@@ -1,0 +1,13 @@
+remote_theme: jekyll/minima
+title: Error_418
+
+minima:
+  skin: dark
+
+include:
+  - _pages
+  
+header_pages:
+  - _pages/candidatura.md
+  - _pages/RTB.md
+  - _pages/PB.md

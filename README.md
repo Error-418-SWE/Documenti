@@ -1,4 +1,4 @@
-<img alt="Logo di Error_418" src="https://github.com/Error-418-SWE/Documenti-wip/blob/5b1ea8478b67980ddbb0ac63a3e749427030b829/logo.png" width="128"/>
+<img alt="Logo di Error_418" src="https://github.com/Error-418-SWE/Documenti/blob/7778de3e750a90db96204acb8b7942b2876769a8/logo.png" width="128"/>
 
 # Sorgenti della documentazione di Error_418
 

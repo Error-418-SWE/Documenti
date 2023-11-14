@@ -2,7 +2,7 @@
 
 #show: project.with(
   title:"Piano di progetto",
-  subTitle: "Pianificazione, analisi e retrospettive", 
+  subTitle: "Pianificazione, analisi e retrospettive",
   docType: "doc",
   partecipants: (
   (name: "Banzato Alessio", role: "Verificatore"),
@@ -20,17 +20,17 @@
 #show "link": word => text[#text(fill:blue, word)]
 
 = Introduzione
-Il documento _Piano di progetto_ ha il delicato compito di governare la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere, presentando un'analisi critica del lavoro fino a quel momento svolto. L'intento è rendicontare l'intero sviluppo, valutando criticamente l'operato compiuto per eventualmente miglirarlo, e gestire in modo efficace ed efficiente le risorse.
+Il documento _Piano di progetto_ ha il compito di governare la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e presentando un'analisi critica del lavoro fino a quel momento svolto. L'intento è rendicontare e valutare criticamente l'operato compiuto per migliorarlo, ove necessario, e gestire in modo efficace ed efficiente le risorse.
 
-Il documento si articola in 5 sezioni, quali:
-- *Rischi e loro mitigazione*: dedicata all'analisi dei rischi che possono insorgere con relativi sistemi di mitigazioni;
+Il documento si articola in 5 sezioni:
+- *Rischi e loro mitigazione*: dedicata all'analisi dei rischi che possono insorgere con relativi sistemi di mitigazione;
 - *Divisione temporale di sviluppo*: dedicata all'analisi della suddivisione temporale dello sviluppo del progetto;
 - *Preventivo dei costi di realizzazione*: dedicata all'analisi preventiva dei costi di realizzazione di progetto;
 - *Pianificazione del lavoro*: dedicata alla pianificazione delle attività da svolgere nei periodi di sprint;
-- *Consuntivo del progetto*: dedicata all'analisi retrospettiva del lavoro svolto, indicando criticità ed eventuali azioni intraprese a fini migliorativi.
+- *Consuntivo di progetto*: dedicata all'analisi retrospettiva del lavoro svolto, indicando le eventuali criticità riscontrate e le contromisure intraprese.
 \
 == Glossario
-Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e per evitare qualsiasi forma di ambiguità in merito ai termini utilizzati, il gruppo _Error\_418_ fornirà come risorse web consultabile, un _*Glossario*_. La prima ricorrenza di termini tecnici appartenenti al dominio del progetto, saranno caratterizzati dalla presenza della lettera _g_ al pedice.
+Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e per evitare qualsiasi forma di ambiguità in merito ai termini utilizzati, il gruppo _Error\_418_ fornisce come risorsa web liberamente consultabile, un _*Glossario*_. Ogni ricorrenza di termini tecnici appartenenti al dominio del progetto sarà denotata dal simbolo lettera _g_ al pedice.
 \
 \
 == Riferimenti esterni
@@ -64,7 +64,7 @@ Ancora da definire
 Ancora da definire
 = Preventivo dei costi di realizzazione
 == Introduzione
-Definiti i rischi (e le relative contromisure) e il calendario di progetto, si è definito, mediante una pianificazione retrospettiva, un preventivo iniziale dei costi di realizzazione del progetto. \
+Delineati i rischi, le relative contromisure e il calendario di progetto, si è definito, mediante una pianificazione retrospettiva, un preventivo iniziale dei costi di realizzazione del progetto.\
 È altresì corretto evidenziare come i membri del gruppo non siano dotati di esperienza sufficiente per fornire un preventivo corretto e preciso sin dagli inizi dello sviluppo: per tale motivo, il prezzo indicato sarà soggetto a modifiche con l'avanzamento del progetto.
 === Analisi dei ruoli
 === Suddivisione delle ore dei ruoli
@@ -72,24 +72,26 @@ Definiti i rischi (e le relative contromisure) e il calendario di progetto, si �
 
 = Pianificazione del lavoro
 == Introduzione
-La pianificazione ricopre un ruolo fondamentale nello sviluppo dell'intero progetto, svolgendo il compito di stabilire obiettivi da raggiungere in periodi di tempo determinati, organizzando le risorse in modo da rendere lo sviluppo efficace ed efficiente. Lo scopo principale deve essere governare la realtà, pianificando dettagliatamente le azioni da intraprendere nel periodo successivo.
+La pianificazione ricopre un ruolo fondamentale nello sviluppo dell'intero progetto. Svolge il compito di stabilire quali obiettivi raggiungere in periodi di tempo determinati, organizzando le risorse in modo da rendere lo sviluppo efficace ed efficiente. Lo scopo principale è pianificare le azioni da intraprendere nel periodo successivo, definendone tempistiche, modalità e obiettivi.
 \
-== Metodologia di lavoro AGILE
-Il team si è imposto una metodologia di lavoro _agile_, determinando periodi di lavoro di durata fissa terminanti con un'analisi retrospettiva degli stessi. \
+== Metodologia di lavoro Agile
+Il team adotta una metodologia di lavoro _Agile_, determinando periodi di lavoro di durata fissa terminanti con un'analisi retrospettiva degli stessi. \
 Tale approccio è definibile _adattivo_, in grado dunque di adattarsi ad eventuali modifiche in corso d'opera, in merito soprattutto a cambiamenti di specifiche e requisiti.\
 L'intero sviluppo è dunque organizzato in iterazioni di lunghezza fissa, denominati in SCRUM come _sprint_. \
-L'analisi retrospettiva e il frequente contatto con il proponente, permettono di indirizzare lo sviluppo verso la produzione di un prodotto finale che si attenga quanto più possibile ai requisiti desiderati dall'azienda e alle sue aspettative, e una documentazione dettagliata e precisa che evolve e migliora insieme al prodotto.
+L'analisi retrospettiva e il frequente contatto con il Proponente permettono di indirizzare lo sviluppo verso la realizzazione di un prodotto finale che si attenga quanto più possibile ai requisiti desiderati dall'azienda e alle sue aspettative, e una documentazione dettagliata e precisa che evolve e migliora insieme al prodotto.
+
 === Organizzazione per sprint
-Gli sprint sono periodi di sviluppo di durata fissa entro i quali si cerca di raggiungere obiettivi prefissati, che vengono stabiliti da un'attenta fase di pianificazione iniziale precedente all'avvio dello sprint stesso.\
-L'intento è fissare obiettivi concretamente raggiungibili nell'arco di tempo stabilito, che nel nostro caso, si tratta di una settimana.\
-Al termine di ogni sprint si svolgerà un'analisi retrospettiva con lo scopo di valutare il lavoro svolto e proporre eventuali miglioramenti in caso di criticità riscontrate.\ 
+Gli sprint sono periodi di sviluppo di durata fissa entro i quali si cerca di raggiungere obiettivi prefissati. Ciascuno sprint viene stabilito, in termini di scope e obiettivi, in un momento precedente all'avvio dello sprint stesso.\
+Error_418 adotta periodi di sprint di 7 giorni.\
+L'intento è fissare obiettivi concretamente raggiungibili nell'arco di tempo stabilito.\
+Al termine di ogni sprint si svolgerà un'analisi retrospettiva con lo scopo di valutare il lavoro svolto e proporre eventuali miglioramenti in caso di criticità riscontrate.\
 
 La pianficazione di uno sprint sarà così composta:
-- *Obiettivi prefissati*: gli obiettivi che si intende raggiungere entro la terminazione dello sprint;
+- *Obiettivi prefissati*: gli obiettivi che si intende raggiungere entro il termine dello sprint;
 
-- *Preventivo dei costi*: preventivo dei costi in base alle figure che opereranno nel periodo e il relativo tempo;
+- *Preventivo dei costi*: preventivo dei costi in base alle figure che operano nel periodo di sprint;
 
-- *Diagramma di Gantt*: grafico rappresentante l'organizzazione delle attività e le dipendenze tra esse. 
+- *Diagramma di Gantt*: diagramma che rappresenta l'organizzazione delle attività nel tempo e le dipendenze tra esse.
 
 Essenziale in questa organizzazione è l'analisi retrospettiva a fine sprint, che permette di valutare in modo critico eventuali mancanze, criticità o errori che possono in questo modo venir affrontati per trovare soluzioni che ne mitighino gli effetti in futuro.
 
@@ -102,32 +104,32 @@ La retrospettiva di uno sprint si articolerà in:
 
 - *Risoluzioni attuate*: azioni compiute in risposta alle problematiche riscontrate durante lo sprint, in modo che in futuro si possa o prevenire del tutto il ripetersi di tali problemi, o in caso insorgessero nuovamente, sapere come mitigarli.
 
-- *Analisi dei costi dello sprint effettivi*: a seguito dello svolgimento dello sprint sarà possibile verificare se i costi preventivati rispecchiano i costi effettivi, in base alle ore svolte per ogni ruolo;
+- *Analisi dei costi dello sprint effettivi*: al termine dello sprint sarà possibile verificare se i costi preventivati rispecchino i costi effettivi, in base alle ore svolte per ogni ruolo;
 
-- *Burndown-chart*: uno strumento metrico come il burndown-chart permette di avere una chiara visione del corretto (o meno) andamento dello sprint.
+- *Burndown-chart*: strumento metrico che permette di avere una chiara visione dell'andamento dello sprint.
 
 == Primo Sprint dal 06-11-2023 al 13-11-2023
 === Obiettivi prefissati
-Gli obiettivi del primo sprint si concentrano sulla correzione e sul miglioramento dei documenti e della repository in seguito alla valutazione esposta dal professore.\
+Gli obiettivi del primo sprint si concentrano sulla correzione e sul miglioramento dei documenti e della repository in seguito alla valutazione esposta dal Committente.\
 Gli obiettivi dello sprint 1 sono:
-- Reset della repository;
-- Revisione preventivo costi con aggiornamento della suddivisione delle ore;
-- Implementazione di automazioni per la compilazione dei documenti;
-- Implementazione di automazioni per il versionamento dei documenti;
-- Stesura delle domande in merito al dominio tecnologico del capitolato;
-- Contatto con l'azienda proponente per comunicare l'esito della candidatura;
-- Contatto con l'azienda proponente per fissare un primo meeting di analisi.
+- riconfigurazione della repository;
+- revisione preventivo costi con aggiornamento della suddivisione delle ore;
+- implementazione di automazioni per la compilazione dei documenti;
+- implementazione di automazioni per il versionamento dei documenti;
+- stesura delle domande in merito al dominio tecnologico del capitolato;
+- contatto con l'azienda Proponente per comunicare l'esito della candidatura;
+- contatto con l'azienda Proponente per fissare un primo meeting di analisi.
 === Preventivo costi
-Il primo sprint, avendo compiti essenzialmente correttivi e incentrati sul miglioramento dei documenti vede l'impiego principale delle figure:
-- *Responsabile*: al fine di coordinare le attività e contattare l'azienda proponente;
+Nell'ambito del primo sprint, il Gruppo attua compiti correttivi e incentrati sul miglioramento dei documenti e dei processi. In quest'ottica, vede l'impiego principale delle figure:
+- *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 
-- *Amministratore*: al fine di gestire gli strumenti come GitHub e Jira per la gestione degli automazioni per la compilazione e versionamento dei documenti;
+- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
 
 - *Verificatore*: al fine di garantire che le modifiche effettuate rispecchino gli standard qualitativi desiderati e implementino effettivamente le mancanze individuate dalla valutazione;
 
-- *Analista*: al fine di redigere le principali domande da porre in merito al dominio tecnologico da utilizzare.
+- *Analista*: al fine di redigere le principali domande da porre al Proponente in merito al dominio tecnologico da utilizzare.
 
-In questo primo periodo, le figure di progettista e programmatore non sono anora assegnate perchè ritenuto ancora troppo precoce lo stato del progetto.
+In questo primo periodo, l'assegnazione dei ruoli di progettista e di programmatore è ritenuta precoce.
 
 #table(
 columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr),
@@ -153,23 +155,23 @@ inset:7pt ,
 = Consuntivo del progetto
 == Introduzione
 Il consuntivo di ogni sprint permette di avere una valutazione critica dell'avanzamento dello sviluppo, valutando in modo oggettivo i punti positivi e negativi dello sprint terminato. \
-Questa fase di retrospettiva è essenziale al fine di individuare possibili miglioramenti e di analizzare se la pianificazione ideata all'inizio dello sprint ha trovato concretezza. \
+Questa fase di retrospettiva è essenziale al fine di individuare possibili miglioramenti e di analizzare se la pianificazione ideata all'inizio dello sprint abbia trovato concretezza. \
 == Primo Sprint dal 06-11-2023 al 13-11-2023
 === Obiettivi raggiunti
-- Revisione preventivo costi con aggiornamento della suddivisione delle ore;
+- Revisione preventivo costi con aggiornamento della suddivisione delle ore, con conseguente riduzione del costo totale;
 - Implementazione di automazioni per la compilazione dei documenti;
 - Stesura delle domande in merito al dominio tecnologico del capitolato;
 === Obiettivi mancati
-- Reset della repository;
+- Riconfigurazione della repository;
 - Implementazione di automazioni per il versionamento dei documenti;
-- Contatto con l'azienda proponente per comunicare l'esito della candidatura;
-- Contatto con l'azienda proponente per fissare un primo meeting di analisi.
+- Contatto con l'azienda Proponente per comunicare l'esito della candidatura;
+- Contatto con l'azienda Proponente per fissare un primo meeting di analisi.
 === Analisi problematiche insorte
-A causa di una sottostima del carico di lavoro per l'implementazione delle automazioni tramite github action, alcuni obiettivi riguardanti la repository sono stati mancati, creando un inesorabile effetto a catena che ha temporaneamente bloccato il caricamento di documenti nella repository.\
-Un altro problema riguarda la comunicazione con l'azienda proponente: la mail inviata sfortunatamente non ha ricevuto riscontro, impedendo di procedere ulteriormente con l'analisi dei requisiti e/o l'impostazione di un meeting con l'azienda stessa.\
+A causa di una sottostima del carico di lavoro per l'implementazione delle automazioni tramite GitHub Action, alcuni obiettivi riguardanti la repository sono stati mancati, creando un effetto a catena che ha temporaneamente bloccato il caricamento di documenti nella repository.\
+Un altro problema riguarda la comunicazione con l'azienda Proponente: la mail inviata sfortunatamente non ha ricevuto riscontro in tempo utile, impedendo di procedere ulteriormente con l'analisi dei requisiti e/o la programmazione di un meeting con l'azienda.\
 === Risoluzioni attuate
-Le automazioni rigurdante il versionamento, essendo comunque in uno stadio terminale di implementazione, verranno concluse nello sprint successivo, senza arrecare ulteriori rallentamenti.\
-La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di un'azione di sollecitamento con una seconda mail e successivamente la richiesta di stabilire un nuovo canale di comunicazione.
+Le automazioni rigurdanti il versionamento verranno concluse nello sprint successivo.\
+La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di un'azione di sollecito con una seconda mail e successivamente la richiesta di stabilire un nuovo canale di comunicazione.
 === Analisi costi di sprint effettivi
 #table(
 columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr),
@@ -192,11 +194,11 @@ inset:7pt ,
 )
 #align(center, text("Tabella 2: costo effettivo primo sprint"))
 A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effettivo inferiore a quanto preventivato:
-- Amministratore: il blocco temporaneo della repository e la mancata risposta dell'azienda non hanno visto evolvere il progetto, limitando così il lavoro del responsabile;
+- Amministratore: il blocco temporaneo della repository e la mancata risposta dell'azienda non hanno permesso la produzione di documenti, limitando così il lavoro del responsabile;
 
-- Analista: la mancata risposta da parte dell'azienda ha impedito agli analisti di iniziare con la vera analisi dei requisiti, limitando dunque il lavoro alla stesura di domande in merito al dominio tecnologico;
+- Analista: la mancata risposta da parte dell'azienda ha impedito agli analisti di iniziare l'analisi dei requisiti, limitando dunque il lavoro alla stesura di domande in merito al dominio tecnologico;
 
-- Verificatore: il mancato avanzamento ha prodotto documentazione ridotta rispetto a quanto preventivato, per tanto il verificatore ha svolto un numero inferiore di ore.
+- Verificatore: il mancato avanzamento ha prodotto documentazione ridotta rispetto a quanto preventivato, pertanto il verificatore ha svolto un numero inferiore di ore.
 
 Il ruolo dell'amministratore invece, incaricato di gestire il reparto tecnologico implementando gli automatismi necessari, a causa di difficoltà incontrate nell'implementazione (errori, testing, verifica), ha visto un aumento delle ore rispetto a quanto preventivato.
 === Burndown-chart

@@ -109,7 +109,7 @@ let calcolateDuration(oraInizio,oraFine)={
   return  text(addZeroes(resultTimeHours)+":"+addZeroes(resultTimeMinutes));
 }
 
-let durata=""
+let durata = ""
 if docType == "verbale"{
   durata = calcolateDuration(oraInizio,oraFine);
 }

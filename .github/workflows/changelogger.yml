@@ -13,31 +13,34 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
+      - name: Touch CSV
+        run: |
+          touch "${{ inputs.path }}/log.csv"
       - name: Configure Git
-        if: github.event.pull_request.merged == false
+        if: github.event.pull_request.merged == true
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git fetch
       - name: Fetch PR information
-        if: github.event.pull_request.merged == false
+        if: github.event.pull_request.merged == true
         run: |
           COMMIT_ID=$(echo ${{github.event.pull_request.head.sha}} | cut -c1-7)
           DATA=$(date -u +'%d-%m-%Y %a')
           git checkout ${{ github.head_ref }}
       - name: Write changelog
-        if: github.event.pull_request.merged == false
+        if: github.event.pull_request.merged == true
         env:
-          PR_NUMBER: "${{github.event.pull_request.number}}"
-          COMMIT_TITLE: "${{github.event.pull_request.title}}"
-          AUTHOR: "${{ github.actor }}"
+          PR_NUMBER: "${{ github.event.pull_request.number }}"
+          PR_TITLE: "${{ github.event.pull_request.title }}"
+          PR_AUTHOR: "${{ github.triggering_actor }}"
+          PR_REVIEWER: "${{ github.event.pull_request.requested_reviewers }}"
         run: |
-          touch "${{ inputs.path }}/log.csv"
           OLD_CONTENT=$(cat "${{ inputs.path }}/log.csv")
-          NEW_CONTENT="$COMMIT_ID,$PR_NUMBER,$COMMIT_TITLE,$AUTHOR,$DATA\n$OLD_CONTENT"
+          NEW_CONTENT="$PR_NUMBER,$PR_TITLE,$PR_AUTHOR,$PR_REVIEWER,$DATA\n$OLD_CONTENT"
           echo -e "$NEW_CONTENT" > "${{ inputs.path }}/log.csv"
       - name: Commit and push changelog
-        if: github.event.pull_request.merged == false
+        if: github.event.pull_request.merged == true
         run: |
           git add "${{ inputs.path }}/log.csv"
           git commit -m "Update changelog"

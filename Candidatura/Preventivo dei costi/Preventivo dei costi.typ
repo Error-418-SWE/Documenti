@@ -6,18 +6,18 @@
   title: "Preventivo Costi",
   subTitle: "Organizzazione temporale e assunzione di impegno",
   docType: "doc",
-  writers: "Antonio Oseliero, Alessio Banzato",
   //  Nome        //Ruolo           Durata Presenza
-  authors: (
-    (name: "Banzato Alessio", role: "Redattore",    duration:  ""),
-    (name: "Carraro Riccardo",  role: "Verificatore", duration:  ""),
-    (name: "Gardin Giovanni",  role: "Verificatore", duration:  ""),
-    (name: "Nardo Silvio",   role: "Amministratore", duration:  ""),
-    (name: "Oseliero Antonio", role: "Redattore",    duration: ""),
-    (name: "Todesco Mattia",   role: "Amministratore", duration:  ""),
-    (name: "Zaccone Rosario",  role: "Verificatore", duration:  ""),
+  partecipants: (
+    (name: "Banzato Alessio", role: "Redattore"),
+    (name: "Carraro Riccardo",  role: "Verificatore"),
+    (name: "Gardin Giovanni",  role: "Verificatore"),
+    (name: "Nardo Silvio",   role: "Amministratore"),
+    (name: "Oseliero Antonio", role: "Amministratore"),
+    (name: "Todesco Mattia",   role: "Redattore"),
+    (name: "Zaccone Rosario",  role: "Verificatore"),
   ),
   showLog: false,
+  showIndex: true,
 )
 
 #set text(font:"New Computer Modern", size: 1.3em)

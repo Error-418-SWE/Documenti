@@ -109,8 +109,9 @@ let calcolateDuration(oraInizio,oraFine)={
   return  text(addZeroes(resultTimeHours)+":"+addZeroes(resultTimeMinutes));
 }
 
+let durata=""
 if docType == "verbale"{
-  let durata = calcolateDuration(oraInizio,oraFine);
+  durata = calcolateDuration(oraInizio,oraFine);
 }
 
 //Capire se si tratta di un verbale per condizionare il layout

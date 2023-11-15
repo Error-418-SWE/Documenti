@@ -34,8 +34,19 @@ jobs:
         run: |
           touch "${{ inputs.path }}/log.csv"
           OLD_CONTENT=$(cat "${{ inputs.path }}/log.csv")
-          NEW_CONTENT="$PR_NUMBER,$PR_TITLE,$PR_AUTHOR,$PR_REVIEWER,$DATE\n$OLD_CONTENT"
-          echo -e "$NEW_CONTENT" > "${{ inputs.path }}/log.csv"
+          NEW_CONTENT="$PR_NUMBER,$PR_TITLE,$PR_AUTHOR,$PR_REVIEWER,$DATE"
+          FILE_CONTENT="$NEW_CONTENT\n$OLD_CONTENT"
+          echo -e "$FILE_CONTENT" > "${{ inputs.path }}/log.csv"
+      - name: Replace usernames
+        if: github.event.pull_request.merged == true
+        run: |
+          sed -i -e "s/${{ UID_ANTONIO }}/Antonio Oseliero/g" "${{ inputs.path }}/log.csv"
+          sed -i -e "s/${{ UID_ALESSIO }}/Alessio Banzato/g" "${{ inputs.path }}/log.csv"
+          sed -i -e "s/${{ UID_GIOVANNI }}/Giovanni Gardin/g" "${{ inputs.path }}/log.csv"
+          sed -i -e "s/${{ UID_MATTIA }}/Mattia Todesco/g" "${{ inputs.path }}/log.csv"
+          sed -i -e "s/${{ UID_RICCARDO }}/Riccardo Carraro/g" "${{ inputs.path }}/log.csv"
+          sed -i -e "s/${{ UID_ROSARIO }}/Rosario Zaccone/g" "${{ inputs.path }}/log.csv"
+          sed -i -e "s/${{ UID_SILVIO }}/Silvio Nardo/g" "${{ inputs.path }}/log.csv"
       - name: Commit and push changelog
         if: github.event.pull_request.merged == true
         run: |

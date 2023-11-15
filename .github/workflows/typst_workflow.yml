@@ -47,13 +47,13 @@ jobs:
 
   log:
     needs: common
-    uses: Error-418-SWE/Documenti/.github/workflows/changelogger.yml@src
+    uses: ggardin/Documenti/.github/workflows/changelogger.yml@src
     with:
       path: '${{ needs.common.outputs.FILE_PATH }}'
 
   compile:
     needs: [common, log]
-    uses: Error-418-SWE/Documenti/.github/workflows/compiler.yml@src
+    uses: ggardin/Documenti/.github/workflows/compiler.yml@src
     with:
       name: '${{ needs.common.outputs.FILE_NAME }}'
       path: '${{ needs.common.outputs.FILE_PATH }}'

@@ -30,7 +30,7 @@ jobs:
           PR_NUMBER: "${{ github.event.pull_request.number }}"
           PR_TITLE: "${{ github.event.pull_request.title }}"
           PR_AUTHOR: "${{ github.triggering_actor }}"
-          PR_REVIEWER: "${{ github.event.pull_request.requested_reviewers || '' }}"
+          PR_REVIEWER: 'ggardin' #"${{ github.event.pull_request.requested_reviewers || '' }}"
         run: |
           touch "${{ inputs.path }}/log.csv"
           OLD_CONTENT=$(cat "${{ inputs.path }}/log.csv")

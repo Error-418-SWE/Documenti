@@ -10,7 +10,11 @@ jobs:
 
   version:
     name: Update document version
+    needs: fetch
     uses: ggardin/Documenti/.github/workflows/versioning.yml@src
+    with:
+      path: ${{ needs.fetch.outputs.file_path }}
+      name: ${{ needs.fetch.outputs.file_name }}
 
   log:
     needs: [fetch, version]
@@ -30,7 +34,7 @@ jobs:
           echo "date=$(date -u +'%d-%m-%Y %a')" >> $GITHUB_OUTPUT
       - name: Write changelog
         env:
-          DOC_VERSION: "${{ needs.version.outputs.updated_version }}"
+          DOC_VERSION: "${{ needs.version.outputs.version }}"
           PR_NUMBER: "${{ github.event.pull_request.number }}"
           PR_TITLE: "${{ github.event.pull_request.title }}"
           PR_AUTHOR: "${{ github.event.pull_request.assignee }}"

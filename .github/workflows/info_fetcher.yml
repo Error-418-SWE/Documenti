@@ -40,7 +40,7 @@ jobs:
       - name: Output to summary
         run: |
           echo "::notice::Path: ${{ steps.path.outputs.FILE_PATH }}"
-          echo "::notice::File: ${{ steps.name.outputs.FILE_NAME }}"
+          echo "::notice::Name: ${{ steps.name.outputs.FILE_NAME }}"
       - name: Check number of changed files
         run: |
           if [[ "${{ steps.path.outputs.FILE_PATH }}" == *".typ"* ]]; then

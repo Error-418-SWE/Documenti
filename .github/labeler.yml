@@ -1,0 +1,20 @@
+'Candidatura':
+- '1 - Candidatura/**'
+
+'RTB':
+- '2 - RTB/**'
+
+'CA':
+- '4 - CA/**'
+
+'PB':
+- '3 - PB/**'
+
+'Verbale esterno':
+- 'Verbali/Esterni/**'
+
+'Verbale interno':
+- 'Verbali/Interni/**'
+
+'Norme di Progetto':
+- 'Norme di Progetto.*'

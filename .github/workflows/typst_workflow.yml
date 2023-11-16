@@ -20,7 +20,7 @@ jobs:
         run: |
           pwd
           sudo apt install tree
-          tree
+          tree .
           touch "${{ needs.fetch.outputs.file_path }}/log.csv"
 
   compile:

@@ -1,7 +1,7 @@
-#import "template.typ": *
+#import "/template.typ": *
 
 #show: project.with(
-  title:"Analisi dei rischi",
+  title:"Analisi dei rischi ma quali rischi zio",
   subTitle: "Pianificazione, analisi e retrospettive",
   docType: "doc",
   partecipants: (

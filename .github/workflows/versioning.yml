@@ -2,8 +2,15 @@ name: Version handler
 
 on:
   workflow_call:
+    inputs:
+      path:
+        type: string
+        required: true
+      name:
+        type: string
+        required: true
     outputs:
-      updated_version:
+      version:
         description: "The new and updated version of the document"
         value: ${{ jobs.fetch.outputs.updated_version }}
 
@@ -19,3 +26,16 @@ jobs:
         id: version
         run: |
           echo "VERSION=v0" >> $GITHUB_OUTPUT
+
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Run Python script
+        run: |
+          cp .github/script.py ./
+          version=$(python script.py  "${{ needs.common.outputs.FILE_PATH }}" "${{ needs.common.outputs.FILE_NAME }}")
+          echo "$version" >> $GITHUB_OUTPUT
+          echo "::notice::Updated version: $version"

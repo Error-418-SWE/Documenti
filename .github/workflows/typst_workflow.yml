@@ -10,17 +10,17 @@ on:
 
 jobs:
   fetch:
-    uses: ${{ github.repository }}/.github/workflows/info_fetcher.yml@src
+    uses: ggardin/Documenti/.github/workflows/info_fetcher.yml@src
 
   log:
     needs: fetch
-    uses: ${{ github.repository }}/.github/workflows/changelogger.yml@src
+    uses: ggardin/Documenti/.github/workflows/changelogger.yml@src
     with:
       path: '${{ needs.fetch.outputs.file_path }}'
 
   compile:
     needs: [fetch, log]
-    uses: ${{ github.repository }}/.github/workflows/compiler.yml@src
+    uses: ggardin/Documenti/.github/workflows/compiler.yml@src
     with:
       name: '${{ needs.fetch.outputs.file_name }}'
       path: '${{ needs.fetch.outputs.file_path }}'

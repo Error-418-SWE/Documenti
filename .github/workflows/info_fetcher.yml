@@ -1,0 +1,47 @@
+name: Changed file info fetcher
+
+on:
+  workflow_call:
+    outputs:
+      file_path:
+        description: "The path to the changed file's directory"
+        value: ${{ jobs.fetch.outputs.FILE_PATH }}
+      file_name:
+        description: "The changed file name"
+        value: ${{ jobs.fetch.outputs.FILE_NAME }}
+
+jobs:
+  fetch:
+    name: Fetch changed file info
+    runs-on: ubuntu-latest
+    outputs:
+      FILE_PATH: '${{ steps.path.outputs.FILE_PATH }}'
+      FILE_NAME: '${{ steps.name.outputs.FILE_NAME }}'
+
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+      - name: Get changed file
+        id: files
+        uses: tj-actions/changed-files@v40
+        with:
+          files: |
+            **.typ
+      - name: Extract path
+        id: path
+        run: |
+          FILES="${{ steps.files.outputs.all_changed_files }}"
+          echo "FILE_PATH=$(dirname "$FILES")" >> $GITHUB_OUTPUT
+          echo "::notice::Path: $FILE_PATH"
+      - name: Extract name w/o extension
+        id: name
+        run: |
+          FILES="${{ steps.files.outputs.all_changed_files }}"
+          echo "FILE_NAME=$(basename "${FILES}" .typ)" >> $GITHUB_OUTPUT
+          echo "::notice::File: $FILE_NAME"
+      - name: Check number of changed files
+        run: |
+          if [[ "${{ steps.path.outputs.FILE_PATH }}" == *".typ"* ]]; then
+            echo "::error::More than one Typst source have been modified. Aborting."
+            exit 1
+          fi

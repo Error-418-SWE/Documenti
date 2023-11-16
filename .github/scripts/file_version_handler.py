@@ -3,9 +3,14 @@ import glob
 import re
 import subprocess
 
-repo_url = "https://github.com/Carraro-Riccardo/test-python-versioning"
-target_directory = "./tmp"
+repo_url = "https://github.com/ggardin/Documenti"
+target_directory = "./tmp_main"
 branch_name = "main"
+subprocess.run(["git", "clone", "--branch",  branch_name, repo_url, target_directory,  "--quiet"], check=True)
+
+repo_url = "https://github.com/ggardin/Documenti"
+target_directory = "./tmp_src"
+branch_name = "src"
 subprocess.run(["git", "clone", "--branch",  branch_name, repo_url, target_directory,  "--quiet"], check=True)
 
 file_path  = sys.argv[1]
@@ -13,12 +18,12 @@ file_name   = sys.argv[2]
 str_version = "1.0.0"
 
 search_pattern = f"{file_name}*.pdf"
-matching_file = glob.glob("./tmp/"+file_path+"/"+search_pattern)
+matching_file = glob.glob("./tmp_main/"+file_path+"/"+search_pattern)
 re_pattern = r"_v(\d+\.\d+\.\d+)\.pdf"
 
 match = False
 if len(matching_file) != 0:
-    match = re.search(re_pattern,"./tmp/"+file_path+"/"+matching_file[0])
+    match = re.search(re_pattern,"./tmp_main/"+file_path+"/"+matching_file[0])
 
 if match:
     str_version = match.group(1)
@@ -34,7 +39,7 @@ if match:
     with open(file_path+"/"+file_name+".typ") as file:
         new_file_content = file.read()
 
-    with open("./tmp/"+file_path+"/"+file_name+".typ") as file:
+    with open("./tmp_src/"+file_path+"/"+file_name+".typ") as file:
         old_file_content = file.read()
 
     def diff_letters(first, second,x,y,z):

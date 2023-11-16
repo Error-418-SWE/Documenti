@@ -1,0 +1,21 @@
+name: Version handler
+
+on:
+  workflow_call:
+    outputs:
+      updated_version:
+        description: "The new and updated version of the document"
+        value: ${{ jobs.fetch.outputs.updated_version }}
+
+jobs:
+  fetch:
+    name: Fetch changed file info
+    runs-on: ubuntu-latest
+    outputs:
+      updated_version: '${{ steps.version.outputs.VERSION }}'
+
+    steps:
+      - name: Output version
+        id: version
+        run: |
+          echo "VERSION=v0" >> $GITHUB_OUTPUT

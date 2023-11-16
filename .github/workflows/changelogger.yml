@@ -23,9 +23,10 @@ jobs:
         run: |
           touch "${{ inputs.path }}/log.csv"
       - name: Get date
+        id: date
         if: github.event.pull_request.merged == true
         run: |
-          DATE=$(date -u +'%d-%m-%Y %a')
+          echo "date=$(date -u +'%d-%m-%Y %a')" >> $GITHUB_OUTPUT
       - name: Write changelog
         if: github.event.pull_request.merged == true
         env:
@@ -33,6 +34,7 @@ jobs:
           PR_TITLE: "${{ github.event.pull_request.title }}"
           PR_AUTHOR: "${{ github.triggering_actor }}"
           PR_REVIEWER: 'ggardin' #"${{ github.event.pull_request.requested_reviewers || '' }}"
+          DATE: "${{ steps.date.outputs.date }}"
         run: |
           OLD_CONTENT=$(cat "${{ inputs.path }}/log.csv")
           NEW_CONTENT="$DATE,$PR_NUMBER,$PR_TITLE,$PR_AUTHOR,$PR_REVIEWER"

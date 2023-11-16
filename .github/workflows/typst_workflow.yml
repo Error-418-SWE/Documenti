@@ -14,9 +14,11 @@ jobs:
 
   log:
     needs: fetch
-    uses: ggardin/Documenti/.github/workflows/changelogger.yml@src
-    with:
-      path: '${{ needs.fetch.outputs.file_path }}'
+    runs-on: ubuntu_latest
+    steps:
+      - name: Create changelog if missing
+        run: |
+          touch "${{ needs.fetch.outputs.file_path }}/log.csv"
 
   compile:
     needs: [fetch, log]
@@ -27,8 +29,8 @@ jobs:
 
   publish:
     if: github.event.pull_request.merged == true
-    runs-on: ubuntu-latest
     needs: [fetch, compile]
+    runs-on: ubuntu-latest
     env:
       TARGET_BRANCH: 'main'
 

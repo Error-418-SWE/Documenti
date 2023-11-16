@@ -1,14 +1,15 @@
 name: Changelog generator
 
 on:
-  workflow_call:
-    inputs:
-      path:
-        required: true
-        type: string
+  pull_request_review:
+    types: submitted
 
 jobs:
+  fetch:
+    uses: ggardin/Documenti/.github/workflows/info_fetcher.yml@src
+
   log:
+    needs: fetch
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
@@ -19,42 +20,34 @@ jobs:
           git config --global user.name "GitHub Actions"
           git fetch
           git checkout ${{ github.head_ref }}
-      - name: Create changelog if missing
-        run: |
-          touch "${{ inputs.path }}/log.csv"
       - name: Get date
         id: date
-        if: github.event.pull_request.merged == true
         run: |
           echo "date=$(date -u +'%d-%m-%Y %a')" >> $GITHUB_OUTPUT
       - name: Write changelog
-        if: github.event.pull_request.merged == true
         env:
           PR_NUMBER: "${{ github.event.pull_request.number }}"
           PR_TITLE: "${{ github.event.pull_request.title }}"
-          PR_AUTHOR: "${{ github.triggering_actor }}"
-          PR_REVIEWER: 'ggardin' #"${{ github.event.pull_request.requested_reviewers || '' }}"
+          PR_AUTHOR: "${{ github.event.pull_request.assignee }}"
+          PR_REVIEWER: "${{ github.event.sender }}"
           DATE: "${{ steps.date.outputs.date }}"
         run: |
-          OLD_CONTENT=$(cat "${{ inputs.path }}/log.csv")
+          OLD_CONTENT=$(cat "${{ needs.fetch.outputs.file_path }}/log.csv")
           NEW_CONTENT="$DATE,$PR_NUMBER,$PR_TITLE,$PR_AUTHOR,$PR_REVIEWER"
           FILE_CONTENT="$NEW_CONTENT\n$OLD_CONTENT"
-          echo -e "$FILE_CONTENT" > "${{ inputs.path }}/log.csv"
+          echo -e "$FILE_CONTENT" > "${{ needs.fetch.outputs.file_path }}/log.csv"
           echo "::notice::New line: $NEW_CONTENT"
-          echo "::notice::Old lines: $OLD_CONTENT"
-          echo "::notice::Current lines: $FILE_CONTENT"
       - name: Replace usernames
-        if: github.event.pull_request.merged == true
         run: |
-          sed -i -e "s/${{ vars.UID_ANTONIO }}/Antonio Oseliero/g" "${{ inputs.path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_ALESSIO }}/Alessio Banzato/g" "${{ inputs.path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_GIOVANNI }}/Giovanni Gardin/g" "${{ inputs.path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_MATTIA }}/Mattia Todesco/g" "${{ inputs.path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_RICCARDO }}/Riccardo Carraro/g" "${{ inputs.path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_ROSARIO }}/Rosario Zaccone/g" "${{ inputs.path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_SILVIO }}/Silvio Nardo/g" "${{ inputs.path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_ANTONIO }}/Antonio Oseliero/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_ALESSIO }}/Alessio Banzato/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_GIOVANNI }}/Giovanni Gardin/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_MATTIA }}/Mattia Todesco/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_RICCARDO }}/Riccardo Carraro/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_ROSARIO }}/Rosario Zaccone/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_SILVIO }}/Silvio Nardo/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
       - name: Commit and push changelog
         run: |
-          git add "${{ inputs.path }}/log.csv"
+          git add "${{ needs.fetch.outputs.file_path }}/log.csv"
           git diff-index --quiet HEAD || git commit -m "Update changelog"
           git push origin ${{ github.head_ref }}

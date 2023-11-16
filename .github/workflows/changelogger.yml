@@ -35,10 +35,12 @@ jobs:
           PR_REVIEWER: 'ggardin' #"${{ github.event.pull_request.requested_reviewers || '' }}"
         run: |
           OLD_CONTENT=$(cat "${{ inputs.path }}/log.csv")
-          NEW_CONTENT="$PR_NUMBER,$PR_TITLE,$PR_AUTHOR,$PR_REVIEWER,$DATE"
+          NEW_CONTENT="$DATE,$PR_NUMBER,$PR_TITLE,$PR_AUTHOR,$PR_REVIEWER"
           FILE_CONTENT="$NEW_CONTENT\n$OLD_CONTENT"
           echo -e "$FILE_CONTENT" > "${{ inputs.path }}/log.csv"
           echo "::notice::New line: $NEW_CONTENT"
+          echo "::notice::Old lines: $OLD_CONTENT"
+          echo "::notice::Current lines: $FILE_CONTENT"
       - name: Replace usernames
         if: github.event.pull_request.merged == true
         run: |

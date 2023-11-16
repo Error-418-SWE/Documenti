@@ -5,18 +5,18 @@ on:
     outputs:
       file_path:
         description: "The path to the changed file's directory"
-        value: ${{ jobs.fetch.outputs.FILE_PATH }}
+        value: ${{ jobs.fetch.outputs.file_path }}
       file_name:
         description: "The changed file name"
-        value: ${{ jobs.fetch.outputs.FILE_NAME }}
+        value: ${{ jobs.fetch.outputs.file_name }}
 
 jobs:
   fetch:
     name: Fetch changed file info
     runs-on: ubuntu-latest
     outputs:
-      FILE_PATH: '${{ steps.path.outputs.FILE_PATH }}'
-      FILE_NAME: '${{ steps.name.outputs.FILE_NAME }}'
+      file_path: '${{ steps.path.outputs.file_path }}'
+      file_name: '${{ steps.name.outputs.file_name }}'
 
     steps:
       - name: Set up Git repository
@@ -39,11 +39,11 @@ jobs:
           echo "FILE_NAME=$(basename "${FILES}" .typ)" >> $GITHUB_OUTPUT
       - name: Output to summary
         run: |
-          echo "::notice::Path: ${{ steps.path.outputs.FILE_PATH }}"
-          echo "::notice::Name: ${{ steps.name.outputs.FILE_NAME }}"
+          echo "::notice::Path: ${{ steps.path.outputs.file_path }}"
+          echo "::notice::Name: ${{ steps.name.outputs.file_name }}"
       - name: Check number of changed files
         run: |
-          if [[ "${{ steps.path.outputs.FILE_PATH }}" == *".typ"* ]]; then
+          if [[ "${{ steps.path.outputs.file_path }}" == *".typ"* ]]; then
             echo "::error::More than one Typst source have been modified. Aborting."
             exit 1
           fi

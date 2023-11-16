@@ -30,7 +30,7 @@ jobs:
       - name: Commit and push changelog
         run: |
           git add "${{ needs.fetch.outputs.file_path }}/log.csv"
-          git diff-index --quiet HEAD || git commit -m "Update changelog"
+          git diff-index --quiet HEAD || git commit -m "Aggiunto changelog vuoto"
           git push origin ${{ github.head_ref }}
 
   compile:

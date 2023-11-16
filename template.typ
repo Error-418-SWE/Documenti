@@ -215,10 +215,9 @@ pagebreak()
 if (showLog and docType != "verbale"){
   // Changelog
   table(
-    align: center,
+    align: left,
     columns: 6,
-    [*V.*],[*Data*],[*#PR*],[*Titolo*],[*Redattore*],[*Verificatore*],
-    ..changesData.flatten(),
+    [*Ver.*],[*Data*],[*PR*],[*Titolo*],[*Redattore*],[*Verificatore*],
   )
   pagebreak()
 }

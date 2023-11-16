@@ -216,8 +216,8 @@ if (showLog and docType != "verbale"){
   // Changelog
   table(
     align: center,
-    columns: 5,
-    [*Id*],[*PR number*],[*PR Title*],[*Author*],[*Date*],
+    columns: 6,
+    [*V.*],[*Data*],[*#PR*],[*Titolo*],[*Redattore*],[*Verificatore*],
     ..changesData.flatten(),
   )
   pagebreak()

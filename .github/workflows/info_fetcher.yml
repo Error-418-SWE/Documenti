@@ -32,13 +32,15 @@ jobs:
         run: |
           FILES="${{ steps.files.outputs.all_changed_files }}"
           echo "FILE_PATH=$(dirname "$FILES")" >> $GITHUB_OUTPUT
-          echo "::notice::Path: $FILE_PATH"
       - name: Extract name w/o extension
         id: name
         run: |
           FILES="${{ steps.files.outputs.all_changed_files }}"
           echo "FILE_NAME=$(basename "${FILES}" .typ)" >> $GITHUB_OUTPUT
-          echo "::notice::File: $FILE_NAME"
+      - name: Output to summary
+        run: |
+          echo "::notice::Path: ${{ steps.path.outputs.FILE_PATH }}"
+          echo "::notice::File: ${{ steps.name.outputs.FILE_NAME }}"
       - name: Check number of changed files
         run: |
           if [[ "${{ steps.path.outputs.FILE_PATH }}" == *".typ"* ]]; then

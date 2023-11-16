@@ -38,6 +38,7 @@ jobs:
           NEW_CONTENT="$PR_NUMBER,$PR_TITLE,$PR_AUTHOR,$PR_REVIEWER,$DATE"
           FILE_CONTENT="$NEW_CONTENT\n$OLD_CONTENT"
           echo -e "$FILE_CONTENT" > "${{ inputs.path }}/log.csv"
+          echo "::notice::New line: $NEW_CONTENT"
       - name: Replace usernames
         if: github.event.pull_request.merged == true
         run: |

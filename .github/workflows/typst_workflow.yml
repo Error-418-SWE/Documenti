@@ -47,13 +47,13 @@ jobs:
 
   log:
     needs: common
-    uses: ggardin/Documenti/.github/workflows/changelogger.yml@src
+    uses: ${{ github.repository }}/.github/workflows/changelogger.yml@src
     with:
       path: '${{ needs.common.outputs.FILE_PATH }}'
 
   compile:
     needs: [common, log]
-    uses: ggardin/Documenti/.github/workflows/compiler.yml@src
+    uses: ${{ github.repository }}/.github/workflows/compiler.yml@src
     with:
       name: '${{ needs.common.outputs.FILE_NAME }}'
       path: '${{ needs.common.outputs.FILE_PATH }}'

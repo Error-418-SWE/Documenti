@@ -19,8 +19,7 @@ jobs:
       - name: Create changelog if missing
         run: |
           pwd
-          sudo apt install tree
-          tree /
+          ls
           touch "${{ needs.fetch.outputs.file_path }}/log.csv"
 
   compile:

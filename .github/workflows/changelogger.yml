@@ -54,5 +54,5 @@ jobs:
       - name: Commit and push changelog
         run: |
           git add "${{ inputs.path }}/log.csv"
-          git commit -m "Update changelog"
+          git diff-index --quiet HEAD || git commit -m "Update changelog"
           git push origin ${{ github.head_ref }}

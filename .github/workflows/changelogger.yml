@@ -8,8 +8,12 @@ jobs:
   fetch:
     uses: ggardin/Documenti/.github/workflows/info_fetcher.yml@src
 
+  version:
+    name: Update document version
+    uses: ggardin/Documenti/.github/workflows/versioning.yml@src
+
   log:
-    needs: fetch
+    needs: [fetch, version]
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
@@ -26,6 +30,7 @@ jobs:
           echo "date=$(date -u +'%d-%m-%Y %a')" >> $GITHUB_OUTPUT
       - name: Write changelog
         env:
+          DOC_VERSION: "${{ needs.version.outputs.updated_version }}"
           PR_NUMBER: "${{ github.event.pull_request.number }}"
           PR_TITLE: "${{ github.event.pull_request.title }}"
           PR_AUTHOR: "${{ github.event.pull_request.assignee }}"
@@ -33,7 +38,7 @@ jobs:
           DATE: "${{ steps.date.outputs.date }}"
         run: |
           OLD_CONTENT=$(cat "${{ needs.fetch.outputs.file_path }}/log.csv")
-          NEW_CONTENT="$DATE,$PR_NUMBER,$PR_TITLE,$PR_AUTHOR,$PR_REVIEWER"
+          NEW_CONTENT="$DOC_VERSION,$DATE,$PR_NUMBER,$PR_TITLE,$PR_AUTHOR,$PR_REVIEWER"
           FILE_CONTENT="$NEW_CONTENT\n$OLD_CONTENT"
           echo -e "$FILE_CONTENT" > "${{ needs.fetch.outputs.file_path }}/log.csv"
           echo "::notice::New line: $NEW_CONTENT"

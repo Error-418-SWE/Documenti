@@ -1,0 +1,50 @@
+#import "template.typ": *
+
+// Take a look at the file `template.typ` in the file panel
+// to customize this template and discover how it works.
+#show: project.with(
+  title: "Verbale **gg/mm/aa**",
+  subTitle: "***Subtitle***",
+  docType: "verbale",        
+  partecipants: (
+    (name: "Banzato Alessio", role: "Verificatore"),
+    (name: "Carraro Riccardo", role: "Verificatore"),
+    (name: "Gardin Giovanni",  role: "Redattore"),
+    (name: "Nardo Silvio",   role: "Redattore"),
+    (name: "Oseliero Antonio",   role: "Amministratore"),
+    (name: "Todesco Mattia",  role: "Verificatore"),
+    (name: "Zaccone Rosario",  role: "Amministratore"),
+    //(name: "Pippo",  role: "Proponente"),
+  ),
+  oraInizio: "14:00",
+  oraFine:  "16:00",
+  firmeEsterne: "///inserire firma esterna///"   //Questa variabile va aggiunta solo se è un documento esterno, qua i partecipanti esterni andranno a firmarsi.
+)
+
+#set text(font:"New Computer Modern", size: 1.3em)
+#set align(left)
+
+
+
+= Section
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed venenatis sem, sagittis commodo nisi. Nullam consectetur sem et massa mattis lacinia. Nulla tincidunt nunc porttitor nibh convallis bibendum vel eget dolor. Nunc non tellus eget erat bibendum cursus. Etiam eget malesuada sapien. Donec quis velit sodales quam venenatis ultricies ut sit amet risus. Integer sed leo felis. In laoreet ornare metus nec interdum. Duis augue sem, pretium et libero sed, rhoncus imperdiet sapien. Maecenas viverra ipsum quis nisl consequat fermentum. Sed interdum varius velit, vitae pulvinar ex aliquet sit amet. Aenean nisi neque, facilisis at lacus finibus, lacinia convallis dolor. Donec nisi quam, sagittis non ante sit amet, feugiat consequat augue. Nullam id turpis et leo congue vestibulum et in enim. Cras dui dui, maximus eu massa nec, blandit sodales dui.
+
+- Elenco;
+
+- Puntato.
+
+= Section
+== Subsection
+Sed aliquam pulvinar tincidunt. In nec enim eleifend, auctor nunc ut, varius nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean et aliquet ligula, vel aliquam lorem.  
+
+== Subsection
+Phasellus eget sollicitudin nunc. Praesent lobortis, tellus ultrices efficitur aliquet, lacus quam dignissim eros, vel semper mauris velit vel tellus. Integer eu ex non elit viverra iaculis. Morbi sit amet facilisis nibh. Sed pellentesque nibh justo, eleifend suscipit elit lobortis sed. Integer tincidunt non mauris eget blandit.
+
+== Subsection
+Vestibulum aliquet sapien turpis, ut fringilla arcu bibendum at. Etiam cursus sapien ligula, quis volutpat enim mollis eget. Nulla arcu quam, consectetur in turpis ut, fringilla ornare orci. Nulla sit amet egestas mauris.
+
+
+
+
+
+

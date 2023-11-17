@@ -34,7 +34,7 @@
   finalizzato il lavoro e ha aggiornato il gruppo riguardo alle nuove funzionalità.
   La vecchia repository è stata abbandonata in favore di una nuova (questo perchè riorganizzare 
   la vecchia repository avrebbe richiesto troppo tempo) con una nuova organizzazione dei branch, 
-  differente rispetto alla precedente. La differenza fondamentale risiede nel fatto che prima si aveva 
+  differente rispetto alla precedente. La differenza fondamentale è prima si aveva 
   un branch main per le release, un branch develop comune da cui si aprivano poi i vari branch feature 
   di lavoro; ora abbiamo un branch main che racchiude tutti i pdf dei file, un branch orfano website 
   che contiene un piccolo sito del gruppo e un altro branch orfano src contenente tutti i sorgente 

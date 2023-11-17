@@ -29,7 +29,7 @@
   - Ripartizione dei ruoli per il nuovo sprint;
   - Pianificazione sprint 3;
 
-= Automazioni e nuova repository
+== Automazioni e nuova repository
   Il gruppo che si è dedicato nel precedente sprint ad automatizzare la repository ha 
   finalizzato il lavoro e ha aggiornato il gruppo riguardo alle nuove funzionalità.
   La vecchia repository è stata abbandonata in favore di una nuova (questo perchè riorganizzare 
@@ -42,14 +42,14 @@
   - website: branch parallello contente un versione work in progress del sito del team.  
 
 
-= Retrospettiva sullo sprint 
+== Retrospettiva sullo sprint 
   Segue quindi la discussione in merito ai miglioramenti da attuare nei seguenti sprint e quello 
   attuale. Lo sprint passato ha avuto due criticità fondamentali: una generale confusione da 
   parte del team di documentazione in merito alla priorità da dare ai vari documenti da redigere 
   e cosa riportarvi all'interno; l'impossibilità di utilizzare la nuova repository bloccata dai 
   rallentamenti subiti dal sottovalutare la mole di lavoro riguardo l'attuazione delle automazioni  
 
-= Nuove tecnologie
+== Nuove tecnologie
   Il gruppo ha continuato la riunione facendo una panoramica sulle nuove tecnologie adottate:
   - Jira: ITS sostitutivo a github, scelto per le molte possibilità che offre come i 
   diagrammi di Gantt o la possibilità di definire macro obbiettivi (epic) oltre le normali 
@@ -61,15 +61,14 @@
   - Miro: Una board che verrà utilizzata durante i meeting interni per supportare processi di 
   brainstorming o per riportare concetti o criticità durante l'analisi dello sprint appena terminato.
 
-= Ripartizione dei ruoli
+== Ripartizione dei ruoli
   In seguito al diario di bordo della mattina abbiamo seguito i suggerimenti del professore e ripartito 
   la forza lavoro in 3 gruppi: 
   - un gruppo per definire il Way of Working lavorerà alla stesura del documento "norme di progetto";
   - un gruppo (quello composto da più persone) dedicato alla stesura del documento "analisi dei requisiti";
   - un gruppo per la stesura del "piano di progetto".
 
-= Conclusioni
-  Le conclusioni sono state:
+= Azioni da intraprendere
   - la necessità di cominciare a redigere un glossario dei termini;
   - la necessità di definire delle modalità di lavoro precise da utilizzare con Jira e un 
     workshop per allineare le conoscenze del gruppo in merito al suo utilizzo;

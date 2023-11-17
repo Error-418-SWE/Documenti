@@ -56,8 +56,7 @@
   task. Un altra funzionalità utile di Jira è la possibilità di definire sprint settimanali 
   che permettono di definire obbiettivi da raggiungere entro l'arco di periodo indicato.
   Questa feature è fondamentale per definire la qualità del lavoro svolto, se il ritmo di 
-  lavoro è stato opportunamente calcolato/rispettato, dove risiedono le criticità della 
-  pianificazione del lavoro;
+  lavoro è stato opportunamente calcolato/rispettato, dove risiedono le criticità della pianificazione del lavoro e permette inoltre di avere strumenti metrici come i burndown chart per monitorare lo stato di avanzamento dello sprint;
   - Miro: Una board che verrà utilizzata durante i meeting interni per supportare processi di 
   brainstorming o per riportare concetti o criticità durante l'analisi dello sprint appena terminato.
 

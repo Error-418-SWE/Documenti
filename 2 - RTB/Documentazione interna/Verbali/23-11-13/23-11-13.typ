@@ -43,7 +43,7 @@
 
 
 == Retrospettiva sullo sprint 
-  Segue quindi la discussione in merito ai miglioramenti da attuare nei seguenti sprint e quello 
+  Segue quindi la discussione in merito ai miglioramenti da attuare nei prossimi sprint e quello 
   attuale. Lo sprint passato ha avuto due criticità fondamentali: una generale confusione da 
   parte del team di documentazione in merito alla priorità da dare ai vari documenti da redigere 
   e cosa riportarvi all'interno; l'impossibilità di utilizzare la nuova repository bloccata dai 

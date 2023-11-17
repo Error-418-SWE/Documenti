@@ -2,7 +2,7 @@
 
 #show: project.with(
   title:"Piano di progetto?",
-  subTitle: "Pianificazione, analisi e retrospettive",
+  subTitle: "Subtitle",
   docType: "doc",
   partecipants: (
   (name: "Banzato Alessio", role: "Verificatore"),

@@ -36,9 +36,10 @@
   la vecchia repository avrebbe richiesto troppo tempo) con una nuova organizzazione dei branch, 
   differente rispetto alla precedente. La differenza fondamentale è prima si aveva 
   un branch main per le release, un branch develop comune da cui si aprivano poi i vari branch feature 
-  di lavoro; ora abbiamo un branch main che racchiude tutti i pdf dei file, un branch orfano website 
-  che contiene un piccolo sito del gruppo e un altro branch orfano src contenente tutti i sorgente 
-  dei file (.typ).  
+  di lavoro; ora la repository è composta da tre branch principali quali:
+  - main: contenente i pdf compilati e pubblicati automaticamente tramite github actions solo a seguito della verifica di uno o più reviwer;
+  - src: contenente i file sorgenti scritti in Typst;
+  - website: branch parallello contente un versione work in progress del sito del team.  
 
 
 = Retrospettiva sullo sprint 

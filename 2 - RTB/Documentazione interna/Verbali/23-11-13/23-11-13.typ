@@ -30,10 +30,10 @@
   - Pianificazione sprint 3;
 
 = Automazioni e nuova repository
-  Il gruppo che si è dedicato nel precedente sprint ad automatizzare la repo ha 
+  Il gruppo che si è dedicato nel precedente sprint ad automatizzare la repository ha 
   finalizzato il lavoro e ha aggiornato il gruppo riguardo alle nuove funzionalità.
-  La vecchia repo è stata abbandonata in favore di una nuova (questo perchè riorganizzare 
-  la vecchia repo avrebbe richiesto troppo tempo) con una nuova organizzazione dei branch, 
+  La vecchia repository è stata abbandonata in favore di una nuova (questo perchè riorganizzare 
+  la vecchia repository avrebbe richiesto troppo tempo) con una nuova organizzazione dei branch, 
   differente rispetto alla precedente. La differenza fondamentale risiede nel fatto che prima si aveva 
   un branch main per le release, un branch develop comune da cui si aprivano poi i vari branch feature 
   di lavoro; ora abbiamo un branch main che racchiude tutti i pdf dei file, un branch orfano website 
@@ -45,7 +45,7 @@
   Segue quindi la discussione in merito ai miglioramenti da attuare nei seguenti sprint e quello 
   attuale. Lo sprint passato ha avuto due criticità fondamentali: una generale confusione da 
   parte del team di documentazione in merito alla priorità da dare ai vari documenti da redigere 
-  e cosa riportarvi all'interno; l'impossibilità di utilizzare la nuova repo bloccata dai 
+  e cosa riportarvi all'interno; l'impossibilità di utilizzare la nuova repository bloccata dai 
   rallentamenti subiti dal sottovalutare la mole di lavoro riguardo l'attuazione delle automazioni  
 
 = Nuove tecnologie

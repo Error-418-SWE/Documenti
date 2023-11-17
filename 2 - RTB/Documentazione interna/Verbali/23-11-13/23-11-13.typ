@@ -46,7 +46,7 @@
   Segue quindi la discussione in merito ai miglioramenti da attuare nei prossimi sprint e quello 
   attuale. Lo sprint passato ha avuto due criticità fondamentali: una generale confusione da 
   parte del team di documentazione in merito alla priorità da dare ai vari documenti da redigere 
-  e cosa riportarvi all'interno; l'impossibilità di utilizzare la nuova repository bloccata dai 
+  e al loro contenuto; l'impossibilità di utilizzare la nuova repository bloccata dai 
   rallentamenti subiti dal sottovalutare la mole di lavoro riguardo l'attuazione delle automazioni  
 
 == Nuove tecnologie

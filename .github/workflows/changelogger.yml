@@ -63,4 +63,4 @@ jobs:
           git commit -m "Aggiunti dettagli di rilascio"
       - name: Push
         run: |
-          git push origin ${{ github.head_ref }}
+          git push origin HEAD:${{ github.head_ref }}

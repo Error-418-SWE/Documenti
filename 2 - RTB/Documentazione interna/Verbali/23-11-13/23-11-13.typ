@@ -54,7 +54,7 @@
   - Jira: ITS sostitutivo a github, scelto per le molte possibilità che offre come i 
   diagrammi di Gantt o la possibilità di definire macro obbiettivi (epic) oltre le normali 
   task. Un altra funzionalità utile di Jira è la possibilità di definire sprint settimanali 
-  che permettono di definire obbiettivi da raggiungere entro l'arco di, appunto, una settimana.
+  che permettono di definire obbiettivi da raggiungere entro l'arco di periodo indicato.
   Questa feature è fondamentale per definire la qualità del lavoro svolto, se il ritmo di 
   lavoro è stato opportunamente calcolato/rispettato, dove risiedono le criticità della 
   pianificazione del lavoro;

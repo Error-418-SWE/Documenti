@@ -57,16 +57,15 @@
   che permettono di definire obbiettivi da raggiungere entro l'arco di periodo indicato.
   Questa feature è fondamentale per definire la qualità del lavoro svolto, se il ritmo di 
   lavoro è stato opportunamente calcolato/rispettato, dove risiedono le criticità della pianificazione del lavoro e permette inoltre di avere strumenti metrici come i burndown chart per monitorare lo stato di avanzamento dello sprint;
-  - Miro: Una board che verrà utilizzata durante i meeting interni per supportare processi di 
+  - Miro: una board che verrà utilizzata durante i meeting interni per supportare processi di 
   brainstorming o per riportare concetti o criticità durante l'analisi dello sprint appena terminato.
 
 == Ripartizione dei ruoli
-  In seguito al diario di bordo della mattina abbiamo seguito i suggerimenti del professore e ripartito 
-  la forza lavoro in 3 gruppi: 
-  - un gruppo per definire il Way of Working lavorerà alla stesura del documento "norme di progetto";
-  - un gruppo (quello composto da più persone) dedicato alla stesura del documento "analisi dei requisiti";
-  - un gruppo per la stesura del "piano di progetto".
-
+  In seguito al diario di bordo tenutosi in data 13-11-23, il team si è organizzato per portare avanti lo sviluppo dei tre documenti fondamentali, quali: 
+  - analisi dei requisiti: documento di priorità maggiore. Risorse assegnate: 3 persone;
+  - piano di progetto. Risorse assegnate: 2 persone;
+  - norme di progetto: Risorse assegnate: 2 persone.
+  
 = Azioni da intraprendere
   - la necessità di cominciare a redigere un glossario dei termini;
   - la necessità di definire delle modalità di lavoro precise da utilizzare con Jira e un 

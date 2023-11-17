@@ -33,4 +33,6 @@ jobs:
         run: |
           cp .github/scripts/file_version_handler.py ./
           echo "VERSION=$(python file_version_handler.py "${{ inputs.file_path }}" "${{ inputs.file_name }}")" >> $GITHUB_OUTPUT
-          echo "::notice::Updated version: $VERSION"
+      - name: Print version to summary
+        run: |
+          echo "::notice::Updated version: ${{ steps.version.outputs.version }}"

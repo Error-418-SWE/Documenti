@@ -57,6 +57,8 @@ jobs:
           sed -i -e "s/${{ vars.UID_SILVIO }}/Silvio Nardo/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
       - name: Commit and push changelog
         run: |
+          git status
+          git checkout ${{ github.head_ref }}
           git add "${{ needs.fetch.outputs.file_path }}/log.csv"
           git commit -m "Aggiunti dettagli di rilascio"
           git push origin ${{ github.head_ref }}

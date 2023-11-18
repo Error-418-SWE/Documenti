@@ -1,8 +1,7 @@
 #import "template.typ": *
 
 #show: project.with(
-  title: "Verbale **13/11/23**",
-  subTitle: "***Subtitle***",
+  title: "Verbale 13/11/23",
   docType: "verbale",        
   partecipants: (
     (name: "Banzato Alessio", role: "Verificatore"),
@@ -65,13 +64,11 @@
   - analisi dei requisiti: documento di priorità maggiore. Risorse assegnate: 3 persone;
   - piano di progetto. Risorse assegnate: 2 persone;
   - norme di progetto: Risorse assegnate: 2 persone.
-  
+
 = Azioni da intraprendere
   - la necessità di cominciare a redigere un glossario dei termini;
-  - la necessità di definire delle modalità di lavoro precise da utilizzare con Jira e un 
-    workshop per allineare le conoscenze del gruppo in merito al suo utilizzo;
-  - la necessità di contattare l'azienda per domande in merito all'analisi dei requisti
-    (confermata per mercoledì 15/11/23).
+  - la necessità di definire delle modalità di lavoro precise da utilizzare con Jira e un workshop per allineare le conoscenze del gruppo in merito al suo utilizzo;
+  - la necessità di contattare l'azienda per domande in merito all'analisi dei requisti (confermata per mercoledì 15/11/23).
 
 
 

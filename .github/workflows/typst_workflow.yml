@@ -66,7 +66,7 @@ jobs:
       - name: Remove older version
         run: |
           git checkout $TARGET_BRANCH
-          rm -f "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}.pdf"
+          rm -f "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}*.pdf"
           git rm --ignore-unmatch "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}.pdf"
       - name: Grab document
         uses: actions/download-artifact@v3

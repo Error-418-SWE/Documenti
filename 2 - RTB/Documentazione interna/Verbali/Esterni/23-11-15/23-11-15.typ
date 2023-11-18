@@ -2,7 +2,7 @@
 
 #show: project.with(
   title:"Verbale esterno 15/11/2023",
-  subTitle: "Inizio analisi dei requisiti", 
+  subTitle: "Avvio dell'Analisi dei Requisiti",
   docType: "verbale",
   partecipants: (
   (name: "Banzato Alessio", role: "Analista"),

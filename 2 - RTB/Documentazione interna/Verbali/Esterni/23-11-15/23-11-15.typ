@@ -7,11 +7,11 @@
   partecipants: (
   (name: "Banzato Alessio", role: "Analista"),
   (name: "Carraro Riccardo", role: "Redattore"),
-  (name: "Gardin Giovanni",  role: "Amministratore"),
-  (name: "Nardo Silvio",   role: "Analista"),
-  (name: "Oseliero Antonio",   role: "Responsabile"),
-  (name: "Todesco Mattia",  role: "Verificatore"),
-  (name: "Zaccone Rosario",  role: "Analista"),
+  (name: "Gardin Giovanni", role: "Amministratore"),
+  (name: "Nardo Silvio", role: "Analista"),
+  (name: "Oseliero Antonio", role: "Responsabile"),
+  (name: "Todesco Mattia", role: "Verificatore"),
+  (name: "Zaccone Rosario", role: "Analista"),
   (name: "Matteo Bassani", role: "Referente aziendale")
   ),
   showIndex: false,

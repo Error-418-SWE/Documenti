@@ -37,8 +37,8 @@ jobs:
           DOC_VERSION: "${{ needs.version.outputs.version }}"
           PR_NUMBER: "${{ github.event.pull_request.number }}"
           PR_TITLE: "${{ github.event.pull_request.title }}"
-          PR_AUTHOR: "${{ github.event.pull_request.assignee.name }}"
-          PR_REVIEWER: "${{ github.event.sender.name }}"
+          PR_AUTHOR: "${{ github.event.pull_request.user.login }}"
+          PR_REVIEWER: "${{ github.event.review.user.name }}"
           DATE: "${{ steps.date.outputs.date }}"
         run: |
           OLD_CONTENT=$(cat "${{ needs.fetch.outputs.file_path }}/log.csv")

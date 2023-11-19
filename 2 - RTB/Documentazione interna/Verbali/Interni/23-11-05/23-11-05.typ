@@ -22,24 +22,24 @@
 
 #set text(font:"New Computer Modern", size: 1.3em)
 #set align(left)
-S
+
 = Ordine del giorno
 - Automazioni di GitHub Actions;
 - Organizzazione meeting di Retrospettiva;
 - Revisione norme di progetto;
 - Organizzazione attività da svolgere.
 
-= GitHub Actions
+== GitHub Actions
 Sono state discusse le automazioni introdotte tramite GitHub Actions:
     - Sito internet per la visualizzazione ordinata della documentazione il quale viene automaticamente aggiornato con la modifica del repository;
     - Compilazione automatica dei file .tex con conseguente generazione nel repository dei file pdf corrispondenti.
 
 
-= Meeting di Retrospettiva
+== Meeting di Retrospettiva
 Sono stati discussi i meeting di retrospettiva, fissati ogni domenica alle ore 15:00.
 \ Per definire ordinatamente alcuni argomenti da trattare in tali meeting, come i "keep doing" e i problemi riscontrati durante la settimana, è stato deciso di utilizzare lo strumento "Miro", la cui bacheca va aggionata prima del meeting domenicale.
 
-= Norme di progetto
+== Norme di progetto
 Il documento relativo alle norme di progetto è stato revisionato e discusso dal gruppo.
 \ Sono stati proposti degli strumenti per la realizzazione di grafici UML:
    - StarUML;

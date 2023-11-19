@@ -4,15 +4,13 @@ on:
     workflows: [Typst document workflow]
     types:
       - completed
-    branches:
-      - src
 
 jobs:
   comment:
     name: Comment in PR with artifact link
     runs-on: windows-2019
     steps:
-      - name: Comment in PR with artifact link
+      - name: Add comment
         uses: tonyhallett/artifacts-url-comments@v1.1.0
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,4 +1,4 @@
-#import "template.typ":*
+#import "/template.typ":*
 
 #show: project.with(
   title:"Analisi dei Requisiti",
@@ -67,4 +67,28 @@ Questo documento viene redatto in modo incrementale, così da risultare sempre c
 
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
   _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_ .
+
+#set heading(numbering: none) 
+
+=== UC1.1 - Visualizzazione errore lettura del file SVG
+$bold("descrizione: ")$
+il file caricato dall'utente non ha permesso al programma di configurare l'ambiente di lavoro
+
+$bold("attore: ")$
+utente
+
+$bold("precondizioni: ")$
+l'utente ha caricato un file per la configurazione dell'ambiente di lavoro
+
+$bold("postcondizioni: ")$
+all'utente viene mostrato un messaggio di errore 
+
+$bold("scenario: ")$
+l'utente ha caricato un file non adatto
+
+$bold("generalizzazioni: ")$
+- UC1.1.1 - Visualizzazione errore lettura del file SVG dovuto a estensione del file sbagliata
+- UC1.1.2 - Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni
+- UC1.1.3 - Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti
+
 

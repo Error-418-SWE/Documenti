@@ -23,6 +23,12 @@
 #set text(font:"New Computer Modern", size: 1.3em)
 #set align(left)
 
+= Ordine del giorno
+- Retrospettiva sullo sprint terminato;
+- Divisione dei ruoli e formazione sottogruppi di lavoro;
+- Organizzazione attività da svolgere.
+
+
 = Retrospettiva
 
   In questo primo meeting di retrospettiva sono state analizzate le attività svolte dal gruppo durante la settimana e, in modo particolare, sono state discusse le nuove automazioni di github action che sono state implementate (per la compilazione ed il caricamento automatico in repository e nel sito web dei file legati alla documentazione con i relativi changelog).

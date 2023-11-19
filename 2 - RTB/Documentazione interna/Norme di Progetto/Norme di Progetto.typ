@@ -91,7 +91,7 @@ Al fine di eliminare possibili ambiguità durante la consultazione dei documenti
 ==== Verbali
 Un verbale è la documentazione di un meeting svolto tra i membri del gruppo (verbale interno) o con un referente esterno (verbale esterno). Documentare le riunioni permette di tenere traccia delle decisioni prese dal gruppo in un dato momento e permette a chi non riesce a presenziare di tenersi al passo con il gruppo in maniera asincrona. \
 I verbali devono essere rinominati nel seguente modo "yy-mm-dd.typ" e nello stesso modo deve essere chiamata la sottocartella in cui è inserito.
-===== Struttura dei verbali
+===== Intestazione dei verbali
 Ogni verbale, interno o esterno, deve presentare:
 - intestazione:\
   + logo del gruppo (logo.png disponibile nella root del branch src);
@@ -108,4 +108,31 @@ L'effettivo contenuto del documento dove vengono riportati i dettaglio gli argom
 - subsection: ogni subsection riporta l'effettivo resoconto dell'incontro con evetuali dubbi e soluzioni a cui si è arrivati durante il meeting;
 - section "Azioni da intraprendere": riporta le operazioni che andranno svolte a seguito del meeting per risolvere problemi emersi durante il meeting o per continuare il lavoro.
 - firme esterne: per verbali esterni, firma del referente esterno che approva il resoconto stilato del gruppo.
-==== Struttura dei documenti
+==== Documenti
+Documenti prodotto dal team Error 418:
+- Norme di Progetto;
+- Piano di Progetto;
+- Piano di Qualifica;
+- Glossario
+- Analisi dei Requisiti
+- Specifica Architetturale;
+- Manuale Utente;
+===== Intestazione dei documenti
+Ogni documento deve presentare:
+- intestazione:\
+  + logo del gruppo (logo.png disponibile nella root del branch src);
+  + nome del gruppo: Error 418;
+  + titolo del documento
+  + redattori e destinatari;
+  + tabella con i componenti del gruppo e i ruoli che ricoprono;
+  + changelog;
+  + indice.
+===== Corpo del documento
+Il contenuto del documento è suddiviso in capitoli, ognuno dei quali è composto da più
+sezioni.
+=== Convenzioni stilisteche
+==== Sintattiche/Grammaticali
+Per la scrittura dei documenti è richiesto uno stile di scrittura impersonale (preferendo per esempio frasi come "il gruppo ha fatto" piuttosto che "abbiamo fatto"). Si richiede inoltre di spezzare i paragrafi troppo lunghi con un "a capo" in modo da dividere il testo in aree logiche di più facile comprensione e lettura.
+=== Elenchi puntati
+Viene inserito ";" alla fine delle voci dell'elenco tranne l'ultima che termina con ".". Ogni
+voce dell'elenco inizia con una lettera minuscola.

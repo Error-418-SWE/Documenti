@@ -22,12 +22,12 @@
 
 #set text(font:"New Computer Modern", size: 1.3em)
 #set align(left)
-
+S
 = Ordine del giorno
-- Automazioni di GitHub Actions
-- Organizzazione meeting di Retrospettiva
-- Revisione norme di progetto
-- Organizzazione attività da svolgere
+- Automazioni di GitHub Actions;
+- Organizzazione meeting di Retrospettiva;
+- Revisione norme di progetto;
+- Organizzazione attività da svolgere.
 
 = GitHub Actions
 Sono state discusse le automazioni introdotte tramite GitHub Actions:
@@ -54,3 +54,4 @@ Il documento relativo alle norme di progetto è stato revisionato e discusso dal
     - Ricontrollare le norme di progetto;
     - Prendere confidenza con le tecnologie scelte (Miro, Jira, ecc), e con quelle proposte così da prendere scelte consapevoli;
     - Iniziare a pensare all'analisi dei requisiti.
+ 

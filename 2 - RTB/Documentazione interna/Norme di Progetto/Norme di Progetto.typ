@@ -52,3 +52,60 @@ Al fine di eliminare possibili ambiguità durante la consultazione dei documenti
 
 - Documentazione Three.js
 #link("https://threejs.org/docs/")
+
+= Processi di supporto
+== Documentazione
+=== Scopo e descrizione
+  Il processo di documentazione del lavoro ha molteplici obbiettivi, il primo è quello di 
+  tenere traccia di cio che è stato svolto e delle decisioni prese nell'ambito del progetto, il secondo 
+  è quello di normare le attività in modo che i componenti del gruppo possano lavorare 
+  in maniera uniforme ed ordinata.\
+  La documentazione è quindi un processo di supporto all’attività di gestione di progetto, essendo un mezzo che, tramite versionamento e integrazione continua, norma attività di codifica, progettazione, analisi ed integrazione.\
+  In questa sezione si và ad elencare e descrivere tutte le norme riguardanti la stesura, il mantenimento e l'aggiornamento della documentazione prodotta da Error 418 per ogni fase del ciclo di vita del software. 
+=== Aspettative
+  - Definire una serie di regole per la stesura di documenti o per metodi di lavoro in modo che ogni attività svolta da un membro del gruppo sia valutabile secondo criteri di correttezza decisi a priori.
+  - Documentare come svolgere un lavoro in modo che un membro del gruppo possa lavorare in maniera uniforme al resto del gruppo. 
+=== Typst
+  Il team Error 418 ha deciso di utilizzare Typst come linguaggio per redarre la documentazione. Questo è un linguaggio di markup che permette molte delle funzionalità offerte da strumenti come LaTeX, richiedendo però molto meno sforzo durante la procedura di creazione e di compilazione del file.\  Questo permette di evitare l'apprendimento della sintassi LaTeX che può risultare ostica ai novizi e consentendo al team di concentrarsi esclusivamente sul corpo del file evitando perdite di tempo e frustrazione data da errori che non si capisce come risolvere o che richiederebbero molto tempo per essere risolti. 
+=== Ciclo di vita
+  La creazione e il versionamento di un documento è stato automatizzato quanto più possibile in modo da ridurre l'impatto dell'errore umano.\
+  Le modalità che permetto di creare un documento sono:
+  + creare un nuovo branch a partire dal branch che raccoglie i sorgenti (src);
+  + creare una nuova cartella rinominata con lo stesso nome del sorgente che si andrà a creare;
+  + creare un nuovo file .typ a partire da uno dei template che sono stati creati appositamente dal team (per scopo e struttura dei template controllare la sezione @template);
+  + scrivere il corpo del documento modificando eventualmente alcuni specifici campi del template (titolo, data, ecc..);
+  + accertarsi che il documento rispetti tutte le norme definite nelle "Norme di progetto"; 
+  + salvare e creare la pull request per integrare il sorgente all'interno del branch src;
+  + scegliere un nome della pull request aderente alle norme definite nelle "Norme di progetto";
+  + una volta creata la pull request avvierà una serie di action che provvederanno a verificare la correttezza la presenza o meno di alcuni campi del documento, creare o aggiornare il changelog, compilare il documento e integrare il risultante file .pdf all'interno del branch main;
+=== Template <template>
+  Il team ha creato dei template per la creazione di documenti, questo facilita il lavoro di compilazione e verifica da parte delle github. \
+  Possono essere trovate nella root della repository github nel branch src. \
+  I template sono:
+  - template.typ: per la creazione di documenti interni o esterni;
+  - quickstart.typ:  per la creazione di verbali interni o esterni;
+=== Struttura dei documenti
+  Esistono due tipi di documenti fondamentali: "documento" e "verbali" e hanno alcune differenze a livello di struttura. \
+  Ogni documento è formato da un file Typst e da un file log.csv creato automaticamente dalle github action (e che si occupano anche di aggiornarlo). Questi due file vengono automaticamente compilati insieme e il .pdf risultante viene inserito all'interno del branch main.
+  Ogni documento dovrà presentare:
+==== Verbali
+Un verbale è la documentazione di un meeting svolto tra i membri del gruppo (verbale interno) o con un referente esterno (verbale esterno). Documentare le riunioni permette di tenere traccia delle decisioni prese dal gruppo in un dato momento e permette a chi non riesce a presenziare di tenersi al passo con il gruppo in maniera asincrona. \
+I verbali devono essere rinominati nel seguente modo "yy-mm-dd.typ" e nello stesso modo deve essere chiamata la sottocartella in cui è inserito.
+===== Struttura dei verbali
+Ogni verbale, interno o esterno, deve presentare:
+- intestazione:\
+  + logo del gruppo (logo.png disponibile nella root del branch src);
+  + nome del gruppo: Error 418;
+  + titolo del documento: standardizzato nella forma "Verbale"+"interno/esterno"+"data del verbale nella forma dd/mm/yy";
+  + eventuale sottotitolo: specifica se una riunione ha avuto uno specifico argomento di discussione, è opzionale;
+  + referente: referente dell'azienda proponente che ha partecipate alla riunione in caso di verbale esterno;
+  + redattori e destinatari;
+  + partecipanti: chi ha partecipato alla riunione e il ruolo che ha ricoperto;
+  + ora di inizio meeting, ora di fine meeting e durata del meeting (calcolata automanticamente).
+===== Corpo del verbale
+L'effettivo contenuto del documento dove vengono riportati i dettaglio gli argomenti trattati nel meeting, il corpo è così organizzato:
+- section "Ordine del giorno": riporta gli argomenti da trattare nel meeting;
+- subsection: ogni subsection riporta l'effettivo resoconto dell'incontro con evetuali dubbi e soluzioni a cui si è arrivati durante il meeting;
+- section "Azioni da intraprendere": riporta le operazioni che andranno svolte a seguito del meeting per risolvere problemi emersi durante il meeting o per continuare il lavoro.
+- firme esterne: per verbali esterni, firma del referente esterno che approva il resoconto stilato del gruppo.
+==== Struttura dei documenti

@@ -25,8 +25,7 @@ jobs:
           git fetch
           git checkout ${{ github.head_ref }}
       - name: Create changelog if missing
-        run: |
-          touch "${{ needs.fetch.outputs.file_path }}/log.csv"
+        run: touch "${{ needs.fetch.outputs.file_path }}/log.csv"
       - name: Commit and push changelog
         run: |
           git add "${{ needs.fetch.outputs.file_path }}/log.csv"
@@ -57,8 +56,7 @@ jobs:
           git fetch
       - name: Update path
         id: publish_path
-        run: |
-          echo "PUBLISH_PATH=$(dirname "${{ needs.fetch.outputs.file_path }}")" >> $GITHUB_OUTPUT
+        run: echo "PUBLISH_PATH=$(dirname "${{ needs.fetch.outputs.file_path }}")" >> $GITHUB_OUTPUT
       - name: Output
         run: |
           echo "::notice::Old path: ${{ needs.fetch.outputs.file_path }}"
@@ -72,8 +70,10 @@ jobs:
         with:
           name: '${{ needs.fetch.outputs.file_name }}.pdf'
           path: '${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}'
+      - name: Rename file
+        run: mv -v "${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}.pdf" "${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}_v${{ needs.fetch.outputs.latest_version }}.pdf"
       - name: Publish document
         run: |
-          git add "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}.pdf"
-          git commit -am "Publish document ${{ needs.fetch.outputs.file_name }}.pdf"
+          git add "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}*.pdf"
+          git commit -am "Publish document ${{ needs.fetch.outputs.file_name }} (v${{ needs.fetch.outputs.latest_version }}"
           git push origin $TARGET_BRANCH

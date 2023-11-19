@@ -31,13 +31,13 @@
 
 = GitHub Actions
 Sono state discusse le automazioni introdotte tramite GitHub Actions:
-    - item Sito internet per la visualizzazione ordinata della documentazione il quale viene  automaticamente aggiornato con la modifica del repository;
+    - item Sito internet per la visualizzazione ordinata della documentazione il quale viene automaticamente aggiornato con la modifica del repository;
     - item Compilazione automatica dei file .tex con conseguente generazione nel repository dei file pdf corrispondenti.
 
 
 = Meeting di Retrospettiva
 Sono stati discussi i meeting di retrospettiva, fissati ogni domenica alle ore 15:00.
-\ Per definire ordinatamente alcuni argomenti da trattare in tali meeting, come i "keep doing" e i problemi riscontrati durante la settimana, è stato deciso di utilizzare lo strumento "Miro", la quale bacheca va aggionata prima del meeting domenicale.
+\ Per definire ordinatamente alcuni argomenti da trattare in tali meeting, come i "keep doing" e i problemi riscontrati durante la settimana, è stato deciso di utilizzare lo strumento "Miro", la cui bacheca va aggionata prima del meeting domenicale.
 
 = Norme di progetto
 Il documento relativo alle norme di progetto è stato revisionato e discusso dal gruppo.
@@ -49,7 +49,7 @@ Il documento relativo alle norme di progetto è stato revisionato e discusso dal
 \ È stato deciso che i file .tex saranno posti in un branch dedicato del repository.
 
 = To do
-    - Sono emersi dubbi riguardo alle tecnologie e le pratiche da adottare per la fase di test della parte grafica da realizzare. È di conseguenza emersa la necessità di organizzare un meeting esterno con il proponente per discutere tali dubbi. Ciascuno deve quindi pensare alle domande da porre in tale occasione;
+    - Sono emersi dubbi riguardo alle tecnologie e le pratiche da adottare per i test della parte grafica da realizzare. È di conseguenza emersa la necessità di organizzare un meeting esterno con il proponente per discutere tali dubbi. Ciascun membro deve quindi pensare alle domande da porre in tale occasione;
     - Stabilire con precisione il criterio di versionamento dei file;
     - Ricontrollare le norme di progetto;
     - Prendere confidenza con le tecnologie scelte (Miro, Jira, ecc), e con quelle proposte così da prendere scelte consapevoli;

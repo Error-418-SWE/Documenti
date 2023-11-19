@@ -23,10 +23,10 @@
 
 = Ordine del giorno
   - Aggiornamento del gruppo in merito alle nuove automazioni adottate;
-  - Retrospettiva dello sprint 2;
+  - Retrospettiva dello sprint 1;
   - Discussione in merito alle tecnologie adottate;
   - Ripartizione dei ruoli per il nuovo sprint;
-  - Pianificazione sprint 3;
+  - Pianificazione sprint 2;
 
 == Automazioni e nuova repository
   Il gruppo che si è dedicato nel precedente sprint ad automatizzare la repository ha 

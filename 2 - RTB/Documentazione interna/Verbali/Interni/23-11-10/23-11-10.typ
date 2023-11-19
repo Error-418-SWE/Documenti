@@ -6,15 +6,15 @@
   title: "Verbale 10/11/23",
   subTitle: "Meeting di retrospettiva, indicazioni per la settimana a venire",
   docType: "verbale",
-  //  Nome        //Ruolo           Durata Presenza
+  //  Nome        //Ruolo           
   partecipants: (
-    (name: "Antonio", role: "Responsabile"),
-    (name: "Alessio", role: "Verificatore"),
-    (name: "Giovanni",  role: "Amministratore"),
-    (name: "Silvio",   role: "Redattore"),
-    (name: "Mattia",   role: "Amministratore"),
-    (name: "Rosario",  role: "Amministratore"),
-    (name: "Riccardo",  role: "Amministratore"),
+    (name: "Banzato Alessio", role: "Verificatore"),
+    (name: "Carraro Riccardo", role: "Amministratore"),
+    (name: "Gardin Giovanni",  role: "Amministratore"),
+    (name: "Nardo Silvio",   role: "Redattore"),
+    (name: "Oseliero Antonio",   role: "Responsabile"),
+    (name: "Todesco Mattia",  role: "Analista"),
+    (name: "Zaccone Rosario",  role: "Analista"),
   ),
   oraInizio: "14:00",
   oraFine: "15:00"

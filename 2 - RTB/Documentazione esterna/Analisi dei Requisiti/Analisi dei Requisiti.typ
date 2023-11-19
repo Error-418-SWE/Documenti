@@ -70,7 +70,7 @@ Questo documento viene redatto in modo incrementale, così da risultare sempre c
 
 #set heading(numbering: none) 
 
-=== UC1.1 - Visualizzazione errore lettura del file SVG
+=== UC-1.1 Visualizzazione errore lettura del file SVG
 $bold("descrizione: ")$
 il file caricato dall'utente non ha permesso al programma di configurare l'ambiente di lavoro
 

@@ -23,6 +23,12 @@
 #set text(font:"New Computer Modern", size: 1.3em)
 #set align(left)
 
+= Ordine del giorno
+- Automazioni di GitHub Actions
+- Organizzazione meeting di Retrospettiva
+- Revisione norme di progetto
+- Organizzazione attività da svolgere
+
 = GitHub Actions
 Sono state discusse le automazioni introdotte tramite GitHub Actions:
     - item Sito internet per la visualizzazione ordinata della documentazione il quale viene  automaticamente aggiornato con la modifica del repository;

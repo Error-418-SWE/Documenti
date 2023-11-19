@@ -1,0 +1,23 @@
+name: Comment with artifact link
+on:
+  workflow_run:
+    workflows: [Typst document workflow]
+    types:
+      - completed
+    branches:
+      - src
+
+jobs:
+  comment:
+    name: Comment in PR with artifact link
+    runs-on: windows-2019
+    steps:
+      - name: Comment in PR with artifact link
+        uses: tonyhallett/artifacts-url-comments@v1.1.0
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            prefix: Il documento  
+            suffix: compilato è ora disponibile.
+            format: name
+            addTo: pullandissues

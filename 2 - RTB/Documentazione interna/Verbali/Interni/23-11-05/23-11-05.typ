@@ -31,8 +31,8 @@ S
 
 = GitHub Actions
 Sono state discusse le automazioni introdotte tramite GitHub Actions:
-    - item Sito internet per la visualizzazione ordinata della documentazione il quale viene automaticamente aggiornato con la modifica del repository;
-    - item Compilazione automatica dei file .tex con conseguente generazione nel repository dei file pdf corrispondenti.
+    - Sito internet per la visualizzazione ordinata della documentazione il quale viene automaticamente aggiornato con la modifica del repository;
+    - Compilazione automatica dei file .tex con conseguente generazione nel repository dei file pdf corrispondenti.
 
 
 = Meeting di Retrospettiva
@@ -45,7 +45,7 @@ Il documento relativo alle norme di progetto è stato revisionato e discusso dal
    - StarUML;
    - Eraser;
    - Draw.io.
- È stato discusso l'utilizzo di Latex in maniera più specifica analizzando l'utilizzo del template e degli include.
+ È stato discusso l'utilizzo di LaTeX in maniera più specifica analizzando l'utilizzo del template e degli include.
 \ È stato deciso che i file .tex saranno posti in un branch dedicato del repository.
 
 = To do

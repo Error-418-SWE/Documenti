@@ -6,15 +6,15 @@
   title: "Verbale 05/11/23",
   subTitle: "Automazioni, norme di progetto e pianificazione meeting",
   docType: "verbale",
-  //  Nome        //Ruolo           Durata Presenza
+  //  Nome        //Ruolo          
   partecipants: (
-    (name: "Antonio", role: "Redattore",    duration: "/"),
-    (name: "Alessio", role: "Verificatore"),
-    (name: "Giovanni",  role: "Verificatore"),
-    (name: "Silvio",   role: "Amministratore"),
-    (name: "Mattia",   role: "Amministratore"),
-    (name: "Rosario",  role: "Verificatore"),
-    (name: "Riccardo",  role: "Redattore"),
+    (name: "Banzato Alessio", role: "Verificatore"),
+    (name: "Carraro Riccardo", role: "Amministratore"),
+    (name: "Gardin Giovanni",  role: "Amministratore"),
+    (name: "Nardo Silvio",   role: "Redattore"),
+    (name: "Oseliero Antonio",   role: "Responsabile"),
+    (name: "Todesco Mattia",  role: "Analista"),
+    (name: "Zaccone Rosario",  role: "Analista"),
   ),
   oraInizio: "14:30",
   oraFine: "15:30"

@@ -1,4 +1,4 @@
-#import "template.typ":*
+#import "/template.typ":*
 
 #show: project.with(
   title:"Analisi dei Requisiti",
@@ -67,4 +67,28 @@ Questo documento viene redatto in modo incrementale, così da risultare sempre c
 
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
   _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_ .
+
+= Casi d'uso
+
+#set heading(numbering: none) 
+== UC-1 Importazione mappa magazzino da file SVG 
+
+$bold("descrizione: ")$
+All'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file svg il quale viene utilizzato dal programma per configurare le aree di lavoro.
+
+$bold("attore: ")$
+utente
+
+$bold("precondizioni: ")$
+nessuna, questa azione può essere fatta in qualsiasi momento
+
+$bold("postcondizioni: ")$
+- un fie svg è stato caricato con successo e il programma ha configurato l'ambiente di conseguenza
+- l'ambiente così generato ha rimosso eventuali elementi precedentemente configurati
+
+$bold("scenario: ")$
+l'utente carica un file svg tramite un'apposita interfaccia
+
+$bold("estensioni: ")$
+UC-1.1 Visualizzazione errore lettura del file SVG
 

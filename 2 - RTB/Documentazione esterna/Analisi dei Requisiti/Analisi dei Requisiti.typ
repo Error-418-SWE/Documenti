@@ -148,3 +148,23 @@ l'utente inserisce i dati relativi alla configurazione.
 
 $bold("Estensioni: ")$
 UC 2.1 Visualizzazione errore sui dati.
+
+
+
+=== UC-2.1 Visualizzazione errore sui dati
+$bold("Descrizione: ")$
+i dati inseriti per la configurazione manuale dell'ambiente di lavoro non sono validi.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- inseriti dati per la configurazione manuale dell'ambiente;
+- tali dati non sono utilizzabili dal programma.
+
+
+$bold("Postcondizioni: ")$
+viene visualizzato l'errore relativo all'inserimento di dati non validi.
+
+$bold("Scenario: ")$
+l'utente inserisce dati relativi alla configurazione dell'ambiente non validi.

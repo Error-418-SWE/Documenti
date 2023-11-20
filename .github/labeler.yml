@@ -48,3 +48,8 @@
 
 'Verbale interno':
 - 'Verbali/Interni/**'
+
+# Misc +++++++++++++++++++++++++++++++++++++
+
+'Actions':
+- '.github/**'

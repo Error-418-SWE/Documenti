@@ -191,3 +191,23 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 UC-3.1 Visualizzazione errore di modifica dell'ambiente.
 
+
+
+
+=== UC-3.1 Visualizzazione errore di modifica dell'ambiente
+$bold("Descrizione: ")$ 
+i dati inseriti per la modifica dell'ambiente di lavoro non sono validi con quanto configurato precedentemente.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- l'utente ha immesso i dati per la modifica dell'ambiente;
+- tali dati non sono congrui con la precedente configurazione dell'ambiente.
+
+$bold("Postcondizioni: ")$
+viene visualizzato il messaggio di errore relativo ad un'immissione errata dei dati per la modifica dell'ambiente.
+
+$bold("Scenario: ")$
+l'utente ha immesso dei dati errati per la modifica dell'ambiente.
+

@@ -72,23 +72,23 @@ Questo documento viene redatto in modo incrementale, così da risultare sempre c
 
 === UC-1.1 Visualizzazione errore lettura del file SVG
 $bold("Descrizione: ")$
-il file caricato dall'utente non ha permesso al programma di configurare l'ambiente di lavoro
+il file caricato dall'utente non ha permesso al programma di configurare l'ambiente di lavoro.
 
 $bold("Attore: ")$
-utente
+utente.
 
 $bold("Precondizioni: ")$
-l'utente ha caricato un file per la configurazione dell'ambiente di lavoro
+l'utente ha caricato un file per la configurazione dell'ambiente di lavoro.
 
 $bold("Postcondizioni: ")$
-all'utente viene mostrato un messaggio di errore 
+all'utente viene mostrato un messaggio di errore.
 
 $bold("Scenario: ")$
-l'utente ha caricato un file non adatto
+l'utente ha caricato un file non adatto.
 
 $bold("Generalizzazioni: ")$
-- UC1.1.1 - Visualizzazione errore lettura del file SVG dovuto a estensione del file sbagliata
-- UC1.1.2 - Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni
-- UC1.1.3 - Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti
+- UC1.1.1 - Visualizzazione errore lettura del file SVG dovuto a estensione del file sbagliata;
+- UC1.1.2 - Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni;
+- UC1.1.3 - Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti.
 
 

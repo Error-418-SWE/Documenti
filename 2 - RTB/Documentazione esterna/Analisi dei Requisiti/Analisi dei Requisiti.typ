@@ -85,3 +85,24 @@ viene visualizzato l'errore relativo al caricamento di un file con estensione di
 
 $bold("Scenario: ")$
 L'utente ha caricato un file per la configurazione dell'ambiente con estensione errata.
+
+
+
+==== UC-1.1.2 Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni
+$bold("Descrizione: ")$
+il file SVG caricato non contiene informazioni utili alla configurazione dell'ambiente.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- é stato caricato un file per la configurazione dell'ambiente;
+- tale file è stato aperto correttamente dal programma;
+- il programma non ha potuto ottenere informazioni dal file.
+
+$bold("Postcondizioni: ")$
+viene visualizzato l'errore relativo al caricamento di un file SVG privo di informazioni.
+
+$bold("Scenario: ")$
+L'utente ha caricato un file SVG vuoto o con informazioni non utili.
+

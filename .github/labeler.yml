@@ -1,0 +1,50 @@
+# Configuration file for label_pr.yml
+
+# Milestones +++++++++++++++++++++++++++++++
+
+'Candidatura':
+- '1 - Candidatura/**'
+
+'RTB':
+- '2 - RTB/**'
+
+'CA':
+- '4 - CA/**'
+
+'PB':
+- '3 - PB/**'
+
+# Documents ++++++++++++++++++++++++++++++++
+
+'Analisi dei rischi':
+- 'Analisi dei rischi.*'
+
+'Analisi dei requisiti':
+- 'Analisi dei requisiti.*'
+
+'Glossario':
+- 'Glossario.*'
+
+'Lettera di presentazione':
+- 'Lettera di presentazione.*'
+
+'Manuale d\'uso':
+- 'Manuale d\'uso*.*'
+
+'Norme di Progetto':
+- 'Norme di Progetto.*'
+
+'Piano di Progetto':
+- 'Piano di Progetto.*'
+
+'Piano di qualifica':
+- 'Piano di qualifica.*'
+
+'Specifica tecnica':
+- 'Specifica tecnica*.*'
+
+'Verbale esterno':
+- 'Verbali/Esterni/**'
+
+'Verbale interno':
+- 'Verbali/Interni/**'

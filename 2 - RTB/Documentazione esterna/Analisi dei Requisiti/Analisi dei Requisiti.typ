@@ -126,3 +126,25 @@ viene visualizzato l'errore relativo al caricamento di un file con informazioni 
 
 $bold("Scenario: ")$
 L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
+
+
+
+== UC-2 Configurazione ambiente 3d manuale
+$bold("Descrizione: ")$
+configurazione manuale del perimetro dell'ambiente di lavoro.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+è stato dato inizio alla procedura di configurazione manuale dell'ambiente di lavoro.
+
+$bold("Postcondizioni: ")$
+- la forma e il perimetro dell'ambiente di lavoro è stato configurato manualmente;
+- l'ambiente così generato ha rimosso eventuali elementi precedentemente configurati.
+
+$bold("Scenario: ")$
+l'utente inserisce i dati relativi alla configurazione.
+
+$bold("Estensioni: ")$
+UC 2.1 Visualizzazione errore sui dati.

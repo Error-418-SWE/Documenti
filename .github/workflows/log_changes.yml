@@ -1,0 +1,62 @@
+name: Changelog generator
+
+on:
+  pull_request_review:
+    types: submitted
+
+jobs:
+  fetch:
+    uses: Error-418-SWE/Documenti/.github/workflows/fetch_info.yml@src
+
+  version:
+    name: Update document version
+    needs: fetch
+    uses: Error-418-SWE/Documenti/.github/workflows/version_document.yml@src
+    with:
+      file_path: ${{ needs.fetch.outputs.file_path }}
+      file_name: ${{ needs.fetch.outputs.file_name }}
+
+  log:
+    needs: [fetch, version]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+      - name: Configure Git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git fetch
+          git checkout ${{ github.event.pull_request.head.ref }}
+      - name: Get date
+        id: date
+        run: |
+          echo "date=$(date -u +'%d-%m-%Y %a')" >> $GITHUB_OUTPUT
+      - name: Write changelog
+        env:
+          DOC_VERSION: "${{ needs.version.outputs.version }}"
+          PR_NUMBER: "${{ github.event.pull_request.number }}"
+          PR_TITLE: "${{ github.event.pull_request.title }}"
+          PR_AUTHOR: "${{ github.event.pull_request.user.login }}"
+          PR_REVIEWER: "${{ github.event.review.user.login }}"
+          DATE: "${{ steps.date.outputs.date }}"
+        run: |
+          OLD_CONTENT=$(cat "${{ needs.fetch.outputs.file_path }}/log.csv")
+          NEW_CONTENT="$DOC_VERSION,$DATE,$PR_NUMBER,$PR_TITLE,$PR_AUTHOR,$PR_REVIEWER"
+          FILE_CONTENT="$NEW_CONTENT\n$OLD_CONTENT"
+          echo -e "$FILE_CONTENT" > "${{ needs.fetch.outputs.file_path }}/log.csv"
+          echo "::notice::New line: $NEW_CONTENT"
+      - name: Replace usernames
+        run: |
+          sed -i -e "s/${{ vars.UID_ANTONIO }}/Antonio Oseliero/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_ALESSIO }}/Alessio Banzato/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_GIOVANNI }}/Giovanni Gardin/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_MATTIA }}/Mattia Todesco/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_RICCARDO }}/Riccardo Carraro/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_ROSARIO }}/Rosario Zaccone/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_SILVIO }}/Silvio Nardo/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+      - name: Commit and push changelog
+        run: |
+          git add "${{ needs.fetch.outputs.file_path }}/log.csv"
+          git commit -m "Aggiunti dettagli di rilascio"
+          git push origin HEAD:${{ github.event.pull_request.head.ref }}

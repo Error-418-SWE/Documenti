@@ -1,0 +1,38 @@
+name: Version handler
+
+on:
+  workflow_call:
+    inputs:
+      file_path:
+        type: string
+        required: true
+      file_name:
+        type: string
+        required: true
+    outputs:
+      version:
+        description: "The next and updated version of the document"
+        value: ${{ jobs.update.outputs.version }}
+
+jobs:
+  update:
+    name: Compute versions
+    runs-on: ubuntu-latest
+    outputs:
+      version: '${{ steps.version.outputs.version }}'
+
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Compute next version
+        id: version
+        run: |
+          cp .github/scripts/file_version_handler.py ./
+          echo "VERSION=$(python file_version_handler.py "${{ inputs.file_path }}" "${{ inputs.file_name }}")" >> $GITHUB_OUTPUT
+      - name: Print versions to summary
+        run: |
+          echo "::notice::Updated version: ${{ steps.version.outputs.version }}"

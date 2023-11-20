@@ -3,10 +3,10 @@ name: Typst document compiler
 on:
   workflow_call:
     inputs:
-      name:
+      file_path:
         required: true
         type: string
-      path:
+      file_name:
         required: true
         type: string
 
@@ -28,15 +28,15 @@ jobs:
           ref: src
       - name: Prepare folder environment
         run: |
-          cp $REQUIRED_FILES "${{ inputs.path }}"
+          cp $REQUIRED_FILES "${{ inputs.file_path }}"
       - name: Compile Typst document
         uses: lvignoli/typst-action@main
         with:
           source_file: |
-            ${{ inputs.path }}/${{ inputs.name }}.typ
+            ${{ inputs.file_path }}/${{ inputs.file_name }}.typ
       - name: Publish artifact
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ inputs.name }}.pdf
-          path: ${{ github.workspace }}/${{ inputs.path }}/${{ inputs.name }}.pdf
+          name: ${{ inputs.file_name }}.pdf
+          path: ${{ github.workspace }}/${{ inputs.file_path }}/${{ inputs.file_name }}.pdf
           if-no-files-found: error

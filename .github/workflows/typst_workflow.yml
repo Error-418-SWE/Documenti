@@ -9,59 +9,53 @@ on:
       - '!**template.typ'
 
 jobs:
-  common:
+  fetch:
+    uses: Error-418-SWE/Documenti/.github/workflows/fetch_info.yml@src
+
+  log:
+    needs: fetch
     runs-on: ubuntu-latest
-    outputs:
-      FILE_PATH: '${{ steps.path.outputs.FILE_PATH }}'
-      FILE_NAME: '${{ steps.name.outputs.FILE_NAME }}'
+    env:
+      BASE_BRANCH: 'src'
+
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
-      - name: Get changed file
-        id: files
-        uses: tj-actions/changed-files@v40
-        with:
-          files: |
-             **.typ
-      - name: Extract path
-        id: path
+      - name: Configure Git
         run: |
-          FILES="${{ steps.files.outputs.all_changed_files }}"
-          echo "FILE_PATH=$(dirname "$FILES")" >> $GITHUB_OUTPUT
-      - name: Extract name w/o extension
-        id: name
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git fetch
+      - name: Checkout head branch
+        if: github.event.pull_request.merged == false
+        run: git checkout ${{ github.head_ref }}
+      - name: Checkout base branch
+        if: github.event.pull_request.merged == true
+        run: git checkout $BASE_BRANCH
+      - name: Create changelog if missing
+        run: touch "${{ needs.fetch.outputs.file_path }}/log.csv"
+      - name: Commit and push changelog
         run: |
-          FILES="${{ steps.files.outputs.all_changed_files }}"
-          echo "FILE_NAME=$(basename "${FILES}" .typ)" >> $GITHUB_OUTPUT
-      - name: Output to summary
-        run: |
-          echo "::notice::Modified files: ${{ steps.files.outputs.all_changed_files }}"
-          echo "::notice::Path: ${{ steps.path.outputs.FILE_PATH }}"
-          echo "::notice::File: ${{ steps.name.outputs.FILE_NAME }}"
-      - name: Check number of changed files
-        run: |
-          if [[ "${{ steps.path.outputs.FILE_PATH }}" == *".typ"* ]]; then
-            echo "::error::More than one Typst source have been modified. Aborting."
-            exit 1
-          fi
-
-  log:
-    needs: common
-    uses: Error-418-SWE/Documenti/.github/workflows/changelogger.yml@src
-    with:
-      path: '${{ needs.common.outputs.FILE_PATH }}'
+          git add "${{ needs.fetch.outputs.file_path }}/log.csv"
+          git diff-index --quiet HEAD || git commit -m "Aggiunto changelog vuoto"
+      - name: Push to head branch
+        if: github.event.pull_request.merged == false
+        run: git push origin ${{ github.head_ref }}
+      - name: Push to base branch
+        if: github.event.pull_request.merged == true
+        run: git push origin $BASE_BRANCH
 
   compile:
-    needs: [common, log]
-    uses: Error-418-SWE/Documenti/.github/workflows/compiler.yml@src
+    needs: [fetch, log]
+    uses: Error-418-SWE/Documenti/.github/workflows/compile_document.yml@src
     with:
-      name: '${{ needs.common.outputs.FILE_NAME }}'
-      path: '${{ needs.common.outputs.FILE_PATH }}'
+      file_name: ${{ needs.fetch.outputs.file_name }}
+      file_path: ${{ needs.fetch.outputs.file_path }}
 
   publish:
     if: github.event.pull_request.merged == true
+    needs: [fetch, compile]
     runs-on: ubuntu-latest
-    needs: [common, compile]
     env:
       TARGET_BRANCH: 'main'
 
@@ -75,24 +69,24 @@ jobs:
           git fetch
       - name: Update path
         id: publish_path
-        run: |
-          echo "PUBLISH_PATH=$(dirname "${{ needs.common.outputs.FILE_PATH }}")" >> $GITHUB_OUTPUT
+        run: echo "PUBLISH_PATH=$(dirname "${{ needs.fetch.outputs.file_path }}")" >> $GITHUB_OUTPUT
       - name: Output
         run: |
-          echo "::notice::Old path: ${{ needs.common.outputs.FILE_PATH }}"
+          echo "::notice::Old path: ${{ needs.fetch.outputs.file_path }}"
           echo "::notice::New path: ${{ steps.publish_path.outputs.PUBLISH_PATH }}"
       - name: Remove older version
         run: |
           git checkout $TARGET_BRANCH
-          rm -f "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.common.outputs.FILE_NAME }}.pdf"
-          git rm --ignore-unmatch "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.common.outputs.FILE_NAME }}.pdf"
+          git rm --ignore-unmatch "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}*.pdf"
       - name: Grab document
         uses: actions/download-artifact@v3
         with:
-          name: '${{ needs.common.outputs.FILE_NAME }}.pdf'
+          name: '${{ needs.fetch.outputs.file_name }}.pdf'
           path: '${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}'
+      - name: Rename file
+        run: mv -v "${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}.pdf" "${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}_v${{ needs.fetch.outputs.latest_version }}.pdf"
       - name: Publish document
         run: |
-          git add "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.common.outputs.FILE_NAME }}.pdf"
-          git commit -am "Publish document ${{ needs.common.outputs.FILE_NAME }}.pdf"
+          git add "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}*.pdf"
+          git commit -am "Publish document ${{ needs.fetch.outputs.file_name }} (v${{ needs.fetch.outputs.latest_version }})"
           git push origin $TARGET_BRANCH

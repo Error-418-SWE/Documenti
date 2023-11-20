@@ -254,3 +254,24 @@ $bold("Scenario: ")$
 
 $bold("Estensioni: ")$
 UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale.
+
+
+
+=== UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale 
+$bold("Descrizione: ")$ 
+i dati inseriti per la modifica di uno scaffale sono errati e non possono essere accettati.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+-l'attività di modifica di uno scaffale deve essere stata attivata;
+-l'inserimento dei valori per la modifica deve essere avvenuto.
+
+$bold("Postcondizioni: ")$
+viene visualizzato il messaggio di errore relativo ai dati errati.
+
+$bold("Scenario: ")$
+- l'utente ha avviato la procedura di modifica di uno scaffale esistente;
+- l'utente ha immesso dati non validi o che comporterebbero incongruenze con i bin o altri elementi dell'ambiente.
+

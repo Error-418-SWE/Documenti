@@ -79,7 +79,7 @@ utente.
 
 $bold("Precondizioni: ")$
 - l'utente ha caricato un file per la configurazione dell'ambiente di lavoro;
-- il programma non ha potuto leggere tale file poiché esso ha un'estensione inattesa.
+- il programma non ha potuto leggere tale file.
 
 $bold("Postcondizioni: ")$
 all'utente viene mostrato un messaggio di errore.

@@ -68,3 +68,20 @@ Questo documento viene redatto in modo incrementale, così da risultare sempre c
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
   _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_ .
 
+
+==== UC-1.1.1 Visualizzazione errore lettura del file SVG dovuto a estensione del file sbagliata
+$bold("Descrizione: ")$
+il file per la configurazione dell'ambiente caricato ha un'estensione inattesa.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- é stato caricato un file per la configurazione dell'ambiente;
+- il programma non ha potuto leggere tale file a causa dell'incongruenza della sua estensione.
+
+$bold("Postcondizioni: ")$
+viene visualizzato l'errore relativo al caricamento di un file con estensione diversa da SVG.
+
+$bold("Scenario: ")$
+L'utente ha caricato un file per la configurazione dell'ambiente con estensione errata.

@@ -168,3 +168,26 @@ viene visualizzato l'errore relativo all'inserimento di dati non validi.
 
 $bold("Scenario: ")$
 l'utente inserisce dati relativi alla configurazione dell'ambiente non validi.
+
+
+
+== UC-3 Modifica ambiente 3d
+$bold("Descrizione: ")$ 
+il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- almeno una configurazione dell'ambinete deve essere avvenuta con successo;
+
+$bold("Postcondizioni: ")$
+l'ambiente di lavoro è stato modificato con successo.
+
+$bold("Scenario: ")$
+- l'utente avvia la modifica dell'ambiente di lavoro;
+- l'utente immette i dati richiesti.
+
+$bold("Estensioni: ")$
+UC3.1 - Visualizzazione errore di modifica dell'ambiente.
+

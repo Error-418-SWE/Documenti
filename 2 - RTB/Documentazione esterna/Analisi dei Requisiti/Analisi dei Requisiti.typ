@@ -80,7 +80,7 @@ $bold("attore: ")$
 utente
 
 $bold("precondizioni: ")$
-nessuna, questa azione può essere fatta in qualsiasi momento
+è stato dato inizio alla procedura di configurazione dell'ambiente di lavoro tramite file 
 
 $bold("postcondizioni: ")$
 - un fie svg è stato caricato con successo e il programma ha configurato l'ambiente di conseguenza

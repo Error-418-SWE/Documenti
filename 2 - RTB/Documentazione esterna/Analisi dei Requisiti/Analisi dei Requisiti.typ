@@ -275,3 +275,22 @@ $bold("Scenario: ")$
 - l'utente ha avviato la procedura di modifica di uno scaffale esistente;
 - l'utente ha immesso dati non validi o che comporterebbero incongruenze con i bin o altri elementi dell'ambiente.
 
+
+== UC-6 Eliminazione scaffale
+$bold("Descrizione: ")$ 
+uno scaffale presente nell'ambiente viene eliminato.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+nell'ambiente deve essere posizionato almeno uno scaffale.
+
+$bold("Postcondizioni: ")$
+- lo scaffale selezionato viene rimosso dall'ambiente;
+- vengono rimossi i bin in esso contenuti.
+
+$bold("Scenario: ")$
+- l'utente seleziona uno scaffale nell'ambiente;
+- l'utente seleziona il comando per la rimozione dello scaffale;
+- l'utente conferma l'operazione da una finestra di conferma.

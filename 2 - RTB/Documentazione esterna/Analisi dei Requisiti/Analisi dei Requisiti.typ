@@ -147,7 +147,7 @@ $bold("Scenario: ")$
 l'utente inserisce i dati relativi alla configurazione.
 
 $bold("Estensioni: ")$
-UC 2.1 Visualizzazione errore sui dati.
+UC-2.1 Visualizzazione errore sui dati.
 
 
 
@@ -189,5 +189,5 @@ $bold("Scenario: ")$
 - l'utente immette i dati richiesti.
 
 $bold("Estensioni: ")$
-UC3.1 - Visualizzazione errore di modifica dell'ambiente.
+UC-3.1 Visualizzazione errore di modifica dell'ambiente.
 

@@ -106,3 +106,23 @@ viene visualizzato l'errore relativo al caricamento di un file SVG privo di info
 $bold("Scenario: ")$
 L'utente ha caricato un file SVG vuoto o con informazioni non utili.
 
+
+
+
+==== UC-1.1.3 Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti
+$bold("Descrizione: ")$
+il file SVG caricato contiene informazioni incongruenti e quindi non utilizzabili per la configurazione dell'ambiente.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- é stato caricato un file per la configurazione dell'ambiente;
+- tale file è stato aperto correttamente dal programma;
+- il programma ha ricavato informazioni non valide dal file.
+
+$bold("Postcondizioni: ")$
+viene visualizzato l'errore relativo al caricamento di un file con informazioni incongruenti.
+
+$bold("Scenario: ")$
+L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.

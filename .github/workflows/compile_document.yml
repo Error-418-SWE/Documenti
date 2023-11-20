@@ -1,0 +1,42 @@
+name: Typst document compiler
+
+on:
+  workflow_call:
+    inputs:
+      file_path:
+        required: true
+        type: string
+      file_name:
+        required: true
+        type: string
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    env:
+      REQUIRED_FILES: 'template.typ logo.png'
+    steps:
+      - name: Set up Git repository
+        if: github.event.pull_request.merged == false
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref || github.ref_name }}
+      - name: Set up Git repository
+        if: github.event.pull_request.merged == true
+        uses: actions/checkout@v4
+        with:
+          ref: src
+      - name: Prepare folder environment
+        run: |
+          cp $REQUIRED_FILES "${{ inputs.file_path }}"
+      - name: Compile Typst document
+        uses: lvignoli/typst-action@main
+        with:
+          source_file: |
+            ${{ inputs.file_path }}/${{ inputs.file_name }}.typ
+      - name: Publish artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ inputs.file_name }}.pdf
+          path: ${{ github.workspace }}/${{ inputs.file_path }}/${{ inputs.file_name }}.pdf
+          if-no-files-found: error

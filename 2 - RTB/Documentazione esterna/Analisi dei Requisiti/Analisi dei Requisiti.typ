@@ -231,3 +231,26 @@ $bold("Scenario: ")$
 - l'utente seleziona l'aggiunta di uno scaffale;
 - l'utente inserisce i dati necessari alla creazione di uno scaffale;
 - l'utente posiziona lo scaffale in una posiziona valida nell'ambiente.
+
+
+
+== UC-5 Modifica scaffale 
+$bold("Descrizione: ")$ 
+modifica dei valori di uno scaffale già esistente.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+nell'ambiente deve essere posizionato almeno uno scaffale.
+
+$bold("Postcondizioni: ")$
+i valori relativi ad uno scaffale sono stati modificati come indicato.
+
+$bold("Scenario: ")$
+- l'utente seleziona uno scaffale nell'ambiente;
+- l'utente seleziona il comando per la modifica dello scaffale;
+- l'utente inserisce i nuovi valori.
+
+$bold("Estensioni: ")$
+UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale.

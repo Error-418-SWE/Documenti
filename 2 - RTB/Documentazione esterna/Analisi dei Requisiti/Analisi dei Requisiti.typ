@@ -211,3 +211,23 @@ viene visualizzato il messaggio di errore relativo ad un'immissione errata dei d
 $bold("Scenario: ")$
 l'utente ha immesso dei dati errati per la modifica dell'ambiente.
 
+
+
+
+== UC-4 Creazione scaffale
+$bold("Descrizione: ")$ 
+uno scaffale viene creato in base ai valori dati e aggiunto nell'ambiente.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+l'ambiente deve essere stato configurato.
+
+$bold("Postcondizioni: ")$
+nell'ambiente è stato aggiunto un nuovo scaffale.
+
+$bold("Scenario: ")$
+- l'utente seleziona l'aggiunta di uno scaffale;
+- l'utente inserisce i dati necessari alla creazione di uno scaffale;
+- l'utente posiziona lo scaffale in una posiziona valida nell'ambiente.

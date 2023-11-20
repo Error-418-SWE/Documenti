@@ -1,0 +1,17 @@
+name: Comment PR with review guidance
+
+on: pull_request
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    name: Provide review guidance
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Comment PR
+        uses: mshick/add-pr-comment@v2
+        with:
+          message-path: .github/pull_request_review_guidance.md
+          allow-repeats: false

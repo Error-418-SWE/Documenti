@@ -8,7 +8,7 @@ Documentazione di **Error_418** (gruppo 7) per il corso di **Ingegneria del Soft
 
 Tutti i documenti sono pubblici. Sono consultabili tramite:
 
-1. [sito web del gruppo](https://error-418-swe.github.io/documenti/);
+1. [sito web del gruppo](https://error-418-swe.github.io/Documenti/);
 1. navigazione all'interno del branch `main`.
 
 ## Struttura del repository

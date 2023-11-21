@@ -1,0 +1,42 @@
+Quick start per la redazione di un documento Typst.
+
+Questo file non è un documento Typst compilabile.
+
+!!! Il parametro `date` va inserito nel formato "gg/mm/aa"
+
+!!! Dopo il primo partecipante deve esserci una "," anche se unico
+
+!!! Dopo il primo redattore deve esserci una "," anche se unico
+
+------------------------------ QUICKSTART VERBALE -----------------------------
+#import "/template.typ": *
+
+//change title
+#show: project.with(
+  date: "06/11/23",
+  subTitle: "Sottotitolo",
+  docType: "verbale",
+  externalParticipants : (
+    (name: "Matteo Bassani", role: "Referente aziendale"),
+  ), // Rimuovere se non ci sono partecipanti esterni
+  authors: (
+    "Cognome Nome",
+  ),
+  timeStart: "10:00",
+  timeEnd: "11:00",
+);
+
+CONTENUTO
+
+----------------------------- QUICKSTART DOCUMENTO ----------------------------
+#import "/template.typ": *
+
+#show: project.with(
+  title:"Titolo",
+  subTitle: "Sottotitolo",
+  authors: (
+    "Cognome Nome",
+  ),
+);
+
+CONTENUTO

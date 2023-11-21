@@ -1,6 +1,6 @@
 Quick start per la redazione di un documento Typst.
 
-Questo file non è un documento.
+Questo file non è un documento Typst compilabile.
 
 !!! Il parametro `date` va inserito nel formato "gg/mm/aa"
 

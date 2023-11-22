@@ -99,7 +99,7 @@ $bold("Precondizioni: ")$
 - il programma non ha potuto configurare l'ambiente di lavoro a causa del file caricato.
 
 $bold("Postcondizioni: ")$
-all'utente viene mostrato un messaggio di errore.
+all'utente viene notificato l'errore.
 
 $bold("Scenario: ")$
 l'utente ha caricato un file non adatto.
@@ -228,7 +228,7 @@ $bold("Precondizioni: ")$
 - tali dati non sono congrui con la precedente configurazione dell'ambiente.
 
 $bold("Postcondizioni: ")$
-viene visualizzato il messaggio di errore relativo ad un'immissione errata dei dati per la modifica dell'ambiente.
+all'utente viene notificato l'errore relativo ad un'immissione errata dei dati per la modifica dell'ambiente.
 
 $bold("Scenario: ")$
 l'utente ha immesso dei dati errati per la modifica dell'ambiente.
@@ -290,7 +290,7 @@ $bold("Precondizioni: ")$
 -l'inserimento dei valori per la modifica deve essere avvenuto.
 
 $bold("Postcondizioni: ")$
-viene visualizzato il messaggio di errore relativo ai dati errati.
+all'utente viene notificato l'errore relativo ai dati errati.
 
 $bold("Scenario: ")$
 - l'utente ha avviato la procedura di modifica di uno scaffale esistente;
@@ -334,7 +334,7 @@ $bold("Precondizioni: ")$
 - tale scaffale contiene almeno un bin non vuoto.
 
 $bold("Postcondizioni: ")$
-all'utente viene mostrato un messaggio di errore relativo all'eliminazione di uno scaffale non vuoto.
+all'utente viene notificato l'errore relativo all'eliminazione di uno scaffale non vuoto.
 
 $bold("Scenario: ")$
 l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.

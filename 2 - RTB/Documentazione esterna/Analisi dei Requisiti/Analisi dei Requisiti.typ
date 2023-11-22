@@ -201,7 +201,7 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- almeno una configurazione dell'ambinete deve essere avvenuta con successo;
+- almeno una configurazione dell'ambiente deve essere avvenuta con successo;
 
 $bold("Postcondizioni: ")$
 l'ambiente di lavoro è stato correttamente modificato in funzione delle richieste dell'utente.

@@ -1,245 +1,289 @@
-// The project function defines how your document looks.
-// It takes your content and some metadata and formats it.
-// Go ahead and customize it to your liking!
-#let project( title: "",
-            subTitle: "",
-            docType: "",
-            firmeEsterne:"",
-            partecipants: (),
-            recipients: "Vardanega Tullio \n Cardin Riccardo",
-            logo: "logo.png",
-            oraInizio:"",
-            oraFine:"",
-            showLog: false,
-            showIndex: true,
-            body) = {
-
-// Set the document's basic properties.
+#let project(
+  title: "",
+  subTitle: "",
+  docType: "doc",
+  date: "",
+  externalParticipants: (),
+  authors: (),
+  logo: "logo.png",
+  timeStart: "",
+  timeEnd: "",
+  showLog: false,
+  showIndex: true,
+  body
+) = {
+// Set the document's basic properties
 set document(author: "Error_418", title: title)
+set text(font: "Inter", lang: "it")
+set text(font: "New Computer Modern")
 set page(numbering: "1", number-align: center)
-set text(font: "Source Sans Pro", lang: "it")
 set heading(numbering: "1.1")
-let groupMembers = ("Oseliero Antonio","Banzato Alessio","Gardin Giovanni","Nardo Silvio","Carraro Riccardo","Zaccone Rosario","Todesco Mattia");
-let title = title;
-let subTitle = subTitle;
-let docType = docType;
-let oraInizio = oraInizio;
-let oraFine = oraFine;
-let esterno = false;
-let recipients = recipients;
-let firmeEsterne = firmeEsterne;
-let showLog = showLog;
-let showIndex = showIndex;
-let changesData = ();
-if showLog {
-  changesData = csv("log.csv");
-}
-let partecipants = partecipants;
-let externalParticipants = ()
-// Title page.
-// The page can contain a logo if you pass one with `logo: "logo.png"`.
-v(0.6fr)
 
+// Define constants
+let groupName = "Error_418"
+let groupMembers = ("Banzato Alessio","Carraro Riccardo", "Gardin Giovanni" ,"Nardo Silvio", "Oseliero Antonio","Todesco Mattia","Zaccone Rosario")
+let recipients = ("Vardanega Tullio", "Cardin Riccardo")
 
-let isEsterno()={
-  let esternoTmp = false
-  let isRecognised
-  //let externalParticipants = ()
-  //sets the "Esterno" value in function of partecipants
-  for partecipant in partecipants{
-    isRecognised = false
-    for member in groupMembers{
-      if(member == partecipant.name){
-        // this partecipant is a group member
-        isRecognised = true;
-        break
-      }
+// Import parameters
+let title = title
+let subTitle = subTitle
+let docType = docType
+let date = date
+let timeStart = timeStart
+let timeEnd = timeEnd
+let showLog = showLog
+let showIndex = showIndex
+let externalParticipants = externalParticipants
+let authors = authors
+
+// Asses if document is for external use
+let isExternalUse = externalParticipants.len() > 0
+
+// Setup titles
+if docType == "verbale" {
+    title = "Verbale " + date
+    if isExternalUse {
+      title = "Verbale esterno " + date
     }
-    if isRecognised == false{
-      // this partecipant is not a group member
-        esternoTmp = true
-        return esternoTmp
-      //externalParticipants.push(partecipant.name)
-    }
-  }
-  return esternoTmp
 }
 
-esterno = isEsterno()
+// Page header
+set page(header: locate(loc => {
+  if counter(page).at(loc).first() > 1 [
+    #smallcaps(title)
+    #h(1fr)
+    #groupName
+  ]
+}))
 
-let addZeroes(value)={
-  // given a value, if it has only one character a "0" is added in front of it
-  if(str(value).len()==1){
-    return text("0"+str(value))
+/////////////////////////////////////
+// FUNCTIONS
+/////////////////////////////////////
+
+let addZeroes(value) = {
+  if(str(value).len() == 1) {
+    return text("0" + str(value))
   }
 }
 
-let calcolateDuration(oraInizio,oraFine)={
+let calcolateDuration(timeStart, timeEnd) = {
   // given the start and the end time it returns the duration
   let startTimeHours;
   let startTimeMinutes;
   let dotsPassed = false;
-  for character in oraInizio{
-      if(character == ":"){
-        dotsPassed = true;
-      }else{
-        if(dotsPassed){
-          startTimeMinutes = startTimeMinutes + (character)
-          }else{
-          startTimeHours = startTimeHours + (character)
-          }
+  for character in timeStart {
+    if(character == ":") {
+      dotsPassed = true;
+    }
+    else {
+      if(dotsPassed) {
+        startTimeMinutes = startTimeMinutes + (character)
       }
+      else {
+        startTimeHours = startTimeHours + (character)
+      }
+    }
   }
   let endTimeHours;
   let endTimeMinutes;
   dotsPassed = false;
-  for character in oraFine{
-      if(character == ":"){
-        dotsPassed = true;
-      }else{
-        if(dotsPassed){
-          endTimeMinutes = endTimeMinutes+(character)
-          }else{
-          endTimeHours = endTimeHours+(character)
-          }
+  for character in timeEnd {
+    if(character == ":") {
+      dotsPassed = true;
+    }
+    else {
+      if(dotsPassed){
+        endTimeMinutes = endTimeMinutes+(character)
       }
+      else {
+        endTimeHours = endTimeHours+(character)
+      }
+    }
   }
   let resultTimeHours = int(endTimeHours) - int(startTimeHours)
   let resultTimeMinutes = int(endTimeMinutes) - int(startTimeMinutes)
-  return  text(addZeroes(resultTimeHours)+":"+addZeroes(resultTimeMinutes));
+  return  text(addZeroes(resultTimeHours) + ":" + addZeroes(resultTimeMinutes));
 }
 
-let durata = ""
-if docType == "verbale"{
-  durata = calcolateDuration(oraInizio,oraFine);
-}
+let calculateKey(jObject, jObjectKeys) = {
+  let dateToFind = ""
+  if docType != "verbale" {
+    let today = datetime.today()
+    let year  = str(today.year()-2000)
+    let month = str(today.month())
+    let day   = str(today.day())
 
-//Capire se si tratta di un verbale per condizionare il layout
-if docType != "verbale"{
-  //layout documento
-  set align(center)
-  grid(
-    rows: 2,
-    align(center, image(logo, width: 60%)),
-    align(center, text(font:"New Computer Moder", 3.5em,weight: "extralight","Error_418\n"))
-  )
-}else{
-  //layout verbale
-  set align(left)
-  grid(
-    columns: 2,
-    row-gutter: 30pt,
-    align(center, image(logo, width: 50%)),
-    align(center)[
-      \
-      #text(font:"New Computer Moder", 4em,weight: "extralight","     Error_418\n")
-      #v(3em)
-    ],
-  )
-}
-
-//sezione Titolo e Sottotitolo
-v(20pt)
-line(length: 100%)
-align(center,text(font:"New Computer Modern",2.5em, weight: "medium",title))
-if subTitle.len() != 0{
-    align(center,text(font:"New Computer Modern",1.5em, weight: "extralight",subTitle))
-}
-if esterno {
-    align(center,text(font:"New Computer Modern",1.5em, weight: "extralight","Referente aziendale: Matteo Bassani (Sanmarco Informatica)"))
-}
-line(length: 100%)
-v(2em)
-
-//sezione Redattori e Destinatari
-let writers = "";
-let findWriters()={
-  let writersTmp = "";
-  for partecipant in partecipants{
-    if(partecipant.role == "Redattore"){
-      writersTmp = text(writersTmp +"\n"+ str(partecipant.name))
+    if month.len() == 1 {
+      month = "0" + month
     }
+
+    if day.len() == 1 {
+      day = "0" + day
+    }
+
+    dateToFind = year + "-" + month + "-" + day
+
   }
-  return writersTmp
+  else { //verbale
+    dateToFind = date.split("/").rev().join("-")
+  }
+
+  let i = 0
+  while i < jObject.keys().len()-1 {
+    if jObjectKeys.at(i) <= dateToFind and dateToFind < jObjectKeys.at(i + 1) {
+      return jObject.keys().at(i)
+    }
+    i = i + 1
+  }
+  //check se è l'ultimo elemento
+  let lastKey = jObject.keys().at(jObject.keys().len() - 1)
+  if dateToFind >= lastKey {
+    return lastKey
+  }
 }
+////////////////////
+// END FUNCTIONS
+///////////////////
 
-writers = text(0.8em,findWriters());
-recipients = text(0.8em,recipients);
+// Cover page
+page(numbering: none)[
 
-grid(
-  columns: (50%,50%),
-  align(center,text(font:"New Computer Modern",1.7em, weight: "extralight", "Redattori: "+writers)),
-  align(center,text(font:"New Computer Modern",1.7em, weight: "extralight", "Destinatari:\n" + recipients))
+  #v(0.6fr)
+  #set align(center)
+
+  // Group heading
+  #grid(
+    rows: auto,
+    align(center, image(logo, width: 50%)),
+    v(0.75em),
+    align(center, text(2em, groupName + "\n"))
   )
-v(2fr)
-line(length:100%)
-v(1fr)
 
-// tabella
-set align(center)
-if docType == "verbale"{
-  v(1fr)
-  align(center, text(font:"New Computer Modern",1.5em, weight: "bold", "Partecipanti"))
-  v(1fr)
-}
+  #v(2em)
+  #line(length: 100%, stroke: 1pt)
 
-let partecipantValues = ()
-for partecipant in partecipants{
-    partecipantValues.push((partecipant.name, partecipant.role))
-}
+  // Title and subtitle
+  #align(center,text(2.5em, weight: "medium", title))
+  #v(-1em)
+  #if subTitle.len() != 0{ align(center,text(1.5em,subTitle)) }
 
-table(
-columns: (2fr, 2fr),
-column-gutter: 0.2em,
-align: center,
-inset:7pt ,
-[*Membro*], [*Ruolo*],
-..partecipantValues.flatten())
+  #if isExternalUse {
+    let str_participants = ""
+    let str_intro = "Referente esterno"
+    for part in externalParticipants {
+      str_participants += part.name + " "
+    }
+    if externalParticipants.len() > 1 {
+      str_intro = "Referenti esterni"
+    }
+    align(center,text(1.5em, str_intro + ": " + str_participants))
+  }
 
-//time info
-v(2fr)
+  #v(1em)
+  #line(length: 100%, stroke: 1pt)
+  #v(1em)
 
-if docType == "verbale"{
-  grid(
-    columns: 3,
-    column-gutter: 1.2em,
-    text(font:"New Computer Modern",1.35em, weight: "extralight", "Inizio Meeting:  "+oraInizio),
-    text(font:"New Computer Modern",1.35em, weight: "extralight", "Fine Meeting: "+oraFine),
-    text(font:"New Computer Modern",1.35em, weight: "extralight", "Durata Meeting: "+durata+"h")
+  // Authors and recipients
+  #grid(
+    columns: (50%, 50%),
+    align(center,text(1.7em, "Redattori:\n " + text(0.8em, authors.join("\n")))),
+    align(center,text(1.7em, "Destinatari:\n" + text(0.8em, recipients.join("\n"))))
   )
-  v(5fr)
-}
+
+  #v(1em)
+  #line(length:100%, stroke: 1pt)
+  #v(1em)
+
+  // Participants table
+  #set align(center)
+  #if docType == "verbale" {
+    v(1fr)
+    align(center, text(1.2em, weight: "bold", "Partecipanti"))
+    v(1fr)
+  }
+
+  // Load roles from JSON file
+  #let jObject = json("/roles.json")
+  #let jObjectKeys = jObject.keys()
+  #let key = calculateKey(jObject, jObjectKeys)
+  #let ruoli = jObject.at(key)
+  #for other in externalParticipants {
+    ruoli.ruoli.insert(other.name, other.role)
+  }
+
+  #table(
+    align: center,
+    columns: (25%, 25%),
+    [*Membro*],[*Ruolo*],
+    ..ruoli.ruoli.pairs().flatten()
+  )
+
+  #v(2fr)
+
+  // Time info
+  #if docType == "verbale"{
+    grid(
+      columns: 3,
+      column-gutter: 1.2em,
+      text(1.1em, "Inizio Meeting: " + timeStart),
+      text(1.1em, "Fine Meeting: "   + timeEnd),
+      text(1.1em, "Durata Meeting: " + calcolateDuration(timeStart, timeEnd) + "h")
+    )
+    v(5fr)
+  }
+
+  // Document version
+  #if docType != "verbale" {
+    let changesData = csv("log.csv")
+    text("Versione " + changesData.flatten().at(0))
+  }
+
+]
 
 pagebreak()
 
-if (showLog and docType != "verbale"){
-  // Changelog
-  table(
-    align: center,
-    columns: 5,
-    [*Id*],[*PR number*],[*PR Title*],[*Author*],[*Date*],
-    ..changesData.flatten(),
-  )
+// Changelog
+if docType != "verbale" {
+  page(numbering: "I")[
+    #counter(page).update(1)
+    #if (showLog and docType != "verbale"){
+      let changesData = csv("log.csv")
+      table(
+        align: left,
+        columns: (1fr, 1.5fr, 0.8fr, 5fr, 2.1fr, 2.1fr),
+        [*Ver.*],[*Data*],[*PR*],[*Titolo*],[*Redattore*],[*Verificatore*],
+        ..changesData.flatten(),
+      )
+    }
+  ]
   pagebreak()
 }
 
-if showIndex and docType != "verbale"{
-  // Table of contents.
-  outline(depth: 3, indent: true)
+// Table of contents
+if showIndex and docType != "verbale" {
+  page(numbering: none)[
+    #outline(depth: 3, indent: true)
+  ]
   pagebreak()
 }
 
-// Main body.
+// Body
+show "link": word => text[#text(fill:blue, word)]
 set par(justify: true)
+counter(page).update(1)
 body
 
-// External signature.
-if esterno {
-  align(bottom+left,
-    text(font:"New Computer Modern",(
-      text(weight: "bold",1.4em,"Firme partecipanti esterni: ") +
-      text(1.35em,""+firmeEsterne))
+//Signatures
+if isExternalUse {
+  align(
+    end+bottom,
+    grid(
+      columns: 2,
+      column-gutter: 1em,
+      text(1.1em,"Firma partecipanti esterni: "),
+      line(length: 100%)
     )
   )
 }
+
 }

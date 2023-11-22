@@ -14,7 +14,7 @@ jobs:
   compile:
     runs-on: ubuntu-latest
     env:
-      REQUIRED_FILES: 'template.typ logo.png'
+      REQUIRED_FILES: 'template.typ logo.png roles.json'
     steps:
       - name: Set up Git repository
         if: github.event.pull_request.merged == false

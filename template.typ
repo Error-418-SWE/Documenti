@@ -21,8 +21,10 @@ set heading(numbering: "1.1")
 
 // Define constants
 let groupName = "Error_418"
-let groupMembers = ("Banzato Alessio","Carraro Riccardo", "Gardin Giovanni" ,"Nardo Silvio", "Oseliero Antonio","Todesco Mattia","Zaccone Rosario")
-let recipients = ("Vardanega Tullio", "Cardin Riccardo")
+let groupMembers = ("Banzato Alessio","Carraro Riccardo", "Gardin Giovanni" ,"Nardo Silvio", "Oseliero Antonio", "Todesco Mattia", "Zaccone Rosario")
+let recipients = ("Gruppo " + groupName, "Vardanega Tullio", "Cardin Riccardo")
+let changelogData = csv("log.csv")
+let logo = "logo.png"
 
 // Import parameters
 let title = title

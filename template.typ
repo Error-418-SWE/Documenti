@@ -262,7 +262,11 @@ if docType != "verbale" {
 // Table of contents
 if showIndex and docType != "verbale" {
   page(numbering: none)[
-    #outline(depth: 3, indent: true)
+    #outline(
+      title: "Indice dei contenuti",
+      depth: 3,
+      indent: true
+    )
   ]
   pagebreak()
 }

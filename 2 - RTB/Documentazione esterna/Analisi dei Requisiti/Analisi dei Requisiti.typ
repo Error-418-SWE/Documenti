@@ -256,7 +256,7 @@ $bold("Scenario: ")$
 
 
 
-== UC-5 Modifica scaffale (OPZIONALE)
+== UC-5 Modifica scaffale
 $bold("Descrizione: ")$ 
 modifica dei valori di uno scaffale già esistente.
 
@@ -267,10 +267,10 @@ $bold("Precondizioni: ")$
 nell'ambiente deve essere posizionato almeno uno scaffale.
 
 $bold("Postcondizioni: ")$
-i valori relativi ad uno scaffale sono stati modificati come indicato.
+i valori di uno scaffale scelto sono stati modificati come indicato.
 
 $bold("Scenario: ")$
-- l'utente seleziona uno scaffale nell'ambiente;
+- l'utente seleziona uno scaffale nell'ambiente di lavoro;
 - l'utente seleziona il comando per la modifica dello scaffale;
 - l'utente inserisce i nuovi valori.
 

@@ -337,9 +337,34 @@ if showIndex and docType != "verbale" {
 }
 
 // Body
-show "link": word => text[#text(fill:blue, word)]
 set par(justify: true)
 counter(page).update(1)
+if docType == "verbale" [
+  // Build participants list
+  #let allParticipants = ()
+  #for member in groupMembers {
+    if not missingMembers.contains(member) {
+      allParticipants.push(member)
+    }
+  }
+  #for other in externalParticipants {
+    allParticipants.insert(0, other.name)
+  }
+
+  = Informazioni generali
+  - Luogo: #location
+  - Data e ora: #date \@ #timeStart \~ #timeEnd
+  - Partecipanti (#allParticipants.dedup().len()):
+    #for participant in allParticipants.dedup().sorted() {
+      list.item(participant)
+    }
+  #if (missingMembers.len() > 0){[
+  - Assenti (#missingMembers.dedup().len()):
+    #for participant in missingMembers.dedup().sorted() {
+      list.item(participant)
+    }
+  ]}
+]
 body
 
 //Signatures

@@ -12,12 +12,45 @@
   showIndex: true,
   body
 ) = {
-// Set the document's basic properties
-set document(author: "Error_418", title: title)
-set text(font: "Inter", lang: "it")
-set text(font: "New Computer Modern")
-set page(numbering: "1", number-align: center)
-set heading(numbering: "1.1")
+// Document and elements styling
+set text(
+  font: "New Computer Modern",
+  lang: "it",
+)
+set par(
+  first-line-indent: 1em,
+  leading: 0.85em,
+)
+set page(
+  numbering: "1",
+  number-align: center,
+  paper: "a4",
+  margin: (x: 2cm, y: 2.5cm),
+)
+set heading(
+  numbering: "1.1",
+)
+set list(
+  marker: ([•], [--]),
+)
+set enum(
+  numbering: "1a)",
+)
+set table(
+  fill: (_, row) => if row == 0 { luma(240) },
+)
+show link: set text(fill: blue)
+show heading.where(
+  level: 1
+): it => {
+  it
+  v(1em, weak: true)
+}
+show outline.entry.where(
+  level: 1
+): it => {
+  strong(it)
+}
 
 // Define constants
 let groupName = "Error_418"

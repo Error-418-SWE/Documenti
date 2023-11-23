@@ -279,7 +279,7 @@ UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno s
 
 
 
-=== UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale (OPZIONALE)
+=== UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale 
 $bold("Descrizione: ")$ 
 i dati inseriti per la modifica di uno scaffale sono errati e non possono essere accettati.
 

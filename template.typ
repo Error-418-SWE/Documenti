@@ -5,106 +5,138 @@
   date: "",
   externalParticipants: (),
   authors: (),
-  logo: "logo.png",
+  missingMembers: (),
+  location: "Discord",
   timeStart: "",
   timeEnd: "",
   showLog: false,
   showIndex: true,
+  isExternalUse: false,
   body
 ) = {
-// Set the document's basic properties
-set document(author: "Error_418", title: title)
-set text(font: "Inter", lang: "it")
-set text(font: "New Computer Modern")
-set page(numbering: "1", number-align: center)
-set heading(numbering: "1.1")
+// Document and elements styling
+set text(
+  font: "New Computer Modern",
+  lang: "it",
+)
+set par(
+  first-line-indent: 1em,
+  leading: 0.85em,
+)
+set page(
+  numbering: "1",
+  number-align: center,
+  paper: "a4",
+  margin: (x: 2cm, y: 2.5cm),
+)
+set heading(
+  numbering: "1.1",
+)
+set list(
+  marker: ([•], [--]),
+)
+set enum(
+  numbering: "1a)",
+)
+set table(
+  fill: (_, row) => if row == 0 { luma(240) },
+)
+show link: set text(fill: blue)
+show heading.where(
+  level: 1
+): it => {
+  it
+  v(1em, weak: true)
+}
+show outline.entry.where(
+  level: 1
+): it => {
+  strong(it)
+}
 
 // Define constants
 let groupName = "Error_418"
-let groupMembers = ("Banzato Alessio","Carraro Riccardo", "Gardin Giovanni" ,"Nardo Silvio", "Oseliero Antonio","Todesco Mattia","Zaccone Rosario")
-let recipients = ("Vardanega Tullio", "Cardin Riccardo")
+let groupMembers = ("Banzato Alessio","Carraro Riccardo", "Gardin Giovanni" ,"Nardo Silvio", "Oseliero Antonio", "Todesco Mattia", "Zaccone Rosario")
+let recipients = ("Gruppo " + groupName, "Vardanega Tullio", "Cardin Riccardo")
+let changelogData = csv("log.csv")
+let logo = "logo.png"
 
 // Import parameters
 let title = title
 let subTitle = subTitle
 let docType = docType
 let date = date
+let location = location
 let timeStart = timeStart
 let timeEnd = timeEnd
 let showLog = showLog
 let showIndex = showIndex
+let missingMembers = missingMembers
 let externalParticipants = externalParticipants
 let authors = authors
+let isExternalUse = isExternalUse or externalParticipants.len() > 0
 
-// Asses if document is for external use
-let isExternalUse = externalParticipants.len() > 0
+// Check members validity
+for author in authors {
+  if (author not in groupMembers) {
+    panic("Controlla lo spelling dei redattori.")
+  }
+}
+for member in missingMembers {
+  if (member not in groupMembers) {
+    panic("Controlla lo spelling degli assenti.")
+  }
+}
+
+// Handle plurals
+let str_authors = "Redattore"
+if (authors.len() >= 2) {
+  str_authors = "Redattori"
+}
+let str_representatives = "Referente"
+if (externalParticipants.len() >= 2) {
+  str_representatives = "Referenti"
+}
 
 // Setup titles
 if docType == "verbale" {
-    title = "Verbale " + date
+    title = "Verbale interno " + date
     if isExternalUse {
       title = "Verbale esterno " + date
     }
 }
 
+// Set the document's basic properties
+set document(
+  author: "Error_418",
+  title: title,
+  date: auto
+)
+
+// Insert company to recipients list
+for externalParticipant in externalParticipants {
+  if externalParticipant.role.contains("Referente aziendale") {
+    recipients.insert(1, "Sanmarco Informatica")
+    break
+  }
+}
+
 // Page header
-set page(header: locate(loc => {
-  if counter(page).at(loc).first() > 1 [
-    #smallcaps(title)
-    #h(1fr)
-    #groupName
-  ]
-}))
+set page(
+  header: locate(loc => {
+    text(
+      0.75em,
+      if counter(page).at(loc).first() > 1 [
+        #upper(title) v#changelogData.flatten().at(0)
+        #h(1fr)
+        #groupName
+        #line(length: 100%, stroke: 0.25pt)
+      ]
+    )
+  })
+)
 
-/////////////////////////////////////
-// FUNCTIONS
-/////////////////////////////////////
-
-let addZeroes(value) = {
-  if(str(value).len() == 1) {
-    return text("0" + str(value))
-  }
-}
-
-let calcolateDuration(timeStart, timeEnd) = {
-  // given the start and the end time it returns the duration
-  let startTimeHours;
-  let startTimeMinutes;
-  let dotsPassed = false;
-  for character in timeStart {
-    if(character == ":") {
-      dotsPassed = true;
-    }
-    else {
-      if(dotsPassed) {
-        startTimeMinutes = startTimeMinutes + (character)
-      }
-      else {
-        startTimeHours = startTimeHours + (character)
-      }
-    }
-  }
-  let endTimeHours;
-  let endTimeMinutes;
-  dotsPassed = false;
-  for character in timeEnd {
-    if(character == ":") {
-      dotsPassed = true;
-    }
-    else {
-      if(dotsPassed){
-        endTimeMinutes = endTimeMinutes+(character)
-      }
-      else {
-        endTimeHours = endTimeHours+(character)
-      }
-    }
-  }
-  let resultTimeHours = int(endTimeHours) - int(startTimeHours)
-  let resultTimeMinutes = int(endTimeMinutes) - int(startTimeMinutes)
-  return  text(addZeroes(resultTimeHours) + ":" + addZeroes(resultTimeMinutes));
-}
-
+// Extract Json data based on date
 let calculateKey(jObject, jObjectKeys) = {
   let dateToFind = ""
   if docType != "verbale" {
@@ -141,22 +173,26 @@ let calculateKey(jObject, jObjectKeys) = {
     return lastKey
   }
 }
-////////////////////
-// END FUNCTIONS
-///////////////////
 
 // Cover page
 page(numbering: none)[
 
-  #v(0.6fr)
   #set align(center)
 
   // Group heading
   #grid(
     rows: auto,
-    align(center, image(logo, width: 50%)),
-    v(0.75em),
-    align(center, text(2em, groupName + "\n"))
+    image(logo, width: 50%),
+    v(0.5em),
+    text(2em, groupName + "\n"),
+
+    v(0.5em)
+  )
+  #grid(
+    columns: (30%, 30%),
+    column-gutter: 1em,
+    link("https://github.com/Error-418-SWE/")[GitHub/Error-418-SWE],
+    link("mailto:error418swe@gmail.com")
   )
 
   #v(2em)
@@ -165,42 +201,21 @@ page(numbering: none)[
   // Title and subtitle
   #align(center,text(2.5em, weight: "medium", title))
   #v(-1em)
-  #if subTitle.len() != 0{ align(center,text(1.5em,subTitle)) }
-
-  #if isExternalUse {
-    let str_participants = ""
-    let str_intro = "Referente esterno"
-    for part in externalParticipants {
-      str_participants += part.name + " "
-    }
-    if externalParticipants.len() > 1 {
-      str_intro = "Referenti esterni"
-    }
-    align(center,text(1.5em, str_intro + ": " + str_participants))
+  #if subTitle.len() != 0 {
+    align(center,text(1.5em,subTitle))
   }
 
   #v(1em)
   #line(length: 100%, stroke: 1pt)
-  #v(1em)
+  #v(2em)
 
-  // Authors and recipients
-  #grid(
-    columns: (50%, 50%),
-    align(center,text(1.7em, "Redattori:\n " + text(0.8em, authors.join("\n")))),
-    align(center,text(1.7em, "Destinatari:\n" + text(0.8em, recipients.join("\n"))))
-  )
-
-  #v(1em)
-  #line(length:100%, stroke: 1pt)
-  #v(1em)
+  #v(2em)
 
   // Participants table
   #set align(center)
-  #if docType == "verbale" {
-    v(1fr)
-    align(center, text(1.2em, weight: "bold", "Partecipanti"))
-    v(1fr)
-  }
+  #v(1fr)
+  #align(center, text(1em, weight: "bold", "Informazioni"))
+  #line(length: 50%, stroke: 0.25pt)
 
   // Load roles from JSON file
   #let jObject = json("/roles.json")
@@ -211,50 +226,100 @@ page(numbering: none)[
     ruoli.ruoli.insert(other.name, other.role)
   }
 
-  #table(
-    align: center,
+  #let summaryHeading = align.with(right)
+  #let summaryContent = align.with(left)
+
+  // Show roles
+  #grid(
     columns: (25%, 25%),
-    [*Membro*],[*Ruolo*],
-    ..ruoli.ruoli.pairs().flatten()
+    gutter: 15pt,
+    // Versione
+    summaryHeading[*Versione*],
+    summaryContent[
+      #changelogData.flatten().at(0)
+    ],
+
+    // Destinazione d'uso
+    summaryHeading[*Uso*],
+    summaryContent[
+        #if isExternalUse {
+          text("Esterno")
+        } else {
+          text("Interno")
+        }
+    ],
+
+    // Stato di approvazione
+    summaryHeading[*Stato*],
+    summaryContent[Approvato],
+
+    // Responsabile del gruppo
+    summaryHeading[*Responsabile*],
+    summaryContent[
+      #let responsabile = "n/a"
+      #for role in ruoli.ruoli {
+        if role.contains("Responsabile") {
+          responsabile = role.flatten().at(0)
+        }
+      }
+      #responsabile
+    ],
+
+    // Redattori documento
+    summaryHeading[*#str_authors*],
+    summaryContent[
+      #authors.join("\n")
+    ],
+
+    // Verificatori documento
+    summaryHeading[*Verificatore*],
+    summaryContent[
+      #let reviewer = "n/a"
+      #for role in ruoli.ruoli {
+        if role.contains("Verificatore") {
+          reviewer = role.flatten().at(0)
+        }
+      }
+      #reviewer
+    ],
+
+    // Destinatari documento
+    summaryHeading[*Destinatari*],
+    summaryContent[
+      #recipients.join("\n")
+    ],
+
+    if (isExternalUse and docType == "verbale") [
+      #summaryHeading[*#str_representatives*]
+    ],
+    if (isExternalUse and docType == "verbale") [
+      #summaryContent[
+        #let str_participants = ""
+        #for participant in externalParticipants {
+          str_participants += participant.name + "\n"
+        }
+        #str_participants
+      ]
+    ],
   )
 
   #v(2fr)
-
-  // Time info
-  #if docType == "verbale"{
-    grid(
-      columns: 3,
-      column-gutter: 1.2em,
-      text(1.1em, "Inizio Meeting: " + timeStart),
-      text(1.1em, "Fine Meeting: "   + timeEnd),
-      text(1.1em, "Durata Meeting: " + calcolateDuration(timeStart, timeEnd) + "h")
-    )
-    v(5fr)
-  }
-
-  // Document version
-  #if docType != "verbale" {
-    let changesData = csv("log.csv")
-    text("Versione " + changesData.flatten().at(0))
-  }
-
 ]
 
 pagebreak()
 
 // Changelog
-if docType != "verbale" {
+if (showLog and docType != "verbale") {
   page(numbering: "I")[
     #counter(page).update(1)
-    #if (showLog and docType != "verbale"){
-      let changesData = csv("log.csv")
-      table(
-        align: left,
-        columns: (1fr, 1.5fr, 0.8fr, 5fr, 2.1fr, 2.1fr),
-        [*Ver.*],[*Data*],[*PR*],[*Titolo*],[*Redattore*],[*Verificatore*],
-        ..changesData.flatten(),
-      )
-    }
+    #align(center, text(weight: "bold", "Registro delle modifiche"))
+    #show par: set par(leading: 0.65em)
+    #table(
+      align: left,
+      columns: (1fr, 1.5fr, 0.8fr, 5fr, 2.1fr, 2.1fr),
+      [*Ver.*],[*Data*],[*PR*],[*Titolo*],[*Redattore*],[*Verificatore*],
+      ..changelogData.flatten(),
+    )
   ]
   pagebreak()
 }
@@ -262,15 +327,44 @@ if docType != "verbale" {
 // Table of contents
 if showIndex and docType != "verbale" {
   page(numbering: none)[
-    #outline(depth: 3, indent: true)
+    #outline(
+      title: "Indice dei contenuti",
+      depth: 3,
+      indent: true
+    )
   ]
   pagebreak()
 }
 
 // Body
-show "link": word => text[#text(fill:blue, word)]
 set par(justify: true)
 counter(page).update(1)
+if docType == "verbale" [
+  // Build participants list
+  #let allParticipants = ()
+  #for member in groupMembers {
+    if not missingMembers.contains(member) {
+      allParticipants.push(member)
+    }
+  }
+  #for other in externalParticipants {
+    allParticipants.insert(0, other.name)
+  }
+
+  = Informazioni generali
+  - Luogo: #location
+  - Data e ora: #date \@ #timeStart \~ #timeEnd
+  - Partecipanti (#allParticipants.dedup().len()):
+    #for participant in allParticipants.dedup().sorted() {
+      list.item(participant)
+    }
+  #if (missingMembers.len() > 0){[
+  - Assenti (#missingMembers.dedup().len()):
+    #for participant in missingMembers.dedup().sorted() {
+      list.item(participant)
+    }
+  ]}
+]
 body
 
 //Signatures
@@ -280,9 +374,10 @@ if isExternalUse {
     grid(
       columns: 2,
       column-gutter: 1em,
-      text(1.1em,"Firma partecipanti esterni: "),
-      line(length: 100%)
-    )
+      text(1em,"Firma partecipanti esterni: "),
+      line(length: 100%),
+      v(1em)
+    ),
   )
 }
 

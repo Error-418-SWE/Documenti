@@ -1,42 +1,77 @@
-Quick start per la redazione di un documento Typst.
+# Quick start per la redazione di un documento Typst.
 
-Questo file non è un documento Typst compilabile.
+Parametri del template:
 
-!!! Il parametro `date` va inserito nel formato "gg/mm/aa"
+```
+let title: ?string = ""
+let subTitle: ?string = ""
+let docType: ?string = "doc"
+let date: ?string
+let externalParticipants: ?Person(name: string, role: string)[]
+let authors: string[]
+let missingMembers: ?string[]
+let location: ?string = "Discord"
+let timeStart: string
+let timeEnd: string
+let showLog: ?boolean = false
+let showIndex: ?boolean = true
+let isExternalUse: ?boolean = false
+```
 
-!!! Dopo il primo partecipante deve esserci una "," anche se unico
+Esempi di valori:
 
-!!! Dopo il primo redattore deve esserci una "," anche se unico
+```
+docType: "verbale"
+date: "gg/mm/aa"
+externalParticipants: ((name: "Cognome Nome", role: "Referente aziendale"),)
+authors: ("Cognome Nome",)
+missingMembers: ("Cognome Nome",)
+location = "Discord"
+timeStart: "15:00"
+```
 
------------------------------- QUICKSTART VERBALE -----------------------------
+Note perl'uso:
+- Il parametro `date` va inserito nel formato "gg/mm/aa";
+- I parametri che accettano valori di tipo array come `externalParticipants` o `authors`) richiedono una "," dopo gli elementi;
+- Per i verbali non includere un valore per `title` o `isExternalUse`;
+- Nei verbali, le informazioni generali sul meeting vengono automaticamente inserite prima del contenuto.
+
+------------------------------- QUICKSTART VERBALE -------------------------------
 #import "/template.typ": *
 
-//change title
 #show: project.with(
-  date: "06/11/23",
-  subTitle: "Sottotitolo",
+  date: "DD/MM/YY",
+  subTitle: "Sommario",
   docType: "verbale",
-  externalParticipants : (
-    (name: "Matteo Bassani", role: "Referente aziendale"),
-  ), // Rimuovere se non ci sono partecipanti esterni
   authors: (
     "Cognome Nome",
   ),
+  externalParticipants : (
+    (name: "Matteo Bassani", role: "Referente aziendale"),
+  ), // Rimuovere se vuoto
+  missingMembers: (
+    "Cognome Nome",
+  ), // Rimuovere se vuoto
   timeStart: "10:00",
   timeEnd: "11:00",
 );
 
-CONTENUTO
+= Ordine del giorno
 
------------------------------ QUICKSTART DOCUMENTO ----------------------------
+- Contenuto;
+
+------------------------------- QUICKSTART DOCUMENTO -------------------------------
 #import "/template.typ": *
 
 #show: project.with(
-  title:"Titolo",
-  subTitle: "Sottotitolo",
+  title: "Titolo",
+  subTitle: "Sommario",
   authors: (
     "Cognome Nome",
   ),
+  showIndex: true,
+  showLog: true,
+  isExternalUse: true,
 );
 
-CONTENUTO
+= Titolo iniziale

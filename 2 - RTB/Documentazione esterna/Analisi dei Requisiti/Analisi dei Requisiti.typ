@@ -238,7 +238,7 @@ l'utente ha immesso dei dati errati per la modifica dell'ambiente.
 
 == UC-4 Creazione scaffale
 $bold("Descrizione: ")$ 
-uno scaffale standard viene creato e aggiunto nell'ambiente.
+uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata.
 
 $bold("Attore: ")$
 utente.
@@ -250,7 +250,8 @@ $bold("Postcondizioni: ")$
 nell'ambiente di lavoro è stato aggiunto un nuovo scaffale.
 
 $bold("Scenario: ")$
-- l'utente seleziona l'aggiunta di uno scaffale standard;
+- l'utente seleziona l'aggiunta di uno scaffale;
+- l'utente inserisce i dati necessari alla creazione dello scaffale;
 - l'utente posiziona lo scaffale in una posizione valida nell'ambiente di lavoro.
 
 

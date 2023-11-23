@@ -280,9 +280,10 @@ if isExternalUse {
     grid(
       columns: 2,
       column-gutter: 1em,
-      text(1.1em,"Firma partecipanti esterni: "),
-      line(length: 100%)
-    )
+      text(1em,"Firma partecipanti esterni: "),
+      line(length: 100%),
+      v(1em)
+    ),
   )
 }
 

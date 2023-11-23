@@ -88,72 +88,55 @@ for member in missingMembers {
   }
 }
 
+// Handle plurals
+let str_authors = "Redattore"
+if (authors.len() >= 2) {
+  str_authors = "Redattori"
+}
+let str_representatives = "Referente"
+if (externalParticipants.len() >= 2) {
+  str_representatives = "Referenti"
+}
+
 // Setup titles
 if docType == "verbale" {
-    title = "Verbale " + date
+    title = "Verbale interno " + date
     if isExternalUse {
       title = "Verbale esterno " + date
     }
 }
 
+// Set the document's basic properties
+set document(
+  author: "Error_418",
+  title: title,
+  date: auto
+)
+
+// Insert company to recipients list
+for externalParticipant in externalParticipants {
+  if externalParticipant.role.contains("Referente aziendale") {
+    recipients.insert(1, "Sanmarco Informatica")
+    break
+  }
+}
+
 // Page header
-set page(header: locate(loc => {
-  if counter(page).at(loc).first() > 1 [
-    #smallcaps(title)
-    #h(1fr)
-    #groupName
-  ]
-}))
+set page(
+  header: locate(loc => {
+    text(
+      0.75em,
+      if counter(page).at(loc).first() > 1 [
+        #upper(title) v#changelogData.flatten().at(0)
+        #h(1fr)
+        #groupName
+        #line(length: 100%, stroke: 0.25pt)
+      ]
+    )
+  })
+)
 
-/////////////////////////////////////
-// FUNCTIONS
-/////////////////////////////////////
-
-let addZeroes(value) = {
-  if(str(value).len() == 1) {
-    return text("0" + str(value))
-  }
-}
-
-let calcolateDuration(timeStart, timeEnd) = {
-  // given the start and the end time it returns the duration
-  let startTimeHours;
-  let startTimeMinutes;
-  let dotsPassed = false;
-  for character in timeStart {
-    if(character == ":") {
-      dotsPassed = true;
-    }
-    else {
-      if(dotsPassed) {
-        startTimeMinutes = startTimeMinutes + (character)
-      }
-      else {
-        startTimeHours = startTimeHours + (character)
-      }
-    }
-  }
-  let endTimeHours;
-  let endTimeMinutes;
-  dotsPassed = false;
-  for character in timeEnd {
-    if(character == ":") {
-      dotsPassed = true;
-    }
-    else {
-      if(dotsPassed){
-        endTimeMinutes = endTimeMinutes+(character)
-      }
-      else {
-        endTimeHours = endTimeHours+(character)
-      }
-    }
-  }
-  let resultTimeHours = int(endTimeHours) - int(startTimeHours)
-  let resultTimeMinutes = int(endTimeMinutes) - int(startTimeMinutes)
-  return  text(addZeroes(resultTimeHours) + ":" + addZeroes(resultTimeMinutes));
-}
-
+// Extract Json data based on date
 let calculateKey(jObject, jObjectKeys) = {
   let dateToFind = ""
   if docType != "verbale" {
@@ -190,22 +173,26 @@ let calculateKey(jObject, jObjectKeys) = {
     return lastKey
   }
 }
-////////////////////
-// END FUNCTIONS
-///////////////////
 
 // Cover page
 page(numbering: none)[
 
-  #v(0.6fr)
   #set align(center)
 
   // Group heading
   #grid(
     rows: auto,
-    align(center, image(logo, width: 50%)),
-    v(0.75em),
-    align(center, text(2em, groupName + "\n"))
+    image(logo, width: 50%),
+    v(0.5em),
+    text(2em, groupName + "\n"),
+
+    v(0.5em)
+  )
+  #grid(
+    columns: (30%, 30%),
+    column-gutter: 1em,
+    link("https://github.com/Error-418-SWE/")[GitHub/Error-418-SWE],
+    link("mailto:error418swe@gmail.com")
   )
 
   #v(2em)
@@ -214,42 +201,21 @@ page(numbering: none)[
   // Title and subtitle
   #align(center,text(2.5em, weight: "medium", title))
   #v(-1em)
-  #if subTitle.len() != 0{ align(center,text(1.5em,subTitle)) }
-
-  #if isExternalUse {
-    let str_participants = ""
-    let str_intro = "Referente esterno"
-    for part in externalParticipants {
-      str_participants += part.name + " "
-    }
-    if externalParticipants.len() > 1 {
-      str_intro = "Referenti esterni"
-    }
-    align(center,text(1.5em, str_intro + ": " + str_participants))
+  #if subTitle.len() != 0 {
+    align(center,text(1.5em,subTitle))
   }
 
   #v(1em)
   #line(length: 100%, stroke: 1pt)
-  #v(1em)
+  #v(2em)
 
-  // Authors and recipients
-  #grid(
-    columns: (50%, 50%),
-    align(center,text(1.7em, "Redattori:\n " + text(0.8em, authors.join("\n")))),
-    align(center,text(1.7em, "Destinatari:\n" + text(0.8em, recipients.join("\n"))))
-  )
-
-  #v(1em)
-  #line(length:100%, stroke: 1pt)
-  #v(1em)
+  #v(2em)
 
   // Participants table
   #set align(center)
-  #if docType == "verbale" {
-    v(1fr)
-    align(center, text(1.2em, weight: "bold", "Partecipanti"))
-    v(1fr)
-  }
+  #v(1fr)
+  #align(center, text(1em, weight: "bold", "Informazioni"))
+  #line(length: 50%, stroke: 0.25pt)
 
   // Load roles from JSON file
   #let jObject = json("/roles.json")
@@ -260,33 +226,84 @@ page(numbering: none)[
     ruoli.ruoli.insert(other.name, other.role)
   }
 
-  #table(
-    align: center,
+  #let summaryHeading = align.with(right)
+  #let summaryContent = align.with(left)
+
+  // Show roles
+  #grid(
     columns: (25%, 25%),
-    [*Membro*],[*Ruolo*],
-    ..ruoli.ruoli.pairs().flatten()
+    gutter: 15pt,
+    // Versione
+    summaryHeading[*Versione*],
+    summaryContent[
+      #changelogData.flatten().at(0)
+    ],
+
+    // Destinazione d'uso
+    summaryHeading[*Uso*],
+    summaryContent[
+        #if isExternalUse {
+          text("Esterno")
+        } else {
+          text("Interno")
+        }
+    ],
+
+    // Stato di approvazione
+    summaryHeading[*Stato*],
+    summaryContent[Approvato],
+
+    // Responsabile del gruppo
+    summaryHeading[*Responsabile*],
+    summaryContent[
+      #let responsabile = "n/a"
+      #for role in ruoli.ruoli {
+        if role.contains("Responsabile") {
+          responsabile = role.flatten().at(0)
+        }
+      }
+      #responsabile
+    ],
+
+    // Redattori documento
+    summaryHeading[*#str_authors*],
+    summaryContent[
+      #authors.join("\n")
+    ],
+
+    // Verificatori documento
+    summaryHeading[*Verificatore*],
+    summaryContent[
+      #let reviewer = "n/a"
+      #for role in ruoli.ruoli {
+        if role.contains("Verificatore") {
+          reviewer = role.flatten().at(0)
+        }
+      }
+      #reviewer
+    ],
+
+    // Destinatari documento
+    summaryHeading[*Destinatari*],
+    summaryContent[
+      #recipients.join("\n")
+    ],
+
+    if (isExternalUse and docType == "verbale") [
+      #summaryHeading[*#str_representatives*]
+    ],
+    if (isExternalUse and docType == "verbale") [
+      #summaryContent[
+        #let str_participants = ""
+        #for participant in externalParticipants {
+          str_participants += participant.name + "\n"
+        }
+        #str_participants
+      ]
+    ],
   )
 
   #v(2fr)
-
-  // Time info
-  #if docType == "verbale"{
-    grid(
-      columns: 3,
-      column-gutter: 1.2em,
-      text(1.1em, "Inizio Meeting: " + timeStart),
-      text(1.1em, "Fine Meeting: "   + timeEnd),
-      text(1.1em, "Durata Meeting: " + calcolateDuration(timeStart, timeEnd) + "h")
-    )
-    v(5fr)
-  }
-
-  // Document version
-  #if docType != "verbale" {
-    let changesData = csv("log.csv")
-    text("Versione " + changesData.flatten().at(0))
-  }
-
 ]
 
 pagebreak()

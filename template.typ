@@ -76,6 +76,18 @@ let externalParticipants = externalParticipants
 let authors = authors
 let isExternalUse = isExternalUse or externalParticipants.len() > 0
 
+// Check members validity
+for author in authors {
+  if (author not in groupMembers) {
+    panic("Controlla lo spelling dei redattori.")
+  }
+}
+for member in missingMembers {
+  if (member not in groupMembers) {
+    panic("Controlla lo spelling degli assenti.")
+  }
+}
+
 // Setup titles
 if docType == "verbale" {
     title = "Verbale " + date

@@ -5,11 +5,13 @@
   date: "",
   externalParticipants: (),
   authors: (),
-  logo: "logo.png",
+  missingMembers: (),
+  location: "Discord",
   timeStart: "",
   timeEnd: "",
   showLog: false,
   showIndex: true,
+  isExternalUse: false,
   body
 ) = {
 // Document and elements styling
@@ -64,15 +66,15 @@ let title = title
 let subTitle = subTitle
 let docType = docType
 let date = date
+let location = location
 let timeStart = timeStart
 let timeEnd = timeEnd
 let showLog = showLog
 let showIndex = showIndex
+let missingMembers = missingMembers
 let externalParticipants = externalParticipants
 let authors = authors
-
-// Asses if document is for external use
-let isExternalUse = externalParticipants.len() > 0
+let isExternalUse = isExternalUse or externalParticipants.len() > 0
 
 // Setup titles
 if docType == "verbale" {

@@ -243,18 +243,17 @@ page(numbering: none)[
 pagebreak()
 
 // Changelog
-if docType != "verbale" {
+if (showLog and docType != "verbale") {
   page(numbering: "I")[
     #counter(page).update(1)
-    #if (showLog and docType != "verbale"){
-      let changesData = csv("log.csv")
-      table(
-        align: left,
-        columns: (1fr, 1.5fr, 0.8fr, 5fr, 2.1fr, 2.1fr),
-        [*Ver.*],[*Data*],[*PR*],[*Titolo*],[*Redattore*],[*Verificatore*],
-        ..changesData.flatten(),
-      )
-    }
+    #align(center, text(weight: "bold", "Registro delle modifiche"))
+    #show par: set par(leading: 0.65em)
+    #table(
+      align: left,
+      columns: (1fr, 1.5fr, 0.8fr, 5fr, 2.1fr, 2.1fr),
+      [*Ver.*],[*Data*],[*PR*],[*Titolo*],[*Redattore*],[*Verificatore*],
+      ..changelogData.flatten(),
+    )
   ]
   pagebreak()
 }

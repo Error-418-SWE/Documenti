@@ -16,9 +16,9 @@
 );
 
 = Ordine del giorno
-- Presentazione, supportata da una board Miro, delle assunzioni fatte dal team durante il periodo di individuazione degli use case;
+- Presentazione, supportata da una board Miro, delle ipotesi fatte dal team durante il periodo di individuazione degli use case;
 
-- Presentazione, supportata da una board Miro, delle domande raccolte dal team rigurdo l'analisi dei requisiti. Le domande si articolano in:
+- Presentazione, supportata da una board Miro, delle domande raccolte dal team rigurdo l'Analisi dei Requisiti. Le domande si articolano in:
  - use case;
  - chiarimenti tecnici;
  - device da supportare;

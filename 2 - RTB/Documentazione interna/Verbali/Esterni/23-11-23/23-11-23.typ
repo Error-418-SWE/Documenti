@@ -29,14 +29,14 @@
 - Organizzazione di un prossimo meeting.
 \
 
-== Presentazione delle assunzioni fatte
-Il team ha iniziato il meeting presentando delle assunzioni al referente aziendale, per avere un riscontro riguardo la loro validità.\
-La prima assunzione specificava la presenza di un solo prodotto per ogni bin, ed è stata confermata e ritenuta una semplificazione utile. Per aree di carico/scarico questa assunzione non è valida, ma per semplicità di sviluppo si può tenere questa semplificazione.\
-La seconda assunzione specificava la presenza di scaffali in dimensioni standard, ma è stata rifiutata, poirchè lo scaffale va costruito parametricamente, eventualmente fornendo opzioni preimpostate.
+== Presentazione delle ipotesi fatte
++ Il team ha iniziato il meeting presentando delle ipotesi al referente aziendale, per avere un riscontro riguardo la loro validità.\
++ La prima ipotesi specificava la presenza di un solo prodotto per ogni bin, ed è stata confermata e ritenuta una semplificazione utile. Per aree di carico/scarico questa supposizione non è valida, ma per semplicità di sviluppo si può tenere questa semplificazione.\
++ La seconda ipotesi specificava la presenza di scaffali in dimensioni standard, ma è stata rifiutata, poirchè lo scaffale va costruito parametricamente, eventualmente fornendo opzioni preimpostate.
 
-La terza assunzione riguardava la possibilità di eliminare scaffali solo se vuoti, che ha trovato il favore del proponente.\
++ La terza ipotesi riguardava la possibilità di eliminare scaffali solo se vuoti, che ha trovato il favore del proponente.\
 
-L'ultima assunzione, che riguardava la presenza di dimensioni fisse per i bin, è stata rifiutata poichè si devono prevedere bin di dimensioni diverse.
++ L'ultima ipotesi, che riguardava la presenza di dimensioni fisse per i bin, è stata rifiutata poichè si devono prevedere bin di dimensioni diverse.
 \
 
 == Presentazione delle domande raccolte
@@ -63,14 +63,14 @@ Il team ha chiesto informazioni riguardo possibili vincoli sui requisiti non fun
 \
 
 == Richieste all'azienda proponente riguardo materiale utile durante il progetto
-Il team ha avanzato la richiesta di materiale e informazioni come le le caratteristiche dei prodotti, esempi di codifica di scaffali e bin ed esempi di piantina di magazzino. Le proposte sono state accolte dal referente aziendale, che ci ha assicurato il soddisfacimento delle nostre richieste.
+Il team ha avanzato la richiesta di materiale e informazioni come le caratteristiche dei prodotti, esempi di codifica di scaffali e bin ed esempi di piantina di magazzino. Le proposte sono state accolte dal referente aziendale, che ci ha assicurato il soddisfacimento delle nostre richieste.
 
 == Organizzazione di un prossimo meeting
 L'incontro si è concluso con la proposta del prossimo meeting in data 30 novembre 2023, in orario alle 16:00 o alle 17:00, ancora da confermare.
 
 = Azioni da intraprendere
 A seguito del meeting sono state individuate le seguenti operazioni da svolgere:
-- modifica delle assunzioni in seguito ai chiarimenti forniti dal referente;
+- modifica delle ipotesi in seguito ai chiarimenti forniti dal referente;
 - continuazione del lavoro di stesura degli use case;
 - organizzazione di un meeting interno post meeting esterno per riflettere meglio sul lavoro da fare e sulla sua suddivisione.
 

@@ -1,20 +1,11 @@
-#import "template.typ": *
+#import "/template.typ": *
 
 #show: project.with(
-  title:"Piano di progetto",
-  subTitle: "Pianificazione, analisi e retrospettive", 
-  docType: "doc",
-  partecipants: (
-  (name: "Banzato Alessio", role: "Verificatore"),
-  (name: "Carraro Riccardo", role: "Redattore"),
-  (name: "Gardin Giovanni",  role: "Redattore"),
-  (name: "Nardo Silvio",   role: "Verificatore"),
-  (name: "Oseliero Antonio",   role: "Responsabile"),
-  (name: "Todesco Mattia",  role: "Verificatore"),
-  (name: "Zaccone Rosario",  role: "Amministratore"),
+  title:"Piano di Progetto",
+  subTitle: "Pianificazione, Analisi e Retrospettive",
+  authors: (
+    "Zaccone Rosario",
   ),
-  showIndex: true,
-  showLog: true
 );
 #set text(font:"New Computer Modern")
 #set align(left)
@@ -153,11 +144,57 @@ inset:7pt ,
 [Oseliero Antonio], [3],  [/],    [/],    [/],    [3],
 [Todesco Mattia],   [/],  [/],    [3],    [/],    [3],
 [Zaccone Rosario],  [/],  [/],    [3],    [/],    [3],
-[Totale ore ruolo], [3],  [8],    [6],    [6],    [27],
+[Totale ore ruolo], [3],  [8],    [6],    [6],    [23],
 [Costo orario],     [30,00], [20,00], [25,00], [15,00], [],
 [Costo ruolo],      [90,00], [160,00], [150,00], [90,00], [490,00]
 )
 #align(center, text("Tabella 1: preventivo primo sprint"))
+=== Digramma Gantt
+[da inserire]
+
+== Secondo Sprint dal 12-11-2023 al 20-11-2023
+=== Obiettivi prefissati
+Gli obiettivi del secondo sprint si concentrano sull'individuazione degli use case del progetto, sul perfezionamento delle automazioni e sulla stesura iniziale delle Norme di Progetto. \
+Gli obiettivi dello sprint 2 sono:
+- riconfigurazione del repository;
+- stesura della sezione _introduzione_ del documento delle Norme di Progetto;
+- stesura della sezione _processi di supporto_ del documento delle Norme di Progetto;
+- perfezionamento delle automazioni per la compilazione dei documenti;
+- perfezionamento delle automazioni per il versionamento dei documenti;
+- contatto con l'azienda Proponente per comunicare l'esito della candidatura;
+- meeting con l'azienda Proponente per riflettere sull'Analisi dei Requisiti e sulle ulteriori tecnologie da usare;
+- inizio dell'individuazione e della stesura degli use case.
+
+=== Preventivo costi
+Nel secondo sprint il team svolge compiti correttivi incentrati sul miglioramento dei documenti e compiti orientati all'individuazione e alla stesura degli use case. In quest'ottica, vede l'impiego principale delle figure:
+- *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
+
+- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
+
+- *Verificatore*: al fine di garantire che le modifiche effettuate rispecchino gli standard qualitativi desiderati e implementino effettivamente le mancanze individuate dalla valutazione;
+
+- *Analista*: al fine di individuare e sviluppare testualmente i principali use case in ottica del documento di Analisi dei Requisiti.
+
+In questo  periodo, l'assegnazione dei ruoli di programmatore e progettista è ritenuta precoce.
+
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:7pt ,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Verificatore*],[*Totale*],
+[Banzato Alessio],  [/],  [/],    [/],    [3],    [3],
+[Carraro Riccardo], [/],  [4],    [/],    [/],    [4],
+[Gardin Giovanni],  [/],  [4],    [/],    [/],    [4],
+[Nardo Silvio],     [/],  [/],    [3],    [/],    [3],
+[Oseliero Antonio], [3],  [/],    [/],    [/],    [3],
+[Todesco Mattia],   [/],  [/],    [3],    [/],    [3],
+[Zaccone Rosario],  [/],  [/],    [3],    [/],    [3],
+[Totale ore ruolo], [3],  [8],    [9],    [3],    [23],
+[Costo orario],     [30,00], [20,00], [25,00], [15,00], [],
+[Costo ruolo],      [90,00], [160,00], [225,00], [45,00], [520,00]
+)
+#align(center, text("Tabella 2: preventivo secondo sprint"))
 === Digramma Gantt
 [da inserire]
 

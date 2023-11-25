@@ -1,18 +1,9 @@
-#import "template.typ": *
+#import "/template.typ": *
 
 #show: project.with(
   title:"Norme di Progetto",
-  subTitle: "",
+  subTitle: "Norme, processi e disciplina",
   docType: "doc",
-  partecipants: (
-  (name: "Banzato Alessio", role: "Verificatore"),
-  (name: "Carraro Riccardo", role: "Redattore"),
-  (name: "Gardin Giovanni",  role: "Redattore"),
-  (name: "Nardo Silvio",   role: "Verificatore"),
-  (name: "Oseliero Antonio",   role: "Responsabile"),
-  (name: "Todesco Mattia",  role: "Verificatore"),
-  (name: "Zaccone Rosario",  role: "Amministratore"),
-  ),
   showIndex: true,
   showLog: true
 );

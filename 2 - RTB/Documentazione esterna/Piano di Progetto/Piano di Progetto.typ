@@ -194,7 +194,7 @@ inset:7pt ,
 [Costo orario],     [30,00], [20,00], [25,00], [15,00], [],
 [Costo ruolo],      [90,00], [160,00], [225,00], [45,00], [520,00]
 )
-#align(center, text("Tabella 2: preventivo secondo sprint"))
+#align(center, text("Tabella 3: preventivo secondo sprint"))
 === Digramma Gantt
 [da inserire]
 

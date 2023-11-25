@@ -139,3 +139,66 @@ Per la scrittura dei documenti è richiesto uno stile di scrittura impersonale (
 
 === Elenchi puntati
 Viene inserito ";" alla fine delle voci dell'elenco tranne l'ultima che termina con ".". Ogni voce dell'elenco inizia con una lettera minuscola.
+
+= Processi di ciclo di vita
+
+== Processi organizzativi abilitanti
+
+I processi organizzativi abilitanti garantiscono la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. Questi processi forniscono le risorse e l'infrastruttura necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
+
+I processi organizzativi abilitanti sono i seguenti:
+//+ Processo di gestione dei modelli di ciclo di vita;
++ Processo di gestione dell'infrastruttura;
+// + Processo di gestione del portfolio;
+// + Processo di gestione delle risorse umane;
+// + Processo di gestione della qualità;
+// + Processo di gestione della conoscenza.
+
+=== Processi di gestione dell'infrastruttura
+
+==== Scopo
+
+Lo scopo del processo di gestione dell'infrastruttura è fornire l'infrastruttura e i servizi a supporto dell'organizzazione per il conseguimento degli obiettivi di progetto nel corso dell'intero ciclo di vita.
+
+Questo processo definisce, fornisce e regola i servizi, gli strumenti e le tecnologie di comunicazione e condivisione delle informazioni a supporto degli scopi dell'organizzazione.
+
+==== Requisiti
+
+L'infrastruttura è costituita dai servizi, dagli strumenti e dalle tecnologie di comunicazione e condivisione delle informazioni adottate a supporto degli scopi dell'organizzazione. L'infrastruttura risponde alle necessità di comunicazione interna ed esterna. I principi della comunicazione che ispirano i processi di gestione dell'infrastruttura sono:
+
++ Comunicazione aperta: le comunicazioni avvengono in modalità pubblica, ovvero tutti i membri possono partecipare (compatibilmente con i loro impegni di progetto e sempre nel rispetto delle rispettive responsabilità). I membri del gruppo hanno accesso e possono liberamente consultare i messaggi, le eventuali registrazioni e i verbali;
++ Comunicazione onesta: quanto comunicato rappresenta sempre il reale stato del progetto. Nessun membro, in nessun caso, deve nascondere le criticità incontrate.
++ Comunicazione proattiva: comunicare con cognizione di causa, offrendo spunti concreti di discussione. Ogni comunicazione deve poter essere processata dagli interessati nel minor tempo possibile.
++ Comunicazione frequente: la frequenza della comunicazione permette di prendere decisione in modo tempestivo e informato.
+
+==== Infrastruttura di comunicazione
+
+===== Comunicazione interna
+
+Discord ([discord.com](https://discord.com/)) rappresenta il canale primario di comunicazione interna. È una piattaforma di comunicazione che fornisce:
+
++ Un servizio di messaggistica istantanea che permette la suddivisione delle conversazioni in canali tematici;
++ Un servizio di videochiamate usato per le comunicazioni sincrone interne in modalità remota.
+
+Le comunicazioni testuali tramite messaggio istantaneo sono organizzate per argomento. Discord adotta il termine "canale" per designare tale suddivisione tematica. I canali attualmente in uso sono:
+
+- Canale generale (`#random`): usato per le comunicazioni informali;
+- Canale meeting (`#meeting`): usato per l'organizzazione dei meeting interni e la condivisione degli ordini del giorno;
+- Canale di riferimento (`#riferimenti`): usato come bacheca per raccogliere ed organizzare, in un unico luogo, le risorse a supporto degli scopi dell'organizzazione;
+- Altri canali tematici: le comunicazioni relative ad uno specifico prodotto dei processi dell'organizzazione avvengono in un canale dedicato.
+
+La suddivisione delle comunicazioni interne in canali ha lo scopo di ridurre le distrazioni, facilitare l'accesso alle informazioni e semplificare la comunicazione interna.
+
+Le comunicazioni sincrone in videochiamata avvengono nei cosiddetti "canali vocali". Vengono forniti quattro canali vocali generici ad accesso libero. I membri dell'organizzazione hanno la facoltà di incontrarsi in qualsiasi momento in videochiamate interne. I canali vocali non sono organizzati tematicamente perché offrono la persistenza.
+
+===== Comunicazione esterna
+
+Le modalità e la frequenza delle comunicazioni esterne sono da stabilirsi con i diretti interessati, secondo necessità e disponibilità degli interlocutori. Le comunicazioni esterne avvengono su due canali primari: Gmail e Zoom.
+
+[Gmail](https://mail.google.com/) è il servizio di posta elettronica di Google. L'indirizzo di posta elettronica dell'organizzazione è `error418swe@gmail.com`. Viene utilizzato per tutte le comunicazioni da e verso gli interlocutori esterni. Tutti i membri dell'organizzazione hanno accesso completo alla casella di posta elettronica.
+
+[Zoom](https://zoom.us/) è un servizio di teleconferenza.
+
+==== Mantenimento dell'infrastruttura
+
+L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di minimizzare la ridondanza ecc

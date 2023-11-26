@@ -119,7 +119,7 @@ utente.
 
 $bold("Precondizioni: ")$
 - é stato caricato un file per la configurazione dell'ambiente;
-- tale file è stato aperto correttamente dal programma;
+- il file è stato aperto correttamente dal programma;
 - il programma non ha potuto ottenere informazioni dal file.
 
 $bold("Postcondizioni: ")$

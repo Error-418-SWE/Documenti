@@ -258,7 +258,7 @@ $bold("Scenario: ")$
 
 == UC-5 Modifica scaffale
 $bold("Descrizione: ")$ 
-modifica dei valori di uno scaffale già esistente.
+modifica delle caratteristiche di uno scaffale già esistente.
 
 $bold("Attore: ")$
 utente.

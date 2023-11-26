@@ -213,4 +213,6 @@ L'indirizzo è reso noto nel frontespizio di ogni documento prodotto dall'organi
 
 ==== Mantenimento dell'infrastruttura
 
-L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di minimizzare la ridondanza ecc
+Sono compiti dell'amministratore il mantenimento dell'infrastruttura, l'aggiornamento delle norme e dei processi e l'identificazione di nuovi servizi a supporto delle attività dell'organizzazione.
+
+L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi minimo e sufficiente a coprire tutti i requisiti di comunicazione.

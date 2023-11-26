@@ -161,6 +161,61 @@ inset:7pt ,
 === Digramma Gantt
 [da inserire]
 
+= Terzo Sprint dal 20-11-2023 al 27-11-2023
+=== Obiettivi prefissati
+Gli obiettivi del terzo sprint si concentrano sull'aggiornamento del documento di Norme di Progetto, sul periodo di Analisi dei Requisiti (principalmente concentrata sui requisiti funzionali) e su un primo momento di esplorazione delle nuove tecnologie.\
+Gli obiettivi dello sprint 3 sono:
+- continuazione del processo di individuazione e stesura degli use case;
+- perfezionamento delle automazioni di versionamento documenti;
+- perfezionamento del template usato per i documenti;
+- aggiornamento del documento di Norme di Progetto;
+- studio iniziale della libreria Three.js;
+- meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare oppurtune richieste;
+- contatto con l'azienda Proponente per fissare il prossimo meeting.
+=== Preventivo costi
+Nel terzo sprint, il gruppo svolge delle attività principalmente focalizzate sull'Analisi dei Requisiti e sull'aggiornamento e perfezionamento dei documenti e delle automazioni. In quest'ottica, vede l'impiego principale delle figure:
+- *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
+
+- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti, al fine di aggiornare il documento di Piano di Progetto;
+
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti, al fine di effettuare un controllo sulla validità e formulazione degli use case individuati;
+
+- *Analista*: al fine di individuare e formulare gli use case correlati ai requisiti funzionali;
+
+- *Progettista*: al fine di condurre uno studio iniziale sulla libreria Three.js.
+
+In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce.
+
+#set text(
+  size: 10pt
+)
+
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:7pt,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [3],  [/],    [/],    [/], [/],   [3],
+[Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
+[Gardin Giovanni],  [/],  [/],    [/],    [/], [3],   [3],
+[Nardo Silvio],     [/],  [/],    [/],    [3], [/],   [3],
+[Oseliero Antonio], [/],  [/],    [4],    [/], [/],   [4],
+[Todesco Mattia],   [/],  [3],    [/],    [/], [/],   [3],
+[Zaccone Rosario],  [/],  [3],    [/],    [/], [/],   [3],
+[Totale ore ruolo], [3],  [6],    [8],    [3], [3],   [23],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
+[Costo ruolo], [30,00], [120,00], [200,00], [75,00], [45,00], [470,00]
+)
+#align(center, text("Tabella 4: preventivo terzo sprint"))
+
+#set text(
+  size: 11pt
+)
+
+=== Digramma Gantt
+[da inserire]
+
 = Consuntivo del progetto
 == Introduzione
 Il consuntivo di ogni sprint permette di avere una valutazione critica dell'avanzamento dello sviluppo, valutando in modo oggettivo i punti positivi e negativi dello sprint terminato. \

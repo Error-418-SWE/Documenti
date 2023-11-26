@@ -203,9 +203,11 @@ Oltre a Discord e Miro, l'organizzazione comunica anche tramite *Jira* (ITS) e *
 
 Le modalità e la frequenza delle comunicazioni esterne sono da stabilirsi con i diretti interessati, secondo necessità e disponibilità degli interlocutori. Le comunicazioni esterne avvengono su due canali primari: Gmail e Zoom.
 
-[Gmail](https://mail.google.com/) è il servizio di posta elettronica di Google. L'indirizzo di posta elettronica dell'organizzazione è `error418swe@gmail.com`. Viene utilizzato per tutte le comunicazioni da e verso gli interlocutori esterni. Tutti i membri dell'organizzazione hanno accesso completo alla casella di posta elettronica.
+#link("https://mail.google.com/")[*Gmail*] è il servizio di posta elettronica di Google. L'indirizzo di posta elettronica dell'organizzazione è:
+#align(center, `error418swe@gmail.com`)
+Viene utilizzato per tutte le comunicazioni da e verso gli interlocutori esterni. Tutti i membri dell'organizzazione possono accedere in qualsiasi momento alla casella di posta elettronica. Inoltre, tutte le conversazioni vengono inoltrate automaticamente agli indirizzi e-mail istituzionali di ciascun membro.
 
-[Zoom](https://zoom.us/) è un servizio di teleconferenza.
+L'indirizzo è reso noto nel frontespizio di ogni documento prodotto dall'organizzazione.
 
 ==== Mantenimento dell'infrastruttura
 

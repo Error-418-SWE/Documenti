@@ -4,6 +4,7 @@
   title:"Piano di Progetto",
   subTitle: "Pianificazione, Analisi e Retrospettive",
   authors: (
+    "Carraro Riccardo",
     "Zaccone Rosario",
   ),
 );
@@ -20,11 +21,10 @@ Il documento si articola in 5 sezioni:
 - *Preventivo dei costi di realizzazione*: dedicata all'analisi preventiva dei costi di realizzazione di progetto;
 - *Pianificazione del lavoro*: dedicata alla pianificazione delle attività da svolgere nei periodi di sprint;
 - *Consuntivo del progetto*: dedicata all'analisi retrospettiva del lavoro svolto, indicando criticità ed eventuali azioni intraprese a fini migliorativi.
-\
+
 == Glossario
 Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e per evitare qualsiasi forma di ambiguità in merito ai termini utilizzati, il gruppo _Error\_418_ fornisce come risorsa web liberamente consultabile, un _*Glossario*_. Ogni ricorrenza di termini tecnici appartenenti al dominio del progetto sarà denotata dalla lettera _g_ al pedice.
-\
-\
+
 == Riferimenti esterni
 === Norme
 - Regolamento di progetto \
@@ -57,7 +57,7 @@ Ancora da definire
 = Preventivo dei costi di realizzazione
 == Introduzione
 Delineati i rischi, le relative contromisure e il calendario di progetto, si è definito, mediante una pianificazione retrospettiva, un preventivo iniziale dei costi di realizzazione del progetto.\
-È altresì corretto evidenziare come i membri del gruppo non siano dotati di esperienza sufficiente per fornire un preventivo corretto e preciso sin dagli inizi dello sviluppo: per tale motivo, il prezzo indicato sarà soggetto a modifiche con l'avanzamento del progetto (seppur mai superando il prezzo preventivato in candidatura). 
+È altresì corretto evidenziare come i membri del gruppo non siano dotati di esperienza sufficiente per fornire un preventivo corretto e preciso sin dagli inizi dello sviluppo: per tale motivo, il prezzo indicato sarà soggetto a modifiche con l'avanzamento del progetto (seppur mai superando il prezzo preventivato in candidatura).
 === Analisi dei ruoli
 === Suddivisione delle ore dei ruoli
 === Preventivo calcolato
@@ -70,7 +70,8 @@ La pianificazione ricopre un ruolo fondamentale nello sviluppo dell'intero proge
 Il team si è imposto una metodologia di lavoro _agile_ mediante l'applicazizone del framework Scrum, determinando periodi di lavoro di durata fissa terminanti con un'analisi retrospettiva degli stessi. \
 Tale approccio è definibile _adattivo_, in grado dunque di adattarsi ad eventuali modifiche in corso d'opera, in merito soprattutto a cambiamenti di specifiche e requisiti.\
 L'intero sviluppo è dunque organizzato in iterazioni di lunghezza fissa, denominati in SCRUM come _sprint_. \
-L'analisi retrospettiva e il frequente contatto con il Proponente permettono di indirizzare lo sviluppo verso la realizzazione di un prodotto finale che si attenga quanto più possibile ai requisiti desiderati dall'azienda e alle sue aspettative, e una documentazione dettagliata e precisa che evolve e migliora insieme al prodotto.\
+L'analisi retrospettiva e il frequente contatto con il Proponente permettono di indirizzare lo sviluppo verso la realizzazione di un prodotto finale che si attenga quanto più possibile ai requisiti desiderati dall'azienda e alle sue aspettative, e una documentazione dettagliata e precisa che evolve e migliora insieme al prodotto.
+
 === Eventi dettati dal framework
 La corretta applicazione del framework comporta il rispetto di determinati impegni, individuabili nello svolgimento di precisi eventi organizzativi quali:
 - *Sprint planning*: evento decisionale da tenersi prima dell'avvio dello sprint successivo. In questo incontro vengono stabili gli obiettivi da raggiungere e le task necessarie da compiere entro la fine dello stesso;
@@ -82,16 +83,16 @@ La corretta applicazione del framework comporta il rispetto di determinati impeg
 - *Sprint retrospective*: al termine dello sprint si compie un'azione di retrospettiva, analizzando eventuali criticità incontrate e stabilendo i possibili miglioramenti o meccanismi di mitigazione.
 
 === Organizzazione per sprint
-Gli sprint sono periodi di sviluppo di durata fissa entro i quali si cerca di raggiungere obiettivi prefissati. Ciascuno sprint viene stabilito, in termini di scope e obiettivi, in un momento precedente all'avvio dello sprint stesso.\ 
+Gli sprint sono periodi di sviluppo di durata fissa entro i quali si cerca di raggiungere obiettivi prefissati. Ciascuno sprint viene stabilito, in termini di scope e obiettivi, in un momento precedente all'avvio dello sprint stesso.\
 Error\_418 adotta periodi di sprint di una settimana, ove l'intento è fissare obiettivi concretamente raggiungibili nell'arco di tempo stabilito.\
-Al termine di ogni sprint si svolgerà un'analisi retrospettiva con lo scopo di valutare il lavoro svolto e proporre eventuali miglioramenti in caso di criticità riscontrate.\ 
+Al termine di ogni sprint si svolgerà un'analisi retrospettiva con lo scopo di valutare il lavoro svolto e proporre eventuali miglioramenti in caso di criticità riscontrate.\
 
 La pianficazione di uno sprint sarà così composta:
 - *Obiettivi prefissati*: gli obiettivi che si intende raggiungere entro il termine dello sprint;
 
 - *Preventivo dei costi*: preventivo dei costi in base alle figure che operano nel periodo di sprint;
 
-- *Diagramma di Gantt*: diagramma che rappresenta l'organizzazione delle attività nel tempo e le dipendenze tra esse. 
+- *Diagramma di Gantt*: diagramma che rappresenta l'organizzazione delle attività nel tempo e le dipendenze tra esse.
 
 Essenziale in questa organizzazione è l'analisi retrospettiva a fine sprint, che permette di valutare in modo critico eventuali mancanze, criticità o errori che possono in questo modo venir affrontati per trovare soluzioni che ne mitighino gli effetti in futuro.
 
@@ -109,6 +110,7 @@ La retrospettiva di uno sprint si articolerà in:
 - *Burndown-chart*: strumento metrico che permette di avere una chiara visione dell'andamento dello sprint.
 
 == Primo Sprint dal 06-11-2023 al 13-11-2023
+
 === Obiettivi prefissati
 Gli obiettivi del primo sprint si concentrano sulla correzione e sul miglioramento dei documenti e della repository in seguito alla valutazione esposta dal Committente.\
 Gli obiettivi dello sprint 1 sono:
@@ -119,6 +121,7 @@ Gli obiettivi dello sprint 1 sono:
 - stesura delle domande in merito al dominio tecnologico del capitolato;
 - contatto con l'azienda Proponente per comunicare l'esito della candidatura;
 - contatto con l'azienda Proponente per fissare un primo meeting di analisi.
+
 === Preventivo costi
 Il primo sprint, il gruppo svolge compiti correttivi e incentrati sul miglioramento dei documenti e dei processi. In quest'ottica, vede l'impiego principale delle figure:
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
@@ -149,10 +152,12 @@ inset:7pt ,
 [Costo ruolo],      [90,00], [160,00], [150,00], [90,00], [490,00]
 )
 #align(center, text("Tabella 1: preventivo primo sprint"))
-=== Digramma Gantt
+
+=== Diagramma Gantt
 [da inserire]
 
 == Secondo Sprint dal 12-11-2023 al 20-11-2023
+
 === Obiettivi prefissati
 Gli obiettivi del secondo sprint si concentrano sull'individuazione degli use case del progetto, sul perfezionamento delle automazioni e sulla stesura iniziale delle Norme di Progetto. \
 Gli obiettivi dello sprint 2 sono:
@@ -195,14 +200,18 @@ inset:7pt ,
 [Costo ruolo],      [90,00], [160,00], [225,00], [45,00], [520,00]
 )
 #align(center, text("Tabella 3: preventivo secondo sprint"))
-=== Digramma Gantt
+
+=== Diagramma Gantt
 [da inserire]
 
 = Consuntivo del progetto
+
 == Introduzione
 Il consuntivo di ogni sprint permette di avere una valutazione critica dell'avanzamento dello sviluppo, valutando in modo oggettivo i punti positivi e negativi dello sprint terminato. \
 Questa fase di retrospettiva è essenziale al fine di individuare possibili miglioramenti e di analizzare se la pianificazione ideata all'inizio dello sprint abbia trovato concretezza. \
+
 == Primo Sprint dal 06-11-2023 al 13-11-2023
+
 === Obiettivi raggiunti
 - Revisione preventivo costi con aggiornamento della suddivisione delle ore, con conseguente riduzione del costo totale;
 - Implementazione di automazioni per la compilazione dei documenti;

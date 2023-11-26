@@ -73,17 +73,17 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-è stato dato inizio alla procedura di configurazione dell'ambiente di lavoro tramite file.
+- è stato dato inizio alla procedura di configurazione dell'ambiente di lavoro tramite file.
 
 $bold("Postcondizioni: ")$
 - il file SVG è stato caricato con successo e il programma ha configurato l'ambiente di conseguenza;
 - l'ambiente così generato ha rimosso eventuali elementi precedentemente configurati.
 
 $bold("Scenario: ")$
-l'utente carica un file SVG tramite un'apposita interfaccia.
+- l'utente carica un file SVG tramite un'apposita interfaccia.
 
 $bold("Estensioni: ")$
-UC-1.1 Visualizzazione errore lettura del file SVG.
+- UC-1.1 Visualizzazione errore lettura del file SVG.
 
 
 
@@ -99,10 +99,10 @@ $bold("Precondizioni: ")$
 - il programma non ha potuto configurare l'ambiente di lavoro a causa del file caricato.
 
 $bold("Postcondizioni: ")$
-all'utente viene notificato l'errore.
+- all'utente viene notificato l'errore.
 
 $bold("Scenario: ")$
-l'utente ha caricato un file non adatto.
+- l'utente ha caricato un file non adatto.
 
 $bold("Generalizzazioni: ")$
 - UC-1.1.1 Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni;
@@ -123,10 +123,10 @@ $bold("Precondizioni: ")$
 - il programma non ha potuto ottenere informazioni dal file.
 
 $bold("Postcondizioni: ")$
-viene visualizzato l'errore relativo al caricamento di un file SVG privo di informazioni.
+- viene visualizzato l'errore relativo al caricamento di un file SVG privo di informazioni.
 
 $bold("Scenario: ")$
-L'utente ha caricato un file SVG vuoto o con informazioni non utili.
+- L'utente ha caricato un file SVG vuoto o con informazioni non utili.
 
 
 
@@ -144,10 +144,10 @@ $bold("Precondizioni: ")$
 - il programma ha ricavato informazioni non valide dal file.
 
 $bold("Postcondizioni: ")$
-viene visualizzato l'errore relativo al caricamento di un file con informazioni incongruenti.
+- viene visualizzato l'errore relativo al caricamento di un file con informazioni incongruenti.
 
 $bold("Scenario: ")$
-L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
+- L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
 
 
 
@@ -159,17 +159,17 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-è stato dato inizio alla procedura di configurazione manuale dell'ambiente di lavoro.
+- è stato dato inizio alla procedura di configurazione manuale dell'ambiente di lavoro.
 
 $bold("Postcondizioni: ")$
 - la forma e il perimetro dell'ambiente di lavoro è stato configurato manualmente;
 - l'ambiente così generato ha rimosso eventuali elementi precedentemente configurati.
 
 $bold("Scenario: ")$
-l'utente inserisce i dati relativi alla configurazione.
+- l'utente inserisce i dati relativi alla configurazione.
 
 $bold("Estensioni: ")$
-UC-2.1 Visualizzazione errore sui dati.
+- UC-2.1 Visualizzazione errore sui dati.
 
 
 
@@ -186,10 +186,10 @@ $bold("Precondizioni: ")$
 
 
 $bold("Postcondizioni: ")$
-viene visualizzato l'errore relativo all'inserimento di dati non validi.
+- viene visualizzato l'errore relativo all'inserimento di dati non validi.
 
 $bold("Scenario: ")$
-l'utente inserisce dati relativi alla configurazione dell'ambiente non validi.
+- l'utente inserisce dati relativi alla configurazione dell'ambiente non validi.
 
 
 
@@ -204,14 +204,14 @@ $bold("Precondizioni: ")$
 - almeno una configurazione dell'ambiente deve essere avvenuta con successo;
 
 $bold("Postcondizioni: ")$
-l'ambiente di lavoro è stato correttamente modificato in funzione delle richieste dell'utente.
+- l'ambiente di lavoro è stato correttamente modificato in funzione delle richieste dell'utente.
 
 $bold("Scenario: ")$
 - l'utente avvia la modifica dell'ambiente di lavoro;
 - l'utente immette i dati richiesti.
 
 $bold("Estensioni: ")$
-UC-3.1 Visualizzazione errore di modifica dell'ambiente.
+- UC-3.1 Visualizzazione errore di modifica dell'ambiente.
 
 
 
@@ -228,10 +228,10 @@ $bold("Precondizioni: ")$
 - tali dati non sono congrui con la precedente configurazione dell'ambiente.
 
 $bold("Postcondizioni: ")$
-all'utente viene notificato l'errore relativo ad un'immissione errata dei dati per la modifica dell'ambiente.
+- all'utente viene notificato l'errore relativo ad un'immissione errata dei dati per la modifica dell'ambiente.
 
 $bold("Scenario: ")$
-l'utente ha immesso dei dati errati per la modifica dell'ambiente.
+- l'utente ha immesso dei dati errati per la modifica dell'ambiente.
 
 
 
@@ -244,10 +244,10 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-l'ambiente di lavoro deve essere stato configurato con successo.
+- l'ambiente di lavoro deve essere stato configurato con successo.
 
 $bold("Postcondizioni: ")$
-nell'ambiente di lavoro è stato aggiunto un nuovo scaffale.
+- nell'ambiente di lavoro è stato aggiunto un nuovo scaffale.
 
 $bold("Scenario: ")$
 - l'utente seleziona l'aggiunta di uno scaffale;
@@ -264,10 +264,10 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-nell'ambiente deve essere posizionato almeno uno scaffale.
+- nell'ambiente deve essere posizionato almeno uno scaffale.
 
 $bold("Postcondizioni: ")$
-i valori di uno scaffale scelto sono stati modificati come indicato.
+- i valori di uno scaffale scelto sono stati modificati come indicato.
 
 $bold("Scenario: ")$
 - l'utente seleziona uno scaffale nell'ambiente di lavoro;
@@ -275,7 +275,7 @@ $bold("Scenario: ")$
 - l'utente inserisce i nuovi valori.
 
 $bold("Estensioni: ")$
-UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale.
+- UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale.
 
 
 
@@ -291,7 +291,7 @@ $bold("Precondizioni: ")$
 -l'inserimento dei valori per la modifica deve essere avvenuto.
 
 $bold("Postcondizioni: ")$
-all'utente viene notificato l'errore relativo ai dati errati.
+- all'utente viene notificato l'errore relativo ai dati errati.
 
 $bold("Scenario: ")$
 - l'utente ha avviato la procedura di modifica di uno scaffale esistente;
@@ -320,7 +320,7 @@ $bold("Scenario: ")$
 - l'utente conferma l'operazione da una finestra di conferma.
 
 $bold("Estensioni: ")$
-UC-6.1 Visualizzazione errore scaffale da eliminare non vuoto.
+- UC-6.1 Visualizzazione errore scaffale da eliminare non vuoto.
 
 
 === UC-6.1 Visualizzazione errore scaffale da eliminare non vuoto
@@ -335,7 +335,7 @@ $bold("Precondizioni: ")$
 - tale scaffale contiene almeno un bin non vuoto.
 
 $bold("Postcondizioni: ")$
-all'utente viene notificato l'errore relativo all'eliminazione di uno scaffale non vuoto.
+- all'utente viene notificato l'errore relativo all'eliminazione di uno scaffale non vuoto.
 
 $bold("Scenario: ")$
-l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.
+- l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.

@@ -209,6 +209,8 @@ Viene utilizzato per tutte le comunicazioni da e verso gli interlocutori esterni
 
 L'indirizzo è reso noto nel frontespizio di ogni documento prodotto dall'organizzazione.
 
+#link("https://zoom.us/")[*Zoom*] è un servizio di teleconferenza. A meno di accordi specifici tra le parti, l'organizzazione utilizza Zoom per effettuare videochiamate con gli interlocutori esterni.
+
 ==== Mantenimento dell'infrastruttura
 
 L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di minimizzare la ridondanza ecc

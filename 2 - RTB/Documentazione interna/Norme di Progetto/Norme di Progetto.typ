@@ -164,18 +164,27 @@ Questo processo definisce, fornisce e regola i servizi, gli strumenti e le tecno
 
 ==== Requisiti
 
-L'infrastruttura è costituita dai servizi, dagli strumenti e dalle tecnologie di comunicazione e condivisione delle informazioni adottate a supporto degli scopi dell'organizzazione. L'infrastruttura risponde alle necessità di comunicazione interna ed esterna. I principi della comunicazione che ispirano i processi di gestione dell'infrastruttura sono:
+L'infrastruttura è costituita dai servizi, dagli strumenti e dalle tecnologie di comunicazione e condivisione delle informazioni adottate a supporto degli scopi dell'organizzazione. L'infrastruttura risponde alle necessità di comunicazione interna ed esterna.
+
+// Li sposterei
+I principi della comunicazione che ispirano i processi di gestione dell'infrastruttura sono:
 
 + Comunicazione aperta: le comunicazioni avvengono in modalità pubblica, ovvero tutti i membri possono partecipare (compatibilmente con i loro impegni di progetto e sempre nel rispetto delle rispettive responsabilità). I membri del gruppo hanno accesso e possono liberamente consultare i messaggi, le eventuali registrazioni e i verbali;
 + Comunicazione onesta: quanto comunicato rappresenta sempre il reale stato del progetto. Nessun membro, in nessun caso, deve nascondere le criticità incontrate.
 + Comunicazione proattiva: comunicare con cognizione di causa, offrendo spunti concreti di discussione. Ogni comunicazione deve poter essere processata dagli interessati nel minor tempo possibile.
 + Comunicazione frequente: la frequenza della comunicazione permette di prendere decisione in modo tempestivo e informato.
 
+I requisiti dei processi di gestione dell'infrastruttura sono:
+
++ Semplicità di adozione di strumenti e servizi;
++ Accesso rapido alle informazioni, anche in mobilità;
++ Non ridondanza tra strumenti e servizi adottati.
+
 ==== Infrastruttura di comunicazione
 
 ===== Comunicazione interna
 
-Discord ([discord.com](https://discord.com/)) rappresenta il canale primario di comunicazione interna. È una piattaforma di comunicazione che fornisce:
+#link("https://discord.com/")[*Discord*] rappresenta il canale primario di comunicazione interna. È una piattaforma di comunicazione che fornisce:
 
 + Un servizio di messaggistica istantanea che permette la suddivisione delle conversazioni in canali tematici;
 + Un servizio di videochiamate usato per le comunicazioni sincrone interne in modalità remota.

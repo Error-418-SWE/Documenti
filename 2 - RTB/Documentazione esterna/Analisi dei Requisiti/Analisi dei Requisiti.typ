@@ -70,7 +70,7 @@ $bold("Precondizioni: ")$
 l'ambiente deve essere correttamente configurato e deve esistere almeno un'area libera e valida.
 
 $bold("Postcondizioni: ")$ 
-l'area selezionata viene classificata come bin e non può essere sovrascritta.
+l'area selezionata viene classificata come bin.
 
 $bold("Scenario: ")$ 
 	- l'utente entra nella modalità di modifica;

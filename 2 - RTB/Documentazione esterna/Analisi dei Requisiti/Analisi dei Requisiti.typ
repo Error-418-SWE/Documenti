@@ -238,7 +238,7 @@ $bold("Scenario: ")$
 
 == UC-4 Creazione scaffale
 $bold("Descrizione: ")$ 
-uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata.
+uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata. Seccessivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
 
 $bold("Attore: ")$
 utente.
@@ -247,7 +247,8 @@ $bold("Precondizioni: ")$
 - l'ambiente di lavoro deve essere stato configurato con successo.
 
 $bold("Postcondizioni: ")$
-- nell'ambiente di lavoro è stato aggiunto un nuovo scaffale.
+- nell'ambiente di lavoro è stato aggiunto un nuovo scaffale;
+- nello scaffale creato sono stati aggiunti i bin da esso contenuti.
 
 $bold("Scenario: ")$
 - l'utente seleziona l'aggiunta di uno scaffale;

@@ -173,24 +173,6 @@ $bold("Scenario: ")$
 	- il prodotto viene inserito nel bin.
 
 $bold("Estensioni: ")$ 
-	- UC10.1 - Assegnazione prodotto a bin non compatibile per dimensioni.
-
-=== UC10.1 - Assegnazione prodotto a bin non compatibile per dimensioni
-$bold("Descrizione: ")$
-l'utente assegna il prodotto a un bin di dimensioni incompatibili.
-
-$bold("Attore: ")$  utente.
-
-$bold("Precondizioni: ")$
-l'ambiente deve essere correttamente configurato e deve esistere almeno un bin libero.
-
-$bold("Postcondizioni: ")$
-il bin rimane inalterato e viene visualizzato un messaggio di errore.
-
-$bold("Scenario: ")$ 
-	- l'utente seleziona un bin di dimensioni minori rispetto alla dimensione del prodotto da inserire;
-	- viene visualizzato un messaggio di errore;
-	- il prodotto scelto ritorna al punto iniziale e il bin rimane inalterato.
 
 == UC11 - Interrogazione bin 
 $bold("Descrizione: ")$

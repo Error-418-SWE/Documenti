@@ -273,7 +273,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente seleziona uno scaffale nell'ambiente di lavoro;
 - l'utente seleziona il comando per la modifica dello scaffale;
-- l'utente inserisce i nuovi valori.
+- l'utente inserisce i nuovi valori relativi alle proprietà da modificare dello scaffale.
 
 $bold("Estensioni: ")$
 - UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale.

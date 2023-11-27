@@ -333,7 +333,7 @@ utente.
 
 $bold("Precondizioni: ")$
 - l'attività di eliminazione di uno scaffale deve essere stata attivata;
-- tale scaffale contiene almeno un bin non vuoto.
+- lo scaffale interessato contiene almeno un bin non vuoto.
 
 $bold("Postcondizioni: ")$
 - all'utente viene notificato l'errore relativo all'eliminazione di uno scaffale non vuoto.

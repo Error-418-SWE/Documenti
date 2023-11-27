@@ -53,6 +53,9 @@ show outline.entry.where(
 ): it => {
   strong(it)
 }
+show "WIP": it => [
+  #text(it, fill: red)
+]
 
 // Define constants
 let groupName = "Error_418"
@@ -75,6 +78,7 @@ let missingMembers = missingMembers
 let externalParticipants = externalParticipants
 let authors = authors
 let isExternalUse = isExternalUse or externalParticipants.len() > 0
+let documentVersion = "WIP"
 
 // Check members validity
 for author in authors {
@@ -106,6 +110,11 @@ if docType == "verbale" {
     }
 }
 
+// Define version
+if (changelogData.flatten().len() > 0) {
+  documentVersion = changelogData.flatten().at(0)
+}
+
 // Set the document's basic properties
 set document(
   author: "Error_418",
@@ -127,7 +136,7 @@ set page(
     text(
       0.75em,
       if counter(page).at(loc).first() > 1 [
-        #upper(title) v#changelogData.flatten().at(0)
+        #upper(title) v#documentVersion
         #h(1fr)
         #groupName
         #line(length: 100%, stroke: 0.25pt)
@@ -229,14 +238,14 @@ page(numbering: none)[
   #let summaryHeading = align.with(right)
   #let summaryContent = align.with(left)
 
-  // Show roles
+  // Show document info
   #grid(
     columns: (25%, 25%),
     gutter: 15pt,
     // Versione
     summaryHeading[*Versione*],
     summaryContent[
-      #changelogData.flatten().at(0)
+      #documentVersion
     ],
 
     // Destinazione d'uso

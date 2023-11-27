@@ -48,6 +48,20 @@ show heading.where(
   it
   v(1em, weak: true)
 }
+show heading.where(
+  level: 2
+): it => {
+  v(0.5em, weak: false)
+  it
+  v(1em, weak: true)
+}
+show heading.where(
+  level: 3
+): it => {
+  it
+  v(1em, weak: true)
+}
+
 show outline.entry.where(
   level: 1
 ): it => {
@@ -238,7 +252,7 @@ page(numbering: none)[
   #let summaryHeading = align.with(right)
   #let summaryContent = align.with(left)
 
-  // Show document info
+  // Show roles
   #grid(
     columns: (25%, 25%),
     gutter: 15pt,

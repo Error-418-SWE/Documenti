@@ -154,25 +154,22 @@ $bold("Scenario: ")$
 	- l'utente chiede di eliminare il bin;
 	- viene richiesta la conferma dell'eliminazione.
 
-== UC10 - Assegnazione prodotto al bin
+== UC10 - Caricamento dei prodotti da database
 $bold("Descrizione: ")$
-deve essere possibile aggiungere un prodotto in un bin.
+i prodotti vengono inseriti dal database nei rispettivi bin.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-l'ambiente deve essere correttamente configurato e deve esistere almeno un bin libero.
+l'ambiente deve essere correttamente configurato e il database deve contenere almeno un prodotto con le relative coordinate.
 
 $bold("Postcondizioni: ")$
-il bin contiene il prodotto inserito.
+i prodotti si trovano nei rispettivi bin.
 
 $bold("Scenario: ")$ 
-	- l'utente seleziona il prodotto da inserire nel bin;
-	- l'utente seleziona il bin in cui inserire il prodotto;
-	- il prodotto viene inserito nel bin.
-
-$bold("Estensioni: ")$ 
+	- l'utente configura l'accesso al database;
+	- l'utente inizia la procedura di caricamento dei prodotti.
 
 == UC11 - Interrogazione bin 
 $bold("Descrizione: ")$

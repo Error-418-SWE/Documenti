@@ -170,7 +170,7 @@ L'infrastruttura è costituita dai servizi, dagli strumenti e dalle tecnologie d
 I principi della comunicazione che ispirano i processi di gestione dell'infrastruttura sono:
 
 + Comunicazione aperta: le comunicazioni avvengono in modalità pubblica, ovvero tutti i membri possono partecipare (compatibilmente con i loro impegni di progetto e sempre nel rispetto delle rispettive responsabilità). I membri del gruppo hanno accesso e possono liberamente consultare i messaggi, le eventuali registrazioni e i verbali;
-+ Comunicazione onesta: quanto comunicato rappresenta sempre il reale stato del progetto. Nessun membro, in nessun caso, deve nascondere le criticità incontrate.
++ Comunicazione onesta: quanto comunicato rappresenta sempre il reale stato del progetto. Nessun membro, in nessun caso, deve nascondere le criticità incontrate;
 + Comunicazione proattiva: comunicare con cognizione di causa, offrendo spunti concreti di discussione. Ogni comunicazione deve poter essere processata dagli interessati nel minor tempo possibile.
 + Comunicazione frequente: la frequenza della comunicazione permette di prendere decisione in modo tempestivo e informato.
 

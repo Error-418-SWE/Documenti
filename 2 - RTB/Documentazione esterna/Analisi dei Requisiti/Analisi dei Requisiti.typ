@@ -59,7 +59,7 @@ Questo documento viene redatto in modo incrementale, così da risultare sempre c
 = Casi d'uso
 #set heading(numbering: none) 
 
-== UC7 - Creazione di un bin
+== UC-7 Creazione di un bin
 $bold("Descrizione: ")$
 deve essere possibile creare delle aree adibite a contenere prodotti.
 
@@ -67,16 +67,17 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$ 
-l'ambiente deve essere correttamente configurato e deve esistere almeno un'area libera e valida.
+- l'ambiente deve essere correttamente configurato;
+- deve esistere almeno un'area libera e valida.
 
 $bold("Postcondizioni: ")$ 
-l'area selezionata viene classificata come bin.
+- l'area selezionata viene classificata come bin.
 
 $bold("Scenario: ")$ 
-	- l'utente entra nella modalità di modifica;
-	- l'utente seleziona un'area libera e valida.
+- l'utente entra nella modalità di modifica;
+- l'utente seleziona un'area libera e valida.
 
-== UC8 - Modifica di un bin
+== UC-8 Modifica di un bin
 $bold("Descrizione: ")$ 
 deve essere possibile modificare le dimensioni dei bin.
 
@@ -84,22 +85,22 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-l'ambiente deve essere correttamente configurato e deve esistere almeno un bin modificabile.
+- l'ambiente deve essere correttamente configurato e deve esistere almeno un bin modificabile.
 
 $bold("Postcondizioni: ")$
-le dimensioni del bin sono state ridefinite.
+- le dimensioni del bin sono state ridefinite.
 
 $bold("Scenario: ")$ 
-	- l'utente entra nella modalità di modifica;
-	- l'utente seleziona un bin;
-	- vengono mostrate le informazioni del bin;
-	- l'utente modifica le dimensioni del bin.
+- l'utente entra nella modalità di modifica;
+- l'utente seleziona un bin;
+- vengono mostrate le informazioni del bin;
+- l'utente modifica le dimensioni del bin.
 
 $bold("Estensioni: ")$ 
-  - UC8.1 - Dimensioni del bin negative o uguali a zero;
-	- UC8.2 - Dimensioni del bin eccessive.
+- UC-8.1 Dimensioni del bin negative o uguali a zero;
+- UC-8.2 Dimensioni del bin eccessive.
 
-=== UC8.1 - Dimensioni del bin negative o uguali a zero
+=== UC-8.1 Dimensioni del bin negative o uguali a zero
 $bold("Descrizione: ")$
 le dimensioni del bin definite dall'utente sono negative o uguali a zero.
 
@@ -107,17 +108,18 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-UC8 - Modifica Bin.
+- UC-8 Modifica Bin.
 
 $bold("Postcondizioni: ")$
-viene mostrato un messaggio di errore e il bin rimane al suo stato precedente.
+- viene mostrato un messaggio di errore;
+- il bin rimane al suo stato precedente.
 
 $bold("Scenario: ")$ 
-	- l'utente inserisce dimensioni minori o uguali a zero;
-	- viene visualizzato un messaggio di errore;
-	- la modifica viene rifiutata e il bin non viene cambiato.
+- l'utente inserisce dimensioni minori o uguali a zero;
+- viene visualizzato un messaggio di errore;
+- la modifica viene rifiutata e il bin non viene cambiato.
 
-=== UC8.2 - Dimensioni del bin eccessive
+=== UC-8.2 Dimensioni del bin eccessive
 $bold("Descrizione: ")$
 le dimensioni del bin definite dall'utente sono eccessive.
 
@@ -125,17 +127,17 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-UC8 - Modifica Bin.
+- UC-8 Modifica Bin.
 
 $bold("Postcondizioni: ")$
 viene mostrato un messaggio di errore e il bin rimane al suo stato precedente.
 
 $bold("Scenario: ")$ 
-	- l'utente inserisce dimensioni troppo grandi per il bin;
-	- viene visualizzato un messaggio di errore;
-	- la modifica viene rifiutata e il bin non viene cambiato.
+- l'utente inserisce dimensioni troppo grandi per il bin;
+- viene visualizzato un messaggio di errore;
+- la modifica viene rifiutata e il bin non viene cambiato.
 
-== UC9 - Eliminazione bin vuoto
+== UC-9 Eliminazione bin vuoto
 $bold("Descrizione: ")$
 deve essere possibile eliminare un bin.
 
@@ -143,18 +145,19 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-l'ambiente deve essere correttamente configurato e deve esistere almeno un bin vuoto.
+- l'ambiente deve essere correttamente configurato;
+- deve esistere almeno un bin vuoto.
 
 $bold("Postcondizioni: ")$
-il bin è tornato ad essere un'area libera.
+- il bin è tornato ad essere un'area libera.
 
 $bold("Scenario: ")$ 
-	- l'utente entra nella modalità di modifica;
-	- l'utente seleziona un bin vuoto;
-	- l'utente chiede di eliminare il bin;
-	- viene richiesta la conferma dell'eliminazione.
+- l'utente entra nella modalità di modifica;
+- l'utente seleziona un bin vuoto;
+- l'utente chiede di eliminare il bin;
+- viene richiesta la conferma dell'eliminazione.
 
-== UC10 - Caricamento dei prodotti da database
+== UC-10 Caricamento dei prodotti da database
 $bold("Descrizione: ")$
 i prodotti vengono inseriti dal database nei rispettivi bin.
 
@@ -162,16 +165,17 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-l'ambiente deve essere correttamente configurato e il database deve contenere almeno un prodotto con le relative coordinate.
+- l'ambiente deve essere correttamente configurato;
+- il database deve contenere almeno un prodotto con le relative coordinate.
 
 $bold("Postcondizioni: ")$
-i prodotti si trovano nei rispettivi bin.
+- i prodotti si trovano nei rispettivi bin.
 
 $bold("Scenario: ")$ 
-	- l'utente configura l'accesso al database;
-	- l'utente inizia la procedura di caricamento dei prodotti.
+- l'utente configura l'accesso al database;
+- l'utente inizia la procedura di caricamento dei prodotti.
 
-== UC11 - Interrogazione bin 
+== UC-11 Interrogazione bin 
 $bold("Descrizione: ")$
 deve essere possibile visualizzare la prodotto contenuta in un determinato bin.
 
@@ -179,11 +183,11 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-l'ambiente deve essere correttamente configurato e deve esistere almeno un bin.
+- l'ambiente deve essere correttamente configurato e deve esistere almeno un bin.
 
 $bold("Postcondizioni: ")$
-vengono visualizzate le informazioni del bin.
+- vengono visualizzate le informazioni del bin.
 
 $bold("Scenario: ")$ 
-	- l'utente seleziona un bin;
-	- vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
+- l'utente seleziona un bin;
+- vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.

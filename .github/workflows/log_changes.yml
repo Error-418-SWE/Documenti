@@ -6,10 +6,12 @@ on:
 
 jobs:
   fetch:
+    if: github.event.review.state == 'approved'
     uses: Error-418-SWE/Documenti/.github/workflows/fetch_info.yml@src
 
   version:
     name: Update document version
+    if: github.event.review.state == 'approved'
     needs: fetch
     uses: Error-418-SWE/Documenti/.github/workflows/version_document.yml@src
     with:
@@ -18,6 +20,7 @@ jobs:
 
   log:
     needs: [fetch, version]
+    if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository

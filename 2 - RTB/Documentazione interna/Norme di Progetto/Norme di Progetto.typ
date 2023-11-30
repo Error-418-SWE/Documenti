@@ -45,23 +45,22 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 
 - Documentazione Three.js
 #link("https://threejs.org/docs/")
-\
-\
+
 = Processi di accordo
 == Fornitura
 === Scopo e descrizione
-Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con proponente e committente. Tra quest'ultimi e il fornitore, in questo caso il gruppo _Error_418_, deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di ciò, lo stesso fornitore deve aver effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
+Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con proponente e committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
 === Rapporti con il proponente
 Il dialogo tra il gruppo _Error_418_ e il proponente dovrà essere attivo e frequente fino al termine del progetto didattico, in modo che si riescano a raccogliere più feedback possibili riguardo la correttezza del lavoro svolto. Questa comunicazione avverrà in due modalità:
-+ scritta, tramite e-mail, utilizzata per:
++ scritta, asincrona, utilizzata per:
   - comunicazioni di breve durata;
   - condivisione di verbali e materiali informativi;
-  - fissare meeting.
-+ orale, tramite meeting su Zoom, durante i quali si affronteranno:
+  - coordinamento.
++ orale, sincrona, durante i quali si affronteranno:
   - feedback sul lavoro prodotto;
   - chiarimenti sul capitolato;
   - chiarimenti riguardo casi d'uso e requisiti.
-I meeting avranno cadenza variabile, e saranno fissati al termine di altri incontri oppure via e-mail. Il contenuto di ogni incontro sarà raccolto all'interno del relativo verbale. Ognuno di questi verbali sarà validato dal proponente tramite l'apposizione di una firma, e sarà liberamente consultabile all'interno del repository GitHub del gruppo dedicato ai documenti (_#link("https://github.com/Error-418-SWE/Documenti/tree/main")_), al percorso `NomeBaseline/Documentazione esterna/Verbali`, dove `NomeBaseline` è uno tra:
+I meeting avranno cadenza variabile, e saranno fissati al termine di altri incontri oppure via e-mail. Il contenuto di ogni incontro sarà raccolto all'interno del relativo verbale. Ognuno di questi verbali sarà validato dal proponente tramite l'apposizione di una firma, e sarà liberamente consultabile all'interno del repository GitHub del gruppo dedicato ai documenti (_#link("https://github.com/Error-418-SWE/Documenti/tree/main")_), al percorso `NomeMilestone/Documentazione esterna/Verbali`, dove `NomeMilestone` è uno tra:
 - 1 - Candidatura;
 - 2 - RTB;
 - 3 - PB.

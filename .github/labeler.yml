@@ -17,39 +17,39 @@
 # Documents ++++++++++++++++++++++++++++++++
 
 "Analisi dei rischi":
-- "Analisi dei rischi.*"
+- "**/Analisi dei rischi.*"
 
 "Analisi dei requisiti":
-- "Analisi dei requisiti.*"
+- "**/Analisi dei requisiti.*"
 
 "Glossario":
-- "Glossario.*"
+- "**/Glossario.*"
 
 "Lettera di presentazione":
-- "Lettera di presentazione.*"
+- "**/Lettera di presentazione.*"
 
 "Manuale d'uso":
-- "Manuale d'uso*.*"
+- "**/Manuale d'uso*.*"
 
 "Norme di Progetto":
-- "Norme di Progetto.*"
+- "**/Norme di Progetto.*"
 
 "Piano di Progetto":
-- "Piano di Progetto.*"
+- "**/Piano di Progetto.*"
 
 "Piano di qualifica":
-- "Piano di qualifica.*"
+- "**/Piano di qualifica.*"
 
 "Specifica tecnica":
-- "Specifica tecnica*.*"
+- "**/Specifica tecnica*.*"
 
 "Verbale esterno":
-- "Verbali/Esterni/**"
+- "**/Verbali/Esterni/**"
 
 "Verbale interno":
-- "Verbali/Interni/**"
+- "**/Verbali/Interni/**"
 
 # Misc +++++++++++++++++++++++++++++++++++++
 
 "Actions":
-- ".github/**"
+- "**/.github/**"

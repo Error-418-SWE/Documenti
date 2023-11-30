@@ -208,7 +208,7 @@ inset:7pt ,
 === Obiettivi prefissati
 Gli obiettivi del terzo sprint si concentrano sull'aggiornamento del documento di Norme di Progetto, sul periodo di Analisi dei Requisiti (principalmente concentrata sui requisiti funzionali) e su un primo momento di esplorazione delle nuove tecnologie.\
 Gli obiettivi dello sprint 3 sono:
-- continuazione del processo di individuazione e stesura degli use case;
+- proseguimento del processo di individuazione e stesura degli use case;
 - perfezionamento delle automazioni di versionamento documenti;
 - perfezionamento del template usato per i documenti;
 - aggiornamento del documento di Norme di Progetto;

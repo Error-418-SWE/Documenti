@@ -3,7 +3,6 @@
 #show: project.with(
   title: "Norme di Progetto",
   subTitle: "Norme, processi e disciplina",
-  docType="doc",
   authors: (
     "Banzato Alessio",
     "Gardin Giovanni"

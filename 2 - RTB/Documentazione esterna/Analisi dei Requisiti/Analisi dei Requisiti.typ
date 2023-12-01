@@ -203,9 +203,11 @@ $bold("Scenario: ")$
 
 
 
-= Caricamento dati da database
+= Caricamento dati database
 
 #figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])
+
+== Caricamento dati da database
 
 $bold("Descrizione: ")$ 
 i prodotti vengono inseriti dal database nei rispettivi bin.
@@ -224,33 +226,47 @@ $bold("Scenario: ")$
 - l’utente configura l’accesso al database;
 - l’utente inizia la procedura di caricamento dei prodotti.
 
-$bold("Estensioni: ")$
-- UC-3.3 Visualizzazione messaggio di errore.
-
 $bold("Inclusioni: ")$
 - UC-3.2 Configurazione collegamento al database.
 
+$bold("Estensioni: ")$
+- UC-3.3 Visualizzazione messaggio di errore.
 
-
-
-=== UC-3.1 Visualizzazione messaggio di errore
+== Configurazione collegamento al database
 $bold("Descrizione: ")$ 
-i dati inseriti per la modifica dell'ambiente di lavoro non sono validi con quanto configurato precedentemente.
+l'utente imposta i dati necessari affinchè il programma possa configurarsi con il database in cui sono contenuti i dati.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'utente ha immesso i dati per la modifica dell'ambiente;
-- tali dati non sono congrui con la precedente configurazione dell'ambiente.
+- l’ambiente deve essere correttamente configurato;
+- il database deve essere disponibile;
+- l'utente deve dispoore delle credenziali per configurarsi al database.
 
 $bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo ad un'immissione errata dei dati per la modifica dell'ambiente.
+- il sistema è correttamente configurato con il database.
 
 $bold("Scenario: ")$
-- l'utente ha immesso dei dati errati per la modifica dell'ambiente.
+- l’utente configura l’accesso al database;
 
+== Visualizzazione messaggio di errore
 
+$bold("Descrizione: ")$ 
+i dati contenuti nel database sono in un formato non conforme o sono errati
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- l'utente ha iniziato la procedura di caricamento dati da database;
+- l'accesso al database deve essere stato correttamente configurato.
+
+$bold("Postcondizioni: ")$
+- all'utente viene notificato l'errore relativo alla presenza di dati errati o non conformi all'interno del database.
+
+$bold("Scenario: ")$
+- l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere.
 
 
 == UC-4 Creazione scaffale

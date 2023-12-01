@@ -194,30 +194,37 @@ $bold("Scenario: ")$
 
 
 
-== UC-3 Modifica ambiente 3d
+== UC-3 Caricamento dati da database
+
+#figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])
+
 $bold("Descrizione: ")$ 
-il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
+i prodotti vengono inseriti dal database nei rispettivi bin.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- almeno una configurazione dell'ambiente deve essere avvenuta con successo;
+- l’ambiente deve essere correttamente configurato;
+- il database deve contenere almeno un prodotto con le relative coordinate.
 
 $bold("Postcondizioni: ")$
-- l'ambiente di lavoro è stato correttamente modificato in funzione delle richieste dell'utente.
+- i prodotti si trovano nei rispettivi bin.
 
 $bold("Scenario: ")$
-- l'utente avvia la modifica dell'ambiente di lavoro;
-- l'utente immette i dati richiesti.
+- l’utente configura l’accesso al database;
+- l’utente inizia la procedura di caricamento dei prodotti.
 
 $bold("Estensioni: ")$
-- UC-3.1 Visualizzazione errore di modifica dell'ambiente.
+- UC-3.3 Visualizzazione messaggio di errore.
+
+$bold("Inclusioni: ")$
+- UC-3.2 Configurazione collegamento al database.
 
 
 
 
-=== UC-3.1 Visualizzazione errore di modifica dell'ambiente
+=== UC-3.1 Visualizzazione messaggio di errore
 $bold("Descrizione: ")$ 
 i dati inseriti per la modifica dell'ambiente di lavoro non sono validi con quanto configurato precedentemente.
 

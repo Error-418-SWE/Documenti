@@ -7,6 +7,9 @@
     "Carraro Riccardo",
     "Zaccone Rosario",
   ),
+  showIndex: true,
+  showLog: true,
+  isExternalUse: true,
 );
 #set text(font:"New Computer Modern")
 #set align(left)
@@ -200,6 +203,66 @@ inset:7pt ,
 [Costo ruolo],      [90,00], [160,00], [225,00], [45,00], [520,00]
 )
 #align(center, text("Tabella 3: preventivo secondo sprint"))
+
+=== Diagramma Gantt
+[da inserire]
+
+== Quarto Sprint dal 27-11-2023 al 04-12-2023
+
+=== Obiettivi prefissati
+Gli obiettivi del quarto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
+dell'Analisi dei Requisiti e sull'esplorazione delle nuove tecnologie. \
+Gli obiettivi dello sprint 4 sono:
+- effettuare una migliore pianificazione;
+- perfezionamento della stesura degli use case indivduati finora;
+- redazione di una prima versione dell'Analisi dei Requisiti;
+- valutazione di un'eventuale data per un primo meeting con il professore Cardin per ottenere un feedback sull'Analisi dei Requisiti;
+- proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
+- proseguimento periodo di studio di Three.js, in particolare finalizzato a:
+ - creazione di alcuni scaffali nell'ambiente tridimensionale;
+ - implentazione sistema di drag and drop;
+ - parametrizzazione degli elementi presenti nell'applicazione.
+
+=== Preventivo costi
+Nel quarto sprint il team svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
+- *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
+
+- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti, al fine di aggiornare il documento di Piano di Progetto;
+
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti, al fine di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti;
+
+- *Analista*: al fine di perfezionare la stesura degli use case individuati e redatte una prima versione di Analisi dei Requisiti;
+
+- *Progettista*: al fine di condurre uno studio esplorativo sulla libreria Three.js.
+
+In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce.
+
+#set text(
+  size: 10pt
+)
+
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:7pt,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [3],  [/],    [/],    [/], [/],   [3],
+[Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
+[Gardin Giovanni],  [/],  [/],    [/],    [/], [3],   [3],
+[Nardo Silvio],     [/],  [/],    [/],    [3], [/],   [3],
+[Oseliero Antonio], [/],  [/],    [4],    [/], [/],   [4],
+[Todesco Mattia],   [/],  [3],    [/],    [/], [/],   [3],
+[Zaccone Rosario],  [/],  [3],    [/],    [/], [/],   [3],
+[Totale ore ruolo], [3],  [6],    [8],    [3], [3],   [23],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
+[Costo ruolo], [90,00], [120,00], [200,00], [75,00], [45,00], [530,00]
+)
+#align(center, text("Tabella 7: preventivo quarto sprint"))
+
+#set text(
+  size: 11pt
+)
 
 === Diagramma Gantt
 [da inserire]

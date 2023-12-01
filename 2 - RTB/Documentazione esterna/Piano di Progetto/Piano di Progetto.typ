@@ -7,6 +7,9 @@
     "Carraro Riccardo",
     "Zaccone Rosario",
   ),
+  showIndex: true,
+  showLog: true,
+  isExternalUse: true,
 );
 #set text(font:"New Computer Modern")
 #set align(left)
@@ -256,5 +259,67 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 - Verificatore: il mancato avanzamento ha prodotto documentazione ridotta rispetto a quanto preventivato, pertanto il verificatore ha svolto un numero inferiore di ore.
 
 Il ruolo dell'amministratore invece, incaricato di gestire il reparto tecnologico implementando gli automatismi necessari, a causa di difficoltà incontrate nell'implementazione (errori, testing, verifica), ha visto un aumento delle ore rispetto a quanto preventivato.
+=== Burndown-chart
+[da inserire]
+
+== Terzo Sprint dal 27-11-2023 al 04-12-2023
+
+=== Obiettivi raggiunti
+- proseguimento del processo di individuazione e stesura degli use case;
+- perfezionamento delle automazioni di versionamento documenti;
+- perfezionamento del template usato per i documenti;
+- aggiornamento parziale del documento di Norme di Progetto;
+- studio iniziale della libreria Three.js;
+- meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare oppurtune richieste;
+- contatto con l'azienda Proponente per fissare il prossimo meeting.
+=== Obiettivi mancati
+- aggiornamento completo del documento di Norme di Progetto con l'inserimento dei grafici di Gantt e di burndown.
+=== Analisi problematiche insorte
+
+Nonostante la realizzazione soddisfacente della maggior parte degli obiettivi concordati, sono emerse alcune criticità durante l'implementazione del progetto:
+
+- si è riscontrata una pianificazione non ottimale e superficiale, attribuibile alla mancanza di un dettagliato processo di pianificazione durante la riunione precedente l'avvio dello sprint;
+- problemi sono sorti a causa della mancata definizione di standard per la creazione dei grafici di Gantt e burndown, comportando una stesura parziale dei paragrafi nel documento del Piano di Progetto;
+- la durata dei meeting ha superato le aspettative a causa di alcune inefficienze temporali;
+- il team ha rilevato la mancanza di standard per designare le persone responsabili della redazione dei verbali durante lo sprint.
+
+
+=== Risoluzioni attuate
+Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentrano su un'organizzazione e un'attenzione maggiore nella fase di pianificazione, oltre alla definizione di standard relativi ai grafici da inserire nei documenti e relativi allo svolgimento dei meeting e redazione dei rispettivi verbali. In particolare:
+- è stata prestata una maggiore attenzione nella pianificazione del nuovo sprint, introducento nella board retrospettiva di Miro una bacheca relativa alle task da svolgere, che sono state tradotte din da subito in ticket di Jira e assegnati ai rispettivi ruoli;
+- è stata fissata una durata massima per i meeting settimanali, con eccezione meeting straordinari relativi ad una grande mole di lavoro;
+- sono stati definiti degli standard per la realizzazione dei grafici, adottando quelli proposti da Jira, ma gestendo meglio la pianificazione in modo da ottenere grafici ottimali.
+=== Analisi costi di sprint effettivi
+
+#set text(
+  size: 10pt
+)
+
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:7pt,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [2(-1)],  [/],    [/],    [/], [/],   [2(-1)],
+[Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
+[Gardin Giovanni],  [/],  [/],    [/],    [/], [3],   [3],
+[Nardo Silvio],     [/],  [/],    [/],    [3], [/],   [3],
+[Oseliero Antonio], [/],  [/],    [4],    [/], [/],   [4],
+[Todesco Mattia],   [/],  [4(+1)],    [/],    [/], [/],   [4(+1)],
+[Zaccone Rosario],  [/],  [4(+1)],    [/],    [/], [/],   [4(+1)],
+[Totale ore ruolo], [2(-1)],  [8(+2)],    [8],    [3], [3],   [23],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
+[Costo ruolo], [60,00], [160,00], [200,00], [75,00], [45,00], [540,00]
+)
+#align(center, text("Tabella 6: consuntivo terzo sprint"))
+
+#set text(
+  size: 11pt
+)
+
+A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo diverso a quanto preventivato:
+- Responsabile: a causa di mancati standard su come effettuare una pianificazione ottimale il responsabile ha impiegato meno ore di quanto previsto;
+- Amministratore: a causa dei mancati standard sulla realizzazione dei grafici gli amministratori hanno impiegato più ore finalizzate allo studio sui grafici da adottare.
 === Burndown-chart
 [da inserire]

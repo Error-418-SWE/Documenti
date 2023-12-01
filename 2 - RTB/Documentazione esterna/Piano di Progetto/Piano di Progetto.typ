@@ -248,7 +248,7 @@ inset:7pt,
 [Zaccone Rosario],  [/],  [3],    [/],    [/], [/],   [3],
 [Totale ore ruolo], [3],  [6],    [8],    [3], [3],   [23],
 [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
-[Costo ruolo], [30,00], [120,00], [200,00], [75,00], [45,00], [470,00]
+[Costo ruolo], [90,00], [120,00], [200,00], [75,00], [45,00], [530,00]
 )
 #align(center, text("Tabella 4: preventivo terzo sprint"))
 

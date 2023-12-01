@@ -7,6 +7,9 @@
     "Carraro Riccardo",
     "Zaccone Rosario",
   ),
+  showIndex: true,
+  showLog: true,
+  isExternalUse: true,
 );
 #set text(font:"New Computer Modern")
 #set align(left)

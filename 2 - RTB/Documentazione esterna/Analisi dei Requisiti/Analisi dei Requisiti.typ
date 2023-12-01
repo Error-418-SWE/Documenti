@@ -62,11 +62,20 @@ Questo documento viene redatto in modo incrementale, così da risultare sempre c
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
   _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_ .
 
-= Casi d'uso
+
 
 #set heading(numbering: none) 
-== UC-1 Importazione mappa magazzino da file SVG 
+ 
+#set heading(numbering: (..nums) => {
+  let values = nums.pos();
+  if (values.len() > 0){
+      values.at(values.len()-1) = values.at(values.len()-1);
+  }
+  values.at(0) = values.at(0)-1;
+  return "UC-"+values.map(str).join(".");
+}) 
 
+= UC1
 $bold("Descrizione: ")$
 All'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
 
@@ -152,7 +161,7 @@ $bold("Scenario: ")$
 
 
 
-== UC-2 Configurazione ambiente 3d manuale
+= UC-2 Configurazione ambiente 3d manuale
 $bold("Descrizione: ")$
 configurazione manuale del perimetro dell'ambiente di lavoro.
 
@@ -194,7 +203,7 @@ $bold("Scenario: ")$
 
 
 
-== UC-3 Caricamento dati da database
+= Caricamento dati da database
 
 #figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])
 

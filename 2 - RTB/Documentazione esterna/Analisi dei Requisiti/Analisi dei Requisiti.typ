@@ -62,10 +62,18 @@ Questo documento viene redatto in modo incrementale, così da risultare sempre c
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
   _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_ .
 
-= Casi d'uso
-
 #set heading(numbering: none) 
-== UC-1 Importazione mappa magazzino da file SVG 
+
+#set heading(numbering: (..nums) => {
+  let values = nums.pos();
+  if (values.len() > 0){
+      values.at(values.len()-1) = values.at(values.len()-1);
+  }
+  values.at(0) = values.at(0)-1;
+  return "UC-"+values.map(str).join(".");
+}) 
+
+= UC1
 
 $bold("Descrizione: ")$
 All'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
@@ -152,7 +160,7 @@ $bold("Scenario: ")$
 
 
 
-== UC-2 Configurazione ambiente 3d manuale
+= UC-2 Configurazione ambiente 3d manuale
 $bold("Descrizione: ")$
 configurazione manuale del perimetro dell'ambiente di lavoro.
 
@@ -194,7 +202,7 @@ $bold("Scenario: ")$
 
 
 
-== UC-3 Modifica ambiente 3d
+= UC-3 Modifica ambiente 3d
 $bold("Descrizione: ")$ 
 il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
 
@@ -237,26 +245,36 @@ $bold("Scenario: ")$
 
 
 
-== UC-4 Creazione scaffale
+= Richiesta di spostamento di un prodotto
+
+#figure(image("./imgs/uc4.png", format: "png"), caption: [UML UC-4])
+
+== Richiesta di spostamento di un prodotto
+
 $bold("Descrizione: ")$ 
-uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata. Seccessivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
+l'utente seleziona il prodotto di cui desidera una ricollocazione all'interno del magazzino e avvia una richiesta di spostamento verso un altro bin.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'ambiente di lavoro deve essere stato configurato con successo.
+- devono esistere almeno due bin distinti;
+- uno dei due bin deve contenere un prodotto;
+- uno dei due bin deve essere vuoto.
 
 $bold("Postcondizioni: ")$
-- nell'ambiente di lavoro è stato aggiunto un nuovo scaffale;
-- nello scaffale creato sono stati aggiunti i bin da esso contenuti.
+- il prodotto è contenuto all'interno del bin di destinazione;
+- il bin di partenza risulta vuoto;
+- viene inviata una richiesta di spostamento al magazzino tramite l'uso di API;
+- il bin di partenza viene colorato in modo da identificare il fatto che da quel bin è in atto uno spostamento;
+- il bin di arrivo viene colorato in modo da identificare il fatto che in quel bin è in atto uno spostamento;
 
 $bold("Scenario: ")$
-- l'utente seleziona l'aggiunta di uno scaffale;
-- l'utente inserisce i dati necessari alla creazione dello scaffale;
-- l'utente posiziona lo scaffale in una posizione valida nell'ambiente di lavoro.
-
-
+- l'utente seleziona un bin che contiene un prodotto;
+- l'utente sposta il prodotto all'interno di un altro bin vuoto;
+- il bin di partenza risulta ora vuoto;
+- il bin destinazione ora contiene il prodotto;
+- il sistema notifica al magazzino la richiesta di ricollocazione del prodotto nel magazzino.
 
 == UC-5 Modifica scaffale
 $bold("Descrizione: ")$ 

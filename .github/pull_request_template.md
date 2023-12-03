@@ -1,9 +1,8 @@
-Link alla issue di Jira:
+### Note
 
-Note:
 
-### ✏️ Checklist
 
-- [ ] documento testato;
+### Checklist
+
 - [ ] titolo della PR conforme;
 - [ ] designato almeno un verificatore.

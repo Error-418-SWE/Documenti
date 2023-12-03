@@ -217,7 +217,6 @@ utente.
 
 $bold("Precondizioni: ")$
 - l’ambiente deve essere correttamente configurato;
-- il database deve contenere almeno un prodotto con le relative coordinate.
 
 $bold("Postcondizioni: ")$
 - i prodotti si trovano nei rispettivi bin.
@@ -242,10 +241,10 @@ utente.
 $bold("Precondizioni: ")$
 - l’ambiente deve essere correttamente configurato;
 - il database deve essere disponibile;
-- l'utente deve dispoore delle credenziali per configurarsi al database.
+- l'utente deve disporre delle credenziali per configurarsi al database.
 
 $bold("Postcondizioni: ")$
-- il sistema è correttamente configurato con il database.
+- il sistema è correttamente configurato per accedere al database.
 
 $bold("Scenario: ")$
 - l’utente configura l’accesso al database;
@@ -266,7 +265,7 @@ $bold("Postcondizioni: ")$
 - all'utente viene notificato l'errore relativo alla presenza di dati errati o non conformi all'interno del database.
 
 $bold("Scenario: ")$
-- l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere.
+- l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere (es. numero scaffali/bin incompatibile con le coordinate dei prodotti).
 
 
 == UC-4 Creazione scaffale

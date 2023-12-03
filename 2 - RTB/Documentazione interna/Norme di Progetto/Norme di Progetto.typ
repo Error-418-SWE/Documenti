@@ -216,7 +216,7 @@ I processi organizzativi abilitanti sono i seguenti:
 //+ Processo di gestione dei modelli di ciclo di vita;
 + Processo di gestione dell'infrastruttura;
 // + Processo di gestione del portfolio;
-// + Processo di gestione delle risorse umane;
++ Processo di gestione delle risorse umane;
 // + Processo di gestione della qualità;
 // + Processo di gestione della conoscenza.
 
@@ -291,3 +291,53 @@ L'indirizzo è reso noto nel frontespizio di ogni documento prodotto dall'organi
 Sono compiti dell'amministratore il mantenimento dell'infrastruttura, l'aggiornamento delle norme e dei processi e l'identificazione di nuovi servizi a supporto delle attività dell'organizzazione.
 
 L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi minimo e sufficiente a coprire tutti i requisiti di comunicazione.
+
+=== Processo di gestione delle Risorse Umane
+
+La natura didattica del progetto riduce le prerogative del processo di gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la _conformance to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.4_.
+
+==== Scopo
+
+Questo processo fornisce all'organizzazione le risorse umane necessarie all'esecuzione dei processi di ciclo di vita al fine di realizzare gli obiettivi di progetto, dell'organizzazione e degli stakeholder.
+
+==== Attività e compiti
+
+===== Identificare le competenze dei membri
+
+L'organizzazione sottopone, ad ogni nuovo membro, un form conoscitivo atto a identificare le competenze pregresse. Il form è realizzato con #link("https://www.google.it/intl/it/forms/about/")[*Google Forms*] e include domande su:
+
++ Strumenti di collaborazione;
++ Linguaggi di programmazione;
++ Tecnologie;
++ Strumenti di automazione;
++ Strumenti di controllo di versione.
+
+Le risposte sono non vincolanti e non influiscono in alcun modo sulla rotazione dei ruoli, sui compiti assegnati o sull'organizzazione interna.
+
+===== Identificare le competenze richieste
+
+Le competenze richieste sono identificate tramite:
+
++ Analisi dei Capitolati;
++ Studio del dominio di progetto;
++ Incontri con i Proponenti e successivi colloqui.
+
+===== Sviluppare le competenze <gestione-risorse-umane-sviluppo>
+
+Lo sviluppo di nuove competenze riguarda i membri, e non i ruoli. Per questa ragione, i processi di sviluppo di competenze sono universali e condivisi.
+
+L'organizzazione si adopera per sviluppare le competenze dei membri mediante:
+
++ Attività di _peer-tutoring_ in concomitanza delle rotazioni di ruolo;
++ Pubblicazione interna di tutorial tecnici scritti (eventualmente accompagnati da brevi video, se utili a migliorare la comprensione degli argomenti trattati);
++ Attività di _tutoring_ interno su richiesta, sincrono, in base alla necessità;
++ Attività di _mentoring_ esterno su richiesta, in base alla necessità e alla disponibilità dell'interlocutore esterno;
++ Condivisione delle best practice in sessione collettiva.
+
+Le sessioni di tutoring sono "a sportello" ed è responsabilità dei singoli membri richiederne l'attivazione. Il responsabile, identificati i temi di maggior interesse, può espressamente richiedere che un ruolo copra le esigenze di tutoring interno tramite le modalità sopra indicate.
+
+===== Acquisire e fornire competenze
+
+I membri dell'organizzazione sono prestabiliti. Qualora le competenze interne all'organizzazione siano deficitarie, è richiesta l'attivazione delle attività descritte in @gestione-risorse-umane-sviluppo.
+
+Non sono previste variazioni della composizione dell'organizzazione, se non in via straordinaria e comunque discussa preventivamente con il Committente.

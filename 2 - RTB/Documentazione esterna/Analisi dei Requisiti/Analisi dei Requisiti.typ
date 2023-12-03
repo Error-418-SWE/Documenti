@@ -115,7 +115,7 @@ $bold("Generalizzazioni: ")$
 - UC-1.1.1.2 Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti.
 
 \
-==== UC-1.1.1.1 Visualizzazione errore file privo di informazioni
+==== Visualizzazione errore file privo di informazioni
 $bold("Descrizione: ")$
 il file SVG caricato non contiene informazioni utili alla configurazione dell'ambiente.
 
@@ -134,7 +134,7 @@ $bold("Scenario: ")$
 - L'utente ha caricato un file SVG vuoto o con informazioni non utili.
 
 \
-==== UC-1.1.1.2 Visualizzazione errore informazioni del file incongruenti
+==== Visualizzazione errore informazioni del file incongruenti
 $bold("Descrizione: ")$
 il file SVG caricato contiene informazioni incongruenti e quindi non utilizzabili per la configurazione dell'ambiente.
 

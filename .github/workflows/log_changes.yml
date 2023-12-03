@@ -34,7 +34,7 @@ jobs:
       - name: Get date
         id: date
         run: |
-          echo "date=$(date -u +'%d-%m-%Y %a')" >> $GITHUB_OUTPUT
+          echo "date=$(date -u +'%d-%m-%Y')" >> $GITHUB_OUTPUT
       - name: Write changelog
         env:
           DOC_VERSION: "${{ needs.version.outputs.version }}"

@@ -194,7 +194,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione dell'ambiente non validi.
 
-\
+#pagebreak()
 = Modifica dell'ambiente 3D
 #figure(image("./imgs/uc2.png", format: "png"), caption: [UML UC-2])
 == Inserimento nuove dimensioni del magazzino
@@ -217,6 +217,7 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-2.1.1 Visualizzazione errore di modifica dell'ambiente.
 
+\
 \
 === Visualizzazione errore di modifica dell'ambiente
 $bold("Descrizione: ")$ 
@@ -310,7 +311,7 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'attività di spostamento di uno scaffale deve essere stata attivata;
+- avviata l'attività di spostamento dello scaffale;
 - lo scaffale interessato viene posto in una zona occupata.
 
 $bold("Postcondizioni: ")$

@@ -2,7 +2,7 @@
 
 #show: project.with(
   title: "Norme di Progetto",
-  subTitle: "",
+  subTitle: "Norme, processi e disciplina",
   authors: (
     "Banzato Alessio",
     "Gardin Giovanni"
@@ -45,6 +45,71 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 
 - Documentazione Three.js
 #link("https://threejs.org/docs/")
+
+= Processi di accordo
+== Fornitura
+=== Scopo e descrizione
+Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con proponente e committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
+=== Rapporti con il proponente
+Il dialogo tra il gruppo _Error_418_ e il proponente dovrà essere attivo e frequente fino al termine del progetto didattico, in modo che si riescano a raccogliere più feedback possibili riguardo la correttezza del lavoro svolto. Questa comunicazione avverrà in due modalità:
++ scritta, asincrona, utilizzata per:
+  - comunicazioni di breve durata;
+  - condivisione di verbali e materiali informativi;
+  - coordinamento.
++ orale, sincrona, durante i quali si affronteranno:
+  - feedback sul lavoro prodotto;
+  - chiarimenti sul capitolato;
+  - chiarimenti riguardo casi d'uso e requisiti.
+I meeting avranno cadenza variabile, e saranno fissati al termine di altri incontri oppure via e-mail. Il contenuto di ogni incontro sarà raccolto all'interno del relativo verbale. Ognuno di questi verbali sarà validato dal proponente tramite l'apposizione di una firma, e sarà liberamente consultabile all'interno del repository GitHub del gruppo dedicato ai documenti (_#link("https://github.com/Error-418-SWE/Documenti/tree/main")_), al percorso `NomeMilestone/Documentazione esterna/Verbali`, dove `NomeMilestone` è uno tra:
+- 1 - Candidatura;
+- 2 - RTB;
+- 3 - PB.
+
+=== Documentazione prodotta
+In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di fornitura, la quale sarà resa disponibile al proponente, _Sanmarco Informatica_, e ai committenti, i professori Tullio Vardanega e Riccardo Cardin.
+
+==== Valutazione dei capitolati
+Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese disponibili dai vari proponenti. Per ogni capitolato vengono presentati tre paragrafi:
++ *Descrizione*: vengono indicati i nominativi di proponente e committente, e viene presentato l'obiettivo del progetto;
++ *Dominio tecnologico*: vengono elencate le tecnologie consigliate dal proponente del capitolato;
++ *Considerazioni*: il gruppo dà la propria valutazione sul capitolato.
+
+==== Analisi dei rischi
+Nel documento di Analisi dei rischi vengono presentati i rischi a cui il gruppo potrebbe essere esposto durante il periodo in cui lavora al progetto. Ogni rischio viene classificato secondo tre parametri:
+- *Impatto*: esprime l'effetto generato dall'evento;
+- *Probabilità*: esprime la probabilità del verificarsi del rischio;
+- *Conseguenze*: effetti collaterali a breve o medio termine che il rischio può comportare.
+Ad ogni rischio sono inoltre associate delle buone pratiche da seguire per mitigarlo.
+
+==== Preventivo dei costi
+Nel Preventivo dei costi viene esposta una tabella che presenta una previsione riguardo il numero di ore di lavoro totali, per membro e per ruolo e viene fornito un calcolo del costo totale del progetto. Prima della tabella vengono spiegate le motivazioni che hanno portato alla suddivisione oraria individuata, effettuando una tripartizione del periodo di lavoro complessivo e analizzando ogni ruolo presente all'interno del team.
+
+==== Lettera di presentazione
+Breve documento dove il gruppo si presenta e dichiara il suo impegno nello svolgimento del capitolato scelto. Viene dato un riferimento al repository dove si potranno trovare i documenti necessari alla candidatura e vengono dichiarati il costo della realizzazione del prodotto e la data di consegna prevista.
+
+==== Analisi dei Requisiti
+In questo documento vengono raccolti tutti gli use case e requisiti individuati dal gruppo con il supporto del proponente. Ogni use case e requisito è identificato da un codice, così da essere facilmente individuabile e tracciabile. All'inizio del documento sono inoltre descritti i criteri di qualità che il gruppo ha seguito durante la redazione.
+
+==== Piano di Progetto
+Documento che governa la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e analizzando il lavoro lavoro svolto. È articolato in cinque sezioni:
+- Rischi e loro mitigazione;
+- Divisione temporale di sviluppo;
+- Preventivo dei costi di realizzazione;
+- Pianificazione del lavoro;
+- Consuntivo del progetto.
+
+==== Piano di Qualifica
+Nel Piano di Qualifica vengono fissati obiettivi di qualità e vengono descritti i processi necessari per conseguirli con realative procedure di controllo.
+
+==== Glossario
+Nel Glossario vengono elencati e definiti in modo preciso tutti i termini rilevanti utilizzati all'interno del progetto. È un documento estremamente importante per evitare situazioni di ambiguità, e garantire così una corretta comprensione della documentazione da parte di tutte le parti coinvolte.
+
+=== Strumenti utilizzati
+In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo di fornitura.
+
+- *Zoom*: applicazione per videoconferenze;
+- *Google slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il committente riguardo l'andamento del lavoro;
+- *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
 
 = Processi di supporto
 
@@ -140,6 +205,143 @@ Per la scrittura dei documenti è richiesto uno stile di scrittura impersonale (
 
 === Elenchi puntati
 Viene inserito ";" alla fine delle voci dell'elenco tranne l'ultima che termina con ".". Ogni voce dell'elenco inizia con una lettera minuscola.
+
+
+= Processi di ciclo di vita
+
+== Processi organizzativi abilitanti
+
+I processi organizzativi abilitanti garantiscono la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. Questi processi forniscono le risorse e l'infrastruttura necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
+
+I processi organizzativi abilitanti sono i seguenti:
+//+ Processo di gestione dei modelli di ciclo di vita;
++ Processo di gestione dell'infrastruttura;
+// + Processo di gestione del portfolio;
++ Processo di gestione delle risorse umane;
+// + Processo di gestione della qualità;
+// + Processo di gestione della conoscenza.
+
+=== Processi di gestione dell'infrastruttura
+
+==== Scopo
+
+Lo scopo del processo di gestione dell'infrastruttura è fornire l'infrastruttura e i servizi a supporto dell'organizzazione per il conseguimento degli obiettivi di progetto nel corso dell'intero ciclo di vita.
+
+Questo processo definisce, fornisce e regola i servizi, gli strumenti e le tecnologie di comunicazione e condivisione delle informazioni a supporto degli scopi dell'organizzazione.
+
+==== Requisiti
+
+L'infrastruttura è costituita dai servizi, dagli strumenti e dalle tecnologie di comunicazione e condivisione delle informazioni adottate a supporto degli scopi dell'organizzazione. L'infrastruttura risponde alle necessità di comunicazione interna ed esterna.
+
+// Li sposterei
+I principi della comunicazione che ispirano i processi di gestione dell'infrastruttura sono:
+
++ Comunicazione aperta: le comunicazioni avvengono in modalità pubblica, ovvero tutti i membri possono partecipare (compatibilmente con i loro impegni di progetto e sempre nel rispetto delle rispettive responsabilità). I membri del gruppo hanno accesso e possono liberamente consultare i messaggi, le eventuali registrazioni e i verbali;
++ Comunicazione onesta: quanto comunicato rappresenta sempre il reale stato del progetto. Nessun membro, in nessun caso, deve nascondere le criticità incontrate;
++ Comunicazione proattiva: comunicare con cognizione di causa, offrendo spunti concreti di discussione. Ogni comunicazione deve poter essere processata dagli interessati nel minor tempo possibile.
++ Comunicazione frequente: la frequenza della comunicazione permette di prendere decisione in modo tempestivo e informato.
+
+I requisiti dei processi di gestione dell'infrastruttura sono:
+
++ Semplicità di adozione di strumenti e servizi;
++ Accesso rapido alle informazioni, anche in mobilità;
++ Non ridondanza tra strumenti e servizi adottati.
+
+==== Infrastruttura di comunicazione
+
+===== Comunicazione interna
+
+#link("https://discord.com/")[*Discord*] rappresenta il canale primario di comunicazione interna. È una piattaforma di comunicazione che fornisce:
+
++ Un servizio di messaggistica istantanea che permette la suddivisione delle conversazioni in canali tematici;
++ Un servizio di videochiamate usato per le comunicazioni sincrone interne in modalità remota.
+
+Le comunicazioni testuali tramite messaggio istantaneo sono organizzate per argomento. Discord adotta il termine "canale" per designare tale suddivisione tematica. I canali attualmente in uso sono:
+
+- Canale generale (`#random`): usato per le comunicazioni informali;
+- Canale meeting (`#meeting`): usato per l'organizzazione dei meeting interni e la condivisione degli ordini del giorno;
+- Canale di riferimento (`#riferimenti`): usato come bacheca per raccogliere ed organizzare, in un unico luogo, le risorse a supporto degli scopi dell'organizzazione;
+- Altri canali tematici: le comunicazioni relative ad uno specifico prodotto dei processi dell'organizzazione avvengono in un canale dedicato.
+
+La suddivisione delle comunicazioni interne in canali ha lo scopo di ridurre le distrazioni, facilitare l'accesso alle informazioni e semplificare la comunicazione interna.
+
+Le comunicazioni sincrone in videochiamata avvengono nei cosiddetti "canali vocali". Vengono forniti quattro canali vocali generici ad accesso libero. I membri dell'organizzazione hanno la facoltà di incontrarsi in qualsiasi momento in videochiamate interne. I canali vocali non sono organizzati tematicamente perché offrono la persistenza.
+
+#link("https://miro.com/")[*Miro*] è un servizio di collaborazione per team basato su _whiteboard_. Offre la possibilità di creare board multimediali e permette la collaborazione asincrona. È utilizzato per:
+
++ Raccogliere i feedback interni da discutere durante i meeting di retrospettiva;
++ Supportare gli incontri interni di _brainstorming_;
++ Supportare i meeting con gli interlocutori esterni.
+
+Oltre a Discord e Miro, l'organizzazione comunica anche tramite *Jira* (ITS) e *GitHub* (VCS). L'uso di questi strumenti è discusso in dettaglio nelle sezioni apposite.
+
+===== Comunicazione esterna
+
+Le modalità e la frequenza delle comunicazioni esterne sono da stabilirsi con i diretti interessati, secondo necessità e disponibilità degli interlocutori. Le comunicazioni esterne avvengono su due canali primari: Gmail e Zoom.
+
+#link("https://mail.google.com/")[*Gmail*] è il servizio di posta elettronica di Google. L'indirizzo di posta elettronica dell'organizzazione è:
+#align(center, `error418swe@gmail.com`)
+Viene utilizzato per tutte le comunicazioni da e verso gli interlocutori esterni. Tutti i membri dell'organizzazione possono accedere in qualsiasi momento alla casella di posta elettronica. Inoltre, tutte le conversazioni vengono inoltrate automaticamente agli indirizzi e-mail istituzionali di ciascun membro.
+
+L'indirizzo è reso noto nel frontespizio di ogni documento prodotto dall'organizzazione.
+
+#link("https://zoom.us/")[*Zoom*] è un servizio di teleconferenza. A meno di accordi specifici tra le parti, l'organizzazione utilizza Zoom per effettuare videochiamate con gli interlocutori esterni.
+
+==== Mantenimento dell'infrastruttura
+
+Sono compiti dell'amministratore il mantenimento dell'infrastruttura, l'aggiornamento delle norme e dei processi e l'identificazione di nuovi servizi a supporto delle attività dell'organizzazione.
+
+L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi minimo e sufficiente a coprire tutti i requisiti di comunicazione.
+
+=== Processo di gestione delle Risorse Umane
+
+La natura didattica del progetto riduce le prerogative del processo di gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la _conformance to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.4_.
+
+==== Scopo
+
+Questo processo fornisce all'organizzazione le risorse umane necessarie all'esecuzione dei processi di ciclo di vita al fine di realizzare gli obiettivi di progetto, dell'organizzazione e degli stakeholder.
+
+==== Attività e compiti
+
+===== Identificare le competenze dei membri
+
+L'organizzazione sottopone, ad ogni nuovo membro, un form conoscitivo atto a identificare le competenze pregresse. Il form è realizzato con #link("https://www.google.it/intl/it/forms/about/")[*Google Forms*] e include domande su:
+
++ Strumenti di collaborazione;
++ Linguaggi di programmazione;
++ Tecnologie;
++ Strumenti di automazione;
++ Strumenti di controllo di versione.
+
+Le risposte sono non vincolanti e non influiscono in alcun modo sulla rotazione dei ruoli, sui compiti assegnati o sull'organizzazione interna.
+
+===== Identificare le competenze richieste
+
+Le competenze richieste sono identificate tramite:
+
++ Analisi dei Capitolati;
++ Studio del dominio di progetto;
++ Incontri con i Proponenti e successivi colloqui.
+
+===== Sviluppare le competenze <gestione-risorse-umane-sviluppo>
+
+Lo sviluppo di nuove competenze riguarda i membri, e non i ruoli. Per questa ragione, i processi di sviluppo di competenze sono universali e condivisi.
+
+L'organizzazione si adopera per sviluppare le competenze dei membri mediante:
+
++ Attività di _peer-tutoring_ in concomitanza delle rotazioni di ruolo;
++ Pubblicazione interna di tutorial tecnici scritti (eventualmente accompagnati da brevi video, se utili a migliorare la comprensione degli argomenti trattati);
++ Attività di _tutoring_ interno su richiesta, sincrono, in base alla necessità;
++ Attività di _mentoring_ esterno su richiesta, in base alla necessità e alla disponibilità dell'interlocutore esterno;
++ Condivisione delle best practice in sessione collettiva.
+
+Le sessioni di tutoring sono "a sportello" ed è responsabilità dei singoli membri richiederne l'attivazione. Il responsabile, identificati i temi di maggior interesse, può espressamente richiedere che un ruolo copra le esigenze di tutoring interno tramite le modalità sopra indicate.
+
+===== Acquisire e fornire competenze
+
+I membri dell'organizzazione sono prestabiliti. Qualora le competenze interne all'organizzazione siano deficitarie, è richiesta l'attivazione delle attività descritte in @gestione-risorse-umane-sviluppo.
+
+Non sono previste variazioni della composizione dell'organizzazione, se non in via straordinaria e comunque discussa preventivamente con il Committente.
 
 = Processi di gestione tecnica
 

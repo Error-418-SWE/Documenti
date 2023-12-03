@@ -272,8 +272,10 @@ Il ruolo dell'amministratore invece, incaricato di gestire il reparto tecnologic
 - studio iniziale della libreria Three.js;
 - meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare oppurtune richieste;
 - contatto con l'azienda Proponente per fissare il prossimo meeting.
+
 === Obiettivi mancati
 - aggiornamento completo del documento di Norme di Progetto con l'inserimento dei grafici di Gantt e di burndown.
+
 === Analisi problematiche insorte
 
 Nonostante la realizzazione soddisfacente della maggior parte degli obiettivi concordati, sono emerse alcune criticità durante l'implementazione del progetto:
@@ -283,12 +285,13 @@ Nonostante la realizzazione soddisfacente della maggior parte degli obiettivi co
 - la durata dei meeting ha superato le aspettative a causa di alcune inefficienze temporali;
 - il team ha rilevato la mancanza di standard per designare le persone responsabili della redazione dei verbali durante lo sprint.
 
-
 === Risoluzioni attuate
 Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentrano su un'organizzazione e un'attenzione maggiore nella fase di pianificazione, oltre alla definizione di standard relativi ai grafici da inserire nei documenti e relativi allo svolgimento dei meeting e redazione dei rispettivi verbali. In particolare:
-- è stata prestata una maggiore attenzione nella pianificazione del nuovo sprint, introducento nella board retrospettiva di Miro una bacheca relativa alle task da svolgere, che sono state tradotte din da subito in ticket di Jira e assegnati ai rispettivi ruoli;
-- è stata fissata una durata massima per i meeting settimanali, con eccezione meeting straordinari relativi ad una grande mole di lavoro;
+
+- è stata prestata una maggiore attenzione nella pianificazione del nuovo sprint, introducento nella board retrospettiva di Miro una bacheca relativa alle task da svolgere, che sono state tradotte fin da subito in ticket di Jira e assegnati ai rispettivi ruoli;
+- la durata massima dei meeting di retrospettiva è stata fissata a 90 minuti (_soft limit_);
 - sono stati definiti degli standard per la realizzazione dei grafici, adottando quelli proposti da Jira, ma gestendo meglio la pianificazione in modo da ottenere grafici ottimali.
+
 === Analisi costi di sprint effettivi
 
 #set text(

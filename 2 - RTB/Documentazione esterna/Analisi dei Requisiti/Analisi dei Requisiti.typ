@@ -273,47 +273,26 @@ $bold("Scenario: ")$
 - viene inviata una notifica a magazzino che segnala lo spostamento;
 - i due bin, di partenza e di arrivo, vengono evidenziati per segnalare lo spostamento in corso.
 
-== UC-5 Modifica scaffale
+= Interrogazione bin
+
+#figure(image("./imgs/uc5.png", format: "png"), caption: [UML UC-5])
+
+== Interrogazione di un bin
 $bold("Descrizione: ")$ 
-modifica delle caratteristiche di uno scaffale già esistente.
+deve essere possibile visualizzare il prodotto contenuto in un determinato bin.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- nell'ambiente deve essere posizionato almeno uno scaffale.
+- l’ambiente deve essere correttamente configurato e deve esistere almeno un bin.
 
 $bold("Postcondizioni: ")$
-- i valori di uno scaffale scelto sono stati modificati come indicato.
+- vengono visualizzate le informazioni del bin.
 
 $bold("Scenario: ")$
-- l'utente seleziona uno scaffale nell'ambiente di lavoro;
-- l'utente seleziona il comando per la modifica dello scaffale;
-- l'utente inserisce i nuovi valori relativi alle proprietà da modificare dello scaffale.
-
-$bold("Estensioni: ")$
-- UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale.
-
-
-
-=== UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale 
-$bold("Descrizione: ")$ 
-i dati inseriti per la modifica di uno scaffale sono errati e non possono essere accettati.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
--l'attività di modifica di uno scaffale deve essere stata attivata;
--l'inserimento dei valori per la modifica deve essere avvenuto.
-
-$bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo ai dati errati.
-
-$bold("Scenario: ")$
-- l'utente ha avviato la procedura di modifica di uno scaffale esistente;
-- l'utente ha immesso dati non validi o che comporterebbero incongruenze con i bin o altri elementi dell'ambiente.
-
+- l’utente seleziona un bin;
+- vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
 
 == UC-6 Eliminazione scaffale
 $bold("Descrizione: ")$ 

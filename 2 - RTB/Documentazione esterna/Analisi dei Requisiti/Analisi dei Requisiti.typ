@@ -62,11 +62,18 @@ Questo documento viene redatto in modo incrementale, così da risultare sempre c
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
   _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_ .
 
-= Casi d'uso
+#set heading(numbering: (..nums) => {
+  let values = nums.pos();
+  if (values.len() > 0){
+      values.at(values.len()-1) = values.at(values.len()-1);
+  }
+  values.at(0) = values.at(0)-1;
+  return "UC-"+values.map(str).join(".");
+}) 
 
-#set heading(numbering: none) 
-== UC-1 Importazione mappa magazzino da file SVG 
-
+= Creazione magazzino 
+#figure(image("./imgs/uc1.png", format: "png"), caption: [UML UC-1])
+== Importazione mappa magazzino da file SVG 
 $bold("Descrizione: ")$
 All'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
 
@@ -84,11 +91,9 @@ $bold("Scenario: ")$
 - l'utente carica un file SVG tramite un'apposita interfaccia.
 
 $bold("Estensioni: ")$
-- UC-1.1 Visualizzazione errore lettura del file SVG.
-
-
-
-=== UC-1.1 Visualizzazione errore lettura del file SVG
+- UC-1.1.1 Visualizzazione errore lettura del file SVG.
+\
+=== Visualizzazione errore lettura del file SVG
 $bold("Descrizione: ")$
 il file caricato dall'utente non ha permesso al programma di configurare l'ambiente di lavoro.
 
@@ -106,12 +111,11 @@ $bold("Scenario: ")$
 - l'utente ha caricato un file non adatto.
 
 $bold("Generalizzazioni: ")$
-- UC-1.1.1 Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni;
-- UC-1.1.2 Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti.
+- UC-1.1.1.1 Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni;
+- UC-1.1.1.2 Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti.
 
-
-
-==== UC-1.1.1 Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni
+\
+==== Visualizzazione errore file privo di informazioni
 $bold("Descrizione: ")$
 il file SVG caricato non contiene informazioni utili alla configurazione dell'ambiente.
 
@@ -129,10 +133,8 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - L'utente ha caricato un file SVG vuoto o con informazioni non utili.
 
-
-
-
-==== UC-1.1.2 Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti
+\
+==== Visualizzazione errore informazioni del file incongruenti
 $bold("Descrizione: ")$
 il file SVG caricato contiene informazioni incongruenti e quindi non utilizzabili per la configurazione dell'ambiente.
 
@@ -151,8 +153,8 @@ $bold("Scenario: ")$
 - L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
 
 
-
-== UC-2 Configurazione ambiente 3d manuale
+\
+== Creazione manuale della mappa del magazzino
 $bold("Descrizione: ")$
 configurazione manuale del perimetro dell'ambiente di lavoro.
 
@@ -173,8 +175,8 @@ $bold("Estensioni: ")$
 - UC-2.1 Visualizzazione errore sui dati.
 
 
-
-=== UC-2.1 Visualizzazione errore sui dati
+\
+=== Visualizzazione errore dati inseriti non validi
 $bold("Descrizione: ")$
 i dati inseriti per la configurazione manuale dell'ambiente di lavoro non sono validi.
 
@@ -192,9 +194,10 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione dell'ambiente non validi.
 
-
-
-== UC-3 Modifica ambiente 3d
+#pagebreak()
+= Modifica dell'ambiente 3D
+#figure(image("./imgs/uc2.png", format: "png"), caption: [UML UC-2])
+== Inserimento nuove dimensioni del magazzino
 $bold("Descrizione: ")$ 
 il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
 
@@ -212,12 +215,11 @@ $bold("Scenario: ")$
 - l'utente immette i dati richiesti.
 
 $bold("Estensioni: ")$
-- UC-3.1 Visualizzazione errore di modifica dell'ambiente.
+- UC-2.1.1 Visualizzazione errore di modifica dell'ambiente.
 
-
-
-
-=== UC-3.1 Visualizzazione errore di modifica dell'ambiente
+\
+\
+=== Visualizzazione errore di modifica dell'ambiente
 $bold("Descrizione: ")$ 
 i dati inseriti per la modifica dell'ambiente di lavoro non sono validi con quanto configurato precedentemente.
 
@@ -234,10 +236,8 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente ha immesso dei dati errati per la modifica dell'ambiente.
 
-
-
-
-== UC-4 Creazione scaffale
+\
+== Creazione scaffale
 $bold("Descrizione: ")$ 
 uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata. Seccessivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
 
@@ -256,9 +256,11 @@ $bold("Scenario: ")$
 - l'utente inserisce i dati necessari alla creazione dello scaffale;
 - l'utente posiziona lo scaffale in una posizione valida nell'ambiente di lavoro.
 
+$bold("Estensioni: ")$
+- UC-2.9 Visualizzazione errore inserimento dati dimensionali non validi
 
-
-== UC-5 Modifica scaffale
+\
+== Modifica scaffale
 $bold("Descrizione: ")$ 
 modifica delle caratteristiche di uno scaffale già esistente.
 
@@ -277,30 +279,49 @@ $bold("Scenario: ")$
 - l'utente inserisce i nuovi valori relativi alle proprietà da modificare dello scaffale.
 
 $bold("Estensioni: ")$
-- UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale.
+- UC-2.9 Visualizzazione errore inserimento dati dimensionali non validi
 
-
-
-=== UC-5.1 Visualizzazione errore inserimento valori errati per la modifica di uno scaffale 
+\
+== Spostamento scaffali
 $bold("Descrizione: ")$ 
-i dati inseriti per la modifica di uno scaffale sono errati e non possono essere accettati.
+L'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
--l'attività di modifica di uno scaffale deve essere stata attivata;
--l'inserimento dei valori per la modifica deve essere avvenuto.
+- nell'ambiente deve essere posizionato almeno uno scaffale.
 
 $bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo ai dati errati.
+- lo scaffale spostato si trova nella nuova posizione scelta dall'utente.
 
 $bold("Scenario: ")$
-- l'utente ha avviato la procedura di modifica di uno scaffale esistente;
-- l'utente ha immesso dati non validi o che comporterebbero incongruenze con i bin o altri elementi dell'ambiente.
+- l'utente seleziona uno scaffale nell'ambiente di lavoro;
+- l'utente sposta lo scaffale nella nuova posizione desiderata nell'ambiente 3D.
 
+$bold("Estensioni: ")$
+- UC-2.4-1 Visualizzazione errore spostamento dello scaffale in zona non libera
 
-== UC-6 Eliminazione scaffale
+\
+=== Visualizzazione errore spostamento dello scaffale in zona non libera
+$bold("Descrizione: ")$ 
+è stata richiesto lo spostamento di uno scaffale in una zona non libera.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- avviata l'attività di spostamento dello scaffale;
+- lo scaffale interessato viene posto in una zona occupata.
+
+$bold("Postcondizioni: ")$
+- all'utente viene notificato l'errore relativo allo spostamento dello scaffale.
+
+$bold("Scenario: ")$
+- l'utente ha richiesto lo spostamento di uno scaffale in una zona non libera.
+
+\
+== Eliminazione scaffale
 $bold("Descrizione: ")$ 
 lo scaffale selezionato presente nell'ambiente viene eliminato.
 
@@ -322,10 +343,10 @@ $bold("Scenario: ")$
 - l'utente conferma l'operazione da una finestra di conferma.
 
 $bold("Estensioni: ")$
-- UC-6.1 Visualizzazione errore scaffale da eliminare non vuoto.
+- UC-2.5.1 Visualizzazione errore scaffale da eliminare non vuoto.
 
-
-=== UC-6.1 Visualizzazione errore scaffale da eliminare non vuoto
+\
+=== Visualizzazione errore scaffale da eliminare non vuoto
 $bold("Descrizione: ")$ 
 è stata richiesta l'eliminazione di uno scaffale contenente almeno un bin non vuoto.
 
@@ -342,9 +363,8 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.
 
-
-
-== UC-7 Creazione di un bin
+\
+== Creazione di un bin
 $bold("Descrizione: ")$
 deve essere possibile creare delle aree adibite a contenere prodotti.
 
@@ -362,7 +382,8 @@ $bold("Scenario: ")$
 - l'utente entra nella modalità di modifica;
 - l'utente seleziona un'area libera e valida.
 
-== UC-8 Modifica di un bin
+\
+== Modifica di un bin
 $bold("Descrizione: ")$ 
 deve essere possibile modificare le dimensioni dei bin.
 
@@ -385,44 +406,8 @@ $bold("Estensioni: ")$
 - UC-8.1 Dimensioni del bin negative o uguali a zero;
 - UC-8.2 Dimensioni del bin eccessive.
 
-=== UC-8.1 Dimensioni del bin negative o uguali a zero
-$bold("Descrizione: ")$
-le dimensioni del bin definite dall'utente sono negative o uguali a zero.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- UC-8 Modifica Bin.
-
-$bold("Postcondizioni: ")$
-- viene mostrato un messaggio di errore;
-- il bin rimane al suo stato precedente.
-
-$bold("Scenario: ")$ 
-- l'utente inserisce dimensioni minori o uguali a zero;
-- viene visualizzato un messaggio di errore;
-- la modifica viene rifiutata e il bin non viene cambiato.
-
-=== UC-8.2 Dimensioni del bin eccessive
-$bold("Descrizione: ")$
-le dimensioni del bin definite dall'utente sono eccessive.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- UC-8 Modifica Bin.
-
-$bold("Postcondizioni: ")$
-viene mostrato un messaggio di errore e il bin rimane al suo stato precedente.
-
-$bold("Scenario: ")$ 
-- l'utente inserisce dimensioni troppo grandi per il bin;
-- viene visualizzato un messaggio di errore;
-- la modifica viene rifiutata e il bin non viene cambiato.
-
-== UC-9 Eliminazione bin vuoto
+\
+== Eliminazione bin vuoto
 $bold("Descrizione: ")$
 deve essere possibile eliminare un bin.
 
@@ -442,7 +427,84 @@ $bold("Scenario: ")$
 - l'utente chiede di eliminare il bin;
 - viene richiesta la conferma dell'eliminazione.
 
-== UC-10 Caricamento dei prodotti da database
+\
+=== Visualizzazione errore scaffale da eliminare non vuoto
+$bold("Descrizione: ")$ 
+è stata richiesta l'eliminazione di un bin non vuoto.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- l'attività di eliminazione di un bin deve essere stata attivata;
+- lo scaffale interessato contiene un prodotto.
+
+$bold("Postcondizioni: ")$
+- all'utente viene notificato l'errore relativo all'eliminazione di un bin non vuoto.
+
+$bold("Scenario: ")$
+- l'utente ha richiesto l'eliminazione di un bin non vuoto.
+
+\
+== Visualizzazione errore inserimento dati dimensionali non validi
+$bold("Descrizione: ")$
+i dati inseriti per la modifica delle dimensioni dell'elemento interessato non sono validi.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- inseriti dati per la modifica o la creazione degli elementi dell'ambiente;
+- tali dati non sono utilizzabili dal programma.
+
+$bold("Postcondizioni: ")$
+- viene visualizzato l'errore relativo all'inserimento di dati non validi.
+
+$bold("Scenario: ")$
+- l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente non validi.
+
+$bold("Generalizzazioni: ")$
+- UC-2.9.1 Dimensioni negative o uguali a 0;
+- UC-2.9.2 Dimensioni eccessive.
+
+\
+=== Dimensioni negative o uguali a zero
+$bold("Descrizione: ")$
+le dimensioni inserite per la modifica dell'elemento interessato sono minori o uguali a zero.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- inseriti dati dimensionali per la modifica o la creazione degli elementi dell'ambiente;
+- le dimensioni inserite non sono valide.
+
+$bold("Postcondizioni: ")$
+- viene visualizzato l'errore relativo all'inserimento di dimensioni non valide.
+
+$bold("Scenario: ")$
+- l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente minori o uguali a zero.
+
+\
+=== Dimensioni eccessive
+$bold("Descrizione: ")$
+le dimensioni inserite per la modifica dell'elemento interessato eccessive per il contesto di inserimento.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- inseriti dati dimensionali per la modifica o la creazione degli elementi dell'ambiente;
+- le dimensioni inserite sono eccessive.
+
+$bold("Postcondizioni: ")$
+- viene visualizzato l'errore relativo all'inserimento di dimensioni eccessive.
+
+$bold("Scenario: ")$
+- l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente eccessivi.
+
+\
+= Caricamento dei prodotti da database
 $bold("Descrizione: ")$
 i prodotti vengono inseriti dal database nei rispettivi bin.
 
@@ -460,7 +522,7 @@ $bold("Scenario: ")$
 - l'utente configura l'accesso al database;
 - l'utente inizia la procedura di caricamento dei prodotti.
 
-== UC-11 Interrogazione bin 
+= Interrogazione bin 
 $bold("Descrizione: ")$
 deve essere possibile visualizzare la prodotto contenuta in un determinato bin.
 

@@ -545,16 +545,16 @@ $bold("Scenario: ")$
 
 == Spostamento della visuale
 $bold("Descrizione: ")$
-Una volta che il sistema è stato configurato l'utente può visualizzare il magazzino e spostare la visuale sui quattro assi (avani, indietro, destra e sinistra).
+Una volta che il sistema è stato configurato l'utente può visualizzare il magazzino e spostare la visuale sui tre assi.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- il sistema è stato correttamente configurato
+- il sistema è stato correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- l'utente ha spostato la visuale sul magazzino nella direzione indicata
+- l'utente ha spostato la visuale sul magazzino nella direzione indicata.
 
 $bold("Scenario: ")$
 - l'utente visualizza il magazzino;
@@ -563,16 +563,16 @@ $bold("Scenario: ")$
 
 == Rotazione della visuale
 $bold("Descrizione: ")$
-Una volta che il sistema è stato configurato l'utente può visualizzare il magazzino e ruotare la vista sul magazzino a destra o sinistra.
+Una volta che il sistema è stato configurato l'utente può visualizzare il magazzino e ruotare la camera sul magazzino a destra o sinistra.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- il sistema è stato correttamente configurato
+- il sistema è stato correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- l'utente ha spostato la visuale sul magazzino nella direzione indicata
+- l'utente ha spostato la visuale sul magazzino nella direzione indicata.
 
 $bold("Scenario: ")$
 - l'utente visualizza il magazzino;
@@ -581,13 +581,13 @@ $bold("Scenario: ")$
 
 == Zoom della visuale
 $bold("Descrizione: ")$
-Una volta che il sistema è stato configurato l'utente può avvicinare o allontanare la visuale dal magazzino (zoom in, zoom out)
+Una volta che l'ambiente è stato configurato l'utente può avvicinare o allontanare la visuale dal magazzino (zoom in, zoom out).
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- il sistema è stato correttamente configurato
+- il sistema è stato correttamente configurato.
 
 $bold("Postcondizioni: ")$
 - l'utente ha avvicinato o allontanato la visuale dal magazzino.

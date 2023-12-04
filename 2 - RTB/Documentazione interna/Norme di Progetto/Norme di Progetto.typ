@@ -47,7 +47,7 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 #link("https://threejs.org/docs/")
 
 = Processi di accordo
-== Fornitura
+== Processo di fornitura
 === Scopo e descrizione
 Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con proponente e committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
 === Rapporti con il proponente
@@ -345,7 +345,7 @@ Non sono previste variazioni della composizione dell'organizzazione, se non in v
 
 = Processi di gestione tecnica
 
-== Pianificazione di progetto <pianificazione>
+== Processo di pianificazione di progetto <pianificazione>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
 === Scopo
 Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato Piano di progetto (@PdP).

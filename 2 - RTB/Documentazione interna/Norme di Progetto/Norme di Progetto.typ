@@ -47,7 +47,7 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 #link("https://threejs.org/docs/")
 
 = Processi di accordo
-== Fornitura
+== Processo di fornitura
 === Scopo e descrizione
 Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con proponente e committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
 === Rapporti con il proponente
@@ -206,6 +206,7 @@ Per la scrittura dei documenti è richiesto uno stile di scrittura impersonale (
 === Elenchi puntati
 Viene inserito ";" alla fine delle voci dell'elenco tranne l'ultima che termina con ".". Ogni voce dell'elenco inizia con una lettera minuscola.
 
+
 = Processi di ciclo di vita
 
 == Processi organizzativi abilitanti
@@ -341,3 +342,64 @@ Le sessioni di tutoring sono "a sportello" ed è responsabilità dei singoli mem
 I membri dell'organizzazione sono prestabiliti. Qualora le competenze interne all'organizzazione siano deficitarie, è richiesta l'attivazione delle attività descritte in @gestione-risorse-umane-sviluppo.
 
 Non sono previste variazioni della composizione dell'organizzazione, se non in via straordinaria e comunque discussa preventivamente con il Committente.
+
+= Processi di gestione tecnica
+
+== Processo di pianificazione di progetto <pianificazione>
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
+=== Scopo
+Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato Piano di progetto (@PdP).
+
+=== Attività
+Nel processo di pianificazione sono presenti due attività principali:
+
++ Definizione del progetto;
++ Pianificazione del progetto e della gestione tecnica.
+
+==== Definizione del progetto
+In questa attività il gruppo deve definire tutto ciò che caratterizza il progetto, ovvero i suoi obiettivi e vincoli, sia di carattere funzionale che tecnologico. Durante la lavorazione del progetto verranno prodotti diversi output, che possono essere suddivisi nelle due macro categorie di: documentazione, codice. Entrambi questi prodotti dovranno essere realizzati rispettando determinate regole e processi, ed è quindi necessario che il gruppo definisca in questa attività uno o più cicli di vita da seguire.
+
+==== Pianificazione del progetto e della gestione tecnica
+È l'attività principale del processo, nella quale viene definita nel concreto la pianificazione.
+
+===== Suddivisione temporale
+Il gruppo ha individuato tre periodi di lavoro principali:
+
+- Raccolta e analisi dei requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con l'azienda proponente;
+- Sviluppo della Requirements and Technology Baseline (RTB): si studiano le tecnologie da utilizzare e si applicano le conoscenze acquisite per realizzare un PoC (Proof of Concept), ovvero un prodotto software che permetta di dimostrare la padronanza delle tecnologie selezionate ai fini dello sviluppo del progetto;
+- Periodo di sviluppo del Minimum Viable Product (MVP): viene progettato e implementato un prodotto software che rispetti almeno i requisiti minimi di accettazione, e che offra tutte le funzionalità richieste.
+
+Ognuno di questi viene suddiviso a sua volta in periodi della durata di una settimana denominati _sprint_. Al termine di ogni _sprint_ viene effettuato un incontro interno di retrospettiva, nel quale si analizza criticamente la settimana appena conclusa, mostrandone aspetti positivi, aspetti da migliorare e fissando obiettivi che verrano poi riportati nell'Issue Tracking System sotto forma di task. Questi andranno a comporre il _backlog_ dello _sprint_ successivo, e il loro progressivo completamento andrà a produrre un _burndown-chart_, utilizzato dal gruppo come strumento che rappresenti in modo oggettivo l'andamento del lavoro.
+
+===== Definizione di ruoli, responsabilità e costi
+Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognuno dei quali con precise responsabilità da rispettare. Ogni membro del gruppo dovrà assumere ognuno di questi ruoli all'interno del periodo di lavoro al progetto. L'assegnazione dei ruoli avviene con frequenza bisettimanale. Di seguito viene riportata la descrizone di ogni ruolo con i relativi compiti:
+
++ *Responsabile*: è presente durante l'intero progetto, in particolare si occupa di:
+  - coordinare il gruppo;
+  - verificare che il lavoro proceda secondo le tempistiche e i costi stabiliti;
+  - rappresentare il gruppo nei rapporti con il committente;
+  - gestire la pianificazione di ogni _sprint_.
++ *Amministratore*: ruolo presente durante tutto il progetto. Ha il compito di:
+  - predisporre e controllare il corretto utilizzo delle procedure e degli strumenti adottati;
+  - implementare e manutenere gli automatismi in modo da migliorare l'efficienza del gruppo.
++ *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento Analisi dei requisiti, nel quale:
+  - definisce i casi d'uso;
+  - raccoglie e classifica i requisiti.
++ *Progettista*: ruolo presente principalmente negli ulimi due periodi, nei quali:
+  - delinea l'architettura del prodotto;
+  - definisce le linee guida implementative valutando le scelte più efficienti e sostenibili.
++ *Programmatore*: è attivo negli ultimi due periodi del progetto, ed è il responsabile della traduzione in codice eseguibile dell'architettura definita dal progettista;
++ *Verificatore*: è presente durante l'intero progetto, e si occupa di controllare che il lavoro prodotto dal gruppo rispetti gli standard qualitativi adottati.
+
+Ad ogni ruolo è inoltre associato un costo orario, tramite cui il gruppo calcola il preventivo totale del progetto e quello di ogni _sprint_ seguito dal relativo consuntivo.
+
+=== Piano di progetto <PdP>
+Il piano di progetto è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento. Sono presenti cinque sezioni:
+
++ Rischi e loro mitigazione;
++ Divisione temporale di sviluppo;
++ Preventivo dei costi di realizzazione;
++ Pianificazione del lavoro;
++ Consuntivo del progetto.
+
+La redazione del documento va di pari passo con l'avanzamento del progetto, in modo tale da essere sempre aggiornato alla situazione corrente del lavoro.

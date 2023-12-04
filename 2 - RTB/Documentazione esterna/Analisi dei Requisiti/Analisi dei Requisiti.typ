@@ -154,7 +154,6 @@ $bold("Scenario: ")$
 
 
 = Configurazione ambiente 3d manuale
-
 $bold("Descrizione: ")$
 configurazione manuale del perimetro dell'ambiente di lavoro.
 
@@ -260,30 +259,35 @@ $bold("Scenario: ")$
 - l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere (es. numero scaffali/bin incompatibile con le coordinate dei prodotti).
 
 
-== UC-4 Creazione scaffale
+= Richiesta di spostamento di un prodotto
+
+#figure(image("./imgs/uc4.png", format: "png"), caption: [UML UC-4])
+
+== Richiesta di spostamento di un prodotto
+
 $bold("Descrizione: ")$ 
-uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata. Seccessivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
+l'utente seleziona il prodotto di cui desidera una ricollocazione all'interno del magazzino e avvia una richiesta di spostamento verso un altro bin.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'ambiente di lavoro deve essere stato configurato con successo.
+- devono esistere almeno due bin distinti;
+- uno dei due bin deve contenere un prodotto;
+- uno dei due bin deve essere vuoto.
 
 $bold("Postcondizioni: ")$
-- nell'ambiente di lavoro è stato aggiunto un nuovo scaffale;
-- nello scaffale creato sono stati aggiunti i bin da esso contenuti.
+- viene inviata una richiesta di spostamento al magazzino tramite l'uso di API;
+- il bin di partenza viene evidenziato in modo da identificare il fatto che da quel bin è in atto uno spostamento;
+- il bin di arrivo viene evidenziato in modo da identificare il fatto che in quel bin è in atto uno spostamento;
 
 $bold("Scenario: ")$
-- l'utente seleziona l'aggiunta di uno scaffale;
-- l'utente inserisce i dati necessari alla creazione dello scaffale;
-- l'utente posiziona lo scaffale in una posizione valida nell'ambiente di lavoro.
+- l'utente seleziona un bin che contiene un prodotto;
+- l'utente sposta il prodotto all'interno di un altro bin vuoto;
+- viene inviata una notifica a magazzino che segnala lo spostamento;
+- i due bin, di partenza e di arrivo, vengono evidenziati per segnalare lo spostamento in corso.
 
-$bold("Estensioni: ")$
-- UC-2.9 Visualizzazione errore inserimento dati dimensionali non validi
-
-\
-== Modifica scaffale
+== UC-5 Modifica scaffale
 $bold("Descrizione: ")$ 
 modifica delle caratteristiche di uno scaffale già esistente.
 

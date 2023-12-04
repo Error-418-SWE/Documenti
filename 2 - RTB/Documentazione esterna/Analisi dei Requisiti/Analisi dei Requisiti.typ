@@ -346,7 +346,7 @@ $bold("Postcondizioni: ")$
 - l'utente visualizza la posizione del bin contenente il prodotto ricercato.
 
 $bold("Scenario: ")$
-- l'utente ricerca un prodotto usando come riferimento per la ricerca l'ID univoco di magazzino;
+- l'utente ricerca un prodotto usando come chiave l'ID univoco di magazzino;
 - il bin contenente il prodotto cercato viene evidenziato.
 
 === Ricerca per Nome
@@ -363,13 +363,13 @@ $bold("Postcondizioni: ")$
 - l'utente visualizza la posizione del bin contenente il prodotto ricercato.
 
 $bold("Scenario: ")$
-- l'utente ricerca un prodotto usando come riferimento per la ricerca il nome del prodotto;
+- l'utente ricerca un prodotto usando come chiave per la ricerca il nome del prodotto;
 - il bin contenente il prodotto cercato viene evidenziato;
 - i prodotti associati al nome possono essere più di uno.
 
 === Ricerca per Scaffale
 $bold("Descrizione: ")$ 
-l'utente ricerca uno scaffale all'interno del magazzino.
+l'utente ricerca i prodotti contenuti all'interno di uno scaffale del magazzino.
 
 $bold("Attore: ")$
 utente.
@@ -378,11 +378,11 @@ $bold("Precondizioni: ")$
 - l'ambiente deve essere correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- l'utente visualizza la posizione dello scaffale.
+- l'utente visualizza la posizione dei prodotti contenuti nello scaffale cercato.
 
 $bold("Scenario: ")$
-- l'utente ricerca uno scaffale all'interno del magazzino;
-- lo scaffale viene evidenziato;
+- l'utente ricerca i materiali contenuti all'interno di uno scaffale del magazzino;
+- lo scaffale viene evidenziato.
 
 
 == UC-7 Creazione di un bin

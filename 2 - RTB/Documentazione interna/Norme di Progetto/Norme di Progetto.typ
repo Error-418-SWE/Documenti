@@ -346,7 +346,7 @@ Non sono previste variazioni della composizione dell'organizzazione, se non in v
 = Processi di gestione tecnica
 
 == Pianificazione di progetto <pianificazione>
-
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
 === Scopo
 Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato Piano di progetto (@PdP).
 

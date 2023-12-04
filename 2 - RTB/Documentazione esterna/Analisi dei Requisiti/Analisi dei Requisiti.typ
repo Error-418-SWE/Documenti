@@ -153,8 +153,8 @@ $bold("Scenario: ")$
 - L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
 
 
-\
-== Creazione manuale della mappa del magazzino
+= Configurazione ambiente 3d manuale
+
 $bold("Descrizione: ")$
 configurazione manuale del perimetro dell'ambiente di lavoro.
 
@@ -194,50 +194,73 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione dell'ambiente non validi.
 
-#pagebreak()
-= Modifica dell'ambiente 3D
-#figure(image("./imgs/uc2.png", format: "png"), caption: [UML UC-2])
-== Inserimento nuove dimensioni del magazzino
+= Caricamento dati database
+
+#figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])
+
+== Caricamento dati da database
+
 $bold("Descrizione: ")$ 
-il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
+i prodotti vengono inseriti dal database nei rispettivi bin.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- almeno una configurazione dell'ambiente deve essere avvenuta con successo;
+- l’ambiente deve essere correttamente configurato;
 
 $bold("Postcondizioni: ")$
-- l'ambiente di lavoro è stato correttamente modificato in funzione delle richieste dell'utente.
+- i prodotti si trovano nei rispettivi bin.
 
 $bold("Scenario: ")$
-- l'utente avvia la modifica dell'ambiente di lavoro;
-- l'utente immette i dati richiesti.
+- l’utente configura l’accesso al database;
+- l’utente inizia la procedura di caricamento dei prodotti.
+
+$bold("Inclusioni: ")$
+- UC-3.2 Configurazione collegamento al database.
 
 $bold("Estensioni: ")$
-- UC-2.1.1 Visualizzazione errore di modifica dell'ambiente.
 
-\
-\
-=== Visualizzazione errore di modifica dell'ambiente
+- UC-3.3 Visualizzazione messaggio di errore.
+
+== Configurazione collegamento al database
 $bold("Descrizione: ")$ 
-i dati inseriti per la modifica dell'ambiente di lavoro non sono validi con quanto configurato precedentemente.
+l'utente imposta i dati necessari affinchè il programma possa configurarsi con il database in cui sono contenuti i dati.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'utente ha immesso i dati per la modifica dell'ambiente;
-- tali dati non sono congrui con la precedente configurazione dell'ambiente.
+- l’ambiente deve essere correttamente configurato;
+- il database deve essere disponibile;
+- l'utente deve disporre delle credenziali per configurarsi al database.
 
 $bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo ad un'immissione errata dei dati per la modifica dell'ambiente.
+- il sistema è correttamente configurato per accedere al database.
 
 $bold("Scenario: ")$
-- l'utente ha immesso dei dati errati per la modifica dell'ambiente.
+- l’utente configura l’accesso al database;
 
-\
-== Creazione scaffale
+== Visualizzazione messaggio di errore
+
+$bold("Descrizione: ")$ 
+i dati contenuti nel database sono in un formato non conforme o sono errati
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- l'utente ha iniziato la procedura di caricamento dati da database;
+- l'accesso al database deve essere stato correttamente configurato.
+
+$bold("Postcondizioni: ")$
+- all'utente viene notificato l'errore relativo alla presenza di dati errati o non conformi all'interno del database.
+
+$bold("Scenario: ")$
+- l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere (es. numero scaffali/bin incompatibile con le coordinate dei prodotti).
+
+
+== UC-4 Creazione scaffale
 $bold("Descrizione: ")$ 
 uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata. Seccessivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
 

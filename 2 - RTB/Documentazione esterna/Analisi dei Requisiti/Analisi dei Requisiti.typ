@@ -287,68 +287,28 @@ $bold("Scenario: ")$
 - viene inviata una notifica a magazzino che segnala lo spostamento;
 - i due bin, di partenza e di arrivo, vengono evidenziati per segnalare lo spostamento in corso.
 
-== UC-5 Modifica scaffale
+= Interrogazione bin
+
+#figure(image("./imgs/uc5.png", format: "png"), caption: [UML UC-5])
+
+== Interrogazione di un bin
 $bold("Descrizione: ")$ 
-modifica delle caratteristiche di uno scaffale già esistente.
+deve essere possibile visualizzare il prodotto contenuto in un determinato bin.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- nell'ambiente deve essere posizionato almeno uno scaffale.
+- l’ambiente deve essere correttamente configurato e deve esistere almeno un bin.
 
 $bold("Postcondizioni: ")$
-- i valori di uno scaffale scelto sono stati modificati come indicato.
+- vengono visualizzate le informazioni del bin.
 
 $bold("Scenario: ")$
-- l'utente seleziona uno scaffale nell'ambiente di lavoro;
-- l'utente seleziona il comando per la modifica dello scaffale;
-- l'utente inserisce i nuovi valori relativi alle proprietà da modificare dello scaffale.
+- l’utente seleziona un bin;
+- vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
 
-$bold("Estensioni: ")$
-- UC-2.9 Visualizzazione errore inserimento dati dimensionali non validi
-
-\
-== Spostamento scaffali
-$bold("Descrizione: ")$ 
-L'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- nell'ambiente deve essere posizionato almeno uno scaffale.
-
-$bold("Postcondizioni: ")$
-- lo scaffale spostato si trova nella nuova posizione scelta dall'utente.
-
-$bold("Scenario: ")$
-- l'utente seleziona uno scaffale nell'ambiente di lavoro;
-- l'utente sposta lo scaffale nella nuova posizione desiderata nell'ambiente 3D.
-
-$bold("Estensioni: ")$
-- UC-2.4-1 Visualizzazione errore spostamento dello scaffale in zona non libera
-
-\
-=== Visualizzazione errore spostamento dello scaffale in zona non libera
-$bold("Descrizione: ")$ 
-è stata richiesto lo spostamento di uno scaffale in una zona non libera.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- avviata l'attività di spostamento dello scaffale;
-- lo scaffale interessato viene posto in una zona occupata.
-
-$bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo allo spostamento dello scaffale.
-
-$bold("Scenario: ")$
-- l'utente ha richiesto lo spostamento di uno scaffale in una zona non libera.
-
-\
-== Eliminazione scaffale
+== UC-6 Eliminazione scaffale
 $bold("Descrizione: ")$ 
 lo scaffale selezionato presente nell'ambiente viene eliminato.
 

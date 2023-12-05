@@ -560,3 +560,60 @@ $bold("Scenario: ")$
 - l'utente seleziona un bin;
 - vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
 
+= Esplorazione magazzino
+
+#figure(image("./imgs/uc7.png", format: "png"), caption: [UML UC-7])
+
+== Spostamento della visuale
+$bold("Descrizione: ")$
+Una volta che il sistema è stato configurato l'utente può visualizzare il magazzino e spostare la visuale sui tre assi.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- il sistema è stato correttamente configurato.
+
+$bold("Postcondizioni: ")$
+- l'utente ha spostato la visuale sul magazzino nella direzione indicata.
+
+$bold("Scenario: ")$
+- l'utente visualizza il magazzino;
+- l'utente sposta la visuale secondo uno dei quattro assi;
+- l'utente ha cambiato la prospettiva sul magazzino.
+
+== Rotazione della visuale
+$bold("Descrizione: ")$
+Una volta che il sistema è stato configurato l'utente può visualizzare il magazzino e ruotare la camera sul magazzino a destra o sinistra.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- il sistema è stato correttamente configurato.
+
+$bold("Postcondizioni: ")$
+- l'utente ha spostato la visuale sul magazzino nella direzione indicata.
+
+$bold("Scenario: ")$
+- l'utente visualizza il magazzino;
+- l'utente ruota lavisuale a destra o a sinistra;
+- l'utente ha cambiato la prospettiva sul magazzino.
+
+== Zoom della visuale
+$bold("Descrizione: ")$
+Una volta che l'ambiente è stato configurato l'utente può avvicinare o allontanare la visuale dal magazzino (zoom in, zoom out).
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- il sistema è stato correttamente configurato.
+
+$bold("Postcondizioni: ")$
+- l'utente ha avvicinato o allontanato la visuale dal magazzino.
+
+$bold("Scenario: ")$
+- l'utente visualizza il magazzino;
+- l'utente effettua uno zoom in o uno zoom out sul magazzino;
+- l'utente ha cambiato la prospettiva sul magazzino.

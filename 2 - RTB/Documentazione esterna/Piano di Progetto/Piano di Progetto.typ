@@ -81,7 +81,7 @@ Tra le difficoltà principali durante lo sviluppo del progetto è la congiunzion
 
 - Impatto: grave;
 - Probabilità: 4 (Probabilità aumentata nel periodo della sessione invernale).
-- Conseguenze: attività non svolte o completate parzialmente determinerebbero uno slittamento della data di consegna e delle scadenze intermedie.;
+- Conseguenze: attività non svolte o completate parzialmente determinerebbero uno slittamento della data di consegna e delle scadenze intermedie.
 - Mitigazione:
   - Organizzazione e suddivisione del monte ore con occhio di riguardo a precise date e scadenze;
   - Incontri e comunicazione costante con i membri del gruppo al fine di rendere note eventuali indisponibilità o impegni;

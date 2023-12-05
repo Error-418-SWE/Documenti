@@ -153,8 +153,7 @@ $bold("Scenario: ")$
 - L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
 
 
-\
-== Creazione manuale della mappa del magazzino
+= Configurazione ambiente 3d manuale
 $bold("Descrizione: ")$
 configurazione manuale del perimetro dell'ambiente di lavoro.
 
@@ -194,177 +193,199 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione dell'ambiente non validi.
 
-#pagebreak()
-= Modifica dell'ambiente 3D
-#figure(image("./imgs/uc2.png", format: "png"), caption: [UML UC-2])
-== Inserimento nuove dimensioni del magazzino
+= Caricamento dati database
+
+#figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])
+
+== Caricamento dati da database
 $bold("Descrizione: ")$ 
-il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
+i prodotti vengono inseriti dal database nei rispettivi bin.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- almeno una configurazione dell'ambiente deve essere avvenuta con successo;
+- l’ambiente deve essere correttamente configurato;
 
 $bold("Postcondizioni: ")$
-- l'ambiente di lavoro è stato correttamente modificato in funzione delle richieste dell'utente.
+- i prodotti si trovano nei rispettivi bin.
 
 $bold("Scenario: ")$
-- l'utente avvia la modifica dell'ambiente di lavoro;
-- l'utente immette i dati richiesti.
+- l’utente configura l’accesso al database;
+- l’utente inizia la procedura di caricamento dei prodotti.
+
+$bold("Inclusioni: ")$
+- UC-3.2 Configurazione collegamento al database.
 
 $bold("Estensioni: ")$
-- UC-2.1.1 Visualizzazione errore di modifica dell'ambiente.
 
-\
-\
-=== Visualizzazione errore di modifica dell'ambiente
+- UC-3.3 Visualizzazione messaggio di errore.
+
+== Configurazione collegamento al database
 $bold("Descrizione: ")$ 
-i dati inseriti per la modifica dell'ambiente di lavoro non sono validi con quanto configurato precedentemente.
+l'utente imposta i dati necessari affinchè il programma possa configurarsi con il database in cui sono contenuti i dati.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'utente ha immesso i dati per la modifica dell'ambiente;
-- tali dati non sono congrui con la precedente configurazione dell'ambiente.
+- l’ambiente deve essere correttamente configurato;
+- il database deve essere disponibile;
+- l'utente deve disporre delle credenziali per configurarsi al database.
 
 $bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo ad un'immissione errata dei dati per la modifica dell'ambiente.
+- il sistema è correttamente configurato per accedere al database.
 
 $bold("Scenario: ")$
-- l'utente ha immesso dei dati errati per la modifica dell'ambiente.
+- l’utente configura l’accesso al database;
 
-\
-== Creazione scaffale
+== Visualizzazione messaggio di errore
 $bold("Descrizione: ")$ 
-uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata. Seccessivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
+i dati contenuti nel database sono in un formato non conforme o sono errati
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'ambiente di lavoro deve essere stato configurato con successo.
+- l'utente ha iniziato la procedura di caricamento dati da database;
+- l'accesso al database deve essere stato correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- nell'ambiente di lavoro è stato aggiunto un nuovo scaffale;
-- nello scaffale creato sono stati aggiunti i bin da esso contenuti.
+- all'utente viene notificato l'errore relativo alla presenza di dati errati o non conformi all'interno del database.
 
 $bold("Scenario: ")$
-- l'utente seleziona l'aggiunta di uno scaffale;
-- l'utente inserisce i dati necessari alla creazione dello scaffale;
-- l'utente posiziona lo scaffale in una posizione valida nell'ambiente di lavoro.
+- l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere (es. numero scaffali/bin incompatibile con le coordinate dei prodotti).
 
-$bold("Estensioni: ")$
-- UC-2.9 Visualizzazione errore inserimento dati dimensionali non validi
 
-\
-== Modifica scaffale
+= Richiesta di spostamento di un prodotto
+
+#figure(image("./imgs/uc4.png", format: "png"), caption: [UML UC-4])
+
+== Richiesta di spostamento di un prodotto
 $bold("Descrizione: ")$ 
-modifica delle caratteristiche di uno scaffale già esistente.
+l'utente seleziona il prodotto di cui desidera una ricollocazione all'interno del magazzino e avvia una richiesta di spostamento verso un altro bin.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- nell'ambiente deve essere posizionato almeno uno scaffale.
+- devono esistere almeno due bin distinti;
+- uno dei due bin deve contenere un prodotto;
+- uno dei due bin deve essere vuoto.
 
 $bold("Postcondizioni: ")$
-- i valori di uno scaffale scelto sono stati modificati come indicato.
+- viene inviata una richiesta di spostamento al magazzino tramite l'uso di API;
+- il bin di partenza viene evidenziato in modo da identificare il fatto che da quel bin è in atto uno spostamento;
+- il bin di arrivo viene evidenziato in modo da identificare il fatto che in quel bin è in atto uno spostamento;
 
 $bold("Scenario: ")$
-- l'utente seleziona uno scaffale nell'ambiente di lavoro;
-- l'utente seleziona il comando per la modifica dello scaffale;
-- l'utente inserisce i nuovi valori relativi alle proprietà da modificare dello scaffale.
+- l'utente seleziona un bin che contiene un prodotto;
+- l'utente sposta il prodotto all'interno di un altro bin vuoto;
+- viene inviata una notifica a magazzino che segnala lo spostamento;
+- i due bin, di partenza e di arrivo, vengono evidenziati per segnalare lo spostamento in corso.
 
-$bold("Estensioni: ")$
-- UC-2.9 Visualizzazione errore inserimento dati dimensionali non validi
+= Interrogazione bin
 
-\
-== Spostamento scaffali
+#figure(image("./imgs/uc5.png", format: "png"), caption: [UML UC-5])
+
+== Interrogazione di un bin
 $bold("Descrizione: ")$ 
-L'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
+deve essere possibile visualizzare il prodotto contenuto in un determinato bin.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- nell'ambiente deve essere posizionato almeno uno scaffale.
+- l’ambiente deve essere correttamente configurato e deve esistere almeno un bin.
 
 $bold("Postcondizioni: ")$
-- lo scaffale spostato si trova nella nuova posizione scelta dall'utente.
+- vengono visualizzate le informazioni del bin.
 
 $bold("Scenario: ")$
-- l'utente seleziona uno scaffale nell'ambiente di lavoro;
-- l'utente sposta lo scaffale nella nuova posizione desiderata nell'ambiente 3D.
+- l’utente seleziona un bin;
+- vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
 
-$bold("Estensioni: ")$
-- UC-2.4-1 Visualizzazione errore spostamento dello scaffale in zona non libera
+= Ricerca prodotti
 
-\
-=== Visualizzazione errore spostamento dello scaffale in zona non libera
+#figure(image("./imgs/uc6.png", format: "png"), caption: [UML UC-6])
+
+== Ricerca di un prodotto
+
 $bold("Descrizione: ")$ 
-è stata richiesto lo spostamento di uno scaffale in una zona non libera.
+l'utente ricerca un prodotto.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- avviata l'attività di spostamento dello scaffale;
-- lo scaffale interessato viene posto in una zona occupata.
+- l'ambiente deve essere correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo allo spostamento dello scaffale.
+- l'utente visualizza la posizione del bin contenente il prodotto ricercato.
 
 $bold("Scenario: ")$
-- l'utente ha richiesto lo spostamento di uno scaffale in una zona non libera.
+- l'utente ricerca un prodotto;
+- il bin contenente il prodotto cercato viene evidenziato.
 
-\
-== Eliminazione scaffale
+$bold("Generalizzazioni: ")$
+- UC-6.1.1 Ricerca per ID;
+- UC-6.1.2 Ricerca per Nome;
+- UC-6.1.3 Ricerca per Scaffale.
+
+=== Ricerca per ID
 $bold("Descrizione: ")$ 
-lo scaffale selezionato presente nell'ambiente viene eliminato.
+l'utente ricerca un prodotto tramite il suo ID di magazzino.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- nell'ambiente deve essere posizionato almeno uno scaffale;
-- la modalità di modifica dell'ambiente deve essere attiva;
-- lo scaffale da eliminare deve contenere solo bin vuoti.
+- l'ambiente deve essere correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- lo scaffale selezionato viene rimosso dall'ambiente;
-- vengono rimossi i bin in esso contenuti.
+- l'utente visualizza la posizione del bin contenente il prodotto ricercato.
 
 $bold("Scenario: ")$
-- l'utente seleziona uno scaffale nell'ambiente;
-- l'utente seleziona il comando per la rimozione dello scaffale;
-- l'utente conferma l'operazione da una finestra di conferma.
+- l'utente ricerca un prodotto usando come chiave l'ID univoco di magazzino;
+- il bin contenente il prodotto cercato viene evidenziato.
 
-$bold("Estensioni: ")$
-- UC-2.5.1 Visualizzazione errore scaffale da eliminare non vuoto.
-
-\
-=== Visualizzazione errore scaffale da eliminare non vuoto
+=== Ricerca per Nome
 $bold("Descrizione: ")$ 
-è stata richiesta l'eliminazione di uno scaffale contenente almeno un bin non vuoto.
+l'utente ricerca un prodotto tramite il nome associato al prodotto.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'attività di eliminazione di uno scaffale deve essere stata attivata;
-- lo scaffale interessato contiene almeno un bin non vuoto.
+- l'ambiente deve essere correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo all'eliminazione di uno scaffale non vuoto.
+- l'utente visualizza la posizione del bin contenente il prodotto ricercato.
 
 $bold("Scenario: ")$
-- l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.
+- l'utente ricerca un prodotto usando come chiave per la ricerca il nome del prodotto;
+- il bin contenente il prodotto cercato viene evidenziato;
+- i prodotti associati al nome possono essere più di uno.
 
-\
-== Creazione di un bin
+=== Ricerca per Scaffale
+$bold("Descrizione: ")$ 
+l'utente ricerca i prodotti contenuti all'interno di uno scaffale del magazzino.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- l'ambiente deve essere correttamente configurato.
+
+$bold("Postcondizioni: ")$
+- l'utente visualizza la posizione dei prodotti contenuti nello scaffale cercato.
+
+$bold("Scenario: ")$
+- l'utente ricerca i materiali contenuti all'interno di uno scaffale del magazzino;
+- lo scaffale viene evidenziato.
+
+
+== UC-7 Creazione di un bin
 $bold("Descrizione: ")$
 deve essere possibile creare delle aree adibite a contenere prodotti.
 

@@ -198,7 +198,6 @@ $bold("Scenario: ")$
 #figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])
 
 == Caricamento dati da database
-
 $bold("Descrizione: ")$ 
 i prodotti vengono inseriti dal database nei rispettivi bin.
 
@@ -241,7 +240,6 @@ $bold("Scenario: ")$
 - l’utente configura l’accesso al database;
 
 == Visualizzazione messaggio di errore
-
 $bold("Descrizione: ")$ 
 i dati contenuti nel database sono in un formato non conforme o sono errati
 
@@ -264,7 +262,6 @@ $bold("Scenario: ")$
 #figure(image("./imgs/uc4.png", format: "png"), caption: [UML UC-4])
 
 == Richiesta di spostamento di un prodotto
-
 $bold("Descrizione: ")$ 
 l'utente seleziona il prodotto di cui desidera una ricollocazione all'interno del magazzino e avvia una richiesta di spostamento verso un altro bin.
 
@@ -308,50 +305,87 @@ $bold("Scenario: ")$
 - l’utente seleziona un bin;
 - vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
 
-== UC-6 Eliminazione scaffale
+= Ricerca prodotti
+
+#figure(image("./imgs/uc6.png", format: "png"), caption: [UML UC-6])
+
+== Ricerca di un prodotto
+
 $bold("Descrizione: ")$ 
-lo scaffale selezionato presente nell'ambiente viene eliminato.
+l'utente ricerca un prodotto.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- nell'ambiente deve essere posizionato almeno uno scaffale;
-- la modalità di modifica dell'ambiente deve essere attiva;
-- lo scaffale da eliminare deve contenere solo bin vuoti.
+- l'ambiente deve essere correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- lo scaffale selezionato viene rimosso dall'ambiente;
-- vengono rimossi i bin in esso contenuti.
+- l'utente visualizza la posizione del bin contenente il prodotto ricercato.
 
 $bold("Scenario: ")$
-- l'utente seleziona uno scaffale nell'ambiente;
-- l'utente seleziona il comando per la rimozione dello scaffale;
-- l'utente conferma l'operazione da una finestra di conferma.
+- l'utente ricerca un prodotto;
+- il bin contenente il prodotto cercato viene evidenziato.
 
-$bold("Estensioni: ")$
-- UC-2.5.1 Visualizzazione errore scaffale da eliminare non vuoto.
+$bold("Generalizzazioni: ")$
+- UC-6.1.1 Ricerca per ID;
+- UC-6.1.2 Ricerca per Nome;
+- UC-6.1.3 Ricerca per Scaffale.
 
-\
-=== Visualizzazione errore scaffale da eliminare non vuoto
+=== Ricerca per ID
 $bold("Descrizione: ")$ 
-è stata richiesta l'eliminazione di uno scaffale contenente almeno un bin non vuoto.
+l'utente ricerca un prodotto tramite il suo ID di magazzino.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'attività di eliminazione di uno scaffale deve essere stata attivata;
-- lo scaffale interessato contiene almeno un bin non vuoto.
+- l'ambiente deve essere correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo all'eliminazione di uno scaffale non vuoto.
+- l'utente visualizza la posizione del bin contenente il prodotto ricercato.
 
 $bold("Scenario: ")$
-- l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.
+- l'utente ricerca un prodotto usando come chiave l'ID univoco di magazzino;
+- il bin contenente il prodotto cercato viene evidenziato.
 
-\
-== Creazione di un bin
+=== Ricerca per Nome
+$bold("Descrizione: ")$ 
+l'utente ricerca un prodotto tramite il nome associato al prodotto.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- l'ambiente deve essere correttamente configurato.
+
+$bold("Postcondizioni: ")$
+- l'utente visualizza la posizione del bin contenente il prodotto ricercato.
+
+$bold("Scenario: ")$
+- l'utente ricerca un prodotto usando come chiave per la ricerca il nome del prodotto;
+- il bin contenente il prodotto cercato viene evidenziato;
+- i prodotti associati al nome possono essere più di uno.
+
+=== Ricerca per Scaffale
+$bold("Descrizione: ")$ 
+l'utente ricerca i prodotti contenuti all'interno di uno scaffale del magazzino.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- l'ambiente deve essere correttamente configurato.
+
+$bold("Postcondizioni: ")$
+- l'utente visualizza la posizione dei prodotti contenuti nello scaffale cercato.
+
+$bold("Scenario: ")$
+- l'utente ricerca i materiali contenuti all'interno di uno scaffale del magazzino;
+- lo scaffale viene evidenziato.
+
+
+== UC-7 Creazione di un bin
 $bold("Descrizione: ")$
 deve essere possibile creare delle aree adibite a contenere prodotti.
 

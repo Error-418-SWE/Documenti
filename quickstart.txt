@@ -9,6 +9,7 @@ let docType: ?string = "doc"
 let date: ?string
 let externalParticipants: ?Person(name: string, role: string)[]
 let authors: string[]
+let reviewers: ?string[]
 let missingMembers: ?string[]
 let location: ?string = "Discord"
 let timeStart: string
@@ -30,7 +31,7 @@ location = "Discord"
 timeStart: "15:00"
 ```
 
-Note perl'uso:
+Note per l'uso:
 - Il parametro `date` va inserito nel formato "gg/mm/aa";
 - I parametri che accettano valori di tipo array come `externalParticipants` o `authors`) richiedono una "," dopo gli elementi;
 - Per i verbali non includere un valore per `title` o `isExternalUse`;

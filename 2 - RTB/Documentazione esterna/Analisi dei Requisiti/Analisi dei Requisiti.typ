@@ -11,11 +11,6 @@
   ),
 );
 
-#set text(font:"New Computer Modern")
-#set align(left)
-#show "link": word => text[#text(fill:blue, word)]
-
-
 = Introduzione
 
 == Scopo del documento
@@ -71,11 +66,11 @@ Questo documento viene redatto in modo incrementale, così da risultare sempre c
   }
   values.at(0) = values.at(0)-1;
   return "UC-"+values.map(str).join(".");
-}) 
+})
 
-= Creazione magazzino 
+= Creazione magazzino
 #figure(image("./imgs/uc1.png", format: "png"), caption: [UML UC-1])
-== Importazione mappa magazzino da file SVG 
+== Importazione mappa magazzino da file SVG
 $bold("Descrizione: ")$
 All'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
 
@@ -200,7 +195,7 @@ $bold("Scenario: ")$
 #figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])
 
 == Caricamento dati da database
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 i prodotti vengono inseriti dal database nei rispettivi bin.
 
 $bold("Attore: ")$
@@ -224,7 +219,7 @@ $bold("Estensioni: ")$
 - UC-3.3 Visualizzazione messaggio di errore.
 
 == Configurazione collegamento al database
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 l'utente imposta i dati necessari affinchè il programma possa configurarsi con il database in cui sono contenuti i dati.
 
 $bold("Attore: ")$
@@ -242,7 +237,7 @@ $bold("Scenario: ")$
 - l’utente configura l’accesso al database;
 
 == Visualizzazione messaggio di errore
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 i dati contenuti nel database sono in un formato non conforme o sono errati
 
 $bold("Attore: ")$
@@ -264,7 +259,7 @@ $bold("Scenario: ")$
 #figure(image("./imgs/uc4.png", format: "png"), caption: [UML UC-4])
 
 == Richiesta di spostamento di un prodotto
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 l'utente seleziona il prodotto di cui desidera una ricollocazione all'interno del magazzino e avvia una richiesta di spostamento verso un altro bin.
 
 $bold("Attore: ")$
@@ -291,7 +286,7 @@ $bold("Scenario: ")$
 #figure(image("./imgs/uc5.png", format: "png"), caption: [UML UC-5])
 
 == Interrogazione di un bin
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 deve essere possibile visualizzare il prodotto contenuto in un determinato bin.
 
 $bold("Attore: ")$
@@ -313,7 +308,7 @@ $bold("Scenario: ")$
 
 == Ricerca di un prodotto
 
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 l'utente ricerca un prodotto.
 
 $bold("Attore: ")$
@@ -335,7 +330,7 @@ $bold("Generalizzazioni: ")$
 - UC-6.1.3 Ricerca per Scaffale.
 
 === Ricerca per ID
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 l'utente ricerca un prodotto tramite il suo ID di magazzino.
 
 $bold("Attore: ")$
@@ -352,7 +347,7 @@ $bold("Scenario: ")$
 - il bin contenente il prodotto cercato viene evidenziato.
 
 === Ricerca per Nome
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 l'utente ricerca un prodotto tramite il nome associato al prodotto.
 
 $bold("Attore: ")$
@@ -370,7 +365,7 @@ $bold("Scenario: ")$
 - i prodotti associati al nome possono essere più di uno.
 
 === Ricerca per Scaffale
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 l'utente ricerca i prodotti contenuti all'interno di uno scaffale del magazzino.
 
 $bold("Attore: ")$
@@ -394,20 +389,20 @@ deve essere possibile creare delle aree adibite a contenere prodotti.
 $bold("Attore: ")$
 utente.
 
-$bold("Precondizioni: ")$ 
+$bold("Precondizioni: ")$
 - l'ambiente deve essere correttamente configurato;
 - deve esistere almeno un'area libera e valida.
 
-$bold("Postcondizioni: ")$ 
+$bold("Postcondizioni: ")$
 - l'area selezionata viene classificata come bin.
 
-$bold("Scenario: ")$ 
+$bold("Scenario: ")$
 - l'utente entra nella modalità di modifica;
 - l'utente seleziona un'area libera e valida.
 
 \
 == Modifica di un bin
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 deve essere possibile modificare le dimensioni dei bin.
 
 $bold("Attore: ")$
@@ -419,13 +414,13 @@ $bold("Precondizioni: ")$
 $bold("Postcondizioni: ")$
 - le dimensioni del bin sono state ridefinite.
 
-$bold("Scenario: ")$ 
+$bold("Scenario: ")$
 - l'utente entra nella modalità di modifica;
 - l'utente seleziona un bin;
 - vengono mostrate le informazioni del bin;
 - l'utente modifica le dimensioni del bin.
 
-$bold("Estensioni: ")$ 
+$bold("Estensioni: ")$
 - UC-8.1 Dimensioni del bin negative o uguali a zero;
 - UC-8.2 Dimensioni del bin eccessive.
 
@@ -444,7 +439,7 @@ $bold("Precondizioni: ")$
 $bold("Postcondizioni: ")$
 - il bin è tornato ad essere un'area libera.
 
-$bold("Scenario: ")$ 
+$bold("Scenario: ")$
 - l'utente entra nella modalità di modifica;
 - l'utente seleziona un bin vuoto;
 - l'utente chiede di eliminare il bin;
@@ -452,7 +447,7 @@ $bold("Scenario: ")$
 
 \
 === Visualizzazione errore scaffale da eliminare non vuoto
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 è stata richiesta l'eliminazione di un bin non vuoto.
 
 $bold("Attore: ")$
@@ -541,11 +536,11 @@ $bold("Precondizioni: ")$
 $bold("Postcondizioni: ")$
 - i prodotti si trovano nei rispettivi bin.
 
-$bold("Scenario: ")$ 
+$bold("Scenario: ")$
 - l'utente configura l'accesso al database;
 - l'utente inizia la procedura di caricamento dei prodotti.
 
-= Interrogazione bin 
+= Interrogazione bin
 $bold("Descrizione: ")$
 deve essere possibile visualizzare la prodotto contenuta in un determinato bin.
 
@@ -558,7 +553,7 @@ $bold("Precondizioni: ")$
 $bold("Postcondizioni: ")$
 - vengono visualizzate le informazioni del bin.
 
-$bold("Scenario: ")$ 
+$bold("Scenario: ")$
 - l'utente seleziona un bin;
 - vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
 

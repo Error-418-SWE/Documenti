@@ -4,6 +4,9 @@
   date: "03/12/23",
   docType: "verbale",
   authors: (
+    "Gardin Giovanni",
+  ),
+  reviewers: (
     "Todesco Mattia",
   ),
   missingMembers: (

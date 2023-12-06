@@ -5,6 +5,7 @@
   date: "",
   externalParticipants: (),
   authors: (),
+  reviewers: (),
   missingMembers: (),
   location: "Discord",
   timeStart: "",
@@ -48,11 +49,28 @@ show heading.where(
   it
   v(1em, weak: true)
 }
+show heading.where(
+  level: 2
+): it => {
+  v(0.5em, weak: false)
+  it
+  v(1em, weak: true)
+}
+show heading.where(
+  level: 3
+): it => {
+  it
+  v(1em, weak: true)
+}
+
 show outline.entry.where(
   level: 1
 ): it => {
   strong(it)
 }
+show "WIP": it => [
+  #text(it, fill: red)
+]
 
 // Define constants
 let groupName = "Error_418"
@@ -74,12 +92,19 @@ let showIndex = showIndex
 let missingMembers = missingMembers
 let externalParticipants = externalParticipants
 let authors = authors
+let reviewers = reviewers
 let isExternalUse = isExternalUse or externalParticipants.len() > 0
+let documentVersion = "WIP"
 
 // Check members validity
 for author in authors {
   if (author not in groupMembers) {
     panic("Controlla lo spelling dei redattori.")
+  }
+}
+for reviewer in reviewers {
+  if (reviewer not in groupMembers) {
+    panic("Controlla lo spelling dei verificatori, o rimuovili per caricare automaticamente il verificatore designato.")
   }
 }
 for member in missingMembers {
@@ -93,6 +118,10 @@ let str_authors = "Redattore"
 if (authors.len() >= 2) {
   str_authors = "Redattori"
 }
+let str_reviewers = "Verificatore"
+if (reviewers.len() >= 2) {
+  str_reviewers = "Verificatori"
+}
 let str_representatives = "Referente"
 if (externalParticipants.len() >= 2) {
   str_representatives = "Referenti"
@@ -104,6 +133,11 @@ if docType == "verbale" {
     if isExternalUse {
       title = "Verbale esterno " + date
     }
+}
+
+// Define version
+if (changelogData.flatten().len() > 0) {
+  documentVersion = changelogData.flatten().at(0)
 }
 
 // Set the document's basic properties
@@ -127,7 +161,7 @@ set page(
     text(
       0.75em,
       if counter(page).at(loc).first() > 1 [
-        #upper(title) v#changelogData.flatten().at(0)
+        #upper(title) v#documentVersion
         #h(1fr)
         #groupName
         #line(length: 100%, stroke: 0.25pt)
@@ -236,7 +270,7 @@ page(numbering: none)[
     // Versione
     summaryHeading[*Versione*],
     summaryContent[
-      #changelogData.flatten().at(0)
+      #documentVersion
     ],
 
     // Destinazione d'uso
@@ -272,15 +306,19 @@ page(numbering: none)[
     ],
 
     // Verificatori documento
-    summaryHeading[*Verificatore*],
+    summaryHeading[*#str_reviewers*],
     summaryContent[
-      #let reviewer = "n/a"
-      #for role in ruoli.ruoli {
-        if role.contains("Verificatore") {
-          reviewer = role.flatten().at(0)
+      #let verificatore = "n/a"
+      #if (reviewers.len() > 0) {
+        verificatore = reviewers.join("\n")
+      } else {
+        for role in ruoli.ruoli {
+          if role.contains("Verificatore") {
+            verificatore = role.flatten().at(0)
+          }
         }
       }
-      #reviewer
+      #verificatore
     ],
 
     // Destinatari documento

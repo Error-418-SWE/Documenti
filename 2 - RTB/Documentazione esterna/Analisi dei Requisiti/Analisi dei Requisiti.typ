@@ -5,7 +5,9 @@
   subTitle: "",
   authors: (
     "Banzato Alessio",
-    "Nardo Silvio"
+    "Nardo Silvio",
+    "Oseliero Antonio",
+    "Gardin Giovanni",
   ),
 );
 

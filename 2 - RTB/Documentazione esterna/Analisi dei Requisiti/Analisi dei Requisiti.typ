@@ -202,14 +202,14 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l’ambiente deve essere correttamente configurato;
+- l'ambiente deve essere correttamente configurato;
 
 $bold("Postcondizioni: ")$
 - i prodotti si trovano nei rispettivi bin.
 
 $bold("Scenario: ")$
-- l’utente configura l’accesso al database;
-- l’utente inizia la procedura di caricamento dei prodotti.
+- l'utente configura l'accesso al database;
+- l'utente inizia la procedura di caricamento dei prodotti.
 
 $bold("Inclusioni: ")$
 - UC-3.2 Configurazione collegamento al database.
@@ -226,7 +226,7 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l’ambiente deve essere correttamente configurato;
+- l'ambiente deve essere correttamente configurato;
 - il database deve essere disponibile;
 - l'utente deve disporre delle credenziali per configurarsi al database.
 
@@ -234,7 +234,7 @@ $bold("Postcondizioni: ")$
 - il sistema è correttamente configurato per accedere al database.
 
 $bold("Scenario: ")$
-- l’utente configura l’accesso al database;
+- l'utente configura l'accesso al database;
 
 == Visualizzazione messaggio di errore
 $bold("Descrizione: ")$
@@ -293,13 +293,13 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l’ambiente deve essere correttamente configurato e deve esistere almeno un bin.
+- l'ambiente deve essere correttamente configurato e deve esistere almeno un bin.
 
 $bold("Postcondizioni: ")$
 - vengono visualizzate le informazioni del bin.
 
 $bold("Scenario: ")$
-- l’utente seleziona un bin;
+- l'utente seleziona un bin;
 - vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
 
 = Ricerca prodotti

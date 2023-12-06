@@ -36,7 +36,7 @@ Questo documento viene redatto in modo incrementale, così da risultare sempre c
 == Riferimenti
 === Normativi
 
-- Norme di progetto;
+- Norme di Progetto;
 
 - Regolamento del progetto didattico: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_ ;
@@ -89,7 +89,7 @@ $bold("Scenario: ")$
 
 $bold("Estensioni: ")$
 - UC-1.1.1 Visualizzazione errore lettura del file SVG.
-\
+
 === Visualizzazione errore lettura del file SVG
 $bold("Descrizione: ")$
 il file caricato dall'utente non ha permesso al programma di configurare l'ambiente di lavoro.
@@ -111,7 +111,6 @@ $bold("Generalizzazioni: ")$
 - UC-1.1.1.1 Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni;
 - UC-1.1.1.2 Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti.
 
-\
 ==== Visualizzazione errore file privo di informazioni
 $bold("Descrizione: ")$
 il file SVG caricato non contiene informazioni utili alla configurazione dell'ambiente.
@@ -130,7 +129,6 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - L'utente ha caricato un file SVG vuoto o con informazioni non utili.
 
-\
 ==== Visualizzazione errore informazioni del file incongruenti
 $bold("Descrizione: ")$
 il file SVG caricato contiene informazioni incongruenti e quindi non utilizzabili per la configurazione dell'ambiente.
@@ -148,7 +146,6 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
-
 
 = Configurazione ambiente 3d manuale
 $bold("Descrizione: ")$
@@ -170,8 +167,6 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-2.1 Visualizzazione errore sui dati.
 
-
-\
 === Visualizzazione errore dati inseriti non validi
 $bold("Descrizione: ")$
 i dati inseriti per la configurazione manuale dell'ambiente di lavoro non sono validi.
@@ -252,7 +247,6 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere (es. numero scaffali/bin incompatibile con le coordinate dei prodotti).
-
 
 = Richiesta di spostamento di un prodotto
 
@@ -381,7 +375,6 @@ $bold("Scenario: ")$
 - l'utente ricerca i materiali contenuti all'interno di uno scaffale del magazzino;
 - lo scaffale viene evidenziato.
 
-
 == UC-7 Creazione di un bin
 $bold("Descrizione: ")$
 deve essere possibile creare delle aree adibite a contenere prodotti.
@@ -400,7 +393,6 @@ $bold("Scenario: ")$
 - l'utente entra nella modalità di modifica;
 - l'utente seleziona un'area libera e valida.
 
-\
 == Modifica di un bin
 $bold("Descrizione: ")$
 deve essere possibile modificare le dimensioni dei bin.
@@ -424,7 +416,6 @@ $bold("Estensioni: ")$
 - UC-8.1 Dimensioni del bin negative o uguali a zero;
 - UC-8.2 Dimensioni del bin eccessive.
 
-\
 == Eliminazione bin vuoto
 $bold("Descrizione: ")$
 deve essere possibile eliminare un bin.
@@ -445,7 +436,6 @@ $bold("Scenario: ")$
 - l'utente chiede di eliminare il bin;
 - viene richiesta la conferma dell'eliminazione.
 
-\
 === Visualizzazione errore scaffale da eliminare non vuoto
 $bold("Descrizione: ")$
 è stata richiesta l'eliminazione di un bin non vuoto.
@@ -463,7 +453,6 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di un bin non vuoto.
 
-\
 == Visualizzazione errore inserimento dati dimensionali non validi
 $bold("Descrizione: ")$
 i dati inseriti per la modifica delle dimensioni dell'elemento interessato non sono validi.
@@ -485,7 +474,6 @@ $bold("Generalizzazioni: ")$
 - UC-2.9.1 Dimensioni negative o uguali a 0;
 - UC-2.9.2 Dimensioni eccessive.
 
-\
 === Dimensioni negative o uguali a zero
 $bold("Descrizione: ")$
 le dimensioni inserite per la modifica dell'elemento interessato sono minori o uguali a zero.
@@ -503,7 +491,6 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente minori o uguali a zero.
 
-\
 === Dimensioni eccessive
 $bold("Descrizione: ")$
 le dimensioni inserite per la modifica dell'elemento interessato eccessive per il contesto di inserimento.
@@ -521,7 +508,6 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente eccessivi.
 
-\
 = Caricamento dei prodotti da database
 $bold("Descrizione: ")$
 i prodotti vengono inseriti dal database nei rispettivi bin.

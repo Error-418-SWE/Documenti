@@ -5,6 +5,9 @@
   authors: (
     "Todesco Mattia",
   ),
+  reviewers: (
+    "Gardin Giovanni",
+  )
 );
 
 = Introduzione
@@ -65,14 +68,14 @@ Un changelog è un registro di tutte le modifiche notevoli apportate a un proget
 == Commit
 Il comando git commit è una delle funzioni principali di Git, esso viene utilizzato per creare un'istantanea delle modifiche effettuate nella cronologia di un progetto Git.
 
-== Committente 
+== Committente
 Il committente è la figura che commissiona un lavoro, indipendentemente dall'entità o dall'importo.
-Esso può essere una persona fisica oppure una persona giuridica (come ad esempio un ente).  
+Esso può essere una persona fisica oppure una persona giuridica (come ad esempio un ente).
 
 = D
 
 == Database
-Un database è un insieme di informazioni (o dati) strutturate in genere archiviate elettronicamente in un sistema informatico. Di solito, il database viene controllato da un sistema DBMS (Database Management System). Si fa riferimento ai dati, al sistema DBMS e alle applicazioni associate come sistema di database, spesso abbreviato solo in database. 
+Un database è un insieme di informazioni (o dati) strutturate in genere archiviate elettronicamente in un sistema informatico. Di solito, il database viene controllato da un sistema DBMS (Database Management System). Si fa riferimento ai dati, al sistema DBMS e alle applicazioni associate come sistema di database, spesso abbreviato solo in database.
 
 == Discord
 Discord è una piattaforma statunitense di VoIP, messaggistica istantanea e distribuzione digitale progettata per la comunicazione tra comunità di videogiocatori. Gli utenti comunicano con chiamate vocali, videochiamate, messaggi di testo, media e file in chat private o come membri di un server Discord.
@@ -81,7 +84,7 @@ Discord è una piattaforma statunitense di VoIP, messaggistica istantanea e dist
 Docker è un  software  progettato per eseguire processi informatici in ambienti isolabili, minimali e facilmente distribuibili chiamati container Linux, con l'obiettivo di semplificare i processi di deployment di applicazioni software.
 
 == Documentazione
-La documentazione software, in informatica ed in particolare nell'ambito dello sviluppo software, è un testo scritto che accompagna un software, con lo scopo di spiegare quali funzionalità assolve il software, come è strutturato, implementato e come lo si utilizza. 
+La documentazione software, in informatica ed in particolare nell'ambito dello sviluppo software, è un testo scritto che accompagna un software, con lo scopo di spiegare quali funzionalità assolve il software, come è strutturato, implementato e come lo si utilizza.
 
 = E
 
@@ -159,7 +162,7 @@ Bene economico trasportabile e stoccabile. All'interno del prodotto vengono visu
 
 == Milestone
 Il termine milestone viene tipicamente utilizzato nella pianificazione e gestione di progetti complessi per indicare il raggiungimento di obiettivi stabiliti in fase di definizione del progetto stesso.
-Nei casi di progetti regolati da standard di qualità il raggiungimento delle milestone viene decretato tramite documenti ufficiali redatti dai vari attori del progetto e monitorato tramite metriche attraverso le quali risulta possibile fornire una stima della bontà del progetto e del suo stato di avanzamento. 
+Nei casi di progetti regolati da standard di qualità il raggiungimento delle milestone viene decretato tramite documenti ufficiali redatti dai vari attori del progetto e monitorato tramite metriche attraverso le quali risulta possibile fornire una stima della bontà del progetto e del suo stato di avanzamento.
 
 == Minimum Viable Product (MVP)
 Il prodotto minimo funzionante è la versione di un prodotto con caratteristiche appena sufficienti per essere utilizzabile dai primi clienti, i quali possono quindi fornire feedback per lo sviluppo futuro del prodotto stesso.
@@ -170,7 +173,7 @@ Miro è una piattaforma di collaborazione digitale progettata per facilitare la 
 = N
 
 == Node.js
-Node.js è un runtime system open source multipiattaforma orientato agli eventi per l'esecuzione di codice JavaScript di cui gli sviluppatori possono scrivere nuovi moduli nello stesso linguaggio di programmazione. 
+Node.js è un runtime system open source multipiattaforma orientato agli eventi per l'esecuzione di codice JavaScript di cui gli sviluppatori possono scrivere nuovi moduli nello stesso linguaggio di programmazione.
 
 = O
 
@@ -185,7 +188,7 @@ Azienda/Ente che propone il capitolato d'appalto per il progetto didattico.
 == Pull Request
 La Pull Request è una richiesta, fatta all'autore originale di un software da parte di suoi collaboratori, di includere modifiche al suo progetto.
 
-= Q 
+= Q
 
 = R
 
@@ -215,7 +218,7 @@ La revisione dei documenti o del codice è un processo di peer review utilizzato
 Elemento presente all'interno del magazzino costituito da uno o più ripiani orizzontali che permettono lo stoccaggio della merce.
 
 == SQL
-Structured Query Language (SQL)  è un linguaggio standardizzato per database basati sul modello relazionale, progettato per le seguenti operazioni: creare e modificare schemi di database; inserire, modificare e gestire dati memorizzati; interrogare i dati memorizzati; 
+Structured Query Language (SQL)  è un linguaggio standardizzato per database basati sul modello relazionale, progettato per le seguenti operazioni: creare e modificare schemi di database; inserire, modificare e gestire dati memorizzati; interrogare i dati memorizzati;
 
 == SVG
 Scalable Vector Graphics è un formato di file di grafica vettoriale bidimensionale basato sull'XML sviluppato da World Wide Web Consortium. Le immagini SVG possono essere incluse all'interno di una pagina HTML. Possono essere inoltre distribuite in versione compressa utilizzando l'algoritmo gzip.
@@ -228,16 +231,16 @@ un template indica un documento o programma nel quale, come in un foglio semicom
 == Three.js
 Three.js è una libreria JavaScript cross-browser e un'interfaccia di programmazione dell'applicazione utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL. Il codice sorgente è ospitato in un repository su GitHub.
 
-== Typst 
+== Typst
 Typst è un nuovo sistema di composizione basato su markup progettato per essere potente quanto LaTeX pur essendo molto più facile da apprendere e utilizzare.
 
-= U 
+= U
 
 == UML
 L'Unified Modeling Language (UML) un linguaggio di modellazione visivo comune, ricco sia nella semantica che nella sintassi, per l'architettura, la progettazione e l'implementazione di sistemi software complessi sia dal punto di vista strutturale che comportamentale.
 
 == Use case
-Gli use case consistono nel valutare ogni requisito che l'applicazione deve implementare focalizzandosi sul punto di vista degli attori che interagiscono col sistema, valutandone le varie interazioni. In UML sono rappresentati dagli Use Case Diagram. 
+Gli use case consistono nel valutare ogni requisito che l'applicazione deve implementare focalizzandosi sul punto di vista degli attori che interagiscono col sistema, valutandone le varie interazioni. In UML sono rappresentati dagli Use Case Diagram.
 
 == Utente
 Un utente è colui che usufruisce dell'applicazione e delle sue funzionalità.
@@ -248,7 +251,7 @@ Un utente è colui che usufruisce dell'applicazione e delle sue funzionalità.
 Documento redatto da un pubblico ufficiale, o da chi è investito di questa specifica funzione, allo scopo di attestare e ricordare, in forma sintetica ma completa ed esauriente nei dati essenziali, fatti, procedimenti e avvenimenti di varia natura. Nel nostro caso i verbali registrano gli eventi dei meeting interni del gruppo.
 
 == Versionamento
-Nello sviluppo software, la versione (di un software, programma o applicazione) corrisponde a un determinato stato nello sviluppo di un software secondo l'uso del versioning ("versionamento").Esso è il processo di mantenimento di una versione di qualsiasi software in modo che possa essere facilmente recuperata, anche dopo che sono state rilasciate e implementate versioni più recenti. 
+Nello sviluppo software, la versione (di un software, programma o applicazione) corrisponde a un determinato stato nello sviluppo di un software secondo l'uso del versioning ("versionamento").Esso è il processo di mantenimento di una versione di qualsiasi software in modo che possa essere facilmente recuperata, anche dopo che sono state rilasciate e implementate versioni più recenti.
 
 = W
 

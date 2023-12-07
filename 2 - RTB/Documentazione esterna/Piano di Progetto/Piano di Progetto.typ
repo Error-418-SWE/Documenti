@@ -378,7 +378,7 @@ Gli obiettivi dello sprint 5 sono:
 - perfezionamento del sistema di drag and drop nel POC;
 - creazione degli scaffali nel POC;
 - creazione ambiente docker;
-- svolgere meeting con il professore Cardin in merito all'Analisi dei Requisiti;
+- svolgere meeting con il professor Cardin in merito all'Analisi dei Requisiti;
 - perfezionare e aggiornare il documento di Norme di Progetto;
 - aggiornamento del documento di Analisi dei Requisiti, introducendo i requisiti non funzionali;
 - informarsi sul documento di Piano di Qualifica;
@@ -390,7 +390,7 @@ Nel quinto sprint il team svolge compiti correttivi incentrati sul miglioramento
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti, al fine di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti;
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti;
 - *Analista*: al fine di redarre il documento di Analisi dei Requisiti;
 - *Progettista*: al fine di sviluppare i POC.
 

@@ -29,7 +29,7 @@ A seguito di un dialogo che il gruppo ha avuto con il professor Cardin in data 0
 Altri requisiti non funzionali da includere sono relativi alla qualità e a come l'applicativo debba rispettare determinate norme prestabilite. 
 
 === Requisiti prestazionali
-Bisogna fare attenzione con l'approccio dei requisiti non funzionali relativi alle prestazioni, in quanto serve descrivere minuziosamente il contesto che permetta di replicare il requisito (velocità della rete, cardinalità delle operazioni, ecc) per poter poi imporre dei vincoli prestazionali su tale contesto.
+È necessario analizzare e definire con particolare attenzione i requisiti non funzionali relativi alle prestazioni, in quanto serve descrivere minuziosamente il contesto che permetta di replicare il requisito (velocità della rete, cardinalità delle operazioni, ecc) per poter poi imporre dei vincoli prestazionali su tale contesto.
 
 === Requisito relativo all'utilizzo di alfabeti non latini
 Diversamente da quanto ipotizzato inizialmente, il requisito riguardante la possibilità di utilizzare alfabeti non latini è un requisito funzionale in quanto rappresenta una vera e propria feature che determina il comportamento del programma.

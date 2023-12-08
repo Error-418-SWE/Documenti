@@ -2,7 +2,7 @@
 
 #show: project.with(
   date: "07/12/23",
-  subTitle: "Discussioni conseguenti al dialogo con il professor Cardin",
+  subTitle: "Discussione conseguente ad incontro con il professor Cardin",
   docType: "verbale",
   authors: (
     "Nardo Silvio",

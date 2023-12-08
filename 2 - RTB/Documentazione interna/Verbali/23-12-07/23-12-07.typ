@@ -32,7 +32,7 @@ Altri requisiti non funzionali da includere sono relativi alla qualità e a come
 Bisogna fare attenzione con l'approccio dei requisiti non funzionali relativi alle prestazioni, in quanto serve descrivere minuziosamente il contesto che permetta di replicare il requisito (velocità della rete, cardinalità delle operazioni, ecc) per poter poi imporre dei vincoli prestazionali su tale contesto.
 
 === Requisito relativo all'utilizzo di alfabeti non latini
-Diversamente da quanto era stato pensato, il requisito per cui nel nostro applicativo sono utilizzabili alfabeti non latini è un requisito funzionale in quanto rappresenta una vera e propria feature che determina il comportamento del programma.
+Diversamente da quanto ipotizzato inizialmente, il requisito riguardante la possibilità di utilizzare alfabeti non latini è un requisito funzionale in quanto rappresenta una vera e propria feature che determina il comportamento del programma.
 
 == Raggruppamento degli Use Case
 La suddivisione degli Use Case è da svolgere in funzione della loro leggibilità e utilità, pertanto nel nostro caso, è più ragionevole suddividere gli Use Case relaitivi alla modifica dell'ambiente di lavoro in:

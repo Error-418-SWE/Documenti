@@ -46,8 +46,8 @@ E successivamente, per ciascuno di questi, si può, in base alle esigenze, esten
 - spostamento;
 - eliminazione. 
 
-== Criteri che definiscono un'analisi dei requisiti ben fatta
-Un'analisi dei requisiti per essere considerata ben fatta, deve avere:
+== Criteri che definiscono un'Analisi dei Requisiti ben fatta
+Le caratteristiche di un'Analisi dei Requisiti ottimale sono:
 - sintassi dei diagrammi UML corretta rispetto allo standard;
 - requisiti atomici;
 - requisiti deterministici;

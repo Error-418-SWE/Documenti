@@ -40,7 +40,7 @@ La suddivisione degli Use Case è da svolgere in funzione della loro leggibilit�
 - modifica ambiente;
 - modifica bin.
 
-E successivamente, per ciascuno di questi, si può, in base alle esigenze, estenderli con i relativi Use Case legati alla:
+E successivamente, per ciascuno di questi, si può, in base alle esigenze, estenderli con i relativi Use Case legati a:
 - creazione; 
 - ridimensionamento;
 - spostamento;

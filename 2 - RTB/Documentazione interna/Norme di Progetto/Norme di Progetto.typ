@@ -153,6 +153,7 @@ Ogni documento è formato da un file Typst e da un file log.csv creato automatic
 ==== Verbali
 Un verbale è la documentazione di un meeting svolto tra i membri del gruppo (verbale interno) o con un referente esterno (verbale esterno). Documentare le riunioni permette di tenere traccia delle decisioni prese dal gruppo in un dato momento e permette a chi non riesce a presenziare di tenersi al passo con il gruppo in maniera asincrona. \
 I verbali devono essere rinominati nel seguente modo "yy-mm-dd.typ" e nello stesso modo deve essere chiamata la sottocartella in cui è inserito.
+//todo: aggiungere il fatto che sarà l'amministratore ad avere il compito di redigere i verbali post meeting
 
 ===== Intestazione dei verbali
 Ogni verbale, interno o esterno, deve presentare:
@@ -214,13 +215,149 @@ Viene inserito ";" alla fine delle voci dell'elenco tranne l'ultima che termina 
 I processi organizzativi abilitanti garantiscono la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. Questi processi forniscono le risorse e l'infrastruttura necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
 
 I processi organizzativi abilitanti sono i seguenti:
-//+ Processo di gestione dei modelli di ciclo di vita;
++ Processo di gestione dei modelli di ciclo di vita;
 + Processo di gestione dell'infrastruttura;
 // + Processo di gestione del portfolio;
 + Processo di gestione delle risorse umane;
 // + Processo di gestione della qualità;
 // + Processo di gestione della conoscenza.
 
+=== Processo di gestione dei modelli di ciclo di vita
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
+
+==== Scopo
+
+Lo scopo del processo di gestione del modello di ciclo di vita è definire, mantenere e garantire la presenza di regole, processi, modelli e procedure di ciclo di vita che il gruppo intende rispettare. \
+Questo processo fornisce politiche, processi, modelli e procedure del ciclo di vita coerenti con gli obiettivi dell'organizzazione, che sono definiti, adattati, migliorati e mantenuti per supportare le esigenze individuali dei progetti all'interno del contesto dell'organizzazione, e che sono in grado di essere applicati mediante metodi e strumenti efficaci e comprovati.\
+
+Il gruppo intende utilizzare il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo di vita del software. Questo modello prevede quattro fasi:
++ pianificazione (Plan): definizione degli obiettivi e dei processi necessari per raggiungerli;
++ esecuzione (Do): attuazione del piano;
++ verifica (Check): monitoraggio e misurazione dei processi e dei prodotti rispetto agli obiettivi e ai requisiti, e reportistica dei risultati;
++ attuazione (Act): azioni per migliorare le prestazioni, se necessario, in base ai risultati della verifica.
+
+==== Organizzazione del processso 
+===== Pianificazione
+La pianificazione del processo è compito del responsabile, il quale al termine dello sprint precedente, in base alle attività svolte e ai risultati ottenuti, pianifica le attività da svolgere nello sprint successivo. \
+La pianificazione è un'attività iterativa, che viene svolta ad ogni termine di sprint. Il responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \
+Questo processo permette di individuare le attività da svolgere, le risorse necessarie e le tempistiche di svolgimento, mediante il sistema di ticketing offerto da Jira.\
+Il risutato di questo processo è visibile all'interno del Piano di Progetto.\
+\ 
+===== Esecuzione
+Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto. \
+Il processo di esecuzione è composto da due attività principali:
++ sviluppo del prodotto;
++ sviluppo della documentazione.
+
+Durante questo processo, ogni ruolo svolge le attività assegnate seguendo quanto stabilito nella pianificazione, e sarà compito del responsabile verificare che le attività siano svolte correttamente e nei tempi previsti. Ogni membro avrà la possibilità di segnalare eventuali criticità, avendo a disposizione una board apposita sulla piattaforma Miro.\ Si tratta di un passaggio fondamentale in quanto permette di avere un resoconto pronto a fine sprint in merito al processo di avanzamento, individuando: \
+- "Keep doing": attività che hanno dato buoni risultati e che quindi vanno mantenute;
+- "Things to change": attività che hanno dato risultati non soddisfacenti e che quindi vanno modificate.
+\
+La progressione del lavoro è visibile mediante:
+- grafici di burndown (Jira);
+- board di avanzamento (Miro).
+
+I prodotti di questo processo, permettono dunque di procedere con la verifica e lo stabilimento delle contromisure e dei miglioramenti necessari.
+\ \
+===== Verifica
+Al termine di ogni sprint, il gruppo procederà con il meeting di retrospettiva, durante il quale verranno analizzati i risultati ottenuti e le attività svolte, basandosi sui prodotti della fase di esecuzione: \
++ grafici di burndown:
+  - Permetto di avere una visione rapida di quanto del lavoro pianificato è stato portato a termine: si tratta di una metrica puramente quantitativa, che tiene conto di del numero di ticket chiusi e del numero di ticket aperti;
++ board di avanzamento:
+  - "Keep doing": attività che hanno dato buoni risultati e che quindi vanno mantenute: questo permette al gruppo di individuare il modus operandi più efficace ed efficiente per svolgere le attività;
+  - "Things to change": attività che hanno dato risultati non soddisfacenti e che quindi vanno modificate: si tratta dell'aspetto più delicato da considerare, in quanto permette di individuare le criticità e le inefficienze del processo di sviluppo, e di conseguenza di apportare le modifiche necessarie per migliorare il processo stesso.
+
+Questa analisi individua i miglioramenti da apportare al processo di sviluppo, e di conseguenza di stabilire le contromisure necessarie per migliorare il processo stesso.
+  \ \
+===== Attuazione
+L'attuazione è l'ultima fase del processo di gestione del ciclo di vita, e consiste nell'attuare le contromisure stabilite durante la fase di verifica. \
+L'obiettivo è sopperire alle mancanze e alle inefficienze del processo di sviluppo, in modo da migliorare la qualità del prodotto e la produttività del gruppo. \
+Diventa compito del responsabile stabilire le attività necessarie per attuare le contromisure, e di conseguenza di pianificare le attività da svolgere nello sprint successivo. \
+Il risultato di questo processo è visibile all'interno del Piano di Progetto.
+\
+\
+==== Ruoli 
+===== Responsabile
+Il responsabile è la figura chiave che guida il progetto, rappresentandolo nei confronti degli stakeholders. Le sue responsabilità sono molteplici:
+
++ coordinamento: ha il compito di supervisionare i membri del gruppo, assicurandosi che le attività siano svolte in modo efficiente e tempestivo;
+
++ pianificazione: il responsabile è incaricato di delineare il percorso del progetto, stabilendo le attività da svolgere, le relative scadenze e priorità, sancendo l'inizio e la fine di ogni sprint;
+
++ monitoraggio e gestione dei costi: il responsabile tiene sotto controllo l'andamento del progetto, stima i costi e gestisce l'analisi dei rischi, garantendo che il progetto rimanga entro il budget previsto;
+
++ norme di progetto: il responsabile è responsabile della stesura e dell'aggiornamento delle norme di progetto, che devono essere rispettate da tutti i membri del gruppo;
+
++ relazioni esterne: gestisce tutte le interazioni con la proponente e i committenti assicurando una comunicazione fluida e efficace;
+
+In sintesi, il responsabile è il fulcro che mantiene il gruppo unito e guida il progetto verso il successo.
+\ \
+===== Amministratore
+L'amministratore è la figura che gestisce l'ambiente di lavoro e gli strumenti utilizzati dal gruppo per tutta la durata del progetto. Ha il compito di assicurare che gli strumenti proposti ai membri del gruppo siano efficienti e favoriscano la qualità del lavoro. Monitora il rispetto delle regole stabilite in questo documento e verifica che i servizi a disposizione del team siano adeguati alle attività pianificate, promuovendo la produttività. \
+
+Le responsabilità dell'amministratore includono:
+
++ redazione dei verbali: l'amministratore è responsabile della stesura dei verbali relativi ai meeting interni ed esterni;
+
++ gestione delle risorse: si occupa dell'amministrazione delle risorse, delle infrastrutture e dei servizi necessari per l'esecuzione dei processi di supporto;
+
++ automatizzazione dei processi: determina gli strumenti necessari per automatizzare i processi, come la compilazione dei file sorgenti e il sistema di versionamento automatico;
+
++ risoluzione dei problemi: affronta e risolve i problemi legati alla gestione dei processi.
+
+In sintesi, l'amministratore è il motore che mantiene il progetto in movimento, assicurando che tutto funzioni senza intoppi.
+
+\ \
+===== Analista
+L'analista svolge un ruolo estremamente delicato, facendosi carico di individuare i needs del proponente e di trasformarli in requisiti che saranno l'input delle attività successive. Il suo lavoro si svolge intensamente nel periodo di avvio del progetto, e si conclude con la stesura dell'Analisi dei Requisiti. \
+Il suo compito è di estrema rilevanza in quanto un'incompleta o superficiale analisi può impattare in modo sensibile sulle attività successive, causando ritardi e costi aggiuntivi, andando ad inficiare sulla qualità e completezza del prodotto finale. \
+
+Le responsabilità dell'analista includono:
++ documento di Analisi dei Requisiti: L'analista è incaricato di scrivere questo documento cruciale, che dettaglia i requisiti specifici del progetto.
+
++ interazione con i clienti: L'analista lavora a stretto contatto con i clienti o i committenti per capire e studiare i loro bisogni;
+
++ classificazione dei requisiti: individua i requisiti e li classifica come funzionali e non funzionali, e come obbligatori, desiderabili o opzionali;
+
++ definizione del problema e degli obiettivi: L'analista esamina la situazione attuale, identifica il problema e stabilisce gli obiettivi da raggiungere;
+
++ trasformazione dei bisogni in requisiti: Durante l'Analisi dei Requisiti, l'analista converte i bisogni dei clienti in requisiti specifici per la soluzione.
+
+\ \
+===== Progettista
+Il progettista ha il compito di sviluppare una soluzione che soddisfi le esigenze identificate dall'Analista, rispettando i vincoli individuati. Il Progettista trasforma i requisiti in un'architettura che modella il problema. \
+
+Le responsabilità del progettista includono:
+
++ sviluppo di un'architettura robusta e resistente ai malfunzionamenti;
+
++ realizzazione di soluzioni affidabili, efficienti, sostenibili e conformi ai requisiti;
+
++ decomposizione del sistema in componenti e organizzazione delle loro interazioni, ruoli e responsabilità;
+
++ garanzia di un basso grado di accoppiamento nell'architettura.
+
+\ \
+===== Programmatore
+Il programmmatore è responsabile della realizzazione della soluzione attraverso la codifica. Il suo compito è realizzare quanto stabilito dalla progettazione, accompagnando implementazione e manutenzione del codice. \
+Il programmatore è la figura più numerosa all'intero del gruppo con precise competenze tecniche.\
+
+Le responsabilità del programmatore includono:
++ scrittura del codice sorgente, perseguendo mantenibilità e conformità a quanto stabilito dall'architettura definita dalla progettazione;
+
++ creazione di test specifici per la verifica e la validazione del codice.
+
+\ \ 
+===== Verificatore
+Il verificatore controlla il lavoro svolto dagli altri membri del gruppo, assicurandosi che le norme di progetto e le aspettative siano rispettate. \
+
+Le responsabilità del verificatore includono:
+
++ verifica della qualità e della conformità della documentazione prodotta;
+
++ approvazione della documentazione sottoposta a verifica;
+
+\ \
 === Processi di gestione dell'infrastruttura
 
 ==== Scopo

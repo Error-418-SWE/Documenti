@@ -16,7 +16,7 @@ A seguito di un dialogo che il gruppo ha avuto con il professor Cardin in data 0
 
 - requisiti non funzionali;
 - raggruppamento degli Use Case;
-- quali sono i criteri che definiscono un'analisi dei requisiti ben fatta.
+- quali sono i criteri che definiscono un'Analisi dei Requisiti ben fatta.
 
 == Requisiti non funzionali
 === Specificare le versioni

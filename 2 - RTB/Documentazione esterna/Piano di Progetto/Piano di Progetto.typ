@@ -290,7 +290,8 @@ Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentr
 
 - è stata prestata una maggiore attenzione nella pianificazione del nuovo sprint, introducento nella board retrospettiva di Miro una bacheca relativa alle task da svolgere, che sono state tradotte fin da subito in ticket di Jira e assegnati ai rispettivi ruoli;
 - la durata massima dei meeting di retrospettiva è stata fissata a 90 minuti (_soft limit_);
-- sono stati definiti degli standard per la realizzazione dei grafici, adottando quelli proposti da Jira, ma gestendo meglio la pianificazione in modo da ottenere grafici ottimali.
+- sono stati definiti degli standard per la realizzazione dei grafici, adottando quelli proposti da Jira, ma gestendo meglio la pianificazione in modo da ottenere grafici ottimali;
+- è stato assegnato all'Amministratore il compito della redazione dei verbali.
 
 === Analisi costi di sprint effettivi
 

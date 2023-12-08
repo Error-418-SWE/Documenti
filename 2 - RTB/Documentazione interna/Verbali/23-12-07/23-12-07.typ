@@ -35,7 +35,7 @@ Bisogna fare attenzione con l'approccio dei requisiti non funzionali relativi al
 Diversamente da quanto ipotizzato inizialmente, il requisito riguardante la possibilità di utilizzare alfabeti non latini è un requisito funzionale in quanto rappresenta una vera e propria feature che determina il comportamento del programma.
 
 == Raggruppamento degli Use Case
-La suddivisione degli Use Case è da svolgere in funzione della loro leggibilità e utilità, pertanto nel nostro caso, è più ragionevole suddividere gli Use Case relaitivi alla modifica dell'ambiente di lavoro in:
+La suddivisione degli Use Case è da svolgere in funzione della loro leggibilità e utilità, perciò si ritiene più ragionevole suddividere gli Use Case relaitivi alla modifica dell'ambiente di lavoro in:
 - modifica scaffale;
 - modifica ambiente;
 - modifica bin.

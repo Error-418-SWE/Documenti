@@ -14,22 +14,31 @@
 = Introduzione
 
 == Scopo del documento
-Il presente documento ha come obiettivo la descrizione del prodotto software tramite la definizione di casi d'uso e requisiti, facilmente identificabili da un codice. Ogni caso d'uso sarà inoltre associato ad un diagramma creato utilizzando il linguaggio UML (_Unified Modeling Language_).
+Il presente documento ha come obiettivo la descrizione del prodotto software tramite la definizione di casi d'uso e requisiti. Tutti gli elementi sono identificati da un codice. Ogni caso d'uso è associato ad un diagramma creato utilizzando il linguaggio UML (_Unified Modeling Language_).
+
+== Panoramica del prodotto
+
+=== Product perspective
+=== Product functions
+=== User characteristics
+=== Limitazioni
 
 == Definizioni
 Il presente documento include lessico di dominio, per il quale è previsto il documento di Glossario. Le parole del Glossario sono denotate dal simbolo #sub("G") al pedice.
 
-== Riferimenti
+= Riferimenti
 
-=== Normativi
+== Riferimenti di conformità
 
 - Norme di Progetto;
 - Regolamento del progetto didattico: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_ ;
 - Standard ISO/IEC/IEEE 29148:2018: \
-  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_.
+  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_;
+- Standard ISO/IEC/IEEE 12207:2017: \
+  _#link("")_.
 
-=== Informativi
+== Riferimenti informativi
 
 - Verbali interni;
 - Verbali esterni;

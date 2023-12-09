@@ -21,6 +21,116 @@ Il presente documento descrive i casi d'uso e i requisiti del progetto _Warehous
 == Definizioni
 Il presente documento include lessico di dominio, per il quale è previsto il documento di Glossario. Le parole del Glossario sono denotate dal simbolo #sub("G") al pedice.
 
+= Descrizione del prodotto
+
+== Obiettivi del prodotto
+
+Il prodotto software oggetto di questo documento è un gestionale di magazzino (WMS) che offra una visualizzazione 3D del magazzino ed un set di funzionalità logistiche di base.
+
+== Ambito del prodotto
+
+Il prodotto software oggetto di questo documento è nominato *WMS3*. WMS3 è un gestionale di magazzino che offre le seguenti funzionalità:
+- visualizzazione tridimensionale di un magazzino, con possibilità di muovere la vista;
+- visualizzazione delle informazioni della merce presente in magazzino;
+- caricamento dei dati relativi alle merci da un database SQL;
+- emissione di ordini di movimentazione delle merci;
+- filtraggio e ricerca delle merci con rappresentazione grafica dei risultati;
+- importazione di planimetrie in formato SVG.
+
+I gestionali di magazzino tradizionali presentano una serie di problematiche:
+- rappresentazione 2D del contenuto del magazzino;
+- software pensato per un uso esclusivamente desktop;
+- interfaccia di gestione complessa (@wms-tradizionale), inadatta all'uso tramite touchscreen;
+- interpretazione dei dati e delle viste laboriosa e soggetta ad errore umano;
+- tempi di formazione del personale lunghi a causa della complessità degli strumenti.
+
+#figure(
+  image("./imgs/wms-tradizionale.jpg", format: "jpg"),
+  caption: [Schermata di un software WMS tradizionale (fonte: #link("https://www.seniorsoftware.ro/en/wms/")[seniorsoftware.ro])]) <wms-tradizionale>
+
+Il vantaggio principale di WMS3, rispetto ai tradizionali gestionali di magazzino, è la visualizzazione 3D del magazzino e del suo contenuto. Questa funzionalità rappresenta un miglioramento significativo di usabilità rispetto ai WMS tradizionali. La visualizzazione 3D permette agli utenti di:
+
+- avere una migliore comprensione dello stato del magazzino;
+- disporre le operazioni logistiche con maggiore cognizione.
+
+== Panoramica del prodotto
+
+=== Interazioni
+
+WMS3 si integra con, ma non comprende nel proprio ambito:
++ database SQL esterno per ottenere lo stato interno del magazzino;
++ sistema esterno per la notifica degli ordini di movimentazione tramite API RESTful.
+
+// Qui ci starebbe un bel diagramma...
+
+==== Interfacce utente
+
+WMS3 è una _web application_ acceduta e operata tramite browser. L'interfaccia utente (IU) è _web-based_ e _responsive_.
+
+Lo scenario di interazione primario avviene tramite mouse e tastiera. Tuttavia, è prevista la piena operabilità anche tramite touchscreen. Sarà possibile operare da dispositivi mobili quali tablet e smartphone.
+
+Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport_ del dispositivo in uso.
+
+==== Interfacce hardware
+
+Il prodotto è acceduto tramite browser. Deve supportare l'esecuzione sui seguenti dispositivi:
+- computer desktop, tramite mouse e tastiera;
+- tablet, tramite touchscreen;
+- smartphone, tramite touchscreen.
+
+Il browser e il dispositivo devono essere compatibili con lo standard WebGL.
+
+Il prodotto non prevede elementi hardware propri o interfacce con elementi hardware di terze parti.
+
+==== Interfacce software
+
+WMS3 richiede l'accesso in lettura ad un database SQL per il caricamento e la visualizzazione dei dati.
+
+==== Interfacce di comunicazione
+
+Per la comunicazione tra le sue componenti, con l'utente e con servizi esterni, WMS3 utilizza HTTP.
+
+==== Vincoli di memoria
+
+Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
+
+==== Operazioni
+
+// Dettagliare le operazioni, una volta confermate, secondo quanto descritto da 9.6.4.7
+
+==== Requisiti di adattamento al contesto
+
+// Descrivere le modalità di adattamento a diversi DBMS SQL come da 9.6.4.8
+
+==== Interfacce a servizi
+
+WMS3 dovrà invierà messaggi ad uno o più servizi esterni per comunicare gli ordini di movimentazione richiesti dall'utente. Dovrà inoltre ricevere e gestire messaggi che comunicano l'esito dell'ordine di movimentazione richiesto.
+
+=== Funzionalità del prodotto
+
+// TODO: 9.6.5
+
+=== Caratteristiche degli utenti
+
+L'utente tipico di WMS3 è un supervisore di magazzino. Ci si aspetta che la maggior parte degli accessi a WMS3 avvengano da ufficio, tramite un computer desktop dotato di mouse e tastiera. Tuttavia, non si può escludere che l'utente possa accedere a WMS3 tramite dispositivo mobile.
+
+L'utente tipico è avvezzo all'uso del computer e dei dispositivi mobili. Conosce il dominio applicativo.
+
+=== Limitazioni
+
+Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare il progetto WMS3, come ad esempio:
+- politiche interne, regolamenti, leggi statali;
+- limiti hardware;
+- limiti imposti dai servizi esterni;
+- limiti imposti dai requisiti di qualità;
+- considerazioni sulla sicurezza dei dati;
+- considerazioni sulla sicurezza dell'utente e di tutti coloro coinvolti, direttamente o indirettamente, dal ciclo di vita di WMS3.
+
+=== Ipotesi e dipendenze
+
++ Disponibilità di un database SQL;
++ Disponibilità di un browser compatibile con WebGL.
+
 = Riferimenti
 
 == Riferimenti di conformità

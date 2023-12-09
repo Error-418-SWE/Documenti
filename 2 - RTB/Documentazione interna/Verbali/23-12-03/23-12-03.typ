@@ -20,7 +20,7 @@
 - Rotazione dei ruoli;
 - Programmazione appuntamento con il Referente aziendale;
 - Retrospettiva sprint 4;
-- Presentazione degli dimostratori tecnologici realizzati;
+- Presentazione dei dimostratori tecnologici realizzati;
 - Pianificazione sprint 5.
 
 == Rotazione dei ruoli
@@ -35,9 +35,9 @@ Il gruppo attua la rotazione dei ruoli secondo la programmazione stabilita nel P
 
 Sono stati presentati tre dimostratori tecnologici, ciascuno focalizzato sulla comprensione di una specifica funzionalità:
 
-+ *importazione SVG*: applicazione basata su _Three.js_ che genera un ambiente 3D a partire da un file SVG standard;
-+ *interrogazione di un database*: applicazione basata su _Express.js_ che mostra, sotto forma di testo, il risultato di una query eseguita su un database MySQL locale;
-+ *creazione di elementi nello spazio 3D*: applicazione basata su _Three.js_ che permette all'utente di posizionare nell'ambiente 3D un numero di cubi parametrizzati e di segnalarne la collisione.
++ *importazione SVG*: applicazione, basata su _Three.js_, che importa un file SVG standard e lo colloca nell'ambiente 3D;
++ *interrogazione di un database*: applicazione, basata su _Express.js_, che mostra, sotto forma di testo, il risultato di una query eseguita su un database MySQL locale;
++ *creazione di elementi nello spazio 3D*: applicazione, basata su _Three.js_, che permette all'utente di posizionare nell'ambiente 3D un numero di cubi parametrizzati e di segnalarne la collisione.
 
 I risultati sono incoraggianti e il gruppo è entusiasta delle potenzialità di _Three.js_. Nel corso di un prossimo meeting, gli esploratori tecnologici realizzati saranno sottoposti al Referente aziendale per sostanziare la visione di progetto ed ottenere feedback. Nell'ambito dello sprint 5, il gruppo valuterà la realizzazione di esploratori tecnologici analoghi basati su tecnologie diverse (ad esempio _Unreal Engine_ o _Unity_).
 
@@ -59,7 +59,7 @@ Le criticità riscontrate sono:
 + la lavorazione di un ticket sembra terminare con l'apertura della PR, non con il merge;
 + numerosi merge conflict, dovuti alla scrittura concorrente di documenti e log;
 + lavorazione opaca dei ticket: capita che il backlog non rappresenti il reale stato di avanzamento del ticket;
-+ il lavoro sulla Analisi dei Requisiti è stato profondamente rivisto dopo il cambio di ruoli;
++ il lavoro sull'Analisi dei Requisiti è stato profondamente rivisto dopo il cambio di ruoli;
 + notifiche da GitHub, Jira copiose e spesso ridondanti;
 + il lavoro sul PoC richiede più risorse del previsto.
 

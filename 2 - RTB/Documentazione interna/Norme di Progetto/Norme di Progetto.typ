@@ -348,7 +348,7 @@ Non sono previste variazioni della composizione dell'organizzazione, se non in v
 == Processo di pianificazione di progetto <pianificazione>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
 === Scopo
-Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato Piano di progetto (@PdP).
+Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato Piano di Progetto (@PdP).
 
 === Attività
 Nel processo di pianificazione sono presenti due attività principali:
@@ -393,8 +393,8 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
 
 Ad ogni ruolo è inoltre associato un costo orario, tramite cui il gruppo calcola il preventivo totale del progetto e quello di ogni _sprint_ seguito dal relativo consuntivo.
 
-=== Piano di progetto <PdP>
-Il piano di progetto è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento. Sono presenti cinque sezioni:
+=== Piano di Progetto <PdP>
+Il Piano di Progetto è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento. Sono presenti cinque sezioni:
 
 + Rischi e loro mitigazione;
 + Divisione temporale di sviluppo;
@@ -413,7 +413,7 @@ Il processo di valutazione e controllo ha lo scopo di determinare lo stato del p
 - costi;
 - obiettivi raggiunti.
 
-Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e viene messo per iscritto all'interno dei verbali di tali riunioni e nei paragrafi di consuntivo del Piano di progetto.
+Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e viene messo per iscritto all'interno dei verbali di tali riunioni e nei paragrafi di consuntivo del Piano di Progetto.
 
 === Attività
 ==== Piano di valutazione e controllo del progetto
@@ -441,7 +441,7 @@ Oltre a queste, Jira offre la funzionalità di visualizzazione di un burndown-ch
 
 Entrambe le rappresentazioni pongono nell'asse $x$ del grafico il tempo, indicato in giorni. Questi grafici contengono inoltre una retta rappresentante l'andamento ideale del lavoro, grazie alla quale risulta più semplice verificare l'efficienza del gruppo.
 
-Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consuntivo dello sprint nel Piano di progetto, nel quale, oltre a fare un resoconto dello sprint, si analizza il suo l'aspetto economico: in base ai ruoli impegnati e al monte ore produttivo svolto, si calcola il costo effettivo del periodo concluso, aggiornando conseguentemente il costo preventivato e il documento Piano di Progetto. Questo indicatore contribuisce ad avere un resoconto completo del progetto, e permette al gruppo di comprendere meglio come sta lavorando e se sta gestendo correttamente le risorse a sua disposizione.
+Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consuntivo dello sprint nel Piano di Progetto, nel quale, oltre a fare un resoconto dello sprint, si analizza il suo l'aspetto economico: in base ai ruoli impegnati e al monte ore produttivo svolto, si calcola il costo effettivo del periodo concluso, aggiornando conseguentemente il costo preventivato e il documento Piano di Progetto. Questo indicatore contribuisce ad avere un resoconto completo del progetto, e permette al gruppo di comprendere meglio come sta lavorando e se sta gestendo correttamente le risorse a sua disposizione.
 
 ==== Controllo
 Nell'attività di controllo si intraprendono azioni correttive nei confronti dei problemi individuati. Questi problemi possono essere di duplice natura:

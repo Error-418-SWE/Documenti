@@ -227,10 +227,10 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
 
 ==== Scopo
 
-Lo scopo del processo di gestione del modello di ciclo di vita è definire, mantenere e garantire la presenza di regole, processi, modelli e procedure di ciclo di vita che il gruppo intende rispettare. \
+Lo scopo del processo di gestione del modello di ciclo di vita è definire, mantenere e garantire regole, processi, modelli e procedure di ciclo di vita. \
 Questo processo fornisce politiche, processi, modelli e procedure del ciclo di vita coerenti con gli obiettivi dell'organizzazione, che sono definiti, adattati, migliorati e mantenuti per supportare le esigenze individuali dei progetti all'interno del contesto dell'organizzazione, e che sono in grado di essere applicati mediante metodi e strumenti efficaci e comprovati.\
 
-Il gruppo intende utilizzare il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo di vita del software. Questo modello prevede quattro fasi:
+Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo di vita del software. Questo modello prevede quattro fasi:
 + pianificazione (Plan): definizione degli obiettivi e dei processi necessari per raggiungerli;
 + esecuzione (Do): attuazione del piano;
 + verifica (Check): monitoraggio e misurazione dei processi e dei prodotti rispetto agli obiettivi e ai requisiti, e reportistica dei risultati;
@@ -239,7 +239,7 @@ Il gruppo intende utilizzare il modello PDCA (Plan-Do-Check-Act) per la gestione
 ==== Organizzazione del processso 
 ===== Pianificazione
 La pianificazione del processo è compito del Responsabile, il quale al termine dello sprint precedente, in base alle attività svolte e ai risultati ottenuti, pianifica le attività da svolgere nello sprint successivo. \
-La pianificazione è un'attività iterativa, che viene svolta ad ogni termine di sprint. Il Responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \
+La pianificazione è un'attività iterativa, che viene svolta all'inizio dello sprint. Il Responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \
 Questo processo permette di individuare le attività da svolgere, le risorse necessarie e le tempistiche di svolgimento, mediante il sistema di ticketing offerto da Jira.\
 Il risutato di questo processo è visibile all'interno del Piano di Progetto.\
 \ 
@@ -249,11 +249,12 @@ Il processo di esecuzione è composto da due attività principali:
 + sviluppo del prodotto;
 + sviluppo della documentazione.
 
-Durante questo processo, ogni ruolo svolge le attività assegnate seguendo quanto stabilito nella pianificazione, e sarà compito del Responsabile verificare che le attività siano svolte correttamente e nei tempi previsti. Ogni membro avrà la possibilità di segnalare eventuali criticità, avendo a disposizione una board apposita sulla piattaforma Miro.\ Si tratta di un passaggio fondamentale in quanto permette di avere un resoconto pronto a fine sprint in merito al processo di avanzamento, individuando: \
+Durante questo processo, ogni ruolo svolge le attività assegnate seguendo quanto stabilito nella pianificazione, e sarà compito del Responsabile verificare che le attività siano svolte correttamente e nei tempi previsti. Ogni membro avrà la possibilità di segnalare eventuali criticità, avendo a disposizione una board apposita sulla piattaforma Miro.\ Questo permette di avere un resoconto pronto a fine sprint in merito al processo di avanzamento, individuando: \
 - "Keep doing": attività che hanno dato buoni risultati e che quindi vanno mantenute;
 - "Things to change": attività che hanno dato risultati non soddisfacenti e che quindi vanno modificate.
 \
 La progressione del lavoro è visibile mediante:
+- retrospettiva;
 - grafici di burndown (Jira);
 - board di avanzamento (Miro).
 
@@ -278,24 +279,22 @@ Il risultato di questo processo è visibile all'interno del Piano di Progetto.
 \
 ==== Ruoli 
 ===== Responsabile
-Il Responsabile è la figura chiave che guida il progetto, rappresentandolo nei confronti degli stakeholders. 
+Il Responsabile è la figura chiave che guida il progetto, assumendo il ruolo di referente principale per il gruppo e per gli stakeholders. \ 
 
 Le responsabilità del Responsabile includono:
 
-+ coordinamento: ha il compito di supervisionare i membri del gruppo, assicurandosi che le attività siano svolte in modo efficiente e tempestivo;
++ coordinamento: ha il compito di supervisionare i membri del gruppo, assicurandosi che le attività siano svolte seguendo le norme identificate in questo documento;
 
-+ pianificazione: delinea il percorso del progetto, stabilendo le attività da svolgere, le relative scadenze e priorità, sancendo l'inizio e la fine di ogni sprint;
++ pianificazione: stabilisce le attività da svolgere, le relative scadenze e priorità, sancendo l'inizio e la fine di ogni sprint;
 
 + monitoraggio e gestione dei costi: tiene sotto controllo l'andamento del progetto, stima i costi e gestisce l'analisi dei rischi, garantendo che il progetto rimanga entro il budget previsto;
 
 + norme di progetto: si occupa della stesura e dell'aggiornamento delle norme di progetto, che devono essere rispettate da tutti i membri del gruppo;
 
 + relazioni esterne: gestisce tutte le interazioni con il Proponente e i Committenti assicurando una comunicazione fluida e efficace;
-
-In sintesi, il Responsabile è il fulcro che mantiene il gruppo unito e guida il progetto verso il successo.
 \ \
 ===== Amministratore
-L'Amministratore è la figura che gestisce l'ambiente di lavoro e gli strumenti utilizzati dal gruppo per tutta la durata del progetto. Ha il compito di assicurare che gli strumenti proposti ai membri del gruppo siano efficienti e favoriscano la qualità del lavoro. Monitora il rispetto delle regole stabilite in questo documento e verifica che i servizi a disposizione del team siano adeguati alle attività pianificate, promuovendo la produttività. \
+L'Amministratore è la figura che gestisce l'ambiente di lavoro e gli strumenti utilizzati dal gruppo per tutta la durata del progetto. Ha il compito di assicurare che gli strumenti proposti ai membri del gruppo siano efficienti e favoriscano la qualità del lavoro. Monitora, assieme al Responsabile, il rispetto delle regole stabilite in questo documento e verifica che i servizi a disposizione del gruppo siano adeguati alle attività pianificate, promuovendo la produttività. \
 
 Le responsabilità dell'Amministratore includono:
 
@@ -307,12 +306,11 @@ Le responsabilità dell'Amministratore includono:
 
 + risoluzione dei problemi: affronta e risolve i problemi legati alla gestione dei processi.
 
-In sintesi, l'Amministratore è il motore che mantiene il progetto in movimento, assicurando che tutto funzioni senza intoppi.
 
 \ \
 ===== Analista
-L'Analista svolge un ruolo estremamente delicato, facendosi carico di individuare i bisogni del proponente e di trasformarli in requisiti che saranno l'input delle attività successive. Il suo lavoro si svolge intensamente nel periodo di avvio del progetto, e si conclude con la stesura dell'Analisi dei Requisiti. \
-Il suo compito è di estrema rilevanza in quanto un'incompleta o superficiale analisi può impattare in modo sensibile sulle attività successive, causando ritardi e costi aggiuntivi, andando ad inficiare sulla qualità e completezza del prodotto finale. \
+L'Analista individua i bisogni del Proponente e li trasforma in requisiti che saranno l'input delle attività successive. Il suo lavoro si svolge intensamente nel periodo di avvio del progetto, e si conclude con la stesura dell'Analisi dei Requisiti. \
+Il suo compito è di rilevanza in quanto un'incompleta o superficiale analisi può impattare in modo sensibile sulle attività successive, causando ritardi e costi aggiuntivi, andando ad inficiare sulla qualità e completezza del prodotto finale. \
 
 Le responsabilità dell'Analista includono:
 + documento di Analisi dei Requisiti: l'Analista è incaricato di scrivere questo documento cruciale, che dettaglia i requisiti specifici del progetto.
@@ -341,7 +339,6 @@ Le responsabilità del Progettista includono:
 
 \ \
 ===== Programmatore
-Il Programmmatore è responsabile della realizzazione della soluzione attraverso la codifica. Il suo compito è realizzare quanto stabilito dalla progettazione, accompagnando implementazione e manutenzione del codice. \
 Il Programmatore è la figura più numerosa all'intero del gruppo con precise competenze tecniche.\
 
 Le responsabilità del Programmatore includono:

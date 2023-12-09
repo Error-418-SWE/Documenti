@@ -485,3 +485,57 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 Il ruolo dell'amministratore invece, incaricato di gestire il reparto tecnologico implementando gli automatismi necessari, a causa di difficoltà incontrate nell'implementazione (errori, testing, verifica), ha visto un aumento delle ore rispetto a quanto preventivato.
 === Burndown-chart
 [da inserire]
+
+
+== Secondo sprint dal 06-11-2023 al 13-11-2023
+
+=== Obiettivi raggiunti
+- riconfigurazione del repository;
+- stesura della sezione _introduzione_ del documento delle Norme di Progetto;
+- stesura della sezione _processi di supporto_ del documento delle Norme di Progetto;
+- perfezionamento delle automazioni per la compilazione dei documenti;
+- perfezionamento delle automazioni per il versionamento dei documenti;
+- contatto con l'azienda Proponente per comunicare l'esito della candidatura;
+- meeting con l'azienda Proponente per riflettere sull'Analisi dei Requisiti e sulle ulteriori tecnologie da usare;
+- inizio dell'individuazione e della stesura degli use case.
+=== Obiettivi mancati
+Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obiettivi mancati dello sprint precedente.
+=== Analisi problematiche insorte
+- Il team ha notato la mancanza di una struttura comune nei verbali, che porta a documenti senza una precisa convenzione e rallentamenti in fase di redazione;\
+- Sono emerse difficoltà nelle modalità di utilizzo del repository comune, nonostante sia stato dedicato del tempo per la formazione;
+- Scarsa reattività in fase di review.
+=== Risoluzioni attuate
+- Per risolvere la problematica di una mancanza di struttura nei verbali, si sono fissate delle convenzioni da seguire nel documento di Norme di Progetto;
+- Per formare meglio il team sulle modalità di utilizzo del repository, è stato dedicato tempo in più per fornire tutorial video e testuali in supporto del team;
+- Per ovviare alla scarsa reattività in fase di review, il team prende la responsabilità di visionare spesso la casella mail personale per
+capire quando c'è bisogno di una review o di risolvere una conversation Github, oltre a sollecitare i verificatori via i canali di comunicazione interni del team
+in caso di mancate revisioni.
+
+=== Analisi costi di sprint effettivi
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:7pt ,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Verificatore*],[*Totale*],
+[Banzato Alessio],  [/],  [/],    [/],    [2(-1)],    [2(-1)],
+[Carraro Riccardo], [/],  [6(+2)],    [/],    [/],    [6(+2)],
+[Gardin Giovanni],  [/],  [6(+2)],    [/],    [/],    [6(+2)],
+[Nardo Silvio],     [/],  [/],    [3],    [/],    [3],
+[Oseliero Antonio], [3],  [/],    [/],    [/],    [3],
+[Todesco Mattia],   [/],  [/],    [3],    [/],    [3],
+[Zaccone Rosario],  [/],  [/],    [3],    [/],    [3],
+[Totale ore ruolo], [3],  [12],    [9],    [2],    [26],
+[Costo orario],     [30,00], [20,00], [25,00], [15,00], [],
+[Costo ruolo],      [90,00], [240,00], [225,00], [30,00], [585,00]
+)
+#align(center, text("Tabella 4: consuntivo secondo sprint"))
+
+A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore effettivo diverso a quanto preventivato:
+- Amministratore: la scarsa comprensione delle modalità di utilizzo del repository da parte dei membri del team ha portato
+gli amministratori a dedicare delle ore in più mirate al perfezionamento della formazione dei membri del gruppo;
+
+- Verificatore: la scarsa reattività in fase di review ha portato un impegno inferiore alle attività di revisione.
+
+=== Burndown-chart
+[da inserire]

@@ -36,7 +36,7 @@ Il presente documento include lessico di dominio, per il quale è previsto il do
 - Standard ISO/IEC/IEEE 29148:2018: \
   _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_;
 - Standard ISO/IEC/IEEE 12207:2017: \
-  _#link("")_.
+  _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_.
 
 == Riferimenti informativi
 

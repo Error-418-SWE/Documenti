@@ -5,6 +5,7 @@
   date: "",
   externalParticipants: (),
   authors: (),
+  reviewers: (),
   missingMembers: (),
   location: "Discord",
   timeStart: "",
@@ -91,6 +92,7 @@ let showIndex = showIndex
 let missingMembers = missingMembers
 let externalParticipants = externalParticipants
 let authors = authors
+let reviewers = reviewers
 let isExternalUse = isExternalUse or externalParticipants.len() > 0
 let documentVersion = "WIP"
 
@@ -98,6 +100,11 @@ let documentVersion = "WIP"
 for author in authors {
   if (author not in groupMembers) {
     panic("Controlla lo spelling dei redattori.")
+  }
+}
+for reviewer in reviewers {
+  if (reviewer not in groupMembers) {
+    panic("Controlla lo spelling dei verificatori, o rimuovili per caricare automaticamente il verificatore designato.")
   }
 }
 for member in missingMembers {
@@ -110,6 +117,10 @@ for member in missingMembers {
 let str_authors = "Redattore"
 if (authors.len() >= 2) {
   str_authors = "Redattori"
+}
+let str_reviewers = "Verificatore"
+if (reviewers.len() >= 2) {
+  str_reviewers = "Verificatori"
 }
 let str_representatives = "Referente"
 if (externalParticipants.len() >= 2) {
@@ -295,15 +306,19 @@ page(numbering: none)[
     ],
 
     // Verificatori documento
-    summaryHeading[*Verificatore*],
+    summaryHeading[*#str_reviewers*],
     summaryContent[
-      #let reviewer = "n/a"
-      #for role in ruoli.ruoli {
-        if role.contains("Verificatore") {
-          reviewer = role.flatten().at(0)
+      #let verificatore = "n/a"
+      #if (reviewers.len() > 0) {
+        verificatore = reviewers.join("\n")
+      } else {
+        for role in ruoli.ruoli {
+          if role.contains("Verificatore") {
+            verificatore = role.flatten().at(0)
+          }
         }
       }
-      #reviewer
+      #verificatore
     ],
 
     // Destinatari documento

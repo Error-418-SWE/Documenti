@@ -249,7 +249,7 @@ I requisiti dei processi di gestione dell'infrastruttura sono:
 
 ==== Infrastruttura di comunicazione
 
-===== Comunicazione interna <comunicazioneInterna>
+===== Comunicazione interna
 
 #link("https://discord.com/")[*Discord*] rappresenta il canale primario di comunicazione interna. È una piattaforma di comunicazione che fornisce:
 
@@ -362,7 +362,7 @@ In questa attività il gruppo deve definire tutto ciò che caratterizza il proge
 ==== Pianificazione del progetto e della gestione tecnica
 È l'attività principale del processo, nella quale viene definita nel concreto la pianificazione.
 
-===== Suddivisione temporale <sprint>
+===== Suddivisione temporale
 Il gruppo ha individuato tre periodi di lavoro principali:
 
 - Raccolta e analisi dei requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con l'azienda proponente;

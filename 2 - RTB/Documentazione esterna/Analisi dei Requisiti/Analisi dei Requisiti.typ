@@ -2,13 +2,14 @@
 
 #show: project.with(
   title:"Analisi dei Requisiti",
-  subTitle: "",
+  subTitle: "Warehouse Management 3D (WMS3)",
   authors: (
     "Banzato Alessio",
     "Nardo Silvio",
     "Oseliero Antonio",
     "Gardin Giovanni",
   ),
+  showLog: true,
 );
 
 = Introduzione

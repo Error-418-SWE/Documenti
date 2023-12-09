@@ -249,7 +249,7 @@ I requisiti dei processi di gestione dell'infrastruttura sono:
 
 ==== Infrastruttura di comunicazione
 
-===== Comunicazione interna
+===== Comunicazione interna <comunicazioneInterna>
 
 #link("https://discord.com/")[*Discord*] rappresenta il canale primario di comunicazione interna. È una piattaforma di comunicazione che fornisce:
 
@@ -362,7 +362,7 @@ In questa attività il gruppo deve definire tutto ciò che caratterizza il proge
 ==== Pianificazione del progetto e della gestione tecnica
 È l'attività principale del processo, nella quale viene definita nel concreto la pianificazione.
 
-===== Suddivisione temporale
+===== Suddivisione temporale <sprint>
 Il gruppo ha individuato tre periodi di lavoro principali:
 
 - Raccolta e analisi dei requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con l'azienda proponente;
@@ -403,3 +403,54 @@ Il piano di progetto è il documento principale che viene redatto durante questo
 + Consuntivo del progetto.
 
 La redazione del documento va di pari passo con l'avanzamento del progetto, in modo tale da essere sempre aggiornato alla situazione corrente del lavoro.
+
+== Processo di valutazione e controllo di progetto <valutazioneControllo>
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.2_
+=== Scopo
+Il processo di valutazione e controllo ha lo scopo di determinare lo stato del progetto tramite la verifica dell'allineamento del lavoro con i piani definiti. Tale allineamento viene dimostrato osservando i seguenti parametri:
+
+- tempistiche;
+- costi;
+- obiettivi raggiunti.
+
+Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e viene messo per iscritto all'interno dei verbali di tali riunioni e nei paragrafi di consuntivo del Piano di progetto.
+
+=== Attività
+==== Piano di valutazione e controllo del progetto
+La valutazione e il controllo del progetto vengono fatte settimanalmente, in corrispondenza della riunione di retrospettiva. Durante questa riunione si valuta ciò che è stato svolto durante il periodo di lavoro (_sprint_) che si sta concludendo, se ne identificano i problemi e si decidono soluzioni di controllo che vadano a risolvere o arginare i problemi individuati.
+
+Oltre a queste revisioni periodiche interne, sono presenti attività nelle quali il gruppo espone la propria situazione al Proponente, tramite riunione su Zoom, e Committente, tramite le attività denominate "diario di bordo".
+
+Inoltre, è necessario che il gruppo svolga delle revisioni tecniche con il Committente per avere una valutazione esterna. Queste due revisioni sono chiamate Requirements and Technology Baseline (o RTB) e Product Baseline (o PB).
+
+==== Valutazione <valutazione>
+Durante l'attività di valutazione il gruppo deve analizzare la situazione del progetto, e per fare ciò deve adottare degli strumenti che rappresentino tale situazione nel modo più oggettivo possibile. Il momento in cui si effettua questo compito è la retrospettiva settimanale. Questa viene fatta tramite meeting interno su Discord con il supporto di una board Miro. Il meeting è suddiviso concettualmente in tre parti, rappresentate all'interno della board da tre riquadri:
+
+- Keep doing: raccoglie tutti gli aspetti positivi (e di conseguenza da mantenere) dello sprint;
+- Improvements: raccoglie tutte le problematiche incontrate durante lo sprint;
+- Task: raccoglie tutte le attività da svolgere nel prossimo sprint, alcune delle quali direttamente collegate agli elementi appartenenti ad "Improvements".
+
+Tramite Miro il gruppo riesce ad avere una panoramica della situazione del lavoro, che viene poi completata da Jira, l'Issue Tracking Systema adottato. Al suo interno il gruppo ha definito le due milestone principali (RTB e PB), nelle quali ha creato delle Epic che rappresentano ciò che è necessario produrre per quella milestone, e che raccolgo tutti i task necessari alla produzione di tali prodotti (documenti o software).
+
+Milestone e Epic vengono accompagnate all'interno di Jira da una barra di completamento che rappresenta in verde il lavoro svolto, in blu il lavoro in fase di svolgimento e lascia vuota la parte dedicata alle attività definite ma non ancora in svolgimento. Queste barre contribuiscono a una rappresentazione oggettiva della situazione del progetto.
+
+Oltre a queste, Jira offre la funzionalità di visualizzazione di un burndown-chart, ovvero un grafico che rappresenta l'andamento del lavoro all'interno di uno sprint in due possibili modalità:
+
+- quantità di story points completati;
+- quantità di issue completate.
+
+Entrambe le rappresentazioni pongono nell'asse $x$ del grafico il tempo, indicato in giorni. Questi grafici contengono inoltre una retta rappresentante l'andamento ideale del lavoro, grazie alla quale risulta più semplice verificare l'efficienza del gruppo.
+
+Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consuntivo dello sprint nel Piano di progetto, nel quale, oltre a fare un resoconto dello sprint, si guarda anche come sta procedendo il progetto dal punto di vista economico. Dato che ogni ruolo ha un costo, a fine sprint si calcolano i costi totali, in base alle ore che sono state svolte dai singoli ruoli in quel periodo. Questo indicatore contribuisce ad avere un resoconto completo del progetto, e permette al gruppo di comprendere meglio come sta lavorando e se sta gestendo correttamente le risorse a sua disposizione.
+
+==== Controllo
+Nell'attività di controllo si intraprendono azioni correttive nei confronti dei problemi individuati. Questi problemi possono essere di duplice natura:
+
++ mancato raggiungimento degli obiettivi prefissati;
++ miglioramenti e accortezze da adottare.
+
+===== Mancato raggiungimento degli obiettivi prefissati
+È necessario che alla chiusura dello sprint le attività ancora in fase di svolgimento vengano riportate nello sprint successivo, insieme a tutte quelle attività pianificate ma non ancora iniziate che sono considerate importanti. Tutte le attività che non vengono considerate importanti, ad esempio attività di cui si è rivalutato il grado di priorità, vengono inserite nel backlog, ovvero un archivio di task non assegnate a nessuno sprint. Una situazione di mancato raggiungimento degli obiettivi può essere causata anche da una pianificazione errata e troppo ottimista, ed è quindi necessario che essa sia rivista e migliorata.
+
+===== Miglioramenti e accortezze da adottare
+In questo caso le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcune delle task raccolte rispondono direttamente ai problemi individuati nella parte di Improvements.

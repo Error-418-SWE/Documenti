@@ -15,14 +15,8 @@
 = Introduzione
 
 == Scopo del documento
-Il presente documento ha come obiettivo la descrizione del prodotto software tramite la definizione di casi d'uso e requisiti. Tutti gli elementi sono identificati da un codice. Ogni caso d'uso è associato ad un diagramma creato utilizzando il linguaggio UML (_Unified Modeling Language_).
 
-== Panoramica del prodotto
-
-=== Product perspective
-=== Product functions
-=== User characteristics
-=== Limitazioni
+Il presente documento descrive i casi d'uso e i requisiti del progetto _Warehouse Management 3D_, elaborati a partire dal capitolato C5 proposto da Sanmarco Informatica S.p.A e assegnato all'organizzazione dal Committente.
 
 == Definizioni
 Il presente documento include lessico di dominio, per il quale è previsto il documento di Glossario. Le parole del Glossario sono denotate dal simbolo #sub("G") al pedice.

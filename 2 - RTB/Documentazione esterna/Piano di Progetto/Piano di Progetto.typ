@@ -112,8 +112,52 @@ Ancora da definire
 Delineati i rischi, le relative contromisure e il calendario di progetto, si è definito, mediante una pianificazione retrospettiva, un preventivo iniziale dei costi di realizzazione del progetto.\
 È altresì corretto evidenziare come i membri del gruppo non siano dotati di esperienza sufficiente per fornire un preventivo corretto e preciso sin dagli inizi dello sviluppo: per tale motivo, il prezzo indicato sarà soggetto a modifiche con l'avanzamento del progetto (seppur mai superando il prezzo preventivato in candidatura).
 === Analisi dei ruoli
+==== Responsabile
+Il Responsabile è un ruolo presente durante l'intero progetto. Il suo compito è quello di gestire il team e di assicurarsi che lo sviluppo proceda secondo le tempistiche predefinite e le aspettative del Committente. Deve inoltre redigere e far rispettare le Norme di Progetto, nonché le linee guida di sviluppo che l'intero team deve rispettare. Essendo il ruolo più costoso, il numero di ore è stato scelto per favorire l'efficienza e non pesare eccessivamente sul costo finale.
+
+==== Amministratore
+L'Amministratore è un ruolo presente durante l'intero progetto, in quanto si occupa di predisporre e controllare il corretto utilizzo delle procedure e degli strumenti definiti nelle Norme di Progetto, andando anche a gestire e implementare automatismi, migliorando così l'efficienza del team. Il monte ore scelto è tale, poiché essendo questo un ruolo di controllo, non sono richieste un numero elevato di ore.
+
+==== Analista
+L'Analista è presente esclusivamente nelle fasi iniziali del progetto, poiché si occupa della raccolta e dell'elaborazione dei requisiti. Ciò comporta un numero di ore ridotto e una distribuzione delle stesse unicamente nelle prime settimane del progetto.
+
+==== Progettista
+Il Progettista ha il compito di delineare e documentare l'architettura del prodotto in modo da:
+
+- soddisfare i requisiti raccolti nelle fasi pregresse;
+
+- aiutare il team di sviluppo con una documentazione chiara ed esaustiva.
+
+Nello stabilire l'architettura deve quindi indicare anche quali saranno le tecnologie da utilizzare per la sua implementazione.
+Ritenendolo un ruolo impegnativo dal punto di vista temporale, il numero di ore risulta maggiore rispetto ai ruoli precedenti.
+
+==== Programmatore
+Il Programmatore ha il compito di tradurre in codice eseguibile l'architettura prodotta dal progettista. Il ruolo prevede un numero di ore molto elevato poiché riteniamo il lavoro più dispendioso a livello temporale rispetto a quello delle altre figure professionali.
+
+==== Verificatore
+Il Verificatore è un ruolo presente durante l'intero progetto, che si occupa di mantenere degli standard qualitativi sul lavoro del team: egli deve verificare la correttezza, esaustività e coerenza di tutti i documenti, e nella fase di codifica sarà colui che si occuperà di controllare la qualità del software prodotto. Proprio per questo il totale delle ore risulta essere il secondo più elevato dopo il Programmatore.
+
 === Suddivisione delle ore dei ruoli
+La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo di competenze trasversali nei vari ruoli presenti all'interno del progetto. 
+
+#figure(
+  caption: "Tabella 1: suddivisione delle ore dei ruoli",
+  table(align: center,
+  columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+  [*Membro*],[*Resp.*],[*Amm.*],[*Analis.*],[*Prog.*],[*Program*],[*Verifi.*],[*Totale*],
+  [Alessio], [13], [10], [10], [14], [30], [18], [95],
+  [Antonio], [13], [10], [10], [14], [30], [18], [95],
+  [Giovanni], [13], [10], [10], [14], [30], [18], [95],
+  [Mattia], [13], [10], [10], [14], [30], [18], [95],
+  [Riccardo], [13], [10], [10], [14], [30], [18], [95],
+  [Rosario], [13], [10], [10], [14], [30], [18], [95],
+  [Silvio], [13], [10], [10], [14], [30], [18], [95],
+  [Totale Ore], [91], [70], [70], [98], [210], [126], [665],
+  [Costo Orario (€)], [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+  [Costo Ruolo (€)], [2.730], [1.400], [1.750], [2.450], [3.150], [1.890], [],  
+))
 === Preventivo calcolato
+Il costo totale preventivato è di € 13.370,00.
 
 = Pianificazione del lavoro
 == Introduzione

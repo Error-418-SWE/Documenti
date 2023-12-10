@@ -19,10 +19,10 @@
 - suddivisione compiti da svolgere.
 
 == Discussione relativa al meeting con il Proponente
-Si è svolta una discussione "a caldo" a seguito del meeting con il Proponente allo scopo di definire con precisione ciò che l'azienda ha apprezzato e ciò che va rivisto. Il gruppo si ritiene soddisfatto dell'esito dell'incontro ed è stata creata una lista Keep doing/To Do per i prossimi giorni di lavoro:
+Si è svolta una discussione a seguito del meeting con il Proponente allo scopo di definire con precisione ciò che l'azienda ha apprezzato e ciò che va rivisto. Il gruppo si ritiene soddisfatto dell'esito dell'incontro ed è stata creata una lista Keep doing/To Do per i prossimi giorni di lavoro:
 
 - Keep doing: 
-  - lettura file svg: implementata proprio come desiderata dal Proponente;
+  - lettura file SVG: implementazione coerente con la richiesta del Proponente;
   - griglia per snapping degli scaffali: particolarmente apprezzata dal referente aziendale;
   - lettura dati dal database: implementata in maniera convincente.
 
@@ -33,4 +33,4 @@ Si è svolta una discussione "a caldo" a seguito del meeting con il Proponente a
 
 == Suddivisione compiti da svolgere
 La suddivisione dei compiti decisa durante il meeting è:
-- il Progettista a seguito del completamento del lavoro con il Piano di Progetto passa allo sviluppo del PoC e si occuperà dell'integrazione dei bin con gli scaffali.
+- il Progettista, a seguito del completamento del lavoro con il Piano di Progetto passerà allo sviluppo del PoC e si occuperà dell'integrazione dei bin con gli scaffali.

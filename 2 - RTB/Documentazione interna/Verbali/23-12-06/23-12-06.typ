@@ -33,4 +33,4 @@ Si è svolta una discussione a seguito del meeting con il Proponente allo scopo 
 
 == Suddivisione compiti da svolgere
 La suddivisione dei compiti decisa durante il meeting è:
-- il Progettista, a seguito del completamento del lavoro con il Piano di Progetto passerà allo sviluppo del PoC e si occuperà dell'integrazione dei bin con gli scaffali.
+- il Progettista, a seguito del completamento del lavoro con il Piano di Progetto, passerà allo sviluppo del PoC e si occuperà dell'integrazione dei bin con gli scaffali.

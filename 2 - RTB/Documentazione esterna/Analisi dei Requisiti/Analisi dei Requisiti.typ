@@ -715,3 +715,21 @@ $bold("Scenario: ")$
 - l'utente visualizza il magazzino;
 - l'utente effettua uno zoom in o uno zoom out sul magazzino;
 - l'utente ha cambiato la prospettiva sul magazzino.
+
+== Requisiti di qualità
+
+#figure(
+  table(
+    columns: 4,
+    align: left,
+    [*Codice*], [*Classificazione*], [*Descrizione*], [*Fonte*],
+    [], [Obbligatorio], [Deve essere rispettato quanto previsto dalle Norme di Progetto.], [Interna],
+    [], [Obbligatorio], [Deve essere rispettato quanto previsto dal Piano di Qualifica.], [Interna],
+    [], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico.], [Capitolato],
+    [], [Obbligatorio], [Devono essere consegnati i diagrammi UML degli UC.], [Capitolato],
+    [], [Obbligatorio], [Deve essere consegnata la lista dei bug risolti.], [Capitolato],
+    [], [Opzionale], [Deve essere consegnato lo schema del DB.], [Capitolato],
+    [], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate.], [Capitolato],
+  ),
+  caption: "Requisiti di qualità."
+)

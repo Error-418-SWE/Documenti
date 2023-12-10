@@ -52,5 +52,5 @@ In luce degli avanzamenti ottenuti durante lo sprint attuale e del backlog relat
 - adeguare l'Analisi dei Requisiti in funzione di quanto emerso durante lo scorso meeting con il professor Cardin;
 - aggiungere nel file di Analisi dei Requisiti la tabella che correli gli Use Case ai requisiti.
 
-Inoltre è stato deciso che le modifiche al Piano di Progetto saranno fatte dall'amministratore. \
+Inoltre è stato deciso che le modifiche al Piano di Progetto saranno fatte dall'Amministratore. \
 Non è previsto per il prossimo sprint ma è stata considerata l'implementazione di una Action di GitHub che aggiorni i documenti presenti in repository aggiungendo i riferimenti ai termini del glossario.

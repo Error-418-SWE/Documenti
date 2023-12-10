@@ -636,9 +636,9 @@ Le decisioni vengono dunque così classificate:
   - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
 
 + Decisioni sulla qualità: sono decisioni relative ai controlli di qualità. 
-  - Documento soggetto a modifiche: Piano di qualifica;
-  - Ruoli responsbili dell'aggiornamento: Responsabile, Verificatori;
-  - Strategia di decision-making: collaborativa.
+  - documento soggetto a modifiche: Piano di qualifica;
+  - ruoli responsbili dell'aggiornamento: Responsabile, Verificatori;
+  - strategia di decision-making: collaborativa.
 
 ==== Strategie di decision-making utilizzate
 + Strategia collaborativa: prevede che la decisione venga presentata e votata in modo collaborativo, coinvolgendo tutti i membri del gruppo e mediante una votazione con un sistema maggioritario, in modo che il risultato rappresenti la volontà della maggioranza.\ Strategia utilizzata per le decisioni: 

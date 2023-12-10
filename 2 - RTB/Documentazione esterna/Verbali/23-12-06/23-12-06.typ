@@ -25,34 +25,37 @@
 - discussione eventuale prossimo meeting.
 
 == Tecnologie Implementate
-Sono state presentate al Proponente le tecnologie attualmente implementate, e precedentemente discusse con lo stesso, e sono stati dati riferimenti per quanto riguarda le tecnologie ancora da implementare:
-- fatte: Three.js, MySQL;
-- da fare: Docker, Next.js.
+Sono state presentate al Proponente le tecnologie attualmente implementate e sono stati dati riferimenti per quanto riguarda le tecnologie ancora da implementare::
+- implementate: Three.js, MySQL;
+- da implementare: Docker, Next.js.
 
 == Dimostrazioni Tecniche dei PoC A e B
 Sono stati presentati al Proponente due PoC denominati A e B con le seguenti caratteristiche:
 
-- PoC A:
+=== PoC A:
   - funzionalità implementate:
-        creazione, eliminazione e spostamento di scaffali. UI nativa Three.js con possibilità di definire dimensioni e precisione della "scacchiera";
+        - creazione;
+        - eliminazione;
+        - spostamento di scaffali;
+        - UI nativa Three.js con possibilità di definire dimensioni e precisione della "scacchiera".
 
   - requisiti minimi: zoom in/out e rotazione(rotazione su tre assi opzionale).
 
 Non sono ancora presenti bin.
 
-- PoC B:
+=== PoC B:
   - funzionalità implementate:
-    - creazione di un magazzino tramite file svg;
+    - creazione del piano dell'area di lavoro di un magazzino tramite file SVG;
     - possibilità di creazione manuale specificando le dimensioni del magazzino;
-    - ipotesi integrazione con database tramite Express come middleware.
-    
+    - integrazione con database tramite Express come middleware.
+
   - valutazioni proponente:
     - una variazione proposta dal referente aziendale è quella di mantenere l'area del magazzino come implementata nel PoC A, e adattare il caricamento del file svg alle dimensioni di default.
 
 == Chiarimenti tecnici sull'implementazione dei PoC
 A seguito del confronto col Proponente, il gruppo è giunto alle seguenti conclusioni:
 - si ritiene necessario trovare un compromesso tra precaricare l'intero database nel programma all'interno di una struttura dati e mantenere una continua comunicazione tra applicazione e database;
-- la definizione delle altezze dopo il caricamento del file "svg" può essere implementata (desiderabile) tramite trascinamento verso l'alto;
+- la definizione delle altezze dopo il caricamento del file "SVG" può essere implementata (desiderabile) tramite trascinamento verso l'alto;
 - si ritiene desiderabile implementare la rotazione degli scaffali con angoli diversi da 90°.
 
 == Discussione eventuale prossimo meeting

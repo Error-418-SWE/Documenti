@@ -480,15 +480,14 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 
 - Analista: la mancata risposta da parte dell'azienda ha impedito agli analisti di iniziare l'analisi dei requisiti, limitando dunque il lavoro alla stesura di domande in merito al dominio tecnologico;
 
-- Verificatore: il mancato avanzamento ha prodotto documentazione ridotta rispetto a quanto preventivato, pertanto il verificatore ha svolto un numero inferiore di ore.
+- Verificatore: il mancato avanzamento ha prodotto documentazione ridotta rispetto a quanto preventivato, pertanto il Verificatore ha svolto un numero inferiore di ore.
 
-Il ruolo dell'amministratore invece, incaricato di gestire il reparto tecnologico implementando gli automatismi necessari, a causa di difficoltà incontrate nell'implementazione (errori, testing, verifica), ha visto un aumento delle ore rispetto a quanto preventivato.
+Il ruolo dell'Amministratore invece, incaricato di gestire il reparto tecnologico implementando gli automatismi necessari, a causa di difficoltà incontrate nell'implementazione (errori, testing, verifica), ha visto un aumento delle ore rispetto a quanto preventivato.
 === Burndown-chart
 [da inserire]
 
 
 == Secondo sprint dal 06-11-2023 al 13-11-2023
-
 === Obiettivi raggiunti
 - riconfigurazione del repository;
 - stesura della sezione _introduzione_ del documento delle Norme di Progetto;
@@ -507,9 +506,7 @@ Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obi
 === Risoluzioni attuate
 - Per risolvere la problematica di una mancanza di struttura nei verbali, si sono fissate delle convenzioni da seguire nel documento di Norme di Progetto;
 - Per formare meglio il team sulle modalità di utilizzo del repository, è stato dedicato tempo in più per fornire tutorial video e testuali in supporto del team;
-- Per ovviare alla scarsa reattività in fase di review, il team prende la responsabilità di visionare spesso la casella mail personale per
-capire quando c'è bisogno di una review o di risolvere una conversation Github, oltre a sollecitare i verificatori via i canali di comunicazione interni del team
-in caso di mancate revisioni.
+- Per ovviare alla scarsa reattività in fase di review, il team prende la responsabilità di visionare spesso la casella mail personale per capire quando c'è bisogno di una review o di risolvere una conversation GitHub, oltre a sollecitare i Verificatori via i canali di comunicazione interni del team in caso di mancate revisioni.
 
 === Analisi costi di sprint effettivi
 #table(
@@ -532,8 +529,7 @@ inset:7pt ,
 #align(center, text("Tabella 4: consuntivo secondo sprint"))
 
 A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore effettivo diverso a quanto preventivato:
-- Amministratore: la scarsa comprensione delle modalità di utilizzo del repository da parte dei membri del team ha portato
-gli amministratori a dedicare delle ore in più mirate al perfezionamento della formazione dei membri del gruppo;
+- Amministratore: la scarsa comprensione delle modalità di utilizzo del repository da parte dei membri del team ha portato gli Amministratori a dedicare delle ore in più mirate al perfezionamento della formazione dei membri del gruppo;
 
 - Verificatore: la scarsa reattività in fase di review ha portato un impegno inferiore alle attività di revisione.
 

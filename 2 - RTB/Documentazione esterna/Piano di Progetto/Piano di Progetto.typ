@@ -493,23 +493,23 @@ Il ruolo dell'amministratore invece, incaricato di gestire il reparto tecnologic
 
 === Obiettivi raggiunti
 - effettuare una migliore pianificazione;
-- perfezionamento della stesura degli use case indivduati finora;
+- perfezionamento della stesura degli use case individuati finora;
 - redazione di una prima versione dell'Analisi dei Requisiti;
-- valutazione di un'eventuale data per un primo meeting con il professore Cardin per ottenere un feedback sull'Analisi dei Requisiti;
+- valutazione di un'eventuale data per un primo meeting con il professor Cardin per ottenere un feedback sull'Analisi dei Requisiti;
 - proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
 - proseguimento periodo di studio di Three.js, in particolare finalizzato a:
- - creazione di alcuni scaffali nell'ambiente tridimensionale;
+ - creazione di scaffali nell'ambiente tridimensionale;
  - implentazione sistema di drag and drop;
  - parametrizzazione degli elementi presenti nell'applicazione.
 === Obiettivi mancati
 Tutti gli obiettivi sono stati raggiunti.
 === Analisi problematiche insorte
-Il team ha notato in fase di retrospettiva una lentezza in fase di review e verifica, che portano al rallentamento del lavoro. Le review
+Il team ha notato in fase di retrospettiva una scarsa reattività in fase di review e verifica, che portano al rallentamento del lavoro. Le review
 sono state rallentate anche dalla presenza di numerosi merge conflicts, che il team si è ritrovato a gestire per la prima volta nel progetto.\
-Inoltre si è presa coscienza di una necessità di apportare migliorie al processo di gestione di Jira.
+Inoltre si è presa coscienza della necessità di apportare migliorie al processo di gestione di Jira.
 === Risoluzioni attuate
 Il team ha preso in considerazione l'utilizzo di Graphite per velocizzare il processo di review e creare pull request brevi.\
-Inoltre il gruppo ha preso l'impegno di utilizzare Jira con più attenzione, per migliorare l'amministrazione del progetto.
+Inoltre il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'utilizzo di Jira, per migliorare l'amministrazione del progetto.
 === Analisi costi di sprint effettivi
 #set text(
   size: 10pt
@@ -541,7 +541,7 @@ inset:7pt,
 
 
 A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effettivo diverso a quanto preventivato:
-- Amministratore: l'utilizzo di Jira in maniera non molto approfondita ha portato ad un monte ore inferiore a quanto previsto;
+- Amministratore: l'utilizzo di Jira in maniera approssimativa ha portato ad un monte ore inferiore a quanto previsto;
 
 - Verificatore: i numerosi merge conflicts hanno portato a notevoli rallentamenti in fase di review.
 

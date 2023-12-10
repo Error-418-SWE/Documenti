@@ -47,6 +47,7 @@ In luce degli avanzamenti ottenuti durante lo sprint attuale e del backlog relat
 
 - avanzare con la gestione dei bin nel PoC A;
 - migliorare l'uso di Docker;
+- iniziare a lavorare sul Piano di Qualifica;
 - implementare la possibilità di avere più file typst per Pull Request modificando le GitHub Actions;
 - adeguare l'Analisi dei Requisiti in funzione di quanto emerso durante lo scorso meeting con il professor Cardin;
 - aggiungere nel file di Analisi dei Requisiti la tabella che correli gli Use Case ai requisiti.

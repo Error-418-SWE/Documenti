@@ -25,7 +25,7 @@
 - discussione eventuale prossimo meeting.
 
 == Tecnologie Implementate
-Sono state presentate al Proponente le tecnologie attualmente implementate e sono stati dati riferimenti per quanto riguarda le tecnologie ancora da implementare::
+Sono state presentate al Proponente le tecnologie attualmente implementate e sono stati dati riferimenti per quanto riguarda le tecnologie ancora da implementare:
 - implementate: Three.js, MySQL;
 - da implementare: Docker, Next.js.
 
@@ -34,8 +34,8 @@ Sono stati presentati al Proponente due PoC denominati A e B con le seguenti car
 
 === PoC A:
   - funzionalità implementate:
-        - creazione;
-        - eliminazione;
+        - creazione scaffale;
+        - eliminazione scaffale;
         - spostamento di scaffali;
         - UI nativa Three.js con possibilità di definire dimensioni e precisione della "scacchiera".
 

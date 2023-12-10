@@ -26,12 +26,12 @@ $bold("Keep doings:")$
 - fase di review delle Pull Request più rapida.
 
 $bold("Improvements:")$
-- da migliorare le convenzioni da adottare riguardanti il codice;
+- definire delle convenzioni da adottare riguardanti il codice;
 - lavoro concentrato principalmente nel weekend;
 - richiesta maggiore partecipazione dei membri del gruppo sulle board di miro;
 
 $bold("Relativamente agli improvements le relative soluzioni accordate sono:")$
-- formulare convenzioni più chiare da adottare per il codice;
+- formulare convenzioni da adottare per il codice;
 - impegnarsi a fissare delle scadenze infrasettimanali così da ridurre il carico di lavoro il weekend;
 - utilizzare le board su miro con anticipo aggiungendo il proprio feedback.
 

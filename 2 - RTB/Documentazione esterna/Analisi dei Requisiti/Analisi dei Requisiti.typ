@@ -25,11 +25,11 @@ Il presente documento include lessico di dominio, per il quale è previsto il do
 
 == Obiettivi del prodotto
 
-Il prodotto software oggetto di questo documento è un gestionale di magazzino (WMS) che offra una visualizzazione 3D del magazzino ed un set di funzionalità logistiche di base.
+Il prodotto software oggetto di questo documento è un gestionale di magazzino (WMS) che offre una visualizzazione 3D del magazzino ed un set di funzionalità logistiche di base.
 
 == Ambito del prodotto
 
-Il prodotto software oggetto di questo documento è nominato *WMS3*. WMS3 è un gestionale di magazzino che offre le seguenti funzionalità:
+Il prodotto software oggetto di questo documento è denominato *WMS3*. WMS3 è un gestionale di magazzino che offre le seguenti funzionalità:
 - visualizzazione tridimensionale di un magazzino, con possibilità di muovere la vista;
 - visualizzazione delle informazioni della merce presente in magazzino;
 - caricamento dei dati relativi alle merci da un database SQL;
@@ -67,7 +67,7 @@ WMS3 si integra con, ma non comprende nel proprio ambito:
 
 WMS3 è una _web application_ acceduta e operata tramite browser. L'interfaccia utente (IU) è _web-based_ e _responsive_.
 
-Lo scenario di interazione primario avviene tramite mouse e tastiera. Tuttavia, è prevista la piena operabilità anche tramite touchscreen. Sarà possibile operare da dispositivi mobili quali tablet e smartphone.
+Lo scenario di interazione primario avviene tramite mouse e tastiera; tuttavia, è prevista la piena operabilità anche tramite touchscreen. Sarà possibile operare da dispositivi mobili quali tablet e smartphone.
 
 Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport_ del dispositivo in uso.
 
@@ -104,7 +104,7 @@ Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
 
 ==== Interfacce a servizi
 
-WMS3 dovrà invierà messaggi ad uno o più servizi esterni per comunicare gli ordini di movimentazione richiesti dall'utente. Dovrà inoltre ricevere e gestire messaggi che comunicano l'esito dell'ordine di movimentazione richiesto.
+WMS3 dovrà inviare messaggi ad uno o più servizi esterni per comunicare gli ordini di movimentazione richiesti dall'utente. Dovrà inoltre ricevere e gestire messaggi che comunicano l'esito dell'ordine di movimentazione richiesto.
 
 === Funzionalità del prodotto
 
@@ -112,7 +112,7 @@ WMS3 dovrà invierà messaggi ad uno o più servizi esterni per comunicare gli o
 
 === Caratteristiche degli utenti
 
-L'utente tipico di WMS3 è un supervisore di magazzino. Ci si aspetta che la maggior parte degli accessi a WMS3 avvengano da ufficio, tramite un computer desktop dotato di mouse e tastiera. Tuttavia, non si può escludere che l'utente possa accedere a WMS3 tramite dispositivo mobile.
+L'utente tipico di WMS3 è un supervisore di magazzino. Ci si aspetta che la maggior parte degli accessi a WMS3 avvengano da ufficio, tramite un computer desktop dotato di mouse e tastiera; tuttavia, non si può escludere che l'utente possa accedere a WMS3 tramite dispositivo mobile.
 
 L'utente tipico è avvezzo all'uso del computer e dei dispositivi mobili. Conosce il dominio applicativo.
 

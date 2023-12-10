@@ -46,6 +46,56 @@ Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e pe
 #pagebreak()
 
 = Rischi e loro mitigazione
+
+== Parametri
+A ciascun rischio individuato si associano:
+- Impatto: può essere lieve, medio, grave. Esprime l'effetto generato dall'evento;
+- Probabilità: da 1 a 5. Esprime la probabilità del verificarsi del rischio;
+- Conseguenze: effetti collaterali a breve o medio termine che il rischio può comportare.
+
+== Rischi
+
+=== Comunicazione con il proponente
+I contatti con il proponente potrebbero subire variazioni nella qualità e nella frequenza a causa di problematiche fuori dal controllo del gruppo. Questa situazione potrebbe causare un rallentamento significativo del lavoro, soprattutto durante l'analisi dei requisiti.
+
+- Impatto: grave;
+- Probabilità: 1;
+- Conseguenze: lo sviluppo potrebbe allontanarsi dalle linee guida o dalle aspettative del proponente, non rispettando quanto preventivato o pianificato. Tale rischio, comporterebbe dunque la produzione di un software non in linea con le richieste conducendo a perdite di tempo per analisi, progettazione e implementazione aggiuntive;
+- Mitigazione:
+  - Pianificazione anticipata degli incontri di revisione dell'avanzamento;
+  - Uso di strumenti asincroni per facilitare lo scambio di informazioni tra gruppo e proponente;
+  - Programmazione di incontri periodici di aggiornamento, anche brevi.
+
+=== Effetto "sottomarino"
+Uno o più membri potrebbero, per motivi diversi, cessare la partecipazione attiva alle attività del gruppo. È necessario evitare che la durata di queste assenze impedisca il regolare svolgimento delle attività di progetto.
+
+- Impatto: medio;
+- Probabilità: 3;
+- Conseguenze: i partecipanti che si dovessero trovare in questa situazione rischierebbero di accentuare eventuali incomprensioni nel proprio lavoro senza la possibilità di confrontarsi con gli altri accorgendosi degli errori troppo tardi;
+- Mitigazione:
+  - Mantenimento di un dialogo costante sulle problematiche interne al gruppo;
+  - Segnalazione responsabile e preventiva di difficoltà o impedimenti da parte dei singoli membri.
+
+=== Rallentamento delle attività
+Tra le difficoltà principali durante lo sviluppo del progetto è la congiunzione tra gli impegni individuali e progettuali. Tale rischio può comportare un rallentamento nel completamento di attività e task assegnate comportando un generale ritardo nello sviluppo.
+
+- Impatto: grave;
+- Probabilità: 4 (Probabilità aumentata nel periodo della sessione invernale).
+- Conseguenze: attività non svolte o completate parzialmente determinerebbero uno slittamento della data di consegna e delle scadenze intermedie.
+- Mitigazione:
+  - Organizzazione e suddivisione del monte ore con occhio di riguardo a precise date e scadenze;
+  - Incontri e comunicazione costante con i membri del gruppo al fine di rendere note eventuali indisponibilità o impegni;
+  - Uso di strumenti asincroni al fine di permettere a tutti i membri un'equa divisione del lavoro da svolgere nei momenti a loro più comodi, a patto di rispettare le linee guida delle Norme di Progetto.
+
+=== Adozione delle tecnologie
+Le tecnologie individuate o suggerite durante i processi di analisi e progettazione potrebbero risultare complesse da comprendere e/o integrare.
+- Impatto: medio;
+- Probabilità: 4;
+- Conseguenze: rallentamenti non preventivati che possono avere conseguenze a cascata sulle attività dipendenti;
+- Mitigazione:
+  - Accurata pianificazione e stesura delle Norme di Progetto;
+  - Assicurarsi che ad ogni membro del gruppo sia chiaro il funzionamento delle tecnologie e delle norme concordate.
+
 = Divisione temporale di sviluppo
 == Introduzione
 == Periodi di sviluppo
@@ -206,6 +256,180 @@ inset:7pt ,
 
 === Diagramma Gantt
 [da inserire]
+
+== Terzo Sprint dal 20-11-2023 al 27-11-2023
+=== Obiettivi prefissati
+Gli obiettivi del terzo sprint si concentrano sull'aggiornamento del documento di Norme di Progetto, sul periodo di Analisi dei Requisiti (principalmente concentrata sui requisiti funzionali) e su un primo momento di esplorazione delle nuove tecnologie.\
+Gli obiettivi dello sprint 3 sono:
+- proseguimento del processo di individuazione e stesura degli use case;
+- perfezionamento delle automazioni di versionamento documenti;
+- perfezionamento del template usato per i documenti;
+- aggiornamento del documento di Norme di Progetto;
+- studio iniziale della libreria Three.js;
+- meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare oppurtune richieste;
+- contatto con l'azienda Proponente per fissare il prossimo meeting.
+
+=== Preventivo costi
+Nel terzo sprint, il gruppo svolge delle attività principalmente focalizzate sull'Analisi dei Requisiti e sull'aggiornamento e perfezionamento dei documenti e delle automazioni. In quest'ottica, vede l'impiego principale delle figure:
+
+- *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
+- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti, al fine di aggiornare il documento di Piano di Progetto;
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti, al fine di effettuare un controllo sulla validità e formulazione degli use case individuati;
+- *Analista*: al fine di individuare e formulare gli use case correlati ai requisiti funzionali;
+- *Progettista*: al fine di condurre uno studio iniziale sulla libreria Three.js.
+
+In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce.
+
+#set text(
+  size: 10pt
+)
+
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:7pt,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [3],  [/],    [/],    [/], [/],   [3],
+[Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
+[Gardin Giovanni],  [/],  [/],    [/],    [/], [3],   [3],
+[Nardo Silvio],     [/],  [/],    [/],    [3], [/],   [3],
+[Oseliero Antonio], [/],  [/],    [4],    [/], [/],   [4],
+[Todesco Mattia],   [/],  [3],    [/],    [/], [/],   [3],
+[Zaccone Rosario],  [/],  [3],    [/],    [/], [/],   [3],
+[Totale ore ruolo], [3],  [6],    [8],    [3], [3],   [23],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
+[Costo ruolo], [90,00], [120,00], [200,00], [75,00], [45,00], [530,00]
+)
+
+#align(center, text("Tabella 7: preventivo quarto sprint"))
+
+#set text(
+  size: 11pt
+)
+
+=== Diagramma Gantt
+[da inserire]
+
+== Quarto Sprint dal 27-11-2023 al 04-12-2023
+
+=== Obiettivi prefissati
+Gli obiettivi del quarto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
+dell'Analisi dei Requisiti e sull'esplorazione delle nuove tecnologie. \
+Gli obiettivi dello sprint 4 sono:
+- effettuare una migliore pianificazione;
+- perfezionamento della stesura degli use case indivduati finora;
+- redazione di una prima versione dell'Analisi dei Requisiti;
+- valutazione di un'eventuale data per un primo meeting con il professore Cardin per ottenere un feedback sull'Analisi dei Requisiti;
+- proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
+- proseguimento periodo di studio di Three.js, in particolare finalizzato a:
+ - creazione di alcuni scaffali nell'ambiente tridimensionale;
+ - implentazione sistema di drag and drop;
+ - parametrizzazione degli elementi presenti nell'applicazione.
+
+=== Preventivo costi
+Nel quarto sprint il team svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
+
+- *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
+- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti, al fine di aggiornare il documento di Piano di Progetto;
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti, al fine di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti;
+- *Analista*: al fine di perfezionare la stesura degli use case individuati e redatte una prima versione di Analisi dei Requisiti;
+- *Progettista*: al fine di condurre uno studio esplorativo sulla libreria Three.js.
+
+In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce.
+
+#set text(
+  size: 10pt
+)
+
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:7pt,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [3],  [/],    [/],    [/], [/],   [3],
+[Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
+[Gardin Giovanni],  [/],  [/],    [/],    [/], [3],   [3],
+[Nardo Silvio],     [/],  [/],    [/],    [3], [/],   [3],
+[Oseliero Antonio], [/],  [/],    [4],    [/], [/],   [4],
+[Todesco Mattia],   [/],  [3],    [/],    [/], [/],   [3],
+[Zaccone Rosario],  [/],  [3],    [/],    [/], [/],   [3],
+[Totale ore ruolo], [3],  [6],    [8],    [3], [3],   [23],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
+[Costo ruolo], [90,00], [120,00], [200,00], [75,00], [45,00], [530,00]
+)
+
+#align(center, text("Tabella 7: preventivo quarto sprint"))
+
+#set text(
+  size: 11pt
+)
+
+=== Diagramma Gantt
+[da inserire]
+
+== Quinto Sprint dal 04-12-2023 al 11-12-2023
+
+=== Obiettivi prefissati
+Gli obiettivi del quinto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
+dell'Analisi dei Requisiti e sullo sviluppo dei primi POC. \
+Gli obiettivi dello sprint 5 sono:
+- perfezionamento del sistema di drag and drop nel POC;
+- creazione degli scaffali nel POC;
+- creazione ambiente docker;
+- svolgere meeting con il professor Cardin in merito all'Analisi dei Requisiti;
+- perfezionare e aggiornare il documento di Norme di Progetto;
+- aggiornamento del documento di Analisi dei Requisiti, introducendo i requisiti non funzionali;
+- informarsi sul documento di Piano di Qualifica;
+- aggiornare vecchi documenti con il nuovo template;
+- scrittura del glossario.
+
+=== Preventivo costi
+Nel quinto sprint il team svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
+
+- *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
+- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira;
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti;
+- *Analista*: al fine di redarre il documento di Analisi dei Requisiti;
+- *Progettista*: al fine di sviluppare i POC.
+
+In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce.
+
+#set text(
+  size: 10pt
+)
+
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:7pt,
+[*Membro*],         [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [/],  [/],    [4],    [/], [/],   [4],
+[Carraro Riccardo], [3],  [/],    [/],    [/], [/],   [3],
+[Gardin Giovanni],  [/],  [/],    [4],    [/], [/],   [4],
+[Nardo Silvio],     [/],  [3],    [/],    [/], [/],   [3],
+[Oseliero Antonio], [/],  [/],    [/],    [3], [/],   [3],
+[Todesco Mattia],   [/],  [/],    [/],    [/], [3],   [3],
+[Zaccone Rosario],  [/],  [/],    [/],    [3], [/],   [3],
+[Totale ore ruolo], [3],  [3],    [8],    [6], [3],   [23],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
+[Costo ruolo], [90,00], [60,00], [200,00], [150,00], [45,00], [545,00]
+)
+
+#align(center, text("Tabella 9: preventivo quinto sprint"))
+
+#set text(
+  size: 11pt
+)
+
+=== Diagramma Gantt
+[da inserire]
+
+
+
+
 
 = Consuntivo del progetto
 

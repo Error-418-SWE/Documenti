@@ -43,11 +43,8 @@
 "Specifica tecnica":
 - "**/Specifica tecnica*.*"
 
-"Verbale esterno":
-- "**/Verbali/Esterni/**"
-
-"Verbale interno":
-- "**/Verbali/Interni/**"
+"Verbale":
+- "**/Verbali/**"
 
 # Misc +++++++++++++++++++++++++++++++++++++
 

@@ -112,8 +112,52 @@ Ancora da definire
 Delineati i rischi, le relative contromisure e il calendario di progetto, si è definito, mediante una pianificazione retrospettiva, un preventivo iniziale dei costi di realizzazione del progetto.\
 È altresì corretto evidenziare come i membri del gruppo non siano dotati di esperienza sufficiente per fornire un preventivo corretto e preciso sin dagli inizi dello sviluppo: per tale motivo, il prezzo indicato sarà soggetto a modifiche con l'avanzamento del progetto (seppur mai superando il prezzo preventivato in candidatura).
 === Analisi dei ruoli
+==== Responsabile
+Il Responsabile è un ruolo presente durante l'intero progetto. Il suo compito è quello di gestire il team e di assicurarsi che lo sviluppo proceda secondo le tempistiche predefinite e le aspettative del Committente. Deve inoltre redigere e far rispettare le Norme di Progetto, nonché le linee guida di sviluppo che l'intero team deve rispettare. Essendo il ruolo più costoso, il numero di ore è stato scelto per favorire l'efficienza e non pesare eccessivamente sul costo finale.
+
+==== Amministratore
+L'Amministratore è un ruolo presente durante l'intero progetto, in quanto si occupa di predisporre e controllare il corretto utilizzo delle procedure e degli strumenti definiti nelle Norme di Progetto, andando anche a gestire e implementare automatismi, migliorando così l'efficienza del team. Il monte ore scelto è tale, poiché essendo questo un ruolo di controllo, non sono richieste un numero elevato di ore.
+
+==== Analista
+L'Analista è presente esclusivamente nelle fasi iniziali del progetto, poiché si occupa della raccolta e dell'elaborazione dei requisiti. Ciò comporta un numero di ore ridotto e una distribuzione delle stesse unicamente nelle prime settimane del progetto.
+
+==== Progettista
+Il Progettista ha il compito di delineare e documentare l'architettura del prodotto in modo da:
+
+- soddisfare i requisiti raccolti nelle fasi pregresse;
+
+- aiutare il team di sviluppo con una documentazione chiara ed esaustiva.
+
+Nello stabilire l'architettura deve quindi indicare anche quali saranno le tecnologie da utilizzare per la sua implementazione.
+Ritenendolo un ruolo impegnativo dal punto di vista temporale, il numero di ore risulta maggiore rispetto ai ruoli precedenti.
+
+==== Programmatore
+Il Programmatore ha il compito di tradurre in codice eseguibile l'architettura prodotta dal progettista. Il ruolo prevede un numero di ore molto elevato poiché riteniamo il lavoro più dispendioso a livello temporale rispetto a quello delle altre figure professionali.
+
+==== Verificatore
+Il Verificatore è un ruolo presente durante l'intero progetto, che si occupa di mantenere degli standard qualitativi sul lavoro del team: egli deve verificare la correttezza, esaustività e coerenza di tutti i documenti, e nella fase di codifica sarà colui che si occuperà di controllare la qualità del software prodotto. Proprio per questo il totale delle ore risulta essere il secondo più elevato dopo il Programmatore.
+
 === Suddivisione delle ore dei ruoli
+La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo di competenze trasversali nei vari ruoli presenti all'interno del progetto. 
+
+#figure(
+  caption: "Tabella 1: suddivisione delle ore dei ruoli",
+  table(align: center,
+  columns: (2fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
+  [*Membro*],[*Resp.*],[*Amm.*],[*Analis.*],[*Prog.*],[*Program*],[*Verifi.*],[*Totale*],
+  [Alessio], [13], [10], [10], [14], [30], [18], [95],
+  [Antonio], [13], [10], [10], [14], [30], [18], [95],
+  [Giovanni], [13], [10], [10], [14], [30], [18], [95],
+  [Mattia], [13], [10], [10], [14], [30], [18], [95],
+  [Riccardo], [13], [10], [10], [14], [30], [18], [95],
+  [Rosario], [13], [10], [10], [14], [30], [18], [95],
+  [Silvio], [13], [10], [10], [14], [30], [18], [95],
+  [Totale Ore], [91], [70], [70], [98], [210], [126], [665],
+  [Costo Orario (€)], [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+  [Costo Ruolo (€)], [2.730], [1.400], [1.750], [2.450], [3.150], [1.890], [],  
+))
 === Preventivo calcolato
+Il costo totale preventivato è di € 13.370,00.
 
 = Pianificazione del lavoro
 == Introduzione
@@ -533,5 +577,71 @@ A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore ef
 
 - Verificatore: la scarsa reattività in fase di review ha portato un impegno inferiore alle attività di revisione.
 
+=== Burndown-chart
+[da inserire]
+
+== Terzo Sprint dal 27-11-2023 al 04-12-2023
+
+=== Obiettivi raggiunti
+- proseguimento del processo di individuazione e stesura degli use case;
+- perfezionamento delle automazioni di versionamento documenti;
+- perfezionamento del template usato per i documenti;
+- aggiornamento parziale del documento di Norme di Progetto;
+- studio iniziale della libreria Three.js;
+- meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare oppurtune richieste;
+- contatto con l'azienda Proponente per fissare il prossimo meeting.
+
+=== Obiettivi mancati
+- aggiornamento completo del documento di Norme di Progetto con l'inserimento dei grafici di Gantt e di burndown.
+
+=== Analisi problematiche insorte
+
+Nonostante la realizzazione soddisfacente della maggior parte degli obiettivi concordati, sono emerse alcune criticità durante l'implementazione del progetto:
+
+- si è riscontrata una pianificazione non ottimale e superficiale, attribuibile alla mancanza di un dettagliato processo di pianificazione durante la riunione precedente l'avvio dello sprint;
+- problemi sono sorti a causa della mancata definizione di standard per la creazione dei grafici di Gantt e burndown, comportando una stesura parziale dei paragrafi nel documento del Piano di Progetto;
+- la durata dei meeting ha superato le aspettative a causa di alcune inefficienze temporali;
+- il team ha rilevato la mancanza di standard per designare le persone responsabili della redazione dei verbali durante lo sprint.
+
+=== Risoluzioni attuate
+Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentrano su un'organizzazione e un'attenzione maggiore nella fase di pianificazione, oltre alla definizione di standard relativi ai grafici da inserire nei documenti e relativi allo svolgimento dei meeting e redazione dei rispettivi verbali. In particolare:
+
+- è stata prestata una maggiore attenzione nella pianificazione del nuovo sprint, introducento nella board retrospettiva di Miro una bacheca relativa alle task da svolgere, che sono state tradotte fin da subito in ticket di Jira e assegnati ai rispettivi ruoli;
+- la durata massima dei meeting di retrospettiva è stata fissata a 90 minuti (_soft limit_);
+- sono stati definiti degli standard per la realizzazione dei grafici, adottando quelli proposti da Jira, ma gestendo meglio la pianificazione in modo da ottenere grafici ottimali;
+- è stato assegnato all'Amministratore il compito della redazione dei verbali.
+
+=== Analisi costi di sprint effettivi
+
+#set text(
+  size: 10pt
+)
+
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:7pt,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [2(-1)],  [/],    [/],    [/], [/],   [2(-1)],
+[Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
+[Gardin Giovanni],  [/],  [/],    [/],    [/], [3],   [3],
+[Nardo Silvio],     [/],  [/],    [/],    [3], [/],   [3],
+[Oseliero Antonio], [/],  [/],    [4],    [/], [/],   [4],
+[Todesco Mattia],   [/],  [4(+1)],    [/],    [/], [/],   [4(+1)],
+[Zaccone Rosario],  [/],  [4(+1)],    [/],    [/], [/],   [4(+1)],
+[Totale ore ruolo], [2(-1)],  [8(+2)],    [8],    [3], [3],   [23],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
+[Costo ruolo], [60,00], [160,00], [200,00], [75,00], [45,00], [540,00]
+)
+#align(center, text("Tabella 6: consuntivo terzo sprint"))
+
+#set text(
+  size: 11pt
+)
+
+A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo diverso a quanto preventivato:
+- Responsabile: a causa di mancati standard su come effettuare una pianificazione ottimale il responsabile ha impiegato meno ore di quanto previsto;
+- Amministratore: a causa dei mancati standard sulla realizzazione dei grafici gli amministratori hanno impiegato più ore finalizzate allo studio sui grafici da adottare.
 === Burndown-chart
 [da inserire]

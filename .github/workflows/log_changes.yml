@@ -51,13 +51,13 @@ jobs:
           echo "::notice::New line: $NEW_CONTENT"
       - name: Replace usernames
         run: |
-          sed -i -e "s/${{ vars.UID_ANTONIO }}/Antonio Oseliero/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_ALESSIO }}/Alessio Banzato/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_GIOVANNI }}/Giovanni Gardin/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_MATTIA }}/Mattia Todesco/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_RICCARDO }}/Riccardo Carraro/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_ROSARIO }}/Rosario Zaccone/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
-          sed -i -e "s/${{ vars.UID_SILVIO }}/Silvio Nardo/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_ANTONIO }}/Oseliero Antonio/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_ALESSIO }}/Banzato Alessio/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_GIOVANNI }}/Gardin Giovanni/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_MATTIA }}/Todesco Mattia/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_RICCARDO }}/Carraro Riccardo/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_ROSARIO }}/Zaccone Rosario/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
+          sed -i -e "s/${{ vars.UID_SILVIO }}/Nardo Silvio/g" "${{ needs.fetch.outputs.file_path }}/log.csv"
       - name: Commit and push changelog
         run: |
           git add "${{ needs.fetch.outputs.file_path }}/log.csv"

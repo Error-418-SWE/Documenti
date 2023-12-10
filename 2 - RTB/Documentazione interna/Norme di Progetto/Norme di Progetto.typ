@@ -223,7 +223,7 @@ I processi organizzativi abilitanti sono i seguenti:
 // + Processo di gestione della conoscenza.
 
 === Processo di gestione dei modelli di ciclo di vita
-_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
 
 ==== Scopo
 
@@ -539,3 +539,61 @@ Il piano di progetto è il documento principale che viene redatto durante questo
 + Consuntivo del progetto.
 
 La redazione del documento va di pari passo con l'avanzamento del progetto, in modo tale da essere sempre aggiornato alla situazione corrente del lavoro.
+
+== Processo di gestione delle Decisioni 
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
+=== Scopo
+Lo scopo del processo di gestione delle decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionandone la migliore in termini di benefici attesi e costi e rischi associati. \
+
+==== Presentazione delle decisioni
+Ogni decisione viene presentata identificandone:
+- tipologia;
+- obiettivo;
+- soluzione proposta;
+- vantaggi;
+- svantaggi;
+- impatto in termini di tempi e costi;
+
+Il processo di decision making viene prevalentemente svolto nel meeting di retrospettiva, in modo da non contrastare la pianificazione dello sprint in corso ed evitando un eccessivo numero di meeting interni che potrebbero comportare difficoltà organizzative e un rallentamnto dell'avanzamento. 
+Solo in caso di decisioni critiche che riguardo cambiamenti sostanziali o nuove direzioni di lavoro possono far scaturire meeting interni mirati.
+
+Il resoconto di quanto deciso sarà visibile all'interno del verbale redatto a fine meeting.
+
+==== Tipologie delle Decisioni
+Le decisioni possono riguardare diversi aspetti del capitolato, e la loro categorizzazione è utile per poter indiduare la migliore strategie di gestione e i ruoli coinvolti. 
+
+Le decisioni vengono dunque così classificate:
++ Decisioni organizzative: Queste sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto:
+  - Documento soggetto a modifiche: Norme di progetto;
+  - Ruoli responsbili dell'aggiornamento: Responsabile;
+  - Strategia di decision-making: collaborativa.
+
++ Decisioni sui requisiti: Queste sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
+  - Documento soggetto a modifiche: Analisi dei requisiti;
+  - Ruoli responsbili dell'aggiornamento: Analisti;
+  - Strategia di decision-making: collaborativa.
+
++ Decisioni di implementazione: Queste sono decisioni relative alla stesura del codice:
+  - Documento soggetto a modifiche: Norme di progetto, documenti tecnici (diagramma delle classi,...);
+  - Ruoli responsbili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
+  - Strategia di decision-making: expertise decision-making, contattando figure più esperte come Proponente o Committente.
+
++ Decisioni architetturali: Queste sono decisioni relative ai pattern e alle architetture riguardanti il software. 
+  - Documento soggetto a modifiche: Norme di progetto, documenti tecnici (diagramma delle classi,...);
+  - Ruoli responsbili dell'aggiornamento: Responsabile, Progettisti;
+  - Strategia di decision-making: expertise decision-making, contattando figure più esperte come Proponente o Committente.
+
++ Decisioni sulla qualità: Queste sono decisioni relative ai controlli di qualità. 
+  - Documento soggetto a modifiche: Piano di qualifica;
+  - Ruoli responsbili dell'aggiornamento: Responsabile, Verificatori;
+  - Strategia di decision-making: collaborativa.
+
+==== Strategie di decision-making utilizzate
++ Strategia collaborativa: Questa strategia prevede che la decisione venga presentata e votata in modo collaborativo, coinvolgendo tutti i membri del gruppo e mediante una votazione con un sistema maggioritario, in modo che il risultato rappresenti la volontà della maggioranza.\ Strategia utilizzata per le decisioni: 
+  - organizzative;
+  - dei requisiti; 
+  - qualitative.
+
++ Strategia expertise decision-making: Questa strategia prevede che la decisione venga presentata e analizzata mediante la consultazione di figure esterne più esperte, individuabili nel Proponente o nel Committente, la cui esperienza risulta determinante. \ Questa strategia viene utilizzata per le decisioni:
+  - implementative;
+  - architetturali. \ 

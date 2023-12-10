@@ -645,3 +645,65 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
 - Amministratore: a causa dei mancati standard sulla realizzazione dei grafici gli amministratori hanno impiegato più ore finalizzate allo studio sui grafici da adottare.
 === Burndown-chart
 [da inserire]
+
+
+
+
+== Quarto Sprint dal 27-11-2023 al 04-12-2023
+
+=== Obiettivi raggiunti
+- effettuare una migliore pianificazione;
+- perfezionamento della stesura degli use case individuati finora;
+- redazione di una prima versione dell'Analisi dei Requisiti;
+- valutazione di un'eventuale data per un primo meeting con il professor Cardin per ottenere un feedback sull'Analisi dei Requisiti;
+- proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
+- proseguimento periodo di studio di Three.js, in particolare finalizzato a:
+ - creazione di scaffali nell'ambiente tridimensionale;
+ - implentazione sistema di drag and drop;
+ - parametrizzazione degli elementi presenti nell'applicazione.
+=== Obiettivi mancati
+Tutti gli obiettivi sono stati raggiunti.
+=== Analisi problematiche insorte
+Il team ha notato in fase di retrospettiva una scarsa reattività in fase di review e verifica, che portano al rallentamento del lavoro. Le review
+sono state rallentate anche dalla presenza di numerosi merge conflicts, che il team si è ritrovato a gestire per la prima volta nel progetto.\
+Inoltre si è presa coscienza della necessità di apportare migliorie al processo di gestione di Jira.
+=== Risoluzioni attuate
+Il team ha preso in considerazione l'utilizzo di Graphite per velocizzare il processo di review e creare pull request brevi.\
+Inoltre il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'utilizzo di Jira, per migliorare l'amministrazione del progetto.
+=== Analisi costi di sprint effettivi
+#set text(
+  size: 10pt
+)
+
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:7pt,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [3],  [/],    [/],    [/], [/],   [3],
+[Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
+[Gardin Giovanni],  [/],  [/],    [/],    [/], [4(+1)],   [4(+1)],
+[Nardo Silvio],     [/],  [/],    [/],    [3], [/],   [3],
+[Oseliero Antonio], [/],  [/],    [4],    [/], [/],   [4],
+[Todesco Mattia],   [/],  [2(-1)],    [/],    [/], [/],   [2(-1)],
+[Zaccone Rosario],  [/],  [2(-1)],    [/],    [/], [/],   [2(-1)],
+[Totale ore ruolo], [3],  [4],    [8],    [3], [4],   [22],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
+[Costo ruolo], [90,00], [80,00], [200,00], [75,00], [60,00], [505,00]
+)
+
+#align(center, text("Tabella 8: consuntivo quarto sprint"))
+
+#set text(
+  size: 11pt
+)
+
+
+A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effettivo diverso a quanto preventivato:
+- Amministratore: l'utilizzo di Jira in maniera approssimativa ha portato ad un monte ore inferiore a quanto previsto;
+
+- Verificatore: i numerosi merge conflicts hanno portato a notevoli rallentamenti in fase di review.
+
+=== Burndown-chart
+[da inserire]

@@ -11,9 +11,6 @@
   showLog: true,
   isExternalUse: true,
 );
-#set text(font:"New Computer Modern")
-#set align(left)
-#show "link": word => text[#text(fill:blue, word)]
 
 = Introduzione
 Il documento _Piano di progetto_ ha il compito di governare la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e presentando un'analisi critica del lavoro fino a quel momento svolto. L'intento è rendicontare e valutare criticamente l'operato compiuto per  migliorarlo, ove necessario, e gestire in modo efficace ed efficiente le risorse.
@@ -138,7 +135,7 @@ Il Programmatore ha il compito di tradurre in codice eseguibile l'architettura p
 Il Verificatore è un ruolo presente durante l'intero progetto, che si occupa di mantenere degli standard qualitativi sul lavoro del team: egli deve verificare la correttezza, esaustività e coerenza di tutti i documenti, e nella fase di codifica sarà colui che si occuperà di controllare la qualità del software prodotto. Proprio per questo il totale delle ore risulta essere il secondo più elevato dopo il Programmatore.
 
 === Suddivisione delle ore dei ruoli
-La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo di competenze trasversali nei vari ruoli presenti all'interno del progetto. 
+La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo di competenze trasversali nei vari ruoli presenti all'interno del progetto.
 
 #figure(
   caption: "Tabella 1: suddivisione delle ore dei ruoli",
@@ -154,7 +151,7 @@ La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo d
   [Silvio], [13], [10], [10], [14], [30], [18], [95],
   [Totale Ore], [91], [70], [70], [98], [210], [126], [665],
   [Costo Orario (€)], [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
-  [Costo Ruolo (€)], [2.730], [1.400], [1.750], [2.450], [3.150], [1.890], [],  
+  [Costo Ruolo (€)], [2.730], [1.400], [1.750], [2.450], [3.150], [1.890], [],
 ))
 === Preventivo calcolato
 Il costo totale preventivato è di € 13.370,00.

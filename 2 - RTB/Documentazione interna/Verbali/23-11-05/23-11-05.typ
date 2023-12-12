@@ -6,7 +6,7 @@
   title: "Verbale 05/11/23",
   subTitle: "Automazioni, norme di progetto e pianificazione meeting",
   docType: "verbale",
-  //  Nome        //Ruolo          
+  //  Nome        //Ruolo
   partecipants: (
     (name: "Banzato Alessio", role: "Verificatore"),
     (name: "Carraro Riccardo", role: "Amministratore"),
@@ -19,9 +19,6 @@
   oraInizio: "14:30",
   oraFine: "15:30"
 )
-
-#set text(font:"New Computer Modern", size: 1.3em)
-#set align(left)
 
 = Ordine del giorno
 - Automazioni di GitHub Actions;
@@ -54,4 +51,3 @@ Il documento relativo alle norme di progetto è stato revisionato e discusso dal
     - Ricontrollare le norme di progetto;
     - Prendere confidenza con le tecnologie scelte (Miro, Jira, ecc), e con quelle proposte così da prendere scelte consapevoli;
     - Iniziare a pensare all'analisi dei requisiti.
- 

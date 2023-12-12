@@ -6,7 +6,7 @@
   title: "Verbale 10/11/23",
   subTitle: "Meeting di retrospettiva, indicazioni per la settimana a venire",
   docType: "verbale",
-  //  Nome        //Ruolo           
+  //  Nome        //Ruolo
   partecipants: (
     (name: "Banzato Alessio", role: "Verificatore"),
     (name: "Carraro Riccardo", role: "Amministratore"),
@@ -20,9 +20,6 @@
   oraFine: "15:00"
 )
 
-#set text(font:"New Computer Modern", size: 1.3em)
-#set align(left)
-
 = Ordine del giorno
 - Retrospettiva sullo sprint terminato;
 - Divisione dei ruoli e formazione sottogruppi di lavoro;
@@ -34,7 +31,7 @@
   In questo primo meeting di retrospettiva sono state analizzate le attività svolte dal gruppo durante la settimana e, in modo particolare, sono state discusse le nuove automazioni di github action che sono state implementate (per la compilazione ed il caricamento automatico in repository e nel sito web dei file legati alla documentazione con i relativi changelog).
   \ Si è discusso del cambiamento attutato sulle tecnologie di markup per la stesura dei documenti, passando da LaTeX a Typst, strumento che risulta più comodo e immediato da usare.\
   È stato analizzato il diario di bordo che verrà esposto lunedì 13 novembre, in particolar modo riguardo le difficoltà riscontrate.\ Nel fine settimana è importante che ciascun membro del gruppo pensi ad eventuali domande da aggiungere.
-  
+
 == Divisione ruoli
   I ruoli all'interno del gruppo e le mansioni future sono state assegnate più specificatamente: \
    - Antonio è responsabile, pertanto lunedì esporrà il diario di bordo;
@@ -48,7 +45,7 @@
    - due membri del gruppo si concentreranno sull'analisi dei requisiti;
    - due membri del gruppo miglioreranno la nostra analisi delle ore/ruoli in luce del giudizio del professor Vardanega il quale ha ritenuto il costo del progetto eccessivo.
 
-    
+
 
 = To do
   - Il giorno 8 novembre è stata inviata un'email al proponente dove esponavamo alcuni nostri dubbi ma, non avendo ricevuto risposta, abbiamo pianificato di inviarla nuovamente lunedì.

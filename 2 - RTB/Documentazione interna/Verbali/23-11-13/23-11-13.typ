@@ -2,7 +2,7 @@
 
 #show: project.with(
   title: "Verbale 13/11/23",
-  docType: "verbale",        
+  docType: "verbale",
   partecipants: (
     (name: "Banzato Alessio", role: "Verificatore"),
     (name: "Carraro Riccardo", role: "Amministratore/Verificatore"),
@@ -16,11 +16,6 @@
   oraFine:  "17:30",
 )
 
-#set text(font:"New Computer Modern", size: 1.3em)
-#set align(left)
-
-
-
 = Ordine del giorno
   - Aggiornamento del gruppo in merito alle nuove automazioni adottate;
   - Retrospettiva dello sprint 1;
@@ -29,18 +24,18 @@
   - Pianificazione sprint 2.
 
 == Automazioni e nuova repository
-  Il gruppo che si è dedicato nel precedente sprint ad automatizzare la repository ha 
+  Il gruppo che si è dedicato nel precedente sprint ad automatizzare la repository ha
   finalizzato il lavoro e ha aggiornato il gruppo riguardo alle nuove funzionalità.
-  La vecchia repository è stata abbandonata in favore di una nuova (questo perchè riorganizzare 
-  la vecchia repository avrebbe richiesto troppo tempo) con una nuova organizzazione dei branch, 
+  La vecchia repository è stata abbandonata in favore di una nuova (questo perchè riorganizzare
+  la vecchia repository avrebbe richiesto troppo tempo) con una nuova organizzazione dei branch,
   differente rispetto alla precedente: prima era presente un branch main (per i release) e un branch develop dal quale si aprivano feature branch; ora la repository è composta da tre branch principali quali:
   - main: contenente i pdf compilati e pubblicati automaticamente tramite github actions solo a seguito della verifica di uno o più reviwer;
   - src: contenente i file sorgenti scritti in Typst;
   - website: branch parallello contente un versione work in progress del sito del team.
 
 
-== Retrospettiva sullo sprint 
-  Segue quindi la discussione in merito ai miglioramenti da attuare nei prossimi sprint e quello 
+== Retrospettiva sullo sprint
+  Segue quindi la discussione in merito ai miglioramenti da attuare nei prossimi sprint e quello
   attuale. Lo sprint passato ha avuto due criticità fondamentali:
   - una generale confusione da parte del team di documentazione in merito alla priorità da dare ai vari documenti da redigere e al loro contenuto;
   - l'impossibilità di utilizzare la nuova repository bloccata dai rallentamenti subiti dal sottovalutare la mole di lavoro riguardo l'implementazione delle automazioni.
@@ -53,7 +48,7 @@
   - Miro: board che verrà utilizzata durante i meeting interni per supportare processi di brainstorming o per riportare concetti o criticità durante l'analisi dello sprint appena terminato.
 
 == Ripartizione dei ruoli <ruoli>
-  In seguito al diario di bordo tenutosi in data 13-11-23, il team si è organizzato per portare avanti lo sviluppo dei tre documenti fondamentali, quali: 
+  In seguito al diario di bordo tenutosi in data 13-11-23, il team si è organizzato per portare avanti lo sviluppo dei tre documenti fondamentali, quali:
   - analisi dei requisiti: documento di priorità maggiore. Risorse assegnate: 3 persone;
   - piano di progetto. Risorse assegnate: 2 persone;
   - norme di progetto: Risorse assegnate: 2 persone.

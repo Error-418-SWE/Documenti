@@ -757,7 +757,7 @@ Solo a seguito del merge della PR, la task collegata presente in Jira può esser
 L'intero processo di versionamento è accompagnato da una serie di automazioni, che sollevano i componenti del gruppo dall'onere manuale di attività come la compilazione dei documenti, l'aggiornamento del registro delle modifiche (file log.csv) e la pubblicazione dei documenti dopo la verifica.
 
 *Workflow delle automazioni:*
-#figure(image("./imgs/github_actions_workflow.png", format: "png"), caption: [Workflow delle automazioni]);
+#figure(image("./imgs/flusso_actions.svg", format: "svg"), caption: [Workflow delle automazioni]);
 
 Alla creazione della pull request si avvia il workflow per la compilazione e la registrazione delle modifiche avvenute. Prima di procedere sarà necessario inserire informazioni essenziali ai fini di chiarezza e tracciabilità nel messaggio di pull request, quali:
 - titolo conforme, contenente il nome della task di riferimento su Jira legata alla pull request, nel formato _DOC-XX titolo_;

@@ -704,3 +704,68 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 
 === Burndown-chart
 [da inserire]
+
+
+== Quinto Sprint dal 04-12-2023 al 11-12-2023
+
+=== Obiettivi raggiunti
+- miglioramento e aggiornamento documento Analisi dei Requisiti;
+- realizzazione mini PoC relativo alla creazione e posizionamento di scaffali dell'ambiente di lavoro;
+- realizzazione mini PoC relativo alla lettura e utilizzo di file SVG e comunicazione con Database;
+- incontro con Proponente in data 06-12-23;
+- incontro con professor Cardin in data 07-12-23;
+- redazione del glossario;
+- aggiornamento documento Norme di Progetto;
+- aggiornamento documento Piano di Progetto.
+
+=== Obiettivi mancati
+- miglioramento GitHub Actions.
+
+=== Analisi problematiche insorte
+Durante il meeting di retrospettiva sono emerse le seguenti problematiche da migliorare:
+- mancanza di precise convenzioni da adottare riguardanti il codice;
+- lavoro concentrato principalmente nel weekend;
+- richiesta di maggiore partecipazione dei membri del gruppo sulle board di Miro;
+
+=== Risoluzioni attuate
+Conseguentemente ai problemi rilevati, sono state individuate le relative soluzioni da adottare:
+- formulare convenzioni più chiare da adottare per il codice;
+- impegnarsi a fissare delle scadenze infrasettimanali così da ridurre il carico di lavoro il weekend;
+- utilizzare le board su Miro con anticipo aggiungendo il proprio feedback.
+
+=== Analisi costi di sprint effettivi
+#set text(
+  size: 9pt
+)
+
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr,2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:8pt,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+[Carraro Riccardo], [3],  [/],    [/],    [/],    [(1)],   [/], [4],
+[Gardin Giovanni],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+[Nardo Silvio],     [/],  [3(-1)],[/],    [/],    [(1)],   [/], [3],
+[Oseliero Antonio], [/],  [/],    [/],    [3(-2)],[(2)],   [/], [3],
+[Todesco Mattia],   [/],  [/],    [/],    [/],    [/],   [3], [3],
+[Zaccone Rosario],  [/],  [/],    [/],    [3(-2)],[(2)],   [/], [3],
+[Totale ore ruolo], [3],  [2],    [8],    [2],    [6],   [3], [24],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+[Costo ruolo],      [90,00], [40,00], [200,00], [50,00], [90,00], [45,00], [515,00]
+)
+
+#align(center, text("Tabella 10: consuntivo quinto sprint"))
+
+#set text(
+  size: 11pt
+)
+
+\
+Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabile e l'Amministratore) hanno impiegato ore produttive come Programmatori, questo ha in parte significato una riduzione delle ore produttive previste per il ruolo assegnato.
+
+
+
+=== Burndown-chart
+[da inserire]

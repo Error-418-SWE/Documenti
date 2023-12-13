@@ -665,7 +665,7 @@ dove:
 + Z: indica il numero di versione di revisione e correzione, aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
 
 L'aggiornamento di una delle cifre del numero di versione azzera le cifre di rilevanza inferiore.
-+ Questo schema descrive il versionamento dei documenti. I documenti prodotti dal gruppo sono descritti nel dettaglio nella sezione @sezione-che-probabilmente-ora-non-esiste.  
++ Questo schema descrive il versionamento dei documenti. I documenti prodotti dal gruppo sono descritti nel dettaglio nella sezione TODO  
 + Un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi.  
 + Numeri di versione con `X` pari a 0 indicano documenti in lavorazione, da non considerarsi pronti al rilascio.  
 + Dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.  
@@ -775,7 +775,7 @@ Il workflow è composto dai seguenti passaggi:
   - path del file.
 + controllo del numero di file modificati: se il numero di file modificati è maggiore di 1, il workflow termina con un errore;
 + controllo dell'esistenza del file log.csv: se il file non esiste, viene creato (sinonimo di creazione del documento);
-+ <rilascio-della-review>rilascio della review: il verificatore si occupa di controllare il documento e rilasciare la review, segnando i cambiamenti richiesti;
++ rilascio della review: il verificatore si occupa di controllare il documento e rilasciare la review, segnando i cambiamenti richiesti;
 + apportate le modifiche, si richiede nuovamente la review per verificare che i cambiamenti apportati siano corretti;
 + nel momento in cui la review termina con esito positivo, si procede al recupero della versione corrente del documento:
   - se non esiste il corrispettivo pdf nel branch main, allora il documento non era mai stato pubblicato, pertanto la sua versione di partenza sarà fissata a 1.0.0;
@@ -783,7 +783,7 @@ Il workflow è composto dai seguenti passaggi:
 + aggiornamento del file log.csv: il file di log viene aggioranato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
 + compilazione del documento: aggiornato il file log.csv e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
 + pubblicazione del documento: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main della repository; 
-+ merge non confermato: qualora a termine della compilazione del documento non venisse confermato il merge da parte del verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo `main` del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto @rilascio-della-review.
++ merge non confermato: qualora a termine della compilazione del documento non venisse confermato il merge da parte del verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo `main` del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
 
 
 L'azione manuale si riduce solamente al rilascio di review e conferma di merge, mentre tutte le altre attività vengono automatizzate.

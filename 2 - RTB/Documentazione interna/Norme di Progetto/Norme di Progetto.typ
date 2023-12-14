@@ -236,13 +236,13 @@ Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo d
 + verifica (Check): monitoraggio e misurazione dei processi e dei prodotti rispetto agli obiettivi e ai requisiti, e reportistica dei risultati;
 + attuazione (Act): azioni per migliorare le prestazioni, se necessario, in base ai risultati della verifica.
 
-==== Organizzazione del processso 
+==== Organizzazione del processso
 ===== Pianificazione
 La pianificazione del processo è compito del Responsabile, il quale al termine dello sprint precedente, in base alle attività svolte e ai risultati ottenuti, pianifica le attività da svolgere nello sprint successivo. \
 La pianificazione è un'attività iterativa, che viene svolta all'inizio dello sprint. Il Responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \
 Questo processo permette di individuare le attività da svolgere, le risorse necessarie e le tempistiche di svolgimento, mediante il sistema di ticketing offerto da Jira.\
 Il risutato di questo processo è visibile all'interno del Piano di Progetto.\
-\ 
+\
 ===== Esecuzione
 Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto. \
 Il processo di esecuzione è composto da due attività principali:
@@ -277,9 +277,9 @@ Diventa compito del Responsabile stabilire le attività necessarie per attuare l
 Il risultato di questo processo è visibile all'interno del Piano di Progetto.
 \
 \
-==== Ruoli 
+==== Ruoli
 ===== Responsabile
-Il Responsabile è la figura chiave che guida il progetto, assumendo il ruolo di referente principale per il gruppo e per gli stakeholders. \ 
+Il Responsabile è la figura chiave che guida il progetto, assumendo il ruolo di referente principale per il gruppo e per gli stakeholders. \
 
 Le responsabilità del Responsabile includono:
 
@@ -346,7 +346,7 @@ Le responsabilità del Programmatore includono:
 
 + creazione di test specifici per la verifica e la validazione del codice.
 
-\ \ 
+\ \
 ===== Verificatore
 Il Verificatore controlla il lavoro svolto dagli altri membri del gruppo, assicurandosi che le norme di progetto e le aspettative siano rispettate. \
 
@@ -592,7 +592,7 @@ Nell'attività di controllo si intraprendono azioni correttive nei confronti dei
 Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcune delle task raccolte rispondono direttamente ai problemi individuati nella parte di Things to change.
 
 
-== Processo di gestione delle Decisioni 
+== Processo di gestione delle Decisioni
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
 === Scopo
 Lo scopo del processo di gestione delle decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionando la migliore in termini di benefici attesi, costi e rischi associati. \
@@ -606,13 +606,13 @@ Ogni decisione viene presentata identificandone:
 - svantaggi;
 - impatto in termini di tempi e costi.
 
-Il processo di decision making viene prevalentemente svolto nel meeting di retrospettiva, in modo da non contrastare la pianificazione dello sprint in corso ed evitare un eccessivo numero di meeting interni che potrebbero comportare difficoltà organizzative e un rallentamnto dell'avanzamento. 
+Il processo di decision making viene prevalentemente svolto nel meeting di retrospettiva, in modo da non contrastare la pianificazione dello sprint in corso ed evitare un eccessivo numero di meeting interni che potrebbero comportare difficoltà organizzative e un rallentamnto dell'avanzamento.
 Solo decisioni critiche riguardo cambiamenti sostanziali o nuove direzioni di lavoro possono far scaturire meeting interni mirati.
 
 Il resoconto di quanto deciso sarà visibile all'interno del verbale redatto a fine meeting.
 
 ==== Tipologie delle Decisioni
-Le decisioni possono riguardare diversi aspetti del capitolato, e la loro categorizzazione è utile per individuare la migliore strategia di gestione e i ruoli coinvolti. 
+Le decisioni possono riguardare diversi aspetti del capitolato, e la loro categorizzazione è utile per individuare la migliore strategia di gestione e i ruoli coinvolti.
 
 Le decisioni vengono dunque così classificate:
 + Decisioni organizzative: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto:
@@ -630,25 +630,25 @@ Le decisioni vengono dunque così classificate:
   - ruoli responsbili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
   - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
 
-+ Decisioni architetturali: sono decisioni relative ai pattern e alle architetture riguardanti il software. 
++ Decisioni architetturali: sono decisioni relative ai pattern e alle architetture riguardanti il software.
   - documento soggetto a modifiche: Norme di progetto, documenti tecnici (diagramma delle classi,...);
   - ruoli responsbili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
 
-+ Decisioni sulla qualità: sono decisioni relative ai controlli di qualità. 
++ Decisioni sulla qualità: sono decisioni relative ai controlli di qualità.
   - documento soggetto a modifiche: Piano di qualifica;
   - ruoli responsbili dell'aggiornamento: Responsabile, Verificatori;
   - strategia di decision-making: collaborativa.
 
 ==== Strategie di decision-making utilizzate
-+ Strategia collaborativa: prevede che la decisione venga presentata e votata in modo collaborativo, coinvolgendo tutti i membri del gruppo e mediante una votazione con un sistema maggioritario, in modo che il risultato rappresenti la volontà della maggioranza.\ Strategia utilizzata per le decisioni: 
++ Strategia collaborativa: prevede che la decisione venga presentata e votata in modo collaborativo, coinvolgendo tutti i membri del gruppo e mediante una votazione con un sistema maggioritario, in modo che il risultato rappresenti la volontà della maggioranza.\ Strategia utilizzata per le decisioni:
   - organizzative;
-  - dei requisiti; 
+  - dei requisiti;
   - qualitative.
 
 + Strategia expertise decision-making: prevede che la decisione venga presentata e analizzata mediante la consultazione di figure esterne più esperte, individuabili nel Proponente o nel Committente, la cui esperienza risulta determinante. \ Questa strategia viene utilizzata per le decisioni:
   - implementative;
-  - architetturali. \ 
+  - architetturali. \
 
 == Processo di gestione della configurazione
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.5_
@@ -665,10 +665,10 @@ dove:
 + Z: indica il numero di versione di revisione e correzione, aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
 
 L'aggiornamento di una delle cifre del numero di versione azzera le cifre di rilevanza inferiore.
-+ Questo schema descrive il versionamento dei documenti. I documenti prodotti dal gruppo sono descritti nel dettaglio nella sezione TODO  
-+ Un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi.  
-+ Numeri di versione con `X` pari a 0 indicano documenti in lavorazione, da non considerarsi pronti al rilascio.  
-+ Dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.  
++ Questo schema descrive il versionamento dei documenti. I documenti prodotti dal gruppo sono descritti nel dettaglio nella sezione TODO
++ Un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi.
++ Numeri di versione con `X` pari a 0 indicano documenti in lavorazione, da non considerarsi pronti al rilascio.
++ Dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.
 
 
 ==== Tracciamento modifiche
@@ -688,7 +688,7 @@ Ogni documento, nella sezione direttamente sottostante all'indice, mostrerà in 
 
 === Tecnologie
 ==== Typst
-Il gruppo utilizza Typst come strumento di scrittura e compilazione dei documenti. 
+Il gruppo utilizza Typst come strumento di scrittura e compilazione dei documenti.
 ===== Template
 Al fine di dare una struttura comune ai documenti si è creato un file Template.typ parametrizzato, sfruttando la possibilità di produrre un file PDF compilando insieme più file Typst. Questo file contiene le impostazioni di base per la creazione di un documento:
 - `title`: titolo del documento;
@@ -706,7 +706,7 @@ Al fine di dare una struttura comune ai documenti si è creato un file Template.
 - `showIndex`: flag che indica se mostrare l'indice;
 - `isExternalUse`: flag che indica se il documento è per uso esterno.
 
-Al momento della creazione di un nuovo documento sarà sufficiente importare il modello e specificare i parametri sopra elencati. 
+Al momento della creazione di un nuovo documento sarà sufficiente importare il modello e specificare i parametri sopra elencati.
 
 ===== QuickStart
 Al fine di semplificare la procedura di creazione di un documento, è stato condiviso un documento di testo denominato quickstart.txt che contiene la configurazione base per la stesura dei documenti.
@@ -779,15 +779,15 @@ Il workflow è composto dai seguenti passaggi:
 + apportate le modifiche, si richiede nuovamente la review per verificare che i cambiamenti apportati siano corretti;
 + nel momento in cui la review termina con esito positivo, si procede al recupero della versione corrente del documento:
   - se non esiste il corrispettivo pdf nel branch main, allora il documento non era mai stato pubblicato, pertanto la sua versione di partenza sarà fissata a 1.0.0;
-  - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script python;  
+  - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script python;
 + aggiornamento del file log.csv: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
 + compilazione del documento: aggiornato il file log.csv e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
-+ pubblicazione del documento: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main della repository; 
++ pubblicazione del documento: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main della repository;
 + merge non confermato: qualora a termine della compilazione del documento non venisse confermato il merge da parte del verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo `main` del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
 
 
 L'azione manuale si riduce solamente al rilascio di review e conferma di merge, mentre tutte le altre attività vengono automatizzate.
-All'approvazione della pull request, e alla conseguente chiusura del branch, un ulteriore automazione integrata su Jira, permette di aggiornare in automatico lo stato della task collegata alla pull request, portandola allo stato di "Completata". 
+All'approvazione della pull request, e alla conseguente chiusura del branch, un ulteriore automazione integrata su Jira, permette di aggiornare in automatico lo stato della task collegata alla pull request, portandola allo stato di "Completata".
 
 ==== Jira
 Jira è lo strumento centrale per la gestione e la tracciabilità delle task assegnate ai membri del gruppo.
@@ -808,9 +808,9 @@ Nel processo di versionamento e di tracciamento delle modifiche, Jira ricopre un
 
 A questo punto, la task si aggiornerà nello stato "In corso". Terminata la task, effettuta la pull request, superato il processo di verifica e chiuso il branch, Jira provvederà ad aggiornare lo stato della task in "Completata".
 ===== Backlog
-Ogni task da svolgere è segnata all'interno del backlog. Durante la pianificazione dello sprint, si definisce lo sprint backlog, il sottoinsieme di attività provenienti dal backlog che si intendono portare a termine entro la conclusione dello sprint.   
+Ogni task da svolgere è segnata all'interno del backlog. Durante la pianificazione dello sprint, si definisce lo sprint backlog, il sottoinsieme di attività provenienti dal backlog che si intendono portare a termine entro la conclusione dello sprint.
 
-A differenza dello sprint backlog definito durante la pianificazione, il backlog viene espanso man mano che si riscontrano nuove task necessarie o a seguito di decisioni prese durante le riunioni interne o esterne. 
+A differenza dello sprint backlog definito durante la pianificazione, il backlog viene espanso man mano che si riscontrano nuove task necessarie o a seguito di decisioni prese durante le riunioni interne o esterne.
 ===== Boards
 Le boards permettono, similmente allo sprint backlog, di avere una visione d'insieme delle attività da svolgere, ma con un approccio più visuale e intuitivo.
 Le task sono organizzate in tre colonne, rappresentanti lo stato:
@@ -819,7 +819,7 @@ Le task sono organizzate in tre colonne, rappresentanti lo stato:
 - completata: task conclusa, ovvero branch dedicato chiuso a seguito di merge sul ramo principale.
 ===== Timeline
 La timeline permette di avere una visione delle attività incentrata sulle tempistiche e le relazione tra le task.
-La timeline permette di mostrare il grafico di Gantt delle attività evidenziando i rapporti di dipendenza tra le task e stabilendo le scadenze necessarie per il loro svolgimento. 
+La timeline permette di mostrare il grafico di Gantt delle attività evidenziando i rapporti di dipendenza tra le task e stabilendo le scadenze necessarie per il loro svolgimento.
 ===== Grafici
 Jira offre la possibilità di produrre grafici e report relativi all'avanzamento e alla tracciabilità delle task. Tali strumenti permettono di avere delle metriche di valutazione dell'andamento del progetto e di individuare eventuali criticità.
 Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story points di ogni attività.

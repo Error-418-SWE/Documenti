@@ -710,8 +710,9 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 
 === Obiettivi raggiunti
 - miglioramento e aggiornamento documento Analisi dei Requisiti;
-- realizzazione mini PoC relativo alla creazione e posizionamento di scaffali dell'ambiente di lavoro;
-- realizzazione mini PoC relativo alla lettura e utilizzo di file SVG e comunicazione con Database;
+- realizzazione PoC relativo alla creazione e posizionamento di scaffali dell'ambiente di lavoro;
+- realizzazione PoC relativo alla lettura e utilizzo di file SVG e comunicazione con Database;
+- realizzazione PoC che integra l'utilizzo di Docker;
 - incontro con Proponente in data 06-12-23;
 - incontro con professor Cardin in data 07-12-23;
 - redazione del glossario;

@@ -730,7 +730,7 @@ Durante il meeting di retrospettiva sono emerse le seguenti problematiche da mig
 
 === Risoluzioni attuate
 Conseguentemente ai problemi rilevati, sono state individuate le relative soluzioni da adottare:
-- Normare le convenzioni di stesura del codice nelle Norme di Progetto;
+- normare le convenzioni di stesura del codice nelle Norme di Progetto;
 - impegnarsi a fissare delle scadenze infrasettimanali così da ridurre il carico di lavoro nel weekend;
 - utilizzare le board su Miro con anticipo aggiungendo il proprio feedback.
 

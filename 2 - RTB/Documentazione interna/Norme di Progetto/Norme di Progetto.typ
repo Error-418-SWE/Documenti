@@ -823,3 +823,36 @@ La timeline permette di mostrare il grafico di Gantt delle attività evidenziand
 ===== Grafici
 Jira offre la possibilità di produrre grafici e report relativi all'avanzamento e alla tracciabilità delle task. Tali strumenti permettono di avere delle metriche di valutazione dell'andamento del progetto e di individuare eventuali criticità.
 Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story points di ogni attività.
+
+= Processi tecnici
+
+== Processo di definizione di bisogni e requisiti degli stakeholder
+
+=== Scopo
+
+Il processo di definizione di bisogni e requisiti degli stakeholder definisce i requisiti di un sistema che possa fornire le funzionalità di cui gli utenti e gli stakeholder necessitano.
+
+Il processo identifica gli stakeholder coinvolti con il sistema durante l'intero suo ciclo di vita.
+
+Identifica inoltre i loro bisogni, li analizza e li trasforma in un insieme condiviso di requisiti che:
+- esprima i comportamenti attesi che il sistema dovrà avere nel suo ambiente operativo;
+- funga da riferimento per la validazione di ciascuna funzionalità operativa.
+
+=== Identificazione degli stakeholder e dei loro bisogni
+
+- Responsabile
+- Committente
+- Proponente
+- Aziende
+
+=== Definizione della strategia di identificazione, analisi e trasformazione di bisogni e requisiti
+
+...
+Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, questo processo è inteso per mediare i contrasti.
+Gli intenti o i desideri di chi si oppone al gruppo o al sistema software sono affrontati tramite il processo di gestione dei rischi (#text("TODO", fill: red))
+
+=== Trasformazione dei bisogni in requisiti
+
+=== Analisi dei requisiti
+
+=== Gestione dei bisogni e dei requisiti

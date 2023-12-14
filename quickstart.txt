@@ -16,6 +16,8 @@ let timeStart: string
 let timeEnd: string
 let showLog: ?boolean = false
 let showIndex: ?boolean = true
+let showImagesIndex: ?boolean = true
+let showTablesIndex: ?boolean = true
 let isExternalUse: ?boolean = false
 ```
 

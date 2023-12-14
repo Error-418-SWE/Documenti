@@ -715,7 +715,7 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 - realizzazione PoC che integra l'utilizzo di Docker;
 - incontro con Proponente in data 06-12-23;
 - incontro con professor Cardin in data 07-12-23;
-- redazione del glossario;
+- redazione del Glossario;
 - aggiornamento documento Norme di Progetto;
 - aggiornamento documento Piano di Progetto.
 

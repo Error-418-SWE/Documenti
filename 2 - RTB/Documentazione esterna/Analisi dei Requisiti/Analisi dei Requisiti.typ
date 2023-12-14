@@ -147,8 +147,12 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 
 - Verbali interni;
 - Verbali esterni;
-- Capitolato: \
+- Capitolato "Warehouse Management 3D" di _Sanmarco Informatica S.p.A._: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_ ;
+- Documentazione Three.js: \
+  _#link("https://threejs.org/docs/index.html")_
+- WebGL 2.0 Specification: \
+  _#link("https://registry.khronos.org/webgl/specs/latest/2.0/")_
 - Analisi dei requisiti: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf")_ ;
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
@@ -170,7 +174,7 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 
 + *Modificabilità*: deve essere definito un modello per la stesura dei singoli casi d'uso e requisiti, così che la loro modifica possa avvenire nel modo più efficiente possibile;
 
-+ *Tracciabilità*: per ogni requisito ne è indicata la fonte, in modo da semplificare il processo di verifica della completezza e correttezza.
++ *Tracciabilità*: per ogni requisito ne è indicato il riferimento (o fonte), in modo da semplificare il processo di verifica della completezza e correttezza.
 
 #pagebreak()
 
@@ -303,7 +307,7 @@ $bold("Scenario: ")$
 = Modifica dell'ambiente 3D
 #figure(image("./imgs/uc2.png", format: "png"), caption: [UML UC-2])
 == Inserimento nuove dimensioni del magazzino
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
 
 $bold("Attore: ")$
@@ -323,7 +327,7 @@ $bold("Estensioni: ")$
 - UC-2.1.1 Visualizzazione errore di modifica dell'ambiente.
 
 === Visualizzazione errore di modifica dell'ambiente
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 i dati inseriti per la modifica dell'ambiente di lavoro non sono validi con quanto configurato precedentemente.
 
 $bold("Attore: ")$
@@ -340,7 +344,7 @@ $bold("Scenario: ")$
 - l'utente ha immesso dei dati errati per la modifica dell'ambiente.
 
 == Creazione scaffale
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata. Seccessivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
 
 $bold("Attore: ")$
@@ -362,7 +366,7 @@ $bold("Estensioni: ")$
 - UC-2.9 Visualizzazione errore inserimento dati dimensionali non validi
 
 == Modifica scaffale
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 modifica delle caratteristiche di uno scaffale già esistente.
 
 $bold("Attore: ")$
@@ -383,7 +387,7 @@ $bold("Estensioni: ")$
 - UC-2.9 Visualizzazione errore inserimento dati dimensionali non validi
 
 == Spostamento scaffali
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 L'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
 
 $bold("Attore: ")$
@@ -403,7 +407,7 @@ $bold("Estensioni: ")$
 - UC-2.4-1 Visualizzazione errore spostamento dello scaffale in zona non libera
 
 === Visualizzazione errore spostamento dello scaffale in zona non libera
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 è stata richiesto lo spostamento di uno scaffale in una zona non libera.
 
 $bold("Attore: ")$
@@ -420,7 +424,7 @@ $bold("Scenario: ")$
 - l'utente ha richiesto lo spostamento di uno scaffale in una zona non libera.
 
 == Eliminazione scaffale
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 lo scaffale selezionato presente nell'ambiente viene eliminato.
 
 $bold("Attore: ")$
@@ -444,7 +448,7 @@ $bold("Estensioni: ")$
 - UC-2.5.1 Visualizzazione errore scaffale da eliminare non vuoto.
 
 === Visualizzazione errore scaffale da eliminare non vuoto
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 è stata richiesta l'eliminazione di uno scaffale contenente almeno un bin non vuoto.
 
 $bold("Attore: ")$
@@ -522,7 +526,7 @@ $bold("Scenario: ")$
 - viene richiesta la conferma dell'eliminazione.
 
 === Errore cancellazione bin non vuoto
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 è stata richiesta l'eliminazione di un bin non vuoto.
 
 $bold("Attore: ")$
@@ -847,7 +851,7 @@ $bold("Scenario: ")$
   table(
     columns: 4,
     align: left,
-    [*Codice*], [*Classificazione*], [*Descrizione*], [*Fonte*],
+    [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
     [], [Obbligatorio], [Deve essere rispettato quanto previsto dalle Norme di Progetto.], [Interna],
     [], [Obbligatorio], [Deve essere rispettato quanto previsto dal Piano di Qualifica.], [Interna],
     [], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico.], [Capitolato],
@@ -857,4 +861,29 @@ $bold("Scenario: ")$
     [], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate.], [Capitolato],
   ),
   caption: "Requisiti di qualità."
+)
+
+== Requisiti di vincolo
+
+#figure(
+  table(
+    columns: 4,
+    align: left,
+    [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
+    [], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login.], [Capitolato],
+    [], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente.], [Capitolato],
+    [], [Obbligatorio], [Il prodotto non deve gestire la persistenza dei dati.], [Capitolato],
+    [], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0.], [Interno],
+    [], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva.], [Interno],
+    [], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose.], [VE 23-11-15]
+  ),
+  caption: "Requisiti di vincolo."
 )

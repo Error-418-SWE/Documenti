@@ -746,15 +746,15 @@ align: center,
 inset:8pt,
 [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
 [Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
-[Carraro Riccardo], [3],  [/],    [/],    [/],    [(1)],   [/], [4],
+[Carraro Riccardo], [3],  [/],    [/],    [/],    [(2)],   [/], [5],
 [Gardin Giovanni],  [/],  [/],    [4],    [/],    [/],   [/], [4],
-[Nardo Silvio],     [/],  [3(-1)],[/],    [/],    [(1)],   [/], [3],
+[Nardo Silvio],     [/],  [3(-1)],[/],    [/],    [(2)],   [/], [4],
 [Oseliero Antonio], [/],  [/],    [/],    [3(-2)],[(2)],   [/], [3],
 [Todesco Mattia],   [/],  [/],    [/],    [/],    [/],   [3], [3],
 [Zaccone Rosario],  [/],  [/],    [/],    [3(-2)],[(2)],   [/], [3],
-[Totale ore ruolo], [3],  [2],    [8],    [2],    [6],   [3], [24],
+[Totale ore ruolo], [3],  [2],    [8],    [2],    [8],   [3], [24],
 [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
-[Costo ruolo],      [90,00], [40,00], [200,00], [50,00], [90,00], [45,00], [515,00]
+[Costo ruolo],      [90,00], [40,00], [200,00], [50,00], [120,00], [45,00], [545,00]
 )
 
 #align(center, text("Tabella 10: consuntivo quinto sprint"))

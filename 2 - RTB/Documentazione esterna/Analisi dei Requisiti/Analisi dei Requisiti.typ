@@ -883,7 +883,7 @@ $bold("Scenario: ")$
     [], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva.], [Interno],
     [], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva.], [Interno],
     [], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva.], [Interno],
-    [], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose.], [VE]
+    [], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose.], [VE 23-11-15]
   ),
   caption: "Requisiti di vincolo."
 )

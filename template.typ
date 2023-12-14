@@ -12,6 +12,7 @@
   timeEnd: "",
   showLog: false,
   showIndex: true,
+  showTablesIndex: true,
   isExternalUse: false,
   body
 ) = {
@@ -89,6 +90,7 @@ let timeStart = timeStart
 let timeEnd = timeEnd
 let showLog = showLog
 let showIndex = showIndex
+let showTablesIndex = showTablesIndex
 let missingMembers = missingMembers
 let externalParticipants = externalParticipants
 let authors = authors
@@ -362,13 +364,23 @@ if (showLog and docType != "verbale") {
   pagebreak()
 }
 
-// Table of contents
+// Index of contents
 if showIndex and docType != "verbale" {
   page(numbering: none)[
     #outline(
       title: "Indice dei contenuti",
       depth: 3,
       indent: true
+    )
+  ]
+  pagebreak()
+}
+// Index of tables
+if showTablesIndex and docType != "verbale" {
+  page(numbering: none)[
+    #outline(
+      title: "Indice delle tabelle",
+      target: figure.where(kind: table)
     )
   ]
   pagebreak()

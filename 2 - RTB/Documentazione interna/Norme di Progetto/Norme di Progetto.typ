@@ -649,3 +649,177 @@ Le decisioni vengono dunque così classificate:
 + Strategia expertise decision-making: prevede che la decisione venga presentata e analizzata mediante la consultazione di figure esterne più esperte, individuabili nel Proponente o nel Committente, la cui esperienza risulta determinante. \ Questa strategia viene utilizzata per le decisioni:
   - implementative;
   - architetturali. \ 
+
+== Processo di gestione della configurazione
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.5_
+=== Scopo
+Lo scopo della Gestione della Configurazione è gestire e controllare gli elementi del sistema e le configurazioni durante il ciclo di vita. Lo scopo principale è tracciare e coordinare le procedure necessarie alla modifica della documentazione e del codice sorgente.
+
+=== Versionamento
+==== Descrizione
+Il versionamento è un processo che permette di tenere traccia delle modifiche effettuate su un prodotto software o documentale. Per ogni modifica viene creata una nuova versione del prodotto, che viene identificata da un numero di versione. Il numero di versione è composto da tre cifre separate da un punto, e segue la convenzione seguente:
+#align(center, `X.Y.Z`)
+dove:
++ X: indica il numero di versione principale, aggiornato al cambiamento della struttura del documento. Riguarda dunque cambiamenti di organizzazione del documento, dei suoi paragrafi e della presentazione delle informazioni, nonchè cambiamento dei parametri necessari nel template dei documenti;
++ Y: indica il numero di versione secondaria, aggiornato all'aggiunta o alla rimozione di paragrafi;
++ Z: indica il numero di versione di revisione e correzione, aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
+
+L'aggiornamento di una delle cifre del numero di versione azzera le cifre di rilevanza inferiore.
++ Questo schema descrive il versionamento dei documenti. I documenti prodotti dal gruppo sono descritti nel dettaglio nella sezione TODO  
++ Un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi.  
++ Numeri di versione con `X` pari a 0 indicano documenti in lavorazione, da non considerarsi pronti al rilascio.  
++ Dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.  
+
+
+==== Tracciamento modifiche
+Il tracciamento delle modifiche avviene per mezzo di automazioni che permettono di identificare:
+- versione del documento modificato;
+- data di modifica (gg-mm-aaaa, ddd);
+- numero della pull request di riferimento;
+- titolo della pull request di riferimento;
+- autore della modifica;
+- revisore incaricato.
+
+Tali informazioni sono salvate in un file CSV, unico per ogni documento. Questo file, denominato log.csv, è salvato nella cartella dedicata al documento a cui si riferisce, e viene generato automaticamente da una GitHub Action invocata all'apertura, riapertura, sinconizzazione e chiususra di una pull request. Maggiori dettagli al paragrafo dedicato TODO.
+
+Ogni documento, nella sezione direttamente sottostante all'indice, mostrerà in formato tabellare le informazioni relative al tracciamento delle modifiche, leggendo le informazioni dal file _log.csv_.
+
+#figure(image("./imgs/esempio_tracciamento_modifiche.png", format: "png"), caption: [Esempio tracciamento modifiche])
+
+=== Tecnologie
+==== Typst
+Il gruppo utilizza Typst come strumento di scrittura e compilazione dei documenti. 
+===== Template
+Al fine di dare una struttura comune ai documenti si è creato un file Template.typ parametrizzato, sfruttando la possibilità di produrre un file PDF compilando insieme più file Typst. Questo file contiene le impostazioni di base per la creazione di un documento:
+- `title`: titolo del documento;
+- `subTitle`: sottotitolo del documento;
+- `docType`: tipologia del documento (Verbale, Documento);
+- `date`: data di creazione del documento;
+- `externalPartecipants`: partecipanti esterni al gruppo;
+- `authors`: autori del documento;
+- `reviewers`: revisori del documento;
+- `missingMembers`: membri assenti durante i meeting;
+- `location`: luogo di incontro;
+- `timeStart`: ora di inizio incontro;
+- `timeEnd`: ora di fine incontro;
+- `showLog`: flag che indica se mostrare il tracciamento delle modifiche;
+- `showIndex`: flag che indica se mostrare l'indice;
+- `isExternalUse`: flag che indica se il documento è per uso esterno.
+
+Al momento della creazione di un nuovo documento sarà sufficiente importare il modello e specificare i parametri sopra elencati. 
+
+===== QuickStart
+Al fine di semplificare la procedura di creazione di un documento, è stato condiviso un documento di testo denominato quickstart.txt che contiene la configurazione base per la stesura dei documenti.
+
+==== Astro
+
+==== GitHub
+Lo strumento di versionamento scelto dal gruppo è GitHub.
+Il gruppo Error_418 ha creato un'organizzazione omonima su GitHub in modo da gestire e separare il lavoro in più repository pensate per scopi e contenuti diversi:
+- *Documenti*: repository contenente la documentazione prodotta;
+- *PoC*: repository contenente i Proof of Concept prodotti.
+
+Documenti è la repository dedicata alla documentazione prodotta, la quale possiede due branch principali:
+- `main`: contiene i file pdf dei documenti prodotti solamente in seguito ad un processo di review con esito positivo;
+- `src`: contiene i file sorgenti dei documenti prodotti, file di configurazione e di supporto.
+
+Documenti è organizzata in modo da suddividere la documentazione necessaria alle revisioni esterne che il gruppo dovrà affrontare:
+- *RTB*: contiene i file necessari alla Requirements and Technology Baseline;
+  - *Documentazione esterna*: contiene i documenti ad uso esterno;
+    - *Verbali*: contiene i verbali delle riunioni esterne;
+    - *doc_file_name* /
+      - doc_file_name.typ: file sorgente del documento;
+      - log.csv: registro delle modifiche associato al documento;
+  - *Documentazione interna*: contiene i documenti ad uso interno;
+      - *Verbali*: contiene i verbali delle riunioni interne;
+    - *doc_file_name* /
+      - doc_file_name.typ: file sorgente del documento;
+      - log.csv: registro delle modifiche associato al documento;
+- *PB*: contiene i file necessari alla Product Baseline.
+
+
+===== Pull request (PR)
+Al fine di garantire uno svolgiemnto delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _featuring branching_, ove per ogni modifica che si intende apporre al documento è necessario sollevare un pull request. I branch vengono creati a partire da task assegnate su Jira, e sono nominati nel formato DOC-XX, dove XX è il numero della task su Jira.
+
+La procedura di modifica o di creazione di un file prevede:
+- aggiornamento della task su Jira nello stato di "In progress";
+- creazione di un branch dedicato alla modifica;
+- modifica/creazione del documento;
+- creazione di una pull request;
+  - verificare la conformità del titolo della PR nel formato DOC-XX: titolo;
+  - designato almeno un verificatore;
+  - il documento compila correttamente in locale;
+- revisione della PR da parte del verificatore;
+  - eventuale richiesta di modifiche;
+  - apportazione delle modifiche;
+- approvazione della PR da parte del verificatore;
+- merge della PR.
+
+Il processo di verifica del documento è accompagnato dall'esecuzione di GitHub Actions che si occupano di automatizzare l'aggiornamento del file log.csv con i dati relativi alla modifica apportata, e la compilazione e pubblicazione del documento nel ramo main della repository. In questo modo si assicura che ogni documento presente nel ramo main sia prima stato sottoposto ad un processo di verifica.
+
+Solo a seguito del merge della PR, la task collegata presente in Jira può essere definita conclusa.
+===== Automazioni
+L'intero processo di versionamento è accompagnato da una serie di automazioni, che sollevano i componenti del gruppo dall'onere manuale di attività come la compilazione dei documenti, l'aggiornamento del registro delle modifiche (file log.csv) e la pubblicazione dei documenti dopo la verifica.
+
+*Workflow delle automazioni:*
+#figure(image("./imgs/flusso_actions.svg", format: "svg"), caption: [Workflow delle automazioni]);
+
+Alla creazione della pull request si avvia il workflow per la compilazione e la registrazione delle modifiche avvenute. Prima di procedere sarà necessario inserire informazioni essenziali ai fini di chiarezza e tracciabilità nel messaggio di pull request, quali:
+- titolo conforme, contenente il nome della task di riferimento su Jira legata alla pull request, nel formato _DOC-XX titolo_;
+- link alla task di riferimento su Jira;
+- almeno un verificatore;
+- eventuali note aggiuntive.
+Il workflow è composto dai seguenti passaggi:
++ Fetch delle informazioni dei file modificati: vengono recuperate le informazioni relative ai file modificati nella pull request, quali:
+  - nome del file;
+  - path del file.
++ controllo del numero di file modificati: se il numero di file modificati è maggiore di 1, il workflow termina con un errore;
++ controllo dell'esistenza del file log.csv: se il file non esiste, viene creato (sinonimo di creazione del documento);
++ rilascio della review: il verificatore si occupa di controllare il documento e rilasciare la review, segnando i cambiamenti richiesti;
++ apportate le modifiche, si richiede nuovamente la review per verificare che i cambiamenti apportati siano corretti;
++ nel momento in cui la review termina con esito positivo, si procede al recupero della versione corrente del documento:
+  - se non esiste il corrispettivo pdf nel branch main, allora il documento non era mai stato pubblicato, pertanto la sua versione di partenza sarà fissata a 1.0.0;
+  - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script python;  
++ aggiornamento del file log.csv: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
++ compilazione del documento: aggiornato il file log.csv e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
++ pubblicazione del documento: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main della repository; 
++ merge non confermato: qualora a termine della compilazione del documento non venisse confermato il merge da parte del verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo `main` del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
+
+
+L'azione manuale si riduce solamente al rilascio di review e conferma di merge, mentre tutte le altre attività vengono automatizzate.
+All'approvazione della pull request, e alla conseguente chiusura del branch, un ulteriore automazione integrata su Jira, permette di aggiornare in automatico lo stato della task collegata alla pull request, portandola allo stato di "Completata". 
+
+==== Jira
+Jira è lo strumento centrale per la gestione e la tracciabilità delle task assegnate ai membri del gruppo.
+L'integrazione con GitHub permette a Jira di lavorare e apportare modifiche direttamente alla repository del gruppo, permettendo la creazione, gestione e chiusura di branch e al conseguente aggiornamento dello stato delle task.
+Ogni task è identificata da un codice univoco incrementale nel formato DOC-XX, che permette di identificarla. Ogni task è caratterizzata da:
+- codice identificativo DOC-XX generato automaticamente da Jira;
+- titolo;
+- descrizione (opzionale);
+- stato ("Da completare", "In corso", "Completata");
+- assegnatario;
+- story points (stima del carico di lavoro);
+- epic stories (milestone) di riferimento.
+
+Nel processo di versionamento e di tracciamento delle modifiche, Jira ricopre un ruolo fondamentale, grazie anche alla sua integrazione con GitHub: nel momento in cui si intende avviare una task, è necessario seguire i seguenti passaggi:
+- aprire la task su Jira;
+- selezionare l'opzione di creare un branch dedicato alla task (integrazione con GitHub);
+- selezionare la repository e il branch da cui creare il nuovo branch;
+
+A questo punto, la task si aggiornerà nello stato "In corso". Terminata la task, effettuta la pull request, superato il processo di verifica e chiuso il branch, Jira provvederà ad aggiornare lo stato della task in "Completata".
+===== Backlog
+Ogni task da svolgere è segnata all'interno del backlog. Durante la pianificazione dello sprint, si definisce lo sprint backlog, il sottoinsieme di attività provenienti dal backlog che si intendono portare a termine entro la conclusione dello sprint.   
+
+A differenza dello sprint backlog definito durante la pianificazione, il backlog viene espanso man mano che si riscontrano nuove task necessarie o a seguito di decisioni prese durante le riunioni interne o esterne. 
+===== Boards
+Le boards permettono, similmente allo sprint backlog, di avere una visione d'insieme delle attività da svolgere, ma con un approccio più visuale e intuitivo.
+Le task sono organizzate in tre colonne, rappresentanti lo stato:
+- da completare: non ancora avviate, ovvero non esiste il branch dedicato;
+- in corso: in fase di svolgimento, ovvero branch dedicato alla task creato;
+- completata: task conclusa, ovvero branch dedicato chiuso a seguito di merge sul ramo principale.
+===== Timeline
+La timeline permette di avere una visione delle attività incentrata sulle tempistiche e le relazione tra le task.
+La timeline permette di mostrare il grafico di Gantt delle attività evidenziando i rapporti di dipendenza tra le task e stabilendo le scadenze necessarie per il loro svolgimento. 
+===== Grafici
+Jira offre la possibilità di produrre grafici e report relativi all'avanzamento e alla tracciabilità delle task. Tali strumenti permettono di avere delle metriche di valutazione dell'andamento del progetto e di individuare eventuali criticità.
+Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story points di ogni attività.

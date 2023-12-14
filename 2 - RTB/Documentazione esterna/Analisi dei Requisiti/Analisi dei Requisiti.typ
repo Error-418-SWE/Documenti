@@ -147,8 +147,12 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 
 - Verbali interni;
 - Verbali esterni;
-- Capitolato: \
+- Capitolato "Warehouse Management 3D" di _Sanmarco Informatica S.p.A._: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_ ;
+- Documentazione Three.js: \
+  _#link("https://threejs.org/docs/index.html")_
+- WebGL 2.0 Specification: \
+  _#link("https://registry.khronos.org/webgl/specs/latest/2.0/")_
 - Analisi dei requisiti: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf")_ ;
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
@@ -170,7 +174,7 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 
 + *Modificabilità*: deve essere definito un modello per la stesura dei singoli casi d'uso e requisiti, così che la loro modifica possa avvenire nel modo più efficiente possibile;
 
-+ *Tracciabilità*: per ogni requisito ne è indicata la fonte, in modo da semplificare il processo di verifica della completezza e correttezza.
++ *Tracciabilità*: per ogni requisito ne è indicato il riferimento (o fonte), in modo da semplificare il processo di verifica della completezza e correttezza.
 
 #pagebreak()
 
@@ -851,7 +855,7 @@ $bold("Scenario: ")$
   table(
     columns: 4,
     align: left,
-    [*Codice*], [*Classificazione*], [*Descrizione*], [*Fonte*],
+    [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
     [], [Obbligatorio], [Deve essere rispettato quanto previsto dalle Norme di Progetto.], [Interna],
     [], [Obbligatorio], [Deve essere rispettato quanto previsto dal Piano di Qualifica.], [Interna],
     [], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico.], [Capitolato],
@@ -861,4 +865,29 @@ $bold("Scenario: ")$
     [], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate.], [Capitolato],
   ),
   caption: "Requisiti di qualità."
+)
+
+== Requisiti di vincolo
+
+#figure(
+  table(
+    columns: 4,
+    align: left,
+    [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
+    [], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login.], [Capitolato],
+    [], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente.], [Capitolato],
+    [], [Obbligatorio], [Il prodotto non deve gestire la persistenza dei dati.], [Capitolato],
+    [], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0.], [Interno],
+    [], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva.], [Interno],
+    [], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva.], [Interno],
+    [], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose.], [VE 23-11-15]
+  ),
+  caption: "Requisiti di vincolo."
 )

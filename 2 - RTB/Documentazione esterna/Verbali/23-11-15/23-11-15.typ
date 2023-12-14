@@ -18,9 +18,6 @@
   oraInizio: "10:00",
   oraFine: "11:00",
 );
-#set text(font:"New Computer Modern")
-#set align(left)
-#show "link": word => text[#text(fill:blue, word)]
 
 = Ordine del giorno
 - Approfondimento specifiche del capitolato;

@@ -827,7 +827,7 @@ Il gruppo utilizza come metrica principale il burndown chart, che permette di av
 == Processo di gestione delle informazioni
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.6_
 === Scopo
-Lo scopo della gestione delle informazionie è generare, ottenere, confermare, trasformare, conservare, recuperare, distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completeszza, consistenza, tracciabilitò e presentazione.
+Lo scopo della gestione delle informazionie è generare, ottenere, confermare, trasformare, conservare, recuperare, distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
 
 Le informazioni possono essere tecniche, di progetto, organizzative e di accordo.
 
@@ -842,15 +842,17 @@ Le informazioni gestite dal gruppo sono:
   - Verbali.
 - codice sorgente:
   - Proof of Concept;
-  - Product Baseline.
+  - Minimun Viable Product.
 
-Tali documenti sono creati, organizzati, aggiornatti, versionati e distribuiti all'interno dei repository pubblico del gruppo. 
+Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e distribuiti all'interno dei repository del gruppo. 
 
 === Documentazione
 ==== Struttura <struttura-documenti>
 Ogni documento segue una struttura standard, stabilita nel template _template.typ_. I documenti pertanto sono così strutturati:
 + *Cover page*: la cover page è la prima pagina del documento, e contiene le seguenti informazioni:
   - nome del gruppo;
+  - link all'organizzazione GitHub;
+  - mail del gruppo;
   - logo;
   - titolo del documento;
   - sottotitolo del documento;
@@ -863,12 +865,12 @@ Ogni documento segue una struttura standard, stabilita nel template _template.ty
   - destinatari;
   - figure esterne se presenti.
 
-+ *Indici*: sezione successiva alla cover page. Sono presenti tre tipologie di indici:
-    - indice del contenuto: indice sempre presente che rappresenta i paragrafi del documento;
-    - indice delle tabello: indice presente solo se sono presenti tabelle nel documento;
-    - indice delle figure: indice presente solo se sono presenti figure nel documento.
++ *Registro delle modifiche*: sezione successiva agli indici. Maggiori dettagli sono visibili alla sezione dedicata (@tracciamento-modifiche).
 
-+ *Tracciamento modifiche*: sezione successiva agli indici. Maggiori dettagli sono visibili alla sezione dedicata (@tracciamento-modifiche).
++ *Indici*: sezione successiva agli indici. Sono presenti tre tipologie di indici:
+    - indice del contenuto: indice sempre presente che rappresenta i paragrafi del documento;
+    - indice delle tabelle: indice presente solo se sono presenti tabelle nel documento;
+    - indice delle figure: indice presente solo se sono presenti figure nel documento.
 
 + *Contenuto del file*: sezione successiva alla tabella di tracciamento delle modifiche. Rappresenta il corpo del documento, suddiviso in paragrafi.
 
@@ -880,7 +882,7 @@ I verbali assumono una struttura diversa rispetto agli altri documenti, dato il 
   - data e ora nel formato (gg-mm-aaaa, hh:mm ~ hh:mm);
   - partecipanti;
   - assenti;
-  - referente aziendale (se presente);
+  - referente aziendale (se presente).
 - *ordine del giorno*: elenco degli argomenti trattati durante la riunione;
 - *organizzazione attività*: elenco delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva.
 - *firma partecipanti esterni* (se presenti): firma dei partecipanti esterni alla riunione. 
@@ -903,7 +905,7 @@ Ogni documento alla fine del nome riporta anche la versione nel formato _\_vX.Y.
 esempio: `Norme di Progetto_v1.0.0.pdf`.
 
 ===== Formato data
-All'intenro del documento, le date seguiranno il formato locale _dd/mm/yyyy_, mentre all'interno dei nomi dei file e dei commit di GitHub, il formato utilizzato sarà _yyyy-mm-dd_, dove:
+All'interno del documento, le date seguiranno il formato locale _dd/mm/yyyy_, mentre all'interno dei nomi dei file e dei commit di GitHub, il formato utilizzato sarà _yyyy-mm-dd_, dove:
 - *dd*: numero del giorno con due cifre;
 - *mm*: numero del mese con due cifre;
 - *yyyy*: numero dell'anno con quattro cifre.
@@ -912,10 +914,10 @@ All'intenro del documento, le date seguiranno il formato locale _dd/mm/yyyy_, me
 Convenzioni stilistiche specifiche per i prodotti documentali.
 
 ===== TODO 
-Per indicare sezioni del documento da completare, il gruppo ha deciso di utilizzare il termine TODO, che verrà in automatico mostrato in rosso e riquadrato, riportato il messaggio _riferimento assente_.\
+Per indicare sezioni del documento da completare, il gruppo ha deciso di utilizzare il termine TODO, che verrà in automatico mostrato in rosso e riquadrato, riportando il messaggio _riferimento assente_.\
 Il risultato è il seguente: TODO.\
 Questo permette di individuare facilmente le parti del documento da completare.
-===== corsivo, grassetto, maiuscole e monospace
+===== Corsivo, grassetto, maiuscole e monospace
 _Corsivo_:
 - citazioni;
 - formati;
@@ -924,23 +926,23 @@ _Corsivo_:
 
 *Grassetto*:
 - titoli;
-- parole chiave e significativi;
+- parole chiave e significative;
 - termini iniziali di elenchi puntati che necessitano spiegazione.
 
 MAIUSCOLO:
 - acronimi;
 - nomi propri;
 - nomi strumenti e tecnologie;
-- Iniziale nomi ruoli;
-- Iniziale parole nei nomi documenti ad eccezione di preposizioni e articoli. Riferimento nomi file @norma_nomi_documenti.
+- iniziale nomi ruoli;
+- iniziale parole nei nomi documenti ad eccezione di preposizioni e articoli. Riferimento nomi file @norma_nomi_documenti.
 
 `Monospace`:\
-- nome di un file;
-- parametri 
-- porzioni di codice. Riferimento nomi file @norma_nomi_documenti.
+- nome di un file (Riferimento nomi file @norma_nomi_documenti);
+- parametri;
+- porzioni di codice. 
 
 ===== Elenchi
-- si utilizzano elenchi numerati se gli elementi mostratti richiedono un ordine (es. ordine delle sezioni);
+- si utilizzano elenchi numerati se gli elementi mostrati richiedono un ordine (es. ordine delle sezioni);
 - si utilizzano elenchi non numerati se gli elementi mostrati non richiedono un ordine (es. lista di attività);
 - al termine di ogni elemento viene posto ";" ad eccezione dell'ultimo elemento che viene posto ".".
 

@@ -671,7 +671,7 @@ L'aggiornamento di una delle cifre del numero di versione azzera le cifre di ril
 + Dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.  
 
 
-==== Tracciamento modifiche
+==== Tracciamento modifiche <tracciamento-modifiche>
 Il tracciamento delle modifiche avviene per mezzo di automazioni che permettono di identificare:
 - versione del documento modificato;
 - data di modifica (gg-mm-aaaa, ddd);
@@ -718,7 +718,7 @@ Al fine di semplificare la procedura di creazione di un documento, è stato cond
 
 ==== Astro
 
-==== GitHub
+==== GitHub <repository-github>
 Lo strumento di versionamento scelto dal gruppo è GitHub.
 Il gruppo Error_418 ha creato un'organizzazione omonima su GitHub in modo da gestire e separare il lavoro in più repository pensate per scopi e contenuti diversi:
 - *Documenti*: repository contenente la documentazione prodotta;
@@ -828,3 +828,133 @@ La timeline permette di mostrare il grafico di Gantt delle attività evidenziand
 ===== Grafici
 Jira offre la possibilità di produrre grafici e report relativi all'avanzamento e alla tracciabilità delle task. Tali strumenti permettono di avere delle metriche di valutazione dell'andamento del progetto e di individuare eventuali criticità.
 Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story points di ogni attività.
+
+== Processo di gestione delle informazioni
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.6_
+=== Scopo
+Lo scopo della gestione delle informazionie è generare, ottenere, confermare, trasformare, conservare, recuperare, distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
+
+Le informazioni possono essere tecniche, di progetto, organizzative e di accordo.
+
+=== Informazioni gestite 
+Le informazioni gestite dal gruppo sono:
+- documentazione:
+  - Piano di Progetto;
+  - Norme di Progetto;
+  - Piano di Qualifica;
+  - Analisi dei Requisiti;
+  - Glossario;
+  - Verbali.
+- codice sorgente:
+  - Proof of Concept;
+  - Minimun Viable Product.
+
+Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e distribuiti all'interno dei repository del gruppo. 
+
+=== Documentazione
+==== Struttura <struttura-documenti>
+Ogni documento segue una struttura standard, stabilita nel template _template.typ_. I documenti pertanto sono così strutturati:
++ *Cover page*: la cover page è la prima pagina del documento, e contiene le seguenti informazioni:
+  - nome del gruppo;
+  - link all'organizzazione GitHub;
+  - mail del gruppo;
+  - logo;
+  - titolo del documento;
+  - sottotitolo del documento;
+  - versione;
+  - stato;
+  - tipo di uso: interno od esterno;
+  - responsabile del gruppo;
+  - redattori;
+  - verificatori;
+  - destinatari;
+  - figure esterne se presenti.
+
++ *Registro delle modifiche*: sezione successiva agli indici. Maggiori dettagli sono visibili alla sezione dedicata (@tracciamento-modifiche).
+
++ *Indici*: sezione successiva agli indici. Sono presenti tre tipologie di indici:
+    - indice del contenuto: indice sempre presente che rappresenta i paragrafi del documento;
+    - indice delle tabelle: indice presente solo se sono presenti tabelle nel documento;
+    - indice delle figure: indice presente solo se sono presenti figure nel documento.
+
++ *Contenuto del file*: sezione successiva alla tabella di tracciamento delle modifiche. Rappresenta il corpo del documento, suddiviso in paragrafi.
+
+===== Verbali 
+I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e ridotta lunghezza. I verbali sono così strutturati:
+- *cover page* (@struttura-documenti);
+- *informazioni generali*:
+  - luogo;
+  - data e ora nel formato (gg-mm-aaaa, hh:mm ~ hh:mm);
+  - partecipanti;
+  - assenti;
+  - referente aziendale (se presente).
+- *ordine del giorno*: elenco degli argomenti trattati durante la riunione;
+- *organizzazione attività*: elenco delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva.
+- *firma partecipanti esterni* (se presenti): firma dei partecipanti esterni alla riunione. 
+
+=== Stile e convenzioni
+Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.
+L'obiettivo è perseguire:
+- Chiarezza;
+- Leggibilità;
+- Mantenibilità.
+
+==== Convenzioni stilistiche globali
+Convenzioni stilistiche valide sia per i prodotti documentali che software.
+
+===== Nomi dei documenti <norma_nomi_documenti>
+Ogni parola dei titoli dei documenti deve iniziare con la lettera maiuscola, ad eccezione delle preposizioni e degli articoli.\
+I verbali avranno come titolo la data del verbale nel formato _yyyy-mm-dd_.
+Ogni documento alla fine del nome riporta anche la versione nel formato _\_vX.Y.Z_. \
+
+esempio: `Norme di Progetto_v1.0.0.pdf`.
+
+===== Formato data
+All'interno del documento, le date seguiranno il formato locale _dd/mm/yyyy_, mentre all'interno dei nomi dei file e dei commit di GitHub, il formato utilizzato sarà _yyyy-mm-dd_, dove:
+- *dd*: numero del giorno con due cifre;
+- *mm*: numero del mese con due cifre;
+- *yyyy*: numero dell'anno con quattro cifre.
+
+==== Convenzioni stilistiche documentali
+Convenzioni stilistiche specifiche per i prodotti documentali.
+
+===== TODO 
+Per indicare sezioni del documento da completare, il gruppo ha deciso di utilizzare il termine TODO, che verrà in automatico mostrato in rosso e riquadrato, riportando il messaggio _riferimento assente_.\
+Il risultato è il seguente: TODO.\
+Questo permette di individuare facilmente le parti del documento da completare.
+===== Corsivo, grassetto, maiuscole e monospace
+_Corsivo_:
+- citazioni;
+- formati;
+- nomi di practice;
+- nomi propri di dominio.
+
+*Grassetto*:
+- titoli;
+- parole chiave e significative;
+- termini iniziali di elenchi puntati che necessitano spiegazione.
+
+MAIUSCOLO:
+- acronimi;
+- nomi propri;
+- nomi strumenti e tecnologie;
+- iniziale nomi ruoli;
+- iniziale parole nei nomi documenti ad eccezione di preposizioni e articoli. Riferimento nomi file @norma_nomi_documenti.
+
+`Monospace`:\
+- nome di un file (Riferimento nomi file @norma_nomi_documenti);
+- parametri;
+- porzioni di codice. 
+
+===== Elenchi
+- si utilizzano elenchi numerati se gli elementi mostrati richiedono un ordine (es. ordine delle sezioni);
+- si utilizzano elenchi non numerati se gli elementi mostrati non richiedono un ordine (es. lista di attività);
+- al termine di ogni elemento viene posto ";" ad eccezione dell'ultimo elemento che viene posto ".".
+
+===== Glossario
+Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una G in corsivo a pedice.
+
+=== Distribuzione delle informazioni
+Il gruppo condivide il materiale prodotto all'interno di un repository dedicato reperibile al link:\
+#align(link("https://github.com/Error-418-SWE/Documenti"), center)
+Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.

@@ -12,6 +12,8 @@
   timeEnd: "",
   showLog: false,
   showIndex: true,
+  showImagesIndex: true,
+  showTablesIndex: true,
   isExternalUse: false,
   body
 ) = {
@@ -71,6 +73,13 @@ show outline.entry.where(
 show "WIP": it => [
   #text(it, fill: red)
 ]
+show "TODO": it => [
+  #box(
+    stroke: red,
+    inset: 0.15em,
+    text("Riferimento assente", fill: red, weight: "bold")
+  )
+]
 
 // Define constants
 let groupName = "Error_418"
@@ -89,6 +98,8 @@ let timeStart = timeStart
 let timeEnd = timeEnd
 let showLog = showLog
 let showIndex = showIndex
+let showImagesIndex = showImagesIndex
+let showTablesIndex = showTablesIndex
 let missingMembers = missingMembers
 let externalParticipants = externalParticipants
 let authors = authors
@@ -362,13 +373,33 @@ if (showLog and docType != "verbale") {
   pagebreak()
 }
 
-// Table of contents
+// Index of contents
 if showIndex and docType != "verbale" {
   page(numbering: none)[
     #outline(
       title: "Indice dei contenuti",
       depth: 3,
       indent: true
+    )
+  ]
+  pagebreak()
+}
+// Index of images
+if showImagesIndex and docType != "verbale" {
+  page(numbering: none)[
+    #outline(
+      title: "Indice delle immagini",
+      target: figure.where(kind: image)
+    )
+  ]
+  pagebreak()
+}
+// Index of tables
+if showTablesIndex and docType != "verbale" {
+  page(numbering: none)[
+    #outline(
+      title: "Indice delle tabelle",
+      target: figure.where(kind: table)
     )
   ]
   pagebreak()

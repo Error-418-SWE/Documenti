@@ -469,6 +469,62 @@ inset:7pt,
 [da inserire]
 
 
+== Sesto Sprint dal 11-12-2023 al 18-12-2023
+
+=== Obiettivi prefissati
+Gli obbiettivi del sesto sprint si focalizzano sul miglioramento dei PoC e dei diversi documenti. Nel dettaglio:
+- avanzare con la redazione del PoC "A" integrando il funzionamento dei bin;
+- approfondire e migliorare l'utilizzo di Docker nel PoC corrispondente;
+- migliorare le Action di GitHub risolvendo eventuali problemi o aggiungendo funzionalità;
+- proseguire con il lavoro sul documento Norme di Progetto;
+- redigere introduzione del documento Piano di Qualifica;
+- adeguare l'Analisi dei Requisiti in funzione di quanto emerso durante lo scorso meeting con il professor Cardin;
+- aggiungere nel file di Analisi dei Requisiti la tabella che correli gli Use Case ai requisiti.
+
+
+=== Preventivo costi
+Nel sesto sprint il team svolge compiti correttivi incentrati sul miglioramento dei documenti Analisi dei Requisiti e Norme di Progetto.
+Il team continua a produrre e migliorare PoC e inizia a scrivere il documento Piano di Qualifica.
+In quest'ottica, vede l'impiego principale delle figure:
+
+- *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
+- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira, redigere i verbali e aggiornare il documento Piano di Progetto;
+- *Analista*: al fine di redarre il documento di Analisi dei Requisiti con relativi diagrammi UML;
+- *Progettista*: al fine di progettare i POC;
+- *Programmatore*: al fine di sviluppare i POC;
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti assicurandosi che siano coerenti con le Norme di Progetto.
+
+
+#set text(
+  size: 10pt
+)
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr,2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:8pt,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+[Carraro Riccardo], [3],  [/],    [/],    [/],    [/],   [/], [3],
+[Gardin Giovanni],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+[Nardo Silvio],     [/],  [3],    [/],    [/],    [/],   [/], [3],
+[Oseliero Antonio], [/],  [/],    [/],    [1],    [3],   [/], [4],
+[Todesco Mattia],   [/],  [/],    [/],    [/],    [/],   [3], [3],
+[Zaccone Rosario],  [/],  [/],    [/],    [1],    [3],   [/], [4],
+[Totale ore ruolo], [3],  [3],    [8],    [2],    [6],   [3], [25],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+[Costo ruolo],      [90,00], [60,00], [200,00], [50,00], [90,00], [45,00], [535,00]
+)
+
+#align(center, text("Tabella 11: preventivo sesto sprint"))
+
+#set text(
+  size: 11pt
+)
+
+=== Diagramma Gantt
+[da inserire]
+
 
 
 
@@ -701,6 +757,72 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 - Amministratore: l'utilizzo di Jira in maniera approssimativa ha portato ad un monte ore inferiore a quanto previsto;
 
 - Verificatore: i numerosi merge conflicts hanno portato a notevoli rallentamenti in fase di review.
+
+=== Burndown-chart
+[da inserire]
+
+
+== Quinto Sprint dal 04-12-2023 al 11-12-2023
+
+=== Obiettivi raggiunti
+- miglioramento e aggiornamento documento Analisi dei Requisiti;
+- realizzazione PoC relativo alla creazione e posizionamento di scaffali dell'ambiente di lavoro;
+- realizzazione PoC relativo alla lettura e utilizzo di file SVG e comunicazione con Database;
+- realizzazione PoC che integra l'utilizzo di Docker;
+- incontro con Proponente in data 06-12-23;
+- incontro con professor Cardin in data 07-12-23;
+- redazione del Glossario;
+- aggiornamento documento Norme di Progetto;
+- aggiornamento documento Piano di Progetto.
+
+=== Obiettivi mancati
+- miglioramento GitHub Actions.
+
+=== Analisi problematiche insorte
+Durante il meeting di retrospettiva sono emerse le seguenti problematiche da migliorare:
+- mancanza di precise convenzioni da adottare riguardanti il codice;
+- lavoro concentrato principalmente nel weekend;
+- richiesta di maggiore partecipazione dei membri del gruppo sulle board di Miro;
+
+=== Risoluzioni attuate
+Conseguentemente ai problemi rilevati, sono state individuate le relative soluzioni da adottare:
+- normare le convenzioni di stesura del codice nelle Norme di Progetto;
+- impegnarsi a fissare delle scadenze infrasettimanali così da ridurre il carico di lavoro nel weekend;
+- utilizzare le board su Miro con anticipo aggiungendo il proprio feedback.
+
+=== Analisi costi di sprint effettivi
+#set text(
+  size: 9pt
+)
+
+#table(
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr,2fr, 2fr),
+fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+align: center,
+inset:8pt,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+[Carraro Riccardo], [3],  [/],    [/],    [/],    [(2)],   [/], [5],
+[Gardin Giovanni],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+[Nardo Silvio],     [/],  [3(-1)],[/],    [/],    [(2)],   [/], [4],
+[Oseliero Antonio], [/],  [/],    [/],    [3(-2)],[(2)],   [/], [3],
+[Todesco Mattia],   [/],  [/],    [/],    [/],    [/],   [3], [3],
+[Zaccone Rosario],  [/],  [/],    [/],    [3(-2)],[(2)],   [/], [3],
+[Totale ore ruolo], [3],  [2],    [8],    [2],    [8],   [3], [24],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+[Costo ruolo],      [90,00], [40,00], [200,00], [50,00], [120,00], [45,00], [545,00]
+)
+
+#align(center, text("Tabella 10: consuntivo quinto sprint"))
+
+#set text(
+  size: 11pt
+)
+
+\
+Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabile e l'Amministratore) hanno impiegato ore produttive come Programmatori, questo ha in parte significato una riduzione delle ore produttive previste per il ruolo assegnato.
+
+
 
 === Burndown-chart
 [da inserire]

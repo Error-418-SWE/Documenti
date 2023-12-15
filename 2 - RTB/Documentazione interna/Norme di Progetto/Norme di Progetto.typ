@@ -684,7 +684,12 @@ Tali informazioni sono salvate in un file CSV, unico per ogni documento. Questo 
 
 Ogni documento, nella sezione direttamente sottostante all'indice, mostrerà in formato tabellare le informazioni relative al tracciamento delle modifiche, leggendo le informazioni dal file _log.csv_.
 
-#figure(image("./imgs/esempio_tracciamento_modifiche.png", format: "png"), caption: [Esempio tracciamento modifiche])
+#figure(table(
+    align: left,
+    columns: (1fr, 1.7fr, 0.8fr, 5fr, 2.1fr, 2.1fr),
+    [*Ver.*],[*Data*],[*PR*],[*Titolo*],[*Redattore*],[*Verificatore*],
+    [1.0.0], [11-12-2023,\ Mon], [90], [DOC-123 Redazione paragrafo \ {nome_paragrafo}], [Riccardo \ Carraro], [Mattia \ Todesco]
+), caption: [Esempio tracciamento modifiche])
 
 === Tecnologie
 ==== Typst

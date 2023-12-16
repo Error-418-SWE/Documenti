@@ -860,6 +860,34 @@ $bold("Scenario: ")$
 
 = Requisiti
 
+== Codice identificativo
+Ogni requisito è caratterizzato da un codice identificativo definito nel seguente modo:
+#align(`[Tipologia][Importanza]-[Numero]`, center)
+Dove:
+- `Tipologia` può assumere i valori:
+  - `F`: funzionale;
+  - `Q`: di qualità;
+  - `V`: di vincolo.
+- `Importanza` può assumere i valori:
+  - `M`: mandatory, obbligatorio;
+  - `D`: desiderabile;
+  - `O`: opzionale.
+- `Numero` rappresenta l'identificativo numerico del requisito. Se sono presenti sottocasi, il loro numero viene rappresentato come segue:
+#align(`NumeroPadre.NumeroFiglio`, center)
+
+
+== Requisiti funzionali
+
+#figure(
+  table(
+    columns: 4,
+    align: left,
+    [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
+    [], [], [], [],
+  ),
+  caption: "Requisiti funzionali"
+)
+
 == Requisiti di qualità
 
 #figure(

@@ -849,6 +849,17 @@ $bold("Scenario: ")$
 - l'utente effettua uno zoom in o uno zoom out sul magazzino;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
+#set heading(numbering: (..nums) => {
+  let values = nums.pos();
+  if (values.len() > 0){
+      values.at(values.len()-1) = values.at(values.len()-1);
+  }
+  values.at(0) = values.at(0)-10;
+  return values.map(str).join(".");
+})
+
+= Requisiti
+
 == Requisiti di qualità
 
 #figure(

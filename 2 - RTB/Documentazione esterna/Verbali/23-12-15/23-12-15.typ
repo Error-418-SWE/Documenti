@@ -50,7 +50,7 @@ Relativamente ai PoC da realizzare in fututro e alla luce delle conoscenze acqui
 - è importante precaricare dal database una parte dei dati delle merci così da poter mostrare a schermo informazioni di base, per esempio quali sono i bin occupati. Le restanti informazioni delle singole merci necessiteranno di un'interrogazione al database on demand;
 - il piano inferiore degli scaffali è verosimile che coincida con il pavimento dell'area di lavoro;
 - è corretto che i bin all'interno degli scaffali vengano generati automaticamente alla creazione dello scaffale date le dimensioni dello stesso;
-- non è richiesto ma è desiderabile poter creare scaffali conteneti piani di altezze diverse;
+- non è richiesto ma è desiderabile poter creare scaffali contenenti piani di altezze diverse;
 - in assenza di API, le loro iterrogazioni possono essere simulate con risposte randomiche.
 
 

@@ -23,7 +23,7 @@ $bold("Keep doings:")$
 
 $bold("Improvements:")$
 - A causa di imprevisti tecnici, si sono verificati casi di insufficiente comunicazione tra i membri del gruppo creando il cosiddetto "effetto sottomarino" producendo rallentamenti dei lavori;
-- lo stato di avanzamento del documento Norme di Progetto è indietro rispetto al livello atteso dato il periodo.
+- lo stato di avanzamento del documento Norme di Progetto sta procedendo più lentamente rispetto al livello atteso.
 
 
 $bold("Relativamente agli improvements le relative soluzioni accordate sono:")$

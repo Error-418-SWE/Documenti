@@ -873,4 +873,18 @@ Entrambe le classificazioni si strutturano su tre livelli: basso, medio, alto.
   caption: "Matrice degli stakeholder."
 )
 
+=== Strategia di identificazione, analisi e trasformazione dei bisogni
+
+I bisogni espressi da Committente e Fornitore sono raccolti, catalogati, analizzati ed espressi nel documento di _Analisi dei Requisiti_ prodotto dal gruppo.
+
+Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, questo processo è attuato per mediare i contrasti.
+
+Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi di ciclo di vita del sistema software (descritti in TODO) sono affrontati tramite il processo di gestione dei rischi TODO.
+
+Gli strumenti di comunicazoine a supporto delle attività di processo, descritti nel dettaglio in TODO, sono Zoom e Miro.
+
 === Gestione dei bisogni e dei requisiti
+
+VEDI 29148 clause 5.2
+
+=== Definizione

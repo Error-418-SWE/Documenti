@@ -19,7 +19,7 @@
 == Analisi Keep doings e Improvements
 $bold("Keep doings:")$
 - ugualmente allo scorso sprint il gruppo ha raggiunto un soddisfacente grado di familiarità con le tecnologie e le ripartizioni dei lavori;
-- avendo deciso, in seguito ai problemi riscontrati nello scorso sprint, porre ai lavori scadenze infrasettimanali, le task sono state completate continuativamente, evitando sovraccarichi durante il fine settimana.
+- avendo deciso, in seguito ai problemi riscontrati nello scorso sprint, di porre ai lavori scadenze infrasettimanali, le task sono state completate continuativamente, evitando sovraccarichi durante il fine settimana.
 
 $bold("Improvements:")$
 - a causa di imprevisti tecnici, si sono verificati casi di insufficiente comunicazione tra i membri del gruppo creando il cosiddetto "effetto sottomarino" producendo rallentamenti dei lavori;

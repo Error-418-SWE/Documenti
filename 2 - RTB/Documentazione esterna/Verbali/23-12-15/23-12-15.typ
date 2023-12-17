@@ -8,9 +8,9 @@
     "Nardo Silvio",
   ),
   externalParticipants : (
-    (name: "Alberton Michela", role: "Referente aziendale"),
+    (name: "Alberton Michela", role: "Membro azienda proponente"),
     (name: "Bassani Matteo", role: "Referente aziendale"),
-    (name: "Ruffin Filippo", role: "Referente aziendale"),
+    (name: "Ruffin Filippo", role: "Membro azienda proponente"),
   ), 
   timeStart: "12:00",
   timeEnd: "12:30",

@@ -373,32 +373,32 @@ Nel quarto sprint il team svolge compiti correttivi incentrati sul miglioramento
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti, al fine di aggiornare il documento di Piano di Progetto;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti, al fine di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti;
 - *Analista*: al fine di perfezionare la stesura degli use case individuati e redatte una prima versione di Analisi dei Requisiti;
-- *Progettista*: al fine di condurre uno studio esplorativo sulla libreria Three.js.
+- *Progettista*: al fine di condurre uno studio esplorativo sulla libreria Three.js;
+- *Programmatore*: al fine di esplorare in modo pratico le tecnologie relative ai PoC;
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità degli Use Case individuati nel documento di Analisi dei Requisiti.
 
-In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce.
 
 #set text(
-  size: 10pt
+  size: 9pt
 )
 
 #table(
-columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr, 2fr),
+columns: (3fr, 2fr, 2fr, 2fr, 2fr, 2fr,2fr, 2fr),
 fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
 align: center,
-inset:7pt,
-[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
-[Banzato Alessio],  [3],  [/],    [/],    [/], [/],   [3],
-[Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
-[Gardin Giovanni],  [/],  [/],    [/],    [/], [3],   [3],
-[Nardo Silvio],     [/],  [/],    [/],    [3], [/],   [3],
-[Oseliero Antonio], [/],  [/],    [4],    [/], [/],   [4],
-[Todesco Mattia],   [/],  [3],    [/],    [/], [/],   [3],
-[Zaccone Rosario],  [/],  [3],    [/],    [/], [/],   [3],
-[Totale ore ruolo], [3],  [6],    [8],    [3], [3],   [23],
-[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
-[Costo ruolo], [90,00], [120,00], [200,00], [75,00], [45,00], [530,00]
+inset:8pt,
+[*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+[Banzato Alessio],  [3],  [/],    [/],    [/], [/], [/],   [3],
+[Carraro Riccardo], [/],  [/],    [3],    [/], [1], [/],   [4],
+[Gardin Giovanni],  [/],  [/],    [/],    [/], [/], [3],   [3],
+[Nardo Silvio],     [/],  [/],    [/],    [1], [2], [/],   [3],
+[Oseliero Antonio], [/],  [/],    [4],    [/], [/], [/],   [4],
+[Todesco Mattia],   [/],  [3],    [/],    [/], [/], [/],   [3],
+[Zaccone Rosario],  [/],  [3],    [/],    [/], [/], [/],   [3],
+[Totale ore ruolo], [3],  [6],    [7],    [1], [3], [3],   [23],
+[Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+[Costo ruolo],      [90,00], [120,00], [175,00], [25,00], [45,00],[45,00], [500,00]
 )
 
 #align(center, text("Tabella 7: preventivo quarto sprint"))

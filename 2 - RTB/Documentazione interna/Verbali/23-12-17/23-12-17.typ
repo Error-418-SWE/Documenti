@@ -34,7 +34,7 @@ $bold("Relativamente agli improvements le relative soluzioni accordate sono:")$
 == To do e divisione ruoli
 - I progettisti e il responsabile lavoreranno nella stesura del documento Norme di Progetto aggiungendo almeno cinque nuovi capitoli;
 - il membro del gruppo tra quelli assegnati a lavorare sulle Norme di Progetto che farà un solo capitolo, si dovrà impegnare a studiare le tecnologie relative all'interfaccia utente (Angular, React, Next.js) per capire quale è più adatta al nostro progetto;
-- due membri lavoreranno ai PoC: il programmatore si impegnerà nell'integrazione dei PoC minori in un singolo PoC principale, mentre il verificatore proseguirà lo sviluppo del lato frontend dell'applicativo;
+- due membri lavoreranno ai PoC: il programmatore si impegnerà nell'integrazione dei PoC minori in un singolo PoC principale, mentre il membro del gruppo asseganato al ruolo di verificatore proseguirà, come programmatore, con lo sviluppo del lato frontend dell'applicativo;
 - l'analista continuerà a redarre il documento di Analisi dei Requisiti migliorando quanto fatto e completando la tabella dei requisiti;
 - l'amministratore dovrà: 
   - redigere i verbali;

@@ -55,5 +55,5 @@ Relativamente ai PoC da realizzare in fututro e alla luce delle conoscenze acqui
 
 
 == Organizzazione meeting futuri   
-A causa delle festività natalizie questo è stato l'ultimo meeting esterno previsto per l'anno 2023. Il prossimo incontro è previsto per gli inizi del mese di gennaio quando lo stato dei lavorì sarà prossimo alla valutazione della fase RTB del progetto.
+A causa delle festività natalizie questo è stato l'ultimo meeting esterno previsto per l'anno 2023. Il prossimo incontro è previsto per gli inizi del mese di gennaio quando lo stato dei lavori sarà prossimo alla valutazione della fase RTB del progetto.
 

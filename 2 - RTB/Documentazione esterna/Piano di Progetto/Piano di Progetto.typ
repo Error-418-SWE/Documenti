@@ -374,9 +374,9 @@ Nel quarto sprint il team svolge compiti correttivi incentrati sul miglioramento
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti, al fine di aggiornare il documento di Piano di Progetto;
 - *Analista*: al fine di perfezionare la stesura degli use case individuati e redatte una prima versione di Analisi dei Requisiti;
-- *Progettista*: al fine di condurre uno studio esplorativo sulla libreria Three.js.
+- *Progettista*: al fine di condurre uno studio esplorativo sulla libreria Three.js;
 - *Programmatore*: al fine di esplorare in modo pratico le tecnologie relative ai PoC;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti, al fine di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti;
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità degli Use Case individuati nel documento di Analisi dei Requisiti.
 
 
 #set text(

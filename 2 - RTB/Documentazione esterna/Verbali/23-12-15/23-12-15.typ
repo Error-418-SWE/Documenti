@@ -17,7 +17,7 @@
 );
 
 = Ordine del giorno
-Ai referenti aziendali sono stati esposti gli avanzamenti svolti sui PoC rispetto al precedente meeting esterno e sono sorte discussioni relativamente a:
+Ai referenti aziendali sono stati esposti i progressi sui PoC rispetto al precedente meeting esterno e sono sorte discussioni relativamente a:
 - Analisi dei Requisiti;
 - tecnologie da utilizzare e utilizzate;
 - feature dei PoC;

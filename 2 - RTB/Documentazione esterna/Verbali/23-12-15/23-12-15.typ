@@ -20,7 +20,7 @@
 Ai referenti aziendali sono stati esposti gli avanzamenti svolti sui PoC rispetto al precedente meeting esterno e sono sorte discussioni relativamente a:
 - Analisi dei Requisiti;
 - tecnologie da utilizzare e utilizzate;
-- feature del PoC;
+- feature dei PoC;
 - meeting futuri.
 
 == Considerazioni sull'Analisi dei Requisiti

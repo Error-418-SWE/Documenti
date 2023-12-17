@@ -291,7 +291,7 @@ $bold("Estensioni: ")$
 = Inserimento nuove dimensioni del magazzino
 
 #figure(image("./imgs/uc2.png", format: "png"), caption: [UML UC-2])
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
 
 $bold("Attore: ")$
@@ -313,7 +313,7 @@ $bold("Estensioni: ")$
 
 == Visualizzazione errore dimensioni magazzino troppo piccole
 
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 i dati inseriti per la modifica dell'ambiente di lavoro generano conflitti con quanto configurato precedentemente.
 
 $bold("Attore: ")$
@@ -332,7 +332,7 @@ $bold("Scenario: ")$
 = Gestione scaffali
 #figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])
 == Creazione scaffale
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata. Seccessivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
 
 $bold("Attore: ")$
@@ -354,7 +354,7 @@ $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
 
 == Modifica scaffale
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 modifica delle caratteristiche di uno scaffale già esistente.
 
 $bold("Attore: ")$
@@ -375,7 +375,7 @@ $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
 
 == Spostamento scaffale
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 L'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
 
 $bold("Attore: ")$
@@ -395,7 +395,7 @@ $bold("Estensioni: ")$
 - UC-3.3.1 Visualizzazione errore spostamento dello scaffale in zona non libera
 
 === Visualizzazione errore spostamento dello scaffale in zona non libera
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 è stata richiesto lo spostamento di uno scaffale in una zona non libera.
 
 $bold("Attore: ")$
@@ -412,7 +412,7 @@ $bold("Scenario: ")$
 - l'utente ha richiesto lo spostamento di uno scaffale in una zona non libera.
 
 == Eliminazione scaffale
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 lo scaffale selezionato presente nell'ambiente viene eliminato.
 
 $bold("Attore: ")$
@@ -436,7 +436,7 @@ $bold("Estensioni: ")$
 - UC-3.4.1 Visualizzazione errore scaffale da eliminare non vuoto.
 
 === Visualizzazione errore scaffale da eliminare non vuoto
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 è stata richiesta l'eliminazione di uno scaffale contenente almeno un bin non vuoto.
 
 $bold("Attore: ")$
@@ -519,7 +519,7 @@ $bold("Estensioni: ")$
 - UC-4.3.1 Errore cancellazione bin non vuoto.
 
 === Errore cancellazione bin non vuoto
-$bold("Descrizione: ")$ 
+$bold("Descrizione: ")$
 è stata richiesta l'eliminazione di un bin non vuoto.
 
 $bold("Attore: ")$
@@ -878,7 +878,7 @@ Dove:
     [FM-1.2.2], [Obbligatorio], [L'utente deve poter inserire manualmente la larghezza del magazzino.], [UC-1.2],
     [FM-1.2.3], [Obbligatorio], [L'utente deve poter inserire manualmente l'altezza del magazzino.], [UC-1.2],
     [FM-1.2.4], [Obbligatorio], [L'utente visualizza un errore dato dalla non validità dei dati inseriti.], [UC-1.2.1],
-    
+
     [FM-2], [Obbligatorio], [L'utente deve poter modificare le dimensioni del magazzino dopo la sua creazione.], [UC-2],
     [FM-2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza del magazzino dopo la sua creazione.], [UC-2],
     [FM-2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza del magazzino dopo la sua creazione.], [UC-2],
@@ -887,7 +887,7 @@ Dove:
     [FM-2.4.1], [Obbligatorio], [L'utente visualizza un errore causato dall'inserimento di una lunghezza che eliminerebbe scaffali o loro parti durante la modifica.], [UC-2.1],
     [FM-2.4.2], [Obbligatorio], [L'utente visualizza un errore causato dall'inserimento di una larghezza che eliminerebbe scaffali o loro parti durante la modifica.], [UC-2.1],
     [FM-2.4.3], [Obbligatorio], [L'utente visualizza un errore causato dall'inserimento di un'altezza che eliminerebbe piani di scaffali durante la modifica.], [UC-2.1],
-    
+
     [FM-3], [Obbligatorio], [L'utente deve poter gestire gli scaffali.], [UC-3],
     [FM-3.1], [Obbligatorio], [L'utente deve poter creare gli scaffali.], [UC-3.1],
     [FM-3.1.1], [Obbligatorio], [L'utente deve poter definire le dimensioni degli scaffali.], [UC-3.1],
@@ -921,7 +921,7 @@ Dove:
     [FM-4.2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza dei bin.], [UC-4.1],
     [FM-4.3], [Obbligatorio], [L'utente deve poter eliminare i bin.], [UC-4.3],
     [FM-4.3.1], [Obbligatorio], [L'utente visualizza un errore riguardo la cancellazione di un bin non vuoto.], [UC-4.3.1],
-    
+
     [FM-5], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dati dimensionali non validi.], [UC-5],
     [FM-5.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dimensioni negative o uguali a zero.], [UC-5.1],
     [FM-5.1.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di una lunghezza negativa o uguale a zero.], [UC-5.1],
@@ -930,6 +930,38 @@ Dove:
     [FM-5.2], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dimensioni eccessive.], [UC-5.2],
     [FM-5.2.1], [Obbligatorio], [L'utente visualizza un errore per l'inserimento di dimensioni che creano collisioni tra l'oggetto modificato e altri elementi dell'ambiente.], [UC-5.2],
     [FM-5.2.2], [Obbligatorio], [L'utente visualizza un errore per l'inserimento di dimensioni che non permettono all'oggetto di essere inserito nell'ambiente.], [UC-5.2],
+
+    [FM-6],[Obbligatorio], [L'utente deve poter richiedere il caricamento dei dati da database], [UC-6],
+    [], [], [L'utente deve poter configurare i parametri di connessione al database], [],
+    [], [], [L'utente deve poter indicare il nome del database], [],
+    [], [], [L'utente deve poter indicare il nome utente per la connessione al database], [],
+    [], [], [L'utente deve poter indicare la password per la connessione al database], [],
+    [], [], [L'utente deve poter indicare l'indirizzo del database], [],
+    [], [], [L'utente deve poter indicare la porta del database], [],
+    [], [], [L'utente deve poter testare la connessione al database], [],
+    [], [], [L'utente visualizza un errore se i dati contenuti nel database non sono conformi], [],
+    [], [], [L'utente visualizza un errore se i dati contenuti nel database sono errati], [],
+
+    [], [], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro], [],
+    [], [], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro tramite _drag and drop_], [],
+    [], [], [Il sistema deve interrogare una API RESTful per accertare che lo spostamento sia lecito], [],
+    [], [], [Il sistema deve evidenziare il bin di partenza per rendere evidente la richiesta di spostamento], [],
+    [], [], [Il sistema deve evidenziare il bin di destinazione per rendere evidente la richiesta di spostamento], [],
+
+    [], [], [L'utente deve poter visualizzare le informazioni di un bin selezionato], [],
+    [], [], [L'utente deve poter visualizzare le informazioni del prodotto contenuto in un bin selezionato], [],
+
+    [], [], [L'utente deve poter ricercare un prodotto], [],
+    [], [], [L'utente deve poter ricercare un prodotto per ID], [],
+    [], [], [L'utente deve poter ricercare un prodotto per nome], [],
+    [], [], [L'utente deve poter ricercare uno scaffale], [],
+    [], [], [Il sistema deve fornire la lista dei risultati di ricerca], [],
+    [], [], [Il sistema deve evidenziare i risultati di ricerca], [],
+
+    [], [], [L'utente deve poter muovere la visuale sui tre assi], [], // SICURO?
+    [], [], [L'utente deve poter ruotare la visuale], [],
+    [], [], [L'utente deve poter effettuare l'operazione di zoom in], [],
+    [], [], [L'utente deve poter effettuare l'operazione di zoom out], [],
   ),
   caption: "Requisiti funzionali"
 )

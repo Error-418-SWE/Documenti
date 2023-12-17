@@ -875,6 +875,7 @@ Dove:
 - `Numero` rappresenta l'identificativo numerico del requisito. Se sono presenti sottocasi, il loro numero viene rappresentato come segue:
 #align(`NumeroPadre.NumeroFiglio`, center)
 
+#show figure: set block(breakable: true)
 
 == Requisiti funzionali
 
@@ -883,7 +884,69 @@ Dove:
     columns: 4,
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [], [], [], [],
+    [FM-1], [Obbligatorio], [L'utente deve poter creare il magazzino.], [UC-1],
+    [FM-1.1], [Obbligatorio], [L'utente deve poter caricare un file SVG contenente la pianta del magazzino.], [UC-1.1],
+    [FD-1.1.1], [Desiderabile], [L'utente deve poter definire le altezze degli elementi del file SVG tramite trascinamento verso l'alto.], [Verbale esterno 23-12-06],
+    [FM-1.1.2], [Obbligatorio], [L'utente visualizza un errore di importazione del file SVG.], [UC-1.1.1],
+    [FM-1.1.2.1], [Obbligatorio], [L'utente visualizza un errore dato dal caricamento di un file SVG privo di informazioni.], [UC-1.1.1.1],
+    [FM-1.1.2.2], [Obbligatorio], [L'utente visualizza un errore dato da informazioni incongruenti nel file SVG.], [UC-1.1.1.2],
+    [FM-1.2], [Obbligatorio], [L'utente deve poter creare manualmente il magazzino.], [UC-1.2],
+    [FM-1.2.1], [Obbligatorio], [L'utente deve poter inserire manualmente la lunghezza del magazzino.], [UC-1.2],
+    [FM-1.2.2], [Obbligatorio], [L'utente deve poter inserire manualmente la larghezza del magazzino.], [UC-1.2],
+    [FM-1.2.3], [Obbligatorio], [L'utente deve poter inserire manualmente l'altezza del magazzino.], [UC-1.2],
+    [FM-1.2.4], [Obbligatorio], [L'utente visualizza un errore dato dalla non validità dei dati inseriti.], [UC-1.2.1],
+    
+    [FM-2], [Obbligatorio], [L'utente deve poter modificare le dimensioni del magazzino dopo la sua creazione.], [UC-2],
+    [FM-2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza del magazzino dopo la sua creazione.], [UC-2],
+    [FM-2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza del magazzino dopo la sua creazione.], [UC-2],
+    [FM-2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza del magazzino dopo la sua creazione.], [UC-2],
+    [FM-2.4], [Obbligatorio], [L'utente visualizza un errore relativo all'inserimento di dimensioni troppo piccole del magazzino.], [UC-2.1],
+    [FM-2.4.1], [Obbligatorio], [L'utente visualizza un errore causato dall'inserimento di una lunghezza che eliminerebbe scaffali o loro parti durante la modifica.], [UC-2.1],
+    [FM-2.4.2], [Obbligatorio], [L'utente visualizza un errore causato dall'inserimento di una larghezza che eliminerebbe scaffali o loro parti durante la modifica.], [UC-2.1],
+    [FM-2.4.3], [Obbligatorio], [L'utente visualizza un errore causato dall'inserimento di un'altezza che eliminerebbe piani di scaffali durante la modifica.], [UC-2.1],
+    
+    [FM-3], [Obbligatorio], [L'utente deve poter gestire gli scaffali.], [UC-3],
+    [FM-3.1], [Obbligatorio], [L'utente deve poter creare gli scaffali.], [UC-3.1],
+    [FM-3.1.1], [Obbligatorio], [L'utente deve poter definire le dimensioni degli scaffali.], [UC-3.1],
+    [FM-3.1.1.1], [Obbligatorio], [L'utente deve poter definire la lunghezza degli scaffali.], [UC-3.1],
+    [FM-3.1.1.2], [Obbligatorio], [L'utente deve poter definire la larghezza degli scaffali.], [UC-3.1],
+    [FM-3.1.1.3], [Obbligatorio], [L'utente deve poter definire il numero di piani degli scaffali.], [UC-3.1],
+    [FD-3.1.1.3.1], [Desiderabile], [L'utente deve poter definire altezze diverse per ogni piano degli scaffali.], [Verbale esterno 23-12-15],
+    [FM-3.1.2], [Obbligatorio], [L'utente deve poter posizionare gli scaffali creati nell'ambiente.], [UC-3.1],
+    [FM-3.2], [Obbligatorio], [L'utente deve poter modificare gli scaffali.], [UC-3.2],
+    [FM-3.2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza degli scaffali.], [UC-3.2],
+    [FM-3.2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza degli scaffali.], [UC-3.2],
+    [FM-3.2.3], [Obbligatorio], [L'utente deve poter modificare il numero di piani gli scaffali.], [UC-3.2],
+    [FM-3.3], [Obbligatorio], [L'utente deve poter spostare gli scaffali all'interno del magazzino.], [UC-3.3],
+    [FM-3.3.1], [Obbligatorio], [L'utente deve poter spostare gli scaffali in orizzontale.], [UC-3.3],
+    [FM-3.3.2], [Obbligatorio], [L'utente deve poter spostare gli scaffali in profondità.], [UC-3.3],
+    [FM-3.3.3], [Obbligatorio], [L'utente deve poter ruotare gli scaffali.], [UC-3.3],
+    [FM-3.3.3.1], [Obbligatorio], [L'utente deve poter ruotare gli scaffali con angoli di 90°.], [UC-3.3],
+    [FO-3.3.3.2], [Opzionale], [L'utente deve poter ruotare gli scaffali con angoli diversi da 90°.], [Verbale esterno 23-12-06],
+    [FM-3.3.4], [Obbligatorio], [L'utente visualizza un errore riguardo lo spostamento dello scaffale in una zona non libera.], [UC-3.3.1],
+    [FM-3.4], [Obbligatorio], [L'utente deve poter eliminare gli scaffali.], [UC-3.4],
+    [FM-3.4.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'eliminazione di uno scaffale non vuoto.], [UC-3.4.1],
+
+    [FM-4], [Obbligatorio], [L'utente deve poter gestire i bin.], [UC-4],
+    [FM-4.1], [Obbligatorio], [L'utente deve poter creare i bin.], [UC-4.1],
+    [FM-4.1.1], [Obbligatorio], [L'utente deve poter definire la lunghezza dei bin.], [UC-4.1],
+    [FM-4.1.2], [Obbligatorio], [L'utente deve poter definire la larghezza dei bin.], [UC-4.1],
+    [FM-4.1.3], [Obbligatorio], [L'utente deve poter definire l'altezza dei bin.], [UC-4.1],
+    [FM-4.2], [Obbligatorio], [l'utente deve poter modificare i bin.], [UC-4.2],
+    [FM-4.2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza dei bin.], [UC-4.1],
+    [FM-4.2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza dei bin.], [UC-4.1],
+    [FM-4.2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza dei bin.], [UC-4.1],
+    [FM-4.3], [Obbligatorio], [L'utente deve poter eliminare i bin.], [UC-4.3],
+    [FM-4.3.1], [Obbligatorio], [L'utente visualizza un errore riguardo la cancellazione di un bin non vuoto.], [UC-4.3.1],
+    
+    [FM-5], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dati dimensionali non validi.], [UC-5],
+    [FM-5.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dimensioni negative o uguali a zero.], [UC-5.1],
+    [FM-5.1.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di una lunghezza negativa o uguale a zero.], [UC-5.1],
+    [FM-5.1.2], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di una larghezza negativa o uguale a zero.], [UC-5.1],
+    [FM-5.1.3], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di un'altezza negativa o uguale a zero.], [UC-5.1],
+    [FM-5.2], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dimensioni eccessive.], [UC-5.2],
+    [FM-5.2.1], [Obbligatorio], [L'utente visualizza un errore per l'inserimento di dimensioni che creano collisioni tra l'oggetto modificato e altri elementi dell'ambiente.], [UC-5.2],
+    [FM-5.2.2], [Obbligatorio], [L'utente visualizza un errore per l'inserimento di dimensioni che non permettono all'oggetto di essere inserito nell'ambiente.], [UC-5.2],
   ),
   caption: "Requisiti funzionali"
 )

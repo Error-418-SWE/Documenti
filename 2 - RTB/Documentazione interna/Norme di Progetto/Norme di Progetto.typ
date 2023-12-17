@@ -35,20 +35,21 @@ Al fine di eliminare le ambiguit√† durante la consultazione dei documenti, verr√
 - Regolamento di Progetto:\
 #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")
 
+- Capitolato d'appalto C5: _WMS3_\
 #link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")
 
 === Riferimenti informativi
 
-- Documentazione Typst
+- Documentazione Typst\
 #link("https://typst.app/docs/")
 
-- Documentazione Git
+- Documentazione Git\
 #link("https://git-scm.com/docs")
 
-- Documentazione Jira
+- Documentazione Jira\
 #link("https://confluence.atlassian.com/jira")
 
-- Documentazione Three.js
+- Documentazione Three.js\
 #link("https://threejs.org/docs/")
 
 = Processi di accordo

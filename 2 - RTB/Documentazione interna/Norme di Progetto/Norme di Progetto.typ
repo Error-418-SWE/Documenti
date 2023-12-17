@@ -844,21 +844,33 @@ Identifica inoltre i loro bisogni, li analizza e li trasforma in un insieme cond
 - esprima i comportamenti attesi che il sistema dovrà avere nel suo ambiente operativo;
 - funga da riferimento per la validazione di ciascuna funzionalità operativa.
 
-=== Identificazione degli stakeholder e dei loro bisogni
+=== Stakeholder
 
-- Responsabile
-- Committente
-- Proponente
-- Aziende
+==== Committenza
+I requisiti richiesti dalla Committenza sono riportati nel _Regolamento di Progetto_. Tali requisiti sono vincolanti e il loro soddisfacimento è obbligatorio. I rapporti con la Committenza riguardano gli aspetti organizzativi e didattici del progetto.
 
-=== Definizione della strategia di identificazione, analisi e trasformazione di bisogni e requisiti
+==== Azienda Proponente
+Sanmarco Informatica S.p.A, ovvero l'azienda Proponente, fornisce un documento descrittivo denominato Capitolato C5. Partecipa a riunioni periodiche di aggiornamento per discutere dell'avanzamento di progetto e delle soluzioni tecniche adottate.
 
-...
-Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, questo processo è inteso per mediare i contrasti.
-Gli intenti o i desideri di chi si oppone al gruppo o al sistema software sono affrontati tramite il processo di gestione dei rischi (#text("TODO", fill: red))
+==== Gruppo (o Fornitore)
+Il gruppo assume il ruolo di Fornitore nei confronti del Committente. La buona riuscita del progetto didattico è premessa per la conclusione del percorso di studi di ciascun membro del gruppo.
 
-=== Trasformazione dei bisogni in requisiti
+==== Matrice degli stakeholder
+Si classificano gli stakeholder individuati sulla base di:
+- coinvolgimento nel progetto: indica l'interesse dello stakeholder nell'ambito di progetto;
+- autorità sullo sviluppo: indica il potere decisionale esercitabile sull'ambito di progetto.
 
-=== Analisi dei requisiti
+Entrambe le classificazioni si strutturano su tre livelli: basso, medio, alto.
+
+#figure(
+  table(
+    columns: 3,
+    [*Stakeholder*], [*Coinvolgimento*], [*Autorità*],
+    [Committente], [Medio], [Bassa],
+    [Proponente], [Alto], [Media],
+    [Gruppo], [Alto], [Alta],
+  ),
+  caption: "Matrice degli stakeholder."
+)
 
 === Gestione dei bisogni e dei requisiti

@@ -40,7 +40,7 @@ I dispositivi su cui sarà eseguita l'applicazione sono normali PC Desktop veros
 == Considerazioni su tecnologie da utilizzare e utilizzate
 Durante il meeting sono state discusse ulteriormente le tecnologie impiegate e in programma per una futura implementazione, in particolare è stato approvato da parte del proponente l'utilizzo di:
 - Docker;
-- Next.js 
+- Next.js;
 - Express;
 - PostgreSQL.
 

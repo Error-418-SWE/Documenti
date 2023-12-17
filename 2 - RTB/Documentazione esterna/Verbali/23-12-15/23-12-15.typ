@@ -45,9 +45,9 @@ Durante il meeting sono state discusse ulteriormente le tecnologie impiegate e i
 - PostgreSQL.
 
 == Considerazioni su feature del PoC
-Relativamente ai PoC da realizzare in fututro e alla luce delle conoscenze acquisite, sono emersi con il proponente le seguenti considerazioni:
+Relativamente ai PoC da realizzare in fututro e alla luce delle conoscenze acquisite, sono emerse con il proponente le seguenti considerazioni:
 
-- è emersa l'importanza di precaricare dal database una parte dei dati delle merci così da poter mostrare a schermo informazioni di base come quali sono i bin occupati ma le restanti informazioni delle singole merci necessiteranno di un'interrogazione al database on demand;
+- è importante precaricare dal database una parte dei dati delle merci così da poter mostrare a schermo informazioni di base, per esempio quali sono i bin occupati. Le restanti informazioni delle singole merci necessiteranno di un'interrogazione al database on demand;
 - il piano inferiore degli scaffali è verosimile che coincida con il pavimento dell'area di lavoro;
 - è corretto che i bin all'interno degli scaffali vengano generati automaticamente alla creazione dello scaffale date le dimensioni dello stesso;
 - non è richiesto ma è desiderabile poter creare scaffali conteneti piani di altezze diverse;

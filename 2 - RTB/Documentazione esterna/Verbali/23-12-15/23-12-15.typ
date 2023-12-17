@@ -43,7 +43,7 @@ Durante il meeting sono state discusse ulteriormente le tecnologie impiegate e i
 - Docker;
 - Next.js;
 - Express;
-- PostgreSQL.
+- PostgreSQL (al posto di mySQL, tecnologia inizialmente individuata).
 
 == Considerazioni su feature del PoC
 Relativamente ai PoC da realizzare in fututro e alla luce delle conoscenze acquisite, sono emerse con il proponente le seguenti considerazioni:

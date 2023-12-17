@@ -286,25 +286,7 @@ $bold("Scenario: ")$
 - l'utente inserisce i dati relativi alla configurazione.
 
 $bold("Estensioni: ")$
-- UC-1.2.1 Visualizzazione errore sui dati.
-
-=== Visualizzazione errore dati inseriti non validi
-$bold("Descrizione: ")$
-i dati inseriti per la configurazione manuale dell'ambiente di lavoro non sono validi.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- inseriti dati per la configurazione manuale dell'ambiente;
-- tali dati non sono utilizzabili dal programma.
-
-
-$bold("Postcondizioni: ")$
-- viene visualizzato l'errore relativo all'inserimento di dati non validi.
-
-$bold("Scenario: ")$
-- l'utente inserisce dati relativi alla configurazione dell'ambiente non validi.
+- UC-5.1 Dimensioni negative o uguali a zero.
 
 = Inserimento nuove dimensioni del magazzino
 
@@ -326,12 +308,13 @@ $bold("Scenario: ")$
 - l'utente immette i dati richiesti.
 
 $bold("Estensioni: ")$
-- UC-2.1 Visualizzazione errore di modifica dell'ambiente.
+- UC-2.1 Visualizzazione errore dimensioni magazzino troppo piccole;
+- UC-5.1 Dimensioni negative o uguali a zero.
 
-== Visualizzazione errore di modifica dell'ambiente
+== Visualizzazione errore dimensioni magazzino troppo piccole
 
 $bold("Descrizione: ")$ 
-i dati inseriti per la modifica dell'ambiente di lavoro non sono validi con quanto configurato precedentemente.
+i dati inseriti per la modifica dell'ambiente di lavoro generano conflitti con quanto configurato precedentemente.
 
 $bold("Attore: ")$
 utente.
@@ -344,7 +327,7 @@ $bold("Postcondizioni: ")$
 - all'utente viene notificato l'errore relativo ad un'immissione errata dei dati per la modifica dell'ambiente.
 
 $bold("Scenario: ")$
-- l'utente ha immesso dei dati errati per la modifica dell'ambiente.
+- l'utente ha immesso delle dimensioni troppo piccole nella modifica dell'ambiente, rischiando di generare conflitti.
 
 = Gestione scaffali
 #figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])

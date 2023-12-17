@@ -51,7 +51,7 @@ Relativamente ai PoC da realizzare in fututro e alla luce delle conoscenze acqui
 - il piano inferiore degli scaffali è verosimile che coincida con il pavimento dell'area di lavoro;
 - è corretto che i bin all'interno degli scaffali vengano generati automaticamente alla creazione dello scaffale date le dimensioni dello stesso;
 - non è richiesto ma è desiderabile poter creare scaffali contenenti piani di altezze diverse;
-- in assenza di API, le loro iterrogazioni possono essere simulate con risposte randomiche.
+- in assenza delle API che verranno fornite dal Proponente, le loro interrogazioni possono essere simulate con risposte randomiche.
 
 
 == Organizzazione meeting futuri   

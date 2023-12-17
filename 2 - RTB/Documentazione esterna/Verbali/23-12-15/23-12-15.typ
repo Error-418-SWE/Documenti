@@ -24,6 +24,7 @@ Sono stati esposti i progressi sui PoC rispetto al precedente meeting esterno e 
 - meeting futuri.
 
 == Considerazioni sull'Analisi dei Requisiti
+Sono stati discussi i requisiti non funzionali identificati.
 Non sono stati identificati particolari vincoli sulle performance.
 
 === Vincoli sui browser 

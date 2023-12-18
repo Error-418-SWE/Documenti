@@ -39,14 +39,14 @@ Inoltre sono approvati ma non richiesti l'utilizzo di WebGL e la compatibilità 
 L'applicazione sarà ottimizzata per l'esecuzione su comuni PC desktop, tipicamente utilizzati negli ambienti d'ufficio, garantendo al contempo la compatibilità con dispositivi tablet.
 
 == Considerazioni su tecnologie da utilizzare e utilizzate
-Durante il meeting sono state discusse ulteriormente le tecnologie impiegate e in programma per una futura implementazione, in particolare è stato approvato da parte del proponente l'utilizzo di:
+Durante il meeting sono state discusse ulteriormente le tecnologie impiegate e in programma per una futura implementazione, in particolare è stato approvato da parte del Proponente l'utilizzo di:
 - Docker;
 - Next.js;
 - Express;
 - PostgreSQL (al posto di mySQL, tecnologia inizialmente individuata).
 
 == Considerazioni su feature del PoC
-Relativamente ai PoC da realizzare in fututro e alla luce delle conoscenze acquisite, sono emerse con il proponente le seguenti considerazioni:
+Relativamente ai PoC da realizzare in fututro e alla luce delle conoscenze acquisite, sono emerse con il Proponente le seguenti considerazioni:
 
 - è importante precaricare dal database una parte dei dati delle merci così da poter mostrare a schermo informazioni di base, per esempio quali sono i bin occupati. Le restanti informazioni delle singole merci potranno essere reperite mediante un'interrogazione al database on demand;
 - è verosimile che il piano inferiore degli scaffali coincida con il pavimento dell'area di lavoro;

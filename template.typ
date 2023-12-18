@@ -408,17 +408,18 @@ if showTablesIndex and docType != "verbale" {
 // Highlight glossary terms
 let glossary = []
 if title != "Glossario"{
-   glossary = json("/Glossario.json");
+   glossary = json("/glossario.json");
 }
 show regex(
   glossary.keys().sorted().rev().join("|")
 ): it => {
   it
-  h(0.08em)
+  h(0.03em)
   text(
-    fill: rgb("#666666"),
-    sub(emph("g"))
+    fill: luma(100),
+    sub(emph("G"))
   )
+  h(0.02em)
 }
 
 // Body

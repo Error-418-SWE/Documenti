@@ -36,7 +36,7 @@ Non sono stati identificati particolari vincoli sulle performance.
 Inoltre sono approvati ma non richiesti l'utilizzo di WebGL e la compatibilità dell'applicativo con i browser sopracitati versione mobile.
 
 === Dispositivi utilizzati dall'utente  
-I dispositivi su cui sarà eseguita l'applicazione sono normali PC Desktop verosimilmente presenti in uffici ed eventualmente dispositivi tablet.
+L'applicazione sarà ottimizzata per l'esecuzione su comuni PC desktop, tipicamente utilizzati negli ambienti d'ufficio, garantendo al contempo la compatibilità con dispositivi tablet.
 
 == Considerazioni su tecnologie da utilizzare e utilizzate
 Durante il meeting sono state discusse ulteriormente le tecnologie impiegate e in programma per una futura implementazione, in particolare è stato approvato da parte del proponente l'utilizzo di:

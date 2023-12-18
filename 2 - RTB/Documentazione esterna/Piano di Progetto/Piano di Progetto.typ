@@ -142,14 +142,15 @@ La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo d
 #figure(
   table(
     columns: 8,
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
     [*Membro*],[*Responsabile*],[*Amministratore*],[*Analista*],[*Progettista*],[*Programmatore*],[*Verificatore*],[*Totale*],
-    [Banzato Alessio], [13], [10], [10], [14], [30], [18], [95],
-    [Oseliero Antonio], [13], [10], [10], [14], [30], [18], [95],
-    [Giovanni], [13], [10], [10], [14], [30], [18], [95],
-    [Mattia], [13], [10], [10], [14], [30], [18], [95],
-    [Riccardo], [13], [10], [10], [14], [30], [18], [95],
-    [Rosario], [13], [10], [10], [14], [30], [18], [95],
-    [Silvio], [13], [10], [10], [14], [30], [18], [95],
+    [Alessio Banzato], [13], [10], [10], [14], [30], [18], [95],
+    [Antonio Oseliero], [13], [10], [10], [14], [30], [18], [95],
+    [Giovanni Gardin], [13], [10], [10], [14], [30], [18], [95],
+    [Mattia\ Todesco], [13], [10], [10], [14], [30], [18], [95],
+    [Riccardo Carraro], [13], [10], [10], [14], [30], [18], [95],
+    [Rosario Zaccone], [13], [10], [10], [14], [30], [18], [95],
+    [Silvio\ Nardo], [13], [10], [10], [14], [30], [18], [95],
     [Totale Ore], [91], [70], [70], [98], [210], [126], [665],
     [Costo Orario (€)], [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
     [Costo Ruolo (€)], [2.730], [1.400], [1.750], [2.450], [3.150], [1.890], [],
@@ -165,14 +166,14 @@ Il costo totale preventivato è di € 13.370,00.
 La pianificazione ricopre un ruolo fondamentale nello sviluppo dell'intero progetto. Svolge il compito di stabilire quali obiettivi raggiungere in periodi di tempo determinati, organizzando le risorse in modo da rendere lo sviluppo efficace ed efficiente. Lo scopo principale deve essere pianificare le azioni da intraprendere nel periodo successivo, definendo tempistiche, modalità e obiettivi.
 \
 == Metodologia di lavoro Scrum
-Il team si è imposto una metodologia di lavoro _agile_ mediante l'applicazizone del framework Scrum, determinando periodi di lavoro di durata fissa terminanti con un'analisi retrospettiva degli stessi. \
+Il team si è imposto una metodologia di lavoro _agile_ mediante l'applicazione del framework Scrum, determinando periodi di lavoro di durata fissa terminanti con un'analisi retrospettiva degli stessi. \
 Tale approccio è definibile _adattivo_, in grado dunque di adattarsi ad eventuali modifiche in corso d'opera, in merito soprattutto a cambiamenti di specifiche e requisiti.\
 L'intero sviluppo è dunque organizzato in iterazioni di lunghezza fissa, denominati in SCRUM come _sprint_. \
 L'analisi retrospettiva e il frequente contatto con il Proponente permettono di indirizzare lo sviluppo verso la realizzazione di un prodotto finale che si attenga quanto più possibile ai requisiti desiderati dall'azienda e alle sue aspettative, e una documentazione dettagliata e precisa che evolve e migliora insieme al prodotto.
 
 === Eventi dettati dal framework
 La corretta applicazione del framework comporta il rispetto di determinati impegni, individuabili nello svolgimento di precisi eventi organizzativi quali:
-- *Sprint planning*: evento decisionale da tenersi prima dell'avvio dello sprint successivo. In questo incontro vengono stabili gli obiettivi da raggiungere e le task necessarie da compiere entro la fine dello stesso;
+- *Sprint planning*: evento decisionale da tenersi prima dell'avvio dello sprint successivo. In questo incontro vengono stabiliti gli obiettivi da raggiungere e le task necessarie da compiere entro la fine dello stesso;
 
 - *Daily Scrum meeting*: evento di livellamento ove il team, in un metting della durata molto breve, si aggiorna sullo stato dei lavori e organizza il lavoro del giorno;
 
@@ -185,7 +186,7 @@ Gli sprint sono periodi di sviluppo di durata fissa entro i quali si cerca di ra
 Error\_418 adotta periodi di sprint di una settimana, ove l'intento è fissare obiettivi concretamente raggiungibili nell'arco di tempo stabilito.\
 Al termine di ogni sprint si svolgerà un'analisi retrospettiva con lo scopo di valutare il lavoro svolto e proporre eventuali miglioramenti in caso di criticità riscontrate.\
 
-La pianficazione di uno sprint sarà così composta:
+La pianificazione di uno sprint sarà così composta:
 - *Obiettivi prefissati*: gli obiettivi che si intende raggiungere entro il termine dello sprint;
 
 - *Preventivo dei costi*: preventivo dei costi in base alle figure che operano nel periodo di sprint;
@@ -311,7 +312,7 @@ Gli obiettivi dello sprint 3 sono:
 - perfezionamento del template usato per i documenti;
 - aggiornamento del documento di Norme di Progetto;
 - studio iniziale della libreria Three.js;
-- meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare oppurtune richieste;
+- meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare opportune richieste;
 - contatto con l'azienda Proponente per fissare il prossimo meeting.
 
 === Preventivo costi
@@ -362,13 +363,13 @@ Gli obiettivi del quarto sprint si concentrano sull'aggiornamento e perfezioname
 dell'Analisi dei Requisiti e sull'esplorazione delle nuove tecnologie. \
 Gli obiettivi dello sprint 4 sono:
 - effettuare una migliore pianificazione;
-- perfezionamento della stesura degli use case indivduati finora;
+- perfezionamento della stesura degli use case individuati finora;
 - redazione di una prima versione dell'Analisi dei Requisiti;
 - valutazione di un'eventuale data per un primo meeting con il professore Cardin per ottenere un feedback sull'Analisi dei Requisiti;
 - proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
 - proseguimento periodo di studio di Three.js, in particolare finalizzato a:
  - creazione di alcuni scaffali nell'ambiente tridimensionale;
- - implentazione sistema di drag and drop;
+ - implementazione sistema di drag and drop;
  - parametrizzazione degli elementi presenti nell'applicazione.
 
 === Preventivo costi
@@ -533,7 +534,7 @@ Questa fase di retrospettiva è essenziale al fine di individuare possibili migl
 A causa di una sottostima del carico di lavoro per l'implementazione delle automazioni tramite GitHub Action, alcuni obiettivi riguardanti la repository sono stati mancati, creando un effetto a catena che ha temporaneamente bloccato il caricamento di documenti nella repository.\
 Un altro problema riguarda la comunicazione con l'azienda Proponente: la mail inviata sfortunatamente non ha ricevuto riscontro in tempo, impedendo di procedere ulteriormente con l'analisi dei requisiti e/o la programmazione di un meeting con l'azienda.\
 === Risoluzioni attuate
-Le automazioni rigurdanti il versionamento verranno concluse nello sprint successivo.\
+Le automazioni riguardanti il versionamento verranno concluse nello sprint successivo.\
 La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di un'azione di sollecito con una seconda mail e successivamente la richiesta di stabilire un nuovo canale di comunicazione.
 
 === Analisi costi di sprint effettivi
@@ -582,7 +583,7 @@ Il ruolo dell'Amministratore invece, incaricato di gestire il reparto tecnologic
 === Obiettivi mancati
 Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obiettivi mancati dello sprint precedente.
 === Analisi problematiche insorte
-- Il team ha notato la mancanza di una struttura comune nei verbali, che porta a documenti senza una precisa convenzione e rallentamenti in fase di redazione;\
+- Il team ha notato la mancanza di una struttura comune nei verbali, che porta a documenti senza una precisa convenzione e rallentamenti in fase di redazione;
 - Sono emerse difficoltà nelle modalità di utilizzo del repository comune, nonostante sia stato dedicato del tempo per la formazione;
 - Scarsa reattività in fase di review.
 === Risoluzioni attuate
@@ -626,7 +627,7 @@ A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore ef
 - perfezionamento del template usato per i documenti;
 - aggiornamento parziale del documento di Norme di Progetto;
 - studio iniziale della libreria Three.js;
-- meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare oppurtune richieste;
+- meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare opportune richieste;
 - contatto con l'azienda Proponente per fissare il prossimo meeting.
 
 === Obiettivi mancati
@@ -644,7 +645,7 @@ Nonostante la realizzazione soddisfacente della maggior parte degli obiettivi co
 === Risoluzioni attuate
 Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentrano su un'organizzazione e un'attenzione maggiore nella fase di pianificazione, oltre alla definizione di standard relativi ai grafici da inserire nei documenti e relativi allo svolgimento dei meeting e redazione dei rispettivi verbali. In particolare:
 
-- è stata prestata una maggiore attenzione nella pianificazione del nuovo sprint, introducento nella board retrospettiva di Miro una bacheca relativa alle task da svolgere, che sono state tradotte fin da subito in ticket di Jira e assegnati ai rispettivi ruoli;
+- è stata prestata una maggiore attenzione nella pianificazione del nuovo sprint, introducendo nella board retrospettiva di Miro una bacheca relativa alle task da svolgere, che sono state tradotte fin da subito in ticket di Jira e assegnati ai rispettivi ruoli;
 - la durata massima dei meeting di retrospettiva è stata fissata a 90 minuti (_soft limit_);
 - sono stati definiti degli standard per la realizzazione dei grafici, adottando quelli proposti da Jira, ma gestendo meglio la pianificazione in modo da ottenere grafici ottimali;
 - è stato assegnato all'Amministratore il compito della redazione dei verbali.
@@ -697,7 +698,7 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
 - proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
 - proseguimento periodo di studio di Three.js, in particolare finalizzato a:
  - creazione di scaffali nell'ambiente tridimensionale;
- - implentazione sistema di drag and drop;
+ - implementazione sistema di drag and drop;
  - parametrizzazione degli elementi presenti nell'applicazione.
 === Obiettivi mancati
 Tutti gli obiettivi sono stati raggiunti.

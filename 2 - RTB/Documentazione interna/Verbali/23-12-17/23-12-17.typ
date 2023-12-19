@@ -39,4 +39,4 @@ $bold("Soluzioni accordate relativamente agli improvements:")$
 - l'Amministratore dovrà: 
   - redigere i verbali;
   - modificare il documento Piano di Progetto aggiungendo il preventivo del settimo sprint, il consuntivo del quinto sprint e sistemando eventuali errori presenti nel documento;
-  - migliorare le GitHub Action risolvendo gli errori presenti legati al versionamento dei file e alla  modifica del changelog.
+  - migliorare le GitHub Action risolvendo gli errori legati al versionamento dei file e all'aggiornamento del changelog.

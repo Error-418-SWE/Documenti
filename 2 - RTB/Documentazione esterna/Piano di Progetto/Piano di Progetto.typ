@@ -869,7 +869,7 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
 #figure(
   table(
     columns: 8,
-    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
     [Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
     [Carraro\ Riccardo], [3],  [/],    [/],    [/],    [/],   [/], [3],

@@ -877,6 +877,21 @@ Entrambe le classificazioni si strutturano su tre livelli: basso, medio, alto.
   caption: "Matrice degli stakeholder."
 )
 
+==== Modalità di comunicazione
+Canali e frequenza delle comunicazioni sono descritti nella @tab-stakeholder-comunicazione.
+
+#figure(
+  table(
+    [*Stakeholder*], [*Canale*], [*Frequenza*],
+    [Committente], [E-mail\nZoom\nPresenza], [A sportello],
+    [Proponente], [E-mail\nZoom], [Almeno bisettimanale],
+    [Gruppo], [Discord (TODO)\nPresenza], [Almeno settimanale (TODO)],
+  ),
+  caption: [Modalità di comunicazione]
+) <tab-stakeholder-comunicazione>
+
+Tali modalità sono valide per l'intera durata del progetto.
+
 === Strategia di identificazione, analisi e trasformazione dei bisogni
 
 I bisogni espressi da Committente e Fornitore sono raccolti, catalogati, analizzati ed espressi nel documento di _Analisi dei Requisiti_ prodotto dal gruppo.

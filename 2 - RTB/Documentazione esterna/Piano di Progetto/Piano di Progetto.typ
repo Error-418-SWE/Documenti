@@ -142,7 +142,7 @@ La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo d
 #figure(
   table(
     columns: 8,
-    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*],[*Responsabile*],[*Amministratore*],[*Analista*],[*Progettista*],[*Programmatore*],[*Verificatore*],[*Totale*],
     [Alessio Banzato], [13], [10], [10], [14], [30], [18], [95],
     [Antonio Oseliero], [13], [10], [10], [14], [30], [18], [95],
@@ -236,7 +236,7 @@ In questo primo periodo, l'assegnazione dei ruoli di progettista e di programmat
 #figure(
   table(
     columns: 6,
-    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Verificatore*],[*Totale*],
     [Banzato Alessio],  [/],  [/],    [/],    [3],    [3],
     [Carraro Riccardo], [/],  [4],    [/],    [/],    [4],
@@ -284,7 +284,7 @@ In questo  periodo, l'assegnazione dei ruoli di programmatore e progettista è r
 #figure(
   table(
     columns: 6,
-    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Verificatore*],[*Totale*],
     [Banzato Alessio],  [/],  [/],    [/],    [3],    [3],
     [Carraro Riccardo], [/],  [4],    [/],    [/],    [4],
@@ -333,7 +333,7 @@ In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce
 #figure(
   table(
     columns: 7,
-    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
     [Banzato Alessio],  [3],  [/],    [/],    [/], [/],   [3],
     [Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
@@ -385,7 +385,7 @@ Nel quarto sprint il team svolge compiti correttivi incentrati sul miglioramento
 #figure(
   table(
     columns: 8,
-    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
     [Banzato Alessio],  [3],  [/],    [/],    [/], [/], [/],   [3],
     [Carraro Riccardo], [/],  [/],    [3],    [/], [1], [/],   [4],
@@ -438,7 +438,7 @@ In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce
 #figure(
   table(
     columns: 7,
-    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
     [Banzato Alessio],  [/],  [/],    [4],    [/], [/],   [4],
     [Carraro Riccardo], [3],  [/],    [/],    [/], [/],   [3],
@@ -491,7 +491,7 @@ In quest'ottica, vede l'impiego principale delle figure:
 #figure(
   table(
   columns: 8,
-  fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+  fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
   [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
   [Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
   [Carraro Riccardo], [3],  [/],    [/],    [/],    [/],   [/], [3],
@@ -542,7 +542,7 @@ La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di u
 #figure(
   table(
     columns: 6,
-    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Verificatore*],[*Totale*],
     [Banzato Alessio],  [/],    [/],        [/],        [2(-1)],    [2(-1)],
     [Carraro Riccardo], [/],    [6(+2)],    [/],        [/],        [6(+2)],
@@ -595,7 +595,7 @@ Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obi
 #figure(
   table(
   columns: 6,
-  fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+  fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
   [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Verificatore*],[*Totale*],
   [Banzato Alessio],  [/],  [/],    [/],    [2(-1)],    [2(-1)],
   [Carraro Riccardo], [/],  [6(+2)],    [/],    [/],    [6(+2)],
@@ -659,7 +659,7 @@ Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentr
 #figure(
   table(
     columns: 7,
-    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
     [Banzato Alessio],  [2(-1)],  [/],    [/],    [/], [/],   [2(-1)],
     [Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
@@ -717,7 +717,7 @@ Inoltre il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'ut
 #figure(
   table(
     columns: 7,
-    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
     [Banzato Alessio],  [3],  [/],    [/],    [/], [/],   [3],
     [Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
@@ -780,7 +780,7 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
 #figure(
   table(
     columns: 8,
-    fill: (col, row) => if col == 0 and row > 8 or row == 0 {gray},
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
     [Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
     [Carraro Riccardo], [3],  [/],    [/],    [/],    [(2)],   [/], [5],

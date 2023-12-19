@@ -894,13 +894,19 @@ Tali modalità sono valide per l'intera durata del progetto.
 
 === Strategia di identificazione, analisi e trasformazione dei bisogni
 
+Il gruppo adotta una strategia iterativa per l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. L'approccio utilizzato prevede:
+- comunicazione frequente con il Proponente;
+- confronto con il Committente sui bisogni organizzativi, documentali.
+
+Le comunicazioni sono supportate, quando utile, da documenti, immagini, dimostratori tecnologici e in generale qualsiasi elemento informativo utile alla comprensione dei bisogni degli stakeholder. Le informazioni sono organizzate in modo da supportare l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. Lo strumento adottato è Miro (TODO).
+
 I bisogni espressi da Committente e Fornitore sono raccolti, catalogati, analizzati ed espressi nel documento di _Analisi dei Requisiti_ prodotto dal gruppo.
 
-Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, questo processo è attuato per mediare i contrasti.
+Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, il gruppo si adopera per mediare i contrasti. La strategia di mediazione prevede l'identificazione di un sottoinsieme di interessi e bisogni comuni, il confronto con le parti e la definzione di strategie di mediazione calate nella fattispecie/
 
 Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi di ciclo di vita del sistema software (descritti in TODO) sono affrontati tramite il processo di gestione dei rischi TODO.
 
-Gli strumenti di comunicazoine a supporto delle attività di processo, descritti nel dettaglio in TODO, sono Zoom e Miro.
+Gli strumenti di comunicazione a supporto delle attività, descritti nel dettaglio in TODO, sono Zoom e Miro.
 
 === Gestione dei bisogni e dei requisiti
 

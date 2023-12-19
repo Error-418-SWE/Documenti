@@ -26,7 +26,7 @@ $bold("Improvements:")$
 - lo stato di avanzamento del documento Norme di Progetto sta procedendo più lentamente rispetto al livello atteso.
 
 
-$bold("Relativamente agli improvements le relative soluzioni accordate sono:")$
+$bold("Soluzioni accordate relativamente agli improvements:")$
 - Impegnarsi, in caso di imprevisti, a comunicare tempestivamente agli altri membri del gruppo gli eventuali ritardi previsti nei lavori;
 - nella pianificazione del prossimo sprint verranno assegnati più membri del gruppo alla stesura del documento Norme di Progetto.
 

@@ -846,6 +846,10 @@ Identifica inoltre i loro bisogni, li analizza e li trasforma in un insieme cond
 
 === Stakeholder
 
+Sono identificati tutti quegli stakeholder che possiedano una forte influenza sugli obiettivi, le strategie, l'operatività e le caratteristiche del prodotto.
+
+I ruoli e gli interessi descritti in questa sezione sono validi per l'intero ciclo di vita del prodotto.
+
 ==== Committenza
 I requisiti richiesti dalla Committenza sono riportati nel _Regolamento di Progetto_. Tali requisiti sono vincolanti e il loro soddisfacimento è obbligatorio. I rapporti con la Committenza riguardano gli aspetti organizzativi e didattici del progetto.
 

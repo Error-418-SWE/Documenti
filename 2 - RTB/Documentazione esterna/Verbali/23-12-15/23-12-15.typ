@@ -28,12 +28,15 @@ Sono stati discussi i requisiti non funzionali identificati.
 Non sono stati identificati particolari vincoli sulle performance.
 
 === Vincoli sui browser 
-È richiesta la compatibilità dell'applicazione almeno con i browser:
-- Chrome (da versione 89);
+In seguito all'utilizzo delle tecnologiche da noi individuate, in particolar modo per la libreria Three.js, è necessario che i browser interessati dispongano di una versione minima atta a supportare tale tecnologia mediante  la componente grafica WebGL. Tale osservazione ha trovato conferma da parte del proponente, il quale ha approvato l'implementazione dell'applicativo per i principali browswer:
+- Chrome;
 - Firefox;
 - Edge.
 
-Inoltre sono approvati ma non richiesti l'utilizzo di WebGL e la compatibilità dell'applicativo con i browser sopracitati versione mobile.
+Durante il meeting è stato individuato il numero di versione 89 come soglia minima di compatibilità di Chrome mentre i numeri di versione dei rimanenti browser e di WebGL sono stati individuati dal gruppo e riportati nel documento di Analisi dei Requisiti.
+
+\
+Desiderabilmente è previsa la compatibilità dell'applicativo con i browser sopracitati versione mobile.
 
 === Dispositivi utilizzati dall'utente  
 L'applicazione sarà ottimizzata per l'esecuzione su comuni PC desktop, tipicamente utilizzati negli ambienti d'ufficio, garantendo al contempo la compatibilità con dispositivi tablet.

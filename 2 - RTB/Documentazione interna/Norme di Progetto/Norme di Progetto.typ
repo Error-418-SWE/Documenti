@@ -29,28 +29,28 @@ Al fine di eliminare le ambiguit√† durante la consultazione dei documenti, verr√
 
 === Riferimenti normativi
 
-- Standard ISO/IEC/IEEE 12207:2017: \
+- Standard ISO/IEC/IEEE 12207:2017:\
   _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
 
 - Regolamento di Progetto:\
-#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")
+  #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")
 
 - Capitolato d'appalto C5: _WMS3_\
-#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")
+  #link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")
 
 === Riferimenti informativi
 
 - Documentazione Typst\
-#link("https://typst.app/docs/")
+  #link("https://typst.app/docs/")
 
 - Documentazione Git\
-#link("https://git-scm.com/docs")
+  #link("https://git-scm.com/docs")
 
 - Documentazione Jira\
-#link("https://confluence.atlassian.com/jira")
+  #link("https://confluence.atlassian.com/jira")
 
 - Documentazione Three.js\
-#link("https://threejs.org/docs/")
+  #link("https://threejs.org/docs/")
 
 = Processi di accordo
 == Processo di fornitura

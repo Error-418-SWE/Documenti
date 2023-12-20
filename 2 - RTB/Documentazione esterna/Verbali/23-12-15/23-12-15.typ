@@ -43,7 +43,7 @@ L'applicazione sarà ottimizzata per l'esecuzione su comuni PC desktop, tipicame
 
 == Considerazioni su tecnologie da utilizzare e utilizzate
 Durante il meeting sono state discusse ulteriormente le tecnologie impiegate e in programma per una futura implementazione, in particolare è stato approvato da parte del Proponente l'utilizzo di:
-- Docker;
+- Docker Compose;
 - Next.js;
 - Express;
 - PostgreSQL (al posto di mySQL, tecnologia inizialmente individuata).

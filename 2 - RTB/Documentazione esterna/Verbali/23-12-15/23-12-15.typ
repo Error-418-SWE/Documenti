@@ -36,7 +36,7 @@ In seguito all'utilizzo delle tecnologiche da noi individuate, in particolar mod
 Durante il meeting è stato individuato il numero di versione 89 come soglia minima di compatibilità di Chrome mentre i numeri di versione dei rimanenti browser e di WebGL sono stati individuati dal gruppo e riportati nel documento di Analisi dei Requisiti.
 
 \
-Desiderabilmente è previsa la compatibilità dell'applicativo con i browser sopracitati versione mobile.
+Desiderabilmente è prevista la compatibilità dell'applicativo con i browser sopracitati versione mobile.
 
 === Dispositivi utilizzati dall'utente  
 L'applicazione sarà ottimizzata per l'esecuzione su comuni PC desktop, tipicamente utilizzati negli ambienti d'ufficio, garantendo al contempo la compatibilità con dispositivi tablet.
@@ -49,7 +49,7 @@ Durante il meeting sono state discusse ulteriormente le tecnologie impiegate e i
 - PostgreSQL (al posto di mySQL, tecnologia inizialmente individuata).
 
 == Considerazioni su feature del PoC
-Relativamente ai PoC da realizzare in fututro e alla luce delle conoscenze acquisite, sono emerse con il Proponente le seguenti considerazioni:
+Relativamente ai PoC da realizzare in futuro e alla luce delle conoscenze acquisite, sono emerse con il Proponente le seguenti considerazioni:
 
 - è importante precaricare dal database una parte dei dati delle merci così da poter mostrare a schermo informazioni di base, per esempio quali sono i bin occupati. Le restanti informazioni delle singole merci potranno essere reperite mediante un'interrogazione al database on demand;
 - è verosimile che il piano inferiore degli scaffali coincida con il pavimento dell'area di lavoro;

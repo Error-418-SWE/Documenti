@@ -32,6 +32,15 @@ Al fine di eliminare le ambiguit√† durante la consultazione dei documenti, verr√
 - Standard ISO/IEC/IEEE 12207:2017:\
   _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
 
+- Standard ISO/IEC/IEEE 29148:2018:\
+  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_;
+
+- SWEBOK:\
+  _#link("http://swebokwiki.org/Main_Page;")_
+
+- Specifica Unified Modeling Language 2:\
+  _#link("https://www.omg.org/spec/UML/")_
+
 - Regolamento di Progetto:\
   #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")
 

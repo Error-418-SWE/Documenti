@@ -843,6 +843,8 @@ Il gruppo utilizza come metrica principale il burndown chart, che permette di av
 
 == Processo di definizione di bisogni e requisiti degli stakeholder
 
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.2_
+
 === Scopo
 
 Il processo di definizione di bisogni e requisiti degli stakeholder definisce i requisiti di un sistema che possa fornire le funzionalità di cui gli utenti e gli stakeholder necessitano.

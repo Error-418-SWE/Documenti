@@ -834,7 +834,7 @@ Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabi
   - implementazione visualizzazione prodotti dei bin tramite alert JavaScript.
 - aggiornamento documento Norme di Progetto;
 - aggiornamento documento Analisi dei Requisiti con:
-  - refactoring degli Use case secondo le indicazioni del professor Cardin;
+  - refactoring degli use case secondo le indicazioni del professor Cardin;
   - redazione requisiti funzionali;
   - redazione requisiti di qualità;
   - redazione requisiti di vincolo.
@@ -853,7 +853,7 @@ Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabi
 === Analisi problematiche insorte
 Durante il meeting di retrospettiva sono emerse le seguenti problematiche da migliorare:
 - mancata comunicazione di situazioni di difficoltà o problemi che hanno portato a rallentamenti nella produzione di un PoC per il front-end;
-- le Norme di Progetto hanno una velocità di avanzamento troppo bassa.
+- la stesura del documento Norme di Progetto ha una velocità di avanzamento troppo bassa.
 
 === Risoluzioni attuate
 Conseguentemente ai problemi rilevati, sono state individuate le relative soluzioni da adottare:

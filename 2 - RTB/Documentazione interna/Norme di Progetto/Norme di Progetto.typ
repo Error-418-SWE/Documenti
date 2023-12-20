@@ -752,7 +752,6 @@ Documenti è organizzata in modo da suddividere la documentazione necessaria all
       - log.csv: registro delle modifiche associato al documento;
 - *PB*: contiene i file necessari alla Product Baseline.
 
-
 ===== Pull request (PR)
 Al fine di garantire uno svolgiemnto delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _featuring branching_, ove per ogni modifica che si intende apporre al documento è necessario sollevare un pull request. I branch vengono creati a partire da task assegnate su Jira, e sono nominati nel formato DOC-XX, dove XX è il numero della task su Jira.
 
@@ -861,17 +860,6 @@ Identifica inoltre i loro bisogni, li analizza e li trasforma in un insieme cond
 
 Sono identificati tutti quegli stakeholder che possiedano una forte influenza sugli obiettivi, le strategie, l'operatività e le caratteristiche del prodotto.
 
-I ruoli e gli interessi descritti in questa sezione sono validi per l'intero ciclo di vita del prodotto.
-
-==== Committenza
-I requisiti richiesti dalla Committenza sono riportati nel _Regolamento di Progetto_. Tali requisiti sono vincolanti e il loro soddisfacimento è obbligatorio. I rapporti con la Committenza riguardano gli aspetti organizzativi e didattici del progetto.
-
-==== Azienda Proponente
-Sanmarco Informatica S.p.A, ovvero l'azienda Proponente, fornisce un documento descrittivo denominato Capitolato C5. Partecipa a riunioni periodiche di aggiornamento per discutere dell'avanzamento di progetto e delle soluzioni tecniche adottate.
-
-==== Gruppo (o Fornitore)
-Il gruppo assume il ruolo di Fornitore nei confronti del Committente. La buona riuscita del progetto didattico è premessa per la conclusione del percorso di studi di ciascun membro del gruppo.
-
 ==== Matrice degli stakeholder
 Si classificano gli stakeholder individuati sulla base di:
 - coinvolgimento nel progetto: indica l'interesse dello stakeholder nell'ambito di progetto;
@@ -879,31 +867,8 @@ Si classificano gli stakeholder individuati sulla base di:
 
 Entrambe le classificazioni si strutturano su tre livelli: basso, medio, alto.
 
-#figure(
-  table(
-    columns: 3,
-    [*Stakeholder*], [*Coinvolgimento*], [*Autorità*],
-    [Committente], [Medio], [Bassa],
-    [Proponente], [Alto], [Media],
-    [Gruppo], [Alto], [Alta],
-  ),
-  caption: "Matrice degli stakeholder."
-)
-
-==== Modalità di comunicazione
-Canali e frequenza delle comunicazioni sono descritti nella @tab-stakeholder-comunicazione.
-
-#figure(
-  table(
-    [*Stakeholder*], [*Canale*], [*Frequenza*],
-    [Committente], [E-mail\nZoom\nPresenza], [A sportello],
-    [Proponente], [E-mail\nZoom], [Almeno bisettimanale],
-    [Gruppo], [Discord (TODO)\nPresenza], [Almeno settimanale (TODO)],
-  ),
-  caption: [Modalità di comunicazione]
-) <tab-stakeholder-comunicazione>
-
-Tali modalità sono valide per l'intera durata del progetto.
+==== Modalità di comunicazione <modalita-comunicazione>
+Per ciascuno stakeholder si identificano i canali e la frequenza della comunicazione.
 
 === Strategia di identificazione, analisi e trasformazione dei bisogni
 

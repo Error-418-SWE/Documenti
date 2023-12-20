@@ -851,7 +851,9 @@ Il processo identifica gli stakeholder coinvolti con il sistema durante l'intero
 
 Identifica inoltre i loro bisogni, li analizza e li trasforma in un insieme condiviso di requisiti che:
 - esprima i comportamenti attesi che il sistema dovrà avere nel suo ambiente operativo;
-- funga da riferimento per la validazione di ciascuna funzionalità operativa.
+- cataloghi e prioritizzi ciascun requisito;
+- riporti le fonti di ciascun requisito;
+- funga da riferimento per la validazione dell'implementazione di ciascun requisito.
 
 === Stakeholder
 

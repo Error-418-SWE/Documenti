@@ -511,6 +511,61 @@ In quest'ottica, vede l'impiego principale delle figure:
 [da inserire]
 
 
+== Settimo Sprint dal 18-12-2023 al 25-12-2023
+
+=== Obiettivi prefissati
+Gli obiettivi del settimo sprint si focalizzano sul completamento del PoC e dell'analisi dei requisiti, oltre che un generale avanzamento dei documenti e miglioramento delle automazioni. Nel dettaglio gli obiettivi posti sono:
+- creazione di un PoC per il front-end e realizzazione di un PoC complessivo tramite l'unione dei PoC precedentemente sviluppati;
+- espansione del Piano di Qualifica con l'individuazione delle metriche da utilizzare;
+- espansione delle Norme di Progetto;
+- completamento del documento Analisi dei Requisiti con:
+  - implementazione del tracciamento requisito-fonte;
+  - revisione generale del documento per verificare la presenza di tutti gli use case e requisiti necessari.
+- miglioramento delle GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
+- implementazione dell'automazione che segnala i termini presenti nel glossario all'interno dei documenti.
+
+=== Preventivo costi
+Nel settimo sprint i compiti del team sono incentrati sulla realizzazione del PoC finale e sul proseguimento e miglioramento di tutti i documenti necessari alla Requirements and Technology Baseline. Di conseguenza saranno essenziali le figure di:
+- *Responsabile*: al fine di coordinare le attività e proseguire la redazione delle Norme di Progetto;
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento Piano di Progetto;
+  - gestire GitHub e Jira;
+  - migliorare le GitHub Actions risolvendo gli errori legati al versionamento dei file e all'aggiornamento dei changelog.
+- *Analista*: al fine di migliorare il documento Analisi dei Requisiti e aggiungere il tracciamento requisito-fonte;
+- *Progettista*: al fine di studiare e confrontare le tecnologie per il front-end individuate;
+- *Programmatore*: al fine di realizzare un PoC per il front-end e un PoC finale;
+- *Verificatore*: al fine di verifica la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto.
+
+#set text(
+  size: 10pt
+)
+
+#figure(
+  table(
+    columns: 8,
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato Alessio],  [/],  [4],    [/],    [/],    [/],   [/], [4],
+    [Carraro\ Riccardo], [/],  [/],    [/],    [/],    [3],   [/], [3],
+    [Gardin\ Giovanni],  [/],  [/],    [/],    [3],    [/],   [/], [3],
+    [Nardo\ Silvio],     [3],  [/],    [/],    [/],    [/],   [/], [3],
+    [Oseliero\ Antonio], [/],  [/],    [/],    [/],    [2],   [2], [4],
+    [Todesco Mattia],   [/],  [/],    [/],    [3],    [/],   [/], [3],
+    [Zaccone\ Rosario],  [/],  [/],    [3],    [/],    [/],   [/], [3],
+    [Totale\ ore ruolo], [3],  [4],    [3],    [6],    [5],   [2], [23],
+    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo],      [90,00], [80,00], [75,00], [150,00], [75,00], [30,00], [500,00]
+  ),
+  caption: "Preventivo settimo sprint"
+)
+
+#set text(
+  size: 11pt
+)
+
+=== Diagramma Gantt
+[da inserire]
 
 
 = Consuntivo del progetto

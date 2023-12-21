@@ -906,7 +906,6 @@ I bisogni degli stakeholder scaturiscono da fonti diverse. Il gruppo si impegna 
 - Norme, leggi o altri vincoli esterni.
 
 ==== Definizione delle priorità
-// non mi piace
 Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (TODO), guidano la selezione e la prioritizzazione dei requisiti.
 
 ==== Casi d'uso

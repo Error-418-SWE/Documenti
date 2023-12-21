@@ -788,8 +788,7 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
     [Gardin Giovanni],  [/],     [/],      [4],     [/],     [/],      [/],     [4],
     [Nardo\ Silvio],    [/],     [2(-1)],  [/],     [/],     [2],      [/],     [4(-1)],
     [Oseliero Antonio], [/],     [/],      [/],     [1(-1)], [2],      [/],     [3(-1)],
-    [Todesco Mattia],   [/],     [/],      [/],     [/],     [/],      [3],     [3(-1)],
-    [Zaccone Rosario],  [/],     [/],      [/],     [1(-1)], [2],      [/],     [3],
+    [Todesco Mattia],   [/],     [/],      [/],     [/],     [/],      [3],     [3],
     [Totale\ ore ruolo],[3],     [3],      [8],     [2],     [8],      [3],     [26],
     [Costo\ orario],    [30,00], [20,00],  [25,00], [25,00], [15,00],  [15,00], [],
     [Costo\ ruolo],     [90,00], [40,00],  [200,00],[50,00], [120,00], [45,00], [545,00]

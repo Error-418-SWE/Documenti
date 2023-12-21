@@ -535,7 +535,9 @@ Nel settimo sprint i compiti del team sono incentrati sulla realizzazione del Po
 - *Analista*: al fine di migliorare il documento Analisi dei Requisiti e aggiungere il tracciamento requisito-fonte;
 - *Progettista*: al fine di studiare e confrontare le tecnologie per il front-end individuate;
 - *Programmatore*: al fine di realizzare un PoC per il front-end e un PoC finale;
-- *Verificatore*: al fine di verifica la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto.
+- *Verificatore*: al fine di:
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto;
+  - individuare le metriche da inserire nel Piano di Qualifica.
 
 #set text(
   size: 10pt

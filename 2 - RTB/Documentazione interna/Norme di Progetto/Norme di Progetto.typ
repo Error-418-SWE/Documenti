@@ -913,7 +913,7 @@ Si definisce un insieme di casi d'uso (anche detti _use case_, abbreviato in _UC
 I casi d'uso sono definiti ed utilizzati nel documento di _Analisi dei Requisiti_. Sono fonte di bisogni e, indirettamente, di requisiti; sono un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
 
 Ogni caso d'uso comprende:
-+ Codice identificatore;
++ Codice identificativo;
 + Titolo;
 + Descrizione;
 + Attore;
@@ -923,7 +923,7 @@ Ogni caso d'uso comprende:
 + Scenari alternativi (opzionale);
 + Generalizzazioni (opzionale).
 
-Il codice identificatore assume l'aspetto `UC-X.Y`, dove `UC-` è la radice del codice; `X` è una cifra positiva crescente di cifre che identifica un caso d'uso; `Y` è una cifra positiva crescente, attiva solo per le generalizzazioni di uno stesso caso d'uso.
+Il codice identificativo assume l'aspetto `UC-X.Y`, dove `UC-` è la radice del codice; `X` è una cifra positiva crescente di cifre che identifica un caso d'uso; `Y` è una cifra positiva crescente, attiva solo per le generalizzazioni di uno stesso caso d'uso.
 
 I casi d'uso sono arricchiti con diagrammi realizzati secondo la sintassi Unified Modeling Language (UML) 2.0.
 

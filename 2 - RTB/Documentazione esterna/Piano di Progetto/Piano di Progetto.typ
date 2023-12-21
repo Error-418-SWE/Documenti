@@ -798,7 +798,75 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
 
 Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabile e l'Amministratore) hanno impiegato ore produttive come Programmatori, questo ha in parte significato una riduzione delle ore produttive previste per il ruolo assegnato.
 
+=== Burndown-chart
+[da inserire]
 
+
+== Sesto Sprint dal 11-12-2023 al 18-12-2023
+
+=== Obiettivi raggiunti
+- avanzamento del PoC A con:
+  - miglioramento grafico degli scaffali;
+  - posizionamento automatico dei bin nello scaffale al momento della sua creazione;
+  - implementazione visualizzazione prodotti dei bin tramite alert JavaScript.
+- aggiornamento documento Norme di Progetto;
+- aggiornamento documento Analisi dei Requisiti con:
+  - refactoring degli use case secondo le indicazioni del professor Cardin;
+  - redazione requisiti funzionali;
+  - redazione requisiti di qualità;
+  - redazione requisiti di vincolo.
+- redazione introduzione Piano di Qualifica;
+- meeting con l'azienda Proponente per:
+  - esporre il PoC A;
+  - aggiornare sullo stato dei lavori;
+  - chiedere feedback sui requisiti non funzionali;
+- conversione del Glossario in JSON per automatizzare l'individuazione dei termini nei documenti.
+
+
+=== Obiettivi mancati
+- migliorare GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
+- implementazione PoC per il front-end.
+
+=== Analisi problematiche insorte
+Durante il meeting di retrospettiva sono emerse le seguenti problematiche da migliorare:
+- mancata comunicazione di situazioni di difficoltà o problemi che hanno portato a rallentamenti nella produzione di un PoC per il front-end;
+- la stesura del documento Norme di Progetto ha una velocità di avanzamento troppo bassa.
+
+=== Risoluzioni attuate
+Conseguentemente ai problemi rilevati, sono state individuate le relative soluzioni da adottare:
+- si richiede ai componenti del gruppo una comunicazione rapida delle difficoltà e problemi, non appena questi si presentano;
+- il numero di persone assegnate alla redazione delle Norme di Progetto verrà incrementato da due a tre, in modo da garantire la produzione di un maggior numero di sezioni durante lo sprint.
+
+=== Analisi costi di sprint effettivi
+
+#set text(
+  size: 10pt
+)
+
+#figure(
+  table(
+    columns: 8,
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+    [Carraro\ Riccardo], [3],  [/],    [/],    [/],    [/],   [/], [3],
+    [Gardin\ Giovanni],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+    [Nardo\ Silvio],     [/],  [3],    [/],    [/],    [/],   [/], [3],
+    [Oseliero\ Antonio], [/],  [/],    [/],    [1],    [2(-1)],   [/], [3(-1)],
+    [Todesco Mattia],   [/],  [/],    [/],    [/],    [/],   [3], [3],
+    [Zaccone\ Rosario],  [/],  [/],    [/],    [1],    [3],   [/], [4],
+    [Totale\ ore ruolo], [3],  [3],    [8],    [2],    [5],   [3], [24],
+    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo],      [90,00], [60,00], [200,00], [50,00], [75,00], [45,00], [520,00]
+  ),
+  caption: "Consuntivo sesto sprint"
+)
+
+#set text(
+  size: 11pt
+)
+
+Il ruolo di Programmatore presenta un monte ore effettivo minore rispetto a quello preventivato a causa di problemi tecnici che hanno interrotto la lavorazione del PoC.
 
 === Burndown-chart
 [da inserire]

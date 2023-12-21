@@ -17,16 +17,17 @@
 - to do e divisione ruoli.
 
 == Analisi Keep doings e Improvements
-$bold("Keep doings:")$
+
+=== Keep doings
 - Ugualmente allo scorso sprint il gruppo ha raggiunto un soddisfacente grado di familiarità con le tecnologie e le ripartizioni dei lavori;
 - avendo deciso, in seguito ai problemi riscontrati nello scorso sprint, di porre ai lavori scadenze infrasettimanali, le task sono state completate con maggiore costanza, evitando sovraccarichi durante il fine settimana.
 
-$bold("Improvements:")$
+=== Improvements
 - A causa di imprevisti tecnici, si sono verificati casi di insufficiente comunicazione tra i membri del gruppo creando il cosiddetto "effetto sottomarino" e producendo rallentamenti dei lavori;
 - lo stato di avanzamento del documento Norme di Progetto sta procedendo più lentamente rispetto al livello atteso.
 
 
-$bold("Soluzioni accordate relativamente agli improvements:")$
+=== Soluzioni accordate relativamente agli improvements
 - Impegnarsi, in caso di imprevisti, a comunicare tempestivamente agli altri membri del gruppo gli eventuali ritardi previsti nei lavori;
 - nella pianificazione del prossimo sprint verranno assegnati più membri del gruppo alla stesura del documento Norme di Progetto.
 

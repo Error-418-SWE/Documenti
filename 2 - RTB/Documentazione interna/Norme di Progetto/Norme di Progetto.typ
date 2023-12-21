@@ -892,7 +892,7 @@ Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi
 Il negoziato tra le parti potrebbe essere richiesto per mediare posizioni mutualmente incompatibili, o a causa di vincoli o budget insufficiente. Anche la data di consegna prevista incide sulla realizzazione dei requisiti. Sarà sempre necessario consultare gli stakeholder coinvolti per raggiungere un accordo. Le decisioni saranno tracciate e rese disponibili agli stakeholder.
 
 ==== Identificazione dei bisogni <identificazione-bisogni>
-Include l'elicitazione dei bisogni direttamente dagli stakeholder o dalla documentazione fornita da essi; oppure la raccolta di bisogni impliciti basati sul dominio applicativo ed i contesti tecnologico, legislativo, normativo.
+Include l'elicitazione dei bisogni direttamente dagli stakeholder o dalla documentazione fornita da essi, oppure la raccolta di bisogni impliciti basati sul dominio applicativo ed i contesti tecnologico, legislativo, normativo.
 
 I bisogni degli stakeholder scaturiscono da fonti diverse. Il gruppo si impegna ad esplorare e valutare, al fine di identificare possibili bisogni, almeno questi frangenti:
 - Obiettivi di alto livello che il sistema dovrebbe conseguire;
@@ -910,7 +910,7 @@ I bisogni degli stakeholder scaturiscono da fonti diverse. Il gruppo si impegna 
 Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (TODO), guidano la selezione e la prioritizzazione dei requisiti.
 
 ==== Casi d'uso
-Si definisce un insieme di casi d'uso (anche detti _Use Case_, abbreviato in _UC_) che identifichi tutte le funzionalità attese.
+Si definisce un insieme di casi d'uso (anche detti _use case_, abbreviato in _UC_) che identifichi tutte le funzionalità attese.
 I casi d'uso sono definiti ed utilizzati nel documento di _Analisi dei Requisiti_. Sono fonte di bisogni e, indirettamente, di requisiti; sono un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
 
 Ogni caso d'uso comprende:

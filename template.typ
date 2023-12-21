@@ -455,7 +455,7 @@ if docType == "verbale" [
 body
 
 //Signatures
-if isExternalUse {
+if isExternalUse and docType == "verbale" {
   align(
     end+bottom,
     grid(

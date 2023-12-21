@@ -408,10 +408,10 @@ Nel quarto sprint il team svolge compiti correttivi incentrati sul miglioramento
 
 === Obiettivi prefissati
 Gli obiettivi del quinto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
-dell'Analisi dei Requisiti e sullo sviluppo dei primi POC. \
+dell'Analisi dei Requisiti e sullo sviluppo dei primi PoC. \
 Gli obiettivi dello sprint 5 sono:
-- perfezionamento del sistema di drag and drop nel POC;
-- creazione degli scaffali nel POC;
+- perfezionamento del sistema di drag and drop nel PoC;
+- creazione degli scaffali nel PoC;
 - creazione ambiente docker;
 - svolgere meeting con il professor Cardin in merito all'Analisi dei Requisiti;
 - perfezionare e aggiornare il documento di Norme di Progetto;
@@ -425,11 +425,10 @@ Nel quinto sprint il team svolge compiti correttivi incentrati sul miglioramento
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti;
 - *Analista*: al fine di redarre il documento di Analisi dei Requisiti;
-- *Progettista*: al fine di sviluppare i POC.
-
-In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce.
+- *Progettista*: al fine di continuare lo studio sulla libreria Three.js;
+- *Programmatore*: al fine di sviluppare i PoC relativi allo studio della libreria;
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti.
 
 #set text(
   size: 10pt
@@ -437,19 +436,19 @@ In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce
 
 #figure(
   table(
-    columns: 7,
+    columns: 8,
     fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
-    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
-    [Banzato Alessio],  [/],  [/],    [4],    [/], [/],   [4],
-    [Carraro Riccardo], [3],  [/],    [/],    [/], [/],   [3],
-    [Gardin Giovanni],  [/],  [/],    [4],    [/], [/],   [4],
-    [Nardo Silvio],     [/],  [3],    [/],    [/], [/],   [3],
-    [Oseliero Antonio], [/],  [/],    [/],    [3], [/],   [3],
-    [Todesco Mattia],   [/],  [/],    [/],    [/], [3],   [3],
-    [Zaccone Rosario],  [/],  [/],    [/],    [3], [/],   [3],
-    [Totale ore ruolo], [3],  [3],    [8],    [6], [3],   [23],
-    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
-    [Costo ruolo], [90,00], [60,00], [200,00], [150,00], [45,00], [545,00],
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*],[*Programmatore*],[*Verificatore*],[*Totale*],
+    [Banzato Alessio],   [/],  [/],    [4],    [/], [/],[/],   [4],
+    [Carraro\ Riccardo], [3],  [/],    [/],    [/], [2],[/],   [5],
+    [Gardin\ Giovanni],  [/],  [/],    [4],    [/], [/],[/],   [4],
+    [Nardo\ Silvio],     [/],  [3],    [/],    [/], [2],[/],   [5],
+    [Oseliero\ Antonio], [/],  [/],    [/],    [2], [2],[/],   [4],
+    [Todesco\ Mattia],   [/],  [/],    [/],    [/], [/],[3],   [3],
+    [Zaccone\ Rosario],  [/],  [/],    [/],    [2], [2],[/],   [4],
+    [Totale\ ore ruolo], [3],  [3],    [8],    [4], [8],[3],   [23],
+    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo], [90,00], [60,00], [200,00], [100,00], [120,00], [45,00], [615,00],
   ),
   caption: "Preventivo quinto sprint"
 )
@@ -483,8 +482,8 @@ In quest'ottica, vede l'impiego principale delle figure:
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira, redigere i verbali e aggiornare il documento Piano di Progetto;
 - *Analista*: al fine di redarre il documento di Analisi dei Requisiti con relativi diagrammi UML;
-- *Progettista*: al fine di progettare i POC;
-- *Programmatore*: al fine di sviluppare i POC;
+- *Progettista*: al fine di progettare i PoC;
+- *Programmatore*: al fine di sviluppare i PoC;
 - *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti assicurandosi che siano coerenti con le Norme di Progetto.
 
 
@@ -773,19 +772,19 @@ Inoltre il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'ut
 
 #figure(
   table(
-    columns: 7,
+    columns: 8,
     fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
-    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
-    [Banzato Alessio],  [3],  [/],    [/],    [/], [/],   [3],
-    [Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
-    [Gardin Giovanni],  [/],  [/],    [/],    [/], [4(+1)],   [4(+1)],
-    [Nardo Silvio],     [/],  [/],    [/],    [3], [/],   [3],
-    [Oseliero Antonio], [/],  [/],    [4],    [/], [/],   [4],
-    [Todesco Mattia],   [/],  [2(-1)],    [/],    [/], [/],   [2(-1)],
-    [Zaccone Rosario],  [/],  [2(-1)],    [/],    [/], [/],   [2(-1)],
-    [Totale ore ruolo], [3],  [4],    [8],    [3], [4],   [22],
-    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
-    [Costo ruolo], [90,00], [80,00], [200,00], [75,00], [60,00], [505,00]
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato\ Alessio],  [3],     [/],     [/],      [/],    [/],      [/],    [3],
+    [Carraro\ Riccardo], [/],     [/],     [3],      [/],    [2(+1)],  [/],    [5(+1)],
+    [Gardin\ Giovanni],  [/],     [/],     [/],      [/],    [/],      [4(+1)],[4(+1)],
+    [Nardo\ Silvio],     [/],     [/],     [/],      [1],    [2],      [/],    [3],
+    [Oseliero\ Antonio], [/],     [/],     [4],      [/],    [/],      [/],    [4],
+    [Todesco\ Mattia],   [/],     [2(-1)], [/],      [/],    [/],      [/],    [2(-1)],
+    [Zaccone\ Rosario],  [/],     [2(-1)], [/],      [/],    [/],      [/],    [2(-1)],
+    [Totale\ ore ruolo], [3],     [4],     [7],      [1],    [4],      [4],    [23],
+    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo],      [90,00], [80,00], [175,00], [25,00], [60,00], [60,00], [490,00]
   ),
   caption: "Consuntivo quarto sprint"
 )
@@ -839,23 +838,91 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
     columns: 8,
     fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
-    [Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
-    [Carraro Riccardo], [3],  [/],    [/],    [/],    [(2)],   [/], [5],
-    [Gardin Giovanni],  [/],  [/],    [4],    [/],    [/],   [/], [4],
-    [Nardo\ Silvio],     [/],  [3(-1)],[/],    [/],    [(2)],   [/], [4],
-    [Oseliero Antonio], [/],  [/],    [/],    [3(-2)],[(2)],   [/], [3],
-    [Todesco Mattia],   [/],  [/],    [/],    [/],    [/],   [3], [3],
-    [Zaccone Rosario],  [/],  [/],    [/],    [3(-2)],[(2)],   [/], [3],
-    [Totale\ ore ruolo], [3],  [2],    [8],    [2],    [8],   [3], [24],
-    [Costo\ orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
-    [Costo\ ruolo],      [90,00], [40,00], [200,00], [50,00], [120,00], [45,00], [545,00]
+    [Banzato Alessio],  [/],     [/],      [4],     [/],     [/],      [/],     [4],
+    [Carraro Riccardo], [3],     [/],      [/],     [/],     [2],      [/],     [5],
+    [Gardin Giovanni],  [/],     [/],      [4],     [/],     [/],      [/],     [4],
+    [Nardo\ Silvio],    [/],     [2(-1)],  [/],     [/],     [2],      [/],     [4(-1)],
+    [Oseliero Antonio], [/],     [/],      [/],     [1(-1)], [2],      [/],     [3(-1)],
+    [Todesco Mattia],   [/],     [/],      [/],     [/],     [/],      [3],     [3],
+    [Zaccone Rosario],  [/],     [/],      [/],     [1(-1)], [2],      [/],     [3],
+    [Totale\ ore ruolo],[3],     [3],      [8],     [2],     [8],      [3],     [26],
+    [Costo\ orario],    [30,00], [20,00],  [25,00], [25,00], [15,00],  [15,00], [],
+    [Costo\ ruolo],     [90,00], [40,00],  [200,00],[50,00], [120,00], [45,00], [545,00]
   ),
   caption: "Consuntivo quinto sprint"
 )
 
 Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabile e l'Amministratore) hanno impiegato ore produttive come Programmatori, questo ha in parte significato una riduzione delle ore produttive previste per il ruolo assegnato.
 
+=== Burndown-chart
+[da inserire]
 
+
+== Sesto Sprint dal 11-12-2023 al 18-12-2023
+
+=== Obiettivi raggiunti
+- avanzamento del PoC A con:
+  - miglioramento grafico degli scaffali;
+  - posizionamento automatico dei bin nello scaffale al momento della sua creazione;
+  - implementazione visualizzazione prodotti dei bin tramite alert JavaScript.
+- aggiornamento documento Norme di Progetto;
+- aggiornamento documento Analisi dei Requisiti con:
+  - refactoring degli use case secondo le indicazioni del professor Cardin;
+  - redazione requisiti funzionali;
+  - redazione requisiti di qualità;
+  - redazione requisiti di vincolo.
+- redazione introduzione Piano di Qualifica;
+- meeting con l'azienda Proponente per:
+  - esporre il PoC A;
+  - aggiornare sullo stato dei lavori;
+  - chiedere feedback sui requisiti non funzionali;
+- conversione del Glossario in JSON per automatizzare l'individuazione dei termini nei documenti.
+
+
+=== Obiettivi mancati
+- migliorare GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
+- implementazione PoC per il front-end.
+
+=== Analisi problematiche insorte
+Durante il meeting di retrospettiva sono emerse le seguenti problematiche da migliorare:
+- mancata comunicazione di situazioni di difficoltà o problemi che hanno portato a rallentamenti nella produzione di un PoC per il front-end;
+- la stesura del documento Norme di Progetto ha una velocità di avanzamento troppo bassa.
+
+=== Risoluzioni attuate
+Conseguentemente ai problemi rilevati, sono state individuate le relative soluzioni da adottare:
+- si richiede ai componenti del gruppo una comunicazione rapida delle difficoltà e problemi, non appena questi si presentano;
+- il numero di persone assegnate alla redazione delle Norme di Progetto verrà incrementato da due a tre, in modo da garantire la produzione di un maggior numero di sezioni durante lo sprint.
+
+=== Analisi costi di sprint effettivi
+
+#set text(
+  size: 10pt
+)
+
+#figure(
+  table(
+    columns: 8,
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+    [Carraro\ Riccardo], [3],  [/],    [/],    [/],    [/],   [/], [3],
+    [Gardin\ Giovanni],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+    [Nardo\ Silvio],     [/],  [3],    [/],    [/],    [/],   [/], [3],
+    [Oseliero\ Antonio], [/],  [/],    [/],    [1],    [2(-1)],   [/], [3(-1)],
+    [Todesco Mattia],   [/],  [/],    [/],    [/],    [/],   [3], [3],
+    [Zaccone\ Rosario],  [/],  [/],    [/],    [1],    [3],   [/], [4],
+    [Totale\ ore ruolo], [3],  [3],    [8],    [2],    [5],   [3], [24],
+    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo],      [90,00], [60,00], [200,00], [50,00], [75,00], [45,00], [520,00]
+  ),
+  caption: "Consuntivo sesto sprint"
+)
+
+#set text(
+  size: 11pt
+)
+
+Il ruolo di Programmatore presenta un monte ore effettivo minore rispetto a quello preventivato a causa di problemi tecnici che hanno interrotto la lavorazione del PoC.
 
 === Burndown-chart
 [da inserire]

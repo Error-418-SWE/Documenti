@@ -408,10 +408,10 @@ Nel quarto sprint il team svolge compiti correttivi incentrati sul miglioramento
 
 === Obiettivi prefissati
 Gli obiettivi del quinto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
-dell'Analisi dei Requisiti e sullo sviluppo dei primi POC. \
+dell'Analisi dei Requisiti e sullo sviluppo dei primi PoC. \
 Gli obiettivi dello sprint 5 sono:
-- perfezionamento del sistema di drag and drop nel POC;
-- creazione degli scaffali nel POC;
+- perfezionamento del sistema di drag and drop nel PoC;
+- creazione degli scaffali nel PoC;
 - creazione ambiente docker;
 - svolgere meeting con il professor Cardin in merito all'Analisi dei Requisiti;
 - perfezionare e aggiornare il documento di Norme di Progetto;
@@ -425,11 +425,10 @@ Nel quinto sprint il team svolge compiti correttivi incentrati sul miglioramento
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti;
 - *Analista*: al fine di redarre il documento di Analisi dei Requisiti;
-- *Progettista*: al fine di sviluppare i POC.
-
-In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce.
+- *Progettista*: al fine di continuare lo studio sulla libreria Three.js;
+- *Programmatore*: al fine di sviluppare i PoC relativi allo studio della libreria;
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti.
 
 #set text(
   size: 10pt
@@ -437,19 +436,19 @@ In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce
 
 #figure(
   table(
-    columns: 7,
+    columns: 8,
     fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
-    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
-    [Banzato Alessio],  [/],  [/],    [4],    [/], [/],   [4],
-    [Carraro Riccardo], [3],  [/],    [/],    [/], [/],   [3],
-    [Gardin Giovanni],  [/],  [/],    [4],    [/], [/],   [4],
-    [Nardo Silvio],     [/],  [3],    [/],    [/], [/],   [3],
-    [Oseliero Antonio], [/],  [/],    [/],    [3], [/],   [3],
-    [Todesco Mattia],   [/],  [/],    [/],    [/], [3],   [3],
-    [Zaccone Rosario],  [/],  [/],    [/],    [3], [/],   [3],
-    [Totale ore ruolo], [3],  [3],    [8],    [6], [3],   [23],
-    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
-    [Costo ruolo], [90,00], [60,00], [200,00], [150,00], [45,00], [545,00],
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*],[*Programmatore*],[*Verificatore*],[*Totale*],
+    [Banzato Alessio],   [/],  [/],    [4],    [/], [/],[/],   [4],
+    [Carraro\ Riccardo], [3],  [/],    [/],    [/], [2],[/],   [5],
+    [Gardin\ Giovanni],  [/],  [/],    [4],    [/], [/],[/],   [4],
+    [Nardo\ Silvio],     [/],  [3],    [/],    [/], [2],[/],   [5],
+    [Oseliero\ Antonio], [/],  [/],    [/],    [2], [2],[/],   [4],
+    [Todesco\ Mattia],   [/],  [/],    [/],    [/], [/],[3],   [3],
+    [Zaccone\ Rosario],  [/],  [/],    [/],    [2], [2],[/],   [4],
+    [Totale\ ore ruolo], [3],  [3],    [8],    [4], [8],[3],   [23],
+    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo], [90,00], [60,00], [200,00], [100,00], [120,00], [45,00], [615,00],
   ),
   caption: "Preventivo quinto sprint"
 )
@@ -483,8 +482,8 @@ In quest'ottica, vede l'impiego principale delle figure:
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira, redigere i verbali e aggiornare il documento Piano di Progetto;
 - *Analista*: al fine di redarre il documento di Analisi dei Requisiti con relativi diagrammi UML;
-- *Progettista*: al fine di progettare i POC;
-- *Programmatore*: al fine di sviluppare i POC;
+- *Progettista*: al fine di progettare i PoC;
+- *Programmatore*: al fine di sviluppare i PoC;
 - *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti assicurandosi che siano coerenti con le Norme di Progetto.
 
 
@@ -716,19 +715,19 @@ Inoltre il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'ut
 
 #figure(
   table(
-    columns: 7,
+    columns: 8,
     fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
-    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Verificatore*],[*Totale*],
-    [Banzato Alessio],  [3],  [/],    [/],    [/], [/],   [3],
-    [Carraro Riccardo], [/],  [/],    [4],    [/], [/],   [4],
-    [Gardin Giovanni],  [/],  [/],    [/],    [/], [4(+1)],   [4(+1)],
-    [Nardo Silvio],     [/],  [/],    [/],    [3], [/],   [3],
-    [Oseliero Antonio], [/],  [/],    [4],    [/], [/],   [4],
-    [Todesco Mattia],   [/],  [2(-1)],    [/],    [/], [/],   [2(-1)],
-    [Zaccone Rosario],  [/],  [2(-1)],    [/],    [/], [/],   [2(-1)],
-    [Totale ore ruolo], [3],  [4],    [8],    [3], [4],   [22],
-    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [],
-    [Costo ruolo], [90,00], [80,00], [200,00], [75,00], [60,00], [505,00]
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato\ Alessio],  [3],     [/],     [/],      [/],    [/],      [/],    [3],
+    [Carraro\ Riccardo], [/],     [/],     [3],      [/],    [2(+1)],  [/],    [5(+1)],
+    [Gardin\ Giovanni],  [/],     [/],     [/],      [/],    [/],      [4(+1)],[4(+1)],
+    [Nardo\ Silvio],     [/],     [/],     [/],      [1],    [2],      [/],    [3],
+    [Oseliero\ Antonio], [/],     [/],     [4],      [/],    [/],      [/],    [4],
+    [Todesco\ Mattia],   [/],     [2(-1)], [/],      [/],    [/],      [/],    [2(-1)],
+    [Zaccone\ Rosario],  [/],     [2(-1)], [/],      [/],    [/],      [/],    [2(-1)],
+    [Totale\ ore ruolo], [3],     [4],     [7],      [1],    [4],      [4],    [23],
+    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo],      [90,00], [80,00], [175,00], [25,00], [60,00], [60,00], [490,00]
   ),
   caption: "Consuntivo quarto sprint"
 )
@@ -782,16 +781,16 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
     columns: 8,
     fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
     [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
-    [Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
-    [Carraro Riccardo], [3],  [/],    [/],    [/],    [(2)],   [/], [5],
-    [Gardin Giovanni],  [/],  [/],    [4],    [/],    [/],   [/], [4],
-    [Nardo\ Silvio],     [/],  [3(-1)],[/],    [/],    [(2)],   [/], [4],
-    [Oseliero Antonio], [/],  [/],    [/],    [3(-2)],[(2)],   [/], [3],
-    [Todesco Mattia],   [/],  [/],    [/],    [/],    [/],   [3], [3],
-    [Zaccone Rosario],  [/],  [/],    [/],    [3(-2)],[(2)],   [/], [3],
-    [Totale\ ore ruolo], [3],  [2],    [8],    [2],    [8],   [3], [24],
-    [Costo\ orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
-    [Costo\ ruolo],      [90,00], [40,00], [200,00], [50,00], [120,00], [45,00], [545,00]
+    [Banzato Alessio],  [/],     [/],      [4],     [/],     [/],      [/],     [4],
+    [Carraro Riccardo], [3],     [/],      [/],     [/],     [2],      [/],     [5],
+    [Gardin Giovanni],  [/],     [/],      [4],     [/],     [/],      [/],     [4],
+    [Nardo\ Silvio],    [/],     [2(-1)],  [/],     [/],     [2],      [/],     [4(-1)],
+    [Oseliero Antonio], [/],     [/],      [/],     [1(-1)], [2],      [/],     [3(-1)],
+    [Todesco Mattia],   [/],     [/],      [/],     [/],     [/],      [3],     [3],
+    [Zaccone Rosario],  [/],     [/],      [/],     [1(-1)], [2],      [/],     [3],
+    [Totale\ ore ruolo],[3],     [3],      [8],     [2],     [8],      [3],     [26],
+    [Costo\ orario],    [30,00], [20,00],  [25,00], [25,00], [15,00],  [15,00], [],
+    [Costo\ ruolo],     [90,00], [40,00],  [200,00],[50,00], [120,00], [45,00], [545,00]
   ),
   caption: "Consuntivo quinto sprint"
 )

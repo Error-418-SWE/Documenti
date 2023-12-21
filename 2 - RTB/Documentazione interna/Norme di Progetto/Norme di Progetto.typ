@@ -909,7 +909,7 @@ I bisogni degli stakeholder scaturiscono da fonti diverse. Il gruppo si impegna 
 Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (TODO), guidano la selezione e la prioritizzazione dei requisiti.
 
 ==== Casi d'uso
-Si definisce un insieme di casi d'uso (anche detti _use case_, abbreviato in _UC_) che identifichi tutte le funzionalità attese.
+Si definisce un insieme di casi d'uso (anche detti use case, abbreviato in UC) che identifichi tutte le funzionalità attese.
 I casi d'uso sono definiti ed utilizzati nel documento di _Analisi dei Requisiti_. Sono fonte di bisogni e, indirettamente, di requisiti; sono un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
 
 Ogni caso d'uso comprende:

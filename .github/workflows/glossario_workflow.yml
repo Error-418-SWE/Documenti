@@ -1,0 +1,27 @@
+name: Compile Files Workflow
+
+on:
+  pull_request:
+    paths:
+      - 'Glossario.json'
+
+jobs:
+  compile-files:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Check for Glossario.json
+        run: |
+          if [ -e "Glossario.json" ]; then
+            echo "Glossario.json found. Compiling .typ files."
+          else
+            echo "Glossario.json not found. Skipping compilation."
+            exit 0
+          fi
+
+      - name: Compile .typ files
+        run: |
+          find . -type f -name "*.typ" ! -name "template.typ" -exec Error-418-SWE/Documenti/.github/workflows/compile_document.yml@src

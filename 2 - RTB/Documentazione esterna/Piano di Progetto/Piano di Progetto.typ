@@ -430,8 +430,6 @@ Nel quinto sprint il team svolge compiti correttivi incentrati sul miglioramento
 - *Programmatore*: al fine di sviluppare i POC relativi allo studio della libreria;
 - *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti.
 
-In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce.
-
 #set text(
   size: 10pt
 )
@@ -789,6 +787,7 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
     [Nardo\ Silvio],    [/],     [2(-1)],  [/],     [/],     [2],      [/],     [4(-1)],
     [Oseliero Antonio], [/],     [/],      [/],     [1(-1)], [2],      [/],     [3(-1)],
     [Todesco Mattia],   [/],     [/],      [/],     [/],     [/],      [3],     [3],
+    [Zaccone Rosario],  [/],     [/],      [/],     [1(-1)], [2],      [/],     [3],
     [Totale\ ore ruolo],[3],     [3],      [8],     [2],     [8],      [3],     [26],
     [Costo\ orario],    [30,00], [20,00],  [25,00], [25,00], [15,00],  [15,00], [],
     [Costo\ ruolo],     [90,00], [40,00],  [200,00],[50,00], [120,00], [45,00], [545,00]

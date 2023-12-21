@@ -997,27 +997,22 @@ Il team si impegna a definire approcci di trattamento appropriati, compresi pian
 ==== Analizzare i rischi
 Questa attività consiste nei seguenti compiti:
 
-- identificare i rischi nelle categorie descritte nel contesto della gestione dei rischi: 
-l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
++ identificare i rischi nelle categorie descritte nel contesto della gestione dei rischi:\ l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
 
-- stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato: 
-per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
++ stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato:\ per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
 
-- valutare ciascun rischio rispetto alle sue soglie di rischio:
-ogni rischio viene valutato rispetto alle soglie di rischio stabilite, determinando se il rischio supera tali soglie e richiede trattamenti specifici.
++ valutare ciascun rischio rispetto alle sue soglie di rischio:\ ogni rischio viene valutato rispetto alle soglie di rischio stabilite, determinando se il rischio supera tali soglie e richiede trattamenti specifici.
 
 
 
 ==== Trattare i rischi
 Questa attività consiste nei seguenti compiti:
 
-- per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate:
-per i rischi che superano le soglie prestabilite, vengono definite strategie di trattamento, che possono includere l'eliminazione del rischio, la riduzione della sua probabilità o gravità, o l'accettazione del rischio. Vengono anche registrate le misure che forniranno informazioni sull'efficacia delle alternative di trattamento.
++ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate:\ per i rischi che superano le soglie prestabilite, vengono definite strategie di trattamento, che possono includere l'eliminazione del rischio, la riduzione della sua probabilità o gravità, o l'accettazione del rischio. Vengono anche registrate le misure che forniranno informazioni sull'efficacia delle alternative di trattamento.
 
-- quando viene accettato un rischio che non soddisfa la sua soglia, va considerato una priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
++ quando viene accettato un rischio che non soddisfa la sua soglia, va considerato una priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
 
-- una volta selezionato un trattamento del rischio, coordinare l'azione di gestione: 
-dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
++ una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
 
 ==== Monitorare i rischi  
 Questa attività consiste nei seguenti compiti:

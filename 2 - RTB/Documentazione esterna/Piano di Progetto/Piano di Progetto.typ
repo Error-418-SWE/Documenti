@@ -408,10 +408,10 @@ Nel quarto sprint il team svolge compiti correttivi incentrati sul miglioramento
 
 === Obiettivi prefissati
 Gli obiettivi del quinto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
-dell'Analisi dei Requisiti e sullo sviluppo dei primi POC. \
+dell'Analisi dei Requisiti e sullo sviluppo dei primi PoC. \
 Gli obiettivi dello sprint 5 sono:
-- perfezionamento del sistema di drag and drop nel POC;
-- creazione degli scaffali nel POC;
+- perfezionamento del sistema di drag and drop nel PoC;
+- creazione degli scaffali nel PoC;
 - creazione ambiente docker;
 - svolgere meeting con il professor Cardin in merito all'Analisi dei Requisiti;
 - perfezionare e aggiornare il documento di Norme di Progetto;
@@ -427,7 +427,7 @@ Nel quinto sprint il team svolge compiti correttivi incentrati sul miglioramento
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira;
 - *Analista*: al fine di redarre il documento di Analisi dei Requisiti;
 - *Progettista*: al fine di continuare lo studio sulla libreria Three.js;
-- *Programmatore*: al fine di sviluppare i POC relativi allo studio della libreria;
+- *Programmatore*: al fine di sviluppare i PoC relativi allo studio della libreria;
 - *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti.
 
 #set text(
@@ -482,8 +482,8 @@ In quest'ottica, vede l'impiego principale delle figure:
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira, redigere i verbali e aggiornare il documento Piano di Progetto;
 - *Analista*: al fine di redarre il documento di Analisi dei Requisiti con relativi diagrammi UML;
-- *Progettista*: al fine di progettare i POC;
-- *Programmatore*: al fine di sviluppare i POC;
+- *Progettista*: al fine di progettare i PoC;
+- *Programmatore*: al fine di sviluppare i PoC;
 - *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti assicurandosi che siano coerenti con le Norme di Progetto.
 
 

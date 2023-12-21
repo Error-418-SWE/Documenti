@@ -514,15 +514,15 @@ In quest'ottica, vede l'impiego principale delle figure:
 == Settimo Sprint dal 18-12-2023 al 25-12-2023
 
 === Obiettivi prefissati
-Gli obiettivi del settimo sprint si focalizzano sul completamento del PoC e dell'analisi dei requisiti, oltre che un generale avanzamento dei documenti e miglioramento delle automazioni. Nel dettaglio gli obiettivi posti sono:
-- creazione di un PoC per il front-end e realizzazione di un PoC complessivo tramite l'unione dei PoC precedentemente sviluppati;
+Gli obiettivi del settimo sprint si focalizzano sul completamento del PoC, terminare l'analisi dei requisiti e in generale sull'avanzamento dei documenti e miglioramento delle automazioni. Nel dettaglio gli obiettivi posti sono:
+- creazione di un PoC per il front-end e realizzazione di un PoC definitivo comprendente tutto il lavoro svolto fin'ora
 - espansione del Piano di Qualifica con l'individuazione delle metriche da utilizzare;
 - espansione delle Norme di Progetto;
 - completamento del documento Analisi dei Requisiti con:
   - implementazione del tracciamento requisito-fonte;
   - revisione generale del documento per verificare la presenza di tutti gli use case e requisiti necessari.
 - miglioramento delle GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
-- implementazione dell'automazione che segnala i termini presenti nel glossario all'interno dei documenti.
+- implementazione dell'automazione che evidenzia i termini presenti nel glossario all'interno dei documenti.
 
 === Preventivo costi
 Nel settimo sprint i compiti del team sono incentrati sulla realizzazione del PoC finale e sul proseguimento e miglioramento di tutti i documenti necessari alla Requirements and Technology Baseline. Di conseguenza saranno essenziali le figure di:

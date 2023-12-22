@@ -958,3 +958,50 @@ Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una
 Il gruppo condivide il materiale prodotto all'interno di un repository dedicato reperibile al link:\
 #align(link("https://github.com/Error-418-SWE/Documenti"), center)
 Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
+
+== Processo di Misurazione
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.7_
+
+=== Scopo
+Lo scopo del processo di misurazione è raccogliere, analizzare e riportare dati e informazioni, al fine di dimostrare la qualità dei prodotti, servizi e processi.
+
+Questo processo viene svolto affinchè il gruppo sia in grado di prendere le corrette decisioni per gestire al meglio il raggiungimento dei propri obiettivi.
+
+Le misure devono avere queste caratteristiche di qualità: 
++ verificabili;
++ significative;
++ attuabili;
++ tempestive;
++ economicamente vantaggiose.
+
+Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia espresse che implicite.
+
+=== Risultati
+A seguito dell'implementazione riuscita del processo di misurazione:
+
+- vengono identificate le esigenze informative;
+- viene identificato o sviluppato un insieme appropriato di misure basato sulle esigenze informative;
+- i dati necessari vengono raccolti, verificati e archiviati;
+- i dati vengono analizzati e i risultati interpretati;
+- gli elementi informativi forniscono informazioni oggettive per poter prendere decisioni concrete.
+
+=== Attività
+Il progetto deve implementare le seguenti attività e compiti in conformità con le politiche e le procedure applicabili al processo di misurazione:
+// implementare ogni singolo punto con le decisioni prese nel piano di qualifica.
+- prepararsi per la misurazione:
+
+    - definire la strategia di misurazione;
+    - descrivere le caratteristiche dell'organizzazione rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici;
+    - identificare e dare priorità alle esigenze informative.
+    - selezionare e specificare misure che soddisfino le esigenze informative;
+    - definire procedure di raccolta, analisi, accesso e reportistica dei dati;
+    - definire criteri per valutare gli elementi informativi e il processo di misurazione;
+    - identificare e pianificare l'utilizzo dei necessari sistemi o servizi abilitanti.
+
+- eseguire la misurazione:
+
+    - integrare procedure manuali o automatizzate per la generazione, raccolta, analisi e reportistica dei dati nei processi pertinenti;
+    - raccogliere, archiviare e verificare i dati;
+    - analizzare i dati e sviluppare elementi informativi;\
+    - registrare i risultati e informare gli utenti della misurazione.

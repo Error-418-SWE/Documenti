@@ -1,0 +1,124 @@
+---
+import { Icon } from "@astrojs/starlight/components";
+
+const { title, description, docType, date, lastUpdated, externalParticipants, authors, reviewers, missingMembers, location, timeStart, timeEnd, isExternalUse } = Astro.props;
+---
+
+<section>
+	<div class="description">
+		{description && <p>{description}</p>}
+	</div>
+	<div class="title">
+		<Icon name="information" size="2rem" />
+		<h1 id="info-title">Informazioni sul documento</h1>
+	</div>
+	{isExternalUse && <span>Uso esterno</span>}
+	<dl>
+		{
+			authors && (
+				<>
+					<dt class="taxonomy">Autori</dt>
+					<dd class="content">{authors.join(", ")}</dd>
+				</>
+			)
+		}
+		{
+			reviewers && (
+				<>
+					<dt class="taxonomy">Verificatori</dt>
+					<dd class="content">{reviewers.join(", ")}</dd>
+				</>
+			)
+		}
+		{
+			date && (
+				<>
+					<dt class="taxonomy">Data</dt>
+					<dd class="content">{new Date(date).toLocaleString("it-IT").split(", ")[0]}</dd>
+				</>
+			)
+		}
+		{
+			lastUpdated && (
+				<>
+					<dt class="taxonomy">Ultimo aggiornamento</dt>
+					<dd class="content">{new Date(lastUpdated).toLocaleString("it-IT").split(", ")[0]}</dd>
+				</>
+			)
+		}
+		{
+			externalParticipants && (
+				<>
+					<dt class="taxonomy">Partecipanti esterni</dt>
+					<dd class="content">{externalParticipants.name}</dd>
+				</>
+			)
+		}
+		{
+			missingMembers && (
+				<>
+					<dt class="taxonomy">Assenti</dt>
+					<dd class="content">{missingMembers.join(", ")}</dd>
+				</>
+			)
+		}
+		{
+			location && (
+				<>
+					<dt class="taxonomy">Luogo</dt>
+					<dd class="content">{location}</dd>
+				</>
+			)
+		}
+		{
+			timeStart && (
+				<>
+					<dt class="taxonomy">Ora di inizio</dt>
+					<dd class="content">{timeStart}</dd>
+				</>
+			)
+		}
+		{
+			timeEnd && (
+				<>
+					<dt class="taxonomy">Ora di fine</dt>
+					<dd class="content">{timeEnd}</dd>
+				</>
+			)
+		}
+	</dl>
+</section>
+
+<style>
+	.description {
+		font-style: italic;
+		margin-bottom: 2em;
+	}
+
+	.title {
+		display: flex;
+		gap: 1em;
+		align-items: center;
+	}
+
+	h1#info-title {
+		font-size: 1.3rem;
+		margin-top: 0;
+	}
+
+	dl {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		align-items: baseline;
+		gap: 1em;
+	}
+
+	dl > dt.taxonomy {
+		margin-top: 0;
+	}
+
+	dl > dd.content {
+		margin-top: 0;
+		padding: 0;
+	}
+</style>

@@ -1,0 +1,32 @@
+---
+title: Documentazione
+description: Sito ufficiale della documentazione prodotta da Error_418 (gruppo 7) nell'ambito del corso di Ingegneria del Software (Università degli Studi di Padova, A.A. 2023/2024).
+template: splash
+hero:
+  tagline: Sito ufficiale della documentazione prodotta da Error_418 (gruppo 7) nell'ambito del corso di Ingegneria del Software (Università degli Studi di Padova, A.A. 2023/2024).
+
+  image:
+    file: ../../assets/logo.webp
+  actions:
+    - text: Sezioni del sito
+      link: /introduzione/sezioni/
+      icon: right-arrow
+      variant: primary
+    - text: Repository ufficiale
+      link: https://github.com/Error-418-SWE/Documenti/tree/main
+      icon: external
+---
+
+import { Common } from '/common';
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Dettagli
+
+<CardGrid>
+	<Card title="Crediti" icon="open-book">
+		Questo sito è realizzato con [Starlight](https://starlight.astro.build/).
+	</Card>
+	<Card title="Repository ufficiale" icon="github">
+		Tutti i documenti sono disponibili anche su [GitHub](https://github.com/Error-418-SWE/Documenti/tree/main).
+	</Card>
+</CardGrid>

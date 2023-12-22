@@ -1,0 +1,28 @@
+<details>
+	<summary lang="en">Changelog</summary>
+	<slot>
+</details>
+
+<style>
+
+	details {
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.5rem;
+		box-shadow: var(--sl-shadow-sm);
+		padding: 1rem;
+	}
+
+	summary {
+		padding: 1rem;
+		margin: -1rem;
+		cursor: pointer;
+		user-select: none;
+	}
+
+	details:hover,
+	details:focus {
+		background: var(--sl-color-gray-7, var(--sl-color-gray-6));
+		border-color: var(--sl-color-gray-2);
+	}
+
+</style>

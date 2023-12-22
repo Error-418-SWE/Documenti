@@ -2,6 +2,8 @@
 
 # Sito web di Error_418
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6634b432-c310-416d-8c05-149cbb2f4a7c/deploy-status)](https://app.netlify.com/sites/error418swe/deploys)
+
 Il branch `website` contiene i file sorgente del sito web di **Error_418** (gruppo 7). I documenti sono prodotti nell'ambito del corso di **Ingegneria del Software** del corso di Laurea in Informatica dell'Università degli Studi di Padova (A.A. 2023/2024).
 
 ## Funzionamento

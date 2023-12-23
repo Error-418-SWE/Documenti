@@ -125,3 +125,17 @@ In questo documento si fa riferimento allo standard:
   ),
   caption: "Specifiche metrica ETC"
 )
+
+== Processi di supporto
+=== Documentazione
+==== Metriche
+- *Indice di Gulpease*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [$89+(300*(F)-10*(L))/P$], [100%], [\u{2264}60%],
+  ),
+  caption: "Specifiche Indice di Gulpease"
+)

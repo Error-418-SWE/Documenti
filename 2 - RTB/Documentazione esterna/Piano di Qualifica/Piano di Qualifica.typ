@@ -35,18 +35,93 @@ In questo documento si fa riferimento allo standard:
 == Processi primari
 
 === Fornitura
-In questa fase di avanzamento, si tracciano tutte le decisioni intraprese nel corso dello sviluppo delle singole risorse.
-Nel contesto in esame, l'acronimo cruciale è MPC, ovvero Minimum Predictive Capability (Capacità Predittiva Minima). Si tratta di una metrica fondamentale per valutare l'accuratezza di un modello di previsione o di apprendimento automatico. In termini più chiari, l'MPC rappresenta la soglia minima di precisione delle previsioni che il modello deve raggiungere per ottenere il giudizio di accettabilità.
-Per una comprensione più approfondita, vengono definiti i singoli termini più rilevanti:
-- Budget At Completion(BAC): Il costo totale preventivato del progetto al raggiungimento del completamento;
-- Estimated At Completion (EAC): Il valore stimato per le attività ancora da completare;
-- Estimated To Completion (ETC): La stima del costo finale alla data odierna;
-- Earned Value (EV): Il valore raggiunto fino al momento attuale. Calcolato moltiplicando il lavoro svolto in percentuale per EAC;
-- Planned Value (PV): Il valore pianificato fino al momento attuale. Calcolato moltiplicando il lavoro pianificato espresso in percentuale per BAC;
-- Actual Cost (AC): Il costo effettivo sostenuto fino al momento attuale;
-- Cost Variance (CV): La differenza tra il budget disponibile e quello effettivamente utilizzato. Calcolato sottraendo AC da EV;
-- Schedule Variance (SV): La varianzione temporale rispetto alla pianificazione in termini di anticipo o ritardo. Calcolato sottraendo PV da EV. Un valore negativo indica un ritardo rispetto alle previsioni iniziali;
-- Budget Variance (BV): La variazione rispetto al budget preventivato al completamento del progetto. Calcolato sottraendo CV da AC.
+==== Parametri
+- *BAC (Budget at Completion)*: come definito nel documento Piano di Progetto ha un valore di € 13.370,00.
+==== Metriche
+- *AC (Actual Cost)*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [somma dei costi tracciati dal gruppo], [\u{2264}BAC], [\u{2264}BAC],
+  ),
+  caption: "Specifiche metrica AC"
+)
 
-//tabella con valori accettabili? ho visto gli altri gruppi l'hanno messa ma finchè non scegliamo uno standard non so dove trovarla.
-=== Sviluppo
+- *PV (Planned Value)*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [% di completamento del progetto pianificata\u{2217}BAC], [\u{2264}BAC], [\u{2264}BAC],
+  ),
+  caption: "Specifiche metrica PV"
+)
+
+- *EV (Earned Value)*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [% dell'effettivo stato di completamento del progetto\u{2217}BAC], [\u{2265}0], [\u{2264}BAC],
+  ),
+  caption: "Specifiche metrica EV"
+)
+
+- *CV (Cost Variance)*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [EV-AC], [\u{2265}0], [\u{2265}TBD],
+  ),
+  caption: "Specifiche metrica CV"
+)
+
+- *SV (Schedule Variance)*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [EV-PV], [\u{2265}0], [\u{2265}TBD],
+  ),
+  caption: "Specifiche metrica SV"
+)
+
+- *CPI (Cost Performance Index)*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [EV/AC], [\u{2265}TBD], [\u{2265}TBD],
+  ),
+  caption: "Specifiche metrica CPI"
+)
+
+- *EAC (Estimated At Completition)*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [BAC/CPI], [=BAC], [TBD],
+  ),
+  caption: "Specifiche metrica EAC"
+)
+
+- *ETC (Estimated To Completition)*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [(BAC-EV)/CPI], [\u{2265}0%], [\u{2264}EAC],
+  ),
+  caption: "Specifiche metrica ETC"
+)

@@ -135,7 +135,21 @@ In questo documento si fa riferimento allo standard:
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$89+(300*(F)-10*(L))/P$], [100%], [\u{2264}60%],
+    [$89+(300*(F)-10*(L))/P$], [100%], [\u{2265}60%],
   ),
   caption: "Specifiche Indice di Gulpease"
+)
+-- F=numero di frasi nel testo;
+-- L=numero di lettere nel testo;
+-- P=numero di parole nel testo.
+
+- Errori ortografici
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [numero di errori ortografici presenti nel testo], [0], [0],
+  ),
+  caption: "Specifiche Errori Ortografici"
 )

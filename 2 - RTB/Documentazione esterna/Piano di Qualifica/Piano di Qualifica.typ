@@ -153,3 +153,18 @@ In questo documento si fa riferimento allo standard:
   ),
   caption: "Specifiche Errori Ortografici"
 )
+
+=== Verifica
+==== Metriche
+- *Code coverage*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [(Righe di codice testate/Righe di codice totali)\u{2217}100], [0], [0],
+  ),
+  caption: "Specifiche Code coverage"
+)
+
+// = Qualità del prodotto da compilare dopo l'RTB?

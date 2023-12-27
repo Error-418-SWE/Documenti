@@ -686,7 +686,7 @@ L'aggiornamento di una delle cifre del numero di versione azzera le cifre di ril
 + Dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.
 
 
-==== Tracciamento modifiche
+==== Tracciamento modifiche <tracciamento-modifiche>
 Il tracciamento delle modifiche avviene per mezzo di automazioni che permettono di identificare:
 - versione del documento modificato;
 - data di modifica (gg-mm-aaaa, ddd);
@@ -699,7 +699,12 @@ Tali informazioni sono salvate in un file CSV, unico per ogni documento. Questo 
 
 Ogni documento, nella sezione direttamente sottostante all'indice, mostrerà in formato tabellare le informazioni relative al tracciamento delle modifiche, leggendo le informazioni dal file _log.csv_.
 
-#figure(image("./imgs/esempio_tracciamento_modifiche.png", format: "png"), caption: [Esempio tracciamento modifiche])
+#figure(table(
+    align: left,
+    columns: (1fr, 1.7fr, 0.8fr, 5fr, 2.1fr, 2.1fr),
+    [*Ver.*],[*Data*],[*PR*],[*Titolo*],[*Redattore*],[*Verificatore*],
+    [1.0.0], [11-12-2023,\ Mon], [90], [DOC-123 Redazione paragrafo \ {nome_paragrafo}], [Riccardo \ Carraro], [Mattia \ Todesco]
+), caption: [Esempio tracciamento modifiche])
 
 === Tecnologie
 ==== Typst
@@ -728,7 +733,7 @@ Al fine di semplificare la procedura di creazione di un documento, è stato cond
 
 ==== Astro
 
-==== GitHub
+==== GitHub <repository-github>
 Lo strumento di versionamento scelto dal gruppo è GitHub.
 Il gruppo Error_418 ha creato un'organizzazione omonima su GitHub in modo da gestire e separare il lavoro in più repository pensate per scopi e contenuti diversi:
 - *Documenti*: repository contenente la documentazione prodotta;
@@ -837,6 +842,198 @@ La timeline permette di mostrare il grafico di Gantt delle attività evidenziand
 ===== Grafici
 Jira offre la possibilità di produrre grafici e report relativi all'avanzamento e alla tracciabilità delle task. Tali strumenti permettono di avere delle metriche di valutazione dell'andamento del progetto e di individuare eventuali criticità.
 Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story points di ogni attività.
+
+== Processo di gestione delle informazioni
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.6_
+=== Scopo
+Lo scopo della gestione delle informazionie è generare, ottenere, confermare, trasformare, conservare, recuperare, distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
+
+Le informazioni possono essere tecniche, di progetto, organizzative e di accordo.
+
+=== Informazioni gestite 
+Le informazioni gestite dal gruppo sono:
+- documentazione:
+  - Piano di Progetto;
+  - Norme di Progetto;
+  - Piano di Qualifica;
+  - Analisi dei Requisiti;
+  - Glossario;
+  - Verbali.
+- codice sorgente:
+  - Proof of Concept;
+  - Minimun Viable Product.
+
+Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e distribuiti all'interno dei repository del gruppo. 
+
+=== Documentazione
+==== Struttura <struttura-documenti>
+Ogni documento segue una struttura standard, stabilita nel template _template.typ_. I documenti pertanto sono così strutturati:
++ *Cover page*: la cover page è la prima pagina del documento, e contiene le seguenti informazioni:
+  - nome del gruppo;
+  - link all'organizzazione GitHub;
+  - mail del gruppo;
+  - logo;
+  - titolo del documento;
+  - sottotitolo del documento;
+  - versione;
+  - stato;
+  - tipo di uso: interno od esterno;
+  - responsabile del gruppo;
+  - redattori;
+  - verificatori;
+  - destinatari;
+  - figure esterne se presenti.
+
++ *Registro delle modifiche*: sezione successiva agli indici. Maggiori dettagli sono visibili alla sezione dedicata (@tracciamento-modifiche).
+
++ *Indici*: sezione successiva agli indici. Sono presenti tre tipologie di indici:
+    - indice del contenuto: indice sempre presente che rappresenta i paragrafi del documento;
+    - indice delle tabelle: indice presente solo se sono presenti tabelle nel documento;
+    - indice delle figure: indice presente solo se sono presenti figure nel documento.
+
++ *Contenuto del file*: sezione successiva alla tabella di tracciamento delle modifiche. Rappresenta il corpo del documento, suddiviso in paragrafi.
+
+===== Verbali 
+I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e ridotta lunghezza. I verbali sono così strutturati:
+- *cover page* (@struttura-documenti);
+- *informazioni generali*:
+  - luogo;
+  - data e ora nel formato (gg-mm-aaaa, hh:mm ~ hh:mm);
+  - partecipanti;
+  - assenti;
+  - referente aziendale (se presente).
+- *ordine del giorno*: elenco degli argomenti trattati durante la riunione;
+- *organizzazione attività*: elenco delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva.
+- *firma partecipanti esterni* (se presenti): firma dei partecipanti esterni alla riunione. 
+
+=== Stile e convenzioni
+Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.
+L'obiettivo è perseguire:
+- Chiarezza;
+- Leggibilità;
+- Mantenibilità.
+
+==== Convenzioni stilistiche globali
+Convenzioni stilistiche valide sia per i prodotti documentali che software.
+
+===== Nomi dei documenti <norma_nomi_documenti>
+Ogni parola dei titoli dei documenti deve iniziare con la lettera maiuscola, ad eccezione delle preposizioni e degli articoli.\
+I verbali avranno come titolo la data del verbale nel formato _yyyy-mm-dd_.
+Ogni documento alla fine del nome riporta anche la versione nel formato _\_vX.Y.Z_. \
+
+esempio: `Norme di Progetto_v1.0.0.pdf`.
+
+===== Formato data
+All'interno del documento, le date seguiranno il formato locale _dd/mm/yyyy_, mentre all'interno dei nomi dei file e dei commit di GitHub, il formato utilizzato sarà _yyyy-mm-dd_, dove:
+- *dd*: numero del giorno con due cifre;
+- *mm*: numero del mese con due cifre;
+- *yyyy*: numero dell'anno con quattro cifre.
+
+==== Convenzioni stilistiche documentali
+Convenzioni stilistiche specifiche per i prodotti documentali.
+
+===== TODO 
+Per indicare sezioni del documento da completare, il gruppo ha deciso di utilizzare il termine TODO, che verrà in automatico mostrato in rosso e riquadrato, riportando il messaggio _riferimento assente_.\
+Il risultato è il seguente: TODO.\
+Questo permette di individuare facilmente le parti del documento da completare.
+===== Corsivo, grassetto, maiuscole e monospace
+_Corsivo_:
+- citazioni;
+- formati;
+- nomi di practice;
+- nomi propri di dominio.
+
+*Grassetto*:
+- titoli;
+- parole chiave e significative;
+- termini iniziali di elenchi puntati che necessitano spiegazione.
+
+MAIUSCOLO:
+- acronimi;
+- nomi propri;
+- nomi strumenti e tecnologie;
+- iniziale nomi ruoli;
+- iniziale parole nei nomi documenti ad eccezione di preposizioni e articoli. Riferimento nomi file @norma_nomi_documenti.
+
+`Monospace`:\
+- nome di un file (Riferimento nomi file @norma_nomi_documenti);
+- parametri;
+- porzioni di codice. 
+
+===== Elenchi
+- si utilizzano elenchi numerati se gli elementi mostrati richiedono un ordine (es. ordine delle sezioni);
+- si utilizzano elenchi non numerati se gli elementi mostrati non richiedono un ordine (es. lista di attività);
+- al termine di ogni elemento viene posto ";" ad eccezione dell'ultimo elemento che viene posto ".".
+
+===== Glossario
+Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una G in corsivo a pedice.
+
+=== Distribuzione delle informazioni
+Il gruppo condivide il materiale prodotto all'interno di un repository dedicato reperibile al link:\
+#align(link("https://github.com/Error-418-SWE/Documenti"), center)
+Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
+
+== Processo di Gestione dei Rischi
+
+=== Scopo
+Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.
+
+=== Risultati 
+Come risultato dell'implementazione del processo di Gestione dei Rischi:
+- vengono identificati i rischi;
+- i rischi vengono analizzati;
+- vengono identificate, priorizzate e selezionate opzioni di trattamento del rischio;
+- viene implementato un trattamento appropriato;
+- i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
+
+=== Attività e compiti
+Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
+
+==== Pianificare la gestione dei rischi  
+La strategia di gestione dei rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. 
+I rischi devono venire individuati con tempestività, consentendo la pianificazione di misure preventive e correttive in tempo utile per limitare al massimo le conseguenze.
+La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
+Il team si impegna a definire approcci di trattamento appropriati, compresi piani di mitigazione specifici.
+
+==== Gestire il profilo di rischio  
+- Definire e registrare le soglie e le condizioni di rischio:
+  le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto. 
+  I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
+
+- Stabilire e mantenere un profilo di rischio:
+  il profilo di rischio contiene informazioni sul contesto della gestione dei rischi, il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
+  Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
+
+- Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:
+  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato "Analisi Dei Rischi.pdf" presente in: https://github.com/Error-418-SWE/Documenti-old/blob/develop/1%20-%20Candidatura/Analisi%20dei%20rischi/Analisi%20dei%20rischi.pdf .
+  // riferimenti alla documentazione temporanei 
+
+==== Analizzare i rischi
+Questa attività consiste nei seguenti compiti:
+
++ identificare i rischi nelle categorie descritte nel contesto della gestione dei rischi:\ l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
+
++ stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato:\ per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
+
++ valutare ciascun rischio rispetto alle sue soglie di rischio:\ ogni rischio viene valutato rispetto alle soglie di rischio stabilite, determinando se il rischio supera tali soglie e richiede trattamenti specifici.
+
+==== Trattare i rischi
+Questa attività consiste nei seguenti compiti:
+
++ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate:\ per i rischi che superano le soglie prestabilite, vengono definite strategie di trattamento, che possono includere l'eliminazione del rischio, la riduzione della sua probabilità o gravità, o l'accettazione del rischio. Vengono anche registrate le misure che forniranno informazioni sull'efficacia delle alternative di trattamento.
+
++ quando viene accettato un rischio che non soddisfa la sua soglia, va considerato una priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
+
++ una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
+
+==== Monitorare i rischi  
+Questa attività consiste nei seguenti compiti:
+
+- monitorare continuamente i rischi e il contesto della gestione dei rischi per eventuali cambiamenti e valutare i rischi quando il loro stato è cambiato;
+
+- implementare e monitorare misure per valutare l'efficacia dei trattamenti dei rischi;
+
+- monitorare continuamente l'emergere di nuovi rischi e fonti durante l'intero ciclo di vita.
 
 = Processi tecnici
 

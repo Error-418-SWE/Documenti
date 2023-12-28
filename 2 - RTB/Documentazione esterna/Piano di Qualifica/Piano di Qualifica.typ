@@ -22,7 +22,7 @@ Il presente documento viene redatto con lo scopo di definire gli standard di qua
 Definire la qualità di un prodotto consiste nell'attuazione di un insieme di processi che vadano a definire una base con cui misurare efficienza ed efficacia del lavoro svolto.
 
 == Approccio al documento
-Il presente documento viene redatto in modo incrementale per assicurare la coerenza delle informazioni al suo interno con gli sviluppi in corso e le esigenze evolutive del progetto.
+Il presente documento viene redatto in modo incrementale per assicurare la coerenza delle informazioni al suo interno con gli sviluppi in corso e le esigenze evolutive del progetto. Il documento non ha funzione descrittiva, la definizione delle metriche indicate è presente nel documento Norme di Progetto
 
 == Glossario
 Il presente documento include una serie di termini tecnici specifici del progetto. Al fine di agevolarne la comprensione, si fornisce un Glossario che espliciti il significato di tali termini. I termini tecnici sono chiaramente evidenziati nel testo mediante l'aggiunta di una "G" a pedice degli stessi.
@@ -135,7 +135,6 @@ Il presente documento include una serie di termini tecnici specifici del progett
 
 == Processi di supporto
 === Documentazione
-==== Metriche
 - *Indice di Gulpease*
 #figure(
   table(
@@ -162,7 +161,6 @@ Il presente documento include una serie di termini tecnici specifici del progett
 )
 
 === Verifica
-==== Metriche
 - *Code coverage*
 #figure(
   table(
@@ -170,6 +168,18 @@ Il presente documento include una serie di termini tecnici specifici del progett
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     [(Righe di codice testate/Righe di codice totali)\u{2217}100], [0], [0],
+  ),
+  caption: "Specifiche Code coverage"
+)
+
+=== Miglioramento
+- *Metriche soddisfatte*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [% metriche soddisfatte], [100%], [\u{2265}80%],
   ),
   caption: "Specifiche Code coverage"
 )

@@ -84,7 +84,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [EV-AC], [\u{2265}0], [\u{2265}TBD],
+    [EV-AC], [\u{2265}0], [\u{2265}-10%],
   ),
   caption: "Specifiche metrica CV"
 )
@@ -95,7 +95,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [EV-PV], [\u{2265}0], [\u{2265}TBD],
+    [EV-PV], [\u{2265}0], [\u{2265}-10%],
   ),
   caption: "Specifiche metrica SV"
 )
@@ -106,7 +106,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [EV/AC], [\u{2265}TBD], [\u{2265}TBD],
+    [EV/AC], [\u{2265}1], [\u{2265}0.9],
   ),
   caption: "Specifiche metrica CPI"
 )
@@ -117,7 +117,8 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [BAC/CPI], [=BAC], [TBD],
+    [BAC/CPI], [=BAC], [\u{2264}BAC+3%;\
+                        \u{2265}BAC-3%],
   ),
   caption: "Specifiche metrica EAC"
 )
@@ -181,7 +182,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     [% metriche soddisfatte], [100%], [\u{2265}80%],
   ),
-  caption: "Specifiche Code coverage"
+  caption: "Specifiche Metriche soddisfatte"
 )
 
-// = Qualità del prodotto da compilare dopo l'RTB?
+= Qualità del prodotto

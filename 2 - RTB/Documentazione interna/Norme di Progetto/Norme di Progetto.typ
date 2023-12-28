@@ -959,11 +959,13 @@ Il gruppo condivide il materiale prodotto all'interno di un repository dedicato 
 #align(link("https://github.com/Error-418-SWE/Documenti"), center)
 Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
 
+
 == Processo di Misurazione
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.7_
 
 === Scopo
+
 Lo scopo del processo di misurazione è raccogliere, analizzare e riportare dati e informazioni, al fine di dimostrare la qualità dei prodotti, servizi e processi.
 
 Questo processo viene svolto affinchè il gruppo sia in grado di prendere le corrette decisioni per gestire al meglio il raggiungimento dei propri obiettivi.
@@ -978,30 +980,58 @@ Le misure devono avere queste caratteristiche di qualità:
 Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia espresse che implicite.
 
 === Risultati
-A seguito dell'implementazione riuscita del processo di misurazione:
+
+A seguito dell'implementazione efficace del processo di misurazione:
 
 - vengono identificate le esigenze informative;
-- viene identificato o sviluppato un insieme appropriato di misure basato sulle esigenze informative;
+- viene identificato e sviluppato un insieme appropriato di misure basato sulle esigenze informative;
 - i dati necessari vengono raccolti, verificati e archiviati;
 - i dati vengono analizzati e i risultati interpretati;
 - gli elementi informativi forniscono informazioni oggettive per poter prendere decisioni concrete.
 
 === Attività
-Il progetto deve implementare le seguenti attività e compiti in conformità con le politiche e le procedure applicabili al processo di misurazione:
-// implementare ogni singolo punto con le decisioni prese nel piano di qualifica.
-- prepararsi per la misurazione:
 
-    - definire la strategia di misurazione;
-    - descrivere le caratteristiche dell'organizzazione rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici;
-    - identificare e dare priorità alle esigenze informative.
-    - selezionare e specificare misure che soddisfino le esigenze informative;
-    - definire procedure di raccolta, analisi, accesso e reportistica dei dati;
-    - definire criteri per valutare gli elementi informativi e il processo di misurazione;
-    - identificare e pianificare l'utilizzo dei necessari sistemi o servizi abilitanti.
+Il progetto deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito dal gruppo (parte di questo viene definito nel Piano di Qualifica):
 
-- eseguire la misurazione:
++ prepararsi per la misurazione:
 
-    - integrare procedure manuali o automatizzate per la generazione, raccolta, analisi e reportistica dei dati nei processi pertinenti;
-    - raccogliere, archiviare e verificare i dati;
-    - analizzare i dati e sviluppare elementi informativi;\
-    - registrare i risultati e informare gli utenti della misurazione.
+    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi primari:
+        - BAC (Budget at Completion);
+        - AC (Actual Cost);
+        - PV (Planned Value);
+        - EV (Earned Value);
+        - CV (Cost Variance);
+        - SV (Schedule Variance);
+        - CPI (Cost Performance Index);
+        - EAC (Estimated at Completion);
+        - ETC (Estimated to Completion).
+        
+    - definire la strategia di misurazione per i processi di supporto. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi di supporto:
+        - indice di Gulpease;
+        - errori ortografici;
+        - code coverage.
+
+    - descrivere le caratteristiche del gruppo rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici:
+        - richieste del Proponente;
+        - requisiti individuati.
+
+    - definire procedure di raccolta, analisi, accesso e reportistica dei dati:
+        - Piano di Qualifica: definisce i criteri e le modalità di misurazione e reportistica dei dati misurati.
+
+    - definire criteri per valutare gli elementi informativi e il processo di misurazione:
+        - Piano di Qualifica: definisce i valori ottimali e accettabili della strategia di misurazione adottata a cui tutti i documenti prodotti devono conformarsi.
+
+    - identificare e pianificare l'utilizzo dei necessari sistemi o servizi abilitanti per i casi in cui i paramentri di misurazione di qualità non vengano rispettati.
+
++ eseguire la misurazione:
+
+    - integrare procedure manuali o automatizzate per la generazione, raccolta, analisi e reportistica dei dati nei processi pertinenti:
+        - controllo manuale di conformità dei documenti prodotti ai parametri individuati per i processi primari;
+        - controllo manuale di conformità dei documenti prodotti ai parametri individuati per i processi di supporto;
+        - revisione esterna e manuale dei documenti prodotti per il controllo di leggibilità e di eventuali errori ortografici.
+     
+    - raccogliere, archiviare e verificare i dati:
+        - i dati prodotti vengono salvati e analizzati al fine di perorare una strategia di approccio ed eventuali modifiche da effettuare.
+
+    - registrare i risultati e comunicarli agli stakeholders:
+        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte. 

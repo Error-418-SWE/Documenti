@@ -28,8 +28,15 @@ Il presente documento viene redatto in modo incrementale per assicurare la coere
 Il presente documento include una serie di termini tecnici specifici del progetto. Al fine di agevolarne la comprensione, si fornisce un Glossario che espliciti il significato di tali termini. I termini tecnici sono chiaramente evidenziati nel testo mediante l'aggiunta di una "G" a pedice degli stessi.
 
 == Riferimenti
-In questo documento si fa riferimento allo standard: 
-
+=== Normativi
+- #link("2 - RTB/Documentazione interna/Norme di Progetto.pdf")[Norme di Progetto;]
+- #link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")[Capitolato d'appalto.]
+=== Informativi
+- #link("2 - RTB/Documentazione esterna/Piano di Progetto.pdf")[Piano di Progetto;]
+- #link("https://it.wikipedia.org/wiki/Indice_Gulpease")[Indice di Gulpease.]
+=== Materiale fornito dal docente
+- #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T7.pdf")[Dispense T7;]
+- #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")[Dispense T8.]
 = Qualità di processo
 
 == Processi primari

@@ -1022,3 +1022,82 @@ Questa attività consiste nei seguenti compiti:
 - implementare e monitorare misure per valutare l'efficacia dei trattamenti dei rischi;
 
 - monitorare continuamente l'emergere di nuovi rischi e fonti durante l'intero ciclo di vita.
+
+
+== Processo di Controllo della Qualità
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.8_
+
+=== Scopo
+
+La International Software Testing Qualifications Board (ISTQB) definisce il controllo della qualità come "attività incentrate sul garantire che i requisiti di qualità saranno soddisfatti".
+
+Il processo di controllo della qualità ha quindi come obiettivo principale quello di garantire l'applicazione efficace del processo di gestione della qualità da parte del gruppo. 
+
+Il suo focus fondamentale è fornire la sicurezza e la certezza che i requisiti di qualità stabiliti saranno pienamente soddisfatti. 
+Questo viene ottenuto mediante un'analisi proattiva attenta dei processi e dei risultati che caratterizzano il ciclo di vita del progetto. 
+
+L'obiettivo è assicurare che il prodotto risponda alle aspettative in termini di qualità, e che ciò avvenga in piena conformità con le linee guida, le politiche e le procedure precedentemente definite. 
+In altre parole, la finalità ultima è garantire che la qualità desiderata sia intrinseca al prodotto finale e che ogni fase del processo segua gli standard e le disposizioni stabilite dal gruppo e dal progetto.
+
+=== Risultati
+
+L'implementazione riuscita del processo di controllo della qualità produce i seguenti risultati:
+
+- le procedure di controllo della qualità del progetto sono definite e implementate;
+- vengono definiti criteri e metodi per la valutazione di controllo della qualità;
+- vengono eseguite valutazioni dei prodotti, servizi e processi del progetto;
+- i risultati delle valutazioni vengono forniti agli stakeholders;
+- i problemi vengono trattati.
+
+=== Attività
+
+Le seguenti attività devono essere implementate in conformità con le politiche e le procedure del gruppo:
+
++ prepararsi per il controllo della qualità:
+
+   - definire una strategia di controllo della qualità. Essa consiste in: 
+
+      - ruoli, responsabilità e autorità definite:
+        - i ruoli e i compiti di ciascun membro sono definiti e non ambigui;
+        - ogni individuo fisico viene informato a scadenza bisettimanale dei propri compiti e delle proprie responsabilità per quel periodo di tempo;
+       
+      - criteri di valutazione definiti per processi, prodotti e servizi:
+        - valore delle metriche di controllo dei processi primari entro il valore accettabile;
+        - valore delle metriche di controllo dei processi di supporto entro il valore accettabile;
+        - tempistiche da rispettare definite;
+        - requisiti funzionali definiti;
+        - requisiti non funzionali definiti.
+        
+      - attività di verifica, convalida, monitoraggio, misurazione, revisione per i prodotti o servizi:
+        - assegnazione di un Verificatore col compito di monitorare e testare la qualità del materiale prodotto;
+        - il Verificatore ha il compito di segnalare eventuali incongruenze con le metriche di qualità al redattore.
+
+      - risoluzione dei problemi e attività di miglioramento di processo e prodotto:
+        - modifiche effettuate su indicazioni del Verificatore;
+
+      - stabilire l'indipendenza del controllo della qualità dagli altri processi del ciclo di vita:
+         - il Verificatore è una persona fisica diversa da quella che ha redatto il documento.
+
++ eseguire valutazioni di processi, prodotti e servizi:
+
+  - il Verificatore valuta i prodotti e i servizi per la conformità ai criteri stabiliti;
+  - il Verificatore si assicura che la verifica e la convalida degli output dei processi del ciclo di vita siano eseguiti conformemente a ciò che è stato concordato.
+  - il Verificatore applica il processo di misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
+  - il Verificatore esprime un giudizio e segnala eventuali problematiche riscontrate.
+
++ gestire rapporti del controllo della qualità:
+
+  - stilare rapporti relativi alle attività di controllo della qualità:
+    - in sede di retrospettiva il Verificatore aggiorna il gruppo a riguardo delle attività di controllo qualità dello sprint in corso;
+    - redazione di un verbale contenente anche gli esiti del processo di controllo della qualità.
+
+  - mantenere, archiviare e distribuire i rapporti;
+
+  - identificare incidenti e problemi associati alle valutazioni effettuate.
+
++ trattare incidenti e problemi:
+
+  - in caso di segnalazione di incidenti e problemi viene svolto un lavoro collettivo tra Verificatore e redattore per la loro risoluzione;
+  - nel caso tali problemi o incidenti siano di carattere generale viene avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
+  

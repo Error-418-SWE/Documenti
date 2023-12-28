@@ -974,6 +974,7 @@ Il gruppo condivide il materiale prodotto all'interno di un repository dedicato 
 Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
 
 == Processo di Gestione dei Rischi
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.4_
 
 === Scopo
 Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.

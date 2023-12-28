@@ -11,7 +11,7 @@
   showIndex: false //overridden
 );
 
-#let glossary = json("Glossario.json");
+#let glossary = json("/Glossario.json");
 
 #outline(depth: 2)
 

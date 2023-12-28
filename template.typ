@@ -405,6 +405,24 @@ if showTablesIndex and docType != "verbale" {
   pagebreak()
 }
 
+// Highlight glossary terms
+let glossary = json("Glossario.json");
+let glossaryRegex = lorem(5) // gibberish
+if title != "Glossario"{
+   glossaryRegex = glossary.keys().sorted().rev().join("|")
+}
+show regex(
+  glossaryRegex
+): it => {
+  it
+  h(0.03em)
+  text(
+    fill: luma(100),
+    sub(emph("G"))
+  )
+  h(0.02em)
+}
+
 // Body
 set par(justify: true)
 counter(page).update(1)
@@ -437,7 +455,7 @@ if docType == "verbale" [
 body
 
 //Signatures
-if isExternalUse {
+if isExternalUse and docType == "verbale" {
   align(
     end+bottom,
     grid(

@@ -684,9 +684,10 @@ Come risultato dell'implementazione del processo di Gestione dei Rischi:
 Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
 
 ==== Pianificare la gestione dei rischi  
-La strategia di gestione dei rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. 
-I rischi devono venire individuati con tempestività, consentendo la pianificazione di misure preventive e correttive in tempo utile per limitare al massimo le conseguenze.
+La strategia di gestione dei rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. \
+I rischi devono venire individuati con tempestività, consentendo la pianificazione di misure preventive e correttive in tempo utile per limitare al massimo le conseguenze.\
 La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
+Nello specifico l'impatto può essere "lieve", "medio" o "grave" in base alla sua entità mentre la probabilità di occorrenza viene identificata tramite un valore intero da 1 a 5, dove 1 esprime una probabilità molto bassa, mentre 5 esprime una frequenza attesa sostenuta.\
 Il team definisce approcci di trattamento appropriati, compresi piani di mitigazione specifici.
 
 ==== Gestire il profilo di rischio  

@@ -687,7 +687,7 @@ Il progetto deve implementare le seguenti attività e compiti, in conformità co
 La strategia di gestione dei rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. 
 I rischi devono venire individuati con tempestività, consentendo la pianificazione di misure preventive e correttive in tempo utile per limitare al massimo le conseguenze.
 La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
-Il team si impegna a definire approcci di trattamento appropriati, compresi piani di mitigazione specifici.
+Il team definisce approcci di trattamento appropriati, compresi piani di mitigazione specifici.
 
 ==== Gestire il profilo di rischio  
 - Definire e registrare le soglie e le condizioni di rischio:

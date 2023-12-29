@@ -22,7 +22,7 @@ Il presente documento viene redatto con lo scopo di definire gli standard di qua
 Definire la qualità di un prodotto consiste nell'attuazione di un insieme di processi che vadano a definire una base con cui misurare efficienza ed efficacia del lavoro svolto.
 
 == Approccio al documento
-Il presente documento viene redatto in modo incrementale per assicurare la coerenza delle informazioni al suo interno con gli sviluppi in corso e le esigenze evolutive del progetto. Il documento non ha funzione descrittiva, la definizione delle metriche indicate è presente nel documento Norme di Progetto
+Il presente documento viene redatto in modo incrementale per assicurare la coerenza delle informazioni al suo interno con gli sviluppi in corso e le esigenze evolutive del progetto. I valori identificati come accettabili per le metriche riportate possono subire variazioni con l'avanzamento dello sviluppo.
 
 == Glossario
 Il presente documento include una serie di termini tecnici specifici del progetto. Al fine di agevolarne la comprensione, si fornisce un Glossario che espliciti il significato di tali termini. I termini tecnici sono chiaramente evidenziati nel testo mediante l'aggiunta di una "G" a pedice degli stessi.
@@ -33,7 +33,8 @@ Il presente documento include una serie di termini tecnici specifici del progett
 - #link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")[Capitolato d'appalto.]
 === Informativi
 - #link("2 - RTB/Documentazione esterna/Piano di Progetto.pdf")[Piano di Progetto;]
-- #link("https://it.wikipedia.org/wiki/Indice_Gulpease")[Indice di Gulpease.]
+- #link("https://it.wikipedia.org/wiki/Indice_Gulpease")[Indice di Gulpease;]
+- #link("https://it.wikipedia.org/wiki/ISO/IEC_9126")[ISO/IEC 9126.]
 === Materiale fornito dal docente
 - #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T7.pdf")[Dispense T7;]
 - #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")[Dispense T8.]
@@ -186,3 +187,28 @@ Il presente documento include una serie di termini tecnici specifici del progett
 )
 
 = Qualità del prodotto
+== Funzionalità
+- *Requisiti soddisfatti*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [% requisiti obbligatori soddisfatti], [100%], [100%],
+    [% requisiti desiderabili soddisfatti], [\u{2265}0%], [0%],
+    [% requisiti opzionali soddisfatti], [\u{2265}0%], [0%],
+  ),
+  caption: "Specifiche Requisiti soddisfatti"
+)
+
+== Affidabilità
+- *Difetti del prodotto*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [% difetti del prodotto], [100%], [80%],
+  ),
+  caption: "Specifiche difetti prodotto"
+)

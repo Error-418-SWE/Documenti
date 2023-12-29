@@ -719,7 +719,7 @@ Questa attività consiste nei seguenti compiti:
   - la riduzione della sua probabilità o gravità;
   - l'accettazione del rischio. 
 
-  Vengono anche registrate le misure che forniranno informazioni sull'efficacia delle alternative di trattamento.
+  Vengono anche registrate informazioni sull'efficacia delle alternative di trattamento.
 
 + quando viene accettato un rischio che non soddisfa la sua soglia, va considerato una priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
 

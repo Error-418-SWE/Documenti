@@ -727,9 +727,11 @@ Questa attività consiste nei seguenti compiti:
 ==== Monitorare i rischi  
 Questa attività consiste nei seguenti compiti:
 
-- monitorare continuamente i rischi e il contesto della Gestione dei Rischi per eventuali cambiamenti e valutare i rischi quando il loro stato è cambiato;
+- monitorare continuamente i rischi e il contesto della Gestione dei Rischi per eventuali loro cambiamenti;
 
 - monitorare continuamente l'emergere di nuovi rischi durante l'intero ciclo di vita.
+
+Il monitoraggio dei rischi avviene principalmente in sede di meeting interno, specialmente a seguito di analisi retrospettive.
 
 
 == Processo di gestione della configurazione

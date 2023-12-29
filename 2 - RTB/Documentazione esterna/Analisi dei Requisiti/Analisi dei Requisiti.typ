@@ -942,28 +942,30 @@ Dove:
     [FD-6.3], [Desiderabile], [L'utente visualizza un errore se i dati contenuti nel database non sono conformi], [UC-6.2],
     [FD-6.4], [Desiderabile], [L'utente visualizza un errore se i dati contenuti nel database sono errati], [UC-6.2],
 
-    [FM], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro], [],
-    [FM], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro indicando le coordinate del bin di destinazione], [],
-    [FM], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro tramite _drag and drop_], [],
-    [FM], [Obbligatorio], [Il sistema deve interrogare una API RESTful per accertare che lo spostamento sia lecito], [],
-    [FD], [Desiderabile], [Il sistema deve evidenziare il bin di partenza per rendere evidente la richiesta di spostamento], [],
-    [FD], [Desiderabile], [Il sistema deve evidenziare il bin di destinazione per rendere evidente la richiesta di spostamento], [],
+    [FM-7], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro], [UC-7],
+    [FM-7.1], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro indicando le coordinate del bin di destinazione], [UC-7],
+    [FM-7.2], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro tramite _drag and drop_], [UC-7],
+    [FM-7.3], [Obbligatorio], [Il sistema deve interrogare una API RESTful per accertare che lo spostamento sia lecito], [UC-7],
+    [FD-7.4], [Desiderabile], [Il sistema deve evidenziare il bin di partenza per rendere evidente la richiesta di spostamento], [UC-7],
+    [FD-7.5], [Desiderabile], [Il sistema deve evidenziare il bin di destinazione per rendere evidente la richiesta di spostamento], [UC-7],
 
-    [FM], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di un bin selezionato], [],
-    [FM], [Obbligatorio], [L'utente deve poter visualizzare le informazioni del prodotto contenuto in un bin selezionato], [],
+    [FM-8], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di un bin selezionato], [UC-8],
+    [FM-8.1], [Obbligatorio], [L'utente deve poter visualizzare le informazioni del prodotto contenuto in un bin selezionato], [UC-8],
     [FM], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di uno scaffale selezionato], [],
 
-    [FD], [Desiderabile], [L'utente deve poter ricercare un prodotto], [],
-    [FD], [Desiderabile], [L'utente deve poter ricercare un prodotto per ID], [],
-    [FD], [Desiderabile], [L'utente deve poter ricercare un prodotto per nome], [],
-    [FD], [Desiderabile], [L'utente deve poter ricercare uno scaffale], [],
-    [FD], [Desiderabile], [Il sistema deve fornire la lista dei risultati di ricerca], [],
-    [FD], [Desiderabile], [Il sistema deve evidenziare i risultati di ricerca], [],
+    [FD-9], [Desiderabile], [L'utente deve poter ricercare un prodotto], [UC-9],
+    [FD-9.1], [Desiderabile], [L'utente deve poter ricercare un prodotto per ID], [UC-9.1.1],
+    [FD-9.2], [Desiderabile], [L'utente deve poter ricercare un prodotto per nome], [UC-9.1.2],
+    [FD-9.3], [Desiderabile], [L'utente deve poter ricercare uno scaffale], [UC-9.1.3],
+    [FD-9.4], [Desiderabile], [Il sistema deve fornire la lista dei risultati di ricerca], [UC-9],
+    [FD-9.5], [Desiderabile], [Il sistema deve evidenziare i risultati di ricerca], [UC-9],
 
-    [FM], [Obbligatorio], [L'utente deve poter muovere la visuale sui tre assi], [], // SICURO?
-    [FM], [Obbligatorio], [L'utente deve poter ruotare la visuale], [],
-    [FM], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom in], [],
-    [FM], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom out], [],
+    [FM-10], [Obbligatorio], [L'utente deve poter esplorare visivamente il magazzino], [UC-10],
+    [FM-10.1], [Obbligatorio], [L'utente deve poter muovere la visuale sui tre assi], [UC-10.1], // SICURO?
+    [FM-10.2], [Obbligatorio], [L'utente deve poter ruotare la visuale], [UC-10.2],
+    [FM-10.3], [Obbligatorio], [L'utente deve poter effettuare operazioni di zoom della visuale], [UC-10.3],
+    [FM-10.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom in], [UC-10.3],
+    [FM-10.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom out], [UC-10.3]
   ),
   caption: "Requisiti funzionali"
 )

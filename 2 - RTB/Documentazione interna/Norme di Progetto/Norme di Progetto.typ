@@ -721,7 +721,7 @@ Questa attività consiste nei seguenti compiti:
 
   Vengono anche registrate informazioni sull'efficacia delle alternative di trattamento.
 
-+ quando viene accettato un rischio che non soddisfa la sua soglia, va considerato una priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
++ quando viene accettato un rischio che non soddisfa la sua soglia, va considerato di priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
 
 + una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
 

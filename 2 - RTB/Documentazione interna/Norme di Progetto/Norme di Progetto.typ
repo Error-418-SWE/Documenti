@@ -714,7 +714,12 @@ Questa attività consiste nei seguenti compiti:
 ==== Trattare i rischi
 Questa attività consiste nei seguenti compiti:
 
-+ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate:\ per i rischi che superano le soglie prestabilite, vengono definite strategie di trattamento, che possono includere l'eliminazione del rischio, la riduzione della sua probabilità o gravità, o l'accettazione del rischio. Vengono anche registrate le misure che forniranno informazioni sull'efficacia delle alternative di trattamento.
++ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate. Queste possono includere:\ 
+  - l'eliminazione del rischio;
+  - la riduzione della sua probabilità o gravità;
+  - l'accettazione del rischio. 
+
+  Vengono anche registrate le misure che forniranno informazioni sull'efficacia delle alternative di trattamento.
 
 + quando viene accettato un rischio che non soddisfa la sua soglia, va considerato una priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
 

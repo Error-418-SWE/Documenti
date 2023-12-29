@@ -966,11 +966,9 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.7_
 
 === Scopo
 
-Lo scopo del processo di misurazione è raccogliere, analizzare e riportare dati e informazioni, al fine di dimostrare la qualità dei prodotti, servizi e processi.
-
-Questo processo viene svolto affinché il gruppo sia in grado di prendere le corrette decisioni per gestire al meglio il raggiungimento dei propri obiettivi.
-
-Le misure devono avere queste caratteristiche di qualità: 
+Lo scopo del processo di misurazione è raccogliere, analizzare e riportare dati e informazioni, al fine di dimostrare la qualità di prodotti, servizi e processi.\
+Questo processo viene svolto affinché il gruppo sia in grado di prendere le corrette decisioni per gestire al meglio il raggiungimento dei propri obiettivi.\
+Le misure devono soddisfare determinate caratteristiche di qualità, ovvero devono essere:
 + verificabili;
 + significative;
 + attuabili;
@@ -1021,7 +1019,7 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
     - definire criteri per valutare gli elementi informativi e il processo di misurazione:
         - Piano di Qualifica: definisce i valori ottimali e accettabili della strategia di misurazione adottata a cui tutti i documenti prodotti devono conformarsi.
 
-    - identificare e pianificare l'utilizzo dei necessari sistemi o servizi abilitanti per i casi in cui i parametri di misurazione di qualità non vengano rispettati.
+    - identificare e pianificare le azioni da intraprendere per i casi in cui i parametri di misurazione di qualità non vengano rispettati.
 
 + eseguire la misurazione:
 

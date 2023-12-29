@@ -1030,15 +1030,12 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.8_
 
 === Scopo
 
-La International Software Testing Qualifications Board (ISTQB) definisce il controllo della qualità come "attività incentrate sul garantire che i requisiti di qualità saranno soddisfatti".
-
-Il processo di controllo della qualità ha quindi come obiettivo principale quello di garantire l'applicazione efficace del processo di gestione della qualità da parte del gruppo. 
-
+La International Software Testing Qualifications Board (ISTQB) definisce il controllo della qualità come "attività incentrate sul garantire che i requisiti di qualità saranno soddisfatti".\
+Il processo di controllo della qualità ha quindi come obiettivo principale quello di garantire l'applicazione efficace del processo di gestione della qualità da parte del gruppo.\
 Il suo focus fondamentale è fornire la sicurezza e la certezza che i requisiti di qualità stabiliti saranno pienamente soddisfatti. 
-Questo viene ottenuto mediante un'analisi proattiva attenta dei processi e dei risultati che caratterizzano il ciclo di vita del progetto. 
-
+Questo si ottiene mediante un'analisi proattiva attenta dei processi e dei risultati che caratterizzano il ciclo di vita del progetto.\
 L'obiettivo è assicurare che il prodotto risponda alle aspettative in termini di qualità, e che ciò avvenga in piena conformità con le linee guida, le politiche e le procedure precedentemente definite. 
-In altre parole, la finalità ultima è garantire che la qualità desiderata sia intrinseca al prodotto finale e che ogni fase del processo segua gli standard e le disposizioni stabilite dal gruppo e dal progetto.
+In altre parole, la finalità ultima è garantire che la qualità desiderata sia intrinseca al prodotto finale e che ogni fase del processo segua gli standard e le disposizioni stabilite dal gruppo e dal progetto.\
 
 === Risultati
 
@@ -1070,7 +1067,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
         - requisiti non funzionali definiti.
         
       - attività di verifica, convalida, monitoraggio, misurazione, revisione per i prodotti o servizi:
-        - assegnazione di un Verificatore col compito di monitorare e testare la qualità del materiale prodotto;
+        - assegnazione di un Verificatore con il compito di monitorare e testare la qualità del materiale prodotto;
         - il Verificatore ha il compito di segnalare eventuali incongruenze con le metriche di qualità al redattore.
 
       - risoluzione dei problemi e attività di miglioramento di processo e prodotto:
@@ -1081,15 +1078,15 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
 + eseguire valutazioni di processi, prodotti e servizi:
 
-  - il Verificatore valuta i prodotti e i servizi per la conformità ai criteri stabiliti;
-  - il Verificatore si assicura che la verifica e la convalida degli output dei processi del ciclo di vita siano eseguiti conformemente a ciò che è stato concordato.
+  - il Verificatore valuta i prodotti e i servizi al fine di garantire la conformità rispetto ai criteri stabiliti;
+  - il Verificatore si assicura che la verifica e la convalida degli output dei processi del ciclo di vita siano eseguiti conformemente con quanto concordato in precedenza;
   - il Verificatore applica il processo di misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
   - il Verificatore esprime un giudizio e segnala eventuali problematiche riscontrate.
 
 + gestire rapporti del controllo della qualità:
 
   - stilare rapporti relativi alle attività di controllo della qualità:
-    - in sede di retrospettiva il Verificatore aggiorna il gruppo a riguardo delle attività di controllo qualità dello sprint in corso;
+    - in sede di retrospettiva il Verificatore aggiorna il gruppo riguardo le attività di controllo qualità dello sprint in corso;
     - redazione di un verbale contenente anche gli esiti del processo di controllo della qualità.
 
   - mantenere, archiviare e distribuire i rapporti;
@@ -1099,5 +1096,4 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 + trattare incidenti e problemi:
 
   - in caso di segnalazione di incidenti e problemi viene svolto un lavoro collettivo tra Verificatore e redattore per la loro risoluzione;
-  - nel caso tali problemi o incidenti siano di carattere generale viene avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
-  
+  - nel caso tali problemi o incidenti siano di carattere generale, viene avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.

@@ -674,10 +674,9 @@ Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, tratta
 
 === Risultati 
 Come risultato dell'implementazione del processo di Gestione dei Rischi:
-- vengono identificati i rischi;
-- i rischi vengono analizzati;
-- vengono identificate, priorizzate e selezionate opzioni di trattamento del rischio;
-- viene implementato un trattamento appropriato;
+- vengono identificati e analizzati i rischi;
+- vengono identificate e priorizzate le opzioni di trattamento del rischio;
+- viene selezionato ed implementato un trattamento appropriato;
 - i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
 
 === Attività e compiti

@@ -709,7 +709,7 @@ Questa attività consiste nei seguenti compiti:
 
 + stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato:\ per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
 
-+ valutare ciascun rischio rispetto alle sue soglie di rischio:\ ogni rischio viene valutato rispetto alle soglie di rischio stabilite, determinando se il rischio supera tali soglie e richiede trattamenti specifici.
++ valutare ciascun rischio rispetto alle sue soglie di accettazione:\ ogni rischio viene valutato rispetto alle soglie stabilite, il superamento delle quali attiva delle modalità di trattamento specifiche.
 
 ==== Trattare i rischi
 Questa attività consiste nei seguenti compiti:

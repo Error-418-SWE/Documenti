@@ -732,7 +732,7 @@ Questa attività consiste nei seguenti compiti:
 
 - implementare e monitorare misure per valutare l'efficacia dei trattamenti dei rischi;
 
-- monitorare continuamente l'emergere di nuovi rischi e fonti durante l'intero ciclo di vita.
+- monitorare continuamente l'emergere di nuovi rischi durante l'intero ciclo di vita.
 
 
 == Processo di gestione della configurazione

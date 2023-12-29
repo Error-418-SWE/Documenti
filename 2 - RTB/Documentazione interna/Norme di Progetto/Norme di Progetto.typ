@@ -690,15 +690,15 @@ Nello specifico l'impatto può essere "lieve", "medio" o "grave" in base alla su
 Il team definisce approcci di trattamento appropriati, compresi piani di mitigazione specifici.
 
 ==== Gestire il profilo di rischio  
-- Definire e registrare le soglie e le condizioni di rischio:
+- Definire e registrare le soglie e le condizioni di rischio:\
   le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto. 
   I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
 
-- Stabilire e mantenere un profilo di rischio:
+- Stabilire e mantenere un profilo di rischio:\
   il profilo di rischio contiene informazioni sul contesto della Gestione dei Rischi, il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
   Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
 
-- Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:
+- Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:\
   il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato "Analisi Dei Rischi.pdf" presente in: https://github.com/Error-418-SWE/Documenti-old/blob/develop/1%20-%20Candidatura/Analisi%20dei%20rischi/Analisi%20dei%20rischi.pdf .
   // riferimenti alla documentazione temporanei 
 

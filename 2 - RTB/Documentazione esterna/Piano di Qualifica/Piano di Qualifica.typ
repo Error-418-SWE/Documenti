@@ -13,6 +13,7 @@
   showIndex: true,
   showLog: true,
   isExternalUse: true,
+  showImagesIndex: false,
 );
 
 = Introduzione

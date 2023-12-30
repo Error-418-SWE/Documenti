@@ -72,9 +72,9 @@ Note per l'uso:
   authors: (
     "Cognome Nome",
   ),
-  showIndex: true,
   showLog: true,
-  isExternalUse: true,
+  // Se il documento è esterno inserire:
+  // isExternalUse: true,
 );
 
 = Titolo iniziale

@@ -628,14 +628,14 @@ Il ruolo dell'Amministratore invece, incaricato di gestire il reparto tecnologic
 
 == Secondo sprint dal 06-11-2023 al 13-11-2023
 === Obiettivi raggiunti
-- riconfigurazione del repository;
-- stesura della sezione _introduzione_ del documento delle Norme di Progetto;
-- stesura della sezione _processi di supporto_ del documento delle Norme di Progetto;
-- perfezionamento delle automazioni per la compilazione dei documenti;
-- perfezionamento delle automazioni per il versionamento dei documenti;
-- contatto con l'azienda Proponente per comunicare l'esito della candidatura;
-- meeting con l'azienda Proponente per riflettere sull'Analisi dei Requisiti e sulle ulteriori tecnologie da usare;
-- inizio dell'individuazione e della stesura degli use case.
+- Riconfigurazione del repository;
+- Stesura della sezione _introduzione_ del documento delle Norme di Progetto;
+- Stesura della sezione _processi di supporto_ del documento delle Norme di Progetto;
+- Perfezionamento delle automazioni per la compilazione dei documenti;
+- Perfezionamento delle automazioni per il versionamento dei documenti;
+- Contatto con l'azienda Proponente per comunicare l'esito della candidatura;
+- Meeting con l'azienda Proponente per riflettere sull'Analisi dei Requisiti e sulle ulteriori tecnologie da usare;
+- Inizio dell'individuazione e della stesura degli use case.
 === Obiettivi mancati
 Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obiettivi mancati dello sprint precedente.
 === Analisi problematiche insorte
@@ -678,16 +678,16 @@ A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore ef
 == Terzo Sprint dal 27-11-2023 al 04-12-2023
 
 === Obiettivi raggiunti
-- proseguimento del processo di individuazione e stesura degli use case;
-- perfezionamento delle automazioni di versionamento documenti;
-- perfezionamento del template usato per i documenti;
-- aggiornamento parziale del documento di Norme di Progetto;
-- studio iniziale della libreria Three.js;
-- meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare opportune richieste;
-- contatto con l'azienda Proponente per fissare il prossimo meeting.
+- Proseguimento del processo di individuazione e stesura degli use case;
+- Perfezionamento delle automazioni di versionamento documenti;
+- Perfezionamento del template usato per i documenti;
+- Aggiornamento parziale del documento di Norme di Progetto;
+- Studio iniziale della libreria Three.js;
+- Meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare opportune richieste;
+- Contatto con l'azienda Proponente per fissare il prossimo meeting.
 
 === Obiettivi mancati
-- aggiornamento completo del documento di Norme di Progetto con l'inserimento dei grafici di Gantt e di burndown.
+- Aggiornamento completo del documento di Norme di Progetto con l'inserimento dei grafici di Gantt e di burndown.
 
 === Analisi problematiche insorte
 
@@ -747,12 +747,12 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
 == Quarto Sprint dal 27-11-2023 al 04-12-2023
 
 === Obiettivi raggiunti
-- effettuare una migliore pianificazione;
-- perfezionamento della stesura degli use case individuati finora;
-- redazione di una prima versione dell'Analisi dei Requisiti;
-- valutazione di un'eventuale data per un primo meeting con il professor Cardin per ottenere un feedback sull'Analisi dei Requisiti;
-- proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
-- proseguimento periodo di studio di Three.js, in particolare finalizzato a:
+- Effettuare una migliore pianificazione;
+- Perfezionamento della stesura degli use case individuati finora;
+- Redazione di una prima versione dell'Analisi dei Requisiti;
+- Valutazione di un'eventuale data per un primo meeting con il professor Cardin per ottenere un feedback sull'Analisi dei Requisiti;
+- Proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
+- Proseguimento periodo di studio di Three.js, in particolare finalizzato a:
  - creazione di scaffali nell'ambiente tridimensionale;
  - implementazione sistema di drag and drop;
  - parametrizzazione degli elementi presenti nell'applicazione.
@@ -806,18 +806,18 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 == Quinto Sprint dal 04-12-2023 al 11-12-2023
 
 === Obiettivi raggiunti
-- miglioramento e aggiornamento documento Analisi dei Requisiti;
-- realizzazione PoC relativo alla creazione e posizionamento di scaffali dell'ambiente di lavoro;
-- realizzazione PoC relativo alla lettura e utilizzo di file SVG e comunicazione con Database;
-- realizzazione PoC che integra l'utilizzo di Docker;
-- incontro con Proponente in data 06-12-23;
-- incontro con professor Cardin in data 07-12-23;
-- redazione del Glossario;
-- aggiornamento documento Norme di Progetto;
-- aggiornamento documento Piano di Progetto.
+- Miglioramento e aggiornamento documento Analisi dei Requisiti;
+- Realizzazione PoC relativo alla creazione e posizionamento di scaffali dell'ambiente di lavoro;
+- Realizzazione PoC relativo alla lettura e utilizzo di file SVG e comunicazione con Database;
+- Realizzazione PoC che integra l'utilizzo di Docker;
+- Incontro con Proponente in data 06-12-23;
+- Incontro con professor Cardin in data 07-12-23;
+- Redazione del Glossario;
+- Aggiornamento documento Norme di Progetto;
+- Aggiornamento documento Piano di Progetto.
 
 === Obiettivi mancati
-- miglioramento GitHub Actions.
+- Miglioramento GitHub Actions.
 
 === Analisi problematiche insorte
 Durante il meeting di retrospettiva sono emerse le seguenti problematiche da migliorare:
@@ -861,27 +861,27 @@ Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabi
 == Sesto Sprint dal 11-12-2023 al 18-12-2023
 
 === Obiettivi raggiunti
-- avanzamento del PoC A con:
+- Avanzamento del PoC A con:
   - miglioramento grafico degli scaffali;
   - posizionamento automatico dei bin nello scaffale al momento della sua creazione;
   - implementazione visualizzazione prodotti dei bin tramite alert JavaScript.
-- aggiornamento documento Norme di Progetto;
-- aggiornamento documento Analisi dei Requisiti con:
+- Aggiornamento documento Norme di Progetto;
+- Aggiornamento documento Analisi dei Requisiti con:
   - refactoring degli use case secondo le indicazioni del professor Cardin;
   - redazione requisiti funzionali;
   - redazione requisiti di qualità;
   - redazione requisiti di vincolo.
-- redazione introduzione Piano di Qualifica;
-- meeting con l'azienda Proponente per:
+- Redazione introduzione Piano di Qualifica;
+- Meeting con l'azienda Proponente per:
   - esporre il PoC A;
   - aggiornare sullo stato dei lavori;
   - chiedere feedback sui requisiti non funzionali;
-- conversione del Glossario in JSON per automatizzare l'individuazione dei termini nei documenti.
+- Conversione del Glossario in JSON per automatizzare l'individuazione dei termini nei documenti.
 
 
 === Obiettivi mancati
-- migliorare GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
-- implementazione PoC per il front-end.
+- Migliorare GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
+- Implementazione PoC per il front-end.
 
 === Analisi problematiche insorte
 Durante il meeting di retrospettiva sono emerse le seguenti problematiche da migliorare:

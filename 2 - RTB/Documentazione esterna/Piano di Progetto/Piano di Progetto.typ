@@ -943,8 +943,8 @@ Il ruolo di Programmatore presenta un monte ore effettivo minore rispetto a quel
 Durante il meeting di retrospettiva sono insorte le seguenti problematiche:
 
 - il pool mensile di automatismi inclusi nel piano gratuito relativi ai ticket di Jira è stato esaurito;
-- nelle review delle pull request alcuni commenti risultano essere poco chiari e/o sbrigativi;
 - lentezza nell'approvazione delle correzioni richieste nelle review;
+- nelle review delle pull request alcuni commenti risultano essere poco chiari e/o sbrigativi;
 - il progresso relativo al documento Norme di Progetto è risultato scarso in confronto con gli sprint precedenti, e in ritardo rispetto a quanto pianificato;
 - il tracciamento delle attività relative al PoC non ha lo stesso livello di precisione di quello delle attività documentali.
 

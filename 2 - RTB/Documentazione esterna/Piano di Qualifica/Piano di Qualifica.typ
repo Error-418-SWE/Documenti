@@ -202,13 +202,45 @@ Il presente documento include una serie di termini tecnici specifici del progett
 )
 
 == Affidabilità
-- *Difetti del prodotto*
+- *Densità degli errori*
 #figure(
   table(
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [% difetti del prodotto], [100%], [80%],
+    [$frac("test con errori","test eseguiti")*100$], [0%], [$<=10%$],
   ),
-  caption: "Specifiche difetti prodotto"
+  caption: "Specifiche Densità errori"
 )
+== Efficenza
+- *Efficenza del sistema*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [efficenza del sistema], [TBD], [TBD],
+  ),
+  caption: "Specifiche Efficenza del sistema"
+)
+== Usabilità
+- *Facilità di utilizzo*
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [facilità di utilizzo del sistema], [TBD], [TBD],
+  ),
+  caption: "Specifiche Facilità di utilizzo"
+)
+== Manutenibilità
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [matutentabilità del sistema], [TBD], [TBD],
+  ),
+  caption: "Specifiche Manutentabilità del sistema"
+) 

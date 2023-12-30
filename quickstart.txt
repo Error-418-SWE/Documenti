@@ -57,6 +57,8 @@ Note per l'uso:
   ), // Rimuovere se vuoto
   timeStart: "10:00",
   timeEnd: "11:00",
+  //In caso di meeting esterno aggiungere:
+  //location: "Zoom",
 );
 
 = Ordine del giorno
@@ -73,7 +75,7 @@ Note per l'uso:
     "Cognome Nome",
   ),
   showLog: true,
-  // Se il documento è esterno inserire:
+  // Se il documento è esterno aggiungere:
   // isExternalUse: true,
 );
 

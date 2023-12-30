@@ -1,21 +1,18 @@
 #import "/template.typ": *
 
-//change title
 #show: project.with(
   date: "06/12/23",
   subTitle: "",
   docType: "verbale",
   externalParticipants : (
     (name: "Bassani Matteo", role: "Referente aziendale"),
-  ), // Rimuovere se non ci sono partecipanti esterni
+  ),
   authors: (
     "Todesco Mattia",
   ),
-  reviewers: (
-    "Nardo Silvio",
-  ),
   timeStart: "16:00",
   timeEnd: "16:40",
+  location: "Zoom",
 );
 
 = Ordine del giorno

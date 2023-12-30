@@ -10,6 +10,9 @@
   authors: (
     "Todesco Mattia",
   ),
+  reviewers: (
+    "Nardo Silvio",
+  ),
   timeStart: "16:00",
   timeEnd: "16:40",
   location: "Zoom",

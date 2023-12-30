@@ -76,7 +76,7 @@ jobs:
       - name: Convert glossary
         if: inputs.file_name == 'Glossario'
         run: |
-          jq -r 'to_entries | map("## \(.key)\n\(.value)\n") | join("\n")' "${{ inputs.file_path }}/${{ inputs.file_name }}.json" > "${{ inputs.file_path }}/content.md"
+          jq -r 'to_entries | map("## \(.key) \(.value.acronyms | if length > 0 then "(\(. | join(", ")))" else "" end)\n\(.value.description)\n") | join("\n")' "${{ inputs.file_path }}/${{ inputs.file_name }}.json" > "${{ inputs.file_path }}/content.md"
       - name: Publish document
         uses: actions/upload-artifact@v3
         with:

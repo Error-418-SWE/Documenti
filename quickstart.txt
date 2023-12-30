@@ -50,7 +50,7 @@ Note per l'uso:
     "Cognome Nome",
   ),
   externalParticipants : (
-    (name: "Matteo Bassani", role: "Referente aziendale"),
+    (name: "Bassani Matteo", role: "Referente aziendale"),
   ), // Rimuovere se vuoto
   missingMembers: (
     "Cognome Nome",

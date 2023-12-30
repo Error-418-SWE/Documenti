@@ -5,7 +5,7 @@
   subTitle: "",
   docType: "verbale",
   externalParticipants : (
-    (name: "Matteo Bassani", role: "Referente aziendale"),
+    (name: "Bassani Matteo", role: "Referente aziendale"),
   ),
   authors: (
     "Zaccone Rosario",

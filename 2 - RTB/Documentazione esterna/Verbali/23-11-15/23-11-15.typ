@@ -8,7 +8,7 @@
     "Carraro Riccardo",
   ),
   externalParticipants : (
-    (name: "Matteo Bassani", role: "Referente aziendale"),
+    (name: "Bassani Matteo", role: "Referente aziendale"),
   ),
   timeStart: "10:00",
   timeEnd: "11:00",

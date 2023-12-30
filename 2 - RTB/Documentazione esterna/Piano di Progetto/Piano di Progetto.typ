@@ -926,3 +926,69 @@ Il ruolo di Programmatore presenta un monte ore effettivo minore rispetto a quel
 
 === Burndown-chart
 [da inserire]
+
+== Settimo Sprint dal 18-12-2023 al 25-12-2023
+
+=== Obiettivi raggiunti
+- Integrazione dei PoC realizzati in un unico PoC;
+- Individuazione di metriche di base per il Piano di Qualifica;
+- Aggiornamento del documento Norme di Progetto;
+- Automatizzata l'individuazione dei termini del glossario nei documenti.
+
+=== Obiettivi mancati
+- Implementazione del tracciamento requisito-fonte nel documento Analisi dei Requisiti;
+- Correzione di bug presenti nelle GitHub Actions.
+
+=== Analisi problematiche insorte
+Durante il meeting di retrospettiva sono insorte le seguenti problematiche:
+
+- il pool mensile di automatismi inclusi nel piano gratuito relativi ai ticket di Jira è stato esaurito;
+- nelle review delle pull request:
+  - lentezza nell'approvazione delle correzioni richieste dal revisore;
+  - alcuni commenti risultano essere poco chiari e/o sbrigativi.
+- il progresso relativo al documento Norme di Progetto è risultato scarso in confronto con gli sprint precedenti, e in ritardo rispetto a quanto pianificato;
+- il tracciamento delle attività relative al PoC non ha lo stesso livello di precisione di quello delle attività documentali.
+
+=== Risoluzioni attuate
+- Richiedere l'upgrade gratuito a Jira Standard per progetti open source;
+- Notiﬁcare, tramite i canali dedicati, chi debba apportare correzioni così da velocizzare i tempi di approvazione;
+- Impegnarsi a fornire commenti di review più precisi:
+  - indicando con precisione la natura dell'errore e, se utile, la sua localizzazione all'interno della riga;
+  - fornendo una possibile correzione, quando appropriato;
+  - nel caso di più occorrenze dello stesso errore, segnalarle tutte. Per evitare ripetizioni, fornire una valutazione della prima occorrenza ed inserire un riferimento a tale conversazione nelle occorrenze successive;
+- Per accelerare il lavoro sulle Norme di Progetto, chi ha redatto le Norme di Progetto nel corso degli sprint precedenti continuerà l'aﬃancamento nel corso dello sprint successivo;
+- La natura esplorativa del PoC richiede ﬂessibilità nella pianiﬁcazione, ma si sottolinea la necessità di continuare tracciare le attività per riferimento futuro.
+
+=== Analisi costi di sprint effettivi
+
+#set text(
+  size: 10pt
+)
+
+#figure(
+  table(
+    columns: 8,
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato Alessio],   [/],  [3(-1)],    [/],    [/],    [/],   [/], [3(-1)],
+    [Carraro\ Riccardo], [/],  [/],    [/],    [/],    [3],   [/], [3],
+    [Gardin\ Giovanni],  [/],  [/],    [/],    [3],    [/],   [/], [3],
+    [Nardo\ Silvio],     [2(-1)],  [/],    [/],    [/],    [/],   [/], [2(-1)],
+    [Oseliero\ Antonio], [/],  [/],    [/],    [/],    [2],   [2], [4],
+    [Todesco Mattia],    [/],  [/],    [/],    [2(-1)],    [/],   [/], [2(-1)],
+    [Zaccone\ Rosario],  [/],  [/],    [1(-2)],    [/],    [/],   [/], [1(-2)],
+    [Totale\ ore ruolo], [2],  [3],    [1],    [5],    [5],   [2], [18],
+    [Costo orario],      [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo],       [60,00], [60,00], [25,00], [125,00], [75,00], [30,00], [375,00]
+  ),
+  caption: "Consuntivo settimo sprint"
+)
+
+#set text(
+  size: 11pt
+)
+
+Diversi ruoli risultano avere un monte ore minore rispetto a quello preventivato, a causa di rallentamenti nella stesura delle Norme di Progetto e, per quanto riguarda l'Analista, un rallentamento dovuto alla mancanza di materiale su cui lavorare: il materiale necessario era infatti presente in un branch di cui non era ancora stata fatta una pull request.
+
+=== Burndown-chart
+[da inserire]

@@ -1,24 +1,15 @@
 #import "/template.typ": *
 
-// Take a look at the file `template.typ` in the file panel
-// to customize this template and discover how it works.
 #show: project.with(
-  title: "Verbale 10/11/23",
+  date: "10/11/23",
   subTitle: "Meeting di retrospettiva, indicazioni per la settimana a venire",
   docType: "verbale",
-  //  Nome        //Ruolo
-  partecipants: (
-    (name: "Banzato Alessio", role: "Verificatore"),
-    (name: "Carraro Riccardo", role: "Amministratore"),
-    (name: "Gardin Giovanni",  role: "Amministratore"),
-    (name: "Nardo Silvio",   role: "Redattore"),
-    (name: "Oseliero Antonio",   role: "Responsabile"),
-    (name: "Todesco Mattia",  role: "Analista"),
-    (name: "Zaccone Rosario",  role: "Analista"),
+  authors: (
+    "Nardo Silvio",
   ),
-  oraInizio: "14:00",
-  oraFine: "15:00"
-)
+  timeStart: "14:00",
+  timeEnd: "15:00",
+);
 
 = Ordine del giorno
 - Retrospettiva sullo sprint terminato;

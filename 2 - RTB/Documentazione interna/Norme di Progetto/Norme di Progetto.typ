@@ -7,9 +7,7 @@
     "Banzato Alessio",
     "Gardin Giovanni"
   ),
-  showIndex: true,
   showLog: true,
-  isExternalUse: false,
 );
 
 = Introduzione

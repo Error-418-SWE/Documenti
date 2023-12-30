@@ -53,7 +53,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [somma dei costi tracciati dal gruppo], [\u{2264}BAC], [\u{2264}BAC],
+    [somma dei costi tracciati dal gruppo], [$<="BAC"$], [$<="BAC"$],
   ),
   caption: "Specifiche metrica AC"
 )
@@ -64,7 +64,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [% di completamento del progetto pianificata\u{2217}BAC], [\u{2264}BAC], [\u{2264}BAC],
+    [$"% completamento del progetto pianificata"*"BAC"$], [$<="BAC"$], [$<="BAC"$],
   ),
   caption: "Specifiche metrica PV"
 )
@@ -75,7 +75,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [% dell'effettivo stato di completamento del progetto\u{2217}BAC], [\u{2265}0], [\u{2264}BAC],
+    [$"% stato di completamento del progetto"*"BAC"$], [$>=0$], [$<="BAC"$],
   ),
   caption: "Specifiche metrica EV"
 )
@@ -86,7 +86,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [EV-AC], [\u{2265}0], [\u{2265}-10%],
+    [$"EV"-"AC"$], [$>=0$], [$>=-10%$],
   ),
   caption: "Specifiche metrica CV"
 )
@@ -97,7 +97,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [EV-PV], [\u{2265}0], [\u{2265}-10%],
+    [$"EV"-"PV"$], [$>=0$], [$>=-10%$],
   ),
   caption: "Specifiche metrica SV"
 )
@@ -108,7 +108,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [EV/AC], [\u{2265}1], [\u{2265}0.9],
+    [$frac("EV","AC")$], [$>=1$], [$>=0.9$],
   ),
   caption: "Specifiche metrica CPI"
 )
@@ -119,8 +119,9 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [BAC/CPI], [=BAC], [\u{2264}BAC+3%;\
-                        \u{2265}BAC-3%],
+    [$frac("BAC","CPI")$], [$="BAC"$], 
+    [$<="BAC"+3%$   \
+     $>="BAC"-3%$],
   ),
   caption: "Specifiche metrica EAC"
 )
@@ -131,7 +132,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [(BAC-EV)/CPI], [\u{2265}0%], [\u{2264}EAC],
+    [$frac("BAC-EV","CPI")$], [$>=0%$], [$<="EAC"$],
   ),
   caption: "Specifiche metrica ETC"
 )
@@ -144,7 +145,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$89+(300*(F)-10*(L))/P$], [100%], [\u{2265}60%],
+    [$89+(300*(F)-10*(L))/P$], [100%], [$>=60%$],
   ),
   caption: "Specifiche Indice di Gulpease"
 )
@@ -182,7 +183,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [% metriche soddisfatte], [100%], [\u{2265}80%],
+    [% metriche soddisfatte], [100%], [$>=80%$],
   ),
   caption: "Specifiche Metriche soddisfatte"
 )
@@ -196,8 +197,8 @@ Il presente documento include una serie di termini tecnici specifici del progett
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     [% requisiti obbligatori soddisfatti], [100%], [100%],
-    [% requisiti desiderabili soddisfatti], [\u{2265}0%], [0%],
-    [% requisiti opzionali soddisfatti], [\u{2265}0%], [0%],
+    [% requisiti desiderabili soddisfatti], [$>=0%$], [0%],
+    [% requisiti opzionali soddisfatti], [$>=0%$], [0%],
   ),
   caption: "Specifiche Requisiti soddisfatti"
 )

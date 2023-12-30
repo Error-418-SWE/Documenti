@@ -411,11 +411,14 @@ let glossaryRegex = ()
 let regexSeparator = "(\b|$)|(\b|$)"
 for term in glossary.keys() {
   glossaryRegex.push(term)
+  glossaryRegex.push(lower(term))
   if glossary.at(term).acronyms.len() > 0 {
     glossaryRegex.push(glossary.at(term).acronyms.join(regexSeparator))
+    glossaryRegex.push(lower(glossary.at(term).acronyms.join(regexSeparator)))
   }
   if glossary.at(term).synonyms.len() > 0 {
     glossaryRegex.push(glossary.at(term).synonyms.join(regexSeparator))
+    glossaryRegex.push(lower(glossary.at(term).synonyms.join(regexSeparator)))
   }
 }
 glossaryRegex = glossaryRegex.dedup().sorted().rev().join(regexSeparator)

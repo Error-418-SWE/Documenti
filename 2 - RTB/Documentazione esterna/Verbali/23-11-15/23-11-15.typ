@@ -12,6 +12,7 @@
   ),
   timeStart: "10:00",
   timeEnd: "11:00",
+  location: "Zoom",
 );
 
 

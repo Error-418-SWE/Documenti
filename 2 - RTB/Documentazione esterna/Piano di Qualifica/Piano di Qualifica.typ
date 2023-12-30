@@ -6,11 +6,6 @@
   authors: (
     "Todesco Mattia",
   ),
-  reviewers:(
-    "Nardo Silvio",
-  ),
-
-  showIndex: true,
   showLog: true,
   isExternalUse: true,
 );

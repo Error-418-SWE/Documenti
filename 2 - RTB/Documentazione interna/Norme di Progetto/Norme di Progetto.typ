@@ -665,6 +665,75 @@ Le decisioni vengono dunque così classificate:
   - implementative;
   - architetturali. \
 
+
+== Processo di Gestione dei Rischi
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.4_
+
+=== Scopo
+Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.
+
+=== Risultati 
+Come risultato dell'implementazione del processo di Gestione dei Rischi:
+- vengono identificati e analizzati i rischi;
+- vengono identificate e priorizzate le opzioni di trattamento del rischio;
+- viene selezionato ed implementato un trattamento appropriato;
+- i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
+
+=== Attività e compiti
+Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
+
+==== Pianificare la Gestione dei Rischi 
+La strategia di Gestione dei Rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. \
+La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
+Nello specifico l'impatto può essere "lieve", "medio" o "grave" in base alla sua entità mentre la probabilità di occorrenza viene identificata tramite un valore intero da 1 a 5, dove 1 esprime una probabilità molto bassa, mentre 5 esprime una frequenza attesa sostenuta.\
+Il team definisce approcci di trattamento appropriati, compresi piani di mitigazione specifici.
+
+==== Gestire il profilo di rischio  
+- Definire e registrare le soglie e le condizioni di rischio:\
+  le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto. 
+  I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
+
+- Stabilire e mantenere un profilo di rischio:\
+  il profilo di rischio contiene informazioni sul contesto della Gestione dei Rischi, il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
+  Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
+
+- Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:\
+  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato "Analisi Dei Rischi.pdf" presente in: https://github.com/Error-418-SWE/Documenti-old/blob/develop/1%20-%20Candidatura/Analisi%20dei%20rischi/Analisi%20dei%20rischi.pdf .
+  // riferimenti alla documentazione temporanei 
+
+==== Analizzare i rischi
+Questa attività consiste nei seguenti compiti:
+
++ identificare i rischi nelle categorie descritte nel contesto della Gestione dei Rischi:\ l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
+
++ stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato:\ per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
+
++ valutare ciascun rischio rispetto alle sue soglie di accettazione:\ ogni rischio viene valutato rispetto alle soglie stabilite, il superamento delle quali attiva delle modalità di trattamento specifiche.
+
+==== Trattare i rischi
+Questa attività consiste nei seguenti compiti:
+
++ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate. Queste possono includere:\ 
+  - l'eliminazione del rischio;
+  - la riduzione della sua probabilità o gravità;
+  - l'accettazione del rischio. 
+
+  Vengono anche registrate informazioni sull'efficacia delle alternative di trattamento.
+
++ quando viene accettato un rischio che non soddisfa la sua soglia, va considerato di priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
+
++ una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
+
+==== Monitorare i rischi  
+Questa attività consiste nei seguenti compiti:
+
+- monitorare continuamente i rischi e il contesto della Gestione dei Rischi per eventuali loro cambiamenti;
+
+- monitorare continuamente l'emergere di nuovi rischi durante l'intero ciclo di vita.
+
+Il monitoraggio dei rischi avviene principalmente in sede di meeting interno, specialmente a seguito di analisi retrospettive.
+
+
 == Processo di gestione della configurazione
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.5_
 === Scopo
@@ -973,8 +1042,6 @@ Il gruppo condivide il materiale prodotto all'interno di un repository dedicato 
 #align(link("https://github.com/Error-418-SWE/Documenti"), center)
 Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
 
-
-
 == Processo di Misurazione
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.7_
@@ -1161,7 +1228,7 @@ I bisogni espressi da Committente e Fornitore sono raccolti, catalogati, analizz
 
 Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, il gruppo si adopera per mediare i contrasti. La strategia di mediazione prevede l'identificazione di un sottoinsieme di interessi e bisogni comuni, il confronto con le parti e la definzione di strategie di mediazione calate nella fattispecie.
 
-Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi di ciclo di vita del sistema software (descritti in TODO) sono affrontati tramite il processo di gestione dei rischi TODO.
+Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi di ciclo di vita del sistema software (descritti in TODO) sono affrontati tramite il processo di Gestione dei Rischi TODO.
 
 Il negoziato tra le parti potrebbe essere richiesto per mediare posizioni mutualmente incompatibili, o a causa di vincoli o budget insufficiente. Anche la data di consegna prevista incide sulla realizzazione dei requisiti. Sarà sempre necessario consultare gli stakeholder coinvolti per raggiungere un accordo. Le decisioni saranno tracciate e rese disponibili agli stakeholder.
 

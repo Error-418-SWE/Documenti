@@ -29,22 +29,37 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 
 === Riferimenti normativi
 
-- Capitolato d'appalto C5: _WMS3_
-#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")
+- Standard ISO/IEC/IEEE 12207:2017:\
+  _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
+
+- Standard ISO/IEC/IEEE 29148:2018:\
+  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_;
+
+- SWEBOK:\
+  _#link("http://swebokwiki.org/Main_Page;")_
+
+- Specifica Unified Modeling Language 2:\
+  _#link("https://www.omg.org/spec/UML/")_
+
+- Regolamento di Progetto:\
+  #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")
+
+- Capitolato d'appalto C5: _WMS3_\
+  #link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")
 
 === Riferimenti informativi
 
-- Documentazione Typst
-#link("https://typst.app/docs/")
+- Documentazione Typst\
+  #link("https://typst.app/docs/")
 
-- Documentazione Git
-#link("https://git-scm.com/docs")
+- Documentazione Git\
+  #link("https://git-scm.com/docs")
 
-- Documentazione Jira
-#link("https://confluence.atlassian.com/jira")
+- Documentazione Jira\
+  #link("https://confluence.atlassian.com/jira")
 
-- Documentazione Three.js
-#link("https://threejs.org/docs/")
+- Documentazione Three.js\
+  #link("https://threejs.org/docs/")
 
 = Processi di accordo
 == Processo di fornitura
@@ -236,13 +251,13 @@ Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo d
 + verifica (Check): monitoraggio e misurazione dei processi e dei prodotti rispetto agli obiettivi e ai requisiti, e reportistica dei risultati;
 + attuazione (Act): azioni per migliorare le prestazioni, se necessario, in base ai risultati della verifica.
 
-==== Organizzazione del processso 
+==== Organizzazione del processso
 ===== Pianificazione
 La pianificazione del processo è compito del Responsabile, il quale al termine dello sprint precedente, in base alle attività svolte e ai risultati ottenuti, pianifica le attività da svolgere nello sprint successivo. \
 La pianificazione è un'attività iterativa, che viene svolta all'inizio dello sprint. Il Responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \
 Questo processo permette di individuare le attività da svolgere, le risorse necessarie e le tempistiche di svolgimento, mediante il sistema di ticketing offerto da Jira.\
 Il risutato di questo processo è visibile all'interno del Piano di Progetto.\
-\ 
+\
 ===== Esecuzione
 Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto. \
 Il processo di esecuzione è composto da due attività principali:
@@ -277,9 +292,9 @@ Diventa compito del Responsabile stabilire le attività necessarie per attuare l
 Il risultato di questo processo è visibile all'interno del Piano di Progetto.
 \
 \
-==== Ruoli 
+==== Ruoli
 ===== Responsabile
-Il Responsabile è la figura chiave che guida il progetto, assumendo il ruolo di referente principale per il gruppo e per gli stakeholders. \ 
+Il Responsabile è la figura chiave che guida il progetto, assumendo il ruolo di referente principale per il gruppo e per gli stakeholders. \
 
 Le responsabilità del Responsabile includono:
 
@@ -346,7 +361,7 @@ Le responsabilità del Programmatore includono:
 
 + creazione di test specifici per la verifica e la validazione del codice.
 
-\ \ 
+\ \
 ===== Verificatore
 Il Verificatore controlla il lavoro svolto dagli altri membri del gruppo, assicurandosi che le norme di progetto e le aspettative siano rispettate. \
 
@@ -592,7 +607,7 @@ Nell'attività di controllo si intraprendono azioni correttive nei confronti dei
 Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcune delle task raccolte rispondono direttamente ai problemi individuati nella parte di Things to change.
 
 
-== Processo di gestione delle Decisioni 
+== Processo di gestione delle Decisioni
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
 === Scopo
 Lo scopo del processo di gestione delle decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionando la migliore in termini di benefici attesi, costi e rischi associati. \
@@ -606,13 +621,13 @@ Ogni decisione viene presentata identificandone:
 - svantaggi;
 - impatto in termini di tempi e costi.
 
-Il processo di decision making viene prevalentemente svolto nel meeting di retrospettiva, in modo da non contrastare la pianificazione dello sprint in corso ed evitare un eccessivo numero di meeting interni che potrebbero comportare difficoltà organizzative e un rallentamnto dell'avanzamento. 
+Il processo di decision making viene prevalentemente svolto nel meeting di retrospettiva, in modo da non contrastare la pianificazione dello sprint in corso ed evitare un eccessivo numero di meeting interni che potrebbero comportare difficoltà organizzative e un rallentamnto dell'avanzamento.
 Solo decisioni critiche riguardo cambiamenti sostanziali o nuove direzioni di lavoro possono far scaturire meeting interni mirati.
 
 Il resoconto di quanto deciso sarà visibile all'interno del verbale redatto a fine meeting.
 
 ==== Tipologie delle Decisioni
-Le decisioni possono riguardare diversi aspetti del capitolato, e la loro categorizzazione è utile per individuare la migliore strategia di gestione e i ruoli coinvolti. 
+Le decisioni possono riguardare diversi aspetti del capitolato, e la loro categorizzazione è utile per individuare la migliore strategia di gestione e i ruoli coinvolti.
 
 Le decisioni vengono dunque così classificate:
 + Decisioni organizzative: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto:
@@ -630,25 +645,25 @@ Le decisioni vengono dunque così classificate:
   - ruoli responsbili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
   - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
 
-+ Decisioni architetturali: sono decisioni relative ai pattern e alle architetture riguardanti il software. 
++ Decisioni architetturali: sono decisioni relative ai pattern e alle architetture riguardanti il software.
   - documento soggetto a modifiche: Norme di progetto, documenti tecnici (diagramma delle classi,...);
   - ruoli responsbili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
 
-+ Decisioni sulla qualità: sono decisioni relative ai controlli di qualità. 
++ Decisioni sulla qualità: sono decisioni relative ai controlli di qualità.
   - documento soggetto a modifiche: Piano di qualifica;
   - ruoli responsbili dell'aggiornamento: Responsabile, Verificatori;
   - strategia di decision-making: collaborativa.
 
 ==== Strategie di decision-making utilizzate
-+ Strategia collaborativa: prevede che la decisione venga presentata e votata in modo collaborativo, coinvolgendo tutti i membri del gruppo e mediante una votazione con un sistema maggioritario, in modo che il risultato rappresenti la volontà della maggioranza.\ Strategia utilizzata per le decisioni: 
++ Strategia collaborativa: prevede che la decisione venga presentata e votata in modo collaborativo, coinvolgendo tutti i membri del gruppo e mediante una votazione con un sistema maggioritario, in modo che il risultato rappresenti la volontà della maggioranza.\ Strategia utilizzata per le decisioni:
   - organizzative;
-  - dei requisiti; 
+  - dei requisiti;
   - qualitative.
 
 + Strategia expertise decision-making: prevede che la decisione venga presentata e analizzata mediante la consultazione di figure esterne più esperte, individuabili nel Proponente o nel Committente, la cui esperienza risulta determinante. \ Questa strategia viene utilizzata per le decisioni:
   - implementative;
-  - architetturali. \ 
+  - architetturali. \
 
 == Processo di gestione della configurazione
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.5_
@@ -665,10 +680,10 @@ dove:
 + Z: indica il numero di versione di revisione e correzione, aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
 
 L'aggiornamento di una delle cifre del numero di versione azzera le cifre di rilevanza inferiore.
-+ Questo schema descrive il versionamento dei documenti. I documenti prodotti dal gruppo sono descritti nel dettaglio nella sezione TODO  
-+ Un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi.  
-+ Numeri di versione con `X` pari a 0 indicano documenti in lavorazione, da non considerarsi pronti al rilascio.  
-+ Dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.  
++ Questo schema descrive il versionamento dei documenti. I documenti prodotti dal gruppo sono descritti nel dettaglio nella sezione TODO
++ Un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi.
++ Numeri di versione con `X` pari a 0 indicano documenti in lavorazione, da non considerarsi pronti al rilascio.
++ Dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.
 
 
 ==== Tracciamento modifiche <tracciamento-modifiche>
@@ -693,7 +708,7 @@ Ogni documento, nella sezione direttamente sottostante all'indice, mostrerà in 
 
 === Tecnologie
 ==== Typst
-Il gruppo utilizza Typst come strumento di scrittura e compilazione dei documenti. 
+Il gruppo utilizza Typst come strumento di scrittura e compilazione dei documenti.
 ===== Template
 Al fine di dare una struttura comune ai documenti si è creato un file Template.typ parametrizzato, sfruttando la possibilità di produrre un file PDF compilando insieme più file Typst. Questo file contiene le impostazioni di base per la creazione di un documento:
 - `title`: titolo del documento;
@@ -711,7 +726,7 @@ Al fine di dare una struttura comune ai documenti si è creato un file Template.
 - `showIndex`: flag che indica se mostrare l'indice;
 - `isExternalUse`: flag che indica se il documento è per uso esterno.
 
-Al momento della creazione di un nuovo documento sarà sufficiente importare il modello e specificare i parametri sopra elencati. 
+Al momento della creazione di un nuovo documento sarà sufficiente importare il modello e specificare i parametri sopra elencati.
 
 ===== QuickStart
 Al fine di semplificare la procedura di creazione di un documento, è stato condiviso un documento di testo denominato quickstart.txt che contiene la configurazione base per la stesura dei documenti.
@@ -741,7 +756,6 @@ Documenti è organizzata in modo da suddividere la documentazione necessaria all
       - doc_file_name.typ: file sorgente del documento;
       - log.csv: registro delle modifiche associato al documento;
 - *PB*: contiene i file necessari alla Product Baseline.
-
 
 ===== Pull request (PR)
 Al fine di garantire uno svolgiemnto delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _featuring branching_, ove per ogni modifica che si intende apporre al documento è necessario sollevare un pull request. I branch vengono creati a partire da task assegnate su Jira, e sono nominati nel formato DOC-XX, dove XX è il numero della task su Jira.
@@ -784,15 +798,15 @@ Il workflow è composto dai seguenti passaggi:
 + apportate le modifiche, si richiede nuovamente la review per verificare che i cambiamenti apportati siano corretti;
 + nel momento in cui la review termina con esito positivo, si procede al recupero della versione corrente del documento:
   - se non esiste il corrispettivo pdf nel branch main, allora il documento non era mai stato pubblicato, pertanto la sua versione di partenza sarà fissata a 1.0.0;
-  - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script python;  
+  - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script python;
 + aggiornamento del file log.csv: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
 + compilazione del documento: aggiornato il file log.csv e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
-+ pubblicazione del documento: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main della repository; 
++ pubblicazione del documento: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main della repository;
 + merge non confermato: qualora a termine della compilazione del documento non venisse confermato il merge da parte del verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo `main` del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
 
 
 L'azione manuale si riduce solamente al rilascio di review e conferma di merge, mentre tutte le altre attività vengono automatizzate.
-All'approvazione della pull request, e alla conseguente chiusura del branch, un ulteriore automazione integrata su Jira, permette di aggiornare in automatico lo stato della task collegata alla pull request, portandola allo stato di "Completata". 
+All'approvazione della pull request, e alla conseguente chiusura del branch, un ulteriore automazione integrata su Jira, permette di aggiornare in automatico lo stato della task collegata alla pull request, portandola allo stato di "Completata".
 
 ==== Jira
 Jira è lo strumento centrale per la gestione e la tracciabilità delle task assegnate ai membri del gruppo.
@@ -813,9 +827,9 @@ Nel processo di versionamento e di tracciamento delle modifiche, Jira ricopre un
 
 A questo punto, la task si aggiornerà nello stato "In corso". Terminata la task, effettuta la pull request, superato il processo di verifica e chiuso il branch, Jira provvederà ad aggiornare lo stato della task in "Completata".
 ===== Backlog
-Ogni task da svolgere è segnata all'interno del backlog. Durante la pianificazione dello sprint, si definisce lo sprint backlog, il sottoinsieme di attività provenienti dal backlog che si intendono portare a termine entro la conclusione dello sprint.   
+Ogni task da svolgere è segnata all'interno del backlog. Durante la pianificazione dello sprint, si definisce lo sprint backlog, il sottoinsieme di attività provenienti dal backlog che si intendono portare a termine entro la conclusione dello sprint.
 
-A differenza dello sprint backlog definito durante la pianificazione, il backlog viene espanso man mano che si riscontrano nuove task necessarie o a seguito di decisioni prese durante le riunioni interne o esterne. 
+A differenza dello sprint backlog definito durante la pianificazione, il backlog viene espanso man mano che si riscontrano nuove task necessarie o a seguito di decisioni prese durante le riunioni interne o esterne.
 ===== Boards
 Le boards permettono, similmente allo sprint backlog, di avere una visione d'insieme delle attività da svolgere, ma con un approccio più visuale e intuitivo.
 Le task sono organizzate in tre colonne, rappresentanti lo stato:
@@ -824,7 +838,7 @@ Le task sono organizzate in tre colonne, rappresentanti lo stato:
 - completata: task conclusa, ovvero branch dedicato chiuso a seguito di merge sul ramo principale.
 ===== Timeline
 La timeline permette di avere una visione delle attività incentrata sulle tempistiche e le relazione tra le task.
-La timeline permette di mostrare il grafico di Gantt delle attività evidenziando i rapporti di dipendenza tra le task e stabilendo le scadenze necessarie per il loro svolgimento. 
+La timeline permette di mostrare il grafico di Gantt delle attività evidenziando i rapporti di dipendenza tra le task e stabilendo le scadenze necessarie per il loro svolgimento.
 ===== Grafici
 Jira offre la possibilità di produrre grafici e report relativi all'avanzamento e alla tracciabilità delle task. Tali strumenti permettono di avere delle metriche di valutazione dell'andamento del progetto e di individuare eventuali criticità.
 Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story points di ogni attività.
@@ -960,6 +974,7 @@ Il gruppo condivide il materiale prodotto all'interno di un repository dedicato 
 Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
 
 
+
 == Processo di Misurazione
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.7_
@@ -1034,3 +1049,170 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
 
     - registrare i risultati e comunicarli agli stakeholders:
         - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte. 
+
+== Processo di Gestione dei Rischi
+
+=== Scopo
+Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.
+
+=== Risultati 
+Come risultato dell'implementazione del processo di Gestione dei Rischi:
+- vengono identificati i rischi;
+- i rischi vengono analizzati;
+- vengono identificate, priorizzate e selezionate opzioni di trattamento del rischio;
+- viene implementato un trattamento appropriato;
+- i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
+
+=== Attività e compiti
+Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
+
+==== Pianificare la gestione dei rischi  
+La strategia di gestione dei rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. 
+I rischi devono venire individuati con tempestività, consentendo la pianificazione di misure preventive e correttive in tempo utile per limitare al massimo le conseguenze.
+La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
+Il team si impegna a definire approcci di trattamento appropriati, compresi piani di mitigazione specifici.
+
+==== Gestire il profilo di rischio  
+- Definire e registrare le soglie e le condizioni di rischio:
+  le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto. 
+  I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
+
+- Stabilire e mantenere un profilo di rischio:
+  il profilo di rischio contiene informazioni sul contesto della gestione dei rischi, il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
+  Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
+
+- Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:
+  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato "Analisi Dei Rischi.pdf" presente in: https://github.com/Error-418-SWE/Documenti-old/blob/develop/1%20-%20Candidatura/Analisi%20dei%20rischi/Analisi%20dei%20rischi.pdf .
+  // riferimenti alla documentazione temporanei 
+
+==== Analizzare i rischi
+Questa attività consiste nei seguenti compiti:
+
++ identificare i rischi nelle categorie descritte nel contesto della gestione dei rischi:\ l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
+
++ stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato:\ per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
+
++ valutare ciascun rischio rispetto alle sue soglie di rischio:\ ogni rischio viene valutato rispetto alle soglie di rischio stabilite, determinando se il rischio supera tali soglie e richiede trattamenti specifici.
+
+==== Trattare i rischi
+Questa attività consiste nei seguenti compiti:
+
++ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate:\ per i rischi che superano le soglie prestabilite, vengono definite strategie di trattamento, che possono includere l'eliminazione del rischio, la riduzione della sua probabilità o gravità, o l'accettazione del rischio. Vengono anche registrate le misure che forniranno informazioni sull'efficacia delle alternative di trattamento.
+
++ quando viene accettato un rischio che non soddisfa la sua soglia, va considerato una priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
+
++ una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
+
+==== Monitorare i rischi  
+Questa attività consiste nei seguenti compiti:
+
+- monitorare continuamente i rischi e il contesto della gestione dei rischi per eventuali cambiamenti e valutare i rischi quando il loro stato è cambiato;
+
+- implementare e monitorare misure per valutare l'efficacia dei trattamenti dei rischi;
+
+- monitorare continuamente l'emergere di nuovi rischi e fonti durante l'intero ciclo di vita.
+
+= Processi tecnici
+
+== Processo di definizione di bisogni e requisiti degli stakeholder
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.2_
+
+=== Scopo
+
+Il processo di definizione di bisogni e requisiti degli stakeholder definisce i requisiti di un sistema che possa fornire le funzionalità di cui gli utenti e gli stakeholder necessitano.
+
+Il processo identifica gli stakeholder coinvolti con il sistema durante l'intero suo ciclo di vita.
+
+Identifica inoltre i loro bisogni, li analizza e li trasforma in un insieme condiviso di requisiti che:
+- esprima i comportamenti attesi che il sistema dovrà avere nel suo ambiente operativo;
+- cataloghi e prioritizzi ciascun requisito;
+- riporti le fonti di ciascun requisito;
+- funga da riferimento per la validazione dell'implementazione di ciascun requisito.
+
+=== Stakeholder
+
+Sono identificati tutti quegli stakeholder che possiedano una forte influenza sugli obiettivi, le strategie, l'operatività e le caratteristiche del prodotto.
+
+==== Matrice degli stakeholder
+Si classificano gli stakeholder individuati sulla base di:
+- coinvolgimento nel progetto: indica l'interesse dello stakeholder nell'ambito di progetto;
+- autorità sullo sviluppo: indica il potere decisionale esercitabile sull'ambito di progetto.
+
+Entrambe le classificazioni si strutturano su tre livelli: basso, medio, alto.
+
+==== Modalità di comunicazione <modalita-comunicazione>
+Per ciascuno stakeholder si identificano i canali e la frequenza della comunicazione.
+
+=== Strategia di identificazione, analisi e trasformazione dei bisogni
+
+Il gruppo adotta una strategia iterativa per l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. L'approccio è finalizzato alla raccolta di feedback e prevede:
+- interviste e questionari;
+- studio individuale di tecnologie abilitanti, documentazione tecnica;
+- acquisizione di conoscenze tramite workshop interni e _brainstorming_;
+- osservazione delle criticità delle soluzioni software preesistenti.
+Le comunicazioni con gli stakeholder avvengono nelle modalità descritte in @modalita-comunicazione.
+
+Le attività sono supportate, quando utile, da documenti, immagini, dimostratori tecnologici e in generale qualsiasi elemento informativo utile alla comprensione dei bisogni degli stakeholder. Le informazioni sono organizzate in modo da supportare l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. Il livello di astrazione adottato può differire in base all'interlocutre e al progresso globale conseguito dal _Processo di definizione di bisogni e requisiti degli stakeholder_.
+
+Lo strumento adottato a supporto di queste operazioni è Miro (TODO).
+
+I bisogni espressi da Committente e Fornitore sono raccolti, catalogati, analizzati ed espressi nel documento di _Analisi dei Requisiti_ prodotto dal gruppo.
+
+Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, il gruppo si adopera per mediare i contrasti. La strategia di mediazione prevede l'identificazione di un sottoinsieme di interessi e bisogni comuni, il confronto con le parti e la definzione di strategie di mediazione calate nella fattispecie.
+
+Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi di ciclo di vita del sistema software (descritti in TODO) sono affrontati tramite il processo di gestione dei rischi TODO.
+
+Il negoziato tra le parti potrebbe essere richiesto per mediare posizioni mutualmente incompatibili, o a causa di vincoli o budget insufficiente. Anche la data di consegna prevista incide sulla realizzazione dei requisiti. Sarà sempre necessario consultare gli stakeholder coinvolti per raggiungere un accordo. Le decisioni saranno tracciate e rese disponibili agli stakeholder.
+
+==== Identificazione dei bisogni <identificazione-bisogni>
+Include l'elicitazione dei bisogni direttamente dagli stakeholder o dalla documentazione fornita da essi, oppure la raccolta di bisogni impliciti basati sul dominio applicativo ed i contesti tecnologico, legislativo, normativo.
+
+I bisogni degli stakeholder scaturiscono da fonti diverse. Il gruppo si impegna ad esplorare e valutare, al fine di identificare possibili bisogni, almeno questi frangenti:
+- Obiettivi di alto livello che il sistema dovrebbe conseguire;
+- Contributi concreti che il sistema dovrebbe apportare a beneficio degli stakeholder;
+- Scenari operativi, utili per limitare l'ambito e comprendere le aspettative e i bisogni;
+- Scenari operativi quotidiani, utili per assegnare una priorità ai bisogni;
+- Tipologie e caratteristiche degli utenti;
+- Ambiente operativo e contesto d'utilizzo;
+- Aspettative sulle prestazioni e la disponibilità del sistema;
+- Pratiche di business;
+- Norme, leggi o altri vincoli esterni.
+
+==== Definizione delle priorità
+Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (TODO), guidano la selezione e la prioritizzazione dei requisiti.
+
+==== Casi d'uso
+Si definisce un insieme di casi d'uso (anche detti use case, abbreviato in UC) che identifichi tutte le funzionalità attese.
+I casi d'uso sono definiti ed utilizzati nel documento di _Analisi dei Requisiti_. Sono fonte di bisogni e, indirettamente, di requisiti; sono un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
+
+Ogni caso d'uso comprende:
++ Codice identificativo;
++ Titolo;
++ Descrizione;
++ Attore;
++ Precondizioni (opzionale);
++ Postcondizioni (opzionale);
++ Scenario principale;
++ Scenari alternativi (opzionale);
++ Generalizzazioni (opzionale).
+
+Il codice identificativo assume l'aspetto `UC-X.Y`, dove `UC-` è la radice del codice; `X` è una cifra positiva crescente di cifre che identifica un caso d'uso; `Y` è una cifra positiva crescente, attiva solo per le generalizzazioni di uno stesso caso d'uso.
+
+I casi d'uso sono arricchiti con diagrammi realizzati secondo la sintassi Unified Modeling Language (UML) 2.0.
+
+In nessun caso i casi d'uso propongono o presumono soluzioni implementative.
+
+==== Identificazione dei vincoli
+I vincoli sono un tipo di requisito. Possono derivare da:
+- stakeholder;
+- sistemi software a supporto dei processi di ciclo di vita;
+- budget disponibile;
+- considerazioni su prestazioni, affidabilità, sicurezza, disponibilità, manutenibilità;
+- altre attività dei processi di ciclo di vita.
+
+Sono classificati per priorità e per fonte.
+
+==== Analisi dei requisiti
+Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
+

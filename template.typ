@@ -405,11 +405,26 @@ if showTablesIndex and docType != "verbale" {
   pagebreak()
 }
 
-// Highlight glossary terms
+// Prepare regex for glossary terms matching
 let glossary = json("Glossario.json");
-let glossaryRegex = lorem(5) // gibberish
-if title != "Glossario"{
-   glossaryRegex = glossary.keys().sorted().rev().join("|")
+let glossaryRegex = ()
+let regexSeparator = "(\b|$)|(\b|$)"
+for term in glossary.keys() {
+  glossaryRegex.push(term)
+  glossaryRegex.push(lower(term))
+  if glossary.at(term).acronyms.len() > 0 {
+    glossaryRegex.push(glossary.at(term).acronyms.join(regexSeparator))
+    glossaryRegex.push(lower(glossary.at(term).acronyms.join(regexSeparator)))
+  }
+  if glossary.at(term).synonyms.len() > 0 {
+    glossaryRegex.push(glossary.at(term).synonyms.join(regexSeparator))
+    glossaryRegex.push(lower(glossary.at(term).synonyms.join(regexSeparator)))
+  }
+}
+glossaryRegex = glossaryRegex.dedup().sorted().rev().join(regexSeparator)
+// Highlight glossary terms
+if title == "Glossario"{
+   glossaryRegex = lorem(1)
 }
 show regex(
   glossaryRegex
@@ -455,7 +470,7 @@ if docType == "verbale" [
 body
 
 //Signatures
-if isExternalUse {
+if isExternalUse and docType == "verbale" {
   align(
     end+bottom,
     grid(

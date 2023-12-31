@@ -1042,6 +1042,143 @@ Il gruppo condivide il materiale prodotto all'interno di un repository dedicato 
 #align(link("https://github.com/Error-418-SWE/Documenti"), center)
 Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
 
+== Processo di Misurazione
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.7_
+
+=== Scopo
+
+Lo scopo del processo di misurazione è raccogliere, analizzare e riportare dati e informazioni, al fine di dimostrare la qualità di prodotti, servizi e processi.\
+Questo processo viene svolto affinché il gruppo sia in grado di prendere le corrette decisioni per gestire al meglio il raggiungimento dei propri obiettivi.\
+Le misure devono soddisfare determinate caratteristiche di qualità, ovvero devono essere:
++ verificabili;
++ significative;
++ attuabili;
++ tempestive;
++ economicamente vantaggiose.
+
+Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia espresse che implicite.
+
+=== Risultati
+
+A seguito dell'implementazione efficace del processo di misurazione:
+
+- vengono identificate le esigenze informative;
+- viene identificato e sviluppato un insieme appropriato di misure basato sulle esigenze informative;
+- i dati necessari vengono raccolti, verificati e archiviati;
+- i dati vengono analizzati e i risultati interpretati;
+- gli elementi informativi forniscono informazioni oggettive per poter prendere decisioni concrete.
+
+=== Attività
+
+Il progetto deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito dal gruppo (parte di questo viene definito nel Piano di Qualifica):
+
++ prepararsi per la misurazione:
+
+    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi primari:
+        - BAC (Budget at Completion);
+        - AC (Actual Cost);
+        - PV (Planned Value);
+        - EV (Earned Value);
+        - CV (Cost Variance);
+        - SV (Schedule Variance);
+        - CPI (Cost Performance Index);
+        - EAC (Estimated at Completion);
+        - ETC (Estimated to Completion).
+        
+    - definire la strategia di misurazione per i processi di supporto. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi di supporto:
+        - indice di Gulpease;
+        - errori ortografici;
+        - metriche soddisfatte;
+        - code coverage.
+
+    - descrivere le caratteristiche del gruppo rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici:
+        - richieste del Proponente;
+        - requisiti individuati.
+
+    - definire procedure di raccolta, analisi, accesso e reportistica dei dati:
+        - Piano di Qualifica: definisce i criteri e le modalità di misurazione e reportistica dei dati misurati.
+
+    - definire criteri per valutare gli elementi informativi e il processo di misurazione:
+        - Piano di Qualifica: definisce i valori ottimali e accettabili della strategia di misurazione adottata a cui tutti i documenti prodotti devono conformarsi.
+
+    - identificare e pianificare le azioni da intraprendere per i casi in cui i parametri di misurazione di qualità non vengano rispettati.
+
++ eseguire la misurazione:
+
+    - integrare procedure manuali o automatizzate per la generazione, raccolta, analisi e reportistica dei dati nei processi pertinenti:
+        - controllo manuale di conformità dei documenti prodotti ai parametri individuati per i processi primari;
+        - controllo manuale di conformità dei documenti prodotti ai parametri individuati per i processi di supporto;
+        - revisione esterna e manuale dei documenti prodotti per il controllo di leggibilità e di eventuali errori ortografici.
+     
+    - raccogliere, archiviare e verificare i dati:
+        - i dati prodotti vengono salvati e analizzati al fine di perorare una strategia di approccio ed eventuali modifiche da effettuare.
+
+    - registrare i risultati e comunicarli agli stakeholders:
+        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte. 
+
+== Processo di Gestione dei Rischi
+
+=== Scopo
+Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.
+
+=== Risultati 
+Come risultato dell'implementazione del processo di Gestione dei Rischi:
+- vengono identificati i rischi;
+- i rischi vengono analizzati;
+- vengono identificate, priorizzate e selezionate opzioni di trattamento del rischio;
+- viene implementato un trattamento appropriato;
+- i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
+
+=== Attività e compiti
+Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
+
+==== Pianificare la gestione dei rischi  
+La strategia di gestione dei rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. 
+I rischi devono venire individuati con tempestività, consentendo la pianificazione di misure preventive e correttive in tempo utile per limitare al massimo le conseguenze.
+La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
+Il team si impegna a definire approcci di trattamento appropriati, compresi piani di mitigazione specifici.
+
+==== Gestire il profilo di rischio  
+- Definire e registrare le soglie e le condizioni di rischio:
+  le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto. 
+  I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
+
+- Stabilire e mantenere un profilo di rischio:
+  il profilo di rischio contiene informazioni sul contesto della gestione dei rischi, il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
+  Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
+
+- Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:
+  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato "Analisi Dei Rischi.pdf" presente in: https://github.com/Error-418-SWE/Documenti-old/blob/develop/1%20-%20Candidatura/Analisi%20dei%20rischi/Analisi%20dei%20rischi.pdf .
+  // riferimenti alla documentazione temporanei 
+
+==== Analizzare i rischi
+Questa attività consiste nei seguenti compiti:
+
++ identificare i rischi nelle categorie descritte nel contesto della gestione dei rischi:\ l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
+
++ stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato:\ per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
+
++ valutare ciascun rischio rispetto alle sue soglie di rischio:\ ogni rischio viene valutato rispetto alle soglie di rischio stabilite, determinando se il rischio supera tali soglie e richiede trattamenti specifici.
+
+==== Trattare i rischi
+Questa attività consiste nei seguenti compiti:
+
++ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate:\ per i rischi che superano le soglie prestabilite, vengono definite strategie di trattamento, che possono includere l'eliminazione del rischio, la riduzione della sua probabilità o gravità, o l'accettazione del rischio. Vengono anche registrate le misure che forniranno informazioni sull'efficacia delle alternative di trattamento.
+
++ quando viene accettato un rischio che non soddisfa la sua soglia, va considerato una priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
+
++ una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
+
+==== Monitorare i rischi  
+Questa attività consiste nei seguenti compiti:
+
+- monitorare continuamente i rischi e il contesto della gestione dei rischi per eventuali cambiamenti e valutare i rischi quando il loro stato è cambiato;
+
+- implementare e monitorare misure per valutare l'efficacia dei trattamenti dei rischi;
+
+- monitorare continuamente l'emergere di nuovi rischi e fonti durante l'intero ciclo di vita.
+
 = Processi tecnici
 
 == Processo di definizione di bisogni e requisiti degli stakeholder
@@ -1145,3 +1282,4 @@ Sono classificati per priorità e per fonte.
 
 ==== Analisi dei requisiti
 Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
+

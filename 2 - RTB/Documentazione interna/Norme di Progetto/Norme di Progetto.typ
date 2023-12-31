@@ -1007,6 +1007,7 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
     - definire la strategia di misurazione per i processi di supporto. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi di supporto:
         - indice di Gulpease;
         - errori ortografici;
+        - metriche soddisfatte;
         - code coverage.
 
     - descrivere le caratteristiche del gruppo rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici:

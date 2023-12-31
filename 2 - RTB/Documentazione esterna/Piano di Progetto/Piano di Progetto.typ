@@ -569,6 +569,74 @@ Nel settimo sprint i compiti del team sono incentrati sulla realizzazione del Po
 [da inserire]
 
 
+== Ottavo Sprint dal 25-12-2023 al 01-01-2024
+
+=== Obiettivi prefissati <obiettivi8>
+Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nel settimo sprint, e sull'avanzamento del documento Norme di Progetto, oltre che sul miglioramento di alcuni aspetti di attività già concluse. In particolare gli obiettivi prefissati per questo sprint sono:
+
+- miglioramento del Glossario:
+  - rendere _case insensitive_ l'individuazione dei termini;
+  - implementare la gestione di plurali e acronimi.
+- proseguimento del documento Analisi dei Requisiti con:
+  - implementazione tracciamento requisito-fonte;
+  - miglioramento della resa grafica dei diagrammi UML tramite la loro conversione in SVG.
+- proseguimento del documento Norme di Progetto, recuperando i capitoli non scritti nello sprint precedente e espandendone altri;
+- proseguimento del PoC finale;
+- miglioramento delle GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
+- studio e confronto delle tecnologie riguardanti le API (Next.js e Express);
+- realizzazione di un sito web per la documentazione;
+- realizzazione di una dashboard per monitorare le metriche definite nel Piano di Qualifica.
+
+=== Preventivo costi
+Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di conseguenza saranno necessari tutti i ruoli presenti nel team:
+- *Responsabile*: al fine di coordinare le attività e proseguire la redazione delle Norme di Progetto;
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento Piano di Progetto;
+  - gestire GitHub e Jira;
+  - migliorare le GitHub Actions individuando e rimuovendo bug;
+  - migliorare il Glossario come indicato nel primo punto della @obiettivi8.
+- *Analista*: al fine di:
+  - aggiungere il tracciamento requisito-fonte nel documento Analisi dei Requisiti;
+  - convertire i diagrammi UML in SVG.
+- *Progettista*: al fine di studiare e confrontare le tecnologie per l'implementazione delle API;
+- *Programmatore*: al fine di proseguire con l'implementazione del PoC finale;
+- *Verificatore*: al fine di:
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto;
+  - realizzare una dashboard per il monitoraggio delle metriche.
+
+#set text(
+  size: 10pt
+)
+
+#figure(
+  table(
+    columns: 8,
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato Alessio],   [/],  [3],    [/],    [/],    [/],   [/], [3],
+    [Carraro\ Riccardo], [/],  [/],    [/],    [/],    [3],   [/], [3],
+    [Gardin\ Giovanni],  [/],  [/],    [/],    [3],    [/],   [/], [3],
+    [Nardo\ Silvio],     [4],  [/],    [/],    [/],    [/],   [/], [4],
+    [Oseliero\ Antonio], [/],  [/],    [/],    [/],    [/],   [4], [4],
+    [Todesco Mattia],    [/],  [/],    [/],    [3],    [/],   [/], [3],
+    [Zaccone\ Rosario],  [/],  [/],    [3],    [/],    [/],   [/], [3],
+    [Totale\ ore ruolo], [4],  [3],    [3],    [6],    [3],   [4], [23],
+    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo],      [120,00], [60,00], [75,00], [150,00], [45,00], [60,00], [510,00]
+  ),
+  caption: "Preventivo ottavo sprint"
+)
+
+#set text(
+  size: 11pt
+)
+
+=== Diagramma Gantt
+[da inserire]
+
+
+
 = Consuntivo del progetto
 
 == Introduzione

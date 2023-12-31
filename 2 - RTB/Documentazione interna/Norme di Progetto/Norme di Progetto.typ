@@ -1055,45 +1055,45 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
    - definire una strategia di controllo della qualità. Essa consiste in: 
 
-      - ruoli, responsabilità e autorità definite:
+      + ruoli, responsabilità e autorità definite:
         - i ruoli e i compiti di ciascun membro sono definiti e non ambigui;
-        - ogni individuo fisico viene informato a scadenza bisettimanale dei propri compiti e delle proprie responsabilità per quel periodo di tempo;
+        - ogni individuo fisico viene informato a scadenza bisettimanale dei propri compiti e delle proprie responsabilità per quel periodo di tempo.
        
-      - criteri di valutazione definiti per processi, prodotti e servizi:
+      + criteri di valutazione definiti per processi, prodotti e servizi:
         - valore delle metriche di controllo dei processi primari entro il valore accettabile;
         - valore delle metriche di controllo dei processi di supporto entro il valore accettabile;
         - tempistiche da rispettare definite;
         - requisiti funzionali definiti;
         - requisiti non funzionali definiti.
         
-      - attività di verifica, convalida, monitoraggio, misurazione, revisione per i prodotti o servizi:
+      + attività di verifica, convalida, monitoraggio, misurazione, revisione per i prodotti o servizi:
         - assegnazione di un Verificatore con il compito di monitorare e testare la qualità del materiale prodotto;
         - il Verificatore ha il compito di segnalare eventuali incongruenze con le metriche di qualità al redattore.
 
-      - risoluzione dei problemi e attività di miglioramento di processo e prodotto:
-        - modifiche effettuate su indicazioni del Verificatore;
+      + risoluzione dei problemi e attività di miglioramento di processo e prodotto:
+        - modifiche effettuate su indicazioni del Verificatore.
 
-      - stabilire l'indipendenza del controllo della qualità dagli altri processi del ciclo di vita:
+      + stabilire l'indipendenza del controllo della qualità dagli altri processi del ciclo di vita:
          - il Verificatore è una persona fisica diversa da quella che ha redatto il documento.
 
 + eseguire valutazioni di processi, prodotti e servizi:
 
-  - il Verificatore valuta i prodotti e i servizi al fine di garantire la conformità rispetto ai criteri stabiliti;
-  - il Verificatore si assicura che la verifica e la convalida degli output dei processi del ciclo di vita siano eseguiti conformemente con quanto concordato in precedenza;
-  - il Verificatore applica il processo di misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
-  - il Verificatore esprime un giudizio e segnala eventuali problematiche riscontrate.
+  + il Verificatore valuta i prodotti e i servizi al fine di garantire la conformità rispetto ai criteri stabiliti;
+  + il Verificatore si assicura che la verifica e la convalida degli output dei processi del ciclo di vita siano eseguiti conformemente con quanto concordato in precedenza;
+  + il Verificatore applica il processo di misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
+  + il Verificatore esprime un giudizio e segnala eventuali problematiche riscontrate.
 
 + gestire rapporti del controllo della qualità:
 
-  - stilare rapporti relativi alle attività di controllo della qualità:
+  + stilare rapporti relativi alle attività di controllo della qualità:
     - in sede di retrospettiva il Verificatore aggiorna il gruppo riguardo le attività di controllo qualità dello sprint in corso;
     - redazione di un verbale contenente anche gli esiti del processo di controllo della qualità.
 
-  - mantenere, archiviare e distribuire i rapporti;
+  + mantenere, archiviare e distribuire i rapporti;
 
-  - identificare incidenti e problemi associati alle valutazioni effettuate.
+  + identificare incidenti e problemi associati alle valutazioni effettuate.
 
 + trattare incidenti e problemi:
 
-  - in caso di segnalazione di incidenti e problemi viene svolto un lavoro collettivo tra Verificatore e redattore per la loro risoluzione;
-  - nel caso tali problemi o incidenti siano di carattere generale, viene avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
+  + in caso di segnalazione di incidenti e problemi viene svolto un lavoro collettivo tra Verificatore e redattore per la loro risoluzione;
+  + nel caso tali problemi o incidenti siano di carattere generale, viene avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.

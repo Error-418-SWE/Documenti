@@ -1037,6 +1037,58 @@ Questa attività consiste nei seguenti compiti:
 
 = Processi tecnici
 
+== Processo di analisi della missione
+
+_Tailored conformance on ISO/IEC/IEEE 12207:2017 clause 6.4.1 per ISO/IEC/IEEE 12207:2017 Annex A_
+
+=== Scopo
+
+Il processo di analisi della missione definisce i problemi e le opportunità dai quali scaturisce il progetto, caratterizza lo spazio delle soluzioni e determina una classe di soluzione preferita.
+
+=== Strategia di identificazione e analisi della missione
+
+==== Sistemi e servizi abilitanti
+Gli strumenti di comunicazione adottati dal gruppo sono descritti in TODO.
+
+==== Opportunità
+Si analizzano i problemi e le opportunità così da ottenere una visione d'insieme dello status quo. L'obiettivo dell'analisi è la comprensione del contesto e delle cause di problemi e opportunità, e quindi del Capitolato.
+
+Si identifica l'ambito del Capitolato attraverso la definizione di:
+- difetti e _pain point_ delle soluzioni pre-esistenti, se disponibili;
+- soluzioni alternative, con vantaggi e svantaggi rispetto alle soluzioni pre-esistenti, se disponibili;
+- contesto tecnologico di applicazione;
+- tipologia di utenza attesa;
+- destinazione d'uso del prodotto finale.
+
+La sintesi di bisogni e requisiti avviene nel contesto del Processo di definizione di bisogni e requisiti degli stakeholder (TODO).
+
+==== Classi di soluzione
+Si identificano classi di soluzione che possano sfruttare le opportunità e risolvere i problemi individuati.
+
+Le classi di soluzione possono comprendere lo sviluppo o la modifica di sistemi software pre-esistenti.
+
+Le classi di soluzione individuano le potenziali tecnologie che ci si aspetta essere necessarie. Possono includere l'identificazione di specifici sistemi o prodotti software adatti al riutilizzo.
+
+Nel contesto del progetto didattico, il gruppo accetta le classi di soluzione proposte nel Capitolato, eventualmente utilizzandole come base per la formulazione di classi di soluzione alternative.
+
+==== Valutazione delle classi di soluzione
+Si valuta ogni classe di soluzione identificata sulla base di:
+- fattibilità;
+- costi e tempi necessari;
+- rischi;
+- interesse tecnologico e didattico;
+- pertinenza.
+
+La valutazione delle classi di soluzione può avvenire tramite:
+- studio della documentazione dei sistemi o prodotti software identificati;
+- realizzazione di esploratori tecnologici;
+- consultazione di esperti.
+
+Sulla base dei risultati della valutazione, il gruppo individua una classe di soluzione preferita e la presenta al Proponente per la convalida.
+
+==== Analisi dei requisiti
+Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste dal processo. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
+
 == Processo di definizione di bisogni e requisiti degli stakeholder
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.2_

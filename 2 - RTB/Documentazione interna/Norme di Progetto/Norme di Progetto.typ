@@ -1085,6 +1085,8 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
 + gestire rapporti del controllo della qualità:
 
+ - essi consistono in:
+ 
   + stilare rapporti relativi alle attività di controllo della qualità:
     - in sede di retrospettiva il Verificatore aggiorna il gruppo riguardo le attività di controllo qualità dello sprint in corso;
     - redazione di un verbale contenente anche gli esiti del processo di controllo della qualità.

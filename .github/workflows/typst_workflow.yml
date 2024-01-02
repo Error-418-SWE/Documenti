@@ -5,8 +5,8 @@ on:
   pull_request:
     types: [opened, reopened, synchronize, closed]
     paths:
-      - '!**template.typ'
       - '**.typ'
+      - '!**template.typ'
 
 jobs:
   fetch:

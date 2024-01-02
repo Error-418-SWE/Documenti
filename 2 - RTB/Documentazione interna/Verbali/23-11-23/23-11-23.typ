@@ -7,9 +7,6 @@
   authors: (
     "Zaccone Rosario",
   ),
-  externalParticipants : (
-    (name: "Matteo Bassani", role: "Referente aziendale"),
-  ),
   timeStart: "14:45",
   timeEnd: "15:15",
 );

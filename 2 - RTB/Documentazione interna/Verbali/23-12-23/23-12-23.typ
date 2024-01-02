@@ -58,7 +58,7 @@ Non sono stati rilevati comportamenti virtuosi diversi da quelli dello sprint pr
 - Notificare, tramite i canali dedicati, chi debba apportare correzioni così da velocizzare i tempi di approvazione;
 - Impegnarsi a fornire commenti di review più precisi:
   - indicando con precisione la natura dell'errore e, se utile, la sua localizzazione all'interno della riga;
-  - fornendo una possibile correzione, quando appropriato;
+  - fornendo, quando possibile, una correzione appropriata;
   - nel caso di più occorrenze dello stesso errore, segnalarle tutte. Per evitare ripetizioni, fornire una valutazione della prima occorrenza ed inserire un riferimento a tale conversazione nelle occorrenze successive;
 - Per accelerare il lavoro sulle Norme di Progetto, chi ha redatto le Norme di Progetto nel corso degli sprint precedenti continuerà l'affiancamento nel corso dello sprint successivo;
 - La natura esplorativa del PoC richiede flessibilità nella pianificazione, ma si sottolinea la necessità di continuare tracciare le attività per riferimento futuro.

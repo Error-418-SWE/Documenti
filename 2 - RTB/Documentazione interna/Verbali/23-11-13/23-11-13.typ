@@ -1,20 +1,14 @@
 #import "/template.typ": *
 
 #show: project.with(
-  title: "Verbale 13/11/23",
+  date: "13/11/23",
   docType: "verbale",
-  partecipants: (
-    (name: "Banzato Alessio", role: "Verificatore"),
-    (name: "Carraro Riccardo", role: "Amministratore/Verificatore"),
-    (name: "Gardin Giovanni",  role: "Amministratore"),
-    (name: "Nardo Silvio",   role: "Analista"),
-    (name: "Oseliero Antonio",   role: "Responsabile/Redattore"),
-    (name: "Todesco Mattia",  role: "Analista"),
-    (name: "Zaccone Rosario",  role: "Analista"),
+  authors: (
+    "Oseliero Antonio",
   ),
-  oraInizio: "15:30",
-  oraFine:  "17:30",
-)
+  timeStart: "15:30",
+  timeEnd: "17:30",
+);
 
 = Ordine del giorno
   - Aggiornamento del gruppo in merito alle nuove automazioni adottate;

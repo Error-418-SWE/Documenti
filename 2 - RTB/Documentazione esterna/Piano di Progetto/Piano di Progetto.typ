@@ -9,7 +9,6 @@
     "Nardo Silvio",
     "Banzato Alessio"
   ),
-  showIndex: true,
   showLog: true,
   isExternalUse: true,
 );

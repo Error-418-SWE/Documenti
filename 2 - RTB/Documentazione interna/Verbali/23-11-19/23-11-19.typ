@@ -1,6 +1,5 @@
 #import "/template.typ": *
 
-//change title
 #show: project.with(
   date: "19/11/23",
   docType: "verbale",

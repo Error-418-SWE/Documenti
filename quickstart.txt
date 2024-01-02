@@ -50,13 +50,15 @@ Note per l'uso:
     "Cognome Nome",
   ),
   externalParticipants : (
-    (name: "Matteo Bassani", role: "Referente aziendale"),
+    (name: "Bassani Matteo", role: "Referente aziendale"),
   ), // Rimuovere se vuoto
   missingMembers: (
     "Cognome Nome",
   ), // Rimuovere se vuoto
   timeStart: "10:00",
   timeEnd: "11:00",
+  //In caso di meeting esterno aggiungere:
+  //location: "Zoom",
 );
 
 = Ordine del giorno
@@ -72,9 +74,9 @@ Note per l'uso:
   authors: (
     "Cognome Nome",
   ),
-  showIndex: true,
   showLog: true,
-  isExternalUse: true,
+  // Se il documento è esterno aggiungere:
+  // isExternalUse: true,
 );
 
 = Titolo iniziale

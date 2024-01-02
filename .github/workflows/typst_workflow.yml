@@ -52,6 +52,14 @@ jobs:
       file_name: ${{ needs.fetch.outputs.file_name }}
       file_path: ${{ needs.fetch.outputs.file_path }}
 
+  deploy:
+    if: github.event.pull_request.merged == true
+    needs: [fetch, log]
+    uses: Error-418-SWE/Documenti/.github/workflows/deploy_website.yml@src
+    with:
+      file_name: ${{ needs.fetch.outputs.file_name }}
+      file_path: ${{ needs.fetch.outputs.file_path }}
+
   publish:
     if: github.event.pull_request.merged == true
     needs: [fetch, compile]

@@ -86,30 +86,28 @@ Lo stato di avanzamento dei lavori potrebbe subire ulteriori rallentamenti.
 
 
 == Rallentamento delle attività
-Tra le difficoltà principali durante lo sviluppo del progetto è la congiunzione tra gli impegni individuali e progettuali. Tale rischio può comportare un rallentamento nel completamento di attività e task assegnate comportando un generale ritardo nello sviluppo.
+Rallentamento nel completamento di attività e task assegnate derivato dalla congiunzione tra gli impegni individuali e progettuali.
+Esso comporta un generale ritardo nello sviluppo.
 
 - Impatto: grave;
-- Probabilità: 4 (\textit{Probabilità aumentata nel periodo della sessione invernale});
-- Soglie: 
+- Probabilità: 4 _Probabilità aumentata nel periodo della sessione invernale_;
+- Soglie: se i rallentamenti previsti possono ridurre l'efficienza lavorativa del gruppo, si attua il trattamento "Riduzione della sua probabilità o gravità".
+
 === Opzioni di trattamento del rischio
 ==== Riduzione della sua probabilità o gravità
 *Strategia di trattamento*
+Implementazione di una pianificazione più flessibile decisa in sede di meeting, per adattarsi agli impegni individuali e progettuali. 
+Questo prevede una priorizzazione nell'uso di strumenti di lavoro asincroni, al fine di permettere a tutti i membri un'equa divisione del lavoro da svolgere nei momenti a loro più comodi, a patto di rispettare le linee guida del Way Of Working.
+Assegnazione chiara delle responsabilità in luce dei rallentamenti previsti e monitoraggio costante dello stato di avanzamento.
+Inoltre è richiesta comunicazione costante con i membri del gruppo al fine di rendere note eventuali indisponibilità o impegni.
+
+
 *Conseguenze*
-==== Accettazione del rischio
-*Strategia di trattamento*
-*Conseguenze*
+Miglioramento dell'efficienza nel completamento dei compiti nonostante i rallentamenti inevitabili.
+Le attività non svolte o completate parzialmente possono determinare uno slittamento della data di consegna e delle scadenze intermedie prefissate.
 
-
-
-
-- Conseguenze: attività non svolte o completate parzialmente determinerebbero uno slittamento della data di consegna e delle scadenze intermedie;
-- Mitigazione:
-  - Organizzazione e suddivisione del monte ore con occhio di riguardo a precise date e scadenze;
-  - Incontri e comunicazione costante con i membri del gruppo al fine di rendere note eventuali indisponibilità o impegni;
-  - Uso di strumenti asincroni al fine di permettere a tutti i membri un'equa divisione del lavoro da svolgere nei momenti a loro più comodi, a patto di rispettare le linee guida del Way Of Working.
 
 == Utilizzo delle tecnologie
-
 Le tecnologie individuate o suggerite durante i processi di analisi e progettazione potrebbero risultare complesse da comprendere e/o integrare.
 
 - Impatto: medio;
@@ -118,10 +116,17 @@ Le tecnologie individuate o suggerite durante i processi di analisi e progettazi
 === Opzioni di trattamento del rischio
 ==== Riduzione della sua probabilità o gravità
 *Strategia di trattamento*
+///
+
 *Conseguenze*
+///
+
 ==== Accettazione del rischio
 *Strategia di trattamento*
+///
+
 *Conseguenze*
+///
 
 
 

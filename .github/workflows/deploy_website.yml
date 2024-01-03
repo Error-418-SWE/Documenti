@@ -53,7 +53,7 @@ jobs:
   transpile:
     runs-on: ubuntu-latest
     env:
-      PANDOC_DEB: 'https://github.com/jgm/pandoc/releases/download/3.1.9/pandoc-3.1.9-1-amd64.deb'
+      PANDOC_DEB: '${{ vars.PANDOC_DEB_URL }}'
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4

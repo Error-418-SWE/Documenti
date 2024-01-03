@@ -101,9 +101,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
+    rows: 25pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$frac("EV","AC")$], [$>=1$], [$>=0.9$],
+    align(center+horizon,$"EV"/"AC"$), align(center+horizon,$>=1$), align(center+horizon,$>=0.8$),
   ),
   caption: "Specifiche metrica CPI"
 )
@@ -112,11 +113,11 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
+    rows: 25pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$frac("BAC","CPI")$], [$="BAC"$], 
-    [$<="BAC"+3%$   \
-     $>="BAC"-3%$],
+    align(center+horizon,$"BAC"/"CPI"$), align(center+horizon,$<="BAC"$), 
+    align(center+horizon,$<="BAC"$),
   ),
   caption: "Specifiche metrica EAC"
 )
@@ -125,9 +126,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
+    rows: 25pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$frac("BAC-EV","CPI")$], [$>=0%$], [$<="EAC"$],
+    align(center+horizon,$"BAC-EV"/"CPI"$), align(center+horizon,$<="EAC"$), align(center+horizon,$<="EAC"$),
   ),
   caption: "Specifiche metrica ETC"
 )
@@ -138,9 +140,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
+    rows: 25pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$89+(300*(F)-10*(L))/P$], [100%], [$>=60%$],
+    align(center+horizon,$89+(300*(F)-10*(L))/P$), align(center+horizon,"80%"), align(center+horizon,$>=60%$),
   ),
   caption: "Specifiche Indice di Gulpease"
 )
@@ -164,9 +167,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
+    rows: 25pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [(Righe di codice testate/Righe di codice totali)\u{2217}100], [0], [0],
+    align(center+horizon,$frac("Righe di codice testate","Righe di codice totali")*100$), align(center+horizon,"0"), align(center+horizon,"0"),
   ),
   caption: "Specifiche Code coverage"
 )
@@ -203,9 +207,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
+    rows: 25pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$frac("test con errori","test eseguiti")*100$], [0%], [$<=10%$],
+    align(center+horizon,$frac("test con errori","test eseguiti")*100$), align(center+horizon,"0%"), align(center+horizon,$<=10%$),
   ),
   caption: "Specifiche Densità errori"
 )

@@ -698,9 +698,28 @@ $bold("Scenario: ")$
 - l'utente seleziona un bin;
 - vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
 
-= Ricerca prodotti
+= Interrogazione di uno scaffale
 
 #figure(image("./imgs/uc9.png", format: "png"), caption: [UML UC-9])
+$bold("Descrizione: ")$
+deve essere possibile visualizzare le informazioni relative ad uno specifico scaffale.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- l'ambiente deve essere correttamente configurato e deve esistere almeno uno scaffale.
+
+$bold("Postcondizioni: ")$
+- vengono visualizzate le informazioni dello scaffale.
+
+$bold("Scenario: ")$
+- l'utente seleziona uno scaffale;
+- vengono visualizzate le informazioni relative a lo scaffale selezionato.
+
+= Ricerca prodotti
+
+#figure(image("./imgs/uc10.png", format: "png"), caption: [UML UC-10])
 
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto.
@@ -719,11 +738,11 @@ $bold("Scenario: ")$
 - il bin contenente il prodotto cercato viene evidenziato.
 
 $bold("Generalizzazioni: ")$
-- UC-9.1 Ricerca per ID;
-- UC-9.2 Ricerca per Nome;
-- UC-9.3 Ricerca per Scaffale.
+- UC-10.1 Ricerca per ID;
+- UC-10.2 Ricerca per Nome;
+- UC-10.3 Ricerca per Scaffale.
 
-=== Ricerca per ID
+== Ricerca per ID
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto tramite il suo ID di magazzino.
 
@@ -740,7 +759,7 @@ $bold("Scenario: ")$
 - l'utente ricerca un prodotto usando come chiave l'ID univoco di magazzino;
 - il bin contenente il prodotto cercato viene evidenziato.
 
-=== Ricerca per Nome
+== Ricerca per Nome
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto tramite il nome associato al prodotto.
 
@@ -758,7 +777,7 @@ $bold("Scenario: ")$
 - il bin contenente il prodotto cercato viene evidenziato;
 - i prodotti associati al nome possono essere più di uno.
 
-=== Ricerca per Scaffale
+== Ricerca per Scaffale
 $bold("Descrizione: ")$
 l'utente ricerca i prodotti contenuti all'interno di uno scaffale del magazzino.
 
@@ -777,7 +796,7 @@ $bold("Scenario: ")$
 
 = Esplorazione magazzino
 
-#figure(image("./imgs/uc10.png", format: "png", width: 60%), caption: [UML UC-10])
+#figure(image("./imgs/uc11.png", format: "png", width: 60%), caption: [UML UC-11])
 
 == Spostamento della visuale
 $bold("Descrizione: ")$
@@ -952,21 +971,21 @@ Dove:
 
     [FM-8], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di un bin selezionato], [UC-8],
     [FM-8.1], [Obbligatorio], [L'utente deve poter visualizzare le informazioni del prodotto contenuto in un bin selezionato], [UC-8],
-    [FM], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di uno scaffale selezionato], [],
+    [FM-9], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di uno scaffale selezionato], [UC-9],
 
-    [FD-9], [Desiderabile], [L'utente deve poter ricercare un prodotto], [UC-9],
-    [FD-9.1], [Desiderabile], [L'utente deve poter ricercare un prodotto per ID], [UC-9.1.1],
-    [FD-9.2], [Desiderabile], [L'utente deve poter ricercare un prodotto per nome], [UC-9.1.2],
-    [FD-9.3], [Desiderabile], [L'utente deve poter ricercare uno scaffale], [UC-9.1.3],
-    [FD-9.4], [Desiderabile], [Il sistema deve fornire la lista dei risultati di ricerca], [UC-9],
-    [FD-9.5], [Desiderabile], [Il sistema deve evidenziare i risultati di ricerca], [UC-9],
+    [FD-10], [Desiderabile], [L'utente deve poter ricercare un prodotto], [UC-10],
+    [FD-10.1], [Desiderabile], [L'utente deve poter ricercare un prodotto per ID], [UC-10.1],
+    [FD-10.2], [Desiderabile], [L'utente deve poter ricercare un prodotto per nome], [UC-10.2],
+    [FD-10.3], [Desiderabile], [L'utente deve poter ricercare uno scaffale], [UC-10.3],
+    [FD-10.4], [Desiderabile], [Il sistema deve fornire la lista dei risultati di ricerca], [UC-10],
+    [FD-10.5], [Desiderabile], [Il sistema deve evidenziare i risultati di ricerca], [UC-10],
 
-    [FM-10], [Obbligatorio], [L'utente deve poter esplorare visivamente il magazzino], [UC-10],
-    [FM-10.1], [Obbligatorio], [L'utente deve poter muovere la visuale sui tre assi], [UC-10.1], // SICURO?
-    [FM-10.2], [Obbligatorio], [L'utente deve poter ruotare la visuale], [UC-10.2],
-    [FM-10.3], [Obbligatorio], [L'utente deve poter effettuare operazioni di zoom della visuale], [UC-10.3],
-    [FM-10.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom in], [UC-10.3],
-    [FM-10.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom out], [UC-10.3]
+    [FM-11], [Obbligatorio], [L'utente deve poter esplorare visivamente il magazzino], [UC-11],
+    [FM-11.1], [Obbligatorio], [L'utente deve poter muovere la visuale sui tre assi], [UC-11.1],
+    [FM-11.2], [Obbligatorio], [L'utente deve poter ruotare la visuale], [UC-11.2],
+    [FM-11.3], [Obbligatorio], [L'utente deve poter effettuare operazioni di zoom della visuale], [UC-11.3],
+    [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom in], [UC-11.3],
+    [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom out], [UC-11.3]
   ),
   caption: "Requisiti funzionali"
 )
@@ -978,13 +997,13 @@ Dove:
     columns: 4,
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [], [Obbligatorio], [Deve essere rispettato quanto previsto dalle Norme di Progetto.], [Interna],
-    [], [Obbligatorio], [Deve essere rispettato quanto previsto dal Piano di Qualifica.], [Interna],
-    [], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico.], [Capitolato],
-    [], [Obbligatorio], [Devono essere consegnati i diagrammi UML degli UC.], [Capitolato],
-    [], [Obbligatorio], [Deve essere consegnata la lista dei bug risolti.], [Capitolato],
-    [], [Opzionale], [Deve essere consegnato lo schema del DB.], [Capitolato],
-    [], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate.], [Capitolato],
+    [QM-1], [Obbligatorio], [Deve essere rispettato quanto previsto dalle Norme di Progetto.], [Interna],
+    [QM-2], [Obbligatorio], [Deve essere rispettato quanto previsto dal Piano di Qualifica.], [Interna],
+    [QM-3], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico.], [Capitolato],
+    [QM-4], [Obbligatorio], [Devono essere consegnati i diagrammi UML degli UC.], [Capitolato],
+    [QM-5], [Obbligatorio], [Deve essere consegnata la lista dei bug risolti.], [Capitolato],
+    [QO-6], [Opzionale], [Deve essere consegnato lo schema del DB.], [Capitolato],
+    [QO-7], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate.], [Capitolato],
   ),
   caption: "Requisiti di qualità."
 )
@@ -996,20 +1015,20 @@ Dove:
     columns: 4,
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login.], [Capitolato],
-    [], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente.], [Capitolato],
-    [], [Obbligatorio], [Il prodotto non deve gestire la persistenza dei dati.], [Capitolato],
-    [], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0.], [Interno],
-    [], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0.], [Interno],
-    [], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva.], [Interno],
-    [], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva.], [Interno],
-    [], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva.], [Interno],
-    [], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva.], [Interno],
-    [], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva.], [Interno],
-    [], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva.], [Interno],
-    [], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva.], [Interno],
-    [], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva.], [Interno],
-    [], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose.], [VE 23-11-15]
+    [VM-1], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login.], [Capitolato],
+    [VM-2], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente.], [Capitolato],
+    [VM-3], [Obbligatorio], [Il prodotto non deve gestire la persistenza dei dati.], [Capitolato],
+    [VM-4], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0.], [Interno],
+    [VM-5], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0.], [Interno],
+    [VM-6], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva.], [Interno],
+    [VM-7], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva.], [Interno],
+    [VM-8], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva.], [Interno],
+    [VM-9], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva.], [Interno],
+    [VM-10], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva.], [Interno],
+    [VM-11], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva.], [Interno],
+    [VM-12], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva.], [Interno],
+    [VM-13], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva.], [Interno],
+    [VO-14], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose.], [VE 23-11-15]
   ),
   caption: "Requisiti di vincolo."
 )

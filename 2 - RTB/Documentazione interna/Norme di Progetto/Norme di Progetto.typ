@@ -670,7 +670,7 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.4_
 === Scopo
 Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.
 
-=== Risultati 
+=== Risultati
 Come risultato dell'implementazione del processo di Gestione dei Rischi:
 - vengono identificati e analizzati i rischi;
 - vengono identificate e priorizzate le opzioni di trattamento del rischio;
@@ -680,15 +680,15 @@ Come risultato dell'implementazione del processo di Gestione dei Rischi:
 === Attività e compiti
 Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
 
-==== Pianificare la Gestione dei Rischi 
+==== Pianificare la Gestione dei Rischi
 La strategia di Gestione dei Rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. \
 La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
 Nello specifico l'impatto può essere "lieve", "medio" o "grave" in base alla sua entità mentre la probabilità di occorrenza viene identificata tramite un valore intero da 1 a 5, dove 1 esprime una probabilità molto bassa, mentre 5 esprime una frequenza attesa sostenuta.\
 Il team definisce approcci di trattamento appropriati, compresi piani di mitigazione specifici.
 
-==== Gestire il profilo di rischio  
+==== Gestire il profilo di rischio
 - Definire e registrare le soglie e le condizioni di rischio:\
-  le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto. 
+  le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto.
   I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
 
 - Stabilire e mantenere un profilo di rischio:\
@@ -697,7 +697,7 @@ Il team definisce approcci di trattamento appropriati, compresi piani di mitigaz
 
 - Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:\
   il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato "Analisi Dei Rischi.pdf" presente in: https://github.com/Error-418-SWE/Documenti-old/blob/develop/1%20-%20Candidatura/Analisi%20dei%20rischi/Analisi%20dei%20rischi.pdf .
-  // riferimenti alla documentazione temporanei 
+  // riferimenti alla documentazione temporanei
 
 ==== Analizzare i rischi
 Questa attività consiste nei seguenti compiti:
@@ -711,10 +711,10 @@ Questa attività consiste nei seguenti compiti:
 ==== Trattare i rischi
 Questa attività consiste nei seguenti compiti:
 
-+ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate. Queste possono includere:\ 
++ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate. Queste possono includere:\
   - l'eliminazione del rischio;
   - la riduzione della sua probabilità o gravità;
-  - l'accettazione del rischio. 
+  - l'accettazione del rischio.
 
   Vengono anche registrate informazioni sull'efficacia delle alternative di trattamento.
 
@@ -722,7 +722,7 @@ Questa attività consiste nei seguenti compiti:
 
 + una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
 
-==== Monitorare i rischi  
+==== Monitorare i rischi
 Questa attività consiste nei seguenti compiti:
 
 - monitorare continuamente i rischi e il contesto della Gestione dei Rischi per eventuali loro cambiamenti;
@@ -770,7 +770,7 @@ Ogni documento, nella sezione direttamente sottostante all'indice, mostrerà in 
     align: left,
     columns: (1fr, 1.7fr, 0.8fr, 5fr, 2.1fr, 2.1fr),
     [*Ver.*],[*Data*],[*PR*],[*Titolo*],[*Redattore*],[*Verificatore*],
-    [1.0.0], [11-12-2023,\ Mon], [90], [DOC-123 Redazione paragrafo \ {nome_paragrafo}], [Riccardo \ Carraro], [Mattia \ Todesco]
+    [1.0.0], [11-12-2023,\ Mon], [90], [DOC-123 Redazione paragrafo], [Riccardo \ Carraro], [Mattia \ Todesco]
 ), caption: [Esempio tracciamento modifiche])
 
 === Tecnologie
@@ -917,7 +917,7 @@ Lo scopo della gestione delle informazionie è generare, ottenere, confermare, t
 
 Le informazioni possono essere tecniche, di progetto, organizzative e di accordo.
 
-=== Informazioni gestite 
+=== Informazioni gestite
 Le informazioni gestite dal gruppo sono:
 - documentazione:
   - Piano di Progetto;
@@ -930,7 +930,7 @@ Le informazioni gestite dal gruppo sono:
   - Proof of Concept;
   - Minimun Viable Product.
 
-Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e distribuiti all'interno dei repository del gruppo. 
+Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e distribuiti all'interno dei repository del gruppo.
 
 === Documentazione
 ==== Struttura <struttura-documenti>
@@ -960,7 +960,7 @@ Ogni documento segue una struttura standard, stabilita nel template _template.ty
 
 + *Contenuto del file*: sezione successiva alla tabella di tracciamento delle modifiche. Rappresenta il corpo del documento, suddiviso in paragrafi.
 
-===== Verbali 
+===== Verbali
 I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e ridotta lunghezza. I verbali sono così strutturati:
 - *cover page* (@struttura-documenti);
 - *informazioni generali*:
@@ -971,7 +971,7 @@ I verbali assumono una struttura diversa rispetto agli altri documenti, dato il 
   - referente aziendale (se presente).
 - *ordine del giorno*: elenco degli argomenti trattati durante la riunione;
 - *organizzazione attività*: elenco delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva.
-- *firma partecipanti esterni* (se presenti): firma dei partecipanti esterni alla riunione. 
+- *firma partecipanti esterni* (se presenti): firma dei partecipanti esterni alla riunione.
 
 === Stile e convenzioni
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.
@@ -999,7 +999,7 @@ All'interno del documento, le date seguiranno il formato locale _dd/mm/yyyy_, me
 ==== Convenzioni stilistiche documentali
 Convenzioni stilistiche specifiche per i prodotti documentali.
 
-===== TODO 
+===== TODO
 Per indicare sezioni del documento da completare, il gruppo ha deciso di utilizzare il termine TODO, che verrà in automatico mostrato in rosso e riquadrato, riportando il messaggio _riferimento assente_.\
 Il risultato è il seguente: TODO.\
 Questo permette di individuare facilmente le parti del documento da completare.
@@ -1025,7 +1025,7 @@ MAIUSCOLO:
 `Monospace`:\
 - nome di un file (Riferimento nomi file @norma_nomi_documenti);
 - parametri;
-- porzioni di codice. 
+- porzioni di codice.
 
 ===== Elenchi
 - si utilizzano elenchi numerati se gli elementi mostrati richiedono un ordine (es. ordine delle sezioni);
@@ -1083,7 +1083,7 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
         - CPI (Cost Performance Index);
         - EAC (Estimated at Completion);
         - ETC (Estimated to Completion).
-        
+
     - definire la strategia di misurazione per i processi di supporto. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi di supporto:
         - indice di Gulpease;
         - errori ortografici;
@@ -1108,19 +1108,19 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
         - controllo manuale di conformità dei documenti prodotti ai parametri individuati per i processi primari;
         - controllo manuale di conformità dei documenti prodotti ai parametri individuati per i processi di supporto;
         - revisione esterna e manuale dei documenti prodotti per il controllo di leggibilità e di eventuali errori ortografici.
-     
+
     - raccogliere, archiviare e verificare i dati:
         - i dati prodotti vengono salvati e analizzati al fine di perorare una strategia di approccio ed eventuali modifiche da effettuare.
 
     - registrare i risultati e comunicarli agli stakeholders:
-        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte. 
+        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte.
 
 == Processo di Gestione dei Rischi
 
 === Scopo
 Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.
 
-=== Risultati 
+=== Risultati
 Come risultato dell'implementazione del processo di Gestione dei Rischi:
 - vengono identificati i rischi;
 - i rischi vengono analizzati;
@@ -1131,15 +1131,15 @@ Come risultato dell'implementazione del processo di Gestione dei Rischi:
 === Attività e compiti
 Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
 
-==== Pianificare la gestione dei rischi  
-La strategia di gestione dei rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. 
+==== Pianificare la gestione dei rischi
+La strategia di gestione dei rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita.
 I rischi devono venire individuati con tempestività, consentendo la pianificazione di misure preventive e correttive in tempo utile per limitare al massimo le conseguenze.
 La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
 Il team si impegna a definire approcci di trattamento appropriati, compresi piani di mitigazione specifici.
 
-==== Gestire il profilo di rischio  
+==== Gestire il profilo di rischio
 - Definire e registrare le soglie e le condizioni di rischio:
-  le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto. 
+  le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto.
   I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
 
 - Stabilire e mantenere un profilo di rischio:
@@ -1148,7 +1148,7 @@ Il team si impegna a definire approcci di trattamento appropriati, compresi pian
 
 - Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:
   il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato "Analisi Dei Rischi.pdf" presente in: https://github.com/Error-418-SWE/Documenti-old/blob/develop/1%20-%20Candidatura/Analisi%20dei%20rischi/Analisi%20dei%20rischi.pdf .
-  // riferimenti alla documentazione temporanei 
+  // riferimenti alla documentazione temporanei
 
 ==== Analizzare i rischi
 Questa attività consiste nei seguenti compiti:
@@ -1168,7 +1168,7 @@ Questa attività consiste nei seguenti compiti:
 
 + una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
 
-==== Monitorare i rischi  
+==== Monitorare i rischi
 Questa attività consiste nei seguenti compiti:
 
 - monitorare continuamente i rischi e il contesto della gestione dei rischi per eventuali cambiamenti e valutare i rischi quando il loro stato è cambiato;
@@ -1185,9 +1185,9 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.8_
 
 La International Software Testing Qualifications Board (ISTQB) definisce il controllo della qualità come "attività incentrate sul garantire che i requisiti di qualità saranno soddisfatti".\
 Il processo di controllo della qualità ha quindi come obiettivo principale quello di garantire l'applicazione efficace del processo di gestione della qualità da parte del gruppo.\
-Il suo focus fondamentale è fornire la sicurezza e la certezza che i requisiti di qualità stabiliti saranno pienamente soddisfatti. 
+Il suo focus fondamentale è fornire la sicurezza e la certezza che i requisiti di qualità stabiliti saranno pienamente soddisfatti.
 Questo si ottiene mediante un'analisi proattiva attenta dei processi e dei risultati che caratterizzano il ciclo di vita del progetto.\
-L'obiettivo è assicurare che il prodotto risponda alle aspettative in termini di qualità, e che ciò avvenga in piena conformità con le linee guida, le politiche e le procedure precedentemente definite. 
+L'obiettivo è assicurare che il prodotto risponda alle aspettative in termini di qualità, e che ciò avvenga in piena conformità con le linee guida, le politiche e le procedure precedentemente definite.
 In altre parole, la finalità ultima è garantire che la qualità desiderata sia intrinseca al prodotto finale e che ogni fase del processo segua gli standard e le disposizioni stabilite dal gruppo e dal progetto.\
 
 === Risultati
@@ -1206,19 +1206,19 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
 + prepararsi per il controllo della qualità:
 
-   - definire una strategia di controllo della qualità. Essa consiste in: 
+   - definire una strategia di controllo della qualità. Essa consiste in:
 
       + ruoli, responsabilità e autorità definite:
         - i ruoli e i compiti di ciascun membro sono definiti e non ambigui;
         - ogni individuo fisico viene informato a scadenza bisettimanale dei propri compiti e delle proprie responsabilità per quel periodo di tempo.
-       
+
       + criteri di valutazione definiti per processi, prodotti e servizi:
         - valore delle metriche di controllo dei processi primari entro il valore accettabile;
         - valore delle metriche di controllo dei processi di supporto entro il valore accettabile;
         - tempistiche da rispettare definite;
         - requisiti funzionali definiti;
         - requisiti non funzionali definiti.
-        
+
       + attività di verifica, convalida, monitoraggio, misurazione, revisione per i prodotti o servizi:
         - assegnazione di un Verificatore con il compito di monitorare e testare la qualità del materiale prodotto;
         - il Verificatore ha il compito di segnalare eventuali incongruenze con le metriche di qualità al redattore.
@@ -1239,7 +1239,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 + gestire rapporti del controllo della qualità:
 
  - essi consistono in:
- 
+
   + stilare rapporti relativi alle attività di controllo della qualità:
     - in sede di retrospettiva il Verificatore aggiorna il gruppo riguardo le attività di controllo qualità dello sprint in corso;
     - redazione di un verbale contenente anche gli esiti del processo di controllo della qualità.
@@ -1252,7 +1252,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
   + in caso di segnalazione di incidenti e problemi viene svolto un lavoro collettivo tra Verificatore e redattore per la loro risoluzione;
   + nel caso tali problemi o incidenti siano di carattere generale, viene avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
-  
+
 = Processi tecnici
 
 == Processo di analisi della missione

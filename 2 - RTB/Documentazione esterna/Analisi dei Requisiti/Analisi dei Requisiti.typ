@@ -698,9 +698,28 @@ $bold("Scenario: ")$
 - l'utente seleziona un bin;
 - vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
 
-= Ricerca prodotti
+= Interrogazione di uno scaffale
 
 #figure(image("./imgs/uc9.png", format: "png"), caption: [UML UC-9])
+$bold("Descrizione: ")$
+deve essere possibile visualizzare le informazioni relative ad uno specifico scaffale.
+
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- l'ambiente deve essere correttamente configurato e deve esistere almeno uno scaffale.
+
+$bold("Postcondizioni: ")$
+- vengono visualizzate le informazioni dello scaffale.
+
+$bold("Scenario: ")$
+- l'utente seleziona uno scaffale;
+- vengono visualizzate le informazioni relative a lo scaffale selezionato.
+
+= Ricerca prodotti
+
+#figure(image("./imgs/uc10.png", format: "png"), caption: [UML UC-10])
 
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto.
@@ -719,11 +738,11 @@ $bold("Scenario: ")$
 - il bin contenente il prodotto cercato viene evidenziato.
 
 $bold("Generalizzazioni: ")$
-- UC-9.1 Ricerca per ID;
-- UC-9.2 Ricerca per Nome;
-- UC-9.3 Ricerca per Scaffale.
+- UC-10.1 Ricerca per ID;
+- UC-10.2 Ricerca per Nome;
+- UC-10.3 Ricerca per Scaffale.
 
-=== Ricerca per ID
+== Ricerca per ID
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto tramite il suo ID di magazzino.
 
@@ -740,7 +759,7 @@ $bold("Scenario: ")$
 - l'utente ricerca un prodotto usando come chiave l'ID univoco di magazzino;
 - il bin contenente il prodotto cercato viene evidenziato.
 
-=== Ricerca per Nome
+== Ricerca per Nome
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto tramite il nome associato al prodotto.
 
@@ -758,7 +777,7 @@ $bold("Scenario: ")$
 - il bin contenente il prodotto cercato viene evidenziato;
 - i prodotti associati al nome possono essere più di uno.
 
-=== Ricerca per Scaffale
+== Ricerca per Scaffale
 $bold("Descrizione: ")$
 l'utente ricerca i prodotti contenuti all'interno di uno scaffale del magazzino.
 
@@ -777,7 +796,7 @@ $bold("Scenario: ")$
 
 = Esplorazione magazzino
 
-#figure(image("./imgs/uc10.png", format: "png", width: 60%), caption: [UML UC-10])
+#figure(image("./imgs/uc11.png", format: "png", width: 60%), caption: [UML UC-11])
 
 == Spostamento della visuale
 $bold("Descrizione: ")$

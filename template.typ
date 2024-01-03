@@ -23,7 +23,6 @@ set text(
   lang: "it",
 )
 set par(
-  first-line-indent: 1em,
   leading: 0.85em,
 )
 set page(

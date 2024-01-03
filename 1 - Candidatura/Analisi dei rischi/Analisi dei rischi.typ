@@ -15,20 +15,19 @@
 
 A ciascun rischio individuato si associano:
   - informazioni descrittive sul suo contesto;
-  - impatto: può essere lieve, medio, grave. Esprime l'effetto generato dall'evento;
-  - probabilità: da 1 a 5. Esprime la probabilità del verificarsi del rischio;
+  - impatto: può essere lieve, medio o grave. Esprime l'ordine di grandezza dell'effetto generato dall'evento;
+  - probabilità: da 1 a 5. Esprime la probabilità di verificarsi del rischio;
   - soglie di accettazione del rischio;
-  - azioni previste conseguenti alle soglie, possono includere:
+  - azioni previste in funzione delle soglie, possono includere:
     - l'eliminazione del rischio;
     - la riduzione della sua probabilità o gravità;
     - l'accettazione del rischio.
 
-  - conseguenze relative alle azioni possibili, esse descrivono gli effetti collaterali a breve o medio termine che il rischio può comportare.
+  - conseguenze relative a ciuascuna delle azioni possibili, esse descrivono gli effetti collaterali a breve o medio termine che il rischio può comportare.
 
 = Rischi
 
 == Comunicazione con il proponente
-
 I contatti con il proponente subiscono variazioni nella qualità e nella frequenza a causa di problematiche fuori dal controllo del gruppo. Questa situazione potrebbe causare un rallentamento significativo del lavoro, soprattutto durante l'analisi dei requisiti.
 
 - Impatto: grave;
@@ -36,13 +35,15 @@ I contatti con il proponente subiscono variazioni nella qualità e nella frequen
 - Soglie: 
   - se il periodo critico previsto è sufficientemente breve da permettere al team di continuare con un corretto avanzamento dei lavori nonostante la variazione nella comunicazione con il proponente, si adotta l'"Accettazione del rischio" mantenendo monitorata la situazione;
   - se il periodo critico previsto può mettere a rischio il corretto avanzamento dei lavori o la qualità degli stessi, si adotta l'azione correttiva di rischio: "Riduzione della sua probabilità o gravità".
+
 === Opzioni di trattamento del rischio
 ==== Riduzione della sua probabilità o gravità
 *Strategia di trattamento*
 Si possono adottare, in accordo con il proponente, una o più tra le seguenti strategie comunicative:
-  - Un uso di strumenti asincroni per facilitare lo scambio di informazioni tra gruppo e proponente;
-  - Pianificazione anticipata degli incontri di revisione dell'avanzamento;
-  - Programmazione di incontri periodici di aggiornamento, anche brevi.
+  - uso di strumenti asincroni per facilitare lo scambio di informazioni tra gruppo e proponente;
+  - pianificazione anticipata degli incontri di revisione dell'avanzamento;
+  - programmazione di incontri periodici di aggiornamento, anche brevi.
+
 *Conseguenze*
 È prevista una modifica sostanziale, più o meno temporanea, nella comunicazione con il proponente. Questo potrebbe portare a ritardi nei lavori dovuti ad un maggior impegno da parte del team nel garantire l'adozione delle nuove pratiche.
 
@@ -63,7 +64,8 @@ Uno o più membri, per motivi diversi, cessano la partecipazione attiva alle att
 - Impatto: medio;
 - Probabilità: 3;
 - Soglie: 
-  - se la cessazione della partecipazione da parte di uno o più membri del team può causare un rallentamento nell'avanzamento dei lavori è necessario discutere con i diretti interessati al fine di inquadrare al meglio la situazione. Nel caso in cui tale dialogo rivelasse un'impossibilità nella ripresa delle attività in breve termine oppure nel caso in cui non sia possibile contattare i diretti interessati, è necessario attuare la "Riduzione della sua probabilità o gravità", in caso contrario si attua l'"Accettazione del rischio".
+  - se la cessazione della partecipazione da parte di uno o più membri del team può causare un rallentamento nell'avanzamento dei lavori è necessario discutere con i diretti interessati al fine di inquadrare al meglio la situazione;
+  - nel caso in cui tale dialogo rivelasse un'impossibilità nella ripresa delle attività in breve termine oppure nel caso in cui non sia possibile contattare i diretti interessati, è necessario attuare la "Riduzione della sua probabilità o gravità", in caso contrario si attua l'"Accettazione del rischio".
 
 === Opzioni di trattamento del rischio
 ==== Riduzione della sua probabilità o gravità
@@ -72,7 +74,7 @@ Le attività di lavoro assegnate ai membri coinvolti che non hanno una corretta 
 Viene sollecitato il dialogo con i membri coinvolti per capire la situazione e programmare al meglio le attività da svolgere.
 
 *Conseguenze*
-Vengono ridotti, seppur non non eliminati, i ritardi nell'avanzamento dei lavori.
+Vengono ridotti, seppur non eliminati, i ritardi nell'avanzamento dei lavori.
 Le task svolte senza una chiara condivisione di informazioni da parte dei membri coinvolti possono portare a risultati non conformi con le decisioni prese dal gruppo di lavoro quindi possono risultare in parte o totalmente inutilizzabili.
 
 ==== Accettazione del rischio
@@ -107,31 +109,31 @@ Miglioramento dell'efficienza nel completamento dei compiti nonostante i rallent
 Le attività non svolte o completate parzialmente possono determinare uno slittamento della data di consegna e delle scadenze intermedie prefissate.
 
 
-== Utilizzo delle tecnologie
+== Utilizzo problematico delle tecnologie
 Le tecnologie individuate o suggerite durante i processi di analisi e progettazione potrebbero risultare complesse da comprendere e/o integrare.
 
 - Impatto: medio;
 - Probabilità: 4;
-- Soglie: 
+- Soglie:
+  - se, compreso un ragionevole rallentamento dovuto all'apprendimento di nuove competenze, la complessità delle tecnologie risulta gestibile con le competenze attuali del team e non compromette significativamente la tempistica del progetto, si adotta l'"Accettazione del rischio";
+  - se la complessità delle tecnologie supera significativamente le competenze attuali del team e potrebbe quindi causare gravi ritardi nell'avanzamento dei lavori, si adotta l'azione correttiva di rischio: "Riduzione della sua probabilità o gravità".
+
 === Opzioni di trattamento del rischio
 ==== Riduzione della sua probabilità o gravità
 *Strategia di trattamento*
-///
+Vengono individuate tecnologie sostitutive che rimpiazzeranno quelle coinvolte, esse dovranno essere studiate ed implementate al fine di soddisfare i requisiti rimasti irrisolti a causa dell'occorrenza del rischio.
+Se si ritiene necessario, si richiede una maggiore partecipazione da parte degli altri membri del gruppo, con conseguente riassegnazione di attività e/o ruoli, per integrare le nuove tecnologie nel minor tempo possibile.
 
 *Conseguenze*
-///
+Le analisi tecnologiche precedentemente fatte devono essere riviste in luce delle nuove opzioni individuate. Queste ultime possono essere a loro volta totalmente o parzialmente sconosciute al team il quale dovrà dedicare tempo, non preventivato precedentemente, alla loro comprensione ed integrazione.
+Le nuove tecnologie individuate possono potenzialmente generare nuovamente questo rischio portando ad un rallentamento grave nell'avanzamento dei lavori.
 
 ==== Accettazione del rischio
 *Strategia di trattamento*
-///
+Il team accetta la complessità delle tecnologie e si impegna a risolvere eventuali problemi nell'implementazione e utilizzo delle stesse.
+Se si ritiene necessario, si richiede una maggiore partecipazione da parte degli altri membri del gruppo, con conseguente riassegnazione di attività e/o ruoli, alla risoluzione dei problemi riscontrati.
+In caso di Accettazione del rischio è importante tenere monitorata nel tempo la situazione per accertarsi che le circostanze non richiedano una modifica nell'approccio di risoluzione.
+
 
 *Conseguenze*
-///
-
-
-
-
-- Conseguenze: rallentamenti non preventivati che possono avere conseguenze a cascata sulle attività dipendenti;
-- Mitigazione:
-  - Accurata pianificazione e stesura delle norme di progetto e Way Of Working;
-  - Assicurarsi che ad ogni membro del gruppo sia chiaro il funzionamento delle tecnologie e delle norme concordate.
+Rallentamenti non preventivati che possono avere conseguenze a cascata sulle attività dipendenti e che possono coinvolgere più membri del team per un periodo di tempo difficilmente prevedibile.

@@ -1081,8 +1081,8 @@ Si valuta ogni classe di soluzione identificata sulla base di:
 
 La valutazione delle classi di soluzione può avvenire tramite:
 - studio della documentazione dei sistemi o prodotti software identificati;
-- realizzazione di esploratori tecnologici;
-- consultazione di esperti.
+- realizzazione di esploratori tecnologici (detti _Proof of Concept_ o PoC);
+- consultazione di esperti, quali Proponente e Committente.
 
 Sulla base dei risultati della valutazione, il gruppo individua una classe di soluzione preferita e la presenta al Proponente per la convalida.
 

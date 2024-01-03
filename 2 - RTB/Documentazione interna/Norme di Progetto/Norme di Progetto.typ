@@ -1051,7 +1051,7 @@ Il processo di analisi della missione definisce i problemi e le opportunità dai
 Gli strumenti di comunicazione adottati dal gruppo sono descritti in TODO.
 
 ==== Opportunità
-Si analizzano i problemi e le opportunità così da ottenere una visione d'insieme dello status quo. L'obiettivo dell'analisi è la comprensione del contesto e delle cause di problemi e opportunità, e quindi del Capitolato.
+Si analizzano i problemi e le opportunità per acquisire una panoramica completa del contesto presentato dal Capitolato.
 
 Si identifica l'ambito del Capitolato attraverso la definizione di:
 - difetti e _pain point_ delle soluzioni pre-esistenti, se disponibili;

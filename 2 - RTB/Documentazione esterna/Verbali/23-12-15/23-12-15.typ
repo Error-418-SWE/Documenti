@@ -14,6 +14,7 @@
   ), 
   timeStart: "12:00",
   timeEnd: "12:30",
+  location: "Zoom",
 );
 
 = Ordine del giorno

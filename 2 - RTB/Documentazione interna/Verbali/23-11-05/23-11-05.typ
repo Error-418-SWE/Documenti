@@ -1,24 +1,15 @@
 #import "/template.typ": *
 
-// Take a look at the file `template.typ` in the file panel
-// to customize this template and discover how it works.
 #show: project.with(
-  title: "Verbale 05/11/23",
+  date: "05/11/23",
   subTitle: "Automazioni, norme di progetto e pianificazione meeting",
   docType: "verbale",
-  //  Nome        //Ruolo
-  partecipants: (
-    (name: "Banzato Alessio", role: "Verificatore"),
-    (name: "Carraro Riccardo", role: "Amministratore"),
-    (name: "Gardin Giovanni",  role: "Amministratore"),
-    (name: "Nardo Silvio",   role: "Redattore"),
-    (name: "Oseliero Antonio",   role: "Responsabile"),
-    (name: "Todesco Mattia",  role: "Analista"),
-    (name: "Zaccone Rosario",  role: "Analista"),
+  authors: (
+    "Nardo Silvio",
   ),
-  oraInizio: "14:30",
-  oraFine: "15:30"
-)
+  timeStart: "14:30",
+  timeEnd: "15:30",
+);
 
 = Ordine del giorno
 - Automazioni di GitHub Actions;

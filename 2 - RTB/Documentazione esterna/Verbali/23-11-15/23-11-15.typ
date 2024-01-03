@@ -1,23 +1,20 @@
 #import "/template.typ": *
 
 #show: project.with(
-  title:"Verbale esterno 15/11/2023",
+  date: "15/11/23",
   subTitle: "Avvio dell'Analisi dei Requisiti",
   docType: "verbale",
-  partecipants: (
-  (name: "Banzato Alessio", role: "Analista"),
-  (name: "Carraro Riccardo", role: "Redattore"),
-  (name: "Gardin Giovanni", role: "Amministratore"),
-  (name: "Nardo Silvio", role: "Analista"),
-  (name: "Oseliero Antonio", role: "Responsabile"),
-  (name: "Todesco Mattia", role: "Verificatore"),
-  (name: "Zaccone Rosario", role: "Analista"),
-  (name: "Matteo Bassani", role: "Referente aziendale")
+  authors: (
+    "Carraro Riccardo",
   ),
-  showIndex: false,
-  oraInizio: "10:00",
-  oraFine: "11:00",
+  externalParticipants : (
+    (name: "Bassani Matteo", role: "Referente aziendale"),
+  ),
+  timeStart: "10:00",
+  timeEnd: "11:00",
+  location: "Zoom",
 );
+
 
 = Ordine del giorno
 - Approfondimento specifiche del capitolato;

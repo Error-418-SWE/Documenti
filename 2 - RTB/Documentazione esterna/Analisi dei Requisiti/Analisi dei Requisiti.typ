@@ -10,6 +10,7 @@
     "Gardin Giovanni",
   ),
   showLog: true,
+  isExternalUse: true,
 );
 
 = Introduzione

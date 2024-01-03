@@ -1060,7 +1060,7 @@ Si identifica l'ambito del Capitolato attraverso la definizione di:
 - tipologia di utenza attesa;
 - destinazione d'uso del prodotto finale.
 
-La sintesi di bisogni e requisiti avviene nel contesto del Processo di definizione di bisogni e requisiti degli stakeholder (TODO).
+La sintesi di bisogni e requisiti avviene nel contesto del Processo di definizione di bisogni e requisiti degli Stakeholder (TODO).
 
 ==== Classi di soluzione
 Si identificano classi di soluzione che possano sfruttare le opportunità e risolvere i problemi individuati.
@@ -1087,7 +1087,7 @@ La valutazione delle classi di soluzione può avvenire tramite:
 Sulla base dei risultati della valutazione, il gruppo individua una classe di soluzione preferita e la presenta al Proponente per la convalida.
 
 ==== Analisi dei requisiti
-Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste dal processo. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
+Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste dal processo. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
 
 == Processo di definizione di bisogni e requisiti degli stakeholder
 

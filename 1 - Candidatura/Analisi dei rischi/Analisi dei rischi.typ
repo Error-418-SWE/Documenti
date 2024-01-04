@@ -33,7 +33,7 @@ I contatti con il Proponente subiscono variazioni nella qualità e nella frequen
 - Impatto: grave;
 - Probabilità: 1;
 - Soglie: 
-  - se il periodo critico previsto è sufficientemente breve da permettere al team di continuare con un corretto avanzamento dei lavori nonostante la variazione nella comunicazione con il Proponente, si adotta l'"Accettazione del rischio" mantenendo monitorata la situazione;
+  - se il periodo critico previsto è sufficientemente breve da permettere al gruppo di continuare con un corretto avanzamento dei lavori nonostante la variazione nella comunicazione con il Proponente, si adotta l'"Accettazione del rischio" mantenendo monitorata la situazione;
   - se il periodo critico previsto può mettere a rischio il corretto avanzamento dei lavori o la qualità degli stessi, si adotta l'azione correttiva di rischio: "Riduzione della sua probabilità o gravità".
 
 === Opzioni di trattamento del rischio
@@ -44,12 +44,12 @@ Si possono adottare, in accordo con il Proponente, una o più tra le seguenti st
   - pianificazione anticipata degli incontri di revisione dell'avanzamento;
   - programmazione di incontri periodici di aggiornamento, anche brevi.
 \ *Conseguenze* \
-È prevista una modifica sostanziale, più o meno temporanea, nella comunicazione con il Proponente. Questo potrebbe portare a ritardi nei lavori dovuti ad un maggior impegno da parte del team nel garantire l'adozione delle nuove pratiche.
+È prevista una modifica sostanziale, più o meno temporanea, nella comunicazione con il Proponente. Questo potrebbe portare a ritardi nei lavori dovuti ad un maggior impegno da parte del gruppo nel garantire l'adozione delle nuove pratiche.
 
 ==== Accettazione del rischio
 *Strategia di trattamento* \
 Si attende il termine del periodo nel quale la comunicazione con il Proponente risulta problematica.
-Per evitare perdite di tempo il team continua a lavorare priorizzando task che non dipendono direttamente dall'intervento del Proponente.
+Per evitare perdite di tempo il gruppo continua a lavorare priorizzando task che non dipendono direttamente dall'intervento del Proponente.
 In caso di Accettazione del rischio è importante tenere monitorata nel tempo la situazione per accertarsi che le circostanze non richiedano una modifica nell'approccio di risoluzione.
 
 \ *Conseguenze* \
@@ -63,13 +63,13 @@ Uno o più membri cessano temporaneamente la partecipazione attiva alle attivit�
 - Impatto: medio;
 - Probabilità: 3;
 - Soglie: 
-  - se la cessazione della partecipazione da parte di uno o più membri del team può causare un rallentamento nell'avanzamento dei lavori è necessario discutere con i diretti interessati al fine di inquadrare al meglio la situazione. Nel caso in cui tale dialogo rivelasse un'impossibilità nella ripresa delle attività in breve termine oppure nel caso in cui non sia possibile contattare i diretti interessati, è necessario attuare la "Riduzione della sua probabilità o gravità";
+  - se la cessazione della partecipazione da parte di uno o più membri del gruppo può causare un rallentamento nell'avanzamento dei lavori è necessario discutere con i diretti interessati al fine di inquadrare al meglio la situazione. Nel caso in cui tale dialogo rivelasse un'impossibilità nella ripresa delle attività in breve termine oppure nel caso in cui non sia possibile contattare i diretti interessati, è necessario attuare la "Riduzione della sua probabilità o gravità";
   - in caso contrario, se contattando i membri coinvolti emerge la previsione certa di una corretta ripresa delle attività in breve tempo, si attua l'"Accettazione del rischio".
 
 === Opzioni di trattamento del rischio
 ==== Riduzione della sua probabilità o gravità
 *Strategia di trattamento* \
-Le attività di lavoro assegnate ai membri coinvolti che non hanno una corretta conclusione nei tempi e nelle modalità previste possono essere riassegnate ad altri membri del team. 
+Le attività di lavoro assegnate ai membri coinvolti che non hanno una corretta conclusione nei tempi e nelle modalità previste possono essere riassegnate ad altri membri del gruppo. 
 Viene sollecitato il dialogo con i membri coinvolti per capire la situazione e programmare al meglio le attività da svolgere.
 
 \ *Conseguenze* \
@@ -114,8 +114,8 @@ Le tecnologie individuate o suggerite durante i processi di analisi e progettazi
 - Impatto: medio;
 - Probabilità: 4;
 - Soglie:
-  - se, compreso un ragionevole rallentamento dovuto all'apprendimento di nuove competenze, la complessità delle tecnologie risulta gestibile con le competenze attuali del team e non compromette significativamente la tempistica del progetto, si adotta l'"Accettazione del rischio";
-  - se la complessità delle tecnologie supera significativamente le competenze attuali del team e potrebbe quindi causare gravi ritardi nell'avanzamento dei lavori, si adotta l'azione correttiva di rischio: "Riduzione della sua probabilità o gravità".
+  - se, compreso un ragionevole rallentamento dovuto all'apprendimento di nuove competenze, la complessità delle tecnologie risulta gestibile con le competenze attuali del gruppo e non compromette significativamente la tempistica del progetto, si adotta l'"Accettazione del rischio";
+  - se la complessità delle tecnologie supera significativamente le competenze attuali del gruppo e potrebbe quindi causare gravi ritardi nell'avanzamento dei lavori, si adotta l'azione correttiva di rischio: "Riduzione della sua probabilità o gravità".
 
 === Opzioni di trattamento del rischio
 ==== Riduzione della sua probabilità o gravità
@@ -124,15 +124,15 @@ Viene considerata in sede di meeting la necessità di individuare tecnologie sos
 Se si ritiene necessario, si richiede una maggiore partecipazione da parte degli altri membri del gruppo, con conseguente riassegnazione di attività e/o ruoli, per integrare le nuove tecnologie nel minor tempo possibile.
 
 \ *Conseguenze* \
-Le analisi tecnologiche precedentemente fatte devono essere riviste in luce delle nuove opzioni individuate. Queste ultime possono essere a loro volta totalmente o parzialmente sconosciute al team il quale dovrà dedicare tempo, non preventivato precedentemente, alla loro comprensione ed integrazione.
+Le analisi tecnologiche precedentemente fatte devono essere riviste in luce delle nuove opzioni individuate. Queste ultime possono essere a loro volta totalmente o parzialmente sconosciute al gruppo, il quale dovrà dedicare tempo, non preventivato precedentemente, alla loro comprensione ed integrazione.
 Le nuove tecnologie individuate possono potenzialmente generare nuovamente questo rischio portando ad un rallentamento grave nell'avanzamento dei lavori.
 
 ==== Accettazione del rischio
 *Strategia di trattamento* \
-Il team accetta la complessità delle tecnologie e si impegna a risolvere eventuali problemi nell'implementazione e utilizzo delle stesse.
+Il gruppo accetta la complessità delle tecnologie e si impegna a risolvere eventuali problemi nell'implementazione e utilizzo delle stesse.
 Se si ritiene necessario, si richiede una maggiore partecipazione da parte degli altri membri del gruppo, con conseguente riassegnazione di attività e/o ruoli, alla risoluzione degli eventuali problemi riscontrati.
 In caso di Accettazione del rischio è importante tenere monitorata nel tempo la situazione per accertarsi che le circostanze non richiedano una modifica nell'approccio di risoluzione.
 
 
 \ *Conseguenze* \
-Rallentamenti non preventivati che possono avere conseguenze a cascata sulle attività dipendenti e che possono coinvolgere più membri del team per un periodo di tempo difficilmente prevedibile.
+Rallentamenti non preventivati che possono avere conseguenze a cascata sulle attività dipendenti e che possono coinvolgere più membri del gruppo per un periodo di tempo difficilmente prevedibile.

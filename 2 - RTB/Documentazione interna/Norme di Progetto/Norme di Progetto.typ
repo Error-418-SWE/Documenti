@@ -878,8 +878,8 @@ All'approvazione della pull request, e alla conseguente chiusura del branch, un 
 ==== Jira
 Jira è lo strumento centrale per la gestione e la tracciabilità delle task assegnate ai membri del gruppo.
 L'integrazione con GitHub permette a Jira di lavorare e apportare modifiche direttamente alla repository del gruppo, permettendo la creazione, gestione e chiusura di branch e al conseguente aggiornamento dello stato delle task.
-Ogni task è identificata da un codice univoco incrementale nel formato DOC-XX, che permette di identificarla. Ogni task è caratterizzata da:
-- codice identificativo DOC-XX generato automaticamente da Jira;
+Ogni task è identificata da un codice univoco incrementale nel formato `DOC-XXX`, dove `XXX` è un numero positivo sequenziale, che permette di identificarla. Ogni task è caratterizzata da:
+- codice identificativo `DOC-XXX` generato automaticamente da Jira;
 - titolo;
 - descrizione (opzionale);
 - stato ("Da completare", "In corso", "In verifica", "Completato");

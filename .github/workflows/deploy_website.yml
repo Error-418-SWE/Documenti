@@ -163,7 +163,5 @@ jobs:
       - name: Publish document
         run: |
           git add "${{ steps.path.outputs.WORK_DIR }}/${{inputs.file_name}}.mdx"
-      - name: Publish file
-        run: |
-          git commit -am "Aggiornata versione web di ${{inputs.file_name}}"
+          git commit -am "Aggiornata pagina web di ${{inputs.file_name}}"
           git push origin website

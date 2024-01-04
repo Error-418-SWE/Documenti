@@ -60,7 +60,7 @@ Di seguito è riportata la situazione dei capitoli a fine sprint:
 Non sono state rilevate criticità, la stesura del documento procede senza problemi.
 
 === PoC
-È stato realizzato un PoC finale tramite la compattazione dei PoC esplorativi realizzati fin'ora, i quali avevano ottenuto l'approvazione del Proponente durante i meeting svolti prima del periodo delle vacanze. Dato il cambio di ruoli è stato programmato un meeting interno per spiegare nel dettaglio il PoC e il suo funzionamento ai nuovi Programmatori. Sarà inoltre necessario realizzare un video demo da mostrare al Proponente.
+È stato realizzato un PoC finale tramite la compattazione dei PoC esplorativi realizzati finora, i quali avevano ottenuto l'approvazione del Proponente durante i meeting svolti prima del periodo delle vacanze. Dato il cambio di ruoli è stato programmato un meeting interno per spiegare nel dettaglio il PoC e il suo funzionamento ai nuovi Programmatori. Sarà inoltre necessario realizzare un video demo da mostrare al Proponente.
 
 === Automazioni
 Non sono stati apportati importanti cambiamenti. Sono ancora presenti dei bug, in particolare il numero di versione dei documenti non viene correttamente aggiornato.

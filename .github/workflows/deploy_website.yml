@@ -127,7 +127,7 @@ jobs:
           fi
       - name: Set working directory
         id: path
-        run: echo "WORK_DIR=$(echo 'src/content/docs/${{ steps.baseline.outputs.DIRECTORY }}/${{ steps.document_type.outputs.DIRECTORY }}')" >> $GITHUB_OUTPUT
+        run: echo "WORK_DIR=$(echo 'src/content/docs/${{ steps.baseline.outputs.DIRECTORY }}/${{ steps.document_type.outputs.DIRECTORY }}/${{ steps.report_type.outputs.DIRECTORY }}')" >> $GITHUB_OUTPUT
       - name: Grab common
         uses: actions/download-artifact@v3
         with:

@@ -62,7 +62,6 @@ jobs:
       - name: Remove preamble
         run: |
           sed -i -e "1,/^);$/d" "${{ inputs.file_path }}/${{ inputs.file_name }}.typ" # Preamble ends with ");"
-          cat "${{ inputs.file_path }}/${{ inputs.file_name }}.typ"
       - name: Install Pandoc
         run: |
           wget $PANDOC_DEB --no-verbose --output-document pandoc.deb
@@ -71,8 +70,6 @@ jobs:
         if: inputs.file_name != 'Glossario'
         run: |
           pandoc "${{ inputs.file_path }}/${{ inputs.file_name }}.typ" --from typst --to markdown --output "${{ inputs.file_path }}/content.md"
-          cat "${{ inputs.file_path }}/content.md"
-          cat "${{ inputs.file_path }}/${{ inputs.file_name }}.typ"
       - name: Convert glossary
         if: inputs.file_name == 'Glossario'
         run: |

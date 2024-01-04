@@ -50,10 +50,10 @@ Si possono adottare, in accordo con il Proponente, una o più tra le seguenti st
 *Strategia di trattamento* \
 Si attende il termine del periodo nel quale la comunicazione con il Proponente risulta problematica.
 Per evitare perdite di tempo il gruppo continua a lavorare priorizzando task che non dipendono direttamente dall'intervento del Proponente.
-In caso di Accettazione del rischio è importante tenere monitorata nel tempo la situazione per accertarsi che le circostanze non richiedano una modifica nell'approccio di risoluzione.
+In caso di accettazione del rischio è importante tenere monitorata nel tempo la situazione per accertarsi che le circostanze non richiedano una modifica nell'approccio di risoluzione.
 
 \ *Conseguenze* \
-Lo sviluppo potrebbe allontanarsi dalle linee guida o dalle aspettative del Proponente, non rispettando quanto preventivato o pianificato. Tale rischio, comporterebbe dunque la produzione di un software non in linea con le richieste conducendo a perdite di tempo per analisi, progettazione e implementazione aggiuntive.
+Lo sviluppo potrebbe allontanarsi dalle linee guida o dalle aspettative del Proponente, non rispettando quanto preventivato o pianificato. Tale rischio, comporterebbe dunque la produzione di un software non in linea con le richieste, conducendo a rallentamenti per analisi, progettazione e implementazione aggiuntive.
 
 
 == "Effetto sottomarino"
@@ -82,7 +82,7 @@ Si attende il termine del periodo nel quale la partecipazione dei membri interes
 In caso di Accettazione del rischio è importante tenere monitorata nel tempo la situazione per accertarsi che le circostanze non richiedano una modifica nell'approccio di risoluzione.
 
 \ *Conseguenze* \
-I partecipanti che si dovessero trovare in questa situazione rischierebbero di accentuare eventuali incomprensioni nel proprio lavoro senza la possibilità di confrontarsi con gli altri accorgendosi degli errori troppo tardi.
+I membri che si dovessero trovare in questa situazione rischierebbero di accentuare eventuali incomprensioni nel proprio lavoro senza la possibilità di confrontarsi con gli altri accorgendosi degli errori troppo tardi.
 Lo stato di avanzamento dei lavori potrebbe subire ulteriori rallentamenti.
 
 
@@ -124,7 +124,7 @@ Viene considerata in sede di meeting la necessità di individuare tecnologie sos
 Se si ritiene necessario, si richiede una maggiore partecipazione da parte degli altri membri del gruppo, con conseguente riassegnazione di attività e/o ruoli, per integrare le nuove tecnologie nel minor tempo possibile.
 
 \ *Conseguenze* \
-Le analisi tecnologiche precedentemente fatte devono essere riviste in luce delle nuove opzioni individuate. Queste ultime possono essere a loro volta totalmente o parzialmente sconosciute al gruppo, il quale dovrà dedicare tempo, non preventivato precedentemente, alla loro comprensione ed integrazione.
+Le analisi tecnologiche precedentemente svolte devono essere riviste in luce delle nuove opzioni individuate. Queste ultime possono essere a loro volta totalmente o parzialmente sconosciute al gruppo, il quale dovrà dedicare tempo, non preventivato precedentemente, alla loro comprensione ed integrazione.
 Le nuove tecnologie individuate possono potenzialmente generare nuovamente questo rischio portando ad un rallentamento grave nell'avanzamento dei lavori.
 
 ==== Accettazione del rischio

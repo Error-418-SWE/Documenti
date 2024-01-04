@@ -27,33 +27,33 @@ A ciascun rischio individuato si associano:
 
 = Rischi
 
-== Comunicazione con il proponente
-I contatti con il proponente subiscono variazioni nella qualità e nella frequenza a causa di problematiche fuori dal controllo del gruppo. Questa situazione potrebbe causare un rallentamento significativo del lavoro, soprattutto durante l'analisi dei requisiti.
+== Comunicazione con il Proponente
+I contatti con il Proponente subiscono variazioni nella qualità e nella frequenza a causa di problematiche fuori dal controllo del gruppo. Questa situazione potrebbe causare un rallentamento significativo del lavoro, soprattutto durante l'analisi dei requisiti.
 
 - Impatto: grave;
 - Probabilità: 1;
 - Soglie: 
-  - se il periodo critico previsto è sufficientemente breve da permettere al team di continuare con un corretto avanzamento dei lavori nonostante la variazione nella comunicazione con il proponente, si adotta l'"Accettazione del rischio" mantenendo monitorata la situazione;
+  - se il periodo critico previsto è sufficientemente breve da permettere al team di continuare con un corretto avanzamento dei lavori nonostante la variazione nella comunicazione con il Proponente, si adotta l'"Accettazione del rischio" mantenendo monitorata la situazione;
   - se il periodo critico previsto può mettere a rischio il corretto avanzamento dei lavori o la qualità degli stessi, si adotta l'azione correttiva di rischio: "Riduzione della sua probabilità o gravità".
 
 === Opzioni di trattamento del rischio
 ==== Riduzione della sua probabilità o gravità
 *Strategia di trattamento* \
-Si possono adottare, in accordo con il proponente, una o più tra le seguenti strategie comunicative:
-  - uso di strumenti asincroni per facilitare lo scambio di informazioni tra gruppo e proponente;
+Si possono adottare, in accordo con il Proponente, una o più tra le seguenti strategie comunicative:
+  - uso di strumenti asincroni per facilitare lo scambio di informazioni tra gruppo e Proponente;
   - pianificazione anticipata degli incontri di revisione dell'avanzamento;
   - programmazione di incontri periodici di aggiornamento, anche brevi.
 \ *Conseguenze* \
-È prevista una modifica sostanziale, più o meno temporanea, nella comunicazione con il proponente. Questo potrebbe portare a ritardi nei lavori dovuti ad un maggior impegno da parte del team nel garantire l'adozione delle nuove pratiche.
+È prevista una modifica sostanziale, più o meno temporanea, nella comunicazione con il Proponente. Questo potrebbe portare a ritardi nei lavori dovuti ad un maggior impegno da parte del team nel garantire l'adozione delle nuove pratiche.
 
 ==== Accettazione del rischio
 *Strategia di trattamento* \
-Si attende il termine del periodo nel quale la comunicazione con il proponente risulta problematica.
-Per evitare perdite di tempo il team continua a lavorare priorizzando task che non dipendono direttamente dall'intervento del proponente.
+Si attende il termine del periodo nel quale la comunicazione con il Proponente risulta problematica.
+Per evitare perdite di tempo il team continua a lavorare priorizzando task che non dipendono direttamente dall'intervento del Proponente.
 In caso di Accettazione del rischio è importante tenere monitorata nel tempo la situazione per accertarsi che le circostanze non richiedano una modifica nell'approccio di risoluzione.
 
 \ *Conseguenze* \
-Lo sviluppo potrebbe allontanarsi dalle linee guida o dalle aspettative del proponente, non rispettando quanto preventivato o pianificato. Tale rischio, comporterebbe dunque la produzione di un software non in linea con le richieste conducendo a perdite di tempo per analisi, progettazione e implementazione aggiuntive.
+Lo sviluppo potrebbe allontanarsi dalle linee guida o dalle aspettative del Proponente, non rispettando quanto preventivato o pianificato. Tale rischio, comporterebbe dunque la produzione di un software non in linea con le richieste conducendo a perdite di tempo per analisi, progettazione e implementazione aggiuntive.
 
 
 == "Effetto sottomarino"

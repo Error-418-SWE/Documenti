@@ -113,6 +113,18 @@ jobs:
           if [[ "${{ inputs.file_path }}" == *"Documentazione interna"* ]]; then
             echo "DIRECTORY='Documentazione interna'" >> $GITHUB_OUTPUT
           fi
+      - name: Define report directory
+        id: report_type
+        run: |
+          if [[ "${{ inputs.file_path }}" != *"Verbali"* ]]; then
+            echo "DIRECTORY=''" >> $GITHUB_OUTPUT
+          fi
+          if [[ "${{ inputs.file_path }}" == *"Documentazione esterna/Verbali"* ]]; then
+            echo "DIRECTORY='Verbali esterni'" >> $GITHUB_OUTPUT
+          fi
+          if [[ "${{ inputs.file_path }}" == *"Documentazione interna/Verbali"* ]]; then
+            echo "DIRECTORY='Verbali interni'" >> $GITHUB_OUTPUT
+          fi
       - name: Set working directory
         id: path
         run: echo "WORK_DIR=$(echo 'src/content/docs/${{ steps.baseline.outputs.DIRECTORY }}/${{ steps.document_type.outputs.DIRECTORY }}')" >> $GITHUB_OUTPUT

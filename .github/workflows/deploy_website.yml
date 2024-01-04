@@ -62,7 +62,6 @@ jobs:
       - name: Remove preamble
         run: |
           sed -i -e "1,/^);$/d" "${{ inputs.file_path }}/${{ inputs.file_name }}.typ" # Preamble ends with ");"
-          cat "${{ inputs.file_path }}/${{ inputs.file_name }}.typ"
       - name: Install Pandoc
         run: |
           wget $PANDOC_DEB --no-verbose --output-document pandoc.deb
@@ -71,8 +70,6 @@ jobs:
         if: inputs.file_name != 'Glossario'
         run: |
           pandoc "${{ inputs.file_path }}/${{ inputs.file_name }}.typ" --from typst --to markdown --output "${{ inputs.file_path }}/content.md"
-          cat "${{ inputs.file_path }}/content.md"
-          cat "${{ inputs.file_path }}/${{ inputs.file_name }}.typ"
       - name: Convert glossary
         if: inputs.file_name == 'Glossario'
         run: |
@@ -113,9 +110,21 @@ jobs:
           if [[ "${{ inputs.file_path }}" == *"Documentazione interna"* ]]; then
             echo "DIRECTORY='Documentazione interna'" >> $GITHUB_OUTPUT
           fi
+      - name: Define report directory
+        id: report_type
+        run: |
+          if [[ "${{ inputs.file_path }}" != *"Verbali"* ]]; then
+            echo "DIRECTORY=''" >> $GITHUB_OUTPUT
+          fi
+          if [[ "${{ inputs.file_path }}" == *"Documentazione esterna/Verbali"* ]]; then
+            echo "DIRECTORY='Verbali esterni'" >> $GITHUB_OUTPUT
+          fi
+          if [[ "${{ inputs.file_path }}" == *"Documentazione interna/Verbali"* ]]; then
+            echo "DIRECTORY='Verbali interni'" >> $GITHUB_OUTPUT
+          fi
       - name: Set working directory
         id: path
-        run: echo "WORK_DIR=$(echo 'src/content/docs/${{ steps.baseline.outputs.DIRECTORY }}/${{ steps.document_type.outputs.DIRECTORY }}')" >> $GITHUB_OUTPUT
+        run: echo "WORK_DIR=$(echo 'src/content/docs/${{ steps.baseline.outputs.DIRECTORY }}/${{ steps.document_type.outputs.DIRECTORY }}/${{ steps.report_type.outputs.DIRECTORY }}')" >> $GITHUB_OUTPUT
       - name: Grab common
         uses: actions/download-artifact@v3
         with:
@@ -136,22 +145,8 @@ jobs:
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git fetch
-      - name: Publish external report
-        if: contains(inputs.file_path, 'esterna/Verbali')
-        run: |
-          mkdir -p "${{ steps.path.outputs.WORK_DIR }}/Verbali esterni"
-          mv "${{ steps.path.outputs.WORK_DIR }}/${{inputs.file_name}}.mdx" "${{ steps.path.outputs.WORK_DIR }}/Verbali esterni/${{inputs.file_name}}.mdx"
-          git add "${{ steps.path.outputs.WORK_DIR }}/Verbali esterni/${{inputs.file_name}}.mdx"
-      - name: Publish internal report
-        if: contains(inputs.file_path, 'interna/Verbali')
-        run: |
-          mkdir -p "${{ steps.path.outputs.WORK_DIR }}/Verbali interni"
-          mv "${{ steps.path.outputs.WORK_DIR }}/${{inputs.file_name}}.mdx" "${{ steps.path.outputs.WORK_DIR }}/Verbali interni/${{inputs.file_name}}.mdx"
-          git add "${{ steps.path.outputs.WORK_DIR }}/Verbali interni/${{inputs.file_name}}.mdx"
       - name: Publish document
         run: |
           git add "${{ steps.path.outputs.WORK_DIR }}/${{inputs.file_name}}.mdx"
-      - name: Publish file
-        run: |
-          git commit -am "Aggiornata versione web di ${{inputs.file_name}}"
+          git commit -am "Aggiornata pagina web di ${{inputs.file_name}}"
           git push origin website

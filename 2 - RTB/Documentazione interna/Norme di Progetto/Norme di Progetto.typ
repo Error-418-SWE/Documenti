@@ -878,11 +878,11 @@ All'approvazione della pull request, e alla conseguente chiusura del branch, un 
 ==== Jira
 Jira è lo strumento centrale per la gestione e la tracciabilità delle task assegnate ai membri del gruppo.
 L'integrazione con GitHub permette a Jira di lavorare e apportare modifiche direttamente alla repository del gruppo, permettendo la creazione, gestione e chiusura di branch e al conseguente aggiornamento dello stato delle task.
-Ogni task è identificata da un codice univoco incrementale nel formato DOC-XX, che permette di identificarla. Ogni task è caratterizzata da:
-- codice identificativo DOC-XX generato automaticamente da Jira;
+Ogni task è identificata da un codice univoco incrementale nel formato `DOC-XXX`, dove `XXX` è un numero positivo sequenziale, che permette di identificarla. Ogni task è caratterizzata da:
+- codice identificativo `DOC-XXX` generato automaticamente da Jira;
 - titolo;
 - descrizione (opzionale);
-- stato ("Da completare", "In corso", "Completata");
+- stato ("Da completare", "In corso", "In verifica", "Completato");
 - assegnatario;
 - story points (stima del carico di lavoro);
 - epic stories (milestone) di riferimento.
@@ -892,7 +892,7 @@ Nel processo di versionamento e di tracciamento delle modifiche, Jira ricopre un
 - selezionare l'opzione di creare un branch dedicato alla task (integrazione con GitHub);
 - selezionare la repository e il branch da cui creare il nuovo branch;
 
-A questo punto, la task si aggiornerà nello stato "In corso". Terminata la task, effettuta la pull request, superato il processo di verifica e chiuso il branch, Jira provvederà ad aggiornare lo stato della task in "Completata".
+A questo punto, la task si aggiornerà nello stato "In corso". Terminata la task ed effettuta la pull request, lo stato del ticket passerà automatica a "In verifica". Superato il processo di verifica, Jira provvederà ad aggiornare lo stato della task in "Completato".
 ===== Backlog
 Ogni task da svolgere è segnata all'interno del backlog. Durante la pianificazione dello sprint, si definisce lo sprint backlog, il sottoinsieme di attività provenienti dal backlog che si intendono portare a termine entro la conclusione dello sprint.
 

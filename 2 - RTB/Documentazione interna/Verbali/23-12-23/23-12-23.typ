@@ -61,12 +61,12 @@ Non sono stati rilevati comportamenti virtuosi diversi da quelli dello sprint pr
   - fornendo, quando possibile, una correzione appropriata;
   - nel caso di più occorrenze dello stesso errore, segnalarle tutte. Per evitare ripetizioni, fornire una valutazione della prima occorrenza ed inserire un riferimento a tale conversazione nelle occorrenze successive;
 - Per accelerare il lavoro sulle Norme di Progetto, chi ha redatto le Norme di Progetto nel corso degli sprint precedenti continuerà l'affiancamento nel corso dello sprint successivo;
-- La natura esplorativa del PoC richiede flessibilità nella pianificazione, ma si sottolinea la necessità di continuare tracciare le attività per riferimento futuro.
+- La natura esplorativa del PoC richiede flessibilità nella pianificazione, ma si sottolinea la necessità di continuare a tracciare le attività per riferimento futuro.
 
 == Pianificazione
 - Redazione delle Norme di Progetto, recuperando i capitoli in ritardo ed espandendone altri (totale di 7 capitoli, tra aggiunte e aggiornamenti);
 - Proseguimento dello sviluppo del PoC;
-- Tracciamento requsiti-fonti e rifacimento dei diagrammi UML in formato SVG;
+- Tracciamento requisiti-fonti e rifacimento dei diagrammi UML in formato SVG;
 - Miglioramento del Glossario come descritto in @avanzamento-glossario;
 - Realizzazione di un sito web che raccolga i documenti realizzati finora;
 - Realizzazione di una dashboard per il monitoraggio delle metriche definite nel Piano di Qualifica.

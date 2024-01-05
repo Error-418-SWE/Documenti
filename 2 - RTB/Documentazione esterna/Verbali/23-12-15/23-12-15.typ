@@ -29,7 +29,7 @@ Sono stati discussi i requisiti non funzionali identificati.
 Non sono stati identificati particolari vincoli sulle performance.
 
 === Vincoli sui browser 
-Per adottare le tecnologie da noi individuate, in particolar modo per la libreria Three.js, è necessario che i browser interessati dispongano di una versione specifica atta a supportare tale tecnologia mediante la componente grafica WebGL. Tale osservazione ha trovato conferma da parte del proponente, il quale ha approvato l'implementazione dell'applicativo per i principali browswer:
+Per adottare le tecnologie da noi individuate, in particolar modo per la libreria Three.js, è necessario che i browser interessati dispongano di una versione specifica atta a supportare tale tecnologia mediante la componente grafica WebGL. Tale osservazione ha trovato conferma da parte del proponente, il quale ha approvato l'implementazione dell'applicativo per i principali browser:
 - Chrome;
 - Firefox;
 - Edge.

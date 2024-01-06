@@ -43,11 +43,11 @@
 
 == Ripartizione dei ruoli <ruoli>
   In seguito al diario di bordo tenutosi in data 13-11-23, il team si è organizzato per portare avanti lo sviluppo dei tre documenti fondamentali, quali:
-  - analisi dei requisiti: documento di priorità maggiore. Risorse assegnate: 3 persone;
-  - piano di progetto. Risorse assegnate: 2 persone;
-  - norme di progetto: Risorse assegnate: 2 persone.
+  - Analisi dei Requisiti: documento di priorità maggiore. Risorse assegnate: 3 persone;
+  - Piano di Progetto. Risorse assegnate: 2 persone;
+  - Norme di Progetto: Risorse assegnate: 2 persone.
 
 = Azioni da intraprendere
-  - necessità di cominciare a redigere un glossario dei termini;
-  - necessità di definire delle modalità di lavoro precise da utilizzare con Jira e un workshop per allineare le conoscenze del gruppo in merito al suo utilizzo;
-  - necessità di contattare l'azienda per domande in merito all'analisi dei requisti (confermata per mercoledì 15/11/23).
+  - Cominciare a redigere un glossario dei termini;
+  - Definire delle modalità di lavoro precise da utilizzare con Jira e un workshop per allineare le conoscenze del gruppo in merito al suo utilizzo;
+  - Contattare l'azienda per domande in merito all'Analisi dei Requisti (confermata per mercoledì 15/11/23).

@@ -27,7 +27,7 @@ I lavori svolti durante lo sprint precedente sono stati esposti e spiegati, nell
 Sono stati analizzati i moduli e le tecnologie utilizzate (dat.gui, OrbitControls, Vite, Parcel, MySQL).
 
 == Analisi dei dubbi emersi
-Tramite l'analisi dei lavori svolti sono emersi dubbi da esporre al proponente: 
+Tramite l'analisi dei lavori svolti sono emersi dubbi da esporre al Proponente: 
 - definire se sia più opportuno precaricare il database in blocco oppure interrogarlo ad ogni interazione che necessita le sue informazioni;
 
 - definire come dovrebbe essere gestita l'altezza degli scaffali dopo aver configurato l'ambiente di lavoro tramite file SVG.

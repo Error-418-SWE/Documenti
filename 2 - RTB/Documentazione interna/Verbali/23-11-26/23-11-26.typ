@@ -18,9 +18,9 @@
 - Pianificazione sprint 4.
 
 == Retrospettiva sprint 3 e pianificazione sprint 4
-La valutazione dello sprint è in generale positiva. La riunione con il proponente si è svolta in maniera rapida e precisa. La visione del progetto che è stata raccontata tramite gli use case è stata utile al gruppo e al Proponente.
+La valutazione dello sprint è in generale positiva. La riunione con il Proponente si è svolta in maniera rapida e precisa. La visione del progetto che è stata raccontata tramite gli use case è stata utile al gruppo e al Proponente.
 
-Sono stati considerati i punti descritti come criticità descritti nella precedente retrospettiva riuscendo così ad avere una maggiore interazione da parte di quasi tutti i membri del gruppo durante l'incontro con il proponente.
+Sono stati considerati i punti descritti come criticità descritti nella precedente retrospettiva riuscendo così ad avere una maggiore interazione da parte di quasi tutti i membri del gruppo durante l'incontro con il Proponente.
 
 Si è discussa la necessità di accorciare la durata dei meeting e di pianificare in maggior dettaglio lo sprint successivo. Inoltre, si è sottolineata la necessità di dettagliare i singoli ticket in modo da ottenere una visione coerente dei grafici di Gantt su Jira.
 

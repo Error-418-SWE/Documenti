@@ -41,4 +41,4 @@ Il documento relativo alle Norme di Progetto è stato revisionato e discusso dal
     - Stabilire con precisione il criterio di versionamento dei file;
     - Ricontrollare le Norme di Progetto;
     - Prendere confidenza con le tecnologie scelte (Miro, Jira, ecc), e con quelle proposte così da prendere scelte consapevoli;
-    - Iniziare a pensare all'analisi dei requisiti.
+    - Iniziare a pensare all'Analisi dei Requisiti.

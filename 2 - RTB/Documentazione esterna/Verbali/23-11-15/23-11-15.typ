@@ -68,7 +68,7 @@ Da una prima analisi sono emerse le principali funzionalità desiderate, quali:
   - creazione e posizionamento nello spazio degli scaffali;
   - definizione dei bin, ovvero le locazioni capaci di accogliere i prodotti;
 - caricamento dei dati da un database per la popolazione del magazzino;
-- interrogazione del magazzino mediante ricerce per ID, nome, o caratteristiche dei prodotti;
+- interrogazione del magazzino mediante ricerche per ID, nome, o caratteristiche dei prodotti;
 - evidenziazione dei prodotti ricercati mediante effetti visivi (ad esempio cambio del colore) e/o spostamento della telecamera;
 - invio di notifiche mediante la chiamata a API RESTful per lo spostamento di prodotti nel magazzino.
 

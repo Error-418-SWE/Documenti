@@ -20,7 +20,7 @@
 == Retrospettiva
 
   In questo primo meeting di retrospettiva sono state analizzate le attività svolte dal gruppo durante la settimana e, in modo particolare, sono state discusse le nuove automazioni di github action che sono state implementate (per la compilazione ed il caricamento automatico in repository e nel sito web dei file legati alla documentazione con i relativi changelog).
-  \ Si è discusso del cambiamento attutato sulle tecnologie di markup per la stesura dei documenti, passando da LaTeX a Typst, strumento che risulta più comodo e immediato da usare.\
+  \ Si è discusso del cambiamento attuato sulle tecnologie di markup per la stesura dei documenti, passando da LaTeX a Typst, strumento che risulta più comodo e immediato da usare.\
   È stato analizzato il diario di bordo che verrà esposto lunedì 13 novembre, in particolar modo riguardo le difficoltà riscontrate.\ Nel fine settimana è importante che ciascun membro del gruppo pensi ad eventuali domande da aggiungere.
 
 == Divisione ruoli

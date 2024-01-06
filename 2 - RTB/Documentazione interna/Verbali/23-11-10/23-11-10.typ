@@ -19,8 +19,8 @@
 
 == Retrospettiva
 
-  In questo primo meeting di retrospettiva sono state analizzate le attività svolte dal gruppo durante la settimana e, in modo particolare, sono state discusse le nuove automazioni di github action che sono state implementate (per la compilazione ed il caricamento automatico in repository e nel sito web dei file legati alla documentazione con i relativi changelog).
-  \ Si è discusso del cambiamento attutato sulle tecnologie di markup per la stesura dei documenti, passando da LaTeX a Typst, strumento che risulta più comodo e immediato da usare.\
+  In questo primo meeting di retrospettiva sono state analizzate le attività svolte dal gruppo durante la settimana e, in modo particolare, sono state discusse le nuove automazioni implementate con GitHub Actions (per la compilazione ed il caricamento automatico in repository e nel sito web dei file legati alla documentazione con i relativi changelog).
+  \ Si è discusso del cambiamento attuato sulle tecnologie di markup per la stesura dei documenti, passando da LaTeX a Typst, strumento che risulta più comodo e immediato da usare.\
   È stato analizzato il diario di bordo che verrà esposto lunedì 13 novembre, in particolar modo riguardo le difficoltà riscontrate.\ Nel fine settimana è importante che ciascun membro del gruppo pensi ad eventuali domande da aggiungere.
 
 == Divisione ruoli
@@ -33,14 +33,13 @@
   Il gruppo è stato inoltre suddiviso in tre sottogruppi: \
 
    - tre membri del gruppo si impegneranno per implementare ulteriormente le automazioni e sistemare il repository;
-   - due membri del gruppo si concentreranno sull'analisi dei requisiti;
+   - due membri del gruppo si concentreranno sull'Analisi dei Requisiti;
    - due membri del gruppo miglioreranno la nostra analisi delle ore/ruoli in luce del giudizio del professor Vardanega il quale ha ritenuto il costo del progetto eccessivo.
 
 
-
-= To do
-  - Il giorno 8 novembre è stata inviata un'email al proponente dove esponavamo alcuni nostri dubbi ma, non avendo ricevuto risposta, abbiamo pianificato di inviarla nuovamente lunedì.
-  - Il lavoro relativo all'analisi dei requisiti dovrà proseguire cosicché, la prossima settimana, potremo chiedere al professor Cardin consiglio e delucidazioni sulla direzione da noi data al lavoro.
-  - In vista della futura costruzione del PoC dobbiamo soffermarci sul capire quali features dovranno essere implementate e iniziare a studiare e provare con mano le tecnologie relative, per esempio sarà utilizzato Three.js quindi va compreso il suo utilizzo.
-
-
+= Azioni da intraprendere
+  - Inviare nuova mail al Proponente, poichè non si è ricevuta una risposta a quella precedente;
+  - Proseguire il lavoro relativo all'Analisi dei Requisiti cosicché, la prossima settimana, si potrà chiedere al professor Cardin consigli e delucidazioni sulla direzione data dal gruppo al lavoro;
+  - Identificare le features da implementare per la futura realizzazione del PoC;
+  - Iniziare lo studio e la sperimentazione delle tecnologie correlate necessarie allo sviluppo del PoC.
+  

@@ -66,18 +66,17 @@ WMS3 si integra con, ma non comprende nel proprio ambito:
 
 ==== Interfacce utente
 
-WMS3 è una _web application_ acceduta e operata tramite browser. L'interfaccia utente (IU) è _web-based_ e _responsive_.
+WMS3 è una web application acceduta e operata tramite browser. L'interfaccia utente (IU) è web-based e responsive.
 
 Lo scenario di interazione primario avviene tramite mouse e tastiera; tuttavia, è prevista la piena operabilità anche tramite touchscreen. Sarà possibile operare da dispositivi mobili quali tablet e smartphone.
 
-Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport_ del dispositivo in uso.
+Le funzionalità esposte all'utente variano in base all'ampiezza della viewport del dispositivo in uso.
 
 ==== Interfacce hardware
 
 Il prodotto è acceduto tramite browser. Deve supportare l'esecuzione sui seguenti dispositivi:
 - computer desktop, tramite mouse e tastiera;
-- tablet, tramite touchscreen;
-- smartphone, tramite touchscreen.
+- dispositivi mobili (es. tablet) in dotazione agli adetti di magazzino.
 
 Il browser e il dispositivo devono essere compatibili con lo standard WebGL.
 
@@ -97,7 +96,21 @@ Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
 
 ==== Operazioni
 
-// Dettagliare le operazioni, una volta confermate, secondo quanto descritto da 9.6.4.7
+Il sistema deve permettere le seguenti operazioni:
+- creazione del magazzino (manualmente o tramite caricamento di un file SVG);
+- modificare le dimensioni dell'ambiente 3D (lunghezza, larghezza, altezza);
+- caricare un file SVG;
+- creare e modificare le dimensione di scaffali (lunghezza e larghezza);
+- eliminare gli scaffali;
+- spostare gli scaffali nell'ambiente;
+- definire il numero di piani dello scaffale;
+- creare e modificare i bin (lunghezza, larghezza e altezza);
+- leggere informazioni riguardo agli scaffali e al contenuto dei bin;
+- eliminare i bin;
+- caricare i dati da database;
+- richiedere lo spostamento di un prodotto da un bin a un altro;
+- ricercare un prodotto nel magazzino;
+- visualizzare ed esplorare il magazzino.
 
 ==== Requisiti di adattamento al contesto
 

@@ -30,11 +30,11 @@ Il prodotto software oggetto di questo documento è un gestionale di magazzino (
 
 == Ambito del prodotto
 
-Il prodotto software oggetto di questo documento è denominato *WMS3*. WMS3 è un gestionale di magazzino che offre le seguenti funzionalità:
+Il prodotto software oggetto di questo documento è denominato WMS3, un gestionale di magazzino che offre le seguenti funzionalità:
 - visualizzazione tridimensionale di un magazzino, con possibilità di muovere la vista;
 - visualizzazione delle informazioni della merce presente in magazzino;
 - caricamento dei dati relativi alle merci da un database SQL;
-- emissione di ordini di movimentazione delle merci;
+- emissione di richieste di spostamento della merce all'interno del magazzino;
 - filtraggio e ricerca delle merci con rappresentazione grafica dei risultati;
 - importazione di planimetrie in formato SVG.
 

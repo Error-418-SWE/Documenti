@@ -5,7 +5,8 @@
   subTitle: "Norme, processi e disciplina",
   authors: (
     "Banzato Alessio",
-    "Gardin Giovanni"
+    "Gardin Giovanni",
+    "Nardo Silvio"
   ),
   showLog: true,
 );

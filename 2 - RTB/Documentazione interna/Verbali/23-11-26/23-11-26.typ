@@ -26,7 +26,7 @@ Si è discussa la necessità di accorciare la durata dei meeting e di pianificar
 
 Il gruppo che si occupa di aggiornare il documento "Norme di Progetto" ha applicato modifiche sostanziali in modo da aderire ad uno standard più aggiornato (ISO/IEC 12207:2017 anziché ISO/IEC 12207:1995).
 
-Il gruppo ha quindi provveduto a concludere il meeting con un veloce brainstorming mirato a fissare i principali obbiettivi dello sprint 4 in modo da permettere al responsabile di trasformare la board Miro in ticket Jira che rispettino le norme.
+Il gruppo ha quindi provveduto a concludere il meeting con un veloce brainstorming mirato a fissare i principali obbiettivi dello sprint 4 in modo da permettere al responsabile di trasformare la board Miro in ticket Jira che rispettino le Norme di Progetto.
 
 = Azioni da intraprendere
 - Ultimare la prima versione dell'Analisi dei Requisiti;

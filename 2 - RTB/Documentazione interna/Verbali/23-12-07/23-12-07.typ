@@ -29,13 +29,13 @@ A seguito di un dialogo che il gruppo ha avuto con il professor Cardin in data 0
 Altri requisiti non funzionali da includere sono relativi alla qualità e a come l'applicativo debba rispettare determinate norme prestabilite. 
 
 === Requisiti prestazionali
-È necessario analizzare e definire con particolare attenzione i requisiti non funzionali relativi alle prestazioni, in quanto serve descrivere minuziosamente il contesto che permetta di replicare il requisito (velocità della rete, cardinalità delle operazioni, ecc) per poter poi imporre dei vincoli prestazionali su tale contesto.
+È necessario analizzare e definire con particolare attenzione i requisiti non funzionali relativi alle prestazioni, in quanto serve descrivere minuziosamente il contesto che permetta di replicare il requisito (velocità della rete, cardinalità delle operazioni, ecc.) per poter poi imporre dei vincoli prestazionali su tale contesto.
 
 === Requisito relativo all'utilizzo di alfabeti non latini
 Diversamente da quanto ipotizzato inizialmente, il requisito riguardante la possibilità di utilizzare alfabeti non latini è un requisito funzionale in quanto rappresenta una vera e propria feature che determina il comportamento del programma.
 
 == Raggruppamento degli Use Case
-La suddivisione degli Use Case è da svolgere in funzione alla loro leggibilità e utilità, perciò si ritiene più ragionevole suddividere gli Use Case relaitivi alla modifica dell'ambiente di lavoro in:
+La suddivisione degli Use Case è da svolgere in funzione alla loro leggibilità e utilità, perciò si ritiene più ragionevole suddividere gli Use Case relativi alla modifica dell'ambiente di lavoro in:
 - modifica scaffale;
 - modifica ambiente;
 - modifica bin.

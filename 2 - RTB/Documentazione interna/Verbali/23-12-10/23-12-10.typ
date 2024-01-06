@@ -19,21 +19,21 @@
 
 == Analisi dei keep doing e degli improvements
 
-*Keep doings:*
-- il gruppo ha preso confidenza con le tecnologie e le norme da applicare;
-- il lavoro su diversi documenti è avvenuto correttamente e in parallelo;
-- ottima disponibilità di ogni membro del gruppo nell'aiutarsi con il lavoro in caso di difficoltà;
-- fase di review delle Pull Request più rapida.
+=== Keep doings
+- Il gruppo ha preso confidenza con le tecnologie e le norme da applicare;
+- Il lavoro su diversi documenti è avvenuto correttamente e in parallelo;
+- Ottima disponibilità di ogni membro del gruppo nell'aiutarsi con il lavoro in caso di difficoltà;
+- Fase di review delle Pull Request più rapida.
 
-*Improvements:*
-- definire delle convenzioni da adottare riguardanti il codice;
-- lavoro concentrato principalmente nel weekend;
-- richiesta maggiore partecipazione dei membri del gruppo sulle board di miro.
+=== Improvements
+- Definire delle convenzioni da adottare riguardanti il codice;
+- Lavoro concentrato principalmente nel weekend;
+- Richiesta maggiore partecipazione dei membri del gruppo sulle board di Miro.
 
-*Relativamente agli improvements le relative soluzioni accordate sono:*
-- formulare convenzioni da adottare per il codice;
-- impegnarsi a fissare delle scadenze infrasettimanali così da ridurre il carico di lavoro il weekend;
-- utilizzare le board su miro con anticipo aggiungendo il proprio feedback.
+=== Soluzioni adottate
+- Formulare convenzioni da adottare per il codice;
+- Impegnarsi a fissare delle scadenze infrasettimanali così da ridurre il carico di lavoro il weekend;
+- Utilizzare le board su Miro con anticipo aggiungendo il proprio feedback.
 
 == Esposizione avanzamenti dei lavori dello sprint attuale
 

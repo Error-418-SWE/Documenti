@@ -34,7 +34,7 @@
 
 \
 == Approfondimento specifiche del capitolato
-Lo scopo del meeting è iniziare l'analisi dei requisiti, focalizzando l'attenzione sulla comprensione delle funzionalità richieste, la loro implementazione e il dominio tecnologico che il team utilizzerà.
+Lo scopo del meeting è iniziare l'Analisi dei Requisiti, focalizzando l'attenzione sulla comprensione delle funzionalità richieste, la loro implementazione e il dominio tecnologico che il team utilizzerà.
 Le domande raccolte dal team sono state catalogate nei seguenti ambiti:
 - use case;
 - funzionalità;
@@ -100,11 +100,11 @@ Il Proponente ha confermato l'intenzione di proseguire i contatti mediante l'uso
 
 == Organizzazione di un prossimo meeting e programmazione regolare degli incontri
 L'incontro si è concluso con la programmazione del prossimo meeting in data 23 novembre 2023, dalle ore 14:00 alle ore 15:00.\
-In questa prima fase di analisi dei requisiti, Proponente e Fornitore si sono trovati d'accordo circa la necessità di svolgere incontri con cadenza almeno settimanale.
+In questa prima fase di Analisi dei Requisiti, Proponente e Fornitore si sono trovati d'accordo circa la necessità di svolgere incontri con cadenza almeno settimanale.
 
 \
 = Azioni da intraprendere
 A seguito del meeting sono state individuate le seguenti operazioni da svolgere:
 - raccolta e catalogazione di aspettative e bisogni;
-- produzione della documentazione quale use cases, analisi dei requisiti da presentare al prossimo meeting;
+- produzione della documentazione quale use cases, Analisi dei Requisiti da presentare al prossimo meeting;
 - esplorazione del dominio tecnologico.

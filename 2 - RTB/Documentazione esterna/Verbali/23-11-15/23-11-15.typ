@@ -19,7 +19,7 @@
 = Ordine del giorno
 - Approfondimento specifiche del capitolato;
 
-- Presentazione, supportata da una board Miro, delle domande raccolte dal team sostanziate con proposte e mock up. Le domande si articolano in:
+- Presentazione, supportata da una board Miro, delle domande raccolte dal gruppo sostanziate con proposte e mock up. Le domande si articolano in:
   - identificazione della tipologia di utente a cui il prodotto è destinato;
   - prime proposte di user interface e user experience;
   - differenza di funzionalità tra applicativo desktop e mobile;
@@ -34,15 +34,15 @@
 
 \
 == Approfondimento specifiche del capitolato
-Lo scopo del meeting è iniziare l'Analisi dei Requisiti, focalizzando l'attenzione sulla comprensione delle funzionalità richieste, la loro implementazione e il dominio tecnologico che il team utilizzerà.
-Le domande raccolte dal team sono state catalogate nei seguenti ambiti:
+Lo scopo del meeting è iniziare l'Analisi dei Requisiti, focalizzando l'attenzione sulla comprensione delle funzionalità richieste, la loro implementazione e il dominio tecnologico che il gruppo utilizzerà.
+Le domande raccolte dal gruppo sono state catalogate nei seguenti ambiti:
 - use case;
 - funzionalità;
 - user interface e user experience;
 - stack tecnologico.
 
 \
-== Presentazione delle domande raccolte dal team in merito ai requisiti
+== Presentazione delle domande raccolte dal gruppo in merito ai requisiti
 === Utente
 L'utente tipico è stato individuato nella figura di un amministratore e/o impiegato lato back-office, dotato dunque di massimi privilegi durante l'uso dell'applicativo.\
 Le principali azioni che tale utente svolgerà sono:
@@ -85,7 +85,7 @@ Per l'invio delle notifiche di richiesta di spostamento, l'applicativo si interf
 - la logica di controllo della facoltà di spostare un prodotto è gestita interamente dall'endpoint REST.
 \
 == Conferme riguardo lo stack tecnologico individuato
-Lo stack tecnologico individuato dal team si articola in:
+Lo stack tecnologico individuato dal gruppo si articola in:
 - DB SQL per la gestione del database relazionale;
 - Three.js per l'implementazione della parte grafica (JavaScript o TypeScript);
 - Node.js per la comunicazione tra applicativo e database;

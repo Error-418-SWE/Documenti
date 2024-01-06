@@ -13,16 +13,16 @@
 
 = Ordine del giorno
 
-- Discussione relativa al meeting con il referente aziendale;
+- Discussione relativa al meeting con il Proponente;
 - Suddivisione compiti da svolgere.
 
-== Discussione relativa al meeting con il referente aziendale
+== Discussione relativa al meeting con il Proponente
 
-Il team ha condotto una discussione relativa al meeting esterno appena concluso, ragionando sui suggerimenti, approvazioni e cambiamenti proposti dal proponente. Sono state corrette alcune ipotesi fatte, come la questione delle dimensioni fisse e prefissate dei bin e degli scaffali. Il referente ha espressamente specificato la richiesta di avere dimensioni e configurazioni variabili rispettivamente per bin e scaffali.
+Il team ha condotto una discussione relativa al meeting esterno appena concluso, ragionando sui suggerimenti, approvazioni e cambiamenti proposti dal Proponente. Sono state corrette alcune ipotesi fatte, come la questione delle dimensioni fisse e prefissate dei bin e degli scaffali. Il Proponente ha espressamente specificato la richiesta di avere dimensioni e configurazioni variabili rispettivamente per bin e scaffali.
 
-Il gruppo si ritiene soddisfatto riguardo il lavoro fatto sull'individuazione degli use case e sulle spiegazioni ricevute dal referente esterno riguardo chiarimenti tecnici e compatibilità con diversi device. Si è deciso di proseguire su questa strada visti i riscontri positivi ottenuti.
+Il gruppo si ritiene soddisfatto riguardo il lavoro fatto sull'individuazione degli use case e sulle spiegazioni ricevute dal Proponente riguardo chiarimenti tecnici e compatibilità con diversi device. Si è deciso di proseguire su questa strada visti i riscontri positivi ottenuti.
 
-È stata molto apprezzata la disponibilità del referente aziendale nel rispondere alle nostre richieste riguardo vari elementi (come caratteristiche dei prodotti, codifica dei bin, piantina del magazzino) che serviranno nei periodi a venire.
+È stata molto apprezzata la disponibilità del Proponente nel rispondere alle nostre richieste riguardo vari elementi (come caratteristiche dei prodotti, codifica dei bin, piantina del magazzino) che serviranno nei periodi a venire.
 
 == Suddivisione compiti da svolgere
 

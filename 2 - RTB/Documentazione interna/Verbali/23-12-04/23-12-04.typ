@@ -32,13 +32,13 @@ Tramite l'analisi dei lavori svolti sono emersi dubbi da esporre al proponente:
 
 - definire come dovrebbe essere gestita l'altezza degli scaffali dopo aver configurato l'ambiente di lavoro tramite file SVG.
 
-== Organizzazione dei lavori da svolgere durante lo sprint attuale relativamente al PoC
+= Azioni da intraprendere
 
-Gli ambiti da approfondire ed implementare nel PoC durante questo sprint sono:
-- l'utilizzo di Docker e la containerizzazione dell'applicativo;
-- l'esplorazione di tecnologie alternative a Three.js, nello specifico Unreal Engine (appena terminato il lavoro attualmente iniziato sulle norme di progetto);
-- l'implementazione dei bin e il loro rapporto con gli scaffali (appena terminato il lavoro attualmente iniziato sulle action di Github);
-- esplorazione di diversi modi di implementare l'interfaccia utente (nel caso qualcuno terminasse anzitempo il lavoro assegnato).
+Le azioni da intraprendere si concentrano sullo sviluppo del PoC:
+- studiare l'utilizzo di Docker e la containerizzazione dell'applicativo;
+- esplorare le tecnologie alternative a Three.js, nello specifico Unreal Engine (appena terminato il lavoro attualmente iniziato sulle Norme di Progetto);
+- implementare i bin e il loro rapporto con gli scaffali (appena terminato il lavoro attualmente iniziato sulle action di GitHub);
+- esplorare i diversi modi di implementare l'interfaccia utente (nel caso qualcuno terminasse anzitempo il lavoro assegnato).
 
 
 

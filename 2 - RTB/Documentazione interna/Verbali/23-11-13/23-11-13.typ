@@ -25,7 +25,7 @@
   differente rispetto alla precedente: prima era presente un branch main (per i release) e un branch develop dal quale si aprivano feature branch; ora la repository è composta da tre branch principali quali:
   - main: contenente i pdf compilati e pubblicati automaticamente tramite GitHub Actions solo a seguito della verifica di uno o più reviewer;
   - src: contenente i file sorgenti scritti in Typst;
-  - website: branch parallello contente un versione work in progress del sito del team.
+  - website: branch parallello contente un versione work in progress del sito del gruppo.
 
 
 == Retrospettiva sullo sprint

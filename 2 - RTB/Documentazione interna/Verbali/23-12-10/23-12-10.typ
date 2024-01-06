@@ -13,9 +13,9 @@
 
 = Ordine del giorno
 
-- analisi dei keep doing e degli improvements;
-- esposizione avanzamenti dei lavori dello sprint attuale;
-- organizzazione attività e ruoli del prossimo sprint.
+- Analisi dei keep doing e degli improvements;
+- Esposizione avanzamenti dei lavori dello sprint attuale;
+- Organizzazione attività e ruoli del prossimo sprint.
 
 == Analisi dei keep doing e degli improvements
 
@@ -28,7 +28,7 @@
 *Improvements:*
 - definire delle convenzioni da adottare riguardanti il codice;
 - lavoro concentrato principalmente nel weekend;
-- richiesta maggiore partecipazione dei membri del gruppo sulle board di miro;
+- richiesta maggiore partecipazione dei membri del gruppo sulle board di miro.
 
 *Relativamente agli improvements le relative soluzioni accordate sono:*
 - formulare convenzioni da adottare per il codice;
@@ -39,7 +39,7 @@
 
 Sono stati mostrati gli avanzamenti dei lavori riguardo:
 - l'implementazione della containerizzazione Docker;
-- l'introduzione dei bin e di una creazione più accurata degli scaffali nel PoC A;
+- l'introduzione dei bin e di una creazione più accurata degli scaffali nel PoC A.
 
 
 == Organizzazione attività e ruoli prossimo sprint

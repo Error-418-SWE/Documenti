@@ -96,7 +96,11 @@ Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
 
 ==== Operazioni
 
-Il sistema deve permettere le seguenti operazioni:
+//non ho molto chiaro cosa si richiedesse in questa sezione, sotto riporto lo standard
+//Specify the normal and special operations required by the user such as:
+// - the various modes of operations in the user organization*/
+Il sistema permette di attuare e visualizzare diverse operazioni di gestione del magazzino, in modo da semplificare l'interazione tra gestori e addetti.
+Il sistema deve permettere all'utente le seguenti operazioni:
 - creazione del magazzino (manualmente o tramite caricamento di un file SVG);
 - modificare le dimensioni dell'ambiente 3D (lunghezza, larghezza, altezza);
 - caricare un file SVG;
@@ -112,9 +116,12 @@ Il sistema deve permettere le seguenti operazioni:
 - ricercare un prodotto nel magazzino;
 - visualizzare ed esplorare il magazzino.
 
+Modifiche alla posizione dei prodotti comporta l'invio di una notifica a gli addetti che provvederanno ad attuare lo spostamento.
+
 ==== Requisiti di adattamento al contesto
 
-// Descrivere le modalità di adattamento a diversi DBMS SQL come da 9.6.4.8
+WMS3 non richiede l'installazione di particolari librerie software o specifici sistemi operativi grazie a Docker, che permette di costruire dei container che si occupano di gestire le dipendenze e Docker Compose che si occupa di gestire applicazioni multi-container.\
+Il sistema permette libertà anche dal punto di vista del sistema di notifiche interne al magazzino e del database, visto che l'applicazione permette configurazione tramite API RESTful.
 
 ==== Interfacce a servizi
 

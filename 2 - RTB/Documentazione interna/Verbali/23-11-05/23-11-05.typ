@@ -36,8 +36,8 @@ Il documento relativo alle Norme di Progetto è stato revisionato e discusso dal
  È stato discusso l'utilizzo di LaTeX in maniera più specifica analizzando l'utilizzo del template e degli include.
 \ È stato deciso che i file .tex saranno posti in un branch dedicato del repository.
 
-= To do
-    - Sono emersi dubbi riguardo alle tecnologie e le pratiche da adottare per i test della parte grafica da realizzare. È di conseguenza emersa la necessità di organizzare un meeting esterno con il proponente per discutere tali dubbi. Ciascun membro deve quindi pensare alle domande da porre in tale occasione;
+= Azioni da intraprendere
+    - Organizzazione di un meeting esterno con il proponente per discutere i dubbi relativi alle tecnologie e alle pratiche da adottare per i test della parte grafica da realizzare. Ciascun membro deve quindi pensare alle domande da porre in tale occasione;
     - Stabilire con precisione il criterio di versionamento dei file;
     - Ricontrollare le Norme di Progetto;
     - Prendere confidenza con le tecnologie scelte (Miro, Jira, ecc), e con quelle proposte così da prendere scelte consapevoli;

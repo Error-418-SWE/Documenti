@@ -2,9 +2,10 @@
 
 #show: project.with(
   title:"Piano di Qualifica",
-  subTitle: "",
+  subTitle: "Metriche, qualità e valutazione",
   authors: (
     "Todesco Mattia",
+    "Oseliero Antonio",
   ),
   showLog: true,
   isExternalUse: true,

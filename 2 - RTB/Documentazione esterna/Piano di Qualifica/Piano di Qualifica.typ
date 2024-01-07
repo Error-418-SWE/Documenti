@@ -42,7 +42,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T7.pdf")_ ;
 - Dispense T8:\
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")_ .
-
+\
 = Qualità di processo
 
 == Processi primari
@@ -57,7 +57,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [somma dei costi tracciati dal gruppo], [$<="BAC"$], [$<="BAC"$],
+    [Somma dei costi tracciati dal gruppo], [$<="BAC"$], [$<="BAC"$],
   ),
   caption: "Specifiche metrica AC"
 )
@@ -110,10 +110,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
-    rows: 25pt,
+    rows: 30pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$"EV"/"AC"$), align(center+horizon,$>=1$), align(center+horizon,$>=0.8$),
+    align(center+horizon,$display("EV"/"AC")$), align(center+horizon,$>=1$), align(center+horizon,$>=0.8$),
   ),
   caption: "Specifiche metrica CPI"
 )
@@ -122,10 +122,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
-    rows: 25pt,
+    rows: 30pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$"BAC"/"CPI"$), align(center+horizon,$<="BAC"$), 
+    align(center+horizon,$display("BAC"/"CPI")$), align(center+horizon,$<="BAC"$), 
     align(center+horizon,$<="BAC"$),
   ),
   caption: "Specifiche metrica EAC"
@@ -135,10 +135,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
-    rows: 25pt,
+    rows: 30pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$"BAC-EV"/"CPI"$), align(center+horizon,$<="EAC"$), align(center+horizon,$<="EAC"$),
+    align(center+horizon,$display("BAC-EV"/"CPI")$), align(center+horizon,$<="EAC"$), align(center+horizon,$<="EAC"$),
   ),
   caption: "Specifiche metrica ETC"
 )
@@ -149,10 +149,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
-    rows: 25pt,
+    rows: 30pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$89+(300*(F)-10*(L))/P$), align(center+horizon,"80%"), align(center+horizon,$>=60%$),
+    align(center+horizon,$89+display((300*(F)-10*(L))/P)$), align(center+horizon,"80%"), align(center+horizon,$>=60%$),
   ),
   caption: "Specifiche Indice di Gulpease"
 )
@@ -166,7 +166,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [numero di errori ortografici presenti nel testo], [0], [0],
+    [Numero di errori ortografici presenti nel testo], [0], [0],
   ),
   caption: "Specifiche Errori Ortografici"
 )
@@ -176,10 +176,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
-    rows: 25pt,
+    rows: 30pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$frac("Righe di codice testate","Righe di codice totali")*100$), align(center+horizon,"0"), align(center+horizon,"0"),
+    align(center+horizon,$display(frac("Righe di codice testate","Righe di codice totali"))*100$), align(center+horizon,"0"), align(center+horizon,"0"),
   ),
   caption: "Specifiche Code coverage"
 )
@@ -216,10 +216,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 #figure(
   table(
     columns: 3,
-    rows: 25pt,
+    rows: 30pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$frac("test con errori","test eseguiti")*100$), align(center+horizon,"0%"), align(center+horizon,$<=10%$),
+    align(center+horizon,$display(frac("Test con errori","Test eseguiti"))*100$), align(center+horizon,"0%"), align(center+horizon,$<=10%$),
   ),
   caption: "Specifiche Densità errori"
 )
@@ -230,7 +230,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [efficienza del sistema], [TBD], [TBD],
+    [Efficienza del sistema], [TBD], [TBD],
   ),
   caption: "Specifiche Efficienza del sistema"
 )
@@ -241,7 +241,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [facilità di utilizzo del sistema], [TBD], [TBD],
+    [Facilità di utilizzo del sistema], [TBD], [TBD],
   ),
   caption: "Specifiche Facilità di utilizzo"
 )
@@ -251,7 +251,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [manutenibilità del sistema], [TBD], [TBD],
+    [Manutenibilità del sistema], [TBD], [TBD],
   ),
   caption: "Specifiche Manutenibilità del sistema"
 ) 

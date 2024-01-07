@@ -92,5 +92,5 @@ In riferimento ai punti descritti in @improvements, il gruppo attua le seguenti 
 - Implementare l'automazione della compilazione di documenti composti da più file sorgente Typst;
 - Proseguire l'adeguamento delle Norme di Progetto allo standard ISO/IEC 12207:2017;
 - Proseguire l'esplorazione tecnologica tramite la realizzazione di piccoli dimostratori e lo studio di tecnologie alternative a _Three.js_;
-- Richiedere un colloquio al Prof. Cardin in merito ai dubbi su alcuni UC individuati;
-- Aggiornare consuntivo sprint 4 e preventivo sprint 5 in Piano di progetto.
+- Richiedere un colloquio al professor Cardin in merito ai dubbi su alcuni UC individuati;
+- Aggiornare consuntivo sprint 4 e preventivo sprint 5 in Piano di Progetto.

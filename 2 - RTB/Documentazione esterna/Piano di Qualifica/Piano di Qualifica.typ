@@ -22,19 +22,27 @@ Definire la qualità di un prodotto consiste nell'attuazione di un insieme di pr
 Il presente documento viene redatto in modo incrementale per assicurare la coerenza delle informazioni al suo interno con gli sviluppi in corso e le esigenze evolutive del progetto. I valori identificati come accettabili per le metriche riportate possono subire variazioni con l'avanzamento dello sviluppo.
 
 == Glossario
-Il presente documento include una serie di termini tecnici specifici del progetto. Al fine di agevolarne la comprensione, si fornisce un Glossario che espliciti il significato di tali termini. I termini tecnici sono chiaramente evidenziati nel testo mediante l'aggiunta di una "G" a pedice degli stessi.
+Il presente documento include una serie di termini tecnici specifici del progetto. Al fine di agevolarne la comprensione, si fornisce un Glossario che espliciti il significato di tali termini. I termini tecnici sono chiaramente evidenziati nel testo mediante l'aggiunta di una "_G_" a pedice degli stessi.
 
 == Riferimenti
 === Normativi
-- #link("2 - RTB/Documentazione interna/Norme di Progetto.pdf")[Norme di Progetto;]
-- #link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")[Capitolato d'appalto.]
+- Norme di Progetto:\
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20interna")_ ;
+- Capitolato d'appalto: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_ .
 === Informativi
-- #link("2 - RTB/Documentazione esterna/Piano di Progetto.pdf")[Piano di Progetto;]
-- #link("https://it.wikipedia.org/wiki/Indice_Gulpease")[Indice di Gulpease;]
-- #link("https://it.wikipedia.org/wiki/ISO/IEC_9126")[ISO/IEC 9126.]
+- Piano di Progetto:\
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20esterna")_ ;
+- Indice di Gulpease:\
+  _#link("https://it.wikipedia.org/wiki/Indice_Gulpease")_ ;
+- ISO/IEC 9126:\
+  _#link("https://it.wikipedia.org/wiki/ISO/IEC_9126")_ .
 === Materiale fornito dal docente
-- #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T7.pdf")[Dispense T7;]
-- #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")[Dispense T8.]
+- Dispense T7:\
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T7.pdf")_ ;
+- Dispense T8:\
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")_ .
+
 = Qualità di processo
 
 == Processi primari

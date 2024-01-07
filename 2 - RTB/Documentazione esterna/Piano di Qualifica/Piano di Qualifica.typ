@@ -109,7 +109,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
   caption: "Specifiche metrica CPI"
 )
 
-- *EAC (Estimated At Completition)*
+- *EAC (Estimated At Completion)*
 #figure(
   table(
     columns: 3,
@@ -122,7 +122,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
   caption: "Specifiche metrica EAC"
 )
 
-- *ETC (Estimated To Completition)*
+- *ETC (Estimated To Completion)*
 #figure(
   table(
     columns: 3,
@@ -214,16 +214,16 @@ Il presente documento include una serie di termini tecnici specifici del progett
   ),
   caption: "Specifiche Densità errori"
 )
-== Efficenza
-- *Efficenza del sistema*
+== Efficienza
+- *Efficienza del sistema*
 #figure(
   table(
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [efficenza del sistema], [TBD], [TBD],
+    [efficienza del sistema], [TBD], [TBD],
   ),
-  caption: "Specifiche Efficenza del sistema"
+  caption: "Specifiche Efficienza del sistema"
 )
 == Usabilità
 - *Facilità di utilizzo*
@@ -242,7 +242,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [matutentabilità del sistema], [TBD], [TBD],
+    [manutenibilità del sistema], [TBD], [TBD],
   ),
-  caption: "Specifiche Manutentabilità del sistema"
+  caption: "Specifiche Manutenibilità del sistema"
 ) 

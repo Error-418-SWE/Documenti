@@ -18,7 +18,7 @@
 
 == Discussione relativa al meeting con il Proponente
 
-Il team ha condotto una discussione relativa al meeting esterno appena concluso, ragionando sui suggerimenti, approvazioni e cambiamenti proposti dal Proponente. Sono state corrette alcune ipotesi fatte, come la questione delle dimensioni fisse e prefissate dei bin e degli scaffali. Il Proponente ha espressamente specificato la richiesta di avere dimensioni e configurazioni variabili rispettivamente per bin e scaffali.
+Il gruppo ha condotto una discussione relativa al meeting esterno appena concluso, ragionando sui suggerimenti, approvazioni e cambiamenti proposti dal Proponente. Sono state corrette alcune ipotesi fatte, come la questione delle dimensioni fisse e prefissate dei bin e degli scaffali. Il Proponente ha espressamente specificato la richiesta di avere dimensioni e configurazioni variabili rispettivamente per bin e scaffali.
 
 Il gruppo si ritiene soddisfatto riguardo il lavoro fatto sull'individuazione degli use case e sulle spiegazioni ricevute dal Proponente riguardo chiarimenti tecnici e compatibilità con diversi device. Si è deciso di proseguire su questa strada visti i riscontri positivi ottenuti.
 

@@ -1,4 +1,5 @@
 import sys
+import re
 from datetime import datetime
 file_path = sys.argv[1]
 file_name = sys.argv[2]
@@ -59,12 +60,11 @@ fields = {
 }
 
 need_array_compose = ["authors","reviewers","missingMembers"]
-
 for line in params:
     for key in fields.keys():
         if key in line:
             if key in need_array_compose:
-                fields[key] += compose_array(params,key+":")
+                fields[key] += compose_array(params, key + ":")
             elif "time" in key:
                 fields[key] += ":".join(line.split(":")[1:]).strip()[:-1]
             elif key != "externalParticipants":
@@ -77,7 +77,11 @@ for line in params:
                 external_participants_str = external_participants_str.replace("    ", ",")
                 external_participants_str = external_participants_str.replace(", role", "\", role")
                 external_participants_str = "[" + external_participants_str[3:-1] +",]"
-                fields[key] += external_participants_str
+                matches = re.findall(r'name: "(.*?)",\s*role: "(.*?)"', external_participants_str)
+                output_list = [f'{name} ({role})' for name, role in matches]
+                output_text = f'{output_list}'
+                fields[key] += output_text
+
 
 #azioni aggiuntive di pulizia e dettaglio
 #composizione del titolo se verbale (il titolo è generato a compile time e non presente nel preambolo)
@@ -85,8 +89,8 @@ if fields["date"].strip()[-1] != ":":
     fields["title"] = "title: Verbale " + fields["date"].split(":")[1].strip()
 #per mostrare la data, essa deve essere nel formato yyyy-mm-dd
 if fields["date"].strip()[-1] != ":":
-    splitted_date = fields["date"].split(":")[1].replace("\"","").strip().split("/")
-    fields["date"] = "date: " + str(int(splitted_date[2])+2000) + "-" + splitted_date[1] + "-" + splitted_date[0]
+    split_date = fields["date"].split(":")[1].replace("\"","").strip().split("/")
+    fields["date"] = "date: " + str(int(split_date[2])+2000) + "-" + split_date[1] + "-" + split_date[0]
 #definizione del lastUpdated
 fields["lastUpdated"] = "lastUpdated: " + datetime.now().date().strftime("%Y-%m-%d")
 

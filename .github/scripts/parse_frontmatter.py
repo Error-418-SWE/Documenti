@@ -7,24 +7,6 @@ file = open(file_path + "/" + file_name)
 file_content = file.read()
 file.close()
 
-def array_compose(allText, str_to_split):
-    result = ""
-    splitted_text = "".join(allText).split(str_to_split)[1]
-    for i in range(len(splitted_text)):
-        if splitted_text[i] != ")":
-            result += splitted_text[i]
-        else:
-            result += "]"
-            break
-    result = result.replace("(", "[")
-    return result
-
-def dictionary_handler(allText, str_to_split):
-    if "".join(allText).strip()[0] == ")":
-        return ""
-    parts = "".join(allText).split(str_to_split,1)
-    return parts[0] + ")" + dictionary_handler("".join(parts[1:]), ",")
-
 params = file_content.split("=")[0]
 params = params.replace("#import \"/template.typ\": *\n","")
 params = params.replace("#show: project.with(", "")
@@ -40,6 +22,24 @@ for line in params.split("\n"):
         params = params.replace("#show" + line.split("#show")[1], "")
 
 params = params.split("\n")
+
+def compose_array(all_text, str_to_split):
+    result = ""
+    split_text = "".join(all_text).split(str_to_split)[1]
+    for i in range(len(split_text)):
+        if split_text[i] != ")":
+            result += split_text[i]
+        else:
+            result += "]"
+            break
+    result = result.replace("(", "[")
+    return result
+
+def handle_dictionary(all_text, str_to_split):
+    if "".join(all_text).strip()[0] == ")":
+        return ""
+    parts = "".join(all_text).split(str_to_split, 1)
+    return parts[0] + ")" + handle_dictionary("".join(parts[1:]), ",")
 
 fields = {
     "title": "title: ",
@@ -64,7 +64,7 @@ for line in params:
     for key in fields.keys():
         if key in line:
             if key in need_array_compose:
-                    fields[key] += array_compose(params,key+":")
+                fields[key] += compose_array(params,key+":")
             elif "time" in key:
                 fields[key] += ":".join(line.split(":")[1:]).strip()[:-1]
             elif key != "externalParticipants":

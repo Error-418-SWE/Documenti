@@ -38,9 +38,9 @@ Il presente documento include una serie di termini tecnici specifici del progett
 - ISO/IEC 9126:\
   _#link("https://it.wikipedia.org/wiki/ISO/IEC_9126")_ .
 === Materiale fornito dal docente
-- Dispense T7:\
+- Dispense T7 (Qualità del software):\
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T7.pdf")_ ;
-- Dispense T8:\
+- Dispense T8 (Qualità di processo):\
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")_ .
 \
 = Qualità di processo

@@ -38,7 +38,7 @@ jobs:
           echo -e "\nimport DocumentDetails from '/src/components/DocumentDetails.astro';" >> "$OUTPUT_FILE"
           echo "import ChangelogTable from '/src/components/ChangelogTable.astro';" >> "$OUTPUT_FILE"
           echo -e "\n<DocumentDetails {...frontmatter}/>" >> "$OUTPUT_FILE"
-          echo -e "\n<ChangelogTable>" >> "$OUTPUT_FILE"
+          echo -e "\n<ChangelogTable {...frontmatter}>" >> "$OUTPUT_FILE"
       - name: Convert changelog
         run: echo -e "$(csv2md '${{ inputs.file_path }}/log.csv')" >> "$OUTPUT_FILE"
       - name: Close Astro component

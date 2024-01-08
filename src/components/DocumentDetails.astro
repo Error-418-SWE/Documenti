@@ -1,19 +1,24 @@
 ---
 import { Icon } from "@astrojs/starlight/components";
 
-const { title, description, docType, date, lastUpdated, externalParticipants, authors, reviewers, missingMembers, location, timeStart, timeEnd, isExternalUse } = Astro.props;
+const { title, subTitle, docType, date, lastUpdated, externalParticipants, authors, reviewers, missingMembers, location, timeStart, timeEnd, isExternalUse, showLog } = Astro.props;
 ---
 
 <section>
-	<div class="description">
-		{description && <p>{description}</p>}
-	</div>
 	<div class="title">
 		<Icon name="information" size="2rem" />
 		<h1 id="info-title">Informazioni sul documento</h1>
 	</div>
-	{isExternalUse && <span>Uso esterno</span>}
+	{isExternalUse && <p class="ext">Uso esterno</p>}
 	<dl>
+		{
+				subTitle && (
+				<>
+					<dt class="taxonomy">Sommario</dt>
+					<dd class="content">{subTitle}</dd>
+				</>
+			)
+		}
 		{
 			authors && (
 				<>
@@ -90,7 +95,26 @@ const { title, description, docType, date, lastUpdated, externalParticipants, au
 </section>
 
 <style>
-	.description {
+
+	:root {
+		--badge-text: var(--sl-color-text);
+		--badge-bg: goldenrod;
+	}
+
+	:root[data-theme=dark] {
+		--badge-text: var(--sl-color-bg);
+		--badge-bg: goldenrod;
+	}
+
+	p.ext {
+		width: fit-content;
+		border-radius: 0.5rem;
+		background-color: var(--badge-bg);
+		padding: 0.5em 1em;
+		color: var(--badge-text);
+	}
+
+	.subTitle {
 		font-style: italic;
 		margin-bottom: 2em;
 	}

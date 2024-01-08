@@ -1,10 +1,17 @@
 ---
 title: Verbale 04/12/23
-description: "Meeting di Context Switch relativo al PoC"
+subTitle: "Meeting di Context Switch relativo al PoC"
 lastUpdated: 2024-01-07
 date: 2023-12-04
-authors: [    "Nardo Silvio",  ]
-missingMembers: [    "Banzato Alessio",    "Gardin Giovanni",    "Zaccone Rosario",    "Todesco Mattia"  ]
+authors: [
+    "Nardo Silvio",
+]
+missingMembers: [
+    "Banzato Alessio",
+    "Gardin Giovanni",
+    "Zaccone Rosario",
+    "Todesco Mattia"
+]
 timeStart: "15:00"
 timeEnd: "16:00"
 ---
@@ -14,7 +21,7 @@ import ChangelogTable from '/src/components/ChangelogTable.astro';
 
 <DocumentDetails {...frontmatter}/>
 
-<ChangelogTable>
+<ChangelogTable  {...frontmatter}>
 | Versione | Data       | PR  | Titolo                                       | Redattore       | Verificatore     |
 | -------- | ---------- | --- | -------------------------------------------- | --------------- | ---------------- |
 | 1.0.0    | 07-01-2024 | 162 | DOC-314 Revisionare verbale interno 23-12-04 | Zaccone Rosario | Carraro Riccardo |

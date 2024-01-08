@@ -5,99 +5,69 @@ file_path = sys.argv[1]
 file_name = sys.argv[2]
 
 file = open(file_path + "/" + file_name)
-file_content = file.read()
+preamble = file.read().strip().split(");")[0]
 file.close()
 
-params = file_content.split("=")[0]
-params = params.replace("#import \"/template.typ\": *\n","")
-params = params.replace("#show: project.with(", "")
-params = params.replace("# project(", "")
-params = params.strip()
+string_fields = [
+    "title",
+    "subTitle",
+    "externalParticipants",
+    "authors",
+    "reviewers",
+    "missingMembers",
+    "location",
+    "timeStart",
+    "timeEnd",
+]
 
-for line in params.split("\n"):
-    if "//" in line:
-        params = params.replace("//" + line.split("//")[1], "")
-    if "#set" in line:
-        params = params.replace("#set" + line.split("#set")[1], "")
-    if "#show" in line:
-        params = params.replace("#show" + line.split("#show")[1], "")
+boolean_fields = [
+    "isExternalUse",
+    "showLog",
+]
 
-params = params.split("\n")
+array_fields = [
+    "authors",
+    "reviewers",
+    "missingMembers",
+]
 
-def compose_array(all_text, str_to_split):
-    result = ""
-    split_text = "".join(all_text).split(str_to_split)[1]
-    for i in range(len(split_text)):
-        if split_text[i] != ")":
-            result += split_text[i]
-        else:
-            result += "]"
-            break
-    result = result.replace("(", "[")
-    return result
+def get_document_date(text):
+    match = re.findall(r'\d\d\/\d\d\/\d\d', text)
+    date_format = "%d/%m/%y"
+    return datetime.strptime(match[0], date_format)
 
-def handle_dictionary(all_text, str_to_split):
-    if "".join(all_text).strip()[0] == ")":
-        return ""
-    parts = "".join(all_text).split(str_to_split, 1)
-    return parts[0] + ")" + handle_dictionary("".join(parts[1:]), ",")
+frontmatter = ""
 
-fields = {
-    "title": "title: ",
-    "subTitle": "description: ",
-    "lastUpdated": "lastUpdated: ",
-    "date": "date: ",
-    "externalParticipants": "externalParticipants: ",
-    "authors": "authors: ",
-    "reviewers": "reviewers: ",
-    "missingMembers": "missingMembers: ",
-    "location": "location: ",
-    "timeStart": "timeStart: ",
-    "timeEnd": "timeEnd: ",
-    "showLog": "showLog: ",
-    "showIndex": "showIndex: ",
-    "isExternalUse": "isExternalUse: "
-}
+date_match = re.search(r'date: \"\d\d\/\d\d\/\d\d\"', preamble)
+if date_match:
+    date = get_document_date(date_match.group(0))
+    frontmatter += "title: Verbale " + date.strftime("%d/%m/%y") + "\n"
+    frontmatter += "date: " + date.strftime("%Y-%m-%d") + "\n"
 
-need_array_compose = ["authors","reviewers","missingMembers"]
-for line in params:
-    for key in fields.keys():
-        if key in line:
-            if key in need_array_compose:
-                fields[key] += compose_array(params, key + ":")
-            elif "time" in key:
-                fields[key] += ":".join(line.split(":")[1:]).strip()[:-1]
-            elif key != "externalParticipants":
-                fields[key] += line.split(":")[1].strip()[:-1]
-            else:
-                first_part_to_iterate = "".join(params).split("externalParticipants:")[0]
-                external_participants_str = handle_dictionary(first_part_to_iterate,",") + ")"
-                external_participants_str = external_participants_str.split("externalParticipants :")[1]
-                external_participants_str = external_participants_str.replace("\")", ",").replace(",)","\")")
-                external_participants_str = external_participants_str.replace("    ", ",")
-                external_participants_str = external_participants_str.replace(", role", "\", role")
-                external_participants_str = "[" + external_participants_str[3:-1] +",]"
-                matches = re.findall(r'name: "(.*?)",\s*role: "(.*?)"', external_participants_str)
-                output_list = [f'{name} ({role})' for name, role in matches]
-                output_text = f'{output_list}'
-                fields[key] += output_text
+for field in string_fields:
+    match = re.search(fr'{field}: "(.*?)"', preamble)
+    if match:
+        frontmatter += field + ": \"" + match.group(1) + "\"\n"
 
+for field in boolean_fields:
+    match = re.search(fr'{field}: (true|false)', preamble)
+    if match:
+        frontmatter += field + ": " + match.group(1) + "\n"
 
-#azioni aggiuntive di pulizia e dettaglio
-#composizione del titolo se verbale (il titolo è generato a compile time e non presente nel preambolo)
-if fields["date"].strip()[-1] != ":":
-    fields["title"] = "title: Verbale " + fields["date"].split(":")[1].strip()
-#per mostrare la data, essa deve essere nel formato yyyy-mm-dd
-if fields["date"].strip()[-1] != ":":
-    split_date = fields["date"].split(":")[1].replace("\"","").strip().split("/")
-    fields["date"] = "date: " + str(int(split_date[2])+2000) + "-" + split_date[1] + "-" + split_date[0]
-#definizione del lastUpdated
-fields["lastUpdated"] = "lastUpdated: " + datetime.now().date().strftime("%Y-%m-%d")
+for field in array_fields:
+    match = re.search(fr'{field}: \((.*?)\)', preamble, re.DOTALL)
+    if match:
+        items = [item.strip() for item in match.group(1).split(',')]
+        frontmatter += field + ": [\n\t" + f"{',\n\t'.join(items)},\n" + "]\n"
 
-fields["title"] = fields["title"].replace("\"", "")
-output = "---\n"
-for key in fields.keys():
-    if fields[key].strip()[-1] != ":":
-        output += fields[key] + "\n"
-output += "---"
-print(output)
+if re.search(r'externalParticipants : \((.*?)\)', preamble, re.DOTALL):
+    matches = re.findall(r'name: "(.*?)",\s+role: "(.*?)"', preamble, re.DOTALL)
+    results = ""
+    for match in matches:
+        (name, role) = match
+        results += f'\t\"{name} ({role})\",\n'
+    frontmatter += field + ": [\n" + results + "]\n"
+
+frontmatter += "lastUpdated: " + datetime.now().date().strftime("%Y-%m-%d") + "\n"
+
+print("---\n" + frontmatter + "---")

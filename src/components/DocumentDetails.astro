@@ -1,7 +1,7 @@
 ---
 import { Icon } from "@astrojs/starlight/components";
 
-const { title, description, docType, date, lastUpdated, externalParticipants, authors, reviewers, missingMembers, location, timeStart, timeEnd, isExternalUse, showLog } = Astro.props;
+const { title, subTitle, docType, date, lastUpdated, externalParticipants, authors, reviewers, missingMembers, location, timeStart, timeEnd, isExternalUse, showLog } = Astro.props;
 ---
 
 <section>
@@ -12,10 +12,10 @@ const { title, description, docType, date, lastUpdated, externalParticipants, au
 	{isExternalUse && <p class="ext">Uso esterno</p>}
 	<dl>
 		{
-				description && (
+				subTitle && (
 				<>
 					<dt class="taxonomy">Sommario</dt>
-					<dd class="content">{description}</dd>
+					<dd class="content">{subTitle}</dd>
 				</>
 			)
 		}
@@ -114,7 +114,7 @@ const { title, description, docType, date, lastUpdated, externalParticipants, au
 		color: var(--badge-text);
 	}
 
-	.description {
+	.subTitle {
 		font-style: italic;
 		margin-bottom: 2em;
 	}

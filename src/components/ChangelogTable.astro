@@ -1,7 +1,19 @@
-<details>
-	<summary lang="en">Changelog</summary>
-	<slot>
-</details>
+---
+const { showLog } = Astro.props;
+---
+
+<div>
+	{
+		showLog && (
+			<>
+				<details>
+					<summary lang="en">Changelog</summary>
+					<slot>
+				</details>
+			</>
+		)
+	}
+</div>
 
 <style>
 

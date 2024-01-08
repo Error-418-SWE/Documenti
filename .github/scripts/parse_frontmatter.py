@@ -67,18 +67,18 @@ for line in params:
             if key in needs_array_compose:
                     fields[key] += array_compose(params,key+":")
             elif "time" in key:
-                    fields[key] += ":".join(line.split(":")[1:]).strip()[:-1]
+                fields[key] += ":".join(line.split(":")[1:]).strip()[:-1]
             elif key != "externalParticipants":
-                    fields[key] += line.split(":")[1].strip()[:-1]
+                fields[key] += line.split(":")[1].strip()[:-1]
             else:
-                    first_part_to_iterate = "".join(params).split("externalParticipants:")[0]
-                    external_participants_str = dictionary_handler(first_part_to_iterate,",") + ")"
-                    external_participants_str = external_participants_str.split("externalParticipants :")[1]
-                    external_participants_str = external_participants_str.replace("\")", ",").replace(",)","\")")
-                    external_participants_str = external_participants_str.replace("    ", ",")
-                    external_participants_str = external_participants_str.replace(", role", "\", role")
-                    external_participants_str = "[" + external_participants_str[3:-1] +",]"
-                    fields[key] += external_participants_str
+                first_part_to_iterate = "".join(params).split("externalParticipants:")[0]
+                external_participants_str = handle_dictionary(first_part_to_iterate,",") + ")"
+                external_participants_str = external_participants_str.split("externalParticipants :")[1]
+                external_participants_str = external_participants_str.replace("\")", ",").replace(",)","\")")
+                external_participants_str = external_participants_str.replace("    ", ",")
+                external_participants_str = external_participants_str.replace(", role", "\", role")
+                external_participants_str = "[" + external_participants_str[3:-1] +",]"
+                fields[key] += external_participants_str
 
 #azioni aggiuntive di pulizia e dettaglio
 #composizione del titolo se verbale (il titolo è generato a compile time e non presente nel preambolo)

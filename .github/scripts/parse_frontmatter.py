@@ -33,12 +33,11 @@ params = params.strip()
 
 for line in params.split("\n"):
     if "//" in line:
-        comment = line.split("//")[1]
-        params = params.replace("//"+comment, "")
+        params = params.replace("//" + line.split("//")[1], "")
     if "#set" in line:
-        params = params.replace("#set"+line.split("#set")[1], "")
+        params = params.replace("#set" + line.split("#set")[1], "")
     if "#show" in line:
-        params = params.replace("#show"+line.split("#show")[1], "")
+        params = params.replace("#show" + line.split("#show")[1], "")
 
 params = params.split("\n")
 

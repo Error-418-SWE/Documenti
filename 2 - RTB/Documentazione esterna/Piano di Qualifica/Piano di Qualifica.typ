@@ -173,18 +173,18 @@ Il presente documento include una serie di termini tecnici specifici del progett
   caption: "Specifiche Errori Ortografici"
 )
 
-=== Verifica
-- *Code coverage*
-#figure(
-  table(
-    columns: 3,
-    rows: 30pt,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$display(frac("Righe di codice testate","Righe di codice totali"))*100$), align(center+horizon,"0"), align(center+horizon,"0"),
-  ),
-  caption: "Specifiche Code coverage"
-)
+// === Verifica
+// - *Code coverage*
+// #figure(
+//   table(
+//     columns: 3,
+//     rows: 30pt,
+//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+//     align(center+horizon,$display(frac("Righe di codice testate","Righe di codice totali"))*100$), align(center+horizon,"0"), align(center+horizon,"0"),
+//   ),
+//   caption: "Specifiche Code coverage"
+// )
 
 === Miglioramento
 - *Metriche soddisfatte*
@@ -198,62 +198,62 @@ Il presente documento include una serie di termini tecnici specifici del progett
   caption: "Specifiche Metriche soddisfatte"
 )
 
-= Qualità del prodotto
-== Funzionalità
-- *Requisiti soddisfatti*
-#figure(
-  table(
-    columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [% requisiti obbligatori soddisfatti], [100%], [100%],
-    [% requisiti desiderabili soddisfatti], [$>=0%$], [0%],
-    [% requisiti opzionali soddisfatti], [$>=0%$], [0%],
-  ),
-  caption: "Specifiche Requisiti soddisfatti"
-)
+// = Qualità del prodotto
+// == Funzionalità
+// - *Requisiti soddisfatti*
+// #figure(
+//   table(
+//     columns: 3,
+//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+//     [% requisiti obbligatori soddisfatti], [100%], [100%],
+//     [% requisiti desiderabili soddisfatti], [$>=0%$], [0%],
+//     [% requisiti opzionali soddisfatti], [$>=0%$], [0%],
+//   ),
+//   caption: "Specifiche Requisiti soddisfatti"
+// )
 
-== Affidabilità
-- *Densità degli errori*
-#figure(
-  table(
-    columns: 3,
-    rows: 30pt,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$display(frac("Test con errori","Test eseguiti"))*100$), align(center+horizon,"0%"), align(center+horizon,$<=10%$),
-  ),
-  caption: "Specifiche Densità errori"
-)
-== Efficienza
-- *Efficienza del sistema*
-#figure(
-  table(
-    columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [Efficienza del sistema], [TBD], [TBD],
-  ),
-  caption: "Specifiche Efficienza del sistema"
-)
-== Usabilità
-- *Facilità di utilizzo*
-#figure(
-  table(
-    columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [Facilità di utilizzo del sistema], [TBD], [TBD],
-  ),
-  caption: "Specifiche Facilità di utilizzo"
-)
-== Manutenibilità
-#figure(
-  table(
-    columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [Manutenibilità del sistema], [TBD], [TBD],
-  ),
-  caption: "Specifiche Manutenibilità del sistema"
-) 
+// == Affidabilità
+// - *Densità degli errori*
+// #figure(
+//   table(
+//     columns: 3,
+//     rows: 30pt,
+//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+//     align(center+horizon,$display(frac("Test con errori","Test eseguiti"))*100$), align(center+horizon,"0%"), align(center+horizon,$<=10%$),
+//   ),
+//   caption: "Specifiche Densità errori"
+// )
+// == Efficienza
+// - *Efficienza del sistema*
+// #figure(
+//   table(
+//     columns: 3,
+//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+//     [Efficienza del sistema], [TBD], [TBD],
+//   ),
+//   caption: "Specifiche Efficienza del sistema"
+// )
+// == Usabilità
+// - *Facilità di utilizzo*
+// #figure(
+//   table(
+//     columns: 3,
+//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+//     [Facilità di utilizzo del sistema], [TBD], [TBD],
+//   ),
+//   caption: "Specifiche Facilità di utilizzo"
+// )
+// == Manutenibilità
+// #figure(
+//   table(
+//     columns: 3,
+//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+//     [Manutenibilità del sistema], [TBD], [TBD],
+//   ),
+//   caption: "Specifiche Manutenibilità del sistema"
+// ) 

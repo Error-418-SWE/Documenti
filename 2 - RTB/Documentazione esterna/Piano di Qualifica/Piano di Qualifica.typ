@@ -146,6 +146,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
 == Processi di supporto
 === Documentazione
 - *Indice di Gulpease*
+
+  - F = numero di frasi nel testo;
+  - L = numero di lettere nel testo;
+  - P = numero di parole nel testo.
 #figure(
   table(
     columns: 3,
@@ -156,11 +160,9 @@ Il presente documento include una serie di termini tecnici specifici del progett
   ),
   caption: "Specifiche Indice di Gulpease"
 )
--- F=numero di frasi nel testo;
--- L=numero di lettere nel testo;
--- P=numero di parole nel testo.
 
-- Errori ortografici
+
+- *Errori ortografici*
 #figure(
   table(
     columns: 3,

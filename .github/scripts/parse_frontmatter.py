@@ -59,12 +59,12 @@ fields = {
     "isExternalUse": "isExternalUse: "
 }
 
-needs_array_compose = ["authors","reviewers","missingMembers"]
+need_array_compose = ["authors","reviewers","missingMembers"]
 
 for line in params:
     for key in fields.keys():
         if key in line:
-            if key in needs_array_compose:
+            if key in need_array_compose:
                     fields[key] += array_compose(params,key+":")
             elif "time" in key:
                 fields[key] += ":".join(line.split(":")[1:]).strip()[:-1]

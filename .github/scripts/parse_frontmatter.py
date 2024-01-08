@@ -83,7 +83,7 @@ for line in params:
 #azioni aggiuntive di pulizia e dettaglio
 #composizione del titolo se verbale (il titolo è generato a compile time e non presente nel preambolo)
 if fields["date"].strip()[-1] != ":":
-    fields["title"] = "title: Verbale "+fields["date"].split(":")[1].strip()
+    fields["title"] = "title: Verbale " + fields["date"].split(":")[1].strip()
 #per mostrare la data, essa deve essere nel formato yyyy-mm-dd
 if fields["date"].strip()[-1] != ":":
     splitted_date = fields["date"].split(":")[1].replace("\"","").strip().split("/")

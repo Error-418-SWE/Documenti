@@ -5,15 +5,20 @@ const { title, description, docType, date, lastUpdated, externalParticipants, au
 ---
 
 <section>
-	<div class="description">
-		{description && <p>{description}</p>}
-	</div>
 	<div class="title">
 		<Icon name="information" size="2rem" />
 		<h1 id="info-title">Informazioni sul documento</h1>
 	</div>
 	{isExternalUse && <p class="ext">Uso esterno</p>}
 	<dl>
+		{
+				description && (
+				<>
+					<dt class="taxonomy">Sommario</dt>
+					<dd class="content">{description}</dd>
+				</>
+			)
+		}
 		{
 			authors && (
 				<>

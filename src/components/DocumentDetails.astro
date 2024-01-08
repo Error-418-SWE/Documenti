@@ -12,7 +12,7 @@ const { title, description, docType, date, lastUpdated, externalParticipants, au
 		<Icon name="information" size="2rem" />
 		<h1 id="info-title">Informazioni sul documento</h1>
 	</div>
-	{isExternalUse && <span>Uso esterno</span>}
+	{isExternalUse && <p class="ext">Uso esterno</p>}
 	<dl>
 		{
 			authors && (
@@ -90,6 +90,25 @@ const { title, description, docType, date, lastUpdated, externalParticipants, au
 </section>
 
 <style>
+
+	:root {
+		--badge-text: var(--sl-color-text);
+		--badge-bg: goldenrod;
+	}
+
+	:root[data-theme=dark] {
+		--badge-text: var(--sl-color-bg);
+		--badge-bg: goldenrod;
+	}
+
+	p.ext {
+		width: fit-content;
+		border-radius: 0.5rem;
+		background-color: var(--badge-bg);
+		padding: 0.5em 1em;
+		color: var(--badge-text);
+	}
+
 	.description {
 		font-style: italic;
 		margin-bottom: 2em;

@@ -174,7 +174,7 @@ L'analisi retrospettiva e il frequente contatto con il Proponente permettono di 
 La corretta applicazione del framework comporta il rispetto di determinati impegni, individuabili nello svolgimento di precisi eventi organizzativi quali:
 - *Sprint planning*: evento decisionale da tenersi prima dell'avvio dello sprint successivo. In questo incontro vengono stabiliti gli obiettivi da raggiungere e le task necessarie da compiere entro la fine dello stesso;
 
-- *Daily Scrum meeting*: evento di livellamento ove il team, in un metting della durata molto breve, si aggiorna sullo stato dei lavori e organizza il lavoro del giorno;
+- *Daily Scrum meeting*: evento di livellamento ove il team, in un meeting della durata molto breve, si aggiorna sullo stato dei lavori e organizza il lavoro del giorno;
 
 - *Sprint review*: al termine dello sprint si compie un'azione di validazione di quanto prodotto, valutando dunque gli obiettivi che sono stati (o meno) raggiunti;
 
@@ -463,7 +463,7 @@ Nel quinto sprint il team svolge compiti correttivi incentrati sul miglioramento
 == Sesto Sprint dal 11-12-2023 al 18-12-2023
 
 === Obiettivi prefissati
-Gli obbiettivi del sesto sprint si focalizzano sul miglioramento dei PoC e dei diversi documenti. Nel dettaglio:
+Gli obiettivi del sesto sprint si focalizzano sul miglioramento dei PoC e dei diversi documenti. Nel dettaglio:
 - avanzare con la redazione del PoC "A" integrando il funzionamento dei bin;
 - approfondire e migliorare l'utilizzo di Docker nel PoC corrispondente;
 - migliorare le Action di GitHub risolvendo eventuali problemi o aggiungendo funzionalità;
@@ -1023,7 +1023,7 @@ Durante il meeting di retrospettiva sono insorte le seguenti problematiche:
   - fornendo una possibile correzione, quando appropriato;
   - nel caso di più occorrenze dello stesso errore, segnalarle tutte. Per evitare ripetizioni, fornire una valutazione della prima occorrenza ed inserire un riferimento a tale conversazione nelle occorrenze successive;
 - Per accelerare il lavoro sulle Norme di Progetto, chi ha redatto le Norme di Progetto nel corso degli sprint precedenti continuerà l'aﬃancamento nel corso dello sprint successivo;
-- La natura esplorativa del PoC richiede ﬂessibilità nella pianiﬁcazione, ma si sottolinea la necessità di continuare tracciare le attività per riferimento futuro.
+- La natura esplorativa del PoC richiede ﬂessibilità nella pianiﬁcazione, ma si sottolinea la necessità di continuare a tracciare le attività per riferimento futuro.
 
 === Analisi costi di sprint effettivi
 

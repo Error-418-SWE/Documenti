@@ -98,13 +98,14 @@ Le tecnologie individuate o suggerite durante i processi di analisi e progettazi
 == Introduzione
 == Periodi di sviluppo
 === Periodo RTB
-- Analisi dei requisiti
-- Proof of Concept
-- date nostra suddivisione
+- Analisi dei Requisiti;
+- Proof of Concept;
+- Date nostra suddivisione.
 === Periodo PB
-Ancora da definire
+Ancora da definire.
 === Periodo CA
-Ancora da definire
+Ancora da definire.
+
 = Preventivo dei costi di realizzazione
 == Introduzione
 Delineati i rischi, le relative contromisure e il calendario di progetto, si è definito, mediante una pianificazione retrospettiva, un preventivo iniziale dei costi di realizzazione del progetto.\

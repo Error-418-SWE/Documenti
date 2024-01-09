@@ -36,13 +36,13 @@ jobs:
       - name: Extract path
         id: path
         run: |
-          FILES="${{ steps.files.outputs.all_changed_files }}"
-          echo "FILE_PATH=$(dirname "$FILES")" >> $GITHUB_OUTPUT
+          FILE="${{ steps.files.outputs.all_changed_files }}"
+          echo "FILE_PATH=$(dirname "$FILE")" >> $GITHUB_OUTPUT
       - name: Extract name w/o extension
         id: name
         run: |
-          FILES="${{ steps.files.outputs.all_changed_files }}"
-          echo "FILE_NAME=$(basename "${FILES}" .typ)" >> $GITHUB_OUTPUT
+          FILE="${{ steps.files.outputs.all_changed_files }}"
+          echo "FILE_NAME=$(basename "${FILE}" .typ)" >> $GITHUB_OUTPUT
       - name: Get latest version
         id: version
         run: |

@@ -37,7 +37,12 @@ jobs:
         id: path
         run: |
           FILE="${{ steps.files.outputs.all_changed_files }}"
-          echo "FILE_PATH=$(dirname "$FILE")" >> $GITHUB_OUTPUT
+          if [[ "${{ steps.name.outputs.file_name }}" == *"Glossario"* ]]; then
+            echo "FILE_PATH=${{ vars.BASELINE_DIR }}/Glossario" >> $GITHUB_OUTPUT
+          fi
+          if [[ "${{ steps.name.outputs.file_name }}" != *"Glossario"* ]]; then
+            echo "FILE_PATH=$(dirname "$FILE")" >> $GITHUB_OUTPUT
+          fi
       - name: Check number of changed files
         run: |
           if [[ "${{ steps.path.outputs.file_path }}" == *".typ"* ]]; then

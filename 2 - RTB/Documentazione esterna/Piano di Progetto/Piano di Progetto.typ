@@ -112,10 +112,10 @@ Delineati i rischi, le relative contromisure e il calendario di progetto, si è 
 È altresì corretto evidenziare come i membri del gruppo non siano dotati di esperienza sufficiente per fornire un preventivo corretto e preciso sin dagli inizi dello sviluppo: per tale motivo, il prezzo indicato sarà soggetto a modifiche con l'avanzamento del progetto (seppur mai superando il prezzo preventivato in candidatura).
 === Analisi dei ruoli
 ==== Responsabile
-Il Responsabile è un ruolo presente durante l'intero progetto. Il suo compito è quello di gestire il team e di assicurarsi che lo sviluppo proceda secondo le tempistiche predefinite e le aspettative del Committente. Deve inoltre redigere e far rispettare le Norme di Progetto, nonché le linee guida di sviluppo che l'intero team deve rispettare. Essendo il ruolo più costoso, il numero di ore è stato scelto per favorire l'efficienza e non pesare eccessivamente sul costo finale.
+Il Responsabile è un ruolo presente durante l'intero progetto. Il suo compito è quello di gestire il gruppo e di assicurarsi che lo sviluppo proceda secondo le tempistiche predefinite e le aspettative del Committente. Deve inoltre redigere e far rispettare le Norme di Progetto, nonché le linee guida di sviluppo che l'intero gruppo deve rispettare. Essendo il ruolo più costoso, il numero di ore è stato scelto per favorire l'efficienza e non pesare eccessivamente sul costo finale.
 
 ==== Amministratore
-L'Amministratore è un ruolo presente durante l'intero progetto, in quanto si occupa di predisporre e controllare il corretto utilizzo delle procedure e degli strumenti definiti nelle Norme di Progetto, andando anche a gestire e implementare automatismi, migliorando così l'efficienza del team. Il monte ore scelto è tale, poiché essendo questo un ruolo di controllo, non sono richieste un numero elevato di ore.
+L'Amministratore è un ruolo presente durante l'intero progetto, in quanto si occupa di predisporre e controllare il corretto utilizzo delle procedure e degli strumenti definiti nelle Norme di Progetto, andando anche a gestire e implementare automatismi, migliorando così l'efficienza del gruppo. Il monte ore scelto è tale, poiché essendo questo un ruolo di controllo, non sono richieste un numero elevato di ore.
 
 ==== Analista
 L'Analista è presente esclusivamente nelle fasi iniziali del progetto, poiché si occupa della raccolta e dell'elaborazione dei requisiti. Ciò comporta un numero di ore ridotto e una distribuzione delle stesse unicamente nelle prime settimane del progetto.
@@ -125,7 +125,7 @@ Il Progettista ha il compito di delineare e documentare l'architettura del prodo
 
 - soddisfare i requisiti raccolti nelle fasi pregresse;
 
-- aiutare il team di sviluppo con una documentazione chiara ed esaustiva.
+- aiutare il gruppo di sviluppo con una documentazione chiara ed esaustiva.
 
 Nello stabilire l'architettura deve quindi indicare anche quali saranno le tecnologie da utilizzare per la sua implementazione.
 Ritenendolo un ruolo impegnativo dal punto di vista temporale, il numero di ore risulta maggiore rispetto ai ruoli precedenti.
@@ -134,7 +134,7 @@ Ritenendolo un ruolo impegnativo dal punto di vista temporale, il numero di ore 
 Il Programmatore ha il compito di tradurre in codice eseguibile l'architettura prodotta dal progettista. Il ruolo prevede un numero di ore molto elevato poiché riteniamo il lavoro più dispendioso a livello temporale rispetto a quello delle altre figure professionali.
 
 ==== Verificatore
-Il Verificatore è un ruolo presente durante l'intero progetto, che si occupa di mantenere degli standard qualitativi sul lavoro del team: egli deve verificare la correttezza, esaustività e coerenza di tutti i documenti, e nella fase di codifica sarà colui che si occuperà di controllare la qualità del software prodotto. Proprio per questo il totale delle ore risulta essere il secondo più elevato dopo il Programmatore.
+Il Verificatore è un ruolo presente durante l'intero progetto, che si occupa di mantenere degli standard qualitativi sul lavoro del gruppo: egli deve verificare la correttezza, esaustività e coerenza di tutti i documenti, e nella fase di codifica sarà colui che si occuperà di controllare la qualità del software prodotto. Proprio per questo il totale delle ore risulta essere il secondo più elevato dopo il Programmatore.
 
 === Suddivisione delle ore dei ruoli
 La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo di competenze trasversali nei vari ruoli presenti all'interno del progetto.
@@ -166,7 +166,7 @@ Il costo totale preventivato è di € 13.370,00.
 La pianificazione ricopre un ruolo fondamentale nello sviluppo dell'intero progetto. Svolge il compito di stabilire quali obiettivi raggiungere in periodi di tempo determinati, organizzando le risorse in modo da rendere lo sviluppo efficace ed efficiente. Lo scopo principale deve essere pianificare le azioni da intraprendere nel periodo successivo, definendo tempistiche, modalità e obiettivi.
 \
 == Metodologia di lavoro Scrum
-Il team si è imposto una metodologia di lavoro _agile_ mediante l'applicazione del framework Scrum, determinando periodi di lavoro di durata fissa terminanti con un'analisi retrospettiva degli stessi. \
+Il gruppo si è imposto una metodologia di lavoro _agile_ mediante l'applicazione del framework Scrum, determinando periodi di lavoro di durata fissa terminanti con un'analisi retrospettiva degli stessi. \
 Tale approccio è definibile _adattivo_, in grado dunque di adattarsi ad eventuali modifiche in corso d'opera, in merito soprattutto a cambiamenti di specifiche e requisiti.\
 L'intero sviluppo è dunque organizzato in iterazioni di lunghezza fissa, denominati in SCRUM come _sprint_. \
 L'analisi retrospettiva e il frequente contatto con il Proponente permettono di indirizzare lo sviluppo verso la realizzazione di un prodotto finale che si attenga quanto più possibile ai requisiti desiderati dall'azienda e alle sue aspettative, e una documentazione dettagliata e precisa che evolve e migliora insieme al prodotto.
@@ -175,7 +175,7 @@ L'analisi retrospettiva e il frequente contatto con il Proponente permettono di 
 La corretta applicazione del framework comporta il rispetto di determinati impegni, individuabili nello svolgimento di precisi eventi organizzativi quali:
 - *Sprint planning*: evento decisionale da tenersi prima dell'avvio dello sprint successivo. In questo incontro vengono stabiliti gli obiettivi da raggiungere e le task necessarie da compiere entro la fine dello stesso;
 
-- *Daily Scrum meeting*: evento di livellamento ove il team, in un meeting della durata molto breve, si aggiorna sullo stato dei lavori e organizza il lavoro del giorno;
+- *Daily Scrum meeting*: evento di livellamento ove il gruppo, in un meeting della durata molto breve, si aggiorna sullo stato dei lavori e organizza il lavoro del giorno;
 
 - *Sprint review*: al termine dello sprint si compie un'azione di validazione di quanto prodotto, valutando dunque gli obiettivi che sono stati (o meno) raggiunti;
 
@@ -270,7 +270,7 @@ Gli obiettivi dello sprint 2 sono:
 - inizio dell'individuazione e della stesura degli use case.
 
 === Preventivo costi
-Nel secondo sprint il team svolge compiti correttivi incentrati sul miglioramento dei documenti e compiti orientati all'individuazione e alla stesura degli use case. In quest'ottica, vede l'impiego principale delle figure:
+Nel secondo sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti e compiti orientati all'individuazione e alla stesura degli use case. In quest'ottica, vede l'impiego principale delle figure:
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
@@ -373,7 +373,7 @@ Gli obiettivi dello sprint 4 sono:
  - parametrizzazione degli elementi presenti nell'applicazione.
 
 === Preventivo costi
-Nel quarto sprint il team svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
+Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti, al fine di aggiornare il documento di Piano di Progetto;
@@ -421,7 +421,7 @@ Gli obiettivi dello sprint 5 sono:
 - scrittura del glossario.
 
 === Preventivo costi
-Nel quinto sprint il team svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
+Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira;
@@ -475,8 +475,8 @@ Gli obiettivi del sesto sprint si focalizzano sul miglioramento dei PoC e dei di
 
 
 === Preventivo costi
-Nel sesto sprint il team svolge compiti correttivi incentrati sul miglioramento dei documenti Analisi dei Requisiti e Norme di Progetto.
-Il team continua a produrre e migliorare PoC e inizia a scrivere il documento Piano di Qualifica.
+Nel sesto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti Analisi dei Requisiti e Norme di Progetto.
+Il gruppo continua a produrre e migliorare PoC e inizia a scrivere il documento Piano di Qualifica.
 In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
@@ -524,7 +524,7 @@ Gli obiettivi del settimo sprint si focalizzano sul completamento del PoC, termi
 - implementazione dell'automazione che evidenzia i termini presenti nel glossario all'interno dei documenti.
 
 === Preventivo costi
-Nel settimo sprint i compiti del team sono incentrati sulla realizzazione del PoC finale e sul proseguimento e miglioramento di tutti i documenti necessari alla Requirements and Technology Baseline. Di conseguenza saranno essenziali le figure di:
+Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del PoC finale e sul proseguimento e miglioramento di tutti i documenti necessari alla Requirements and Technology Baseline. Di conseguenza saranno essenziali le figure di:
 - *Responsabile*: al fine di coordinare le attività e proseguire la redazione delle Norme di Progetto;
 - *Amministratore*: al fine di:
   - redigere i verbali;
@@ -588,7 +588,7 @@ Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività
 - realizzazione di una dashboard per monitorare le metriche definite nel Piano di Qualifica.
 
 === Preventivo costi
-Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di conseguenza saranno necessari tutti i ruoli presenti nel team:
+Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di conseguenza saranno necessari tutti i ruoli presenti nel gruppo:
 - *Responsabile*: al fine di coordinare le attività e proseguire la redazione delle Norme di Progetto;
 - *Amministratore*: al fine di:
   - redigere i verbali;
@@ -707,13 +707,13 @@ Il ruolo dell'Amministratore invece, incaricato di gestire il reparto tecnologic
 === Obiettivi mancati
 Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obiettivi mancati dello sprint precedente.
 === Analisi problematiche insorte
-- Il team ha notato la mancanza di una struttura comune nei verbali, che porta a documenti senza una precisa convenzione e rallentamenti in fase di redazione;
+- Il gruppo ha notato la mancanza di una struttura comune nei verbali, che porta a documenti senza una precisa convenzione e rallentamenti in fase di redazione;
 - Sono emerse difficoltà nelle modalità di utilizzo del repository comune, nonostante sia stato dedicato del tempo per la formazione;
 - Scarsa reattività in fase di review.
 === Risoluzioni attuate
 - Per risolvere la problematica di una mancanza di struttura nei verbali, si sono fissate delle convenzioni da seguire nel documento di Norme di Progetto;
-- Per formare meglio il team sulle modalità di utilizzo del repository, è stato dedicato tempo in più per fornire tutorial video e testuali in supporto del team;
-- Per ovviare alla scarsa reattività in fase di review, il team prende la responsabilità di visionare spesso la casella mail personale per capire quando c'è bisogno di una review o di risolvere una conversation GitHub, oltre a sollecitare i Verificatori via i canali di comunicazione interni del team in caso di mancate revisioni.
+- Per formare meglio il gruppo sulle modalità di utilizzo del repository, è stato dedicato tempo in più per fornire tutorial video e testuali in supporto del gruppo;
+- Per ovviare alla scarsa reattività in fase di review, il gruppo prende la responsabilità di visionare spesso la casella mail personale per capire quando c'è bisogno di una review o di risolvere una conversation GitHub, oltre a sollecitare i Verificatori via i canali di comunicazione interni del gruppo in caso di mancate revisioni.
 
 === Analisi costi di sprint effettivi
 #figure(
@@ -736,7 +736,7 @@ Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obi
 )
 
 A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore effettivo diverso a quanto preventivato:
-- Amministratore: la scarsa comprensione delle modalità di utilizzo del repository da parte dei membri del team ha portato gli Amministratori a dedicare delle ore in più mirate al perfezionamento della formazione dei membri del gruppo;
+- Amministratore: la scarsa comprensione delle modalità di utilizzo del repository da parte dei membri del gruppo ha portato gli Amministratori a dedicare delle ore in più mirate al perfezionamento della formazione dei membri del gruppo;
 
 - Verificatore: la scarsa reattività in fase di review ha portato un impegno inferiore alle attività di revisione.
 
@@ -764,7 +764,7 @@ Nonostante la realizzazione soddisfacente della maggior parte degli obiettivi co
 - si è riscontrata una pianificazione non ottimale e superficiale, attribuibile alla mancanza di un dettagliato processo di pianificazione durante la riunione precedente l'avvio dello sprint;
 - problemi sono sorti a causa della mancata definizione di standard per la creazione dei grafici di Gantt e burndown, comportando una stesura parziale dei paragrafi nel documento del Piano di Progetto;
 - la durata dei meeting ha superato le aspettative a causa di alcune inefficienze temporali;
-- il team ha rilevato la mancanza di standard per designare le persone responsabili della redazione dei verbali durante lo sprint.
+- il gruppo ha rilevato la mancanza di standard per designare le persone responsabili della redazione dei verbali durante lo sprint.
 
 === Risoluzioni attuate
 Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentrano su un'organizzazione e un'attenzione maggiore nella fase di pianificazione, oltre alla definizione di standard relativi ai grafici da inserire nei documenti e relativi allo svolgimento dei meeting e redazione dei rispettivi verbali. In particolare:
@@ -827,11 +827,11 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
 === Obiettivi mancati
 Tutti gli obiettivi sono stati raggiunti.
 === Analisi problematiche insorte
-Il team ha notato in fase di retrospettiva una scarsa reattività in fase di review e verifica, che portano al rallentamento del lavoro. Le review
-sono state rallentate anche dalla presenza di numerosi merge conflicts, che il team si è ritrovato a gestire per la prima volta nel progetto.\
+Il gruppo ha notato in fase di retrospettiva una scarsa reattività in fase di review e verifica, che portano al rallentamento del lavoro. Le review
+sono state rallentate anche dalla presenza di numerosi merge conflicts, che il gruppo si è ritrovato a gestire per la prima volta nel progetto.\
 Inoltre si è presa coscienza della necessità di apportare migliorie al processo di gestione di Jira.
 === Risoluzioni attuate
-Il team ha preso in considerazione l'utilizzo di Graphite per velocizzare il processo di review e creare pull request brevi.\
+Il gruppo ha preso in considerazione l'utilizzo di Graphite per velocizzare il processo di review e creare pull request brevi.\
 Inoltre il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'utilizzo di Jira, per migliorare l'amministrazione del progetto.
 === Analisi costi di sprint effettivi
 #set text(

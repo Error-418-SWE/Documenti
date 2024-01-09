@@ -17,7 +17,7 @@
 
 == Scopo del documento
 
-Il presente documento descrive i casi d'uso e i requisiti del progetto Warehouse Management 3D, elaborati a partire dal capitolato C5 proposto da Sanmarco Informatica S.p.A e assegnato all'organizzazione dal Committente.
+Il presente documento descrive i casi d'uso e i requisiti del progetto _Warehouse Management 3D_, elaborati a partire dal capitolato C5 proposto da Sanmarco Informatica S.p.A e assegnato all'organizzazione dal Committente.
 
 == Definizioni
 Il presente documento include lessico di dominio, per il quale è previsto il documento di Glossario. Le parole del Glossario sono denotate dal simbolo #sub("G") al pedice.
@@ -30,7 +30,7 @@ Il prodotto software oggetto di questo documento è un gestionale di magazzino (
 
 == Ambito del prodotto
 
-Il prodotto software oggetto di questo documento è denominato WMS3, un gestionale di magazzino che offre le seguenti funzionalità:
+Il prodotto software oggetto di questo documento è denominato *WMS3*, un gestionale di magazzino che offre le seguenti funzionalità:
 - visualizzazione tridimensionale di un magazzino, con possibilità di muovere la vista;
 - visualizzazione delle informazioni della merce presente in magazzino;
 - caricamento dei dati relativi alle merci da un database SQL;
@@ -66,11 +66,11 @@ WMS3 si integra con, ma non comprende nel proprio ambito:
 
 ==== Interfacce utente
 
-WMS3 è una web application acceduta e operata tramite browser. L'interfaccia utente (IU) è web-based e responsive.
+WMS3 è una _web application_ acceduta e operata tramite browser. L'interfaccia utente (IU) è _web-based_ e _responsive_.
 
 Lo scenario di interazione primario avviene tramite mouse e tastiera; tuttavia, è prevista la piena operabilità anche tramite touchscreen. Sarà possibile operare da dispositivi mobili quali tablet e smartphone.
 
-Le funzionalità esposte all'utente variano in base all'ampiezza della viewport del dispositivo in uso.
+Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport_ del dispositivo in uso.
 
 ==== Interfacce hardware
 

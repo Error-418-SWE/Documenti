@@ -7,7 +7,7 @@ on:
         description: "The path to the changed file's directory"
         value: ${{ jobs.fetch.outputs.file_path }}
       file_name:
-        description: "The changed file name"
+        description: "The name of the changed file"
         value: ${{ jobs.fetch.outputs.file_name }}
       latest_version:
         description: "The current document version"

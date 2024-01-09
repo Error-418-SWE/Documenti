@@ -31,6 +31,7 @@ jobs:
         with:
           files: |
             **.typ
+            Glossario.json
       - name: Extract path
         id: path
         run: |

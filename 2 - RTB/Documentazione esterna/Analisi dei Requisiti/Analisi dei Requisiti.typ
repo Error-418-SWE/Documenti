@@ -138,20 +138,20 @@ WMS3 dovrà inviare messaggi ad uno o più servizi esterni per comunicare gli or
 //Such a diagram is not intended to show a design of a product, but simply shows the logical relationships among variables.
 
 Il progetto sarà caratterizzato da:
-- l'ambiente:
+- *ambiente*:
   - l'interno di un magazzino, di forma quadrata o rettangolare delimitato sui quattro lati che rappresenta il reale magazzino su cui deve operare l'addetto;
   - caratterizzato da una griglia (o grid) a terra che permette all'utente di collocare gli oggetti nell'ambiente con maggiore o minore precisione a seconda delle esigenze;
   - le dimensioni e la finezza della grid devono essere modificabili in ogni momento;
   - deve essere navigabile tramite diverse periferiche (freccie direzionali, mouse, touch del dispositivo) e in diversi modi (sui tre assi, zoom-in/zoom-out, rotazione).
-- scaffalature:
+- *scaffalature*:
   - scaffali con caratteristiche personalizzabili (altezza, larghezza, profondità, numero di scaffali) che rappresentano i reali scaffali nel magazzino;
   - al loro interno contengono dei bin;
   - possono essere spostati, modificati, creati o eliminati.
-- bin:
+- *bin*:
   - è possibile crearli, modificarli o eliminarli;
   - leggere le informazioni riguardanti il bin stesso e il loro contenuto;
   - rappresentano lo spazio occupabile da un prodotto nel magazzino.
-- prodotti:
+- *prodotti*:
   - rappresentano i reali prodotti contenuti nel magazzino;
   - contengono diverse informazioni riguardo il prodotto;
   - sono contenuti in un bin e possono essere spostati verso un bin differente.
@@ -174,7 +174,8 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 === Ipotesi e dipendenze
 
 + Disponibilità di un database SQL;
-+ Disponibilità di un browser compatibile con WebGL.
++ Disponibilità di un browser compatibile con WebGL;
++ Disponibilità di un sistema proprietario per notificare, in questo caso, la richiesta di spostamento di un prodotto all'interno del magazzino al personale designato.
 
 = Riferimenti
 

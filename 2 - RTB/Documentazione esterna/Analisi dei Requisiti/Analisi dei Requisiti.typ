@@ -119,7 +119,11 @@ Il sistema deve permettere all'utente le seguenti operazioni:
 Modifiche alla posizione dei prodotti comporta l'invio di una notifica a gli addetti che provvederanno ad attuare lo spostamento.
 
 ==== Requisiti di adattamento al contesto
-
+//The site adaptation requirements include:
+//a) definition of the requirements for any data or initialization sequences that are specific to a given
+//site, mission or operational mode (e.g., grid values, safety limits, etc.);
+//b) specification of the site or mission-related features that should be modified to adapt the software
+//to a particular installation.
 WMS3 non richiede l'installazione di particolari librerie software o specifici sistemi operativi grazie a Docker, che permette di costruire dei container che si occupano di gestire le dipendenze e Docker Compose che si occupa di gestire applicazioni multi-container.\
 Il sistema permette libertà anche dal punto di vista del sistema di notifiche interne al magazzino e del database, visto che l'applicazione permette configurazione tramite API RESTful.
 

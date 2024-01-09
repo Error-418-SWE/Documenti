@@ -32,6 +32,7 @@ jobs:
           files: |
             **.typ
             Glossario.json
+          files_ignore: template.typ
       - name: Extract path
         id: path
         run: |

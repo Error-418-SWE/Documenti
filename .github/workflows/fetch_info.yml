@@ -38,6 +38,12 @@ jobs:
         run: |
           FILE="${{ steps.files.outputs.all_changed_files }}"
           echo "FILE_PATH=$(dirname "$FILE")" >> $GITHUB_OUTPUT
+      - name: Check number of changed files
+        run: |
+          if [[ "${{ steps.path.outputs.file_path }}" == *".typ"* ]]; then
+            echo "::error::More than one Typst source have been modified. Aborting."
+            exit 1
+          fi
       - name: Extract name w/o extension
         id: name
         run: |
@@ -52,9 +58,3 @@ jobs:
           echo "::notice::Path: ${{ steps.path.outputs.file_path }}"
           echo "::notice::Name: ${{ steps.name.outputs.file_name }}"
           echo "::notice::Version: ${{ steps.version.outputs.latest_version }} (current)"
-      - name: Check number of changed files
-        run: |
-          if [[ "${{ steps.path.outputs.file_path }}" == *".typ"* ]]; then
-            echo "::error::More than one Typst source have been modified. Aborting."
-            exit 1
-          fi

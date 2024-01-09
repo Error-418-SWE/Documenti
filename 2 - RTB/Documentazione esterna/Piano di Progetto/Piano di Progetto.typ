@@ -108,8 +108,10 @@ Ancora da definire.
 
 = Preventivo dei costi di realizzazione
 == Introduzione
-Delineati i rischi, le relative contromisure e il calendario di progetto, si è definito, mediante una pianificazione retrospettiva, un preventivo iniziale dei costi di realizzazione del progetto.\
+Delineati i rischi, le relative contromisure e il calendario di progetto, si è definito, mediante una pianificazione retrospettiva, un preventivo iniziale dei costi di realizzazione del progetto.
+
 È altresì corretto evidenziare come i membri del gruppo non siano dotati di esperienza sufficiente per fornire un preventivo corretto e preciso sin dagli inizi dello sviluppo: per tale motivo, il prezzo indicato sarà soggetto a modifiche con l'avanzamento del progetto (seppur mai superando il prezzo preventivato in candidatura).
+
 === Analisi dei ruoli
 ==== Responsabile
 Il Responsabile è un ruolo presente durante l'intero progetto. Il suo compito è quello di gestire il gruppo e di assicurarsi che lo sviluppo proceda secondo le tempistiche predefinite e le aspettative del Committente. Deve inoltre redigere e far rispettare le Norme di Progetto, nonché le linee guida di sviluppo che l'intero gruppo deve rispettare. Essendo il ruolo più costoso, il numero di ore è stato scelto per favorire l'efficienza e non pesare eccessivamente sul costo finale.
@@ -152,8 +154,8 @@ La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo d
     [Rosario Zaccone], [13], [10], [10], [14], [30], [18], [95],
     [Silvio\ Nardo], [13], [10], [10], [14], [30], [18], [95],
     [Totale Ore], [91], [70], [70], [98], [210], [126], [665],
-    [Costo Orario (€)], [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
-    [Costo Ruolo (€)], [2.730], [1.400], [1.750], [2.450], [3.150], [1.890], [],
+    [Costo\ Orario (€)], [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo\ Ruolo (€)], [2.730], [1.400], [1.750], [2.450], [3.150], [1.890], [],
   ),
   caption: "Suddivisione delle ore dei ruoli"
 )

@@ -100,14 +100,14 @@ Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
 //Specify the normal and special operations required by the user such as:
 // - the various modes of operations in the user organization*/
 Il sistema permette di attuare e visualizzare diverse operazioni di gestione del magazzino, in modo da semplificare l'interazione tra gestori e addetti.
-Il sistema deve permettere all'utente le seguenti operazioni:
+Il sistema deve permettere al *responsabile del magazzino* le seguenti operazioni:
 - creazione del magazzino (manualmente o tramite caricamento di un file SVG);
 - modificare le dimensioni dell'ambiente 3D (lunghezza, larghezza, altezza);
-- caricare un file SVG;
-- creare e modificare le dimensione di scaffali (lunghezza e larghezza);
+- creare e modificare le dimensione di scaffali (larghezza, profondità e altezza);
 - eliminare gli scaffali;
-- spostare gli scaffali nell'ambiente;
+- riposizionare gli scaffali nell'ambiente;
 - definire il numero di piani dello scaffale;
+- definire il numero di bin per piano;
 - creare e modificare i bin (lunghezza, larghezza e altezza);
 - leggere informazioni riguardo agli scaffali e al contenuto dei bin;
 - eliminare i bin;
@@ -116,7 +116,7 @@ Il sistema deve permettere all'utente le seguenti operazioni:
 - ricercare un prodotto nel magazzino;
 - visualizzare ed esplorare il magazzino.
 
-Modifiche alla posizione dei prodotti comporta l'invio di una notifica a gli addetti che provvederanno ad attuare lo spostamento.
+Modifiche alla posizione dei prodotti comporta l'invio di una notifica a gli *addetti* che provvederanno ad attuare lo spostamento.
 
 ==== Requisiti di adattamento al contesto
 //The site adaptation requirements include:
@@ -141,7 +141,7 @@ WMS3 dovrà inviare messaggi ad uno o più servizi esterni per comunicare gli or
 // - textual or graphical methods can be used to show the different functions and their relationships.
 //Such a diagram is not intended to show a design of a product, but simply shows the logical relationships among variables.
 
-Il progetto sarà caratterizzato da:
+Il prodotto sarà caratterizzato da:
 - *ambiente*:
   - l'interno di un magazzino, di forma quadrata o rettangolare delimitato sui quattro lati che rappresenta il reale magazzino su cui deve operare l'addetto;
   - caratterizzato da una griglia (o grid) a terra che permette all'utente di collocare gli oggetti nell'ambiente con maggiore o minore precisione a seconda delle esigenze;

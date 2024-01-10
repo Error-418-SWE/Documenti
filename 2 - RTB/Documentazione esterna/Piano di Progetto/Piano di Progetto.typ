@@ -218,7 +218,8 @@ La retrospettiva di uno sprint si articolerà in:
 == Primo Sprint dal 06-11-2023 al 13-11-2023
 
 === Obiettivi prefissati
-Gli obiettivi del primo sprint si concentrano sulla correzione e sul miglioramento dei documenti e della repository in seguito alla valutazione esposta dal Committente.\
+Gli obiettivi del primo sprint si concentrano sulla correzione e sul miglioramento dei documenti e della repository in seguito alla valutazione esposta dal Committente.
+
 Gli obiettivi dello sprint 1 sono:
 - riconfigurazione della repository;
 - revisione preventivo costi con aggiornamento della suddivisione delle ore;
@@ -229,7 +230,7 @@ Gli obiettivi dello sprint 1 sono:
 - contatto con l'azienda Proponente per fissare un primo meeting di analisi.
 
 === Preventivo costi
-Il primo sprint, il gruppo svolge compiti correttivi e incentrati sul miglioramento dei documenti e dei processi. In quest'ottica, vede l'impiego principale delle figure:
+Nel primo sprint il gruppo svolge compiti correttivi e incentrati sul miglioramento dei documenti e dei processi. In quest'ottica, vede l'impiego principale delle figure:
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
@@ -238,7 +239,7 @@ Il primo sprint, il gruppo svolge compiti correttivi e incentrati sul migliorame
 
 - *Analista*: al fine di redigere le principali domande da porre al Proponente in merito al dominio tecnologico da utilizzare.
 
-In questo primo periodo, l'assegnazione dei ruoli di progettista e di programmatore è ritenuta precoce.
+In questo primo periodo, l'assegnazione dei ruoli di Progettista e di Programmatore è ritenuta precoce.
 
 #figure(
   table(
@@ -647,26 +648,32 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
 = Consuntivo del progetto
 
 == Introduzione
-Il consuntivo di ogni sprint permette di avere una valutazione critica dell'avanzamento dello sviluppo, valutando in modo oggettivo i punti positivi e negativi dello sprint terminato. \
-Questa fase di retrospettiva è essenziale al fine di individuare possibili miglioramenti e di analizzare se la pianificazione ideata all'inizio dello sprint abbia trovato concretezza. \
+Il consuntivo di ogni sprint permette di avere una valutazione critica dell'avanzamento dello sviluppo, valutando in modo oggettivo i punti positivi e negativi dello sprint terminato.
+
+Questa fase di retrospettiva è essenziale al fine di individuare possibili miglioramenti e di analizzare se la pianificazione ideata all'inizio dello sprint abbia trovato concretezza.
 
 == Primo Sprint dal 06-11-2023 al 13-11-2023
 
 === Obiettivi raggiunti
-- Revisione preventivo costi con aggiornamento della suddivisione delle ore, con conseguente riduzione del costo totale;
+- Revisione preventivo costi con aggiornamento della suddivisione delle ore e conseguente riduzione del costo totale;
 - Implementazione di automazioni per la compilazione dei documenti;
-- Stesura delle domande in merito al dominio tecnologico del capitolato;
+- Stesura delle domande in merito al dominio tecnologico del capitolato.
+
 === Obiettivi mancati
 - Riconfigurazione della repository;
 - Implementazione di automazioni per il versionamento dei documenti;
 - Contatto con l'azienda Proponente per comunicare l'esito della candidatura;
 - Contatto con l'azienda Proponente per fissare un primo meeting di analisi.
+
 === Analisi problematiche insorte
-A causa di una sottostima del carico di lavoro per l'implementazione delle automazioni tramite GitHub Action, alcuni obiettivi riguardanti la repository sono stati mancati, creando un effetto a catena che ha temporaneamente bloccato il caricamento di documenti nella repository.\
-Un altro problema riguarda la comunicazione con l'azienda Proponente: la mail inviata sfortunatamente non ha ricevuto riscontro in tempo, impedendo di procedere ulteriormente con l'analisi dei requisiti e/o la programmazione di un meeting con l'azienda.\
+A causa di una sottostima del carico di lavoro per l'implementazione delle automazioni tramite GitHub Actions, alcuni obiettivi sono stati mancati, creando un effetto a catena che ha temporaneamente bloccato il caricamento di documenti nella repository.
+
+Un altro problema riguarda la comunicazione con l'azienda Proponente: sfortunatamente, la mail inviata non ha ricevuto riscontro in tempo, impedendo di procedere ulteriormente con l'analisi dei requisiti e la programmazione di un meeting con l'azienda.
+
 === Risoluzioni attuate
-Le automazioni riguardanti il versionamento verranno concluse nello sprint successivo.\
-La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di un'azione di sollecito con una seconda mail e successivamente la richiesta di stabilire un nuovo canale di comunicazione.
+Le automazioni riguardanti il versionamento verranno concluse nello sprint successivo.
+
+La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di un'azione di sollecito con una seconda mail, e successivamente la richiesta di stabilire un nuovo canale di comunicazione.
 
 === Analisi costi di sprint effettivi
 
@@ -690,13 +697,14 @@ La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di u
 )
 
 A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effettivo inferiore a quanto preventivato:
-- Amministratore: il blocco temporaneo della repository e la mancata risposta dell'azienda non hanno permesso la produzione di documenti, limitando così il lavoro del responsabile;
+- Responsabile: il blocco temporaneo della repository e la mancata risposta dell'azienda non hanno permesso la produzione di documenti, limitando così il lavoro del Responsabile;
 
 - Analista: la mancata risposta da parte dell'azienda ha impedito agli analisti di iniziare l'analisi dei requisiti, limitando dunque il lavoro alla stesura di domande in merito al dominio tecnologico;
 
 - Verificatore: il mancato avanzamento ha prodotto documentazione ridotta rispetto a quanto preventivato, pertanto il Verificatore ha svolto un numero inferiore di ore.
 
-Il ruolo dell'Amministratore invece, incaricato di gestire il reparto tecnologico implementando gli automatismi necessari, a causa di difficoltà incontrate nell'implementazione (errori, testing, verifica), ha visto un aumento delle ore rispetto a quanto preventivato.
+Il ruolo dell'Amministratore, invece, ha visto un aumento delle ore rispetto a quanto preventivato, a causa di difficoltà incontrate nell'implementazione delle automazioni (errori, testing, verifica).
+
 === Burndown-chart
 [da inserire]
 

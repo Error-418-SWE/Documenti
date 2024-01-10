@@ -263,31 +263,32 @@ In questo primo periodo, l'assegnazione dei ruoli di Progettista e di Programmat
 === Diagramma di Gantt
 [da inserire]
 
-== Secondo Sprint dal 12-11-2023 al 20-11-2023
+== Secondo Sprint dal 13-11-2023 al 19-11-2023
 
 === Obiettivi prefissati
-Gli obiettivi del secondo sprint si concentrano sull'individuazione degli use case del progetto, sul perfezionamento delle automazioni e sulla stesura iniziale delle Norme di Progetto. \
+Gli obiettivi del secondo sprint si concentrano sull'individuazione degli Use Case del progetto, sul perfezionamento delle automazioni e sulla stesura iniziale delle Norme di Progetto. 
+
 Gli obiettivi dello sprint 2 sono:
-- riconfigurazione del repository;
-- stesura della sezione _introduzione_ del documento delle Norme di Progetto;
-- stesura della sezione _processi di supporto_ del documento delle Norme di Progetto;
+- riconfigurazione della repository;
+- stesura della sezione _Introduzione_ del documento Norme di Progetto;
+- stesura della sezione _Processi di supporto_ del documento Norme di Progetto;
 - perfezionamento delle automazioni per la compilazione dei documenti;
 - perfezionamento delle automazioni per il versionamento dei documenti;
 - contatto con l'azienda Proponente per comunicare l'esito della candidatura;
-- meeting con l'azienda Proponente per riflettere sull'Analisi dei Requisiti e sulle ulteriori tecnologie da usare;
-- inizio dell'individuazione e della stesura degli use case.
+- meeting con l'azienda Proponente per riflettere sull'analisi dei requisiti e sulle tecnologie da usare;
+- inizio dell'individuazione e della stesura degli Use Case.
 
 === Preventivo costi
-Nel secondo sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti e compiti orientati all'individuazione e alla stesura degli use case. In quest'ottica, vede l'impiego principale delle figure:
+Nel secondo sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti e compiti orientati all'individuazione e alla stesura degli Use Case. In quest'ottica, vede l'impiego principale delle figure:
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 
-- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
+- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione e il miglioramento delle automazioni per la compilazione e il versionamento dei documenti;
 
 - *Verificatore*: al fine di garantire che le modifiche effettuate rispecchino gli standard qualitativi desiderati e implementino effettivamente le mancanze individuate dalla valutazione;
 
-- *Analista*: al fine di individuare e sviluppare testualmente i principali use case in ottica del documento di Analisi dei Requisiti.
+- *Analista*: al fine di individuare e sviluppare testualmente i principali Use Case in ottica del documento Analisi dei Requisiti.
 
-In questo  periodo, l'assegnazione dei ruoli di programmatore e progettista è ritenuta precoce.
+In questo  periodo, l'assegnazione dei ruoli di Programmatore e Progettista è ritenuta precoce.
 
 #figure(
   table(
@@ -315,12 +316,12 @@ In questo  periodo, l'assegnazione dei ruoli di programmatore e progettista è r
 === Obiettivi prefissati
 Gli obiettivi del terzo sprint si concentrano sull'aggiornamento del documento di Norme di Progetto, sul periodo di Analisi dei Requisiti (principalmente concentrata sui requisiti funzionali) e su un primo momento di esplorazione delle nuove tecnologie.\
 Gli obiettivi dello sprint 3 sono:
-- proseguimento del processo di individuazione e stesura degli use case;
+- proseguimento del processo di individuazione e stesura degli Use Case;
 - perfezionamento delle automazioni di versionamento documenti;
 - perfezionamento del template usato per i documenti;
 - aggiornamento del documento di Norme di Progetto;
 - studio iniziale della libreria Three.js;
-- meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare opportune richieste;
+- meeting con l'azienda Proponente per esporre ipotesi e Use Case individuati, richiedere chiarimenti ed avanzare opportune richieste;
 - contatto con l'azienda Proponente per fissare il prossimo meeting.
 
 === Preventivo costi
@@ -328,8 +329,8 @@ Nel terzo sprint, il gruppo svolge delle attività principalmente focalizzate su
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti, al fine di aggiornare il documento di Piano di Progetto;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti, al fine di effettuare un controllo sulla validità e formulazione degli use case individuati;
-- *Analista*: al fine di individuare e formulare gli use case correlati ai requisiti funzionali;
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti, al fine di effettuare un controllo sulla validità e formulazione degli Use Case individuati;
+- *Analista*: al fine di individuare e formulare gli Use Case correlati ai requisiti funzionali;
 - *Progettista*: al fine di condurre uno studio iniziale sulla libreria Three.js.
 
 In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce.
@@ -371,7 +372,7 @@ Gli obiettivi del quarto sprint si concentrano sull'aggiornamento e perfezioname
 dell'Analisi dei Requisiti e sull'esplorazione delle nuove tecnologie. \
 Gli obiettivi dello sprint 4 sono:
 - effettuare una migliore pianificazione;
-- perfezionamento della stesura degli use case individuati finora;
+- perfezionamento della stesura degli Use Case individuati finora;
 - redazione di una prima versione dell'Analisi dei Requisiti;
 - valutazione di un'eventuale data per un primo meeting con il professore Cardin per ottenere un feedback sull'Analisi dei Requisiti;
 - proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
@@ -385,7 +386,7 @@ Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti, al fine di aggiornare il documento di Piano di Progetto;
-- *Analista*: al fine di perfezionare la stesura degli use case individuati e redatte una prima versione di Analisi dei Requisiti;
+- *Analista*: al fine di perfezionare la stesura degli Use Case individuati e redatte una prima versione di Analisi dei Requisiti;
 - *Progettista*: al fine di condurre uno studio esplorativo sulla libreria Three.js;
 - *Programmatore*: al fine di esplorare in modo pratico le tecnologie relative ai PoC;
 - *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità degli Use Case individuati nel documento di Analisi dei Requisiti.
@@ -436,7 +437,7 @@ Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
 - *Analista*: al fine di redarre il documento di Analisi dei Requisiti;
 - *Progettista*: al fine di continuare lo studio sulla libreria Three.js;
 - *Programmatore*: al fine di sviluppare i PoC relativi allo studio della libreria;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità e formulazione degli use case individuati e del documento di Analisi dei Requisiti.
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità e formulazione degli Use Case individuati e del documento di Analisi dei Requisiti.
 
 #set text(
   size: 10pt
@@ -527,7 +528,7 @@ Gli obiettivi del settimo sprint si focalizzano sul completamento del PoC, termi
 - espansione delle Norme di Progetto;
 - completamento del documento Analisi dei Requisiti con:
   - implementazione del tracciamento requisito-fonte;
-  - revisione generale del documento per verificare la presenza di tutti gli use case e requisiti necessari.
+  - revisione generale del documento per verificare la presenza di tutti gli Use Case e requisiti necessari.
 - miglioramento delle GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
 - implementazione dell'automazione che evidenzia i termini presenti nel glossario all'interno dei documenti.
 
@@ -709,25 +710,29 @@ Il ruolo dell'Amministratore, invece, ha visto un aumento delle ore rispetto a q
 [da inserire]
 
 
-== Secondo sprint dal 06-11-2023 al 13-11-2023
+== Secondo sprint dal 13-11-2023 al 19-11-2023
+
 === Obiettivi raggiunti
-- Riconfigurazione del repository;
-- Stesura della sezione _introduzione_ del documento delle Norme di Progetto;
-- Stesura della sezione _processi di supporto_ del documento delle Norme di Progetto;
+- Riconfigurazione della repository;
+- Stesura della sezione _Introduzione_ del documento Norme di Progetto;
+- Stesura della sezione _Processi di supporto_ del documento Norme di Progetto;
 - Perfezionamento delle automazioni per la compilazione dei documenti;
 - Perfezionamento delle automazioni per il versionamento dei documenti;
 - Contatto con l'azienda Proponente per comunicare l'esito della candidatura;
-- Meeting con l'azienda Proponente per riflettere sull'Analisi dei Requisiti e sulle ulteriori tecnologie da usare;
-- Inizio dell'individuazione e della stesura degli use case.
+- Meeting con l'azienda Proponente per riflettere sull'analisi dei requisiti e sulle tecnologie da usare;
+- Inizio dell'individuazione e della stesura degli Use Case.
+
 === Obiettivi mancati
 Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obiettivi mancati dello sprint precedente.
+
 === Analisi problematiche insorte
 - Il gruppo ha notato la mancanza di una struttura comune nei verbali, che porta a documenti senza una precisa convenzione e rallentamenti in fase di redazione;
-- Sono emerse difficoltà nelle modalità di utilizzo del repository comune, nonostante sia stato dedicato del tempo per la formazione;
+- Sono emerse difficoltà nelle modalità di utilizzo della repository, nonostante sia stato dedicato del tempo per la formazione;
 - Scarsa reattività in fase di review.
+
 === Risoluzioni attuate
-- Per risolvere la problematica di una mancanza di struttura nei verbali, si sono fissate delle convenzioni da seguire nel documento di Norme di Progetto;
-- Per formare meglio il gruppo sulle modalità di utilizzo del repository, è stato dedicato tempo in più per fornire tutorial video e testuali in supporto del gruppo;
+- Per risolvere la problematica di una mancanza di struttura nei verbali, si sono fissate delle convenzioni da seguire nel documento Norme di Progetto;
+- Per formare meglio il gruppo sulle modalità di utilizzo della repository, è stato dedicato tempo in più per fornire tutorial video e testuali a supporto del gruppo;
 - Per ovviare alla scarsa reattività in fase di review, il gruppo prende la responsabilità di visionare spesso la casella mail personale per capire quando c'è bisogno di una review o di risolvere una conversation GitHub, oltre a sollecitare i Verificatori via i canali di comunicazione interni del gruppo in caso di mancate revisioni.
 
 === Analisi costi di sprint effettivi
@@ -751,7 +756,7 @@ Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obi
 )
 
 A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore effettivo diverso a quanto preventivato:
-- Amministratore: la scarsa comprensione delle modalità di utilizzo del repository da parte dei membri del gruppo ha portato gli Amministratori a dedicare delle ore in più mirate al perfezionamento della formazione dei membri del gruppo;
+- Amministratore: la scarsa comprensione delle modalità di utilizzo della repository da parte dei membri del gruppo ha portato gli Amministratori a dedicare delle ore in più mirate al perfezionamento della formazione dei membri del gruppo;
 
 - Verificatore: la scarsa reattività in fase di review ha portato un impegno inferiore alle attività di revisione.
 
@@ -761,12 +766,12 @@ A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore ef
 == Terzo Sprint dal 27-11-2023 al 04-12-2023
 
 === Obiettivi raggiunti
-- Proseguimento del processo di individuazione e stesura degli use case;
+- Proseguimento del processo di individuazione e stesura degli Use Case;
 - Perfezionamento delle automazioni di versionamento documenti;
 - Perfezionamento del template usato per i documenti;
 - Aggiornamento parziale del documento di Norme di Progetto;
 - Studio iniziale della libreria Three.js;
-- Meeting con l'azienda Proponente per esporre ipotesi e use case individuati, richiedere chiarimenti ed avanzare opportune richieste;
+- Meeting con l'azienda Proponente per esporre ipotesi e Use Case individuati, richiedere chiarimenti ed avanzare opportune richieste;
 - Contatto con l'azienda Proponente per fissare il prossimo meeting.
 
 === Obiettivi mancati
@@ -831,7 +836,7 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
 
 === Obiettivi raggiunti
 - Effettuare una migliore pianificazione;
-- Perfezionamento della stesura degli use case individuati finora;
+- Perfezionamento della stesura degli Use Case individuati finora;
 - Redazione di una prima versione dell'Analisi dei Requisiti;
 - Valutazione di un'eventuale data per un primo meeting con il professor Cardin per ottenere un feedback sull'Analisi dei Requisiti;
 - Proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
@@ -950,7 +955,7 @@ Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabi
   - implementazione visualizzazione prodotti dei bin tramite alert JavaScript.
 - Aggiornamento documento Norme di Progetto;
 - Aggiornamento documento Analisi dei Requisiti con:
-  - refactoring degli use case secondo le indicazioni del professor Cardin;
+  - refactoring degli Use Case secondo le indicazioni del professor Cardin;
   - redazione requisiti funzionali;
   - redazione requisiti di qualità;
   - redazione requisiti di vincolo.

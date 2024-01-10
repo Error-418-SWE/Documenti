@@ -7,7 +7,7 @@ on:
         description: "The path to the changed file's directory"
         value: ${{ jobs.fetch.outputs.file_path }}
       file_name:
-        description: "The changed file name"
+        description: "The name of the changed file"
         value: ${{ jobs.fetch.outputs.file_name }}
       latest_version:
         description: "The current document version"
@@ -31,16 +31,29 @@ jobs:
         with:
           files: |
             **.typ
-      - name: Extract path
-        id: path
-        run: |
-          FILES="${{ steps.files.outputs.all_changed_files }}"
-          echo "FILE_PATH=$(dirname "$FILES")" >> $GITHUB_OUTPUT
+            Glossario.json
+          files_ignore: template.typ
       - name: Extract name w/o extension
         id: name
         run: |
-          FILES="${{ steps.files.outputs.all_changed_files }}"
-          echo "FILE_NAME=$(basename "${FILES}" .typ)" >> $GITHUB_OUTPUT
+          FILE="${{ steps.files.outputs.all_changed_files }}"
+          echo "FILE_NAME=$(basename "${FILE}" | cut -d. -f1)" >> $GITHUB_OUTPUT
+      - name: Extract path
+        id: path
+        run: |
+          FILE="${{ steps.files.outputs.all_changed_files }}"
+          if [[ "${{ steps.name.outputs.file_name }}" == *"Glossario"* ]]; then
+            echo "FILE_PATH=${{ vars.BASELINE_DIR }}/Glossario" >> $GITHUB_OUTPUT
+          fi
+          if [[ "${{ steps.name.outputs.file_name }}" != *"Glossario"* ]]; then
+            echo "FILE_PATH=$(dirname "$FILE")" >> $GITHUB_OUTPUT
+          fi
+      - name: Check number of changed files
+        run: |
+          if [[ "${{ steps.path.outputs.file_path }}" == *".typ"* ]]; then
+            echo "::error::More than one Typst source have been modified. Aborting."
+            exit 1
+          fi
       - name: Get latest version
         id: version
         run: |
@@ -50,9 +63,3 @@ jobs:
           echo "::notice::Path: ${{ steps.path.outputs.file_path }}"
           echo "::notice::Name: ${{ steps.name.outputs.file_name }}"
           echo "::notice::Version: ${{ steps.version.outputs.latest_version }} (current)"
-      - name: Check number of changed files
-        run: |
-          if [[ "${{ steps.path.outputs.file_path }}" == *".typ"* ]]; then
-            echo "::error::More than one Typst source have been modified. Aborting."
-            exit 1
-          fi

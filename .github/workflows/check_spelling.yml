@@ -2,7 +2,7 @@ name: GPT spell checking
 
 on:
   pull_request:
-    types: [opened, reopened, synchronize, closed]
+    types: [opened, reopened, synchronize]
     paths:
       - '**.typ'
       - '!**template.typ'

@@ -60,6 +60,10 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 - Documentazione Three.js\
   #link("https://threejs.org/docs/")
 
+=== Riferimenti a documentazione interna
+- Documento "Analisi dei rischi v2.0.0"\
+  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20rischi_v2.0.0.pdf")
+
 = Processi di accordo
 == Processo di fornitura
 === Scopo e descrizione
@@ -697,7 +701,7 @@ Il team definisce approcci di trattamento appropriati, compresi piani di mitigaz
   Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
 
 - Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:\
-  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato: #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20rischi_v1.0.0.pdf")[Analisi dei rischi v1.1.0].
+  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento Analisi dei rischi. 
 
 
 ==== Analizzare i rischi

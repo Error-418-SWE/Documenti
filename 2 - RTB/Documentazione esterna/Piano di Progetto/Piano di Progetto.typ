@@ -166,11 +166,14 @@ Il costo totale preventivato è di € 13.370,00.
 = Pianificazione del lavoro
 == Introduzione
 La pianificazione ricopre un ruolo fondamentale nello sviluppo dell'intero progetto. Svolge il compito di stabilire quali obiettivi raggiungere in periodi di tempo determinati, organizzando le risorse in modo da rendere lo sviluppo efficace ed efficiente. Lo scopo principale deve essere pianificare le azioni da intraprendere nel periodo successivo, definendo tempistiche, modalità e obiettivi.
-\
+
 == Metodologia di lavoro Scrum
-Il gruppo si è imposto una metodologia di lavoro _agile_ mediante l'applicazione del framework Scrum, determinando periodi di lavoro di durata fissa terminanti con un'analisi retrospettiva degli stessi. \
-Tale approccio è definibile _adattivo_, in grado dunque di adattarsi ad eventuali modifiche in corso d'opera, in merito soprattutto a cambiamenti di specifiche e requisiti.\
-L'intero sviluppo è dunque organizzato in iterazioni di lunghezza fissa, denominati in SCRUM come _sprint_. \
+Il gruppo si è imposto una metodologia di lavoro *agile* mediante l'applicazione del framework Scrum, determinando periodi di lavoro di durata fissa terminanti con un'analisi retrospettiva degli stessi.
+
+Tale approccio è definibile *adattivo*, in grado dunque di adattarsi ad eventuali modifiche in corso d'opera, in merito soprattutto a cambiamenti di specifiche e requisiti.
+
+L'intero sviluppo è dunque organizzato in iterazioni di lunghezza fissa, denominati in Scrum come *sprint*.
+
 L'analisi retrospettiva e il frequente contatto con il Proponente permettono di indirizzare lo sviluppo verso la realizzazione di un prodotto finale che si attenga quanto più possibile ai requisiti desiderati dall'azienda e alle sue aspettative, e una documentazione dettagliata e precisa che evolve e migliora insieme al prodotto.
 
 === Eventi dettati dal framework
@@ -184,14 +187,16 @@ La corretta applicazione del framework comporta il rispetto di determinati impeg
 - *Sprint retrospective*: al termine dello sprint si compie un'azione di retrospettiva, analizzando eventuali criticità incontrate e stabilendo i possibili miglioramenti o meccanismi di mitigazione.
 
 === Organizzazione per sprint
-Gli sprint sono periodi di sviluppo di durata fissa entro i quali si cerca di raggiungere obiettivi prefissati. Ciascuno sprint viene stabilito, in termini di scope e obiettivi, in un momento precedente all'avvio dello sprint stesso.\
-Error\_418 adotta periodi di sprint di una settimana, ove l'intento è fissare obiettivi concretamente raggiungibili nell'arco di tempo stabilito.\
-Al termine di ogni sprint si svolgerà un'analisi retrospettiva con lo scopo di valutare il lavoro svolto e proporre eventuali miglioramenti in caso di criticità riscontrate.\
+Gli sprint sono periodi di sviluppo di durata fissa entro i quali si cerca di raggiungere obiettivi prefissati. Ciascuno sprint viene stabilito, in termini di scope e obiettivi, in un momento precedente all'avvio dello sprint stesso.
+
+Il gruppo _Error\_418_ adotta periodi di sprint di una settimana, ove l'intento è fissare obiettivi concretamente raggiungibili nell'arco di tempo stabilito.
+
+Al termine di ogni sprint si svolgerà un'analisi retrospettiva con lo scopo di valutare il lavoro svolto e proporre eventuali miglioramenti in caso di criticità riscontrate.
 
 La pianificazione di uno sprint sarà così composta:
 - *Obiettivi prefissati*: gli obiettivi che si intende raggiungere entro il termine dello sprint;
 
-- *Preventivo dei costi*: preventivo dei costi in base alle figure che operano nel periodo di sprint;
+- *Preventivo costi*: preventivo dei costi dello sprint, calcolato in base alle figure che vi operano e alla loro quantità di ore di lavoro previste;
 
 - *Diagramma di Gantt*: diagramma che rappresenta l'organizzazione delle attività nel tempo e le dipendenze tra esse.
 
@@ -202,11 +207,11 @@ La retrospettiva di uno sprint si articolerà in:
 
 - *Obiettivi mancati*: obiettivi non raggiunti al termine dello sprint;
 
-- *Analisi delle problematiche insorte*: analisi delle criticità riscontrate durante lo sprint, in modo da aver chiari le motivazioni che le hanno causate;
+- *Analisi problematiche insorte*: analisi delle criticità riscontrate durante lo sprint, in modo da aver chiari le motivazioni che le hanno causate;
 
-- *Risoluzioni attuate*: azioni compiute in risposta alle problematiche riscontrate durante lo sprint, in modo che in futuro si possa o prevenire del tutto il ripetersi di tali problemi, o in caso insorgessero nuovamente, sapere come mitigarli.
+- *Risoluzioni attuate*: azioni compiute in risposta alle problematiche riscontrate durante lo sprint, in modo che in futuro si possano prevenire o mitigare;
 
-- *Analisi dei costi dello sprint effettivi*: al termine dello sprint sarà possibile verificare se i costi preventivati rispecchino i costi effettivi, in base alle ore svolte per ogni ruolo;
+- *Analisi costi di sprint effettivi*: al termine dello sprint sarà possibile verificare se i costi preventivati rispecchino i costi effettivi, in base alle ore svolte per ogni ruolo;
 
 - *Burndown-chart*: strumento metrico che permette di avere una chiara visione dell'andamento dello sprint.
 
@@ -254,7 +259,7 @@ In questo primo periodo, l'assegnazione dei ruoli di progettista e di programmat
   caption: "Preventivo primo sprint"
 )
 
-=== Diagramma Gantt
+=== Diagramma di Gantt
 [da inserire]
 
 == Secondo Sprint dal 12-11-2023 al 20-11-2023
@@ -302,7 +307,7 @@ In questo  periodo, l'assegnazione dei ruoli di programmatore e progettista è r
   caption: "Preventivo secondo sprint"
 )
 
-=== Diagramma Gantt
+=== Diagramma di Gantt
 [da inserire]
 
 == Terzo Sprint dal 20-11-2023 al 27-11-2023
@@ -355,7 +360,7 @@ In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce
   size: 11pt
 )
 
-=== Diagramma Gantt
+=== Diagramma di Gantt
 [da inserire]
 
 == Quarto Sprint dal 27-11-2023 al 04-12-2023
@@ -403,7 +408,7 @@ Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
   caption: "Preventivo quarto sprint"
 )
 
-=== Diagramma Gantt
+=== Diagramma di Gantt
 [da inserire]
 
 == Quinto Sprint dal 04-12-2023 al 11-12-2023
@@ -459,7 +464,7 @@ Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
   size: 11pt
 )
 
-=== Diagramma Gantt
+=== Diagramma di Gantt
 [da inserire]
 
 
@@ -508,7 +513,7 @@ In quest'ottica, vede l'impiego principale delle figure:
   caption: "Preventivo sesto sprint"
 )
 
-=== Diagramma Gantt
+=== Diagramma di Gantt
 [da inserire]
 
 
@@ -567,7 +572,7 @@ Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del 
   size: 11pt
 )
 
-=== Diagramma Gantt
+=== Diagramma di Gantt
 [da inserire]
 
 
@@ -634,7 +639,7 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
   size: 11pt
 )
 
-=== Diagramma Gantt
+=== Diagramma di Gantt
 [da inserire]
 
 

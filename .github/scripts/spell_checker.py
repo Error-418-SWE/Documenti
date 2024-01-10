@@ -16,7 +16,7 @@ messages = []
 messages_sent = 0
 
 client = AsyncOpenAI(
-    api_key = os.environ('OPENAI_API_KEY'),
+    api_key = os.getenv('OPENAI_API_KEY'),
 )
 
 def split_string(input_string, max_length):

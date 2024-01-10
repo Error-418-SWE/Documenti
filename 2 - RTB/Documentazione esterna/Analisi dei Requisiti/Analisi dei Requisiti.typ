@@ -1029,6 +1029,7 @@ Dove:
 
     [FM-8], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di un bin selezionato], [UC-8],
     [FM-8.1], [Obbligatorio], [L'utente deve poter visualizzare le informazioni del prodotto contenuto in un bin selezionato], [UC-8],
+
     [FM-9], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di uno scaffale selezionato], [UC-9],
 
     [FD-10], [Desiderabile], [L'utente deve poter ricercare un prodotto], [UC-10],
@@ -1045,7 +1046,7 @@ Dove:
     [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom in], [UC-11.3],
     [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom out], [UC-11.3]
   ),
-  caption: "Requisiti funzionali"
+  caption: [Requisiti funzionali]
 )
 
 == Requisiti di qualità
@@ -1063,7 +1064,7 @@ Dove:
     [QO-6], [Opzionale], [Deve essere consegnato lo schema del DB.], [Capitolato],
     [QO-7], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate.], [Capitolato],
   ),
-  caption: "Requisiti di qualità."
+  caption: [Requisiti di qualità.]
 )
 
 == Requisiti di vincolo
@@ -1088,5 +1089,5 @@ Dove:
     [VM-13], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva.], [Interno],
     [VO-14], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose.], [VE 23-11-15]
   ),
-  caption: "Requisiti di vincolo."
+  caption: [Requisiti di vincolo.]
 )

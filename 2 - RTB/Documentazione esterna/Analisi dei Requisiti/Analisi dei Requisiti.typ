@@ -280,7 +280,7 @@ $bold("Precondizioni: ")$
 - è stato dato inizio alla procedura di creazione dell'ambiente di lavoro vuoto.
 
 $bold("Postcondizioni: ")$
-- è stato generato un ambiente di lavoro vuoto di diemsioni standard;
+- è stato generato un ambiente di lavoro vuoto di dimensioni standard;
 - l'ambiente così generato ha rimosso eventuali elementi precedentemente configurati.
 
 $bold("Scenario: ")$
@@ -307,7 +307,7 @@ $bold("Scenario: ")$
 
 $bold("Estensioni: ")$
 - UC-2.1 Errore dimensioni magazzino troppo piccole;
-- UC-2.2 Errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
+- UC-2.2 Errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente.
 
 == Errore dimensioni magazzino troppo piccole
 
@@ -326,7 +326,7 @@ $bold("Postcondizioni: ")$
 - all'utente viene notificato l'errore relativo al fatto che l'ambiente non può diventare più piccolo.
 
 $bold("Scenario: ")$
-- l'utente vuole ridurre la dimensione dell'ambiente oltre una soglia minima.
+- l'utente vuole ridurre le dimensioni dell'ambiente oltre una soglia minima.
 
 == Errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
 

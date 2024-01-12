@@ -213,6 +213,8 @@ La retrospettiva di uno sprint si articolerà in:
 
 - *Analisi costi di sprint effettivi*: al termine dello sprint sarà possibile verificare se i costi preventivati rispecchino i costi effettivi, in base alle ore svolte per ogni ruolo;
 
+- *Monitoraggio costi e ore*: tabelle che riportano le ore e il budget rimanenti per ogni ruolo e complessivamente;
+
 - *Burndown-chart*: strumento metrico che permette di avere una chiara visione dell'andamento dello sprint.
 
 == Primo Sprint dal 06-11-2023 al 13-11-2023

@@ -535,12 +535,12 @@ In quest'ottica vede l'impiego principale delle figure:
 
 === Obiettivi prefissati
 Gli obiettivi del settimo sprint si focalizzano sul completamento del PoC, terminare l'analisi dei requisiti e in generale sull'avanzamento dei documenti e miglioramento delle automazioni. Nel dettaglio gli obiettivi posti sono:
-- creazione di un PoC per il front-end e realizzazione di un PoC definitivo comprendente tutto il lavoro svolto fin'ora
+- creazione di un PoC per il front-end e realizzazione di un PoC definitivo comprendente tutto il lavoro svolto fin'ora;
 - espansione del Piano di Qualifica con l'individuazione delle metriche da utilizzare;
 - espansione delle Norme di Progetto;
 - completamento del documento Analisi dei Requisiti con:
   - implementazione del tracciamento requisito-fonte;
-  - revisione generale del documento per verificare la presenza di tutti gli Use Case e requisiti necessari.
+  - revisione generale del documento per verificare la presenza e correttezza di tutti gli Use Case e requisiti necessari.
 - miglioramento delle GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
 - implementazione dell'automazione che evidenzia i termini presenti nel glossario all'interno dei documenti.
 
@@ -1237,6 +1237,7 @@ Il ruolo di Programmatore presenta un monte ore effettivo minore rispetto a quel
 === Burndown-chart
 [da inserire]
 
+
 == Settimo Sprint dal 18-12-2023 al 25-12-2023
 
 === Obiettivi raggiunti
@@ -1264,7 +1265,7 @@ Durante il meeting di retrospettiva sono insorte le seguenti problematiche:
 - Impegnarsi a fornire commenti di review più precisi:
   - indicando con precisione la natura dell'errore e, se utile, la sua localizzazione all'interno della riga;
   - fornendo una possibile correzione, quando appropriato;
-  - nel caso di più occorrenze dello stesso errore, segnalarle tutte. Per evitare ripetizioni, fornire una valutazione della prima occorrenza ed inserire un riferimento a tale conversazione nelle occorrenze successive;
+  - nel caso di più occorrenze dello stesso errore, segnalarle tutte. Per evitare ripetizioni, fornire una valutazione della prima occorrenza ed inserire un riferimento a tale conversazione nelle occorrenze successive.
 - Per accelerare il lavoro sulle Norme di Progetto, chi ha redatto le Norme di Progetto nel corso degli sprint precedenti continuerà l'aﬃancamento nel corso dello sprint successivo;
 - La natura esplorativa del PoC richiede ﬂessibilità nella pianiﬁcazione, ma si sottolinea la necessità di continuare a tracciare le attività per riferimento futuro.
 
@@ -1298,6 +1299,40 @@ Durante il meeting di retrospettiva sono insorte le seguenti problematiche:
 )
 
 Diversi ruoli risultano avere un monte ore minore rispetto a quello preventivato, a causa di rallentamenti nella stesura delle Norme di Progetto e, per quanto riguarda l'Analista, un rallentamento dovuto alla mancanza di materiale su cui lavorare: il materiale necessario era infatti presente in un branch di cui non era ancora stata fatta una pull request.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Budget rimanente*], 
+    [Responsabile], [2.190,00],
+    [Amministratore], [520,00],
+    [Analista], [625,00],
+    [Progettista], [2.125,00],
+    [Programmatore], [2.820,00],
+    [Verificatore], [1.575,00],
+    [*Totale rimanente*], [9855,00]
+  ),
+  caption: "Monitoraggio costi settimo sprint"
+)
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Ore rimanenti*],
+    [Responsabile], [73],
+    [Amministratore], [26],
+    [Analista], [25],
+    [Progettista], [85],
+    [Programmatore], [188],
+    [Verificatore], [105],
+    [*Totale ore rimanenti*], [502]
+  ),
+  caption: "Monitoraggio ore settimo sprint"
+)
 
 === Burndown-chart
 [da inserire]

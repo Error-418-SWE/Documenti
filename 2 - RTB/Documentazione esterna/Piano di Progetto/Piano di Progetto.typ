@@ -413,7 +413,7 @@ Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
     [Oseliero Antonio], [/],  [/],    [4],    [/], [/], [/],   [4],
     [Todesco Mattia],   [/],  [3],    [/],    [/], [/], [/],   [3],
     [Zaccone Rosario],  [/],  [3],    [/],    [/], [/], [/],   [3],
-    [Totale\ ore ruolo], [3],  [6],    [7],    [1], [3], [3],   [23],
+    [Totale\ ore ruolo], [3],  [6],    [7],    [1], [3], [3],   [29],
     [Costo\ orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
     [Costo\ ruolo],      [90,00], [120,00], [175,00], [25,00], [45,00],[45,00], [500,00]
   ),

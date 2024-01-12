@@ -706,6 +706,40 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 
 Il ruolo dell'Amministratore, invece, ha visto un aumento delle ore rispetto a quanto preventivato, a causa di difficoltà incontrate nell'implementazione delle automazioni (errori, testing, verifica).
 
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Budget rimanente*], 
+    [Responsabile], [2.670,00],
+    [Amministratore], [1.160,00],
+    [Analista], [1.650,00],
+    [Progettista], [2.450,00],
+    [Programmatore], [3.150,00],
+    [Verificatore], [1.830,00],
+    [*Totale rimanente*], [12.910,00]
+  ),
+  caption: "Monitoraggio costi primo sprint"
+)
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Ore rimanenti*],
+    [Responsabile], [89],
+    [Amministratore], [58],
+    [Analista], [66],
+    [Progettista], [98],
+    [Programmatore], [210],
+    [Verificatore], [122],
+    [*Totale ore rimanenti*], [643]
+  ),
+  caption: "Monitoraggio ore primo sprint"
+)
+
 === Burndown-chart
 [da inserire]
 
@@ -759,6 +793,40 @@ A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore ef
 - Amministratore: la scarsa comprensione delle modalità di utilizzo della repository da parte dei membri del gruppo ha portato gli Amministratori a dedicare delle ore in più mirate al perfezionamento della formazione dei membri del gruppo;
 
 - Verificatore: la scarsa reattività in fase di review ha portato un impegno inferiore alle attività di revisione.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Budget rimanente*], 
+    [Responsabile], [2.580,00],
+    [Amministratore], [920,00],
+    [Analista], [1.425,00],
+    [Progettista], [2.450,00],
+    [Programmatore], [3.150,00],
+    [Verificatore], [1.800,00],
+    [*Totale rimanente*], [12.325,00]
+  ),
+  caption: "Monitoraggio costi secondo sprint"
+)
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Ore rimanenti*],
+    [Responsabile], [86],
+    [Amministratore], [46],
+    [Analista], [57],
+    [Progettista], [98],
+    [Programmatore], [210],
+    [Verificatore], [120],
+    [*Totale ore rimanenti*], [617]
+  ),
+  caption: "Monitoraggio ore secondo sprint"
+)
 
 === Burndown-chart
 [da inserire]

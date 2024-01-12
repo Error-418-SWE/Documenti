@@ -489,21 +489,20 @@ Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
 Gli obiettivi del sesto sprint si focalizzano sul miglioramento dei PoC e dei diversi documenti. Nel dettaglio:
 - avanzare con la redazione del PoC "A" integrando il funzionamento dei bin;
 - approfondire e migliorare l'utilizzo di Docker nel PoC corrispondente;
-- migliorare le Action di GitHub risolvendo eventuali problemi o aggiungendo funzionalità;
+- migliorare le GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
 - proseguire con il lavoro sul documento Norme di Progetto;
 - redigere introduzione del documento Piano di Qualifica;
 - adeguare l'Analisi dei Requisiti in funzione di quanto emerso durante lo scorso meeting con il professor Cardin;
-- aggiungere nel file di Analisi dei Requisiti la tabella che correli gli Use Case ai requisiti.
-
+- aggiungere al documento Analisi dei Requisiti la tabella che correli gli Use Case ai requisiti.
 
 === Preventivo costi
 Nel sesto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti Analisi dei Requisiti e Norme di Progetto.
 Il gruppo continua a produrre e migliorare PoC e inizia a scrivere il documento Piano di Qualifica.
-In quest'ottica, vede l'impiego principale delle figure:
+In quest'ottica vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira, redigere i verbali e aggiornare il documento Piano di Progetto;
-- *Analista*: al fine di redarre il documento di Analisi dei Requisiti con relativi diagrammi UML;
+- *Analista*: al fine di redarre il documento Analisi dei Requisiti con relativi diagrammi UML;
 - *Progettista*: al fine di progettare i PoC;
 - *Programmatore*: al fine di sviluppare i PoC;
 - *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti assicurandosi che siano coerenti con le Norme di Progetto.
@@ -511,19 +510,19 @@ In quest'ottica, vede l'impiego principale delle figure:
 
 #figure(
   table(
-  columns: 8,
-  fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
-  [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
-  [Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
-  [Carraro Riccardo], [3],  [/],    [/],    [/],    [/],   [/], [3],
-  [Gardin Giovanni],  [/],  [/],    [4],    [/],    [/],   [/], [4],
-  [Nardo\ Silvio],     [/],  [3],    [/],    [/],    [/],   [/], [3],
-  [Oseliero Antonio], [/],  [/],    [/],    [1],    [3],   [/], [4],
-  [Todesco Mattia],   [/],  [/],    [/],    [/],    [/],   [3], [3],
-  [Zaccone Rosario],  [/],  [/],    [/],    [1],    [3],   [/], [4],
-  [Totale\ ore ruolo], [3],  [3],    [8],    [2],    [6],   [3], [25],
-  [Costo\ orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
-  [Costo\ ruolo], [90,00], [60,00], [200,00], [50,00], [90,00], [45,00], [535,00]
+    columns: 8,
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato Alessio],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+    [Carraro Riccardo], [3],  [/],    [/],    [/],    [/],   [/], [3],
+    [Gardin Giovanni],  [/],  [/],    [4],    [/],    [/],   [/], [4],
+    [Nardo\ Silvio],     [/],  [3],    [/],    [/],    [/],   [/], [3],
+    [Oseliero Antonio], [/],  [/],    [/],    [1],    [3],   [/], [4],
+    [Todesco Mattia],   [/],  [/],    [/],    [/],    [/],   [3], [3],
+    [Zaccone Rosario],  [/],  [/],    [/],    [1],    [3],   [/], [4],
+    [Totale\ ore ruolo], [3],  [3],    [8],    [2],    [6],   [3], [25],
+    [Costo\ orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo\ ruolo], [90,00], [60,00], [200,00], [50,00], [90,00], [45,00], [535,00]
   ),
   caption: "Preventivo sesto sprint"
 )
@@ -785,19 +784,19 @@ Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obi
 === Analisi costi di sprint effettivi
 #figure(
   table(
-  columns: 6,
-  fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
-  [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Verificatore*],[*Totale*],
-  [Banzato Alessio],  [/],  [/],    [/],    [2(-1)],    [2(-1)],
-  [Carraro Riccardo], [/],  [6(+2)],    [/],    [/],    [6(+2)],
-  [Gardin Giovanni],  [/],  [6(+2)],    [/],    [/],    [6(+2)],
-  [Nardo Silvio],     [/],  [/],    [3],    [/],    [3],
-  [Oseliero Antonio], [3],  [/],    [/],    [/],    [3],
-  [Todesco Mattia],   [/],  [/],    [3],    [/],    [3],
-  [Zaccone Rosario],  [/],  [/],    [3],    [/],    [3],
-  [Totale ore ruolo], [3],  [12],    [9],    [2],    [26],
-  [Costo orario],     [30,00], [20,00], [25,00], [15,00], [],
-  [Costo ruolo],      [90,00], [240,00], [225,00], [30,00], [585,00]
+    columns: 6,
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Verificatore*],[*Totale*],
+    [Banzato Alessio],  [/],  [/],    [/],    [2(-1)],    [2(-1)],
+    [Carraro Riccardo], [/],  [6(+2)],    [/],    [/],    [6(+2)],
+    [Gardin Giovanni],  [/],  [6(+2)],    [/],    [/],    [6(+2)],
+    [Nardo Silvio],     [/],  [/],    [3],    [/],    [3],
+    [Oseliero Antonio], [3],  [/],    [/],    [/],    [3],
+    [Todesco Mattia],   [/],  [/],    [3],    [/],    [3],
+    [Zaccone Rosario],  [/],  [/],    [3],    [/],    [3],
+    [Totale ore ruolo], [3],  [12],    [9],    [2],    [26],
+    [Costo orario],     [30,00], [20,00], [25,00], [15,00], [],
+    [Costo ruolo],      [90,00], [240,00], [225,00], [30,00], [585,00]
   ),
   caption: "Consuntivo secondo sprint"
 )
@@ -1153,9 +1152,8 @@ Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabi
 - Meeting con l'azienda Proponente per:
   - esporre il PoC A;
   - aggiornare sullo stato dei lavori;
-  - chiedere feedback sui requisiti non funzionali;
+  - chiedere feedback sui requisiti non funzionali.
 - Conversione del Glossario in JSON per automatizzare l'individuazione dei termini nei documenti.
-
 
 === Obiettivi mancati
 - Migliorare GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
@@ -1201,6 +1199,40 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
 )
 
 Il ruolo di Programmatore presenta un monte ore effettivo minore rispetto a quello preventivato a causa di problemi tecnici che hanno interrotto la lavorazione del PoC.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Budget rimanente*], 
+    [Responsabile], [2.250,00],
+    [Amministratore], [180,00],
+    [Analista], [650,00],
+    [Progettista], [2.250,00],
+    [Programmatore], [2.895,00],
+    [Verificatore], [1.605,00],
+    [*Totale rimanente*], [10.230,00]
+  ),
+  caption: "Monitoraggio costi sesto sprint"
+)
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Ore rimanenti*],
+    [Responsabile], [75],
+    [Amministratore], [29],
+    [Analista], [26],
+    [Progettista], [90],
+    [Programmatore], [193],
+    [Verificatore], [107],
+    [*Totale ore rimanenti*], [520]
+  ),
+  caption: "Monitoraggio ore sesto sprint"
+)
 
 === Burndown-chart
 [da inserire]

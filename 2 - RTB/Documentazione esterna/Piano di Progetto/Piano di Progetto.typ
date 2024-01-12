@@ -314,28 +314,33 @@ In questo  periodo, l'assegnazione dei ruoli di Programmatore e Progettista è r
 === Diagramma di Gantt
 [da inserire]
 
-== Terzo Sprint dal 20-11-2023 al 27-11-2023
+== Terzo Sprint dal 19-11-2023 al 27-11-2023
 === Obiettivi prefissati
-Gli obiettivi del terzo sprint si concentrano sull'aggiornamento del documento di Norme di Progetto, sul periodo di Analisi dei Requisiti (principalmente concentrata sui requisiti funzionali) e su un primo momento di esplorazione delle nuove tecnologie.\
+Gli obiettivi del terzo sprint si concentrano sull'aggiornamento del documento Norme di Progetto, sul periodo di analisi dei requisiti (principalmente concentrata sui requisiti funzionali) e su un primo momento di esplorazione delle nuove tecnologie.
+
 Gli obiettivi dello sprint 3 sono:
 - proseguimento del processo di individuazione e stesura degli Use Case;
 - perfezionamento delle automazioni di versionamento documenti;
 - perfezionamento del template usato per i documenti;
-- aggiornamento del documento di Norme di Progetto;
+- aggiornamento del documento Norme di Progetto;
 - studio iniziale della libreria Three.js;
 - meeting con l'azienda Proponente per esporre ipotesi e Use Case individuati, richiedere chiarimenti ed avanzare opportune richieste;
 - contatto con l'azienda Proponente per fissare il prossimo meeting.
 
 === Preventivo costi
-Nel terzo sprint, il gruppo svolge delle attività principalmente focalizzate sull'Analisi dei Requisiti e sull'aggiornamento e perfezionamento dei documenti e delle automazioni. In quest'ottica, vede l'impiego principale delle figure:
+Nel terzo sprint, il gruppo svolge delle attività principalmente focalizzate sull'analisi dei requisiti e sull'aggiornamento e perfezionamento dei documenti e delle automazioni. In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
-- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti, al fine di aggiornare il documento di Piano di Progetto;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti, al fine di effettuare un controllo sulla validità e formulazione degli Use Case individuati;
+- *Amministratore*: al fine di:
+  - gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
+  - aggiornare il documento Piano di Progetto.
+- *Verificatore*: al fine di:
+  - verificare la correttezza delle modifiche ai documenti;
+  - effettuare un controllo sulla validità e formulazione degli Use Case individuati.
 - *Analista*: al fine di individuare e formulare gli Use Case correlati ai requisiti funzionali;
 - *Progettista*: al fine di condurre uno studio iniziale sulla libreria Three.js.
 
-In questo periodo, l'assegnazione del ruolo di programmatore è ritenuta precoce.
+In questo periodo, l'assegnazione del ruolo di Programmatore è ritenuta precoce.
 
 #set text(
   size: 10pt
@@ -377,7 +382,7 @@ Gli obiettivi dello sprint 4 sono:
 - perfezionamento della stesura degli Use Case individuati finora;
 - redazione di una prima versione dell'Analisi dei Requisiti;
 - valutazione di un'eventuale data per un primo meeting con il professore Cardin per ottenere un feedback sull'Analisi dei Requisiti;
-- proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
+- proseguimento della redazione e aggiornamento del documento Norme di Progetto;
 - proseguimento periodo di studio di Three.js, in particolare finalizzato a:
  - creazione di alcuni scaffali nell'ambiente tridimensionale;
  - implementazione sistema di drag and drop;
@@ -425,7 +430,7 @@ Gli obiettivi dello sprint 5 sono:
 - creazione degli scaffali nel PoC;
 - creazione ambiente docker;
 - svolgere meeting con il professor Cardin in merito all'Analisi dei Requisiti;
-- perfezionare e aggiornare il documento di Norme di Progetto;
+- perfezionare e aggiornare il documento Norme di Progetto;
 - aggiornamento del documento di Analisi dei Requisiti, introducendo i requisiti non funzionali;
 - informarsi sul documento di Piano di Qualifica;
 - aggiornare vecchi documenti con il nuovo template;
@@ -833,26 +838,26 @@ A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore ef
 === Burndown-chart
 [da inserire]
 
-== Terzo Sprint dal 27-11-2023 al 04-12-2023
+== Terzo Sprint dal 19-11-2023 al 27-11-2023
 
 === Obiettivi raggiunti
 - Proseguimento del processo di individuazione e stesura degli Use Case;
 - Perfezionamento delle automazioni di versionamento documenti;
 - Perfezionamento del template usato per i documenti;
-- Aggiornamento parziale del documento di Norme di Progetto;
+- Aggiornamento parziale del documento Norme di Progetto;
 - Studio iniziale della libreria Three.js;
 - Meeting con l'azienda Proponente per esporre ipotesi e Use Case individuati, richiedere chiarimenti ed avanzare opportune richieste;
 - Contatto con l'azienda Proponente per fissare il prossimo meeting.
 
 === Obiettivi mancati
-- Aggiornamento completo del documento di Norme di Progetto con l'inserimento dei grafici di Gantt e di burndown.
+- Aggiornamento completo del documento Piano di Progetto con l'inserimento dei grafici di Gantt e di burndown.
 
 === Analisi problematiche insorte
 
 Nonostante la realizzazione soddisfacente della maggior parte degli obiettivi concordati, sono emerse alcune criticità durante l'implementazione del progetto:
 
 - si è riscontrata una pianificazione non ottimale e superficiale, attribuibile alla mancanza di un dettagliato processo di pianificazione durante la riunione precedente l'avvio dello sprint;
-- problemi sono sorti a causa della mancata definizione di standard per la creazione dei grafici di Gantt e burndown, comportando una stesura parziale dei paragrafi nel documento del Piano di Progetto;
+- sono sorti problemi a causa della mancata definizione di standard per la creazione dei grafici di Gantt e burndown, comportando una stesura parziale dei paragrafi nel documento Piano di Progetto;
 - la durata dei meeting ha superato le aspettative a causa di alcune inefficienze temporali;
 - il gruppo ha rilevato la mancanza di standard per designare le persone responsabili della redazione dei verbali durante lo sprint.
 
@@ -895,7 +900,42 @@ Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentr
 
 A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo diverso a quanto preventivato:
 - Responsabile: a causa di mancati standard su come effettuare una pianificazione ottimale il responsabile ha impiegato meno ore di quanto previsto;
-- Amministratore: a causa dei mancati standard sulla realizzazione dei grafici gli amministratori hanno impiegato più ore finalizzate allo studio sui grafici da adottare.
+- Amministratore: a causa dei mancati standard sulla realizzazione dei grafici gli Amministratori hanno impiegato più ore finalizzate allo studio sui grafici da adottare.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Budget rimanente*], 
+    [Responsabile], [2.520,00],
+    [Amministratore], [760,00],
+    [Analista], [1.225,00],
+    [Progettista], [2.375,00],
+    [Programmatore], [3.150,00],
+    [Verificatore], [1.755,00],
+    [*Totale rimanente*], [11.785,00]
+  ),
+  caption: "Monitoraggio costi terzo sprint"
+)
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Ore rimanenti*],
+    [Responsabile], [84],
+    [Amministratore], [38],
+    [Analista], [49],
+    [Progettista], [95],
+    [Programmatore], [210],
+    [Verificatore], [117],
+    [*Totale ore rimanenti*], [593]
+  ),
+  caption: "Monitoraggio ore terzo sprint"
+)
+
 === Burndown-chart
 [da inserire]
 
@@ -909,7 +949,7 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
 - Perfezionamento della stesura degli Use Case individuati finora;
 - Redazione di una prima versione dell'Analisi dei Requisiti;
 - Valutazione di un'eventuale data per un primo meeting con il professor Cardin per ottenere un feedback sull'Analisi dei Requisiti;
-- Proseguimento della redazione e aggiornamento del documento di Norme di Progetto;
+- Proseguimento della redazione e aggiornamento del documento Norme di Progetto;
 - Proseguimento periodo di studio di Three.js, in particolare finalizzato a:
  - creazione di scaffali nell'ambiente tridimensionale;
  - implementazione sistema di drag and drop;

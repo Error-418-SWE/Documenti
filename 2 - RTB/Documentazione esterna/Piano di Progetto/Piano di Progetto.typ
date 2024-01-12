@@ -427,27 +427,30 @@ Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
 
 === Obiettivi prefissati
 Gli obiettivi del quinto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
-dell'Analisi dei Requisiti e sullo sviluppo dei primi PoC. \
+del documento Analisi dei Requisiti e sullo sviluppo dei primi PoC.
+
 Gli obiettivi dello sprint 5 sono:
 - perfezionamento del sistema di drag and drop nel PoC;
 - creazione degli scaffali nel PoC;
-- creazione ambiente docker;
+- creazione ambiente Docker;
 - svolgere meeting con il professor Cardin in merito all'Analisi dei Requisiti;
 - perfezionare e aggiornare il documento Norme di Progetto;
-- aggiornamento del documento di Analisi dei Requisiti, introducendo i requisiti non funzionali;
-- informarsi sul documento di Piano di Qualifica;
+- aggiornamento del documento Analisi dei Requisiti, introducendo i requisiti non funzionali;
+- informarsi sul documento Piano di Qualifica;
 - aggiornare vecchi documenti con il nuovo template;
-- scrittura del glossario.
+- scrittura del Glossario.
 
 === Preventivo costi
 Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira;
-- *Analista*: al fine di redarre il documento di Analisi dei Requisiti;
+- *Analista*: al fine di redarre il documento Analisi dei Requisiti;
 - *Progettista*: al fine di continuare lo studio sulla libreria Three.js;
 - *Programmatore*: al fine di sviluppare i PoC relativi allo studio della libreria;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità e formulazione degli Use Case individuati e del documento di Analisi dei Requisiti.
+- *Verificatore*: al fine di:
+  - verificare la correttezza delle modifiche ai documenti;
+  - effettuare un controllo sulla validità e formulazione degli Use Case individuati e del documento Analisi dei Requisiti.
 
 #set text(
   size: 10pt
@@ -1048,7 +1051,7 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 === Obiettivi raggiunti
 - Miglioramento e aggiornamento documento Analisi dei Requisiti;
 - Realizzazione PoC relativo alla creazione e posizionamento di scaffali dell'ambiente di lavoro;
-- Realizzazione PoC relativo alla lettura e utilizzo di file SVG e comunicazione con Database;
+- Realizzazione PoC relativo alla lettura e utilizzo di file SVG e comunicazione con database;
 - Realizzazione PoC che integra l'utilizzo di Docker;
 - Incontro con Proponente in data 06-12-23;
 - Incontro con professor Cardin in data 07-12-23;
@@ -1093,6 +1096,41 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
 )
 
 Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabile e l'Amministratore) hanno impiegato ore produttive come Programmatori, questo ha in parte significato una riduzione delle ore produttive previste per il ruolo assegnato.
+
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Budget rimanente*], 
+    [Responsabile], [2.340,00],
+    [Amministratore], [640,00],
+    [Analista], [850,00],
+    [Progettista], [2.300,00],
+    [Programmatore], [2.970,00],
+    [Verificatore], [1.650,00],
+    [*Totale rimanente*], [10.750,00]
+  ),
+  caption: "Monitoraggio costi quinto sprint"
+)
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Ore rimanenti*],
+    [Responsabile], [78],
+    [Amministratore], [32],
+    [Analista], [34],
+    [Progettista], [92],
+    [Programmatore], [198],
+    [Verificatore], [110],
+    [*Totale ore rimanenti*], [544]
+  ),
+  caption: "Monitoraggio ore quinto sprint"
+)
 
 === Burndown-chart
 [da inserire]

@@ -376,7 +376,8 @@ In questo periodo, l'assegnazione del ruolo di Programmatore è ritenuta precoce
 
 === Obiettivi prefissati
 Gli obiettivi del quarto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
-dell'Analisi dei Requisiti e sull'esplorazione delle nuove tecnologie. \
+del documento Analisi dei Requisiti e sull'esplorazione delle nuove tecnologie.
+
 Gli obiettivi dello sprint 4 sono:
 - effettuare una migliore pianificazione;
 - perfezionamento della stesura degli Use Case individuati finora;
@@ -392,11 +393,13 @@ Gli obiettivi dello sprint 4 sono:
 Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
-- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti, al fine di aggiornare il documento di Piano di Progetto;
-- *Analista*: al fine di perfezionare la stesura degli Use Case individuati e redatte una prima versione di Analisi dei Requisiti;
+- *Amministratore*: al fine di:
+  - gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
+  - aggiornare il documento Piano di Progetto.
+- *Analista*: al fine di perfezionare la stesura degli Use Case individuati e redarre una prima versione del documento Analisi dei Requisiti;
 - *Progettista*: al fine di condurre uno studio esplorativo sulla libreria Three.js;
 - *Programmatore*: al fine di esplorare in modo pratico le tecnologie relative ai PoC;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità degli Use Case individuati nel documento di Analisi dei Requisiti.
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità degli Use Case individuati nel documento Analisi dei Requisiti.
 
 #figure(
   table(
@@ -947,22 +950,28 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
 === Obiettivi raggiunti
 - Effettuare una migliore pianificazione;
 - Perfezionamento della stesura degli Use Case individuati finora;
-- Redazione di una prima versione dell'Analisi dei Requisiti;
+- Redazione di una prima versione del documento Analisi dei Requisiti;
 - Valutazione di un'eventuale data per un primo meeting con il professor Cardin per ottenere un feedback sull'Analisi dei Requisiti;
 - Proseguimento della redazione e aggiornamento del documento Norme di Progetto;
 - Proseguimento periodo di studio di Three.js, in particolare finalizzato a:
  - creazione di scaffali nell'ambiente tridimensionale;
  - implementazione sistema di drag and drop;
  - parametrizzazione degli elementi presenti nell'applicazione.
+
 === Obiettivi mancati
 Tutti gli obiettivi sono stati raggiunti.
+
 === Analisi problematiche insorte
 Il gruppo ha notato in fase di retrospettiva una scarsa reattività in fase di review e verifica, che portano al rallentamento del lavoro. Le review
-sono state rallentate anche dalla presenza di numerosi merge conflicts, che il gruppo si è ritrovato a gestire per la prima volta nel progetto.\
+sono state rallentate anche dalla presenza di numerosi merge conflicts, che il gruppo si è ritrovato a gestire per la prima volta nel progetto.
+
 Inoltre si è presa coscienza della necessità di apportare migliorie al processo di gestione di Jira.
+
 === Risoluzioni attuate
-Il gruppo ha preso in considerazione l'utilizzo di Graphite per velocizzare il processo di review e creare pull request brevi.\
-Inoltre il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'utilizzo di Jira, per migliorare l'amministrazione del progetto.
+Il gruppo ha preso in considerazione l'utilizzo di Graphite per velocizzare il processo di review e creare pull request brevi.
+
+Inoltre, il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'utilizzo di Jira, per migliorare l'amministrazione del progetto.
+
 === Analisi costi di sprint effettivi
 #set text(
   size: 10pt
@@ -991,11 +1000,44 @@ Inoltre il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'ut
   size: 11pt
 )
 
-
 A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effettivo diverso a quanto preventivato:
-- Amministratore: l'utilizzo di Jira in maniera approssimativa ha portato ad un monte ore inferiore a quanto previsto;
 
+- Amministratore: l'utilizzo di Jira in maniera approssimativa ha portato ad un monte ore inferiore a quanto previsto;
 - Verificatore: i numerosi merge conflicts hanno portato a notevoli rallentamenti in fase di review.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Budget rimanente*], 
+    [Responsabile], [2.430,00],
+    [Amministratore], [680,00],
+    [Analista], [1.050,00],
+    [Progettista], [2.350,00],
+    [Programmatore], [3.090,00],
+    [Verificatore], [1.695,00],
+    [*Totale rimanente*], [11.295,00]
+  ),
+  caption: "Monitoraggio costi quarto sprint"
+)
+
+#figure(
+  table(
+    columns: 2,
+    fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
+    [*Ruolo*], [*Ore rimanenti*],
+    [Responsabile], [81],
+    [Amministratore], [34],
+    [Analista], [42],
+    [Progettista], [94],
+    [Programmatore], [206],
+    [Verificatore], [113],
+    [*Totale ore rimanenti*], [570]
+  ),
+  caption: "Monitoraggio ore quarto sprint"
+)
 
 === Burndown-chart
 [da inserire]

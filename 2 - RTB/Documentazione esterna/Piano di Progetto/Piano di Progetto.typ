@@ -265,7 +265,7 @@ In questo primo periodo, l'assegnazione dei ruoli di Progettista e di Programmat
 === Diagramma di Gantt
 [da inserire]
 
-== Secondo Sprint dal 13-11-2023 al 19-11-2023
+== Secondo Sprint dal 13-11-2023 al 20-11-2023
 
 === Obiettivi prefissati
 Gli obiettivi del secondo sprint si concentrano sull'individuazione degli Use Case del progetto, sul perfezionamento delle automazioni e sulla stesura iniziale delle Norme di Progetto. 
@@ -314,7 +314,7 @@ In questo  periodo, l'assegnazione dei ruoli di Programmatore e Progettista è r
 === Diagramma di Gantt
 [da inserire]
 
-== Terzo Sprint dal 19-11-2023 al 27-11-2023
+== Terzo Sprint dal 20-11-2023 al 27-11-2023
 === Obiettivi prefissati
 Gli obiettivi del terzo sprint si concentrano sull'aggiornamento del documento Norme di Progetto, sul periodo di analisi dei requisiti (principalmente concentrata sui requisiti funzionali) e su un primo momento di esplorazione delle nuove tecnologie.
 
@@ -751,7 +751,7 @@ Il ruolo dell'Amministratore, invece, ha visto un aumento delle ore rispetto a q
 [da inserire]
 
 
-== Secondo sprint dal 13-11-2023 al 19-11-2023
+== Secondo Sprint dal 13-11-2023 al 20-11-2023
 
 === Obiettivi raggiunti
 - Riconfigurazione della repository;
@@ -838,7 +838,7 @@ A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore ef
 === Burndown-chart
 [da inserire]
 
-== Terzo Sprint dal 19-11-2023 al 27-11-2023
+== Terzo Sprint dal 20-11-2023 al 27-11-2023
 
 === Obiettivi raggiunti
 - Proseguimento del processo di individuazione e stesura degli Use Case;

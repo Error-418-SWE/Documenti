@@ -1,4 +1,4 @@
-name: GPT spell checking
+name: Spell checker
 
 on:
   pull_request:
@@ -12,6 +12,7 @@ jobs:
     uses: Error-418-SWE/Documenti/.github/workflows/fetch_info.yml@src
 
   check:
+    name: Check spelling
     if: github.event.pull_request.merged == false
     needs: [fetch]
     permissions:
@@ -42,6 +43,6 @@ jobs:
         if: always()
         with:
           message-path: output.txt
-          message-failure: "Spell checking fallito. Controlla i log."
+          message-failure: "*Spell checking fallito. Controlla i log di esecuzione della Action.*"
           message-id: "gpt-answer"
           refresh-message-position: true

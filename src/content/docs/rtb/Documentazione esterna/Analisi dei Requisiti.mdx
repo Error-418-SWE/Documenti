@@ -1,0 +1,1399 @@
+
+
+import DocumentDetails from '/src/components/DocumentDetails.astro';
+import ChangelogTable from '/src/components/ChangelogTable.astro';
+
+<DocumentDetails {...frontmatter}/>
+
+<ChangelogTable {...frontmatter}>
+| Versione | Data       | PR  | Titolo                                                             | Redattore        | Verificatore     |
+| -------- | ---------- | --- | ------------------------------------------------------------------ | ---------------- | ---------------- |
+| 1.0.0    | 13-01-2024 | 178 | DOC-258 Correggere dichiarazione tabelle analisi dei requisiti     | Oseliero Antonio | Carraro Riccardo |
+| 1.0.0    | 30-12-2023 | 128 | DOC-195 Implementare tracciamento requisito fonte                  | Zaccone Rosario  | Oseliero Antonio |
+| 1.6.0    | 28-12-2023 | 123 | DOC-194 Rendere gli UC in forma tabellare requisiti funzionali     | Zaccone Rosario  | Oseliero Antonio |
+| 1.5.1    | 15-12-2023 | 102 | DOC-226 Scomporre UC secondo feedback di Cardin                    | Banzato Alessio  | Todesco Mattia   |
+| 1.5.0    | 14-12-2023 | 94  | DOC-197 Definzione requisiti di vincolo                            | Gardin Giovanni  | Todesco Mattia   |
+| 1.4.1    | 12-12-2023 | 91  | DOC-250 Correggere sezione degli UC del file Analisi dei requisiti | Banzato Alessio  | Todesco Mattia   |
+| 1.4.0    | 10-12-2023 | 78  | DOC-192 Redatte sezione Introduzione e Descrizione del prodotto    | Gardin Giovanni  | Todesco Mattia   |
+| 1.3.0    | 10-12-2023 | 88  | DOC-196 Redazione requisiti di qualità                             | Gardin Giovanni  | Todesco Mattia   |
+| 1.2.6    | 05-12-2023 | 71  | DOC-38 Analisi dei requisiti                                       | Nardo Silvio     | Gardin Giovanni  |
+| 1.2.6    | 05-12-2023 | 67  | DOC-188 Completato UC-7                                            | Oseliero Antonio | Carraro Riccardo |
+| 1.2.5    | 05-12-2023 | 66  | DOC-187 Completamento UC-6                                         | Oseliero Antonio | Carraro Riccardo |
+| 1.2.4    | 04-12-2023 | 62  | DOC-186 Completamento UC-5                                         | Oseliero Antonio | Carraro Riccardo |
+| 1.2.3    | 04-12-2023 | 57  | DOC-185 Completamento UC-4                                         | Oseliero Antonio | Carraro Riccardo |
+| 1.2.2    | 04-12-2023 | 56  | DOC-184 Completamento UC-3                                         | Oseliero Antonio | Carraro Riccardo |
+| 1.2.1    | 03-12-2023 | 54  | Completamento UC-1 e UC-2                                          | Carraro Riccardo | Oseliero Antonio |
+| 1.2.0    | 28-11-2023 | 39  | DOC-100 Aggiungere UC da 7 a 11                                    | Banzato Alessio  | Oseliero Antonio |
+| 1.1.0    | 27-11-2023 | 37  | DOC-97 Aggiunto file analisi dei requisiti con uc fino alla 6.1    | Nardo Silvio     | Carraro Riccardo |
+| 1.1.0    | 27-11-2023 | 37  | DOC-97 Aggiunto file analisi dei requisiti con uc fino alla 6.1    | Nardo Silvio     | Oseliero Antonio |
+| 1.0.0    | 18-11-2023 | 15  | DOC-71 Pubblicazione analisi dei requisiti                         | Banzato Alessio  | Todesco Mattia   |
+</ChangelogTable>
+
+# Introduzione
+
+## Scopo del documento
+
+Il presente documento descrive i casi d'uso e i requisiti del progetto
+*Warehouse Management 3D*, elaborati a partire dal capitolato C5
+proposto da Sanmarco Informatica S.p.A e assegnato all'organizzazione
+dal Committente.
+
+## Definizioni
+
+Il presente documento include lessico di dominio, per il quale è
+previsto il documento di Glossario. Le parole del Glossario sono
+denotate dal simbolo ~G~ al pedice.
+
+# Descrizione del prodotto
+
+## Obiettivi del prodotto
+
+Il prodotto software oggetto di questo documento è un gestionale di
+magazzino (WMS) che offre una visualizzazione 3D del magazzino ed un set
+di funzionalità logistiche di base.
+
+## Ambito del prodotto
+
+Il prodotto software oggetto di questo documento è denominato **WMS3**.
+WMS3 è un gestionale di magazzino che offre le seguenti funzionalità:
+
+-   visualizzazione tridimensionale di un magazzino, con possibilità di
+    muovere la vista;
+
+-   visualizzazione delle informazioni della merce presente in
+    magazzino;
+
+-   caricamento dei dati relativi alle merci da un database SQL;
+
+-   emissione di ordini di movimentazione delle merci;
+
+-   filtraggio e ricerca delle merci con rappresentazione grafica dei
+    risultati;
+
+-   importazione di planimetrie in formato SVG.
+
+I gestionali di magazzino tradizionali presentano una serie di
+problematiche:
+
+-   rappresentazione 2D del contenuto del magazzino;
+
+-   software pensato per un uso esclusivamente desktop;
+
+-   interfaccia di gestione complessa
+    ([\[wms-tradizionale\]](#wms-tradizionale){.ref}), inadatta all'uso
+    tramite touchscreen;
+
+-   interpretazione dei dati e delle viste laboriosa e soggetta ad
+    errore umano;
+
+-   tempi di formazione del personale lunghi a causa della complessità
+    degli strumenti.
+
+<figure>
+<p><img src="./imgs/wms-tradizionale.jpg" /></p>
+<figcaption><p>Schermata di un software WMS tradizionale (fonte: <a
+href="https://www.seniorsoftware.ro/en/wms/">seniorsoftware.ro</a>)</p></figcaption>
+</figure>
+
+[]{#wms-tradizionale}
+
+Il vantaggio principale di WMS3, rispetto ai tradizionali gestionali di
+magazzino, è la visualizzazione 3D del magazzino e del suo contenuto.
+Questa funzionalità rappresenta un miglioramento significativo di
+usabilità rispetto ai WMS tradizionali. La visualizzazione 3D permette
+agli utenti di:
+
+-   avere una migliore comprensione dello stato del magazzino;
+
+-   disporre le operazioni logistiche con maggiore cognizione.
+
+## Panoramica del prodotto
+
+### Interazioni
+
+WMS3 si integra con, ma non comprende nel proprio ambito:
+
+1.  database SQL esterno per ottenere lo stato interno del magazzino;
+
+2.  sistema esterno per la notifica degli ordini di movimentazione
+    tramite API RESTful.
+
+#### Interfacce utente
+
+WMS3 è una *web application* acceduta e operata tramite browser.
+L'interfaccia utente (IU) è *web-based* e *responsive*.
+
+Lo scenario di interazione primario avviene tramite mouse e tastiera;
+tuttavia, è prevista la piena operabilità anche tramite touchscreen.
+Sarà possibile operare da dispositivi mobili quali tablet e smartphone.
+
+Le funzionalità esposte all'utente variano in base all'ampiezza della
+*viewport* del dispositivo in uso.
+
+#### Interfacce hardware
+
+Il prodotto è acceduto tramite browser. Deve supportare l'esecuzione sui
+seguenti dispositivi:
+
+-   computer desktop, tramite mouse e tastiera;
+
+-   tablet, tramite touchscreen;
+
+-   smartphone, tramite touchscreen.
+
+Il browser e il dispositivo devono essere compatibili con lo standard
+WebGL.
+
+Il prodotto non prevede elementi hardware propri o interfacce con
+elementi hardware di terze parti.
+
+#### Interfacce software
+
+WMS3 richiede l'accesso in lettura ad un database SQL per il caricamento
+e la visualizzazione dei dati.
+
+#### Interfacce di comunicazione
+
+Per la comunicazione tra le sue componenti, con l'utente e con servizi
+esterni, WMS3 utilizza HTTP.
+
+#### Vincoli di memoria
+
+Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
+
+#### Operazioni
+
+#### Requisiti di adattamento al contesto
+
+#### Interfacce a servizi
+
+WMS3 dovrà inviare messaggi ad uno o più servizi esterni per comunicare
+gli ordini di movimentazione richiesti dall'utente. Dovrà inoltre
+ricevere e gestire messaggi che comunicano l'esito dell'ordine di
+movimentazione richiesto.
+
+### Funzionalità del prodotto
+
+### Caratteristiche degli utenti
+
+L'utente tipico di WMS3 è un supervisore di magazzino. Ci si aspetta che
+la maggior parte degli accessi a WMS3 avvengano da ufficio, tramite un
+computer desktop dotato di mouse e tastiera; tuttavia, non si può
+escludere che l'utente possa accedere a WMS3 tramite dispositivo mobile.
+
+L'utente tipico è avvezzo all'uso del computer e dei dispositivi mobili.
+Conosce il dominio applicativo.
+
+### Limitazioni
+
+Non sono noti requisiti limitanti la capacità dell'organizzazione di
+realizzare il progetto WMS3, come ad esempio:
+
+-   politiche interne, regolamenti, leggi statali;
+
+-   limiti hardware;
+
+-   limiti imposti dai servizi esterni;
+
+-   limiti imposti dai requisiti di qualità;
+
+-   considerazioni sulla sicurezza dei dati;
+
+-   considerazioni sulla sicurezza dell'utente e di tutti coloro
+    coinvolti, direttamente o indirettamente, dal ciclo di vita di WMS3.
+
+### Ipotesi e dipendenze
+
+1.  Disponibilità di un database SQL;
+
+2.  Disponibilità di un browser compatibile con WebGL.
+
+# Riferimenti
+
+## Riferimenti di conformità
+
+-   Norme di Progetto;
+
+-   Regolamento del progetto didattico:\
+    *<https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf>* ;
+
+-   Standard ISO/IEC/IEEE 29148:2018:\
+    *<https://ieeexplore.ieee.org/servlet/opac?punumber=8559684>*;
+
+-   Standard ISO/IEC/IEEE 12207:2017:\
+    *<https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en>*.
+
+## Riferimenti informativi
+
+-   Verbali interni;
+
+-   Verbali esterni;
+
+-   Capitolato "Warehouse Management 3D" di *Sanmarco Informatica
+    S.p.A.*:\
+    *<https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf>* ;
+
+-   Documentazione Three.js:\
+    *<https://threejs.org/docs/index.html>*
+
+-   WebGL 2.0 Specification:\
+    *<https://registry.khronos.org/webgl/specs/latest/2.0/>*
+
+-   Analisi dei requisiti:\
+    *<https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf>* ;
+
+-   Analisi e descrizione delle funzionalità, Use Case e relativi
+    diagrammi (UML):\
+    *<https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf>*
+    .
+
+## Principi di redazione
+
+Questo documento è redatto in modo incrementale, così da risultare
+sempre conforme agli accordi presi tra gruppo e Proponente durante lo
+sviluppo del progetto. Vengono inoltre adottati i seguenti criteri di
+qualità:
+
+1.  **Correttezza**: ogni caso d'uso e requisito riportato corrisponde a
+    ciò che è richiesto dal Proponente;
+
+2.  **Non ambiguità**: ogni parte del documento, caso d'uso e requisito
+    deve essere descritto in modo tale che ne esista una sola
+    interpretazione, e che questa sia facilmente comprensibile da tutte
+    le parti coinvolte nel progetto. A questo scopo, il gruppo
+    *Error_418* mette a disposizione un ***Glossario*** nel quale sono
+    definiti i termini propri del dominio di progetto. Ogni ricorrenza
+    di tali termini nei documenti è segnalata dalla lettera *g* al
+    pedice;
+
+3.  **Completezza**: il documento contiene tutti i requisiti necessari
+    allo sviluppo del progetto, classificandoli per categorie di
+    importanza, e comprende anche la descrizione di tutti i possibili
+    scenari del prodotto;
+
+4.  **Coerenza**: ciò che è scritto nel documento non deve andare in
+    conflitto con il contenuto di altri documenti o del documento
+    stesso. Ogni caso d'uso o requisito deve esprimere un concetto
+    diverso dagli altri;
+
+5.  **Verificabilità**: deve essere possibile controllare la presenza di
+    ogni requisito nel prodotto finale tramite un procedimento
+    misurabile. La verificabilità è un parametro fortemente influenzato
+    dall'ambiguità: più un requisito è ambiguo, meno sarà verificabile;
+
+6.  **Modificabilità**: deve essere definito un modello per la stesura
+    dei singoli casi d'uso e requisiti, così che la loro modifica possa
+    avvenire nel modo più efficiente possibile;
+
+7.  **Tracciabilità**: per ogni requisito ne è indicato il riferimento
+    (o fonte), in modo da semplificare il processo di verifica della
+    completezza e correttezza.
+
+# Creazione magazzino
+
+<figure>
+<p><img src="./imgs/uc1.png" /></p>
+<figcaption><p>UML UC-1</p></figcaption>
+</figure>
+
+## Importazione mappa magazzino da file SVG
+
+$\mathbf{\text{Descrizione: }}$ All'avvio dell'applicazione e in ogni
+momento si desideri, si può decidere di caricare un file SVG il quale
+viene utilizzato dal programma per configurare le aree di lavoro.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   è stato dato inizio alla procedura di configurazione dell'ambiente
+    di lavoro tramite file.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   il file SVG è stato caricato con successo e il programma ha
+    configurato l'ambiente di conseguenza;
+
+-   l'ambiente così generato ha rimosso eventuali elementi
+    precedentemente configurati.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente carica un file SVG tramite un'apposita interfaccia.
+
+$\mathbf{\text{Estensioni: }}$
+
+-   UC-1.1.1 Visualizzazione errore lettura del file SVG.
+
+### Visualizzazione errore lettura del file SVG
+
+$\mathbf{\text{Descrizione: }}$ il file caricato dall'utente non ha
+permesso al programma di configurare l'ambiente di lavoro.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'utente ha caricato un file per la configurazione dell'ambiente di
+    lavoro;
+
+-   il programma non ha potuto configurare l'ambiente di lavoro a causa
+    del file caricato.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   all'utente viene notificato l'errore.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente ha caricato un file non adatto.
+
+$\mathbf{\text{Generalizzazioni: }}$
+
+-   UC-1.1.1.1 Visualizzazione errore lettura del file SVG dovuto a file
+    privo di informazioni;
+
+-   UC-1.1.1.2 Visualizzazione errore lettura del file SVG dovuto a
+    informazioni fornite incongruenti.
+
+#### Visualizzazione errore file privo di informazioni
+
+$\mathbf{\text{Descrizione: }}$ il file SVG caricato non contiene
+informazioni utili alla configurazione dell'ambiente.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   è stato caricato un file per la configurazione dell'ambiente;
+
+-   il file è stato aperto correttamente dal programma;
+
+-   il programma non ha potuto ottenere informazioni dal file.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   viene visualizzato l'errore relativo al caricamento di un file SVG
+    privo di informazioni.
+
+$\mathbf{\text{Scenario: }}$
+
+-   L'utente ha caricato un file SVG vuoto o con informazioni non utili.
+
+#### Visualizzazione errore informazioni del file incongruenti
+
+$\mathbf{\text{Descrizione: }}$ il file SVG caricato contiene
+informazioni incongruenti e quindi non utilizzabili per la
+configurazione dell'ambiente.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   è stato caricato un file per la configurazione dell'ambiente;
+
+-   tale file è stato aperto correttamente dal programma;
+
+-   il programma ha ricavato informazioni non valide dal file.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   viene visualizzato l'errore relativo al caricamento di un file con
+    informazioni incongruenti.
+
+$\mathbf{\text{Scenario: }}$
+
+-   L'utente ha caricato un file per la configurazione dell'ambiente
+    contenente informazioni incongruenti.
+
+## Creazione manuale della mappa del magazzino
+
+$\mathbf{\text{Descrizione: }}$ configurazione manuale del perimetro
+dell'ambiente di lavoro.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   è stato dato inizio alla procedura di configurazione manuale
+    dell'ambiente di lavoro.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   la forma e il perimetro dell'ambiente di lavoro è stato configurato
+    manualmente;
+
+-   l'ambiente così generato ha rimosso eventuali elementi
+    precedentemente configurati.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente inserisce i dati relativi alla configurazione.
+
+$\mathbf{\text{Estensioni: }}$
+
+-   UC-5.1 Dimensioni negative o uguali a zero.
+
+# Inserimento nuove dimensioni del magazzino
+
+<figure>
+<p><img src="./imgs/uc2.png" /></p>
+<figcaption><p>UML UC-2</p></figcaption>
+</figure>
+
+$\mathbf{\text{Descrizione: }}$ il perimetro dell'ambiente di lavoro
+viene modificato successivamente alla sua configurazione iniziale.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   almeno una configurazione dell'ambiente deve essere avvenuta con
+    successo;
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   l'ambiente di lavoro è stato correttamente modificato in funzione
+    delle richieste dell'utente.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente avvia la modifica dell'ambiente di lavoro;
+
+-   l'utente immette i dati richiesti.
+
+$\mathbf{\text{Estensioni: }}$
+
+-   UC-2.1 Visualizzazione errore dimensioni magazzino troppo piccole;
+
+-   UC-5.1 Dimensioni negative o uguali a zero.
+
+## Visualizzazione errore dimensioni magazzino troppo piccole
+
+$\mathbf{\text{Descrizione: }}$ i dati inseriti per la modifica
+dell'ambiente di lavoro generano conflitti con quanto configurato
+precedentemente.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'utente ha immesso i dati per la modifica dell'ambiente;
+
+-   tali dati non sono congrui con la precedente configurazione
+    dell'ambiente.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   all'utente viene notificato l'errore relativo ad un'immissione
+    errata dei dati per la modifica dell'ambiente.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente ha immesso delle dimensioni troppo piccole nella modifica
+    dell'ambiente, rischiando di generare conflitti.
+
+# Gestione scaffali
+
+<figure>
+<p><img src="./imgs/uc3.png" /></p>
+<figcaption><p>UML UC-3</p></figcaption>
+</figure>
+
+## Creazione scaffale
+
+$\mathbf{\text{Descrizione: }}$ uno scaffale viene creato in base ai
+valori dati dall'utente e aggiunto nell'ambiente in una posizione valida
+specificata. Seccessivamente vengono creati i bin contenuti dallo
+scaffale e posizionati in esso.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente di lavoro deve essere stato configurato con successo.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   nell'ambiente di lavoro è stato aggiunto un nuovo scaffale;
+
+-   nello scaffale creato sono stati aggiunti i bin da esso contenuti.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente seleziona l'aggiunta di uno scaffale;
+
+-   l'utente inserisce i dati necessari alla creazione dello scaffale;
+
+-   l'utente posiziona lo scaffale in una posizione valida nell'ambiente
+    di lavoro.
+
+$\mathbf{\text{Estensioni: }}$
+
+-   UC-5 Visualizzazione errore inserimento dati dimensionali non
+    validi.
+
+## Modifica scaffale
+
+$\mathbf{\text{Descrizione: }}$ modifica delle caratteristiche di uno
+scaffale già esistente.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   nell'ambiente deve essere posizionato almeno uno scaffale.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   i valori di uno scaffale scelto sono stati modificati come indicato.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente seleziona uno scaffale nell'ambiente di lavoro;
+
+-   l'utente seleziona il comando per la modifica dello scaffale;
+
+-   l'utente inserisce i nuovi valori relativi alle proprietà da
+    modificare dello scaffale.
+
+$\mathbf{\text{Estensioni: }}$
+
+-   UC-5 Visualizzazione errore inserimento dati dimensionali non
+    validi.
+
+## Spostamento scaffale
+
+$\mathbf{\text{Descrizione: }}$ L'utente intende spostare la posizione
+di uno scaffale presente nell'ambiente 3D.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   nell'ambiente deve essere posizionato almeno uno scaffale.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   lo scaffale spostato si trova nella nuova posizione scelta
+    dall'utente.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente seleziona uno scaffale nell'ambiente di lavoro;
+
+-   l'utente sposta lo scaffale nella nuova posizione desiderata
+    nell'ambiente 3D.
+
+$\mathbf{\text{Estensioni: }}$
+
+-   UC-3.3.1 Visualizzazione errore spostamento dello scaffale in zona
+    non libera
+
+### Visualizzazione errore spostamento dello scaffale in zona non libera
+
+$\mathbf{\text{Descrizione: }}$ è stata richiesto lo spostamento di uno
+scaffale in una zona non libera.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   avviata l'attività di spostamento dello scaffale;
+
+-   lo scaffale interessato viene posto in una zona occupata.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   all'utente viene notificato l'errore relativo allo spostamento dello
+    scaffale.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente ha richiesto lo spostamento di uno scaffale in una zona non
+    libera.
+
+## Eliminazione scaffale
+
+$\mathbf{\text{Descrizione: }}$ lo scaffale selezionato presente
+nell'ambiente viene eliminato.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   nell'ambiente deve essere posizionato almeno uno scaffale;
+
+-   la modalità di modifica dell'ambiente deve essere attiva;
+
+-   lo scaffale da eliminare deve contenere solo bin vuoti.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   lo scaffale selezionato viene rimosso dall'ambiente;
+
+-   vengono rimossi i bin in esso contenuti.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente seleziona uno scaffale nell'ambiente;
+
+-   l'utente seleziona il comando per la rimozione dello scaffale;
+
+-   l'utente conferma l'operazione da una finestra di conferma.
+
+$\mathbf{\text{Estensioni: }}$
+
+-   UC-3.4.1 Visualizzazione errore scaffale da eliminare non vuoto.
+
+### Visualizzazione errore scaffale da eliminare non vuoto
+
+$\mathbf{\text{Descrizione: }}$ è stata richiesta l'eliminazione di uno
+scaffale contenente almeno un bin non vuoto.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'attività di eliminazione di uno scaffale deve essere stata
+    attivata;
+
+-   lo scaffale interessato contiene almeno un bin non vuoto.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   all'utente viene notificato l'errore relativo all'eliminazione di
+    uno scaffale non vuoto.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.
+
+# Gestione bin
+
+<figure>
+<p><img src="./imgs/uc4.png" /></p>
+<figcaption><p>UML UC-4</p></figcaption>
+</figure>
+
+## Creazione di un bin
+
+$\mathbf{\text{Descrizione: }}$ deve essere possibile creare delle aree
+adibite a contenere prodotti.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente deve essere correttamente configurato;
+
+-   deve esistere almeno un'area libera e valida.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   l'area selezionata viene classificata come bin.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente entra nella modalità di modifica;
+
+-   l'utente seleziona un'area libera e valida.
+
+## Modifica di un bin
+
+$\mathbf{\text{Descrizione: }}$ deve essere possibile modificare le
+dimensioni dei bin.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente deve essere correttamente configurato e deve esistere
+    almeno un bin modificabile.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   le dimensioni del bin sono state ridefinite.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente entra nella modalità di modifica;
+
+-   l'utente seleziona un bin;
+
+-   vengono mostrate le informazioni del bin;
+
+-   l'utente modifica le dimensioni del bin.
+
+$\mathbf{\text{Estensioni: }}$
+
+-   UC-5 Visualizzazione errore inserimento dati dimensionali non
+    validi.
+
+## Eliminazione bin
+
+$\mathbf{\text{Descrizione: }}$ deve essere possibile eliminare un bin.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente deve essere correttamente configurato;
+
+-   deve esistere almeno un bin vuoto.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   il bin è tornato ad essere un'area libera.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente entra nella modalità di modifica;
+
+-   l'utente seleziona un bin vuoto;
+
+-   l'utente chiede di eliminare il bin;
+
+-   viene richiesta la conferma dell'eliminazione.
+
+$\mathbf{\text{Estensioni: }}$
+
+-   UC-4.3.1 Errore cancellazione bin non vuoto.
+
+### Errore cancellazione bin non vuoto
+
+$\mathbf{\text{Descrizione: }}$ è stata richiesta l'eliminazione di un
+bin non vuoto.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'attività di eliminazione di un bin deve essere stata attivata;
+
+-   il bin interessato contiene un prodotto.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   all'utente viene notificato l'errore relativo all'eliminazione di un
+    bin non vuoto.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente ha richiesto l'eliminazione di un bin non vuoto.
+
+# Visualizzazione errore inserimento dati dimensionali non validi
+
+<figure>
+<p><img src="./imgs/uc5.png" /></p>
+<figcaption><p>UML UC-5</p></figcaption>
+</figure>
+
+$\mathbf{\text{Descrizione: }}$ i dati inseriti per la modifica delle
+dimensioni dell'elemento interessato non sono validi.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   inseriti dati per la modifica o la creazione degli elementi
+    dell'ambiente;
+
+-   tali dati non sono utilizzabili dal programma.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   viene visualizzato l'errore relativo all'inserimento di dati non
+    validi.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente inserisce dati relativi alla configurazione degli elementi
+    dell'ambiente non validi.
+
+$\mathbf{\text{Generalizzazioni: }}$
+
+-   UC-5.1.1 Dimensioni negative o uguali a 0;
+
+-   UC-5.1.2 Dimensioni eccessive.
+
+## Dimensioni negative o uguali a zero
+
+$\mathbf{\text{Descrizione: }}$ le dimensioni inserite per la modifica
+dell'elemento interessato sono minori o uguali a zero.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   inseriti dati dimensionali per la modifica o la creazione degli
+    elementi dell'ambiente;
+
+-   le dimensioni inserite non sono valide.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   viene visualizzato l'errore relativo all'inserimento di dimensioni
+    non valide.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente inserisce dati relativi alla configurazione degli elementi
+    dell'ambiente minori o uguali a zero.
+
+## Dimensioni eccessive
+
+$\mathbf{\text{Descrizione: }}$ le dimensioni inserite per la modifica
+dell'elemento interessato eccessive per il contesto di inserimento.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   inseriti dati dimensionali per la modifica o la creazione degli
+    elementi dell'ambiente;
+
+-   le dimensioni inserite sono eccessive.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   viene visualizzato l'errore relativo all'inserimento di dimensioni
+    eccessive.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente inserisce dati relativi alla configurazione degli elementi
+    dell'ambiente eccessivi.
+
+# Caricamento dati da database
+
+<figure>
+<p><img src="./imgs/uc6.png" /></p>
+<figcaption><p>UML UC-6</p></figcaption>
+</figure>
+
+$\mathbf{\text{Descrizione: }}$ i prodotti vengono inseriti dal database
+nei rispettivi bin.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente deve essere correttamente configurato.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   i prodotti si trovano nei rispettivi bin.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente configura l'accesso al database;
+
+-   l'utente inizia la procedura di caricamento dei prodotti.
+
+$\mathbf{\text{Inclusioni: }}$
+
+-   UC-6.1 Configurazione collegamento al database.
+
+$\mathbf{\text{Estensioni: }}$
+
+-   UC-6.2 Visualizzazione messaggio di errore.
+
+## Configurazione collegamento al database {#oo}
+
+$\mathbf{\text{Descrizione: }}$ l'utente imposta i dati necessari
+affinché il programma possa configurarsi con il database in cui sono
+contenuti i dati.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente deve essere correttamente configurato;
+
+-   il database deve essere disponibile;
+
+-   l'utente deve disporre delle credenziali per configurarsi al
+    database.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   il sistema è correttamente configurato per accedere al database.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente configura l'accesso al database.
+
+## Visualizzazione messaggio di errore
+
+$\mathbf{\text{Descrizione: }}$ i dati contenuti nel database sono in un
+formato non conforme o sono errati.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'utente ha iniziato la procedura di caricamento dati da database;
+
+-   l'accesso al database deve essere stato correttamente configurato.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   all'utente viene notificato l'errore relativo alla presenza di dati
+    errati o non conformi all'interno del database.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente prova a caricare i dati dal database ma questi sono errati
+    o non conformi a quelli che il sistema può riconoscere (es. numero
+    scaffali/bin incompatibile con le coordinate dei prodotti).
+
+# Richiesta di spostamento di un prodotto
+
+<figure>
+<p><img src="./imgs/uc7.png" /></p>
+<figcaption><p>UML UC-7</p></figcaption>
+</figure>
+
+$\mathbf{\text{Descrizione: }}$ l'utente seleziona il prodotto di cui
+desidera una ricollocazione all'interno del magazzino e avvia una
+richiesta di spostamento verso un altro bin.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   devono esistere almeno due bin distinti;
+
+-   uno dei due bin deve contenere un prodotto;
+
+-   uno dei due bin deve essere vuoto.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   viene inviata una richiesta di spostamento al magazzino tramite
+    l'uso di API;
+
+-   il bin di partenza viene evidenziato in modo da identificare il
+    fatto che da quel bin è in atto uno spostamento;
+
+-   il bin di arrivo viene evidenziato in modo da identificare il fatto
+    che in quel bin è in atto uno spostamento.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente seleziona un bin che contiene un prodotto;
+
+-   l'utente sposta il prodotto all'interno di un altro bin vuoto;
+
+-   viene inviata una notifica a magazzino che segnala lo spostamento;
+
+-   i due bin, di partenza e di arrivo, vengono evidenziati per
+    segnalare lo spostamento in corso.
+
+# Interrogazione di un bin
+
+<figure>
+<p><img src="./imgs/uc8.png" /></p>
+<figcaption><p>UML UC-8</p></figcaption>
+</figure>
+
+$\mathbf{\text{Descrizione: }}$ deve essere possibile visualizzare il
+prodotto contenuto in un determinato bin.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente deve essere correttamente configurato e deve esistere
+    almeno un bin.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   vengono visualizzate le informazioni del bin.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente seleziona un bin;
+
+-   vengono visualizzate le informazioni sul bin e, se presente, sul
+    prodotto contenuto nel bin.
+
+# Interrogazione di uno scaffale
+
+<figure>
+<p><img src="./imgs/uc9.png" /></p>
+<figcaption><p>UML UC-9</p></figcaption>
+</figure>
+
+$\mathbf{\text{Descrizione: }}$ deve essere possibile visualizzare le
+informazioni relative ad uno specifico scaffale.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente deve essere correttamente configurato e deve esistere
+    almeno uno scaffale.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   vengono visualizzate le informazioni dello scaffale.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente seleziona uno scaffale;
+
+-   vengono visualizzate le informazioni relative a lo scaffale
+    selezionato.
+
+# Ricerca prodotti
+
+<figure>
+<p><img src="./imgs/uc10.png" /></p>
+<figcaption><p>UML UC-10</p></figcaption>
+</figure>
+
+$\mathbf{\text{Descrizione: }}$ l'utente ricerca un prodotto.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente deve essere correttamente configurato.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   l'utente visualizza la posizione del bin contenente il prodotto
+    ricercato.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente ricerca un prodotto;
+
+-   il bin contenente il prodotto cercato viene evidenziato.
+
+$\mathbf{\text{Generalizzazioni: }}$
+
+-   UC-10.1 Ricerca per ID;
+
+-   UC-10.2 Ricerca per Nome;
+
+-   UC-10.3 Ricerca per Scaffale.
+
+## Ricerca per ID
+
+$\mathbf{\text{Descrizione: }}$ l'utente ricerca un prodotto tramite il
+suo ID di magazzino.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente deve essere correttamente configurato.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   l'utente visualizza la posizione del bin contenente il prodotto
+    ricercato.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente ricerca un prodotto usando come chiave l'ID univoco di
+    magazzino;
+
+-   il bin contenente il prodotto cercato viene evidenziato.
+
+## Ricerca per Nome
+
+$\mathbf{\text{Descrizione: }}$ l'utente ricerca un prodotto tramite il
+nome associato al prodotto.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente deve essere correttamente configurato.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   l'utente visualizza la posizione del bin contenente il prodotto
+    ricercato.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente ricerca un prodotto usando come chiave per la ricerca il
+    nome del prodotto;
+
+-   il bin contenente il prodotto cercato viene evidenziato;
+
+-   i prodotti associati al nome possono essere più di uno.
+
+## Ricerca per Scaffale
+
+$\mathbf{\text{Descrizione: }}$ l'utente ricerca i prodotti contenuti
+all'interno di uno scaffale del magazzino.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   l'ambiente deve essere correttamente configurato.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   l'utente visualizza la posizione dei prodotti contenuti nello
+    scaffale cercato.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente ricerca i materiali contenuti all'interno di uno scaffale
+    del magazzino;
+
+-   lo scaffale viene evidenziato.
+
+# Esplorazione magazzino
+
+<figure>
+<p><img src="./imgs/uc11.png" style="width:60.0%" /></p>
+<figcaption><p>UML UC-11</p></figcaption>
+</figure>
+
+## Spostamento della visuale
+
+$\mathbf{\text{Descrizione: }}$ Una volta che il sistema è stato
+configurato l'utente può visualizzare il magazzino e spostare la visuale
+sui tre assi.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   il sistema è stato correttamente configurato.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   l'utente ha spostato la visuale sul magazzino nella direzione
+    indicata.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente visualizza il magazzino;
+
+-   l'utente sposta la visuale secondo uno dei quattro assi;
+
+-   l'utente ha cambiato la prospettiva sul magazzino.
+
+## Rotazione della visuale
+
+$\mathbf{\text{Descrizione: }}$ Una volta che il sistema è stato
+configurato l'utente può visualizzare il magazzino e ruotare la camera
+sul magazzino a destra o sinistra.
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   il sistema è stato correttamente configurato.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   l'utente ha spostato la visuale sul magazzino nella direzione
+    indicata.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente visualizza il magazzino;
+
+-   l'utente ruota lavisuale a destra o a sinistra;
+
+-   l'utente ha cambiato la prospettiva sul magazzino.
+
+## Zoom della visuale
+
+$\mathbf{\text{Descrizione: }}$ Una volta che l'ambiente è stato
+configurato l'utente può avvicinare o allontanare la visuale dal
+magazzino (zoom in, zoom out).
+
+$\mathbf{\text{Attore: }}$ utente.
+
+$\mathbf{\text{Precondizioni: }}$
+
+-   il sistema è stato correttamente configurato.
+
+$\mathbf{\text{Postcondizioni: }}$
+
+-   l'utente ha avvicinato o allontanato la visuale dal magazzino.
+
+$\mathbf{\text{Scenario: }}$
+
+-   l'utente visualizza il magazzino;
+
+-   l'utente effettua uno zoom in o uno zoom out sul magazzino;
+
+-   l'utente ha cambiato la prospettiva sul magazzino.
+
+# Requisiti
+
+## Codice identificativo
+
+Ogni requisito è caratterizzato da un codice identificativo definito nel
+seguente modo: [`[Tipologia][Importanza]-[Numero]`]{align="center"}
+Dove:
+
+-   `Tipologia` può assumere i valori:
+
+    -   `F`: funzionale;
+
+    -   `Q`: di qualità;
+
+    -   `V`: di vincolo.
+
+-   `Importanza` può assumere i valori:
+
+    -   `M`: mandatory, obbligatorio;
+
+    -   `D`: desiderabile;
+
+    -   `O`: opzionale.
+
+-   `Numero` rappresenta l'identificativo numerico del requisito. Se
+    sono presenti sottocasi, il loro numero viene rappresentato come
+    segue:
+
+[`NumeroPadre.NumeroFiglio`]{align="center"}
+
+## Requisiti funzionali
+
+  -------------- --------------------- ---------------------------------------------------------------------------------------------------------------------------------------------- --------------------------
+  **Codice**     **Classificazione**   **Descrizione**                                                                                                                                **Riferimento**
+  FM-1           Obbligatorio          L'utente deve poter creare il magazzino.                                                                                                       UC-1
+  FM-1.1         Obbligatorio          L'utente deve poter caricare un file SVG contenente la pianta del magazzino.                                                                   UC-1.1
+  FD-1.1.1       Desiderabile          L'utente deve poter definire le altezze degli elementi del file SVG tramite trascinamento verso l'alto.                                        Verbale esterno 23-12-06
+  FM-1.1.2       Obbligatorio          L'utente visualizza un errore di importazione del file SVG.                                                                                    UC-1.1.1
+  FM-1.1.2.1     Obbligatorio          L'utente visualizza un errore dato dal caricamento di un file SVG privo di informazioni.                                                       UC-1.1.1.1
+  FM-1.1.2.2     Obbligatorio          L'utente visualizza un errore dato da informazioni incongruenti nel file SVG.                                                                  UC-1.1.1.2
+  FM-1.2         Obbligatorio          L'utente deve poter creare manualmente il magazzino.                                                                                           UC-1.2
+  FM-1.2.1       Obbligatorio          L'utente deve poter inserire manualmente la lunghezza del magazzino.                                                                           UC-1.2
+  FM-1.2.2       Obbligatorio          L'utente deve poter inserire manualmente la larghezza del magazzino.                                                                           UC-1.2
+  FM-1.2.3       Obbligatorio          L'utente deve poter inserire manualmente l'altezza del magazzino.                                                                              UC-1.2
+  FM-1.2.4       Obbligatorio          L'utente visualizza un errore dato dalla non validità dei dati inseriti.                                                                       UC-1.2.1
+  FM-2           Obbligatorio          L'utente deve poter modificare le dimensioni del magazzino dopo la sua creazione.                                                              UC-2
+  FM-2.1         Obbligatorio          L'utente deve poter modificare la lunghezza del magazzino dopo la sua creazione.                                                               UC-2
+  FM-2.2         Obbligatorio          L'utente deve poter modificare la larghezza del magazzino dopo la sua creazione.                                                               UC-2
+  FM-2.3         Obbligatorio          L'utente deve poter modificare l'altezza del magazzino dopo la sua creazione.                                                                  UC-2
+  FM-2.4         Obbligatorio          L'utente visualizza un errore relativo all'inserimento di dimensioni troppo piccole del magazzino.                                             UC-2.1
+  FM-2.4.1       Obbligatorio          L'utente visualizza un errore causato dall'inserimento di una lunghezza che eliminerebbe scaffali o loro parti durante la modifica.            UC-2.1
+  FM-2.4.2       Obbligatorio          L'utente visualizza un errore causato dall'inserimento di una larghezza che eliminerebbe scaffali o loro parti durante la modifica.            UC-2.1
+  FM-2.4.3       Obbligatorio          L'utente visualizza un errore causato dall'inserimento di un'altezza che eliminerebbe piani di scaffali durante la modifica.                   UC-2.1
+  FM-3           Obbligatorio          L'utente deve poter gestire gli scaffali.                                                                                                      UC-3
+  FM-3.1         Obbligatorio          L'utente deve poter creare gli scaffali.                                                                                                       UC-3.1
+  FM-3.1.1       Obbligatorio          L'utente deve poter definire le dimensioni degli scaffali.                                                                                     UC-3.1
+  FM-3.1.1.1     Obbligatorio          L'utente deve poter definire la lunghezza degli scaffali.                                                                                      UC-3.1
+  FM-3.1.1.2     Obbligatorio          L'utente deve poter definire la larghezza degli scaffali.                                                                                      UC-3.1
+  FM-3.1.1.3     Obbligatorio          L'utente deve poter definire il numero di piani degli scaffali.                                                                                UC-3.1
+  FD-3.1.1.3.1   Desiderabile          L'utente deve poter definire altezze diverse per ogni piano degli scaffali.                                                                    Verbale esterno 23-12-15
+  FM-3.1.2       Obbligatorio          L'utente deve poter posizionare gli scaffali creati nell'ambiente.                                                                             UC-3.1
+  FM-3.2         Obbligatorio          L'utente deve poter modificare gli scaffali.                                                                                                   UC-3.2
+  FM-3.2.1       Obbligatorio          L'utente deve poter modificare la lunghezza degli scaffali.                                                                                    UC-3.2
+  FM-3.2.2       Obbligatorio          L'utente deve poter modificare la larghezza degli scaffali.                                                                                    UC-3.2
+  FM-3.2.3       Obbligatorio          L'utente deve poter modificare il numero di piani gli scaffali.                                                                                UC-3.2
+  FM-3.3         Obbligatorio          L'utente deve poter spostare gli scaffali all'interno del magazzino.                                                                           UC-3.3
+  FM-3.3.1       Obbligatorio          L'utente deve poter spostare gli scaffali in orizzontale.                                                                                      UC-3.3
+  FM-3.3.2       Obbligatorio          L'utente deve poter spostare gli scaffali in profondità.                                                                                       UC-3.3
+  FM-3.3.3       Obbligatorio          L'utente deve poter ruotare gli scaffali.                                                                                                      UC-3.3
+  FM-3.3.3.1     Obbligatorio          L'utente deve poter ruotare gli scaffali con angoli di 90°.                                                                                    UC-3.3
+  FO-3.3.3.2     Opzionale             L'utente deve poter ruotare gli scaffali con angoli diversi da 90°.                                                                            Verbale esterno 23-12-06
+  FM-3.3.4       Obbligatorio          L'utente visualizza un errore riguardo lo spostamento dello scaffale in una zona non libera.                                                   UC-3.3.1
+  FM-3.4         Obbligatorio          L'utente deve poter eliminare gli scaffali.                                                                                                    UC-3.4
+  FM-3.4.1       Obbligatorio          L'utente visualizza un errore riguardo l'eliminazione di uno scaffale non vuoto.                                                               UC-3.4.1
+  FM-4           Obbligatorio          L'utente deve poter gestire i bin.                                                                                                             UC-4
+  FM-4.1         Obbligatorio          L'utente deve poter creare i bin.                                                                                                              UC-4.1
+  FM-4.1.1       Obbligatorio          L'utente deve poter definire la lunghezza dei bin.                                                                                             UC-4.1
+  FM-4.1.2       Obbligatorio          L'utente deve poter definire la larghezza dei bin.                                                                                             UC-4.1
+  FM-4.1.3       Obbligatorio          L'utente deve poter definire l'altezza dei bin.                                                                                                UC-4.1
+  FM-4.2         Obbligatorio          l'utente deve poter modificare i bin.                                                                                                          UC-4.2
+  FM-4.2.1       Obbligatorio          L'utente deve poter modificare la lunghezza dei bin.                                                                                           UC-4.1
+  FM-4.2.2       Obbligatorio          L'utente deve poter modificare la larghezza dei bin.                                                                                           UC-4.1
+  FM-4.2.3       Obbligatorio          L'utente deve poter modificare l'altezza dei bin.                                                                                              UC-4.1
+  FM-4.3         Obbligatorio          L'utente deve poter eliminare i bin.                                                                                                           UC-4.3
+  FM-4.3.1       Obbligatorio          L'utente visualizza un errore riguardo la cancellazione di un bin non vuoto.                                                                   UC-4.3.1
+  FM-5           Obbligatorio          L'utente visualizza un errore riguardo l'inserimento di dati dimensionali non validi.                                                          UC-5
+  FM-5.1         Obbligatorio          L'utente visualizza un errore riguardo l'inserimento di dimensioni negative o uguali a zero.                                                   UC-5.1
+  FM-5.1.1       Obbligatorio          L'utente visualizza un errore riguardo l'inserimento di una lunghezza negativa o uguale a zero.                                                UC-5.1
+  FM-5.1.2       Obbligatorio          L'utente visualizza un errore riguardo l'inserimento di una larghezza negativa o uguale a zero.                                                UC-5.1
+  FM-5.1.3       Obbligatorio          L'utente visualizza un errore riguardo l'inserimento di un'altezza negativa o uguale a zero.                                                   UC-5.1
+  FM-5.2         Obbligatorio          L'utente visualizza un errore riguardo l'inserimento di dimensioni eccessive.                                                                  UC-5.2
+  FM-5.2.1       Obbligatorio          L'utente visualizza un errore per l'inserimento di dimensioni che creano collisioni tra l'oggetto modificato e altri elementi dell'ambiente.   UC-5.2
+  FM-5.2.2       Obbligatorio          L'utente visualizza un errore per l'inserimento di dimensioni che non permettono all'oggetto di essere inserito nell'ambiente.                 UC-5.2
+  FD-6           Desiderabile          L'utente deve poter richiedere il caricamento dei dati da database                                                                             UC-6
+  FO-6.1         Opzionale             L'utente deve poter configurare i parametri di connessione al database                                                                         UC-6.1
+  FO-6.1.1       Opzionale             L'utente deve poter indicare il nome del database                                                                                              UC-6.1
+  FO-6.1.2       Opzionale             L'utente deve poter indicare il nome utente per la connessione al database                                                                     UC-6.1
+  FO-6.1.3       Opzionale             L'utente deve poter indicare la password per la connessione al database                                                                        UC-6.1
+  FO-6.1.4       Opzionale             L'utente deve poter indicare l'indirizzo del database                                                                                          UC-6.1
+  FO-6.1.5       Opzionale             L'utente deve poter indicare la porta del database                                                                                             UC-6.1
+  FD-6.2         Desiderabile          L'utente deve poter testare la connessione al database                                                                                         UC-6.1
+  FD-6.3         Desiderabile          L'utente visualizza un errore se i dati contenuti nel database non sono conformi                                                               UC-6.2
+  FD-6.4         Desiderabile          L'utente visualizza un errore se i dati contenuti nel database sono errati                                                                     UC-6.2
+  FM-7           Obbligatorio          L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro                                                             UC-7
+  FM-7.1         Obbligatorio          L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro indicando le coordinate del bin di destinazione             UC-7
+  FM-7.2         Obbligatorio          L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro tramite *drag and drop*                                     UC-7
+  FM-7.3         Obbligatorio          Il sistema deve interrogare una API RESTful per accertare che lo spostamento sia lecito                                                        UC-7
+  FD-7.4         Desiderabile          Il sistema deve evidenziare il bin di partenza per rendere evidente la richiesta di spostamento                                                UC-7
+  FD-7.5         Desiderabile          Il sistema deve evidenziare il bin di destinazione per rendere evidente la richiesta di spostamento                                            UC-7
+  FM-8           Obbligatorio          L'utente deve poter visualizzare le informazioni di un bin selezionato                                                                         UC-8
+  FM-8.1         Obbligatorio          L'utente deve poter visualizzare le informazioni del prodotto contenuto in un bin selezionato                                                  UC-8
+  FM-9           Obbligatorio          L'utente deve poter visualizzare le informazioni di uno scaffale selezionato                                                                   UC-9
+  FD-10          Desiderabile          L'utente deve poter ricercare un prodotto                                                                                                      UC-10
+  FD-10.1        Desiderabile          L'utente deve poter ricercare un prodotto per ID                                                                                               UC-10.1
+  FD-10.2        Desiderabile          L'utente deve poter ricercare un prodotto per nome                                                                                             UC-10.2
+  FD-10.3        Desiderabile          L'utente deve poter ricercare uno scaffale                                                                                                     UC-10.3
+  FD-10.4        Desiderabile          Il sistema deve fornire la lista dei risultati di ricerca                                                                                      UC-10
+  FD-10.5        Desiderabile          Il sistema deve evidenziare i risultati di ricerca                                                                                             UC-10
+  FM-11          Obbligatorio          L'utente deve poter esplorare visivamente il magazzino                                                                                         UC-11
+  FM-11.1        Obbligatorio          L'utente deve poter muovere la visuale sui tre assi                                                                                            UC-11.1
+  FM-11.2        Obbligatorio          L'utente deve poter ruotare la visuale                                                                                                         UC-11.2
+  FM-11.3        Obbligatorio          L'utente deve poter effettuare operazioni di zoom della visuale                                                                                UC-11.3
+  FM-11.3.1      Obbligatorio          L'utente deve poter effettuare l'operazione di zoom in                                                                                         UC-11.3
+  FM-11.3.2      Obbligatorio          L'utente deve poter effettuare l'operazione di zoom out                                                                                        UC-11.3
+  -------------- --------------------- ---------------------------------------------------------------------------------------------------------------------------------------------- --------------------------
+
+  : Requisiti funzionali
+
+## Requisiti di qualità
+
+  ------------ --------------------- -------------------------------------------------------------------------------------- -----------------
+  **Codice**   **Classificazione**   **Descrizione**                                                                        **Riferimento**
+  QM-1         Obbligatorio          Deve essere rispettato quanto previsto dalle Norme di Progetto.                        Interna
+  QM-2         Obbligatorio          Deve essere rispettato quanto previsto dal Piano di Qualifica.                         Interna
+  QM-3         Obbligatorio          Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico.   Capitolato
+  QM-4         Obbligatorio          Devono essere consegnati i diagrammi UML degli UC.                                     Capitolato
+  QM-5         Obbligatorio          Deve essere consegnata la lista dei bug risolti.                                       Capitolato
+  QO-6         Opzionale             Deve essere consegnato lo schema del DB.                                               Capitolato
+  QO-7         Opzionale             Deve essere consegnata la documentazione delle API realizzate.                         Capitolato
+  ------------ --------------------- -------------------------------------------------------------------------------------- -----------------
+
+  : Requisiti di qualità.
+
+## Requisiti di vincolo
+
+  ------------ --------------------- ------------------------------------------------------------------------------------------ -----------------
+  **Codice**   **Classificazione**   **Descrizione**                                                                            **Riferimento**
+  VM-1         Obbligatorio          Il prodotto deve essere ad accesso pubblico, ovvero senza login.                           Capitolato
+  VM-2         Obbligatorio          Il prodotto deve prevedere una sola tipologia di utente.                                   Capitolato
+  VM-3         Obbligatorio          Il prodotto non deve gestire la persistenza dei dati.                                      Capitolato
+  VM-4         Obbligatorio          Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0.                  Interno
+  VM-5         Obbligatorio          L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0.   Interno
+  VM-6         Obbligatorio          L'utente deve utilizzare un browser Google Chrome versione 89 o successiva.                Interno
+  VM-7         Obbligatorio          L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva.               Interno
+  VM-8         Obbligatorio          L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva.            Interno
+  VM-9         Obbligatorio          L'utente deve utilizzare un browser Apple Safari versione 108 o successiva.                Interno
+  VM-10        Obbligatorio          L'utente deve utilizzare un browser Opera Browser versione 76 o successiva.                Interno
+  VM-11        Obbligatorio          L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva.    Interno
+  VM-12        Obbligatorio          L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva.       Interno
+  VM-13        Obbligatorio          L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva.             Interno
+  VO-14        Opzionale             Il prodotto deve essere eseguibile in un container Docker o Docker Compose.                VE 23-11-15
+  ------------ --------------------- ------------------------------------------------------------------------------------------ -----------------
+
+  : Requisiti di vincolo.

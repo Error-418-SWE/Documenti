@@ -16,7 +16,7 @@ on:
 
 jobs:
   update:
-    name: Compute versions
+    name: Evaluate version
     runs-on: ubuntu-latest
     outputs:
       version: '${{ steps.version.outputs.version }}'

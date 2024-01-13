@@ -19,6 +19,7 @@ jobs:
       file_name: ${{ needs.fetch.outputs.file_name }}
 
   log:
+    name: Update changelog
     needs: [fetch, version]
     if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest

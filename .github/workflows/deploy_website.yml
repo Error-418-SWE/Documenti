@@ -12,6 +12,7 @@ on:
 
 jobs:
   extract:
+    name: Extract info from preamble and log
     runs-on: ubuntu-latest
     env:
       OUTPUT_FILE: '${{ inputs.file_path }}/common.md'
@@ -51,6 +52,7 @@ jobs:
           if-no-files-found: error
 
   transpile:
+    name: Transpile document
     runs-on: ubuntu-latest
     env:
       PANDOC_DEB: '${{ vars.PANDOC_DEB_URL }}'
@@ -82,6 +84,7 @@ jobs:
           if-no-files-found: error
 
   merge:
+    name: Merge and push
     runs-on: ubuntu-latest
     needs: [extract, transpile]
     steps:
@@ -135,7 +138,7 @@ jobs:
         with:
           name: 'content.md'
           path: '${{ steps.path.outputs.WORK_DIR }}'
-      - name: Compose files
+      - name: Append files
         run: |
           cd "${{ steps.path.outputs.WORK_DIR }}"
           git rm --ignore-unmatch "${{ inputs.file_name }}.mdx"

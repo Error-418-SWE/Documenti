@@ -9,21 +9,31 @@ on:
       file_name:
         type: string
         required: true
+      current_version:
+        type: string
+        required: false
     outputs:
-      version:
+      next_version:
         description: "The next and updated version of the document"
-        value: ${{ jobs.update.outputs.version }}
+        value: ${{ jobs.evaluate.outputs.next_version }}
 
 jobs:
-  update:
+  evaluate:
     name: Evaluate version
     runs-on: ubuntu-latest
     outputs:
-      version: '${{ steps.version.outputs.version }}'
+      next_version: '${{ steps.version.outputs.next_version }}'
 
     steps:
-      - name: Set up Git repository
+      - name: Set up Git repository on source branch
         uses: actions/checkout@v4
+        with:
+          path: head
+      - name: Set up Git repository on main branch
+        uses: actions/checkout@v4
+        with:
+          ref: src
+          path: src
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -31,8 +41,8 @@ jobs:
       - name: Compute next version
         id: version
         run: |
-          cp .github/scripts/file_version_handler.py ./
-          echo "VERSION=$(python file_version_handler.py "${{ inputs.file_path }}" "${{ inputs.file_name }}")" >> $GITHUB_OUTPUT
-      - name: Print versions to summary
+          cp src/.github/scripts/manage_document_version.py ./
+          echo "NEXT_VERSION=$(python manage_document_version.py "${{ inputs.file_path }}" "${{ inputs.file_name }}" ${{ inputs.current_version }})" >> $GITHUB_OUTPUT
+      - name: Print next version to summary
         run: |
-          echo "::notice::Updated version: ${{ steps.version.outputs.version }}"
+          echo "::notice::Next version: ${{ steps.version.outputs.next_version }}"

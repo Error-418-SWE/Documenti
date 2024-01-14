@@ -104,7 +104,7 @@ Breve documento dove il gruppo si presenta e dichiara il suo impegno nello svolg
 In questo documento vengono raccolti tutti gli use case e requisiti individuati dal gruppo con il supporto del proponente. Ogni use case e requisito è identificato da un codice, così da essere facilmente individuabile e tracciabile. All'inizio del documento sono inoltre descritti i criteri di qualità che il gruppo ha seguito durante la redazione.
 
 ==== Piano di Progetto
-Documento che governa la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e analizzando il lavoro lavoro svolto. È articolato in cinque sezioni:
+Documento che governa la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e analizzando il lavoro svolto. È articolato in cinque sezioni:
 - Rischi e loro mitigazione;
 - Divisione temporale di sviluppo;
 - Preventivo dei costi di realizzazione;
@@ -112,7 +112,7 @@ Documento che governa la pianificazione dell'avanzamento del progetto, determina
 - Consuntivo del progetto.
 
 ==== Piano di Qualifica
-Nel Piano di Qualifica vengono fissati obiettivi di qualità e vengono descritti i processi necessari per conseguirli con realative procedure di controllo.
+Nel Piano di Qualifica vengono fissati obiettivi di qualità e vengono descritti i processi necessari per conseguirli con relative procedure di controllo.
 
 ==== Glossario
 Nel Glossario vengono elencati e definiti in modo preciso tutti i termini rilevanti utilizzati all'interno del progetto. È un documento estremamente importante per evitare situazioni di ambiguità, e garantire così una corretta comprensione della documentazione da parte di tutte le parti coinvolte.

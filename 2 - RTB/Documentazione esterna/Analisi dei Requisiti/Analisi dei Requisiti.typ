@@ -94,38 +94,17 @@ Per la comunicazione tra le sue componenti, con l'utente e con servizi esterni, 
 
 Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
 
-==== Operazioni
-
-//non ho molto chiaro cosa si richiedesse in questa sezione, sotto riporto lo standard
-//Specify the normal and special operations required by the user such as:
-// - the various modes of operations in the user organization*/
-Il sistema permette di attuare e visualizzare diverse operazioni di gestione del magazzino, in modo da semplificare l'interazione tra gestori e addetti.
-Il sistema deve permettere al *responsabile del magazzino* le seguenti operazioni:
-- creazione del magazzino (manualmente o tramite caricamento di un file SVG);
-- modificare le dimensioni dell'ambiente 3D (lunghezza, larghezza, altezza);
-- creare e modificare le dimensione di scaffali (larghezza, profondità e altezza);
-- eliminare gli scaffali;
-- riposizionare gli scaffali nell'ambiente;
-- definire il numero di piani dello scaffale;
-- definire il numero di bin per piano;
-- creare e modificare i bin (lunghezza, larghezza e altezza);
-- leggere informazioni riguardo agli scaffali e al contenuto dei bin;
-- eliminare i bin;
-- caricare i dati da database;
-- richiedere lo spostamento di un prodotto da un bin a un altro;
-- ricercare un prodotto nel magazzino;
-- visualizzare ed esplorare il magazzino.
-
-Modifiche alla posizione dei prodotti comporta l'invio di una notifica a gli *addetti* che provvederanno ad attuare lo spostamento.
-
 ==== Requisiti di adattamento al contesto
-//The site adaptation requirements include:
-//a) definition of the requirements for any data or initialization sequences that are specific to a given
-//site, mission or operational mode (e.g., grid values, safety limits, etc.);
-//b) specification of the site or mission-related features that should be modified to adapt the software
-//to a particular installation.
-WMS3 non richiede l'installazione di particolari librerie software o specifici sistemi operativi grazie a Docker, che permette di costruire dei container che si occupano di gestire le dipendenze e Docker Compose che si occupa di gestire applicazioni multi-container.\
-Il sistema permette libertà anche dal punto di vista del sistema di notifiche interne al magazzino e del database, visto che l'applicazione permette configurazione tramite API RESTful.
+
+WMS3 per essere eseguito richiede:
+- un *browser* che supporta WebGL 2.0 (per le specifiche riguardanti i vari browser compatibili consultare la sezione @vincoli);
+- *Node.js* versione 20.11.0 (latest LTS) o superiore;
+- Un database relazionale che si interfacci con le API fornite dal gruppo (il gruppo utilizza *Postgresql* versione 16.1);
+- *Docker Compose* versione 2.23.3 o superiore;
+- *Docker* versione 24.0.7 o superiore;
+
+Il gruppo ha deciso di utilizzare la tecnologia Docker per permettere una maggiore portabilità e facilitare il deploy, mentre Docker Compose serve a gestire le applicazioni multi-container. \
+Le specifiche sui browser sono imposte dall'utilizzo da parte del gruppo di *Three.js* per implementare l'ambiente 3D.
 
 ==== Interfacce a servizi
 
@@ -133,22 +112,16 @@ WMS3 dovrà inviare messaggi ad uno o più servizi esterni per comunicare gli or
 
 === Funzionalità del prodotto
 
-// Provide a summary of the major functions that the software will perform. For example, an SRS for an accounting program may use this part to address customer account maintenance, customer statement and invoice preparation without mentioning the vast amount of detail that each of those functions requires.
-//Sometimes the function summary that is necessary for this part can be taken directly from the section of the higher-level specification (if one exists) that allocates particular functions to the software product.
-//Use cases, user stories and scenarios are also used to describe product functions.
-//Note that for the sake of clarity:
-//- the product functions should be organized in a way that makes the list of functions understandable to the acquirer or to anyone else reading the document for the first time.
-// - textual or graphical methods can be used to show the different functions and their relationships.
-//Such a diagram is not intended to show a design of a product, but simply shows the logical relationships among variables.
-
 Il prodotto sarà caratterizzato da:
 - *ambiente*:
   - l'interno di un magazzino, di forma quadrata o rettangolare delimitato sui quattro lati che rappresenta il reale magazzino su cui deve operare l'addetto;
   - caratterizzato da una griglia (o grid) a terra che permette all'utente di collocare gli oggetti nell'ambiente con maggiore o minore precisione a seconda delle esigenze;
-  - le dimensioni e la finezza della grid devono essere modificabili in ogni momento;
+  - le dimensioni e la finezza della grid devono essere sempre modificabili (quando possibile);
   - deve essere navigabile tramite diverse periferiche (freccie direzionali, mouse, touch del dispositivo) e in diversi modi (sui tre assi, zoom-in/zoom-out, rotazione).
+  - può essere creato vuoto o tramite un file SVG; nel primo caso abbiamo un piano vuoto di dimensioni predefinite, mentre nel secondo caso il file SVG viene usato per disegnare sul piano le forme degli scaffali da inserire nell'ambiente.
 - *scaffalature*:
-  - scaffali con caratteristiche personalizzabili (altezza, larghezza, profondità, numero di scaffali) che rappresentano i reali scaffali nel magazzino;
+  - scaffali con caratteristiche personalizzabili (altezza, larghezza, profondità, numero di scaffali e il numero di colonne in cui è diviso uno scaffale) che rappresentano i reali scaffali nel magazzino;
+  - è possibile definire in fase di creazione l'orientamento (verticale od orizzontale) dello scaffale;
   - al loro interno contengono dei bin;
   - possono essere spostati, modificati, creati o eliminati.
 - *bin*:
@@ -158,7 +131,9 @@ Il prodotto sarà caratterizzato da:
 - *prodotti*:
   - rappresentano i reali prodotti contenuti nel magazzino;
   - contengono diverse informazioni riguardo il prodotto;
-  - sono contenuti in un bin e possono essere spostati verso un bin differente.
+  - sono contenuti in un bin e possono essere spostati verso un bin differente;
+  - è possibile ricercali tramite l'apposito pannello;
+  - la ricerca può avvenire usando diversi parametri.
 === Caratteristiche degli utenti
 
 L'utente tipico di WMS3 è un supervisore di magazzino. Ci si aspetta che la maggior parte degli accessi a WMS3 avvengano da ufficio, tramite un computer desktop dotato di mouse e tastiera; tuttavia, non si può escludere che l'utente possa accedere a WMS3 tramite dispositivo mobile.
@@ -1057,7 +1032,7 @@ Dove:
   caption: "Requisiti di qualità."
 )
 
-== Requisiti di vincolo
+== Requisiti di vincolo <vincoli>
 
 #figure(
   table(

@@ -271,7 +271,7 @@ $bold("Scenario: ")$
 
 == Creazione magazzino vuoto
 $bold("Descrizione: ")$
-All'avvio dell'applicazione e in ogni momento si desideri, si può decidere di creare un ambiente di lavoro vuoto di dimensioni predefinite.
+All'avvio dell'applicativo è possibile creare un ambiente vuoto di dimensioni predefinite da cui iniziare. Tale funzionalità, rimane disponibile durante l'utilizzo dell'applicativo qualora si volesse ripristinare l'ambiente.
 
 $bold("Attore: ")$
 utente.
@@ -280,11 +280,11 @@ $bold("Precondizioni: ")$
 - è stato dato inizio alla procedura di creazione dell'ambiente di lavoro vuoto.
 
 $bold("Postcondizioni: ")$
-- è stato generato un ambiente di lavoro vuoto di dimensioni standard;
+- è stato generato un ambiente di lavoro vuoto di dimensioni predefinite;
 - l'ambiente così generato ha rimosso eventuali elementi precedentemente configurati.
 
 $bold("Scenario: ")$
-- l'utente crea un ambiente di lavoro vuoto con dimensioni standard.
+- l'utente crea un ambiente di lavoro vuoto con dimensioni predefinite.
 
 = Modifica dimensioni del magazzino
 
@@ -303,36 +303,35 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente avvia la modifica dell'ambiente di lavoro;
-- l'utente regola le dimensioni dell'ambiente di lavoro a piacimento.
+- l'utente regola le dimensioni dell'ambiente di lavoro.
 
 $bold("Estensioni: ")$
-- UC-2.1 Errore dimensioni magazzino troppo piccole;
-- UC-2.2 Errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente.
+- UC-2.1 Visualizzazione errore dimensioni magazzino troppo piccole;
+- UC-2.2 Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente.
 
 == Errore dimensioni magazzino troppo piccole
 
 $bold("Descrizione: ")$
-l'utente vuole modificare le dimensioni dell'ambiente rimpicciolendo troppo le dimensioni dell'ambiente vuoto.
+l'utente vuole modificare le dimensioni dell'ambiente riducendole eccessivamente.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'utente ha creato l' ambiente di lavoro manualmente;
+- l'utente ha creato l'ambiente di lavoro manualmente;
 - l'ambiente è stato creato correttamente;
 - l'ambiente di lavoro risulta vuoto.
 
 $bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo al fatto che l'ambiente non può diventare più piccolo.
+- all'utente viene notificato l'errore relativo al fatto che le dimensioni dell'ambiente non possono essere ulteriormente diminuite.
 
 $bold("Scenario: ")$
 - l'utente vuole ridurre le dimensioni dell'ambiente oltre una soglia minima.
 
-== Errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
+== Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
 
 $bold("Descrizione: ")$
-l'utente vuole modificare le dimensioni dell'ambiente rimpicciolendo troppo le dimensioni dell'ambiente non vuoto.
-
+Dato un ambiente con elementi posizionati (come scaffali e/o bin), l'utente cerca di ridurre le dimensioni dell'ambiente in modo eccessivo, non permettendo di mantenere gli elementi precedentemente posizionati.
 $bold("Attore: ")$
 utente.
 
@@ -345,7 +344,7 @@ $bold("Postcondizioni: ")$
 - all'utente viene notificato l'errore relativo al fatto che stia cercando di diminuire troppo le dimensioni dell'ambiente nonostante gli elementi presenti.
 
 $bold("Scenario: ")$
-- l'utente vuole ridurre la dimensione dell'ambiente nonostante l'ambiente di lavoro contenga elementi che in questo modo non si adatterebbero più alle dimensioni del piano.
+- l'utente vuole ridurre la dimensione dell'ambiente nonostante l'ambiente di lavoro contenga elementi le cui posizioni non risulterebbero più valide alle nuove dimensioni ridotte.
 
 = Gestione scaffali
 #figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])
@@ -906,13 +905,12 @@ Dove:
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
     [FM-1], [Obbligatorio], [L'utente deve poter creare il magazzino.], [UC-1],
     [FM-1.1], [Obbligatorio], [L'utente deve poter caricare un file SVG contenente la pianta del magazzino.], [UC-1.1],
-    [FM-1.1.1], [Obbligatorio], [L'utente deve poter creare un magazzino tramite caricamento di un file SVG in qualunque momento.], [UC-1.1],
+    [FM-1.1.1], [Obbligatorio], [L'utente deve sempre poter creare un magazzino tramite caricamento di un file SVG, quando possibile], [UC-1.1],
     [FD-1.1.2], [Desiderabile], [L'utente deve poter definire le altezze degli elementi del file SVG tramite trascinamento verso l'alto.], [Verbale esterno 23-12-06],
     [FM-1.1.3], [Obbligatorio], [L'utente visualizza un errore di importazione del file SVG.], [UC-1.1.1],
     [FM-1.1.3.1], [Obbligatorio], [L'utente visualizza un errore dato dal caricamento di un file SVG privo di informazioni.], [UC-1.1.1.1],
     [FM-1.1.3.2], [Obbligatorio], [L'utente visualizza un errore dato da informazioni incongruenti nel file SVG.], [UC-1.1.1.2],
-    [FM-1.2], [Obbligatorio], [L'utente deve poter creare un ambiente di lavoro vuoto.], [UC-1.2],
-    [FM-1.2.1], [Obbligatorio], [L'utente deve poter creare un magazzino vuoto in qualunque momento.], [UC-1.2],
+    [FM-1.2], [Obbligatorio], [L'utente deve sempre poter creare un ambiente di lavoro vuoto, quando possibile.], [UC-1.2],
 
     [FM-2], [Obbligatorio], [L'utente deve poter modificare le dimensioni del magazzino dopo la sua creazione.], [UC-2],
     [FM-2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza del magazzino dopo la sua creazione.], [UC-2],

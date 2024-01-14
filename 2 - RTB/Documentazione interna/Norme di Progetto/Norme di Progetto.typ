@@ -5,7 +5,8 @@
   subTitle: "Norme, processi e disciplina",
   authors: (
     "Banzato Alessio",
-    "Gardin Giovanni"
+    "Gardin Giovanni",
+    "Nardo Silvio"
   ),
   showLog: true,
 );
@@ -59,6 +60,10 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 - Documentazione Three.js\
   #link("https://threejs.org/docs/")
 
+=== Riferimenti a documentazione interna
+- Documento "Analisi dei Rischi v2.0.0"\
+  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")
+
 = Processi di accordo
 == Processo di fornitura
 === Scopo e descrizione
@@ -88,7 +93,7 @@ Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese
 + *Considerazioni*: il gruppo dà la propria valutazione sul capitolato.
 
 ==== Analisi dei rischi
-Nel documento di Analisi dei rischi vengono presentati i rischi a cui il gruppo potrebbe essere esposto durante il periodo in cui lavora al progetto. Ogni rischio viene classificato secondo tre parametri:
+Nel documento di Analisi dei Rischi vengono presentati i rischi a cui il gruppo potrebbe essere esposto durante il periodo in cui lavora al progetto. Ogni rischio viene classificato secondo tre parametri:
 - *Impatto*: esprime l'effetto generato dall'evento;
 - *Probabilità*: esprime la probabilità del verificarsi del rischio;
 - *Conseguenze*: effetti collaterali a breve o medio termine che il rischio può comportare.
@@ -696,8 +701,8 @@ Il team definisce approcci di trattamento appropriati, compresi piani di mitigaz
   Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
 
 - Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:\
-  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato "Analisi Dei Rischi.pdf" presente in: https://github.com/Error-418-SWE/Documenti-old/blob/develop/1%20-%20Candidatura/Analisi%20dei%20rischi/Analisi%20dei%20rischi.pdf .
-  // riferimenti alla documentazione temporanei
+  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento Analisi dei Rischi v2.0.0. 
+
 
 ==== Analizzare i rischi
 Questa attività consiste nei seguenti compiti:
@@ -1114,68 +1119,6 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
 
     - registrare i risultati e comunicarli agli stakeholders:
         - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte.
-
-== Processo di Gestione dei Rischi
-
-=== Scopo
-Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.
-
-=== Risultati
-Come risultato dell'implementazione del processo di Gestione dei Rischi:
-- vengono identificati i rischi;
-- i rischi vengono analizzati;
-- vengono identificate, priorizzate e selezionate opzioni di trattamento del rischio;
-- viene implementato un trattamento appropriato;
-- i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
-
-=== Attività e compiti
-Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
-
-==== Pianificare la gestione dei rischi
-La strategia di gestione dei rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita.
-I rischi devono venire individuati con tempestività, consentendo la pianificazione di misure preventive e correttive in tempo utile per limitare al massimo le conseguenze.
-La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
-Il team si impegna a definire approcci di trattamento appropriati, compresi piani di mitigazione specifici.
-
-==== Gestire il profilo di rischio
-- Definire e registrare le soglie e le condizioni di rischio:
-  le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto.
-  I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
-
-- Stabilire e mantenere un profilo di rischio:
-  il profilo di rischio contiene informazioni sul contesto della gestione dei rischi, il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
-  Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
-
-- Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:
-  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato "Analisi Dei Rischi.pdf" presente in: https://github.com/Error-418-SWE/Documenti-old/blob/develop/1%20-%20Candidatura/Analisi%20dei%20rischi/Analisi%20dei%20rischi.pdf .
-  // riferimenti alla documentazione temporanei
-
-==== Analizzare i rischi
-Questa attività consiste nei seguenti compiti:
-
-+ identificare i rischi nelle categorie descritte nel contesto della gestione dei rischi:\ l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
-
-+ stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato:\ per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
-
-+ valutare ciascun rischio rispetto alle sue soglie di rischio:\ ogni rischio viene valutato rispetto alle soglie di rischio stabilite, determinando se il rischio supera tali soglie e richiede trattamenti specifici.
-
-==== Trattare i rischi
-Questa attività consiste nei seguenti compiti:
-
-+ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate:\ per i rischi che superano le soglie prestabilite, vengono definite strategie di trattamento, che possono includere l'eliminazione del rischio, la riduzione della sua probabilità o gravità, o l'accettazione del rischio. Vengono anche registrate le misure che forniranno informazioni sull'efficacia delle alternative di trattamento.
-
-+ quando viene accettato un rischio che non soddisfa la sua soglia, va considerato una priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
-
-+ una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
-
-==== Monitorare i rischi
-Questa attività consiste nei seguenti compiti:
-
-- monitorare continuamente i rischi e il contesto della gestione dei rischi per eventuali cambiamenti e valutare i rischi quando il loro stato è cambiato;
-
-- implementare e monitorare misure per valutare l'efficacia dei trattamenti dei rischi;
-
-- monitorare continuamente l'emergere di nuovi rischi e fonti durante l'intero ciclo di vita.
 
 == Processo di Controllo della Qualità
 

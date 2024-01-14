@@ -701,7 +701,7 @@ Il team definisce approcci di trattamento appropriati, compresi piani di mitigaz
   Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
 
 - Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:\
-  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento Analisi dei rischi. 
+  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento Analisi dei rischi v2.0.0. 
 
 
 ==== Analizzare i rischi

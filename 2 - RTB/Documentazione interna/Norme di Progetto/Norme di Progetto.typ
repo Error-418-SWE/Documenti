@@ -62,7 +62,7 @@ Al fine di eliminare le ambiguit√† durante la consultazione dei documenti, verr√
 
 === Riferimenti a documentazione interna
 - Documento "Analisi dei Rischi v2.0.0"\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20rischi_v2.0.0.pdf")
+  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")
 
 = Processi di accordo
 == Processo di fornitura

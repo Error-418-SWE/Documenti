@@ -47,7 +47,10 @@ I gestionali di magazzino tradizionali presentano una serie di problematiche:
 
 #figure(
   image("./imgs/wms-tradizionale.jpg", format: "jpg"),
-  caption: [Schermata di un software WMS tradizionale (fonte: #link("https://www.seniorsoftware.ro/en/wms/")[seniorsoftware.ro])]) <wms-tradizionale>
+  caption: [
+    Schermata di un software WMS tradizionale (fonte: #link("https://www.seniorsoftware.ro/en/wms/")[seniorsoftware.ro])
+  ],
+) <wms-tradizionale>
 
 Il vantaggio principale di WMS3, rispetto ai tradizionali gestionali di magazzino, è la visualizzazione 3D del magazzino e del suo contenuto. Questa funzionalità rappresenta un miglioramento significativo di usabilità rispetto ai WMS tradizionali. La visualizzazione 3D permette agli utenti di:
 
@@ -191,7 +194,12 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 #set par(first-line-indent: 0pt)
 
 = Creazione magazzino
-#figure(image("./imgs/uc1.png", format: "png"), caption: [UML UC-1])
+#figure(
+  image("./imgs/uc1.png", format: "png"), 
+  caption: [
+    UML UC-1
+  ],
+)
 == Importazione mappa magazzino da file SVG
 $bold("Descrizione: ")$
 All'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
@@ -291,7 +299,12 @@ $bold("Estensioni: ")$
 
 = Inserimento nuove dimensioni del magazzino
 
-#figure(image("./imgs/uc2.png", format: "png"), caption: [UML UC-2])
+#figure(
+  image("./imgs/uc2.png", format: "png"), 
+  caption: [
+    UML UC-2
+  ],
+)
 $bold("Descrizione: ")$
 il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
 
@@ -331,7 +344,12 @@ $bold("Scenario: ")$
 - l'utente ha immesso delle dimensioni troppo piccole nella modifica dell'ambiente, rischiando di generare conflitti.
 
 = Gestione scaffali
-#figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])
+#figure(
+  image("./imgs/uc3.png", format: "png"), 
+  caption: [
+    UML UC-3
+  ],
+)
 == Creazione scaffale
 $bold("Descrizione: ")$
 uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata. Seccessivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
@@ -454,7 +472,12 @@ $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.
 
 = Gestione bin
-#figure(image("./imgs/uc4.png", format: "png"), caption: [UML UC-4])
+#figure(
+  image("./imgs/uc4.png", format: "png"), 
+  caption: [
+    UML UC-4
+  ],
+)
 
 == Creazione di un bin
 $bold("Descrizione: ")$
@@ -537,7 +560,12 @@ $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di un bin non vuoto.
 
 = Visualizzazione errore inserimento dati dimensionali non validi
-#figure(image("./imgs/uc5.png", format: "png"), caption: [UML UC-5])
+#figure(
+  image("./imgs/uc5.png", format: "png"), 
+  caption: [
+    UML UC-5
+  ],
+)
 $bold("Descrizione: ")$
 i dati inseriti per la modifica delle dimensioni dell'elemento interessato non sono validi.
 
@@ -594,7 +622,12 @@ $bold("Scenario: ")$
 
 = Caricamento dati da database
 
-#figure(image("./imgs/uc6.png", format: "png"), caption: [UML UC-6])
+#figure(
+  image("./imgs/uc6.png", format: "png"), 
+  caption: [
+    UML UC-6
+  ],
+)
 
 $bold("Descrizione: ")$
 i prodotti vengono inseriti dal database nei rispettivi bin.
@@ -655,7 +688,12 @@ $bold("Scenario: ")$
 
 = Richiesta di spostamento di un prodotto
 
-#figure(image("./imgs/uc7.png", format: "png"), caption: [UML UC-7])
+#figure(
+  image("./imgs/uc7.png", format: "png"), 
+  caption: [
+    UML UC-7
+  ],
+)
 
 $bold("Descrizione: ")$
 l'utente seleziona il prodotto di cui desidera una ricollocazione all'interno del magazzino e avvia una richiesta di spostamento verso un altro bin.
@@ -681,7 +719,12 @@ $bold("Scenario: ")$
 
 = Interrogazione di un bin
 
-#figure(image("./imgs/uc8.png", format: "png"), caption: [UML UC-8])
+#figure(
+  image("./imgs/uc8.png", format: "png"), 
+  caption: [
+    UML UC-8
+  ],
+)
 $bold("Descrizione: ")$
 deve essere possibile visualizzare il prodotto contenuto in un determinato bin.
 
@@ -700,7 +743,12 @@ $bold("Scenario: ")$
 
 = Interrogazione di uno scaffale
 
-#figure(image("./imgs/uc9.png", format: "png"), caption: [UML UC-9])
+#figure(
+  image("./imgs/uc9.png", format: "png"), 
+  caption: [
+    UML UC-9
+  ],
+)
 $bold("Descrizione: ")$
 deve essere possibile visualizzare le informazioni relative ad uno specifico scaffale.
 
@@ -719,7 +767,12 @@ $bold("Scenario: ")$
 
 = Ricerca prodotti
 
-#figure(image("./imgs/uc10.png", format: "png"), caption: [UML UC-10])
+#figure(
+  image("./imgs/uc10.png", format: "png"), 
+  caption: [
+    UML UC-10
+  ],
+)
 
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto.
@@ -796,7 +849,12 @@ $bold("Scenario: ")$
 
 = Esplorazione magazzino
 
-#figure(image("./imgs/uc11.png", format: "png", width: 60%), caption: [UML UC-11])
+#figure(
+  image("./imgs/uc11.png", format: "png", width: 60%), 
+  caption: [
+    UML UC-11
+  ],
+)
 
 == Spostamento della visuale
 $bold("Descrizione: ")$
@@ -971,6 +1029,7 @@ Dove:
 
     [FM-8], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di un bin selezionato], [UC-8],
     [FM-8.1], [Obbligatorio], [L'utente deve poter visualizzare le informazioni del prodotto contenuto in un bin selezionato], [UC-8],
+
     [FM-9], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di uno scaffale selezionato], [UC-9],
 
     [FD-10], [Desiderabile], [L'utente deve poter ricercare un prodotto], [UC-10],
@@ -987,7 +1046,7 @@ Dove:
     [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom in], [UC-11.3],
     [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom out], [UC-11.3]
   ),
-  caption: "Requisiti funzionali"
+  caption: [Requisiti funzionali]
 )
 
 == Requisiti di qualità
@@ -1005,7 +1064,7 @@ Dove:
     [QO-6], [Opzionale], [Deve essere consegnato lo schema del DB.], [Capitolato],
     [QO-7], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate.], [Capitolato],
   ),
-  caption: "Requisiti di qualità."
+  caption: [Requisiti di qualità.]
 )
 
 == Requisiti di vincolo
@@ -1030,5 +1089,5 @@ Dove:
     [VM-13], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva.], [Interno],
     [VO-14], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose.], [VE 23-11-15]
   ),
-  caption: "Requisiti di vincolo."
+  caption: [Requisiti di vincolo.]
 )

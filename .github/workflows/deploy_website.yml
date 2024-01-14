@@ -12,6 +12,7 @@ on:
 
 jobs:
   extract:
+    name: Extract info from preamble and log
     runs-on: ubuntu-latest
     env:
       OUTPUT_FILE: '${{ inputs.file_path }}/common.md'
@@ -38,7 +39,7 @@ jobs:
           echo -e "\nimport DocumentDetails from '/src/components/DocumentDetails.astro';" >> "$OUTPUT_FILE"
           echo "import ChangelogTable from '/src/components/ChangelogTable.astro';" >> "$OUTPUT_FILE"
           echo -e "\n<DocumentDetails {...frontmatter}/>" >> "$OUTPUT_FILE"
-          echo -e "\n<ChangelogTable>" >> "$OUTPUT_FILE"
+          echo -e "\n<ChangelogTable {...frontmatter}>" >> "$OUTPUT_FILE"
       - name: Convert changelog
         run: echo -e "$(csv2md '${{ inputs.file_path }}/log.csv')" >> "$OUTPUT_FILE"
       - name: Close Astro component
@@ -51,6 +52,7 @@ jobs:
           if-no-files-found: error
 
   transpile:
+    name: Transpile document
     runs-on: ubuntu-latest
     env:
       PANDOC_DEB: '${{ vars.PANDOC_DEB_URL }}'
@@ -82,6 +84,7 @@ jobs:
           if-no-files-found: error
 
   merge:
+    name: Merge and push
     runs-on: ubuntu-latest
     needs: [extract, transpile]
     steps:
@@ -135,7 +138,7 @@ jobs:
         with:
           name: 'content.md'
           path: '${{ steps.path.outputs.WORK_DIR }}'
-      - name: Compose files
+      - name: Append files
         run: |
           cd "${{ steps.path.outputs.WORK_DIR }}"
           git rm --ignore-unmatch "${{ inputs.file_name }}.mdx"

@@ -71,7 +71,7 @@ if re.search(r'externalParticipants : \((.*?)\)', preamble, re.DOTALL):
 
 frontmatter += "version: " + file_version + "\n"
 
-url = "\"https://error-418-swe.github.io/Documenti/" + file_path + file_name + "_v" + file_version + "\""
+url = "\"https://error-418-swe.github.io/Documenti/" + file_path + "_v" + file_version + ".pdf\""
 frontmatter += "url: " + url + "\n"
 
 frontmatter += "lastUpdated: " + datetime.now().date().strftime("%Y-%m-%d") + "\n"

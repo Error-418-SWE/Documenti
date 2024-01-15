@@ -995,7 +995,7 @@ Dove:
 
     [FM-4], [Obbligatorio], [L'utente deve poter gestire i bin.], [UC-4],
     [FM-4.1], [Obbligatorio], [L'utente deve poter creare i bin.], [UC-4.1],
-    [FM-4.1.1], [Obbligatorio], [L'utente deve poter definire le dimensioni degli scaffali.], [UC-3.1],
+    [FM-4.1.1], [Obbligatorio], [L'utente deve poter definire le dimensioni dei bin.], [UC-4.1],
     [FM-4.1.1.1], [Obbligatorio], [L'utente deve poter definire la profondità dei bin.], [UC-4.1],
     [FM-4.1.1.2], [Obbligatorio], [L'utente deve poter definire la larghezza dei bin.], [UC-4.1],
     [FM-4.1.1.3], [Obbligatorio], [L'utente deve poter definire l'altezza dei bin.], [UC-4.1],

@@ -1,19 +1,23 @@
 ---
 title: Verbale 04/12/23
-subTitle: "Meeting di Context Switch relativo al PoC"
-lastUpdated: 2024-01-07
 date: 2023-12-04
-authors: [
-    "Nardo Silvio",
-]
-missingMembers: [
-    "Banzato Alessio",
-    "Gardin Giovanni",
-    "Zaccone Rosario",
-    "Todesco Mattia"
-]
+subTitle: "Meeting di Context Switch relativo al PoC"
 timeStart: "15:00"
 timeEnd: "16:00"
+authors: [
+	"Nardo Silvio",
+	,
+]
+missingMembers: [
+	"Banzato Alessio",
+	"Gardin Giovanni",
+	"Zaccone Rosario",
+	"Todesco Mattia",
+]
+title: 23-12-04.typ
+version: 1.0.0
+url: "https://error-418-swe.github.io/Documenti/2 - RTB/Documentazione interna/Verbali/23-12-04_v1.0.0.pdf"
+lastUpdated: 2024-01-15
 ---
 
 import DocumentDetails from '/src/components/DocumentDetails.astro';
@@ -21,56 +25,10 @@ import ChangelogTable from '/src/components/ChangelogTable.astro';
 
 <DocumentDetails {...frontmatter}/>
 
-<ChangelogTable  {...frontmatter}>
+<ChangelogTable {...frontmatter}>
 | Versione | Data       | PR  | Titolo                                       | Redattore       | Verificatore     |
 | -------- | ---------- | --- | -------------------------------------------- | --------------- | ---------------- |
 | 1.0.0    | 07-01-2024 | 162 | DOC-314 Revisionare verbale interno 23-12-04 | Zaccone Rosario | Carraro Riccardo |
 |          |            |     |                                              |                 |                  |
 </ChangelogTable>
 
-# Ordine del giorno
-
--   spiegazione del lavoro svolto sul PoC;
-
--   analisi dei dubbi emersi;
-
--   organizzazione dei lavori da svolgere durante lo sprint attuale
-    relativamente al PoC.
-
-## Spiegazione del lavoro svolto sul PoC
-
-I lavori svolti durante lo sprint precedente sono stati esposti e
-spiegati, nello specifico è stato mostrata l'implementazione del sistema
-di posizionamento degli scaffali nell'ambiente di lavoro, il
-funzionamento di meccaniche base di Three.js, l'implementazione della
-lettura dei file SVG e del database. Sono stati analizzati i moduli e le
-tecnologie utilizzate (dat.gui, OrbitControls, Vite, Parcel, MySQL).
-
-## Analisi dei dubbi emersi
-
-Tramite l'analisi dei lavori svolti sono emersi dubbi da esporre al
-Proponente:
-
--   definire se sia più opportuno precaricare il database in blocco
-    oppure interrogarlo ad ogni interazione che necessita le sue
-    informazioni;
-
--   definire come dovrebbe essere gestita l'altezza degli scaffali dopo
-    aver configurato l'ambiente di lavoro tramite file SVG.
-
-# Azioni da intraprendere
-
-Le azioni da intraprendere si concentrano sullo sviluppo del PoC:
-
--   studiare l'utilizzo di Docker e la containerizzazione
-    dell'applicativo;
-
--   esplorare le tecnologie alternative a Three.js, nello specifico
-    Unreal Engine (appena terminato il lavoro attualmente iniziato sulle
-    Norme di Progetto);
-
--   implementare i bin e il loro rapporto con gli scaffali (appena
-    terminato il lavoro attualmente iniziato sulle action di GitHub);
-
--   esplorare i diversi modi di implementare l'interfaccia utente (nel
-    caso qualcuno terminasse anzitempo il lavoro assegnato).

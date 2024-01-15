@@ -12,6 +12,7 @@ on:
 
 jobs:
   compile:
+    name: Compile document
     runs-on: ubuntu-latest
     env:
       REQUIRED_FILES: 'template.typ logo.png roles.json Glossario.json'

@@ -5,7 +5,8 @@
   subTitle: "Norme, processi e disciplina",
   authors: (
     "Banzato Alessio",
-    "Gardin Giovanni"
+    "Gardin Giovanni",
+    "Nardo Silvio"
   ),
   showLog: true,
 );
@@ -13,11 +14,11 @@
 = Introduzione
 
 == Scopo del documento
-Questo documento contiene le regole del _way of working_ che disciplinano le attività di ogni membro del gruppo _Error_418_. Queste regole mirano a garantire coerenza, uniformità e efficacia nel processo collaborativo, promuovendo un ambiente di lavoro strutturato e efficiente.
-L'approccio adottato per la redazione di questo documento è di natura incrementale. Ciò significa che il testo è soggetto ad aggiornamenti e revisioni continue al fine di integrare progressivamente le nuove norme, le _best practices_ e i cambiamenti che emergono nel corso dello sviluppo del progetto. Questa flessibilità consente al gruppo di adattarsi prontamente alle dinamiche di lavoro e alle esigenze specifiche del contesto, garantendo un documento sempre allineato alle necessità attuali del team.
+Questo documento contiene le regole del _way of working_ che disciplinano le attività di ogni membro del gruppo _Error_418_. Queste regole mirano a garantire coerenza, uniformità ed efficacia nel processo collaborativo, promuovendo un ambiente di lavoro strutturato ed efficiente.
+L'approccio adottato per la redazione di questo documento è di natura incrementale. Ciò significa che il testo è soggetto ad aggiornamenti e revisioni continue al fine di integrare progressivamente le nuove norme, le _best practices_ e i cambiamenti che emergono nel corso dello sviluppo del progetto. Questa flessibilità consente al gruppo di adattarsi prontamente alle dinamiche di lavoro e alle esigenze specifiche del contesto, garantendo un documento sempre allineato alle necessità attuali del gruppo.
 
 == Scopo del progetto
-Il capitolato C5, denominato _WMS3: Warehouse Management 3D_ e aggiudicato al team, ha come obiettivo la realizzazione di un sistema di gestione di magazzino in tre dimensioni. L'applicazione sviluppata consentirà all'utente di accedere a un ambiente virtuale tridimensionale, dove potrà navigare all'interno di un magazzino e visualizzare gli oggetti presenti nelle scaffalature.
+Il capitolato C5, denominato _WMS3: Warehouse Management 3D_ e aggiudicato al gruppo, ha come obiettivo la realizzazione di un sistema di gestione di magazzino in tre dimensioni. L'applicazione sviluppata consentirà all'utente di accedere a un ambiente virtuale tridimensionale, dove potrà navigare all'interno di un magazzino e visualizzare gli oggetti presenti nelle scaffalature.
 L'utente avrà la possibilità di cercare specifici prodotti all'interno del magazzino, sfruttando la visualizzazione 3D per individuare rapidamente la posizione degli articoli desiderati, potrà modificare l'assetto del magazzino e inviare una notifica verso l'esterno in caso ci sia il bisogno di prelevare un articolo.
 
 == Glossario
@@ -59,12 +60,19 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 - Documentazione Three.js\
   #link("https://threejs.org/docs/")
 
+=== Riferimenti a documentazione interna
+- Documento "Analisi dei Rischi v2.0.0"\
+  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")
+
 = Processi di accordo
+
 == Processo di fornitura
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
+
 === Scopo e descrizione
-Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con proponente e committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
-=== Rapporti con il proponente
-Il dialogo tra il gruppo _Error_418_ e il proponente dovrà essere attivo e frequente fino al termine del progetto didattico, in modo che si riescano a raccogliere più feedback possibili riguardo la correttezza del lavoro svolto. Questa comunicazione avverrà in due modalità:
+Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con Proponente e Committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
+=== Rapporti con il Proponente
+Il dialogo tra il gruppo _Error_418_ e il Proponente dovrà essere attivo e frequente fino al termine del progetto didattico, in modo che si riescano a raccogliere più feedback possibili riguardo la correttezza del lavoro svolto. Questa comunicazione avverrà in due modalità:
 + scritta, asincrona, utilizzata per:
   - comunicazioni di breve durata;
   - condivisione di verbali e materiali informativi;
@@ -73,38 +81,39 @@ Il dialogo tra il gruppo _Error_418_ e il proponente dovrà essere attivo e freq
   - feedback sul lavoro prodotto;
   - chiarimenti sul capitolato;
   - chiarimenti riguardo casi d'uso e requisiti.
-I meeting avranno cadenza variabile, e saranno fissati al termine di altri incontri oppure via e-mail. Il contenuto di ogni incontro sarà raccolto all'interno del relativo verbale. Ognuno di questi verbali sarà validato dal proponente tramite l'apposizione di una firma, e sarà liberamente consultabile all'interno del repository GitHub del gruppo dedicato ai documenti (_#link("https://github.com/Error-418-SWE/Documenti/tree/main")_), al percorso `NomeMilestone/Documentazione esterna/Verbali`, dove `NomeMilestone` è uno tra:
+I meeting avranno cadenza variabile, e saranno fissati al termine di altri incontri oppure via e-mail. Il contenuto di ogni incontro sarà raccolto all'interno del relativo verbale. Ognuno di questi verbali sarà validato dal Proponente tramite l'apposizione di una firma, e sarà liberamente consultabile all'interno del repository GitHub del gruppo dedicato ai documenti (_#link("https://github.com/Error-418-SWE/Documenti/tree/main")_), al percorso `NomeMilestone/Documentazione esterna/Verbali`, dove `NomeMilestone` è uno tra:
 - 1 - Candidatura;
 - 2 - RTB;
 - 3 - PB.
 
 === Documentazione prodotta
-In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di fornitura, la quale sarà resa disponibile al proponente, _Sanmarco Informatica_, e ai committenti, i professori Tullio Vardanega e Riccardo Cardin.
+In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di fornitura, la quale sarà resa disponibile al Proponente, _Sanmarco Informatica_, e ai Committenti, i professori Tullio Vardanega e Riccardo Cardin.
 
 ==== Valutazione dei capitolati
 Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese disponibili dai vari proponenti. Per ogni capitolato vengono presentati tre paragrafi:
-+ *Descrizione*: vengono indicati i nominativi di proponente e committente, e viene presentato l'obiettivo del progetto;
-+ *Dominio tecnologico*: vengono elencate le tecnologie consigliate dal proponente del capitolato;
++ *Descrizione*: vengono indicati i nominativi di Proponente e Committente, e viene presentato l'obiettivo del progetto;
++ *Dominio tecnologico*: vengono elencate le tecnologie consigliate dal Proponente del capitolato;
 + *Considerazioni*: il gruppo dà la propria valutazione sul capitolato.
 
 ==== Analisi dei rischi
 Nel documento di Analisi dei rischi vengono presentati i rischi a cui il gruppo potrebbe essere esposto durante il periodo in cui lavora al progetto. Ogni rischio viene classificato secondo tre parametri:
-- *Impatto*: esprime l'effetto generato dall'evento;
-- *Probabilità*: esprime la probabilità del verificarsi del rischio;
-- *Conseguenze*: effetti collaterali a breve o medio termine che il rischio può comportare.
+- *impatto*: esprime l'effetto generato dall'evento;
+- *probabilità*: esprime la probabilità del verificarsi del rischio;
+- *conseguenze*: effetti collaterali a breve o medio termine che il rischio può comportare.
+
 Ad ogni rischio sono inoltre associate delle buone pratiche da seguire per mitigarlo.
 
 ==== Preventivo dei costi
-Nel Preventivo dei costi viene esposta una tabella che presenta una previsione riguardo il numero di ore di lavoro totali, per membro e per ruolo e viene fornito un calcolo del costo totale del progetto. Prima della tabella vengono spiegate le motivazioni che hanno portato alla suddivisione oraria individuata, effettuando una tripartizione del periodo di lavoro complessivo e analizzando ogni ruolo presente all'interno del team.
+Nel Preventivo dei costi viene esposta una tabella che presenta una previsione riguardo il numero di ore di lavoro totali, per membro e per ruolo e viene fornito un calcolo del costo totale del progetto. Prima della tabella vengono spiegate le motivazioni che hanno portato alla suddivisione oraria individuata, effettuando una tripartizione del periodo di lavoro complessivo e analizzando ogni ruolo presente all'interno del gruppo.
 
 ==== Lettera di presentazione
 Breve documento dove il gruppo si presenta e dichiara il suo impegno nello svolgimento del capitolato scelto. Viene dato un riferimento al repository dove si potranno trovare i documenti necessari alla candidatura e vengono dichiarati il costo della realizzazione del prodotto e la data di consegna prevista.
 
 ==== Analisi dei Requisiti
-In questo documento vengono raccolti tutti gli use case e requisiti individuati dal gruppo con il supporto del proponente. Ogni use case e requisito è identificato da un codice, così da essere facilmente individuabile e tracciabile. All'inizio del documento sono inoltre descritti i criteri di qualità che il gruppo ha seguito durante la redazione.
+In questo documento vengono raccolti tutti gli Use Case e requisiti individuati dal gruppo con il supporto del Proponente. Ogni Use Case e requisito è identificato da un codice, così da essere facilmente individuabile e tracciabile. All'inizio del documento sono inoltre descritti i criteri di qualità che il gruppo ha seguito durante la redazione.
 
 ==== Piano di Progetto
-Documento che governa la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e analizzando il lavoro lavoro svolto. È articolato in cinque sezioni:
+Documento che governa la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e analizzando il lavoro svolto. È articolato in cinque sezioni:
 - Rischi e loro mitigazione;
 - Divisione temporale di sviluppo;
 - Preventivo dei costi di realizzazione;
@@ -112,7 +121,7 @@ Documento che governa la pianificazione dell'avanzamento del progetto, determina
 - Consuntivo del progetto.
 
 ==== Piano di Qualifica
-Nel Piano di Qualifica vengono fissati obiettivi di qualità e vengono descritti i processi necessari per conseguirli con realative procedure di controllo.
+Nel Piano di Qualifica vengono fissati obiettivi di qualità e vengono descritti i processi necessari per conseguirli con relative procedure di controllo.
 
 ==== Glossario
 Nel Glossario vengono elencati e definiti in modo preciso tutti i termini rilevanti utilizzati all'interno del progetto. È un documento estremamente importante per evitare situazioni di ambiguità, e garantire così una corretta comprensione della documentazione da parte di tutte le parti coinvolte.
@@ -121,7 +130,7 @@ Nel Glossario vengono elencati e definiti in modo preciso tutti i termini rileva
 In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo di fornitura.
 
 - *Zoom*: applicazione per videoconferenze;
-- *Google slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il committente riguardo l'andamento del lavoro;
+- *Google slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il Committente riguardo l'andamento del lavoro;
 - *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
 
 = Processi di supporto
@@ -696,8 +705,8 @@ Il team definisce approcci di trattamento appropriati, compresi piani di mitigaz
   Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
 
 - Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:\
-  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato "Analisi Dei Rischi.pdf" presente in: https://github.com/Error-418-SWE/Documenti-old/blob/develop/1%20-%20Candidatura/Analisi%20dei%20rischi/Analisi%20dei%20rischi.pdf .
-  // riferimenti alla documentazione temporanei
+  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento Analisi dei Rischi v2.0.0. 
+
 
 ==== Analizzare i rischi
 Questa attività consiste nei seguenti compiti:
@@ -1114,68 +1123,6 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
 
     - registrare i risultati e comunicarli agli stakeholders:
         - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte.
-
-== Processo di Gestione dei Rischi
-
-=== Scopo
-Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.
-
-=== Risultati
-Come risultato dell'implementazione del processo di Gestione dei Rischi:
-- vengono identificati i rischi;
-- i rischi vengono analizzati;
-- vengono identificate, priorizzate e selezionate opzioni di trattamento del rischio;
-- viene implementato un trattamento appropriato;
-- i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
-
-=== Attività e compiti
-Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
-
-==== Pianificare la gestione dei rischi
-La strategia di gestione dei rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita.
-I rischi devono venire individuati con tempestività, consentendo la pianificazione di misure preventive e correttive in tempo utile per limitare al massimo le conseguenze.
-La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
-Il team si impegna a definire approcci di trattamento appropriati, compresi piani di mitigazione specifici.
-
-==== Gestire il profilo di rischio
-- Definire e registrare le soglie e le condizioni di rischio:
-  le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto.
-  I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
-
-- Stabilire e mantenere un profilo di rischio:
-  il profilo di rischio contiene informazioni sul contesto della gestione dei rischi, il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
-  Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
-
-- Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:
-  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento dedicato "Analisi Dei Rischi.pdf" presente in: https://github.com/Error-418-SWE/Documenti-old/blob/develop/1%20-%20Candidatura/Analisi%20dei%20rischi/Analisi%20dei%20rischi.pdf .
-  // riferimenti alla documentazione temporanei
-
-==== Analizzare i rischi
-Questa attività consiste nei seguenti compiti:
-
-+ identificare i rischi nelle categorie descritte nel contesto della gestione dei rischi:\ l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
-
-+ stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato:\ per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
-
-+ valutare ciascun rischio rispetto alle sue soglie di rischio:\ ogni rischio viene valutato rispetto alle soglie di rischio stabilite, determinando se il rischio supera tali soglie e richiede trattamenti specifici.
-
-==== Trattare i rischi
-Questa attività consiste nei seguenti compiti:
-
-+ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate:\ per i rischi che superano le soglie prestabilite, vengono definite strategie di trattamento, che possono includere l'eliminazione del rischio, la riduzione della sua probabilità o gravità, o l'accettazione del rischio. Vengono anche registrate le misure che forniranno informazioni sull'efficacia delle alternative di trattamento.
-
-+ quando viene accettato un rischio che non soddisfa la sua soglia, va considerato una priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
-
-+ una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
-
-==== Monitorare i rischi
-Questa attività consiste nei seguenti compiti:
-
-- monitorare continuamente i rischi e il contesto della gestione dei rischi per eventuali cambiamenti e valutare i rischi quando il loro stato è cambiato;
-
-- implementare e monitorare misure per valutare l'efficacia dei trattamenti dei rischi;
-
-- monitorare continuamente l'emergere di nuovi rischi e fonti durante l'intero ciclo di vita.
 
 == Processo di Controllo della Qualità
 

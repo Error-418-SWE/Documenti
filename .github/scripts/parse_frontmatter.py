@@ -1,100 +1,79 @@
 import sys
+import re
 from datetime import datetime
 file_path = sys.argv[1]
 file_name = sys.argv[2]
+file_version = sys.argv[3]
 
 file = open(file_path + "/" + file_name)
-file_content = file.read()
+preamble = file.read().strip().split(");")[0]
 file.close()
 
-def array_compose(allText, str_to_split):
-    result = ""
-    splitted_text = "".join(allText).split(str_to_split)[1]
-    for i in range(len(splitted_text)):
-        if splitted_text[i] != ")":
-            result += splitted_text[i]
-        else:
-            result += "]"
-            break
-    result = result.replace("(", "[")
-    return result
+string_fields = [
+    "title",
+    "subTitle",
+    "externalParticipants",
+    "authors",
+    "reviewers",
+    "missingMembers",
+    "location",
+    "timeStart",
+    "timeEnd",
+]
 
-def dictionary_handler(allText, str_to_split):
-    if "".join(allText).strip()[0] == ")":
-        return ""
-    parts = "".join(allText).split(str_to_split,1)
-    return parts[0] + ")" + dictionary_handler("".join(parts[1:]), ",")
+boolean_fields = [
+    "isExternalUse",
+    "showLog",
+]
 
-params = file_content.split("=")[0]
-params = params.replace("#import \"/template.typ\": *\n","")
-params = params.replace("#show: project.with(", "")
-params = params.replace("# project(", "")
-params = params.strip()
+array_fields = [
+    "authors",
+    "reviewers",
+    "missingMembers",
+]
 
-for line in params.split("\n"):
-    if "//" in line:
-        comment = line.split("//")[1]
-        params = params.replace("//"+comment, "")
-    if "#set" in line:
-        params = params.replace("#set"+line.split("#set")[1], "")
-    if "#show" in line:
-        params = params.replace("#show"+line.split("#show")[1], "")
+def get_document_date(text):
+    match = re.findall(r'\d\d\/\d\d\/\d\d', text)
+    date_format = "%d/%m/%y"
+    return datetime.strptime(match[0], date_format)
 
-params = params.split("\n")
+frontmatter = ""
 
-fields = {
-    "title": "title: ",
-    "subTitle": "description: ",
-    "lastUpdated": "lastUpdated: ",
-    "date": "date: ",
-    "externalParticipants": "externalParticipants: ",
-    "authors": "authors",
-    "reviewers": "reviewers",
-    "missingMembers": "missingMembers",
-    "location": "location: ",
-    "timeStart": "timeStart: ",
-    "timeEnd": "timeEnd: ",
-    "showLog": "showLog: ",
-    "showIndex": "showIndex: ",
-    "isExternalUse": "isExternalUse: "
-}
+date_match = re.search(r'date: \"\d\d\/\d\d\/\d\d\"', preamble)
+if date_match:
+    date = get_document_date(date_match.group(0))
+    frontmatter += "title: Verbale " + date.strftime("%d/%m/%y") + "\n"
+    frontmatter += "date: " + date.strftime("%Y-%m-%d") + "\n"
 
-needs_array_compose = ["authors","reviewers","missingMembers"]
+for field in string_fields:
+    match = re.search(fr'{field}: "(.*?)"', preamble)
+    if match:
+        frontmatter += field + ": \"" + match.group(1) + "\"\n"
 
-for line in params:
-    for key in fields.keys():
-        if key in line:
-            if key in needs_array_compose:
-                    fields[key] += array_compose(params,key+":")
-            elif "time" in key:
-                    fields[key] += ":".join(line.split(":")[1:]).strip()[:-1]
-            elif key != "externalParticipants":
-                    fields[key] += line.split(":")[1].strip()[:-1]
-            else:
-                    first_part_to_iterate = "".join(params).split("externalParticipants:")[0]
-                    external_participants_str = dictionary_handler(first_part_to_iterate,",") + ")"
-                    external_participants_str = external_participants_str.split("externalParticipants :")[1]
-                    external_participants_str = external_participants_str.replace("\")", ",").replace(",)","\")")
-                    external_participants_str = external_participants_str.replace("    ", ",")
-                    external_participants_str = external_participants_str.replace(", role", "\", role")
-                    external_participants_str = "[" + external_participants_str[3:-1] +",]"
-                    fields[key] += external_participants_str
+for field in boolean_fields:
+    match = re.search(fr'{field}: (true|false)', preamble)
+    if match:
+        frontmatter += field + ": " + match.group(1) + "\n"
 
-#azioni aggiuntive di pulizia e dettaglio
-#composizione del titolo se verbale (il titolo è generato a compile time e non presente nel preambolo)
-if fields["date"].strip()[-1] != ":":
-    fields["title"] = "title: Verbale "+fields["date"].split(":")[1].strip()
-#per mostrare la data, essa deve essere nel formato yyyy-mm-dd
-if fields["date"].strip()[-1] != ":":
-    splitted_date = fields["date"].split(":")[1].replace("\"","").strip().split("/")
-    fields["date"] = "date: " + str(int(splitted_date[2])+2000) + "-" + splitted_date[1] + "-" + splitted_date[0]
-#definizione del lastUpdated
-fields["lastUpdated"] = "lastUpdated: " + datetime.now().date().strftime("%Y-%m-%d")
+for field in array_fields:
+    match = re.search(fr'{field}: \((.*?)\)', preamble, re.DOTALL)
+    if match:
+        items = [item.strip() for item in match.group(1).split(',')]
+        frontmatter += field + ": [\n\t" + f"{',\n\t'.join(items)},\n" + "]\n"
 
-fields["title"] = fields["title"].replace("\"", "")
-output = "---\n"
-for key in fields.keys():
-    if fields[key].strip()[-1] != ":":
-        output += fields[key] + "\n"
-output += "---"
-print(output)
+if re.search(r'externalParticipants : \((.*?)\)', preamble, re.DOTALL):
+    matches = re.findall(r'name: "(.*?)",\s+role: "(.*?)"', preamble, re.DOTALL)
+    results = ""
+    for match in matches:
+        (name, role) = match
+        results += f'\t\"{name} ({role})\",\n'
+    frontmatter += field + ": [\n" + results + "]\n"
+
+frontmatter += "version: " + file_version + "\n"
+
+url = "\"https://error-418-swe.github.io/Documenti/" + file_path + file_name + "_v" + file_version + "\""
+frontmatter += "url: " + url + "\n"
+
+frontmatter += "lastUpdated: " + datetime.now().date().strftime("%Y-%m-%d") + "\n"
+
+print("---\n" + frontmatter + "---")

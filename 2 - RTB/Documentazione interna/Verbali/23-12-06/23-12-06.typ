@@ -15,8 +15,8 @@
 );
 
 = Ordine del giorno
-- discussione relativa al meeting con il Proponente;
-- suddivisione compiti da svolgere.
+- Discussione relativa al meeting con il Proponente;
+- Suddivisione compiti da svolgere.
 
 == Discussione relativa al meeting con il Proponente
 Si è svolta una discussione a seguito del meeting con il Proponente allo scopo di definire con precisione ciò che l'azienda ha apprezzato e ciò che va rivisto. Il gruppo si ritiene soddisfatto dell'esito dell'incontro ed è stata creata una lista Keep doing/To Do per i prossimi giorni di lavoro:

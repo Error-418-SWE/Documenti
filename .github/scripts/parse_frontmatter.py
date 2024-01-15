@@ -3,6 +3,7 @@ import re
 from datetime import datetime
 file_path = sys.argv[1]
 file_name = sys.argv[2]
+file_version = sys.argv[3]
 
 file = open(file_path + "/" + file_name)
 preamble = file.read().strip().split(");")[0]
@@ -67,6 +68,11 @@ if re.search(r'externalParticipants : \((.*?)\)', preamble, re.DOTALL):
         (name, role) = match
         results += f'\t\"{name} ({role})\",\n'
     frontmatter += field + ": [\n" + results + "]\n"
+
+frontmatter += "version: " + file_version + "\n"
+
+url = "\"https://error-418-swe.github.io/Documenti/" + file_path + file_name + "_v" + file_version + "\""
+frontmatter += "url: " + url + "\n"
 
 frontmatter += "lastUpdated: " + datetime.now().date().strftime("%Y-%m-%d") + "\n"
 

@@ -1,7 +1,7 @@
 #import "/template.typ": *
 
 #show: project.with(
-  title: "Analisi dei rischi",
+  title: "Analisi dei Rischi",
   subTitle: "",
   authors: (
     "Banzato Alessio",

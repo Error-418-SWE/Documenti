@@ -26,7 +26,7 @@ Per ragioni di tempo non è stato possibile ampliare la dashboard di monitoraggi
 === PoC
 Sono stati individuati e corretti i problemi di prestazioni riscontrati alla fine dello sprint precedente.
 
-A seguito di un colloquio informale con il Prof. Cardin in data 12/01/24, è stato deciso di utilizzare Next.js per la realizzazione del _pattern middleware_. Poiché Next.js è la tecnologia scelta per la realizzazione del frontend, utilizzarlo anche per l'implementaizone del middleware sembra, allo stato attuale, una scelta naturale. La rimozione di Express.js permetterà di semplificare lo stack tecnologico complessivo.
+A seguito di un colloquio informale con il Professor Cardin in data 12/01/24, è stato deciso di utilizzare Next.js per la realizzazione del _pattern middleware_. Poiché Next.js è la tecnologia scelta per la realizzazione del frontend, utilizzarlo anche per l'implementazione del middleware sembra, allo stato attuale, una scelta naturale. La rimozione di Express.js permetterà di semplificare lo stack tecnologico complessivo.
 
 === Automazioni
 Sono stati corretti tutti i bug grazie ad un refactoring del codice delle GitHub Action.
@@ -58,6 +58,6 @@ La pianificazione dello Sprint 11 tiene conto della prossimità della sessione d
 - Revisionare, correggere ed espandere il Glossario;
 - Preparare la presentazione a supporto della valutazione RTB.
 
-La candidatura sarà nuovamente discussa durante una riunione interna mercoledì 17/01/24 alle ore 10:00, secondo le modalità consuete. In tale sessione si stabilirà quando chiedere il colloquio di valutazione RTB con il Prof. Cardin.
+La candidatura sarà nuovamente discussa durante una riunione interna mercoledì 17/01/24 alle ore 10:00, secondo le modalità consuete. In tale sessione si stabilirà quando chiedere il colloquio di valutazione RTB con il Professor Cardin.
 
 Si prevede, inoltre, che gli Sprint 12 e 13 avranno ambito ridotto a causa della concorrente sessione di esami.

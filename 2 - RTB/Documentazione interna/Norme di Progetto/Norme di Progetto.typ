@@ -60,7 +60,10 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
   #link("https://threejs.org/docs/")
 
 = Processi di accordo
+
 == Processo di fornitura
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
+
 === Scopo e descrizione
 Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con Proponente e Committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
 === Rapporti con il Proponente

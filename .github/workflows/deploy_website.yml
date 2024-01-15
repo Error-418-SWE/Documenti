@@ -145,7 +145,8 @@ jobs:
         run: |
           cd "${{ steps.path.outputs.WORK_DIR }}"
           git rm --ignore-unmatch "${{ inputs.file_name }}.mdx"
-          cat common.md content.md > "${{ inputs.file_name }}.mdx"
+          cat common.md > "${{ inputs.file_name }}.mdx"
+#          cat common.md content.md > "${{ inputs.file_name }}.mdx"
       - name: Configure Git
         run: |
           git config --global user.email "actions@github.com"

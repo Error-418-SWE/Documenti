@@ -352,8 +352,8 @@ $bold("Scenario: ")$
 )
 == Creazione scaffale
 $bold("Descrizione: ")$
-uno scaffale viene creato in base ai valori dati dall'utente quali: lunghezza, larghezza, profondità, numero di piani, colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
-Quindi viene aggiunto nell'ambiente in una posizione valida specificata. Seccessivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
+uno scaffale viene creato in base ai valori inseriti dall'utente quali: lunghezza, larghezza, profondità, numero di piani, colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
+Quindi viene aggiunto nell'ambiente in una posizione valida specificata. Successivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
 
 $bold("Attore: ")$
 utente.
@@ -482,7 +482,7 @@ $bold("Scenario: ")$
 
 == Creazione di un bin
 $bold("Descrizione: ")$
-deve essere possibile creare delle aree adibite a contenere prodotti (qui chiamate bin). In fase di creazione deve essere possibile definire le caratteristiche che il bin dovrà avere, quali : altezza, larghezza e profondità.
+deve essere possibile creare delle aree adibite a contenere prodotti, definite nel contesto come bin. In fase di creazione deve essere possibile definire le caratteristiche che il bin dovrà avere, quali : altezza, larghezza e profondità.
 
 $bold("Attore: ")$
 utente.
@@ -995,9 +995,10 @@ Dove:
 
     [FM-4], [Obbligatorio], [L'utente deve poter gestire i bin.], [UC-4],
     [FM-4.1], [Obbligatorio], [L'utente deve poter creare i bin.], [UC-4.1],
-    [FM-4.1.1], [Obbligatorio], [L'utente deve poter definire la profondità dei bin.], [UC-4.1],
-    [FM-4.1.2], [Obbligatorio], [L'utente deve poter definire la larghezza dei bin.], [UC-4.1],
-    [FM-4.1.3], [Obbligatorio], [L'utente deve poter definire l'altezza dei bin.], [UC-4.1],
+    [FM-4.1.1], [Obbligatorio], [L'utente deve poter definire le dimensioni degli scaffali.], [UC-3.1],
+    [FM-4.1.1.1], [Obbligatorio], [L'utente deve poter definire la profondità dei bin.], [UC-4.1],
+    [FM-4.1.1.2], [Obbligatorio], [L'utente deve poter definire la larghezza dei bin.], [UC-4.1],
+    [FM-4.1.1.3], [Obbligatorio], [L'utente deve poter definire l'altezza dei bin.], [UC-4.1],
     [FM-4.2], [Obbligatorio], [l'utente deve poter modificare i bin.], [UC-4.2],
     [FM-4.2.1], [Obbligatorio], [L'utente deve poter modificare la profondità dei bin.], [UC-4.1],
     [FM-4.2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza dei bin.], [UC-4.1],

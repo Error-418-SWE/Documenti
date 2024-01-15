@@ -662,11 +662,11 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
 
 Gli obiettivi dell'undicesimo sprint si incentrano sulla preparazione per il colloquio RTB oltre che sul ricontrollo di alcuni aspetti di attività già concluse. In particolare gli obiettivi prefissati per questo sprint sono:
 
-- aggiornare il Piano di Qualifica con delle nuove metriche individuate riguardanti:
+- aggiornare il Piano di Qualifica con nuove metriche individuate riguardanti:
   - budget utilizzato;
   - ore rimanenti.
 - ultimare il documento Analisi dei Requisiti con alcune modifiche minori agli use cases;
-- verificare la correttezza di quanto prodotto nei documenti redatti fin'ora;
+- verificare la correttezza di quanto prodotto nei documenti redatti finora;
 - preparare la candidatura per il colloquio RTB.
 
 === Preventivo costi

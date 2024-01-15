@@ -1092,6 +1092,7 @@ Dove:
   caption: [Requisiti di vincolo.]
 )
 
+== Riepilogo requisiti
 
 #figure(
   table(
@@ -1103,5 +1104,5 @@ Dove:
     [Requisiti di vincolo], [14],
     
   ),
-  caption: [Panoramica requisiti]
+  caption: [Riepilogo requisiti]
 )

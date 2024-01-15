@@ -309,7 +309,7 @@ $bold("Estensioni: ")$
 - UC-2.1 Visualizzazione errore dimensioni magazzino troppo piccole;
 - UC-2.2 Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente.
 
-== Errore dimensioni magazzino troppo piccole
+== Visualizzazione errore dimensioni magazzino troppo piccole
 
 $bold("Descrizione: ")$
 l'utente vuole modificare le dimensioni dell'ambiente riducendole eccessivamente.

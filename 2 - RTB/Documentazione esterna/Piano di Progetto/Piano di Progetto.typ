@@ -656,7 +656,67 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
 === Diagramma di Gantt
 [da inserire]
 
+== Undicesimo Sprint dal 14-01-2024 al 21-01-2024
 
+=== Obiettivi prefissati
+
+Gli obiettivi dell'undicesimo sprint si incentrano sulla preparazione per il colloquio RTB oltre che sul ricontrollo di alcuni aspetti di attività già concluse. In particolare gli obiettivi prefissati per questo sprint sono:
+
+- aggiornare il Piano di Qualifica con delle nuove metriche individuate riguardanti:
+  - budget utilizzato;
+  - ore rimanenti.
+- ultimare il documento Analisi dei Requisiti con alcune modifiche minori agli use cases;
+- verificare la correttezza di quanto prodotto nei documenti redatti fin'ora;
+- preparare la candidatura per il colloquio RTB.
+
+=== Preventivo costi
+
+Gli obiettivi dell'undicesimo sprint riguardano principalmente la preparazione per il colloquio di RTB. Sono state quindi principalmente assegnate ore al ruolo di Verificatore e Analista a scapito di quello di Programmatore in quanto il PoC risulta ormai ultimato:
+
+- *Responsabile*: al fine di coordinare le attività.
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento Piano di Progetto;
+  - gestire GitHub e Jira.
+- *Analista*: al fine di:
+  - ultimare alcune modifiche al documento Analisi dei Requisiti;
+  - ricontrollare interamente il documento di Analisi dei Requisiti.
+- *Progettista*: al fine di mettere per iscritto le motivazioni che hanno portato alla scelta delle tecnologie utilizzate nel PoC.
+- *Verificatore*: al fine di:
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto;
+  - ricontrollare i documenti prodotti e correggere eventuali errori riportati;
+  - inserire nel Piano di Qualifica alcune metriche nuove.
+
+#set text(
+  size: 10pt
+)
+
+#figure(
+  table(
+    columns: 8,
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato Alessio],   [/],  [/],    [4],    [/],    [/],   [/], [4],
+    [Carraro\ Riccardo], [/],  [/],    [/],    [3],    [/],   [/], [3],
+    [Gardin\ Giovanni],  [/],  [/],    [/],    [/],    [/],   [3], [3],
+    [Nardo\ Silvio],     [3],  [/],    [/],    [/],    [/],   [/], [3],
+    [Oseliero\ Antonio], [/],  [/],    [4],    [/],    [/],   [/], [4],
+    [Todesco Mattia],    [/],  [3],    [/],    [/],    [/],   [/], [3],
+    [Zaccone\ Rosario],  [/],  [/],    [/],    [/],    [/],   [3], [3],
+    [Totale\ ore ruolo], [3],  [3],    [8],    [3],    [0],   [6], [23],
+    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo],      [90,00], [60,00], [200,00], [75,00], [0,00], [90,00], [515,00]
+  ),
+  caption: "Preventivo undicesimo sprint"
+)
+
+#set text(
+  size: 11pt
+)
+
+=== Diagramma di Gantt
+
+ [da inserire]
 
 = Consuntivo del progetto
 

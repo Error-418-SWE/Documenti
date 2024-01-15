@@ -101,7 +101,7 @@ Nel Preventivo dei costi viene esposta una tabella che presenta una previsione r
 Breve documento dove il gruppo si presenta e dichiara il suo impegno nello svolgimento del capitolato scelto. Viene dato un riferimento al repository dove si potranno trovare i documenti necessari alla candidatura e vengono dichiarati il costo della realizzazione del prodotto e la data di consegna prevista.
 
 ==== Analisi dei Requisiti
-In questo documento vengono raccolti tutti gli use case e requisiti individuati dal gruppo con il supporto del Proponente. Ogni use case e requisito è identificato da un codice, così da essere facilmente individuabile e tracciabile. All'inizio del documento sono inoltre descritti i criteri di qualità che il gruppo ha seguito durante la redazione.
+In questo documento vengono raccolti tutti gli Use Case e requisiti individuati dal gruppo con il supporto del Proponente. Ogni Use Case e requisito è identificato da un codice, così da essere facilmente individuabile e tracciabile. All'inizio del documento sono inoltre descritti i criteri di qualità che il gruppo ha seguito durante la redazione.
 
 ==== Piano di Progetto
 Documento che governa la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e analizzando il lavoro svolto. È articolato in cinque sezioni:

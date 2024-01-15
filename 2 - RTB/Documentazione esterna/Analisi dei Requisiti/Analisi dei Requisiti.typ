@@ -30,11 +30,11 @@ Il prodotto software oggetto di questo documento è un gestionale di magazzino (
 
 == Ambito del prodotto
 
-Il prodotto software oggetto di questo documento è denominato *WMS3*. WMS3 è un gestionale di magazzino che offre le seguenti funzionalità:
+Il prodotto software oggetto di questo documento è denominato *WMS3*, un gestionale di magazzino che offre le seguenti funzionalità:
 - visualizzazione tridimensionale di un magazzino, con possibilità di muovere la vista;
 - visualizzazione delle informazioni della merce presente in magazzino;
 - caricamento dei dati relativi alle merci da un database SQL;
-- emissione di ordini di movimentazione delle merci;
+- emissione di richieste di spostamento della merce all'interno del magazzino;
 - filtraggio e ricerca delle merci con rappresentazione grafica dei risultati;
 - importazione di planimetrie in formato SVG.
 
@@ -79,8 +79,7 @@ Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport
 
 Il prodotto è acceduto tramite browser. Deve supportare l'esecuzione sui seguenti dispositivi:
 - computer desktop, tramite mouse e tastiera;
-- tablet, tramite touchscreen;
-- smartphone, tramite touchscreen.
+- dispositivi mobili (es. tablet) in dotazione agli adetti di magazzino.
 
 Il browser e il dispositivo devono essere compatibili con lo standard WebGL.
 
@@ -98,13 +97,18 @@ Per la comunicazione tra le sue componenti, con l'utente e con servizi esterni, 
 
 Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
 
-==== Operazioni
-
-// Dettagliare le operazioni, una volta confermate, secondo quanto descritto da 9.6.4.7
-
 ==== Requisiti di adattamento al contesto
 
-// Descrivere le modalità di adattamento a diversi DBMS SQL come da 9.6.4.8
+WMS3 per essere eseguito richiede:
+- un *browser* che supporta WebGL 2.0 (per le specifiche riguardanti i vari browser compatibili consultare la sezione @vincoli);
+- *Node.js* versione 20.11.0 (latest LTS) o superiore;
+- Un database relazionale che si interfacci con le API fornite dal gruppo (il gruppo utilizza *Postgresql* versione 16.1);
+- *Docker Compose* versione 2.23.3 o superiore;
+- *Docker* versione 24.0.7 o superiore;
+
+Il gruppo ha deciso di utilizzare la tecnologia Docker per permettere una maggiore portabilità e facilitare il deploy. \
+La gestione di più container simultanei avviene mediante Docker Compose. \
+Le specifiche sui browser sono imposte dall'utilizzo da parte del gruppo di *Three.js* per implementare l'ambiente 3D.
 
 ==== Interfacce a servizi
 
@@ -112,8 +116,27 @@ WMS3 dovrà inviare messaggi ad uno o più servizi esterni per comunicare gli or
 
 === Funzionalità del prodotto
 
-// TODO: 9.6.5
-
+Il prodotto sarà caratterizzato da:
+- *ambiente*:
+  - l'interno di un magazzino, di forma quadrata o rettangolare delimitato sui quattro lati che rappresenta il reale magazzino su cui deve operare l'addetto;
+  - caratterizzato da una griglia (o grid) a terra che permette all'utente di collocare gli oggetti nell'ambiente con maggiore o minore precisione a seconda delle esigenze;
+  - le dimensioni e la finezza della grid devono essere modificabili;
+  - deve essere navigabile tramite diverse periferiche (freccie direzionali, mouse, touch del dispositivo) e in diversi modi (sui tre assi, zoom-in/zoom-out, rotazione).
+  - può essere creato vuoto o tramite un file SVG; nel primo caso abbiamo un piano vuoto di dimensioni predefinite, mentre nel secondo caso il file SVG viene usato per disegnare sul piano le forme degli scaffali da inserire nell'ambiente.
+- *scaffalature*:
+  - scaffali con caratteristiche personalizzabili (altezza, larghezza, profondità, numero di scaffali e il numero di colonne in cui è diviso uno scaffale) che rappresentano i reali scaffali nel magazzino;
+  - è possibile definire in fase di creazione l'orientamento (verticale od orizzontale) dello scaffale;
+  - al loro interno contengono dei bin;
+  - possono essere spostati, modificati, creati o eliminati.
+- *bin*:
+  - è possibile crearli, modificarli o eliminarli;
+  - leggere le informazioni riguardanti il bin stesso e il loro contenuto;
+  - rappresentano lo spazio occupabile da un prodotto nel magazzino.
+- *prodotti*:
+  - rappresentano i reali prodotti contenuti nel magazzino;
+  - contengono diverse informazioni riguardo il prodotto;
+  - sono contenuti in un bin e possono essere spostati verso un bin differente;
+  - è possibile la ricerca dei prodotti attraverso dei parametri quali: id, nome, scaffale.
 === Caratteristiche degli utenti
 
 L'utente tipico di WMS3 è un supervisore di magazzino. Ci si aspetta che la maggior parte degli accessi a WMS3 avvengano da ufficio, tramite un computer desktop dotato di mouse e tastiera; tuttavia, non si può escludere che l'utente possa accedere a WMS3 tramite dispositivo mobile.
@@ -133,7 +156,8 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 === Ipotesi e dipendenze
 
 + Disponibilità di un database SQL;
-+ Disponibilità di un browser compatibile con WebGL.
++ Disponibilità di un browser compatibile con WebGL;
++ Disponibilità di un sistema proprietario per notificare, in questo caso, la richiesta di spostamento di un prodotto all'interno del magazzino al personale designato.
 
 = Riferimenti
 
@@ -1067,7 +1091,7 @@ Dove:
   caption: [Requisiti di qualità.]
 )
 
-== Requisiti di vincolo
+== Requisiti di vincolo <vincoli>
 
 #figure(
   table(

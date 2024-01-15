@@ -14,7 +14,7 @@
 = Ordine del giorno
 - Valutazione dell'avanzamento;
 - Analisi di retrospettiva;
-- Valutazione RTB;
+- Revisione RTB;
 - Pianificazione.
 
 == Valutazione dell'avanzamento <avanzamento>
@@ -46,17 +46,17 @@ La comunicazione tra membri è risultata non allineata (_siloed_) in alcune occa
 
 Si è inoltre riscontrato uno sbilanciamento dell'impegno dei singoli membri del gruppo, dovuto all'avvicinarsi della sessione d'esame invernale.
 
-== Valutazione RTB
-Visto lo stato di avanzamento, il gruppo ha l'obiettivo di presentare la propria candidatura per la valutazione RTB entro il 19/01/24.
+== Revisione RTB
+Visto lo stato di avanzamento, il gruppo ha l'obiettivo di presentare la propria candidatura per la revisione RTB entro il 19/01/24.
 
 == Pianificazione <pianificazione>
 La pianificazione dello Sprint 11 tiene conto della prossimità della sessione di esame invernale.
 
 - Procedere con la revisione dei documenti. Se necessario, l'incaricato alla revisione aggiornerà manualmente il log associato secondo le regole prestabilite;
-- Redigere la lettera di presentazione per sostenere la valutazione RTB;
+- Redigere la lettera di presentazione per sostenere la revisione RTB;
 - Ampliare la dashboard di monitoraggio;
 - Revisionare, correggere ed espandere il Glossario;
-- Preparare la presentazione a supporto della valutazione RTB.
+- Preparare la presentazione a supporto della revisione RTB.
 
 La candidatura sarà nuovamente discussa durante una riunione interna mercoledì 17/01/24 alle ore 10:00, secondo le modalità consuete. In tale sessione si stabilirà quando chiedere il colloquio di valutazione RTB con il Professor Cardin.
 

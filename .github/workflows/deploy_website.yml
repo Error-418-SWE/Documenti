@@ -9,6 +9,9 @@ on:
       file_name:
         required: true
         type: string
+      file_version:
+        required: true
+        type: string
 
 jobs:
   extract:
@@ -29,7 +32,7 @@ jobs:
       - name: Install csv2md
         run: pip install csv2md
       - name: Extract info from preamble
-        run: echo "$(python .github/scripts/parse_frontmatter.py "${{ inputs.file_path }}" "${{ inputs.file_name }}.typ")" >> "$OUTPUT_FILE"
+        run: echo "$(python .github/scripts/parse_frontmatter.py "${{ inputs.file_path }}" "${{ inputs.file_name }}.typ" "${{ inputs.file_version }}")" >> "$OUTPUT_FILE"
       - name: Insert header into changelog
         run: sed -i -e "1i $CHANGELOG_HEADER" "${{ inputs.file_path }}/log.csv"
       - name: Trim blank lines

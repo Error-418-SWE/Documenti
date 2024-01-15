@@ -103,7 +103,8 @@ WMS3 per essere eseguito richiede:
 - *Docker Compose* versione 2.23.3 o superiore;
 - *Docker* versione 24.0.7 o superiore;
 
-Il gruppo ha deciso di utilizzare la tecnologia Docker per permettere una maggiore portabilità e facilitare il deploy, mentre Docker Compose serve a gestire le applicazioni multi-container. \
+Il gruppo ha deciso di utilizzare la tecnologia Docker per permettere una maggiore portabilità e facilitare il deploy. \
+La gestione di più container simultanei avviene mediante Docker Compose. \
 Le specifiche sui browser sono imposte dall'utilizzo da parte del gruppo di *Three.js* per implementare l'ambiente 3D.
 
 ==== Interfacce a servizi
@@ -116,7 +117,7 @@ Il prodotto sarà caratterizzato da:
 - *ambiente*:
   - l'interno di un magazzino, di forma quadrata o rettangolare delimitato sui quattro lati che rappresenta il reale magazzino su cui deve operare l'addetto;
   - caratterizzato da una griglia (o grid) a terra che permette all'utente di collocare gli oggetti nell'ambiente con maggiore o minore precisione a seconda delle esigenze;
-  - le dimensioni e la finezza della grid devono essere sempre modificabili (quando possibile);
+  - le dimensioni e la finezza della grid devono essere modificabili;
   - deve essere navigabile tramite diverse periferiche (freccie direzionali, mouse, touch del dispositivo) e in diversi modi (sui tre assi, zoom-in/zoom-out, rotazione).
   - può essere creato vuoto o tramite un file SVG; nel primo caso abbiamo un piano vuoto di dimensioni predefinite, mentre nel secondo caso il file SVG viene usato per disegnare sul piano le forme degli scaffali da inserire nell'ambiente.
 - *scaffalature*:
@@ -132,8 +133,7 @@ Il prodotto sarà caratterizzato da:
   - rappresentano i reali prodotti contenuti nel magazzino;
   - contengono diverse informazioni riguardo il prodotto;
   - sono contenuti in un bin e possono essere spostati verso un bin differente;
-  - è possibile ricercali tramite l'apposito pannello;
-  - la ricerca può avvenire usando diversi parametri.
+  - è possibile la ricerca dei prodotti attraverso dei parametri quali: id, nome, scaffale.
 === Caratteristiche degli utenti
 
 L'utente tipico di WMS3 è un supervisore di magazzino. Ci si aspetta che la maggior parte degli accessi a WMS3 avvengano da ufficio, tramite un computer desktop dotato di mouse e tastiera; tuttavia, non si può escludere che l'utente possa accedere a WMS3 tramite dispositivo mobile.

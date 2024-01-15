@@ -121,7 +121,7 @@ Nel Glossario vengono elencati e definiti in modo preciso tutti i termini rileva
 In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo di fornitura.
 
 - *Zoom*: applicazione per videoconferenze;
-- *Google slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il committente riguardo l'andamento del lavoro;
+- *Google slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il Committente riguardo l'andamento del lavoro;
 - *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
 
 = Processi di supporto

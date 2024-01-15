@@ -92,9 +92,9 @@ Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese
 
 ==== Analisi dei rischi
 Nel documento di Analisi dei rischi vengono presentati i rischi a cui il gruppo potrebbe essere esposto durante il periodo in cui lavora al progetto. Ogni rischio viene classificato secondo tre parametri:
-- *Impatto*: esprime l'effetto generato dall'evento;
-- *Probabilità*: esprime la probabilità del verificarsi del rischio;
-- *Conseguenze*: effetti collaterali a breve o medio termine che il rischio può comportare.
+- *impatto*: esprime l'effetto generato dall'evento;
+- *probabilità*: esprime la probabilità del verificarsi del rischio;
+- *conseguenze*: effetti collaterali a breve o medio termine che il rischio può comportare.
 Ad ogni rischio sono inoltre associate delle buone pratiche da seguire per mitigarlo.
 
 ==== Preventivo dei costi

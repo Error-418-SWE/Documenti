@@ -665,9 +665,15 @@ Gli obiettivi dell'undicesimo sprint si incentrano sulla preparazione per il col
 - aggiornare il Piano di Qualifica con nuove metriche individuate riguardanti:
   - budget utilizzato;
   - ore rimanenti.
-- ultimare il documento Analisi dei Requisiti con alcune modifiche minori agli use cases;
+- rimuovere Express dal PoC post feedback con il professor Cardin;
+- registrazione di un video dimostrazione del PoC destinato al proponente;
+- creazione di un collegamento tra Jira e Grafana per il cruscotto di controllo della qualità;
+- ultimare il documento Analisi dei Requisiti con alcune modifiche minori agli Use Cases;
 - verificare la correttezza di quanto prodotto nei documenti redatti finora;
-- preparare la candidatura per il colloquio RTB.
+- preparare la candidatura per il colloquio RTB:
+  - Redigere nuova lettera di presentazione con aggiornamento di preventivo;
+  - Preparare presentazione power point;
+  - Continuare la revisione dei documenti.
 
 === Preventivo costi
 

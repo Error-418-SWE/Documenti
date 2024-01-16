@@ -45,13 +45,10 @@ if date_match:
     frontmatter += "title: Verbale " + date.strftime("%d/%m/%y") + "\n"
     frontmatter += "date: " + date.strftime("%Y-%m-%d") + "\n"
 
-has_title = False
 for field in string_fields:
     match = re.search(fr'{field}: "(.*?)"', preamble)
     if match:
         frontmatter += field + ": \"" + match.group(1) + "\"\n"
-        if field == "title":
-            has_title = True
 
 for field in boolean_fields:
     match = re.search(fr'{field}: (true|false)', preamble)
@@ -71,9 +68,6 @@ if re.search(r'externalParticipants : \((.*?)\)', preamble, re.DOTALL):
         (name, role) = match
         results += f'\t\"{name} ({role})\",\n'
     frontmatter += field + ": [\n" + results + "]\n"
-
-if not has_title:
-    frontmatter += "title: " + file_name + "\n"
 
 frontmatter += "version: " + file_version + "\n"
 

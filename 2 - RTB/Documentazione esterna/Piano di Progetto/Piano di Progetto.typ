@@ -590,7 +590,7 @@ Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del 
 [da inserire]
 
 
-== Ottavo Sprint dal 25-12-2023 al 01-01-2024
+== Ottavo Sprint dal 25-12-2023 al 31-12-2023
 
 === Obiettivi prefissati <obiettivi8>
 Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nel settimo sprint, e sull'avanzamento del documento Norme di Progetto, oltre che sul miglioramento di alcuni aspetti di attività già concluse. In particolare gli obiettivi prefissati per questo sprint sono:

@@ -3,16 +3,16 @@ const { showLog } = Astro.props;
 ---
 
 <div>
-	{
-		showLog && (
-			<>
-				<details>
-					<summary lang="en">Changelog</summary>
-					<slot>
-				</details>
-			</>
-		)
-	}
+{
+	showLog && (
+		<>
+			<details>
+				<summary lang="en">Changelog</summary>
+				<slot />
+			</details>
+		</>
+	)
+}
 </div>
 
 <style>

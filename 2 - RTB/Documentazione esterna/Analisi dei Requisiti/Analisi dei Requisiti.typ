@@ -30,11 +30,11 @@ Il prodotto software oggetto di questo documento è un gestionale di magazzino (
 
 == Ambito del prodotto
 
-Il prodotto software oggetto di questo documento è denominato *WMS3*. WMS3 è un gestionale di magazzino che offre le seguenti funzionalità:
+Il prodotto software oggetto di questo documento è denominato *WMS3*, un gestionale di magazzino che offre le seguenti funzionalità:
 - visualizzazione tridimensionale di un magazzino, con possibilità di muovere la vista;
 - visualizzazione delle informazioni della merce presente in magazzino;
 - caricamento dei dati relativi alle merci da un database SQL;
-- emissione di ordini di movimentazione delle merci;
+- emissione di richieste di spostamento della merce all'interno del magazzino;
 - filtraggio e ricerca delle merci con rappresentazione grafica dei risultati;
 - importazione di planimetrie in formato SVG.
 
@@ -79,8 +79,7 @@ Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport
 
 Il prodotto è acceduto tramite browser. Deve supportare l'esecuzione sui seguenti dispositivi:
 - computer desktop, tramite mouse e tastiera;
-- tablet, tramite touchscreen;
-- smartphone, tramite touchscreen.
+- dispositivi mobili (es. tablet) in dotazione agli adetti di magazzino.
 
 Il browser e il dispositivo devono essere compatibili con lo standard WebGL.
 
@@ -98,13 +97,18 @@ Per la comunicazione tra le sue componenti, con l'utente e con servizi esterni, 
 
 Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
 
-==== Operazioni
-
-// Dettagliare le operazioni, una volta confermate, secondo quanto descritto da 9.6.4.7
-
 ==== Requisiti di adattamento al contesto
 
-// Descrivere le modalità di adattamento a diversi DBMS SQL come da 9.6.4.8
+WMS3 per essere eseguito richiede:
+- un *browser* che supporta WebGL 2.0 (per le specifiche riguardanti i vari browser compatibili consultare la sezione @vincoli);
+- *Node.js* versione 20.11.0 (latest LTS) o superiore;
+- Un database relazionale che si interfacci con le API fornite dal gruppo (il gruppo utilizza *Postgresql* versione 16.1);
+- *Docker Compose* versione 2.23.3 o superiore;
+- *Docker* versione 24.0.7 o superiore;
+
+Il gruppo ha deciso di utilizzare la tecnologia Docker per permettere una maggiore portabilità e facilitare il deploy. \
+La gestione di più container simultanei avviene mediante Docker Compose. \
+Le specifiche sui browser sono imposte dall'utilizzo da parte del gruppo di *Three.js* per implementare l'ambiente 3D.
 
 ==== Interfacce a servizi
 
@@ -112,8 +116,27 @@ WMS3 dovrà inviare messaggi ad uno o più servizi esterni per comunicare gli or
 
 === Funzionalità del prodotto
 
-// TODO: 9.6.5
-
+Il prodotto sarà caratterizzato da:
+- *ambiente*:
+  - l'interno di un magazzino, di forma quadrata o rettangolare delimitato sui quattro lati che rappresenta il reale magazzino su cui deve operare l'addetto;
+  - caratterizzato da una griglia (o grid) a terra che permette all'utente di collocare gli oggetti nell'ambiente con maggiore o minore precisione a seconda delle esigenze;
+  - le dimensioni e la finezza della grid devono essere modificabili;
+  - deve essere navigabile tramite diverse periferiche (freccie direzionali, mouse, touch del dispositivo) e in diversi modi (sui tre assi, zoom-in/zoom-out, rotazione).
+  - può essere creato vuoto o tramite un file SVG; nel primo caso abbiamo un piano vuoto di dimensioni predefinite, mentre nel secondo caso il file SVG viene usato per disegnare sul piano le forme degli scaffali da inserire nell'ambiente.
+- *scaffalature*:
+  - scaffali con caratteristiche personalizzabili (altezza, larghezza, profondità, numero di scaffali e il numero di colonne in cui è diviso uno scaffale) che rappresentano i reali scaffali nel magazzino;
+  - è possibile definire in fase di creazione l'orientamento (verticale od orizzontale) dello scaffale;
+  - al loro interno contengono dei bin;
+  - possono essere spostati, modificati, creati o eliminati.
+- *bin*:
+  - è possibile crearli, modificarli o eliminarli;
+  - leggere le informazioni riguardanti il bin stesso e il loro contenuto;
+  - rappresentano lo spazio occupabile da un prodotto nel magazzino.
+- *prodotti*:
+  - rappresentano i reali prodotti contenuti nel magazzino;
+  - contengono diverse informazioni riguardo il prodotto;
+  - sono contenuti in un bin e possono essere spostati verso un bin differente;
+  - è possibile la ricerca dei prodotti attraverso dei parametri quali: id, nome, scaffale.
 === Caratteristiche degli utenti
 
 L'utente tipico di WMS3 è un supervisore di magazzino. Ci si aspetta che la maggior parte degli accessi a WMS3 avvengano da ufficio, tramite un computer desktop dotato di mouse e tastiera; tuttavia, non si può escludere che l'utente possa accedere a WMS3 tramite dispositivo mobile.
@@ -133,7 +156,8 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 === Ipotesi e dipendenze
 
 + Disponibilità di un database SQL;
-+ Disponibilità di un browser compatibile con WebGL.
++ Disponibilità di un browser compatibile con WebGL;
++ Disponibilità di un sistema proprietario per notificare, in questo caso, la richiesta di spostamento di un prodotto all'interno del magazzino al personale designato.
 
 = Riferimenti
 
@@ -277,27 +301,24 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
 
-== Creazione manuale della mappa del magazzino
+== Creazione magazzino vuoto
 $bold("Descrizione: ")$
-configurazione manuale del perimetro dell'ambiente di lavoro.
+All'avvio dell'applicativo è possibile creare un ambiente vuoto di dimensioni predefinite da cui iniziare. Tale funzionalità, rimane disponibile durante l'utilizzo dell'applicativo qualora si volesse ripristinare l'ambiente.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- è stato dato inizio alla procedura di configurazione manuale dell'ambiente di lavoro.
+- è stato dato inizio alla procedura di creazione dell'ambiente di lavoro vuoto.
 
 $bold("Postcondizioni: ")$
-- la forma e il perimetro dell'ambiente di lavoro è stato configurato manualmente;
+- è stato generato un ambiente di lavoro vuoto di dimensioni predefinite;
 - l'ambiente così generato ha rimosso eventuali elementi precedentemente configurati.
 
 $bold("Scenario: ")$
-- l'utente inserisce i dati relativi alla configurazione.
+- l'utente crea un ambiente di lavoro vuoto con dimensioni predefinite.
 
-$bold("Estensioni: ")$
-- UC-5.1 Dimensioni negative o uguali a zero.
-
-= Inserimento nuove dimensioni del magazzino
+= Modifica dimensioni del magazzino
 
 #figure(
   image("./imgs/uc2.png", format: "png"), 
@@ -319,29 +340,48 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente avvia la modifica dell'ambiente di lavoro;
-- l'utente immette i dati richiesti.
+- l'utente regola le dimensioni dell'ambiente di lavoro.
 
 $bold("Estensioni: ")$
 - UC-2.1 Visualizzazione errore dimensioni magazzino troppo piccole;
-- UC-5.1 Dimensioni negative o uguali a zero.
+- UC-2.2 Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente.
 
 == Visualizzazione errore dimensioni magazzino troppo piccole
 
 $bold("Descrizione: ")$
-i dati inseriti per la modifica dell'ambiente di lavoro generano conflitti con quanto configurato precedentemente.
+l'utente vuole modificare le dimensioni dell'ambiente riducendole eccessivamente.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'utente ha immesso i dati per la modifica dell'ambiente;
-- tali dati non sono congrui con la precedente configurazione dell'ambiente.
+- l'utente ha creato l'ambiente di lavoro manualmente;
+- l'ambiente è stato creato correttamente;
+- l'ambiente di lavoro risulta vuoto.
 
 $bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo ad un'immissione errata dei dati per la modifica dell'ambiente.
+- all'utente viene notificato l'errore relativo al fatto che le dimensioni dell'ambiente non possono essere ulteriormente diminuite.
 
 $bold("Scenario: ")$
-- l'utente ha immesso delle dimensioni troppo piccole nella modifica dell'ambiente, rischiando di generare conflitti.
+- l'utente vuole ridurre le dimensioni dell'ambiente oltre una soglia minima.
+
+== Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
+
+$bold("Descrizione: ")$
+Dato un ambiente con elementi posizionati (come scaffali e/o bin), l'utente cerca di ridurre le dimensioni dell'ambiente in modo eccessivo, non permettendo di mantenere gli elementi precedentemente posizionati.
+$bold("Attore: ")$
+utente.
+
+$bold("Precondizioni: ")$
+- l'utente ha creato l' ambiente di lavoro manualmente;
+- l'ambiente è stato creato correttamente;
+- l'ambiente di lavoro risulta non vuoto.
+
+$bold("Postcondizioni: ")$
+- all'utente viene notificato l'errore relativo al fatto che stia cercando di diminuire troppo le dimensioni dell'ambiente nonostante gli elementi presenti.
+
+$bold("Scenario: ")$
+- l'utente vuole ridurre la dimensione dell'ambiente nonostante l'ambiente di lavoro contenga elementi le cui posizioni non risulterebbero più valide alle nuove dimensioni ridotte.
 
 = Gestione scaffali
 #figure(
@@ -948,24 +988,19 @@ Dove:
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
     [FM-1], [Obbligatorio], [L'utente deve poter creare il magazzino.], [UC-1],
     [FM-1.1], [Obbligatorio], [L'utente deve poter caricare un file SVG contenente la pianta del magazzino.], [UC-1.1],
-    [FD-1.1.1], [Desiderabile], [L'utente deve poter definire le altezze degli elementi del file SVG tramite trascinamento verso l'alto.], [Verbale esterno 23-12-06],
-    [FM-1.1.2], [Obbligatorio], [L'utente visualizza un errore di importazione del file SVG.], [UC-1.1.1],
-    [FM-1.1.2.1], [Obbligatorio], [L'utente visualizza un errore dato dal caricamento di un file SVG privo di informazioni.], [UC-1.1.1.1],
-    [FM-1.1.2.2], [Obbligatorio], [L'utente visualizza un errore dato da informazioni incongruenti nel file SVG.], [UC-1.1.1.2],
-    [FM-1.2], [Obbligatorio], [L'utente deve poter creare manualmente il magazzino.], [UC-1.2],
-    [FM-1.2.1], [Obbligatorio], [L'utente deve poter inserire manualmente la lunghezza del magazzino.], [UC-1.2],
-    [FM-1.2.2], [Obbligatorio], [L'utente deve poter inserire manualmente la larghezza del magazzino.], [UC-1.2],
-    [FM-1.2.3], [Obbligatorio], [L'utente deve poter inserire manualmente l'altezza del magazzino.], [UC-1.2],
-    [FM-1.2.4], [Obbligatorio], [L'utente visualizza un errore dato dalla non validità dei dati inseriti.], [UC-1.2.1],
+    [FM-1.1.1], [Obbligatorio], [L'utente deve sempre poter creare un magazzino tramite caricamento di un file SVG, quando possibile], [UC-1.1],
+    [FD-1.1.2], [Desiderabile], [L'utente deve poter definire le altezze degli elementi del file SVG tramite trascinamento verso l'alto.], [Verbale esterno 23-12-06],
+    [FM-1.1.3], [Obbligatorio], [L'utente visualizza un errore di importazione del file SVG.], [UC-1.1.1],
+    [FM-1.1.3.1], [Obbligatorio], [L'utente visualizza un errore dato dal caricamento di un file SVG privo di informazioni.], [UC-1.1.1.1],
+    [FM-1.1.3.2], [Obbligatorio], [L'utente visualizza un errore dato da informazioni incongruenti nel file SVG.], [UC-1.1.1.2],
+    [FM-1.2], [Obbligatorio], [L'utente deve sempre poter creare un ambiente di lavoro vuoto, quando possibile.], [UC-1.2],
 
     [FM-2], [Obbligatorio], [L'utente deve poter modificare le dimensioni del magazzino dopo la sua creazione.], [UC-2],
     [FM-2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza del magazzino dopo la sua creazione.], [UC-2],
     [FM-2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza del magazzino dopo la sua creazione.], [UC-2],
     [FM-2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza del magazzino dopo la sua creazione.], [UC-2],
-    [FM-2.4], [Obbligatorio], [L'utente visualizza un errore relativo all'inserimento di dimensioni troppo piccole del magazzino.], [UC-2.1],
-    [FM-2.4.1], [Obbligatorio], [L'utente visualizza un errore causato dall'inserimento di una lunghezza che eliminerebbe scaffali o loro parti durante la modifica.], [UC-2.1],
-    [FM-2.4.2], [Obbligatorio], [L'utente visualizza un errore causato dall'inserimento di una larghezza che eliminerebbe scaffali o loro parti durante la modifica.], [UC-2.1],
-    [FM-2.4.3], [Obbligatorio], [L'utente visualizza un errore causato dall'inserimento di un'altezza che eliminerebbe piani di scaffali durante la modifica.], [UC-2.1],
+    [FM-2.4], [Obbligatorio], [L'utente visualizza un errore relativo alla riduzione eccessiva delle dimensioni dell'ambiente vuoto.], [UC-2.1],
+    [FM-2.5], [Obbligatorio], [L'utente visualizza un errore relativo alla riduzione eccessiva delle dimensioni dell'ambiente non vuoto.], [UC-2.2],
 
     [FM-3], [Obbligatorio], [L'utente deve poter gestire gli scaffali.], [UC-3],
     [FM-3.1], [Obbligatorio], [L'utente deve poter creare gli scaffali.], [UC-3.1],
@@ -1073,7 +1108,7 @@ Dove:
   caption: [Requisiti di qualità.]
 )
 
-== Requisiti di vincolo
+== Requisiti di vincolo <vincoli>
 
 #figure(
   table(
@@ -1096,4 +1131,19 @@ Dove:
     [VO-14], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose.], [VE 23-11-15]
   ),
   caption: [Requisiti di vincolo.]
+)
+
+== Riepilogo requisiti
+
+#figure(
+  table(
+    columns: 2,
+    align: left,
+    [*Tipo Requisito*], [*Numero totale*], 
+    [Requisiti funzionali], [11], 
+    [Requisiti di qualità], [7],
+    [Requisiti di vincolo], [14],
+    
+  ),
+  caption: [Riepilogo requisiti]
 )

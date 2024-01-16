@@ -30,11 +30,11 @@ Il prodotto software oggetto di questo documento è un gestionale di magazzino (
 
 == Ambito del prodotto
 
-Il prodotto software oggetto di questo documento è denominato *WMS3*. WMS3 è un gestionale di magazzino che offre le seguenti funzionalità:
+Il prodotto software oggetto di questo documento è denominato *WMS3*, un gestionale di magazzino che offre le seguenti funzionalità:
 - visualizzazione tridimensionale di un magazzino, con possibilità di muovere la vista;
 - visualizzazione delle informazioni della merce presente in magazzino;
 - caricamento dei dati relativi alle merci da un database SQL;
-- emissione di ordini di movimentazione delle merci;
+- emissione di richieste di spostamento della merce all'interno del magazzino;
 - filtraggio e ricerca delle merci con rappresentazione grafica dei risultati;
 - importazione di planimetrie in formato SVG.
 
@@ -47,7 +47,10 @@ I gestionali di magazzino tradizionali presentano una serie di problematiche:
 
 #figure(
   image("./imgs/wms-tradizionale.jpg", format: "jpg"),
-  caption: [Schermata di un software WMS tradizionale (fonte: #link("https://www.seniorsoftware.ro/en/wms/")[seniorsoftware.ro])]) <wms-tradizionale>
+  caption: [
+    Schermata di un software WMS tradizionale (fonte: #link("https://www.seniorsoftware.ro/en/wms/")[seniorsoftware.ro])
+  ],
+) <wms-tradizionale>
 
 Il vantaggio principale di WMS3, rispetto ai tradizionali gestionali di magazzino, è la visualizzazione 3D del magazzino e del suo contenuto. Questa funzionalità rappresenta un miglioramento significativo di usabilità rispetto ai WMS tradizionali. La visualizzazione 3D permette agli utenti di:
 
@@ -76,8 +79,7 @@ Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport
 
 Il prodotto è acceduto tramite browser. Deve supportare l'esecuzione sui seguenti dispositivi:
 - computer desktop, tramite mouse e tastiera;
-- tablet, tramite touchscreen;
-- smartphone, tramite touchscreen.
+- dispositivi mobili (es. tablet) in dotazione agli adetti di magazzino.
 
 Il browser e il dispositivo devono essere compatibili con lo standard WebGL.
 
@@ -95,13 +97,18 @@ Per la comunicazione tra le sue componenti, con l'utente e con servizi esterni, 
 
 Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
 
-==== Operazioni
-
-// Dettagliare le operazioni, una volta confermate, secondo quanto descritto da 9.6.4.7
-
 ==== Requisiti di adattamento al contesto
 
-// Descrivere le modalità di adattamento a diversi DBMS SQL come da 9.6.4.8
+WMS3 per essere eseguito richiede:
+- un *browser* che supporta WebGL 2.0 (per le specifiche riguardanti i vari browser compatibili consultare la sezione @vincoli);
+- *Node.js* versione 20.11.0 (latest LTS) o superiore;
+- Un database relazionale che si interfacci con le API fornite dal gruppo (il gruppo utilizza *Postgresql* versione 16.1);
+- *Docker Compose* versione 2.23.3 o superiore;
+- *Docker* versione 24.0.7 o superiore;
+
+Il gruppo ha deciso di utilizzare la tecnologia Docker per permettere una maggiore portabilità e facilitare il deploy. \
+La gestione di più container simultanei avviene mediante Docker Compose. \
+Le specifiche sui browser sono imposte dall'utilizzo da parte del gruppo di *Three.js* per implementare l'ambiente 3D.
 
 ==== Interfacce a servizi
 
@@ -109,8 +116,27 @@ WMS3 dovrà inviare messaggi ad uno o più servizi esterni per comunicare gli or
 
 === Funzionalità del prodotto
 
-// TODO: 9.6.5
-
+Il prodotto sarà caratterizzato da:
+- *ambiente*:
+  - l'interno di un magazzino, di forma quadrata o rettangolare delimitato sui quattro lati che rappresenta il reale magazzino su cui deve operare l'addetto;
+  - caratterizzato da una griglia (o grid) a terra che permette all'utente di collocare gli oggetti nell'ambiente con maggiore o minore precisione a seconda delle esigenze;
+  - le dimensioni e la finezza della grid devono essere modificabili;
+  - deve essere navigabile tramite diverse periferiche (freccie direzionali, mouse, touch del dispositivo) e in diversi modi (sui tre assi, zoom-in/zoom-out, rotazione).
+  - può essere creato vuoto o tramite un file SVG; nel primo caso abbiamo un piano vuoto di dimensioni predefinite, mentre nel secondo caso il file SVG viene usato per disegnare sul piano le forme degli scaffali da inserire nell'ambiente.
+- *scaffalature*:
+  - scaffali con caratteristiche personalizzabili (altezza, larghezza, profondità, numero di scaffali e il numero di colonne in cui è diviso uno scaffale) che rappresentano i reali scaffali nel magazzino;
+  - è possibile definire in fase di creazione l'orientamento (verticale od orizzontale) dello scaffale;
+  - al loro interno contengono dei bin;
+  - possono essere spostati, modificati, creati o eliminati.
+- *bin*:
+  - è possibile crearli, modificarli o eliminarli;
+  - leggere le informazioni riguardanti il bin stesso e il loro contenuto;
+  - rappresentano lo spazio occupabile da un prodotto nel magazzino.
+- *prodotti*:
+  - rappresentano i reali prodotti contenuti nel magazzino;
+  - contengono diverse informazioni riguardo il prodotto;
+  - sono contenuti in un bin e possono essere spostati verso un bin differente;
+  - è possibile la ricerca dei prodotti attraverso dei parametri quali: id, nome, scaffale.
 === Caratteristiche degli utenti
 
 L'utente tipico di WMS3 è un supervisore di magazzino. Ci si aspetta che la maggior parte degli accessi a WMS3 avvengano da ufficio, tramite un computer desktop dotato di mouse e tastiera; tuttavia, non si può escludere che l'utente possa accedere a WMS3 tramite dispositivo mobile.
@@ -130,7 +156,8 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 === Ipotesi e dipendenze
 
 + Disponibilità di un database SQL;
-+ Disponibilità di un browser compatibile con WebGL.
++ Disponibilità di un browser compatibile con WebGL;
++ Disponibilità di un sistema proprietario per notificare, in questo caso, la richiesta di spostamento di un prodotto all'interno del magazzino al personale designato.
 
 = Riferimenti
 
@@ -191,7 +218,12 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 #set par(first-line-indent: 0pt)
 
 = Creazione magazzino
-#figure(image("./imgs/uc1.png", format: "png"), caption: [UML UC-1])
+#figure(
+  image("./imgs/uc1.png", format: "png"), 
+  caption: [
+    UML UC-1
+  ],
+)
 == Importazione mappa magazzino da file SVG
 $bold("Descrizione: ")$
 All'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
@@ -288,7 +320,12 @@ $bold("Scenario: ")$
 
 = Modifica dimensioni del magazzino
 
-#figure(image("./imgs/uc2.png", format: "png"), caption: [UML UC-2])
+#figure(
+  image("./imgs/uc2.png", format: "png"), 
+  caption: [
+    UML UC-2
+  ],
+)
 $bold("Descrizione: ")$
 il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
 
@@ -347,7 +384,12 @@ $bold("Scenario: ")$
 - l'utente vuole ridurre la dimensione dell'ambiente nonostante l'ambiente di lavoro contenga elementi le cui posizioni non risulterebbero più valide alle nuove dimensioni ridotte.
 
 = Gestione scaffali
-#figure(image("./imgs/uc3.png", format: "png"), caption: [UML UC-3])
+#figure(
+  image("./imgs/uc3.png", format: "png"), 
+  caption: [
+    UML UC-3
+  ],
+)
 == Creazione scaffale
 $bold("Descrizione: ")$
 uno scaffale viene creato in base ai valori dati dall'utente e aggiunto nell'ambiente in una posizione valida specificata. Seccessivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
@@ -470,7 +512,12 @@ $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.
 
 = Gestione bin
-#figure(image("./imgs/uc4.png", format: "png"), caption: [UML UC-4])
+#figure(
+  image("./imgs/uc4.png", format: "png"), 
+  caption: [
+    UML UC-4
+  ],
+)
 
 == Creazione di un bin
 $bold("Descrizione: ")$
@@ -553,7 +600,12 @@ $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di un bin non vuoto.
 
 = Visualizzazione errore inserimento dati dimensionali non validi
-#figure(image("./imgs/uc5.png", format: "png"), caption: [UML UC-5])
+#figure(
+  image("./imgs/uc5.png", format: "png"), 
+  caption: [
+    UML UC-5
+  ],
+)
 $bold("Descrizione: ")$
 i dati inseriti per la modifica delle dimensioni dell'elemento interessato non sono validi.
 
@@ -610,7 +662,12 @@ $bold("Scenario: ")$
 
 = Caricamento dati da database
 
-#figure(image("./imgs/uc6.png", format: "png"), caption: [UML UC-6])
+#figure(
+  image("./imgs/uc6.png", format: "png"), 
+  caption: [
+    UML UC-6
+  ],
+)
 
 $bold("Descrizione: ")$
 i prodotti vengono inseriti dal database nei rispettivi bin.
@@ -671,7 +728,12 @@ $bold("Scenario: ")$
 
 = Richiesta di spostamento di un prodotto
 
-#figure(image("./imgs/uc7.png", format: "png"), caption: [UML UC-7])
+#figure(
+  image("./imgs/uc7.png", format: "png"), 
+  caption: [
+    UML UC-7
+  ],
+)
 
 $bold("Descrizione: ")$
 l'utente seleziona il prodotto di cui desidera una ricollocazione all'interno del magazzino e avvia una richiesta di spostamento verso un altro bin.
@@ -697,7 +759,12 @@ $bold("Scenario: ")$
 
 = Interrogazione di un bin
 
-#figure(image("./imgs/uc8.png", format: "png"), caption: [UML UC-8])
+#figure(
+  image("./imgs/uc8.png", format: "png"), 
+  caption: [
+    UML UC-8
+  ],
+)
 $bold("Descrizione: ")$
 deve essere possibile visualizzare il prodotto contenuto in un determinato bin.
 
@@ -716,7 +783,12 @@ $bold("Scenario: ")$
 
 = Interrogazione di uno scaffale
 
-#figure(image("./imgs/uc9.png", format: "png"), caption: [UML UC-9])
+#figure(
+  image("./imgs/uc9.png", format: "png"), 
+  caption: [
+    UML UC-9
+  ],
+)
 $bold("Descrizione: ")$
 deve essere possibile visualizzare le informazioni relative ad uno specifico scaffale.
 
@@ -735,7 +807,12 @@ $bold("Scenario: ")$
 
 = Ricerca prodotti
 
-#figure(image("./imgs/uc10.png", format: "png"), caption: [UML UC-10])
+#figure(
+  image("./imgs/uc10.png", format: "png"), 
+  caption: [
+    UML UC-10
+  ],
+)
 
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto.
@@ -812,7 +889,12 @@ $bold("Scenario: ")$
 
 = Esplorazione magazzino
 
-#figure(image("./imgs/uc11.png", format: "png", width: 60%), caption: [UML UC-11])
+#figure(
+  image("./imgs/uc11.png", format: "png", width: 60%), 
+  caption: [
+    UML UC-11
+  ],
+)
 
 == Spostamento della visuale
 $bold("Descrizione: ")$
@@ -982,6 +1064,7 @@ Dove:
 
     [FM-8], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di un bin selezionato], [UC-8],
     [FM-8.1], [Obbligatorio], [L'utente deve poter visualizzare le informazioni del prodotto contenuto in un bin selezionato], [UC-8],
+
     [FM-9], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di uno scaffale selezionato], [UC-9],
 
     [FD-10], [Desiderabile], [L'utente deve poter ricercare un prodotto], [UC-10],
@@ -998,7 +1081,7 @@ Dove:
     [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom in], [UC-11.3],
     [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom out], [UC-11.3]
   ),
-  caption: "Requisiti funzionali"
+  caption: [Requisiti funzionali]
 )
 
 == Requisiti di qualità
@@ -1016,10 +1099,10 @@ Dove:
     [QO-6], [Opzionale], [Deve essere consegnato lo schema del DB.], [Capitolato],
     [QO-7], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate.], [Capitolato],
   ),
-  caption: "Requisiti di qualità."
+  caption: [Requisiti di qualità.]
 )
 
-== Requisiti di vincolo
+== Requisiti di vincolo <vincoli>
 
 #figure(
   table(
@@ -1041,5 +1124,20 @@ Dove:
     [VM-13], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva.], [Interno],
     [VO-14], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose.], [VE 23-11-15]
   ),
-  caption: "Requisiti di vincolo."
+  caption: [Requisiti di vincolo.]
+)
+
+== Riepilogo requisiti
+
+#figure(
+  table(
+    columns: 2,
+    align: left,
+    [*Tipo Requisito*], [*Numero totale*], 
+    [Requisiti funzionali], [11], 
+    [Requisiti di qualità], [7],
+    [Requisiti di vincolo], [14],
+    
+  ),
+  caption: [Riepilogo requisiti]
 )

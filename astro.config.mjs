@@ -8,7 +8,7 @@ export default defineConfig({
 	// base: '/' + Common.repositoryName,
 	integrations: [
 		starlight({
-			title: 'Documentazione',
+			title: 'Error_418',
 			social: {
 				github: Common.documentsRepositoryURL,
 			},

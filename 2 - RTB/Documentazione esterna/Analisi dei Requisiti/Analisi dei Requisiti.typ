@@ -1115,3 +1115,18 @@ Dove:
   ),
   caption: [Requisiti di vincolo.]
 )
+
+== Riepilogo requisiti
+
+#figure(
+  table(
+    columns: 2,
+    align: left,
+    [*Tipo Requisito*], [*Numero totale*], 
+    [Requisiti funzionali], [11], 
+    [Requisiti di qualità], [7],
+    [Requisiti di vincolo], [14],
+    
+  ),
+  caption: [Riepilogo requisiti]
+)

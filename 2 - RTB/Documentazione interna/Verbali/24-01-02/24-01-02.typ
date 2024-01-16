@@ -14,10 +14,10 @@
 - Context switch dei programmatori in merito al PoC.
 
 == Analisi paragrafi Norme di Progetto da redigere rispetto allo standard ISO/IEC 12207:2017
-Nell'espansione e aggiornamento del documento Norme di Progetto, il gruppo fa riferimento allo standard ISO/IEC 12207:2017. 
+Nell'espansione e aggiornamento del documento Norme di Progetto, il gruppo fa riferimento allo standard ISO/IEC 12207:2017.
 Dato l'avvinarsi della prima revisione esterna (RTB), il gruppo ha ritenuto opportuno identificare i paragrafi facenti riferimento ad aspetti del progetto che non trovano riscontro e applicazione nel periodo attuale.
 
-Si è pertanto stabilito che i seguenti paragrafi saranno redatti in seguito alla revisione esterna, perchè più pertinenti al periodo di PB:
+Si è pertanto stabilito che i seguenti paragrafi saranno redatti in seguito alla revisione esterna, perché più pertinenti al periodo di PB:
 - _Architecture Definition Process_;
 - _Design Definition Process_;
 - _System Analysis Process_;

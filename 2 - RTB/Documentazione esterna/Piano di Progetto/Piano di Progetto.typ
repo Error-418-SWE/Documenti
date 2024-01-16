@@ -1402,3 +1402,93 @@ Diversi ruoli risultano avere un monte ore minore rispetto a quello preventivato
 
 === Burndown-chart
 [da inserire]
+
+
+== Ottavo Sprint dal 26-12-2023 al 31-12-2023
+
+=== Obiettivi raggiunti
+- Miglioramento del Glossario con gestione di plurali e acronimi dei termini ed evidenziazione _case insensitive_;
+- Implementato il tracciamento requisito-fonte nella Analisi dei Requisiti;
+- Aggiornamento del documento Norme di Progetto;
+- Realizzato sito web per la documentazione;
+- Automatizzata l'individuazione dei termini del glossario nei documenti.
+- Realizzazione di una dashboard preliminare Grafana;
+- Unione dei diversi esploratori tecnologici in un singolo PoC.
+
+=== Obiettivi mancati
+- La dashboard di monitoraggio non implementa tutte le metriche individuate nel Piano di Qualifica;
+- Rimane da comprendere a fondo le implicazioni della scelta tra Next.js ed Express.js;
+- Permangono bug nelle GitHub Actions.
+
+=== Analisi problematiche insorte
+Durante il meeting di retrospettiva sono insorte le seguenti problematiche:
+
+- i lavori hanno subito rallentamenti dovuti al periodo di festività.
+
+=== Risoluzioni attuate
+Nessuna.
+
+=== Analisi costi di sprint effettivi
+
+#set text(
+  size: 10pt
+)
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato Alessio],   [/],  [4 (+1)],    [/],    [/],    [/],   [/], [/],
+    [Carraro\ Riccardo], [/],  [/],    [/],    [/],    [5 (+2)],   [/], [/],
+    [Gardin\ Giovanni],  [/],  [2 (+2)],    [/],    [2 (-1)],    [/],   [/], [/],
+    [Nardo\ Silvio],     [4],  [/],    [/],    [/],    [/],   [/], [/],
+    [Oseliero\ Antonio], [/],  [/],    [/],    [/],    [/],   [4], [/],
+    [Todesco Mattia],    [/],  [/],    [/],    [3],    [/],   [/], [/],
+    [Zaccone\ Rosario],  [/],  [/],    [3],    [/],    [/],   [/], [/],
+    [Totale\ ore ruolo], [/],  [/],    [/],    [/],    [/],   [/], [/],
+    [Costo orario],      [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo],       [120,00], [120,00], [75,00], [125,00], [105,00], [60,00], [605,00]
+  ),
+  caption: "Consuntivo ottavo sprint"
+)
+
+#set text(
+  size: 11pt
+)
+
+La ricerca di una valida soluzione per implementare la dashboard di monitoraggio ha richiesto un impegno maggiore rispetto a quanto preventivato. La scelta di adottare Grafana comporterà costi di adozione più alti rispetto a soluzioni standard. La contemporanea implementazione del sito web per la documentazione ha accentuato la necessità di avvalersi della figura dell'Amministratore.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 2,
+    [*Ruolo*], [*Budget rimanente*],
+    [Responsabile], [2.070,00],
+    [Amministratore], [400,00],
+    [Analista], [550,00],
+    [Progettista], [2.000,00],
+    [Programmatore], [2.715,00],
+    [Verificatore], [1.515,00],
+    [*Totale rimanente*], [9250,00]
+  ),
+  caption: "Monitoraggio costi ottavo sprint"
+)
+
+#figure(
+  table(
+    columns: 2,
+    [*Ruolo*], [*Ore rimanenti*],
+    [Responsabile], [69],
+    [Amministratore], [20],
+    [Analista], [22],
+    [Progettista], [80],
+    [Programmatore], [183],
+    [Verificatore], [101],
+    [*Totale ore rimanenti*], [475]
+  ),
+  caption: "Monitoraggio ore ottavo sprint"
+)
+
+=== Burndown-chart
+[da inserire]

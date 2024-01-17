@@ -268,7 +268,7 @@ In questo primo periodo, l'assegnazione dei ruoli di Progettista e di Programmat
 == Secondo Sprint dal 13-11-2023 al 20-11-2023
 
 === Obiettivi prefissati
-Gli obiettivi del secondo sprint si concentrano sull'individuazione degli Use Case del progetto, sul perfezionamento delle automazioni e sulla stesura iniziale delle Norme di Progetto. 
+Gli obiettivi del secondo sprint si concentrano sull'individuazione degli Use Case del progetto, sul perfezionamento delle automazioni e sulla stesura iniziale delle Norme di Progetto.
 
 Gli obiettivi dello sprint 2 sono:
 - riconfigurazione della repository;
@@ -790,7 +790,7 @@ Il ruolo dell'Amministratore, invece, ha visto un aumento delle ore rispetto a q
   table(
     columns: 2,
     fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
-    [*Ruolo*], [*Budget rimanente*], 
+    [*Ruolo*], [*Budget rimanente*],
     [Responsabile], [2.670,00],
     [Amministratore], [1.160,00],
     [Analista], [1.650,00],
@@ -878,7 +878,7 @@ A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore ef
   table(
     columns: 2,
     fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
-    [*Ruolo*], [*Budget rimanente*], 
+    [*Ruolo*], [*Budget rimanente*],
     [Responsabile], [2.580,00],
     [Amministratore], [920,00],
     [Analista], [1.425,00],
@@ -979,7 +979,7 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
   table(
     columns: 2,
     fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
-    [*Ruolo*], [*Budget rimanente*], 
+    [*Ruolo*], [*Budget rimanente*],
     [Responsabile], [2.520,00],
     [Amministratore], [760,00],
     [Analista], [1.225,00],
@@ -1079,7 +1079,7 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
   table(
     columns: 2,
     fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
-    [*Ruolo*], [*Budget rimanente*], 
+    [*Ruolo*], [*Budget rimanente*],
     [Responsabile], [2.430,00],
     [Amministratore], [680,00],
     [Analista], [1.050,00],
@@ -1169,7 +1169,7 @@ Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabi
   table(
     columns: 2,
     fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
-    [*Ruolo*], [*Budget rimanente*], 
+    [*Ruolo*], [*Budget rimanente*],
     [Responsabile], [2.340,00],
     [Amministratore], [640,00],
     [Analista], [850,00],
@@ -1272,7 +1272,7 @@ Il ruolo di Programmatore presenta un monte ore effettivo minore rispetto a quel
   table(
     columns: 2,
     fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
-    [*Ruolo*], [*Budget rimanente*], 
+    [*Ruolo*], [*Budget rimanente*],
     [Responsabile], [2.250,00],
     [Amministratore], [180,00],
     [Analista], [650,00],
@@ -1372,7 +1372,7 @@ Diversi ruoli risultano avere un monte ore minore rispetto a quello preventivato
   table(
     columns: 2,
     fill: (col, row) => if col == 0 and row > 6 or row == 0 {rgb("#bbbbbb")},
-    [*Ruolo*], [*Budget rimanente*], 
+    [*Ruolo*], [*Budget rimanente*],
     [Responsabile], [2.190,00],
     [Amministratore], [520,00],
     [Analista], [625,00],
@@ -1398,6 +1398,97 @@ Diversi ruoli risultano avere un monte ore minore rispetto a quello preventivato
     [*Totale ore rimanenti*], [502]
   ),
   caption: "Monitoraggio ore settimo sprint"
+)
+
+=== Burndown-chart
+[da inserire]
+
+
+== Ottavo Sprint dal 26-12-2023 al 31-12-2023
+
+=== Obiettivi raggiunti
+- Miglioramento del Glossario con gestione di plurali e acronimi dei termini ed evidenziazione _case insensitive_;
+- Implementato il tracciamento requisito-fonte nell'Analisi dei Requisiti;
+- Aggiornamento del documento Norme di Progetto;
+- Realizzato sito web per la documentazione;
+- Automatizzata l'individuazione dei termini del Glossario nei documenti.
+- Realizzazione di una dashboard preliminare Grafana;
+- Unione dei diversi esploratori tecnologici in un singolo PoC.
+
+=== Obiettivi mancati
+- La dashboard di monitoraggio non implementa tutte le metriche individuate nel Piano di Qualifica;
+- Rimane da comprendere a fondo le implicazioni della scelta tra Next.js ed Express.js;
+- Permangono bug nelle GitHub Action.
+
+=== Analisi problematiche insorte
+Durante il meeting di retrospettiva sono insorte le seguenti problematiche:
+
+- i lavori hanno subito rallentamenti dovuti al periodo di festività.
+
+=== Risoluzioni attuate
+Nessuna.
+
+=== Analisi costi di sprint effettivi
+
+#set text(
+  size: 10pt
+)
+
+#figure(
+  table(
+    columns: 8,
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato Alessio],   [/],  [4 (+1)],    [/],    [/],    [/],   [/], [/],
+    [Carraro\ Riccardo], [/],  [/],    [/],    [/],    [5 (+2)],   [/], [/],
+    [Gardin\ Giovanni],  [/],  [2 (+2)],    [/],    [2 (-1)],    [/],   [/], [/],
+    [Nardo\ Silvio],     [4],  [/],    [/],    [/],    [/],   [/], [/],
+    [Oseliero\ Antonio], [/],  [/],    [/],    [/],    [/],   [4], [/],
+    [Todesco Mattia],    [/],  [/],    [/],    [3],    [/],   [/], [/],
+    [Zaccone\ Rosario],  [/],  [/],    [3],    [/],    [/],   [/], [/],
+    [Totale\ ore ruolo], [4],  [6],    [3],    [3],    [7],   [4], [27],
+    [Costo orario],      [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo],       [120,00], [120,00], [75,00], [125,00], [105,00], [60,00], [605,00]
+  ),
+  caption: "Consuntivo ottavo sprint"
+)
+
+#set text(
+  size: 11pt
+)
+
+La ricerca di una valida soluzione per implementare la dashboard di monitoraggio ha richiesto un impegno maggiore rispetto a quanto preventivato. La scelta di adottare Grafana comporterà costi di adozione più alti rispetto a soluzioni standard. La contemporanea implementazione del sito web per la documentazione ha accentuato la necessità di avvalersi della figura dell'Amministratore.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 2,
+    [*Ruolo*], [*Budget rimanente*],
+    [Responsabile], [2.070,00],
+    [Amministratore], [400,00],
+    [Analista], [550,00],
+    [Progettista], [2.000,00],
+    [Programmatore], [2.715,00],
+    [Verificatore], [1.515,00],
+    [*Totale rimanente*], [9.250,00]
+  ),
+  caption: "Monitoraggio costi ottavo sprint"
+)
+
+#figure(
+  table(
+    columns: 2,
+    [*Ruolo*], [*Ore rimanenti*],
+    [Responsabile], [69],
+    [Amministratore], [20],
+    [Analista], [22],
+    [Progettista], [80],
+    [Programmatore], [183],
+    [Verificatore], [101],
+    [*Totale ore rimanenti*], [475]
+  ),
+  caption: "Monitoraggio ore ottavo sprint"
 )
 
 === Burndown-chart

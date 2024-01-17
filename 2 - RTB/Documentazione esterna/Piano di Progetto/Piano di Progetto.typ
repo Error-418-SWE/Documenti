@@ -663,7 +663,7 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
 Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nell'ottavo sprint, sulla revisione dei documenti e del PoC in vista della valutazione RTB. In particolare gli obiettivi prefissati per questo sprint sono:
 
 - estensione e revisione del documento Norme di Progetto;
-- correzione degli errori riscontrati in alcuni UC nel documento Analisi dei Requisiti;
+- correzione degli errori riscontrati in alcuni UC nel documento Analisi dei Requisiti, compreso l'aggiornamento dei diagrammi UML associati;
 - realizzazione di una dashboard per monitorare le metriche definite nel Piano di Qualifica;
 - revisione dei documenti prodotti finora;
 - risoluzione dei problemi legati all'automazione per il versionamento dei documenti;
@@ -673,7 +673,7 @@ Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività
 Gli obiettivi del nono sprint riguardano i seguenti ruoli:
 - *Responsabile*: al fine di:
   - coordinare le attività e proseguire la redazione delle Norme di Progetto;
-  - contattare il Proponente fornendo aggiornamenti sull'avanzamento dei lavori;
+  - contattare il Proponente fornendo aggiornamenti sull'avanzamento dei lavori.
 - *Amministratore*: al fine di:
   - redigere i verbali;
   - aggiornare il documento Piano di Progetto;
@@ -683,7 +683,7 @@ Gli obiettivi del nono sprint riguardano i seguenti ruoli:
 - *Analista*: al fine di correggere gli errori riscontrati in alcuni UC nel documento Analisi dei Requisiti;
 - *Verificatore*: al fine di:
   - revisionare i documenti prodotti nel corso degli sprint precedenti;
-  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto;
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto.
 
 #set text(
   size: 10pt

@@ -24,7 +24,7 @@ Ogni membro del gruppo ha esposto lo stato di avanzamento delle proprie attivit�
 
 === Analisi dei Requisiti
 
-Il documento è completo e revisionato, sono state apportate le ultime modifiche ed ora è pronto per la presentazione al RTB.
+Il documento è completo e revisionato, sono state apportate le ultime modifiche ed ora è pronto per la presentazione RTB.
 
 === Comunicazioni con il Proponente
 

@@ -24,7 +24,7 @@ Ogni membro del gruppo ha esposto lo stato di avanzamento delle proprie attivit�
 
 === Analisi dei Requisiti
 
-Il documento risulta completo e revisionato, sono state apportate le ultime modifiche e ora è pronto per la presentazione RTB.
+Il documento è completo e revisionato, sono state apportate le ultime modifiche ed ora è pronto per la presentazione al RTB.
 
 === Comunicazioni con il Proponente
 
@@ -50,7 +50,7 @@ La lettera di presentazione non risulta ancora redatta.
 
 == Candidatura RTB
 
-Il gruppo si ritiene pronto per effetture la candidatura al colloquio RTB entro i termini precedentemente stabiliti (entro il 19/01/24). Essa verrà inviata non appena terminata la lettera di presentazione richiesta e dopo aver migliorato il tema della presentazione power point.
+Il gruppo si ritiene pronto per effettuare la candidatura al colloquio RTB entro i termini precedentemente stabiliti, cioè entro il 19/01/24. Essa verrà inviata non appena terminata la lettera di presentazione richiesta e dopo aver migliorato il tema della presentazione power point.
 
 == To Do
 

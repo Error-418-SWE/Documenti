@@ -119,7 +119,7 @@
 		"acronyms": [],
 		"synonyms": ["Drive"]
 	},
-	"International Eletrotechnical Commission": {
+	"International Electrotechnical Commission": {
 		"description": "È un'organizzazione internazionale per la definizione di standard in materia di elettricità, elettronica e tecnologie correlate. Molti dei suoi standard sono definiti in collaborazione con l'ISO.",
 		"acronyms": ["IEC"],
 		"synonyms": []
@@ -200,7 +200,7 @@
 		"synonyms": []
 	},
 	"Progetto didattico": {
-		"description": "Esso è una particolare tipologia di progetto che prevede diverse modalità di sviluppo per un processo educativo. Questo temine deriva dall'inglese \"project management\", cioè \"gestione del progetto\".",
+		"description": "Esso è una particolare tipologia di progetto che prevede diverse modalità di sviluppo per un processo educativo. Questo termine deriva dall'inglese \"project management\", cioè \"gestione del progetto\".",
 		"acronyms": [],
 		"synonyms": []
 	},
@@ -255,7 +255,7 @@
 		"synonyms": []
 	},
 	"Scalable Vector Graphics": {
-		"description": "È un formato di file di grafica vettoriale bidimensionale basato sull'XML sviluppato dal World Wide Web Consortium.",
+		"description": "È un formato di file di grafica vettoriale bidimensionale basato su XML sviluppato dal World Wide Web Consortium.",
 		"acronyms": ["SVG"],
 		"synonyms": []
 	},

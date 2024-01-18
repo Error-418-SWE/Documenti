@@ -590,7 +590,7 @@ Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del 
 [da inserire]
 
 
-== Ottavo Sprint dal 25-12-2023 al 01-01-2024
+== Ottavo Sprint dal 25-12-2023 al 31-12-2023
 
 === Obiettivi prefissati <obiettivi8>
 Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nel settimo sprint, e sull'avanzamento del documento Norme di Progetto, oltre che sul miglioramento di alcuni aspetti di attività già concluse. In particolare gli obiettivi prefissati per questo sprint sono:
@@ -655,6 +655,66 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
 
 === Diagramma di Gantt
 [da inserire]
+
+
+== Nono Sprint dal 01-01-2024 al 08-01-2024
+
+=== Obiettivi prefissati <obiettivi9>
+Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nell'ottavo sprint, sulla revisione dei documenti e del PoC in vista della valutazione RTB. In particolare gli obiettivi prefissati per questo sprint sono:
+
+- estensione e revisione del documento Norme di Progetto;
+- correzione degli errori riscontrati in alcuni UC nel documento Analisi dei Requisiti, compreso l'aggiornamento dei diagrammi UML associati;
+- realizzazione di una dashboard per monitorare le metriche definite nel Piano di Qualifica;
+- revisione dei documenti prodotti finora;
+- risoluzione dei problemi legati all'automazione per il versionamento dei documenti;
+- ripresa dei contatti con il Proponente tramite l'invio di una comunicazione di aggiornamento corredata da un video demo del PoC.
+
+=== Preventivo costi
+Gli obiettivi del nono sprint riguardano i seguenti ruoli:
+- *Responsabile*: al fine di:
+  - coordinare le attività e proseguire la redazione delle Norme di Progetto;
+  - contattare il Proponente fornendo aggiornamenti sull'avanzamento dei lavori.
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento Piano di Progetto;
+  - gestire GitHub e Jira;
+  - migliorare le GitHub Actions individuando e rimuovendo bug;
+  - realizzare una dashboard per il monitoraggio delle metriche.
+- *Analista*: al fine di correggere gli errori riscontrati in alcuni UC nel documento Analisi dei Requisiti;
+- *Verificatore*: al fine di:
+  - revisionare i documenti prodotti nel corso degli sprint precedenti;
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto.
+
+#set text(
+  size: 10pt
+)
+
+#figure(
+  table(
+    columns: 8,
+    fill: (col, row) => if col == 0 and row > 8 or row == 0 {rgb("#bbbbbb")},
+    [*Membro*], [*Responsabile*], [*Amministratore*],[*Analista*],[*Progettista*], [*Programmatore*], [*Verificatore*],[*Totale*],
+    [Banzato Alessio],   [/],  [5],    [/],    [/],    [/],   [/], [5],
+    [Carraro\ Riccardo], [/],  [/],    [/],    [/],    [/],   [4], [4],
+    [Gardin\ Giovanni],  [/],  [5],    [/],    [/],    [/],   [/], [5],
+    [Nardo\ Silvio],     [/],  [/],    [/],    [/],    [/],   [4], [4],
+    [Oseliero\ Antonio], [/],  [/],    [5],    [/],    [/],   [/], [5],
+    [Todesco Mattia],    [/],  [/],    [/],    [/],    [/],   [4], [4],
+    [Zaccone\ Rosario],  [4],  [/],    [/],    [/],    [/],   [/], [4],
+    [Totale\ ore ruolo], [4],  [10],   [5],    [/],    [/],   [12], [31],
+    [Costo orario],     [30,00], [20,00], [25,00], [25,00], [15,00], [15,00], [],
+    [Costo ruolo],      [120,00], [200,00], [125,00], [0,00], [0,00], [180,00], [625,00]
+  ),
+  caption: "Preventivo nono sprint"
+)
+
+#set text(
+  size: 11pt
+)
+
+=== Diagramma di Gantt
+[da inserire]
+
 
 == Undicesimo Sprint dal 14-01-2024 al 21-01-2024
 

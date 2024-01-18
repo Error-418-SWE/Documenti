@@ -41,7 +41,8 @@ set enum(
   numbering: "1a)",
 )
 set table(
-  fill: (_, row) => if row == 0 { luma(240) },
+  fill: (_, row) => if row == 0 { luma(220) },
+  stroke: 0.5pt + luma(140),
 )
 show link: set text(fill: blue)
 show heading.where(

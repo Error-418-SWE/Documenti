@@ -46,22 +46,22 @@ if date_match:
     frontmatter += "date: " + date.strftime("%Y-%m-%d") + "\n"
 
 for field in string_fields:
-    match = re.search(fr'{field}:(\s)*"(.*?)"', preamble)
+    match = re.search(fr'{field}: "(.*?)"', preamble)
     if match:
         frontmatter += field + ": \"" + match.group(1) + "\"\n"
 
 for field in boolean_fields:
-    match = re.search(fr'{field}:(\s)*(true|false)', preamble)
+    match = re.search(fr'{field}: (true|false)', preamble)
     if match:
         frontmatter += field + ": " + match.group(1) + "\n"
 
 for field in array_fields:
-    match = re.search(fr'{field}:(\s)*\((.*?)\)', preamble, re.DOTALL)
+    match = re.search(fr'{field}: \((.*?)\)', preamble, re.DOTALL)
     if match:
         items = [item.strip() for item in match.group(1).split(',')]
         frontmatter += field + ": [\n\t" + f"{',\n\t'.join(items)},\n" + "]\n"
 
-if re.search(r'externalParticipants:(\s)*\((.*?)\)', preamble, re.DOTALL):
+if re.search(r'externalParticipants: \((.*?)\)', preamble, re.DOTALL):
     matches = re.findall(r'name: "(.*?)",\s+role: "(.*?)"', preamble, re.DOTALL)
     results = ""
     for match in matches:

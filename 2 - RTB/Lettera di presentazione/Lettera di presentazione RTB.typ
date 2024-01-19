@@ -66,7 +66,7 @@ Con la presente, il gruppo Error-418 intende comunicarVi la volontà di candidar
 
 #align(center)[*"WMS3: Warehouse Management 3D"*]
 
-proposto dall'azienda _Sanmarco Informatica S.p.a._, altresì denominato Capitolato 5.
+proposto dall'azienda _Sanmarco Informatica S.p.A._, altresì denominato Capitolato 5.
 
 I documenti prodotti dal gruppo per la RTB sono consultabili all'indirizzo:
 

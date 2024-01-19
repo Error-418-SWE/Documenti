@@ -1,0 +1,17 @@
+---
+version: 1.0.0
+url: "https://error-418-swe.github.io/Documenti/2 - RTB/Lettera di presentazione_v1.0.0.pdf"
+lastUpdated: 2024-01-19
+---
+
+import DocumentDetails from '/src/components/DocumentDetails.astro';
+import ChangelogTable from '/src/components/ChangelogTable.astro';
+
+<DocumentDetails {...frontmatter}/>
+
+<ChangelogTable {...frontmatter}>
+| Versione | Data       | PR  | Titolo                                        | Redattore       | Verificatore    |
+| -------- | ---------- | --- | --------------------------------------------- | --------------- | --------------- |
+| 1.0.0    | 19-01-2024 | 202 | DOC-368 Redigere lettera di presentazione RTB | Gardin Giovanni | Zaccone Rosario |
+</ChangelogTable>
+

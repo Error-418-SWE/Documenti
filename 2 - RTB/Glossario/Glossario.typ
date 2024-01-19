@@ -1,7 +1,7 @@
 #import "/template.typ": *
 
 #show: project.with(
-  title:"Glossario",
+  title: "Glossario",
   authors: (
     "Todesco Mattia",
   ),

@@ -1,7 +1,7 @@
 #import "/template.typ": *
 
 #show: project.with(
-  title:"Analisi dei Requisiti",
+  title: "Analisi dei Requisiti",
   subTitle: "Warehouse Management 3D (WMS3)",
   authors: (
     "Banzato Alessio",
@@ -219,7 +219,7 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 
 = Creazione magazzino
 #figure(
-  image("./imgs/uc1.png", format: "png"), 
+  image("./imgs/uc1.png", format: "png"),
   caption: [
     UML UC-1
   ],
@@ -321,7 +321,7 @@ $bold("Scenario: ")$
 = Modifica dimensioni del magazzino
 
 #figure(
-  image("./imgs/uc2.png", format: "png"), 
+  image("./imgs/uc2.png", format: "png"),
   caption: [
     UML UC-2
   ],
@@ -385,7 +385,7 @@ $bold("Scenario: ")$
 
 = Gestione scaffali
 #figure(
-  image("./imgs/uc3.png", format: "png"), 
+  image("./imgs/uc3.png", format: "png"),
   caption: [
     UML UC-3
   ],
@@ -514,7 +514,7 @@ $bold("Scenario: ")$
 
 = Gestione bin
 #figure(
-  image("./imgs/uc4.png", format: "png"), 
+  image("./imgs/uc4.png", format: "png"),
   caption: [
     UML UC-4
   ],
@@ -602,7 +602,7 @@ $bold("Scenario: ")$
 
 = Visualizzazione errore inserimento dati dimensionali non validi
 #figure(
-  image("./imgs/uc5.png", format: "png"), 
+  image("./imgs/uc5.png", format: "png"),
   caption: [
     UML UC-5
   ],
@@ -664,7 +664,7 @@ $bold("Scenario: ")$
 = Caricamento dati da database
 
 #figure(
-  image("./imgs/uc6.png", format: "png"), 
+  image("./imgs/uc6.png", format: "png"),
   caption: [
     UML UC-6
   ],
@@ -730,7 +730,7 @@ $bold("Scenario: ")$
 = Richiesta di spostamento di un prodotto
 
 #figure(
-  image("./imgs/uc7.png", format: "png"), 
+  image("./imgs/uc7.png", format: "png"),
   caption: [
     UML UC-7
   ],
@@ -761,7 +761,7 @@ $bold("Scenario: ")$
 = Interrogazione di un bin
 
 #figure(
-  image("./imgs/uc8.png", format: "png"), 
+  image("./imgs/uc8.png", format: "png"),
   caption: [
     UML UC-8
   ],
@@ -785,7 +785,7 @@ $bold("Scenario: ")$
 = Interrogazione di uno scaffale
 
 #figure(
-  image("./imgs/uc9.png", format: "png"), 
+  image("./imgs/uc9.png", format: "png"),
   caption: [
     UML UC-9
   ],
@@ -809,7 +809,7 @@ $bold("Scenario: ")$
 = Ricerca prodotti
 
 #figure(
-  image("./imgs/uc10.png", format: "png"), 
+  image("./imgs/uc10.png", format: "png"),
   caption: [
     UML UC-10
   ],
@@ -891,7 +891,7 @@ $bold("Scenario: ")$
 = Esplorazione magazzino
 
 #figure(
-  image("./imgs/uc11.png", format: "png", width: 60%), 
+  image("./imgs/uc11.png", format: "png", width: 60%),
   caption: [
     UML UC-11
   ],
@@ -1139,11 +1139,11 @@ Dove:
   table(
     columns: 2,
     align: left,
-    [*Tipo Requisito*], [*Numero totale*], 
-    [Requisiti funzionali], [11], 
+    [*Tipo Requisito*], [*Numero totale*],
+    [Requisiti funzionali], [11],
     [Requisiti di qualità], [7],
     [Requisiti di vincolo], [14],
-    
+
   ),
   caption: [Riepilogo requisiti]
 )

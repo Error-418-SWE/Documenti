@@ -45,7 +45,7 @@
 		"synonyms": []
 	},
 	"Capitolato": {
-		"description": "Documento redatto dal Proponente in cui viene presento un progetto, del quale sono specificati gli obiettivi, le tecnologie consigliate per l'implementazione, e le principali funzionalità.",
+		"description": "Documento redatto dal Proponente in cui viene presentato un progetto, del quale sono specificati gli obiettivi, le tecnologie consigliate per l'implementazione, e le principali funzionalità.",
 		"acronyms": [],
 		"synonyms": []
 	},
@@ -70,7 +70,7 @@
 		"synonyms": []
 	},
 	"Discord": {
-		"description": "Piattaforma di VoIP (Voce over IP, ovvero \"Voce tramite protocollo Internet\"), messaggistica istantanea e distribuzione digitale. Gli utenti possono comunicare tramite chat private, gruppi o come membri di uno stesso server, ovvero ambienti virtuali suddivisi in canali di testo o vocali.",
+		"description": "Piattaforma di VoIP (Voice over IP, ovvero \"Voce tramite protocollo Internet\"), messaggistica istantanea e distribuzione digitale. Gli utenti possono comunicare tramite chat private, gruppi o come membri di uno stesso server, ovvero ambienti virtuali suddivisi in canali di testo o vocali.",
 		"acronyms": [],
 		"synonyms": []
 	},

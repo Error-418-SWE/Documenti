@@ -2,6 +2,7 @@
 
 #show: project.with(
   date: "19/11/23",
+  subTitle: "Meeting di retrospettiva e pianificazione",
   docType: "verbale",
   authors: (
     "Oseliero Antonio",

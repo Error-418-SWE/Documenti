@@ -2,7 +2,7 @@
 
 #show: project.with(
   date: "23/11/23",
-  subTitle: "Sommario",
+  subTitle: "Discussione a seguito del meeting con il Proponente",
   docType: "verbale",
   authors: (
     "Zaccone Rosario",

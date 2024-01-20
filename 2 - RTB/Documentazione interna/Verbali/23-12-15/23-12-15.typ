@@ -2,7 +2,7 @@
 
 #show: project.with(
   date: "15/12/23",
-  subTitle: "Incontro conseguente al meeting esterno odierno",
+  subTitle: "Discussione a seguito del meeting con il Proponente",
   docType: "verbale",
   authors: (
     "Nardo Silvio",
@@ -28,6 +28,6 @@ I diversi aspetti discussi durante il meeting esterno sono stati analizzati senz
 == Discussione su problemi relativi alle tecnologie da poco implementate
 Sono stati analizzati alcuni problemi riscontrati da alcuni membri del gruppo relativamente all'utilizzo di Docker e delle sue versioni.
 
-== To do   
+== To do
 Visti i buoni progressi ottenuti nello sviluppo dei PoC, nelle prossime settimane si intende creare un PoC principale integrando le feature dei singoli PoC minori tra loro così da poter avere un prodotto utile alla valutazione RTB di gennaio.
 

@@ -2,6 +2,7 @@
 
 #show: project.with(
   date: "03/12/23",
+  subTitle: "Meeting di retrospettiva e pianificazione",
   docType: "verbale",
   authors: (
     "Gardin Giovanni",

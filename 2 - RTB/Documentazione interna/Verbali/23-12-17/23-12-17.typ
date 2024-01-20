@@ -1,4 +1,3 @@
-
 #import "/template.typ": *
 
 #show: project.with(
@@ -37,7 +36,7 @@
 - Il membro del gruppo tra quelli assegnati a lavorare sulle Norme di Progetto che farà un solo capitolo, si dovrà impegnare a studiare le tecnologie relative all'interfaccia utente (Angular, React, Next.js) per capire quale è più adatta al nostro progetto;
 - Due membri lavoreranno ai PoC: il Programmatore si impegnerà nell'integrazione dei PoC minori in un singolo PoC principale, mentre il membro del gruppo assegnato al ruolo di Verificatore proseguirà, come Programmatore, con lo sviluppo del lato frontend dell'applicativo;
 - L'Analista continuerà a redarre il documento di Analisi dei Requisiti migliorando quanto fatto e completando la tabella dei requisiti;
-- L'Amministratore dovrà: 
+- L'Amministratore dovrà:
   - redigere i verbali;
   - modificare il documento Piano di Progetto aggiungendo il preventivo del settimo sprint, il consuntivo del quinto sprint e sistemando eventuali errori presenti nel documento;
   - Migliorare le GitHub Action risolvendo gli errori legati al versionamento dei file e all'aggiornamento del changelog.

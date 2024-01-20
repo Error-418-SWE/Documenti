@@ -2,7 +2,7 @@
 
 #show: project.with(
   date: "15/12/23",
-  subTitle: "",
+  subTitle: "Stato di avanzamento lavori su PoC",
   docType: "verbale",
   authors: (
     "Nardo Silvio",
@@ -11,7 +11,7 @@
     (name: "Alberton Michela", role: "Membro azienda proponente"),
     (name: "Bassani Matteo", role: "Referente aziendale"),
     (name: "Ruffin Filippo", role: "Membro azienda proponente"),
-  ), 
+  ),
   timeStart: "12:00",
   timeEnd: "12:30",
   location: "Zoom",
@@ -28,7 +28,7 @@ Sono stati esposti i progressi sui PoC rispetto al precedente meeting esterno e 
 Sono stati discussi i requisiti non funzionali identificati.
 Non sono stati identificati particolari vincoli sulle performance.
 
-=== Vincoli sui browser 
+=== Vincoli sui browser
 Per adottare le tecnologie da noi individuate, in particolar modo per la libreria Three.js, è necessario che i browser interessati dispongano di una versione specifica atta a supportare tale tecnologia mediante la componente grafica WebGL. Tale osservazione ha trovato conferma da parte del proponente, il quale ha approvato l'implementazione dell'applicativo per i principali browser:
 - Chrome;
 - Firefox;
@@ -39,7 +39,7 @@ Durante il meeting è stato individuato il numero di versione 89 come soglia min
 \
 Desiderabilmente è prevista la compatibilità dell'applicativo con i browser sopracitati versione mobile.
 
-=== Dispositivi utilizzati dall'utente  
+=== Dispositivi utilizzati dall'utente
 L'applicazione sarà ottimizzata per l'esecuzione su comuni PC desktop, tipicamente utilizzati negli ambienti d'ufficio, garantendo al contempo la compatibilità con dispositivi tablet.
 
 == Considerazioni su tecnologie da utilizzare e utilizzate
@@ -59,6 +59,6 @@ Relativamente ai PoC da realizzare in futuro e alla luce delle conoscenze acquis
 - in assenza delle API che verranno fornite dal Proponente, le loro interrogazioni possono essere simulate con risposte randomiche.
 
 
-== Organizzazione meeting futuri   
+== Organizzazione meeting futuri
 A causa delle festività natalizie non sono previsti ulteriori incontri per l'anno 2023. Il prossimo incontro è previsto per gli inizi del mese di gennaio quando lo stato dei lavori sarà prossimo al raggiungimento della milestone RTB del progetto.
 

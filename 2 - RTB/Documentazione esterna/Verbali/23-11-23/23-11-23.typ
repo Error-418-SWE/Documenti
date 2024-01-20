@@ -2,7 +2,7 @@
 
 #show: project.with(
   date: "23/11/23",
-  subTitle: "",
+  subTitle: "Analisi dei Requisiti, approfondimento dominio applicativo",
   docType: "verbale",
   externalParticipants : (
     (name: "Bassani Matteo", role: "Referente aziendale"),
@@ -19,7 +19,7 @@
 - Presentazione, supportata da una board Miro, delle ipotesi fatte dal gruppo durante il periodo di individuazione degli use case;
 
 - Presentazione, supportata da una board Miro, delle domande raccolte dal gruppo riguardo l'Analisi dei Requisiti. Le domande si articolano in:
- - use case;
+ - Use Case;
  - chiarimenti tecnici;
  - device da supportare;
  - requisiti non funzionali.

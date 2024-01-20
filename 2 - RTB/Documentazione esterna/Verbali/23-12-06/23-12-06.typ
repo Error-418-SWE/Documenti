@@ -2,7 +2,7 @@
 
 #show: project.with(
   date: "06/12/23",
-  subTitle: "",
+  subTitle: "Colloquio tecnico su tecnologie e PoC",
   docType: "verbale",
   externalParticipants : (
     (name: "Bassani Matteo", role: "Referente aziendale"),

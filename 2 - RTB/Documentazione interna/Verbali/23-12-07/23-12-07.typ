@@ -2,7 +2,7 @@
 
 #show: project.with(
   date: "07/12/23",
-  subTitle: "Discussione conseguente ad incontro con il professor Cardin",
+  subTitle: "Discussione a seguito del meeting con il Professor Cardin",
   docType: "verbale",
   authors: (
     "Nardo Silvio",
@@ -26,7 +26,7 @@ A seguito di un dialogo che il gruppo ha avuto con il professor Cardin in data 0
 - le versioni dei browser che supportano l'applicativo.
 
 === Requisiti di qualità
-Altri requisiti non funzionali da includere sono relativi alla qualità e a come l'applicativo debba rispettare determinate norme prestabilite. 
+Altri requisiti non funzionali da includere sono relativi alla qualità e a come l'applicativo debba rispettare determinate norme prestabilite.
 
 === Requisiti prestazionali
 È necessario analizzare e definire con particolare attenzione i requisiti non funzionali relativi alle prestazioni, in quanto serve descrivere minuziosamente il contesto che permetta di replicare il requisito (velocità della rete, cardinalità delle operazioni, ecc.) per poter poi imporre dei vincoli prestazionali su tale contesto.
@@ -41,10 +41,10 @@ La suddivisione degli Use Case è da svolgere in funzione alla loro leggibilità
 - modifica bin.
 
 E successivamente, per ciascuno di questi, si può, in base alle esigenze, estenderli con i relativi Use Case legati a:
-- creazione; 
+- creazione;
 - ridimensionamento;
 - spostamento;
-- eliminazione. 
+- eliminazione.
 
 == Criteri che definiscono un'Analisi dei Requisiti ben fatta
 Le caratteristiche di un'Analisi dei Requisiti ottimale sono:

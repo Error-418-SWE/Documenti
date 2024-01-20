@@ -2,7 +2,7 @@
 
 #show: project.with(
   date: "06/12/23",
-  subTitle: "Discussione post incontro con il Proponente",
+  subTitle: "Discussione a seguito del meeting con il Proponente",
   docType: "verbale",
   authors: (
     "Todesco Mattia",
@@ -21,7 +21,7 @@
 == Discussione relativa al meeting con il Proponente
 Si è svolta una discussione a seguito del meeting con il Proponente allo scopo di definire con precisione ciò che l'azienda ha apprezzato e ciò che va rivisto. Il gruppo si ritiene soddisfatto dell'esito dell'incontro ed è stata creata una lista Keep doing/To Do per i prossimi giorni di lavoro:
 
-- Keep doing: 
+- Keep doing:
   - lettura file SVG: implementazione coerente con la richiesta del Proponente;
   - griglia per snapping degli scaffali: particolarmente apprezzata dal referente aziendale;
   - lettura dati dal database: implementata in maniera convincente.

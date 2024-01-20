@@ -2,7 +2,7 @@
 
 #show: project.with(
   date: "10/12/23",
-  subTitle: "Meeting di retrospettiva e organizzazione prossimo sprint",
+  subTitle: "Meeting di retrospettiva e pianificazione",
   docType: "verbale",
   authors: (
     "Nardo Silvio",

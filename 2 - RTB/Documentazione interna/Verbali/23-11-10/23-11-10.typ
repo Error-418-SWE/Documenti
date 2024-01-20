@@ -2,7 +2,7 @@
 
 #show: project.with(
   date: "10/11/23",
-  subTitle: "Meeting di retrospettiva, indicazioni per la settimana a venire",
+  subTitle: "Organizzazione delle attività",
   docType: "verbale",
   authors: (
     "Nardo Silvio",
@@ -42,4 +42,4 @@
   - Proseguire il lavoro relativo all'Analisi dei Requisiti cosicché, la prossima settimana, si potrà chiedere al professor Cardin consigli e delucidazioni sulla direzione data dal gruppo al lavoro;
   - Identificare le features da implementare per la futura realizzazione del PoC;
   - Iniziare lo studio e la sperimentazione delle tecnologie correlate necessarie allo sviluppo del PoC.
-  
+

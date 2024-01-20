@@ -1,6 +1,8 @@
+#import "/template.typ": *
+
 #show: project.with(
   date: "02/01/24",
-  subTitle: "Analisi paragrafi norme di progetto e context switch",
+  subTitle: "Analisi paragrafi Norme di Progetto e context switch",
   docType: "verbale",
   authors: (
     "Carraro Riccardo",

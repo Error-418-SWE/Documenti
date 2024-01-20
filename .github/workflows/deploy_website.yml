@@ -54,42 +54,42 @@ jobs:
           path: ${{ inputs.file_path }}/common.md
           if-no-files-found: error
 
-  transpile:
-    name: Transpile document
-    runs-on: ubuntu-latest
-    env:
-      PANDOC_DEB: '${{ vars.PANDOC_DEB_URL }}'
-    steps:
-      - name: Set up Git repository
-        uses: actions/checkout@v4
-        with:
-          ref: src
-      - name: Remove preamble
-        run: |
-          sed -i -e "1,/^);$/d" "${{ inputs.file_path }}/${{ inputs.file_name }}.typ" # Preamble ends with ");"
-      - name: Install Pandoc
-        run: |
-          wget $PANDOC_DEB --no-verbose --output-document pandoc.deb
-          sudo dpkg -i pandoc.deb
-      - name: Transpile document
-        if: inputs.file_name != 'Glossario'
-        run: |
-          pandoc "${{ inputs.file_path }}/${{ inputs.file_name }}.typ" --from typst --to markdown --output "${{ inputs.file_path }}/content.md"
-      - name: Convert glossary
-        if: inputs.file_name == 'Glossario'
-        run: |
-          jq -r 'to_entries | map("## \(.key) \(.value.acronyms | if length > 0 then "(\(. | join(", ")))" else "" end)\n\(.value.description)\n") | join("\n")' "${{ inputs.file_path }}/${{ inputs.file_name }}.json" > "${{ inputs.file_path }}/content.md"
-      - name: Publish document
-        uses: actions/upload-artifact@v3
-        with:
-          name: 'content.md'
-          path: '${{ inputs.file_path }}/content.md'
-          if-no-files-found: error
+  # transpile:
+  #   name: Transpile document
+  #   runs-on: ubuntu-latest
+  #   env:
+  #     PANDOC_DEB: '${{ vars.PANDOC_DEB_URL }}'
+  #   steps:
+  #     - name: Set up Git repository
+  #       uses: actions/checkout@v4
+  #       with:
+  #         ref: src
+  #     - name: Remove preamble
+  #       run: |
+  #         sed -i -e "1,/^);$/d" "${{ inputs.file_path }}/${{ inputs.file_name }}.typ" # Preamble ends with ");"
+  #     - name: Install Pandoc
+  #       run: |
+  #         wget $PANDOC_DEB --no-verbose --output-document pandoc.deb
+  #         sudo dpkg -i pandoc.deb
+  #     - name: Transpile document
+  #       if: inputs.file_name != 'Glossario'
+  #       run: |
+  #         pandoc "${{ inputs.file_path }}/${{ inputs.file_name }}.typ" --from typst --to markdown --output "${{ inputs.file_path }}/content.md"
+  #     - name: Convert glossary
+  #       if: inputs.file_name == 'Glossario'
+  #       run: |
+  #         jq -r 'to_entries | map("## \(.key) \(.value.acronyms | if length > 0 then "(\(. | join(", ")))" else "" end)\n\(.value.description)\n") | join("\n")' "${{ inputs.file_path }}/${{ inputs.file_name }}.json" > "${{ inputs.file_path }}/content.md"
+  #     - name: Publish document
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         name: 'content.md'
+  #         path: '${{ inputs.file_path }}/content.md'
+  #         if-no-files-found: error
 
   merge:
     name: Merge and push
     runs-on: ubuntu-latest
-    needs: [extract, transpile]
+    needs: [extract]
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
@@ -136,11 +136,11 @@ jobs:
         with:
           name: common.md
           path: '${{ steps.path.outputs.WORK_DIR }}'
-      - name: Grab transpiled document
-        uses: actions/download-artifact@v3
-        with:
-          name: 'content.md'
-          path: '${{ steps.path.outputs.WORK_DIR }}'
+      # - name: Grab transpiled document
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: 'content.md'
+      #     path: '${{ steps.path.outputs.WORK_DIR }}'
       - name: Append files
         run: |
           cd "${{ steps.path.outputs.WORK_DIR }}"

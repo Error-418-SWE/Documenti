@@ -1,7 +1,7 @@
 #import "/template.typ": *
 
 #show: project.with(
-  title:"Piano di Qualifica",
+  title: "Piano di Qualifica",
   subTitle: "Metriche, qualità e valutazione",
   authors: (
     "Todesco Mattia",
@@ -125,7 +125,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
     rows: 30pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$display("BAC"/"CPI")$), align(center+horizon,$<="BAC"$), 
+    align(center+horizon,$display("BAC"/"CPI")$), align(center+horizon,$<="BAC"$),
     align(center+horizon,$<="BAC"$),
   ),
   caption: "Specifiche metrica EAC"
@@ -256,4 +256,4 @@ Il presente documento include una serie di termini tecnici specifici del progett
 //     [Manutenibilità del sistema], [TBD], [TBD],
 //   ),
 //   caption: "Specifiche Manutenibilità del sistema"
-// ) 
+// )

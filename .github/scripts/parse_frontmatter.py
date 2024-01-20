@@ -61,7 +61,7 @@ for field in array_fields:
         items = [item.strip() for item in match.group(1).split(',')]
         frontmatter += field + ": [\n\t" + f"{',\n\t'.join(items)},\n" + "]\n"
 
-if re.search(r'externalParticipants : \((.*?)\)', preamble, re.DOTALL):
+if re.search(r'externalParticipants: \((.*?)\)', preamble, re.DOTALL):
     matches = re.findall(r'name: "(.*?)",\s+role: "(.*?)"', preamble, re.DOTALL)
     results = ""
     for match in matches:

@@ -45,7 +45,7 @@
 		"synonyms": []
 	},
 	"Capitolato": {
-		"description": "Documento redatto dal Proponente in cui viene presentato un progetto, del quale sono specificati gli obiettivi, le tecnologie consigliate per l'implementazione, e le principali funzionalità.",
+		"description": "Documento redatto dal Proponente in cui viene presentato un progetto, del quale sono specificati gli obiettivi, le tecnologie consigliate per l'implementazione e le principali funzionalità.",
 		"acronyms": [],
 		"synonyms": []
 	},
@@ -95,7 +95,7 @@
 		"synonyms": []
 	},
 	"GitHub": {
-		"description": "Servizio di hosting di progetti software basato su Git utilizzato da singoli ed organizzazioni. Fornisce un Issue Tracking System integrato e permette di implementare sistemi di Continuous Integration e Continuous Delivery tramite automazioni chiamate Actions.",
+		"description": "Servizio di hosting di progetti software basato su Git utilizzato da singoli ed organizzazioni. Fornisce un Issue Tracking System integrato e permette di implementare sistemi di Continuous Integration e Continuous Delivery tramite automazioni chiamate Action.",
 		"acronyms": ["GH"],
 		"synonyms": []
 	},
@@ -105,7 +105,7 @@
 		"synonyms": []
 	},
 	"GitHub Pages": {
-		"description": "Piattaforma offerta da GitHub, utilizzata per ospitare siti web statici che si basano su repository.",
+		"description": "Servizio di hosting web fornito da GitHub, progettato per ospitare siti web statici generati da file presenti in repository.",
 		"acronyms": [],
 		"synonyms": []
 	},
@@ -145,7 +145,7 @@
 		"synonyms": []
 	},
 	"JavaScript": {
-		"description": "Linguaggio di scripting che costituisce una delle tecnologie principali del World Wide Web. È un linguaggio compilato di alto livello che dispone di interfacce di programmazione delle applicazioni (API) per lavorare con testo, date, espressioni regolari, strutture dati standard e Document Object Model (DOM).",
+		"description": "Linguaggio di scripting che costituisce una delle tecnologie principali del World Wide Web. È un linguaggio interpretato di alto livello che dispone di interfacce di programmazione delle applicazioni (API) per lavorare con testo, date, espressioni regolari, strutture dati standard e Document Object Model (DOM).",
 		"acronyms": ["JS"],
 		"synonyms": []
 	},
@@ -280,9 +280,9 @@
 		"synonyms": []
 	},
 	"Use Case": {
-		"description": "Rappresentano le funzionalità del prodotto, che vengono rappresentate come interazioni tra utenti e sistema. Vengono spesso rappresentati tramite diagrammi realizzati con il linguaggio UML.",
+		"description": "Caso (o situazione) in cui il sistema viene utilizzato per soddisfare uno o più requisiti degli utenti; cattura una parte di funzionalità che il sistema fornisce. Vengono spesso rappresentati tramite diagrammi realizzati con il linguaggio UML.",
 		"acronyms": ["UC"],
-		"synonyms": []
+		"synonyms": ["Casi d'uso"]
 	},
 	"Utente": {
 		"description": "Colui che usufruisce dell'applicazione e delle sue funzionalità.",
@@ -300,7 +300,7 @@
 		"synonyms": []
 	},
 	"Versionamento": {
-		"description": "Gestione di versioni diverse dello stesso prodotto. Comprende il recupero di versioni diverse da quella attuale e l'aggiornamento della versione stessa.",
+		"description": "Processo di assegnazione di identificatori univoci a diversi momenti di sviluppo di un software o progetto. Comprende il recupero di versioni diverse da quella attuale e l'aggiornamento della versione stessa.",
 		"acronyms": [],
 		"synonyms": []
 	},

@@ -148,7 +148,7 @@ Questa sezione descrive tutte le norme riguardanti la stesura, il mantenimento e
 
 === Typst
 Il team Error 418 ha deciso di utilizzare Typst come linguaggio per redarre la documentazione. Questo è un linguaggio di markup che permette molte delle funzionalità offerte da strumenti come LaTeX, richiedendo però molto meno sforzo durante la procedura di creazione e di compilazione del file.\
-Questo permette di evitare l'apprendimento della sintassi LaTeX che può risultare ostica ai novizi e consentendo al team di concentrarsi esclusivamente sul corpo del file evitando perdite di tempo e frustrazione data da errori che non si capisce come risolvere o che richiederebbero molto tempo per essere risolti.
+Questo permette di evitare l'apprendimento della sintassi LaTeX che può risultare ostica ai novizi e consentendo al team di concentrarsi esclusivamente sul corpo del file evitando perdite di tempo e frustrazione data da errori che possono essere di difficile risoluzione.
 
 === Ciclo di vita
 La creazione e il versionamento di un documento è stato automatizzato quanto più possibile in modo da ridurre l'impatto dell'errore umano.\
@@ -157,9 +157,9 @@ Le modalità che permetto di creare un documento sono:
 + creare una nuova cartella rinominata con lo stesso nome del sorgente che si andrà a creare;
 + creare un nuovo file .typ a partire da uno dei template che sono stati creati appositamente dal team (per scopo e struttura dei template controllare la sezione @template);
 + scrivere il corpo del documento modificando eventualmente alcuni specifici campi del template (titolo, data, ecc..);
-+ accertarsi che il documento rispetti tutte le norme definite nelle "Norme di progetto";
++ accertarsi che il documento rispetti tutte le norme definite nelle `Norme di progetto`;
 + salvare e creare la pull request per integrare il sorgente all'interno del branch src;
-+ scegliere un nome della pull request aderente alle norme definite nelle "Norme di progetto";
++ scegliere un nome della pull request aderente alle norme definite nelle `Norme di progetto`;
 + una volta creata la pull request avvierà una serie di action che provvederanno a verificare la correttezza la presenza o meno di alcuni campi del documento, creare o aggiornare il changelog, compilare il documento e integrare il risultante file .pdf all'interno del branch main;
 === Template <template>
 Il team ha creato dei template per la creazione di documenti, questo facilita il lavoro di compilazione e verifica da parte delle GitHub.\
@@ -169,13 +169,13 @@ I template sono:
 - quickstart.typ: per la creazione di verbali interni o esterni.
 
 === Struttura dei documenti
-Esistono due tipi di documenti fondamentali: "documento" e "verbali" e hanno alcune differenze a livello di struttura.\
+Esistono due tipi di documenti fondamentali: "documento" e "verbale" e hanno alcune differenze a livello di struttura.\
 Ogni documento è formato da un file Typst e da un file log.csv creato automaticamente dalle github action (e che si occupano anche di aggiornarlo). Questi due file vengono automaticamente compilati insieme e il .pdf risultante viene inserito all'interno del branch main.
 
 ==== Verbali
 Un verbale è la documentazione di un meeting svolto tra i membri del gruppo (verbale interno) o con un referente esterno (verbale esterno). Documentare le riunioni permette di tenere traccia delle decisioni prese dal gruppo in un dato momento e permette a chi non riesce a presenziare di tenersi al passo con il gruppo in maniera asincrona. \
-I verbali devono essere rinominati nel seguente modo "yy-mm-dd.typ" e nello stesso modo deve essere chiamata la sottocartella in cui è inserito.
-//todo: aggiungere il fatto che sarà l'amministratore ad avere il compito di redigere i verbali post meeting
+I verbali devono essere rinominati nel seguente modo "yy-mm-dd.typ" e nello stesso modo deve essere chiamata la sottocartella in cui è inserito.\
+Sarà compito dell'amministratore redigere i verbali dei meeting svolti dal gruppo.
 
 ===== Intestazione dei verbali
 Ogni verbale, interno o esterno, deve presentare:
@@ -187,23 +187,24 @@ Ogni verbale, interno o esterno, deve presentare:
   + referente: referente dell'azienda proponente che ha partecipate alla riunione in caso di verbale esterno;
   + redattori e destinatari;
   + partecipanti: chi ha partecipato alla riunione e il ruolo che ha ricoperto;
-  + ora di inizio meeting, ora di fine meeting e durata del meeting (calcolata automanticamente).
+  + luogo in cui si è svolto il meeting, se online indicare la piattaforma usata;
+  + ora di inizio meeting, ora di fine meeting.
 ===== Corpo del verbale
 L'effettivo contenuto del documento dove vengono riportati i dettaglio gli argomenti trattati nel meeting, il corpo è così organizzato:
-- section "Ordine del giorno": riporta gli argomenti da trattare nel meeting;
-- subsection: ogni subsection riporta l'effettivo resoconto dell'incontro con evetuali dubbi e soluzioni a cui si è arrivati durante il meeting;
-- section "Azioni da intraprendere": riporta le operazioni che andranno svolte a seguito del meeting per risolvere problemi emersi durante il meeting o per continuare il lavoro.
-- firme esterne: per verbali esterni, firma del referente esterno che approva il resoconto stilato del gruppo.
+- section *"Ordine del giorno"*: riporta gli argomenti da trattare nel meeting;
+- *subsection*: ogni subsection riporta l'effettivo resoconto dell'incontro con evetuali dubbi e soluzioni a cui si è arrivati durante il meeting;
+- section *"Pianificazione"*: riporta le operazioni che andranno svolte a seguito del meeting per risolvere problemi emersi durante il meeting o per continuare il lavoro.
+- *firme esterne*: per verbali esterni, firma del referente esterno che approva il resoconto stilato del gruppo.
 
 ==== Documenti
 Documenti prodotto dal team Error 418:
-- Norme di Progetto;
-- Piano di Progetto;
-- Piano di Qualifica;
-- Glossario
-- Analisi dei Requisiti
-- Specifica Architetturale;
-- Manuale Utente.
+- `Norme di Progetto`;
+- `Piano di Progetto`;
+- `Piano di Qualifica`;
+- `Glossario`;
+- `Analisi dei Requisiti`;
+- `Specifica Architetturale`;
+- `Manuale Utente`.
 
 ===== Intestazione dei documenti
 Ogni documento deve presentare:

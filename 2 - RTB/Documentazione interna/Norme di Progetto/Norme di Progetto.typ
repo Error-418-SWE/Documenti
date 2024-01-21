@@ -147,22 +147,22 @@ Questa sezione descrive tutte le norme riguardanti la stesura, il mantenimento e
 - Documentare come svolgere un lavoro in modo che un membro del gruppo possa lavorare in maniera uniforme rispetto al resto del gruppo.
 
 === Typst
-Il team Error 418 ha deciso di utilizzare Typst come linguaggio per redarre la documentazione. Questo è un linguaggio di markup che permette molte delle funzionalità offerte da strumenti come LaTeX, richiedendo però molto meno sforzo durante la procedura di creazione e di compilazione del file.\
-Questo permette di evitare l'apprendimento della sintassi LaTeX che può risultare ostica ai novizi e consentendo al team di concentrarsi esclusivamente sul corpo del file evitando perdite di tempo e frustrazione data da errori che possono essere di difficile risoluzione.
+Il gruppo Error 418 ha deciso di utilizzare Typst come linguaggio per redarre la documentazione. Questo è un linguaggio di markup che permette molte delle funzionalità offerte da strumenti come LaTeX, richiedendo però molto meno sforzo durante la procedura di creazione e di compilazione del file.\
+Questo permette di evitare l'apprendimento della sintassi LaTeX che può risultare ostica ai novizi e consentendo al gruppo di concentrarsi esclusivamente sul corpo del file evitando perdite di tempo e frustrazione data da errori che possono essere di difficile risoluzione.
 
 === Ciclo di vita
 La creazione e il versionamento di un documento è stato automatizzato quanto più possibile in modo da ridurre l'impatto dell'errore umano.\
 Le modalità che permetto di creare un documento sono:
 + creare un nuovo branch a partire dal branch che raccoglie i sorgenti (src);
 + creare una nuova cartella rinominata con lo stesso nome del sorgente che si andrà a creare;
-+ creare un nuovo file .typ a partire da uno dei template che sono stati creati appositamente dal team (per scopo e struttura dei template controllare la sezione @template);
++ creare un nuovo file .typ a partire da uno dei template che sono stati creati appositamente dal gruppo (per scopo e struttura dei template controllare la sezione @template);
 + scrivere il corpo del documento modificando eventualmente alcuni specifici campi del template (titolo, data, ecc..);
-+ accertarsi che il documento rispetti tutte le norme definite nelle `Norme di progetto`;
++ accertarsi che il documento rispetti tutte le norme definite nelle `Norme di Progetto`;
 + salvare e creare la pull request per integrare il sorgente all'interno del branch src;
-+ scegliere un nome della pull request aderente alle norme definite nelle `Norme di progetto`;
++ scegliere un nome della pull request aderente alle norme definite nelle `Norme di Progetto`;
 + una volta creata la pull request avvierà una serie di action che provvederanno a verificare la correttezza la presenza o meno di alcuni campi del documento, creare o aggiornare il changelog, compilare il documento e integrare il risultante file .pdf all'interno del branch main;
 === Template <template>
-Il team ha creato dei template per la creazione di documenti, questo facilita il lavoro di compilazione e verifica da parte delle GitHub.\
+Il gruppo ha creato dei template per la creazione di documenti, questo facilita il lavoro di compilazione e verifica da parte delle GitHub.\
 Possono essere trovate nella root della repository github nel branch src.\
 I template sono:
 - template.typ: per la creazione di documenti interni o esterni;
@@ -197,7 +197,7 @@ L'effettivo contenuto del documento dove vengono riportati i dettaglio gli argom
 - *firme esterne*: per verbali esterni, firma del referente esterno che approva il resoconto stilato del gruppo.
 
 ==== Documenti
-Documenti prodotto dal team Error 418:
+Documenti prodotto dal gruppo Error 418:
 - `Norme di Progetto`;
 - `Piano di Progetto`;
 - `Piano di Qualifica`;

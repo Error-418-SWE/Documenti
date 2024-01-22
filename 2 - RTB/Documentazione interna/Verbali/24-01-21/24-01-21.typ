@@ -29,7 +29,7 @@ La lettera di presentazione relativa al colloquio RTB è stata ultimata e spedit
 
 === Piano di Progetto
 
-Il documento Piano di Progetto è stato completamente revisionato e sono state effettuate modifiche minori di leggibilità e comprensione.
+Il documento Piano di Progetto è stato completamente revisionato e sono state effettuate modifiche minori per migliorare leggibilità e comprensione.
 
 === Sito Web
 
@@ -65,4 +65,4 @@ La pianificazione dello Sprint 12 tiene conto della prossimità della sessione d
   - Redigere consuntivo di periodo 11;
   - Redigere preventivo di periodo 12;
   - Estendere termini Glossario;
-  - Modifica minore su una tabella del documento Analisi dei Requisiti causa rilevamento errore;
+  - Modifica minore su una tabella del documento Analisi dei Requisiti causa rilevamento errore.

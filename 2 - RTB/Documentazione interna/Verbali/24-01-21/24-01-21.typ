@@ -20,7 +20,7 @@
 == Valutazione del progresso generale <avanzamento>
 
 Ogni membro del gruppo, supportato dall'evidenza della board Jira, ha esposto lo stato di avanzamento delle proprie attività assegnate.
-Come già previsto durante la pianificazione i lavori risultano rallentati causa esami. 
+Come già previsto durante la pianificazione i lavori risultano rallentati causa esami.
 Si prevede di procedere a ritmo rallentato fino allo sprint 13.
 
 === Lettera di presentazione

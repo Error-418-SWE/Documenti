@@ -54,8 +54,8 @@ Continua lo sbilanciamento tra gli impegni dei singoli del gruppo. Esso è dovut
 
 == RTB
 
-È stata fissata la presentazione RTB per il 25/01/24 alle ore 8:40. 
-Sono stati assegnati i ruoli che ciascun membro del gruppo ricoprirà durante la presentazione, facendo particolare attenzione a suddividere equamente il lavoro e i minuti di presentazione a disposizione.
+È stata fissata la presentazione RTB per il 25/01/24 alle ore 8:40.
+Sono stati assegnati gli argomenti che ciascun membro del gruppo ricoprirà durante la presentazione, facendo particolare attenzione a suddividere equamente il lavoro e i minuti di presentazione a disposizione.
 Il gruppo ritiene necessario fissare un meeting di "prova" della presentazione il 24/01/24 alle ore 17:30.
 
 

@@ -35,9 +35,9 @@ Il documento Piano di Progetto è stato completamente revisionato e sono state e
 
 Il sito Web del gruppo è ora totalmente online e completo di riferimenti a tutta la documentazione prodotta.
 
-=== Presentazione PowerPoint
+=== Presentazione RTB
 
-La presentazione PowerPoint è stata terminata sia dal punto di vista del contenuto sia dal punto di vista del layout e del tema. Essa risulta ora pronta per il colloquio di RTB.
+La presentazione Google Slides è stata terminata sia dal punto di vista del contenuto sia dal punto di vista del layout e del tema. Essa risulta ora pronta per il colloquio di RTB.
 
 == Analisi di retrospettiva
 

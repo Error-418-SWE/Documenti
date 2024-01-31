@@ -20,7 +20,7 @@
 == Valutazione del progresso generale <avanzamento>
 
 Ogni membro del gruppo, supportato dall'evidenza della board Jira, ha esposto lo stato di avanzamento delle proprie attività assegnate.
-Come già previsto durante la pianificazione i lavori risultano rallentati causa esami. 
+Come già previsto durante la pianificazione i lavori risultano rallentati causa esami.
 Si prevede di procedere a ritmo rallentato fino allo sprint 13.
 
 === Lettera di presentazione
@@ -35,9 +35,9 @@ Il documento Piano di Progetto è stato completamente revisionato e sono state e
 
 Il sito Web del gruppo è ora totalmente online e completo di riferimenti a tutta la documentazione prodotta.
 
-=== Presentazione PowerPoint
+=== Presentazione RTB
 
-La presentazione PowerPoint è stata terminata sia dal punto di vista del contenuto sia dal punto di vista del layout e del tema. Essa risulta ora pronta per il colloquio di RTB.
+La presentazione Google Slides è stata terminata sia dal punto di vista del contenuto sia dal punto di vista del layout e del tema. Essa risulta ora pronta per il colloquio di RTB.
 
 == Analisi di retrospettiva
 
@@ -54,8 +54,8 @@ Continua lo sbilanciamento tra gli impegni dei singoli del gruppo. Esso è dovut
 
 == RTB
 
-È stata fissata la presentazione RTB per il 25/01/24 alle ore 8:40. 
-Sono stati assegnati i ruoli che ciascun membro del gruppo ricoprirà durante la presentazione, facendo particolare attenzione a suddividere equamente il lavoro e i minuti di presentazione a disposizione.
+È stata fissata la presentazione RTB per il 25/01/24 alle ore 8:40.
+Sono stati assegnati gli argomenti che ciascun membro del gruppo ricoprirà durante la presentazione, facendo particolare attenzione a suddividere equamente il lavoro e i minuti di presentazione a disposizione.
 Il gruppo ritiene necessario fissare un meeting di "prova" della presentazione il 24/01/24 alle ore 17:30.
 
 

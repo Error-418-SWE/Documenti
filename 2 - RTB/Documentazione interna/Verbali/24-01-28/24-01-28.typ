@@ -37,7 +37,7 @@ Il gruppo ha deciso di sospendere l'utilizzo di ChatGPT per la correzione gramma
 
 Il gruppo ha tenuto una discussione sull'esito provvisorio del colloquio RTB tenutosi in data 25/01/24. \
 Sono state analizzate le considerazioni del professor Cardin e si è discusso sia degli aspetti positivi del colloquio, sia di quelli con possibilità di miglioramento.
-Il gruppo resta in attesa del riscontro finale da parte del professore per decid.
+Il gruppo resta in attesa del riscontro finale da parte del professore.
 
 == Pianificazione
 

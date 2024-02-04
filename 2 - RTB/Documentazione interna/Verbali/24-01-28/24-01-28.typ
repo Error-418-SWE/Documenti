@@ -41,7 +41,7 @@ Il gruppo resta in attesa del riscontro finale da parte del professore.
 
 == Pianificazione
 
-La fase di pianificazione di questo sprint risulta assente, poiché esso coincide temporalmente con la settimana più impegnativa della sessione d'esami invernale e poiché il gruppo è ancora in attesa dell'esito del colloquio RTB.\
+Durante la pianificazione è stato deciso di attendere l'esito del colloquio RTB e nel frattempo, essendo questo sprint coincidente temporalmente con la settimana più impegnativa della sessione d'esami, i membri del gruppo si concentreranno sullo studio individuale. \
 Le attività del gruppo riprenderanno regolarmente dallo sprint 14.
 
 

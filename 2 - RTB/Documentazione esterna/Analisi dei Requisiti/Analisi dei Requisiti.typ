@@ -1140,7 +1140,7 @@ Dove:
     columns: 2,
     align: left,
     [*Tipo Requisito*], [*Numero totale*],
-    [Requisiti funzionali], [11],
+    [Requisiti funzionali], [90],
     [Requisiti di qualità], [7],
     [Requisiti di vincolo], [14],
 

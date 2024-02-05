@@ -1085,7 +1085,9 @@ Dove:
     [FM-11.2], [Obbligatorio], [L'utente deve poter ruotare la visuale], [UC-11.2],
     [FM-11.3], [Obbligatorio], [L'utente deve poter effettuare operazioni di zoom della visuale], [UC-11.3],
     [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom in], [UC-11.3],
-    [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom out], [UC-11.3]
+    [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom out], [UC-11.3],
+    
+    [FM-12], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login.], [Capitolato]
   ),
   caption: [Requisiti funzionali]
 )
@@ -1115,7 +1117,6 @@ Dove:
     columns: 4,
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [VM-1], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login.], [Capitolato],
     [VM-2], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente.], [Capitolato],
     [VM-3], [Obbligatorio], [Il prodotto non deve gestire la persistenza dei dati.], [Capitolato],
     [VM-4], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0.], [Interno],

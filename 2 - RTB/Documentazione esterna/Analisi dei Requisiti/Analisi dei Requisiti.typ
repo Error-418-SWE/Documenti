@@ -392,7 +392,7 @@ $bold("Scenario: ")$
 )
 == Creazione scaffale
 $bold("Descrizione: ")$
-uno scaffale viene creato in base ai valori inseriti dall'utente quali: lunghezza, larghezza, profondità, numero di piani, colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
+uno scaffale viene creato in base ai valori inseriti dall'utente quali: altezza, larghezza, profondità, numero di piani e colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
 Quindi viene aggiunto nell'ambiente in una posizione valida specificata. Successivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
 
 $bold("Attore: ")$
@@ -407,7 +407,12 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente seleziona l'aggiunta di uno scaffale;
-- l'utente inserisce i dati necessari alla creazione dello scaffale;
+- l'utente inserisce l'altezza dello scaffale;
+- l'utente inserisce la larghezza dello scaffale;
+- l'utente inserisce la profondità dello scaffale;
+- l'utente inserisce il numero di piani dello scaffale;
+- l'utente inserisce il numero di colonne dello scaffale;
+- l'utente seleziona l'orientamento dello scaffale nel piano (orizzontale o verticale);
 - l'utente posiziona lo scaffale in una posizione valida nell'ambiente di lavoro.
 
 $bold("Estensioni: ")$

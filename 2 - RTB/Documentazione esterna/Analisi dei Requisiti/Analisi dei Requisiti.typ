@@ -1087,9 +1087,9 @@ Dove:
     [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom in], [UC-11.3],
     [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom out], [UC-11.3],
     
-    [FM-12], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login.], [Capitolato],
+    [FM-12], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login], [Capitolato],
 
-    [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente.], [Capitolato]
+    [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato]
   ),
   caption: [Requisiti funzionali]
 )
@@ -1101,15 +1101,15 @@ Dove:
     columns: 4,
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [QM-1], [Obbligatorio], [Deve essere rispettato quanto previsto dalle Norme di Progetto.], [Interna],
-    [QM-2], [Obbligatorio], [Deve essere rispettato quanto previsto dal Piano di Qualifica.], [Interna],
-    [QM-3], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico.], [Capitolato],
-    [QM-4], [Obbligatorio], [Devono essere consegnati i diagrammi UML degli UC.], [Capitolato],
-    [QM-5], [Obbligatorio], [Deve essere consegnata la lista dei bug risolti.], [Capitolato],
-    [QO-6], [Opzionale], [Deve essere consegnato lo schema del DB.], [Capitolato],
-    [QO-7], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate.], [Capitolato],
+    [QM-1], [Obbligatorio], [Deve essere rispettato quanto previsto dalle Norme di Progetto], [Interna],
+    [QM-2], [Obbligatorio], [Deve essere rispettato quanto previsto dal Piano di Qualifica], [Interna],
+    [QM-3], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico], [Capitolato],
+    [QM-4], [Obbligatorio], [Devono essere consegnati i diagrammi UML degli UC], [Capitolato],
+    [QM-5], [Obbligatorio], [Deve essere consegnata la lista dei bug risolti], [Capitolato],
+    [QO-6], [Opzionale], [Deve essere consegnato lo schema del DB], [Capitolato],
+    [QO-7], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate], [Capitolato],
   ),
-  caption: [Requisiti di qualità.]
+  caption: [Requisiti di qualità]
 )
 
 == Requisiti di vincolo <vincoli>
@@ -1119,20 +1119,20 @@ Dove:
     columns: 4,
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [VM-1], [Obbligatorio], [Il prodotto non deve gestire la persistenza dei dati.], [Capitolato],
-    [VM-2], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0.], [Interno],
-    [VM-3], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0.], [Interno],
-    [VM-4], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva.], [Interno],
-    [VM-5], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva.], [Interno],
-    [VM-6], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva.], [Interno],
-    [VM-7], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva.], [Interno],
-    [VM-8], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva.], [Interno],
-    [VM-9], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva.], [Interno],
-    [VM-10], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva.], [Interno],
-    [VM-11], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva.], [Interno],
-    [VO-12], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose.], [VE 23-11-15]
+    [VM-1], [Obbligatorio], [Il prodotto non deve gestire la persistenza dei dati], [Capitolato],
+    [VM-2], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0], [Interno],
+    [VM-3], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0], [Interno],
+    [VM-4], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva], [Interno],
+    [VM-5], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva], [Interno],
+    [VM-6], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva], [Interno],
+    [VM-7], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva], [Interno],
+    [VM-8], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva], [Interno],
+    [VM-9], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva], [Interno],
+    [VM-10], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva], [Interno],
+    [VM-11], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva], [Interno],
+    [VO-12], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose], [VE 23-11-15]
   ),
-  caption: [Requisiti di vincolo.]
+  caption: [Requisiti di vincolo]
 )
 
 == Riepilogo requisiti

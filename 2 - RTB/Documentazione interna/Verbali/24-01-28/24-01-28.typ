@@ -31,7 +31,7 @@ L'aggiunta è stata effettuata mediante l'utilizzo della libreria Cetz e non tra
 
 === Revisione documenti
 
-Il gruppo ha deciso di sospendere l'utilizzo di ChatGPT per la correzione grammaticale e sintattica dei documenti, in quanto i risultati prodotti non sono stati soddisfacenti e la pratica era soggetta ad allucinazioni frequenti.
+Il gruppo ha deciso di sospendere l'utilizzo di ChatGPT per la correzione grammaticale e sintattica dei documenti, in quanto i risultati prodotti non sono stati soddisfacenti e venivano riscontrati parecchi falsi positivi.
 
 == Discussione sul colloquio RTB
 

@@ -17,7 +17,7 @@
 - Pianificazione sprint, ruoli e prossimi obiettivi.
 
 == Valutazione esito RTB
-Il gruppo ha aperto la riunione discutendo l'esito della prima parte di RTB svolta con il professor Cardin. Si è discusso in particolare delle criticità rilevate nel documento di `Analisi dei Requisiti`, che possono essere riassunte in:
+Il gruppo ha aperto la riunione discutendo l'esito della prima parte del colloquio RTB svolta con il professor Cardin. Si è discusso in particolare delle criticità rilevate nel documento di `Analisi dei Requisiti`, che possono essere riassunte in:
 - alcuni errori nella modellazione;
 - poca specificità degli UC;
 - assente tracciamento casi d'uso/requisiti.
@@ -26,7 +26,7 @@ Il gruppo ha aperto la riunione discutendo l'esito della prima parte di RTB svol
 La situazione corrente è stata esaminata dal gruppo e sono stati definiti obbiettivi "a lungo termine" da concludere entro la seconda parte del colloquio RTB con il professor Vardanega.
 In particolare si è visto:
 - aggiornamento in seguito al "big-bang" del `Piano di Progetto`;
-- modifica di alcune metriche del `Piano di Qualifica` non compatibili con il modello di sviluppo scelto dal team;
+- modifica di alcune metriche del `Piano di Qualifica` non compatibili con il modello di sviluppo scelto dal gruppo;
 - necessità di preparare le slide per l'incontro con il professore;
 - priorità data a: `Analisi dei Requisiti`, `Piano di Qualifica` e `Norme di Progetto`.
 

@@ -809,7 +809,14 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente seleziona uno scaffale;
-- vengono visualizzate le informazioni relative a lo scaffale selezionato.
+- vengono visualizzate le seguenti informazioni relative allo scaffale selezionato:
+  - codice identificativo dello scaffale;
+  - numero totale di bin che contiene;
+  - numero di bin occupati;
+  - numero di bin vuoti;
+  - dimensioni dello scaffale (altezza, larghezza, profondità);
+  - numero di piani;
+  - numero di colonne.
 
 = Ricerca prodotti
 

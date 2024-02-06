@@ -545,7 +545,9 @@ $bold("Scenario: ")$
 
 == Modifica di un bin
 $bold("Descrizione: ")$
-deve essere possibile modificare le dimensioni dei bin.
+modifica delle caratteristiche di un bin esterno già esistente.\
+Le caratteristiche che definiscono il bin vengono visualizzate e possono essere modificate, nello specifico i valori sono: altezza, larghezza, profondità.\
+L'utente può decidere, per ciascuno di essi, di sostituirlo specificando il nuovo valore oppure di lasciarlo inalterato.
 
 $bold("Attore: ")$
 utente.
@@ -557,10 +559,12 @@ $bold("Postcondizioni: ")$
 - le dimensioni del bin sono state ridefinite.
 
 $bold("Scenario: ")$
-- l'utente entra nella modalità di modifica;
 - l'utente seleziona un bin;
-- vengono mostrate le informazioni del bin;
-- l'utente modifica le dimensioni del bin.
+- l'utente seleziona il comando per la modifica del bin;
+- l'utente può inserire una nuova altezza del bin;
+- l'utente può inserire una nuova larghezza del bin;
+- l'utente può inserire una nuova profondità del bin;
+- l'utente conferma la nuova configurazione di valori.
 
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.

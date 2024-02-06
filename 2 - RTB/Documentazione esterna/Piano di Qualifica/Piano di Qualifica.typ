@@ -98,8 +98,8 @@ La metrica AC rappresenta la somma dei costi sostenuti dal gruppo in un determin
 
 ==== *EV (Earned Value)*
 L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come valore guadagnato nello sprint:
-- *SEV*: Sprint Earned Value, valore guadagnato dal progetto in un determinato sprint, dove lo stato di completamento del lavoro è espresso mediante il rapporto tra gli story points completati e quelli pianificati per lo sprint.;
-- *PEV*: Project Earned Value, valore guadagnato dal progetto dall'inizio del progetto, definito come sommatoria dei SEV.
+- *SEV*: Sprint Earned Value, valore guadagnato dal progetto in un determinato sprint, dove lo stato di completamento del lavoro è espresso mediante il rapporto tra gli story points completati e quelli pianificati per lo sprint;
+- *PEV*: Project Earned Value, valore guadagnato dal progetto dal suo inizio, definito come sommatoria dei SEV.
 *Calcolo del SEV*
 - *SPC*: Story Points Completati;
 - *SPP*: Story Points Pianificati.
@@ -116,7 +116,7 @@ L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato p
 )
 
 *Calcolo del PEV*
-- $"s in S, con S insieme degli sprint svolti"$
+- $"dato s in S, con S insieme degli sprint svolti"$
 #figure(
   table(
     columns: 3,
@@ -144,7 +144,7 @@ Il CPI rappresenta l'indice di performance del costo, ovvero il rapporto tra il 
   caption: "Specifiche metrica CPI"
 )
 
-Un rapporto maggiore di 1 indica che il valore raggiunto è superiore al costo effettivo sostenuto. Data la natura didattica del progetto e l'inesperienza del gruppo, si ritiene accettabile un valore di CPI $>= 0.8$, valore indicante un costo effettivo leggermente superiori al valore guadagnato.
+Un rapporto maggiore di 1 indica che il valore raggiunto è superiore al costo effettivo sostenuto. Data la natura didattica del progetto e l'inesperienza del gruppo, si ritiene accettabile un valore di CPI $>= 0.8$, valore indicante un costo effettivo leggermente superiore al valore guadagnato.
 
 ==== *EAC (Estimated At Completion)*
 L'EAC rappresenta il costo stimato al termine del progetto. Tale metrica viene calcolata in riferimento al budget totale del progetto (*BAC*) in proporzione all'indice di performance del costo (*CPI*).

@@ -46,79 +46,108 @@ Il presente documento include una serie di termini tecnici specifici del progett
 = Qualità di processo
 
 == Processi primari
-
 === Fornitura
-==== Parametri
-- *BAC (Budget at Completion)*: come definito nel documento Piano di Progetto ha un valore di € 13.370,00.
-==== Metriche
-- *AC (Actual Cost)*
-#figure(
-  table(
-    columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [Somma dei costi tracciati dal gruppo], [$<="BAC"$], [$<="BAC"$],
-  ),
-  caption: "Specifiche metrica AC"
-)
+==== *BAC (Budget at Completion)* 
+Definito nel documento Piano di Progetto v2.0.0 con valore di € 13.055,00.
+==== *PV (Planned Value)*
+La metrica PV rappresenta il valore pianificato, indicante il costo preventivato per portare a termine le attività pianificate nello sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento Piano di Progetto v2.0.0.
+\
+Dati: \
+- $"r in R = {Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}"$
+- $"OR"_r$: Ore ruolo;
+- $"CR"_r$: Costo ruolo.
 
-- *PV (Planned Value)*
-#figure(
-  table(
-    columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$"% completamento del progetto pianificata"*"BAC"$], [$<="BAC"$], [$<="BAC"$],
-  ),
-  caption: "Specifiche metrica PV"
-)
-
-- *EV (Earned Value)*
-#figure(
-  table(
-    columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$"% stato di completamento del progetto"*"BAC"$], [$>=0$], [$<="BAC"$],
-  ),
-  caption: "Specifiche metrica EV"
-)
-
-- *CV (Cost Variance)*
-#figure(
-  table(
-    columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$"EV"-"AC"$], [$>=0$], [$>=-10%$],
-  ),
-  caption: "Specifiche metrica CV"
-)
-
-- *SV (Schedule Variance)*
-#figure(
-  table(
-    columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$"EV"-"PV"$], [$>=0$], [$>=-10%$],
-  ),
-  caption: "Specifiche metrica SV"
-)
-
-- *CPI (Cost Performance Index)*
 #figure(
   table(
     columns: 3,
     rows: 30pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$display("EV"/"AC")$), align(center+horizon,$>=1$), align(center+horizon,$>=0.8$),
+    align(center+horizon,$sum_(r in R) "OR"_r * "CR"_r$), align(center+horizon,$>"0"$), align(center+horizon,$>"0"$),
+  ),
+  caption: "Specifiche metrica PV"
+)
+
+La metrica risulta un indice necessario a determinare il valore atteso del lavoro svolto in un determinato sprint. Il suo valore strettaemente maggiore di 0 indica che non sono contemplati periodi di inattività.
+
+==== *AC (Actual Cost)*
+La metrica AC rappresenta la somma dei costi sostenuti dal gruppo in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come consuntivo dello sprint:
+- *SAC*: Sprint Actual Cost, costo effettivo sostenuto dal gruppo in un determinato sprint;
+- *PAC*: Project Actual Cost, costo effettivo sostenuto dal gruppo dall'inizio del progetto, definito come sommatoria dei SAC.
+
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [Somma dei costi sostenuti], [$<="PV"$], [$"+10% PV"$],
+  ),
+  caption: "Specifiche metrica SAC"
+)
+
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    [Somma dei costi sostenuti], [$<="BAC"$], [$<="BAC"$],
+  ),
+  caption: "Specifiche metrica PAC"
+)
+
+
+==== *EV (Earned Value)*
+L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come valore guadagnato nello sprint:
+- *SEV*: Sprint Earned Value, valore guadagnato dal progetto in un determinato sprint, dove lo stato di completamento del lavoro è espresso mediante il rapporto tra gli story points completati e quelli pianificati per lo sprint.;
+- *PEV*: Project Earned Value, valore guadagnato dal progetto dall'inizio del progetto, definito come sommatoria dei SEV.
+*Calcolo del SEV*
+- *SPC*: Story Points Completati;
+- *SPP*: Story Points Pianificati.
+
+#figure(
+  table(
+    columns: 3,
+    rows: 30pt,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    align(center+horizon,$display("SPC"/"SPP")*"SPV"$), align(center+horizon, $="SPV"$), align(center+horizon, $>="80% del SPV"$),
+  ),
+  caption: "Specifiche metrica SEV"
+)
+
+*Calcolo del PEV*
+- $"s in S, con S insieme degli sprint svolti"$
+#figure(
+  table(
+    columns: 3,
+    rows: 30pt,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    align(center+horizon, $sum_(s in S)"SEV"$), align(center+horizon, $>=0$), align(center+horizon, $<="BAC"$),
+  ),
+  caption: "Specifiche metrica PEV"
+)
+
+\
+
+==== *CPI (Cost Performance Index)*
+Il CPI rappresenta l'indice di performance del costo, ovvero il rapporto tra il valore guadagnato e il costo effettivo sostenuto. Tale metrica viene calcolata in riferimento al valore totale raggiunto del progetto (*PEV*) in proporzione al costo effettivo sostenuto (*PAC*).
+
+#figure(
+  table(
+    columns: 3,
+    rows: 30pt,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    align(center+horizon,$display("PEV"/"PAC")$), align(center+horizon,$>=1$), align(center+horizon,$>=0.8$),
   ),
   caption: "Specifiche metrica CPI"
 )
 
-- *EAC (Estimated At Completion)*
+Un rapporto maggiore di 1 indica che il valore raggiunto è superiore al costo effettivo sostenuto. Data la natura didattica del progetto e l'inesperienza del gruppo, si ritiene accettabile un valore di CPI $>= 0.8$, valore indicante un costo effettivo leggermente superiori al valore guadagnato.
+
+==== *EAC (Estimated At Completion)*
+L'EAC rappresenta il costo stimato al termine del progetto. Tale metrica viene calcolata in riferimento al budget totale del progetto (*BAC*) in proporzione all'indice di performance del costo (*CPI*).
 #figure(
   table(
     columns: 3,
@@ -131,36 +160,10 @@ Il presente documento include una serie di termini tecnici specifici del progett
   caption: "Specifiche metrica EAC"
 )
 
-- *ETC (Estimated To Completion)*
-#figure(
-  table(
-    columns: 3,
-    rows: 30pt,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$display("BAC-EV"/"CPI")$), align(center+horizon,$<="EAC"$), align(center+horizon,$<="EAC"$),
-  ),
-  caption: "Specifiche metrica ETC"
-)
+Il valore del BAC non può essere maggiore rispetto a quanto espresso in candidatura, pertanto gli unici valori accettbili (e ottimali) sono stime a ribasso rispetto al BAC.
 
 == Processi di supporto
 === Documentazione
-- *Indice di Gulpease*
-
-  - F = numero di frasi nel testo;
-  - L = numero di lettere nel testo;
-  - P = numero di parole nel testo.
-#figure(
-  table(
-    columns: 3,
-    rows: 30pt,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$89+display((300*(F)-10*(L))/P)$), align(center+horizon,"80%"), align(center+horizon,$>=60%$),
-  ),
-  caption: "Specifiche Indice di Gulpease"
-)
-
 
 - *Errori ortografici*
 #figure(

@@ -763,7 +763,7 @@ $bold("Scenario: ")$
 - viene inviata una notifica a magazzino che segnala lo spostamento;
 - i due bin, di partenza e di arrivo, vengono evidenziati per segnalare lo spostamento in corso.
 
-= Interrogazione di un bin
+= Visualizzazione di un bin
 
 #figure(
   image("./imgs/uc8.png", format: "png"),

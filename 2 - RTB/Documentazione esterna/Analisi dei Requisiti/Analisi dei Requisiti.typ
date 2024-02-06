@@ -812,9 +812,11 @@ $bold("Scenario: ")$
 - vengono visualizzate le seguenti informazioni relative allo scaffale selezionato:
   - codice identificativo dello scaffale;
   - numero totale di bin che contiene;
-  - numero di bin occupati;
-  - numero di bin vuoti;
-  - dimensioni dello scaffale (altezza, larghezza, profondità);
+  - numero di bin contenuti occupati;
+  - numero di bin contenuti vuoti;
+  - altezza dello scaffale;
+  - larghezza dello scaffale;
+  - profondità dello scaffale;
   - numero di piani;
   - numero di colonne.
 

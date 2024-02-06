@@ -545,8 +545,10 @@ $bold("Scenario: ")$
 
 == Modifica di un bin
 $bold("Descrizione: ")$
-modifica delle caratteristiche di un bin esterno già esistente.\
-Le caratteristiche che definiscono il bin vengono visualizzate e possono essere modificate, nello specifico i valori sono: altezza, larghezza, profondità.\
+modifica delle caratteristiche di un bin esterno già esistente.
+
+Le caratteristiche che definiscono il bin vengono visualizzate e possono essere modificate, nello specifico i valori sono: altezza, larghezza, profondità.
+
 L'utente può decidere, per ciascuno di essi, di sostituirlo specificando il nuovo valore oppure di lasciarlo inalterato.
 
 $bold("Attore: ")$

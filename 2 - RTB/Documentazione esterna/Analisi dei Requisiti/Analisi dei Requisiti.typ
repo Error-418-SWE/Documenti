@@ -785,7 +785,10 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente seleziona un bin;
-- vengono visualizzati il codice identificativo del bin, il suo stato (vuoto o pieno), e, se il bin non è vuoto, la tipologia di prodotto che contiene.
+- vengono visualizzate le seguenti informazioni relative al bin selezionato: 
+  - codice identificativo del bin;
+  - stato del bin (occupato o vuoto);
+  - tipologia di prodotto che contiene, in caso di bin non vuoto.
 
 = Interrogazione di uno scaffale
 

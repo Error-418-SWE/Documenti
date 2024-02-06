@@ -441,7 +441,7 @@ $bold("Scenario: ")$
 - l'utente può inserire una nuova profondità dello scaffale;
 - l'utente può inserire un nuovo numero di piani dello scaffale;
 - l'utente può inserire un nuovo numero di colonne dello scaffale;
-- l'utente può seleziona un diverso orientamento dello scaffale nel piano (orizzontale o verticale);
+- l'utente può selezionare un diverso orientamento dello scaffale nel piano (orizzontale o verticale);
 - l'utente conferma la nuova configurazione di valori.
 
 $bold("Estensioni: ")$

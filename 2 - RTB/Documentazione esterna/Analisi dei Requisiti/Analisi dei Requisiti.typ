@@ -420,8 +420,10 @@ $bold("Estensioni: ")$
 
 == Modifica scaffale
 $bold("Descrizione: ")$
-modifica delle caratteristiche di uno scaffale già esistente.\
-Le caratteristiche che definiscono lo scaffale vengono visualizzate e possono essere modificate, nello specifico i valori sono: altezza, larghezza, profondità, numero di piani e colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).\
+modifica delle caratteristiche di uno scaffale già esistente.
+
+Le caratteristiche che definiscono lo scaffale vengono visualizzate e possono essere modificate, nello specifico i valori sono: altezza, larghezza, profondità, numero di piani e colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
+
 L'utente può decidere, per ciascuno di essi, di sostituirlo specificando il nuovo valore oppure di lasciarlo inalterato.
 
 $bold("Attore: ")$

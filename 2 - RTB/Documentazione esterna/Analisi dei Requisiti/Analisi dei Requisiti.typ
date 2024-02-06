@@ -788,7 +788,9 @@ $bold("Scenario: ")$
 - vengono visualizzate le seguenti informazioni relative al bin selezionato: 
   - codice identificativo del bin;
   - stato del bin (occupato o vuoto);
-  - tipologia di prodotto che contiene, in caso di bin non vuoto.
+  - tipologia di prodotto che contiene, in caso di bin non vuoto;
+  - id dello scaffale che lo contiene;
+  - posizione del bin all'interno dello scaffale (piano e colonna).
 
 = Interrogazione di uno scaffale
 

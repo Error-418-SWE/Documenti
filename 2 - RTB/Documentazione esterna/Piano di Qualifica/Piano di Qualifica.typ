@@ -1,4 +1,5 @@
 #import "/template.typ": *
+#import "@preview/cetz:0.2.0"
 
 #show: project.with(
   title: "Piano di Qualifica",
@@ -50,7 +51,9 @@ Il presente documento include una serie di termini tecnici specifici del progett
 ==== *BAC (Budget at Completion)* 
 Definito nel documento Piano di Progetto v2.0.0 con valore di € 13.055,00.
 ==== *PV (Planned Value)*
-La metrica PV rappresenta il valore pianificato, indicante il costo preventivato per portare a termine le attività pianificate nello sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento Piano di Progetto v2.0.0.
+La metrica PV rappresenta il valore pianificato, indicante il costo preventivato per portare a termine le attività pianificate nello sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento Piano di Progetto v2.0.0. Il calcolo di tale metrica è esteso anche all'intero progetto, dove il valore pianificato è definito come sommatoria dei PV di ogni singolo sprint.
+- *SPV*: Sprint Planned Value, valore pianificato per un determinato sprint;
+- *PPV*: Project Planned Value, valore pianificato per l'intero progetto.
 \
 Dati: \
 - $"r in R = {Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}"$
@@ -65,7 +68,19 @@ Dati: \
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     align(center+horizon,$sum_(r in R) "OR"_r * "CR"_r$), align(center+horizon,$>"0"$), align(center+horizon,$>"0"$),
   ),
-  caption: "Specifiche metrica PV"
+  caption: "Specifiche metrica SPV"
+)
+
+- $"dato s in S, con S insieme degli sprint svolti"$
+#figure(
+  table(
+    columns: 3,
+    rows: 30pt,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+    align(center+horizon,$sum_(s in S)"SPV"_("s")$), align(center+horizon,$>"0"$), align(center+horizon,$>"0"$),
+  ),
+  caption: "Specifiche metrica SPV"
 )
 
 La metrica risulta un indice necessario a determinare il valore atteso del lavoro svolto in un determinato sprint. Il suo valore strettaemente maggiore di 0 indica che non sono contemplati periodi di inattività.
@@ -74,23 +89,24 @@ La metrica risulta un indice necessario a determinare il valore atteso del lavor
 La metrica AC rappresenta la somma dei costi sostenuti dal gruppo in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come consuntivo dello sprint:
 - *SAC*: Sprint Actual Cost, costo effettivo sostenuto dal gruppo in un determinato sprint;
 - *PAC*: Project Actual Cost, costo effettivo sostenuto dal gruppo dall'inizio del progetto, definito come sommatoria dei SAC.
-
 #figure(
   table(
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [Somma dei costi sostenuti], [$<="PV"$], [$"+10% PV"$],
+    [Somma dei costi sostenuti nello sprint], [$<="PV"$], [$"+10% PV"$],
   ),
   caption: "Specifiche metrica SAC"
 )
 
+- $"dato s in S, con S insieme degli sprint svolti"$
 #figure(
   table(
     columns: 3,
+    rows: 30pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [Somma dei costi sostenuti], [$<="BAC"$], [$<="BAC"$],
+    align(center+horizon,$sum_(s in S)"SAC"_("s")$), align(center+horizon,$<="BAC"$), align(center+horizon,$<="BAC"$),
   ),
   caption: "Specifiche metrica PAC"
 )
@@ -123,7 +139,7 @@ L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato p
     rows: 30pt,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon, $sum_(s in S)"SEV"$), align(center+horizon, $>=0$), align(center+horizon, $<="BAC"$),
+    align(center+horizon, $sum_(s in S)"SEV"_("s")$), align(center+horizon, $>=0$), align(center+horizon, $<="BAC"$),
   ),
   caption: "Specifiche metrica PEV"
 )
@@ -160,7 +176,7 @@ L'EAC rappresenta il costo stimato al termine del progetto. Tale metrica viene c
   caption: "Specifiche metrica EAC"
 )
 
-Il valore del BAC non può essere maggiore rispetto a quanto espresso in candidatura, pertanto gli unici valori accettbili (e ottimali) sono stime a ribasso rispetto al BAC.
+Il valore del BAC non può essere maggiore rispetto a quanto espresso in candidatura, pertanto gli unici valori accettbili (e ottimali) sono stime a ribasso rispetto al BAC. Dipendendo strettamente dall'indice di performance (*CPI*), il valore della metrica EAC può subire variazioni anche a rialzo, ma sarà compito del gruppo mantenere tale valore il più possibile vicino al BAC.
 
 == Processi di supporto
 === Documentazione
@@ -175,19 +191,6 @@ Il valore del BAC non può essere maggiore rispetto a quanto espresso in candida
   ),
   caption: "Specifiche Errori Ortografici"
 )
-
-// === Verifica
-// - *Code coverage*
-// #figure(
-//   table(
-//     columns: 3,
-//     rows: 30pt,
-//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
-//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-//     align(center+horizon,$display(frac("Righe di codice testate","Righe di codice totali"))*100$), align(center+horizon,"0"), align(center+horizon,"0"),
-//   ),
-//   caption: "Specifiche Code coverage"
-// )
 
 === Miglioramento
 - *Metriche soddisfatte*
@@ -260,3 +263,97 @@ Il valore del BAC non può essere maggiore rispetto a quanto espresso in candida
 //   ),
 //   caption: "Specifiche Manutenibilità del sistema"
 // )
+
+#pagebreak()
+= Valutazione Metriche
+== Premessa
+Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il gruppo ha imposto sprint della durata settimanale. Durante i primi 4 sprint, il gruppo è stato impegnato nello studio degli strumenti ITS come Jira, Linear, YouTrack, pertanto le operazioni di tracciamento non risultavano ancora ottimizzate. A partire dal quinto sprint, definito Jira come strumento, il gruppo ha iniziato a lavorare in maniera più efficiente, riuscendo a tracciare in maniera più precisa le ore di lavoro e i task svolti.
+== Processi primari
+=== Fornitura
+==== Rapporto tra PPV, PAC e PEV
+#figure(
+  cetz.canvas({
+    import cetz.plot 
+    let EV_points(offset: 0) = ((4,2040), (5,2655), (6,3060.07), (7,3265.55), (8,3426.11), (9, 4051.11), (10, 4249.11), (11, 4471.04), (12, 4546.04)).map(((x,y)) => {(x,y + offset * 1.5)})
+    
+    let AC_point(offset: 1) = ((4,2075), (5,2620), (6,3140), (7,3515), (8,4090), (9, 4515), (10, 4870), (11, 5100), (12, 5280)).map(((x,y)) => {(x,y + offset * 1.5)})
+
+    let PV_point(offset: 1) = ((4,2040), (5,2655), (6,3190), (7,3690), (8,4200), (9, 4825), (10, 5155), (11, 5470), (12, 5625)).map(((x,y)) => {(x,y + offset * 1.5)})
+
+    plot.plot(size: (12, 6), {
+    plot.add(PV_point(offset: 1), line: "spline", label: "PPV")
+    plot.add(AC_point(offset: 1), line: "spline", label: "PAC", style: (stroke: (paint: red)))
+    plot.add(EV_points(offset: 0), line: "spline", label: "PEV", style: (stroke: (paint: green)))
+    plot.add-vline(12, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
+    plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
+    plot.add-hline(13055, label: "BAC" , style: (stroke: (paint: blue, dash: "dotted")))
+    },
+    y-max: 14000,
+    x-max: 21,
+    x-min: 4,
+    x-tick-step: 1,
+    y-tick-step: 1500,
+    x-label: "Sprint",
+    y-label: "Valore in €",
+    )
+  }),
+  caption: "Rapporto tra PPV e PEV"
+)
+*RTB*: In questo primo periodo, il gruppo è consapevole che il valore pianficato *PPV* risulta superiore a quanto prodotto nell'effettivo indicato dal *PEV*. Nonostante ciò il gruppo è sempre riuscito a mantenere il valore del *PEV* non solo in crescita, ma anche superiore almeno all'80% del *PPV*.
+Il *PAC* inoltre, seppur superiore al *PEV*, risulta inferiore al *PPV*, indicando un consumo del budget inferiore a quanto preventivato.
+
+#pagebreak()
+
+==== Rapporto tra PAC e PEV
+#figure(
+  cetz.canvas({
+    import cetz.plot 
+    let CPI_points(offset: 0) = ((4,0.98), (5,1.01), (6,0.97), (7,0.93), (8,0.84), (9, 0.9), (10, 0.87), (11, 0.88), (12, 0.86)).map(((x,y)) => {(x,y + offset * 1.5)})
+
+    plot.plot(size: (12, 6), {
+    plot.add(CPI_points(offset: 0), line: "linear", label: "CPI", mark: "triangle")
+    plot.add-hline(1.1, label: "Limite superiore" , style: (stroke: (paint: green, dash: "dotted")))
+    plot.add-hline(0.8, label: "Limite inferiore" , style: (stroke: (paint: red, dash: "dotted")))
+    plot.add-vline(12, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
+    plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
+    },
+    y-max: 1.2,
+    y-min: 0.6,
+    x-max: 21,
+    x-min: 4,
+    x-tick-step: 1,
+    y-tick-step: 0.1,
+    x-label: "Sprint",
+    y-label: "CPI",
+    )
+  }),
+  caption: "Andamento CPI"
+)
+*RTB*: L'indice CPI, seppur superiore a quanto imposto dal gruppo come limite inferiore, risulta in un andamento non lineare. Le motivazioni di tale andamento rispecchiano anche il rallentamento dei lavori in corso a seguito delle vacanze e della sessione invernale di esami. Nonostante ciò, il valore del CPI è previsto risalire con l'avanzare del progetto e la maggior disponibilità individuale dei membri del gruppo.
+
+==== Rapporto tra BAC e EAC
+#figure(
+  cetz.canvas({
+    import cetz.plot 
+    let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13395.99), (7, 14052.25), (8,15584.73), (9, 14549.93), (10, 14962.64), (11, 14891.15), (12, 15162.74)).map(((x,y)) => {(x,y + offset * 100)})
+
+    plot.plot(size: (12, 6), {
+    plot.add(EAC_points(offset: 0), line: "linear", label: "EAC", mark: "triangle", style: (stroke: (paint: red)))
+    plot.add-hline(13055, label: "BAC" , style: (stroke: (paint: blue, dash: "dotted")))
+    plot.add-vline(12, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
+    plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
+    },
+    y-max: 17000,
+    y-min: 5000,
+    x-max: 21,
+    x-min: 4,
+    x-tick-step: 1,
+    y-tick-step: 1000,
+    x-label: "Sprint",
+    y-label: "Valore in €",
+    )
+  }),
+  caption: "Andamento EAC"
+)
+
+RTB: Come annunciato anche dalle metriche precedenti, il valore dell'EAC risulta superiore al BAC. Seppur il valore del BAC non possa essere superiore a quanto preventivato, il gruppo è consapevole che il valore dell'EAC può subire variazioni anche a rialzo, ma sarà compito del gruppo mantenere tale valore il più possibile vicino al BAC. L'impegno del gruppo sarà quello di ridurre e assorbire tale differenza, rientrando nei limiti imposti dal BAC negli sprint successivi.

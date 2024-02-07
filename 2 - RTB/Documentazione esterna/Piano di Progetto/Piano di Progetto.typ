@@ -208,7 +208,7 @@ Il Responsabile è un ruolo presente durante l'intero progetto. Il suo compito �
 L'Amministratore è un ruolo presente durante l'intero progetto, in quanto si occupa di predisporre e controllare il corretto utilizzo delle procedure e degli strumenti definiti nelle Norme di Progetto, andando anche a gestire e implementare automatismi, migliorando così l'efficienza del gruppo. Il monte ore scelto è tale, poiché essendo questo un ruolo di controllo, non sono richieste un numero elevato di ore.
 
 === Analista
-L'Analista è il ruolo preposto all'individuazione, redazione, aggiornamento e tracciamento dei requisiti del progetto. Il modello Agile adottato dal gruppo prevede che l'attività di analisi si svolga in modo incrementale, seppur preminente inizialmente, che permetterà la redazione del documento Analisi dei Requisiti ai fini della _Requirements and Technology Baseline_. Pertanto, per  il ruolo di Analista il gruppo riserva un numero di ore durante il periodo PB qualora si necessitasse di rivedere o aggiornare i requisiti individuati.
+L'Analista è il ruolo preposto all'individuazione, redazione, aggiornamento e tracciamento dei requisiti del progetto. Il modello Agile adottato dal gruppo prevede che l'attività di analisi si svolga in modo incrementale, seppur preminente inizialmente, che permetterà la redazione del documento Analisi dei Requisiti ai fini della _Requirements and Technology Baseline_. Pertanto, per il ruolo di Analista il gruppo riserva un numero di ore durante il periodo PB qualora si necessitasse di rivedere o aggiornare i requisiti individuati.
 
 === Progettista
 Il Progettista ha il compito di delineare e documentare l'architettura del prodotto in modo da:

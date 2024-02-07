@@ -127,7 +127,7 @@ Il documento si articola in 5 sezioni principali:
 - *Consuntivi di periodo*: dedicata all'analisi retrospettiva del lavoro svolto in ciascuno sprint. Riporta eventuali criticità ed azioni intraprese a fini migliorativi.
 
 == Definizioni
-Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e per evitare qualsiasi forma di ambiguità in merito ai termini utilizzati, il gruppo _Error\_418_ fornisce un _*Glossario*_. Ogni ricorrenza di termini tecnici appartenenti al dominio del progetto sarà denotata dalla lettera _G_ al pedice.
+Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e per evitare qualsiasi forma di ambiguità in merito ai termini utilizzati, il gruppo _Error\_418_ fornisce il documento Glossario v1.1.0. Ogni ricorrenza di termini tecnici appartenenti al dominio del progetto sarà denotata dalla lettera _G_ al pedice.
 
 == Riferimenti <riferimenti>
 === Riferimenti normativi <riferimenti-normativi>
@@ -145,6 +145,8 @@ Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e pe
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
 
 === Riferimenti a documentazione interna <riferimenti-interni>
+- Documento Glossario (v1.1.0)\
+  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
 - Documento Analisi dei Rischi (v2.0.0)\
   #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")
 

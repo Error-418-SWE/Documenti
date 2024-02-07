@@ -152,7 +152,7 @@ Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e pe
 
 
 = Panoramica generale
-Identificati i rischi, le relative contromisure e il calendario di progetto, si è definito, mediante una pianificazione a ritroso, un preventivo iniziale dei costi di realizzazione del progetto.
+Identificati i rischi, le relative contromisure e il calendario di progetto, è stato definito, mediante una pianificazione a ritroso, un preventivo iniziale dei costi di realizzazione del progetto.
 
 È corretto evidenziare come i membri del gruppo non siano dotati di esperienza sufficiente per fornire un preventivo corretto e preciso sin dagli inizi dello sviluppo: per tale motivo, il prezzo indicato sarà soggetto a modifiche con l'avanzamento del progetto (seppur mai superando il prezzo preventivato in candidatura).
 

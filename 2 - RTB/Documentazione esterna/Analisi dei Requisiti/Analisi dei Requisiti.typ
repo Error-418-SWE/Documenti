@@ -902,9 +902,9 @@ $bold("Scenario: ")$
   ],
 )
 
-== Spostamento della visuale
+== Spostamento della visuale lungo gli assi
 $bold("Descrizione: ")$
-Una volta che il sistema è stato configurato l'utente può visualizzare il magazzino e spostare la visuale sui tre assi.
+una volta che il sistema è stato configurato, l'utente può visualizzare il magazzino e spostare la visuale lungo almeno uno dei tre assi (orizzontale, verticale, profondità).
 
 $bold("Attore: ")$
 utente.
@@ -913,11 +913,13 @@ $bold("Precondizioni: ")$
 - il sistema è stato correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- l'utente ha spostato la visuale sul magazzino nella direzione indicata.
+- l'utente ha spostato la visuale sul magazzino nella direzione di almeno uno dei tre assi (orizzontale, verticale, profondità).
 
 $bold("Scenario: ")$
 - l'utente visualizza il magazzino;
-- l'utente sposta la visuale secondo uno dei quattro assi;
+- l'utente può spostare la visuale del magazzino in verticale;
+- l'utente può spostare la visuale del magazzino in orizzontale;
+- l'utente può spostare la visuale del magazzino in profondità;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
 == Rotazione della visuale

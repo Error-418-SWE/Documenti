@@ -175,7 +175,7 @@ La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo d
     [Nardo], [10], [14], [15], [7], [28], [21], [95],
     [Totale ore], [91], [70], [70], [98], [210], [126], [665],
     [Costo\ orario], [€ 30], [€ 20], [€ 25], [€ 25], [€ 15], [€ 15], [],
-    [Costo\ ruolo], [€ 2100], [€ 1960], [€ 2625], [€ 1225], [€ 2940], [€ 2205], [],
+    [Costo\ ruolo], [€ 2100], [€ 1960], [€ 2625], [€ 1225], [€ 2940], [€ 2205], [€ 13055],
   ),
   caption: "Prospetto orario complessivo per membro e ruolo"
 )

@@ -231,7 +231,7 @@ Il costo totale preventivato è di € 13055.
 
 = Periodi di sviluppo
 == Introduzione
-Il periodo individuabile tra l'aggiudicazione del capitolato e la data di consegna del prodotto viene suddiviso in 2 periodi principali dettati dalle revisioni esterne _Requirements and Technology Baseline (RTB)_ e _Product Baseline (PB)_, rispettivamente previste per il 27-01-2024 e il 20-03-2024.\
+Il periodo compreso tra l'aggiudicazione del capitolato e la data di consegna del prodotto viene suddiviso in 2 periodi principali dettati dalle revisioni esterne _Requirements and Technology Baseline (RTB)_ e _Product Baseline (PB)_, rispettivamente previste per il 27-01-2024 e il 20-03-2024.\
 Vengono pertanto a definirsi i seguenti periodi di sviluppo:
 - *Periodo RTB*: dal 06-11-2023 al 26-01-2024;
 - *Periodo PB*: dal 27-01-2024 al 20-03-2024.

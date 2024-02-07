@@ -524,7 +524,7 @@ In questa attività il gruppo deve definire tutto ciò che caratterizza il proge
 ===== Suddivisione temporale
 Il gruppo ha individuato tre periodi di lavoro principali:
 
-- Raccolta e analisi dei requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con l'azienda proponente;
+- Raccolta e Analisi dei Requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con l'azienda proponente;
 - Sviluppo della Requirements and Technology Baseline (RTB): si studiano le tecnologie da utilizzare e si applicano le conoscenze acquisite per realizzare un PoC (Proof of Concept), ovvero un prodotto software che permetta di dimostrare la padronanza delle tecnologie selezionate ai fini dello sviluppo del progetto;
 - Periodo di sviluppo del Minimum Viable Product (MVP): viene progettato e implementato un prodotto software che rispetti almeno i requisiti minimi di accettazione, e che offra tutte le funzionalità richieste.
 
@@ -541,7 +541,7 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
 + *Amministratore*: ruolo presente durante tutto il progetto. Ha il compito di:
   - predisporre e controllare il corretto utilizzo delle procedure e degli strumenti adottati;
   - implementare e manutenere gli automatismi in modo da migliorare l'efficienza del gruppo.
-+ *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento Analisi dei requisiti, nel quale:
++ *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento Analisi dei Requisiti, nel quale:
   - definisce i casi d'uso;
   - raccoglie e classifica i requisiti.
 + *Progettista*: ruolo presente principalmente negli ulimi due periodi, nei quali:

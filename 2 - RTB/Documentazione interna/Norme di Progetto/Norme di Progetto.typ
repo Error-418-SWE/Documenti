@@ -66,7 +66,7 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 
 = Processi di accordo
 
-== Processo di fornitura
+== Processo di fornitura <fornitura>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
 
 === Scopo e descrizione
@@ -234,7 +234,7 @@ Viene inserito ";" alla fine delle voci dell'elenco tranne l'ultima che termina 
 = Processi di ciclo di vita
 
 == Processi organizzativi abilitanti
-
+<ciclo_di_vita>
 I processi organizzativi abilitanti garantiscono la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. Questi processi forniscono le risorse e l'infrastruttura necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
 
 I processi organizzativi abilitanti sono i seguenti:
@@ -452,7 +452,7 @@ Sono compiti dell'amministratore il mantenimento dell'infrastruttura, l'aggiorna
 
 L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi minimo e sufficiente a coprire tutti i requisiti di comunicazione.
 
-=== Processo di gestione delle Risorse Umane
+=== Processo di gestione delle Risorse Umane <risorse_umane>
 
 La natura didattica del progetto riduce le prerogative del processo di gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la _conformance to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.4_.
 
@@ -615,7 +615,7 @@ Nell'attività di controllo si intraprendono azioni correttive nei confronti dei
 Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcune delle task raccolte rispondono direttamente ai problemi individuati nella parte di Things to change.
 
 
-== Processo di gestione delle Decisioni
+== Processo di gestione delle Decisioni <gestione_decisioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
 === Scopo
 Lo scopo del processo di gestione delle decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionando la migliore in termini di benefici attesi, costi e rischi associati. \
@@ -674,7 +674,7 @@ Le decisioni vengono dunque così classificate:
   - architetturali. \
 
 
-== Processo di Gestione dei Rischi
+== Processo di Gestione dei Rischi <gestione_rischi>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.4_
 
 === Scopo
@@ -742,7 +742,7 @@ Questa attività consiste nei seguenti compiti:
 Il monitoraggio dei rischi avviene principalmente in sede di meeting interno, specialmente a seguito di analisi retrospettive.
 
 
-== Processo di gestione della configurazione
+== Processo di gestione della configurazione <gestione_configurazione>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.5_
 === Scopo
 Lo scopo della Gestione della Configurazione è gestire e controllare gli elementi del sistema e le configurazioni durante il ciclo di vita. Lo scopo principale è tracciare e coordinare le procedure necessarie alla modifica della documentazione e del codice sorgente.
@@ -920,7 +920,7 @@ La timeline permette di mostrare il grafico di Gantt delle attività evidenziand
 Jira offre la possibilità di produrre grafici e report relativi all'avanzamento e alla tracciabilità delle task. Tali strumenti permettono di avere delle metriche di valutazione dell'andamento del progetto e di individuare eventuali criticità.
 Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story points di ogni attività.
 
-== Processo di gestione delle informazioni
+== Processo di gestione delle informazioni <gestione_informazioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.6_
 === Scopo
 Lo scopo della gestione delle informazionie è generare, ottenere, confermare, trasformare, conservare, recuperare, distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
@@ -1050,7 +1050,7 @@ Il gruppo condivide il materiale prodotto all'interno di un repository dedicato 
 #align(link("https://github.com/Error-418-SWE/Documenti"), center)
 Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
 
-== Processo di Misurazione
+== Processo di Misurazione <processo_misurazione>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.7_
 
@@ -1125,7 +1125,7 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
     - registrare i risultati e comunicarli agli stakeholders:
         - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte.
 
-== Processo di Controllo della Qualità
+== Processo di Controllo della Qualità <processo_controllo_qualità>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.8_
 
@@ -1203,7 +1203,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
 = Processi tecnici
 
-== Processo di analisi della missione
+== Processo di analisi della missione <processo_missione>
 
 _Tailored conformance on ISO/IEC/IEEE 12207:2017 clause 6.4.1 per ISO/IEC/IEEE 12207:2017 Annex A_
 
@@ -1255,7 +1255,7 @@ Sulla base dei risultati della valutazione, il gruppo individua una classe di so
 ==== Analisi dei requisiti
 Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste dal processo. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
 
-== Processo di definizione di bisogni e requisiti degli stakeholder
+== Processo di definizione di bisogni e requisiti degli stakeholder <processo_bisogni>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.2_
 
@@ -1357,4 +1357,28 @@ Sono classificati per priorità e per fonte.
 ==== Analisi dei requisiti
 Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
+#pagebreak()
 
+= Tracciamento Paragrafi-ISO/IEC/IEEE 12207:2017
+
+#figure(
+  table(
+    columns: 3,
+    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    [*Capitolo Norme*],[*Capitolo Standard*],[*Conformance Level*],
+    [@fornitura], [6.2.1 - Life cycle model management process],[to outcome],
+    [@ciclo_di_vita], [6.2.1 - Life cycle model management process],[to outcome],
+    [@risorse_umane], [6.2.4 - Human Resource Management process],[to outcome],
+    [@pianificazione], [6.3.1 - Project Planning process],[to outcome],
+    [@valutazioneControllo], [6.3.2 - Project assessment and control process],[to outcome],
+    [@gestione_decisioni], [6.3.3 - Decision Management process],[to outcome],
+    [@gestione_rischi], [6.3.4 - Risk Management process],[to outcome],
+    [@gestione_configurazione], [6.3.5 - Configuration Management process],[to outcome],
+    [@gestione_informazioni], [6.3.6 - Information Management process],[to outcome],
+    [@processo_misurazione], [6.3.7 - Measurement process],[to outcome],
+    [@processo_controllo_qualità], [6.3.8 - Quality Assurance process],[to outcome],
+    [@processo_missione], [6.4.1 - Business or Mission Analysis process],[to outcome],
+    [@processo_bisogni], [6.4.2 - Stakeholder Needs and Requirements Definition process],[to outcome],
+  ),
+  caption: "Tracciamento Paragrafi-ISO/IEC/IEEE 12207:2017"
+)

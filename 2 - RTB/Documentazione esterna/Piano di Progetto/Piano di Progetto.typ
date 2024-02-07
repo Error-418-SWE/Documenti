@@ -415,7 +415,7 @@ La pianificazione di uno sprint sarà così composta:
 - *Obiettivi prefissati*: gli obiettivi che si intende raggiungere entro il termine dello sprint;
 - *Preventivo costi*: preventivo dei costi dello sprint, calcolato in base alle figure che vi operano e alla loro quantità di ore di lavoro previste.
 
-Essenziale in questa organizzazione è l'analisi retrospettiva al termine di ogni sprint. Essa permette di valutare in modo critico eventuali mancanze, criticità o errori che possono in questo modo venir affrontati per trovare soluzioni che ne mitighino gli effetti in futuro. È inoltre utile per identificare buone prassi e strategie che hanno portato a risultati positivi, in modo da poterle replicare in futuro.
+Essenziale in questa organizzazione è l'analisi retrospettiva al termine di ogni sprint. Essa permette di valutare in modo critico eventuali mancanze, criticità o errori che possono in questo modo venir affrontati per trovare soluzioni che ne mitighino gli effetti. È inoltre utile per identificare buone prassi e strategie che hanno portato a risultati positivi, in modo da poterle replicare in futuro.
 
 La retrospettiva di uno sprint si articolerà in:
 - *Obiettivi raggiunti*: obiettivi fissati e concretamente raggiunti al termine dello sprint;

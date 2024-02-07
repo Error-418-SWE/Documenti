@@ -1,0 +1,322 @@
+{
+	"Analisi dei Requisiti": {
+		"description": "Processo di individuazione dei bisogni, delle necessità e delle aspettative degli utenti e degli stakeholder. Usato come punto di partenza per elaborare i requisiti di progetto.",
+		"acronyms": ["AdR"],
+		"synonyms": []
+	},
+	"Application Programming Interface": {
+		"description": "Insieme di regole e protocolli che consente la comunicazione standardizzata tra software distinti. Definisce le modalità di scambio e le strutture dati scambiate durante la comunicazione.",
+		"acronyms": ["API"],
+		"synonyms": []
+	},
+	"Attore": {
+		"description": "Entità che interagisce con il sistema svolgendo determinate azioni.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Backlog": {
+		"description": "Gruppo di attività da completare per conseguire un certo obiettivo.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Baseline": {
+		"description": "Insieme di prodotti di lavoro associati a un obiettivo (milestone), e che ne dimostrano il raggiungimento.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Bin": {
+		"description": "Unità minima di spazio del magazzino atta a contenere prodotti. I bin sono posizionati in automatico all'interno degli scaffali al momento della loro creazione, e possono contenere al massimo un tipo di prodotto. È possibile creare bin, eliminarli se vuoti, e modificarne le dimensioni.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Branch": {
+		"description": "Nel contesto di Git rappresenta un ramo di sviluppo, implementato come puntatore a un commit. La suddivisione in branch permette di lavorare parallelamente a parti diverse dello stesso prodotto.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Browser": {
+		"description": "Applicazione per l'acquisizione, la presentazione e la navigazione di risorse sul Web.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Bug": {
+		"description": "Anomalia che porta al malfunzionamento di un software, producendo un risultato inatteso o errato.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Capitolato": {
+		"description": "Documento redatto dal Proponente in cui viene presentato un progetto, del quale sono specificati gli obiettivi, le tecnologie consigliate per l'implementazione e le principali funzionalità.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Changelog": {
+		"description": "Registro di tutte le modifiche apportate ad una configurazione (i.e. un software, un documento).",
+		"acronyms": [],
+		"synonyms": ["Registro delle modifiche"]
+	},
+	"Commit": {
+		"description": "Nei Version Control System rappresenta la registrazione all'interno di una repository di una serie di modifiche apportate ad un documento o a del codice sorgente. Ogni commit è dotato di un codice identificativo, e contribuisce a creare, nel complesso, la cronologia del progetto.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Committente": {
+		"description": "Figura che commissiona un lavoro. Può essere una persona fisica oppure una persona giuridica (esempio un ente o un'azienda).",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Database": {
+		"description": "Insieme di informazioni (o dati) strutturate, in genere archiviate elettronicamente in un sistema informatico. Solitamente i database sono gestiti da un DBMS (Database Management System), il quale deve garantire efficacia, efficienza, privacy ed affidabilità.",
+		"acronyms": ["DB"],
+		"synonyms": []
+	},
+	"Discord": {
+		"description": "Piattaforma di VoIP (Voice over IP, ovvero \"Voce tramite protocollo Internet\"), messaggistica istantanea e distribuzione digitale. Gli utenti possono comunicare tramite chat private, gruppi o come membri di uno stesso server, ovvero ambienti virtuali suddivisi in canali di testo o vocali.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Docker": {
+		"description": "Software progettato per semplificare il processo di deployment di applicazioni software. Permette di eseguire processi informatici in ambienti isolati chiamati container.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Documentazione": {
+		"description": "È un testo scritto allo scopo di spiegare quali funzionalità assolve il software, come è strutturato, implementato e come lo si utilizza.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Feature": {
+		"description": "Specifica funzionalità o caratteristica all'interno del prodotto sviluppato.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Git": {
+		"description": "Software di versionamento distribuito utilizzabile tramite linea di comando.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"GitHub": {
+		"description": "Servizio di hosting di progetti software basato su Git utilizzato da singoli ed organizzazioni. Fornisce un Issue Tracking System integrato e permette di implementare sistemi di Continuous Integration e Continuous Delivery tramite automazioni chiamate Action.",
+		"acronyms": ["GH"],
+		"synonyms": []
+	},
+	"GitHub Actions": {
+		"description": "Piattaforma integrata di GitHub per la Continuous Integration e la Continuous Delivery che consente ai team di sviluppo di automatizzare il flusso di lavoro, comprese le pipeline di compilazione, test e distribuzione.",
+		"acronyms": ["GHA"],
+		"synonyms": []
+	},
+	"GitHub Pages": {
+		"description": "Servizio di hosting web fornito da GitHub, progettato per ospitare siti web statici generati da file presenti in repository.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Google Docs": {
+		"description": "Elaboratore di testi online sincronizzato con Google Drive ed offerto come parte integrante dei servizi Google.",
+		"acronyms": [],
+		"synonyms": ["Docs"]
+	},
+	"Google Drive": {
+		"description": "Servizio di web cloud offerto da Google basato sull'archiviazione e condivisione di file e documenti all'interno di uno spazio condiviso e modificabile via web.",
+		"acronyms": [],
+		"synonyms": ["Drive"]
+	},
+	"International Electrotechnical Commission": {
+		"description": "Organizzazione internazionale per la definizione di standard in materia di elettricità, elettronica e tecnologie correlate. Molti dei suoi standard sono definiti in collaborazione con l'ISO.",
+		"acronyms": ["IEC"],
+		"synonyms": []
+	},
+	"Ingegneria del software": {
+		"description": "Disciplina che si occupa della progettazione, sviluppo, test e manutenzione del software. Adotta un approccio sistematico, disciplinato e quantificabile, che mira a creare software di alta qualità, affidabile e manutenibile. ",
+		"acronyms": ["IS","SWE"],
+		"synonyms": []
+	},
+	"Issue": {
+		"description": "Specifico problema riscontrato durante una delle fasi del ciclo di vita del prodotto sviluppato.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"International Organization for Standardization": {
+		"description": "Principale organizzazione internazionale che si occupa di definire norme tecniche, dette anche \"norme ISO\" oppure \"standard ISO\".",
+		"acronyms": ["ISO"],
+		"synonyms": []
+	},
+	"Issue Tracking System": {
+		"description": "Sistema informatico che gestisce e mantiene elenchi di problemi riscontrati durante il ciclo di vita di un'applicazione.",
+		"acronyms": ["ITS"],
+		"synonyms": []
+	},
+	"JavaScript": {
+		"description": "Linguaggio di scripting che costituisce una delle tecnologie principali del World Wide Web. È un linguaggio interpretato di alto livello che dispone di interfacce di programmazione delle applicazioni (API) per lavorare con testo, date, espressioni regolari, strutture dati standard e Document Object Model (DOM).",
+		"acronyms": ["JS"],
+		"synonyms": []
+	},
+	"JavaScript Object Notation": {
+		"description": "Formato per lo scambio di dati basato su un sottoinsieme del linguaggio JavaScript. Utilizza convenzioni conosciute dai programmatori, rendendolo così adatto e ideale per il trasferimento di informazioni.",
+		"acronyms": ["JSON"],
+		"synonyms": []
+	},
+	"Jira": {
+		"description": "Suite di software proprietari per l'ITS sviluppata da Atlassian, che consente il bug tracking e la gestione dei progetti sviluppati con metodologie agile.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Magazzino": {
+		"description": "Struttura logistica in grado di ricevere le merci, conservarle (stoccaggio) e renderle disponibili per lo smistamento, la spedizione e la consegna.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Merce": {
+		"description": "Bene economico trasportabile e stoccabile in un magazzino.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Milestone": {
+		"description": "Data presente sulla linea temporale del progetto che indica un punto di avanzamento atteso, ovvero un insieme di obiettivi che devono risultare raggiunti in quella data.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Minimum Viable Product": {
+		"description": "Versione di un software con caratteristiche appena sufficienti per essere utilizzabile dai clienti, i quali possono quindi fornire feedback per lo sviluppo futuro del prodotto stesso.",
+		"acronyms": ["MVP"],
+		"synonyms": []
+	},
+	"Miro": {
+		"description": "Piattaforma di collaborazione digitale progettata per facilitare la comunicazione di team e la gestione dei progetti tramite board.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Node.js": {
+		"description": "Runtime system open source e multipiattaforma orientato agli eventi per l'esecuzione di codice JavaScript. Gli sviluppatori possono estenderne le funzionalità tramite moduli.",
+		"acronyms": [],
+		"synonyms": ["Node"]
+	},
+	"Proof of Concept": {
+		"description": "Realizzazione incompleta o abbozzata di un determinato progetto o metodo. Il suo scopo è quello di dimostrare la fattibilità o confermare la validità delle tecnologie scelte per la realizzazione del progetto.",
+		"acronyms": ["PoC"],
+		"synonyms": []
+	},
+	"Proponente": {
+		"description": "Azienda o ente che propone il capitolato d'appalto per il progetto didattico.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Progetto didattico": {
+		"description": "Tipologia di progetto offerta all'interno di un percorso didattico. Deve avere durata limitata, e ha come obiettivo lo sviluppo di abilità e competenze tramite la realizzazione di un prodotto finale.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Pull Request": {
+		"description": "Richiesta, rivolta all'autore originale di un software da parte di suoi collaboratori, di includere modifiche al suo progetto. Questa richiesta ha come oggetto due branch, sui quali, in caso di accettazione della PR, viene effettuato un merge (unione).",
+		"acronyms": ["PR"],
+		"synonyms": []
+	},
+	"Redattore": {
+		"description": "Persona che si occupa della redazione di un documento e della correzione di eventuali errori segnalati dal verificatore, rimanendo a disposizione in caso di dubbi/confronto.",
+		"acronyms": [],
+		"synonyms": ["Autore"]
+	},
+	"Repository": {
+		"description": "Archivio in cui vengono conservati tutti i file di un progetto, utilizzato dagli sviluppatori per apportare e gestire le modifiche al codice sorgente/documentazione del prodotto. Questa cartella può essere salvata localmente o ospitata su una piattaforma online (ad esempio GitHub).",
+		"acronyms": [],
+		"synonyms": ["Repo"]
+	},
+	"Requisito": {
+		"description": "È una condizione o funzionalità che deve essere verificata o posseduta dal sistema o da un componente del sistema per soddisfare un contratto, uno standard, una specifica o qualsiasi altro documento formalmente specificato.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Ripiano": {
+		"description": "Ognuna delle superfici piane e orizzontali di uno scaffale.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Risk management": {
+		"description": "Pratica di individuazione, definizione, classificazione dei rischi a cui si può andare incontro durante il lavoro sul progetto, e delle relative pratiche di prevenzione.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Review": {
+		"description": "Revisione di documenti o codice. È un processo di peer review utilizzato per individuare eventuali problemi e migliorare la qualità del prodotto. È un'attività fondamentale per garantire uno standard qualitativo al prodotto.",
+		"acronyms": [],
+		"synonyms": ["Revisione"]
+	},
+	"Scaffale": {
+		"description": "Elemento presente all'interno del magazzino costituito da uno o più ripiani orizzontali che permettono lo stoccaggio della merce.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Scrum": {
+		"description": "Framework agile di gestione dello sviluppo di progetti complessi con l'obiettivo di consegnare il maggior valore business nel più breve tempo possibile.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Structured Query Language": {
+		"description": "Linguaggio standard per database basati sul modello relazionale, progettato per: creare e modificare schemi di database; inserire, modificare e gestire dati memorizzati; interrogare i dati memorizzati.",
+		"acronyms": ["SQL"],
+		"synonyms": []
+	},
+	"Scalable Vector Graphics": {
+		"description": "Formato di file di grafica vettoriale bidimensionale basato su XML sviluppato dal World Wide Web Consortium.",
+		"acronyms": ["SVG"],
+		"synonyms": []
+	},
+	"Three.js": {
+		"description": "Libreria JavaScript cross-browser utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"TypeScript": {
+		"description": "Linguaggio di programmazione fortemente tipizzato che si basa su JavaScript. Il codice TypeScript può infatti essere facilmente convertito in JavaScript, e funziona ovunque funzioni anche JavaScript.",
+		"acronyms": ["TS"],
+		"synonyms": []
+	},
+	"Typst": {
+		"description": "Linguaggio di markup progettato per la scrittura e formattazione di documenti.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Unified Modeling Language": {
+		"description": "Linguaggio di modellazione visivo, destinato a fornire un modo standard per visualizzare la progettazione di un sistema.",
+		"acronyms": ["UML"],
+		"synonyms": []
+	},
+	"Use Case": {
+		"description": "Caso (o situazione) in cui il sistema viene utilizzato per soddisfare uno o più requisiti degli utenti; cattura una parte di funzionalità che il sistema fornisce. Vengono spesso rappresentati tramite diagrammi realizzati con il linguaggio UML.",
+		"acronyms": ["UC"],
+		"synonyms": ["Casi d'uso"]
+	},
+	"Utente": {
+		"description": "Colui che usufruisce dell'applicazione e delle sue funzionalità.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Verbale": {
+		"description": "Documento redatto allo scopo di attestare e ricordare, in forma sintetica ed esaustiva, gli argomenti di discussione e le scelte prese durante i meeting.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Versione": {
+		"description": "Nello sviluppo software indica un determinato stato dello sviluppo di un software, programma, documento o applicazione.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Versionamento": {
+		"description": "Processo di assegnazione di identificatori univoci a diversi momenti di sviluppo di un software o progetto. Comprende il recupero di versioni diverse da quella attuale e l'aggiornamento della versione stessa.",
+		"acronyms": [],
+		"synonyms": []
+	},
+	"Web Graphics Library": {
+		"description": "API per il rendering di grafica 3D e 2D interattiva e ad alte prestazioni all'interno di qualsiasi browser web compatibile senza l'uso di plugin.",
+		"acronyms": ["WebGL"],
+		"synonyms": []
+	},
+	"Way of Working": {
+		"description": "Rappresenta il modo di lavorare del gruppo. È la descrizione di tutte le tecnologie, attività, metodologie adottate dal gruppo e di come queste sono utilizzate.",
+		"acronyms": ["WoW"],
+		"synonyms": []
+	},
+	"Zoom": {
+		"description": "Servizio di videoconferenza basato su cloud che permette di effettuare chiamate audio o video. Consente di registrare le sessioni per essere poi visualizzate in seguito.",
+		"acronyms": [],
+		"synonyms": []
+	}
+}

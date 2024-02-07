@@ -1,0 +1,123 @@
+{
+	"23-10-15": {
+		"ruoli": {
+			"Banzato Alessio": "Verificatore",
+			"Carraro Riccardo": "Verificatore",
+			"Gardin Giovanni": "Verificatore",
+			"Nardo Silvio": "Amministratore",
+			"Oseliero Antonio": "Responsabile",
+			"Todesco Mattia": "Amministratore",
+			"Zaccone Rosario": "Verificatore"
+		}
+	},
+	"23-11-06": {
+		"ruoli": {
+			"Banzato Alessio": "Verificatore",
+			"Carraro Riccardo": "Amministratore",
+			"Gardin Giovanni": "Amministratore",
+			"Nardo Silvio": "Analista",
+			"Oseliero Antonio": "Responsabile",
+			"Todesco Mattia": "Analista",
+			"Zaccone Rosario": "Analista"
+		}
+	},
+	"23-11-20": {
+		"ruoli": {
+			"Banzato Alessio": "Responsabile",
+			"Carraro Riccardo": "Analista",
+			"Gardin Giovanni": "Verificatore",
+			"Nardo Silvio": "Progettista",
+			"Oseliero Antonio": "Analista",
+			"Todesco Mattia": "Amministratore",
+			"Zaccone Rosario": "Amministratore"
+		}
+	},
+	"23-12-04": {
+		"ruoli": {
+			"Banzato Alessio": "Analista",
+			"Carraro Riccardo": "Responsabile",
+			"Gardin Giovanni": "Analista",
+			"Nardo Silvio": "Amministratore",
+			"Oseliero Antonio": "Progettista",
+			"Todesco Mattia": "Verificatore",
+			"Zaccone Rosario": "Progettista"
+		}
+	},
+	"23-12-18": {
+		"ruoli": {
+			"Banzato Alessio": "Amministratore",
+			"Carraro Riccardo": "Programmatore",
+			"Gardin Giovanni": "Progettista",
+			"Nardo Silvio": "Responsabile",
+			"Oseliero Antonio": "Verificatore",
+			"Todesco Mattia": "Progettista",
+			"Zaccone Rosario": "Analista"
+		}
+	},
+	"24-01-01": {
+		"ruoli": {
+			"Banzato Alessio": "Progettista",
+			"Carraro Riccardo": "Verificatore",
+			"Gardin Giovanni": "Amministratore",
+			"Nardo Silvio": "Programmatore",
+			"Oseliero Antonio": "Analista",
+			"Todesco Mattia": "Programmatore",
+			"Zaccone Rosario": "Responsabile"
+		}
+	},
+	"24-01-15": {
+		"ruoli": {
+			"Banzato Alessio": "Programmatore",
+			"Carraro Riccardo": "Progettista",
+			"Gardin Giovanni": "Programmatore",
+			"Nardo Silvio": "Responsabile",
+			"Oseliero Antonio": "Programmatore",
+			"Todesco Mattia": "Amministratore",
+			"Zaccone Rosario": "Verificatore"
+		}
+	},
+	"24-01-29": {
+		"ruoli": {
+			"Banzato Alessio": "Progettista",
+			"Carraro Riccardo": "Programmatore",
+			"Gardin Giovanni": "Responsabile",
+			"Nardo Silvio": "Verificatore",
+			"Oseliero Antonio": "Amministratore",
+			"Todesco Mattia": "Programmatore",
+			"Zaccone Rosario": "Programmatore"
+		}
+	},
+	"24-02-12": {
+		"ruoli": {
+			"Banzato Alessio": "Programmatore",
+			"Carraro Riccardo": "Verificatore",
+			"Gardin Giovanni": "Amministratore",
+			"Nardo Silvio": "Programmatore",
+			"Oseliero Antonio": "Programmatore",
+			"Todesco Mattia": "Responsabile",
+			"Zaccone Rosario": "Progettista"
+		}
+	},
+	"24-02-26": {
+		"ruoli": {
+			"Banzato Alessio": "Amministratore",
+			"Carraro Riccardo": "Responsabile",
+			"Gardin Giovanni": "Programmatore",
+			"Nardo Silvio": "Progettista",
+			"Oseliero Antonio": "Verificatore",
+			"Todesco Mattia": "Programmatore",
+			"Zaccone Rosario": "Programmatore"
+		}
+	},
+	"24-03-11": {
+		"ruoli": {
+			"Banzato Alessio": "Verificatore",
+			"Carraro Riccardo": "Programmatore",
+			"Gardin Giovanni": "Progettista",
+			"Nardo Silvio": "Programmatore",
+			"Oseliero Antonio": "Programmatore",
+			"Todesco Mattia": "Amministratore",
+			"Zaccone Rosario": "Responsabile"
+		}
+	}
+}

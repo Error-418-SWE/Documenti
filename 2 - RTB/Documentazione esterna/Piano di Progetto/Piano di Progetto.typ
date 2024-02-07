@@ -7,11 +7,11 @@
  title:"Piano di Progetto",
  subTitle: "Pianificazione, analisi e retrospettive",
  authors: (
-   "Carraro Riccardo",
-   "Zaccone Rosario",
-   "Nardo Silvio",
    "Banzato Alessio",
-   "Gardin Giovanni"
+   "Carraro Riccardo",
+   "Gardin Giovanni",
+   "Nardo Silvio",
+   "Zaccone Rosario",
  ),
  showLog: true,
  showImagesIndex: false,

@@ -274,17 +274,17 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
 #figure(
   cetz.canvas({
     import cetz.plot 
-    let EV_points(offset: 0) = ((4,2040), (5,2655), (6,3060.07), (7,3265.55), (8,3426.11), (9, 4051.11), (10, 4249.11), (11, 4471.04), (12, 4546.04)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let EV_points(offset: 0) = ((4,2040), (5,2655), (6,3060.07), (7,3265.55), (8,3426.11), (9, 4051.11), (10, 4249.11), (11, 4471.04), (12, 4546.04), (13, 4610.55)).map(((x,y)) => {(x,y + offset * 1.5)})
     
-    let AC_point(offset: 1) = ((4,2075), (5,2620), (6,3140), (7,3515), (8,4090), (9, 4515), (10, 4870), (11, 5100), (12, 5280)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let AC_point(offset: 1) = ((4,2075), (5,2620), (6,3140), (7,3515), (8,4090), (9, 4515), (10, 4870), (11, 5100), (12, 5280), (13, 5390)).map(((x,y)) => {(x,y + offset * 1.5)})
 
-    let PV_point(offset: 1) = ((4,2040), (5,2655), (6,3190), (7,3690), (8,4200), (9, 4825), (10, 5155), (11, 5470), (12, 5625)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let PV_point(offset: 1) = ((4,2040), (5,2655), (6,3190), (7,3690), (8,4200), (9, 4825), (10, 5155), (11, 5470), (12, 5625), (13, 5705)).map(((x,y)) => {(x,y + offset * 1.5)})
 
     plot.plot(size: (12, 6), {
     plot.add(PV_point(offset: 1), line: "spline", label: "PPV")
     plot.add(AC_point(offset: 1), line: "spline", label: "PAC", style: (stroke: (paint: red)))
     plot.add(EV_points(offset: 0), line: "spline", label: "PEV", style: (stroke: (paint: green)))
-    plot.add-vline(12, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
+    plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
     plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
     plot.add-hline(13055, label: "BAC" , style: (stroke: (paint: blue, dash: "dotted")))
     },
@@ -304,17 +304,17 @@ Il *PAC* inoltre, seppur superiore al *PEV*, risulta inferiore al *PPV*, indican
 
 #pagebreak()
 
-==== Rapporto tra PAC e PEV
+==== Cost Performance Index CPI
 #figure(
   cetz.canvas({
     import cetz.plot 
-    let CPI_points(offset: 0) = ((4,0.98), (5,1.01), (6,0.97), (7,0.93), (8,0.84), (9, 0.9), (10, 0.87), (11, 0.88), (12, 0.86)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let CPI_points(offset: 0) = ((4,0.98), (5,1.01), (6,0.97), (7,0.93), (8,0.84), (9, 0.9), (10, 0.87), (11, 0.88), (12, 0.86), (13, 0.86)).map(((x,y)) => {(x,y + offset * 1.5)})
 
     plot.plot(size: (12, 6), {
     plot.add(CPI_points(offset: 0), line: "linear", label: "CPI", mark: "triangle")
     plot.add-hline(1.1, label: "Limite superiore" , style: (stroke: (paint: green, dash: "dotted")))
     plot.add-hline(0.8, label: "Limite inferiore" , style: (stroke: (paint: red, dash: "dotted")))
-    plot.add-vline(12, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
+    plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
     plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
     },
     y-max: 1.2,
@@ -330,17 +330,18 @@ Il *PAC* inoltre, seppur superiore al *PEV*, risulta inferiore al *PPV*, indican
   caption: "Andamento CPI"
 )
 *RTB*: L'indice CPI, seppur superiore a quanto imposto dal gruppo come limite inferiore, risulta in un andamento non lineare. Le motivazioni di tale andamento rispecchiano anche il rallentamento dei lavori in corso a seguito delle vacanze e della sessione invernale di esami. Nonostante ciò, il valore del CPI è previsto risalire con l'avanzare del progetto e la maggior disponibilità individuale dei membri del gruppo.
-
+\
+\
 ==== Rapporto tra BAC e EAC
 #figure(
   cetz.canvas({
     import cetz.plot 
-    let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13395.99), (7, 14052.25), (8,15584.73), (9, 14549.93), (10, 14962.64), (11, 14891.15), (12, 15162.74)).map(((x,y)) => {(x,y + offset * 100)})
+    let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13395.99), (7, 14052.25), (8,15584.73), (9, 14549.93), (10, 14962.64), (11, 14891.15), (12, 15162.74), (13, 15262.04)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(EAC_points(offset: 0), line: "linear", label: "EAC", mark: "triangle", style: (stroke: (paint: red)))
     plot.add-hline(13055, label: "BAC" , style: (stroke: (paint: blue, dash: "dotted")))
-    plot.add-vline(12, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
+    plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
     plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
     },
     y-max: 17000,

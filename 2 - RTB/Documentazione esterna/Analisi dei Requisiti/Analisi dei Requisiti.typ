@@ -422,6 +422,10 @@ $bold("Estensioni: ")$
 $bold("Descrizione: ")$
 modifica delle caratteristiche di uno scaffale già esistente.
 
+Le caratteristiche che definiscono lo scaffale vengono visualizzate e possono essere modificate, nello specifico i valori sono: altezza, larghezza, profondità, numero di piani e colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
+
+L'utente può decidere, per ciascuno di essi, di sostituirlo specificando il nuovo valore oppure di lasciarlo inalterato.
+
 $bold("Attore: ")$
 utente.
 
@@ -434,7 +438,13 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente seleziona uno scaffale nell'ambiente di lavoro;
 - l'utente seleziona il comando per la modifica dello scaffale;
-- l'utente inserisce i nuovi valori relativi alle proprietà da modificare dello scaffale.
+- l'utente può inserire una nuova altezza dello scaffale;
+- l'utente può inserire una nuova larghezza dello scaffale;
+- l'utente può inserire una nuova profondità dello scaffale;
+- l'utente può inserire un nuovo numero di piani dello scaffale;
+- l'utente può inserire un nuovo numero di colonne dello scaffale;
+- l'utente può selezionare un diverso orientamento dello scaffale nel piano (orizzontale o verticale);
+- l'utente conferma la nuova configurazione di valori.
 
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.

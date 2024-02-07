@@ -420,7 +420,7 @@ Essenziale in questa organizzazione è l'analisi retrospettiva al termine di ogn
 La retrospettiva di uno sprint si articolerà in:
 - *Obiettivi raggiunti*: obiettivi fissati e concretamente raggiunti al termine dello sprint;
 - *Obiettivi mancati*: obiettivi non raggiunti al termine dello sprint;
-- *Problematiche insorte*: analisi delle criticità riscontrate durante lo sprint, in modo da aver chiari le motivazioni che le hanno causate;
+- *Problematiche insorte*: analisi delle criticità riscontrate durante lo sprint, in modo da aver chiare le motivazioni che le hanno causate;
 - *Risoluzioni attuate*: azioni compiute in risposta alle problematiche riscontrate durante lo sprint, in modo che in futuro si possano prevenire o mitigare;
 - *Panoramica dei costi effettivi* (consuntivo): al termine dello sprint sarà possibile verificare se i costi preventivati rispecchino i costi effettivi, in base alle ore svolte per ogni ruolo;
 - *Monitoraggio costi e ore*: tabelle che riportano le ore e il budget rimanenti per ogni ruolo e complessivamente.

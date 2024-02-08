@@ -482,7 +482,7 @@ Come risultato dell'implementazione del processo di valutazione e controllo si e
 - valutazione dell'adeguatezza di ruoli, responsabilità e risorse;
 - esecuzione delle azioni correttive scaturite dalle revisioni di progesso;
 - viene avviata, se necessaria, la ripianificazione del progetto;
-- Viene autorizzata l'azione del progetto di avanzare (o meno) da un traguardo o evento programmato al successivo.
+- viene autorizzata l'azione del progetto di avanzare (o meno) da un traguardo o evento programmato al successivo;
 - vengono registrati gli obiettivi raggiunti.
 
 I risultati sono espressi e analizzati nei paragrafi di consuntivo del Piano di Progetto.

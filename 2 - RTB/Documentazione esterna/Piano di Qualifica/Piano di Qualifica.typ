@@ -26,23 +26,23 @@ Il presente documento viene redatto in modo incrementale per assicurare la coere
 Il presente documento include una serie di termini tecnici specifici del progetto. Al fine di agevolarne la comprensione, si fornisce un Glossario che espliciti il significato di tali termini. I termini tecnici sono chiaramente evidenziati nel testo mediante l'aggiunta di una "_G_" a pedice degli stessi.
 
 == Riferimenti
-=== Normativi
-- Norme di Progetto:\
-  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20interna")_ ;
-- Capitolato d'appalto: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_ .
-=== Informativi
-- Piano di Progetto:\
-  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20esterna")_ ;
-- Indice di Gulpease:\
-  _#link("https://it.wikipedia.org/wiki/Indice_Gulpease")_ ;
+=== Riferimenti a documentazione interna
+- Documento Glossario v1.1.0\
+  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf");
+- Piano di Progetto TODO:\
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20esterna")_;
+- Norme di Progetto TODO:\
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20interna")_.
+=== Riferimenti normativi
 - ISO/IEC 9126:\
-  _#link("https://it.wikipedia.org/wiki/ISO/IEC_9126")_ .
-=== Materiale fornito dal docente
+  _#link("https://it.wikipedia.org/wiki/ISO/IEC_9126")_.
+- Capitolato d'appalto C5 _WMS3_: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_.
+=== Riferimenti informativi
 - Dispense T7 (Qualità del software):\
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T7.pdf")_ ;
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T7.pdf")_;
 - Dispense T8 (Qualità di processo):\
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")_ .
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")_.
 \
 = Qualità di processo
 
@@ -63,10 +63,10 @@ Dati: \
 #figure(
   table(
     columns: 3,
-    rows: 30pt,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    rows: (auto, 30pt),
+    
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$sum_(r in R) "OR"_r * "CR"_r$), align(center+horizon,$>"0"$), align(center+horizon,$>"0"$),
+    align(center+horizon,$"SPV" = sum_(r in R) "OR"_r * "CR"_r$), align(center+horizon,$>"0"$), align(center+horizon,$>"0"$),
   ),
   caption: "Specifiche metrica SPV"
 )
@@ -75,10 +75,10 @@ Dati: \
 #figure(
   table(
     columns: 3,
-    rows: 30pt,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    rows: (auto, 30pt),
+    
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$sum_(s in S)"SPV"_("s")$), align(center+horizon,$>"0"$), align(center+horizon,$>"0"$),
+    align(center+horizon,$"PPV" = sum_(s in S)"SPV"_("s")$), align(center+horizon,$cases(>"0", <="BAC")$), align(center+horizon,$cases(>"0", <="BAC")$),
   ),
   caption: "Specifiche metrica SPV"
 )
@@ -86,15 +86,15 @@ Dati: \
 La metrica risulta un indice necessario a determinare il valore atteso del lavoro svolto in un determinato sprint. Il suo valore strettaemente maggiore di 0 indica che non sono contemplati periodi di inattività.
 
 ==== *AC (Actual Cost)*
-La metrica AC rappresenta la somma dei costi sostenuti dal gruppo in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come consuntivo dello sprint:
+La metrica *AC* rappresenta la somma dei costi sostenuti dal gruppo in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come consuntivo dello sprint:
 - *SAC*: Sprint Actual Cost, costo effettivo sostenuto dal gruppo in un determinato sprint;
-- *PAC*: Project Actual Cost, costo effettivo sostenuto dal gruppo dall'inizio del progetto, definito come sommatoria dei SAC.
+- *PAC*: Project Actual Cost, costo effettivo sostenuto dal gruppo dall'inizio del progetto, definito come sommatoria dei *SAC*.
 #figure(
   table(
     columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [Somma dei costi sostenuti nello sprint], [$<="PV"$], [$"+10% PV"$],
+    [SAC = Somma dei costi sostenuti nello sprint], [$<="SPV"$], [$"<= SPV + 10%"$],
   ),
   caption: "Specifiche metrica SAC"
 )
@@ -103,10 +103,10 @@ La metrica AC rappresenta la somma dei costi sostenuti dal gruppo in un determin
 #figure(
   table(
     columns: 3,
-    rows: 30pt,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    rows: (auto, 30pt),
+    
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$sum_(s in S)"SAC"_("s")$), align(center+horizon,$<="BAC"$), align(center+horizon,$<="BAC"$),
+    align(center+horizon,$"PAC" = sum_(s in S)"SAC"_("s")$), align(center+horizon,$<="BAC"$), align(center+horizon,$<="BAC"$),
   ),
   caption: "Specifiche metrica PAC"
 )
@@ -115,7 +115,7 @@ La metrica AC rappresenta la somma dei costi sostenuti dal gruppo in un determin
 ==== *EV (Earned Value)*
 L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come valore guadagnato nello sprint:
 - *SEV*: Sprint Earned Value, valore guadagnato dal progetto in un determinato sprint, dove lo stato di completamento del lavoro è espresso mediante il rapporto tra gli story points completati e quelli pianificati per lo sprint;
-- *PEV*: Project Earned Value, valore guadagnato dal progetto dal suo inizio, definito come sommatoria dei SEV.
+- *PEV*: Project Earned Value, valore guadagnato dal progetto dal suo inizio, definito come sommatoria dei *SEV*.
 *Calcolo del SEV*
 - *SPC*: Story Points Completati;
 - *SPP*: Story Points Pianificati.
@@ -123,8 +123,8 @@ L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato p
 #figure(
   table(
     columns: 3,
-    rows: 30pt,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    rows: (auto, 30pt),
+    
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     align(center+horizon,$display("SPC"/"SPP")*"SPV"$), align(center+horizon, $="SPV"$), align(center+horizon, $>="80% del SPV"$),
   ),
@@ -136,10 +136,10 @@ L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato p
 #figure(
   table(
     columns: 3,
-    rows: 30pt,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    rows: (auto, 40pt),
+    
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon, $sum_(s in S)"SEV"_("s")$), align(center+horizon, $>=0$), align(center+horizon, $<="BAC"$),
+    align(center+horizon, $sum_(s in S)"SEV"_("s")$), align(center+horizon, $="PPV"$), align(center+horizon, $>="80% del PPV"$),
   ),
   caption: "Specifiche metrica PEV"
 )
@@ -147,36 +147,39 @@ L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato p
 \
 
 ==== *CPI (Cost Performance Index)*
-Il CPI rappresenta l'indice di performance del costo, ovvero il rapporto tra il valore guadagnato e il costo effettivo sostenuto. Tale metrica viene calcolata in riferimento al valore totale raggiunto del progetto (*PEV*) in proporzione al costo effettivo sostenuto (*PAC*).
+Il *CPI* rappresenta l'indice di performance del costo, ovvero il rapporto tra il valore guadagnato e il costo effettivo sostenuto. Tale metrica viene calcolata in riferimento al valore totale raggiunto del progetto (*PEV*) in proporzione al costo effettivo sostenuto (*PAC*).
 
 #figure(
   table(
     columns: 3,
-    rows: 30pt,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    rows: (auto, 30pt),
+    
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$display("PEV"/"PAC")$), align(center+horizon,$>=1$), align(center+horizon,$>=0.8$),
+    align(center+horizon,$display("PEV"/"PAC")$), align(center+horizon,$>=1$), align(center+horizon,$>=0.95$),
   ),
   caption: "Specifiche metrica CPI"
 )
 
-Un rapporto maggiore di 1 indica che il valore raggiunto è superiore al costo effettivo sostenuto. Data la natura didattica del progetto e l'inesperienza del gruppo, si ritiene accettabile un valore di CPI $>= 0.8$, valore indicante un costo effettivo leggermente superiore al valore guadagnato.
+Un rapporto maggiore di 1 indica che il valore raggiunto è superiore al costo effettivo sostenuto. Data la natura didattica del progetto e l'inesperienza del gruppo, si ritiene accettabile un valore di *CPI* $>= 0.95$, valore indicante un costo effettivo leggermente superiore al valore guadagnato.
 
 ==== *EAC (Estimated At Completion)*
 L'EAC rappresenta il costo stimato al termine del progetto. Tale metrica viene calcolata in riferimento al budget totale del progetto (*BAC*) in proporzione all'indice di performance del costo (*CPI*).
 #figure(
   table(
     columns: 3,
-    rows: 30pt,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    rows: (auto,50pt),
+    
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     align(center+horizon,$display("BAC"/"CPI")$), align(center+horizon,$<="BAC"$),
-    align(center+horizon,$<="BAC"$),
+    align(center+horizon, $cases( <= "BAC + 5%",
+                                 <= "BAC alla consegna",
+                                 >= "12000 da regolamento"
+                                  )$),
   ),
   caption: "Specifiche metrica EAC"
 )
 
-Il valore del BAC non può essere maggiore rispetto a quanto espresso in candidatura, pertanto gli unici valori accettbili (e ottimali) sono stime a ribasso rispetto al BAC. Dipendendo strettamente dall'indice di performance (*CPI*), il valore della metrica EAC può subire variazioni anche a rialzo, ma sarà compito del gruppo mantenere tale valore il più possibile vicino al BAC.
+Il costo totale del capitolato non può essere maggiore rispetto a quanto espresso in candidatura, pertanto gli unici valori accettbili (e ottimali) sono stime a ribasso rispetto al *BAC*. Dipendendo strettamente dall'indice di performance (*CPI*), il valore della metrica *EAC* può subire variazioni anche a rialzo, ma sarà compito del gruppo mantenere tale valore il più possibile vicino al *BAC* e al momento della consegna, non superiore ad esso.
 
 == Processi di supporto
 === Documentazione
@@ -185,24 +188,28 @@ Il valore del BAC non può essere maggiore rispetto a quanto espresso in candida
 #figure(
   table(
     columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     [Numero di errori ortografici presenti nel testo], [0], [0],
   ),
-  caption: "Specifiche Errori Ortografici"
+  caption: "Specifiche errori ortografici"
 )
+
+Il numero di errori ortografici presenti nei documenti deve essere pari a 0. A tal fine il gruppo si impegna in una revisione prima di ogni rilascio approvato. La metrica pertanto tiene conto del numero di errori ortografici individuati in fase di revisione e successivamente corretti prima del rilascio.
 
 === Miglioramento
 ==== Metriche soddisfatte
 #figure(
   table(
     columns: 3,
-    fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+    
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [% metriche soddisfatte], [100%], [$>=80%$],
+    [% metriche soddisfatte], [100%], [$>=75%$],
   ),
-  caption: "Specifiche Metriche soddisfatte"
+  caption: "Specifiche metriche soddisfatte"
 )
+
+Avere un resoconto delle metriche soddisfatte per ogni sprint permette di evidenziare eventuali criticità e di attuare le misure di correzione necessarie, seguendo, come stabilito nelle Norme di Progetto TODO paragrafo 4.1.1 _Processo di gestione dei modelli di ciclo di vita_, il ciclo PDCA per il miglioramento continuo.
 
 // = Qualità del prodotto
 // == Funzionalità
@@ -210,7 +217,7 @@ Il valore del BAC non può essere maggiore rispetto a quanto espresso in candida
 // #figure(
 //   table(
 //     columns: 3,
-//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+//     
 //     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
 //     [% requisiti obbligatori soddisfatti], [100%], [100%],
 //     [% requisiti desiderabili soddisfatti], [$>=0%$], [0%],
@@ -224,8 +231,8 @@ Il valore del BAC non può essere maggiore rispetto a quanto espresso in candida
 // #figure(
 //   table(
 //     columns: 3,
-//     rows: 30pt,
-//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+//     rows: (auto, 30pt),
+//     
 //     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
 //     align(center+horizon,$display(frac("Test con errori","Test eseguiti"))*100$), align(center+horizon,"0%"), align(center+horizon,$<=10%$),
 //   ),
@@ -236,7 +243,7 @@ Il valore del BAC non può essere maggiore rispetto a quanto espresso in candida
 // #figure(
 //   table(
 //     columns: 3,
-//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+//     
 //     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
 //     [Efficienza del sistema], [TBD], [TBD],
 //   ),
@@ -247,7 +254,7 @@ Il valore del BAC non può essere maggiore rispetto a quanto espresso in candida
 // #figure(
 //   table(
 //     columns: 3,
-//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+//     
 //     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
 //     [Facilità di utilizzo del sistema], [TBD], [TBD],
 //   ),
@@ -257,14 +264,13 @@ Il valore del BAC non può essere maggiore rispetto a quanto espresso in candida
 // #figure(
 //   table(
 //     columns: 3,
-//     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
+//     
 //     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
 //     [Manutenibilità del sistema], [TBD], [TBD],
 //   ),
 //   caption: "Specifiche Manutenibilità del sistema"
 // )
 
-#pagebreak()
 = Valutazione Metriche
 == Premessa
 Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il gruppo ha imposto sprint della durata settimanale. Nel primo sprint si è definito l'utilizzo dell'ITS Jira come strumento di tracciamento, e gli sprint successivi sono stati utilizzati per la sua comprensione e corretto utilizzo. Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponibili dal quinto sprint, iniziato il 04/12/2023. 
@@ -328,7 +334,7 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
   }),
   caption: "Andamento CPI"
 )
-*RTB*: L'indice CPI risulta sempre in un range di valore accettabile. Seppur non lineare, non si evidenziano grandi variazioni, permettendo di evidenziare un corretto avanzamento in termini di costi e lavoro prodotto.
+*RTB*: L'indice *CPI* risulta sempre in un range di valore accettabile. Seppur non lineare, non si evidenziano grandi variazioni, permettendo di evidenziare un corretto avanzamento in termini di costi e lavoro prodotto.
 \
 \
 ==== Rapporto tra BAC e EAC
@@ -432,3 +438,35 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
 - *Documentazione interna*:
   - *WoW*: L'adozione dello standard ISO/IEC 12207:2017 ha portato con sè anche un grado di complessità maggiore nella stesura del documento, il quale è aumentato di dimensione e complessità. La maggior parte degli errori è pertanto riscontrabile nel periodo di maggiore stesura, per poi ridursi quando le sezioni del documento inerenti e utili al periodo sono state redatte;
   - *Analisi dei Rischi*: La stesura del documento di Analisi dei Rischi non è stata caratterizzata da un numero elevato di errori.
+
+=== Miglioramento
+==== Metriche soddisfatte
+#figure(
+  cetz.canvas({
+    import cetz.plot 
+
+    let Metrics_points(offset: 0) = ((4,7/9*100), (5,8/9*100), (6, 7/9*100), (7, 8/9*100), (8, 6/9*100), (9, 8/9*100), (10, 7/9*100), (11, 6/9*100), (12, 6/9*100), (13, 6/9*100)).map(((x,y)) => {(x,y + offset * 100)})     
+
+    plot.plot(size: (12, 6), {
+    plot.add(Metrics_points(offset: 0), line: "linear", label: "% Metriche soddisfatte", mark: "triangle", style: (stroke: (paint: red)))
+    plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
+    plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
+    plot.add-hline(75, label: "Limite accettabile" , style: (stroke: (paint: red, dash: "dotted")))
+    plot.add-hline(100, label: "Limite ottimale" , style: (stroke: (paint: green, dash: "dotted")))
+    },
+    y-max: 110,
+    y-min: 40,
+    x-max: 21,
+    x-min: 4,
+    x-tick-step: 1,
+    y-tick-step: 5,
+    x-label: "Sprint",
+    y-label: "% Metriche soddisfatte",
+    )
+  }),
+  caption: "Percentuale metriche soddisfatte"
+)
+
+*RTB*: La percentuale di metriche soddisfatte risulta per la maggior parte degli sprint superiore alla soglia accettabile del 75%. I periodi in cui tale soglia non è stata raggiunta sono gli sprint 8, 11, 12 e 13 in quanto:
+- Sprint 8: periodo dal 26/12/2023 al 02/01/2024, caratterizzato da festività natalizie e di fine anno;
+- Sprint 11,12,13: periodo dal 15/01/2024 al 05/02/2024, caratterizzato dalla sessione d'esami.

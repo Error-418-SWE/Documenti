@@ -479,7 +479,7 @@ Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e
 
 === Risultati
 Come risultato dell'implementazione del processo di valutazione e controllo si elencano i seguenti:
-- valutazione dell'adeguatezza dei ruoli, respondabilità e risorse;
+- valutazione dell'adeguatezza dei ruoli, responsabilità e risorse;
 - esecuzioni delle azioni correttive scaturite dalle revisioni di progesso;
 - viene avviata, se necessaria, la ripianificazione del progetto;
 - Viene autorizzata l'azione del progetto di avanzare (o meno) da un traguardo o evento programmato al successivo.
@@ -518,15 +518,15 @@ Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consunti
 ==== Controllo
 Nell'attività di controllo figurano i seguenti task:
 
-+ azioni correttive;
-+ ripianificazione;
-+ azioni di cambiamento dovute a richieste del Committente e/o Proponente;
-+ autorizzazione ad avanzare alla successiva milestone.
+- azioni correttive;
+- ripianificazione;
+- azioni di cambiamento dovute a richieste del Committente e/o Proponente;
+- autorizzazione ad avanzare alla successiva milestone.
 
 ===== Azioni correttive
 Nell'attività di controllo si intraprendono azioni correttive nei confronti dei problemi individuati. Questi problemi possono essere di duplice natura:
-+ mancato raggiungimento degli obiettivi prefissati;
-+ miglioramenti e accortezze da adottare.
+- mancato raggiungimento degli obiettivi prefissati;
+- miglioramenti e accortezze da adottare.
 
 ====== Mancato raggiungimento degli obiettivi prefissati
 È necessario che alla chiusura dello sprint le attività ancora in fase di svolgimento vengano riportate nello sprint successivo, insieme a tutte quelle attività pianificate ma non ancora iniziate che sono considerate importanti. Tutte le attività che non vengono considerate importanti, ad esempio attività di cui si è rivalutato il grado di priorità, vengono riportate nel backlog. Una situazione di mancato raggiungimento degli obiettivi può essere sinonimo anche da una pianificazione errata e troppo ottimista, ed è quindi necessario che essa sia rivista e migliorata.
@@ -535,8 +535,13 @@ Nell'attività di controllo si intraprendono azioni correttive nei confronti dei
 Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcuni dei task raccolti rispondono direttamente ai problemi individuati nella parte di Things to change.
 
 ===== Ripianificazione
-===== Azioni di cambiamento dovute a richieste del Committente e/o Proponenteinegoziazione
+La ripianificazione ha atto quando gli obiettivi cambiano nel corso dello sprint o alcune ipotesi fatte in fase di pianificazione si rilevano sbagliate. La ripianificazione viene gestita grazie all'uso di Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo. 
+
+===== Azioni di cambiamento dovute a richieste del Committente e/o Proponente
+Le azioni di cambiamento dovute a richieste del Committente e/o Proponente sono recepite attraverso i canali di comunicazione con quest'ultimi (Zoom, mail) e vengono registrate nei rispettivi verbali. A queste azioni viene attribuita un'alta priorità per garantire massima soddisfazione nel cliente finale.
+
 ===== Autorizzazione ad avanzare alla successiva milestone
+L'autorizzazione ad avanzare alla successiva milestone di progetto viene concessa dal Committente e/o Proponente in seguito ai colloqui pianificati su Zoom con quest'ultimi. Il gruppo si riserva di procedere verso la milestone successiva solo una volta ricevuta l'approvazione richiesta, in modo da non portare avanti difetti e problematiche che potrebbero risultare insidiosi da correggere una volta entrati in un periodo avanzato del progetto. 
 
 == Processo di gestione delle Decisioni
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_

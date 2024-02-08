@@ -262,7 +262,7 @@ Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo d
 La pianificazione del processo è compito del Responsabile, il quale al termine dello sprint precedente, in base alle attività svolte e ai risultati ottenuti, pianifica le attività da svolgere nello sprint successivo. \
 La pianificazione è un'attività iterativa, che viene svolta all'inizio dello sprint. Il Responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \
 Questo processo permette di individuare le attività da svolgere, le risorse necessarie e le tempistiche di svolgimento, mediante il sistema di ticketing offerto da Jira.\
-Il risutato di questo processo è visibile all'interno del documento Piano di Progetto.\
+Il risultato di questo processo è visibile all'interno del documento Piano di Progetto.\
 \
 ===== Esecuzione
 Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto. \

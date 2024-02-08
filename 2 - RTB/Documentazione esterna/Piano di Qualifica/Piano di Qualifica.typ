@@ -193,7 +193,7 @@ Il valore del BAC non può essere maggiore rispetto a quanto espresso in candida
 )
 
 === Miglioramento
-- *Metriche soddisfatte*
+==== Metriche soddisfatte
 #figure(
   table(
     columns: 3,
@@ -267,7 +267,7 @@ Il valore del BAC non può essere maggiore rispetto a quanto espresso in candida
 #pagebreak()
 = Valutazione Metriche
 == Premessa
-Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il gruppo ha imposto sprint della durata settimanale. Nel primo sprint si è definito l'utilizzo dell'ITS Jira come strumento di tracciamento, e gli sprint successivi sono stati utilizzati nella sua comprensione e corretto utilizzo. Per questo motivo, le metriche utili e correttamente registrate sono disponibili dal quinto sprint iniziato il 04/12/2023. 
+Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il gruppo ha imposto sprint della durata settimanale. Nel primo sprint si è definito l'utilizzo dell'ITS Jira come strumento di tracciamento, e gli sprint successivi sono stati utilizzati per la sua comprensione e corretto utilizzo. Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponibili dal quinto sprint, iniziato il 04/12/2023. 
 == Processi primari
 === Fornitura
 ==== Rapporto tra PPV, PAC e PEV
@@ -335,7 +335,7 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
 #figure(
   cetz.canvas({
     import cetz.plot 
-    let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13173.08), (7,   13004.98), (8, 13524.07), (9, 12903.30), (10, 13127.33), (11, 13107.92), (12, 133022.45), (13, 13480.74)).map(((x,y)) => {(x,y + offset * 100)})
+    let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13173.08), (7,   13004.98), (8, 13524.07), (9, 12903.30), (10, 13127.33), (11, 13107.92), (12, 13322.45), (13, 13480.74)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(EAC_points(offset: 0), line: "linear", label: "EAC", mark: "triangle", style: (stroke: (paint: red)))
@@ -353,7 +353,82 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
     y-label: "Valore in €",
     )
   }),
-  caption: "Andamento EAC"
+  caption: "Rapporto tra EAC e BAC"
 )
 
-*RTB*: Il valore dell'*EAC* oscilla attorno al valore del *BAC*
+*RTB*: Il valore dell'*EAC* oscilla attorno al valore del *BAC*. Il gruppo è consapevole che il valore stabilito dal *BAC* non può essere superato, pertanto l'*EAC* al termine del progetto dovrà attenersi al rigido vincolo di $<=$ rispetto al *BAC*.
+
+== Processi di supporto
+=== Documentazione
+==== Errori ortografici
+
+*Documentazione esterna*
+#figure(
+  cetz.canvas({
+    import cetz.plot 
+    
+    let PdP_points(offset: 0) = ((4,1), (5,2), (6, 2), (7, 1), (8, 0), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
+
+    let PdQ_points(offset: 0) = ((4,0), (5,0), (6, 0), (7, 0), (8, 0), (9, 2), (10, 3), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
+
+    let AdR_points(offset: 0) = ((4,4), (5,4), (6, 2), (7, 2), (8, 3), (9, 1), (10, 0), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
+
+    let GLS_points(offset: 0) = ((4,3), (5,2), (6, 0), (7, 0), (8, 2), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
+
+    plot.plot(size: (12, 6), {
+    plot.add(PdP_points(offset: 0), line: "linear", label: "PdP", mark: "o")
+    plot.add(PdQ_points(offset: 0), line: "linear", label: "PdQ", mark: "o")
+    plot.add(AdR_points(offset: 0), line: "linear", label: "AdR", mark: "o")
+    plot.add(GLS_points(offset: 0), line: "linear", label: "Glossario", mark: "o")
+    plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
+    plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
+    },
+    y-max: 8,
+    x-max: 21,
+    x-min: 4,
+    x-tick-step: 1,
+    y-tick-step: 1,
+    x-label: "Sprint",
+    y-label: "Numero di errori",
+    )
+  }),
+  caption: "Andamento errori ortografici nella documentazione esterna"
+)
+
+
+*Documentazione interna*
+#figure(
+  cetz.canvas({
+    import cetz.plot 
+
+    let WoW_points(offset: 0) = ((4,2), (5,3), (6, 4), (7, 3), (8, 3), (9, 2), (10, 1), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
+
+    let RIS_points(offset: 0) = ((4,2), (5,1), (6, 0), (7, 0), (8, 0), (9, 0), (10, 0), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})   
+
+    plot.plot(size: (12, 6), {
+    plot.add(WoW_points(offset: 0), line: "linear", label: "WoW", mark: "o")
+    plot.add(RIS_points(offset: 0), line: "linear", label: "Analisi dei Rischi", mark: "o")
+    plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
+    plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
+    },
+    y-max: 8,
+    x-max: 21,
+    x-min: 4,
+    x-tick-step: 1,
+    y-tick-step: 1,
+    x-label: "Sprint",
+    y-label: "Numero di errori",
+    )
+  }),
+  caption: "Andamento errori ortografici nella documentazione interna"
+)
+
+*RTB*: Gli errori ortografici nella documentazione rispecchiano i periodi in cui i documenti hanno subito la maggior parte delle modifiche. In particolare:
+- *Documentazione esterna*:
+  - *PdP*: Il documento ha inizialmente subito la maggior parte di aggiunte a livello testuale, come le sezioni di introduzione, amministrazione dei periodi e dei ruoli. Successivamente gli aggiornamenti sono stati minori, atti alla registrazione e al tracciamento dei preventivi e consuntivi dei vari periodi. Inoltre, la creazione di un sistema di creazione automatico delle tabelle dei preventivi e dei consuntivi implementato in _Google Apps Script_, ha permesso di ridurre ulteriormente l'insorgenza di errori;
+  - *PdQ*: L'insorgenza di errori nel Piano di Qualifica è dettata dall'inizio della sua stesura dallo sprint 9;
+  - *AdR*: Data la natura del periodo di RTB, l'Analisi dei Requisiti è tra i documenti più corposi e maggiormente soggetti a revisioni e modifiche. Inoltre, l'incremento dei numero di errori è dovuto non solo a revisioni interne ma anche a modifiche dettate da revisioni esterne con i professori;
+  - *Glossario*: Il Glossario è stato soggetto a relativamente poche modifiche; la maggior parte degli errori è stata riscontrata inizialmente, e successivamente il documento è stato soggetto a poche modifiche e migliorie.
+- *Documentazione interna*:
+  - *WoW*: L'adozione dello standard ISO/IEC 12207:2017 ha portato con sè anche un grado di complessità maggiore nella stesura del documento, il quale è aumentato di dimensione e complessità. La maggior parte degli errori è pertanto riscontrabile nel periodo di maggiore stesura, per poi ridursi quando le sezioni del documento inerenti e utili al periodo sono state redatte;
+  - *Analisi dei Rischi*: La stesura del documento di Analisi dei Rischi non è stata caratterizzata da un numero elevato di errori.

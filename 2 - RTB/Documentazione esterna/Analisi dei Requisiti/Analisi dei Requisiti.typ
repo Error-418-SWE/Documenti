@@ -772,7 +772,7 @@ $bold("Scenario: ")$
   ],
 )
 $bold("Descrizione: ")$
-deve essere possibile visualizzare le informazioni di un determinato bin e, se presente, del prodotto che contiene.
+vengono visualizzate le informazioni di un determinato bin e, se presente, del prodotto che contiene.
 
 $bold("Attore: ")$
 utente.

@@ -230,11 +230,10 @@ Per la scrittura dei documenti è richiesto uno stile di scrittura impersonale (
 === Elenchi puntati
 Viene inserito ";" alla fine delle voci dell'elenco tranne l'ultima che termina con ".". Ogni voce dell'elenco inizia con una lettera minuscola.
 
-
 = Processi di ciclo di vita
 
 == Processi organizzativi abilitanti
-<ciclo_di_vita>
+
 I processi organizzativi abilitanti garantiscono la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. Questi processi forniscono le risorse e l'infrastruttura necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
 
 I processi organizzativi abilitanti sono i seguenti:
@@ -245,12 +244,11 @@ I processi organizzativi abilitanti sono i seguenti:
 // + Processo di gestione della qualità;
 // + Processo di gestione della conoscenza.
 
-=== Processo di gestione dei modelli di ciclo di vita
+=== Processo di gestione dei modelli di ciclo di vita<ciclo_di_vita>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
-
 ==== Scopo
 
-Lo scopo del processo di gestione del modello di ciclo di vita è definire, mantenere e garantire regole, processi, modelli e procedure di ciclo di vita. \
+Lo scopo del processo di gestione del modello di ciclo di vita è definire, mantenere e garantire regole, processi, modelli e procedure di ciclo di vita.\
 Questo processo fornisce politiche, processi, modelli e procedure del ciclo di vita coerenti con gli obiettivi dell'organizzazione, che sono definiti, adattati, migliorati e mantenuti per supportare le esigenze individuali dei progetti all'interno del contesto dell'organizzazione, e che sono in grado di essere applicati mediante metodi e strumenti efficaci e comprovati.\
 
 Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo di vita del software. Questo modello prevede quattro fasi:
@@ -1205,7 +1203,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
 == Processo di analisi della missione <processo_missione>
 
-_Tailored conformance on ISO/IEC/IEEE 12207:2017 clause 6.4.1 per ISO/IEC/IEEE 12207:2017 Annex A_
+_Tailored conformance on ISO/IEC/IEEE 12207:2017 clause 6.4.1 per ISO/IEC/IEEE 12207:2017_
 
 === Scopo
 
@@ -1361,24 +1359,28 @@ Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. TODO co
 
 = Tracciamento Paragrafi-ISO/IEC/IEEE 12207:2017
 
+La tabella di seguito riportata consente di associare ogni capitolo del documento al rispettivo capitolo dello standard di riferimento. Viene riporato anche il grado di conformità:
+- *to outcome* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
+- *full* indica che il capitolo riporta fedelmente le indacazioni dello standard con poche o nessuna azione di adeguamento.
+
 #figure(
   table(
     columns: 3,
     fill: (col, row) => if row == 0 {rgb("#bbbbbb")},
     [*Capitolo Norme*],[*Capitolo Standard*],[*Conformance Level*],
-    [@fornitura], [6.2.1 - Life cycle model management process],[to outcome],
-    [@ciclo_di_vita], [6.2.1 - Life cycle model management process],[to outcome],
-    [@risorse_umane], [6.2.4 - Human Resource Management process],[to outcome],
-    [@pianificazione], [6.3.1 - Project Planning process],[to outcome],
-    [@valutazioneControllo], [6.3.2 - Project assessment and control process],[to outcome],
-    [@gestione_decisioni], [6.3.3 - Decision Management process],[to outcome],
-    [@gestione_rischi], [6.3.4 - Risk Management process],[to outcome],
-    [@gestione_configurazione], [6.3.5 - Configuration Management process],[to outcome],
-    [@gestione_informazioni], [6.3.6 - Information Management process],[to outcome],
-    [@processo_misurazione], [6.3.7 - Measurement process],[to outcome],
-    [@processo_controllo_qualità], [6.3.8 - Quality Assurance process],[to outcome],
-    [@processo_missione], [6.4.1 - Business or Mission Analysis process],[to outcome],
-    [@processo_bisogni], [6.4.2 - Stakeholder Needs and Requirements Definition process],[to outcome],
+    [@fornitura], align(left, "6.1.2 - Supply process"),[to outcome],
+    [@ciclo_di_vita], align(left, "6.2.1 - Life cycle model management process"),[to outcome],
+    [@risorse_umane], align(left, "6.2.4 - Human Resource Management process"),[to outcome],
+    [@pianificazione], align(left, "6.3.1 - Project Planning process"),[to outcome],
+    [@valutazioneControllo], align(left, "6.3.2 - Project assessment and control process"),[full],
+    [@gestione_decisioni], align(left, "6.3.3 - Decision Management process"),[full],
+    [@gestione_rischi], align(left, "6.3.4 - Risk Management process"),[full],
+    [@gestione_configurazione], align(left, "6.3.5 - Configuration Management process"),[to outcome],
+    [@gestione_informazioni], align(left, "6.3.6 - Information Management process"),[to outcome],
+    [@processo_misurazione], align(left, "6.3.7 - Measurement process"),[to outcome],
+    [@processo_controllo_qualità], align(left, "6.3.8 - Quality Assurance process"),[full],
+    [@processo_missione], align(left, "6.4.1 - Business or Mission Analysis process"),[full],
+    [@processo_bisogni], align(left, "6.4.2 - Stakeholder Needs and Requirements Definition process"),[to outcome],
   ),
   caption: "Tracciamento Paragrafi-ISO/IEC/IEEE 12207:2017"
 )

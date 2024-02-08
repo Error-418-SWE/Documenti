@@ -18,15 +18,17 @@ hero:
 ---
 
 import { Common } from '/common';
-import { Card, CardGrid } from '@astrojs/starlight/components';
-
-## Dettagli
+import { CardGrid } from '@astrojs/starlight/components';
+import Card from '../../components/CustomCard.astro'
+import ListCard from '../../components/ListCard.astro'
 
 <CardGrid>
-	<Card title="Crediti" icon="open-book">
-		Questo sito è realizzato con [Starlight](https://starlight.astro.build/).
-	</Card>
-	<Card title="Repository ufficiale" icon="github">
-		Tutti i documenti sono disponibili anche su [GitHub](https://github.com/Error-418-SWE/Documenti/tree/main).
-	</Card>
+  <ListCard title="Sezioni">
+    - [Introduzione](/introduzione/sezioni/)
+    - [Documenti RTB](/rtb/introduzione/)
+  </ListCard>
+  <ListCard title="Sezioni">
+    - <a title="GitHub" href="https://github.com/Error-418-SWE/Documenti/tree/main" target="_blank">Repository GitHub</a>
+    - <a title="Grafana" href="https://error418swe.grafana.net/public-dashboards/9392efccc5a5427c850fc9ec81df7dff" target="_blank">Dashboard Grafana</a>
+  </ListCard>
 </CardGrid>

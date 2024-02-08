@@ -564,7 +564,7 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
   - traduce in codice eseguibile l'architettura del prodotto finale definita dal progettista durante il periodo di sviluppo del MVP.
 + *Verificatore*: è presente durante l'intero progetto, e si occupa di controllare che il lavoro prodotto dal gruppo rispetti gli standard qualitativi adottati.
 
-Ad ogni ruolo è inoltre associato un costo orario, tramite cui il gruppo calcola il preventivo totale del progetto e quello di ogni _sprint_ seguito dal relativo consuntivo.
+Ad ogni ruolo è inoltre associato un costo orario, sulla base del quale il gruppo calcola il preventivo totale del progetto e quello di ogni _sprint_ seguito dal relativo consuntivo. Il costo orario viene calcolato in base alla sua importanza all'interno del progetto, misurata in termini di competenze e disponibilità della risorsa.
 
 
 == Processo di valutazione e controllo di progetto <valutazioneControllo>

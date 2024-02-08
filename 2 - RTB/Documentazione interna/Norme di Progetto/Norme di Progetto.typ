@@ -584,24 +584,25 @@ Le decisioni vengono dunque così classificate:
   - architetturali. \
 
 
-== Processo di Gestione dei Rischi
+== Processo di gestione dei rischi
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.4_
 
 === Scopo
-Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.
+Lo scopo del processo di gestione dei rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.
 
 === Risultati
-Come risultato dell'implementazione del processo di Gestione dei Rischi:
+Come risultato dell'implementazione del processo di gestione dei rischi:
 - vengono identificati e analizzati i rischi;
 - vengono identificate e priorizzate le opzioni di trattamento del rischio;
 - viene selezionato ed implementato un trattamento appropriato;
 - i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
+I risultati sono raccolti nel documento Analisi dei Rischi.
 
 === Attività e compiti
-Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
+Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di gestione dei rischi.
 
-==== Pianificare la Gestione dei Rischi
-La strategia di Gestione dei Rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. \
+==== Pianificare la gestione dei rischi
+La strategia di gestione dei rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. \
 La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
 Nello specifico l'impatto può essere "lieve", "medio" o "grave" in base alla sua entità mentre la probabilità di occorrenza viene identificata tramite un valore intero da 1 a 5, dove 1 esprime una probabilità molto bassa, mentre 5 esprime una frequenza attesa sostenuta.\
 Il team definisce approcci di trattamento appropriati, compresi piani di mitigazione specifici.
@@ -612,7 +613,7 @@ Il team definisce approcci di trattamento appropriati, compresi piani di mitigaz
   I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
 
 - Stabilire e mantenere un profilo di rischio:\
-  il profilo di rischio contiene informazioni sul contesto della Gestione dei Rischi, il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
+  il profilo di rischio contiene informazioni sul contesto della gestione dei rischi, il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
   Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
 
 - Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:\
@@ -622,7 +623,7 @@ Il team definisce approcci di trattamento appropriati, compresi piani di mitigaz
 ==== Analizzare i rischi
 Questa attività consiste nei seguenti compiti:
 
-+ identificare i rischi nelle categorie descritte nel contesto della Gestione dei Rischi:\ l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
++ identificare i rischi nelle categorie descritte nel contesto della gestione dei rischi:\ l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
 
 + stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato:\ per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
 
@@ -645,7 +646,7 @@ Questa attività consiste nei seguenti compiti:
 ==== Monitorare i rischi
 Questa attività consiste nei seguenti compiti:
 
-- monitorare continuamente i rischi e il contesto della Gestione dei Rischi per eventuali loro cambiamenti;
+- monitorare continuamente i rischi e il contesto della gestione dei rischi per eventuali loro cambiamenti;
 
 - monitorare continuamente l'emergere di nuovi rischi durante l'intero ciclo di vita.
 

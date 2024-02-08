@@ -480,7 +480,7 @@ Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e
 === Risultati
 Come risultato dell'implementazione del processo di valutazione e controllo si elencano i seguenti:
 - valutazione dell'adeguatezza di ruoli, responsabilità e risorse;
-- esecuzioni delle azioni correttive scaturite dalle revisioni di progesso;
+- esecuzione delle azioni correttive scaturite dalle revisioni di progesso;
 - viene avviata, se necessaria, la ripianificazione del progetto;
 - Viene autorizzata l'azione del progetto di avanzare (o meno) da un traguardo o evento programmato al successivo.
 - vengono registrati gli obiettivi raggiunti.

@@ -94,7 +94,7 @@ La metrica *AC* rappresenta la somma dei costi sostenuti dal gruppo in un determ
     columns: 3,
     
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [SAC = Somma dei costi sostenuti nello sprint], [$<="SPV"$], [$"<= SPV + 10%"$],
+    [SAC = Somma dei costi sostenuti nello sprint], [$<="SPV"$], [$<="SPV" + 10%$],
   ),
   caption: "Specifiche metrica SAC"
 )
@@ -126,7 +126,7 @@ L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato p
     rows: (auto, 30pt),
     
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$display("SPC"/"SPP")*"SPV"$), align(center+horizon, $="SPV"$), align(center+horizon, $>="80% del SPV"$),
+    align(center+horizon,$"SEV" = display("SPC"/"SPP")*"SPV"$), align(center+horizon, $="SPV"$), align(center+horizon, $>="80% del SPV"$),
   ),
   caption: "Specifiche metrica SEV"
 )
@@ -139,7 +139,7 @@ L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato p
     rows: (auto, 40pt),
     
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon, $sum_(s in S)"SEV"_("s")$), align(center+horizon, $="PPV"$), align(center+horizon, $>="80% del PPV"$),
+    align(center+horizon, $"PEV" = sum_(s in S)"SEV"_("s")$), align(center+horizon, $="PPV"$), align(center+horizon, $>="80% del PPV"$),
   ),
   caption: "Specifiche metrica PEV"
 )
@@ -155,7 +155,7 @@ Il *CPI* rappresenta l'indice di performance del costo, ovvero il rapporto tra i
     rows: (auto, 30pt),
     
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$display("PEV"/"PAC")$), align(center+horizon,$>=1$), align(center+horizon,$>=0.95$),
+    align(center+horizon,$"CPI" = display("PEV"/"PAC")$), align(center+horizon,$>=1$), align(center+horizon,$>=0.95$),
   ),
   caption: "Specifiche metrica CPI"
 )
@@ -170,7 +170,7 @@ L'EAC rappresenta il costo stimato al termine del progetto. Tale metrica viene c
     rows: (auto,50pt),
     
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$display("BAC"/"CPI")$), align(center+horizon,$<="BAC"$),
+    align(center+horizon,$"EAC" = display("BAC"/"CPI")$), align(center+horizon,$<="BAC"$),
     align(center+horizon, $cases( <= "BAC + 5%",
                                  <= "BAC alla consegna",
                                  >= "12000 da regolamento"
@@ -198,13 +198,17 @@ Il costo totale del capitolato non può essere maggiore rispetto a quanto espres
 Il numero di errori ortografici presenti nei documenti deve essere pari a 0. A tal fine il gruppo si impegna in una revisione prima di ogni rilascio approvato. La metrica pertanto tiene conto del numero di errori ortografici individuati in fase di revisione e successivamente corretti prima del rilascio.
 
 === Miglioramento
-==== Metriche soddisfatte
+==== Percentuale metriche soddisfatte
+Dati:
+- MS: Metriche soddisfatte;
+- MT: Metriche totali.
+
 #figure(
   table(
-    columns: 3,
-    
+    columns: 3, 
+    rows: (auto, 30pt),
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [% metriche soddisfatte], [100%], [$>=75%$],
+    align(center+horizon, [% metriche soddisfatte = $display("MS"/"MT")*100$]), align(center+horizon,$100%$), align(center+horizon,$>=75%$),
   ),
   caption: "Specifiche metriche soddisfatte"
 )
@@ -290,9 +294,9 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
     plot.add(PV_point(offset: 1), line: "spline", label: "PPV")
     plot.add(AC_point(offset: 1), line: "spline", label: "PAC", style: (stroke: (paint: red)))
     plot.add(EV_points(offset: 0), line: "spline", label: "PEV", style: (stroke: (paint: green)))
+    plot.add-hline(13055, label: "BAC" , style: (stroke: (paint: blue, dash: "dotted")))
     plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
     plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
-    plot.add-hline(13055, label: "BAC" , style: (stroke: (paint: blue, dash: "dotted")))
     },
     y-max: 14000,
     x-max: 21,
@@ -345,12 +349,14 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
 
     plot.plot(size: (12, 6), {
     plot.add(EAC_points(offset: 0), line: "linear", label: "EAC", mark: "triangle", style: (stroke: (paint: red)))
-    plot.add-hline(13055, label: "BAC" , style: (stroke: (paint: blue, dash: "dotted")))
+    plot.add-hline(13005*1.05, label: "Limite superiore (BAC + 5%)" , style: (stroke: (paint: red, dash: "dotted")))
+    plot.add-hline(12000, label: "Limite inferiore" , style: (stroke: (paint: blue, dash: "dotted")))
+    plot.add-hline(13055, label: "BAC" , style: (stroke: (paint: green, dash: "dotted")))
     plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
     plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
     },
-    y-max: 17000,
-    y-min: 5000,
+    y-max: 16000,
+    y-min: 10000,
     x-max: 21,
     x-min: 4,
     x-tick-step: 1,
@@ -449,13 +455,13 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
 
     plot.plot(size: (12, 6), {
     plot.add(Metrics_points(offset: 0), line: "linear", label: "% Metriche soddisfatte", mark: "triangle", style: (stroke: (paint: red)))
-    plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
-    plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
     plot.add-hline(75, label: "Limite accettabile" , style: (stroke: (paint: red, dash: "dotted")))
     plot.add-hline(100, label: "Limite ottimale" , style: (stroke: (paint: green, dash: "dotted")))
+    plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
+    plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
     },
     y-max: 110,
-    y-min: 40,
+    y-min: 50,
     x-max: 21,
     x-min: 4,
     x-tick-step: 1,

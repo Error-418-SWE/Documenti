@@ -475,4 +475,4 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
 
 *RTB*: La percentuale di metriche soddisfatte risulta per la maggior parte degli sprint superiore alla soglia accettabile del 75%. I periodi in cui tale soglia non è stata raggiunta sono gli sprint 8, 11, 12 e 13 in quanto:
 - Sprint 8: periodo dal 26/12/2023 al 02/01/2024, caratterizzato da festività natalizie e di fine anno;
-- Sprint 11,12,13: periodo dal 15/01/2024 al 05/02/2024, caratterizzato dalla sessione d'esami.
+- Sprint 11, 12, 13: periodo dal 15/01/2024 al 05/02/2024, caratterizzato dalla sessione d'esami.

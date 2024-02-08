@@ -470,7 +470,7 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
     y-label: "% Metriche soddisfatte",
     )
   }),
-  caption: "Percentuale metriche soddisfatte"
+  caption: "Andamento percentuale metriche soddisfatte"
 )
 
 *RTB*: La percentuale di metriche soddisfatte risulta per la maggior parte degli sprint superiore alla soglia accettabile del 75%. I periodi in cui tale soglia non è stata raggiunta sono gli sprint 8, 11, 12 e 13 in quanto:

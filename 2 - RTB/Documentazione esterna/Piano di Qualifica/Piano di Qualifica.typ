@@ -195,7 +195,7 @@ Il costo totale del capitolato non può essere maggiore rispetto a quanto espres
   caption: "Specifiche errori ortografici"
 )
 
-Il numero di errori ortografici presenti nei documenti deve essere pari a 0. A tal fine il gruppo si impegna in una revisione prima di ogni rilascio approvato. La metrica pertanto tiene conto del numero di errori ortografici individuati in fase di revisione e successivamente corretti prima del rilascio.
+Il numero di errori ortografici presenti nei documenti deve essere pari a 0. La metrica evidenzia il numero di errori ortografici individuati durante la revisione precedente al rilascio del documento.
 
 === Miglioramento
 ==== Percentuale metriche soddisfatte

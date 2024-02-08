@@ -550,17 +550,17 @@ Le decisioni vengono dunque così classificate:
   - strategia di decision-making: collaborativa.
 
 + Decisioni sui requisiti: sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
-  - documento soggetto a modifiche: Analisi dei requisiti;
+  - documento soggetto a modifiche: Analisi dei Requisiti;
   - ruoli responsabili dell'aggiornamento: Analisti;
   - strategia di decision-making: collaborativa.
 
 + Decisioni di implementazione: sono decisioni relative alla stesura del codice:
-  - documento soggetto a modifiche: Norme di progetto, documenti tecnici (diagramma delle classi,...);
+  - documento soggetto a modifiche: Norme di Progetto, documenti tecnici (diagramma delle classi, diagramma dei casi d'uso...);
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
   - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
 
 + Decisioni architetturali: sono decisioni relative ai pattern e alle architetture riguardanti il software.
-  - documento soggetto a modifiche: Norme di progetto, documenti tecnici (diagramma delle classi,...);
+  - documento soggetto a modifiche: Norme di Progetto, documenti tecnici (diagramma delle classi, diagramma dei casi d'uso...);
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
 

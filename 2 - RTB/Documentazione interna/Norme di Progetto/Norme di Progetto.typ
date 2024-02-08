@@ -535,7 +535,7 @@ Nell'attività di controllo si intraprendono azioni correttive nei confronti dei
 Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcuni dei task raccolti rispondono direttamente ai problemi individuati nella parte di Things to change.
 
 ===== Ripianificazione
-La ripianificazione ha atto quando gli obiettivi cambiano nel corso dello sprint o alcune ipotesi fatte in fase di pianificazione si rilevano sbagliate. La ripianificazione viene gestita grazie all'uso di Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo. 
+La ripianificazione ha atto quando gli obiettivi cambiano nel corso dello sprint o alcune ipotesi fatte in fase di pianificazione si rivelano sbagliate. La ripianificazione viene gestita tramite Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo. 
 
 ===== Azioni di cambiamento dovute a richieste del Committente e/o Proponente
 Le azioni di cambiamento dovute a richieste del Committente e/o Proponente sono recepite attraverso i canali di comunicazione con quest'ultimi (Zoom, mail) e vengono registrate nei rispettivi verbali. A queste azioni viene attribuita un'alta priorità per garantire massima soddisfazione nel cliente finale.

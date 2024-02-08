@@ -267,16 +267,16 @@ Il valore del BAC non può essere maggiore rispetto a quanto espresso in candida
 #pagebreak()
 = Valutazione Metriche
 == Premessa
-Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il gruppo ha imposto sprint della durata settimanale. Durante i primi 4 sprint, il gruppo è stato impegnato nello studio degli strumenti ITS come Jira, Linear, YouTrack, pertanto le operazioni di tracciamento non risultavano ancora ottimizzate. A partire dal quinto sprint, definito Jira come strumento, il gruppo ha iniziato a lavorare in maniera più efficiente, riuscendo a tracciare in maniera più precisa le ore di lavoro e i task svolti.
+Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il gruppo ha imposto sprint della durata settimanale. Nel primo sprint si è definito l'utilizzo dell'ITS Jira come strumento di tracciamento, e gli sprint successivi sono stati utilizzati nella sua comprensione e corretto utilizzo. Per questo motivo, le metriche utili e correttamente registrate sono disponibili dal quinto sprint iniziato il 04/12/2023. 
 == Processi primari
 === Fornitura
 ==== Rapporto tra PPV, PAC e PEV
 #figure(
   cetz.canvas({
     import cetz.plot 
-    let EV_points(offset: 0) = ((4,2040), (5,2655), (6,3060.07), (7,3265.55), (8,3426.11), (9, 4051.11), (10, 4249.11), (11, 4471.04), (12, 4546.04), (13, 4610.55)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let EV_points(offset: 0) = ((4,2040), (5,2655), (6,3111.85), (7,3528.52), (8,3948.14), (9, 4573.14), (10, 4848.14), (11, 5084.39), (12, 5178.90), (13, 5224.62)).map(((x,y)) => {(x,y + offset * 1.5)})
     
-    let AC_point(offset: 1) = ((4,2075), (5,2620), (6,3140), (7,3515), (8,4090), (9, 4515), (10, 4870), (11, 5100), (12, 5280), (13, 5390)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let AC_point(offset: 1) = ((4,2075), (5,2620), (6,3140), (7,3515), (8,4090), (9, 4520), (10, 4875), (11, 5105), (12, 5285), (13, 5395)).map(((x,y)) => {(x,y + offset * 1.5)})
 
     let PV_point(offset: 1) = ((4,2040), (5,2655), (6,3190), (7,3690), (8,4200), (9, 4825), (10, 5155), (11, 5470), (12, 5625), (13, 5705)).map(((x,y)) => {(x,y + offset * 1.5)})
 
@@ -297,10 +297,9 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
     y-label: "Valore in €",
     )
   }),
-  caption: "Rapporto tra PPV e PEV"
+  caption: "Rapporto tra PPV, PAC e PEV"
 )
 *RTB*: In questo primo periodo, il gruppo è consapevole che il valore pianficato *PPV* risulta superiore a quanto prodotto nell'effettivo indicato dal *PEV*. Nonostante ciò il gruppo è sempre riuscito a mantenere il valore del *PEV* non solo in crescita, ma anche superiore almeno all'80% del *PPV*.
-Il *PAC* inoltre, seppur superiore al *PEV*, risulta inferiore al *PPV*, indicando un consumo del budget inferiore a quanto preventivato.
 
 #pagebreak()
 
@@ -308,7 +307,7 @@ Il *PAC* inoltre, seppur superiore al *PEV*, risulta inferiore al *PPV*, indican
 #figure(
   cetz.canvas({
     import cetz.plot 
-    let CPI_points(offset: 0) = ((4,0.98), (5,1.01), (6,0.97), (7,0.93), (8,0.84), (9, 0.9), (10, 0.87), (11, 0.88), (12, 0.86), (13, 0.86)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let CPI_points(offset: 0) = ((4,0.98), (5,1.01), (6,0.99), (7,1.00), (8,0.97), (9, 1.01), (10, 0.99), (11, 1.00), (12, 0.98), (13, 0.97)).map(((x,y)) => {(x,y + offset * 1.5)})
 
     plot.plot(size: (12, 6), {
     plot.add(CPI_points(offset: 0), line: "linear", label: "CPI", mark: "triangle")
@@ -329,14 +328,14 @@ Il *PAC* inoltre, seppur superiore al *PEV*, risulta inferiore al *PPV*, indican
   }),
   caption: "Andamento CPI"
 )
-*RTB*: L'indice CPI, seppur superiore a quanto imposto dal gruppo come limite inferiore, risulta in un andamento non lineare. Le motivazioni di tale andamento rispecchiano anche il rallentamento dei lavori in corso a seguito delle vacanze e della sessione invernale di esami. Nonostante ciò, il valore del CPI è previsto risalire con l'avanzare del progetto e la maggior disponibilità individuale dei membri del gruppo.
+*RTB*: L'indice CPI risulta sempre in un range di valore accettabile. Seppur non lineare, non si evidenziano grandi variazioni, permettendo di evidenziare un corretto avanzamento in termini di costi e lavoro prodotto.
 \
 \
 ==== Rapporto tra BAC e EAC
 #figure(
   cetz.canvas({
     import cetz.plot 
-    let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13395.99), (7, 14052.25), (8,15584.73), (9, 14549.93), (10, 14962.64), (11, 14891.15), (12, 15162.74), (13, 15262.04)).map(((x,y)) => {(x,y + offset * 100)})
+    let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13173.08), (7,   13004.98), (8, 13524.07), (9, 12903.30), (10, 13127.33), (11, 13107.92), (12, 133022.45), (13, 13480.74)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(EAC_points(offset: 0), line: "linear", label: "EAC", mark: "triangle", style: (stroke: (paint: red)))
@@ -357,4 +356,4 @@ Il *PAC* inoltre, seppur superiore al *PEV*, risulta inferiore al *PPV*, indican
   caption: "Andamento EAC"
 )
 
-RTB: Come annunciato anche dalle metriche precedenti, il valore dell'EAC risulta superiore al BAC. Seppur il valore del BAC non possa essere superiore a quanto preventivato, il gruppo è consapevole che il valore dell'EAC può subire variazioni anche a rialzo, ma sarà compito del gruppo mantenere tale valore il più possibile vicino al BAC. L'impegno del gruppo sarà quello di ridurre e assorbire tale differenza, rientrando nei limiti imposti dal BAC negli sprint successivi.
+*RTB*: Il valore dell'*EAC* oscilla attorno al valore del *BAC*

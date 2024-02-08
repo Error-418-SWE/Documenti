@@ -527,7 +527,7 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
 Lo scopo del processo di gestione delle decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionando la migliore in termini di benefici attesi, costi e rischi associati. \
 
 === Risultati
-Come risultato dell'efficace attuazione del processo di Gestione delle Decisioni:
+Come risultato dell'efficace attuazione del processo di gestione delle decisioni:
 - vengono identificate le decisioni che richiedono un'analisi alternativa;
 - vengono identificati e valutati i percorsi di azione alternativi;
 - viene selezionato un percorso di azione preferito;
@@ -549,47 +549,47 @@ Solo decisioni critiche riguardo cambiamenti sostanziali o nuove direzioni di la
 Il resoconto di quanto deciso sarà visibile all'interno del verbale redatto a fine meeting.
 
 ===== Strategie di decision-making utilizzate
-+ Strategia collaborativa: prevede che la decisione venga presentata e votata in modo collaborativo, coinvolgendo tutti i membri del gruppo e mediante una votazione con un sistema maggioritario, in modo che il risultato rappresenti la volontà della maggioranza.\ Strategia utilizzata per le decisioni:
++ *Strategia collaborativa*: prevede che la decisione venga presentata e votata in modo collaborativo, coinvolgendo tutti i membri del gruppo e mediante una votazione con un sistema maggioritario, in modo che il risultato rappresenti la volontà della maggioranza.\ Strategia utilizzata per le decisioni:
   - organizzative;
   - dei requisiti;
   - qualitative.
 
-+ Strategia expertise decision-making: prevede che la decisione venga presentata e analizzata mediante la consultazione di figure esterne più esperte, individuabili nel Proponente o nel Committente, la cui esperienza risulta determinante. \ Questa strategia viene utilizzata per le decisioni:
++ *Strategia expertise decision-making*: prevede che la decisione venga presentata e analizzata mediante la consultazione di figure esterne più esperte, individuabili nel Proponente o nel Committente, la cui esperienza risulta determinante. \ Questa strategia viene utilizzata per le decisioni:
   - implementative;
   - tecnologiche;
   - architetturali.
 
 
-==== Analisi delle Decisioni
+==== Analisi delle decisioni
 Le decisioni possono riguardare diversi aspetti del capitolato, e la loro categorizzazione è utile per individuare la migliore strategia di gestione e i ruoli coinvolti.
 
 Le decisioni vengono dunque così classificate:
-+ Decisioni organizzative: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto. Esempi notevoli sono le decisioni focalizzate alla coordinazione del gruppo o alla scelta degli strumenti da utilizzare per la gestione del progetto, ad esempio ITS, piattaforme per la comunicazione e per la collaborazione:
++ *Decisioni organizzative*: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto. Esempi notevoli sono le decisioni focalizzate alla coordinazione del gruppo o alla scelta degli strumenti da utilizzare per la gestione del progetto, ad esempio ITS, piattaforme per la comunicazione e per la collaborazione:
   - documento soggetto a modifiche: Norme di progetto;
   - ruoli responsabili dell'aggiornamento: Responsabile, Amministratori;
   - strategia di decision-making: collaborativa.
 
-+ Decisioni tecnologiche: sono relative allo stack tecnologico da adottare durante lo sviluppo del progetto:
++ *Decisioni tecnologiche*: sono relative allo stack tecnologico da adottare durante lo sviluppo del progetto:
   - documento soggetto a modifiche: Norme di Progetto;
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making.
 
-+ Decisioni sui requisiti: sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
++ *Decisioni sui requisiti*: sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
   - documento soggetto a modifiche: Analisi dei Requisiti;
   - ruoli responsabili dell'aggiornamento: Analisti;
   - strategia di decision-making: collaborativa.
 
-+ Decisioni di implementazione: sono decisioni relative alla stesura del codice:
++ *Decisioni di implementazione*: sono decisioni relative alla stesura del codice:
   - documento soggetto a modifiche: Norme di Progetto, documenti tecnici (diagramma delle classi, ...);
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
   - strategia di decision-making: expertise decision-making.
 
-+ Decisioni architetturali: sono decisioni relative ai pattern e alle architetture riguardanti il software:
++ *Decisioni architetturali*: sono decisioni relative ai pattern e alle architetture riguardanti il software:
   - documento soggetto a modifiche: Norme di Progetto, documenti tecnici (diagramma delle classi, diagramma dei casi d'uso...);
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making.
 
-+ Decisioni sulla qualità: sono decisioni relative ai controlli di qualità.
++ *Decisioni sulla qualità*: sono decisioni relative ai controlli di qualità.
   - documento soggetto a modifiche: Piano di Qualifica;
   - ruoli responsabili dell'aggiornamento: Responsabile, Verificatori;
   - strategia di decision-making: collaborativa.

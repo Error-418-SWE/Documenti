@@ -415,11 +415,22 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
 === Scopo
 Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato Piano di Progetto (@PdP).
 
+=== Risultati (Piano di Progetto) <PdP>
+Il Piano di Progetto è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento accompagnata dai grafici di Gantt e di burndown. Sono presenti cinque sezioni, di cui le prime quattro rientrano nel processo di pianificazione:
+
++ Rischi e loro mitigazione;
++ Divisione temporale di sviluppo;
++ Preventivo dei costi di realizzazione;
++ Pianificazione del lavoro;
++ Consuntivo del progetto.
+
+La redazione del documento va di pari passo con l'avanzamento del progetto, in modo tale da essere sempre aggiornato alla situazione corrente del lavoro.
+
 === Attività
 Nel processo di pianificazione sono presenti due attività principali:
 
-+ Definizione del progetto;
-+ Pianificazione del progetto e della gestione tecnica.
++ definizione del progetto;
++ pianificazione del progetto e della gestione tecnica.
 
 ==== Definizione del progetto
 In questa attività il gruppo deve definire tutto ciò che caratterizza il progetto, ovvero i suoi obiettivi e vincoli, sia di carattere funzionale che tecnologico. Durante la lavorazione del progetto verranno prodotti diversi output, che possono essere suddivisi nelle due macro categorie di: documentazione, codice. Entrambi questi prodotti dovranno essere realizzati rispettando determinate regole e processi, ed è quindi necessario che il gruppo definisca in questa attività uno o più cicli di vita da seguire.
@@ -430,14 +441,14 @@ In questa attività il gruppo deve definire tutto ciò che caratterizza il proge
 ===== Suddivisione temporale
 Il gruppo ha individuato tre periodi di lavoro principali:
 
-- Raccolta e analisi dei requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con l'azienda proponente;
-- Sviluppo della Requirements and Technology Baseline (RTB): si studiano le tecnologie da utilizzare e si applicano le conoscenze acquisite per realizzare un PoC (Proof of Concept), ovvero un prodotto software che permetta di dimostrare la padronanza delle tecnologie selezionate ai fini dello sviluppo del progetto;
-- Periodo di sviluppo del Minimum Viable Product (MVP): viene progettato e implementato un prodotto software che rispetti almeno i requisiti minimi di accettazione, e che offra tutte le funzionalità richieste.
+- raccolta e Analisi dei Requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con il Proponente;
+- sviluppo della Requirements and Technology Baseline (RTB): si studiano le tecnologie da utilizzare e si applicano le conoscenze acquisite per realizzare un PoC (Proof of Concept), ovvero un prodotto software che permetta di dimostrare la padronanza delle tecnologie selezionate ai fini dello sviluppo del progetto;
+- periodo di sviluppo del Minimum Viable Product (MVP): viene progettato e implementato un prodotto software che rispetti almeno i requisiti minimi di accettazione, e che offra tutte le funzionalità richieste.
 
-Ognuno di questi viene suddiviso a sua volta in periodi della durata di una settimana denominati _sprint_. Al termine di ogni _sprint_ viene effettuato un incontro interno di retrospettiva, nel quale si analizza criticamente la settimana appena conclusa, mostrandone aspetti positivi, aspetti da migliorare e fissando obiettivi che verrano poi riportati nell'Issue Tracking System sotto forma di task. Questi andranno a comporre il _backlog_ dello _sprint_ successivo, e il loro progressivo completamento andrà a produrre un _burndown-chart_, utilizzato dal gruppo come strumento che rappresenti in modo oggettivo l'andamento del lavoro.
+Ognuno di questi viene suddiviso a sua volta in periodi della durata di una settimana denominati _sprint_. Al termine di ogni _sprint_ viene effettuato un incontro interno di retrospettiva, nel quale si analizza criticamente la settimana appena conclusa, mostrandone aspetti positivi, aspetti da migliorare e fissando obiettivi che verranno poi riportati nell'Issue Tracking System sotto forma di task. Questi andranno a comporre il _backlog_ dello _sprint_ successivo, e il loro progressivo completamento andrà a produrre un _burndown-chart_, utilizzato dal gruppo come strumento che rappresenti in modo oggettivo l'andamento del lavoro.
 
 ===== Definizione di ruoli, responsabilità e costi
-Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognuno dei quali con precise responsabilità da rispettare. Ogni membro del gruppo dovrà assumere ognuno di questi ruoli all'interno del periodo di lavoro al progetto. L'assegnazione dei ruoli avviene con frequenza bisettimanale. Di seguito viene riportata la descrizone di ogni ruolo con i relativi compiti:
+Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognuno dei quali con precise responsabilità da rispettare. Ogni membro del gruppo dovrà assumere ognuno di questi ruoli all'interno del periodo di lavoro al progetto. L'assegnazione dei ruoli avviene con frequenza bisettimanale. Di seguito viene riportata la descrizione di ogni ruolo con i relativi compiti:
 
 + *Responsabile*: è presente durante l'intero progetto, in particolare si occupa di:
   - coordinare il gruppo;
@@ -447,27 +458,20 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
 + *Amministratore*: ruolo presente durante tutto il progetto. Ha il compito di:
   - predisporre e controllare il corretto utilizzo delle procedure e degli strumenti adottati;
   - implementare e manutenere gli automatismi in modo da migliorare l'efficienza del gruppo.
-+ *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento Analisi dei requisiti, nel quale:
++ *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento Analisi dei Requisiti, nel quale:
   - definisce i casi d'uso;
   - raccoglie e classifica i requisiti.
 + *Progettista*: ruolo presente principalmente negli ulimi due periodi, nei quali:
+  - effettua uno studio delle tecnologie proposte, mirato alla definizione  dello stack tecnologico da usare;
   - delinea l'architettura del prodotto;
   - definisce le linee guida implementative valutando le scelte più efficienti e sostenibili.
-+ *Programmatore*: è attivo negli ultimi due periodi del progetto, ed è il responsabile della traduzione in codice eseguibile dell'architettura definita dal progettista;
++ *Programmatore*: è attivo negli ultimi due periodi del progetto, nei quali:
+  - si occupa della codifica del PoC, senza partire da una progettazione ben definita visto l'obiettivo del Proof of Concept;
+  - traduce in codice eseguibile l'architettura del prodotto finale definita dal progettista durante il periodo di sviluppo del MVP.
 + *Verificatore*: è presente durante l'intero progetto, e si occupa di controllare che il lavoro prodotto dal gruppo rispetti gli standard qualitativi adottati.
 
-Ad ogni ruolo è inoltre associato un costo orario, tramite cui il gruppo calcola il preventivo totale del progetto e quello di ogni _sprint_ seguito dal relativo consuntivo.
+Ad ogni ruolo è inoltre associato un costo orario, sulla base del quale il gruppo calcola il preventivo totale del progetto e quello di ogni _sprint_ seguito dal relativo consuntivo. Il costo orario viene calcolato in base alla sua importanza all'interno del progetto, misurata in termini di competenze e disponibilità della risorsa.
 
-=== Piano di Progetto <PdP>
-Il Piano di Progetto è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento. Sono presenti cinque sezioni:
-
-+ Rischi e loro mitigazione;
-+ Divisione temporale di sviluppo;
-+ Preventivo dei costi di realizzazione;
-+ Pianificazione del lavoro;
-+ Consuntivo del progetto.
-
-La redazione del documento va di pari passo con l'avanzamento del progetto, in modo tale da essere sempre aggiornato alla situazione corrente del lavoro.
 
 == Processo di valutazione e controllo di progetto <valutazioneControllo>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.2_

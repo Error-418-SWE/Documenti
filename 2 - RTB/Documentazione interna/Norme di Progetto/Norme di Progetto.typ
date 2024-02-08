@@ -523,8 +523,8 @@ La redazione del documento va di pari passo con l'avanzamento del progetto, in m
 === Attività
 Nel processo di pianificazione sono presenti due attività principali:
 
-+ Definizione del progetto;
-+ Pianificazione del progetto e della gestione tecnica.
++ definizione del progetto;
++ pianificazione del progetto e della gestione tecnica.
 
 ==== Definizione del progetto
 In questa attività il gruppo deve definire tutto ciò che caratterizza il progetto, ovvero i suoi obiettivi e vincoli, sia di carattere funzionale che tecnologico. Durante la lavorazione del progetto verranno prodotti diversi output, che possono essere suddivisi nelle due macro categorie di: documentazione, codice. Entrambi questi prodotti dovranno essere realizzati rispettando determinate regole e processi, ed è quindi necessario che il gruppo definisca in questa attività uno o più cicli di vita da seguire.

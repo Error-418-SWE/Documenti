@@ -9,8 +9,8 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Error_418',
-			social: {
-				github: Common.documentsRepositoryURL,
+			components: {
+				SocialIcons: './src/components/SocialLinks.astro',
 			},
 			locales: {
 				root: {

@@ -556,6 +556,7 @@ Il resoconto di quanto deciso sarà visibile all'interno del verbale redatto a f
 
 + Strategia expertise decision-making: prevede che la decisione venga presentata e analizzata mediante la consultazione di figure esterne più esperte, individuabili nel Proponente o nel Committente, la cui esperienza risulta determinante. \ Questa strategia viene utilizzata per le decisioni:
   - implementative;
+  - tecnologiche;
   - architetturali.
 
 
@@ -563,10 +564,15 @@ Il resoconto di quanto deciso sarà visibile all'interno del verbale redatto a f
 Le decisioni possono riguardare diversi aspetti del capitolato, e la loro categorizzazione è utile per individuare la migliore strategia di gestione e i ruoli coinvolti.
 
 Le decisioni vengono dunque così classificate:
-+ Decisioni organizzative: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto:
++ Decisioni organizzative: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto. Esempi notevoli sono le decisioni focalizzate alla coordinazione del gruppo o alla scelta degli strumenti da utilizzare per la gestione del progetto, ad esempio ITS, piattaforme per la comunicazione e per la collaborazione:
   - documento soggetto a modifiche: Norme di progetto;
-  - ruoli responsabili dell'aggiornamento: Responsabile;
+  - ruoli responsabili dell'aggiornamento: Responsabile, Amministratori;
   - strategia di decision-making: collaborativa.
+
++ Decisioni tecnologiche: sono relative allo stack tecnologico da adottare durante lo sviluppo del progetto:
+  - documento soggetto a modifiche: Norme di Progetto;
+  - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
+  - strategia di decision-making: expertise decision-making.
 
 + Decisioni sui requisiti: sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
   - documento soggetto a modifiche: Analisi dei Requisiti;
@@ -576,12 +582,12 @@ Le decisioni vengono dunque così classificate:
 + Decisioni di implementazione: sono decisioni relative alla stesura del codice:
   - documento soggetto a modifiche: Norme di Progetto, documenti tecnici (diagramma delle classi, ...);
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
-  - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
+  - strategia di decision-making: expertise decision-making.
 
 + Decisioni architetturali: sono decisioni relative ai pattern e alle architetture riguardanti il software:
   - documento soggetto a modifiche: Norme di Progetto, documenti tecnici (diagramma delle classi, diagramma dei casi d'uso...);
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
-  - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
+  - strategia di decision-making: expertise decision-making.
 
 + Decisioni sulla qualità: sono decisioni relative ai controlli di qualità.
   - documento soggetto a modifiche: Piano di Qualifica;

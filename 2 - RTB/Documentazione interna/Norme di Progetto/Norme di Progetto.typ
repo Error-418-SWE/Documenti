@@ -257,7 +257,7 @@ Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo d
 + Verifica (Check): monitoraggio e misurazione dei processi e dei prodotti rispetto agli obiettivi e ai requisiti, e reportistica dei risultati;
 + Attuazione (Act): azioni per migliorare le prestazioni, se necessario, in base ai risultati della verifica.
 
-==== Organizzazione del processso
+==== Organizzazione del processo
 ===== Pianificazione
 La pianificazione del processo è compito del Responsabile, il quale al termine dello sprint precedente, in base alle attività svolte e ai risultati ottenuti, pianifica le attività da svolgere nello sprint successivo. \
 La pianificazione è un'attività iterativa, che viene svolta all'inizio dello sprint. Il Responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \

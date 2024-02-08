@@ -477,6 +477,16 @@ Il processo di valutazione e controllo ha lo scopo di determinare lo stato del p
 
 Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e viene messo per iscritto all'interno dei verbali di tali riunioni e nei paragrafi di consuntivo del Piano di Progetto.
 
+=== Risultati
+Come risultato dell'implementazione del processo di valutazione e controllo si elencano i seguenti:
+- valutazione dell'adeguatezza dei ruoli, respondabilità e risorse;
+- esecuzioni delle azioni correttive scaturite dalle revisioni di progesso;
+- viene avviata, se necessaria, la ripianificazione del progetto;
+- Viene autorizzata l'azione del progetto di avanzare (o meno) da un traguardo o evento programmato al successivo.
+- vengono registrati gli obiettivi raggiunti.
+
+I risultati sono espressi e analizzati nei paragrafi di consuntivo del Piano di Progetto.
+
 === Attività
 ==== Piano di valutazione e controllo del progetto
 La valutazione e il controllo del progetto avvengono a cadenza settimanale, in corrispondenza della riunione di retrospettiva. Durante questa riunione si valuta ciò che è stato svolto durante il periodo di lavoro (_sprint_) che si sta concludendo, se ne identificano i problemi e si decidono soluzioni di controllo che vadano a risolvere o arginare i problemi individuati.
@@ -506,17 +516,27 @@ Entrambe le rappresentazioni pongono nell'asse $x$ del grafico il tempo, indicat
 Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consuntivo dello sprint nel Piano di Progetto, nel quale, oltre a fare un resoconto dello sprint, si analizza il suo l'aspetto economico: in base ai ruoli impegnati e al monte ore produttivo svolto, si calcola il costo effettivo del periodo concluso, aggiornando conseguentemente il costo preventivato e il documento Piano di Progetto. Questo indicatore contribuisce ad avere un resoconto completo del progetto, e permette al gruppo di comprendere meglio come sta lavorando e se sta gestendo correttamente le risorse a sua disposizione.
 
 ==== Controllo
-Nell'attività di controllo si intraprendono azioni correttive nei confronti dei problemi individuati. Questi problemi possono essere di duplice natura:
+Nell'attività di controllo figurano i seguenti task:
 
++ azioni correttive;
++ ripianificazione;
++ azioni di cambiamento dovute a richieste del Committente e/o Proponente;
++ autorizzazione ad avanzare alla successiva milestone.
+
+===== Azioni correttive
+Nell'attività di controllo si intraprendono azioni correttive nei confronti dei problemi individuati. Questi problemi possono essere di duplice natura:
 + mancato raggiungimento degli obiettivi prefissati;
 + miglioramenti e accortezze da adottare.
 
-===== Mancato raggiungimento degli obiettivi prefissati
+====== Mancato raggiungimento degli obiettivi prefissati
 È necessario che alla chiusura dello sprint le attività ancora in fase di svolgimento vengano riportate nello sprint successivo, insieme a tutte quelle attività pianificate ma non ancora iniziate che sono considerate importanti. Tutte le attività che non vengono considerate importanti, ad esempio attività di cui si è rivalutato il grado di priorità, vengono riportate nel backlog. Una situazione di mancato raggiungimento degli obiettivi può essere sinonimo anche da una pianificazione errata e troppo ottimista, ed è quindi necessario che essa sia rivista e migliorata.
 
-===== Miglioramenti e accortezze da adottare
-Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcune delle task raccolte rispondono direttamente ai problemi individuati nella parte di Things to change.
+====== Miglioramenti e accortezze da adottare
+Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcuni dei task raccolti rispondono direttamente ai problemi individuati nella parte di Things to change.
 
+===== Ripianificazione
+===== Azioni di cambiamento dovute a richieste del Committente e/o Proponenteinegoziazione
+===== Autorizzazione ad avanzare alla successiva milestone
 
 == Processo di gestione delle Decisioni
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_

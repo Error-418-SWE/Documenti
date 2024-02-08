@@ -932,7 +932,7 @@ $bold("Scenario: ")$
 
 == Rotazione della visuale
 $bold("Descrizione: ")$
-Una volta che il sistema è stato configurato l'utente può visualizzare il magazzino e ruotare la camera sul magazzino a destra o sinistra.
+successivamente alla configurazione del sistema, l'utente può visualizzare il magazzino e ruotare la visuale sul magazzino in senso orario o antiorario.
 
 $bold("Attore: ")$
 utente.
@@ -941,11 +941,12 @@ $bold("Precondizioni: ")$
 - il sistema è stato correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- l'utente ha spostato la visuale sul magazzino nella direzione indicata.
+- l'utente ha ruotato la visuale sul magazzino in senso orario o antiorario.
 
 $bold("Scenario: ")$
 - l'utente visualizza il magazzino;
-- l'utente ruota lavisuale a destra o a sinistra;
+- l'utente può ruotare la visuale in senso orario;
+- l'utente può ruotare la visuale in senso antiorario;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
 == Zoom della visuale

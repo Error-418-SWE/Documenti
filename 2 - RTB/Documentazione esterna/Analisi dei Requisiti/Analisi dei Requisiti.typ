@@ -186,6 +186,11 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
   _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_ .
 
+== Riferimenti a documentazione interna
+- Documento "Glossario v1.1.0"\
+  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
+
+
 == Principi di redazione
 
 Questo documento è redatto in modo incrementale, così da risultare sempre conforme agli accordi presi tra gruppo e Proponente durante lo sviluppo del progetto. Vengono inoltre adottati i seguenti criteri di qualità:
@@ -422,6 +427,10 @@ $bold("Estensioni: ")$
 $bold("Descrizione: ")$
 modifica delle caratteristiche di uno scaffale già esistente.
 
+Le caratteristiche che definiscono lo scaffale vengono visualizzate e possono essere modificate, nello specifico i valori sono: altezza, larghezza, profondità, numero di piani e colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
+
+L'utente può decidere, per ciascuno di essi, di sostituirlo specificando il nuovo valore oppure di lasciarlo inalterato.
+
 $bold("Attore: ")$
 utente.
 
@@ -434,7 +443,13 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente seleziona uno scaffale nell'ambiente di lavoro;
 - l'utente seleziona il comando per la modifica dello scaffale;
-- l'utente inserisce i nuovi valori relativi alle proprietà da modificare dello scaffale.
+- l'utente può inserire una nuova altezza dello scaffale;
+- l'utente può inserire una nuova larghezza dello scaffale;
+- l'utente può inserire una nuova profondità dello scaffale;
+- l'utente può inserire un nuovo numero di piani dello scaffale;
+- l'utente può inserire un nuovo numero di colonne dello scaffale;
+- l'utente può selezionare un diverso orientamento dello scaffale nel piano (orizzontale o verticale);
+- l'utente conferma la nuova configurazione di valori.
 
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.

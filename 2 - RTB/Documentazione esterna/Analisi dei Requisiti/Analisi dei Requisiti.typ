@@ -950,7 +950,7 @@ $bold("Scenario: ")$
 
 == Zoom della visuale
 $bold("Descrizione: ")$
-Una volta che l'ambiente è stato configurato l'utente può avvicinare o allontanare la visuale dal magazzino (zoom in, zoom out).
+successivamente alla configurazione del sistema, l'utente può effettuare uno zoom-in o uno zoom-out per avvicinare o allontanare la visuale dal magazzino.
 
 $bold("Attore: ")$
 utente.
@@ -963,7 +963,8 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente visualizza il magazzino;
-- l'utente effettua uno zoom in o uno zoom out sul magazzino;
+- l'utente può avvicinarsi al magazzino e ai suoi elementi tramite uno zoom-in;
+- l'utente può allontanarsi dal magazzino e dai suoi elementi tramite uno zoom-out;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
 #set heading(numbering: (..nums) => {
@@ -1099,8 +1100,8 @@ Dove:
     [FM-11.1], [Obbligatorio], [L'utente deve poter muovere la visuale sui tre assi], [UC-11.1],
     [FM-11.2], [Obbligatorio], [L'utente deve poter ruotare la visuale], [UC-11.2],
     [FM-11.3], [Obbligatorio], [L'utente deve poter effettuare operazioni di zoom della visuale], [UC-11.3],
-    [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom in], [UC-11.3],
-    [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom out], [UC-11.3],
+    [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom-in], [UC-11.3],
+    [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom-out], [UC-11.3],
     
     [FM-12], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login], [Capitolato],
 

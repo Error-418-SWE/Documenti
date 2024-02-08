@@ -535,7 +535,7 @@ Ogni decisione viene presentata identificandone:
 - svantaggi;
 - impatto in termini di tempi e costi.
 
-Il processo di decision making viene prevalentemente svolto nel meeting di retrospettiva, in modo da non contrastare la pianificazione dello sprint in corso ed evitare un eccessivo numero di meeting interni che potrebbero comportare difficoltà organizzative e un rallentamnto dell'avanzamento.
+Il processo di decision making viene prevalentemente svolto nel meeting di retrospettiva, in modo da non contrastare la pianificazione dello sprint in corso ed evitare un eccessivo numero di meeting interni che potrebbero comportare difficoltà organizzative e un rallentamento dell'avanzamento.
 Solo decisioni critiche riguardo cambiamenti sostanziali o nuove direzioni di lavoro possono far scaturire meeting interni mirati.
 
 Il resoconto di quanto deciso sarà visibile all'interno del verbale redatto a fine meeting.
@@ -546,27 +546,27 @@ Le decisioni possono riguardare diversi aspetti del capitolato, e la loro catego
 Le decisioni vengono dunque così classificate:
 + Decisioni organizzative: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto:
   - documento soggetto a modifiche: Norme di progetto;
-  - ruoli responsbili dell'aggiornamento: Responsabile;
+  - ruoli responsabili dell'aggiornamento: Responsabile;
   - strategia di decision-making: collaborativa.
 
 + Decisioni sui requisiti: sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
   - documento soggetto a modifiche: Analisi dei requisiti;
-  - ruoli responsbili dell'aggiornamento: Analisti;
+  - ruoli responsabili dell'aggiornamento: Analisti;
   - strategia di decision-making: collaborativa.
 
 + Decisioni di implementazione: sono decisioni relative alla stesura del codice:
   - documento soggetto a modifiche: Norme di progetto, documenti tecnici (diagramma delle classi,...);
-  - ruoli responsbili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
+  - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
   - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
 
 + Decisioni architetturali: sono decisioni relative ai pattern e alle architetture riguardanti il software.
   - documento soggetto a modifiche: Norme di progetto, documenti tecnici (diagramma delle classi,...);
-  - ruoli responsbili dell'aggiornamento: Responsabile, Progettisti;
+  - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
 
 + Decisioni sulla qualità: sono decisioni relative ai controlli di qualità.
   - documento soggetto a modifiche: Piano di qualifica;
-  - ruoli responsbili dell'aggiornamento: Responsabile, Verificatori;
+  - ruoli responsabili dell'aggiornamento: Responsabile, Verificatori;
   - strategia di decision-making: collaborativa.
 
 ==== Strategie di decision-making utilizzate

@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { Common } from '/common';
 
-// https://astro.build/config
 export default defineConfig({
 	// site: Common.githubPagesURL,
 	// base: '/' + Common.repositoryName,
@@ -25,15 +24,17 @@ export default defineConfig({
 				},
 				{
 					label: 'RTB',
-					// badge: 'Deprecato',
+					collapsed: true,
 					autogenerate: { directory: 'rtb' },
 				},
 				// {
 				// 	label: 'PB',
+				//	collapsed: true,
 				// 	autogenerate: { directory: 'pb' },
 				// },
 				// {
 				// 	label: 'CA',
+				// collapsed: true,
 				// 	autogenerate: { directory: 'ca' },
 				// },
 			],

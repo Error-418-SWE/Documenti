@@ -332,7 +332,9 @@ $bold("Scenario: ")$
   ],
 )
 $bold("Descrizione: ")$
-il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
+la larghezza e la lunghezza dell'ambiente di lavoro possono essere modificate successivamente alla sua configurazione iniziale.
+
+L'utente può decidere, per ciascun valore modificabile, di sostituirlo specificando il nuovo valore oppure di lasciarlo inalterato.
 
 $bold("Attore: ")$
 utente.
@@ -345,7 +347,9 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente avvia la modifica dell'ambiente di lavoro;
-- l'utente regola le dimensioni dell'ambiente di lavoro.
+- l'utente può inserire una nuova larghezza dell'ambiente di lavoro;
+- l'utente può inserire una nuova lunghezza dell'ambiente di lavoro;
+- l'utente conferma la nuova configurazione di valori.
 
 $bold("Estensioni: ")$
 - UC-2.1 Visualizzazione errore dimensioni magazzino troppo piccole;

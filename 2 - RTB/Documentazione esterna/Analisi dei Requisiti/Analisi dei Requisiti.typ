@@ -1131,7 +1131,13 @@ Dove:
     
     [FM-12], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login], [Capitolato],
 
-    [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato]
+    [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato],
+
+    [FM-14], [Obbligatorio], [Al termine della sessione di lavoro il prodotto non deve salvare la configurazione dell'ambiente creata dall'utente], [Capitolato],
+    [FM-14.1], [Obbligatorio], [Al termine della sessione di lavoro il prodotto non deve salvare le modifiche effettuate], [Capitolato],
+    [FM-14.1.1], [Obbligatorio], [Al termine della sessione di lavoro il prodotto non deve fornire il salvataggio delle modifiche effettuate agli scaffali], [Capitolato],
+    [FM-14.1.2], [Obbligatorio], [Al termine della sessione di lavoro il prodotto non deve fornire il salvataggio delle modifiche effettuate ai bin], [Capitolato],
+    [FM-14.1.3], [Obbligatorio], [Al termine della sessione di lavoro il prodotto non deve fornire il salvataggio delle modifiche effettuate all'ambiente di lavoro], [Capitolato]
   ),
   caption: [Requisiti funzionali]
 )
@@ -1161,7 +1167,6 @@ Dove:
     columns: 4,
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [VM-1], [Obbligatorio], [Il prodotto non deve gestire la persistenza dei dati], [Capitolato],
     [VM-2], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0], [Interno],
     [VM-3], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0], [Interno],
     [VM-4], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva], [Interno],
@@ -1184,10 +1189,9 @@ Dove:
     columns: 2,
     align: left,
     [*Tipo Requisito*], [*Numero totale*],
-    [Requisiti funzionali], [92],
+    [Requisiti funzionali], [94],
     [Requisiti di qualità], [7],
-    [Requisiti di vincolo], [12],
-
+    [Requisiti di vincolo], [11]
   ),
   caption: [Riepilogo requisiti]
 )

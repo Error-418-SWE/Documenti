@@ -295,7 +295,7 @@ Al termine di ogni sprint, il gruppo procederà con il meeting di retrospettiva,
 Questa analisi individua i miglioramenti da apportare al processo di sviluppo, stabilendo le contromisure necessarie per migliorare il processo stesso.
   \ \
 ===== Attuazione
-L'attuazione è l'ultima fase del processo di gestione del ciclo di vita, e consiste nell'attuazione delle contromisure stabilite durante la fase di verifica. \
+L'attuazione è l'ultima fase del processo di gestione del ciclo di vita, e consiste nella messa in pratica delle contromisure stabilite durante la fase di verifica. \
 L'obiettivo è sopperire alle mancanze e alle inefficienze del processo di sviluppo, in modo da migliorare la qualità del prodotto e la produttività del gruppo. \
 Diventa compito del Responsabile stabilire le attività necessarie per attuare le contromisure, e di conseguenza di pianificare le attività da svolgere nello sprint successivo. \
 Il risultato di questo processo è visibile all'interno del documento Piano di Progetto.
@@ -364,7 +364,7 @@ Le responsabilità del Progettista includono:
 \ \
 ===== Programmatore
 Il Programmatore è la figura più numerosa all'intero del gruppo.\
-Le responsabilità del Programmatore includono:
+Le sue responsabilità includono:
 
 + scrittura del codice sorgente, perseguendo mantenibilità e conformità a quanto stabilito dall'architettura definita dalla progettazione;
 
@@ -408,7 +408,7 @@ I principi della comunicazione che ispirano i processi di gestione dell'infrastr
 
 + Comunicazione proattiva: comunicare con cognizione di causa, offrendo spunti concreti di discussione. Ogni comunicazione deve poter essere processata dagli interessati nel minor tempo possibile;
 
-+ Comunicazione frequente: la frequenza della comunicazione permette di prendere decisione in modo tempestivo e informato.
++ Comunicazione frequente: la frequenza della comunicazione permette di prendere decisioni in modo tempestivo e informato.
 
 ===== Comunicazione interna
 

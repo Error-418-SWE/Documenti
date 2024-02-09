@@ -137,7 +137,7 @@ In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo
 - *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
 
 
-= Processi di ciclo di vita
+= Processi di ciclo di vita <Processi_ciclo_vita>
 
 == Processi organizzativi abilitanti
 
@@ -332,7 +332,7 @@ La suddivisione delle comunicazioni interne in canali ha lo scopo di ridurre le 
 
 Le comunicazioni sincrone in videochiamata avvengono nei cosiddetti "canali vocali". Vengono forniti quattro canali vocali generici ad accesso libero. I membri dell'organizzazione hanno la facoltà di incontrarsi in qualsiasi momento in videochiamate interne. I canali vocali non sono organizzati tematicamente perché offrono la persistenza.
 
-#link("https://miro.com/")[*Miro*] è un servizio di collaborazione per team basato su _whiteboard_. Offre la possibilità di creare board multimediali e permette la collaborazione asincrona. È utilizzato per:
+#link("https://miro.com/")[*Miro*]  è un servizio di collaborazione per team basato su _whiteboard_. Offre la possibilità di creare board multimediali e permette la collaborazione asincrona. È utilizzato per:
 
 + Raccogliere i feedback interni da discutere durante i meeting di retrospettiva;
 + Supportare gli incontri interni di _brainstorming_;
@@ -525,7 +525,7 @@ Nell'attività di controllo si intraprendono azioni correttive nei confronti dei
 Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcune delle task raccolte rispondono direttamente ai problemi individuati nella parte di Things to change.
 
 
-== Processo di gestione delle Decisioni
+== Processo di gestione delle Decisioni <Gestione_decisioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
 === Scopo
 Lo scopo del processo di gestione delle decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionando la migliore in termini di benefici attesi, costi e rischi associati. \
@@ -584,7 +584,7 @@ Le decisioni vengono dunque così classificate:
   - architetturali. \
 
 
-== Processo di Gestione dei Rischi
+== Processo di Gestione dei Rischi <Gestione_rischi>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.4_
 
 === Scopo
@@ -1199,20 +1199,20 @@ Per ciascuno stakeholder si identificano i canali e la frequenza della comunicaz
 
 Il gruppo adotta una strategia iterativa per l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. L'approccio è finalizzato alla raccolta di feedback e prevede:
 - interviste e questionari;
-- studio individuale di tecnologie abilitanti, documentazione tecnica;
+- studio individuale di tecnologie abilitanti e documentazione tecnica;
 - acquisizione di conoscenze tramite workshop interni e _brainstorming_;
 - osservazione delle criticità delle soluzioni software preesistenti.
 Le comunicazioni con gli stakeholder avvengono nelle modalità descritte in @modalita-comunicazione.
 
-Le attività sono supportate, quando utile, da documenti, immagini, dimostratori tecnologici e in generale qualsiasi elemento informativo utile alla comprensione dei bisogni degli stakeholder. Le informazioni sono organizzate in modo da supportare l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. Il livello di astrazione adottato può differire in base all'interlocutre e al progresso globale conseguito dal _Processo di definizione di bisogni e requisiti degli stakeholder_.
+Le attività sono supportate, quando utile, da documenti, immagini, dimostratori tecnologici e in generale qualsiasi elemento informativo utile alla comprensione dei bisogni degli stakeholder. Le informazioni sono organizzate in modo da supportare l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. Il livello di astrazione adottato può differire in base all'interlocutore e al progresso globale conseguito dal _Processo di definizione di bisogni e requisiti degli stakeholder_.
 
-Lo strumento adottato a supporto di queste operazioni è Miro (TODO).
+Lo strumento adottato a supporto di queste operazioni è Miro.
 
 I bisogni espressi da Committente e Fornitore sono raccolti, catalogati, analizzati ed espressi nel documento di _Analisi dei Requisiti_ prodotto dal gruppo.
 
-Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, il gruppo si adopera per mediare i contrasti. La strategia di mediazione prevede l'identificazione di un sottoinsieme di interessi e bisogni comuni, il confronto con le parti e la definzione di strategie di mediazione calate nella fattispecie.
+Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, il gruppo si adopera per mediare i contrasti. La strategia di mediazione prevede l'identificazione di un sottoinsieme di interessi e bisogni comuni, il confronto con le parti e la definizione di strategie di mediazione calate nella fattispecie.
 
-Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi di ciclo di vita del sistema software (descritti in TODO) sono affrontati tramite il processo di Gestione dei Rischi TODO.
+Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi di ciclo di vita del sistema software (descritti nella @Processi_ciclo_vita) sono affrontati tramite il processo di Gestione dei Rischi disponibile alla  @Gestione_rischi.
 
 Il negoziato tra le parti potrebbe essere richiesto per mediare posizioni mutualmente incompatibili, o a causa di vincoli o budget insufficiente. Anche la data di consegna prevista incide sulla realizzazione dei requisiti. Sarà sempre necessario consultare gli stakeholder coinvolti per raggiungere un accordo. Le decisioni saranno tracciate e rese disponibili agli stakeholder.
 
@@ -1220,22 +1220,24 @@ Il negoziato tra le parti potrebbe essere richiesto per mediare posizioni mutual
 Include l'elicitazione dei bisogni direttamente dagli stakeholder o dalla documentazione fornita da essi, oppure la raccolta di bisogni impliciti basati sul dominio applicativo ed i contesti tecnologico, legislativo, normativo.
 
 I bisogni degli stakeholder scaturiscono da fonti diverse. Il gruppo si impegna ad esplorare e valutare, al fine di identificare possibili bisogni, almeno questi frangenti:
-- Obiettivi di alto livello che il sistema dovrebbe conseguire;
-- Contributi concreti che il sistema dovrebbe apportare a beneficio degli stakeholder;
-- Scenari operativi, utili per limitare l'ambito e comprendere le aspettative e i bisogni;
-- Scenari operativi quotidiani, utili per assegnare una priorità ai bisogni;
-- Tipologie e caratteristiche degli utenti;
-- Ambiente operativo e contesto d'utilizzo;
-- Aspettative sulle prestazioni e la disponibilità del sistema;
-- Pratiche di business;
-- Norme, leggi o altri vincoli esterni.
+- obiettivi di alto livello che il sistema dovrebbe conseguire;
+- contributi concreti che il sistema dovrebbe apportare a beneficio degli stakeholder;
+- scenari operativi, utili per limitare l'ambito e comprendere le aspettative e i bisogni;
+- scenari operativi quotidiani, utili per assegnare una priorità ai bisogni;
+- tipologie e caratteristiche degli utenti;
+- ambiente operativo e contesto d'utilizzo;
+- aspettative sulle prestazioni e la disponibilità del sistema;
+- pratiche di business;
+- norme, leggi o altri vincoli esterni.
 
 ==== Definizione delle priorità
-Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (TODO), guidano la selezione e la prioritizzazione dei requisiti.
+Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (@Gestione_decisioni), guidano la selezione e la prioritizzazione dei requisiti.
 
 ==== Casi d'uso
 Si definisce un insieme di casi d'uso (anche detti use case, abbreviato in UC) che identifichi tutte le funzionalità attese.
-I casi d'uso sono definiti ed utilizzati nel documento di _Analisi dei Requisiti_. Sono fonte di bisogni e, indirettamente, di requisiti; sono un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
+I casi d'uso sono definiti ed utilizzati nel documento di _Analisi dei Requisiti_. Essi sono:
+- fonte di bisogni e, indirettamente, di requisiti; 
+- un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
 
 Ogni caso d'uso comprende:
 + Codice identificativo;
@@ -1265,6 +1267,6 @@ I vincoli sono un tipo di requisito. Possono derivare da:
 Sono classificati per priorità e per fonte.
 
 ==== Analisi dei requisiti
-Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
+Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
 

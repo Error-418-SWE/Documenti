@@ -542,7 +542,7 @@ $bold("Scenario: ")$
 
 == Creazione di un bin
 $bold("Descrizione: ")$
-deve essere possibile creare delle aree adibite a contenere prodotti, definite nel contesto come bin. In fase di creazione deve essere possibile definire le caratteristiche che il bin dovrà avere, quali : altezza, larghezza e profondità.
+deve essere possibile creare e aggiungere nell'ambiente delle aree adibite a contenere prodotti, definite nel contesto come bin. In fase di creazione deve essere possibile definire le caratteristiche che il bin dovrà avere, quali: altezza, larghezza e profondità.
 
 $bold("Attore: ")$
 utente.
@@ -555,8 +555,11 @@ $bold("Postcondizioni: ")$
 - l'area selezionata viene classificata come bin.
 
 $bold("Scenario: ")$
-- l'utente entra nella modalità di modifica;
-- l'utente seleziona un'area libera e valida.
+- l'utente seleziona l'aggiunta di un bin;
+- l'utente inserisce l'altezza del bin;
+- l'utente inserisce la larghezza del bin;
+- l'utente inserisce la profondità del bin;
+- l'utente posiziona il bin in una posizione valida nell'ambiente di lavoro.
 
 == Modifica di un bin
 $bold("Descrizione: ")$

@@ -186,6 +186,11 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
   _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_ .
 
+== Riferimenti a documentazione interna
+- Documento "Glossario v1.1.0"\
+  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
+
+
 == Principi di redazione
 
 Questo documento è redatto in modo incrementale, così da risultare sempre conforme agli accordi presi tra gruppo e Proponente durante lo sviluppo del progetto. Vengono inoltre adottati i seguenti criteri di qualità:

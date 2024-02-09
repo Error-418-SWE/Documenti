@@ -303,7 +303,7 @@ Il risultato di questo processo è visibile all'interno del documento Piano di P
 \
 ==== Ruoli
 ===== Responsabile
-Il Responsabile è la figura chiave che guida il progetto, assumendo il ruolo di referente principale per il gruppo e per gli stakeholders. \
+Il Responsabile è la figura chiave che guida il progetto, assumendo il ruolo di referente principale per il gruppo e per gli stakeholder. \
 
 Le responsabilità del Responsabile includono:
 
@@ -461,7 +461,7 @@ La natura didattica del progetto riduce le prerogative del processo di gestione 
 
 ==== Scopo
 
-Questo processo fornisce all'organizzazione le risorse umane necessarie all'esecuzione dei processi di ciclo di vita al fine di realizzare gli obiettivi di progetto, dell'organizzazione e degli stakeholders.
+Questo processo fornisce all'organizzazione le risorse umane necessarie all'esecuzione dei processi di ciclo di vita al fine di realizzare gli obiettivi di progetto, dell'organizzazione e degli stakeholder.
 
 ==== Attività e compiti
 

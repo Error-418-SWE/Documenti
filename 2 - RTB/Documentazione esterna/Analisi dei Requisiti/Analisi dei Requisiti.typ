@@ -811,7 +811,7 @@ $bold("Scenario: ")$
 - l'utente seleziona un bin;
 - vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
 
-= Interrogazione di uno scaffale
+= Visualizzazione di uno scaffale
 
 #figure(
   image("./imgs/uc9.png", format: "png"),

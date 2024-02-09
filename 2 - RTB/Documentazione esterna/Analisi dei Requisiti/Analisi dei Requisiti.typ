@@ -723,7 +723,12 @@ $bold("Estensioni: ")$
 
 == Configurazione collegamento al database <oo>
 $bold("Descrizione: ")$
-l'utente imposta i dati necessari affinché il programma possa configurarsi con il database in cui sono contenuti i dati.
+l'utente imposta i dati necessari all'interfacciamento del prodotto con il database in cui sono contenuti i dati relativi ai prodotti e il loro posizionamento. I dati necessari alla configurazione del collegamento sono i seguenti:
+- indirizzo dell'host;
+- porta;
+- nome del database;
+- username;
+- password.
 
 $bold("Attore: ")$
 utente.
@@ -731,13 +736,18 @@ utente.
 $bold("Precondizioni: ")$
 - l'ambiente deve essere correttamente configurato;
 - il database deve essere disponibile;
-- l'utente deve disporre delle credenziali per configurarsi al database.
+- l'utente deve disporre delle credenziali per accedere al database.
 
 $bold("Postcondizioni: ")$
 - il sistema è correttamente configurato per accedere al database.
 
 $bold("Scenario: ")$
-- l'utente configura l'accesso al database.
+- l'utente i dati relativi alla configurazione del collegamento al database, quali:
+  - indirizzo dell'host;
+  - porta;
+  - nome del database;
+  - username;
+  - password.
 
 == Visualizzazione messaggio di errore
 $bold("Descrizione: ")$

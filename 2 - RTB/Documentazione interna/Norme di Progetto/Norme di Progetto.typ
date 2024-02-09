@@ -1135,7 +1135,7 @@ Si identifica l'ambito del Capitolato attraverso la definizione di:
 - tipologia di utenza attesa;
 - destinazione d'uso del prodotto finale.
 
-La sintesi di bisogni e requisiti avviene nel contesto del processo di definizione di bisogni e requisiti degli Stakeholders disponibile nella @Definizione_bisogni.
+La sintesi di bisogni e requisiti avviene nel contesto del processo di definizione di bisogni e requisiti degli Stakeholder disponibile nella @Definizione_bisogni.
 
 ==== Classi di soluzione
 Si identificano classi di soluzione che possano sfruttare le opportunità e risolvere i problemi individuati.
@@ -1163,7 +1163,7 @@ La valutazione delle classi di soluzione può avvenire tramite:
 Sulla base dei risultati della valutazione, il gruppo individua una classe di soluzione preferita e la presenta al Proponente per la convalida.
 
 ==== Analisi dei requisiti
-Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste da questo processo. Il documento deve ricevere approvazione esplicita da parte degli Stakeholders coinvolti.
+Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste da questo processo. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
 
 == Processo di definizione di bisogni e requisiti degli stakeholder <Definizione_bisogni>
 

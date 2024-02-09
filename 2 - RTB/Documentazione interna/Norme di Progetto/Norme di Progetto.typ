@@ -64,6 +64,9 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 - Documento "Analisi dei Rischi v2.0.0"\
   #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")
 
+- Documento "Glossario v1.1.0"\
+  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
+
 = Processi di accordo
 
 == Processo di fornitura
@@ -132,103 +135,6 @@ In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo
 - *Zoom*: applicazione per videoconferenze;
 - *Google slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il Committente riguardo l'andamento del lavoro;
 - *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
-
-= Processi di supporto
-
-== Documentazione
-
-=== Scopo e descrizione
-Il processo di documentazione del lavoro ha molteplici obbiettivi, il primo è quello di tenere traccia di cio che è stato svolto e delle decisioni prese nell'ambito del progetto, il secondo è quello di normare le attività in modo che i componenti del gruppo possano lavorare in maniera uniforme ed ordinata.\
-La documentazione è quindi un processo di supporto all’attività di gestione di progetto, essendo un mezzo che, tramite versionamento e integrazione continua, norma attività di codifica, progettazione, analisi ed integrazione.\
-Questa sezione descrive tutte le norme riguardanti la stesura, il mantenimento e l'aggiornamento della documentazione prodotta da Error_418 per ogni fase del ciclo di vita del software.
-
-=== Aspettative
-- Definire una serie di regole per la stesura di documenti o per metodi di lavoro in modo che ogni attività svolta da un membro del gruppo sia valutabile secondo criteri di correttezza decisi a priori.
-- Documentare come svolgere un lavoro in modo che un membro del gruppo possa lavorare in maniera uniforme rispetto al resto del gruppo.
-
-=== Typst
-Il gruppo Error 418 ha deciso di utilizzare Typst come linguaggio per redarre la documentazione. Questo è un linguaggio di markup che permette molte delle funzionalità offerte da strumenti come LaTeX, richiedendo però molto meno sforzo durante la procedura di creazione e di compilazione del file.\
-Questo permette di evitare l'apprendimento della sintassi LaTeX che può risultare ostica ai novizi e consentendo al gruppo di concentrarsi esclusivamente sul corpo del file evitando perdite di tempo e frustrazione data da errori che possono essere di difficile risoluzione.
-
-=== Ciclo di vita
-La creazione e il versionamento di un documento è stato automatizzato quanto più possibile in modo da ridurre l'impatto dell'errore umano.\
-Le modalità che permetto di creare un documento sono:
-+ creare un nuovo branch a partire dal branch che raccoglie i sorgenti (src);
-+ creare una nuova cartella rinominata con lo stesso nome del sorgente che si andrà a creare;
-+ creare un nuovo file .typ a partire da uno dei template che sono stati creati appositamente dal gruppo (per scopo e struttura dei template controllare la sezione @template);
-+ scrivere il corpo del documento modificando eventualmente alcuni specifici campi del template (titolo, data, ecc..);
-+ accertarsi che il documento rispetti tutte le norme definite nelle `Norme di Progetto`;
-+ salvare e creare la pull request per integrare il sorgente all'interno del branch src;
-+ scegliere un nome della pull request aderente alle norme definite nelle `Norme di Progetto`;
-+ una volta creata la pull request avvierà una serie di action che provvederanno a verificare la correttezza la presenza o meno di alcuni campi del documento, creare o aggiornare il changelog, compilare il documento e integrare il risultante file .pdf all'interno del branch main;
-=== Template <template>
-Il gruppo ha creato dei template per la creazione di documenti, questo facilita il lavoro di compilazione e verifica da parte delle GitHub.\
-Possono essere trovate nella root della repository github nel branch src.\
-I template sono:
-- template.typ: per la creazione di documenti interni o esterni;
-- quickstart.typ: per la creazione di verbali interni o esterni.
-
-=== Struttura dei documenti
-Esistono due tipi di documenti fondamentali: "documento" e "verbale" e hanno alcune differenze a livello di struttura.\
-Ogni documento è formato da un file Typst e da un file log.csv creato automaticamente dalle github action (e che si occupano anche di aggiornarlo). Questi due file vengono automaticamente compilati insieme e il .pdf risultante viene inserito all'interno del branch main.
-
-==== Verbali
-Un verbale è la documentazione di un meeting svolto tra i membri del gruppo (verbale interno) o con un referente esterno (verbale esterno). Documentare le riunioni permette di tenere traccia delle decisioni prese dal gruppo in un dato momento e permette a chi non riesce a presenziare di tenersi al passo con il gruppo in maniera asincrona. \
-I verbali devono essere rinominati nel seguente modo "yy-mm-dd.typ" e nello stesso modo deve essere chiamata la sottocartella in cui è inserito.\
-Sarà compito dell'amministratore redigere i verbali dei meeting svolti dal gruppo.
-
-===== Intestazione dei verbali
-Ogni verbale, interno o esterno, deve presentare:
-- intestazione:\
-  + logo del gruppo (logo.png disponibile nella root del branch src);
-  + nome del gruppo: Error 418;
-  + titolo del documento: standardizzato nella forma "Verbale"+"interno/esterno"+"data del verbale nella forma dd/mm/yy";
-  + eventuale sottotitolo: specifica se una riunione ha avuto uno specifico argomento di discussione, è opzionale;
-  + referente: referente dell'azienda proponente che ha partecipate alla riunione in caso di verbale esterno;
-  + redattori e destinatari;
-  + partecipanti: chi ha partecipato alla riunione e il ruolo che ha ricoperto;
-  + luogo in cui si è svolto il meeting, se online indicare la piattaforma usata;
-  + ora di inizio meeting, ora di fine meeting.
-===== Corpo del verbale
-L'effettivo contenuto del documento dove vengono riportati i dettaglio gli argomenti trattati nel meeting, il corpo è così organizzato:
-- section *"Ordine del giorno"*: riporta gli argomenti da trattare nel meeting;
-- *subsection*: ogni subsection riporta l'effettivo resoconto dell'incontro con evetuali dubbi e soluzioni a cui si è arrivati durante il meeting;
-- section *"Pianificazione"*: riporta le operazioni che andranno svolte a seguito del meeting per risolvere problemi emersi durante il meeting o per continuare il lavoro.
-- *firme esterne*: per verbali esterni, firma del referente esterno che approva il resoconto stilato del gruppo.
-
-==== Documenti
-Documenti prodotto dal gruppo Error 418:
-- `Norme di Progetto`;
-- `Piano di Progetto`;
-- `Piano di Qualifica`;
-- `Glossario`;
-- `Analisi dei Requisiti`;
-- `Specifica Architetturale`;
-- `Manuale Utente`.
-
-===== Intestazione dei documenti
-Ogni documento deve presentare:
-- intestazione:\
-  + logo del gruppo (logo.png disponibile nella root del branch src);
-  + nome del gruppo: Error 418;
-  + titolo del documento
-  + redattori e destinatari;
-  + tabella con i componenti del gruppo e i ruoli che ricoprono;
-  + changelog;
-  + indice.
-
-===== Corpo del documento
-Il contenuto del documento è suddiviso in capitoli, ognuno dei quali è composto da più
-sezioni.
-
-=== Convenzioni stilisteche
-
-==== Sintattiche/Grammaticali
-
-Per la scrittura dei documenti è richiesto uno stile di scrittura impersonale (preferendo per esempio frasi come "il gruppo ha fatto" anziché "abbiamo fatto"). Si richiede inoltre di spezzare i paragrafi troppo lunghi con un "a capo" in modo da dividere il testo in aree logiche di più facile comprensione e lettura.
-
-=== Elenchi puntati
-Viene inserito ";" alla fine delle voci dell'elenco tranne l'ultima che termina con ".". Ogni voce dell'elenco inizia con una lettera minuscola.
 
 
 = Processi di ciclo di vita
@@ -509,11 +415,22 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
 === Scopo
 Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato Piano di Progetto (@PdP).
 
+=== Risultati (Piano di Progetto) <PdP>
+Il Piano di Progetto è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento accompagnata dai grafici di Gantt e di burndown. Sono presenti cinque sezioni, di cui le prime quattro rientrano nel processo di pianificazione:
+
++ Rischi e loro mitigazione;
++ Divisione temporale di sviluppo;
++ Preventivo dei costi di realizzazione;
++ Pianificazione del lavoro;
++ Consuntivo del progetto.
+
+La redazione del documento va di pari passo con l'avanzamento del progetto, in modo tale da essere sempre aggiornato alla situazione corrente del lavoro.
+
 === Attività
 Nel processo di pianificazione sono presenti due attività principali:
 
-+ Definizione del progetto;
-+ Pianificazione del progetto e della gestione tecnica.
++ definizione del progetto;
++ pianificazione del progetto e della gestione tecnica.
 
 ==== Definizione del progetto
 In questa attività il gruppo deve definire tutto ciò che caratterizza il progetto, ovvero i suoi obiettivi e vincoli, sia di carattere funzionale che tecnologico. Durante la lavorazione del progetto verranno prodotti diversi output, che possono essere suddivisi nelle due macro categorie di: documentazione, codice. Entrambi questi prodotti dovranno essere realizzati rispettando determinate regole e processi, ed è quindi necessario che il gruppo definisca in questa attività uno o più cicli di vita da seguire.
@@ -524,14 +441,14 @@ In questa attività il gruppo deve definire tutto ciò che caratterizza il proge
 ===== Suddivisione temporale
 Il gruppo ha individuato tre periodi di lavoro principali:
 
-- Raccolta e analisi dei requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con l'azienda proponente;
-- Sviluppo della Requirements and Technology Baseline (RTB): si studiano le tecnologie da utilizzare e si applicano le conoscenze acquisite per realizzare un PoC (Proof of Concept), ovvero un prodotto software che permetta di dimostrare la padronanza delle tecnologie selezionate ai fini dello sviluppo del progetto;
-- Periodo di sviluppo del Minimum Viable Product (MVP): viene progettato e implementato un prodotto software che rispetti almeno i requisiti minimi di accettazione, e che offra tutte le funzionalità richieste.
+- raccolta e Analisi dei Requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con il Proponente;
+- sviluppo della Requirements and Technology Baseline (RTB): si studiano le tecnologie da utilizzare e si applicano le conoscenze acquisite per realizzare un PoC (Proof of Concept), ovvero un prodotto software che permetta di dimostrare la padronanza delle tecnologie selezionate ai fini dello sviluppo del progetto;
+- periodo di sviluppo del Minimum Viable Product (MVP): viene progettato e implementato un prodotto software che rispetti almeno i requisiti minimi di accettazione, e che offra tutte le funzionalità richieste.
 
-Ognuno di questi viene suddiviso a sua volta in periodi della durata di una settimana denominati _sprint_. Al termine di ogni _sprint_ viene effettuato un incontro interno di retrospettiva, nel quale si analizza criticamente la settimana appena conclusa, mostrandone aspetti positivi, aspetti da migliorare e fissando obiettivi che verrano poi riportati nell'Issue Tracking System sotto forma di task. Questi andranno a comporre il _backlog_ dello _sprint_ successivo, e il loro progressivo completamento andrà a produrre un _burndown-chart_, utilizzato dal gruppo come strumento che rappresenti in modo oggettivo l'andamento del lavoro.
+Ognuno di questi viene suddiviso a sua volta in periodi della durata di una settimana denominati _sprint_. Al termine di ogni _sprint_ viene effettuato un incontro interno di retrospettiva, nel quale si analizza criticamente la settimana appena conclusa, mostrandone aspetti positivi, aspetti da migliorare e fissando obiettivi che verranno poi riportati nell'Issue Tracking System sotto forma di task. Questi andranno a comporre il _backlog_ dello _sprint_ successivo, e il loro progressivo completamento andrà a produrre un _burndown-chart_, utilizzato dal gruppo come strumento che rappresenti in modo oggettivo l'andamento del lavoro.
 
 ===== Definizione di ruoli, responsabilità e costi
-Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognuno dei quali con precise responsabilità da rispettare. Ogni membro del gruppo dovrà assumere ognuno di questi ruoli all'interno del periodo di lavoro al progetto. L'assegnazione dei ruoli avviene con frequenza bisettimanale. Di seguito viene riportata la descrizone di ogni ruolo con i relativi compiti:
+Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognuno dei quali con precise responsabilità da rispettare. Ogni membro del gruppo dovrà assumere ognuno di questi ruoli all'interno del periodo di lavoro al progetto. L'assegnazione dei ruoli avviene con frequenza bisettimanale. Di seguito viene riportata la descrizione di ogni ruolo con i relativi compiti:
 
 + *Responsabile*: è presente durante l'intero progetto, in particolare si occupa di:
   - coordinare il gruppo;
@@ -541,27 +458,20 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
 + *Amministratore*: ruolo presente durante tutto il progetto. Ha il compito di:
   - predisporre e controllare il corretto utilizzo delle procedure e degli strumenti adottati;
   - implementare e manutenere gli automatismi in modo da migliorare l'efficienza del gruppo.
-+ *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento Analisi dei requisiti, nel quale:
++ *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento Analisi dei Requisiti, nel quale:
   - definisce i casi d'uso;
   - raccoglie e classifica i requisiti.
 + *Progettista*: ruolo presente principalmente negli ulimi due periodi, nei quali:
+  - effettua uno studio delle tecnologie proposte, mirato alla definizione  dello stack tecnologico da usare;
   - delinea l'architettura del prodotto;
   - definisce le linee guida implementative valutando le scelte più efficienti e sostenibili.
-+ *Programmatore*: è attivo negli ultimi due periodi del progetto, ed è il responsabile della traduzione in codice eseguibile dell'architettura definita dal progettista;
++ *Programmatore*: è attivo negli ultimi due periodi del progetto, nei quali:
+  - si occupa della codifica del PoC, senza partire da una progettazione ben definita visto l'obiettivo del Proof of Concept;
+  - traduce in codice eseguibile l'architettura del prodotto finale definita dal progettista durante il periodo di sviluppo del MVP.
 + *Verificatore*: è presente durante l'intero progetto, e si occupa di controllare che il lavoro prodotto dal gruppo rispetti gli standard qualitativi adottati.
 
-Ad ogni ruolo è inoltre associato un costo orario, tramite cui il gruppo calcola il preventivo totale del progetto e quello di ogni _sprint_ seguito dal relativo consuntivo.
+Ad ogni ruolo è inoltre associato un costo orario, sulla base del quale il gruppo calcola il preventivo totale del progetto e quello di ogni _sprint_ seguito dal relativo consuntivo. Il costo orario viene calcolato in base alla sua importanza all'interno del progetto, misurata in termini di competenze e disponibilità della risorsa.
 
-=== Piano di Progetto <PdP>
-Il Piano di Progetto è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento. Sono presenti cinque sezioni:
-
-+ Rischi e loro mitigazione;
-+ Divisione temporale di sviluppo;
-+ Preventivo dei costi di realizzazione;
-+ Pianificazione del lavoro;
-+ Consuntivo del progetto.
-
-La redazione del documento va di pari passo con l'avanzamento del progetto, in modo tale da essere sempre aggiornato alla situazione corrente del lavoro.
 
 == Processo di valutazione e controllo di progetto <valutazioneControllo>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.2_
@@ -573,6 +483,16 @@ Il processo di valutazione e controllo ha lo scopo di determinare lo stato del p
 - obiettivi raggiunti.
 
 Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e viene messo per iscritto all'interno dei verbali di tali riunioni e nei paragrafi di consuntivo del Piano di Progetto.
+
+=== Risultati
+Come risultato dell'implementazione del processo di valutazione e controllo si elencano i seguenti:
+- valutazione dell'adeguatezza di ruoli, responsabilità e risorse;
+- esecuzione delle azioni correttive scaturite dalle revisioni di progesso;
+- viene avviata, se necessaria, la ripianificazione del progetto;
+- viene autorizzata l'azione del progetto di avanzare (o meno) da un traguardo o evento programmato al successivo;
+- vengono registrati gli obiettivi raggiunti.
+
+I risultati sono espressi e analizzati nei paragrafi di consuntivo del Piano di Progetto.
 
 === Attività
 ==== Piano di valutazione e controllo del progetto
@@ -603,17 +523,32 @@ Entrambe le rappresentazioni pongono nell'asse $x$ del grafico il tempo, indicat
 Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consuntivo dello sprint nel Piano di Progetto, nel quale, oltre a fare un resoconto dello sprint, si analizza il suo l'aspetto economico: in base ai ruoli impegnati e al monte ore produttivo svolto, si calcola il costo effettivo del periodo concluso, aggiornando conseguentemente il costo preventivato e il documento Piano di Progetto. Questo indicatore contribuisce ad avere un resoconto completo del progetto, e permette al gruppo di comprendere meglio come sta lavorando e se sta gestendo correttamente le risorse a sua disposizione.
 
 ==== Controllo
+Nell'attività di controllo figurano i seguenti task:
+
+- azioni correttive;
+- ripianificazione;
+- azioni di cambiamento dovute a richieste del Committente e/o Proponente;
+- autorizzazione ad avanzare alla successiva milestone.
+
+===== Azioni correttive
 Nell'attività di controllo si intraprendono azioni correttive nei confronti dei problemi individuati. Questi problemi possono essere di duplice natura:
+- mancato raggiungimento degli obiettivi prefissati;
+- miglioramenti e accortezze da adottare.
 
-+ mancato raggiungimento degli obiettivi prefissati;
-+ miglioramenti e accortezze da adottare.
-
-===== Mancato raggiungimento degli obiettivi prefissati
+====== Mancato raggiungimento degli obiettivi prefissati
 È necessario che alla chiusura dello sprint le attività ancora in fase di svolgimento vengano riportate nello sprint successivo, insieme a tutte quelle attività pianificate ma non ancora iniziate che sono considerate importanti. Tutte le attività che non vengono considerate importanti, ad esempio attività di cui si è rivalutato il grado di priorità, vengono riportate nel backlog. Una situazione di mancato raggiungimento degli obiettivi può essere sinonimo anche da una pianificazione errata e troppo ottimista, ed è quindi necessario che essa sia rivista e migliorata.
 
-===== Miglioramenti e accortezze da adottare
-Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcune delle task raccolte rispondono direttamente ai problemi individuati nella parte di Things to change.
+====== Miglioramenti e accortezze da adottare
+Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcuni dei task raccolti rispondono direttamente ai problemi individuati nella parte di Things to change.
 
+===== Ripianificazione
+La ripianificazione ha atto quando gli obiettivi cambiano nel corso dello sprint o alcune ipotesi fatte in fase di pianificazione si rivelano sbagliate. La ripianificazione viene gestita tramite Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo. 
+
+===== Azioni di cambiamento dovute a richieste del Committente e/o Proponente
+Le azioni di cambiamento dovute a richieste del Committente e/o Proponente sono recepite attraverso i canali di comunicazione con quest'ultimi (Zoom, mail) e vengono registrate nei rispettivi verbali. A queste azioni viene attribuita un'alta priorità per garantire massima soddisfazione nel cliente finale.
+
+===== Autorizzazione ad avanzare alla successiva milestone
+L'autorizzazione ad avanzare alla successiva milestone di progetto viene concessa dal Committente e/o Proponente in seguito ai colloqui pianificati su Zoom con quest'ultimi. Il gruppo si riserva di procedere verso la milestone successiva solo una volta ricevuta l'approvazione richiesta, in modo da non portare avanti difetti e problematiche che potrebbero risultare insidiosi da correggere una volta entrati in un periodo avanzato del progetto. 
 
 == Processo di gestione delle Decisioni
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_

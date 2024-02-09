@@ -51,15 +51,17 @@ Il presente documento include una serie di termini tecnici specifici del progett
 ==== *BAC (Budget at Completion)* 
 Definito nel documento Piano di Progetto v2.0.0 con valore di € 13.055,00.
 ==== *PV (Planned Value)*
-La metrica PV rappresenta il valore pianificato, indicante il costo preventivato per portare a termine le attività pianificate nello sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento Piano di Progetto v2.0.0. Il calcolo di tale metrica è esteso anche all'intero progetto, dove il valore pianificato è definito come sommatoria dei PV di ogni singolo sprint.
+La metrica PV rappresenta il valore pianificato, ovvero il costo preventivato per portare a termine le attività pianificate nello sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento Piano di Progetto v2.0.0. Il calcolo di tale metrica è esteso anche all'intero progetto, dove il valore pianificato è definito come sommatoria dei PV di ogni singolo sprint.
+\ \
 - *SPV*: Sprint Planned Value, valore pianificato per un determinato sprint;
 - *PPV*: Project Planned Value, valore pianificato per l'intero progetto.
-\
+
 Dati: \
 - $"r in R = {Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}"$
 - $"OR"_r$: Ore ruolo;
 - $"CR"_r$: Costo ruolo.
 
+Si definisce:
 #figure(
   table(
     columns: 3,
@@ -70,8 +72,9 @@ Dati: \
   ),
   caption: "Specifiche metrica SPV"
 )
-
-- $"dato s in S, con S insieme degli sprint svolti"$
+Dato:
+- $"s in S, con S insieme degli sprint svolti."$
+Si definisce:
 #figure(
   table(
     columns: 3,
@@ -83,7 +86,7 @@ Dati: \
   caption: "Specifiche metrica SPV"
 )
 
-La metrica risulta un indice necessario a determinare il valore atteso del lavoro svolto in un determinato sprint. Il suo valore strettaemente maggiore di 0 indica che non sono contemplati periodi di inattività.
+La metrica è un indice necessario a determinare il valore atteso del lavoro svolto in un determinato sprint. Il suo valore strettamente maggiore di 0 indica che non sono contemplati periodi di inattività.
 
 ==== *AC (Actual Cost)*
 La metrica *AC* rappresenta la somma dei costi sostenuti dal gruppo in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come consuntivo dello sprint:
@@ -99,7 +102,9 @@ La metrica *AC* rappresenta la somma dei costi sostenuti dal gruppo in un determ
   caption: "Specifiche metrica SAC"
 )
 
-- $"dato s in S, con S insieme degli sprint svolti"$
+Dato:
+- $"s in S, con S insieme degli sprint svolti."$
+Si definisce:
 #figure(
   table(
     columns: 3,
@@ -179,7 +184,7 @@ L'EAC rappresenta il costo stimato al termine del progetto. Tale metrica viene c
   caption: "Specifiche metrica EAC"
 )
 
-Il costo totale del capitolato non può essere maggiore rispetto a quanto espresso in candidatura, pertanto gli unici valori accettbili (e ottimali) sono stime a ribasso rispetto al *BAC*. Dipendendo strettamente dall'indice di performance (*CPI*), il valore della metrica *EAC* può subire variazioni anche a rialzo, ma sarà compito del gruppo mantenere tale valore il più possibile vicino al *BAC* e al momento della consegna, non superiore ad esso.
+Il costo totale del capitolato non può essere maggiore rispetto a quanto espresso in candidatura, pertanto gli unici valori accettbili (e ottimali) sono pari o inferiori rispetto al *BAC*. Dipendendo strettamente dall'indice di performance (*CPI*), il valore della metrica *EAC* può subire variazioni anche al rialzo. Sarà compito del gruppo assorbire eventuali costi aggiuntivi, al fine di mantenere il valore della metrica *EAC* entro i limiti stabiliti in prospettiva della milestone esterna *PB*.
 
 == Processi di supporto
 === Documentazione
@@ -213,7 +218,7 @@ Dati:
   caption: "Specifiche metriche soddisfatte"
 )
 
-Avere un resoconto delle metriche soddisfatte per ogni sprint permette di evidenziare eventuali criticità e di attuare le misure di correzione necessarie, seguendo, come stabilito nelle Norme di Progetto TODO paragrafo 4.1.1 _Processo di gestione dei modelli di ciclo di vita_, il ciclo PDCA per il miglioramento continuo.
+Avere un resoconto delle metriche soddisfatte per ogni sprint permette di evidenziare eventuali criticità e di attuare le misure di correzione necessarie, seguendo, come stabilito nelle Norme di Progetto TODO paragrafo TODO _Processo di gestione dei modelli di ciclo di vita_, il ciclo PDCA per il miglioramento continuo.
 
 // = Qualità del prodotto
 // == Funzionalità
@@ -277,7 +282,8 @@ Avere un resoconto delle metriche soddisfatte per ogni sprint permette di eviden
 
 = Valutazione Metriche
 == Premessa
-Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il gruppo ha imposto sprint della durata settimanale. Nel primo sprint si è definito l'utilizzo dell'ITS Jira come strumento di tracciamento, e gli sprint successivi sono stati utilizzati per la sua comprensione e corretto utilizzo. Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponibili dal quinto sprint, iniziato il 04/12/2023. 
+Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il gruppo ha imposto sprint della durata settimanale. Nel primo sprint si è confermato l'utilizzo dell'ITS Jira come strumento di tracciamento, ma per comprenderne a fondo le meccaniche e il corretto utilizzo, sono stati necessari i seguenti 4 sprint. Nel corso di questo periodo, sono state apportate modifiche di configurazione, anche consapevolmente non retrocompatibili, che hanno introdotto eterogeneità nei dati riportati dall'ITS.  
+Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponibili dal quinto sprint, iniziato il 04/12/2023. 
 == Processi primari
 === Fornitura
 ==== Rapporto tra PPV, PAC e PEV
@@ -309,7 +315,7 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
   }),
   caption: "Rapporto tra PPV, PAC e PEV"
 )
-*RTB*: In questo primo periodo, il gruppo è consapevole che il valore pianficato *PPV* risulta superiore a quanto prodotto nell'effettivo indicato dal *PEV*. Nonostante ciò il gruppo è sempre riuscito a mantenere il valore del *PEV* non solo in crescita, ma anche superiore almeno all'80% del *PPV*.
+*RTB*: In questo primo periodo, il gruppo è consapevole che il valore pianficato *PPV* risulti superiore a quanto prodotto nell'effettivo indicato dal *PEV*. Nonostante ciò, il gruppo è sempre riuscito a mantenere il valore del *PEV* non solo in crescita, ma anche superiore all'80% del *PPV*.
 
 #pagebreak()
 
@@ -338,9 +344,9 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
   }),
   caption: "Andamento CPI"
 )
-*RTB*: L'indice *CPI* risulta sempre in un range di valore accettabile. Seppur non lineare, non si evidenziano grandi variazioni, permettendo di evidenziare un corretto avanzamento in termini di costi e lavoro prodotto.
-\
-\
+*RTB*: L'indice *CPI* risulta sempre in un range di valore accettabile.Seppur l'andamento non sia lineare, non si rilevano grandi variazioni, il che evidenzia un corretto avanzamento in termini di costi e lavoro prodotto.
+
+
 ==== Rapporto tra BAC e EAC
 #figure(
   cetz.canvas({
@@ -368,7 +374,7 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
   caption: "Rapporto tra EAC e BAC"
 )
 
-*RTB*: Il valore dell'*EAC* oscilla attorno al valore del *BAC*. Il gruppo è consapevole che il valore stabilito dal *BAC* non può essere superato, pertanto l'*EAC* al termine del progetto dovrà attenersi al rigido vincolo di $<=$ rispetto al *BAC*.
+*RTB*: Il valore dell'*EAC* oscilla attorno al valore del *BAC*. Il gruppo è consapevole che il valore stabilito dal *BAC* non possa essere superato, pertanto l'*EAC* al termine del progetto dovrà attenersi al rigido vincolo di $<=$ rispetto al *BAC*.
 
 == Processi di supporto
 === Documentazione
@@ -413,12 +419,12 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
   cetz.canvas({
     import cetz.plot 
 
-    let WoW_points(offset: 0) = ((4,2), (5,3), (6, 4), (7, 3), (8, 3), (9, 2), (10, 1), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
+    let NdP_points(offset: 0) = ((4,2), (5,3), (6, 4), (7, 3), (8, 3), (9, 2), (10, 1), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
 
     let RIS_points(offset: 0) = ((4,2), (5,1), (6, 0), (7, 0), (8, 0), (9, 0), (10, 0), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})   
 
     plot.plot(size: (12, 6), {
-    plot.add(WoW_points(offset: 0), line: "linear", label: "WoW", mark: "o")
+    plot.add(NdP_points(offset: 0), line: "linear", label: "NdP", mark: "o")
     plot.add(RIS_points(offset: 0), line: "linear", label: "Analisi dei Rischi", mark: "o")
     plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
     plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
@@ -437,13 +443,13 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
 
 *RTB*: Gli errori ortografici nella documentazione rispecchiano i periodi in cui i documenti hanno subito la maggior parte delle modifiche. In particolare:
 - *Documentazione esterna*:
-  - *PdP*: Il documento ha inizialmente subito la maggior parte di aggiunte a livello testuale, come le sezioni di introduzione, amministrazione dei periodi e dei ruoli. Successivamente gli aggiornamenti sono stati minori, atti alla registrazione e al tracciamento dei preventivi e consuntivi dei vari periodi. Inoltre, la creazione di un sistema di creazione automatico delle tabelle dei preventivi e dei consuntivi implementato in _Google Apps Script_, ha permesso di ridurre ulteriormente l'insorgenza di errori;
-  - *PdQ*: L'insorgenza di errori nel Piano di Qualifica è dettata dall'inizio della sua stesura dallo sprint 9;
-  - *AdR*: Data la natura del periodo di RTB, l'Analisi dei Requisiti è tra i documenti più corposi e maggiormente soggetti a revisioni e modifiche. Inoltre, l'incremento dei numero di errori è dovuto non solo a revisioni interne ma anche a modifiche dettate da revisioni esterne con i professori;
-  - *Glossario*: Il Glossario è stato soggetto a relativamente poche modifiche; la maggior parte degli errori è stata riscontrata inizialmente, e successivamente il documento è stato soggetto a poche modifiche e migliorie.
+  - *PdP*: il documento ha inizialmente subito la maggior parte di aggiunte a livello testuale, come le sezioni di introduzione, amministrazione dei periodi e dei ruoli. Successivamente gli aggiornamenti sono stati minori, atti alla registrazione e al tracciamento dei preventivi e consuntivi dei vari periodi. Inoltre, l'implementazione di un sistema di creazione automatico delle tabelle dei preventivi e dei consuntivi implementato in _Google Apps Script_, ha permesso di ridurre ulteriormente l'insorgenza di errori;
+  - *PdQ*: l'insorgenza di errori nel Piano di Qualifica è dettata dall'inizio della sua stesura dallo sprint 9;
+  - *AdR*: data la natura del periodo di RTB, l'Analisi dei Requisiti è tra i documenti più corposi e maggiormente soggetti a revisioni e modifiche. Inoltre, l'incremento dei numero di errori è dovuto non solo a revisioni interne ma anche a modifiche dettate da revisioni esterne con i professori;
+  - *Glossario*: il Glossario è stato soggetto a relativamente poche modifiche; la maggior parte degli errori è stata riscontrata inizialmente.
 - *Documentazione interna*:
-  - *WoW*: L'adozione dello standard ISO/IEC 12207:2017 ha portato con sè anche un grado di complessità maggiore nella stesura del documento, il quale è aumentato di dimensione e complessità. La maggior parte degli errori è pertanto riscontrabile nel periodo di maggiore stesura, per poi ridursi quando le sezioni del documento inerenti e utili al periodo sono state redatte;
-  - *Analisi dei Rischi*: La stesura del documento di Analisi dei Rischi non è stata caratterizzata da un numero elevato di errori.
+  - *NdP*: l'adozione dello standard ISO/IEC 12207:2017 ha portato con sè anche un grado di complessità maggiore nella stesura del documento, il quale è aumentato di dimensione e complessità. La maggior parte degli errori è pertanto riscontrabile nel periodo di maggiore stesura, per poi ridursi quando le sezioni del documento inerenti e utili al periodo sono state redatte;
+  - *Analisi dei Rischi*: la stesura del documento di Analisi dei Rischi non è stata caratterizzata da un numero elevato di errori.
 
 === Miglioramento
 ==== Metriche soddisfatte
@@ -473,6 +479,6 @@ Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il g
   caption: "Andamento percentuale metriche soddisfatte"
 )
 
-*RTB*: La percentuale di metriche soddisfatte risulta per la maggior parte degli sprint superiore alla soglia accettabile del 75%. I periodi in cui tale soglia non è stata raggiunta sono gli sprint 8, 11, 12 e 13 in quanto:
+*RTB*: La percentuale di metriche soddisfatte risulta per la maggior parte degli sprint superiore alla soglia di accettabilità del 75%. I periodi in cui tale soglia non è stata raggiunta sono gli sprint 8, 11, 12 e 13 in quanto:
 - Sprint 8: periodo dal 26/12/2023 al 02/01/2024, caratterizzato da festività natalizie e di fine anno;
 - Sprint 11, 12, 13: periodo dal 15/01/2024 al 05/02/2024, caratterizzato dalla sessione d'esami.

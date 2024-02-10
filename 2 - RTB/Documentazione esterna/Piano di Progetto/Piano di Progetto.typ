@@ -201,6 +201,8 @@ La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo d
   supplement: "Grafico"
 )
 
+== Preventivo calcolato
+Il costo totale preventivato è di € 13055.
 
 == Analisi dei ruoli
 === Responsabile
@@ -226,8 +228,6 @@ Il Programmatore ha il compito di tradurre in codice eseguibile l'architettura p
 === Verificatore
 Il Verificatore è un ruolo presente durante l'intero progetto, che si occupa di mantenere degli standard qualitativi sul lavoro del gruppo: egli deve verificare la correttezza, esaustività e coerenza di tutti i documenti, e nella fase di codifica sarà colui che si occuperà di controllare la qualità del software prodotto. Proprio per questo il totale delle ore risulta essere il secondo più elevato dopo il Programmatore.
 
-== Preventivo calcolato
-Il costo totale preventivato è di € 13055.
 
 #pagebreak()
 

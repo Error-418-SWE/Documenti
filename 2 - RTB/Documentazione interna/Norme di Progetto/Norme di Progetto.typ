@@ -64,10 +64,13 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 - Documento "Analisi dei Rischi v2.0.0"\
   #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")
 
+- Documento "Glossario v1.1.0"\
+  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
+
 = Processi di accordo
 
-== Processo di fornitura
-_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
+== Processo di fornitura <processo_fornitura>
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.1.2_
 
 === Scopo e descrizione
 Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con Proponente e Committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
@@ -132,6 +135,7 @@ In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo
 - *Zoom*: applicazione per videoconferenze;
 - *Google slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il Committente riguardo l'andamento del lavoro;
 - *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
+
 
 = Processi di supporto
 
@@ -230,7 +234,6 @@ Per la scrittura dei documenti è richiesto uno stile di scrittura impersonale (
 === Elenchi puntati
 Viene inserito ";" alla fine delle voci dell'elenco tranne l'ultima che termina con ".". Ogni voce dell'elenco inizia con una lettera minuscola.
 
-
 = Processi di ciclo di vita
 
 == Processi organizzativi abilitanti
@@ -242,12 +245,11 @@ I processi organizzativi abilitanti implementati dal gruppo sono i seguenti:
 + processo di gestione dei modelli di ciclo di vita;
 + processo di gestione dell'infrastruttura.
 
-=== Processo di gestione dei modelli di ciclo di vita
+=== Processo di gestione dei modelli di ciclo di vita<processo_ciclo_di_vita>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
-
 ==== Scopo
 
-Lo scopo del processo di gestione del modello di ciclo di vita è definire, mantenere e garantire regole, processi, modelli e procedure di ciclo di vita. \
+Lo scopo del processo di gestione del modello di ciclo di vita è definire, mantenere e garantire regole, processi, modelli e procedure di ciclo di vita.\
 Questo processo fornisce politiche, processi, modelli e procedure del ciclo di vita coerenti con gli obiettivi dell'organizzazione, che sono definiti, adattati, migliorati e mantenuti per supportare le esigenze individuali dei progetti all'interno del contesto dell'organizzazione, e che sono in grado di essere applicati mediante metodi e strumenti efficaci e comprovati.\
 
 Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo di vita del software. Questo modello prevede quattro fasi:
@@ -453,7 +455,7 @@ Sono compiti dell'amministratore il mantenimento dell'infrastruttura, l'aggiorna
 
 L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi sufficienti a coprire tutti i requisiti di comunicazione.
 
-=== Processo di gestione delle Risorse Umane
+=== Processo di gestione delle Risorse Umane <processo_risorse_umane>
 
 La natura didattica del progetto riduce le prerogative del processo di gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la: \
  _conformance to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.4_.
@@ -511,11 +513,22 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
 === Scopo
 Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato Piano di Progetto (@PdP).
 
+=== Risultati (Piano di Progetto) <PdP>
+Il Piano di Progetto è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento accompagnata dai grafici di Gantt e di burndown. Sono presenti cinque sezioni, di cui le prime quattro rientrano nel processo di pianificazione:
+
++ Rischi e loro mitigazione;
++ Divisione temporale di sviluppo;
++ Preventivo dei costi di realizzazione;
++ Pianificazione del lavoro;
++ Consuntivo del progetto.
+
+La redazione del documento va di pari passo con l'avanzamento del progetto, in modo tale da essere sempre aggiornato alla situazione corrente del lavoro.
+
 === Attività
 Nel processo di pianificazione sono presenti due attività principali:
 
-+ Definizione del progetto;
-+ Pianificazione del progetto e della gestione tecnica.
++ definizione del progetto;
++ pianificazione del progetto e della gestione tecnica.
 
 ==== Definizione del progetto
 In questa attività il gruppo deve definire tutto ciò che caratterizza il progetto, ovvero i suoi obiettivi e vincoli, sia di carattere funzionale che tecnologico. Durante la lavorazione del progetto verranno prodotti diversi output, che possono essere suddivisi nelle due macro categorie di: documentazione, codice. Entrambi questi prodotti dovranno essere realizzati rispettando determinate regole e processi, ed è quindi necessario che il gruppo definisca in questa attività uno o più cicli di vita da seguire.
@@ -526,14 +539,14 @@ In questa attività il gruppo deve definire tutto ciò che caratterizza il proge
 ===== Suddivisione temporale
 Il gruppo ha individuato tre periodi di lavoro principali:
 
-- Raccolta e analisi dei requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con l'azienda proponente;
-- Sviluppo della Requirements and Technology Baseline (RTB): si studiano le tecnologie da utilizzare e si applicano le conoscenze acquisite per realizzare un PoC (Proof of Concept), ovvero un prodotto software che permetta di dimostrare la padronanza delle tecnologie selezionate ai fini dello sviluppo del progetto;
-- Periodo di sviluppo del Minimum Viable Product (MVP): viene progettato e implementato un prodotto software che rispetti almeno i requisiti minimi di accettazione, e che offra tutte le funzionalità richieste.
+- raccolta e Analisi dei Requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con il Proponente;
+- sviluppo della Requirements and Technology Baseline (RTB): si studiano le tecnologie da utilizzare e si applicano le conoscenze acquisite per realizzare un PoC (Proof of Concept), ovvero un prodotto software che permetta di dimostrare la padronanza delle tecnologie selezionate ai fini dello sviluppo del progetto;
+- periodo di sviluppo del Minimum Viable Product (MVP): viene progettato e implementato un prodotto software che rispetti almeno i requisiti minimi di accettazione, e che offra tutte le funzionalità richieste.
 
-Ognuno di questi viene suddiviso a sua volta in periodi della durata di una settimana denominati _sprint_. Al termine di ogni _sprint_ viene effettuato un incontro interno di retrospettiva, nel quale si analizza criticamente la settimana appena conclusa, mostrandone aspetti positivi, aspetti da migliorare e fissando obiettivi che verrano poi riportati nell'Issue Tracking System sotto forma di task. Questi andranno a comporre il _backlog_ dello _sprint_ successivo, e il loro progressivo completamento andrà a produrre un _burndown-chart_, utilizzato dal gruppo come strumento che rappresenti in modo oggettivo l'andamento del lavoro.
+Ognuno di questi viene suddiviso a sua volta in periodi della durata di una settimana denominati _sprint_. Al termine di ogni _sprint_ viene effettuato un incontro interno di retrospettiva, nel quale si analizza criticamente la settimana appena conclusa, mostrandone aspetti positivi, aspetti da migliorare e fissando obiettivi che verranno poi riportati nell'Issue Tracking System sotto forma di task. Questi andranno a comporre il _backlog_ dello _sprint_ successivo, e il loro progressivo completamento andrà a produrre un _burndown-chart_, utilizzato dal gruppo come strumento che rappresenti in modo oggettivo l'andamento del lavoro.
 
 ===== Definizione di ruoli, responsabilità e costi
-Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognuno dei quali con precise responsabilità da rispettare. Ogni membro del gruppo dovrà assumere ognuno di questi ruoli all'interno del periodo di lavoro al progetto. L'assegnazione dei ruoli avviene con frequenza bisettimanale. Di seguito viene riportata la descrizone di ogni ruolo con i relativi compiti:
+Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognuno dei quali con precise responsabilità da rispettare. Ogni membro del gruppo dovrà assumere ognuno di questi ruoli all'interno del periodo di lavoro al progetto. L'assegnazione dei ruoli avviene con frequenza bisettimanale. Di seguito viene riportata la descrizione di ogni ruolo con i relativi compiti:
 
 + *Responsabile*: è presente durante l'intero progetto, in particolare si occupa di:
   - coordinare il gruppo;
@@ -543,27 +556,20 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
 + *Amministratore*: ruolo presente durante tutto il progetto. Ha il compito di:
   - predisporre e controllare il corretto utilizzo delle procedure e degli strumenti adottati;
   - implementare e manutenere gli automatismi in modo da migliorare l'efficienza del gruppo.
-+ *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento Analisi dei requisiti, nel quale:
++ *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento Analisi dei Requisiti, nel quale:
   - definisce i casi d'uso;
   - raccoglie e classifica i requisiti.
 + *Progettista*: ruolo presente principalmente negli ulimi due periodi, nei quali:
+  - effettua uno studio delle tecnologie proposte, mirato alla definizione  dello stack tecnologico da usare;
   - delinea l'architettura del prodotto;
   - definisce le linee guida implementative valutando le scelte più efficienti e sostenibili.
-+ *Programmatore*: è attivo negli ultimi due periodi del progetto, ed è il responsabile della traduzione in codice eseguibile dell'architettura definita dal progettista;
++ *Programmatore*: è attivo negli ultimi due periodi del progetto, nei quali:
+  - si occupa della codifica del PoC, senza partire da una progettazione ben definita visto l'obiettivo del Proof of Concept;
+  - traduce in codice eseguibile l'architettura del prodotto finale definita dal progettista durante il periodo di sviluppo del MVP.
 + *Verificatore*: è presente durante l'intero progetto, e si occupa di controllare che il lavoro prodotto dal gruppo rispetti gli standard qualitativi adottati.
 
-Ad ogni ruolo è inoltre associato un costo orario, tramite cui il gruppo calcola il preventivo totale del progetto e quello di ogni _sprint_ seguito dal relativo consuntivo.
+Ad ogni ruolo è inoltre associato un costo orario, sulla base del quale il gruppo calcola il preventivo totale del progetto e quello di ogni _sprint_ seguito dal relativo consuntivo. Il costo orario viene calcolato in base alla sua importanza all'interno del progetto, misurata in termini di competenze e disponibilità della risorsa.
 
-=== Piano di Progetto <PdP>
-Il Piano di Progetto è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento. Sono presenti cinque sezioni:
-
-+ Rischi e loro mitigazione;
-+ Divisione temporale di sviluppo;
-+ Preventivo dei costi di realizzazione;
-+ Pianificazione del lavoro;
-+ Consuntivo del progetto.
-
-La redazione del documento va di pari passo con l'avanzamento del progetto, in modo tale da essere sempre aggiornato alla situazione corrente del lavoro.
 
 == Processo di valutazione e controllo di progetto <valutazioneControllo>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.2_
@@ -575,6 +581,16 @@ Il processo di valutazione e controllo ha lo scopo di determinare lo stato del p
 - obiettivi raggiunti.
 
 Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e viene messo per iscritto all'interno dei verbali di tali riunioni e nei paragrafi di consuntivo del Piano di Progetto.
+
+=== Risultati
+Come risultato dell'implementazione del processo di valutazione e controllo si elencano i seguenti:
+- valutazione dell'adeguatezza di ruoli, responsabilità e risorse;
+- esecuzione delle azioni correttive scaturite dalle revisioni di progesso;
+- viene avviata, se necessaria, la ripianificazione del progetto;
+- viene autorizzata l'azione del progetto di avanzare (o meno) da un traguardo o evento programmato al successivo;
+- vengono registrati gli obiettivi raggiunti.
+
+I risultati sono espressi e analizzati nei paragrafi di consuntivo del Piano di Progetto.
 
 === Attività
 ==== Piano di valutazione e controllo del progetto
@@ -605,19 +621,34 @@ Entrambe le rappresentazioni pongono nell'asse $x$ del grafico il tempo, indicat
 Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consuntivo dello sprint nel Piano di Progetto, nel quale, oltre a fare un resoconto dello sprint, si analizza il suo l'aspetto economico: in base ai ruoli impegnati e al monte ore produttivo svolto, si calcola il costo effettivo del periodo concluso, aggiornando conseguentemente il costo preventivato e il documento Piano di Progetto. Questo indicatore contribuisce ad avere un resoconto completo del progetto, e permette al gruppo di comprendere meglio come sta lavorando e se sta gestendo correttamente le risorse a sua disposizione.
 
 ==== Controllo
+Nell'attività di controllo figurano i seguenti task:
+
+- azioni correttive;
+- ripianificazione;
+- azioni di cambiamento dovute a richieste del Committente e/o Proponente;
+- autorizzazione ad avanzare alla successiva milestone.
+
+===== Azioni correttive
 Nell'attività di controllo si intraprendono azioni correttive nei confronti dei problemi individuati. Questi problemi possono essere di duplice natura:
+- mancato raggiungimento degli obiettivi prefissati;
+- miglioramenti e accortezze da adottare.
 
-+ mancato raggiungimento degli obiettivi prefissati;
-+ miglioramenti e accortezze da adottare.
-
-===== Mancato raggiungimento degli obiettivi prefissati
+====== Mancato raggiungimento degli obiettivi prefissati
 È necessario che alla chiusura dello sprint le attività ancora in fase di svolgimento vengano riportate nello sprint successivo, insieme a tutte quelle attività pianificate ma non ancora iniziate che sono considerate importanti. Tutte le attività che non vengono considerate importanti, ad esempio attività di cui si è rivalutato il grado di priorità, vengono riportate nel backlog. Una situazione di mancato raggiungimento degli obiettivi può essere sinonimo anche da una pianificazione errata e troppo ottimista, ed è quindi necessario che essa sia rivista e migliorata.
 
-===== Miglioramenti e accortezze da adottare
-Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcune delle task raccolte rispondono direttamente ai problemi individuati nella parte di Things to change.
+====== Miglioramenti e accortezze da adottare
+Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcuni dei task raccolti rispondono direttamente ai problemi individuati nella parte di Things to change.
 
+===== Ripianificazione
+La ripianificazione ha atto quando gli obiettivi cambiano nel corso dello sprint o alcune ipotesi fatte in fase di pianificazione si rivelano sbagliate. La ripianificazione viene gestita tramite Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo. 
 
-== Processo di gestione delle Decisioni
+===== Azioni di cambiamento dovute a richieste del Committente e/o Proponente
+Le azioni di cambiamento dovute a richieste del Committente e/o Proponente sono recepite attraverso i canali di comunicazione con quest'ultimi (Zoom, mail) e vengono registrate nei rispettivi verbali. A queste azioni viene attribuita un'alta priorità per garantire massima soddisfazione nel cliente finale.
+
+===== Autorizzazione ad avanzare alla successiva milestone
+L'autorizzazione ad avanzare alla successiva milestone di progetto viene concessa dal Committente e/o Proponente in seguito ai colloqui pianificati su Zoom con quest'ultimi. Il gruppo si riserva di procedere verso la milestone successiva solo una volta ricevuta l'approvazione richiesta, in modo da non portare avanti difetti e problematiche che potrebbero risultare insidiosi da correggere una volta entrati in un periodo avanzato del progetto. 
+
+== Processo di gestione delle Decisioni <processo_gestione_decisioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
 === Scopo
 Lo scopo del processo di gestione delle decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionando la migliore in termini di benefici attesi, costi e rischi associati. \
@@ -676,7 +707,7 @@ Le decisioni vengono dunque così classificate:
   - architetturali. \
 
 
-== Processo di Gestione dei Rischi
+== Processo di Gestione dei Rischi <processo_gestione_rischi>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.4_
 
 === Scopo
@@ -744,7 +775,7 @@ Questa attività consiste nei seguenti compiti:
 Il monitoraggio dei rischi avviene principalmente in sede di meeting interno, specialmente a seguito di analisi retrospettive.
 
 
-== Processo di gestione della configurazione
+== Processo di gestione della configurazione <processo_gestione_configurazione>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.5_
 === Scopo
 Lo scopo della Gestione della Configurazione è gestire e controllare gli elementi del sistema e le configurazioni durante il ciclo di vita. Lo scopo principale è tracciare e coordinare le procedure necessarie alla modifica della documentazione e del codice sorgente.
@@ -922,7 +953,7 @@ La timeline permette di mostrare il grafico di Gantt delle attività evidenziand
 Jira offre la possibilità di produrre grafici e report relativi all'avanzamento e alla tracciabilità delle task. Tali strumenti permettono di avere delle metriche di valutazione dell'andamento del progetto e di individuare eventuali criticità.
 Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story points di ogni attività.
 
-== Processo di gestione delle informazioni
+== Processo di gestione delle informazioni <processo_gestione_informazioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.6_
 === Scopo
 Lo scopo della gestione delle informazionie è generare, ottenere, confermare, trasformare, conservare, recuperare, distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
@@ -1052,7 +1083,7 @@ Il gruppo condivide il materiale prodotto all'interno di un repository dedicato 
 #align(link("https://github.com/Error-418-SWE/Documenti"), center)
 Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
 
-== Processo di Misurazione
+== Processo di Misurazione <processo_misurazione>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.7_
 
@@ -1127,7 +1158,7 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
     - registrare i risultati e comunicarli agli stakeholders:
         - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte.
 
-== Processo di Controllo della Qualità
+== Processo di Controllo della Qualità <processo_controllo_qualità>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.8_
 
@@ -1205,7 +1236,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
 = Processi tecnici
 
-== Processo di analisi della missione
+== Processo di analisi della missione <processo_missione>
 
 _Tailored conformance on ISO/IEC/IEEE 12207:2017 clause 6.4.1 per ISO/IEC/IEEE 12207:2017 Annex A_
 
@@ -1257,7 +1288,7 @@ Sulla base dei risultati della valutazione, il gruppo individua una classe di so
 ==== Analisi dei requisiti
 Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste dal processo. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
 
-== Processo di definizione di bisogni e requisiti degli stakeholder
+== Processo di definizione di bisogni e requisiti degli stakeholder <processo_bisogni>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.2_
 
@@ -1359,4 +1390,31 @@ Sono classificati per priorità e per fonte.
 ==== Analisi dei requisiti
 Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
+#pagebreak()
 
+= Tracciamento paragrafi ISO/IEC/IEEE 12207:2017
+
+La tabella di seguito riportata consente di associare ogni capitolo del documento al rispettivo capitolo dello standard di riferimento. Viene riporato anche il grado di conformità:
+- *To outcome* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
+- *Full* indica che il capitolo riporta fedelmente le indacazioni dello standard con poche o nessuna azione di adeguamento.
+
+#figure(
+  table(
+    columns: 3,
+    [*Capitolo Norme*],[*Capitolo Standard*],[*Conformance Level*],
+    [@processo_fornitura],[6.1.2 - Supply process],[To outcome],
+    [@processo_ciclo_di_vita],[6.2.1 - Life cycle model management process],[To outcome],
+    [@processo_risorse_umane],[6.2.4 - Human Resource Management process],[To outcome],
+    [@pianificazione],[6.3.1 - Project Planning process],[To outcome],
+    [@valutazioneControllo],[6.3.2 - Project assessment and control process],[Full],
+    [@processo_gestione_decisioni],[6.3.3 - Decision Management process],[Full],
+    [@processo_gestione_rischi],[6.3.4 - Risk Management process],[Full],
+    [@processo_gestione_configurazione],[6.3.5 - Configuration Management process],[To outcome],
+    [@processo_gestione_informazioni],[6.3.6 - Information Management process],[To outcome],
+    [@processo_misurazione],[6.3.7 - Measurement process],[To outcome],
+    [@processo_controllo_qualità],[6.3.8 - Quality Assurance process],[Full],
+    [@processo_missione],[6.4.1 - Business or Mission Analysis process],[Full],
+    [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
+  ),
+  caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
+)

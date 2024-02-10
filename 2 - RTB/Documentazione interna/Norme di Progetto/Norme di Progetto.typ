@@ -564,7 +564,7 @@ Il resoconto di quanto deciso sarà visibile all'interno del verbale redatto a f
 Le decisioni possono riguardare diversi aspetti del capitolato, e la loro categorizzazione è utile per individuare la migliore strategia di gestione e i ruoli coinvolti.
 
 Le decisioni vengono dunque così classificate:
-+ *Decisioni organizzative*: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto. Esempi notevoli sono le decisioni focalizzate alla coordinazione del gruppo o alla scelta degli strumenti da utilizzare per la gestione del progetto, ad esempio ITS, piattaforme per la comunicazione e per la collaborazione:
++ *Decisioni organizzative*: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto. Esempi notevoli sono le decisioni focalizzate alla coordinazione del gruppo o alla scelta degli strumenti da utilizzare per la gestione del progetto(ad esempio: scelta dell' ITS, delle piattaforme per la comunicazione e per la collaborazione):
   - documento soggetto a modifiche: Norme di progetto;
   - ruoli responsabili dell'aggiornamento: Responsabile, Amministratori;
   - strategia di decision-making: collaborativa.

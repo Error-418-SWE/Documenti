@@ -1155,11 +1155,11 @@ Sono state assegnate ore al ruolo di Verificatore e Analista a scapito di quello
 
 === Obiettivi prefissati
 
-Gli obiettivi del dodicesimo sprint riguardano la partecipazione al colloquio RTB, in data 25/01/2024 alle ore 8:40.
+Gli obiettivi del dodicesimo sprint riguardano la partecipazione al colloquio RTB con il Professor Cardin, in data 25/01/2024 alle ore 8:40.
 
 In questo sprint inizia la sessione d'esame invernale. Gli obiettivi prefissati per questo sprint sono:
 - estensione dei termini di Glossario;
-- aggiunta di grafici significativi al Piano di Progetto, come ad esempio la Suddivisione oraria per ruolo, mediante il pacchetto `plotst` di Typst;
+- aggiunta di grafici significativi al Piano di Progetto, come ad esempio la suddivisione oraria per ruolo, mediante il pacchetto `plotst` di Typst;
 - correzione minore della tabella che riporta il computo dei requisiti totali nel documento di Analisi dei Requisiti;
 - ripasso generale individuale e collettivo prima del colloquio RTB.
 

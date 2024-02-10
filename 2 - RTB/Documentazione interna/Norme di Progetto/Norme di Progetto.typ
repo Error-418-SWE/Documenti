@@ -589,7 +589,7 @@ Le decisioni vengono dunque così classificate:
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making.
 
-+ *Decisioni sulla qualità*: sono decisioni relative ai controlli di qualità.
++ *Decisioni sulla qualità*: sono decisioni relative ai controlli di qualità:
   - documento soggetto a modifiche: Piano di Qualifica;
   - ruoli responsabili dell'aggiornamento: Responsabile, Verificatori;
   - strategia di decision-making: collaborativa.

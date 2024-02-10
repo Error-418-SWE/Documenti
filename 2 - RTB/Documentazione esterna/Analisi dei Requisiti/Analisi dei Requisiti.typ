@@ -1148,8 +1148,9 @@ Dove:
     [QM-3], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico], [Capitolato],
     [QM-4], [Obbligatorio], [Devono essere consegnati i diagrammi UML degli UC], [Capitolato],
     [QM-5], [Obbligatorio], [Deve essere consegnata la lista dei bug risolti], [Capitolato],
-    [QO-6], [Opzionale], [Deve essere consegnato lo schema del DB], [Capitolato],
-    [QO-7], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate], [Capitolato],
+    [QM-6], [Obbligatorio], [Deve essere fornito un manuale d'uso per l'utente], [Decisione\ interna],
+    [QO-7], [Opzionale], [Deve essere consegnato lo schema del DB], [Capitolato],
+    [QO-8], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate], [Capitolato],
   ),
   caption: [Requisiti di qualità]
 )
@@ -1185,7 +1186,7 @@ Dove:
     align: left,
     [*Tipo Requisito*], [*Numero totale*],
     [Requisiti funzionali], [92],
-    [Requisiti di qualità], [7],
+    [Requisiti di qualità], [8],
     [Requisiti di vincolo], [12],
 
   ),

@@ -238,15 +238,12 @@ Viene inserito ";" alla fine delle voci dell'elenco tranne l'ultima che termina 
 
 == Processi organizzativi abilitanti
 
-I processi organizzativi abilitanti garantiscono la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. Questi processi forniscono le risorse e l'infrastruttura necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
+I processi organizzativi abilitanti hanno la funzione di garantire la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. \
+Questi processi forniscono l'infrastruttura e le risorse necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
 
-I processi organizzativi abilitanti sono i seguenti:
+I processi organizzativi abilitanti implementati dal gruppo sono i seguenti:
 + processo di gestione dei modelli di ciclo di vita;
-+ processo di gestione dell'infrastruttura;
-// + Processo di gestione del portfolio;
-+ processo di gestione delle risorse umane;
-// + Processo di gestione della qualità;
-// + Processo di gestione della conoscenza.
++ processo di gestione dell'infrastruttura.
 
 === Processo di gestione dei modelli di ciclo di vita<processo_ciclo_di_vita>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
@@ -256,17 +253,17 @@ Lo scopo del processo di gestione del modello di ciclo di vita è definire, mant
 Questo processo fornisce politiche, processi, modelli e procedure del ciclo di vita coerenti con gli obiettivi dell'organizzazione, che sono definiti, adattati, migliorati e mantenuti per supportare le esigenze individuali dei progetti all'interno del contesto dell'organizzazione, e che sono in grado di essere applicati mediante metodi e strumenti efficaci e comprovati.\
 
 Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo di vita del software. Questo modello prevede quattro fasi:
-+ pianificazione (Plan): definizione degli obiettivi e dei processi necessari per raggiungerli;
-+ esecuzione (Do): attuazione del piano;
-+ verifica (Check): monitoraggio e misurazione dei processi e dei prodotti rispetto agli obiettivi e ai requisiti, e reportistica dei risultati;
-+ attuazione (Act): azioni per migliorare le prestazioni, se necessario, in base ai risultati della verifica.
++ Pianificazione (Plan): definizione degli obiettivi e dei processi necessari per raggiungerli;
++ Esecuzione (Do): attuazione del piano;
++ Verifica (Check): monitoraggio e misurazione dei processi e dei prodotti rispetto agli obiettivi e ai requisiti, e reportistica dei risultati;
++ Attuazione (Act): azioni per migliorare le prestazioni, se necessario, in base ai risultati della verifica.
 
-==== Organizzazione del processso
+==== Organizzazione del processo
 ===== Pianificazione
 La pianificazione del processo è compito del Responsabile, il quale al termine dello sprint precedente, in base alle attività svolte e ai risultati ottenuti, pianifica le attività da svolgere nello sprint successivo. \
 La pianificazione è un'attività iterativa, che viene svolta all'inizio dello sprint. Il Responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \
 Questo processo permette di individuare le attività da svolgere, le risorse necessarie e le tempistiche di svolgimento, mediante il sistema di ticketing offerto da Jira.\
-Il risutato di questo processo è visibile all'interno del Piano di Progetto.\
+Il risultato di questo processo è visibile all'interno del documento Piano di Progetto.\
 \
 ===== Esecuzione
 Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto. \
@@ -274,7 +271,7 @@ Il processo di esecuzione è composto da due attività principali:
 + sviluppo del prodotto;
 + sviluppo della documentazione.
 
-Durante questo processo, ogni ruolo svolge le attività assegnate seguendo quanto stabilito nella pianificazione, e sarà compito del Responsabile verificare che le attività siano svolte correttamente e nei tempi previsti. Ogni membro avrà la possibilità di segnalare eventuali criticità, avendo a disposizione una board apposita sulla piattaforma Miro.\ Questo permette di avere un resoconto pronto a fine sprint in merito al processo di avanzamento, individuando: \
+Durante questo processo, ogni ruolo svolge le attività assegnate seguendo quanto stabilito nella pianificazione. Sarà compito del Responsabile verificare che le attività siano svolte correttamente e nei tempi previsti. Ogni membro avrà la possibilità di segnalare eventuali criticità, avendo a disposizione una board apposita sulla piattaforma Miro.\ Questo permette di avere un resoconto pronto a fine sprint in merito al processo di avanzamento, individuando: \
 - "Keep doing": attività che hanno dato buoni risultati e che quindi vanno mantenute;
 - "Things to change": attività che hanno dato risultati non soddisfacenti e che quindi vanno modificate.
 \
@@ -287,28 +284,31 @@ I prodotti di questo processo, permettono dunque di procedere con la verifica e 
 \ \
 ===== Verifica
 Al termine di ogni sprint, il gruppo procederà con il meeting di retrospettiva, durante il quale verranno analizzati i risultati ottenuti e le attività svolte, basandosi sui prodotti della fase di esecuzione: \
+
 + grafici di burndown:
-  - permettono di avere una visione rapida di quanto del lavoro pianificato è stato portato a termine: si tratta di una metrica puramente quantitativa, che tiene conto di del numero di ticket chiusi e del numero di ticket aperti;
+  - permettono di avere una visione rapida di quanto del lavoro pianificato è stato portato a termine: si tratta di una metrica puramente quantitativa, che tiene conto del numero di ticket chiusi e del numero di ticket aperti;
+
 + board di avanzamento:
   - "Keep doing": attività che hanno dato buoni risultati e che quindi vanno mantenute: questo permette al gruppo di individuare il _modus operandi_ più efficace ed efficiente per svolgere le attività;
+
   - "Things to change": attività che hanno dato risultati non soddisfacenti e che quindi vanno modificate: si tratta dell'aspetto più delicato da considerare, in quanto permette di individuare le criticità e le inefficienze del processo di sviluppo, e di conseguenza di apportare le modifiche necessarie per migliorare il processo stesso.
 
 Questa analisi individua i miglioramenti da apportare al processo di sviluppo, stabilendo le contromisure necessarie per migliorare il processo stesso.
   \ \
 ===== Attuazione
-L'attuazione è l'ultima fase del processo di gestione del ciclo di vita, e consiste nell'attuare le contromisure stabilite durante la fase di verifica. \
+L'attuazione è l'ultima fase del processo di gestione del ciclo di vita, e consiste nella messa in pratica delle contromisure stabilite durante la fase di verifica. \
 L'obiettivo è sopperire alle mancanze e alle inefficienze del processo di sviluppo, in modo da migliorare la qualità del prodotto e la produttività del gruppo. \
 Diventa compito del Responsabile stabilire le attività necessarie per attuare le contromisure, e di conseguenza di pianificare le attività da svolgere nello sprint successivo. \
-Il risultato di questo processo è visibile all'interno del Piano di Progetto.
+Il risultato di questo processo è visibile all'interno del documento Piano di Progetto.
 \
 \
 ==== Ruoli
 ===== Responsabile
-Il Responsabile è la figura chiave che guida il progetto, assumendo il ruolo di referente principale per il gruppo e per gli stakeholders. \
+Il Responsabile è la figura chiave che guida il progetto, assumendo il ruolo di referente principale per il gruppo e per gli stakeholder. \
 
 Le responsabilità del Responsabile includono:
 
-+ coordinamento: ha il compito di supervisionare i membri del gruppo, assicurandosi che le attività siano svolte seguendo le norme identificate in questo documento;
++ coordinamento: ha il compito di supervisionare i membri del gruppo, assicurandosi che le attività vengano svolte nel rispetto delle norme identificate in questo documento;
 
 + pianificazione: stabilisce le attività da svolgere, le relative scadenze e priorità, sancendo l'inizio e la fine di ogni sprint;
 
@@ -316,10 +316,10 @@ Le responsabilità del Responsabile includono:
 
 + norme di progetto: si occupa della stesura e dell'aggiornamento delle norme di progetto, che devono essere rispettate da tutti i membri del gruppo;
 
-+ relazioni esterne: gestisce tutte le interazioni con il Proponente e i Committenti assicurando una comunicazione fluida e efficace;
++ relazioni esterne: gestisce tutte le interazioni con il Proponente e i Committenti assicurando una comunicazione fluida ed efficace;
 \ \
 ===== Amministratore
-L'Amministratore è la figura che gestisce l'ambiente di lavoro e gli strumenti utilizzati dal gruppo per tutta la durata del progetto. Ha il compito di assicurare che gli strumenti proposti ai membri del gruppo siano efficienti e favoriscano la qualità del lavoro. Monitora, assieme al Responsabile, il rispetto delle regole stabilite in questo documento e verifica che i servizi a disposizione del gruppo siano adeguati alle attività pianificate, promuovendo la produttività. \
+L'Amministratore è la figura incaricata di gestire l'ambiente di lavoro e gli strumenti utilizzati dal gruppo per tutta la durata del progetto. Ha il compito di assicurare che gli strumenti proposti ai membri del gruppo siano efficienti e favoriscano la qualità del lavoro. Monitora, assieme al Responsabile, il rispetto delle regole stabilite in questo documento e verifica che i servizi a disposizione del gruppo siano adeguati alle attività pianificate, promuovendo la produttività.  \
 
 Le responsabilità dell'Amministratore includono:
 
@@ -331,14 +331,14 @@ Le responsabilità dell'Amministratore includono:
 
 + risoluzione dei problemi: affronta e risolve i problemi legati alla gestione dei processi.
 
-
 \ \
 ===== Analista
 L'Analista individua i bisogni del Proponente e li trasforma in requisiti che saranno l'input delle attività successive. Il suo lavoro si svolge intensamente nel periodo di avvio del progetto, e si conclude con la stesura dell'Analisi dei Requisiti. \
-Il suo compito è di rilevanza in quanto un'incompleta o superficiale analisi può impattare in modo sensibile sulle attività successive, causando ritardi e costi aggiuntivi, andando ad inficiare sulla qualità e completezza del prodotto finale. \
+Il suo compito è di rilevanza in quanto un'incompleta o superficiale analisi può impattare in modo sensibile sulle attività successive, causando ritardi e costi aggiuntivi, andando a pregiudicare la qualità e la completezza del prodotto finale. \
 
 Le responsabilità dell'Analista includono:
-+ documento di Analisi dei Requisiti: l'Analista è incaricato di scrivere questo documento cruciale, che dettaglia i requisiti specifici del progetto.
+
++ documento di Analisi dei Requisiti: l'Analista è incaricato di redigere questo documento, che dettaglia i requisiti specifici del progetto.
 
 + interazione con i clienti: l'Analista lavora a stretto contatto con il Proponente o i Committenti per capire e studiare i loro bisogni;
 
@@ -346,7 +346,7 @@ Le responsabilità dell'Analista includono:
 
 + definizione del problema e degli obiettivi: l'Analista esamina la situazione attuale, identifica il problema e stabilisce gli obiettivi da raggiungere;
 
-+ trasformazione dei bisogni in requisiti: durante l'Analisi dei Requisiti, l'Analista converte i bisogni dei clienti in requisiti specifici per la soluzione.
++ trasformazione dei bisogni in requisiti: durante la stesura dell'Analisi dei Requisiti, l'Analista converte i bisogni dei clienti in requisiti specifici per la soluzione.
 
 \ \
 ===== Progettista
@@ -364,9 +364,9 @@ Le responsabilità del Progettista includono:
 
 \ \
 ===== Programmatore
-Il Programmatore è la figura più numerosa all'intero del gruppo con precise competenze tecniche.\
+Il Programmatore è la figura più numerosa all'intero del gruppo.\
+Le sue responsabilità includono:
 
-Le responsabilità del Programmatore includono:
 + scrittura del codice sorgente, perseguendo mantenibilità e conformità a quanto stabilito dall'architettura definita dalla progettazione;
 
 + creazione di test specifici per la verifica e la validazione del codice.
@@ -379,7 +379,7 @@ Le responsabilità del Verificatore includono:
 
 + verifica della qualità e della conformità della documentazione prodotta;
 
-+ approvazione della documentazione sottoposta a verifica;
++ approvazione della documentazione sottoposta a verifica.
 
 \ \
 === Processi di gestione dell'infrastruttura
@@ -394,35 +394,36 @@ Questo processo definisce, fornisce e regola i servizi, gli strumenti e le tecno
 
 L'infrastruttura è costituita dai servizi, dagli strumenti e dalle tecnologie di comunicazione e condivisione delle informazioni adottate a supporto degli scopi dell'organizzazione. L'infrastruttura risponde alle necessità di comunicazione interna ed esterna.
 
-// Li sposterei
+I requisiti dei processi di gestione dell'infrastruttura sono:
+
++ semplicità di adozione di strumenti e servizi;
++ accesso rapido alle informazioni, anche in mobilità;
++ non ridondanza tra strumenti e servizi adottati.
+
+==== Infrastruttura di comunicazione
 I principi della comunicazione che ispirano i processi di gestione dell'infrastruttura sono:
 
 + Comunicazione aperta: le comunicazioni avvengono in modalità pubblica, ovvero tutti i membri possono partecipare (compatibilmente con i loro impegni di progetto e sempre nel rispetto delle rispettive responsabilità). I membri del gruppo hanno accesso e possono liberamente consultare i messaggi, le eventuali registrazioni e i verbali;
+
 + Comunicazione onesta: quanto comunicato rappresenta sempre il reale stato del progetto. Nessun membro, in nessun caso, deve nascondere le criticità incontrate;
-+ Comunicazione proattiva: comunicare con cognizione di causa, offrendo spunti concreti di discussione. Ogni comunicazione deve poter essere processata dagli interessati nel minor tempo possibile.
-+ Comunicazione frequente: la frequenza della comunicazione permette di prendere decisione in modo tempestivo e informato.
 
-I requisiti dei processi di gestione dell'infrastruttura sono:
++ Comunicazione proattiva: comunicare con cognizione di causa, offrendo spunti concreti di discussione. Ogni comunicazione deve poter essere processata dagli interessati nel minor tempo possibile;
 
-+ Semplicità di adozione di strumenti e servizi;
-+ Accesso rapido alle informazioni, anche in mobilità;
-+ Non ridondanza tra strumenti e servizi adottati.
-
-==== Infrastruttura di comunicazione
++ Comunicazione frequente: la frequenza della comunicazione permette di prendere decisioni in modo tempestivo e informato.
 
 ===== Comunicazione interna
 
 #link("https://discord.com/")[*Discord*] rappresenta il canale primario di comunicazione interna. È una piattaforma di comunicazione che fornisce:
 
-+ Un servizio di messaggistica istantanea che permette la suddivisione delle conversazioni in canali tematici;
-+ Un servizio di videochiamate usato per le comunicazioni sincrone interne in modalità remota.
++ un servizio di messaggistica istantanea che permette la suddivisione delle conversazioni in canali tematici;
++ un servizio di videochiamate usato per le comunicazioni sincrone interne in modalità remota.
 
 Le comunicazioni testuali tramite messaggio istantaneo sono organizzate per argomento. Discord adotta il termine "canale" per designare tale suddivisione tematica. I canali attualmente in uso sono:
 
-- Canale generale (`#random`): usato per le comunicazioni informali;
-- Canale meeting (`#meeting`): usato per l'organizzazione dei meeting interni e la condivisione degli ordini del giorno;
-- Canale di riferimento (`#riferimenti`): usato come bacheca per raccogliere ed organizzare, in un unico luogo, le risorse a supporto degli scopi dell'organizzazione;
-- Altri canali tematici: le comunicazioni relative ad uno specifico prodotto dei processi dell'organizzazione avvengono in un canale dedicato.
+- canale generale (`#random`): usato per le comunicazioni informali;
+- canale meeting (`#meeting`): usato per l'organizzazione dei meeting interni e la condivisione degli ordini del giorno;
+- canale di riferimento (`#riferimenti`): usato come bacheca per raccogliere ed organizzare, in un unico luogo, le risorse a supporto degli scopi dell'organizzazione;
+- altri canali tematici: le comunicazioni relative ad uno specifico prodotto dei processi dell'organizzazione avvengono in un canale dedicato.
 
 La suddivisione delle comunicazioni interne in canali ha lo scopo di ridurre le distrazioni, facilitare l'accesso alle informazioni e semplificare la comunicazione interna.
 
@@ -430,9 +431,9 @@ Le comunicazioni sincrone in videochiamata avvengono nei cosiddetti "canali voca
 
 #link("https://miro.com/")[*Miro*] è un servizio di collaborazione per team basato su _whiteboard_. Offre la possibilità di creare board multimediali e permette la collaborazione asincrona. È utilizzato per:
 
-+ Raccogliere i feedback interni da discutere durante i meeting di retrospettiva;
-+ Supportare gli incontri interni di _brainstorming_;
-+ Supportare i meeting con gli interlocutori esterni.
++ raccogliere i feedback interni da discutere durante i meeting di retrospettiva;
++ supportare gli incontri interni di _brainstorming_;
++ supportare i meeting con gli interlocutori esterni.
 
 Oltre a Discord e Miro, l'organizzazione comunica anche tramite *Jira* (ITS) e *GitHub* (VCS). L'uso di questi strumenti è discusso in dettaglio nelle sezioni apposite.
 
@@ -452,11 +453,12 @@ L'indirizzo è reso noto nel frontespizio di ogni documento prodotto dall'organi
 
 Sono compiti dell'amministratore il mantenimento dell'infrastruttura, l'aggiornamento delle norme e dei processi e l'identificazione di nuovi servizi a supporto delle attività dell'organizzazione.
 
-L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi minimo e sufficiente a coprire tutti i requisiti di comunicazione.
+L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi sufficienti a coprire tutti i requisiti di comunicazione.
 
 === Processo di gestione delle Risorse Umane <processo_risorse_umane>
 
-La natura didattica del progetto riduce le prerogative del processo di gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la _conformance to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.4_.
+La natura didattica del progetto riduce le prerogative del processo di gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la: \
+ _conformance to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.4_.
 
 ==== Scopo
 
@@ -468,11 +470,11 @@ Questo processo fornisce all'organizzazione le risorse umane necessarie all'esec
 
 L'organizzazione sottopone, ad ogni nuovo membro, un form conoscitivo atto a identificare le competenze pregresse. Il form è realizzato con #link("https://www.google.it/intl/it/forms/about/")[*Google Forms*] e include domande su:
 
-+ Strumenti di collaborazione;
-+ Linguaggi di programmazione;
-+ Tecnologie;
-+ Strumenti di automazione;
-+ Strumenti di controllo di versione.
++ strumenti di collaborazione;
++ linguaggi di programmazione;
++ tecnologie;
++ strumenti di automazione;
++ strumenti di controllo di versione.
 
 Le risposte sono non vincolanti e non influiscono in alcun modo sulla rotazione dei ruoli, sui compiti assegnati o sull'organizzazione interna.
 
@@ -490,11 +492,11 @@ Lo sviluppo di nuove competenze riguarda i membri, e non i ruoli. Per questa rag
 
 L'organizzazione si adopera per sviluppare le competenze dei membri mediante:
 
-+ Attività di _peer-tutoring_ in concomitanza delle rotazioni di ruolo;
-+ Pubblicazione interna di tutorial tecnici scritti (eventualmente accompagnati da brevi video, se utili a migliorare la comprensione degli argomenti trattati);
-+ Attività di _tutoring_ interno su richiesta, sincrono, in base alla necessità;
-+ Attività di _mentoring_ esterno su richiesta, in base alla necessità e alla disponibilità dell'interlocutore esterno;
-+ Condivisione delle best practice in sessione collettiva.
++ attività di _peer-tutoring_ in concomitanza delle rotazioni di ruolo;
++ pubblicazione interna di tutorial tecnici scritti (eventualmente accompagnati da brevi video, se utili a migliorare la comprensione degli argomenti trattati);
++ attività di _tutoring_ interno su richiesta, sincrono, in base alla necessità;
++ attività di _mentoring_ esterno su richiesta, in base alla necessità e alla disponibilità dell'interlocutore esterno;
++ condivisione delle best practice in sessione collettiva.
 
 Le sessioni di tutoring sono "a sportello" ed è responsabilità dei singoli membri richiederne l'attivazione. Il responsabile, identificati i temi di maggior interesse, può espressamente richiedere che un ruolo copra le esigenze di tutoring interno tramite le modalità sopra indicate.
 

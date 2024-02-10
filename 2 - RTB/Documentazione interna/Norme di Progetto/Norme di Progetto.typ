@@ -565,32 +565,32 @@ Le decisioni possono riguardare diversi aspetti del capitolato, e la loro catego
 
 Le decisioni vengono dunque così classificate:
 + *Decisioni organizzative*: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto. Esempi notevoli sono le decisioni focalizzate alla coordinazione del gruppo o alla scelta degli strumenti da utilizzare per la gestione del progetto(ad esempio: scelta dell' ITS, delle piattaforme per la comunicazione e per la collaborazione):
-  - documento soggetto a modifiche: Norme di progetto;
+  - documento soggetto a modifiche: `Norme di Progetto`;
   - ruoli responsabili dell'aggiornamento: Responsabile, Amministratori;
   - strategia di decision-making: collaborativa.
 
 + *Decisioni tecnologiche*: sono relative allo stack tecnologico da adottare durante lo sviluppo del progetto:
-  - documento soggetto a modifiche: Norme di Progetto;
+  - documento soggetto a modifiche: `Norme di Progetto`;
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making.
 
 + *Decisioni sui requisiti*: sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
-  - documento soggetto a modifiche: Analisi dei Requisiti;
+  - documento soggetto a modifiche: `Analisi dei Requisiti`;
   - ruoli responsabili dell'aggiornamento: Analisti;
   - strategia di decision-making: collaborativa.
 
 + *Decisioni di implementazione*: sono decisioni relative alla stesura del codice:
-  - documento soggetto a modifiche: Norme di Progetto, documenti tecnici (diagramma delle classi, ...);
+  - documento soggetto a modifiche: `Norme di Progetto`, documenti tecnici (diagramma delle classi, ...);
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
   - strategia di decision-making: expertise decision-making.
 
 + *Decisioni architetturali*: sono decisioni relative ai pattern e alle architetture riguardanti il software:
-  - documento soggetto a modifiche: Norme di Progetto, documenti tecnici (diagramma delle classi, diagramma dei casi d'uso...);
+  - documento soggetto a modifiche: `Norme di Progetto`, documenti tecnici (diagramma delle classi, diagramma dei casi d'uso...);
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making.
 
 + *Decisioni sulla qualità*: sono decisioni relative ai controlli di qualità:
-  - documento soggetto a modifiche: Piano di Qualifica;
+  - documento soggetto a modifiche: `Piano di Qualifica`;
   - ruoli responsabili dell'aggiornamento: Responsabile, Verificatori;
   - strategia di decision-making: collaborativa.
 

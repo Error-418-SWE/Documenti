@@ -239,9 +239,8 @@ I processi organizzativi abilitanti hanno la funzione di garantire la capacità 
 Questi processi forniscono l'infrastruttura e le risorse necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
 
 I processi organizzativi abilitanti implementati dal gruppo sono i seguenti:
-+ Processo di gestione dei modelli di ciclo di vita;
-+ Processo di gestione dell'infrastruttura;
-+ Processo di gestione delle risorse umane.
++ processo di gestione dei modelli di ciclo di vita;
++ processo di gestione dell'infrastruttura.
 
 === Processo di gestione dei modelli di ciclo di vita
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_

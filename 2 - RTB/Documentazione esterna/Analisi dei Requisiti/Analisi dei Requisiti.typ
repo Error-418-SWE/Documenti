@@ -332,7 +332,9 @@ $bold("Scenario: ")$
   ],
 )
 $bold("Descrizione: ")$
-il perimetro dell'ambiente di lavoro viene modificato successivamente alla sua configurazione iniziale.
+la larghezza e la lunghezza dell'ambiente di lavoro possono essere modificate successivamente alla sua configurazione iniziale.
+
+L'utente può decidere, per ciascun valore modificabile, di sostituirlo specificando il nuovo valore oppure di lasciarlo inalterato.
 
 $bold("Attore: ")$
 utente.
@@ -345,7 +347,9 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente avvia la modifica dell'ambiente di lavoro;
-- l'utente regola le dimensioni dell'ambiente di lavoro.
+- l'utente può inserire una nuova larghezza dell'ambiente di lavoro;
+- l'utente può inserire una nuova lunghezza dell'ambiente di lavoro;
+- l'utente conferma la nuova configurazione di valori.
 
 $bold("Estensioni: ")$
 - UC-2.1 Visualizzazione errore dimensioni magazzino troppo piccole;
@@ -542,7 +546,7 @@ $bold("Scenario: ")$
 
 == Creazione di un bin
 $bold("Descrizione: ")$
-deve essere possibile creare delle aree adibite a contenere prodotti, definite nel contesto come bin. In fase di creazione deve essere possibile definire le caratteristiche che il bin dovrà avere, quali : altezza, larghezza e profondità.
+deve essere possibile creare e aggiungere nell'ambiente delle aree adibite a contenere prodotti, definite nel contesto come bin. In fase di creazione deve essere possibile definire le caratteristiche che il bin dovrà avere, quali: altezza, larghezza e profondità.
 
 $bold("Attore: ")$
 utente.
@@ -555,12 +559,19 @@ $bold("Postcondizioni: ")$
 - l'area selezionata viene classificata come bin.
 
 $bold("Scenario: ")$
-- l'utente entra nella modalità di modifica;
-- l'utente seleziona un'area libera e valida.
+- l'utente seleziona l'aggiunta di un bin;
+- l'utente inserisce l'altezza del bin;
+- l'utente inserisce la larghezza del bin;
+- l'utente inserisce la profondità del bin;
+- l'utente posiziona il bin in una posizione valida nell'ambiente di lavoro.
 
 == Modifica di un bin
 $bold("Descrizione: ")$
-deve essere possibile modificare le dimensioni dei bin.
+modifica delle caratteristiche di un bin esterno già esistente.
+
+Le caratteristiche che definiscono il bin vengono visualizzate e possono essere modificate, nello specifico i valori sono: altezza, larghezza, profondità.
+
+L'utente può decidere, per ciascuno di essi, di sostituirlo specificando il nuovo valore oppure di lasciarlo inalterato.
 
 $bold("Attore: ")$
 utente.
@@ -572,10 +583,12 @@ $bold("Postcondizioni: ")$
 - le dimensioni del bin sono state ridefinite.
 
 $bold("Scenario: ")$
-- l'utente entra nella modalità di modifica;
 - l'utente seleziona un bin;
-- vengono mostrate le informazioni del bin;
-- l'utente modifica le dimensioni del bin.
+- l'utente seleziona il comando per la modifica del bin;
+- l'utente può inserire una nuova altezza del bin;
+- l'utente può inserire una nuova larghezza del bin;
+- l'utente può inserire una nuova profondità del bin;
+- l'utente conferma la nuova configurazione di valori.
 
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
@@ -778,7 +791,7 @@ $bold("Scenario: ")$
 - viene inviata una notifica a magazzino che segnala lo spostamento;
 - i due bin, di partenza e di arrivo, vengono evidenziati per segnalare lo spostamento in corso.
 
-= Interrogazione di un bin
+= Visualizzazione di un bin
 
 #figure(
   image("./imgs/uc8.png", format: "png"),
@@ -802,7 +815,7 @@ $bold("Scenario: ")$
 - l'utente seleziona un bin;
 - vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
 
-= Interrogazione di uno scaffale
+= Visualizzazione di uno scaffale
 
 #figure(
   image("./imgs/uc9.png", format: "png"),
@@ -824,7 +837,16 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente seleziona uno scaffale;
-- vengono visualizzate le informazioni relative a lo scaffale selezionato.
+- vengono visualizzate le seguenti informazioni relative allo scaffale selezionato:
+  - codice identificativo dello scaffale;
+  - numero totale di bin che contiene;
+  - numero di bin contenuti occupati;
+  - numero di bin contenuti vuoti;
+  - altezza dello scaffale;
+  - larghezza dello scaffale;
+  - profondità dello scaffale;
+  - numero di piani;
+  - numero di colonne.
 
 = Ricerca prodotti
 

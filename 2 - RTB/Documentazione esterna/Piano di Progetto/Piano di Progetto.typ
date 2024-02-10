@@ -161,7 +161,7 @@ Identificati i rischi, le relative contromisure e il calendario di progetto, è 
 == Rischi e loro mitigazione
 Il documento Analisi dei Rischi (v2.0.0), riportato in @riferimenti-interni, elenca e categorizza i rischi, li analizza e fornisce strumenti di monitoraggio e mitigazione.
 
-== Prospetto orario complessivo
+== Prospetto orario complessivo <prospetto-orario-complessivo>
 La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo di competenze trasversali nei vari ruoli presenti all'interno del progetto.
 
 #figure(
@@ -427,9 +427,18 @@ La retrospettiva di uno sprint si articolerà in:
 - *Panoramica dei costi effettivi* (consuntivo): al termine dello sprint sarà possibile verificare se i costi preventivati rispecchino i costi effettivi, in base alle ore svolte per ogni ruolo;
 - *Monitoraggio costi e ore*: tabelle che riportano le ore e il budget rimanenti per ogni ruolo e complessivamente.
 
+=== Rotazione dei ruoli
+
+Il gruppo _Error\_418_ adotta una rotazione dei ruoli, in modo da garantire che ciascun membro del gruppo abbia la possibilità di svolgere ciascun ruolo almeno una volta durante lo sviluppo del progetto. Questo permette di:
+- aderire alle linee guida del regolamento del progetto didattico;
+- offrire una visione d'insieme del progetto a tutti i membri del gruppo;
+- garantire che ciascun membro del gruppo possa sviluppare competenze trasversali.
+
+I ruoli assegnati a ciascun membro del gruppo sono riportati in @preventivi e @consuntivi. La ripartizione delle ore per ciascun ruolo è riportata in @prospetto-orario-complessivo.
+
 #pagebreak()
 
-= Preventivi di periodo
+= Preventivi di periodo <preventivi>
 Il preventivo di ogni sprint esprime gli obiettivi e il relativo costo preventivato, secondo un'attività di pianificazione mirata al conseguimento efficace ed efficiente degli obiettivi di periodo.
 
 == Sprint 1 dal 06-11-2023 al 13-11-2023
@@ -1313,7 +1322,7 @@ Questo sprint impiega:
 
 #pagebreak()
 
-= Consuntivi di periodo
+= Consuntivi di periodo <consuntivi>
 
 Il consuntivo di ogni sprint permette di avere una valutazione critica dell'avanzamento dello sviluppo, valutando in modo oggettivo i punti positivi e negativi dello sprint terminato.
 

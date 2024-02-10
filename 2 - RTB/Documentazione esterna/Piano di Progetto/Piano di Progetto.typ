@@ -479,7 +479,7 @@ In questo primo periodo, l'assegnazione dei ruoli di Progettista e di Programmat
     [Todesco],     [0],     [0],     [3],     [0],     [0],     [0],     [3],
     [Zaccone],     [0],     [0],     [3],     [0],     [0],     [0],     [3],
     [Totale ore],     [3],     [8],     [6],     [0],     [0],     [6],     [23],
-    [Costo ruolo],     [90],     [160],     [150],     [0],     [0],     [90],     [490],
+    [Costo\ ruolo],     [90],     [160],     [150],     [0],     [0],     [90],     [490],
   ),
   caption: "Prospetto del preventivo, sprint 1"
 )
@@ -542,7 +542,7 @@ In questo  periodo, l'assegnazione dei ruoli di Programmatore e Progettista è r
     [Todesco],     [0],     [0],     [3],     [0],     [0],     [0],     [3],
     [Zaccone],     [0],     [0],     [3],     [0],     [0],     [0],     [3],
     [Totale ore],     [3],     [8],     [9],     [0],     [0],     [3],     [23],
-    [Costo ruolo],     [90],     [160],     [225],     [0],     [0],     [45],     [520],
+    [Costo\ ruolo],     [90],     [160],     [225],     [0],     [0],     [45],     [520],
   ),
   caption: "Prospetto del preventivo, sprint 2"
 )
@@ -605,7 +605,7 @@ In questo periodo, l'assegnazione del ruolo di Programmatore è ritenuta precoce
     [Todesco],     [0],     [3],     [0],     [0],     [0],     [0],     [3],
     [Zaccone],     [0],     [3],     [0],     [0],     [0],     [0],     [3],
     [Totale ore],     [3],     [6],     [8],     [3],     [0],     [3],     [23],
-    [Costo ruolo],     [90],     [120],     [200],     [75],     [0],     [45],     [530],
+    [Costo\ ruolo],     [90],     [120],     [200],     [75],     [0],     [45],     [530],
   ),
   caption: "Prospetto del preventivo, sprint 3"
 )
@@ -637,7 +637,7 @@ del documento Analisi dei Requisiti e sull'esplorazione delle nuove tecnologie.
 Gli obiettivi dello sprint 4 sono:
 - perfezionamento della stesura degli Use Case individuati finora;
 - redazione di una prima versione dell'Analisi dei Requisiti;
-- scelta di una data per un eventuale primo meeting con il professore Cardin per ottenere un feedback sull'Analisi dei Requisiti;
+- scelta di una data per un eventuale primo meeting con il Professor Cardin per ottenere un feedback sull'Analisi dei Requisiti;
 - proseguimento della redazione e aggiornamento del documento Norme di Progetto;
 - proseguimento periodo di studio di Three.js, finalizzato a:
  - creazione di alcuni scaffali nell'ambiente tridimensionale;
@@ -668,7 +668,7 @@ Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
     [Todesco],     [0],     [3],     [0],     [0],     [0],     [0],     [3],
     [Zaccone],     [0],     [3],     [0],     [0],     [0],     [0],     [3],
     [Totale ore],     [3],     [6],     [7],     [1],     [3],     [3],     [23],
-    [Costo ruolo],     [90],     [120],     [175],     [25],     [45],     [45],     [500],
+    [Costo\ ruolo],     [90],     [120],     [175],     [25],     [45],     [45],     [500],
   ),
   caption: "Prospetto del preventivo, sprint 4"
 )
@@ -733,7 +733,7 @@ Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
     [Todesco],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
     [Zaccone],     [0],     [0],     [0],     [2],     [2],     [0],     [4],
     [Totale ore],     [3],     [3],     [8],     [4],     [8],     [3],     [29],
-    [Costo ruolo],     [90],     [60],     [200],     [100],     [120],     [45],     [615],
+    [Costo\ ruolo],     [90],     [60],     [200],     [100],     [120],     [45],     [615],
   ),
   caption: "Prospetto del preventivo, sprint 5"
 )
@@ -792,7 +792,7 @@ In quest'ottica vede l'impiego principale delle figure:
     [Todesco],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
     [Zaccone],     [0],     [0],     [0],     [1],     [3],     [0],     [4],
     [Totale ore],     [3],     [3],     [8],     [2],     [6],     [3],     [25],
-    [Costo ruolo],     [90],     [60],     [200],     [50],     [90],     [45],     [535],
+    [Costo\ ruolo],     [90],     [60],     [200],     [50],     [90],     [45],     [535],
   ),
   caption: "Prospetto del preventivo, sprint 6"
 )
@@ -855,7 +855,7 @@ Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del 
     [Todesco],     [0],     [0],     [0],     [3],     [0],     [0],     [3],
     [Zaccone],     [0],     [0],     [3],     [0],     [0],     [0],     [3],
     [Totale ore],     [3],     [4],     [3],     [6],     [5],     [2],     [23],
-    [Costo ruolo],     [90],     [80],     [75],     [150],     [75],     [30],     [500],
+    [Costo\ ruolo],     [90],     [80],     [75],     [150],     [75],     [30],     [500],
   ),
   caption: "Prospetto del preventivo, sprint 7"
 )
@@ -926,7 +926,7 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
     [Todesco],     [0],     [0],     [0],     [3],     [0],     [0],     [3],
     [Zaccone],     [0],     [0],     [3],     [0],     [0],     [0],     [3],
     [Totale ore],     [4],     [3],     [3],     [6],     [3],     [4],     [23],
-    [Costo ruolo],     [120],     [60],     [75],     [150],     [45],     [60],     [510],
+    [Costo\ ruolo],     [120],     [60],     [75],     [150],     [45],     [60],     [510],
   ),
   caption: "Prospetto del preventivo, sprint 8"
 )
@@ -989,7 +989,7 @@ Gli obiettivi del nono sprint riguardano i seguenti ruoli:
     [Todesco],     [0],     [0],     [0],     [0],     [0],     [4],     [4],
     [Zaccone],     [4],     [0],     [0],     [0],     [0],     [0],     [4],
     [Totale ore],     [4],     [10],     [5],     [0],     [0],     [12],     [31],
-    [Costo ruolo],     [120],     [200],     [125],     [0],     [0],     [180],     [625],
+    [Costo\ ruolo],     [120],     [200],     [125],     [0],     [0],     [180],     [625],
   ),
   caption: "Prospetto del preventivo, sprint 9"
 )
@@ -1057,7 +1057,7 @@ L'attività prevalente è la revisione documentale. I ruoli attivi durante quest
     [Todesco],     [0],     [0],     [0],     [0],     [2],     [0],     [2],
     [Zaccone],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
     [Totale ore],     [2],     [2],     [2],     [0],     [4],     [8],     [18],
-    [Costo ruolo],     [60],     [40],     [50],     [0],     [60],     [120],     [330],
+    [Costo\ ruolo],     [60],     [40],     [50],     [0],     [60],     [120],     [330],
   ),
   caption: "Prospetto del preventivo, sprint 10"
 )
@@ -1128,7 +1128,7 @@ Sono state assegnate ore al ruolo di Verificatore e Analista a scapito di quello
     [Todesco],     [0],     [3],     [0],     [0],     [0],     [0],     [3],
     [Zaccone],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
     [Totale ore],     [3],     [3],     [4],     [3],     [0],     [6],     [19],
-    [Costo ruolo],     [90],     [60],     [100],     [75],     [0],     [90],     [415],
+    [Costo\ ruolo],     [90],     [60],     [100],     [75],     [0],     [90],     [415],
   ),
   caption: "Prospetto del preventivo, sprint 11"
 )
@@ -1187,7 +1187,7 @@ Dato lo scope ridotto del lavoro, questo sprint impiega un numero di ore inferio
     [Todesco],     [0],     [1],     [0],     [0],     [0],     [0],     [1],
     [Zaccone],     [0],     [0],     [0],     [0],     [0],     [1],     [1],
     [Totale ore],     [1],     [1],     [0],     [3],     [0],     [2],     [7],
-    [Costo ruolo],     [30],     [20],     [0],     [75],     [0],     [30],     [155],
+    [Costo\ ruolo],     [30],     [20],     [0],     [75],     [0],     [30],     [155],
   ),
   caption: "Prospetto del preventivo, sprint 12"
 )
@@ -1236,7 +1236,7 @@ Questo sprint impiega:
     [Todesco],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
     [Zaccone],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
     [Totale ore],     [2],     [1],     [0],     [0],     [0],     [0],     [3],
-    [Costo ruolo],     [60],     [20],     [0],     [0],     [0],     [0],     [80],
+    [Costo\ ruolo],     [60],     [20],     [0],     [0],     [0],     [0],     [80],
   ),
   caption: "Prospetto del preventivo, sprint 13"
 )
@@ -1297,7 +1297,7 @@ Questo sprint impiega:
     [Todesco],     [0],     [0],     [0],     [1],     [0],     [3],     [4],
     [Zaccone],     [0],     [0],     [0],     [1],     [0],     [3],     [4],
     [Totale ore],     [3],     [3],     [8],     [2],     [0],     [13],     [29],
-    [Costo ruolo],     [90],     [60],     [200],     [50],     [0],     [195],     [595],
+    [Costo\ ruolo],     [90],     [60],     [200],     [50],     [0],     [195],     [595],
   ),
   caption: "Prospetto del preventivo, sprint 14"
 )
@@ -1366,7 +1366,7 @@ La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di u
     [Todesco],     [0],     [0],     [2 (-1)],     [0],     [0],     [0],     [2 (-1)],
     [Zaccone],     [0],     [0],     [2 (-1)],     [0],     [0],     [0],     [2 (-1)],
     [Totale ore],     [2 (-1)],     [12 (+4)],     [4 (-2)],     [0],     [0],     [4 (-2)],     [22 (-1)],
-    [Costo ruolo],     [60 (-30)],     [240 (+80)],     [100 (-50)],     [0],     [0],     [60 (-30)],     [460 (-30)],
+    [Costo\ ruolo],     [60 (-30)],     [240 (+80)],     [100 (-50)],     [0],     [0],     [60 (-30)],     [460 (-30)],
   ),
   caption: "Prospetto del consuntivo, sprint 1"
 )
@@ -1471,7 +1471,7 @@ Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obi
     [Todesco],     [0],     [1 (+1)],     [3],     [0],     [0],     [0],     [4 (+1)],
     [Zaccone],     [0],     [2 (+2)],     [3],     [0],     [0],     [0],     [5 (+2)],
     [Totale ore],     [3],     [12 (+4)],     [9],     [0],     [0],     [2 (-1)],     [26 (+3)],
-    [Costo ruolo],     [90],     [240 (+80)],     [225],     [0],     [0],     [30 (-15)],     [585 (+65)],
+    [Costo\ ruolo],     [90],     [240 (+80)],     [225],     [0],     [0],     [30 (-15)],     [585 (+65)],
   ),
   caption: "Prospetto del consuntivo, sprint 2"
 )
@@ -1578,7 +1578,7 @@ Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentr
     [Todesco],     [0],     [4 (+1)],     [0],     [0],     [0],     [0],     [4 (+1)],
     [Zaccone],     [0],     [4 (+1)],     [0],     [0],     [0],     [0],     [4 (+1)],
     [Totale ore],     [2 (-1)],     [8 (+2)],     [8],     [3],     [0],     [3],     [24 (+1)],
-    [Costo ruolo],     [60 (-30)],     [160 (+40)],     [200],     [75],     [0],     [45],     [540 (+10)],
+    [Costo\ ruolo],     [60 (-30)],     [160 (+40)],     [200],     [75],     [0],     [45],     [540 (+10)],
   ),
   caption: "Prospetto del consuntivo, sprint 3"
 )
@@ -1679,7 +1679,7 @@ Inoltre, il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'u
     [Todesco],     [0],     [2 (-1)],     [0],     [0],     [0],     [0],     [2 (-1)],
     [Zaccone],     [0],     [2 (-1)],     [0],     [0],     [0],     [0],     [2 (-1)],
     [Totale ore],     [3],     [4 (-2)],     [7],     [1],     [4 (+1)],     [4 (+1)],     [23],
-    [Costo ruolo],     [90],     [80 (-40)],     [175],     [25],     [60 (+15)],     [60 (+15)],     [490 (-10)],
+    [Costo\ ruolo],     [90],     [80 (-40)],     [175],     [25],     [60 (+15)],     [60 (+15)],     [490 (-10)],
   ),
   caption: "Prospetto del consuntivo, sprint 4"
 )
@@ -1786,7 +1786,7 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
     [Todesco],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
     [Zaccone],     [0],     [0],     [0],     [1 (-1)],     [2],     [0],     [3 (-1)],
     [Totale ore],     [3],     [2 (-1)],     [8],     [2 (-2)],     [8],     [3],     [26 (-3)],
-    [Costo ruolo],     [90],     [40 (-20)],     [200],     [50 (-50)],     [120],     [45],     [545 (-70)],
+    [Costo\ ruolo],     [90],     [40 (-20)],     [200],     [50 (-50)],     [120],     [45],     [545 (-70)],
   ),
   caption: "Prospetto del consuntivo, sprint 5"
 )
@@ -1893,7 +1893,7 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
     [Todesco],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
     [Zaccone],     [0],     [0],     [0],     [1],     [3],     [0],     [4],
     [Totale ore],     [3],     [3],     [8],     [2],     [5 (-1)],     [3],     [24 (-1)],
-    [Costo ruolo],     [90],     [60],     [200],     [50],     [75 (-15)],     [45],     [520 (-15)],
+    [Costo\ ruolo],     [90],     [60],     [200],     [50],     [75 (-15)],     [45],     [520 (-15)],
   ),
   caption: "Prospetto del consuntivo, sprint 6"
 )
@@ -1998,7 +1998,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
     [Todesco],     [0],     [0],     [0],     [2 (-1)],     [0],     [0],     [2 (-1)],
     [Zaccone],     [0],     [0],     [1 (-2)],     [0],     [0],     [0],     [1 (-2)],
     [Totale ore],     [2 (-1)],     [3 (-1)],     [1 (-2)],     [5 (-1)],     [5],     [2],     [18 (-5)],
-    [Costo ruolo],     [60 (-30)],     [60 (-20)],     [25 (-50)],     [125 (-25)],     [75],     [30],     [375 (-125)],
+    [Costo\ ruolo],     [60 (-30)],     [60 (-20)],     [25 (-50)],     [125 (-25)],     [75],     [30],     [375 (-125)],
   ),
   caption: "Prospetto del consuntivo, sprint 7"
 )
@@ -2095,7 +2095,7 @@ Nessuna.
     [Todesco],     [0],     [0],     [0],     [3],     [0],     [0],     [3],
     [Zaccone],     [0],     [0],     [3],     [0],     [0],     [0],     [3],
     [Totale ore],     [4],     [6 (+3)],     [3],     [5 (-1)],     [5 (+2)],     [4],     [27 (+4)],
-    [Costo ruolo],     [120],     [120 (+60)],     [75],     [125 (-25)],     [75 (+30)],     [60],     [575 (+65)],
+    [Costo\ ruolo],     [120],     [120 (+60)],     [75],     [125 (-25)],     [75 (+30)],     [60],     [575 (+65)],
   ),
   caption: "Prospetto del consuntivo, sprint 8"
 )
@@ -2191,7 +2191,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
     [Todesco],     [0],     [0],     [0],     [0],     [0],     [3 (-1)],     [3 (-1)],
     [Zaccone],     [3 (-1)],     [0],     [0],     [0],     [0],     [0],     [3 (-1)],
     [Totale ore],     [3 (-1)],     [4 (-6)],     [4 (-1)],     [1 (+1)],     [0],     [9 (-3)],     [21 (-10)],
-    [Costo ruolo],     [90 (-30)],     [80 (-120)],     [100 (-25)],     [25 (+25)],     [0],     [135 (-45)],     [430 (-195)],
+    [Costo\ ruolo],     [90 (-30)],     [80 (-120)],     [100 (-25)],     [25 (+25)],     [0],     [135 (-45)],     [430 (-195)],
   ),
   caption: "Prospetto del consuntivo, sprint 9"
 )
@@ -2284,7 +2284,7 @@ L'impegno individuale dei membri risulta sbilanciato a causa dell'imminenete ses
     [Todesco],     [1 (+1)],     [0],     [0],     [0],     [2],     [0],     [3 (+1)],
     [Zaccone],     [1 (-1)],     [0],     [0],     [0],     [0],     [3],     [4 (-1)],
     [Totale ore],     [2],     [2],     [2],     [1 (+1)],     [4],     [8],     [19 (+1)],
-    [Costo ruolo],     [60],     [40],     [50],     [25 (+25)],     [60],     [120],     [355 (+25)],
+    [Costo\ ruolo],     [60],     [40],     [50],     [25 (+25)],     [60],     [120],     [355 (+25)],
   ),
   caption: "Prospetto del consuntivo, sprint 10"
 )
@@ -2374,7 +2374,7 @@ Nessuna. La situazione di carico di lavoro asimmetrico è destinata a migliorare
     [Todesco],     [0],     [3],     [0],     [0],     [0],     [0],     [3],
     [Zaccone],     [0],     [0],     [0],     [0],     [0],     [2],     [2],
     [Totale ore],     [2 (-1)],     [3],     [2 (-1)],     [0],     [0],     [4 (-2)],     [11 (-4)],
-    [Costo ruolo],     [60 (-30)],     [60],     [50 (-25)],     [0],     [0],     [60 (-30)],     [230 (-85)],
+    [Costo\ ruolo],     [60 (-30)],     [60],     [50 (-25)],     [0],     [0],     [60 (-30)],     [230 (-85)],
   ),
   caption: "Prospetto del consuntivo, sprint 11"
 )
@@ -2463,7 +2463,7 @@ Nessuna.
     [Todesco],     [0],     [1],     [0],     [0],     [0],     [0],     [1],
     [Zaccone],     [0],     [0],     [0],     [0],     [0],     [1],     [1],
     [Totale ore],     [1],     [1],     [1 (+1)],     [3],     [0],     [2],     [8 (+1)],
-    [Costo ruolo],     [30],     [20],     [25 (+25)],     [75],     [0],     [30],     [180 (+25)],
+    [Costo\ ruolo],     [30],     [20],     [25 (+25)],     [75],     [0],     [30],     [180 (+25)],
   ),
   caption: "Prospetto del consuntivo, sprint 12"
 )
@@ -2549,7 +2549,7 @@ Nessuna.
     [Todesco],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
     [Zaccone],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
     [Totale ore],     [3 (+1)],     [1],     [0],     [0],     [0],     [0],     [4 (+1)],
-    [Costo ruolo],     [90 (+30)],     [20],     [0],     [0],     [0],     [0],     [110 (+30)],
+    [Costo\ ruolo],     [90 (+30)],     [20],     [0],     [0],     [0],     [0],     [110 (+30)],
   ),
   caption: "Prospetto del consuntivo, sprint 13"
 )

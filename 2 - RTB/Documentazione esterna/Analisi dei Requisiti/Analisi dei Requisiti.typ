@@ -800,7 +800,7 @@ $bold("Scenario: ")$
   ],
 )
 $bold("Descrizione: ")$
-deve essere possibile visualizzare il prodotto contenuto in un determinato bin.
+vengono visualizzate le informazioni di un determinato bin e, se presente, del prodotto che contiene.
 
 $bold("Attore: ")$
 utente.
@@ -809,11 +809,16 @@ $bold("Precondizioni: ")$
 - l'ambiente deve essere correttamente configurato e deve esistere almeno un bin.
 
 $bold("Postcondizioni: ")$
-- vengono visualizzate le informazioni del bin.
+- vengono visualizzate le informazioni del bin e, se presente, del prodotto che contiene.
 
 $bold("Scenario: ")$
 - l'utente seleziona un bin;
-- vengono visualizzate le informazioni sul bin e, se presente, sul prodotto contenuto nel bin.
+- vengono visualizzate le seguenti informazioni relative al bin selezionato: 
+  - codice identificativo del bin;
+  - stato del bin (occupato o vuoto);
+  - tipologia di prodotto che contiene, in caso di bin non vuoto;
+  - id dello scaffale che lo contiene;
+  - posizione del bin all'interno dello scaffale (piano e colonna).
 
 = Visualizzazione di uno scaffale
 

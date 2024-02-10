@@ -1016,7 +1016,7 @@ Gli obiettivi del nono sprint riguardano i seguenti ruoli:
 
 === Obiettivi prefissati
 
-Gli obiettivi del decimo sprint vertono sulla revisione dei documenti in preparazione per il colloquio RTB. , gli obiettivi prefissati per questo sprint sono:
+Gli obiettivi del decimo sprint vertono sulla revisione dei documenti in preparazione per il colloquio RTB. Gli obiettivi prefissati per questo sprint sono:
 
 - verificare la correttezza dei documenti redatti finora;
 - identificare e correggere le cause del problema prestazionale del PoC;
@@ -1557,11 +1557,11 @@ Nonostante la realizzazione soddisfacente della maggior parte degli obiettivi co
 - il gruppo ha rilevato la mancanza di standard per designare le persone responsabili della redazione dei verbali durante lo sprint.
 
 === Risoluzioni attuate
-Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentrano su un'organizzazione e un'attenzione maggiore nella fase di pianificazione, oltre alla definizione di standard relativi ai grafici da inserire nei documenti e relativi allo svolgimento dei meeting e redazione dei rispettivi verbali. :
+Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentrano su un'organizzazione e un'attenzione maggiore nel processo di pianificazione, oltre alla definizione di standard relativi ai grafici da inserire nei documenti e relativi allo svolgimento dei meeting e redazione dei rispettivi verbali. In particolare:
 
 - è stata prestata una maggiore attenzione nella pianificazione del nuovo sprint, introducendo nella board retrospettiva di Miro una bacheca relativa alle task da svolgere, che sono state tradotte fin da subito in ticket di Jira e assegnati ai rispettivi ruoli;
 - la durata massima dei meeting di retrospettiva è stata fissata a 90 minuti (_soft limit_);
-- sono stati definiti degli standard per la realizzazione dei grafici, adottando quelli proposti da Jira, ma gestendo meglio la pianificazione in modo da ottenere grafici ottimali;
+- sono stati definiti degli standard per la realizzazione dei grafici, adottando quelli proposti da Jira;
 - è stato assegnato all'Amministratore il compito della redazione dei verbali.
 
 === Panoramica dei costi effettivi
@@ -1755,7 +1755,7 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 - Redazione del Glossario;
 - Aggiornamento documento Norme di Progetto;
 - Aggiornamento documento Piano di Progetto;
-- Aggiornare vecchi documenti con nuovo template;
+- Aggiornare vecchi documenti con nuovo template.
 
 === Obiettivi mancati
 - Miglioramento GitHub Actions.
@@ -2256,7 +2256,7 @@ La pianificazione delle attività per lo sprint 9 è stata conservativa. L'entit
 - I problemi prestazionali del PoC sono stati risolti con successo;
 - Le automazioni hanno subito un refactoring al fine di migliorarne l'affidabilità, la flessibilità e il riuso;
 - I documenti Piano di Qualifica, Piano di Progetto sono stati verificati in vista della valutazione RTB;
-- Preparazione presentazione revisione RTB.
+- Preparazione della presentazione Google Slides a supporto della revisione RTB.
 
 === Obiettivi mancati
 - La dashboard di monitoraggio non è stata ampliata.
@@ -2345,7 +2345,7 @@ La presenza del Progettista, non pianificata, deriva dalla necessità di decider
 == Sprint 11 dal 14-01-2024 al 21-01-2024
 
 === Obiettivi raggiunti
-- Inviata la candidatura al Prof. Cardin per il colloquio RTB;
+- Inviata la candidatura al Professor Cardin per il colloquio RTB;
 - Al Piano di Progetto sono state apportate modifiche minori per migliorare la leggibilità dei dati;
 - Il sito web è accessibile in ogni sua parte e comprende i riferimenti di ogni documento prodotto dal gruppo;
 - I contenuti della presentazione per il colloquio RTB sono stati definiti e il documento è stato completato.
@@ -2502,7 +2502,7 @@ Nessuna.
   supplement: "Grafico"
 )
 
-Il totale delle ore lavorate, seppur basso, è stato in gran parte rispettato. Tuttavia, il ruolo di Analista è stato attivato per correggere un errore di forma riscontrato nel calcolo dei codici identificativi dei requisiti.
+Il totale delle ore di lavoro preventivate è stato in gran parte rispettato. Tuttavia, il ruolo di Analista è stato attivato per correggere un errore di forma riscontrato nel calcolo dei codici identificativi dei requisiti.
 
 === Monitoraggio costi e ore
 

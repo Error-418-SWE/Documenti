@@ -521,13 +521,13 @@ Nell'attività di controllo si intraprendono azioni correttive nei confronti dei
 Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcune delle task raccolte rispondono direttamente ai problemi individuati nella parte di Things to change.
 
 
-== Processo di gestione delle decisioni
+== Processo di Gestione delle Decisioni
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
 === Scopo
-Lo scopo del processo di gestione delle decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionando la migliore in termini di benefici attesi, costi e rischi associati. \
+Lo scopo del processo di Gestione delle Decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionando la migliore in termini di benefici attesi, costi e rischi associati. \
 
 === Risultati
-Come risultato dell'efficace attuazione del processo di gestione delle decisioni:
+Come risultato dell'efficace attuazione del processo di Gestione delle Decisioni:
 - vengono identificate le decisioni che richiedono un'analisi alternativa;
 - vengono identificati e valutati i percorsi di azione alternativi;
 - viene selezionato un percorso di azione preferito;

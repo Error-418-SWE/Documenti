@@ -707,7 +707,7 @@ Gli obiettivi dello sprint 5 sono:
 - informarsi sul documento Piano di Qualifica;
 - aggiornare vecchi documenti con il nuovo template;
 - migliorare affidabilità GitHub Actions;
-- redigere del Glossario.
+- redigere il Glossario.
 
 === Preventivo costi
 Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
@@ -881,7 +881,7 @@ Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del 
 == Sprint 8 dal 25-12-2023 al 01-01-2024
 
 === Obiettivi prefissati <obiettivi8>
-Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nel settimo sprint, e sull'avanzamento del documento Norme di Progetto, oltre che sul miglioramento di alcuni aspetti di attività già concluse. ,, gli obiettivi prefissati per questo sprint sono:
+Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nel settimo sprint e sull'avanzamento del documento Norme di Progetto, oltre che sul miglioramento di alcuni aspetti di attività già concluse. Gli obiettivi prefissati per questo sprint sono:
 
 - miglioramento del Glossario:
   - rendere _case insensitive_ l'individuazione dei termini;
@@ -904,7 +904,7 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
   - aggiornare il documento Piano di Progetto;
   - gestire GitHub e Jira;
   - migliorare le GitHub Actions individuando e rimuovendo bug;
-  - migliorare il Glossario come indicato nel primo punto della.
+  - migliorare il Glossario secondo quanto descritto nel paragrafo di pianificazione di questo sprint.
 - *Analista*: al fine di:
   - aggiungere il tracciamento requisito-fonte nel documento Analisi dei Requisiti;
   - convertire i diagrammi UML in SVG.
@@ -952,7 +952,7 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
 == Sprint 9 dal 01-01-2024 al 08-01-2024
 
 === Obiettivi prefissati <obiettivi9>
-Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nell'ottavo sprint, sulla revisione dei documenti e del PoC in vista della valutazione RTB. , gli obiettivi prefissati per questo sprint sono:
+Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nell'ottavo sprint, sulla revisione dei documenti e del PoC in vista della valutazione RTB. Gli obiettivi prefissati per questo sprint sono:
 
 - estensione e revisione del documento Norme di Progetto;
 - correzione degli errori riscontrati in alcuni UC nel documento Analisi dei Requisiti, compreso l'aggiornamento dei diagrammi UML associati;

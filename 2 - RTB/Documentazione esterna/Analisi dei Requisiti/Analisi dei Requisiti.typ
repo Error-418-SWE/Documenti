@@ -231,7 +231,7 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 )
 == Importazione mappa magazzino da file SVG
 $bold("Descrizione: ")$
-All'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
+all'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
 
 $bold("Attore: ")$
 utente.
@@ -308,7 +308,7 @@ $bold("Scenario: ")$
 
 == Creazione magazzino vuoto
 $bold("Descrizione: ")$
-All'avvio dell'applicativo è possibile creare un ambiente vuoto di dimensioni predefinite da cui iniziare. Tale funzionalità, rimane disponibile durante l'utilizzo dell'applicativo qualora si volesse ripristinare l'ambiente.
+all'avvio dell'applicativo è possibile creare un ambiente vuoto di dimensioni predefinite da cui iniziare. Tale funzionalità, rimane disponibile durante l'utilizzo dell'applicativo qualora si volesse ripristinare l'ambiente.
 
 $bold("Attore: ")$
 utente.
@@ -377,7 +377,7 @@ $bold("Scenario: ")$
 == Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
 
 $bold("Descrizione: ")$
-Dato un ambiente con elementi posizionati (come scaffali e/o bin), l'utente cerca di ridurre le dimensioni dell'ambiente in modo eccessivo, non permettendo di mantenere gli elementi precedentemente posizionati.
+dato un ambiente con elementi posizionati (come scaffali e/o bin), l'utente cerca di ridurre le dimensioni dell'ambiente in modo eccessivo, non permettendo di mantenere gli elementi precedentemente posizionati.
 $bold("Attore: ")$
 utente.
 
@@ -460,7 +460,7 @@ $bold("Estensioni: ")$
 
 == Spostamento scaffale
 $bold("Descrizione: ")$
-L'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
+l'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
 
 $bold("Attore: ")$
 utente.
@@ -725,7 +725,7 @@ $bold("Inclusioni: ")$
 $bold("Estensioni: ")$
 - UC-6.2 Visualizzazione messaggio di errore.
 
-== Configurazione collegamento al database <oo>
+== Configurazione collegamento al database
 $bold("Descrizione: ")$
 l'utente imposta i dati necessari affinché il programma possa configurarsi con il database in cui sono contenuti i dati.
 
@@ -1040,7 +1040,7 @@ Dove:
     [FM-1], [Obbligatorio], [L'utente deve poter creare il magazzino], [UC-1],
     [FM-1.1], [Obbligatorio], [L'utente deve poter caricare un file SVG contenente la pianta del magazzino], [UC-1.1],
     [FM-1.1.1], [Obbligatorio], [L'utente deve sempre poter creare un magazzino tramite caricamento di un file SVG, quando possibile], [UC-1.1],
-    [FD-1.1.2], [Desiderabile], [L'utente deve poter definire le altezze degli elementi del file SVG tramite trascinamento verso l'alto], [Verbale esterno 23-12-06],
+    [FD-1.1.2], [Desiderabile], [L'utente deve poter definire le altezze degli elementi del file SVG tramite trascinamento verso l'alto], [Verbale esterno\ 23-12-06],
     [FM-1.1.3], [Obbligatorio], [L'utente visualizza un errore di importazione del file SVG], [UC-1.1.1],
     [FM-1.1.3.1], [Obbligatorio], [L'utente visualizza un errore dato dal caricamento di un file SVG privo di informazioni], [UC-1.1.1.1],
     [FM-1.1.3.2], [Obbligatorio], [L'utente visualizza un errore dato da informazioni incongruenti nel file SVG], [UC-1.1.1.2],
@@ -1061,7 +1061,7 @@ Dove:
     [FM-3.1.1.3], [Obbligatorio], [L'utente deve poter definire l'orientamento rispetto al piano degli scaffali], [UC-3.1],
     [FM-3.1.1.4], [Obbligatorio], [L'utente deve poter definire la larghezza degli scaffali], [UC-3.1],
     [FM-3.1.1.5], [Obbligatorio], [L'utente deve poter definire il numero di piani degli scaffali], [UC-3.1],
-    [FD-3.1.1.6], [Desiderabile], [L'utente deve poter definire altezze diverse per ogni piano degli scaffali], [Verbale esterno 23-12-15],
+    [FD-3.1.1.6], [Desiderabile], [L'utente deve poter definire altezze diverse per ogni piano degli scaffali], [Verbale esterno\ 23-12-15],
     [FM-3.1.2], [Obbligatorio], [L'utente deve poter posizionare gli scaffali creati nell'ambiente], [UC-3.1],
     [FM-3.2], [Obbligatorio], [L'utente deve poter modificare gli scaffali], [UC-3.2],
     [FM-3.2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza degli scaffali], [UC-3.2],
@@ -1074,7 +1074,7 @@ Dove:
     [FM-3.3.2], [Obbligatorio], [L'utente deve poter spostare gli scaffali in profondità], [UC-3.3],
     [FM-3.3.3], [Obbligatorio], [L'utente deve poter ruotare gli scaffali], [UC-3.3],
     [FM-3.3.3.1], [Obbligatorio], [L'utente deve poter ruotare gli scaffali con angoli di 90°], [UC-3.3],
-    [FO-3.3.3.2], [Opzionale], [L'utente deve poter ruotare gli scaffali con angoli diversi da 90°], [Verbale esterno 23-12-06],
+    [FO-3.3.3.2], [Opzionale], [L'utente deve poter ruotare gli scaffali con angoli diversi da 90°], [Verbale esterno\ 23-12-06],
     [FM-3.3.4], [Obbligatorio], [L'utente visualizza un errore riguardo lo spostamento dello scaffale in una zona non libera], [UC-3.3.1],
     [FM-3.4], [Obbligatorio], [L'utente deve poter eliminare gli scaffali], [UC-3.4],
     [FM-3.4.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'eliminazione di uno scaffale non vuoto], [UC-3.4.1],
@@ -1085,10 +1085,10 @@ Dove:
     [FM-4.1.1.1], [Obbligatorio], [L'utente deve poter definire la profondità dei bin], [UC-4.1],
     [FM-4.1.1.2], [Obbligatorio], [L'utente deve poter definire la larghezza dei bin], [UC-4.1],
     [FM-4.1.1.3], [Obbligatorio], [L'utente deve poter definire l'altezza dei bin], [UC-4.1],
-    [FM-4.2], [Obbligatorio], [l'utente deve poter modificare i bin], [UC-4.2],
-    [FM-4.2.1], [Obbligatorio], [L'utente deve poter modificare la profondità dei bin], [UC-4.1],
-    [FM-4.2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza dei bin], [UC-4.1],
-    [FM-4.2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza dei bin], [UC-4.1],
+    [FM-4.2], [Obbligatorio], [L'utente deve poter modificare i bin], [UC-4.2],
+    [FM-4.2.1], [Obbligatorio], [L'utente deve poter modificare la profondità dei bin], [UC-4.2],
+    [FM-4.2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza dei bin], [UC-4.2],
+    [FM-4.2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza dei bin], [UC-4.2],
     [FM-4.3], [Obbligatorio], [L'utente deve poter eliminare i bin], [UC-4.3],
     [FM-4.3.1], [Obbligatorio], [L'utente visualizza un errore riguardo la cancellazione di un bin non vuoto], [UC-4.3.1],
 
@@ -1152,8 +1152,8 @@ Dove:
     columns: 4,
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [QM-1], [Obbligatorio], [Deve essere rispettato quanto previsto dalle Norme di Progetto], [Interna],
-    [QM-2], [Obbligatorio], [Deve essere rispettato quanto previsto dal Piano di Qualifica], [Interna],
+    [QM-1], [Obbligatorio], [Deve essere rispettato quanto previsto dalle Norme di Progetto], [Decisione\ interna],
+    [QM-2], [Obbligatorio], [Deve essere rispettato quanto previsto dal Piano di Qualifica], [Decisione\ interna],
     [QM-3], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico], [Capitolato],
     [QM-4], [Obbligatorio], [Devono essere consegnati i diagrammi UML degli UC], [Capitolato],
     [QM-5], [Obbligatorio], [Deve essere consegnata la lista dei bug risolti], [Capitolato],
@@ -1182,7 +1182,7 @@ Dove:
     [VM-9], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva], [Interno],
     [VM-10], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva], [Interno],
     [VM-11], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva], [Interno],
-    [VO-12], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose], [VE 23-11-15]
+    [VO-12], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose], [Verbale esterno\ 23-11-15]
   ),
   caption: [Requisiti di vincolo]
 )

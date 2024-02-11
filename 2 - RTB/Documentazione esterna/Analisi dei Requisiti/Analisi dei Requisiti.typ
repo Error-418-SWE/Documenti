@@ -721,7 +721,7 @@ $bold("Inclusioni: ")$
 $bold("Estensioni: ")$
 - UC-6.2 Visualizzazione messaggio di errore.
 
-== Configurazione collegamento al database <oo>
+== Configurazione collegamento al database
 $bold("Descrizione: ")$
 l'utente imposta i dati necessari all'interfacciamento del prodotto con il database in cui sono contenuti i dati relativi ai prodotti e il loro posizionamento. I dati necessari alla configurazione del collegamento sono i seguenti:
 - indirizzo dell'host;
@@ -742,7 +742,7 @@ $bold("Postcondizioni: ")$
 - il sistema è correttamente configurato per accedere al database.
 
 $bold("Scenario: ")$
-- l'utente i dati relativi alla configurazione del collegamento al database, quali:
+- l'utente vuole configurare i dati necessari alla configurazione del collegamento al database, quali:
   - indirizzo dell'host;
   - porta;
   - nome del database;

@@ -137,7 +137,7 @@ In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo
 - *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
 
 
-= Processi di ciclo di vita 
+= Processi di ciclo di vita
 
 == Processi organizzativi abilitanti
 

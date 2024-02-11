@@ -217,7 +217,7 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 
 #set par(first-line-indent: 0pt)
 
-= Creazione magazzino
+= Creazione magazzino <uc1>
 #figure(
   image("./imgs/uc1.png", format: "png"),
   caption: [
@@ -932,7 +932,7 @@ $bold("Scenario: ")$
 
 == Rotazione della visuale
 $bold("Descrizione: ")$
-successivamente alla configurazione del sistema, l'utente può visualizzare il magazzino e ruotare la visuale sul magazzino in senso orario o antiorario.
+successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può visualizzare il magazzino e ruotare la visuale sul magazzino in senso orario o antiorario.
 
 $bold("Attore: ")$
 utente.

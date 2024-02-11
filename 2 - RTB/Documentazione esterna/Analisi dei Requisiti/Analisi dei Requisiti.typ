@@ -217,7 +217,7 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 
 #set par(first-line-indent: 0pt)
 
-= Creazione magazzino
+= Creazione magazzino <uc1>
 #figure(
   image("./imgs/uc1.png", format: "png"),
   caption: [
@@ -950,7 +950,7 @@ $bold("Scenario: ")$
 
 == Zoom della visuale
 $bold("Descrizione: ")$
-successivamente alla configurazione del sistema, l'utente può effettuare uno zoom-in o uno zoom-out per avvicinare o allontanare la visuale dal magazzino.
+successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può effettuare uno zoom-in o uno zoom-out per avvicinare o allontanare la visuale dal magazzino.
 
 $bold("Attore: ")$
 utente.

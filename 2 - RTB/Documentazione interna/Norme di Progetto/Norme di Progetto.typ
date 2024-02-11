@@ -955,8 +955,9 @@ Il gruppo utilizza come metrica principale il burndown chart, che permette di av
 
 == Processo di gestione delle informazioni <processo_gestione_informazioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.6_
+
 === Scopo
-Lo scopo della gestione delle informazionie è generare, ottenere, confermare, trasformare, conservare, recuperare, distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
+Lo scopo del processo di gestione delle informazioni è generare, ottenere, confermare, trasformare, conservare, recuperare e distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
 
 Le informazioni possono essere tecniche, di progetto, organizzative e di accordo.
 
@@ -970,18 +971,20 @@ Le informazioni gestite dal gruppo sono:
   - Glossario;
   - Verbali.
 - codice sorgente:
-  - Proof of Concept;
-  - Minimun Viable Product.
+  - Proof of Concept (PoC);
+  - Minimum Viable Product (MVP).
 
 Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e distribuiti all'interno dei repository del gruppo.
 
 === Documentazione
-==== Struttura <struttura-documenti>
+
+==== Struttura documenti <struttura-documenti>
 Ogni documento segue una struttura standard, stabilita nel template _template.typ_. I documenti pertanto sono così strutturati:
-+ *Cover page*: la cover page è la prima pagina del documento, e contiene le seguenti informazioni:
+
++ *Cover page*: la cover page è la pagina iniziale del documento. Essa contiene le seguenti informazioni:
   - nome del gruppo;
   - link all'organizzazione GitHub;
-  - mail del gruppo;
+  - indirizzo e-mail del gruppo;
   - logo;
   - titolo del documento;
   - sottotitolo del documento;
@@ -992,19 +995,20 @@ Ogni documento segue una struttura standard, stabilita nel template _template.ty
   - redattori;
   - verificatori;
   - destinatari;
-  - figure esterne se presenti.
+  - figure esterne (se presenti).
 
-+ *Registro delle modifiche*: sezione successiva agli indici. Maggiori dettagli sono visibili alla sezione dedicata (@tracciamento-modifiche).
++ *Registro delle modifiche*: sezione successiva alla cover page. Maggiori dettagli sono visibili alla sezione dedicata (@tracciamento-modifiche);
 
-+ *Indici*: sezione successiva agli indici. Sono presenti tre tipologie di indici:
++ *Indici*: Sono presenti tre tipologie di indici:
     - indice del contenuto: indice sempre presente che rappresenta i paragrafi del documento;
     - indice delle tabelle: indice presente solo se sono presenti tabelle nel documento;
     - indice delle figure: indice presente solo se sono presenti figure nel documento.
 
-+ *Contenuto del file*: sezione successiva alla tabella di tracciamento delle modifiche. Rappresenta il corpo del documento, suddiviso in paragrafi.
++ *Contenuto del file*: sezione successiva agli indici. Rappresenta il corpo del documento, suddiviso in paragrafi.
 
-===== Verbali
+==== Struttura verbali
 I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e ridotta lunghezza. I verbali sono così strutturati:
+
 - *cover page* (@struttura-documenti);
 - *informazioni generali*:
   - luogo;
@@ -1013,15 +1017,15 @@ I verbali assumono una struttura diversa rispetto agli altri documenti, dato il 
   - assenti;
   - referente aziendale (se presente).
 - *ordine del giorno*: elenco degli argomenti trattati durante la riunione;
-- *organizzazione attività*: elenco delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva.
+- *organizzazione attività*: elenco e spiegazione delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva;
 - *firma partecipanti esterni* (se presenti): firma dei partecipanti esterni alla riunione.
 
 === Stile e convenzioni
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.
 L'obiettivo è perseguire:
-- Chiarezza;
-- Leggibilità;
-- Mantenibilità.
+- chiarezza;
+- leggibilità;
+- manutenibilità.
 
 ==== Convenzioni stilistiche globali
 Convenzioni stilistiche valide sia per i prodotti documentali che software.
@@ -1063,17 +1067,17 @@ MAIUSCOLO:
 - nomi propri;
 - nomi strumenti e tecnologie;
 - iniziale nomi ruoli;
-- iniziale parole nei nomi documenti ad eccezione di preposizioni e articoli. Riferimento nomi file @norma_nomi_documenti.
+- iniziale parole nei nomi documenti ad eccezione di preposizioni e articoli. Riferimento nomi file disponibile alla @norma_nomi_documenti.
 
 `Monospace`:\
-- nome di un file (Riferimento nomi file @norma_nomi_documenti);
+- nome di un file (Riferimento nomi file disponibile alla @norma_nomi_documenti);
 - parametri;
 - porzioni di codice.
 
 ===== Elenchi
 - si utilizzano elenchi numerati se gli elementi mostrati richiedono un ordine (es. ordine delle sezioni);
 - si utilizzano elenchi non numerati se gli elementi mostrati non richiedono un ordine (es. lista di attività);
-- al termine di ogni elemento viene posto ";" ad eccezione dell'ultimo elemento che viene posto ".".
+- al termine di ogni punto dell'elenco viene posto ";" ad eccezione dell'ultimo elemento a cui viene posto ".".
 
 ===== Glossario
 Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una G in corsivo a pedice.

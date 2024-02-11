@@ -978,8 +978,10 @@ Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e d
 
 === Documentazione
 
-==== Struttura documenti <struttura-documenti>
-Ogni documento segue una struttura standard, stabilita nel template _template.typ_. I documenti pertanto sono così strutturati:
+==== Struttura dei documenti <struttura-documenti>
+Ogni documento segue una struttura standard, stabilita nel template _template.typ_. \
+Questo paragrafo non tratta della struttura dei verbali. Per le norme sulla struttura dei verbali si rimanda alla @struttura-verbali.\
+I documenti pertanto sono così strutturati:
 
 + *Cover page*: la cover page è la pagina iniziale del documento. Essa contiene le seguenti informazioni:
   - nome del gruppo;
@@ -995,9 +997,9 @@ Ogni documento segue una struttura standard, stabilita nel template _template.ty
   - redattori;
   - verificatori;
   - destinatari;
-  - figure esterne (se presenti).
+  - partecipanti esterni (se presenti).
 
-+ *Registro delle modifiche*: sezione successiva alla cover page. Maggiori dettagli sono visibili alla sezione dedicata (@tracciamento-modifiche);
++ *Registro delle modifiche*: sezione successiva alla cover page. Maggiori dettagli sono disponibili alla sezione dedicata (@tracciamento-modifiche);
 
 + *Indici*: Sono presenti tre tipologie di indici:
     - indice del contenuto: indice sempre presente che rappresenta i paragrafi del documento;
@@ -1006,8 +1008,8 @@ Ogni documento segue una struttura standard, stabilita nel template _template.ty
 
 + *Contenuto del file*: sezione successiva agli indici. Rappresenta il corpo del documento, suddiviso in paragrafi.
 
-==== Struttura verbali
-I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e ridotta lunghezza. I verbali sono così strutturati:
+==== Struttura dei verbali <struttura-verbali>
+I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e la struttura semplificata. I verbali sono così strutturati:
 
 - *cover page* (@struttura-documenti);
 - *informazioni generali*:

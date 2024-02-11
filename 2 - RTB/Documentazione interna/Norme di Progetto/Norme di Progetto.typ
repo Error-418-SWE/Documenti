@@ -309,9 +309,9 @@ I requisiti dei processi di gestione dell'infrastruttura sono:
 + Accesso rapido alle informazioni, anche in mobilità;
 + Non ridondanza tra strumenti e servizi adottati.
 
-==== Infrastruttura di comunicazione 
+==== Infrastruttura di comunicazione
 
-===== Comunicazione interna <Comunicazione_interna>
+===== Comunicazione interna <comunicazione_interna>
 
 #link("https://discord.com/")[*Discord*] rappresenta il canale primario di comunicazione interna. È una piattaforma di comunicazione che fornisce:
 
@@ -1106,12 +1106,6 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
 = Processi tecnici
 
-I processi tecnici sono processi utilizzati per:
-+ Definire i requisiti di un sistema software; 
-+ Trasformare tali requisiti in un prodotto efficace;
-+ Consentire una riproduzione coerente del prodotto quando necessario;
-+ Utilizzare il prodotto per fornire i servizi richiesti.
-
 == Processo di analisi della missione
 
 _Tailored conformance on ISO/IEC/IEEE 12207:2017 clause 6.4.1 per ISO/IEC/IEEE 12207:2017 Annex A_
@@ -1123,7 +1117,7 @@ Il processo di analisi della missione definisce i problemi e le opportunità dai
 === Strategia di identificazione e analisi della missione
 
 ==== Sistemi e servizi abilitanti
-Gli strumenti di comunicazione adottati dal gruppo sono descritti nella @Comunicazione_interna.
+Gli strumenti di comunicazione adottati dal gruppo sono descritti nella @comunicazione_interna.
 
 ==== Opportunità
 Si analizzano i problemi e le opportunità per acquisire una panoramica completa del contesto presentato dal Capitolato.
@@ -1135,7 +1129,7 @@ Si identifica l'ambito del Capitolato attraverso la definizione di:
 - tipologia di utenza attesa;
 - destinazione d'uso del prodotto finale.
 
-La sintesi di bisogni e requisiti avviene nel contesto del processo di definizione di bisogni e requisiti degli Stakeholder disponibile nella @Definizione_bisogni.
+La sintesi di bisogni e requisiti avviene nel contesto del processo di definizione di bisogni e requisiti degli Stakeholder disponibile nella @definizione_bisogni.
 
 ==== Classi di soluzione
 Si identificano classi di soluzione che possano sfruttare le opportunità e risolvere i problemi individuati.
@@ -1165,7 +1159,7 @@ Sulla base dei risultati della valutazione, il gruppo individua una classe di so
 ==== Analisi dei requisiti
 Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste da questo processo. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
 
-== Processo di definizione di bisogni e requisiti degli stakeholder <Definizione_bisogni>
+== Processo di definizione di bisogni e requisiti degli stakeholder <definizione_bisogni>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.2_
 

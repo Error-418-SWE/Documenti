@@ -411,7 +411,7 @@ I principi della comunicazione che ispirano i processi di gestione dell'infrastr
 
 + Comunicazione frequente: la frequenza della comunicazione permette di prendere decisioni in modo tempestivo e informato.
 
-===== Comunicazione interna
+===== Comunicazione interna <comunicazione_interna>
 
 #link("https://discord.com/")[*Discord*] rappresenta il canale primario di comunicazione interna. È una piattaforma di comunicazione che fornisce:
 
@@ -1253,7 +1253,7 @@ Il processo di analisi della missione definisce i problemi e le opportunità dai
 === Strategia di identificazione e analisi della missione
 
 ==== Sistemi e servizi abilitanti
-Gli strumenti di comunicazione adottati dal gruppo sono descritti in TODO.
+Gli strumenti di comunicazione adottati dal gruppo sono descritti nella @comunicazione_interna.
 
 ==== Opportunità
 Si analizzano i problemi e le opportunità per acquisire una panoramica completa del contesto presentato dal Capitolato.
@@ -1265,7 +1265,7 @@ Si identifica l'ambito del Capitolato attraverso la definizione di:
 - tipologia di utenza attesa;
 - destinazione d'uso del prodotto finale.
 
-La sintesi di bisogni e requisiti avviene nel contesto del Processo di definizione di bisogni e requisiti degli Stakeholder (TODO).
+La sintesi di bisogni e requisiti avviene nel contesto del processo di definizione di bisogni e requisiti degli Stakeholder disponibile nella @processo_bisogni.
 
 ==== Classi di soluzione
 Si identificano classi di soluzione che possano sfruttare le opportunità e risolvere i problemi individuati.
@@ -1279,7 +1279,8 @@ Nel contesto del progetto didattico, il gruppo accetta le classi di soluzione pr
 ==== Valutazione delle classi di soluzione
 Si valuta ogni classe di soluzione identificata sulla base di:
 - fattibilità;
-- costi e tempi necessari;
+- costi;
+- tempi necessari;
 - rischi;
 - interesse tecnologico e didattico;
 - pertinenza.
@@ -1292,7 +1293,7 @@ La valutazione delle classi di soluzione può avvenire tramite:
 Sulla base dei risultati della valutazione, il gruppo individua una classe di soluzione preferita e la presenta al Proponente per la convalida.
 
 ==== Analisi dei requisiti
-Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste dal processo. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
+Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste da questo processo. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
 
 == Processo di definizione di bisogni e requisiti degli stakeholder <processo_bisogni>
 

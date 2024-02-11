@@ -904,7 +904,7 @@ $bold("Scenario: ")$
 
 == Spostamento della visuale lungo gli assi
 $bold("Descrizione: ")$
-sucessivamente alla configurazione di sistema, l'utente può visualizzare il magazzino e spostare la visuale lungo almeno uno dei tre assi (orizzontale, verticale, logitudinale).
+successivamente alla configurazione di sistema, l'utente può visualizzare il magazzino e spostare la visuale lungo almeno uno dei tre assi (orizzontale, verticale, longitudinale).
 
 $bold("Attore: ")$
 utente.

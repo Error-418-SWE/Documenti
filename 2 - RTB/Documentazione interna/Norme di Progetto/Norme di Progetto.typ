@@ -953,11 +953,11 @@ La timeline permette di mostrare il grafico di Gantt delle attività evidenziand
 Jira offre la possibilità di produrre grafici e report relativi all'avanzamento e alla tracciabilità delle task. Tali strumenti permettono di avere delle metriche di valutazione dell'andamento del progetto e di individuare eventuali criticità.
 Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story points di ogni attività.
 
-== Processo di gestione delle informazioni <processo_gestione_informazioni>
+== Processo di Gestione delle Informazioni <processo_gestione_informazioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.6_
 
 === Scopo
-Lo scopo del processo di gestione delle informazioni è generare, ottenere, confermare, trasformare, conservare, recuperare e distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
+Lo scopo del processo di Gestione delle Informazioni è generare, ottenere, confermare, trasformare, conservare, recuperare e distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
 
 Le informazioni possono essere tecniche, di progetto, organizzative e di accordo.
 

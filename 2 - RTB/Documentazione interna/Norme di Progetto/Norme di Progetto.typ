@@ -531,7 +531,7 @@ Come risultato dell'efficace attuazione del processo di Gestione delle Decisioni
 - vengono identificate le decisioni che richiedono un'analisi alternativa;
 - vengono identificati e valutati i percorsi di azione alternativi;
 - viene selezionato un percorso di azione preferito;
-- vengono identificate le ipotesi, la risoluzione e la giustificazione della decisione.
+- vengono identificate la risoluzione, la giustificazione della decisione e le ipotesi che portano ad una sua necessità.
 
 === Attività
 ==== Presentazione delle decisioni

@@ -1260,7 +1260,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
 ==== Tecnologie <tecnologie_controllo>
 ===== Jira
-Jira, essendo l'ITS del gruppo, è la fonte principali di informazioni per il cruscotto di qualità.
+Jira, essendo l'ITS del gruppo, è la fonte principale di informazioni per il cruscotto di qualità.
 ===== Google Sheets
 Google Sheets viene utilizzato per rendere meglio manipolabili i dati provenienti da Jira, in modo da poterli analizzare con più facilità e calcolare comodamente metriche come CPI, EAC, EV.
 ===== Grafana
@@ -1275,7 +1275,7 @@ Grafana è l'applicazione utilizzata per visualizzare i dati raccolti tramite l'
   - task svolti;
   - story point per stato;
   - bug aperti.
-I dati sono visualizzati sottoforma di grafici, per aiutarne l'analisi e la comprensione.
+I dati sono visualizzati sottoforma di grafici, per aiutarne l'analisi e la comprensione, e sono consultabili in ogni momento dal gruppo.
 
 = Processi tecnici
 

@@ -1255,7 +1255,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
   + *trattare incidenti e problemi*:
 
-    + in caso di segnalazione di incidenti e problemi deve essere svolto un lavoro collettivo tra Verificatore e redattore per la loro risoluzione;
+    + in caso di segnalazione di incidenti e problemi deve essere svolto un lavoro collettivo per la loro risoluzione;
     + nel caso tali problemi o incidenti siano di carattere generale, deve essere avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
 
 ==== Tecnologie <tecnologie_controllo>

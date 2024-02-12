@@ -1150,7 +1150,12 @@ Dove:
     
     [FM-12], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login], [Capitolato],
 
-    [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato]
+    [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato],
+
+    [FM-14], [Obbligatorio], [Il prodotto si deve avviare allo stato iniziale ogni volta che viene ricaricata la pagina], [Capitolato],
+    [FM-14.1], [Obbligatorio], [Il prodotto non persiste in locale (cookie, `localStorage`) le modifiche fatte all'ambiente], [Capitolato],
+    [FM-14.2], [Obbligatorio], [Il prodotto non persiste sul database le modifiche fatte all'ambiente], [Capitolato],
+    [FM-14.3], [Obbligatorio], [Il prodotto non deve fornire alcuna opzione per il salvataggio dei dati], [Capitolato]
   ),
   caption: [Requisiti funzionali]
 )
@@ -1181,18 +1186,17 @@ Dove:
     columns: 4,
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [VM-1], [Obbligatorio], [Il prodotto non deve gestire la persistenza dei dati], [Capitolato],
-    [VM-2], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0], [Interno],
-    [VM-3], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0], [Interno],
-    [VM-4], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva], [Interno],
-    [VM-5], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva], [Interno],
-    [VM-6], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva], [Interno],
-    [VM-7], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva], [Interno],
-    [VM-8], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva], [Interno],
-    [VM-9], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva], [Interno],
-    [VM-10], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva], [Interno],
-    [VM-11], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva], [Interno],
-    [VO-12], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose], [VE 23-11-15]
+    [VM-1], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0], [Interno],
+    [VM-2], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0], [Interno],
+    [VM-3], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva], [Interno],
+    [VM-4], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva], [Interno],
+    [VM-5], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva], [Interno],
+    [VM-6], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva], [Interno],
+    [VM-7], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva], [Interno],
+    [VM-8], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva], [Interno],
+    [VM-9], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva], [Interno],
+    [VM-10], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva], [Interno],
+    [VO-11], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose], [VE 23-11-15]
   ),
   caption: [Requisiti di vincolo]
 )
@@ -1204,10 +1208,9 @@ Dove:
     columns: 2,
     align: left,
     [*Tipo Requisito*], [*Numero totale*],
-    [Requisiti funzionali], [92],
+    [Requisiti funzionali], [96],
     [Requisiti di qualità], [8],
-    [Requisiti di vincolo], [12],
-
+    [Requisiti di vincolo], [11],
   ),
   caption: [Riepilogo requisiti]
 )

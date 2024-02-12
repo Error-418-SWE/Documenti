@@ -1256,6 +1256,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
   + *trattare incidenti e problemi*:
 
     + in caso di segnalazione di incidenti e problemi deve essere svolto un lavoro collettivo per la loro risoluzione;
+    + tutte le criticità devono prevedere risoluzioni e arginamenti già predisposti all'interno del documento dell'_Analisi dei Rischi_.
     + nel caso tali problemi o incidenti siano di carattere generale, deve essere avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
 
 ==== Tecnologie <tecnologie_controllo>

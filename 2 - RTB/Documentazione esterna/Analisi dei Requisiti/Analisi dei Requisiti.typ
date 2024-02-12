@@ -770,7 +770,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere (es. numero scaffali/bin incompatibile con le coordinate dei prodotti).
 
-= Richiesta di spostamento di un prodotto
+= Spostamento di un prodotto
 
 #figure(
   image("./imgs/uc7.png", format: "png"),
@@ -1122,9 +1122,9 @@ Dove:
     [FD-6.3], [Desiderabile], [L'utente visualizza un errore se i dati contenuti nel database non sono conformi], [UC-6.2],
     [FD-6.4], [Desiderabile], [L'utente visualizza un errore se i dati contenuti nel database sono errati], [UC-6.2],
 
-    [FM-7], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro], [UC-7],
-    [FM-7.1], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro indicando le coordinate del bin di destinazione], [UC-7],
-    [FM-7.2], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro tramite _drag and drop_], [UC-7],
+    [FM-7], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin ad un altro], [UC-7],
+    [FM-7.1], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin ad un altro indicando le coordinate del bin di destinazione], [UC-7],
+    [FM-7.2], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin ad un altro tramite _drag and drop_], [UC-7],
     [FM-7.3], [Obbligatorio], [Il sistema deve interrogare una API RESTful per accertare che lo spostamento sia lecito], [UC-7],
     [FD-7.4], [Desiderabile], [Il sistema deve evidenziare il bin di partenza per rendere evidente la richiesta di spostamento], [UC-7],
     [FD-7.5], [Desiderabile], [Il sistema deve evidenziare il bin di destinazione per rendere evidente la richiesta di spostamento], [UC-7],

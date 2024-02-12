@@ -1120,7 +1120,7 @@ Le misure devono soddisfare determinate caratteristiche di qualità, ovvero devo
 + tempestive;
 + economicamente vantaggiose.
 
-Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia espresse che implicite.
+Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia esplicite che implicite.
 
 === Risultati
 
@@ -1138,22 +1138,17 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
 
 + prepararsi per la misurazione:
 
-    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi primari:
+    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di una serie di parametri e metriche scelte dal gruppo che permettono di valutare la qualità dei processi primari:
         - BAC (Budget at Completion);
-        - AC (Actual Cost);
         - PV (Planned Value);
+        - AC (Actual Cost);
         - EV (Earned Value);
-        - CV (Cost Variance);
-        - SV (Schedule Variance);
         - CPI (Cost Performance Index);
-        - EAC (Estimated at Completion);
-        - ETC (Estimated to Completion).
+        - EAC (Estimated at Completion).
 
     - definire la strategia di misurazione per i processi di supporto. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi di supporto:
-        - indice di Gulpease;
         - errori ortografici;
-        - metriche soddisfatte;
-        - code coverage.
+        - metriche soddisfatte.
 
     - descrivere le caratteristiche del gruppo rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici:
         - richieste del Proponente;
@@ -1177,7 +1172,7 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
     - raccogliere, archiviare e verificare i dati:
         - i dati prodotti vengono salvati e analizzati al fine di perorare una strategia di approccio ed eventuali modifiche da effettuare.
 
-    - registrare i risultati e comunicarli agli stakeholders:
+    - registrare i risultati e comunicarli agli stakeholder:
         - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte.
 
 == Processo di Controllo della Qualità <processo_controllo_qualità>

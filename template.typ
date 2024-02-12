@@ -1,3 +1,5 @@
+#import "/common.typ": *
+
 #let project(
   title: "",
   subTitle: "",

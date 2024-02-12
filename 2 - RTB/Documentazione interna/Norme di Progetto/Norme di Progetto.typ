@@ -1132,6 +1132,8 @@ A seguito dell'implementazione efficace del processo di misurazione:
 - i dati vengono analizzati e i risultati interpretati;
 - gli elementi informativi forniscono informazioni oggettive per poter prendere decisioni concrete.
 
+I risultati sono contenuti nel documento _Piano Di Qualifica_.
+
 === Attività
 
 Il progetto deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito dal gruppo (parte di questo viene definito nel Piano di Qualifica):
@@ -1139,16 +1141,22 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
 + prepararsi per la misurazione:
 
     - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di una serie di parametri e metriche scelte dal gruppo che permettono di valutare la qualità dei processi primari:
-        - BAC (Budget at Completion);
-        - PV (Planned Value);
-        - AC (Actual Cost);
-        - EV (Earned Value);
-        - CPI (Cost Performance Index);
-        - EAC (Estimated at Completion).
+        + BAC (Budget at Completion);
+        + PV (Planned Value), che si estende in:
+          - SPV (Sprint Planned Value);
+          - PPV (Project Planned Value);
+        + AC (Actual Cost), che si estende in:
+          - SAC (Sprint Actual Cost);
+          - PAC (Project Actual Cost);
+        + EV (Earned Value), che si estende in:
+          - SEV (Sprint Earned Value);
+          - PEV (Project Earned Value);
+        + CPI (Cost Performance Index);
+        + EAC (Estimated at Completion).
 
     - definire la strategia di misurazione per i processi di supporto. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi di supporto:
         - errori ortografici;
-        - metriche soddisfatte.
+        - percentuale metriche soddisfatte.
 
     - descrivere le caratteristiche del gruppo rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici:
         - richieste del Proponente;

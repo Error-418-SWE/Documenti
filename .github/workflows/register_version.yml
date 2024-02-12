@@ -1,0 +1,27 @@
+name: Register document version
+
+on:
+  workflow_call:
+    inputs:
+      file_name:
+        required: true
+        type: string
+      file_version:
+        required: true
+        type: string
+
+jobs:
+  register:
+    name: Update document version
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v4
+      - name: Insert new version
+        run: |
+          sed -i "s/\"${{ inputs.file_name }}\": \".*\"/\"${{ inputs.file_name }}\": \"${{ inputs.file_version }}\"/" "documents.json"
+      - name: Update register
+        run: |
+          git add documents.json
+          git commit -am "Aggiornata versione ${{ inputs.file_name }}"
+          git push origin src

@@ -1133,11 +1133,10 @@ Dove:
 
     [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato],
 
-    [FM-14], [Obbligatorio], [Al termine della sessione di lavoro il prodotto non deve salvare la configurazione dell'ambiente creata dall'utente], [Capitolato],
-    [FM-14.1], [Obbligatorio], [Al termine della sessione di lavoro il prodotto non deve salvare le modifiche effettuate], [Capitolato],
-    [FM-14.1.1], [Obbligatorio], [Al termine della sessione di lavoro il prodotto non deve fornire il salvataggio delle modifiche effettuate agli scaffali], [Capitolato],
-    [FM-14.1.2], [Obbligatorio], [Al termine della sessione di lavoro il prodotto non deve fornire il salvataggio delle modifiche effettuate ai bin], [Capitolato],
-    [FM-14.1.3], [Obbligatorio], [Al termine della sessione di lavoro il prodotto non deve fornire il salvataggio delle modifiche effettuate all'ambiente di lavoro], [Capitolato]
+    [FM-14], [Obbligatorio], [Il prodotto si deve avviare allo stato iniziale ogni volta che viene ricaricata la pagina], [Capitolato],
+    [FM-14.1], [Obbligatorio], [Il prodotto non persiste in locale (cookie, `localStorage`) le modifiche fatte all'ambiente], [Capitolato],
+    [FM-14.2], [Obbligatorio], [Il prodotto non persiste sul database le modifiche fatte all'ambiente], [Capitolato],
+    [FM-14.3], [Obbligatorio], [Il prodotto non deve fornire alcuna opzione per il salvataggio dei dati], [Capitolato]
   ),
   caption: [Requisiti funzionali]
 )

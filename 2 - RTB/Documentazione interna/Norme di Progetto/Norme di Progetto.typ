@@ -1246,8 +1246,8 @@ Le seguenti attività devono essere implementate in conformità con le politiche
   + *stilare report e record relativi alle attività di Controllo della Qualità*:
     - i report e i record vengono generati tramite l'utilizzo coordinato di Jira, Google Sheets e Grafana che porta alla creazione di un cruscotto di qualità. Si rimanda a @tecnologie_controllo per ulteriori dettagli.
 
-  + *mantenere, archiviare e distribuire i rapporti*:
-    - in sede di retrospettiva il Verificatore è tenuto ad aggiornare il gruppo riguardo le attività di Controllo della Qualità dello sprint in corso, servendosi dell'aiuto del cruscotto di qualità.
+  + *mantenere, archiviare e distribuire i report*:
+    - il cruscotto di qualità è consultabile in ogni momento da ogni membro del gruppo, che possiede un link per accedervi. L'aggiornamento del cruscotto avviene in automatico e in tempo reale grazie al suo collegamento con Jira.
 
   + *identificare incidenti e problemi associati alle valutazioni effettuate*:
     - in sede di retrospettiva, il gruppo lavora in modo coordinato per identificare gli incidenti e i problemi, servendosi delle informazioni presentate dal Verificatore tramite il cruscotto di qualità;

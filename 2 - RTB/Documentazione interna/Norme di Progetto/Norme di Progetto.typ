@@ -1132,15 +1132,15 @@ A seguito dell'implementazione efficace del processo di misurazione:
 - i dati vengono analizzati e i risultati interpretati;
 - gli elementi informativi forniscono informazioni oggettive per poter prendere decisioni concrete.
 
-I risultati sono contenuti nel documento _Piano Di Qualifica_.
+I risultati sono contenuti nel documento _Piano Di Qualifica_ v1.1.0.
 
 === Attività
 
-Il progetto deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito dal gruppo (parte di questo viene definito nel Piano di Qualifica):
+Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito nel _Piano di Qualifica_ v1.1.0:
 
 + prepararsi per la misurazione:
 
-    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di una serie di parametri e metriche scelte dal gruppo che permettono di valutare la qualità dei processi primari:
+    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di metriche mirate alla valutazione dei processi primari, quali:
         + BAC (Budget at Completion);
         + PV (Planned Value), che si estende in:
           - SPV (Sprint Planned Value);
@@ -1181,7 +1181,9 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
         - i dati prodotti vengono salvati e analizzati al fine di perorare una strategia di approccio ed eventuali modifiche da effettuare.
 
     - registrare i risultati e comunicarli agli stakeholder:
-        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte.
+        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste concordate.
+
+Maggiori dettagli in merito alla definizione, al calcolo e l'analisi delle metriche sono reperibili all'interno del documento _Piano di Qualifica_ v1.1.0
 
 == Processo di Controllo della Qualità <processo_controllo_qualità>
 

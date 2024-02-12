@@ -69,8 +69,8 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 
 = Processi di accordo
 
-== Processo di fornitura
-_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
+== Processo di fornitura <processo_fornitura>
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.1.2_
 
 === Scopo e descrizione
 Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con Proponente e Committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
@@ -137,40 +137,133 @@ In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo
 - *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
 
 
+= Processi di supporto
+
+== Documentazione
+
+=== Scopo e descrizione
+Il processo di documentazione del lavoro ha molteplici obbiettivi, il primo è quello di tenere traccia di cio che è stato svolto e delle decisioni prese nell'ambito del progetto, il secondo è quello di normare le attività in modo che i componenti del gruppo possano lavorare in maniera uniforme ed ordinata.\
+La documentazione è quindi un processo di supporto all’attività di gestione di progetto, essendo un mezzo che, tramite versionamento e integrazione continua, norma attività di codifica, progettazione, analisi ed integrazione.\
+Questa sezione descrive tutte le norme riguardanti la stesura, il mantenimento e l'aggiornamento della documentazione prodotta da Error_418 per ogni fase del ciclo di vita del software.
+
+=== Aspettative
+- Definire una serie di regole per la stesura di documenti o per metodi di lavoro in modo che ogni attività svolta da un membro del gruppo sia valutabile secondo criteri di correttezza decisi a priori.
+- Documentare come svolgere un lavoro in modo che un membro del gruppo possa lavorare in maniera uniforme rispetto al resto del gruppo.
+
+=== Typst
+Il gruppo Error 418 ha deciso di utilizzare Typst come linguaggio per redarre la documentazione. Questo è un linguaggio di markup che permette molte delle funzionalità offerte da strumenti come LaTeX, richiedendo però molto meno sforzo durante la procedura di creazione e di compilazione del file.\
+Questo permette di evitare l'apprendimento della sintassi LaTeX che può risultare ostica ai novizi e consentendo al gruppo di concentrarsi esclusivamente sul corpo del file evitando perdite di tempo e frustrazione data da errori che possono essere di difficile risoluzione.
+
+=== Ciclo di vita
+La creazione e il versionamento di un documento è stato automatizzato quanto più possibile in modo da ridurre l'impatto dell'errore umano.\
+Le modalità che permetto di creare un documento sono:
++ creare un nuovo branch a partire dal branch che raccoglie i sorgenti (src);
++ creare una nuova cartella rinominata con lo stesso nome del sorgente che si andrà a creare;
++ creare un nuovo file .typ a partire da uno dei template che sono stati creati appositamente dal gruppo (per scopo e struttura dei template controllare la sezione @template);
++ scrivere il corpo del documento modificando eventualmente alcuni specifici campi del template (titolo, data, ecc..);
++ accertarsi che il documento rispetti tutte le norme definite nelle `Norme di Progetto`;
++ salvare e creare la pull request per integrare il sorgente all'interno del branch src;
++ scegliere un nome della pull request aderente alle norme definite nelle `Norme di Progetto`;
++ una volta creata la pull request avvierà una serie di action che provvederanno a verificare la correttezza la presenza o meno di alcuni campi del documento, creare o aggiornare il changelog, compilare il documento e integrare il risultante file .pdf all'interno del branch main;
+=== Template <template>
+Il gruppo ha creato dei template per la creazione di documenti, questo facilita il lavoro di compilazione e verifica da parte delle GitHub.\
+Possono essere trovate nella root della repository github nel branch src.\
+I template sono:
+- template.typ: per la creazione di documenti interni o esterni;
+- quickstart.typ: per la creazione di verbali interni o esterni.
+
+=== Struttura dei documenti
+Esistono due tipi di documenti fondamentali: "documento" e "verbale" e hanno alcune differenze a livello di struttura.\
+Ogni documento è formato da un file Typst e da un file log.csv creato automaticamente dalle github action (e che si occupano anche di aggiornarlo). Questi due file vengono automaticamente compilati insieme e il .pdf risultante viene inserito all'interno del branch main.
+
+==== Verbali
+Un verbale è la documentazione di un meeting svolto tra i membri del gruppo (verbale interno) o con un referente esterno (verbale esterno). Documentare le riunioni permette di tenere traccia delle decisioni prese dal gruppo in un dato momento e permette a chi non riesce a presenziare di tenersi al passo con il gruppo in maniera asincrona. \
+I verbali devono essere rinominati nel seguente modo "yy-mm-dd.typ" e nello stesso modo deve essere chiamata la sottocartella in cui è inserito.\
+Sarà compito dell'amministratore redigere i verbali dei meeting svolti dal gruppo.
+
+===== Intestazione dei verbali
+Ogni verbale, interno o esterno, deve presentare:
+- intestazione:\
+  + logo del gruppo (logo.png disponibile nella root del branch src);
+  + nome del gruppo: Error 418;
+  + titolo del documento: standardizzato nella forma "Verbale"+"interno/esterno"+"data del verbale nella forma dd/mm/yy";
+  + eventuale sottotitolo: specifica se una riunione ha avuto uno specifico argomento di discussione, è opzionale;
+  + referente: referente dell'azienda proponente che ha partecipate alla riunione in caso di verbale esterno;
+  + redattori e destinatari;
+  + partecipanti: chi ha partecipato alla riunione e il ruolo che ha ricoperto;
+  + luogo in cui si è svolto il meeting, se online indicare la piattaforma usata;
+  + ora di inizio meeting, ora di fine meeting.
+===== Corpo del verbale
+L'effettivo contenuto del documento dove vengono riportati i dettaglio gli argomenti trattati nel meeting, il corpo è così organizzato:
+- section *"Ordine del giorno"*: riporta gli argomenti da trattare nel meeting;
+- *subsection*: ogni subsection riporta l'effettivo resoconto dell'incontro con evetuali dubbi e soluzioni a cui si è arrivati durante il meeting;
+- section *"Pianificazione"*: riporta le operazioni che andranno svolte a seguito del meeting per risolvere problemi emersi durante il meeting o per continuare il lavoro.
+- *firme esterne*: per verbali esterni, firma del referente esterno che approva il resoconto stilato del gruppo.
+
+==== Documenti
+Documenti prodotto dal gruppo Error 418:
+- `Norme di Progetto`;
+- `Piano di Progetto`;
+- `Piano di Qualifica`;
+- `Glossario`;
+- `Analisi dei Requisiti`;
+- `Specifica Architetturale`;
+- `Manuale Utente`.
+
+===== Intestazione dei documenti
+Ogni documento deve presentare:
+- intestazione:\
+  + logo del gruppo (logo.png disponibile nella root del branch src);
+  + nome del gruppo: Error 418;
+  + titolo del documento
+  + redattori e destinatari;
+  + tabella con i componenti del gruppo e i ruoli che ricoprono;
+  + changelog;
+  + indice.
+
+===== Corpo del documento
+Il contenuto del documento è suddiviso in capitoli, ognuno dei quali è composto da più
+sezioni.
+
+=== Convenzioni stilisteche
+
+==== Sintattiche/Grammaticali
+
+Per la scrittura dei documenti è richiesto uno stile di scrittura impersonale (preferendo per esempio frasi come "il gruppo ha fatto" anziché "abbiamo fatto"). Si richiede inoltre di spezzare i paragrafi troppo lunghi con un "a capo" in modo da dividere il testo in aree logiche di più facile comprensione e lettura.
+
+=== Elenchi puntati
+Viene inserito ";" alla fine delle voci dell'elenco tranne l'ultima che termina con ".". Ogni voce dell'elenco inizia con una lettera minuscola.
+
 = Processi di ciclo di vita
 
 == Processi organizzativi abilitanti
 
-I processi organizzativi abilitanti garantiscono la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. Questi processi forniscono le risorse e l'infrastruttura necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
+I processi organizzativi abilitanti hanno la funzione di garantire la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. \
+Questi processi forniscono l'infrastruttura e le risorse necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
 
-I processi organizzativi abilitanti sono i seguenti:
+I processi organizzativi abilitanti implementati dal gruppo sono i seguenti:
 + processo di gestione dei modelli di ciclo di vita;
-+ processo di gestione dell'infrastruttura;
-// + Processo di gestione del portfolio;
-+ processo di gestione delle risorse umane;
-// + Processo di gestione della qualità;
-// + Processo di gestione della conoscenza.
++ processo di gestione dell'infrastruttura.
 
-=== Processo di gestione dei modelli di ciclo di vita
+=== Processo di gestione dei modelli di ciclo di vita<processo_ciclo_di_vita>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
-
 ==== Scopo
 
-Lo scopo del processo di gestione del modello di ciclo di vita è definire, mantenere e garantire regole, processi, modelli e procedure di ciclo di vita. \
+Lo scopo del processo di gestione del modello di ciclo di vita è definire, mantenere e garantire regole, processi, modelli e procedure di ciclo di vita.\
 Questo processo fornisce politiche, processi, modelli e procedure del ciclo di vita coerenti con gli obiettivi dell'organizzazione, che sono definiti, adattati, migliorati e mantenuti per supportare le esigenze individuali dei progetti all'interno del contesto dell'organizzazione, e che sono in grado di essere applicati mediante metodi e strumenti efficaci e comprovati.\
 
 Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo di vita del software. Questo modello prevede quattro fasi:
-+ pianificazione (Plan): definizione degli obiettivi e dei processi necessari per raggiungerli;
-+ esecuzione (Do): attuazione del piano;
-+ verifica (Check): monitoraggio e misurazione dei processi e dei prodotti rispetto agli obiettivi e ai requisiti, e reportistica dei risultati;
-+ attuazione (Act): azioni per migliorare le prestazioni, se necessario, in base ai risultati della verifica.
++ Pianificazione (Plan): definizione degli obiettivi e dei processi necessari per raggiungerli;
++ Esecuzione (Do): attuazione del piano;
++ Verifica (Check): monitoraggio e misurazione dei processi e dei prodotti rispetto agli obiettivi e ai requisiti, e reportistica dei risultati;
++ Attuazione (Act): azioni per migliorare le prestazioni, se necessario, in base ai risultati della verifica.
 
-==== Organizzazione del processso
+==== Organizzazione del processo
 ===== Pianificazione
 La pianificazione del processo è compito del Responsabile, il quale al termine dello sprint precedente, in base alle attività svolte e ai risultati ottenuti, pianifica le attività da svolgere nello sprint successivo. \
 La pianificazione è un'attività iterativa, che viene svolta all'inizio dello sprint. Il Responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \
 Questo processo permette di individuare le attività da svolgere, le risorse necessarie e le tempistiche di svolgimento, mediante il sistema di ticketing offerto da Jira.\
-Il risutato di questo processo è visibile all'interno del Piano di Progetto.\
+Il risultato di questo processo è visibile all'interno del documento Piano di Progetto.\
 \
 ===== Esecuzione
 Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto. \
@@ -178,7 +271,7 @@ Il processo di esecuzione è composto da due attività principali:
 + sviluppo del prodotto;
 + sviluppo della documentazione.
 
-Durante questo processo, ogni ruolo svolge le attività assegnate seguendo quanto stabilito nella pianificazione, e sarà compito del Responsabile verificare che le attività siano svolte correttamente e nei tempi previsti. Ogni membro avrà la possibilità di segnalare eventuali criticità, avendo a disposizione una board apposita sulla piattaforma Miro.\ Questo permette di avere un resoconto pronto a fine sprint in merito al processo di avanzamento, individuando: \
+Durante questo processo, ogni ruolo svolge le attività assegnate seguendo quanto stabilito nella pianificazione. Sarà compito del Responsabile verificare che le attività siano svolte correttamente e nei tempi previsti. Ogni membro avrà la possibilità di segnalare eventuali criticità, avendo a disposizione una board apposita sulla piattaforma Miro.\ Questo permette di avere un resoconto pronto a fine sprint in merito al processo di avanzamento, individuando: \
 - "Keep doing": attività che hanno dato buoni risultati e che quindi vanno mantenute;
 - "Things to change": attività che hanno dato risultati non soddisfacenti e che quindi vanno modificate.
 \
@@ -191,28 +284,31 @@ I prodotti di questo processo, permettono dunque di procedere con la verifica e 
 \ \
 ===== Verifica
 Al termine di ogni sprint, il gruppo procederà con il meeting di retrospettiva, durante il quale verranno analizzati i risultati ottenuti e le attività svolte, basandosi sui prodotti della fase di esecuzione: \
+
 + grafici di burndown:
-  - permettono di avere una visione rapida di quanto del lavoro pianificato è stato portato a termine: si tratta di una metrica puramente quantitativa, che tiene conto di del numero di ticket chiusi e del numero di ticket aperti;
+  - permettono di avere una visione rapida di quanto del lavoro pianificato è stato portato a termine: si tratta di una metrica puramente quantitativa, che tiene conto del numero di ticket chiusi e del numero di ticket aperti;
+
 + board di avanzamento:
   - "Keep doing": attività che hanno dato buoni risultati e che quindi vanno mantenute: questo permette al gruppo di individuare il _modus operandi_ più efficace ed efficiente per svolgere le attività;
+
   - "Things to change": attività che hanno dato risultati non soddisfacenti e che quindi vanno modificate: si tratta dell'aspetto più delicato da considerare, in quanto permette di individuare le criticità e le inefficienze del processo di sviluppo, e di conseguenza di apportare le modifiche necessarie per migliorare il processo stesso.
 
 Questa analisi individua i miglioramenti da apportare al processo di sviluppo, stabilendo le contromisure necessarie per migliorare il processo stesso.
   \ \
 ===== Attuazione
-L'attuazione è l'ultima fase del processo di gestione del ciclo di vita, e consiste nell'attuare le contromisure stabilite durante la fase di verifica. \
+L'attuazione è l'ultima fase del processo di gestione del ciclo di vita, e consiste nella messa in pratica delle contromisure stabilite durante la fase di verifica. \
 L'obiettivo è sopperire alle mancanze e alle inefficienze del processo di sviluppo, in modo da migliorare la qualità del prodotto e la produttività del gruppo. \
 Diventa compito del Responsabile stabilire le attività necessarie per attuare le contromisure, e di conseguenza di pianificare le attività da svolgere nello sprint successivo. \
-Il risultato di questo processo è visibile all'interno del Piano di Progetto.
+Il risultato di questo processo è visibile all'interno del documento Piano di Progetto.
 \
 \
 ==== Ruoli
 ===== Responsabile
-Il Responsabile è la figura chiave che guida il progetto, assumendo il ruolo di referente principale per il gruppo e per gli stakeholders. \
+Il Responsabile è la figura chiave che guida il progetto, assumendo il ruolo di referente principale per il gruppo e per gli stakeholder. \
 
 Le responsabilità del Responsabile includono:
 
-+ coordinamento: ha il compito di supervisionare i membri del gruppo, assicurandosi che le attività siano svolte seguendo le norme identificate in questo documento;
++ coordinamento: ha il compito di supervisionare i membri del gruppo, assicurandosi che le attività vengano svolte nel rispetto delle norme identificate in questo documento;
 
 + pianificazione: stabilisce le attività da svolgere, le relative scadenze e priorità, sancendo l'inizio e la fine di ogni sprint;
 
@@ -220,10 +316,10 @@ Le responsabilità del Responsabile includono:
 
 + norme di progetto: si occupa della stesura e dell'aggiornamento delle norme di progetto, che devono essere rispettate da tutti i membri del gruppo;
 
-+ relazioni esterne: gestisce tutte le interazioni con il Proponente e i Committenti assicurando una comunicazione fluida e efficace;
++ relazioni esterne: gestisce tutte le interazioni con il Proponente e i Committenti assicurando una comunicazione fluida ed efficace;
 \ \
 ===== Amministratore
-L'Amministratore è la figura che gestisce l'ambiente di lavoro e gli strumenti utilizzati dal gruppo per tutta la durata del progetto. Ha il compito di assicurare che gli strumenti proposti ai membri del gruppo siano efficienti e favoriscano la qualità del lavoro. Monitora, assieme al Responsabile, il rispetto delle regole stabilite in questo documento e verifica che i servizi a disposizione del gruppo siano adeguati alle attività pianificate, promuovendo la produttività. \
+L'Amministratore è la figura incaricata di gestire l'ambiente di lavoro e gli strumenti utilizzati dal gruppo per tutta la durata del progetto. Ha il compito di assicurare che gli strumenti proposti ai membri del gruppo siano efficienti e favoriscano la qualità del lavoro. Monitora, assieme al Responsabile, il rispetto delle regole stabilite in questo documento e verifica che i servizi a disposizione del gruppo siano adeguati alle attività pianificate, promuovendo la produttività.  \
 
 Le responsabilità dell'Amministratore includono:
 
@@ -235,14 +331,14 @@ Le responsabilità dell'Amministratore includono:
 
 + risoluzione dei problemi: affronta e risolve i problemi legati alla gestione dei processi.
 
-
 \ \
 ===== Analista
 L'Analista individua i bisogni del Proponente e li trasforma in requisiti che saranno l'input delle attività successive. Il suo lavoro si svolge intensamente nel periodo di avvio del progetto, e si conclude con la stesura dell'Analisi dei Requisiti. \
-Il suo compito è di rilevanza in quanto un'incompleta o superficiale analisi può impattare in modo sensibile sulle attività successive, causando ritardi e costi aggiuntivi, andando ad inficiare sulla qualità e completezza del prodotto finale. \
+Il suo compito è di rilevanza in quanto un'incompleta o superficiale analisi può impattare in modo sensibile sulle attività successive, causando ritardi e costi aggiuntivi, andando a pregiudicare la qualità e la completezza del prodotto finale. \
 
 Le responsabilità dell'Analista includono:
-+ documento di Analisi dei Requisiti: l'Analista è incaricato di scrivere questo documento cruciale, che dettaglia i requisiti specifici del progetto.
+
++ documento di Analisi dei Requisiti: l'Analista è incaricato di redigere questo documento, che dettaglia i requisiti specifici del progetto.
 
 + interazione con i clienti: l'Analista lavora a stretto contatto con il Proponente o i Committenti per capire e studiare i loro bisogni;
 
@@ -250,7 +346,7 @@ Le responsabilità dell'Analista includono:
 
 + definizione del problema e degli obiettivi: l'Analista esamina la situazione attuale, identifica il problema e stabilisce gli obiettivi da raggiungere;
 
-+ trasformazione dei bisogni in requisiti: durante l'Analisi dei Requisiti, l'Analista converte i bisogni dei clienti in requisiti specifici per la soluzione.
++ trasformazione dei bisogni in requisiti: durante la stesura dell'Analisi dei Requisiti, l'Analista converte i bisogni dei clienti in requisiti specifici per la soluzione.
 
 \ \
 ===== Progettista
@@ -268,9 +364,9 @@ Le responsabilità del Progettista includono:
 
 \ \
 ===== Programmatore
-Il Programmatore è la figura più numerosa all'intero del gruppo con precise competenze tecniche.\
+Il Programmatore è la figura più numerosa all'intero del gruppo.\
+Le sue responsabilità includono:
 
-Le responsabilità del Programmatore includono:
 + scrittura del codice sorgente, perseguendo mantenibilità e conformità a quanto stabilito dall'architettura definita dalla progettazione;
 
 + creazione di test specifici per la verifica e la validazione del codice.
@@ -283,7 +379,7 @@ Le responsabilità del Verificatore includono:
 
 + verifica della qualità e della conformità della documentazione prodotta;
 
-+ approvazione della documentazione sottoposta a verifica;
++ approvazione della documentazione sottoposta a verifica.
 
 \ \
 === Processi di gestione dell'infrastruttura
@@ -298,35 +394,36 @@ Questo processo definisce, fornisce e regola i servizi, gli strumenti e le tecno
 
 L'infrastruttura è costituita dai servizi, dagli strumenti e dalle tecnologie di comunicazione e condivisione delle informazioni adottate a supporto degli scopi dell'organizzazione. L'infrastruttura risponde alle necessità di comunicazione interna ed esterna.
 
-// Li sposterei
+I requisiti dei processi di gestione dell'infrastruttura sono:
+
++ semplicità di adozione di strumenti e servizi;
++ accesso rapido alle informazioni, anche in mobilità;
++ non ridondanza tra strumenti e servizi adottati.
+
+==== Infrastruttura di comunicazione
 I principi della comunicazione che ispirano i processi di gestione dell'infrastruttura sono:
 
 + Comunicazione aperta: le comunicazioni avvengono in modalità pubblica, ovvero tutti i membri possono partecipare (compatibilmente con i loro impegni di progetto e sempre nel rispetto delle rispettive responsabilità). I membri del gruppo hanno accesso e possono liberamente consultare i messaggi, le eventuali registrazioni e i verbali;
+
 + Comunicazione onesta: quanto comunicato rappresenta sempre il reale stato del progetto. Nessun membro, in nessun caso, deve nascondere le criticità incontrate;
-+ Comunicazione proattiva: comunicare con cognizione di causa, offrendo spunti concreti di discussione. Ogni comunicazione deve poter essere processata dagli interessati nel minor tempo possibile.
-+ Comunicazione frequente: la frequenza della comunicazione permette di prendere decisione in modo tempestivo e informato.
 
-I requisiti dei processi di gestione dell'infrastruttura sono:
++ Comunicazione proattiva: comunicare con cognizione di causa, offrendo spunti concreti di discussione. Ogni comunicazione deve poter essere processata dagli interessati nel minor tempo possibile;
 
-+ Semplicità di adozione di strumenti e servizi;
-+ Accesso rapido alle informazioni, anche in mobilità;
-+ Non ridondanza tra strumenti e servizi adottati.
++ Comunicazione frequente: la frequenza della comunicazione permette di prendere decisioni in modo tempestivo e informato.
 
-==== Infrastruttura di comunicazione
-
-===== Comunicazione interna
+===== Comunicazione interna <comunicazione_interna>
 
 #link("https://discord.com/")[*Discord*] rappresenta il canale primario di comunicazione interna. È una piattaforma di comunicazione che fornisce:
 
-+ Un servizio di messaggistica istantanea che permette la suddivisione delle conversazioni in canali tematici;
-+ Un servizio di videochiamate usato per le comunicazioni sincrone interne in modalità remota.
++ un servizio di messaggistica istantanea che permette la suddivisione delle conversazioni in canali tematici;
++ un servizio di videochiamate usato per le comunicazioni sincrone interne in modalità remota.
 
 Le comunicazioni testuali tramite messaggio istantaneo sono organizzate per argomento. Discord adotta il termine "canale" per designare tale suddivisione tematica. I canali attualmente in uso sono:
 
-- Canale generale (`#random`): usato per le comunicazioni informali;
-- Canale meeting (`#meeting`): usato per l'organizzazione dei meeting interni e la condivisione degli ordini del giorno;
-- Canale di riferimento (`#riferimenti`): usato come bacheca per raccogliere ed organizzare, in un unico luogo, le risorse a supporto degli scopi dell'organizzazione;
-- Altri canali tematici: le comunicazioni relative ad uno specifico prodotto dei processi dell'organizzazione avvengono in un canale dedicato.
+- canale generale (`#random`): usato per le comunicazioni informali;
+- canale meeting (`#meeting`): usato per l'organizzazione dei meeting interni e la condivisione degli ordini del giorno;
+- canale di riferimento (`#riferimenti`): usato come bacheca per raccogliere ed organizzare, in un unico luogo, le risorse a supporto degli scopi dell'organizzazione;
+- altri canali tematici: le comunicazioni relative ad uno specifico prodotto dei processi dell'organizzazione avvengono in un canale dedicato.
 
 La suddivisione delle comunicazioni interne in canali ha lo scopo di ridurre le distrazioni, facilitare l'accesso alle informazioni e semplificare la comunicazione interna.
 
@@ -334,9 +431,9 @@ Le comunicazioni sincrone in videochiamata avvengono nei cosiddetti "canali voca
 
 #link("https://miro.com/")[*Miro*] è un servizio di collaborazione per team basato su _whiteboard_. Offre la possibilità di creare board multimediali e permette la collaborazione asincrona. È utilizzato per:
 
-+ Raccogliere i feedback interni da discutere durante i meeting di retrospettiva;
-+ Supportare gli incontri interni di _brainstorming_;
-+ Supportare i meeting con gli interlocutori esterni.
++ raccogliere i feedback interni da discutere durante i meeting di retrospettiva;
++ supportare gli incontri interni di _brainstorming_;
++ supportare i meeting con gli interlocutori esterni.
 
 Oltre a Discord e Miro, l'organizzazione comunica anche tramite *Jira* (ITS) e *GitHub* (VCS). L'uso di questi strumenti è discusso in dettaglio nelle sezioni apposite.
 
@@ -356,11 +453,12 @@ L'indirizzo è reso noto nel frontespizio di ogni documento prodotto dall'organi
 
 Sono compiti dell'amministratore il mantenimento dell'infrastruttura, l'aggiornamento delle norme e dei processi e l'identificazione di nuovi servizi a supporto delle attività dell'organizzazione.
 
-L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi minimo e sufficiente a coprire tutti i requisiti di comunicazione.
+L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi sufficienti a coprire tutti i requisiti di comunicazione.
 
-=== Processo di gestione delle Risorse Umane
+=== Processo di gestione delle Risorse Umane <processo_risorse_umane>
 
-La natura didattica del progetto riduce le prerogative del processo di gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la _conformance to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.4_.
+La natura didattica del progetto riduce le prerogative del processo di gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la: \
+ _conformance to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.4_.
 
 ==== Scopo
 
@@ -372,11 +470,11 @@ Questo processo fornisce all'organizzazione le risorse umane necessarie all'esec
 
 L'organizzazione sottopone, ad ogni nuovo membro, un form conoscitivo atto a identificare le competenze pregresse. Il form è realizzato con #link("https://www.google.it/intl/it/forms/about/")[*Google Forms*] e include domande su:
 
-+ Strumenti di collaborazione;
-+ Linguaggi di programmazione;
-+ Tecnologie;
-+ Strumenti di automazione;
-+ Strumenti di controllo di versione.
++ strumenti di collaborazione;
++ linguaggi di programmazione;
++ tecnologie;
++ strumenti di automazione;
++ strumenti di controllo di versione.
 
 Le risposte sono non vincolanti e non influiscono in alcun modo sulla rotazione dei ruoli, sui compiti assegnati o sull'organizzazione interna.
 
@@ -394,11 +492,11 @@ Lo sviluppo di nuove competenze riguarda i membri, e non i ruoli. Per questa rag
 
 L'organizzazione si adopera per sviluppare le competenze dei membri mediante:
 
-+ Attività di _peer-tutoring_ in concomitanza delle rotazioni di ruolo;
-+ Pubblicazione interna di tutorial tecnici scritti (eventualmente accompagnati da brevi video, se utili a migliorare la comprensione degli argomenti trattati);
-+ Attività di _tutoring_ interno su richiesta, sincrono, in base alla necessità;
-+ Attività di _mentoring_ esterno su richiesta, in base alla necessità e alla disponibilità dell'interlocutore esterno;
-+ Condivisione delle best practice in sessione collettiva.
++ attività di _peer-tutoring_ in concomitanza delle rotazioni di ruolo;
++ pubblicazione interna di tutorial tecnici scritti (eventualmente accompagnati da brevi video, se utili a migliorare la comprensione degli argomenti trattati);
++ attività di _tutoring_ interno su richiesta, sincrono, in base alla necessità;
++ attività di _mentoring_ esterno su richiesta, in base alla necessità e alla disponibilità dell'interlocutore esterno;
++ condivisione delle best practice in sessione collettiva.
 
 Le sessioni di tutoring sono "a sportello" ed è responsabilità dei singoli membri richiederne l'attivazione. Il responsabile, identificati i temi di maggior interesse, può espressamente richiedere che un ruolo copra le esigenze di tutoring interno tramite le modalità sopra indicate.
 
@@ -484,6 +582,16 @@ Il processo di valutazione e controllo ha lo scopo di determinare lo stato del p
 
 Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e viene messo per iscritto all'interno dei verbali di tali riunioni e nei paragrafi di consuntivo del Piano di Progetto.
 
+=== Risultati
+Come risultato dell'implementazione del processo di valutazione e controllo si elencano i seguenti:
+- valutazione dell'adeguatezza di ruoli, responsabilità e risorse;
+- esecuzione delle azioni correttive scaturite dalle revisioni di progesso;
+- viene avviata, se necessaria, la ripianificazione del progetto;
+- viene autorizzata l'azione del progetto di avanzare (o meno) da un traguardo o evento programmato al successivo;
+- vengono registrati gli obiettivi raggiunti.
+
+I risultati sono espressi e analizzati nei paragrafi di consuntivo del Piano di Progetto.
+
 === Attività
 ==== Piano di valutazione e controllo del progetto
 La valutazione e il controllo del progetto avvengono a cadenza settimanale, in corrispondenza della riunione di retrospettiva. Durante questa riunione si valuta ciò che è stato svolto durante il periodo di lavoro (_sprint_) che si sta concludendo, se ne identificano i problemi e si decidono soluzioni di controllo che vadano a risolvere o arginare i problemi individuati.
@@ -513,20 +621,36 @@ Entrambe le rappresentazioni pongono nell'asse $x$ del grafico il tempo, indicat
 Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consuntivo dello sprint nel Piano di Progetto, nel quale, oltre a fare un resoconto dello sprint, si analizza il suo l'aspetto economico: in base ai ruoli impegnati e al monte ore produttivo svolto, si calcola il costo effettivo del periodo concluso, aggiornando conseguentemente il costo preventivato e il documento Piano di Progetto. Questo indicatore contribuisce ad avere un resoconto completo del progetto, e permette al gruppo di comprendere meglio come sta lavorando e se sta gestendo correttamente le risorse a sua disposizione.
 
 ==== Controllo
+Nell'attività di controllo figurano i seguenti task:
+
+- azioni correttive;
+- ripianificazione;
+- azioni di cambiamento dovute a richieste del Committente e/o Proponente;
+- autorizzazione ad avanzare alla successiva milestone.
+
+===== Azioni correttive
 Nell'attività di controllo si intraprendono azioni correttive nei confronti dei problemi individuati. Questi problemi possono essere di duplice natura:
+- mancato raggiungimento degli obiettivi prefissati;
+- miglioramenti e accortezze da adottare.
 
-+ mancato raggiungimento degli obiettivi prefissati;
-+ miglioramenti e accortezze da adottare.
-
-===== Mancato raggiungimento degli obiettivi prefissati
+====== Mancato raggiungimento degli obiettivi prefissati
 È necessario che alla chiusura dello sprint le attività ancora in fase di svolgimento vengano riportate nello sprint successivo, insieme a tutte quelle attività pianificate ma non ancora iniziate che sono considerate importanti. Tutte le attività che non vengono considerate importanti, ad esempio attività di cui si è rivalutato il grado di priorità, vengono riportate nel backlog. Una situazione di mancato raggiungimento degli obiettivi può essere sinonimo anche da una pianificazione errata e troppo ottimista, ed è quindi necessario che essa sia rivista e migliorata.
 
-===== Miglioramenti e accortezze da adottare
-Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcune delle task raccolte rispondono direttamente ai problemi individuati nella parte di Things to change.
+====== Miglioramenti e accortezze da adottare
+Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcuni dei task raccolti rispondono direttamente ai problemi individuati nella parte di Things to change.
 
+===== Ripianificazione
+La ripianificazione ha atto quando gli obiettivi cambiano nel corso dello sprint o alcune ipotesi fatte in fase di pianificazione si rivelano sbagliate. La ripianificazione viene gestita tramite Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo. 
 
-== Processo di gestione delle Decisioni <gestione_decisioni>
+===== Azioni di cambiamento dovute a richieste del Committente e/o Proponente
+Le azioni di cambiamento dovute a richieste del Committente e/o Proponente sono recepite attraverso i canali di comunicazione con quest'ultimi (Zoom, mail) e vengono registrate nei rispettivi verbali. A queste azioni viene attribuita un'alta priorità per garantire massima soddisfazione nel cliente finale.
+
+===== Autorizzazione ad avanzare alla successiva milestone
+L'autorizzazione ad avanzare alla successiva milestone di progetto viene concessa dal Committente e/o Proponente in seguito ai colloqui pianificati su Zoom con quest'ultimi. Il gruppo si riserva di procedere verso la milestone successiva solo una volta ricevuta l'approvazione richiesta, in modo da non portare avanti difetti e problematiche che potrebbero risultare insidiosi da correggere una volta entrati in un periodo avanzato del progetto. 
+
+== Processo di gestione delle Decisioni <processo_gestione_decisioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
+
 === Scopo
 Lo scopo del processo di gestione delle decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionando la migliore in termini di benefici attesi, costi e rischi associati. \
 
@@ -584,7 +708,7 @@ Le decisioni vengono dunque così classificate:
   - architetturali. \
 
 
-== Processo di Gestione dei Rischi <gestione_rischi>
+== Processo di Gestione dei Rischi <processo_gestione_rischi>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.4_
 
 === Scopo
@@ -652,7 +776,7 @@ Questa attività consiste nei seguenti compiti:
 Il monitoraggio dei rischi avviene principalmente in sede di meeting interno, specialmente a seguito di analisi retrospettive.
 
 
-== Processo di gestione della configurazione
+== Processo di gestione della configurazione <processo_gestione_configurazione>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.5_
 === Scopo
 Lo scopo della Gestione della Configurazione è gestire e controllare gli elementi del sistema e le configurazioni durante il ciclo di vita. Lo scopo principale è tracciare e coordinare le procedure necessarie alla modifica della documentazione e del codice sorgente.
@@ -830,10 +954,11 @@ La timeline permette di mostrare il grafico di Gantt delle attività evidenziand
 Jira offre la possibilità di produrre grafici e report relativi all'avanzamento e alla tracciabilità delle task. Tali strumenti permettono di avere delle metriche di valutazione dell'andamento del progetto e di individuare eventuali criticità.
 Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story points di ogni attività.
 
-== Processo di gestione delle informazioni
+== Processo di Gestione delle Informazioni <processo_gestione_informazioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.6_
+
 === Scopo
-Lo scopo della gestione delle informazionie è generare, ottenere, confermare, trasformare, conservare, recuperare, distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
+Lo scopo del processo di Gestione delle Informazioni è generare, ottenere, confermare, trasformare, conservare, recuperare e distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
 
 Le informazioni possono essere tecniche, di progetto, organizzative e di accordo.
 
@@ -847,18 +972,22 @@ Le informazioni gestite dal gruppo sono:
   - Glossario;
   - Verbali.
 - codice sorgente:
-  - Proof of Concept;
-  - Minimun Viable Product.
+  - Proof of Concept (PoC);
+  - Minimum Viable Product (MVP).
 
 Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e distribuiti all'interno dei repository del gruppo.
 
 === Documentazione
-==== Struttura <struttura-documenti>
-Ogni documento segue una struttura standard, stabilita nel template _template.typ_. I documenti pertanto sono così strutturati:
-+ *Cover page*: la cover page è la prima pagina del documento, e contiene le seguenti informazioni:
+
+==== Struttura dei documenti <struttura-documenti>
+Ogni documento segue una struttura standard, stabilita nel template _template.typ_. \
+Questo paragrafo non tratta della struttura dei verbali. Per le norme sulla struttura dei verbali si rimanda alla @struttura-verbali.\
+I documenti pertanto sono così strutturati:
+
++ *Cover page*: la cover page è la pagina iniziale del documento. Essa contiene le seguenti informazioni:
   - nome del gruppo;
   - link all'organizzazione GitHub;
-  - mail del gruppo;
+  - indirizzo e-mail del gruppo;
   - logo;
   - titolo del documento;
   - sottotitolo del documento;
@@ -869,19 +998,20 @@ Ogni documento segue una struttura standard, stabilita nel template _template.ty
   - redattori;
   - verificatori;
   - destinatari;
-  - figure esterne se presenti.
+  - partecipanti esterni (se presenti).
 
-+ *Registro delle modifiche*: sezione successiva agli indici. Maggiori dettagli sono visibili alla sezione dedicata (@tracciamento-modifiche).
++ *Registro delle modifiche*: sezione successiva alla cover page. Maggiori dettagli sono disponibili alla sezione dedicata (@tracciamento-modifiche);
 
-+ *Indici*: sezione successiva agli indici. Sono presenti tre tipologie di indici:
++ *Indici*: Sono presenti tre tipologie di indici:
     - indice del contenuto: indice sempre presente che rappresenta i paragrafi del documento;
     - indice delle tabelle: indice presente solo se sono presenti tabelle nel documento;
     - indice delle figure: indice presente solo se sono presenti figure nel documento.
 
-+ *Contenuto del file*: sezione successiva alla tabella di tracciamento delle modifiche. Rappresenta il corpo del documento, suddiviso in paragrafi.
++ *Contenuto del file*: sezione successiva agli indici. Rappresenta il corpo del documento, suddiviso in paragrafi.
 
-===== Verbali
-I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e ridotta lunghezza. I verbali sono così strutturati:
+==== Struttura dei verbali <struttura-verbali>
+I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e la struttura semplificata. I verbali sono così strutturati:
+
 - *cover page* (@struttura-documenti);
 - *informazioni generali*:
   - luogo;
@@ -890,15 +1020,15 @@ I verbali assumono una struttura diversa rispetto agli altri documenti, dato il 
   - assenti;
   - referente aziendale (se presente).
 - *ordine del giorno*: elenco degli argomenti trattati durante la riunione;
-- *organizzazione attività*: elenco delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva.
+- *organizzazione attività*: elenco e spiegazione delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva;
 - *firma partecipanti esterni* (se presenti): firma dei partecipanti esterni alla riunione.
 
 === Stile e convenzioni
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.
 L'obiettivo è perseguire:
-- Chiarezza;
-- Leggibilità;
-- Mantenibilità.
+- chiarezza;
+- leggibilità;
+- manutenibilità.
 
 ==== Convenzioni stilistiche globali
 Convenzioni stilistiche valide sia per i prodotti documentali che software.
@@ -940,17 +1070,17 @@ MAIUSCOLO:
 - nomi propri;
 - nomi strumenti e tecnologie;
 - iniziale nomi ruoli;
-- iniziale parole nei nomi documenti ad eccezione di preposizioni e articoli. Riferimento nomi file @norma_nomi_documenti.
+- iniziale parole nei nomi documenti ad eccezione di preposizioni e articoli. Riferimento nomi file disponibile alla @norma_nomi_documenti.
 
 `Monospace`:\
-- nome di un file (Riferimento nomi file @norma_nomi_documenti);
+- nome di un file (Riferimento nomi file disponibile alla @norma_nomi_documenti);
 - parametri;
 - porzioni di codice.
 
 ===== Elenchi
 - si utilizzano elenchi numerati se gli elementi mostrati richiedono un ordine (es. ordine delle sezioni);
 - si utilizzano elenchi non numerati se gli elementi mostrati non richiedono un ordine (es. lista di attività);
-- al termine di ogni elemento viene posto ";" ad eccezione dell'ultimo elemento che viene posto ".".
+- al termine di ogni punto dell'elenco viene posto ";" ad eccezione dell'ultimo elemento a cui viene posto ".".
 
 ===== Glossario
 Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una G in corsivo a pedice.
@@ -960,7 +1090,7 @@ Il gruppo condivide il materiale prodotto all'interno di un repository dedicato 
 #align(link("https://github.com/Error-418-SWE/Documenti"), center)
 Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
 
-== Processo di Misurazione
+== Processo di Misurazione <processo_misurazione>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.7_
 
@@ -1035,7 +1165,7 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
     - registrare i risultati e comunicarli agli stakeholders:
         - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte.
 
-== Processo di Controllo della Qualità
+== Processo di Controllo della Qualità <processo_controllo_qualità>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.8_
 
@@ -1113,7 +1243,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
 = Processi tecnici
 
-== Processo di analisi della missione
+== Processo di analisi della missione <processo_missione>
 
 _Tailored conformance on ISO/IEC/IEEE 12207:2017 clause 6.4.1 per ISO/IEC/IEEE 12207:2017 Annex A_
 
@@ -1124,7 +1254,7 @@ Il processo di analisi della missione definisce i problemi e le opportunità dai
 === Strategia di identificazione e analisi della missione
 
 ==== Sistemi e servizi abilitanti
-Gli strumenti di comunicazione adottati dal gruppo sono descritti in TODO.
+Gli strumenti di comunicazione adottati dal gruppo sono descritti nella @comunicazione_interna.
 
 ==== Opportunità
 Si analizzano i problemi e le opportunità per acquisire una panoramica completa del contesto presentato dal Capitolato.
@@ -1136,7 +1266,7 @@ Si identifica l'ambito del Capitolato attraverso la definizione di:
 - tipologia di utenza attesa;
 - destinazione d'uso del prodotto finale.
 
-La sintesi di bisogni e requisiti avviene nel contesto del Processo di definizione di bisogni e requisiti degli Stakeholder (TODO).
+La sintesi di bisogni e requisiti avviene nel contesto del processo di definizione di bisogni e requisiti degli Stakeholder disponibile nella @processo_bisogni.
 
 ==== Classi di soluzione
 Si identificano classi di soluzione che possano sfruttare le opportunità e risolvere i problemi individuati.
@@ -1150,7 +1280,8 @@ Nel contesto del progetto didattico, il gruppo accetta le classi di soluzione pr
 ==== Valutazione delle classi di soluzione
 Si valuta ogni classe di soluzione identificata sulla base di:
 - fattibilità;
-- costi e tempi necessari;
+- costi;
+- tempi necessari;
 - rischi;
 - interesse tecnologico e didattico;
 - pertinenza.
@@ -1163,9 +1294,9 @@ La valutazione delle classi di soluzione può avvenire tramite:
 Sulla base dei risultati della valutazione, il gruppo individua una classe di soluzione preferita e la presenta al Proponente per la convalida.
 
 ==== Analisi dei requisiti
-Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste dal processo. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
+Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste da questo processo. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
 
-== Processo di definizione di bisogni e requisiti degli stakeholder
+== Processo di definizione di bisogni e requisiti degli stakeholder <processo_bisogni>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.2_
 
@@ -1212,7 +1343,7 @@ I bisogni espressi da Committente e Fornitore sono raccolti, catalogati, analizz
 
 Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, il gruppo si adopera per mediare i contrasti. La strategia di mediazione prevede l'identificazione di un sottoinsieme di interessi e bisogni comuni, il confronto con le parti e la definizione di strategie di mediazione calate nella fattispecie.
 
-Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi di ciclo di vita del sistema software sono affrontati tramite il processo di Gestione dei Rischi disponibile alla @gestione_rischi.
+Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi di ciclo di vita del sistema software sono affrontati tramite il processo di Gestione dei Rischi disponibile alla @processo_gestione_rischi.
 
 Il negoziato tra le parti potrebbe essere richiesto per mediare posizioni mutualmente incompatibili, o a causa di vincoli o budget insufficiente. Anche la data di consegna prevista incide sulla realizzazione dei requisiti. Sarà sempre necessario consultare gli stakeholder coinvolti per raggiungere un accordo. Le decisioni saranno tracciate e rese disponibili agli stakeholder.
 
@@ -1231,7 +1362,7 @@ I bisogni degli stakeholder scaturiscono da fonti diverse. Il gruppo si impegna 
 - norme, leggi o altri vincoli esterni.
 
 ==== Definizione delle priorità
-Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (@gestione_decisioni), guidano la selezione e la prioritizzazione dei requisiti.
+Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (@processo_gestione_decisioni), guidano la selezione e la prioritizzazione dei requisiti.
 
 ==== Casi d'uso
 Si definisce un insieme di casi d'uso (anche detti use case, abbreviato in UC) che identifichi tutte le funzionalità attese.
@@ -1269,4 +1400,31 @@ Sono classificati per priorità e per fonte.
 ==== Analisi dei requisiti
 Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
+#pagebreak()
 
+= Tracciamento paragrafi ISO/IEC/IEEE 12207:2017
+
+La tabella di seguito riportata consente di associare ogni capitolo del documento al rispettivo capitolo dello standard di riferimento. Viene riporato anche il grado di conformità:
+- *To outcome* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
+- *Full* indica che il capitolo riporta fedelmente le indacazioni dello standard con poche o nessuna azione di adeguamento.
+
+#figure(
+  table(
+    columns: 3,
+    [*Capitolo Norme*],[*Capitolo Standard*],[*Conformance Level*],
+    [@processo_fornitura],[6.1.2 - Supply process],[To outcome],
+    [@processo_ciclo_di_vita],[6.2.1 - Life cycle model management process],[To outcome],
+    [@processo_risorse_umane],[6.2.4 - Human Resource Management process],[To outcome],
+    [@pianificazione],[6.3.1 - Project Planning process],[To outcome],
+    [@valutazioneControllo],[6.3.2 - Project assessment and control process],[Full],
+    [@processo_gestione_decisioni],[6.3.3 - Decision Management process],[Full],
+    [@processo_gestione_rischi],[6.3.4 - Risk Management process],[Full],
+    [@processo_gestione_configurazione],[6.3.5 - Configuration Management process],[To outcome],
+    [@processo_gestione_informazioni],[6.3.6 - Information Management process],[To outcome],
+    [@processo_misurazione],[6.3.7 - Measurement process],[To outcome],
+    [@processo_controllo_qualità],[6.3.8 - Quality Assurance process],[Full],
+    [@processo_missione],[6.4.1 - Business or Mission Analysis process],[Full],
+    [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
+  ),
+  caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
+)

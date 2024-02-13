@@ -1120,7 +1120,7 @@ Le misure devono soddisfare determinate caratteristiche di qualità, ovvero devo
 + tempestive;
 + economicamente vantaggiose.
 
-Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia espresse che implicite.
+Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia esplicite che implicite.
 
 === Risultati
 
@@ -1132,28 +1132,31 @@ A seguito dell'implementazione efficace del processo di misurazione:
 - i dati vengono analizzati e i risultati interpretati;
 - gli elementi informativi forniscono informazioni oggettive per poter prendere decisioni concrete.
 
+I risultati sono contenuti nel documento _Piano Di Qualifica_ v1.1.0.
+
 === Attività
 
-Il progetto deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito dal gruppo (parte di questo viene definito nel Piano di Qualifica):
+Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito nel _Piano di Qualifica_ v1.1.0:
 
 + prepararsi per la misurazione:
 
-    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi primari:
-        - BAC (Budget at Completion);
-        - AC (Actual Cost);
-        - PV (Planned Value);
-        - EV (Earned Value);
-        - CV (Cost Variance);
-        - SV (Schedule Variance);
-        - CPI (Cost Performance Index);
-        - EAC (Estimated at Completion);
-        - ETC (Estimated to Completion).
+    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di metriche mirate alla valutazione dei processi primari, quali:
+        + BAC (Budget at Completion);
+        + PV (Planned Value), che si estende in:
+          - SPV (Sprint Planned Value);
+          - PPV (Project Planned Value);
+        + AC (Actual Cost), che si estende in:
+          - SAC (Sprint Actual Cost);
+          - PAC (Project Actual Cost);
+        + EV (Earned Value), che si estende in:
+          - SEV (Sprint Earned Value);
+          - PEV (Project Earned Value);
+        + CPI (Cost Performance Index);
+        + EAC (Estimated at Completion).
 
     - definire la strategia di misurazione per i processi di supporto. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi di supporto:
-        - indice di Gulpease;
         - errori ortografici;
-        - metriche soddisfatte;
-        - code coverage.
+        - percentuale metriche soddisfatte.
 
     - descrivere le caratteristiche del gruppo rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici:
         - richieste del Proponente;
@@ -1177,8 +1180,10 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
     - raccogliere, archiviare e verificare i dati:
         - i dati prodotti vengono salvati e analizzati al fine di perorare una strategia di approccio ed eventuali modifiche da effettuare.
 
-    - registrare i risultati e comunicarli agli stakeholders:
-        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte.
+    - registrare i risultati e comunicarli agli stakeholder:
+        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste concordate.
+
+Maggiori dettagli in merito alla definizione, al calcolo e l'analisi delle metriche sono reperibili all'interno del documento _Piano di Qualifica_ v1.1.0
 
 == Processo di Controllo della Qualità <processo_controllo_qualità>
 

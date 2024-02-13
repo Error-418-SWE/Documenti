@@ -30,42 +30,54 @@ Al fine di eliminare le ambiguit√† durante la consultazione dei documenti, verr√
 
 - Standard ISO/IEC/IEEE 12207:2017:\
   _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
+  #lastVisitedOn(13,02,2024)
 
 - Standard ISO/IEC/IEEE 29148:2018:\
-  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_;
+  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_
+  #lastVisitedOn(13,02,2024)
 
 - SWEBOK:\
   _#link("http://swebokwiki.org/Main_Page;")_
+  #lastVisitedOn(13,02,2024)
 
 - Specifica Unified Modeling Language 2:\
   _#link("https://www.omg.org/spec/UML/")_
+  #lastVisitedOn(13,02,2024)
 
 - Regolamento di Progetto:\
-  #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
+  #lastVisitedOn(13,02,2024)
 
-- Capitolato d'appalto C5: _WMS3_\
-  #link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")
+- Capitolato d'appalto C5: _WMS3_: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
+  #lastVisitedOn(13,02,2024)
 
 === Riferimenti informativi
 
-- Documentazione Typst\
-  #link("https://typst.app/docs/")
+- Documentazione Typst: \
+  _#link("https://typst.app/docs/")_
+  #lastVisitedOn(13,02,2024)
 
-- Documentazione Git\
-  #link("https://git-scm.com/docs")
+- Documentazione Git: \
+  _#link("https://git-scm.com/docs")_
+  #lastVisitedOn(13,02,2024)
 
-- Documentazione Jira\
-  #link("https://confluence.atlassian.com/jira")
+- Documentazione Jira: \
+  _#link("https://confluence.atlassian.com/jira")_
+  #lastVisitedOn(13,02,2024)
 
-- Documentazione Three.js\
-  #link("https://threejs.org/docs/")
+- Documentazione Three.js: \
+  _#link("https://threejs.org/docs/")_
+  #lastVisitedOn(13,02,2024)
 
 === Riferimenti a documentazione interna
-- Documento "Analisi dei Rischi v2.0.0"\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")
+- Documento #ris_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")_
+  #lastVisitedOn(13,02,2024)
 
-- Documento "Glossario v1.1.0"\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
+- Documento #glo_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
+  #lastVisitedOn(13,02,2024)
 
 = Processi di accordo
 

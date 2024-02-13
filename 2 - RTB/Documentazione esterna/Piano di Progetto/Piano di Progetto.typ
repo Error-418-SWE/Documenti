@@ -1668,7 +1668,7 @@ Il gruppo ha notato in fase di retrospettiva una scarsa reattività in fase di r
 Inoltre si è presa coscienza della necessità di apportare migliorie al processo di gestione di Jira.
 
 === Risoluzioni attuate
-Il gruppo ha preso in considerazione l'utilizzo di Graphite per velocizzare il processo di review e creare pull request brevi.
+Il gruppo ha preso in considerazione l'utilizzo di Graphite per velocizzare il processo di review e creare pull request brevi. L'adozione di questo strumento, o suoi analoghi, verrà valutata dall'Amministratore.
 
 Inoltre, il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'utilizzo di Jira, per migliorare l'amministrazione del progetto.
 

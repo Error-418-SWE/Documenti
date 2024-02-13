@@ -61,8 +61,8 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
   #link("https://threejs.org/docs/")
 
 === Riferimenti a documentazione interna
-- Documento "Analisi dei Rischi v2.0.0"\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")
+- Documento "Analisi dei Rischi v1.0.0"\
+  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v1.0.0.pdf")
 
 - Documento "Glossario v1.1.0"\
   #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
@@ -1256,7 +1256,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
   + *trattare incidenti e problemi*:
 
     + in caso di segnalazione di incidenti e problemi deve essere svolto un lavoro collettivo per la loro risoluzione;
-    + tutte le criticità devono prevedere risoluzioni e arginamenti già predisposti all'interno del documento dell'_Analisi dei Rischi_.
+    + tutte le criticità devono prevedere risoluzioni e arginamenti già predisposti all'interno del documento dell'_Analisi dei Rischi_ v1.0.0.
     + nel caso tali problemi o incidenti siano di carattere generale, deve essere avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
 
 ==== Tecnologie <tecnologie_controllo>

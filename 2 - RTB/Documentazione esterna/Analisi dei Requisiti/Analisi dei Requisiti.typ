@@ -222,6 +222,8 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 
 #set par(first-line-indent: 0pt)
 
+#let requirements = json("Requisiti.json");
+
 = Creazione magazzino <uc1>
 #figure(
   image("./imgs/uc1.png", format: "png"),
@@ -229,6 +231,12 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
     UML UC-1
   ],
 )
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(0) {
+  list(value)
+}
+
 == Importazione mappa magazzino da file SVG
 $bold("Descrizione: ")$
 all'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
@@ -248,6 +256,11 @@ $bold("Scenario: ")$
 
 $bold("Estensioni: ")$
 - UC-1.1.1 Visualizzazione errore lettura del file SVG.
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(1) {
+  list(value)
+}
 
 === Visualizzazione errore lettura del file SVG
 $bold("Descrizione: ")$
@@ -270,6 +283,11 @@ $bold("Generalizzazioni: ")$
 - UC-1.1.1.1 Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni;
 - UC-1.1.1.2 Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(2) {
+  list(value)
+}
+
 ==== Visualizzazione errore file privo di informazioni
 $bold("Descrizione: ")$
 il file SVG caricato non contiene informazioni utili alla configurazione dell'ambiente.
@@ -287,6 +305,11 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - L'utente ha caricato un file SVG vuoto o con informazioni non utili.
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(3) {
+  list(value)
+}
 
 ==== Visualizzazione errore informazioni del file incongruenti
 $bold("Descrizione: ")$
@@ -306,6 +329,11 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(4) {
+  list(value)
+}
+
 == Creazione magazzino vuoto
 $bold("Descrizione: ")$
 all'avvio dell'applicativo è possibile creare un ambiente vuoto di dimensioni predefinite da cui iniziare. Tale funzionalità, rimane disponibile durante l'utilizzo dell'applicativo qualora si volesse ripristinare l'ambiente.
@@ -322,6 +350,11 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente crea un ambiente di lavoro vuoto con dimensioni predefinite.
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(5) {
+  list(value)
+}
 
 = Modifica dimensioni del magazzino
 
@@ -355,6 +388,11 @@ $bold("Estensioni: ")$
 - UC-2.1 Visualizzazione errore dimensioni magazzino troppo piccole;
 - UC-2.2 Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(6) {
+  list(value)
+}
+
 == Visualizzazione errore dimensioni magazzino troppo piccole
 
 $bold("Descrizione: ")$
@@ -374,6 +412,11 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente vuole ridurre le dimensioni dell'ambiente oltre una soglia minima.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(7) {
+  list(value)
+}
+
 == Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
 
 $bold("Descrizione: ")$
@@ -392,6 +435,11 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente vuole ridurre la dimensione dell'ambiente nonostante l'ambiente di lavoro contenga elementi le cui posizioni non risulterebbero più valide alle nuove dimensioni ridotte.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(8) {
+  list(value)
+}
+
 = Gestione scaffali
 #figure(
   image("./imgs/uc3.png", format: "png"),
@@ -399,6 +447,12 @@ $bold("Scenario: ")$
     UML UC-3
   ],
 )
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(9) {
+  list(value)
+}
+
 == Creazione scaffale
 $bold("Descrizione: ")$
 uno scaffale viene creato in base ai valori inseriti dall'utente quali: altezza, larghezza, profondità, numero di piani e colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
@@ -426,6 +480,11 @@ $bold("Scenario: ")$
 
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(10) {
+  list(value)
+}
 
 == Modifica scaffale
 $bold("Descrizione: ")$
@@ -458,6 +517,11 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(11) {
+  list(value)
+}
+
 == Spostamento scaffale
 $bold("Descrizione: ")$
 l'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
@@ -478,6 +542,11 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-3.3.1 Visualizzazione errore spostamento dello scaffale in zona non libera
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(12) {
+  list(value)
+}
+
 === Visualizzazione errore spostamento dello scaffale in zona non libera
 $bold("Descrizione: ")$
 è stata richiesto lo spostamento di uno scaffale in una zona non libera.
@@ -494,6 +563,11 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente ha richiesto lo spostamento di uno scaffale in una zona non libera.
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(13) {
+  list(value)
+}
 
 == Eliminazione scaffale
 $bold("Descrizione: ")$
@@ -519,6 +593,11 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-3.4.1 Visualizzazione errore scaffale da eliminare non vuoto.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(14) {
+  list(value)
+}
+
 === Visualizzazione errore scaffale da eliminare non vuoto
 $bold("Descrizione: ")$
 è stata richiesta l'eliminazione di uno scaffale contenente almeno un bin non vuoto.
@@ -536,6 +615,11 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(15) {
+  list(value)
+}
+
 = Gestione bin
 #figure(
   image("./imgs/uc4.png", format: "png"),
@@ -543,6 +627,11 @@ $bold("Scenario: ")$
     UML UC-4
   ],
 )
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(16) {
+  list(value)
+}
 
 == Creazione di un bin
 $bold("Descrizione: ")$
@@ -564,6 +653,11 @@ $bold("Scenario: ")$
 - l'utente inserisce la larghezza del bin;
 - l'utente inserisce la profondità del bin;
 - l'utente posiziona il bin in una posizione valida nell'ambiente di lavoro.
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(17) {
+  list(value)
+}
 
 == Modifica di un bin
 $bold("Descrizione: ")$
@@ -593,6 +687,11 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(18) {
+  list(value)
+}
+
 == Eliminazione bin
 $bold("Descrizione: ")$
 deve essere possibile eliminare un bin.
@@ -616,6 +715,11 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-4.3.1 Errore cancellazione bin non vuoto.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(19) {
+  list(value)
+}
+
 === Errore cancellazione bin non vuoto
 $bold("Descrizione: ")$
 è stata richiesta l'eliminazione di un bin non vuoto.
@@ -632,6 +736,11 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di un bin non vuoto.
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(20) {
+  list(value)
+}
 
 = Visualizzazione errore inserimento dati dimensionali non validi
 #figure(
@@ -660,6 +769,11 @@ $bold("Generalizzazioni: ")$
 - UC-5.1.1 Dimensioni negative o uguali a 0;
 - UC-5.1.2 Dimensioni eccessive.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(21) {
+  list(value)
+}
+
 == Dimensioni negative o uguali a zero
 $bold("Descrizione: ")$
 le dimensioni inserite per la modifica dell'elemento interessato sono minori o uguali a zero.
@@ -677,6 +791,11 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente minori o uguali a zero.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(22) {
+  list(value)
+}
+
 == Dimensioni eccessive
 $bold("Descrizione: ")$
 le dimensioni inserite per la modifica dell'elemento interessato eccessive per il contesto di inserimento.
@@ -693,6 +812,11 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente eccessivi.
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(23) {
+  list(value)
+}
 
 = Caricamento dati da database
 
@@ -725,6 +849,11 @@ $bold("Inclusioni: ")$
 $bold("Estensioni: ")$
 - UC-6.2 Visualizzazione messaggio di errore.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(24) {
+  list(value)
+}
+
 == Configurazione collegamento al database
 $bold("Descrizione: ")$
 l'utente imposta i dati necessari affinché il programma possa configurarsi con il database in cui sono contenuti i dati.
@@ -743,6 +872,11 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente configura l'accesso al database.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(25) {
+  list(value)
+}
+
 == Visualizzazione messaggio di errore
 $bold("Descrizione: ")$
 i dati contenuti nel database sono in un formato non conforme o sono errati.
@@ -759,6 +893,11 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere (es. numero scaffali/bin incompatibile con le coordinate dei prodotti).
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(26) {
+  list(value)
+}
 
 = Richiesta di spostamento di un prodotto
 
@@ -791,6 +930,11 @@ $bold("Scenario: ")$
 - viene inviata una notifica a magazzino che segnala lo spostamento;
 - i due bin, di partenza e di arrivo, vengono evidenziati per segnalare lo spostamento in corso.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(27) {
+  list(value)
+}
+
 = Visualizzazione di un bin
 
 #figure(
@@ -819,6 +963,11 @@ $bold("Scenario: ")$
   - tipologia di prodotto che contiene, in caso di bin non vuoto;
   - id dello scaffale che lo contiene;
   - posizione del bin all'interno dello scaffale (piano e colonna).
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(28) {
+  list(value)
+}
 
 = Visualizzazione di uno scaffale
 
@@ -853,6 +1002,11 @@ $bold("Scenario: ")$
   - numero di piani;
   - numero di colonne.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(29) {
+  list(value)
+}
+
 = Ricerca prodotti
 
 #figure(
@@ -883,6 +1037,11 @@ $bold("Generalizzazioni: ")$
 - UC-10.2 Ricerca per Nome;
 - UC-10.3 Ricerca per Scaffale.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(30) {
+  list(value)
+}
+
 == Ricerca per ID
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto tramite il suo ID di magazzino.
@@ -899,6 +1058,11 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente ricerca un prodotto usando come chiave l'ID univoco di magazzino;
 - il bin contenente il prodotto cercato viene evidenziato.
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(31) {
+  list(value)
+}
 
 == Ricerca per Nome
 $bold("Descrizione: ")$
@@ -918,6 +1082,11 @@ $bold("Scenario: ")$
 - il bin contenente il prodotto cercato viene evidenziato;
 - i prodotti associati al nome possono essere più di uno.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(32) {
+  list(value)
+}
+
 == Ricerca per Scaffale
 $bold("Descrizione: ")$
 l'utente ricerca i prodotti contenuti all'interno di uno scaffale del magazzino.
@@ -935,6 +1104,11 @@ $bold("Scenario: ")$
 - l'utente ricerca i materiali contenuti all'interno di uno scaffale del magazzino;
 - lo scaffale viene evidenziato.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(33) {
+  list(value)
+}
+
 = Esplorazione magazzino
 
 #figure(
@@ -943,6 +1117,11 @@ $bold("Scenario: ")$
     UML UC-11
   ],
 )
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(34) {
+  list(value)
+}
 
 == Spostamento della visuale lungo gli assi
 $bold("Descrizione: ")$
@@ -964,6 +1143,11 @@ $bold("Scenario: ")$
 - l'utente può spostare la visuale del magazzino lungo l'asse longitudinale;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(35) {
+  list(value)
+}
+
 == Rotazione della visuale
 $bold("Descrizione: ")$
 successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può visualizzare il magazzino e ruotare la visuale sul magazzino in senso orario o antiorario.
@@ -983,6 +1167,11 @@ $bold("Scenario: ")$
 - l'utente può ruotare la visuale in senso antiorario;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(36) {
+  list(value)
+}
+
 == Zoom della visuale
 $bold("Descrizione: ")$
 successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può effettuare uno zoom-in o uno zoom-out per avvicinare o allontanare la visuale dal magazzino.
@@ -1001,6 +1190,11 @@ $bold("Scenario: ")$
 - l'utente può avvicinarsi al magazzino e ai suoi elementi tramite uno zoom-in;
 - l'utente può allontanarsi dal magazzino e dai suoi elementi tramite uno zoom-out;
 - l'utente ha cambiato la prospettiva sul magazzino.
+
+$bold("Requisiti derivati: ")$
+#for value in requirements.values().at(37) {
+  list(value)
+}
 
 #set heading(numbering: (..nums) => {
   let values = nums.pos();

@@ -131,24 +131,32 @@ Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e pe
 
 == Riferimenti <riferimenti>
 === Riferimenti normativi <riferimenti-normativi>
-- Regolamento di progetto \
+- Regolamento di progetto: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
+  #lastVisitedOn(13,02,2024)
 
-- Gestione di progetto \
+- Gestione di progetto: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T4.pdf")_
+  #lastVisitedOn(13,02,2024)
 
-- I processi di ciclo di vita del software \
+- I processi di ciclo di vita del software: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T2.pdf")_
+  #lastVisitedOn(13,02,2024)
 
 === Riferimenti informativi <riferimenti-informativi>
-- Capitolato C5: WMS3: Warehouse management 3D \
+- Capitolato C5: WMS3: Warehouse management 3D: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
+  #lastVisitedOn(13,02,2024)
 
 === Riferimenti a documentazione interna <riferimenti-interni>
-- Documento Glossario (v1.1.0)\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
-- Documento Analisi dei Rischi (v2.0.0)\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")
+- Documento #glo_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
+  #lastVisitedOn(13,02,2024)
+
+- Documento #ris_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")_
+  #lastVisitedOn(13,02,2024)
+
 
 #pagebreak()
 

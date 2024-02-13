@@ -1,4 +1,9 @@
 {
+  "Actual Cost": {
+    "description": "Somma dei costi sostenuti dal gruppo in un determinato periodo di tempo.",
+    "acronyms": ["AC"],
+    "synonyms": []
+  },
   "Analisi dei Requisiti": {
     "description": "Processo di individuazione dei bisogni, delle necessità e delle aspettative degli utenti e degli stakeholder. Usato come punto di partenza per elaborare i requisiti di progetto.",
     "acronyms": ["AdR"],
@@ -69,6 +74,11 @@
     "acronyms": [],
     "synonyms": []
   },
+  "Cost Performance Index": {
+    "description": "Indice di performance del costo, ovvero il rapporto tra il valore guadagnato e il costo effettivo sostenuto.",
+    "acronyms": ["CPI"],
+    "synonyms": []
+  },
   "Cruscotto di qualità": {
     "description": "Prodotto del Piano di Qualifica, luogo in cui vengono generati i grafici delle metriche scelte usando i dati riportati nel Piano di Progetto",
     "acronyms": [],
@@ -109,9 +119,24 @@
     "acronyms": [],
     "synonyms": []
   },
+  "Earned Value": {
+    "description": "Valore guadagnato dal progetto in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come valore guadagnato nello sprint.",
+    "acronyms": ["EV"],
+    "synonyms": []
+  },
   "Epic": {
     "description": "Nella metodologia Agile, è una porzione di lavoro, rilasciabile in modo indipendente, che viene suddivisa in ticket. L'organizzazione del lavoro in epic aiuta a individuare gerarchie tra i ticket.",
     "acronyms": [],
+    "synonyms": []
+  },
+  "Errori ortografici": {
+    "description": "Metrica che rappresenta gli errori ortografici presente in un documento.",
+    "acronyms": [],
+    "synonyms": []
+  },
+  "Estimated At Completion": {
+    "description": "Costo stimato al termine del progetto.",
+    "acronyms": ["EAC"],
     "synonyms": []
   },
   "Feature": {
@@ -219,6 +244,16 @@
     "acronyms": [],
     "synonyms": []
   },
+  "Metriche soddisfatte": {
+    "description": "Metrica che rappresenta il numero di metriche soddisfatte.",
+    "acronyms": ["MS"],
+    "synonyms": []
+  },
+  "Metriche totali": {
+    "description": "Metrica che rappresenta il numero di metriche totali.",
+    "acronyms": ["MT"],
+    "synonyms": []
+  },
   "Milestone": {
     "description": "Data presente sulla linea temporale del progetto che indica un punto di avanzamento atteso, ovvero un insieme di obiettivi che devono risultare raggiunti in quella data.",
     "acronyms": [],
@@ -239,6 +274,16 @@
     "acronyms": [],
     "synonyms": ["Node"]
   },
+  "Project Actual Cost": {
+    "description": "Costo effettivo sostenuto dal gruppo dall'inizio del progetto, definito come sommatoria dei SAC.",
+    "acronyms": ["PAC"],
+    "synonyms": []
+  },
+  "Project Earned Value": {
+    "description": "Valore guadagnato dal progetto dal suo inizio, definito come sommatoria dei SEV.",
+    "acronyms": ["PEV"],
+    "synonyms": []
+  },
   "Piano di Progetto": {
     "description": "Documento che permette di pianificare la suddivisione del lavoro, tenere traccia delle risorse consumate nei vari sprint, degli obbiettivi raggiunti e dei problemi e la loro risoluzione.",
     "acronyms": ["PdP"],
@@ -249,7 +294,7 @@
     "acronyms": ["PdQ"],
     "synonyms": []
   },
-  " Product Baseline": {
+  "Product Baseline": {
     "description": "Milestone che corrisponde a due diverse revisioni con il committente del progetto. Lo scopo della revisione è quello di vagliare la maturità della baseline architetturale del prodotto software e sua realizzazione.",
     "acronyms": ["PB"],
     "synonyms": []
@@ -328,6 +373,16 @@
     "description": "Formato di file di grafica vettoriale bidimensionale basato su XML sviluppato dal World Wide Web Consortium.",
     "acronyms": ["SVG"],
     "synonyms": []
+  },
+  "Sprint Actual Cost": {
+    "description": "Somma dei costi sostenuti dal gruppo in un determinato sprint.",
+    "acronyms": ["SAC"],
+    "synonyms": []
+  },
+  "Sprint Earned Value": {
+    "description": "Valore guadagnato dal progetto in un determinato sprint, dove lo stato di completamento del lavoro è espresso mediante il rapporto tra gli story points completati (SPC) e quelli pianificati per lo sprint (SPP).",
+    "acronyms": ["SEV", "SCP", "SPP"],
+    "synonyms": ["Story Points Completati", "Story Points Pianificati"]
   },
   "Sottotask": {
     "description": "Una parte di lavoro granulare necessaria per completare una story, un task o un bug.",

@@ -163,32 +163,53 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 
 == Riferimenti di conformità
 
-- Norme di Progetto;
+- Norme di Progetto: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Regolamento del progetto didattico: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_ ;
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Standard ISO/IEC/IEEE 29148:2018: \
-  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_;
+  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Standard ISO/IEC/IEEE 12207:2017: \
-  _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_.
+  _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
+  #lastVisitedOn(13, 02, 2024)
+
 
 == Riferimenti informativi
 
 - Verbali interni;
 - Verbali esterni;
 - Capitolato "Warehouse Management 3D" di _Sanmarco Informatica S.p.A._: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_ ;
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Documentazione Three.js: \
   _#link("https://threejs.org/docs/index.html")_
+  #lastVisitedOn(13, 02, 2024)
+
 - WebGL 2.0 Specification: \
   _#link("https://registry.khronos.org/webgl/specs/latest/2.0/")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Analisi dei requisiti: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf")_ ;
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
-  _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_ .
+  _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 
 == Riferimenti a documentazione interna
-- Documento "Glossario v1.1.0"\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
+- Documento #glo_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 
 
 == Principi di redazione

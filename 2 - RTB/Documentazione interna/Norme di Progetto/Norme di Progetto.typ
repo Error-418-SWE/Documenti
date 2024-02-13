@@ -30,42 +30,54 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 
 - Standard ISO/IEC/IEEE 12207:2017:\
   _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
+  #lastVisitedOn(13,02,2024)
 
 - Standard ISO/IEC/IEEE 29148:2018:\
-  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_;
+  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_
+  #lastVisitedOn(13,02,2024)
 
 - SWEBOK:\
   _#link("http://swebokwiki.org/Main_Page;")_
+  #lastVisitedOn(13,02,2024)
 
 - Specifica Unified Modeling Language 2:\
   _#link("https://www.omg.org/spec/UML/")_
+  #lastVisitedOn(13,02,2024)
 
 - Regolamento di Progetto:\
-  #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
+  #lastVisitedOn(13,02,2024)
 
-- Capitolato d'appalto C5: _WMS3_\
-  #link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")
+- Capitolato d'appalto C5: _WMS3_: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
+  #lastVisitedOn(13,02,2024)
 
 === Riferimenti informativi
 
-- Documentazione Typst\
-  #link("https://typst.app/docs/")
+- Documentazione Typst: \
+  _#link("https://typst.app/docs/")_
+  #lastVisitedOn(13,02,2024)
 
-- Documentazione Git\
-  #link("https://git-scm.com/docs")
+- Documentazione Git: \
+  _#link("https://git-scm.com/docs")_
+  #lastVisitedOn(13,02,2024)
 
-- Documentazione Jira\
-  #link("https://confluence.atlassian.com/jira")
+- Documentazione Jira: \
+  _#link("https://confluence.atlassian.com/jira")_
+  #lastVisitedOn(13,02,2024)
 
-- Documentazione Three.js\
-  #link("https://threejs.org/docs/")
+- Documentazione Three.js: \
+  _#link("https://threejs.org/docs/")_
+  #lastVisitedOn(13,02,2024)
 
 === Riferimenti a documentazione interna
-- Documento "Analisi dei Rischi v1.0.0"\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v1.0.0.pdf")
+- Documento #ris_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")_
+  #lastVisitedOn(13,02,2024)
 
-- Documento "Glossario v1.1.0"\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
+- Documento #glo_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
+  #lastVisitedOn(13,02,2024)
 
 = Processi di accordo
 
@@ -1120,7 +1132,7 @@ Le misure devono soddisfare determinate caratteristiche di qualità, ovvero devo
 + tempestive;
 + economicamente vantaggiose.
 
-Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia espresse che implicite.
+Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia esplicite che implicite.
 
 === Risultati
 
@@ -1132,28 +1144,31 @@ A seguito dell'implementazione efficace del processo di misurazione:
 - i dati vengono analizzati e i risultati interpretati;
 - gli elementi informativi forniscono informazioni oggettive per poter prendere decisioni concrete.
 
+I risultati sono contenuti nel documento _Piano Di Qualifica_ v1.1.0.
+
 === Attività
 
-Il progetto deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito dal gruppo (parte di questo viene definito nel Piano di Qualifica):
+Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito nel _Piano di Qualifica_ v1.1.0:
 
 + prepararsi per la misurazione:
 
-    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi primari:
-        - BAC (Budget at Completion);
-        - AC (Actual Cost);
-        - PV (Planned Value);
-        - EV (Earned Value);
-        - CV (Cost Variance);
-        - SV (Schedule Variance);
-        - CPI (Cost Performance Index);
-        - EAC (Estimated at Completion);
-        - ETC (Estimated to Completion).
+    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di metriche mirate alla valutazione dei processi primari, quali:
+        + BAC (Budget at Completion);
+        + PV (Planned Value), che si estende in:
+          - SPV (Sprint Planned Value);
+          - PPV (Project Planned Value);
+        + AC (Actual Cost), che si estende in:
+          - SAC (Sprint Actual Cost);
+          - PAC (Project Actual Cost);
+        + EV (Earned Value), che si estende in:
+          - SEV (Sprint Earned Value);
+          - PEV (Project Earned Value);
+        + CPI (Cost Performance Index);
+        + EAC (Estimated at Completion).
 
     - definire la strategia di misurazione per i processi di supporto. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi di supporto:
-        - indice di Gulpease;
         - errori ortografici;
-        - metriche soddisfatte;
-        - code coverage.
+        - percentuale metriche soddisfatte.
 
     - descrivere le caratteristiche del gruppo rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici:
         - richieste del Proponente;
@@ -1177,8 +1192,10 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
     - raccogliere, archiviare e verificare i dati:
         - i dati prodotti vengono salvati e analizzati al fine di perorare una strategia di approccio ed eventuali modifiche da effettuare.
 
-    - registrare i risultati e comunicarli agli stakeholders:
-        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte.
+    - registrare i risultati e comunicarli agli stakeholder:
+        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste concordate.
+
+Maggiori dettagli in merito alla definizione, al calcolo e l'analisi delle metriche sono reperibili all'interno del documento _Piano di Qualifica_ v1.1.0
 
 == Processo di Controllo della Qualità <processo_controllo_qualità>
 

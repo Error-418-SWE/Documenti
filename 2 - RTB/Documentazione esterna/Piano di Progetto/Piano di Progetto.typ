@@ -2615,6 +2615,99 @@ Lo sprint 13 è stato caratterizzato da un momento di pausa, dovuto alla concomi
   caption: "Monitoraggio sprint 13"
 )
 
+== Sprint 14 dal 04-02-2024 al 11-02-2024
+
+=== Obiettivi raggiunti
+- Revisione, correzione ed estensione del documento #adr secondo il feedback ricevuto dal #cardin;
+- Estensione delle metriche riportate nella dashboard di monitoraggio;
+- Estensione dei termini di Glossario per riflettere i nuovi strumenti adottati;
+- Contattato il Proponente per fornire aggiornamenti sullo stato dei lavori e programmare gli incontri successivi al colloquio RTB.
+
+=== Obiettivi mancati
+Nessuno.
+
+=== Problematiche
+Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+- il carico di lavoro sul Verificatore è stato elevato;
+- numerosi conflitti di _merge_ dovuti al lavoro parallelo su ticket associati allo stesso documento;
+- la board Miro ha mostrato scarsità di riscontro su _Keep doings_ e _Improvements_ prima dell'incontro di retrospettiva.
+
+=== Risoluzioni attuate
+- I conflitti di _merge_ sono inevitabili quando più branch insistono sullo stesso documento. Durante questo sprint la maggior parte del lavoro è avvenuta sul documento #adr. Si cercherà di evitare la sovrapposizione di lavoro sui documenti coordinando il lavoro di redattori e Verificatori;
+- Il Responsabile ha sottolineato l'importanza di individuare _Keep doings_ e _Improvements_ prima dell'incontro di retrospettiva. Non si tratta di un'attività facoltativa, ma di un processo chiave nel miglioramento continuo del gruppo.
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [3],     [0],     [0],     [0],     [3],
+    [Carraro],     [0],     [1],     [1],     [0],     [0],     [2],     [4],
+    [Gardin],     [3],     [0],     [2],     [0],     [0],     [0],     [5],
+    [Nardo],     [0],     [0],     [2],     [0],     [0],     [3],     [5],
+    [Oseliero],     [0],     [2],     [0],     [0],     [0],     [2],     [4],
+    [Todesco],     [0],     [0],     [0],     [1],     [0],     [3],     [4],
+    [Zaccone],     [0],     [0],     [0],     [1],     [0],     [3],     [4],
+    [Totale ore],     [3],     [3],     [8],     [2],     [0],     [13],     [29],
+    [Costo ruolo],     [90],     [60],     [200],     [50],     [0],     [195],     [595],
+  ),
+  caption: "Prospetto del consuntivo, sprint 14"
+)
+#let data = (
+  ("Responsabile", 3, 3),
+  ("Amministratore", 3, 3),
+  ("Analista", 8, 8),
+  ("Progettista", 2, 2),
+  ("Programmatore", 0, 0),
+  ("Verificatore", 13, 13),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo sprint 14",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+La pianificazione di questo sprint è stata precisa e rispettata. Il lavoro del Verificatore è stato particolarmente intenso a causa delle numerose modifiche apportate al documento #adr.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [34],     [1020],
+    [Amministratore],     [34],     [680],
+    [Analista],     [40],     [1000],
+    [Progettista],     [24],     [600],
+    [Programmatore],     [165],     [2475],
+    [Verificatore],     [86],     [1290],
+    [Rimanente],     [383],     [7065],
+  ),
+  caption: "Monitoraggio, sprint 14"
+)
+
 // == Sprint n dal D1-M1-2024 al D2-M2-2024
 
 // === Obiettivi raggiunti

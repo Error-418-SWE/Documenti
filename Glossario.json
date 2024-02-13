@@ -74,13 +74,13 @@
     "acronyms": ["DB"],
     "synonyms": []
   },
-  "Diagrammi di Burndown": {
-    "description": "Rappresentazione visiva del lavoro ancora da svolgere confrontato con il tempo necessario a portarlo a termine. Facendo una stima del tempo necessario a completare le attività, risolvere i problemi ed eseguire i test, puoi determinare la data di completamento del progetto.",
+  "Diagrammi di burn down": {
+    "description": "Un burn down chart è una rappresentazione grafica del lavoro da fare su un progetto nel tempo. Di solito il lavoro rimanente (o backlog) è indicato sull'asse verticale e il tempo sull'asse orizzontale. Il diagramma rappresenta una serie storica del lavoro da fare. Facendo una stima del tempo necessario a completare le attività, risolvendo i problemi ed eseguendo i test, è possibile determinare la data di completamento del progetto.",
     "acronyms": [],
-    "synonyms": ["Burndown", "Burndown Chart"]
+    "synonyms": ["burn down", "burn down Chart"]
   },
   "Diagrammi di Gantt": {
-    "description": "Strumento di gestione dei progetti che illustra il lavoro completato in determinato periodo in relazione al tempo pianificato per quel lavoro. Un diagramma di Gantt può includere le date di inizio e di fine dei task, le milestone, le dipendenze tra i task, gli assegnatari e molto altro.",
+    "description": "Tipo di diagramma a barre che illustra la pianificazione di un progetto. Mostra le attività da completare sull'asse verticale e gli intervalli di tempo sull'asse orizzontale. Ogni attività è rappresentata da una barra orizzontale che inizia alla data di inizio dell'attività e termina alla data di fine dell'attività. La lunghezza e la posizione della barra riflettono la durata dell'attività e la sua relazione con le altre attività del progetto.",
     "acronyms": [],
     "synonyms": ["Gantt"]
   },
@@ -97,7 +97,7 @@
   "Docker Compose": {
     "description": "Strumento per la definizione e l'esecuzione di applicazioni multi-container",
     "acronyms": [],
-    "synonyms": ["Compose"]
+    "synonyms": []
   },
   "Documentazione": {
     "description": "È un testo scritto allo scopo di spiegare quali funzionalità assolve il software, come è strutturato, implementato e come lo si utilizza.",
@@ -105,12 +105,12 @@
     "synonyms": []
   },
   "Epic": {
-    "description": "Gli epic rappresentano obiettivi generali o grandi porzioni di lavoro che possono essere suddivisi in story, task e bug.",
+    "description": "Nella metodologia Agile, è una porzione di lavoro, rilasciabile in modo indipendente, che viene suddivisa in ticket. L'organizzazione del lavoro in epic aiuta a individuare gerarchie tra i ticket.",
     "acronyms": [],
     "synonyms": []
   },
   "Feature": {
-    "description": "Specifica funzionalità o caratteristica all'interno del prodotto sviluppato.",
+    "description": "Specifica funzionalità o caratteristica del prodotto sviluppato. Può essere richiesta esplicitamente dal Proponente o individuata dal Fornitore sulla base del processo di Analisi dei Requisiti.",
     "acronyms": [],
     "synonyms": []
   },
@@ -135,22 +135,27 @@
     "synonyms": []
   },
   "Google Apps Script": {
-    "description": "Apps Script è l'unica piattaforma low-code che consente di creare in modo rapido e veloce soluzioni aziendali che integrano, automatizzano e ampliano le funzionalità di Google Workspace.",
+    "description": "Linguaggio di scripting, basato su JavaScript, che permette di automatizzare compiti nei prodotti Google Workspace.",
     "acronyms": [],
     "synonyms": []
   },
   "Google Docs": {
     "description": "Elaboratore di testi online sincronizzato con Google Drive ed offerto come parte integrante dei servizi Google.",
     "acronyms": [],
-    "synonyms": ["Docs"]
+    "synonyms": []
   },
   "Google Drive": {
     "description": "Servizio di web cloud offerto da Google basato sull'archiviazione e condivisione di file e documenti all'interno di uno spazio condiviso e modificabile via web.",
     "acronyms": [],
-    "synonyms": ["Drive"]
+    "synonyms": []
   },
   "Google Workspace": {
-    "description": "Google Workspace è una suite di software e strumenti di produttività per il cloud computing e per la collaborazione, offerta da Google.",
+    "description": "È una suite di software e strumenti di produttività per il cloud computing e per la collaborazione, offerta da Google.",
+    "acronyms": [],
+    "synonyms": []
+  },
+  "Grafana": {
+    "description": "È una piattaforma open-source per la visualizzazione e la monitoraggio di dati. Permette di creare dashboard interattive e personalizzabili per metriche, log e altri dati provenienti da diverse sorgenti.",
     "acronyms": [],
     "synonyms": []
   },
@@ -159,7 +164,7 @@
     "acronyms": ["IEC"],
     "synonyms": []
   },
-  "Ingegneria del software": {
+  "Ingegneria del Software": {
     "description": "Disciplina che si occupa della progettazione, sviluppo, test e manutenzione del software. Adotta un approccio sistematico, disciplinato e quantificabile, che mira a creare software di alta qualità, affidabile e manutenibile. ",
     "acronyms": ["IS", "SWE"],
     "synonyms": []
@@ -320,19 +325,19 @@
     "synonyms": []
   },
   "Sprint": {
-    "description": "Uno sprint è un breve periodo di tempo, in cui un team Scrum collabora per completare una determinata quantità di lavoro. Gli sprint rappresentano una parte essenziale delle metodologie Scrum e Agile.",
+    "description": "Uno sprint è un breve periodo di tempo (una settimana nel nostro specifico caso), in cui un team Scrum collabora per completare una determinata quantità di lavoro. Gli sprint rappresentano una parte essenziale delle metodologie Scrum e Agile.",
     "acronyms": [],
     "synonyms": []
   },
   "Story Point": {
-    "description": "Unità di misura per esprimere una stima del lavoro complessivo richiesto per implementare completamente un elemento del backlog di prodotto o qualsiasi altra porzione di lavoro.",
+    "description": "Unità di misura per esprimere una stima del lavoro complessivo richiesto per implementare completamente un ticket.",
     "acronyms": [],
     "synonyms": []
   },
   "Ticket": {
-    "description": "Rappresentano il lavoro da completare a sostegno degli obiettivi più ampi. I bug sono problemi che ostacolano l'avanzamento o la funzionalità del lavoro.",
+    "description": "Rappresenta il lavoro da completare a sostegno degli obiettivi più ampi, ogni ticket è individuale e atomico.",
     "acronyms": [],
-    "synonyms": ["task", "story", "bug"]
+    "synonyms": ["task", "story"]
   },
   "Three.js": {
     "description": "Libreria JavaScript cross-browser utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL.",
@@ -386,8 +391,8 @@
   },
   "Way of Working": {
     "description": "Rappresenta il modo di lavorare del gruppo. È la descrizione di tutte le tecnologie, attività, metodologie adottate dal gruppo e di come queste sono utilizzate.",
-    "acronyms": ["WoW"],
-    "synonyms": []
+    "acronyms": ["WoW", "NdP"],
+    "synonyms": ["Norme di Progetto"]
   },
   "Zoom": {
     "description": "Servizio di videoconferenza basato su cloud che permette di effettuare chiamate audio o video. Consente di registrare le sessioni per essere poi visualizzate in seguito.",

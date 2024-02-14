@@ -714,7 +714,7 @@ Il tracciamento delle modifiche avviene per mezzo di automazioni che permettono 
 - autore della modifica;
 - revisore incaricato.
 
-Tali informazioni sono salvate in un file CSV, unico per ogni documento. Questo file, denominato log.csv, è salvato nella cartella dedicata al documento a cui si riferisce, e viene generato automaticamente da una GitHub Action invocata all'apertura, riapertura, sincronizzazione e chiusura di una pull request. Maggiori dettagli al paragrafo dedicato (@automazioni).
+Tali informazioni sono salvate in un file CSV, unico per ogni documento. Questo file, denominato _log.csv_, è salvato nella cartella dedicata al documento a cui si riferisce, e viene generato automaticamente da una GitHub Action invocata all'apertura, riapertura, sincronizzazione e chiusura di una pull request. Maggiori dettagli al paragrafo dedicato (@automazioni).
 
 Ogni documento, nella sezione direttamente sottostante all'indice, mostra in formato tabellare le informazioni relative al tracciamento delle modifiche, leggendo le informazioni dal file _log.csv_.
 
@@ -750,16 +750,16 @@ Documenti è organizzata in modo da suddividere la documentazione necessaria all
       - log.csv: registro delle modifiche associato al documento;
 - *PB*: contiene i file necessari alla Product Baseline.
 
-Al fine di garantire uno svolgimento delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _featuring branching_. È presente un branch per le release, un branch per lo sviluppo dal quale vengono creati dei branch per ogni nuova funzionalità o modifica da apportare.
-Quest'ultimi vengono identificati dal codice DOC-XXX, dove XXX è il numero del relativo task su Jira. I branch di feature vengono integrati tramite pull request.
+Al fine di garantire uno svolgimento delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _featuring branching_. È presente un branch per le release e un branch per lo sviluppo dal quale vengono creati dei branch per ogni nuova funzionalità o modifica da apportare.
+Questi ultimi vengono identificati dal codice DOC-XXX, dove XXX è il numero del relativo task su Jira. I branch di feature vengono integrati tramite pull request.
 
 ====== GitHub Actions <automazioni>
-L'intero processo di versionamento è accompagnato da una serie di automazioni, realizzate tramite GitHub Actions, che sollevano i componenti del gruppo dall'onere manuale di attività come la compilazione dei documenti, l'aggiornamento del registro delle modifiche (file log.csv) e la pubblicazione dei documenti dopo la verifica.
+L'intero processo di versionamento è accompagnato da una serie di automazioni, realizzate tramite GitHub Actions, che sollevano i componenti del gruppo dall'onere manuale di attività come la compilazione dei documenti, l'aggiornamento del registro delle modifiche (file _log.csv_) e la pubblicazione dei documenti dopo la verifica.
 
 *Workflow delle automazioni:*
 #figure(image("./imgs/flusso_actions.svg", format: "svg"), caption: [Workflow delle automazioni]);
 
-Alla creazione della pull request si avvia il workflow per la compilazione e la registrazione delle modifiche avvenute. Prima di procedere è necessario inserire informazioni essenziali ai fini di chiarezza e tracciabilità nel messaggio di pull request, quali:
+Alla creazione della pull request si avvia il workflow per la compilazione e la registrazione delle modifiche avvenute. Prima di procedere è necessario inserire informazioni essenziali ai fini di ottenere maggiore chiarezza e tracciabilità nel messaggio di pull request, quali:
 - titolo conforme, contenente il nome del task di riferimento su Jira legata alla pull request, nel formato _DOC-XXX titolo_;
 - identificativo di almeno un verificatore;
 - eventuali note aggiuntive.
@@ -774,10 +774,10 @@ Il workflow è composto dai seguenti passaggi:
 + *nel momento in cui la review termina con esito positivo, si procede al recupero della versione corrente del documento*:
   - se non esiste il corrispettivo pdf nel branch main, allora il documento non era mai stato pubblicato, pertanto la sua versione di partenza sarà fissata a 1.0.0;
   - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script python;
-+ *aggiornamento del file log.csv*: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
++ *aggiornamento del file _log.csv_*: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
 + *compilazione del documento*: aggiornato il file log.csv e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
 + *pubblicazione del documento*: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main della repository;
-+ *merge non confermato*: qualora a termine della compilazione del documento non venisse confermato il merge da parte del verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo `main` del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
++ *merge non confermato*: qualora a termine della compilazione del documento non venisse confermato il merge da parte del verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo main del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
 
 
 L'azione manuale si riduce solamente al rilascio di review e conferma di merge, mentre tutte le altre attività vengono automatizzate.
@@ -785,7 +785,7 @@ All'approvazione della pull request, e alla conseguente chiusura del branch, un'
 
 ====== Typst
 Il gruppo utilizza Typst come strumento di scrittura e compilazione dei documenti. \
-Al fine di dare una struttura comune ai documenti si è creato un file Template.typ parametrizzato, sfruttando la possibilità di produrre un file PDF compilando insieme più file Typst. Questo file contiene le impostazioni di base per la creazione di un documento:
+Al fine di dare una struttura comune ai documenti si è creato un file _template.typ_ parametrizzato, sfruttando la possibilità di produrre un file pdf compilando insieme più file Typst. Questo file contiene le impostazioni di base per la creazione di un documento:
 - `title`: titolo del documento;
 - `subTitle`: sottotitolo del documento;
 - `docType`: tipologia del documento (Verbale, Documento);
@@ -801,7 +801,7 @@ Al fine di dare una struttura comune ai documenti si è creato un file Template.
 - `showIndex`: flag che indica se mostrare l'indice;
 - `isExternalUse`: flag che indica se il documento è per uso esterno.
 Al momento della creazione di un nuovo documento sarà sufficiente importare il modello e specificare i parametri sopra elencati. \
-Al fine di semplificare la procedura di creazione di un documento, è stato condiviso un documento di testo denominato quickstart.txt che contiene la configurazione base per la stesura dei documenti.
+Al fine di semplificare la procedura di creazione di un documento, è stato condiviso un documento di testo denominato _quickstart.txt_ che contiene la configurazione base per la stesura dei documenti.
 
 ==== Tracciamento dei task e amministrazione dello stato di configurazione
 
@@ -819,7 +819,7 @@ Ogni task è identificato da un codice univoco incrementale nel formato `DOC-XXX
 
 Nel processo di versionamento e di tracciamento delle modifiche, Jira ricopre un ruolo fondamentale, grazie anche alla sua integrazione con GitHub: nel momento in cui si intende avviare un task, è necessario seguire i seguenti passaggi:
 - aprire il task su Jira;
-- selezionare l'opzione di creare un branch dedicato al task (integrazione con GitHub);
+- selezionare l'opzione di creazione di un branch dedicato al task (integrazione con GitHub);
 - selezionare la repository e il branch da cui creare il nuovo branch.
 
 A questo punto, il task si aggiornerà nello stato "In corso" e verrà aperto il relativo branch. Terminato il task ed effettuata la pull request, lo stato del ticket passerà automatica a "In verifica". Superato il processo di verifica, Jira provvederà ad aggiornare lo stato del task in "Completato".
@@ -830,14 +830,14 @@ A differenza dello sprint backlog definito durante la pianificazione, il backlog
 
 ====== Board
 Le board di Jira permettono, similmente allo sprint backlog, di avere una visione d'insieme delle attività da svolgere, ma con un approccio più visuale e intuitivo.
-I task sono organizzate in quattro colonne, rappresentanti lo stato:
+I task sono organizzati in quattro colonne, rappresentanti lo stato:
 - *da completare*: non ancora avviati, ovvero non esiste il branch dedicato;
 - *in corso*: in fase di svolgimento, ovvero branch dedicato al task creato;
 - *in verifica*: in fase di review, dopo l'apertura di una pull request;
 - *completato*: task concluso, ovvero branch dedicato chiuso a seguito di merge sul ramo principale.
 
 ====== Timeline
-La timeline di Jira permette di avere una visione delle attività incentrata sulle tempistiche e le relazione tra i task.
+La timeline di Jira permette di avere una visione delle attività incentrata sulle tempistiche e le relazioni tra i task.
 Permette inoltre di mostrare il grafico di Gantt delle attività evidenziando i rapporti di dipendenza tra i task e stabilendo le scadenze necessarie per il loro svolgimento.
 
 ====== Grafici

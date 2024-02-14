@@ -596,7 +596,7 @@ Come risultato dell'implementazione del processo di Gestione dei Rischi:
 - vengono identificate e priorizzate le opzioni di trattamento del rischio;
 - viene selezionato ed implementato un trattamento appropriato;
 - i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
-I risultati sono raccolti nel documento Analisi dei Rischi.
+I risultati sono raccolti nel documento #ris.
 
 === Attività e compiti
 
@@ -617,7 +617,7 @@ Il gruppo definisce approcci di trattamento appropriati, compresi piani di mitig
   Viene aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
 
 + *Fornitura del profilo di rischio rilevante agli stakeholder in base alle loro esigenze*:\
-  il profilo di rischio viene all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento Analisi dei Rischi v1.0.0. 
+  il profilo di rischio viene all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento #ris_v. 
 
 
 ==== Analisi dei rischi
@@ -630,7 +630,7 @@ Questa attività consiste nei seguenti compiti:
 ==== Trattamento dei rischi
 Questa attività consiste nei seguenti compiti:
 
-+ *definizione e registrazione delle strategie e delle misure di trattamento consigliate per ciascun rischio che superi la soglia di tolleranza*. Queste possono includere:\
++ *definizione e registrazione delle strategie e delle misure di trattamento consigliate per ciascun rischio che superi la soglia di tolleranza*. \ Queste possono includere:\
   - l'eliminazione del rischio;
   - la riduzione della sua probabilità o gravità;
   - l'accettazione del rischio.
@@ -646,7 +646,7 @@ Questa attività consiste nei seguenti compiti:
 
 + *monitoraggio continuo dei rischi e del contesto della loro gestione per eventuali loro cambiamenti*;
 
-+ *monitoraggio continuo dell'emergere di nuovi rischi durante l'intero ciclo di vita*.
++ *monitoraggio continuo di posibili nuovi rischi durante l'intero ciclo di vita*.
 
 Il monitoraggio dei rischi avviene principalmente in sede di meeting interno a seguito di analisi retrospettive.
 

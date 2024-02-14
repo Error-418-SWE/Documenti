@@ -1203,8 +1203,8 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.8_
 
 === Scopo
 
-La International Software Testing Qualifications Board (ISTQB) definisce il controllo della qualità come "attività incentrate sul garantire che i requisiti di qualità saranno soddisfatti".\
-Il processo di controllo della qualità ha quindi come obiettivo principale quello di garantire l'applicazione efficace del processo di gestione della qualità da parte del gruppo.\
+La International Software Testing Qualifications Board (ISTQB) definisce il processo di Controllo della Qualità come "insieme di attività incentrate sul garantire che i requisiti di qualità saranno soddisfatti".\
+Il processo di Controllo della Qualità ha come obiettivo principale quello di garantire l'applicazione efficace del processo di Gestione della Qualità da parte del gruppo.\
 Il suo focus fondamentale è fornire la sicurezza e la certezza che i requisiti di qualità stabiliti saranno pienamente soddisfatti.
 Questo si ottiene mediante un'analisi proattiva attenta dei processi e dei risultati che caratterizzano il ciclo di vita del progetto.\
 L'obiettivo è assicurare che il prodotto risponda alle aspettative in termini di qualità, e che ciò avvenga in piena conformità con le linee guida, le politiche e le procedure precedentemente definite.
@@ -1212,66 +1212,88 @@ In altre parole, la finalità ultima è garantire che la qualità desiderata sia
 
 === Risultati
 
-L'implementazione riuscita del processo di controllo della qualità produce i seguenti risultati:
+L'implementazione riuscita del processo di Controllo della Qualità produce i seguenti risultati:
 
-- le procedure di controllo della qualità del progetto sono definite e implementate;
-- vengono definiti criteri e metodi per la valutazione di controllo della qualità;
+- sono definite e implementate le procedure di Controllo della Qualità del progetto;
+- vengono definiti criteri e metodi per la valutazione di Controllo della Qualità;
 - vengono eseguite valutazioni dei prodotti, servizi e processi del progetto;
-- i risultati delle valutazioni vengono forniti agli stakeholders;
-- i problemi vengono trattati.
+- vengono forniti agli stakeholder i risultati delle valutazioni;
+- vengono trattati i problemi emersi durante il periodo di sviluppo.
 
 === Attività
 
 Le seguenti attività devono essere implementate in conformità con le politiche e le procedure del gruppo:
 
-+ prepararsi per il controllo della qualità:
++ *prepararsi per il Controllo della Qualità*:
 
-   - definire una strategia di controllo della qualità. Essa consiste in:
+   - *definire una strategia di Controllo della Qualità*. Essa consiste in:
 
-      + ruoli, responsabilità e autorità definite:
+      + *ruoli, responsabilità e autorità definite*:
         - i ruoli e i compiti di ciascun membro sono definiti e non ambigui;
         - ogni individuo fisico viene informato a scadenza bisettimanale dei propri compiti e delle proprie responsabilità per quel periodo di tempo.
 
-      + criteri di valutazione definiti per processi, prodotti e servizi:
-        - valore delle metriche di controllo dei processi primari entro il valore accettabile;
-        - valore delle metriche di controllo dei processi di supporto entro il valore accettabile;
-        - tempistiche da rispettare definite;
-        - requisiti funzionali definiti;
-        - requisiti non funzionali definiti.
+      + *criteri di valutazione definiti per processi, prodotti e servizi*:
+        - il valore delle metriche di controllo dei processi primari deve essere accettabile;
+        - il valore delle metriche di controllo dei processi di supporto deve essere accettabile;
+        - le tempistiche da rispettare devono essere definite;
+        - i requisiti funzionali devono essere definiti;
+        - i requisiti non funzionali devono essere definiti.
 
-      + attività di verifica, convalida, monitoraggio, misurazione, revisione per i prodotti o servizi:
+      + *attività di verifica, convalida, monitoraggio, misurazione, revisione per i prodotti o servizi*:
         - assegnazione di un Verificatore con il compito di monitorare e testare la qualità del materiale prodotto;
         - il Verificatore ha il compito di segnalare eventuali incongruenze con le metriche di qualità al redattore.
 
-      + risoluzione dei problemi e attività di miglioramento di processo e prodotto:
-        - modifiche effettuate su indicazioni del Verificatore.
+      + *risoluzione dei problemi e attività di miglioramento di processo e prodotto*:
+        - le modifiche devono essere effettuate su indicazioni del Verificatore.
 
-      + stabilire l'indipendenza del controllo della qualità dagli altri processi del ciclo di vita:
-         - il Verificatore è una persona fisica diversa da quella che ha redatto il documento.
+  - *stabilire l'indipendenza del controllo della qualità dagli altri processi del ciclo di vita*:
+         - il Verificatore deve essere una persona fisica diversa da quella che ha redatto il documento.
 
-+ eseguire valutazioni di processi, prodotti e servizi:
++ *eseguire valutazioni di processi, prodotti e servizi*:
 
-  + il Verificatore valuta i prodotti e i servizi al fine di garantire la conformità rispetto ai criteri stabiliti;
-  + il Verificatore si assicura che la verifica e la convalida degli output dei processi del ciclo di vita siano eseguiti conformemente con quanto concordato in precedenza;
-  + il Verificatore applica il processo di misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
-  + il Verificatore esprime un giudizio e segnala eventuali problematiche riscontrate.
+  + il Verificatore deve valutare i prodotti e i servizi al fine di garantirne la conformità rispetto ai criteri stabiliti;
+  + il Verificatore deve assicurarsi che la verifica e la convalida degli output dei processi del ciclo di vita siano eseguiti conformemente con quanto concordato in precedenza;
+  + il Verificatore deve applicare il processo di misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
+  + il Verificatore deve esprimere un giudizio e segnalare eventuali problematiche riscontrate.
 
-+ gestire rapporti del controllo della qualità:
++ *gestire report e record del Controllo della Qualità*:
 
- - essi consistono in:
+ - *l'attività consiste in*:
 
-  + stilare rapporti relativi alle attività di controllo della qualità:
-    - in sede di retrospettiva il Verificatore aggiorna il gruppo riguardo le attività di controllo qualità dello sprint in corso;
-    - redazione di un verbale contenente anche gli esiti del processo di controllo della qualità.
+  + *stilare report e record relativi alle attività di Controllo della Qualità*:
+    - i report e i record vengono generati tramite l'utilizzo coordinato di Jira, Google Sheets e Grafana che porta alla creazione di un cruscotto di qualità. Si rimanda a @tecnologie_controllo per ulteriori dettagli.
 
-  + mantenere, archiviare e distribuire i rapporti;
+  + *mantenere, archiviare e distribuire i report*:
+    - il cruscotto di qualità è consultabile in ogni momento da ogni membro del gruppo, che possiede un link per accedervi. L'aggiornamento del cruscotto avviene in automatico e in tempo reale grazie al suo collegamento con Jira.
 
-  + identificare incidenti e problemi associati alle valutazioni effettuate.
+  + *identificare incidenti e problemi associati alle valutazioni effettuate*:
+    - in sede di retrospettiva, il gruppo lavora in modo coordinato per identificare gli incidenti e i problemi, servendosi delle informazioni presentate dal Verificatore tramite il cruscotto di qualità;
+    - l'Amministratore si occupa della redazione di un verbale contenente anche gli esiti del processo di Controllo della Qualità.
 
-+ trattare incidenti e problemi:
+  + *trattare incidenti e problemi*:
 
-  + in caso di segnalazione di incidenti e problemi viene svolto un lavoro collettivo tra Verificatore e redattore per la loro risoluzione;
-  + nel caso tali problemi o incidenti siano di carattere generale, viene avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
+    + in caso di segnalazione di incidenti e problemi deve essere svolto un lavoro collettivo per la loro risoluzione;
+    + tutte le criticità devono prevedere risoluzioni e arginamenti già predisposti all'interno del documento dell'_Analisi dei Rischi_ v1.0.0.
+    + nel caso tali problemi o incidenti siano di carattere generale, deve essere avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
+
+==== Tecnologie <tecnologie_controllo>
+===== Jira
+Jira, essendo l'ITS del gruppo, è la fonte principale di informazioni per il cruscotto di qualità.
+===== Google Sheets
+Google Sheets viene utilizzato per rendere meglio manipolabili i dati provenienti da Jira, in modo da poterli analizzare con più facilità e calcolare comodamente metriche come CPI, EAC, EV.
+===== Grafana
+Grafana è l'applicazione utilizzata per visualizzare i dati raccolti tramite l'implementazione di un cruscotto di qualità. Le informazioni mostrate sono le seguenti:
+  - sprint rimanenti;
+  - budget rimanente;
+  - rapporto EAC e BAC;
+  - andamento CPI;
+  - rapporto PPV, PAC e PEV;
+  - metriche soddisfatte;
+  - ore svolte e rimanenti per ruolo;
+  - task svolti;
+  - story point per stato;
+  - bug aperti.
+I dati sono visualizzati sottoforma di grafici, per aiutarne l'analisi e la comprensione, e sono consultabili in ogni momento dal gruppo.
 
 = Processi tecnici
 

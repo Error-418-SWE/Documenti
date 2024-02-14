@@ -637,9 +637,11 @@ Questa attività consiste nei seguenti compiti:
 
   Vengono anche registrate informazioni sull'efficacia delle alternative di trattamento.
 
-+ *nel caso di accettazione di un rischio al di sopra della soglia, attribuzione di priorità elevata e monitoraggio costante per valutare la necessità di futuri interventi di trattamento del rischio o eventuali modifiche della sua priorità*;
++ *nel caso di accettazione di un rischio al di sopra della soglia, attribuzione di priorità elevata e monitoraggio costante*:\
+  pratica necessaria per valutare la necessità di futuri interventi di trattamento del rischio o eventuali modifiche della sua priorità*;
 
-+ *coordinamento dell'azione di gestione dopo la selezione di una strategia di trattamento del rischio*:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di valutazione e controllo del progetto può essere applicato.
++ *coordinamento dell'azione di gestione dopo la selezione di una strategia di trattamento del rischio*:\ 
+  dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di valutazione e controllo del progetto può essere applicato.
 
 ==== Monitoraggio dei rischi
 Questa attività consiste nei seguenti compiti:

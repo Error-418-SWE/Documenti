@@ -1663,7 +1663,7 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
 Tutti gli obiettivi sono stati raggiunti.
 
 === Problematiche
-Il gruppo ha notato in fase di retrospettiva una scarsa reattività in fase di review e verifica, che portano al rallentamento del lavoro. Le review sono state rallentate anche dalla presenza di numerosi merge conflicts, che il gruppo si è ritrovato a gestire per la prima volta nel progetto.
+Il gruppo ha riportato una scarsa reattività durante il processo di review e verifica, con conseguente rallentamento del lavoro. Le review sono state rallentate anche dalla presenza di numerosi merge conflicts, che il gruppo si è ritrovato a gestire per la prima volta nel progetto.
 
 Inoltre si è presa coscienza della necessità di apportare migliorie al processo di gestione di Jira.
 

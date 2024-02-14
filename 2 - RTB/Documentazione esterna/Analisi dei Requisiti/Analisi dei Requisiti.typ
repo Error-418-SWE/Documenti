@@ -797,7 +797,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente seleziona un bin che contiene un prodotto;
 - l'utente sposta il prodotto all'interno di un bin vuoto;
-- vengono inviate alle API RESTful le coordinate di origine e destinazione del prodotto;
+- vengono inviati all'API RESTful il bin di partenza e di destinazione del prodotto;
 - viene verificata la fattibilità dello spostamento dalle API RESTful;
 - viene inviata una notifica di spostamento al magazzino tramite API RESTful;
 - i due bin, di origine e di destinazione, vengono evidenziati per segnalare lo spostamento in corso.

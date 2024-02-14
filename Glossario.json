@@ -72,7 +72,7 @@
   "Cruscotto di qualità": {
     "description": "Prodotto del Piano di Qualifica, luogo in cui vengono generati i grafici delle metriche scelte usando i dati riportati nel Piano di Progetto",
     "acronyms": [],
-    "synonyms": []
+    "synonyms": ["dashboard di monitoraggio"]
   },
   "Database": {
     "description": "Insieme di informazioni (o dati) strutturate, in genere archiviate elettronicamente in un sistema informatico. Solitamente i database sono gestiti da un DBMS (Database Management System), il quale deve garantire efficacia, efficienza, privacy ed affidabilità.",

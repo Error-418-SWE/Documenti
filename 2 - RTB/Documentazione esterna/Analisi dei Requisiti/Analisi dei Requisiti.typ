@@ -812,15 +812,16 @@ $bold("Precondizioni: ")$
 - uno dei due bin deve essere vuoto.
 
 $bold("Postcondizioni: ")$
-- viene inviata una richiesta di spostamento al magazzino tramite l'uso di API;
 - il bin di partenza viene evidenziato in modo da identificare il fatto che da quel bin è in atto uno spostamento;
 - il bin di arrivo viene evidenziato in modo da identificare il fatto che in quel bin è in atto uno spostamento.
 
 $bold("Scenario: ")$
 - l'utente seleziona un bin che contiene un prodotto;
-- l'utente sposta il prodotto all'interno di un altro bin vuoto;
-- viene inviata una notifica a magazzino che segnala lo spostamento;
-- i due bin, di partenza e di arrivo, vengono evidenziati per segnalare lo spostamento in corso.
+- l'utente sposta il prodotto all'interno di un bin vuoto;
+- vengono inviati all'API RESTful il bin di partenza e di destinazione del prodotto;
+- viene verificata la fattibilità dello spostamento dalle API RESTful;
+- viene inviata una notifica di spostamento al magazzino tramite API RESTful;
+- i due bin, di origine e di destinazione, vengono evidenziati per segnalare lo spostamento in corso.
 
 = Visualizzazione di un bin
 

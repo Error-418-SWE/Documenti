@@ -13,6 +13,31 @@
   isExternalUse: true,
 );
 
+#let requirements = json("Requisiti.json");
+#let derivedRequirements(reference) = {
+  box(width: 1fr, stroke: 0.5pt + luma(140), inset: 3pt)[
+    #text("Requisiti derivati: ", weight: "bold")
+    #text(requirements.at(reference).join(", ") + ".")
+  ]
+}
+
+// WIP, non rimuovere
+//
+// #let placeDerivedRequirements() = {
+//   let header = locate(loc => {
+//     let elems = query(selector(heading).before(loc), loc)
+//     if elems == () {
+//       panic("La funzione non ha rilevato di essere in una sezione di UC.")
+//     }
+//     else {
+//       text("Requisiti derivati: ", weight: "bold")
+//       requirements.at(elems.last().numbering).join(", ")
+//       "."
+//     }
+//   })
+//   header
+// }
+
 = Introduzione
 
 == Scopo del documento
@@ -232,10 +257,7 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
   ],
 )
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(0) {
-  list(value)
-}
+#derivedRequirements("UC-1")
 
 === Importazione mappa magazzino da file SVG
 $bold("Descrizione: ")$
@@ -257,10 +279,7 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-1.1.1 Visualizzazione errore lettura del file SVG.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(1) {
-  list(value)
-}
+#derivedRequirements("UC-1.1")
 
 ==== Visualizzazione errore lettura del file SVG
 $bold("Descrizione: ")$
@@ -283,10 +302,7 @@ $bold("Generalizzazioni: ")$
 - UC-1.1.1.1 Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni;
 - UC-1.1.1.2 Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(2) {
-  list(value)
-}
+#derivedRequirements("UC-1.1.1")
 
 ===== Visualizzazione errore file privo di informazioni
 $bold("Descrizione: ")$
@@ -306,10 +322,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - L'utente ha caricato un file SVG vuoto o con informazioni non utili.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(3) {
-  list(value)
-}
+#derivedRequirements("UC-1.1.1.1")
 
 ===== Visualizzazione errore informazioni del file incongruenti
 $bold("Descrizione: ")$
@@ -329,10 +342,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(4) {
-  list(value)
-}
+#derivedRequirements("UC-1.1.1.2")
 
 === Creazione magazzino vuoto
 $bold("Descrizione: ")$
@@ -351,10 +361,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente crea un ambiente di lavoro vuoto con dimensioni predefinite.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(5) {
-  list(value)
-}
+#derivedRequirements("UC-1.2")
 
 == Modifica dimensioni del magazzino <uc2>
 
@@ -388,10 +395,7 @@ $bold("Estensioni: ")$
 - UC-2.1 Visualizzazione errore dimensioni magazzino troppo piccole;
 - UC-2.2 Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(6) {
-  list(value)
-}
+#derivedRequirements("UC-2")
 
 === Visualizzazione errore dimensioni magazzino troppo piccole
 
@@ -412,10 +416,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente vuole ridurre le dimensioni dell'ambiente oltre una soglia minima.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(7) {
-  list(value)
-}
+#derivedRequirements("UC-2.1")
 
 === Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
 
@@ -435,10 +436,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente vuole ridurre la dimensione dell'ambiente nonostante l'ambiente di lavoro contenga elementi le cui posizioni non risulterebbero più valide alle nuove dimensioni ridotte.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(8) {
-  list(value)
-}
+#derivedRequirements("UC-2.2")
 
 == Gestione scaffali <uc3>
 #figure(
@@ -448,10 +446,7 @@ $bold("Requisiti derivati: ")$
   ],
 )
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(9) {
-  list(value)
-}
+#derivedRequirements("UC-3")
 
 === Creazione scaffale
 $bold("Descrizione: ")$
@@ -481,10 +476,7 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(10) {
-  list(value)
-}
+#derivedRequirements("UC-3.1")
 
 === Modifica scaffale
 $bold("Descrizione: ")$
@@ -517,10 +509,7 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(11) {
-  list(value)
-}
+#derivedRequirements("UC-3.2")
 
 === Spostamento scaffale
 $bold("Descrizione: ")$
@@ -542,10 +531,7 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-3.3.1 Visualizzazione errore spostamento dello scaffale in zona non libera
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(12) {
-  list(value)
-}
+#derivedRequirements("UC-3.3")
 
 ==== Visualizzazione errore spostamento dello scaffale in zona non libera
 $bold("Descrizione: ")$
@@ -564,10 +550,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente ha richiesto lo spostamento di uno scaffale in una zona non libera.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(13) {
-  list(value)
-}
+#derivedRequirements("UC-3.3.1")
 
 === Eliminazione scaffale
 $bold("Descrizione: ")$
@@ -593,10 +576,7 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-3.4.1 Visualizzazione errore scaffale da eliminare non vuoto.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(14) {
-  list(value)
-}
+#derivedRequirements("UC-3.4")
 
 ==== Visualizzazione errore scaffale da eliminare non vuoto
 $bold("Descrizione: ")$
@@ -615,10 +595,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(15) {
-  list(value)
-}
+#derivedRequirements("UC-3.4.1")
 
 == Gestione bin <uc4>
 #figure(
@@ -628,10 +605,7 @@ $bold("Requisiti derivati: ")$
   ],
 )
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(16) {
-  list(value)
-}
+#derivedRequirements("UC-4")
 
 === Creazione di un bin
 $bold("Descrizione: ")$
@@ -654,10 +628,7 @@ $bold("Scenario: ")$
 - l'utente inserisce la profondità del bin;
 - l'utente posiziona il bin in una posizione valida nell'ambiente di lavoro.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(17) {
-  list(value)
-}
+#derivedRequirements("UC-4.1")
 
 === Modifica di un bin
 $bold("Descrizione: ")$
@@ -687,10 +658,7 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(18) {
-  list(value)
-}
+#derivedRequirements("UC-4.2")
 
 === Eliminazione bin
 $bold("Descrizione: ")$
@@ -715,10 +683,7 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-4.3.1 Errore cancellazione bin non vuoto.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(19) {
-  list(value)
-}
+#derivedRequirements("UC-4.3")
 
 ==== Errore cancellazione bin non vuoto
 $bold("Descrizione: ")$
@@ -737,10 +702,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di un bin non vuoto.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(20) {
-  list(value)
-}
+#derivedRequirements("UC-4.3.1")
 
 == Visualizzazione errore inserimento dati dimensionali non validi <uc5>
 #figure(
@@ -769,10 +731,7 @@ $bold("Generalizzazioni: ")$
 - UC-5.1.1 Dimensioni negative o uguali a 0;
 - UC-5.1.2 Dimensioni eccessive.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(21) {
-  list(value)
-}
+#derivedRequirements("UC-5")
 
 === Dimensioni negative o uguali a zero
 $bold("Descrizione: ")$
@@ -791,10 +750,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente minori o uguali a zero.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(22) {
-  list(value)
-}
+#derivedRequirements("UC-5.1")
 
 === Dimensioni eccessive
 $bold("Descrizione: ")$
@@ -813,10 +769,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente eccessivi.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(23) {
-  list(value)
-}
+#derivedRequirements("UC-5.2")
 
 == Caricamento dati da database <uc6>
 
@@ -849,10 +802,7 @@ $bold("Inclusioni: ")$
 $bold("Estensioni: ")$
 - UC-6.2 Visualizzazione messaggio di errore.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(24) {
-  list(value)
-}
+#derivedRequirements("UC-6")
 
 === Configurazione collegamento al database
 $bold("Descrizione: ")$
@@ -872,10 +822,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente configura l'accesso al database.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(25) {
-  list(value)
-}
+#derivedRequirements("UC-6.1")
 
 === Visualizzazione messaggio di errore
 $bold("Descrizione: ")$
@@ -894,10 +841,7 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere (es. numero scaffali/bin incompatibile con le coordinate dei prodotti).
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(26) {
-  list(value)
-}
+#derivedRequirements("UC-6.2")
 
 == Richiesta di spostamento di un prodotto <uc7>
 
@@ -930,10 +874,7 @@ $bold("Scenario: ")$
 - viene inviata una notifica a magazzino che segnala lo spostamento;
 - i due bin, di partenza e di arrivo, vengono evidenziati per segnalare lo spostamento in corso.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(27) {
-  list(value)
-}
+#derivedRequirements("UC-7")
 
 == Visualizzazione di un bin <uc8>
 
@@ -957,17 +898,14 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente seleziona un bin;
-- vengono visualizzate le seguenti informazioni relative al bin selezionato: 
+- vengono visualizzate le seguenti informazioni relative al bin selezionato:
   - codice identificativo del bin;
   - stato del bin (occupato o vuoto);
   - tipologia di prodotto che contiene, in caso di bin non vuoto;
   - id dello scaffale che lo contiene;
   - posizione del bin all'interno dello scaffale (piano e colonna).
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(28) {
-  list(value)
-}
+#derivedRequirements("UC-8")
 
 == Visualizzazione di uno scaffale <uc9>
 
@@ -1002,10 +940,7 @@ $bold("Scenario: ")$
   - numero di piani;
   - numero di colonne.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(29) {
-  list(value)
-}
+#derivedRequirements("UC-9")
 
 == Ricerca prodotti <uc10>
 
@@ -1037,10 +972,7 @@ $bold("Generalizzazioni: ")$
 - UC-10.2 Ricerca per Nome;
 - UC-10.3 Ricerca per Scaffale.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(30) {
-  list(value)
-}
+#derivedRequirements("UC-10")
 
 === Ricerca per ID
 $bold("Descrizione: ")$
@@ -1059,10 +991,7 @@ $bold("Scenario: ")$
 - l'utente ricerca un prodotto usando come chiave l'ID univoco di magazzino;
 - il bin contenente il prodotto cercato viene evidenziato.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(31) {
-  list(value)
-}
+#derivedRequirements("UC-10.1")
 
 === Ricerca per Nome
 $bold("Descrizione: ")$
@@ -1082,10 +1011,7 @@ $bold("Scenario: ")$
 - il bin contenente il prodotto cercato viene evidenziato;
 - i prodotti associati al nome possono essere più di uno.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(32) {
-  list(value)
-}
+#derivedRequirements("UC-10.2")
 
 === Ricerca per Scaffale
 $bold("Descrizione: ")$
@@ -1104,10 +1030,7 @@ $bold("Scenario: ")$
 - l'utente ricerca i materiali contenuti all'interno di uno scaffale del magazzino;
 - lo scaffale viene evidenziato.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(33) {
-  list(value)
-}
+#derivedRequirements("UC-10.3")
 
 == Esplorazione magazzino <uc11>
 
@@ -1118,10 +1041,7 @@ $bold("Requisiti derivati: ")$
   ],
 )
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(34) {
-  list(value)
-}
+#derivedRequirements("UC-11")
 
 === Spostamento della visuale lungo gli assi
 $bold("Descrizione: ")$
@@ -1143,10 +1063,7 @@ $bold("Scenario: ")$
 - l'utente può spostare la visuale del magazzino lungo l'asse longitudinale;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(35) {
-  list(value)
-}
+#derivedRequirements("UC-11.1")
 
 === Rotazione della visuale
 $bold("Descrizione: ")$
@@ -1167,10 +1084,7 @@ $bold("Scenario: ")$
 - l'utente può ruotare la visuale in senso antiorario;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(36) {
-  list(value)
-}
+#derivedRequirements("UC-11.2")
 
 === Zoom della visuale
 $bold("Descrizione: ")$
@@ -1191,10 +1105,7 @@ $bold("Scenario: ")$
 - l'utente può allontanarsi dal magazzino e dai suoi elementi tramite uno zoom-out;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
-$bold("Requisiti derivati: ")$
-#for value in requirements.values().at(37) {
-  list(value)
-}
+#derivedRequirements("UC-11.3")
 
 #set heading(numbering: "1.1")
 
@@ -1324,7 +1235,7 @@ Dove:
     [FM-11.3], [Obbligatorio], [L'utente deve poter effettuare operazioni di zoom della visuale], [UC-11.3],
     [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom-in], [UC-11.3],
     [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom-out], [UC-11.3],
-    
+
     [FM-12], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login], [Capitolato],
 
     [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato]

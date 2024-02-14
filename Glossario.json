@@ -82,17 +82,17 @@
   "Cruscotto di qualità": {
     "description": "Prodotto del Piano di Qualifica, luogo in cui vengono generati i grafici delle metriche scelte usando i dati riportati nel Piano di Progetto",
     "acronyms": [],
-    "synonyms": []
+    "synonyms": ["dashboard di monitoraggio"]
   },
   "Database": {
     "description": "Insieme di informazioni (o dati) strutturate, in genere archiviate elettronicamente in un sistema informatico. Solitamente i database sono gestiti da un DBMS (Database Management System), il quale deve garantire efficacia, efficienza, privacy ed affidabilità.",
     "acronyms": ["DB"],
     "synonyms": []
   },
-  "Diagrammi di burn down": {
-    "description": "Un burn down chart è una rappresentazione grafica del lavoro da fare su un progetto nel tempo. Di solito il lavoro rimanente (o backlog) è indicato sull'asse verticale e il tempo sull'asse orizzontale. Il diagramma rappresenta una serie storica del lavoro da fare. Facendo una stima del tempo necessario a completare le attività, risolvendo i problemi ed eseguendo i test, è possibile determinare la data di completamento del progetto.",
+  "Diagrammi di burndown": {
+    "description": "Un burndown chart è una rappresentazione grafica del lavoro da fare su un progetto nel tempo. Di solito il lavoro rimanente (o backlog) è indicato sull'asse verticale e il tempo sull'asse orizzontale. Il diagramma rappresenta una serie storica del lavoro da fare.",
     "acronyms": [],
-    "synonyms": ["burn down", "burn down Chart"]
+    "synonyms": ["burndown", "burndown chart"]
   },
   "Diagrammi di Gantt": {
     "description": "Tipo di diagramma a barre che illustra la pianificazione di un progetto. Mostra le attività da completare sull'asse verticale e gli intervalli di tempo sull'asse orizzontale. Ogni attività è rappresentata da una barra orizzontale che inizia alla data di inizio dell'attività e termina alla data di fine dell'attività. La lunghezza e la posizione della barra riflettono la durata dell'attività e la sua relazione con le altre attività del progetto.",
@@ -427,7 +427,7 @@
   "Use Case": {
     "description": "Caso (o situazione) in cui il sistema viene utilizzato per soddisfare uno o più requisiti degli utenti; cattura una parte di funzionalità che il sistema fornisce. Vengono spesso rappresentati tramite diagrammi realizzati con il linguaggio UML.",
     "acronyms": ["UC"],
-    "synonyms": ["Casi d'uso"]
+    "synonyms": ["caso d'uso", "casi d'uso"]
   },
   "Utente": {
     "description": "Colui che usufruisce dell'applicazione e delle sue funzionalità.",

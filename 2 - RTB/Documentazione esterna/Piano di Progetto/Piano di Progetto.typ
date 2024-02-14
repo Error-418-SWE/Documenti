@@ -4,7 +4,7 @@
 #import "/template.typ": *
 
 #show: project.with(
- title:"Piano di Progetto",
+ title: "Piano di Progetto",
  subTitle: "Pianificazione, analisi e retrospettive",
  authors: (
    "Banzato Alessio",

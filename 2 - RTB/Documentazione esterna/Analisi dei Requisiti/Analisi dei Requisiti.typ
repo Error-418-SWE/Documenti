@@ -211,20 +211,20 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 
 #pagebreak()
 
+= Use Case
+
 #set heading(numbering: (..nums) => {
   let values = nums.pos();
   if (values.len() > 0){
-      values.at(values.len()-1) = values.at(values.len()-1);
+      values.at(values.len() - 1) = values.at(values.len() - 1);
   }
-  values.at(0) = values.at(0)-3;
-  return "UC-"+values.map(str).join(".");
+  values = values.slice(1)
+  return "UC--" + values.map(str).join(".");
 })
 
 #set par(first-line-indent: 0pt)
 
-#let requirements = json("Requisiti.json");
-
-= Creazione magazzino <uc1>
+== Creazione magazzino <uc1>
 #figure(
   image("./imgs/uc1.png", format: "png"),
   caption: [
@@ -237,7 +237,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Importazione mappa magazzino da file SVG
+=== Importazione mappa magazzino da file SVG
 $bold("Descrizione: ")$
 all'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
 
@@ -262,7 +262,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-=== Visualizzazione errore lettura del file SVG
+==== Visualizzazione errore lettura del file SVG
 $bold("Descrizione: ")$
 il file caricato dall'utente non ha permesso al programma di configurare l'ambiente di lavoro.
 
@@ -288,7 +288,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-==== Visualizzazione errore file privo di informazioni
+===== Visualizzazione errore file privo di informazioni
 $bold("Descrizione: ")$
 il file SVG caricato non contiene informazioni utili alla configurazione dell'ambiente.
 
@@ -311,7 +311,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-==== Visualizzazione errore informazioni del file incongruenti
+===== Visualizzazione errore informazioni del file incongruenti
 $bold("Descrizione: ")$
 il file SVG caricato contiene informazioni incongruenti e quindi non utilizzabili per la configurazione dell'ambiente.
 
@@ -334,7 +334,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Creazione magazzino vuoto
+=== Creazione magazzino vuoto
 $bold("Descrizione: ")$
 all'avvio dell'applicativo è possibile creare un ambiente vuoto di dimensioni predefinite da cui iniziare. Tale funzionalità, rimane disponibile durante l'utilizzo dell'applicativo qualora si volesse ripristinare l'ambiente.
 
@@ -356,7 +356,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-= Modifica dimensioni del magazzino
+== Modifica dimensioni del magazzino <uc2>
 
 #figure(
   image("./imgs/uc2.png", format: "png"),
@@ -393,7 +393,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Visualizzazione errore dimensioni magazzino troppo piccole
+=== Visualizzazione errore dimensioni magazzino troppo piccole
 
 $bold("Descrizione: ")$
 l'utente vuole modificare le dimensioni dell'ambiente riducendole eccessivamente.
@@ -417,7 +417,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
+=== Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
 
 $bold("Descrizione: ")$
 dato un ambiente con elementi posizionati (come scaffali e/o bin), l'utente cerca di ridurre le dimensioni dell'ambiente in modo eccessivo, non permettendo di mantenere gli elementi precedentemente posizionati.
@@ -440,7 +440,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-= Gestione scaffali
+== Gestione scaffali <uc3>
 #figure(
   image("./imgs/uc3.png", format: "png"),
   caption: [
@@ -453,7 +453,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Creazione scaffale
+=== Creazione scaffale
 $bold("Descrizione: ")$
 uno scaffale viene creato in base ai valori inseriti dall'utente quali: altezza, larghezza, profondità, numero di piani e colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
 Quindi viene aggiunto nell'ambiente in una posizione valida specificata. Successivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
@@ -486,7 +486,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Modifica scaffale
+=== Modifica scaffale
 $bold("Descrizione: ")$
 modifica delle caratteristiche di uno scaffale già esistente.
 
@@ -522,7 +522,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Spostamento scaffale
+=== Spostamento scaffale
 $bold("Descrizione: ")$
 l'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
 
@@ -547,7 +547,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-=== Visualizzazione errore spostamento dello scaffale in zona non libera
+==== Visualizzazione errore spostamento dello scaffale in zona non libera
 $bold("Descrizione: ")$
 è stata richiesto lo spostamento di uno scaffale in una zona non libera.
 
@@ -569,7 +569,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Eliminazione scaffale
+=== Eliminazione scaffale
 $bold("Descrizione: ")$
 lo scaffale selezionato presente nell'ambiente viene eliminato.
 
@@ -598,7 +598,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-=== Visualizzazione errore scaffale da eliminare non vuoto
+==== Visualizzazione errore scaffale da eliminare non vuoto
 $bold("Descrizione: ")$
 è stata richiesta l'eliminazione di uno scaffale contenente almeno un bin non vuoto.
 
@@ -620,7 +620,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-= Gestione bin
+== Gestione bin <uc4>
 #figure(
   image("./imgs/uc4.png", format: "png"),
   caption: [
@@ -633,7 +633,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Creazione di un bin
+=== Creazione di un bin
 $bold("Descrizione: ")$
 deve essere possibile creare e aggiungere nell'ambiente delle aree adibite a contenere prodotti, definite nel contesto come bin. In fase di creazione deve essere possibile definire le caratteristiche che il bin dovrà avere, quali: altezza, larghezza e profondità.
 
@@ -659,7 +659,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Modifica di un bin
+=== Modifica di un bin
 $bold("Descrizione: ")$
 modifica delle caratteristiche di un bin esterno già esistente.
 
@@ -692,7 +692,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Eliminazione bin
+=== Eliminazione bin
 $bold("Descrizione: ")$
 deve essere possibile eliminare un bin.
 
@@ -720,7 +720,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-=== Errore cancellazione bin non vuoto
+==== Errore cancellazione bin non vuoto
 $bold("Descrizione: ")$
 è stata richiesta l'eliminazione di un bin non vuoto.
 
@@ -742,7 +742,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-= Visualizzazione errore inserimento dati dimensionali non validi
+== Visualizzazione errore inserimento dati dimensionali non validi <uc5>
 #figure(
   image("./imgs/uc5.png", format: "png"),
   caption: [
@@ -774,7 +774,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Dimensioni negative o uguali a zero
+=== Dimensioni negative o uguali a zero
 $bold("Descrizione: ")$
 le dimensioni inserite per la modifica dell'elemento interessato sono minori o uguali a zero.
 
@@ -796,7 +796,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Dimensioni eccessive
+=== Dimensioni eccessive
 $bold("Descrizione: ")$
 le dimensioni inserite per la modifica dell'elemento interessato eccessive per il contesto di inserimento.
 
@@ -818,7 +818,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-= Caricamento dati da database
+== Caricamento dati da database <uc6>
 
 #figure(
   image("./imgs/uc6.png", format: "png"),
@@ -854,7 +854,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Configurazione collegamento al database
+=== Configurazione collegamento al database
 $bold("Descrizione: ")$
 l'utente imposta i dati necessari affinché il programma possa configurarsi con il database in cui sono contenuti i dati.
 
@@ -877,7 +877,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Visualizzazione messaggio di errore
+=== Visualizzazione messaggio di errore
 $bold("Descrizione: ")$
 i dati contenuti nel database sono in un formato non conforme o sono errati.
 
@@ -899,7 +899,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-= Richiesta di spostamento di un prodotto
+== Richiesta di spostamento di un prodotto <uc7>
 
 #figure(
   image("./imgs/uc7.png", format: "png"),
@@ -935,7 +935,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-= Visualizzazione di un bin
+== Visualizzazione di un bin <uc8>
 
 #figure(
   image("./imgs/uc8.png", format: "png"),
@@ -969,7 +969,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-= Visualizzazione di uno scaffale
+== Visualizzazione di uno scaffale <uc9>
 
 #figure(
   image("./imgs/uc9.png", format: "png"),
@@ -1007,7 +1007,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-= Ricerca prodotti
+== Ricerca prodotti <uc10>
 
 #figure(
   image("./imgs/uc10.png", format: "png"),
@@ -1042,7 +1042,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Ricerca per ID
+=== Ricerca per ID
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto tramite il suo ID di magazzino.
 
@@ -1064,7 +1064,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Ricerca per Nome
+=== Ricerca per Nome
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto tramite il nome associato al prodotto.
 
@@ -1087,7 +1087,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Ricerca per Scaffale
+=== Ricerca per Scaffale
 $bold("Descrizione: ")$
 l'utente ricerca i prodotti contenuti all'interno di uno scaffale del magazzino.
 
@@ -1109,7 +1109,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-= Esplorazione magazzino
+== Esplorazione magazzino <uc11>
 
 #figure(
   image("./imgs/uc11.png", format: "png", width: 60%),
@@ -1123,7 +1123,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Spostamento della visuale lungo gli assi
+=== Spostamento della visuale lungo gli assi
 $bold("Descrizione: ")$
 successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può visualizzare il magazzino e spostare la visuale lungo almeno uno dei tre assi (orizzontale, verticale, longitudinale).
 
@@ -1148,7 +1148,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Rotazione della visuale
+=== Rotazione della visuale
 $bold("Descrizione: ")$
 successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può visualizzare il magazzino e ruotare la visuale sul magazzino in senso orario o antiorario.
 
@@ -1172,7 +1172,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-== Zoom della visuale
+=== Zoom della visuale
 $bold("Descrizione: ")$
 successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può effettuare uno zoom-in o uno zoom-out per avvicinare o allontanare la visuale dal magazzino.
 
@@ -1196,14 +1196,7 @@ $bold("Requisiti derivati: ")$
   list(value)
 }
 
-#set heading(numbering: (..nums) => {
-  let values = nums.pos();
-  if (values.len() > 0){
-      values.at(values.len()-1) = values.at(values.len()-1);
-  }
-  values.at(0) = values.at(0)-10;
-  return values.map(str).join(".");
-})
+#set heading(numbering: "1.1")
 
 = Requisiti
 

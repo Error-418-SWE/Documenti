@@ -14,6 +14,7 @@
 = Ordine del giorno
 - Valutazione del progresso generale;
 - Analisi di retrospettiva;
+- Seconda parte RTB con #vardanega
 - Pianificazione.
 
 == Valutazione del progresso generale
@@ -57,7 +58,7 @@ Le soluzioni concordate dal gruppo in relazione alle cricità trovate durante la
  quando il verificatore si trova in difficolta vista la grande mole di lavoro in review, un membro può aiutare approvando le task più piccole. Questo contribuisce a snellire il numero di pr aperte ed evita che i nuovi branch aperti siano troppo indietro rispetto a src;
 + maggiore attenzione nella struttra dei verbali da parte dei redattori e dei revisori.
 
-== Revisione seconda parte RTB con #vardanega
+== Seconda parte RTB con #vardanega
 
 Il gruppo di comune accordo ha deciso di inviare al #vardanega la mail di candidatura per la seconda perte della revisione RTB. Il responsabile è stato incaricato di scrivire la mail e, mercoledì 14/02/24, inviarla (il giorno è stato scelto in modo da permettere il tempo necessario al completamento delle ultime task in vista del colloquio).\
 È stato ritenuto necessario quindi iniziare la bozza della presentazione, sulla base di un brainstorming per identificare le possibili slide e le domande che il professore potrebbe avere interesse a fare. Sono stati identificati due giorni (lunedì 12/02/24 e martedì 13/02/24) per suddividere gli argomenti tra i membri del gruppo e provare la presentazione.

@@ -12,15 +12,27 @@
 );
 
 = Ordine del giorno
-- Retrospettiva sprint 14;
+- Valutazione dell'avanzamento;
 - Soluzioni adottate;
 - Pianificazione sprint 15.
 
-== Retrospettiva sprint 14
-Il gruppo apre la riunione analizzando l'andamento dello sprint appena concluso. \
-Si è fatto notare come, nonostante fosse il primo sprint di lavoro dopo il warm start, si sia lavorato molto bene come dimostra la mole di ticket chiusi sulla board Jira.
-A contribuire al successo dello sprint 14 troviamo una buonissima pianificazione iniziale delle task, e la modalità di lavoro asincrona ormai totalmente assorbita dal gruppo.\
-Tra le criticità evidenziate troviamo un basso utilizzo di Miro per i meeting di retrospettiva, ritardi nelle correzioni delle pr e una struttura dei verbali non sempre conforme.
+== Valutazione dell'avanzamento
+Il gruppo apre la riunione analizzando l'andamento dello sprint appena concluso. La riunione si è concentrata soprattutto sullo stato delle review dei documenti in vista della revisione RTB con il #vardanega e la pianificazione in vista della parte di PB.\
+È stato fatto notare come, nonostante fosse il primo sprint di lavoro dopo il warm start, si sia lavorato molto bene, come dimostrato dalla mole di ticket chiusi sulla board Jira.\
+A contribuire al successo dello sprint 14 troviamo una buonissima pianificazione iniziale delle task, e la modalità di lavoro asincrona ormai totalmente assorbita dal gruppo.
+
+=== Revisione documenti
+
+Si è avanzato molto nella generale review dei documenti, il maggiore sforzo è stato riservato ai documenti: #ndp, #pdp, #pdq, #adr.\
+Il lavoro riguardante l'#adr ha visto l'adattamento in merito al feedback ricevuto dal #cardin in seguito alla revisione RTB.\
+Il lavoro su #pdp e #pdq segue dal big bang attuato durante gli sprint precedenti e viene concluso.
+
+=== Criticità  
+
+Tra le criticità evidenziate troviamo:
+- un basso utilizzo di Miro per i meeting di retrospettiva;
+- ritardi nelle correzioni delle pr 
+- struttura dei verbali non sempre conforme.
 
 == Soluzioni adottate
 Le soluzioni concordate dal gruppo in relazione alle cricità trovate durante la retrospettiva sono:

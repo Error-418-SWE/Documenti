@@ -30,42 +30,54 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
 
 - Standard ISO/IEC/IEEE 12207:2017:\
   _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
+  #lastVisitedOn(13,02,2024)
 
 - Standard ISO/IEC/IEEE 29148:2018:\
-  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_;
+  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_
+  #lastVisitedOn(13,02,2024)
 
 - SWEBOK:\
   _#link("http://swebokwiki.org/Main_Page;")_
+  #lastVisitedOn(13,02,2024)
 
 - Specifica Unified Modeling Language 2:\
   _#link("https://www.omg.org/spec/UML/")_
+  #lastVisitedOn(13,02,2024)
 
 - Regolamento di Progetto:\
-  #link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
+  #lastVisitedOn(13,02,2024)
 
-- Capitolato d'appalto C5: _WMS3_\
-  #link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")
+- Capitolato d'appalto C5: _WMS3_: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
+  #lastVisitedOn(13,02,2024)
 
 === Riferimenti informativi
 
-- Documentazione Typst\
-  #link("https://typst.app/docs/")
+- Documentazione Typst: \
+  _#link("https://typst.app/docs/")_
+  #lastVisitedOn(13,02,2024)
 
-- Documentazione Git\
-  #link("https://git-scm.com/docs")
+- Documentazione Git: \
+  _#link("https://git-scm.com/docs")_
+  #lastVisitedOn(13,02,2024)
 
-- Documentazione Jira\
-  #link("https://confluence.atlassian.com/jira")
+- Documentazione Jira: \
+  _#link("https://confluence.atlassian.com/jira")_
+  #lastVisitedOn(13,02,2024)
 
-- Documentazione Three.js\
-  #link("https://threejs.org/docs/")
+- Documentazione Three.js: \
+  _#link("https://threejs.org/docs/")_
+  #lastVisitedOn(13,02,2024)
 
 === Riferimenti a documentazione interna
-- Documento "Analisi dei Rischi v2.0.0"\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")
+- Documento #ris_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")_
+  #lastVisitedOn(13,02,2024)
 
-- Documento "Glossario v1.1.0"\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
+- Documento #glo_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
+  #lastVisitedOn(13,02,2024)
 
 = Processi di accordo
 
@@ -411,7 +423,7 @@ I principi della comunicazione che ispirano i processi di gestione dell'infrastr
 
 + Comunicazione frequente: la frequenza della comunicazione permette di prendere decisioni in modo tempestivo e informato.
 
-===== Comunicazione interna
+===== Comunicazione interna <comunicazione_interna>
 
 #link("https://discord.com/")[*Discord*] rappresenta il canale primario di comunicazione interna. È una piattaforma di comunicazione che fornisce:
 
@@ -650,9 +662,18 @@ L'autorizzazione ad avanzare alla successiva milestone di progetto viene concess
 
 == Processo di gestione delle Decisioni <processo_gestione_decisioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
-=== Scopo
-Lo scopo del processo di gestione delle decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionando la migliore in termini di benefici attesi, costi e rischi associati. \
 
+=== Scopo
+Lo scopo del processo di Gestione delle Decisioni è fornire un quadro strutturato per identificare, categorizzare e valutare le decisioni che si intendono intraprendere, selezionando la migliore in termini di benefici attesi, costi e rischi associati. \
+
+=== Risultati
+Come risultato dell'efficace attuazione del processo di Gestione delle Decisioni:
+- vengono identificate le decisioni che richiedono un'analisi alternativa;
+- vengono identificati e valutati i percorsi di azione alternativi;
+- viene selezionato un percorso di azione preferito;
+- vengono identificate la risoluzione, la giustificazione della decisione e le ipotesi che portano ad una sua necessità.
+
+=== Attività
 ==== Presentazione delle decisioni
 Ogni decisione viene presentata identificandone:
 - tipologia;
@@ -662,49 +683,56 @@ Ogni decisione viene presentata identificandone:
 - svantaggi;
 - impatto in termini di tempi e costi.
 
-Il processo di decision making viene prevalentemente svolto nel meeting di retrospettiva, in modo da non contrastare la pianificazione dello sprint in corso ed evitare un eccessivo numero di meeting interni che potrebbero comportare difficoltà organizzative e un rallentamnto dell'avanzamento.
+Il processo di decision making viene prevalentemente svolto nel meeting di retrospettiva, in modo da non contrastare la pianificazione dello sprint in corso ed evitare un eccessivo numero di meeting interni che potrebbero comportare difficoltà organizzative e un rallentamento dell'avanzamento. Alcune decisioni potrebbero richiedere il coinvolgimento di soggetti esterni, come Proponente e Committente, soprattutto nei casi in cui sia richiesta una figura con maggiore esperienza nel campo di riferimento.
 Solo decisioni critiche riguardo cambiamenti sostanziali o nuove direzioni di lavoro possono far scaturire meeting interni mirati.
 
 Il resoconto di quanto deciso sarà visibile all'interno del verbale redatto a fine meeting.
 
-==== Tipologie delle Decisioni
-Le decisioni possono riguardare diversi aspetti del capitolato, e la loro categorizzazione è utile per individuare la migliore strategia di gestione e i ruoli coinvolti.
-
-Le decisioni vengono dunque così classificate:
-+ Decisioni organizzative: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto:
-  - documento soggetto a modifiche: Norme di progetto;
-  - ruoli responsbili dell'aggiornamento: Responsabile;
-  - strategia di decision-making: collaborativa.
-
-+ Decisioni sui requisiti: sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
-  - documento soggetto a modifiche: Analisi dei requisiti;
-  - ruoli responsbili dell'aggiornamento: Analisti;
-  - strategia di decision-making: collaborativa.
-
-+ Decisioni di implementazione: sono decisioni relative alla stesura del codice:
-  - documento soggetto a modifiche: Norme di progetto, documenti tecnici (diagramma delle classi,...);
-  - ruoli responsbili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
-  - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
-
-+ Decisioni architetturali: sono decisioni relative ai pattern e alle architetture riguardanti il software.
-  - documento soggetto a modifiche: Norme di progetto, documenti tecnici (diagramma delle classi,...);
-  - ruoli responsbili dell'aggiornamento: Responsabile, Progettisti;
-  - strategia di decision-making: expertise decision-making che prevede la consultazione di figure dotate di maggiore esperienza come Proponente o Committente.
-
-+ Decisioni sulla qualità: sono decisioni relative ai controlli di qualità.
-  - documento soggetto a modifiche: Piano di qualifica;
-  - ruoli responsbili dell'aggiornamento: Responsabile, Verificatori;
-  - strategia di decision-making: collaborativa.
-
-==== Strategie di decision-making utilizzate
-+ Strategia collaborativa: prevede che la decisione venga presentata e votata in modo collaborativo, coinvolgendo tutti i membri del gruppo e mediante una votazione con un sistema maggioritario, in modo che il risultato rappresenti la volontà della maggioranza.\ Strategia utilizzata per le decisioni:
+===== Strategie di decision-making utilizzate
++ *Strategia collaborativa*: prevede che la decisione venga presentata e votata in modo collaborativo, coinvolgendo tutti i membri del gruppo e mediante una votazione con un sistema maggioritario, in modo che il risultato rappresenti la volontà della maggioranza.\ Strategia utilizzata per le decisioni:
   - organizzative;
   - dei requisiti;
   - qualitative.
 
-+ Strategia expertise decision-making: prevede che la decisione venga presentata e analizzata mediante la consultazione di figure esterne più esperte, individuabili nel Proponente o nel Committente, la cui esperienza risulta determinante. \ Questa strategia viene utilizzata per le decisioni:
++ *Strategia expertise decision-making*: prevede che la decisione venga presentata e analizzata mediante la consultazione di figure esterne più esperte, individuabili nel Proponente o nel Committente, la cui esperienza risulta determinante. \ Questa strategia viene utilizzata per le decisioni:
   - implementative;
-  - architetturali. \
+  - tecnologiche;
+  - architetturali.
+
+
+==== Analisi delle decisioni
+Le decisioni possono riguardare diversi aspetti del capitolato, e la loro categorizzazione è utile per individuare la migliore strategia di gestione e i ruoli coinvolti.
+
+Le decisioni vengono dunque così classificate:
++ *Decisioni organizzative*: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto. Esempi notevoli sono le decisioni focalizzate alla coordinazione del gruppo o alla scelta degli strumenti da utilizzare per la gestione del progetto (ad esempio: scelta dell'ITS, delle piattaforme per la comunicazione e per la collaborazione):
+  - documento soggetto a modifiche: `Norme di Progetto`;
+  - ruoli responsabili dell'aggiornamento: Responsabile, Amministratori;
+  - strategia di decision-making: collaborativa.
+
++ *Decisioni tecnologiche*: sono relative allo stack tecnologico da adottare durante lo sviluppo del progetto:
+  - documento soggetto a modifiche: `Norme di Progetto`;
+  - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
+  - strategia di decision-making: expertise decision-making.
+
++ *Decisioni sui requisiti*: sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
+  - documento soggetto a modifiche: `Analisi dei Requisiti`;
+  - ruoli responsabili dell'aggiornamento: Analisti;
+  - strategia di decision-making: collaborativa.
+
++ *Decisioni di implementazione*: sono decisioni relative alla stesura del codice:
+  - documento soggetto a modifiche: `Norme di Progetto`, documenti tecnici (diagramma delle classi);
+  - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
+  - strategia di decision-making: expertise decision-making.
+
++ *Decisioni architetturali*: sono decisioni relative ai pattern e alle architetture riguardanti il software:
+  - documento soggetto a modifiche: `Norme di Progetto`, documenti tecnici (diagramma delle classi, diagramma dei casi d'uso);
+  - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
+  - strategia di decision-making: expertise decision-making.
+
++ *Decisioni sulla qualità*: sono decisioni relative ai controlli di qualità:
+  - documento soggetto a modifiche: `Piano di Qualifica`;
+  - ruoli responsabili dell'aggiornamento: Responsabile, Verificatori;
+  - strategia di decision-making: collaborativa.
 
 
 == Processo di Gestione dei Rischi <processo_gestione_rischi>
@@ -719,60 +747,61 @@ Come risultato dell'implementazione del processo di Gestione dei Rischi:
 - vengono identificate e priorizzate le opzioni di trattamento del rischio;
 - viene selezionato ed implementato un trattamento appropriato;
 - i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
+I risultati sono raccolti nel documento #ris.
 
 === Attività e compiti
-Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
 
-==== Pianificare la Gestione dei Rischi
+==== Pianificazione della Gestione dei Rischi
 La strategia di Gestione dei Rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. \
-La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
-Nello specifico l'impatto può essere "lieve", "medio" o "grave" in base alla sua entità mentre la probabilità di occorrenza viene identificata tramite un valore intero da 1 a 5, dove 1 esprime una probabilità molto bassa, mentre 5 esprime una frequenza attesa sostenuta.\
-Il team definisce approcci di trattamento appropriati, compresi piani di mitigazione specifici.
+Ad ogni rischio individuato viene associato un profilo basato sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
+L'impatto può essere "lieve", "medio" o "grave" in base alla sua entità.
+La probabilità di occorrenza viene identificata tramite un valore intero da 1 a 5, dove 1 esprime una probabilità molto bassa, mentre 5 esprime una frequenza attesa sostenuta.\
+Il gruppo definisce approcci di trattamento appropriati, compresi piani di mitigazione specifici.
 
-==== Gestire il profilo di rischio
-- Definire e registrare le soglie e le condizioni di rischio:\
+==== Gestione del profilo di rischio
++ *Definizione e registrazione delle soglie e delle condizioni di rischio*:\
   le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto.
   I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
 
-- Stabilire e mantenere un profilo di rischio:\
-  il profilo di rischio contiene informazioni sul contesto della Gestione dei Rischi, il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
-  Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
++ *Creazione e mantenimento di un profilo di rischio*:\
+  il profilo di rischio contiene tutte le informazioni necessarie per la Gestione dei Rischi, come il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
+  Viene aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
 
-- Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:\
-  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento Analisi dei Rischi v2.0.0. 
++ *Fornitura del profilo di rischio rilevante agli stakeholder in base alle loro esigenze*:\
+  il profilo di rischio viene all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento #ris_v. 
 
 
-==== Analizzare i rischi
+==== Analisi dei rischi
 Questa attività consiste nei seguenti compiti:
 
-+ identificare i rischi nelle categorie descritte nel contesto della Gestione dei Rischi:\ l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
++ *identificazione del rischio ed associazione ad uno specifico profilo, secondo quanto descritto nella pianificazione della Gestione dei Rischi*:\ l'identificazione avviene durante tutte le fasi di sviluppo. Inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
 
-+ stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato:\ per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
++ *valutazione di ciascun rischio rispetto alle sue soglie di accettazione*:\ ogni rischio viene valutato rispetto alle soglie stabilite, il superamento delle quali attiva delle modalità di trattamento specifiche.
 
-+ valutare ciascun rischio rispetto alle sue soglie di accettazione:\ ogni rischio viene valutato rispetto alle soglie stabilite, il superamento delle quali attiva delle modalità di trattamento specifiche.
-
-==== Trattare i rischi
+==== Trattamento dei rischi
 Questa attività consiste nei seguenti compiti:
 
-+ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate. Queste possono includere:\
++ *definizione e registrazione delle strategie e delle misure di trattamento consigliate per ciascun rischio che superi la soglia di tolleranza*. \ Queste possono includere:\
   - l'eliminazione del rischio;
   - la riduzione della sua probabilità o gravità;
   - l'accettazione del rischio.
 
-  Vengono anche registrate informazioni sull'efficacia delle alternative di trattamento.
+  Vengono anche registrate informazioni sull'efficacia delle alternative di trattamento;
 
-+ quando viene accettato un rischio che non soddisfa la sua soglia, va considerato di priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
++ *nel caso di accettazione di un rischio al di sopra della soglia, attribuzione di priorità elevata e monitoraggio costante*:\
+  pratica necessaria per valutare la necessità di futuri interventi di trattamento del rischio o eventuali modifiche della sua priorità;
 
-+ una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
++ *coordinamento dell'azione di gestione dopo la selezione di una strategia di trattamento del rischio*:\ 
+  dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di valutazione e controllo del progetto può essere applicato.
 
-==== Monitorare i rischi
+==== Monitoraggio dei rischi
 Questa attività consiste nei seguenti compiti:
 
-- monitorare continuamente i rischi e il contesto della Gestione dei Rischi per eventuali loro cambiamenti;
++ *monitoraggio continuo dei rischi e del contesto della loro gestione per eventuali loro cambiamenti*;
 
-- monitorare continuamente l'emergere di nuovi rischi durante l'intero ciclo di vita.
++ *monitoraggio continuo di possibili nuovi rischi durante l'intero ciclo di vita*.
 
-Il monitoraggio dei rischi avviene principalmente in sede di meeting interno, specialmente a seguito di analisi retrospettive.
+Il monitoraggio dei rischi avviene principalmente in sede di meeting interno a seguito di analisi retrospettive.
 
 
 == Processo di gestione della configurazione <processo_gestione_configurazione>
@@ -953,10 +982,11 @@ La timeline permette di mostrare il grafico di Gantt delle attività evidenziand
 Jira offre la possibilità di produrre grafici e report relativi all'avanzamento e alla tracciabilità delle task. Tali strumenti permettono di avere delle metriche di valutazione dell'andamento del progetto e di individuare eventuali criticità.
 Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story points di ogni attività.
 
-== Processo di gestione delle informazioni <processo_gestione_informazioni>
+== Processo di Gestione delle Informazioni <processo_gestione_informazioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.6_
+
 === Scopo
-Lo scopo della gestione delle informazionie è generare, ottenere, confermare, trasformare, conservare, recuperare, distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
+Lo scopo del processo di Gestione delle Informazioni è generare, ottenere, confermare, trasformare, conservare, recuperare e distribuire le informazioni e la relativa documentazione agli stakeholder interessati, garantendone chiarezza, completezza, consistenza, tracciabilità e presentazione.
 
 Le informazioni possono essere tecniche, di progetto, organizzative e di accordo.
 
@@ -970,18 +1000,22 @@ Le informazioni gestite dal gruppo sono:
   - Glossario;
   - Verbali.
 - codice sorgente:
-  - Proof of Concept;
-  - Minimun Viable Product.
+  - Proof of Concept (PoC);
+  - Minimum Viable Product (MVP).
 
 Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e distribuiti all'interno dei repository del gruppo.
 
 === Documentazione
-==== Struttura <struttura-documenti>
-Ogni documento segue una struttura standard, stabilita nel template _template.typ_. I documenti pertanto sono così strutturati:
-+ *Cover page*: la cover page è la prima pagina del documento, e contiene le seguenti informazioni:
+
+==== Struttura dei documenti <struttura-documenti>
+Ogni documento segue una struttura standard, stabilita nel template _template.typ_. \
+Questo paragrafo non tratta della struttura dei verbali. Per le norme sulla struttura dei verbali si rimanda alla @struttura-verbali.\
+I documenti pertanto sono così strutturati:
+
++ *Cover page*: la cover page è la pagina iniziale del documento. Essa contiene le seguenti informazioni:
   - nome del gruppo;
   - link all'organizzazione GitHub;
-  - mail del gruppo;
+  - indirizzo e-mail del gruppo;
   - logo;
   - titolo del documento;
   - sottotitolo del documento;
@@ -992,19 +1026,20 @@ Ogni documento segue una struttura standard, stabilita nel template _template.ty
   - redattori;
   - verificatori;
   - destinatari;
-  - figure esterne se presenti.
+  - partecipanti esterni (se presenti).
 
-+ *Registro delle modifiche*: sezione successiva agli indici. Maggiori dettagli sono visibili alla sezione dedicata (@tracciamento-modifiche).
++ *Registro delle modifiche*: sezione successiva alla cover page. Maggiori dettagli sono disponibili alla sezione dedicata (@tracciamento-modifiche);
 
-+ *Indici*: sezione successiva agli indici. Sono presenti tre tipologie di indici:
++ *Indici*: Sono presenti tre tipologie di indici:
     - indice del contenuto: indice sempre presente che rappresenta i paragrafi del documento;
     - indice delle tabelle: indice presente solo se sono presenti tabelle nel documento;
     - indice delle figure: indice presente solo se sono presenti figure nel documento.
 
-+ *Contenuto del file*: sezione successiva alla tabella di tracciamento delle modifiche. Rappresenta il corpo del documento, suddiviso in paragrafi.
++ *Contenuto del file*: sezione successiva agli indici. Rappresenta il corpo del documento, suddiviso in paragrafi.
 
-===== Verbali
-I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e ridotta lunghezza. I verbali sono così strutturati:
+==== Struttura dei verbali <struttura-verbali>
+I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e la struttura semplificata. I verbali sono così strutturati:
+
 - *cover page* (@struttura-documenti);
 - *informazioni generali*:
   - luogo;
@@ -1013,15 +1048,15 @@ I verbali assumono una struttura diversa rispetto agli altri documenti, dato il 
   - assenti;
   - referente aziendale (se presente).
 - *ordine del giorno*: elenco degli argomenti trattati durante la riunione;
-- *organizzazione attività*: elenco delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva.
+- *organizzazione attività*: elenco e spiegazione delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva;
 - *firma partecipanti esterni* (se presenti): firma dei partecipanti esterni alla riunione.
 
 === Stile e convenzioni
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.
 L'obiettivo è perseguire:
-- Chiarezza;
-- Leggibilità;
-- Mantenibilità.
+- chiarezza;
+- leggibilità;
+- manutenibilità.
 
 ==== Convenzioni stilistiche globali
 Convenzioni stilistiche valide sia per i prodotti documentali che software.
@@ -1063,17 +1098,17 @@ MAIUSCOLO:
 - nomi propri;
 - nomi strumenti e tecnologie;
 - iniziale nomi ruoli;
-- iniziale parole nei nomi documenti ad eccezione di preposizioni e articoli. Riferimento nomi file @norma_nomi_documenti.
+- iniziale parole nei nomi documenti ad eccezione di preposizioni e articoli. Riferimento nomi file disponibile alla @norma_nomi_documenti.
 
 `Monospace`:\
-- nome di un file (Riferimento nomi file @norma_nomi_documenti);
+- nome di un file (Riferimento nomi file disponibile alla @norma_nomi_documenti);
 - parametri;
 - porzioni di codice.
 
 ===== Elenchi
 - si utilizzano elenchi numerati se gli elementi mostrati richiedono un ordine (es. ordine delle sezioni);
 - si utilizzano elenchi non numerati se gli elementi mostrati non richiedono un ordine (es. lista di attività);
-- al termine di ogni elemento viene posto ";" ad eccezione dell'ultimo elemento che viene posto ".".
+- al termine di ogni punto dell'elenco viene posto ";" ad eccezione dell'ultimo elemento a cui viene posto ".".
 
 ===== Glossario
 Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una G in corsivo a pedice.
@@ -1098,7 +1133,7 @@ Le misure devono soddisfare determinate caratteristiche di qualità, ovvero devo
 + tempestive;
 + economicamente vantaggiose.
 
-Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia espresse che implicite.
+Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di un'entità, che ne determinano la capacità di soddisfare esigenze sia esplicite che implicite.
 
 === Risultati
 
@@ -1110,28 +1145,31 @@ A seguito dell'implementazione efficace del processo di misurazione:
 - i dati vengono analizzati e i risultati interpretati;
 - gli elementi informativi forniscono informazioni oggettive per poter prendere decisioni concrete.
 
+I risultati sono contenuti nel documento _Piano Di Qualifica_ v1.1.0.
+
 === Attività
 
-Il progetto deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito dal gruppo (parte di questo viene definito nel Piano di Qualifica):
+Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito nel _Piano di Qualifica_ v1.1.0:
 
 + prepararsi per la misurazione:
 
-    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi primari:
-        - BAC (Budget at Completion);
-        - AC (Actual Cost);
-        - PV (Planned Value);
-        - EV (Earned Value);
-        - CV (Cost Variance);
-        - SV (Schedule Variance);
-        - CPI (Cost Performance Index);
-        - EAC (Estimated at Completion);
-        - ETC (Estimated to Completion).
+    - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di metriche mirate alla valutazione dei processi primari, quali:
+        + BAC (Budget at Completion);
+        + PV (Planned Value), che si estende in:
+          - SPV (Sprint Planned Value);
+          - PPV (Project Planned Value);
+        + AC (Actual Cost), che si estende in:
+          - SAC (Sprint Actual Cost);
+          - PAC (Project Actual Cost);
+        + EV (Earned Value), che si estende in:
+          - SEV (Sprint Earned Value);
+          - PEV (Project Earned Value);
+        + CPI (Cost Performance Index);
+        + EAC (Estimated at Completion).
 
     - definire la strategia di misurazione per i processi di supporto. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi di supporto:
-        - indice di Gulpease;
         - errori ortografici;
-        - metriche soddisfatte;
-        - code coverage.
+        - percentuale metriche soddisfatte.
 
     - descrivere le caratteristiche del gruppo rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici:
         - richieste del Proponente;
@@ -1155,8 +1193,10 @@ Il progetto deve implementare le seguenti attività in conformità con le politi
     - raccogliere, archiviare e verificare i dati:
         - i dati prodotti vengono salvati e analizzati al fine di perorare una strategia di approccio ed eventuali modifiche da effettuare.
 
-    - registrare i risultati e comunicarli agli stakeholders:
-        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste fatte.
+    - registrare i risultati e comunicarli agli stakeholder:
+        - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste concordate.
+
+Maggiori dettagli in merito alla definizione, al calcolo e l'analisi delle metriche sono reperibili all'interno del documento _Piano di Qualifica_ v1.1.0
 
 == Processo di Controllo della Qualità <processo_controllo_qualità>
 
@@ -1164,8 +1204,8 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.8_
 
 === Scopo
 
-La International Software Testing Qualifications Board (ISTQB) definisce il controllo della qualità come "attività incentrate sul garantire che i requisiti di qualità saranno soddisfatti".\
-Il processo di controllo della qualità ha quindi come obiettivo principale quello di garantire l'applicazione efficace del processo di gestione della qualità da parte del gruppo.\
+La International Software Testing Qualifications Board (ISTQB) definisce il processo di Controllo della Qualità come "insieme di attività incentrate sul garantire che i requisiti di qualità saranno soddisfatti".\
+Il processo di Controllo della Qualità ha come obiettivo principale quello di garantire l'applicazione efficace del processo di Gestione della Qualità da parte del gruppo.\
 Il suo focus fondamentale è fornire la sicurezza e la certezza che i requisiti di qualità stabiliti saranno pienamente soddisfatti.
 Questo si ottiene mediante un'analisi proattiva attenta dei processi e dei risultati che caratterizzano il ciclo di vita del progetto.\
 L'obiettivo è assicurare che il prodotto risponda alle aspettative in termini di qualità, e che ciò avvenga in piena conformità con le linee guida, le politiche e le procedure precedentemente definite.
@@ -1173,66 +1213,88 @@ In altre parole, la finalità ultima è garantire che la qualità desiderata sia
 
 === Risultati
 
-L'implementazione riuscita del processo di controllo della qualità produce i seguenti risultati:
+L'implementazione riuscita del processo di Controllo della Qualità produce i seguenti risultati:
 
-- le procedure di controllo della qualità del progetto sono definite e implementate;
-- vengono definiti criteri e metodi per la valutazione di controllo della qualità;
+- sono definite e implementate le procedure di Controllo della Qualità del progetto;
+- vengono definiti criteri e metodi per la valutazione di Controllo della Qualità;
 - vengono eseguite valutazioni dei prodotti, servizi e processi del progetto;
-- i risultati delle valutazioni vengono forniti agli stakeholders;
-- i problemi vengono trattati.
+- vengono forniti agli stakeholder i risultati delle valutazioni;
+- vengono trattati i problemi emersi durante il periodo di sviluppo.
 
 === Attività
 
 Le seguenti attività devono essere implementate in conformità con le politiche e le procedure del gruppo:
 
-+ prepararsi per il controllo della qualità:
++ *prepararsi per il Controllo della Qualità*:
 
-   - definire una strategia di controllo della qualità. Essa consiste in:
+   - *definire una strategia di Controllo della Qualità*. Essa consiste in:
 
-      + ruoli, responsabilità e autorità definite:
+      + *ruoli, responsabilità e autorità definite*:
         - i ruoli e i compiti di ciascun membro sono definiti e non ambigui;
         - ogni individuo fisico viene informato a scadenza bisettimanale dei propri compiti e delle proprie responsabilità per quel periodo di tempo.
 
-      + criteri di valutazione definiti per processi, prodotti e servizi:
-        - valore delle metriche di controllo dei processi primari entro il valore accettabile;
-        - valore delle metriche di controllo dei processi di supporto entro il valore accettabile;
-        - tempistiche da rispettare definite;
-        - requisiti funzionali definiti;
-        - requisiti non funzionali definiti.
+      + *criteri di valutazione definiti per processi, prodotti e servizi*:
+        - il valore delle metriche di controllo dei processi primari deve essere accettabile;
+        - il valore delle metriche di controllo dei processi di supporto deve essere accettabile;
+        - le tempistiche da rispettare devono essere definite;
+        - i requisiti funzionali devono essere definiti;
+        - i requisiti non funzionali devono essere definiti.
 
-      + attività di verifica, convalida, monitoraggio, misurazione, revisione per i prodotti o servizi:
+      + *attività di verifica, convalida, monitoraggio, misurazione, revisione per i prodotti o servizi*:
         - assegnazione di un Verificatore con il compito di monitorare e testare la qualità del materiale prodotto;
         - il Verificatore ha il compito di segnalare eventuali incongruenze con le metriche di qualità al redattore.
 
-      + risoluzione dei problemi e attività di miglioramento di processo e prodotto:
-        - modifiche effettuate su indicazioni del Verificatore.
+      + *risoluzione dei problemi e attività di miglioramento di processo e prodotto*:
+        - le modifiche devono essere effettuate su indicazioni del Verificatore.
 
-      + stabilire l'indipendenza del controllo della qualità dagli altri processi del ciclo di vita:
-         - il Verificatore è una persona fisica diversa da quella che ha redatto il documento.
+  - *stabilire l'indipendenza del controllo della qualità dagli altri processi del ciclo di vita*:
+         - il Verificatore deve essere una persona fisica diversa da quella che ha redatto il documento.
 
-+ eseguire valutazioni di processi, prodotti e servizi:
++ *eseguire valutazioni di processi, prodotti e servizi*:
 
-  + il Verificatore valuta i prodotti e i servizi al fine di garantire la conformità rispetto ai criteri stabiliti;
-  + il Verificatore si assicura che la verifica e la convalida degli output dei processi del ciclo di vita siano eseguiti conformemente con quanto concordato in precedenza;
-  + il Verificatore applica il processo di misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
-  + il Verificatore esprime un giudizio e segnala eventuali problematiche riscontrate.
+  + il Verificatore deve valutare i prodotti e i servizi al fine di garantirne la conformità rispetto ai criteri stabiliti;
+  + il Verificatore deve assicurarsi che la verifica e la convalida degli output dei processi del ciclo di vita siano eseguiti conformemente con quanto concordato in precedenza;
+  + il Verificatore deve applicare il processo di misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
+  + il Verificatore deve esprimere un giudizio e segnalare eventuali problematiche riscontrate.
 
-+ gestire rapporti del controllo della qualità:
++ *gestire report e record del Controllo della Qualità*:
 
- - essi consistono in:
+ - *l'attività consiste in*:
 
-  + stilare rapporti relativi alle attività di controllo della qualità:
-    - in sede di retrospettiva il Verificatore aggiorna il gruppo riguardo le attività di controllo qualità dello sprint in corso;
-    - redazione di un verbale contenente anche gli esiti del processo di controllo della qualità.
+  + *stilare report e record relativi alle attività di Controllo della Qualità*:
+    - i report e i record vengono generati tramite l'utilizzo coordinato di Jira, Google Sheets e Grafana che porta alla creazione di un cruscotto di qualità. Si rimanda a @tecnologie_controllo per ulteriori dettagli.
 
-  + mantenere, archiviare e distribuire i rapporti;
+  + *mantenere, archiviare e distribuire i report*:
+    - il cruscotto di qualità è consultabile in ogni momento da ogni membro del gruppo, che possiede un link per accedervi. L'aggiornamento del cruscotto avviene in automatico e in tempo reale grazie al suo collegamento con Jira.
 
-  + identificare incidenti e problemi associati alle valutazioni effettuate.
+  + *identificare incidenti e problemi associati alle valutazioni effettuate*:
+    - in sede di retrospettiva, il gruppo lavora in modo coordinato per identificare gli incidenti e i problemi, servendosi delle informazioni presentate dal Verificatore tramite il cruscotto di qualità;
+    - l'Amministratore si occupa della redazione di un verbale contenente anche gli esiti del processo di Controllo della Qualità.
 
-+ trattare incidenti e problemi:
+  + *trattare incidenti e problemi*:
 
-  + in caso di segnalazione di incidenti e problemi viene svolto un lavoro collettivo tra Verificatore e redattore per la loro risoluzione;
-  + nel caso tali problemi o incidenti siano di carattere generale, viene avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
+    + in caso di segnalazione di incidenti e problemi deve essere svolto un lavoro collettivo per la loro risoluzione;
+    + tutte le criticità devono prevedere risoluzioni e arginamenti già predisposti all'interno del documento dell'_Analisi dei Rischi_ v1.0.0.
+    + nel caso tali problemi o incidenti siano di carattere generale, deve essere avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
+
+==== Tecnologie <tecnologie_controllo>
+===== Jira
+Jira, essendo l'ITS del gruppo, è la fonte principale di informazioni per il cruscotto di qualità.
+===== Google Sheets
+Google Sheets viene utilizzato per rendere meglio manipolabili i dati provenienti da Jira, in modo da poterli analizzare con più facilità e calcolare comodamente metriche come CPI, EAC, EV.
+===== Grafana
+Grafana è l'applicazione utilizzata per visualizzare i dati raccolti tramite l'implementazione di un cruscotto di qualità. Le informazioni mostrate sono le seguenti:
+  - sprint rimanenti;
+  - budget rimanente;
+  - rapporto EAC e BAC;
+  - andamento CPI;
+  - rapporto PPV, PAC e PEV;
+  - metriche soddisfatte;
+  - ore svolte e rimanenti per ruolo;
+  - task svolti;
+  - story point per stato;
+  - bug aperti.
+I dati sono visualizzati sottoforma di grafici, per aiutarne l'analisi e la comprensione, e sono consultabili in ogni momento dal gruppo.
 
 = Processi tecnici
 
@@ -1247,7 +1309,7 @@ Il processo di analisi della missione definisce i problemi e le opportunità dai
 === Strategia di identificazione e analisi della missione
 
 ==== Sistemi e servizi abilitanti
-Gli strumenti di comunicazione adottati dal gruppo sono descritti in TODO.
+Gli strumenti di comunicazione adottati dal gruppo sono descritti nella @comunicazione_interna.
 
 ==== Opportunità
 Si analizzano i problemi e le opportunità per acquisire una panoramica completa del contesto presentato dal Capitolato.
@@ -1259,7 +1321,7 @@ Si identifica l'ambito del Capitolato attraverso la definizione di:
 - tipologia di utenza attesa;
 - destinazione d'uso del prodotto finale.
 
-La sintesi di bisogni e requisiti avviene nel contesto del Processo di definizione di bisogni e requisiti degli Stakeholder (TODO).
+La sintesi di bisogni e requisiti avviene nel contesto del processo di definizione di bisogni e requisiti degli Stakeholder disponibile nella @processo_bisogni.
 
 ==== Classi di soluzione
 Si identificano classi di soluzione che possano sfruttare le opportunità e risolvere i problemi individuati.
@@ -1273,7 +1335,8 @@ Nel contesto del progetto didattico, il gruppo accetta le classi di soluzione pr
 ==== Valutazione delle classi di soluzione
 Si valuta ogni classe di soluzione identificata sulla base di:
 - fattibilità;
-- costi e tempi necessari;
+- costi;
+- tempi necessari;
 - rischi;
 - interesse tecnologico e didattico;
 - pertinenza.
@@ -1286,7 +1349,7 @@ La valutazione delle classi di soluzione può avvenire tramite:
 Sulla base dei risultati della valutazione, il gruppo individua una classe di soluzione preferita e la presenta al Proponente per la convalida.
 
 ==== Analisi dei requisiti
-Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste dal processo. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
+Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste da questo processo. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
 
 == Processo di definizione di bisogni e requisiti degli stakeholder <processo_bisogni>
 
@@ -1322,20 +1385,20 @@ Per ciascuno stakeholder si identificano i canali e la frequenza della comunicaz
 
 Il gruppo adotta una strategia iterativa per l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. L'approccio è finalizzato alla raccolta di feedback e prevede:
 - interviste e questionari;
-- studio individuale di tecnologie abilitanti, documentazione tecnica;
+- studio individuale di tecnologie abilitanti e documentazione tecnica;
 - acquisizione di conoscenze tramite workshop interni e _brainstorming_;
 - osservazione delle criticità delle soluzioni software preesistenti.
 Le comunicazioni con gli stakeholder avvengono nelle modalità descritte in @modalita-comunicazione.
 
-Le attività sono supportate, quando utile, da documenti, immagini, dimostratori tecnologici e in generale qualsiasi elemento informativo utile alla comprensione dei bisogni degli stakeholder. Le informazioni sono organizzate in modo da supportare l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. Il livello di astrazione adottato può differire in base all'interlocutre e al progresso globale conseguito dal _Processo di definizione di bisogni e requisiti degli stakeholder_.
+Le attività sono supportate, quando utile, da documenti, immagini, dimostratori tecnologici e in generale qualsiasi elemento informativo utile alla comprensione dei bisogni degli stakeholder. Le informazioni sono organizzate in modo da supportare l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. Il livello di astrazione adottato può differire in base all'interlocutore e al progresso globale conseguito dal _Processo di definizione di bisogni e requisiti degli stakeholder_.
 
-Lo strumento adottato a supporto di queste operazioni è Miro (TODO).
+Lo strumento adottato a supporto di queste operazioni è Miro.
 
 I bisogni espressi da Committente e Fornitore sono raccolti, catalogati, analizzati ed espressi nel documento di _Analisi dei Requisiti_ prodotto dal gruppo.
 
-Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, il gruppo si adopera per mediare i contrasti. La strategia di mediazione prevede l'identificazione di un sottoinsieme di interessi e bisogni comuni, il confronto con le parti e la definzione di strategie di mediazione calate nella fattispecie.
+Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, il gruppo si adopera per mediare i contrasti. La strategia di mediazione prevede l'identificazione di un sottoinsieme di interessi e bisogni comuni, il confronto con le parti e la definizione di strategie di mediazione calate nella fattispecie.
 
-Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi di ciclo di vita del sistema software (descritti in TODO) sono affrontati tramite il processo di Gestione dei Rischi TODO.
+Gli intenti o i desideri di chi si oppone al gruppo o ad uno o più dei processi di ciclo di vita del sistema software sono affrontati tramite il processo di Gestione dei Rischi disponibile alla @processo_gestione_rischi.
 
 Il negoziato tra le parti potrebbe essere richiesto per mediare posizioni mutualmente incompatibili, o a causa di vincoli o budget insufficiente. Anche la data di consegna prevista incide sulla realizzazione dei requisiti. Sarà sempre necessario consultare gli stakeholder coinvolti per raggiungere un accordo. Le decisioni saranno tracciate e rese disponibili agli stakeholder.
 
@@ -1343,22 +1406,24 @@ Il negoziato tra le parti potrebbe essere richiesto per mediare posizioni mutual
 Include l'elicitazione dei bisogni direttamente dagli stakeholder o dalla documentazione fornita da essi, oppure la raccolta di bisogni impliciti basati sul dominio applicativo ed i contesti tecnologico, legislativo, normativo.
 
 I bisogni degli stakeholder scaturiscono da fonti diverse. Il gruppo si impegna ad esplorare e valutare, al fine di identificare possibili bisogni, almeno questi frangenti:
-- Obiettivi di alto livello che il sistema dovrebbe conseguire;
-- Contributi concreti che il sistema dovrebbe apportare a beneficio degli stakeholder;
-- Scenari operativi, utili per limitare l'ambito e comprendere le aspettative e i bisogni;
-- Scenari operativi quotidiani, utili per assegnare una priorità ai bisogni;
-- Tipologie e caratteristiche degli utenti;
-- Ambiente operativo e contesto d'utilizzo;
-- Aspettative sulle prestazioni e la disponibilità del sistema;
-- Pratiche di business;
-- Norme, leggi o altri vincoli esterni.
+- obiettivi di alto livello che il sistema dovrebbe conseguire;
+- contributi concreti che il sistema dovrebbe apportare a beneficio degli stakeholder;
+- scenari operativi, utili per limitare l'ambito e comprendere le aspettative e i bisogni;
+- scenari operativi quotidiani, utili per assegnare una priorità ai bisogni;
+- tipologie e caratteristiche degli utenti;
+- ambiente operativo e contesto d'utilizzo;
+- aspettative sulle prestazioni e la disponibilità del sistema;
+- pratiche di business;
+- norme, leggi o altri vincoli esterni.
 
 ==== Definizione delle priorità
-Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (TODO), guidano la selezione e la prioritizzazione dei requisiti.
+Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (@processo_gestione_decisioni), guidano la selezione e la prioritizzazione dei requisiti.
 
 ==== Casi d'uso
 Si definisce un insieme di casi d'uso (anche detti use case, abbreviato in UC) che identifichi tutte le funzionalità attese.
-I casi d'uso sono definiti ed utilizzati nel documento di _Analisi dei Requisiti_. Sono fonte di bisogni e, indirettamente, di requisiti; sono un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
+I casi d'uso sono definiti ed utilizzati nel documento di _Analisi dei Requisiti_. Essi sono:
+- fonte di bisogni e, indirettamente, di requisiti; 
+- un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
 
 Ogni caso d'uso comprende:
 + Codice identificativo;
@@ -1388,7 +1453,7 @@ I vincoli sono un tipo di requisito. Possono derivare da:
 Sono classificati per priorità e per fonte.
 
 ==== Analisi dei requisiti
-Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. TODO contiene una descrizione approfondita del contenuto del documento. Esso include quanto descritto in questa sezione e contiene informazioni di tracciabilità. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
+Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
 #pagebreak()
 

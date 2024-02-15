@@ -188,32 +188,53 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 
 == Riferimenti di conformità
 
-- Norme di Progetto;
+- Norme di Progetto: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Regolamento del progetto didattico: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_ ;
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Standard ISO/IEC/IEEE 29148:2018: \
-  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_;
+  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Standard ISO/IEC/IEEE 12207:2017: \
-  _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_.
+  _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
+  #lastVisitedOn(13, 02, 2024)
+
 
 == Riferimenti informativi
 
 - Verbali interni;
 - Verbali esterni;
 - Capitolato "Warehouse Management 3D" di _Sanmarco Informatica S.p.A._: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_ ;
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Documentazione Three.js: \
   _#link("https://threejs.org/docs/index.html")_
+  #lastVisitedOn(13, 02, 2024)
+
 - WebGL 2.0 Specification: \
   _#link("https://registry.khronos.org/webgl/specs/latest/2.0/")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Analisi dei requisiti: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf")_ ;
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
-  _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_ .
+  _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 
 == Riferimenti a documentazione interna
-- Documento "Glossario v1.1.0"\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
+- Documento #glo_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 
 
 == Principi di redazione
@@ -806,7 +827,12 @@ $bold("Estensioni: ")$
 
 === Configurazione collegamento al database
 $bold("Descrizione: ")$
-l'utente imposta i dati necessari affinché il programma possa configurarsi con il database in cui sono contenuti i dati.
+l'utente imposta i dati necessari all'interfacciamento del prodotto con il database in cui sono contenuti i dati relativi ai prodotti e il loro posizionamento. I dati necessari alla configurazione del collegamento sono i seguenti:
+- indirizzo dell'host;
+- porta;
+- nome del database;
+- username;
+- password.
 
 $bold("Attore: ")$
 utente.
@@ -814,13 +840,18 @@ utente.
 $bold("Precondizioni: ")$
 - l'ambiente deve essere correttamente configurato;
 - il database deve essere disponibile;
-- l'utente deve disporre delle credenziali per configurarsi al database.
+- l'utente deve disporre delle credenziali per accedere al database.
 
 $bold("Postcondizioni: ")$
 - il sistema è correttamente configurato per accedere al database.
 
 $bold("Scenario: ")$
-- l'utente configura l'accesso al database.
+- l'utente vuole configurare i dati necessari alla configurazione del collegamento al database, quali:
+  - indirizzo dell'host;
+  - porta;
+  - nome del database;
+  - username;
+  - password.
 
 #derivedRequirements("UC-6.1")
 
@@ -864,15 +895,16 @@ $bold("Precondizioni: ")$
 - uno dei due bin deve essere vuoto.
 
 $bold("Postcondizioni: ")$
-- viene inviata una richiesta di spostamento al magazzino tramite l'uso di API;
 - il bin di partenza viene evidenziato in modo da identificare il fatto che da quel bin è in atto uno spostamento;
 - il bin di arrivo viene evidenziato in modo da identificare il fatto che in quel bin è in atto uno spostamento.
 
 $bold("Scenario: ")$
 - l'utente seleziona un bin che contiene un prodotto;
-- l'utente sposta il prodotto all'interno di un altro bin vuoto;
-- viene inviata una notifica a magazzino che segnala lo spostamento;
-- i due bin, di partenza e di arrivo, vengono evidenziati per segnalare lo spostamento in corso.
+- l'utente sposta il prodotto all'interno di un bin vuoto;
+- vengono inviati all'API RESTful il bin di partenza e di destinazione del prodotto;
+- viene verificata la fattibilità dello spostamento dalle API RESTful;
+- viene inviata una notifica di spostamento al magazzino tramite API RESTful;
+- i due bin, di origine e di destinazione, vengono evidenziati per segnalare lo spostamento in corso.
 
 #derivedRequirements("UC-7")
 
@@ -1210,9 +1242,9 @@ Dove:
     [FD-6.3], [Desiderabile], [L'utente visualizza un errore se i dati contenuti nel database non sono conformi], [UC-6.2],
     [FD-6.4], [Desiderabile], [L'utente visualizza un errore se i dati contenuti nel database sono errati], [UC-6.2],
 
-    [FM-7], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro], [UC-7],
-    [FM-7.1], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro indicando le coordinate del bin di destinazione], [UC-7],
-    [FM-7.2], [Obbligatorio], [L'utente deve poter richiedere lo spostamento di un prodotto da un bin ad un altro tramite _drag and drop_], [UC-7],
+    [FM-7], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin ad un altro], [UC-7],
+    [FM-7.1], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin d'origine ad un altro di destinazione], [UC-7],
+    [FM-7.2], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin ad un altro tramite _drag and drop_], [UC-7],
     [FM-7.3], [Obbligatorio], [Il sistema deve interrogare una API RESTful per accertare che lo spostamento sia lecito], [UC-7],
     [FD-7.4], [Desiderabile], [Il sistema deve evidenziare il bin di partenza per rendere evidente la richiesta di spostamento], [UC-7],
     [FD-7.5], [Desiderabile], [Il sistema deve evidenziare il bin di destinazione per rendere evidente la richiesta di spostamento], [UC-7],
@@ -1238,7 +1270,12 @@ Dove:
 
     [FM-12], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login], [Capitolato],
 
-    [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato]
+    [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato],
+
+    [FM-14], [Obbligatorio], [Il prodotto si deve avviare allo stato iniziale ogni volta che viene ricaricata la pagina], [Capitolato],
+    [FM-14.1], [Obbligatorio], [Il prodotto non persiste in locale (cookie, `localStorage`) le modifiche fatte all'ambiente], [Capitolato],
+    [FM-14.2], [Obbligatorio], [Il prodotto non persiste sul database le modifiche fatte all'ambiente], [Capitolato],
+    [FM-14.3], [Obbligatorio], [Il prodotto non deve fornire alcuna opzione per il salvataggio dei dati], [Capitolato]
   ),
   caption: [Requisiti funzionali]
 )
@@ -1269,18 +1306,17 @@ Dove:
     columns: 4,
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [VM-1], [Obbligatorio], [Il prodotto non deve gestire la persistenza dei dati], [Capitolato],
-    [VM-2], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0], [Interno],
-    [VM-3], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0], [Interno],
-    [VM-4], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva], [Interno],
-    [VM-5], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva], [Interno],
-    [VM-6], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva], [Interno],
-    [VM-7], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva], [Interno],
-    [VM-8], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva], [Interno],
-    [VM-9], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva], [Interno],
-    [VM-10], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva], [Interno],
-    [VM-11], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva], [Interno],
-    [VO-12], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose], [Verbale esterno\ 23-11-15]
+    [VM-1], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0], [Interno],
+    [VM-2], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0], [Interno],
+    [VM-3], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva], [Interno],
+    [VM-4], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva], [Interno],
+    [VM-5], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva], [Interno],
+    [VM-6], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva], [Interno],
+    [VM-7], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva], [Interno],
+    [VM-8], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva], [Interno],
+    [VM-9], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva], [Interno],
+    [VM-10], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva], [Interno],
+    [VO-11], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose], [VE 23-11-15]
   ),
   caption: [Requisiti di vincolo]
 )
@@ -1292,10 +1328,9 @@ Dove:
     columns: 2,
     align: left,
     [*Tipo Requisito*], [*Numero totale*],
-    [Requisiti funzionali], [92],
+    [Requisiti funzionali], [96],
     [Requisiti di qualità], [8],
-    [Requisiti di vincolo], [12],
-
+    [Requisiti di vincolo], [11],
   ),
   caption: [Riepilogo requisiti]
 )

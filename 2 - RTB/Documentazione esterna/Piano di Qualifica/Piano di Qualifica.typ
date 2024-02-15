@@ -27,23 +27,37 @@ Il presente documento include una serie di termini tecnici specifici del progett
 
 == Riferimenti
 === Riferimenti a documentazione interna
-- Documento Glossario v1.1.0\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf");
-- Piano di Progetto TODO:\
-  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20esterna")_;
-- Norme di Progetto TODO:\
-  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20interna")_.
+- Documento #glo_v\
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
+- Documento #pdp_v:\
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20esterna")_
+  #lastVisitedOn(13, 02, 2024)
+
+- Documento #ndp_v:\
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20interna")_
+  #lastVisitedOn(13, 02, 2024)
+
 === Riferimenti normativi
 - ISO/IEC 9126:\
-  _#link("https://it.wikipedia.org/wiki/ISO/IEC_9126")_.
+  _#link("https://it.wikipedia.org/wiki/ISO/IEC_9126")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Capitolato d'appalto C5 _WMS3_: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_.
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 === Riferimenti informativi
 - Dispense T7 (Qualità del software):\
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T7.pdf")_;
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T7.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
 - Dispense T8 (Qualità di processo):\
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")_.
-\
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
+
 = Qualità di processo
 
 == Processi primari

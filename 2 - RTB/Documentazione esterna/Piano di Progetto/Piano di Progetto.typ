@@ -4,7 +4,7 @@
 #import "/template.typ": *
 
 #show: project.with(
- title:"Piano di Progetto",
+ title: "Piano di Progetto",
  subTitle: "Pianificazione, analisi e retrospettive",
  authors: (
    "Banzato Alessio",
@@ -131,24 +131,32 @@ Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e pe
 
 == Riferimenti <riferimenti>
 === Riferimenti normativi <riferimenti-normativi>
-- Regolamento di progetto \
+- Regolamento di progetto: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
+  #lastVisitedOn(13,02,2024)
 
-- Gestione di progetto \
+- Gestione di progetto: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T4.pdf")_
+  #lastVisitedOn(13,02,2024)
 
-- I processi di ciclo di vita del software \
+- I processi di ciclo di vita del software: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T2.pdf")_
+  #lastVisitedOn(13,02,2024)
 
 === Riferimenti informativi <riferimenti-informativi>
-- Capitolato C5: WMS3: Warehouse management 3D \
+- Capitolato C5: WMS3: Warehouse management 3D: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
+  #lastVisitedOn(13,02,2024)
 
 === Riferimenti a documentazione interna <riferimenti-interni>
-- Documento Glossario (v1.1.0)\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")
-- Documento Analisi dei Rischi (v2.0.0)\
-  #link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")
+- Documento #glo_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
+  #lastVisitedOn(13,02,2024)
+
+- Documento #ris_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")_
+  #lastVisitedOn(13,02,2024)
+
 
 #pagebreak()
 
@@ -176,7 +184,7 @@ La ripartizione delle ore tiene conto degli obiettivi disciplinari di sviluppo d
     [Zaccone], [10], [14], [15], [7], [28], [21], [95],
     [Nardo], [10], [14], [15], [7], [28], [21], [95],
     [Totale ore], [91], [70], [70], [98], [210], [126], [665],
-    [Costo\ orario], [€ 30], [€ 20], [€ 25], [€ 25], [€ 15], [€ 15], [],
+    [Costo\ orario], [€ 30], [€ 20], [€ 25], [€ 25], [€ 15], [€ 15], [/],
     [Costo\ ruolo], [€ 2100], [€ 1960], [€ 2625], [€ 1225], [€ 2940], [€ 2205], [€ 13055],
   ),
   caption: "Prospetto orario complessivo per membro e ruolo"
@@ -1655,13 +1663,12 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
 Tutti gli obiettivi sono stati raggiunti.
 
 === Problematiche
-Il gruppo ha notato in fase di retrospettiva una scarsa reattività in fase di review e verifica, che portano al rallentamento del lavoro. Le review
-sono state rallentate anche dalla presenza di numerosi merge conflicts, che il gruppo si è ritrovato a gestire per la prima volta nel progetto.
+Il gruppo ha riportato una scarsa reattività durante il processo di review e verifica, con conseguente rallentamento del lavoro. Le review sono state rallentate anche dalla presenza di numerosi merge conflicts, che il gruppo si è ritrovato a gestire per la prima volta nel progetto.
 
 Inoltre si è presa coscienza della necessità di apportare migliorie al processo di gestione di Jira.
 
 === Risoluzioni attuate
-Il gruppo ha preso in considerazione l'utilizzo di Graphite per velocizzare il processo di review e creare pull request brevi.
+Il gruppo ha preso in considerazione l'utilizzo di Graphite per velocizzare il processo di review e creare pull request brevi. L'adozione di questo strumento, o suoi analoghi, verrà valutata dall'Amministratore.
 
 Inoltre, il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'utilizzo di Jira, per migliorare l'amministrazione del progetto.
 
@@ -2605,6 +2612,99 @@ Lo sprint 13 è stato caratterizzato da un momento di pausa, dovuto alla concomi
     [Rimanente],     [412],     [€ 7660],
   ),
   caption: "Monitoraggio sprint 13"
+)
+
+== Sprint 14 dal 04-02-2024 al 11-02-2024
+
+=== Obiettivi raggiunti
+- Revisione, correzione ed estensione del documento #adr secondo il feedback ricevuto dal #cardin;
+- Estensione delle metriche riportate nella dashboard di monitoraggio;
+- Estensione dei termini di Glossario per riflettere i nuovi strumenti adottati;
+- Contattato il Proponente per fornire aggiornamenti sullo stato dei lavori e programmare gli incontri successivi al colloquio RTB.
+
+=== Obiettivi mancati
+Nessuno.
+
+=== Problematiche
+Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+- il carico di lavoro sul Verificatore è stato elevato;
+- numerosi conflitti di _merge_ dovuti al lavoro parallelo su ticket associati allo stesso documento;
+- la board Miro ha mostrato scarsità di riscontro su _Keep doings_ e _Improvements_ prima dell'incontro di retrospettiva.
+
+=== Risoluzioni attuate
+- I conflitti di _merge_ sono inevitabili quando più branch insistono sullo stesso documento. Durante questo sprint la maggior parte del lavoro è avvenuta sul documento #adr. Si cercherà di evitare la sovrapposizione di lavoro sui documenti coordinando il lavoro di redattori e Verificatori;
+- Il Responsabile ha sottolineato l'importanza di individuare _Keep doings_ e _Improvements_ prima dell'incontro di retrospettiva. Non si tratta di un'attività facoltativa, ma di un processo chiave nel miglioramento continuo del gruppo.
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [3],     [0],     [0],     [0],     [3],
+    [Carraro],     [0],     [1],     [1],     [0],     [0],     [2],     [4],
+    [Gardin],     [3],     [0],     [2],     [0],     [0],     [0],     [5],
+    [Nardo],     [0],     [0],     [2],     [0],     [0],     [3],     [5],
+    [Oseliero],     [0],     [2],     [0],     [0],     [0],     [2],     [4],
+    [Todesco],     [0],     [0],     [0],     [1],     [0],     [3],     [4],
+    [Zaccone],     [0],     [0],     [0],     [1],     [0],     [3],     [4],
+    [Totale ore],     [3],     [3],     [8],     [2],     [0],     [13],     [29],
+    [Costo ruolo],     [90],     [60],     [200],     [50],     [0],     [195],     [595],
+  ),
+  caption: "Prospetto del consuntivo, sprint 14"
+)
+#let data = (
+  ("Responsabile", 3, 3),
+  ("Amministratore", 3, 3),
+  ("Analista", 8, 8),
+  ("Progettista", 2, 2),
+  ("Programmatore", 0, 0),
+  ("Verificatore", 13, 13),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo sprint 14",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+La pianificazione di questo sprint è stata precisa e rispettata. Il lavoro del Verificatore è stato particolarmente intenso a causa delle numerose modifiche apportate al documento #adr.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [34],     [1020],
+    [Amministratore],     [34],     [680],
+    [Analista],     [40],     [1000],
+    [Progettista],     [24],     [600],
+    [Programmatore],     [165],     [2475],
+    [Verificatore],     [86],     [1290],
+    [Rimanente],     [383],     [7065],
+  ),
+  caption: "Monitoraggio, sprint 14"
 )
 
 // == Sprint n dal D1-M1-2024 al D2-M2-2024

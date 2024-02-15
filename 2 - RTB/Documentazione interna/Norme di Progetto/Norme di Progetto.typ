@@ -747,60 +747,61 @@ Come risultato dell'implementazione del processo di Gestione dei Rischi:
 - vengono identificate e priorizzate le opzioni di trattamento del rischio;
 - viene selezionato ed implementato un trattamento appropriato;
 - i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
+I risultati sono raccolti nel documento #ris.
 
 === Attività e compiti
-Il progetto deve implementare le seguenti attività e compiti, in conformità con le norme identificate applicabili al processo di Gestione dei Rischi.
 
-==== Pianificare la Gestione dei Rischi
+==== Pianificazione della Gestione dei Rischi
 La strategia di Gestione dei Rischi per il progetto è basata su un approccio proattivo per identificare e mitigare i rischi in tutte le fasi del suo ciclo di vita. \
-La classificazione dei rischi è basata sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
-Nello specifico l'impatto può essere "lieve", "medio" o "grave" in base alla sua entità mentre la probabilità di occorrenza viene identificata tramite un valore intero da 1 a 5, dove 1 esprime una probabilità molto bassa, mentre 5 esprime una frequenza attesa sostenuta.\
-Il team definisce approcci di trattamento appropriati, compresi piani di mitigazione specifici.
+Ad ogni rischio individuato viene associato un profilo basato sia sulla probabilità di occorrenza che sull'impatto che essi hanno sullo stato di avanzamento dei lavori e sul progetto stesso.
+L'impatto può essere "lieve", "medio" o "grave" in base alla sua entità.
+La probabilità di occorrenza viene identificata tramite un valore intero da 1 a 5, dove 1 esprime una probabilità molto bassa, mentre 5 esprime una frequenza attesa sostenuta.\
+Il gruppo definisce approcci di trattamento appropriati, compresi piani di mitigazione specifici.
 
-==== Gestire il profilo di rischio
-- Definire e registrare le soglie e le condizioni di rischio:\
+==== Gestione del profilo di rischio
++ *Definizione e registrazione delle soglie e delle condizioni di rischio*:\
   le soglie di rischio sono stabilite sulla base della probabilità di occorrenza e dell'impatto.
   I rischi con un impatto negativo elevato sono trattati in modo più rigoroso rispetto a quelli con un impatto inferiore;
 
-- Stabilire e mantenere un profilo di rischio:\
-  il profilo di rischio contiene informazioni sul contesto della Gestione dei Rischi, il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
-  Sarà aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
++ *Creazione e mantenimento di un profilo di rischio*:\
+  il profilo di rischio contiene tutte le informazioni necessarie per la Gestione dei Rischi, come il loro stato, le soglie, le probabilità, le azioni richieste in caso di occorrenza e le conseguenze previste.
+  Viene aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
 
-- Fornire il profilo di rischio rilevante agli interessati in base alle loro esigenze:\
-  il profilo di rischio verrà all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento Analisi dei Rischi v2.0.0. 
++ *Fornitura del profilo di rischio rilevante agli stakeholder in base alle loro esigenze*:\
+  il profilo di rischio viene all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento #ris_v. 
 
 
-==== Analizzare i rischi
+==== Analisi dei rischi
 Questa attività consiste nei seguenti compiti:
 
-+ identificare i rischi nelle categorie descritte nel contesto della Gestione dei Rischi:\ l'identificazione avviene durante tutte le fasi di sviluppo, inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
++ *identificazione del rischio ed associazione ad uno specifico profilo, secondo quanto descritto nella pianificazione della Gestione dei Rischi*:\ l'identificazione avviene durante tutte le fasi di sviluppo. Inoltre, i rischi emergono dall'analisi delle misurazioni di qualità dei processi e del sistema software in evoluzione;
 
-+ stimare la probabilità di occorrenza e le conseguenze di ciascun rischio identificato:\ per ogni rischio identificato, viene stimata la probabilità di occorrenza e le conseguenze, che tipicamente coinvolgono impatti tecnici, di pianificazione, di costo o di qualità;
++ *valutazione di ciascun rischio rispetto alle sue soglie di accettazione*:\ ogni rischio viene valutato rispetto alle soglie stabilite, il superamento delle quali attiva delle modalità di trattamento specifiche.
 
-+ valutare ciascun rischio rispetto alle sue soglie di accettazione:\ ogni rischio viene valutato rispetto alle soglie stabilite, il superamento delle quali attiva delle modalità di trattamento specifiche.
-
-==== Trattare i rischi
+==== Trattamento dei rischi
 Questa attività consiste nei seguenti compiti:
 
-+ per ciascun rischio che non soddisfi la sua soglia di tolleranza, definire e registrare le strategie e le misure di trattamento consigliate. Queste possono includere:\
++ *definizione e registrazione delle strategie e delle misure di trattamento consigliate per ciascun rischio che superi la soglia di tolleranza*. \ Queste possono includere:\
   - l'eliminazione del rischio;
   - la riduzione della sua probabilità o gravità;
   - l'accettazione del rischio.
 
-  Vengono anche registrate informazioni sull'efficacia delle alternative di trattamento.
+  Vengono anche registrate informazioni sull'efficacia delle alternative di trattamento;
 
-+ quando viene accettato un rischio che non soddisfa la sua soglia, va considerato di priorità elevata e monitorato continuamente per determinare se sono necessarie future azioni di trattamento del rischio o se la sua priorità è cambiata;
++ *nel caso di accettazione di un rischio al di sopra della soglia, attribuzione di priorità elevata e monitoraggio costante*:\
+  pratica necessaria per valutare la necessità di futuri interventi di trattamento del rischio o eventuali modifiche della sua priorità;
 
-+ una volta selezionato un trattamento del rischio, coordinare l'azione di gestione:\ dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del Progetto può essere applicato.
++ *coordinamento dell'azione di gestione dopo la selezione di una strategia di trattamento del rischio*:\ 
+  dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di valutazione e controllo del progetto può essere applicato.
 
-==== Monitorare i rischi
+==== Monitoraggio dei rischi
 Questa attività consiste nei seguenti compiti:
 
-- monitorare continuamente i rischi e il contesto della Gestione dei Rischi per eventuali loro cambiamenti;
++ *monitoraggio continuo dei rischi e del contesto della loro gestione per eventuali loro cambiamenti*;
 
-- monitorare continuamente l'emergere di nuovi rischi durante l'intero ciclo di vita.
++ *monitoraggio continuo di possibili nuovi rischi durante l'intero ciclo di vita*.
 
-Il monitoraggio dei rischi avviene principalmente in sede di meeting interno, specialmente a seguito di analisi retrospettive.
+Il monitoraggio dei rischi avviene principalmente in sede di meeting interno a seguito di analisi retrospettive.
 
 
 == Processo di gestione della configurazione <processo_gestione_configurazione>

@@ -19,6 +19,7 @@
 );
 
 = Ordine del giorno
+prova
 - Discussione sulle tecnologie implementate e da implementare;
 - Dimostrazioni tecniche tramite screen sharing dei PoC realizzati;
 - Chiarimenti tecnici sull'implementazione dei PoC;

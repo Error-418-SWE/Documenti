@@ -13,6 +13,31 @@
   isExternalUse: true,
 );
 
+#let requirements = json("Requisiti.json");
+#let derivedRequirements(reference) = {
+  box(width: 1fr, stroke: 0.5pt + luma(140), inset: 3pt)[
+    #text("Requisiti derivati: ", weight: "bold")
+    #text(requirements.at(reference).join(", ") + ".")
+  ]
+}
+
+// WIP, non rimuovere
+//
+// #let placeDerivedRequirements() = {
+//   let header = locate(loc => {
+//     let elems = query(selector(heading).before(loc), loc)
+//     if elems == () {
+//       panic("La funzione non ha rilevato di essere in una sezione di UC.")
+//     }
+//     else {
+//       text("Requisiti derivati: ", weight: "bold")
+//       requirements.at(elems.last().numbering).join(", ")
+//       "."
+//     }
+//   })
+//   header
+// }
+
 = Introduzione
 
 == Scopo del documento
@@ -232,27 +257,32 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 
 #pagebreak()
 
+= Use Case
+
 #set heading(numbering: (..nums) => {
   let values = nums.pos();
   if (values.len() > 0){
-      values.at(values.len()-1) = values.at(values.len()-1);
+      values.at(values.len() - 1) = values.at(values.len() - 1);
   }
-  values.at(0) = values.at(0)-3;
-  return "UC-"+values.map(str).join(".");
+  values = values.slice(1)
+  return "UC--" + values.map(str).join(".");
 })
 
 #set par(first-line-indent: 0pt)
 
-= Creazione magazzino <uc1>
+== Creazione magazzino <uc1>
 #figure(
   image("./imgs/uc1.png", format: "png"),
   caption: [
     UML UC-1
   ],
 )
-== Importazione mappa magazzino da file SVG
+
+#derivedRequirements("UC-1")
+
+=== Importazione mappa magazzino da file SVG
 $bold("Descrizione: ")$
-All'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
+all'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
 
 $bold("Attore: ")$
 utente.
@@ -270,7 +300,9 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-1.1.1 Visualizzazione errore lettura del file SVG.
 
-=== Visualizzazione errore lettura del file SVG
+#derivedRequirements("UC-1.1")
+
+==== Visualizzazione errore lettura del file SVG
 $bold("Descrizione: ")$
 il file caricato dall'utente non ha permesso al programma di configurare l'ambiente di lavoro.
 
@@ -291,7 +323,9 @@ $bold("Generalizzazioni: ")$
 - UC-1.1.1.1 Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni;
 - UC-1.1.1.2 Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti.
 
-==== Visualizzazione errore file privo di informazioni
+#derivedRequirements("UC-1.1.1")
+
+===== Visualizzazione errore file privo di informazioni
 $bold("Descrizione: ")$
 il file SVG caricato non contiene informazioni utili alla configurazione dell'ambiente.
 
@@ -309,7 +343,9 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - L'utente ha caricato un file SVG vuoto o con informazioni non utili.
 
-==== Visualizzazione errore informazioni del file incongruenti
+#derivedRequirements("UC-1.1.1.1")
+
+===== Visualizzazione errore informazioni del file incongruenti
 $bold("Descrizione: ")$
 il file SVG caricato contiene informazioni incongruenti e quindi non utilizzabili per la configurazione dell'ambiente.
 
@@ -327,9 +363,11 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
 
-== Creazione magazzino vuoto
+#derivedRequirements("UC-1.1.1.2")
+
+=== Creazione magazzino vuoto
 $bold("Descrizione: ")$
-All'avvio dell'applicativo è possibile creare un ambiente vuoto di dimensioni predefinite da cui iniziare. Tale funzionalità, rimane disponibile durante l'utilizzo dell'applicativo qualora si volesse ripristinare l'ambiente.
+all'avvio dell'applicativo è possibile creare un ambiente vuoto di dimensioni predefinite da cui iniziare. Tale funzionalità, rimane disponibile durante l'utilizzo dell'applicativo qualora si volesse ripristinare l'ambiente.
 
 $bold("Attore: ")$
 utente.
@@ -344,7 +382,9 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente crea un ambiente di lavoro vuoto con dimensioni predefinite.
 
-= Modifica dimensioni del magazzino
+#derivedRequirements("UC-1.2")
+
+== Modifica dimensioni del magazzino <uc2>
 
 #figure(
   image("./imgs/uc2.png", format: "png"),
@@ -376,7 +416,9 @@ $bold("Estensioni: ")$
 - UC-2.1 Visualizzazione errore dimensioni magazzino troppo piccole;
 - UC-2.2 Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente.
 
-== Visualizzazione errore dimensioni magazzino troppo piccole
+#derivedRequirements("UC-2")
+
+=== Visualizzazione errore dimensioni magazzino troppo piccole
 
 $bold("Descrizione: ")$
 l'utente vuole modificare le dimensioni dell'ambiente riducendole eccessivamente.
@@ -395,10 +437,12 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente vuole ridurre le dimensioni dell'ambiente oltre una soglia minima.
 
-== Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
+#derivedRequirements("UC-2.1")
+
+=== Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
 
 $bold("Descrizione: ")$
-Dato un ambiente con elementi posizionati (come scaffali e/o bin), l'utente cerca di ridurre le dimensioni dell'ambiente in modo eccessivo, non permettendo di mantenere gli elementi precedentemente posizionati.
+dato un ambiente con elementi posizionati (come scaffali e/o bin), l'utente cerca di ridurre le dimensioni dell'ambiente in modo eccessivo, non permettendo di mantenere gli elementi precedentemente posizionati.
 $bold("Attore: ")$
 utente.
 
@@ -413,14 +457,19 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente vuole ridurre la dimensione dell'ambiente nonostante l'ambiente di lavoro contenga elementi le cui posizioni non risulterebbero più valide alle nuove dimensioni ridotte.
 
-= Gestione scaffali
+#derivedRequirements("UC-2.2")
+
+== Gestione scaffali <uc3>
 #figure(
   image("./imgs/uc3.png", format: "png"),
   caption: [
     UML UC-3
   ],
 )
-== Creazione scaffale
+
+#derivedRequirements("UC-3")
+
+=== Creazione scaffale
 $bold("Descrizione: ")$
 uno scaffale viene creato in base ai valori inseriti dall'utente quali: altezza, larghezza, profondità, numero di piani e colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
 Quindi viene aggiunto nell'ambiente in una posizione valida specificata. Successivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
@@ -448,7 +497,9 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
 
-== Modifica scaffale
+#derivedRequirements("UC-3.1")
+
+=== Modifica scaffale
 $bold("Descrizione: ")$
 modifica delle caratteristiche di uno scaffale già esistente.
 
@@ -479,9 +530,11 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
 
-== Spostamento scaffale
+#derivedRequirements("UC-3.2")
+
+=== Spostamento scaffale
 $bold("Descrizione: ")$
-L'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
+l'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
 
 $bold("Attore: ")$
 utente.
@@ -499,7 +552,9 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-3.3.1 Visualizzazione errore spostamento dello scaffale in zona non libera
 
-=== Visualizzazione errore spostamento dello scaffale in zona non libera
+#derivedRequirements("UC-3.3")
+
+==== Visualizzazione errore spostamento dello scaffale in zona non libera
 $bold("Descrizione: ")$
 è stata richiesto lo spostamento di uno scaffale in una zona non libera.
 
@@ -516,7 +571,9 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente ha richiesto lo spostamento di uno scaffale in una zona non libera.
 
-== Eliminazione scaffale
+#derivedRequirements("UC-3.3.1")
+
+=== Eliminazione scaffale
 $bold("Descrizione: ")$
 lo scaffale selezionato presente nell'ambiente viene eliminato.
 
@@ -540,7 +597,9 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-3.4.1 Visualizzazione errore scaffale da eliminare non vuoto.
 
-=== Visualizzazione errore scaffale da eliminare non vuoto
+#derivedRequirements("UC-3.4")
+
+==== Visualizzazione errore scaffale da eliminare non vuoto
 $bold("Descrizione: ")$
 è stata richiesta l'eliminazione di uno scaffale contenente almeno un bin non vuoto.
 
@@ -557,7 +616,9 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.
 
-= Gestione bin
+#derivedRequirements("UC-3.4.1")
+
+== Gestione bin <uc4>
 #figure(
   image("./imgs/uc4.png", format: "png"),
   caption: [
@@ -565,7 +626,9 @@ $bold("Scenario: ")$
   ],
 )
 
-== Creazione di un bin
+#derivedRequirements("UC-4")
+
+=== Creazione di un bin
 $bold("Descrizione: ")$
 deve essere possibile creare e aggiungere nell'ambiente delle aree adibite a contenere prodotti, definite nel contesto come bin. In fase di creazione deve essere possibile definire le caratteristiche che il bin dovrà avere, quali: altezza, larghezza e profondità.
 
@@ -586,7 +649,9 @@ $bold("Scenario: ")$
 - l'utente inserisce la profondità del bin;
 - l'utente posiziona il bin in una posizione valida nell'ambiente di lavoro.
 
-== Modifica di un bin
+#derivedRequirements("UC-4.1")
+
+=== Modifica di un bin
 $bold("Descrizione: ")$
 modifica delle caratteristiche di un bin esterno già esistente.
 
@@ -614,7 +679,9 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
 
-== Eliminazione bin
+#derivedRequirements("UC-4.2")
+
+=== Eliminazione bin
 $bold("Descrizione: ")$
 deve essere possibile eliminare un bin.
 
@@ -637,7 +704,9 @@ $bold("Scenario: ")$
 $bold("Estensioni: ")$
 - UC-4.3.1 Errore cancellazione bin non vuoto.
 
-=== Errore cancellazione bin non vuoto
+#derivedRequirements("UC-4.3")
+
+==== Errore cancellazione bin non vuoto
 $bold("Descrizione: ")$
 è stata richiesta l'eliminazione di un bin non vuoto.
 
@@ -654,7 +723,9 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente ha richiesto l'eliminazione di un bin non vuoto.
 
-= Visualizzazione errore inserimento dati dimensionali non validi
+#derivedRequirements("UC-4.3.1")
+
+== Visualizzazione errore inserimento dati dimensionali non validi <uc5>
 #figure(
   image("./imgs/uc5.png", format: "png"),
   caption: [
@@ -681,7 +752,9 @@ $bold("Generalizzazioni: ")$
 - UC-5.1.1 Dimensioni negative o uguali a 0;
 - UC-5.1.2 Dimensioni eccessive.
 
-== Dimensioni negative o uguali a zero
+#derivedRequirements("UC-5")
+
+=== Dimensioni negative o uguali a zero
 $bold("Descrizione: ")$
 le dimensioni inserite per la modifica dell'elemento interessato sono minori o uguali a zero.
 
@@ -698,7 +771,9 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente minori o uguali a zero.
 
-== Dimensioni eccessive
+#derivedRequirements("UC-5.1")
+
+=== Dimensioni eccessive
 $bold("Descrizione: ")$
 le dimensioni inserite per la modifica dell'elemento interessato eccessive per il contesto di inserimento.
 
@@ -715,7 +790,9 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente eccessivi.
 
-= Caricamento dati da database
+#derivedRequirements("UC-5.2")
+
+== Caricamento dati da database <uc6>
 
 #figure(
   image("./imgs/uc6.png", format: "png"),
@@ -746,7 +823,9 @@ $bold("Inclusioni: ")$
 $bold("Estensioni: ")$
 - UC-6.2 Visualizzazione messaggio di errore.
 
-== Configurazione collegamento al database
+#derivedRequirements("UC-6")
+
+=== Configurazione collegamento al database
 $bold("Descrizione: ")$
 l'utente imposta i dati necessari all'interfacciamento del prodotto con il database in cui sono contenuti i dati relativi ai prodotti e il loro posizionamento. I dati necessari alla configurazione del collegamento sono i seguenti:
 - indirizzo dell'host;
@@ -774,7 +853,9 @@ $bold("Scenario: ")$
   - username;
   - password.
 
-== Visualizzazione messaggio di errore
+#derivedRequirements("UC-6.1")
+
+=== Visualizzazione messaggio di errore
 $bold("Descrizione: ")$
 i dati contenuti nel database sono in un formato non conforme o sono errati.
 
@@ -791,7 +872,9 @@ $bold("Postcondizioni: ")$
 $bold("Scenario: ")$
 - l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere (es. numero scaffali/bin incompatibile con le coordinate dei prodotti).
 
-= Spostamento di un prodotto
+#derivedRequirements("UC-6.2")
+
+== Richiesta di spostamento di un prodotto <uc7>
 
 #figure(
   image("./imgs/uc7.png", format: "png"),
@@ -823,7 +906,9 @@ $bold("Scenario: ")$
 - viene inviata una notifica di spostamento al magazzino tramite API RESTful;
 - i due bin, di origine e di destinazione, vengono evidenziati per segnalare lo spostamento in corso.
 
-= Visualizzazione di un bin
+#derivedRequirements("UC-7")
+
+== Visualizzazione di un bin <uc8>
 
 #figure(
   image("./imgs/uc8.png", format: "png"),
@@ -845,14 +930,16 @@ $bold("Postcondizioni: ")$
 
 $bold("Scenario: ")$
 - l'utente seleziona un bin;
-- vengono visualizzate le seguenti informazioni relative al bin selezionato: 
+- vengono visualizzate le seguenti informazioni relative al bin selezionato:
   - codice identificativo del bin;
   - stato del bin (occupato o vuoto);
   - tipologia di prodotto che contiene, in caso di bin non vuoto;
   - id dello scaffale che lo contiene;
   - posizione del bin all'interno dello scaffale (piano e colonna).
 
-= Visualizzazione di uno scaffale
+#derivedRequirements("UC-8")
+
+== Visualizzazione di uno scaffale <uc9>
 
 #figure(
   image("./imgs/uc9.png", format: "png"),
@@ -885,7 +972,9 @@ $bold("Scenario: ")$
   - numero di piani;
   - numero di colonne.
 
-= Ricerca prodotti
+#derivedRequirements("UC-9")
+
+== Ricerca prodotti <uc10>
 
 #figure(
   image("./imgs/uc10.png", format: "png"),
@@ -915,7 +1004,9 @@ $bold("Generalizzazioni: ")$
 - UC-10.2 Ricerca per Nome;
 - UC-10.3 Ricerca per Scaffale.
 
-== Ricerca per ID
+#derivedRequirements("UC-10")
+
+=== Ricerca per ID
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto tramite il suo ID di magazzino.
 
@@ -932,7 +1023,9 @@ $bold("Scenario: ")$
 - l'utente ricerca un prodotto usando come chiave l'ID univoco di magazzino;
 - il bin contenente il prodotto cercato viene evidenziato.
 
-== Ricerca per Nome
+#derivedRequirements("UC-10.1")
+
+=== Ricerca per Nome
 $bold("Descrizione: ")$
 l'utente ricerca un prodotto tramite il nome associato al prodotto.
 
@@ -950,7 +1043,9 @@ $bold("Scenario: ")$
 - il bin contenente il prodotto cercato viene evidenziato;
 - i prodotti associati al nome possono essere più di uno.
 
-== Ricerca per Scaffale
+#derivedRequirements("UC-10.2")
+
+=== Ricerca per Scaffale
 $bold("Descrizione: ")$
 l'utente ricerca i prodotti contenuti all'interno di uno scaffale del magazzino.
 
@@ -967,7 +1062,9 @@ $bold("Scenario: ")$
 - l'utente ricerca i materiali contenuti all'interno di uno scaffale del magazzino;
 - lo scaffale viene evidenziato.
 
-= Esplorazione magazzino
+#derivedRequirements("UC-10.3")
+
+== Esplorazione magazzino <uc11>
 
 #figure(
   image("./imgs/uc11.png", format: "png", width: 60%),
@@ -976,7 +1073,9 @@ $bold("Scenario: ")$
   ],
 )
 
-== Spostamento della visuale lungo gli assi
+#derivedRequirements("UC-11")
+
+=== Spostamento della visuale lungo gli assi
 $bold("Descrizione: ")$
 successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può visualizzare il magazzino e spostare la visuale lungo almeno uno dei tre assi (orizzontale, verticale, longitudinale).
 
@@ -996,7 +1095,9 @@ $bold("Scenario: ")$
 - l'utente può spostare la visuale del magazzino lungo l'asse longitudinale;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
-== Rotazione della visuale
+#derivedRequirements("UC-11.1")
+
+=== Rotazione della visuale
 $bold("Descrizione: ")$
 successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può visualizzare il magazzino e ruotare la visuale sul magazzino in senso orario o antiorario.
 
@@ -1015,7 +1116,9 @@ $bold("Scenario: ")$
 - l'utente può ruotare la visuale in senso antiorario;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
-== Zoom della visuale
+#derivedRequirements("UC-11.2")
+
+=== Zoom della visuale
 $bold("Descrizione: ")$
 successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può effettuare uno zoom-in o uno zoom-out per avvicinare o allontanare la visuale dal magazzino.
 
@@ -1034,14 +1137,9 @@ $bold("Scenario: ")$
 - l'utente può allontanarsi dal magazzino e dai suoi elementi tramite uno zoom-out;
 - l'utente ha cambiato la prospettiva sul magazzino.
 
-#set heading(numbering: (..nums) => {
-  let values = nums.pos();
-  if (values.len() > 0){
-      values.at(values.len()-1) = values.at(values.len()-1);
-  }
-  values.at(0) = values.at(0)-10;
-  return values.map(str).join(".");
-})
+#derivedRequirements("UC-11.3")
+
+#set heading(numbering: "1.1")
 
 = Requisiti
 
@@ -1072,7 +1170,7 @@ Dove:
     [FM-1], [Obbligatorio], [L'utente deve poter creare il magazzino], [UC-1],
     [FM-1.1], [Obbligatorio], [L'utente deve poter caricare un file SVG contenente la pianta del magazzino], [UC-1.1],
     [FM-1.1.1], [Obbligatorio], [L'utente deve sempre poter creare un magazzino tramite caricamento di un file SVG, quando possibile], [UC-1.1],
-    [FD-1.1.2], [Desiderabile], [L'utente deve poter definire le altezze degli elementi del file SVG tramite trascinamento verso l'alto], [Verbale esterno 23-12-06],
+    [FD-1.1.2], [Desiderabile], [L'utente deve poter definire le altezze degli elementi del file SVG tramite trascinamento verso l'alto], [Verbale esterno\ 23-12-06],
     [FM-1.1.3], [Obbligatorio], [L'utente visualizza un errore di importazione del file SVG], [UC-1.1.1],
     [FM-1.1.3.1], [Obbligatorio], [L'utente visualizza un errore dato dal caricamento di un file SVG privo di informazioni], [UC-1.1.1.1],
     [FM-1.1.3.2], [Obbligatorio], [L'utente visualizza un errore dato da informazioni incongruenti nel file SVG], [UC-1.1.1.2],
@@ -1093,7 +1191,7 @@ Dove:
     [FM-3.1.1.3], [Obbligatorio], [L'utente deve poter definire l'orientamento rispetto al piano degli scaffali], [UC-3.1],
     [FM-3.1.1.4], [Obbligatorio], [L'utente deve poter definire la larghezza degli scaffali], [UC-3.1],
     [FM-3.1.1.5], [Obbligatorio], [L'utente deve poter definire il numero di piani degli scaffali], [UC-3.1],
-    [FD-3.1.1.6], [Desiderabile], [L'utente deve poter definire altezze diverse per ogni piano degli scaffali], [Verbale esterno 23-12-15],
+    [FD-3.1.1.6], [Desiderabile], [L'utente deve poter definire altezze diverse per ogni piano degli scaffali], [Verbale esterno\ 23-12-15],
     [FM-3.1.2], [Obbligatorio], [L'utente deve poter posizionare gli scaffali creati nell'ambiente], [UC-3.1],
     [FM-3.2], [Obbligatorio], [L'utente deve poter modificare gli scaffali], [UC-3.2],
     [FM-3.2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza degli scaffali], [UC-3.2],
@@ -1106,7 +1204,7 @@ Dove:
     [FM-3.3.2], [Obbligatorio], [L'utente deve poter spostare gli scaffali in profondità], [UC-3.3],
     [FM-3.3.3], [Obbligatorio], [L'utente deve poter ruotare gli scaffali], [UC-3.3],
     [FM-3.3.3.1], [Obbligatorio], [L'utente deve poter ruotare gli scaffali con angoli di 90°], [UC-3.3],
-    [FO-3.3.3.2], [Opzionale], [L'utente deve poter ruotare gli scaffali con angoli diversi da 90°], [Verbale esterno 23-12-06],
+    [FO-3.3.3.2], [Opzionale], [L'utente deve poter ruotare gli scaffali con angoli diversi da 90°], [Verbale esterno\ 23-12-06],
     [FM-3.3.4], [Obbligatorio], [L'utente visualizza un errore riguardo lo spostamento dello scaffale in una zona non libera], [UC-3.3.1],
     [FM-3.4], [Obbligatorio], [L'utente deve poter eliminare gli scaffali], [UC-3.4],
     [FM-3.4.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'eliminazione di uno scaffale non vuoto], [UC-3.4.1],
@@ -1117,10 +1215,10 @@ Dove:
     [FM-4.1.1.1], [Obbligatorio], [L'utente deve poter definire la profondità dei bin], [UC-4.1],
     [FM-4.1.1.2], [Obbligatorio], [L'utente deve poter definire la larghezza dei bin], [UC-4.1],
     [FM-4.1.1.3], [Obbligatorio], [L'utente deve poter definire l'altezza dei bin], [UC-4.1],
-    [FM-4.2], [Obbligatorio], [l'utente deve poter modificare i bin], [UC-4.2],
-    [FM-4.2.1], [Obbligatorio], [L'utente deve poter modificare la profondità dei bin], [UC-4.1],
-    [FM-4.2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza dei bin], [UC-4.1],
-    [FM-4.2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza dei bin], [UC-4.1],
+    [FM-4.2], [Obbligatorio], [L'utente deve poter modificare i bin], [UC-4.2],
+    [FM-4.2.1], [Obbligatorio], [L'utente deve poter modificare la profondità dei bin], [UC-4.2],
+    [FM-4.2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza dei bin], [UC-4.2],
+    [FM-4.2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza dei bin], [UC-4.2],
     [FM-4.3], [Obbligatorio], [L'utente deve poter eliminare i bin], [UC-4.3],
     [FM-4.3.1], [Obbligatorio], [L'utente visualizza un errore riguardo la cancellazione di un bin non vuoto], [UC-4.3.1],
 
@@ -1169,7 +1267,7 @@ Dove:
     [FM-11.3], [Obbligatorio], [L'utente deve poter effettuare operazioni di zoom della visuale], [UC-11.3],
     [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom-in], [UC-11.3],
     [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom-out], [UC-11.3],
-    
+
     [FM-12], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login], [Capitolato],
 
     [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato],
@@ -1189,8 +1287,8 @@ Dove:
     columns: 4,
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [QM-1], [Obbligatorio], [Deve essere rispettato quanto previsto dalle Norme di Progetto], [Interna],
-    [QM-2], [Obbligatorio], [Deve essere rispettato quanto previsto dal Piano di Qualifica], [Interna],
+    [QM-1], [Obbligatorio], [Deve essere rispettato quanto previsto dalle Norme di Progetto], [Decisione\ interna],
+    [QM-2], [Obbligatorio], [Deve essere rispettato quanto previsto dal Piano di Qualifica], [Decisione\ interna],
     [QM-3], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico], [Capitolato],
     [QM-4], [Obbligatorio], [Devono essere consegnati i diagrammi UML degli UC], [Capitolato],
     [QM-5], [Obbligatorio], [Deve essere consegnata la lista dei bug risolti], [Capitolato],

@@ -63,7 +63,7 @@ const { title, subTitle, docType, date, lastUpdated, externalParticipants, autho
 			externalParticipants && (
 				<>
 					<dt class="taxonomy">Partecipanti esterni</dt>
-					<dd class="content">{externalParticipants.name}</dd>
+					<dd class="content">{externalParticipants.join(", ")}</dd>
 				</>
 			)
 		}

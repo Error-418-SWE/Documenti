@@ -62,7 +62,7 @@ Egregio Prof. Riccardo Cardin,
 
 #v(1em)
 
-Con la presente, il gruppo Error-418 intende comunicarVi la volontà di candidarsi alla revisione per la _Requirements and Tecnology Baseline_. Sarà esposto lo stato di avanzamento del progetto:
+Con la presente, il gruppo #err418 intende comunicarVi la volontà di candidarsi alla revisione per la _Requirements and Tecnology Baseline_. Sarà esposto lo stato di avanzamento del progetto:
 
 #align(center)[*"WMS3: Warehouse Management 3D"*]
 
@@ -101,4 +101,4 @@ Il gruppo aggiorna la stima dei costi, riducendola a *€ 13.055,00*. La data di
 #v(1em)
 
 Cordiali saluti,\
-Error_418 (gruppo 7)
+#err418 (gruppo 7)

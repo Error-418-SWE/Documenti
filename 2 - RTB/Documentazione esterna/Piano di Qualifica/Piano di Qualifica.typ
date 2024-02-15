@@ -22,6 +22,11 @@ Definire la qualità di un prodotto consiste nell'attuazione di un insieme di pr
 == Approccio al documento
 Il presente documento viene redatto in modo incrementale per assicurare la coerenza delle informazioni al suo interno con gli sviluppi in corso e le esigenze evolutive del progetto. I valori identificati come accettabili per le metriche riportate possono subire variazioni con l'avanzamento dello sviluppo.
 
+== Dashboard di monitoraggio
+Il gruppo si dota di una dashboard di monitoraggio per tenere traccia delle metriche di processo e di prodotto. La dashboard è accessibile a tutti i membri del gruppo. Essa è accessibile al seguente link:
+
+#align(center, link(grafana))
+
 == Glossario
 Il presente documento include una serie di termini tecnici specifici del progetto. Al fine di agevolarne la comprensione, si fornisce un Glossario che espliciti il significato di tali termini. I termini tecnici sono chiaramente evidenziati nel testo mediante l'aggiunta di una "_G_" a pedice degli stessi.
 
@@ -62,7 +67,7 @@ Il presente documento include una serie di termini tecnici specifici del progett
 
 == Processi primari
 === Fornitura
-==== *BAC (Budget at Completion)* 
+==== *BAC (Budget at Completion)*
 Definito nel documento Piano di Progetto v2.0.0 con valore di € 13.055,00.
 ==== *PV (Planned Value)*
 La metrica PV rappresenta il valore pianificato, ovvero il costo preventivato per portare a termine le attività pianificate nello sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento Piano di Progetto v2.0.0. Il calcolo di tale metrica è esteso anche all'intero progetto, dove il valore pianificato è definito come sommatoria dei PV di ogni singolo sprint.
@@ -80,7 +85,7 @@ Si definisce:
   table(
     columns: 3,
     rows: (auto, 30pt),
-    
+
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     align(center+horizon,$"SPV" = sum_(r in R) "OR"_r * "CR"_r$), align(center+horizon,$>"0"$), align(center+horizon,$>"0"$),
   ),
@@ -93,7 +98,7 @@ Si definisce:
   table(
     columns: 3,
     rows: (auto, 30pt),
-    
+
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     align(center+horizon,$"PPV" = sum_(s in S)"SPV"_("s")$), align(center+horizon,$cases(>"0", <="BAC")$), align(center+horizon,$cases(>"0", <="BAC")$),
   ),
@@ -109,7 +114,7 @@ La metrica *AC* rappresenta la somma dei costi sostenuti dal gruppo in un determ
 #figure(
   table(
     columns: 3,
-    
+
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     [SAC = Somma dei costi sostenuti nello sprint], [$<="SPV"$], [$<="SPV" + 10%$],
   ),
@@ -123,7 +128,7 @@ Si definisce:
   table(
     columns: 3,
     rows: (auto, 30pt),
-    
+
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     align(center+horizon,$"PAC" = sum_(s in S)"SAC"_("s")$), align(center+horizon,$<="BAC"$), align(center+horizon,$<="BAC"$),
   ),
@@ -143,7 +148,7 @@ L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato p
   table(
     columns: 3,
     rows: (auto, 30pt),
-    
+
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     align(center+horizon,$"SEV" = display("SPC"/"SPP")*"SPV"$), align(center+horizon, $="SPV"$), align(center+horizon, $>="80% del SPV"$),
   ),
@@ -156,7 +161,7 @@ L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato p
   table(
     columns: 3,
     rows: (auto, 40pt),
-    
+
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     align(center+horizon, $"PEV" = sum_(s in S)"SEV"_("s")$), align(center+horizon, $="PPV"$), align(center+horizon, $>="80% del PPV"$),
   ),
@@ -172,7 +177,7 @@ Il *CPI* rappresenta l'indice di performance del costo, ovvero il rapporto tra i
   table(
     columns: 3,
     rows: (auto, 30pt),
-    
+
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     align(center+horizon,$"CPI" = display("PEV"/"PAC")$), align(center+horizon,$>=1$), align(center+horizon,$>=0.95$),
   ),
@@ -187,7 +192,7 @@ L'EAC rappresenta il costo stimato al termine del progetto. Tale metrica viene c
   table(
     columns: 3,
     rows: (auto,50pt),
-    
+
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     align(center+horizon,$"EAC" = display("BAC"/"CPI")$), align(center+horizon,$<="BAC"$),
     align(center+horizon, $cases( <= "BAC + 5%",
@@ -207,7 +212,7 @@ Il costo totale del capitolato non può essere maggiore rispetto a quanto espres
 #figure(
   table(
     columns: 3,
-    
+
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     [Numero di errori ortografici presenti nel testo], [0], [0],
   ),
@@ -224,7 +229,7 @@ Dati:
 
 #figure(
   table(
-    columns: 3, 
+    columns: 3,
     rows: (auto, 30pt),
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
     align(center+horizon, [% metriche soddisfatte = $display("MS"/"MT")*100$]), align(center+horizon,$100%$), align(center+horizon,$>=75%$),
@@ -240,7 +245,7 @@ Avere un resoconto delle metriche soddisfatte per ogni sprint permette di eviden
 // #figure(
 //   table(
 //     columns: 3,
-//     
+//
 //     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
 //     [% requisiti obbligatori soddisfatti], [100%], [100%],
 //     [% requisiti desiderabili soddisfatti], [$>=0%$], [0%],
@@ -255,7 +260,7 @@ Avere un resoconto delle metriche soddisfatte per ogni sprint permette di eviden
 //   table(
 //     columns: 3,
 //     rows: (auto, 30pt),
-//     
+//
 //     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
 //     align(center+horizon,$display(frac("Test con errori","Test eseguiti"))*100$), align(center+horizon,"0%"), align(center+horizon,$<=10%$),
 //   ),
@@ -266,7 +271,7 @@ Avere un resoconto delle metriche soddisfatte per ogni sprint permette di eviden
 // #figure(
 //   table(
 //     columns: 3,
-//     
+//
 //     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
 //     [Efficienza del sistema], [TBD], [TBD],
 //   ),
@@ -277,7 +282,7 @@ Avere un resoconto delle metriche soddisfatte per ogni sprint permette di eviden
 // #figure(
 //   table(
 //     columns: 3,
-//     
+//
 //     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
 //     [Facilità di utilizzo del sistema], [TBD], [TBD],
 //   ),
@@ -287,7 +292,7 @@ Avere un resoconto delle metriche soddisfatte per ogni sprint permette di eviden
 // #figure(
 //   table(
 //     columns: 3,
-//     
+//
 //     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
 //     [Manutenibilità del sistema], [TBD], [TBD],
 //   ),
@@ -296,16 +301,16 @@ Avere un resoconto delle metriche soddisfatte per ogni sprint permette di eviden
 
 = Valutazione Metriche
 == Premessa
-Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il gruppo ha imposto sprint della durata settimanale. Nel primo sprint si è confermato l'utilizzo dell'ITS Jira come strumento di tracciamento, ma per comprenderne a fondo le meccaniche e il corretto utilizzo, sono stati necessari i seguenti 4 sprint. Nel corso di questo periodo, sono state apportate modifiche di configurazione, anche consapevolmente non retrocompatibili, che hanno introdotto eterogeneità nei dati riportati dall'ITS.  
-Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponibili dal quinto sprint, iniziato il 04/12/2023. 
+Come stabilito dal Piano di Progetto v2.0.0 e dalle Norme di Progetto TODO, il gruppo ha imposto sprint della durata settimanale. Nel primo sprint si è confermato l'utilizzo dell'ITS Jira come strumento di tracciamento, ma per comprenderne a fondo le meccaniche e il corretto utilizzo, sono stati necessari i seguenti 4 sprint. Nel corso di questo periodo, sono state apportate modifiche di configurazione, anche consapevolmente non retrocompatibili, che hanno introdotto eterogeneità nei dati riportati dall'ITS.
+Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponibili dal quinto sprint, iniziato il 04/12/2023.
 == Processi primari
 === Fornitura
 ==== Rapporto tra PPV, PAC e PEV
 #figure(
   cetz.canvas({
-    import cetz.plot 
+    import cetz.plot
     let EV_points(offset: 0) = ((4,2040), (5,2655), (6,3111.85), (7,3528.52), (8,3948.14), (9, 4573.14), (10, 4848.14), (11, 5084.39), (12, 5178.90), (13, 5224.62)).map(((x,y)) => {(x,y + offset * 1.5)})
-    
+
     let AC_point(offset: 1) = ((4,2075), (5,2620), (6,3140), (7,3515), (8,4090), (9, 4520), (10, 4875), (11, 5105), (12, 5285), (13, 5395)).map(((x,y)) => {(x,y + offset * 1.5)})
 
     let PV_point(offset: 1) = ((4,2040), (5,2655), (6,3190), (7,3690), (8,4200), (9, 4825), (10, 5155), (11, 5470), (12, 5625), (13, 5705)).map(((x,y)) => {(x,y + offset * 1.5)})
@@ -336,7 +341,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 ==== Cost Performance Index CPI
 #figure(
   cetz.canvas({
-    import cetz.plot 
+    import cetz.plot
     let CPI_points(offset: 0) = ((4,0.98), (5,1.01), (6,0.99), (7,1.00), (8,0.97), (9, 1.01), (10, 0.99), (11, 1.00), (12, 0.98), (13, 0.97)).map(((x,y)) => {(x,y + offset * 1.5)})
 
     plot.plot(size: (12, 6), {
@@ -364,7 +369,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 ==== Rapporto tra BAC e EAC
 #figure(
   cetz.canvas({
-    import cetz.plot 
+    import cetz.plot
     let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13173.08), (7,   13004.98), (8, 13524.07), (9, 12903.30), (10, 13127.33), (11, 13107.92), (12, 13322.45), (13, 13480.74)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
@@ -397,15 +402,15 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 *Documentazione esterna*
 #figure(
   cetz.canvas({
-    import cetz.plot 
-    
-    let PdP_points(offset: 0) = ((4,1), (5,2), (6, 2), (7, 1), (8, 0), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
+    import cetz.plot
 
-    let PdQ_points(offset: 0) = ((4,0), (5,0), (6, 0), (7, 0), (8, 0), (9, 2), (10, 3), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
+    let PdP_points(offset: 0) = ((4,1), (5,2), (6, 2), (7, 1), (8, 0), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
 
-    let AdR_points(offset: 0) = ((4,4), (5,4), (6, 2), (7, 2), (8, 3), (9, 1), (10, 0), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
+    let PdQ_points(offset: 0) = ((4,0), (5,0), (6, 0), (7, 0), (8, 0), (9, 2), (10, 3), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
 
-    let GLS_points(offset: 0) = ((4,3), (5,2), (6, 0), (7, 0), (8, 2), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
+    let AdR_points(offset: 0) = ((4,4), (5,4), (6, 2), (7, 2), (8, 3), (9, 1), (10, 0), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
+
+    let GLS_points(offset: 0) = ((4,3), (5,2), (6, 0), (7, 0), (8, 2), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(PdP_points(offset: 0), line: "linear", label: "PdP", mark: "o")
@@ -431,11 +436,11 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 *Documentazione interna*
 #figure(
   cetz.canvas({
-    import cetz.plot 
+    import cetz.plot
 
-    let NdP_points(offset: 0) = ((4,2), (5,3), (6, 4), (7, 3), (8, 3), (9, 2), (10, 1), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})  
+    let NdP_points(offset: 0) = ((4,2), (5,3), (6, 4), (7, 3), (8, 3), (9, 2), (10, 1), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
 
-    let RIS_points(offset: 0) = ((4,2), (5,1), (6, 0), (7, 0), (8, 0), (9, 0), (10, 0), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})   
+    let RIS_points(offset: 0) = ((4,2), (5,1), (6, 0), (7, 0), (8, 0), (9, 0), (10, 0), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(NdP_points(offset: 0), line: "linear", label: "NdP", mark: "o")
@@ -469,9 +474,9 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 ==== Metriche soddisfatte
 #figure(
   cetz.canvas({
-    import cetz.plot 
+    import cetz.plot
 
-    let Metrics_points(offset: 0) = ((4,7/9*100), (5,8/9*100), (6, 7/9*100), (7, 8/9*100), (8, 6/9*100), (9, 8/9*100), (10, 7/9*100), (11, 6/9*100), (12, 6/9*100), (13, 6/9*100)).map(((x,y)) => {(x,y + offset * 100)})     
+    let Metrics_points(offset: 0) = ((4,7/9*100), (5,8/9*100), (6, 7/9*100), (7, 8/9*100), (8, 6/9*100), (9, 8/9*100), (10, 7/9*100), (11, 6/9*100), (12, 6/9*100), (13, 6/9*100)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(Metrics_points(offset: 0), line: "linear", label: "% Metriche soddisfatte", mark: "triangle", style: (stroke: (paint: red)))

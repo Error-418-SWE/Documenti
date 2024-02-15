@@ -148,7 +148,6 @@ In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo
 - *Google slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il Committente riguardo l'andamento del lavoro;
 - *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
 
-
 = Processi di ciclo di vita
 
 == Processi organizzativi abilitanti
@@ -282,7 +281,7 @@ Le responsabilità del Progettista includono:
 Il Programmatore è la figura più numerosa all'intero del gruppo.\
 Le sue responsabilità includono:
 
-+ scrittura del codice sorgente, perseguendo mantenibilità e conformità a quanto stabilito dall'architettura definita dalla progettazione;
++ scrittura del codice sorgente, perseguendo manutenibilità e conformità a quanto stabilito dall'architettura definita dalla progettazione;
 
 + creazione di test specifici per la verifica e la validazione del codice.
 
@@ -474,7 +473,7 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
 + *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento Analisi dei Requisiti, nel quale:
   - definisce i casi d'uso;
   - raccoglie e classifica i requisiti.
-+ *Progettista*: ruolo presente principalmente negli ulimi due periodi, nei quali:
++ *Progettista*: ruolo presente principalmente negli ultimi due periodi, nei quali:
   - effettua uno studio delle tecnologie proposte, mirato alla definizione  dello stack tecnologico da usare;
   - delinea l'architettura del prodotto;
   - definisce le linee guida implementative valutando le scelte più efficienti e sostenibili.
@@ -500,7 +499,7 @@ Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e
 === Risultati
 Come risultato dell'implementazione del processo di valutazione e controllo si elencano i seguenti:
 - valutazione dell'adeguatezza di ruoli, responsabilità e risorse;
-- esecuzione delle azioni correttive scaturite dalle revisioni di progesso;
+- esecuzione delle azioni correttive scaturite dalle revisioni di progresso;
 - viene avviata, se necessaria, la ripianificazione del progetto;
 - viene autorizzata l'azione del progetto di avanzare (o meno) da un traguardo o evento programmato al successivo;
 - vengono registrati gli obiettivi raggiunti.
@@ -1199,7 +1198,7 @@ Grafana è l'applicazione utilizzata per visualizzare i dati raccolti tramite l'
   - task svolti;
   - story point per stato;
   - bug aperti.
-I dati sono visualizzati sottoforma di grafici, per aiutarne l'analisi e la comprensione, e sono consultabili in ogni momento dal gruppo.
+I dati sono visualizzati sotto forma di grafici, per aiutarne l'analisi e la comprensione, e sono consultabili in ogni momento dal gruppo.
 
 = Processi tecnici
 
@@ -1364,9 +1363,9 @@ Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. Il docu
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017
 
-La tabella di seguito riportata consente di associare ogni capitolo del documento al rispettivo capitolo dello standard di riferimento. Viene riporato anche il grado di conformità:
+La tabella di seguito riportata consente di associare ogni capitolo del documento al rispettivo capitolo dello standard di riferimento. Viene riportato anche il grado di conformità:
 - *To outcome* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
-- *Full* indica che il capitolo riporta fedelmente le indacazioni dello standard con poche o nessuna azione di adeguamento.
+- *Full* indica che il capitolo riporta fedelmente le indicazioni dello standard con poche o nessuna azione di adeguamento.
 
 #figure(
   table(

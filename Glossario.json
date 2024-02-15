@@ -74,6 +74,16 @@
     "acronyms": [],
     "synonyms": []
   },
+  "Continuous Delivery": {
+    "description": "Pratica di sviluppo software che prevede il deployment continuo in produzione delle modifiche al codice sorgente.",
+    "acronyms": ["CI/CD"],
+    "synonyms": []
+  },
+  "Continuous Integration": {
+    "description": "Pratica di sviluppo software che prevede l'integrazione continua delle modifiche al codice sorgente da parte dei vari membri del team. L'obiettivo è quello di rilevare e risolvere i problemi di integrazione il prima possibile (feedback rapido).",
+    "acronyms": ["CI/CD"],
+    "synonyms": []
+  },
   "Cost Performance Index": {
     "description": "Indice di performance del costo, ovvero il rapporto tra il valore guadagnato e il costo effettivo sostenuto.",
     "acronyms": ["CPI"],

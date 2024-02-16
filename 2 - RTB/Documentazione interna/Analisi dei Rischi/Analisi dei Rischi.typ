@@ -22,7 +22,6 @@ A ciascun rischio individuato si associano:
     - l'eliminazione del rischio;
     - la riduzione della sua probabilità o gravità;
     - l'accettazione del rischio.
-
   - conseguenze relative a ciascuna delle azioni possibili, esse descrivono gli effetti collaterali a breve o medio termine che il rischio può comportare.
 
 = Rischi
@@ -32,7 +31,7 @@ I contatti con il Proponente subiscono variazioni nella qualità e nella frequen
 
 - Impatto: grave;
 - Probabilità: 1;
-- Soglie: 
+- Soglie:
   - se il periodo critico previsto è sufficientemente breve da permettere al gruppo di continuare con un corretto avanzamento dei lavori nonostante la variazione nella comunicazione con il Proponente, si adotta l'"Accettazione del rischio" mantenendo monitorata la situazione;
   - se il periodo critico previsto può mettere a rischio il corretto avanzamento dei lavori o la qualità degli stessi, si adotta l'azione correttiva di rischio: "Riduzione della sua probabilità o gravità".
 
@@ -62,14 +61,14 @@ Uno o più membri cessano temporaneamente la partecipazione attiva alle attivit�
 
 - Impatto: medio;
 - Probabilità: 3;
-- Soglie: 
+- Soglie:
   - se la cessazione della partecipazione da parte di uno o più membri del gruppo può causare un rallentamento nell'avanzamento dei lavori è necessario discutere con i diretti interessati al fine di inquadrare al meglio la situazione. Nel caso in cui tale dialogo rivelasse un'impossibilità nella ripresa delle attività in breve termine oppure nel caso in cui non sia possibile contattare i diretti interessati, è necessario attuare la "Riduzione della sua probabilità o gravità";
   - in caso contrario, se contattando i membri coinvolti emerge la previsione certa di una corretta ripresa delle attività in breve tempo, si attua l'"Accettazione del rischio".
 
 === Opzioni di trattamento del rischio
 ==== Riduzione della sua probabilità o gravità
 *Strategia di trattamento* \
-Le attività di lavoro assegnate ai membri coinvolti che non hanno una corretta conclusione nei tempi e nelle modalità previste possono essere riassegnate ad altri membri del gruppo. 
+Le attività di lavoro assegnate ai membri coinvolti che non hanno una corretta conclusione nei tempi e nelle modalità previste possono essere riassegnate ad altri membri del gruppo.
 Viene sollecitato il dialogo con i membri coinvolti per capire la situazione e programmare al meglio le attività da svolgere.
 
 \ *Conseguenze* \
@@ -97,7 +96,7 @@ Esso comporta un generale ritardo nello sviluppo.
 === Opzioni di trattamento del rischio
 ==== Riduzione della sua probabilità o gravità
 *Strategia di trattamento* \
-Implementazione di una pianificazione più flessibile decisa in sede di meeting, per adattarsi agli impegni individuali e progettuali. 
+Implementazione di una pianificazione più flessibile decisa in sede di meeting, per adattarsi agli impegni individuali e progettuali.
 Questo prevede una priorizzazione nell'uso di strumenti di lavoro asincroni, al fine di permettere a tutti i membri un'equa divisione del lavoro da svolgere nei momenti a loro più comodi, a patto di rispettare le linee guida delle Norme di Progetto.
 Assegnazione chiara delle responsabilità in luce dei rallentamenti previsti e monitoraggio costante dello stato di avanzamento.
 Inoltre è richiesta comunicazione costante con i membri del gruppo al fine di rendere note eventuali indisponibilità o impegni.

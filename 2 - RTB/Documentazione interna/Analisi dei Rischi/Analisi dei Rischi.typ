@@ -9,6 +9,8 @@
     "Oseliero Antonio",
   ),
   showLog: true,
+  showImagesIndex: false,
+  showTablesIndex: false,
 );
 
 = Profili di rischio

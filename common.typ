@@ -41,3 +41,19 @@
   if (year < 99) { year += 2000 }
   text("(ultimo accesso " + datetime(year: year, month: month, day: day).display("[day]/[month]/[year]") + ")", size: 0.8em, style: "italic", fill: luma(100))
 }
+
+#let glo_paragrafo = [
+  Al fine di agevolare la comprensione del presente documento, viene fornito un glossario che espliciti il significato dei termini di dominio specifici del progetto. I termini di glossario sono evidenziati nel testo mediante l'aggiunta di una "_G_" a pedice degli stessi:
+
+  #align(center, {
+    text("Termine di glossario")
+    h(0.03em)
+    text(
+      fill: luma(100),
+      sub(emph("G"))
+    )
+    h(0.02em)
+  })
+
+  Le definizioni sono dipoonibili nel documento #glo_v.
+]

@@ -1332,6 +1332,75 @@ Questo sprint impiega:
   supplement: "Grafico"
 )
 
+== Sprint 15 dal 11-02-2024 al 18-02-2024
+
+=== Obiettivi prefissati
+Questo sprint si occupa della preparazione per il colloquio RTB con il #vardanega e avvia le attività di progettazione del prodotto software. Gli obiettivi prefissati per questo sprint sono:
+- definizione del diagramma ER del database da implementare;
+- studio preliminare degli elementi architetturali del prodotto;
+- identificazione degli strumenti di appoggio per l'implementazione di una pipeline di CI/CD;
+- configurazione della repository e dei suddetti strumenti;
+- miglioramento della struttura informativa del documento #adr, in particolare per quanto riguarda il tracciamento tra casi d'uso e requisiti;
+- aggiornamento delle GitHub Actions recentemente deprecate (`actions/upload-artifact`, `actions/download-artifact`, `actions/setup-python`);
+- prenotazione del colloquio RTB con il #vardanega, nella seconda metà della settimana.
+
+=== Preventivo costi
+Questo sprint impiega:
+- *Responsabile*: al fine di:
+  - coordinare le attività;
+  - candidare il gruppo al colloquio RTB;
+  - contattare il Proponente fornendo aggiornamenti sull'avanzamento dei lavori.
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp;
+  - identificare gli strumenti di appoggio per l'implementazione di una pipeline di CI/CD;
+  - configurare la repository e i suddetti strumenti.
+- *Analista*: al fine di:
+  - migliorare il tracciamento tra casi d'uso e requisiti nel documento #adr.
+- *Progettista*: al fine di:
+  - definire il diagramma ER del database;
+  - studiare gli elementi architetturali del prodotto.
+- *Programmatore*: al fine di:
+  - implementare uno scheletro dell'applicazione, simile al PoC per struttura ma privo dell'ambiente fornito da Three.js, con Docker Compose;
+  - realizzare un primo prototipo del database;
+  - aggiornare le GitHub Actions che fanno uso di dipendenze recentemente deprecate (`actions/upload-artifact`, `actions/download-artifact`, `actions/setup-python`).
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp.
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [2],     [3],     [0],     [5],
+    [Carraro],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
+    [Gardin],     [0],     [0],     [0],     [0],     [3],     [0],     [3],
+    [Nardo],     [0],     [2],     [3],     [0],     [0],     [0],     [5],
+    [Oseliero],     [0],     [2],     [0],     [2],     [0],     [0],     [4],
+    [Todesco],     [3],     [0],     [0],     [0],     [0],     [0],     [3],
+    [Zaccone],     [0],     [0],     [0],     [0],     [0],     [4],     [4],
+    [Totale ore],     [3],     [4],     [3],     [4],     [6],     [7],     [27],
+    [Costo ruolo],     [90],     [80],     [75],     [100],     [90],     [105],     [540],
+  ),
+  caption: "Prospetto del preventivo, sprint 15"
+)
+#let data = (
+  ("Responsabile", 3),
+  ("Amministratore", 4),
+  ("Analista", 3),
+  ("Progettista", 4),
+  ("Programmatore", 6),
+  ("Verificatore", 7),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo sprint 15",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
 #pagebreak()
 
 = Consuntivi di periodo <consuntivi>

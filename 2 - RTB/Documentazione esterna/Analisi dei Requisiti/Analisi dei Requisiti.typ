@@ -44,8 +44,63 @@
 
 Il presente documento descrive i casi d'uso e i requisiti del progetto _Warehouse Management 3D_, elaborati a partire dal capitolato C5 proposto da Sanmarco Informatica S.p.A e assegnato all'organizzazione dal Committente.
 
-== Definizioni
-Il presente documento include lessico di dominio, per il quale è previsto il documento di Glossario. Le parole del Glossario sono denotate dal simbolo #sub("G") al pedice.
+== Glossario
+#glo_paragrafo
+
+== Riferimenti <riferimenti>
+
+=== Riferimenti a documentazione interna <riferimenti-interni>
+
+- Documento #glo_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v" + glo_vo + ".pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
+- Documento #ndp_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20interna/Norme%20di%20Progetto_v" + ndp_vo + ".pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
+=== Riferimenti normativi <riferimenti-normativi>
+
+- Regolamento del progetto didattico: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
+- Standard ISO/IEC/IEEE 12207:2017: \
+  _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
+  #lastVisitedOn(13, 02, 2024)
+
+- Standard ISO/IEC/IEEE 29148:2018: \
+  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_
+  #lastVisitedOn(13, 02, 2024)
+
+- SWEBOK Chapter 1: Software Requirements: \
+  _#link("http://swebokwiki.org/Chapter_1:_Software_Requirements")_
+  #lastVisitedOn(13, 02, 2024)
+
+=== Riferimenti informativi <riferimenti-informativi>
+
+- Verbali interni;
+- Verbali esterni;
+- Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
+- Documentazione Three.js: \
+  _#link("https://threejs.org/docs/index.html")_
+  #lastVisitedOn(13, 02, 2024)
+
+- Analisi dei requisiti: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
+- Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
+  _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_
+  #lastVisitedOn(13, 02, 2024)
+
+- WebGL 2.0 Specification: \
+  _#link("https://registry.khronos.org/webgl/specs/latest/2.0/")_
+  #lastVisitedOn(13, 02, 2024)
+
 
 = Descrizione del prodotto
 
@@ -183,58 +238,6 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 + Disponibilità di un database SQL;
 + Disponibilità di un browser compatibile con WebGL;
 + Disponibilità di un sistema proprietario per notificare, in questo caso, la richiesta di spostamento di un prodotto all'interno del magazzino al personale designato.
-
-= Riferimenti
-
-== Riferimenti di conformità
-
-- Norme di Progetto: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB")_
-  #lastVisitedOn(13, 02, 2024)
-
-- Regolamento del progetto didattico: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
-  #lastVisitedOn(13, 02, 2024)
-
-- Standard ISO/IEC/IEEE 29148:2018: \
-  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_
-  #lastVisitedOn(13, 02, 2024)
-
-- Standard ISO/IEC/IEEE 12207:2017: \
-  _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
-  #lastVisitedOn(13, 02, 2024)
-
-
-== Riferimenti informativi
-
-- Verbali interni;
-- Verbali esterni;
-- Capitolato "Warehouse Management 3D" di _Sanmarco Informatica S.p.A._: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
-  #lastVisitedOn(13, 02, 2024)
-
-- Documentazione Three.js: \
-  _#link("https://threejs.org/docs/index.html")_
-  #lastVisitedOn(13, 02, 2024)
-
-- WebGL 2.0 Specification: \
-  _#link("https://registry.khronos.org/webgl/specs/latest/2.0/")_
-  #lastVisitedOn(13, 02, 2024)
-
-- Analisi dei requisiti: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf")_
-  #lastVisitedOn(13, 02, 2024)
-
-- Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
-  _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_
-  #lastVisitedOn(13, 02, 2024)
-
-
-== Riferimenti a documentazione interna
-- Documento #glo_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
-  #lastVisitedOn(13, 02, 2024)
-
 
 
 == Principi di redazione

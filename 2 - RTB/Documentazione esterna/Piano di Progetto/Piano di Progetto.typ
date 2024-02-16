@@ -126,11 +126,23 @@ Il documento si articola in 5 sezioni principali:
 - *Preventivi di periodo*: dedicata alla pianificazione delle attività da svolgere per ciascuno sprint;
 - *Consuntivi di periodo*: dedicata all'analisi retrospettiva del lavoro svolto in ciascuno sprint. Riporta eventuali criticità ed azioni intraprese a fini migliorativi.
 
-== Definizioni
-Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e per evitare qualsiasi forma di ambiguità in merito ai termini utilizzati, il gruppo _Error\_418_ fornisce il documento Glossario v1.1.0. Ogni ricorrenza di termini tecnici appartenenti al dominio del progetto sarà denotata dalla lettera _G_ al pedice.
+== Glossario
+#glo_paragrafo
 
 == Riferimenti <riferimenti>
+
+=== Riferimenti a documentazione interna <riferimenti-interni>
+
+- Documento #glo_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v" + glo_vo + ".pdf")_
+  #lastVisitedOn(13,02,2024)
+
+- Documento #ris_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v" + ris_vo + ".pdf")_
+  #lastVisitedOn(13,02,2024)
+
 === Riferimenti normativi <riferimenti-normativi>
+
 - Regolamento di progetto: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
   #lastVisitedOn(13,02,2024)
@@ -144,18 +156,10 @@ Al fine di rendere quanto più chiaro possibile il contenuto dei documenti, e pe
   #lastVisitedOn(13,02,2024)
 
 === Riferimenti informativi <riferimenti-informativi>
-- Capitolato C5: WMS3: Warehouse management 3D: \
+
+- Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
-  #lastVisitedOn(13,02,2024)
-
-=== Riferimenti a documentazione interna <riferimenti-interni>
-- Documento #glo_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
-  #lastVisitedOn(13,02,2024)
-
-- Documento #ris_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")_
-  #lastVisitedOn(13,02,2024)
+  #lastVisitedOn(13, 02, 2024)
 
 
 #pagebreak()

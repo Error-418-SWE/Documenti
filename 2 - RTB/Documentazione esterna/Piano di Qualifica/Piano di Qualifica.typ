@@ -28,37 +28,41 @@ Il gruppo si dota di una dashboard di monitoraggio per tenere traccia delle metr
 #align(center, link(grafana))
 
 == Glossario
-Il presente documento include una serie di termini tecnici specifici del progetto. Al fine di agevolarne la comprensione, si fornisce un Glossario che espliciti il significato di tali termini. I termini tecnici sono chiaramente evidenziati nel testo mediante l'aggiunta di una "_G_" a pedice degli stessi.
+#glo_paragrafo
 
-== Riferimenti
-=== Riferimenti a documentazione interna
-- Documento #glo_v\
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
+== Riferimenti <riferimenti>
+
+=== Riferimenti a documentazione interna <riferimenti-interni>
+
+- Documento #glo_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v" + glo_vo + ".pdf")_
   #lastVisitedOn(13, 02, 2024)
 
-- Documento #pdp_v:\
-  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20esterna")_
+- Documento #ndp_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20interna/Norme%20di%20Progetto_v" + ndp_vo + ".pdf")_
   #lastVisitedOn(13, 02, 2024)
 
-- Documento #ndp_v:\
-  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20interna")_
+- Documento #pdp_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20esterna/Piano%20di%20Progetto_v" + pdp_vo + ".pdf")_
   #lastVisitedOn(13, 02, 2024)
 
-=== Riferimenti normativi
-- ISO/IEC 9126:\
-  _#link("https://it.wikipedia.org/wiki/ISO/IEC_9126")_
+=== Riferimenti normativi <riferimenti-normativi>
+
+- ISO/IEC 9126 1:2001: \
+  _#link("https://www.iso.org/standard/22749.html")_
   #lastVisitedOn(13, 02, 2024)
 
-- Capitolato d'appalto C5 _WMS3_: \
+- Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
   #lastVisitedOn(13, 02, 2024)
 
-=== Riferimenti informativi
-- Dispense T7 (Qualità del software):\
+=== Riferimenti informativi <riferimenti-informativi>
+
+- Dispense T7 (Qualità del software): \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T7.pdf")_
   #lastVisitedOn(13, 02, 2024)
 
-- Dispense T8 (Qualità di processo):\
+- Dispense T8 (Qualità di processo): \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")_
   #lastVisitedOn(13, 02, 2024)
 

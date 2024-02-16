@@ -22,41 +22,47 @@ Il capitolato C5, denominato _WMS3: Warehouse Management 3D_ e aggiudicato al gr
 L'utente avrà la possibilità di cercare specifici prodotti all'interno del magazzino, sfruttando la visualizzazione 3D per individuare rapidamente la posizione degli articoli desiderati, potrà modificare l'assetto del magazzino e inviare una notifica verso l'esterno in caso ci sia il bisogno di prelevare un articolo.
 
 == Glossario
-Al fine di eliminare le ambiguità durante la consultazione dei documenti, verrà introdotto un Glossario, che rappresenta una raccolta delle definizioni dei termini più rilevanti, fornendo chiarimenti sui significati particolari associati a ciascun termine.
+#glo_paragrafo
 
-== Riferimenti
+== Riferimenti <riferimenti>
 
-=== Riferimenti normativi
+=== Riferimenti a documentazione interna <riferimenti-interni>
 
-- Standard ISO/IEC/IEEE 12207:2017:\
-  _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
+- Documento #glo_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v" + glo_vo + ".pdf")_
   #lastVisitedOn(13,02,2024)
 
-- Standard ISO/IEC/IEEE 29148:2018:\
-  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_
+- Documento #ris_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v" + ris_vo + ".pdf")_
   #lastVisitedOn(13,02,2024)
 
-- SWEBOK:\
-  _#link("http://swebokwiki.org/Main_Page;")_
-  #lastVisitedOn(13,02,2024)
+=== Riferimenti normativi <riferimenti-normativi>
 
-- Specifica Unified Modeling Language 2:\
-  _#link("https://www.omg.org/spec/UML/")_
-  #lastVisitedOn(13,02,2024)
+- Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
+  #lastVisitedOn(13, 02, 2024)
 
-- Regolamento di Progetto:\
+- Regolamento di Progetto: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
   #lastVisitedOn(13,02,2024)
 
-- Capitolato d'appalto C5: _WMS3_: \
-  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
+- Standard ISO/IEC/IEEE 12207:2017: \
+  _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
   #lastVisitedOn(13,02,2024)
 
-=== Riferimenti informativi
-
-- Documentazione Typst: \
-  _#link("https://typst.app/docs/")_
+- Standard ISO/IEC/IEEE 29148:2018: \
+  _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_
   #lastVisitedOn(13,02,2024)
+
+- SWEBOK Chapter 6: Software Configuration Management: \
+  _#link("http://swebokwiki.org/Chapter_6:_Software_Configuration_Management")_
+  #lastVisitedOn(13, 02, 2024)
+
+- Specifica Unified Modeling Language 2: \
+  _#link("https://www.omg.org/spec/UML/")_
+  #lastVisitedOn(13,02,2024)
+
+=== Riferimenti informativi <riferimenti-informativi>
 
 - Documentazione Git: \
   _#link("https://git-scm.com/docs")_
@@ -66,18 +72,14 @@ Al fine di eliminare le ambiguità durante la consultazione dei documenti, verr�
   _#link("https://confluence.atlassian.com/jira")_
   #lastVisitedOn(13,02,2024)
 
+- Documentazione Typst: \
+  _#link("https://typst.app/docs/")_
+  #lastVisitedOn(13,02,2024)
+
 - Documentazione Three.js: \
   _#link("https://threejs.org/docs/")_
   #lastVisitedOn(13,02,2024)
 
-=== Riferimenti a documentazione interna
-- Documento #ris_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v2.0.0.pdf")_
-  #lastVisitedOn(13,02,2024)
-
-- Documento #glo_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v1.1.0.pdf")_
-  #lastVisitedOn(13,02,2024)
 
 = Processi di accordo
 
@@ -554,13 +556,13 @@ Nell'attività di controllo si intraprendono azioni correttive nei confronti dei
 Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcuni dei task raccolti rispondono direttamente ai problemi individuati nella parte di Things to change.
 
 ===== Ripianificazione
-La ripianificazione ha atto quando gli obiettivi cambiano nel corso dello sprint o alcune ipotesi fatte in fase di pianificazione si rivelano sbagliate. La ripianificazione viene gestita tramite Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo. 
+La ripianificazione ha atto quando gli obiettivi cambiano nel corso dello sprint o alcune ipotesi fatte in fase di pianificazione si rivelano sbagliate. La ripianificazione viene gestita tramite Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo.
 
 ===== Azioni di cambiamento dovute a richieste del Committente e/o Proponente
 Le azioni di cambiamento dovute a richieste del Committente e/o Proponente sono recepite attraverso i canali di comunicazione con quest'ultimi (Zoom, mail) e vengono registrate nei rispettivi verbali. A queste azioni viene attribuita un'alta priorità per garantire massima soddisfazione nel cliente finale.
 
 ===== Autorizzazione ad avanzare alla successiva milestone
-L'autorizzazione ad avanzare alla successiva milestone di progetto viene concessa dal Committente e/o Proponente in seguito ai colloqui pianificati su Zoom con quest'ultimi. Il gruppo si riserva di procedere verso la milestone successiva solo una volta ricevuta l'approvazione richiesta, in modo da non portare avanti difetti e problematiche che potrebbero risultare insidiosi da correggere una volta entrati in un periodo avanzato del progetto. 
+L'autorizzazione ad avanzare alla successiva milestone di progetto viene concessa dal Committente e/o Proponente in seguito ai colloqui pianificati su Zoom con quest'ultimi. Il gruppo si riserva di procedere verso la milestone successiva solo una volta ricevuta l'approvazione richiesta, in modo da non portare avanti difetti e problematiche che potrebbero risultare insidiosi da correggere una volta entrati in un periodo avanzato del progetto.
 
 == Processo di gestione delle Decisioni <processo_gestione_decisioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
@@ -670,7 +672,7 @@ Il gruppo definisce approcci di trattamento appropriati, compresi piani di mitig
   Viene aggiornato in modo tempestivo in risposta ai cambiamenti nelle condizioni del progetto;
 
 + *Fornitura del profilo di rischio rilevante agli stakeholder in base alle loro esigenze*:\
-  il profilo di rischio viene all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento #ris_v. 
+  il profilo di rischio viene all'occorrenza discusso nei meeting interni e/o esterni e tutte le parti interessate allo stato attuale dei rischi e delle azioni di trattamento possono consultare il documento #ris_v.
 
 
 ==== Analisi dei rischi
@@ -693,7 +695,7 @@ Questa attività consiste nei seguenti compiti:
 + *nel caso di accettazione di un rischio al di sopra della soglia, attribuzione di priorità elevata e monitoraggio costante*:\
   pratica necessaria per valutare la necessità di futuri interventi di trattamento del rischio o eventuali modifiche della sua priorità;
 
-+ *coordinamento dell'azione di gestione dopo la selezione di una strategia di trattamento del rischio*:\ 
++ *coordinamento dell'azione di gestione dopo la selezione di una strategia di trattamento del rischio*:\
   dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di valutazione e controllo del progetto può essere applicato.
 
 ==== Monitoraggio dei rischi
@@ -877,7 +879,7 @@ Il gruppo utilizza come metrica principale il burndown chart, che permette di av
 
 
 ==== Controllo delle release
-Il controllo delle release viene gestito tramite il meccanismo di pull request di GitHub. 
+Il controllo delle release viene gestito tramite il meccanismo di pull request di GitHub.
 Prima di integrare i nuovi cambiamenti, viene aperta una pull request dall'assegnatario del task. La pull request deve avere un titolo valido (come descritto nel paragrafo dedicato @automazioni) e deve essere designato almeno un reviewer. Di norma il reviewer di base è il Verificatore, che svolge una supervisione sulla correttezza sintattica e semantica dei contenuti.
 Nel caso in cui ci sia bisogno di una figura con delle competenze specifiche per quanto riguarda la semantica e il contenuto del materiale da revisionare, il Verificatore può essere affiancato da altri membri del gruppo.
 Per ogni richiesta di modifiche da apportare vengono aperte delle conversation, in cui è possibile evidenziare le linee del documento che hanno bisogno di cambiamenti, oltre a stabilire un canale di comunicazione fra assegnatario e Verificatore.
@@ -1326,7 +1328,7 @@ Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione de
 ==== Casi d'uso
 Si definisce un insieme di casi d'uso (anche detti use case, abbreviato in UC) che identifichi tutte le funzionalità attese.
 I casi d'uso sono definiti ed utilizzati nel documento di _Analisi dei Requisiti_. Essi sono:
-- fonte di bisogni e, indirettamente, di requisiti; 
+- fonte di bisogni e, indirettamente, di requisiti;
 - un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
 
 Ogni caso d'uso comprende:

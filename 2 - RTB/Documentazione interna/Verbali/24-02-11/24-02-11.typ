@@ -14,40 +14,69 @@
 = Ordine del giorno
 - Valutazione del progresso generale;
 - Analisi di retrospettiva;
-- Seconda parte RTB con #vardanega
+- Seconda parte RTB con #vardanega;
 - Pianificazione.
 
 == Valutazione del progresso generale
 
-Il gruppo apre la riunione analizzando l'andamento dello sprint appena concluso. È stato evidenziato come, nonostante fosse il primo sprint di lavoro dopo il warm start, si sia lavorato molto bene, come dimostrato dalla mole di ticket chiusi sulla board Jira.\
+Il meeting si avvia con con l'analisi dello sprint concluso. Nonostante si trattasse del primo sprint a seguito della sessione degli esami, la ripresa dei lavori è stata rapida (warm start), grazie anche alla scelta di non interrompere i lavori negli sprint precedenti ma di ridimensionare il carico di lavoro per far fronte agli impegni universitari, il corretto andamento dello sprint è supportato anche dalle metriche esposte sul cruscotto di qualità realizzato in Grafana.
 
 === Revisione #ndp
 
-Sono stati revisionati la maggior parte dei capitoli del documento, anche se il lavoro non è ancora del tutto ultimato.
+Sono stati revisionati la maggior parte dei capitoli del documento, anche se il lavoro non è ancora del tutto ultimato.\
+Rimangono le task relative a:
+- Rimuovere capitolo Processi di supporto/Documentazione;
+- Revisione ultimi capitoli rimasti.
+
 
 === Revisione #adr
 
-Il gruppo si è impegnato a risolvere tutte le criticità riscontrate dal #cardin durante la prima parte di revisione RTB.
+Il gruppo si è impegnato a risolvere tutte le criticità riscontrate dal #cardin durante la prima parte di revisione RTB, precisamente la valutazione è stata:
+- Il glossario va riferito anche con il numero di versione del documento;
+- UC2: quali sono le informazioni che possono essere modificate?
+- UC3.1: quali sono i dati necessari alla creazione dello scaffale?
+- UC3.2: cosa può essere modificato di uno scaffale?
+- UC4.1: quali sono i dati necessari alla creazione di un bin?
+- UC4.2: cosa può essere modificato di un bin?
+- UC6: il database è interno all'applicazione o è possibile collegarsi a database esterni? Se siì, quali? Se invece è interno, allora il database non può essere un attore secondario (in ogni caso, la primitiva grafica scelta non esiste in UML 2);
+- UC6.1 è precondizione di UC6, non sua inclusione;
+- UC6.1 cosa si intende con "configurazione"? Quali informazioni?
+- UC7: cosa sono le API? Se sono API interne, allora non possono essere attore secondario. Inoltre, perché la funzionalità è una "richiesta"?
+- UC8 e seguenti: modificare "interrogazione" con "visualizzazione". Quali informazioni sono visualizzate?
+- UC11 va analizzato più in dettaglio. I requisiti di qualità mancano della creazione dei manuali richiesti;
+- VM1 e VM2 sono funzionali;
+- VM3 non è chiaro e quindi non verificabile;
+- Non è presente il tracciamento casi d'uso / requisiti.
+
+Il documento abbozza una struttura corretta, ma il livello di analisi raggiunto è spesso poco dettagliato e lacunoso. Inoltre, sono presenti alcuni errori di modellazione.\
+Tutti queste criticità sono state corrette durante lo sprint appena concluso e il documento è ora pronto per la revisione prima del PB.
 
 === Revisione #pdp e #pdq
 
-Il lavoro sui documenti segue dal big bang attuato durante gli sprint precedenti e viene concluso.
+Il lavoro sul #pdp segue dal big bang attuato durante gli sprint precedenti e viene concluso. Viene inoltre redatto:
+- preventivo sprint 12;
+- preventivo sprint 13;
+- consuntivo sprint 13;
+- preventivo sprint 14;
+segue un generale refactoring del documento.
+
+Il #pdq invece è stato esteso e aggiornato con le metriche del periodo e la loro analisi. Vengono inoltre inseriti i grafici generati con Grafana.
 
 === Candidatura seconda parte RTB
 
-Il gruppo ha concordato l'invio della mail per presentarsi al colloquio con il #vardanega per sostenere la seconda parte del RTB.
+Il gruppo ha concordato l'invio della mail per sostenere la seconda parte della revisione esterna RTB con il #vardanega per la data 14/02/2024.
 
 == Analisi di retrospettiva
 
 === Keep doing
 
-A contribuire al successo dello sprint 14 troviamo una buonissima pianificazione iniziale delle task, e il fatto che la modalità di lavoro asincrona risulta pienamente consolidata dal gruppo.
+A contribuire al successo dello sprint 14 troviamo un efficace pianificazione delle task e il rispetto della modalità di lavoro asincrona.
 
-=== Criticità  
+=== Improvements  
 
 Tra le criticità evidenziate troviamo:
 + un basso utilizzo di Miro per i meeting di retrospettiva;
-+ ritardi nelle correzioni delle pr 
++ ritardi nelle correzioni delle pr;
 + struttura dei verbali non sempre conforme.
 
 === Soluzioni adottate
@@ -55,25 +84,23 @@ Le soluzioni concordate dal gruppo in relazione alle cricità trovate durante la
 + maggiore partecipazione su Miro:\
  segnalare anche piccole criticità contribuisce al continuo miglioramento del gruppo;
 + possibile istituzione di un verificatore "provvisorio":\
- quando il verificatore si trova in difficolta vista la grande mole di lavoro in review, un membro può aiutare approvando le task più piccole. Questo contribuisce a snellire il numero di pr aperte ed evita che i nuovi branch aperti siano troppo indietro rispetto a src;
+ se un solo verificatore non risulta sufficiente a causa di un numero consistente di pull request aperte, il gruppo si impegnerà a scegliere un ulteriore membro che in qualità di verificatore provvederà alla review. Tale soluzione permette inoltre di ridimensionare il numero di branch aperti e ridurre conseguentemente la probabilità di merge conflic;
 + maggiore attenzione nella struttra dei verbali da parte dei redattori e dei revisori.
 
 == Seconda parte RTB con #vardanega
 
-Il gruppo di comune accordo ha deciso di inviare al #vardanega la mail di candidatura per la seconda perte della revisione RTB. Il responsabile è stato incaricato di scrivire la mail e, mercoledì 14/02/24, inviarla (il giorno è stato scelto in modo da permettere il tempo necessario al completamento delle ultime task in vista del colloquio).\
-È stato ritenuto necessario quindi iniziare la bozza della presentazione, sulla base di un brainstorming per identificare le possibili slide e le domande che il professore potrebbe avere interesse a fare. Sono stati identificati due giorni (lunedì 12/02/24 e martedì 13/02/24) per suddividere gli argomenti tra i membri del gruppo e provare la presentazione.
+Il gruppo di comune accordo ha deciso di inviare al #vardanega la mail di candidatura per la seconda parte della revisione RTB mercoledì 14/02/24. Il Responsabile ha il compito di redigere la mail e inviarla.\
+Viene inoltre pianificata una riunione a seguito della risposta del professore per creare le slide della presentazione e stilare un discorso ripartendo i vari argomenti tra i membri del gruppo.
 
-== Pianificazione sprint 15
+== Pianificazione sprint
 
-Sono stati programmati i seguenti compiti:
+Per lo sprint 15 sono stati programmati i seguenti compiti:
 
 - completare le ultime tesk necessarie per la candidatura;
 
 - inviare la mail di candidatura;
 
-- definire lo scheletro della presentazione per il colloquio;
+- definire un meeting inerente la presentazione RTB a seguito della risposta del professore;
 
-- programmare i due meeting interni riguardanti la presentazione;
-
-- iniziare i lavori riguardanti la parte di PB non appena gli ultimi lavori per il colloqui sono stati terminati, evitando di bloccarsi attendendo il colloquio.
+- discutere delle azioni da intraprendere per la parte di PB in modo da evitare la sospensione delle attività aspettando il responso del professore.
 

@@ -1,3 +1,5 @@
+#import "/common.typ": *
+
 #set text(
   font: "New Computer Modern",
   lang: "it",

@@ -1337,7 +1337,7 @@ Questo sprint si occupa della preparazione per il colloquio RTB con il #vardaneg
 - identificazione degli strumenti di appoggio per l'implementazione di una pipeline di CI/CD;
 - configurazione della repository e dei suddetti strumenti;
 - miglioramento della struttura informativa del documento #adr, in particolare per quanto riguarda il tracciamento tra casi d'uso e requisiti;
-- aggiornamento delle GitHub Actions recentemente deprecate;
+- aggiornamento delle GitHub Actions recentemente deprecate (`actions/upload-artifact`, `actions/download-artifact`, `actions/setup-python`);
 - prenotazione del colloquio RTB con il #vardanega, nella seconda metà della settimana.
 
 === Preventivo costi
@@ -1348,7 +1348,7 @@ Questo sprint impiega:
   - contattare il Proponente fornendo aggiornamenti sull'avanzamento dei lavori.
 - *Amministratore*: al fine di:
   - redigere i verbali;
-  - aggiornare il documento Piano di Progetto;
+  - aggiornare il documento #pdp;
   - identificare gli strumenti di appoggio per l'implementazione di una pipeline di CI/CD;
   - configurare la repository e i suddetti strumenti.
 - *Analista*: al fine di:
@@ -1359,8 +1359,8 @@ Questo sprint impiega:
 - *Programmatore*: al fine di:
   - implementare uno scheletro dell'applicazione, simile al PoC per struttura ma privo dell'ambiente fornito da Three.js, con Docker Compose;
   - realizzare un primo prototipo del database;
-  - aggiornare le GitHub Actions recentemente deprecate.
-- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto.
+  - aggiornare le GitHub Actions che fanno uso di dipendenze recentemente deprecate (`actions/upload-artifact`, `actions/download-artifact`, `actions/setup-python`).
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp.
 
 #figure(
   table(

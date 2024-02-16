@@ -38,7 +38,7 @@
             #text(
               size: 1.2em,
               weight: "bold",
-              "Error_418"
+              err418
             )
             #v(-0.5em)
             #link("mailto:error418swe@gmail.com")

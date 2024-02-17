@@ -68,24 +68,17 @@ Le criticità riscontrate sono:
 
 In riferimento ai punti descritti in @improvements, il gruppo attua le seguenti azioni correttive:
 
-#set ref(
-  supplement: none,
-)
+1,2) È stato chiarito che la lavorazione dei ticket non termina con l'apertura della relativa PR, bensì con il suo merge nel _branch_ principale. Per questa ragione deve essere cura dell'autore della PR attuare in tempi ragionevoli le correzioni richieste dal verificatore.
 
-#table(
-  columns: (auto, auto),
-  [*Rif.*], [*Azione correttiva*],
-  [@improvements\.1 \ @improvements\.2], [È stato chiarito che la lavorazione dei ticket non termina con l'apertura della relativa PR, bensì con il suo merge nel _branch_ principale. Per questa ragione deve essere cura dell'autore della PR attuare in tempi ragionevoli le correzioni richieste dal verificatore.],
-  [@improvements\.3], [I _merge conflict_ non sono necessariamente segno di procedure errate. Nel corso dell'ultimo sprint documenti e registri delle modifiche sono stati oggetto di scritture concorrenti. L'amministratore è incaricato di indagare eventuali aggiornamenti delle procedure e delle automazioni per ridurre l'occorrenza di _merge conflict_.],
-  [@improvements\.4], [L'assegnatario del ticket è tenuto a porre lo stato del ticket su "In corso" all'inizio della sua lavorazione.],
-  [@improvements\.5], [Nella fattispecie, il documento di Analisi dei Requisiti è stato oggetto di un'azione di _refactoring_ a seguito dell'incontro con il Proponente del 23/11/2023.],
-  [@improvements\.6], [Le impostazioni di notifica sono state aggiornate in modo da notificare solo i membri interessati e non l'intero gruppo. Si sottolinea l'importanza di leggere le notifiche per evitare la necessità di fare _polling_.],
-  [@improvements\.7], [Nel corso del prossimo sprint saranno assegnati due programmatori.],
-)
+3) I _merge conflict_ non sono necessariamente segno di procedure errate. Nel corso dell'ultimo sprint documenti e registri delle modifiche sono stati oggetto di scritture concorrenti. L'amministratore è incaricato di indagare eventuali aggiornamenti delle procedure e delle automazioni per ridurre l'occorrenza di _merge conflict_.
 
-#set ref(
-  supplement: auto,
-)
+4) L'assegnatario del ticket è tenuto a porre lo stato del ticket su "In corso" all'inizio della sua lavorazione.
+
+5) Nella fattispecie, il documento di Analisi dei Requisiti è stato oggetto di un'azione di _refactoring_ a seguito dell'incontro con il Proponente del 23/11/2023.
+
+6) Le impostazioni di notifica sono state aggiornate in modo da notificare solo i membri interessati e non l'intero gruppo. Si sottolinea l'importanza di leggere le notifiche per evitare la necessità di fare _polling_.
+
+7) Nel corso del prossimo sprint saranno assegnati due programmatori.
 
 == Pianificazione sprint 5
 

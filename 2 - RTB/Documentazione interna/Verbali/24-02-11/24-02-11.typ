@@ -25,7 +25,7 @@ Il meeting si avvia con con l'analisi dello sprint concluso. Nonostante si tratt
 
 Sono stati revisionati la maggior parte dei capitoli del documento, anche se il lavoro non è ancora del tutto ultimato.\
 Rimangono le task relative a:
-- Rimuovere capitolo Processi di supporto/Documentazione (capitolo obsoleto non conforme allo standard iso adottato);
+- Rimuovere capitolo Processi di supporto/Documentazione (capitolo obsoleto non conforme allo standard ISO adottato);
 - Revisione ultimi capitoli rimasti.
 
 
@@ -72,7 +72,7 @@ Il gruppo ha concordato l'invio della mail per sostenere la seconda parte della 
 
 === Keep doing
 
-In merito al successo dello sprint 14 ha contribuito un efficace pianificazione delle task e il rispetto della modalità di lavoro asincrona.
+In merito al successo dello sprint 14 ha contribuito un'efficace pianificazione delle task e il rispetto della modalità di lavoro asincrona.
 
 === Improvements  
 

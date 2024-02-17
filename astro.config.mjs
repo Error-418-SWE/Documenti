@@ -27,11 +27,11 @@ export default defineConfig({
 					collapsed: true,
 					autogenerate: { directory: 'rtb' },
 				},
-				// {
-				// 	label: 'PB',
-				//	collapsed: true,
-				// 	autogenerate: { directory: 'pb' },
-				// },
+				{
+					label: 'PB',
+					collapsed: true,
+					autogenerate: { directory: 'pb' },
+				},
 				// {
 				// 	label: 'CA',
 				// collapsed: true,

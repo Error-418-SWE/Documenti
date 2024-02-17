@@ -14,18 +14,18 @@
 = Ordine del giorno
 - Valutazione del progresso generale;
 - Analisi di retrospettiva;
-- Seconda parte RTB con #vardanega;
+- Seconda parte RTB con il #vardanega;
 - Pianificazione.
 
 == Valutazione del progresso generale
 
-Il meeting si avvia con con l'analisi dello sprint concluso. Nonostante si trattasse del primo sprint a seguito della sessione degli esami, la ripresa dei lavori è stata rapida (warm start), grazie anche alla scelta di non interrompere i lavori negli sprint precedenti ma di ridimensionare il carico di lavoro per far fronte agli impegni universitari, il corretto andamento dello sprint è supportato anche dalle metriche esposte sul cruscotto di qualità realizzato in Grafana.
+Il meeting si avvia con con l'analisi dello sprint concluso. Nonostante si trattasse del primo sprint a seguito della sessione degli esami, la ripresa dei lavori è stata rapida (warm start), grazie anche alla scelta di non interrompere i lavori negli sprint precedenti ma di ridimensionare il carico di lavoro per far fronte agli impegni universitari. Il corretto andamento dello sprint è supportato anche dalle metriche esposte sul cruscotto di qualità realizzato in Grafana.
 
 === Revisione #ndp
 
 Sono stati revisionati la maggior parte dei capitoli del documento, anche se il lavoro non è ancora del tutto ultimato.\
 Rimangono le task relative a:
-- Rimuovere capitolo Processi di supporto/Documentazione;
+- Rimuovere capitolo Processi di supporto/Documentazione (capitolo obsoleto non conforme allo standard iso adottato);
 - Revisione ultimi capitoli rimasti.
 
 
@@ -48,59 +48,56 @@ Il gruppo si è impegnato a risolvere tutte le criticità riscontrate dal #cardi
 - VM3 non è chiaro e quindi non verificabile;
 - Non è presente il tracciamento casi d'uso / requisiti.
 
-Il documento abbozza una struttura corretta, ma il livello di analisi raggiunto è spesso poco dettagliato e lacunoso. Inoltre, sono presenti alcuni errori di modellazione.\
-Tutti queste criticità sono state corrette durante lo sprint appena concluso e il documento è ora pronto per la revisione prima del PB.
+Il documento abbozza una struttura corretta, ma il livello di analisi raggiunto è spesso poco dettagliato e lacunoso. Inoltre, sono presenti alcuni errori di modellazione.
+
+
+Tutti queste criticità sono state corrette durante lo sprint appena concluso e il documento è ora pronto per essere revisionato prima dell'ingresso in PB.
 
 === Revisione #pdp e #pdq
 
-Il lavoro sul #pdp segue dal big bang attuato durante gli sprint precedenti e viene concluso. Viene inoltre redatto:
+Il lavoro sul #pdp segue dal big bang attuato durante gli sprint precedenti e viene concluso. Vengono inoltre redatti:
 - preventivo sprint 12;
 - preventivo sprint 13;
 - consuntivo sprint 13;
-- preventivo sprint 14;
+- preventivo sprint 14.
 segue un generale refactoring del documento.
 
 Il #pdq invece è stato esteso e aggiornato con le metriche del periodo e la loro analisi. Vengono inoltre inseriti i grafici generati con Grafana.
 
 === Candidatura seconda parte RTB
 
-Il gruppo ha concordato l'invio della mail per sostenere la seconda parte della revisione esterna RTB con il #vardanega per la data 14/02/2024.
+Il gruppo ha concordato l'invio della mail per sostenere la seconda parte della revisione esterna RTB con il #vardanega in data 14/02/2024.
 
 == Analisi di retrospettiva
 
 === Keep doing
 
-A contribuire al successo dello sprint 14 troviamo un efficace pianificazione delle task e il rispetto della modalità di lavoro asincrona.
+In merito al successo dello sprint 14 ha contribuito un efficace pianificazione delle task e il rispetto della modalità di lavoro asincrona.
 
 === Improvements  
 
-Tra le criticità evidenziate troviamo:
-+ un basso utilizzo di Miro per i meeting di retrospettiva;
-+ ritardi nelle correzioni delle pr;
-+ struttura dei verbali non sempre conforme.
+Basso utilizzo di Miro per i meeting di retrospettiva, segnalare anche piccole criticità contribuisce al continuo miglioramento del gruppo.
 
-=== Soluzioni adottate
-Le soluzioni concordate dal gruppo in relazione alle cricità trovate durante la retrospettiva sono:
-+ maggiore partecipazione su Miro:\
- segnalare anche piccole criticità contribuisce al continuo miglioramento del gruppo;
-+ possibile istituzione di un verificatore "provvisorio":\
- se un solo verificatore non risulta sufficiente a causa di un numero consistente di pull request aperte, il gruppo si impegnerà a scegliere un ulteriore membro che in qualità di verificatore provvederà alla review. Tale soluzione permette inoltre di ridimensionare il numero di branch aperti e ridurre conseguentemente la probabilità di merge conflic;
-+ maggiore attenzione nella struttra dei verbali da parte dei redattori e dei revisori.
+Ritardi nelle correzioni delle pr, se un solo verificatore non risulta sufficiente a causa di un numero consistente di pull request aperte, il gruppo si impegnerà a scegliere un ulteriore membro che, in qualità di verificatore provvederà alle review. Tale soluzione permette inoltre di ridimensionare il numero di branch aperti e ridurre conseguentemente la probabilità di merge conflict.
+
+Struttura dei verbali non sempre conforme,richiesta maggiore attenzione nella struttra dei verbali da parte dei redattori e dei revisori.
 
 == Seconda parte RTB con #vardanega
 
-Il gruppo di comune accordo ha deciso di inviare al #vardanega la mail di candidatura per la seconda parte della revisione RTB mercoledì 14/02/24. Il Responsabile ha il compito di redigere la mail e inviarla.\
+Il gruppo di comune accordo ha deciso di inviare al #vardanega la mail di candidatura per la seconda parte della revisione RTB mercoledì 14/02/24. Il Responsabile ha il compito di redigere la mail e inviarla.
+
+
 Viene inoltre pianificata una riunione a seguito della risposta del professore per creare le slide della presentazione e stilare un discorso ripartendo i vari argomenti tra i membri del gruppo.
 
 == Pianificazione sprint
 
 Per lo sprint 15 sono stati programmati i seguenti compiti:
 
-- completare le ultime tesk necessarie per la candidatura;
+- completare le ultime task necessarie per la candidatura;
 
-- inviare la mail di candidatura;
+- inviare la mail per la candidatura al secondo sportello di valutazione RTB;
 
-- definire un meeting inerente la presentazione RTB a seguito della risposta del professore;
+- definire un meeting inerente alla presentazione RTB a seguito della risposta del professore;
 
 - discutere delle azioni da intraprendere per la parte di PB in modo da evitare la sospensione delle attività aspettando il responso del professore.
 

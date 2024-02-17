@@ -1,6 +1,5 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import { Common } from '/common';
 
 export default defineConfig({
 	// site: Common.githubPagesURL,

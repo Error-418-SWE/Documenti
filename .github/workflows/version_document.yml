@@ -22,7 +22,7 @@ jobs:
     name: Evaluate version
     runs-on: ubuntu-latest
     outputs:
-      next_version: '${{ steps.version.outputs.next_version }}'
+      next_version: "${{ steps.version.outputs.next_version }}"
 
     steps:
       - name: Set up Git repository on source branch
@@ -35,9 +35,9 @@ jobs:
           ref: src
           path: src
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: "3.10"
       - name: Compute next version
         id: version
         run: |

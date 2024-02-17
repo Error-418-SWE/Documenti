@@ -32,7 +32,7 @@ jobs:
     if: inputs.do_publish || inputs.do_deploy
     runs-on: ubuntu-latest
     outputs:
-      current_version: '${{ steps.version.outputs.current_version }}'
+      current_version: "${{ steps.version.outputs.current_version }}"
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
@@ -63,7 +63,7 @@ jobs:
     needs: [retrieve, compile]
     runs-on: ubuntu-latest
     env:
-      TARGET_BRANCH: 'main'
+      TARGET_BRANCH: "main"
 
     steps:
       - name: Set up Git repository
@@ -85,10 +85,10 @@ jobs:
           git checkout $TARGET_BRANCH
           git rm --ignore-unmatch "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ inputs.file_name }}*.pdf"
       - name: Grab document
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: '${{ inputs.file_name }}.pdf'
-          path: '${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}'
+          name: "${{ inputs.file_name }}.pdf"
+          path: "${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}"
       - name: Rename file
         run: mv -v "${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ inputs.file_name }}.pdf" "${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ inputs.file_name }}_v${{ needs.retrieve.outputs.current_version }}.pdf"
       - name: Publish document

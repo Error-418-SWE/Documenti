@@ -8,6 +8,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Error_418',
+			favicon: '/favicon.png',
 			components: {
 				SocialIcons: './src/components/SocialLinks.astro',
 			},

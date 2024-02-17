@@ -4,9 +4,9 @@ on:
   pull_request:
     types: [opened, reopened, synchronize, closed]
     paths:
-      - '!**template.typ'
-      - '**.typ'
-      - 'Glossario.json'
+      - "!**template.typ"
+      - "**.typ"
+      - "Glossario.json"
 
 concurrency:
   group: typst-${{ github.ref }}
@@ -21,7 +21,7 @@ jobs:
     needs: fetch
     runs-on: ubuntu-latest
     env:
-      BASE_BRANCH: 'src'
+      BASE_BRANCH: "src"
 
     steps:
       - name: Set up Git repository
@@ -72,7 +72,7 @@ jobs:
     needs: [fetch, compile]
     runs-on: ubuntu-latest
     env:
-      TARGET_BRANCH: 'main'
+      TARGET_BRANCH: "main"
 
     steps:
       - name: Set up Git repository
@@ -94,10 +94,10 @@ jobs:
           git checkout $TARGET_BRANCH
           git rm --ignore-unmatch "${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}*.pdf"
       - name: Grab document
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
-          name: '${{ needs.fetch.outputs.file_name }}.pdf'
-          path: '${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}'
+          name: "${{ needs.fetch.outputs.file_name }}.pdf"
+          path: "${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}"
       - name: Rename file
         run: mv -v "${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}.pdf" "${{ github.workspace }}/${{ steps.publish_path.outputs.PUBLISH_PATH }}/${{ needs.fetch.outputs.file_name }}_v${{ needs.fetch.outputs.current_version }}.pdf"
       - name: Publish document

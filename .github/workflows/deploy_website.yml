@@ -132,7 +132,7 @@ jobs:
         id: path
         run: echo "WORK_DIR=$(echo 'src/content/docs/${{ steps.baseline.outputs.DIRECTORY }}/${{ steps.document_type.outputs.DIRECTORY }}/${{ steps.report_type.outputs.DIRECTORY }}')" >> $GITHUB_OUTPUT
       - name: Grab common
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: common.md
           path: "${{ steps.path.outputs.WORK_DIR }}"

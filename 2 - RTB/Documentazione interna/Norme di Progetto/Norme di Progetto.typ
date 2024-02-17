@@ -14,7 +14,7 @@
 = Introduzione
 
 == Scopo del documento
-PROVA PROVA PROVA LA PROVA LA PROVONA
+PROVA PROVA PROVA LA PROVA LA PROVONA AVANZA STA CAZZO DI VERSIONE DIO MEO
 Questo documento contiene le regole del _way of working_ che disciplinano le attività di ogni membro del gruppo _Error_418_. Queste regole mirano a garantire coerenza, uniformità ed efficacia nel processo collaborativo, promuovendo un ambiente di lavoro strutturato ed efficiente.
 L'approccio adottato per la redazione di questo documento è di natura incrementale. Ciò significa che il testo è soggetto ad aggiornamenti e revisioni continue al fine di integrare progressivamente le nuove norme, le _best practices_ e i cambiamenti che emergono nel corso dello sviluppo del progetto. Questa flessibilità consente al gruppo di adattarsi prontamente alle dinamiche di lavoro e alle esigenze specifiche del contesto, garantendo un documento sempre allineato alle necessità attuali del gruppo.
 

@@ -1,0 +1,23 @@
+name: Provide artifact link
+
+on:
+  workflow_call:
+    inputs:
+      artifact_url:
+        type: string
+        required: true
+
+jobs:
+  comment:
+    name: Comment PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Provide artifact link
+        uses: mshick/add-pr-comment@v2
+        with:
+          message: "Documento compilato correttamente. [Scarica PDF](${{ inputs.artifact_url }})."
+          message-failure: "Errore durante la compilazione del documento."
+          message-cancelled: "Compilazione annullata."
+          allow-repeats: true

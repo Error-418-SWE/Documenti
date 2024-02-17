@@ -9,6 +9,10 @@ on:
       file_name:
         required: true
         type: string
+    outputs:
+      artifact_url:
+        description: "The compiled document artifact URL."
+        value: ${{ steps.artifact.outputs.artifact-url }}
 
 jobs:
   compile:
@@ -36,6 +40,7 @@ jobs:
           source_file: |
             ${{ inputs.file_path }}/${{ inputs.file_name }}.typ
       - name: Publish artifact
+        id: artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ inputs.file_name }}.pdf

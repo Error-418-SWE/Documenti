@@ -18,8 +18,8 @@ jobs:
     name: Extract info from preamble and log
     runs-on: ubuntu-latest
     env:
-      OUTPUT_FILE: '${{ inputs.file_path }}/common.md'
-      CHANGELOG_HEADER: 'Versione,Data,PR,Titolo,Redattore,Verificatore'
+      OUTPUT_FILE: "${{ inputs.file_path }}/common.md"
+      CHANGELOG_HEADER: "Versione,Data,PR,Titolo,Redattore,Verificatore"
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
@@ -28,7 +28,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
+          python-version: "3.12"
       - name: Install csv2md
         run: pip install csv2md
       - name: Extract info from preamble
@@ -48,7 +48,7 @@ jobs:
       - name: Close Astro component
         run: echo -e "</ChangelogTable>\n" >> "$OUTPUT_FILE"
       - name: Publish document
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: common.md
           path: ${{ inputs.file_path }}/common.md
@@ -135,7 +135,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: common.md
-          path: '${{ steps.path.outputs.WORK_DIR }}'
+          path: "${{ steps.path.outputs.WORK_DIR }}"
       # - name: Grab transpiled document
       #   uses: actions/download-artifact@v3
       #   with:
@@ -146,7 +146,7 @@ jobs:
           cd "${{ steps.path.outputs.WORK_DIR }}"
           git rm --ignore-unmatch "${{ inputs.file_name }}.mdx"
           cat common.md > "${{ inputs.file_name }}.mdx"
-#          cat common.md content.md > "${{ inputs.file_name }}.mdx"
+      #          cat common.md content.md > "${{ inputs.file_name }}.mdx"
       - name: Configure Git
         run: |
           git config --global user.email "actions@github.com"

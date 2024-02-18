@@ -209,7 +209,7 @@ In caso di Accettazione del rischio è importante tenere monitorata nel tempo la
 Lo sviluppo potrebbe allontanarsi dalle linee guida o dalle aspettative del Proponente, non rispettando quanto preventivato o pianificato. Tale rischio, comporterebbe dunque la produzione di un software non in linea con le richieste, conducendo a rallentamenti per analisi, progettazione e implementazione aggiuntive.
 
 
-=== "Effetto sottomarino"
+=== Irreperibilità di un membro del gruppo
 Uno o più membri cessano temporaneamente la partecipazione attiva alle attività del gruppo. È necessario evitare che la durata di queste assenze impedisca il regolare svolgimento delle attività di progetto.
 È da considerare ulteriormente grave la situazione in cui è mancata totalmente una segnalazione responsabile e preventiva di difficoltà o impedimenti da parte dei singoli membri coinvolti.
 

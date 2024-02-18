@@ -20,6 +20,11 @@
 #let glo_v   = text(glo_key + " v" + versions.at(glo_key), style: "italic")
 #let glo_vo  = versions.at(glo_key)
 
+#let man_key = "Manuale Utente"
+#let man     = text(man_key, style: "italic")
+#let man_v   = text(man_key + " v" + versions.at(man_key), style: "italic")
+#let man_vo  = versions.at(man_key)
+
 #let ndp_key = "Norme di Progetto"
 #let ndp     = text(ndp_key, style: "italic")
 #let ndp_v   = text(ndp_key + " v" + versions.at(ndp_key), style: "italic")
@@ -41,6 +46,14 @@
   if (year < 99) { year += 2000 }
   text("(ultimo accesso " + datetime(year: year, month: month, day: day).display("[day]/[month]/[year]") + ")", size: 0.8em, style: "italic", fill: luma(100))
 }
+
+#let TODO = [
+  #box(
+    stroke: red,
+    inset: 0.15em,
+    text("Riferimento assente", fill: red, weight: "bold")
+  )
+]
 
 #let glo_paragrafo = [
   Al fine di agevolare la comprensione del presente documento, viene fornito un glossario che espliciti il significato dei termini di dominio specifici del progetto. I termini di glossario sono evidenziati nel testo mediante l'aggiunta di una "_G_" a pedice degli stessi:

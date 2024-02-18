@@ -47,6 +47,14 @@
   text("(ultimo accesso " + datetime(year: year, month: month, day: day).display("[day]/[month]/[year]") + ")", size: 0.8em, style: "italic", fill: luma(100))
 }
 
+#let TODO = [
+  #box(
+    stroke: red,
+    inset: 0.15em,
+    text("Riferimento assente", fill: red, weight: "bold")
+  )
+]
+
 #let glo_paragrafo = [
   Al fine di agevolare la comprensione del presente documento, viene fornito un glossario che espliciti il significato dei termini di dominio specifici del progetto. I termini di glossario sono evidenziati nel testo mediante l'aggiunta di una "_G_" a pedice degli stessi:
 

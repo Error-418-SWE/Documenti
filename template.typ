@@ -75,13 +75,6 @@ show outline.entry.where(
 show "WIP": it => [
   #text(it, fill: red)
 ]
-show "TODO": it => [
-  #box(
-    stroke: red,
-    inset: 0.15em,
-    text("Riferimento assente", fill: red, weight: "bold")
-  )
-]
 
 // Define constants
 let groupName = "Error_418"

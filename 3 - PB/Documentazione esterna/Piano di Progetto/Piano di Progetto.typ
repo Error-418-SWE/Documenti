@@ -137,10 +137,6 @@ Il documento si articola in 5 sezioni principali:
   _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v" + glo_vo + ".pdf")_
   #lastVisitedOn(13,02,2024)
 
-- Documento #ris_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v" + ris_vo + ".pdf")_
-  #lastVisitedOn(13,02,2024)
-
 === Riferimenti normativi <riferimenti-normativi>
 
 - Regolamento di progetto: \

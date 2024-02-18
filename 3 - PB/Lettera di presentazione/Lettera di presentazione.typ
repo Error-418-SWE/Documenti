@@ -72,13 +72,13 @@ Egregio Prof. Riccardo Cardin,
 
 #v(1em)
 
-Con la presente, il gruppo #err418 intende comunicarVi la volontà di candidarsi alla revisione per la _Product Baseline_. Sarà esposto lo stato di avanzamento del progetto:
+Con la presente, il gruppo #err418 intende comunicarVi la volontà di candidarsi alla revisione per la _Product Baseline_ (PB). Sarà esposto lo stato di avanzamento del progetto:
 
 #align(center)[*"WMS3: Warehouse Management 3D"*]
 
 proposto dall'azienda _Sanmarco Informatica S.p.A._, altresì denominato Capitolato 5.
 
-I documenti prodotti dal gruppo per la RTB sono consultabili all'indirizzo:
+I documenti prodotti dal gruppo per la PB sono consultabili all'indirizzo:
 
 #align(center)[#link("https://github.com/Error-418-SWE/Documenti/tree/main/3 - PB")]
 

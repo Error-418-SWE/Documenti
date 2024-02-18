@@ -70,11 +70,14 @@ Il gruppo si dota di una dashboard di monitoraggio per tenere traccia delle metr
 = Qualità di processo
 
 == Processi primari
+
 === Fornitura
+
 ==== *BAC (Budget at Completion)*
-Definito nel documento Piano di Progetto v2.0.0 con valore di € 13.055,00.
+Definito nel documento #pdp_v con valore di € 13.055,00.
+
 ==== *PV (Planned Value)*
-La metrica PV rappresenta il valore pianificato, ovvero il costo preventivato per portare a termine le attività pianificate nello sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento Piano di Progetto v2.0.0. Il calcolo di tale metrica è esteso anche all'intero progetto, dove il valore pianificato è definito come sommatoria dei PV di ogni singolo sprint.
+La metrica PV rappresenta il valore pianificato, ovvero il costo preventivato per portare a termine le attività pianificate nello sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento #pdp_v. Il calcolo di tale metrica è esteso anche all'intero progetto, dove il valore pianificato è definito come sommatoria dei PV di ogni singolo sprint.
 \ \
 - *SPV*: Sprint Planned Value, valore pianificato per un determinato sprint;
 - *PPV*: Project Planned Value, valore pianificato per l'intero progetto.
@@ -469,12 +472,12 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 *RTB*: Gli errori ortografici nella documentazione rispecchiano i periodi in cui i documenti hanno subito la maggior parte delle modifiche. In particolare:
 - *Documentazione esterna*:
   - *PdP*: il documento ha inizialmente subito la maggior parte di aggiunte a livello testuale, come le sezioni di introduzione, amministrazione dei periodi e dei ruoli. Successivamente gli aggiornamenti sono stati minori, atti alla registrazione e al tracciamento dei preventivi e consuntivi dei vari periodi. Inoltre, l'implementazione di un sistema di creazione automatico delle tabelle dei preventivi e dei consuntivi implementato in _Google Apps Script_, ha permesso di ridurre ulteriormente l'insorgenza di errori;
-  - *PdQ*: l'insorgenza di errori nel Piano di Qualifica è dettata dall'inizio della sua stesura dallo sprint 9;
-  - *AdR*: data la natura del periodo di RTB, l'Analisi dei Requisiti è tra i documenti più corposi e maggiormente soggetti a revisioni e modifiche. Inoltre, l'incremento dei numero di errori è dovuto non solo a revisioni interne ma anche a modifiche dettate da revisioni esterne con i professori;
-  - *Glossario*: il Glossario è stato soggetto a relativamente poche modifiche; la maggior parte degli errori è stata riscontrata inizialmente.
+  - *PdQ*: l'insorgenza di errori nel #pdq è dettata dall'inizio della sua stesura dallo sprint 9;
+  - *AdR*: data la natura del periodo di RTB, l'#adr è tra i documenti più corposi e maggiormente soggetti a revisioni e modifiche. Inoltre, l'incremento dei numero di errori è dovuto non solo a revisioni interne ma anche a modifiche dettate da revisioni esterne con i professori;
+  - *Glossario*: il #glo è stato soggetto a relativamente poche modifiche; la maggior parte degli errori è stata riscontrata inizialmente.
 - *Documentazione interna*:
   - *NdP*: l'adozione dello standard ISO/IEC 12207:2017 ha portato con sè anche un grado di complessità maggiore nella stesura del documento, il quale è aumentato di dimensione e complessità. La maggior parte degli errori è pertanto riscontrabile nel periodo di maggiore stesura, per poi ridursi quando le sezioni del documento inerenti e utili al periodo sono state redatte;
-  - *Analisi dei Rischi*: la stesura del documento di Analisi dei Rischi non è stata caratterizzata da un numero elevato di errori.
+  - *Analisi dei Rischi*: la stesura del documento di #ris non è stata caratterizzata da un numero elevato di errori.
 
 === Miglioramento
 ==== Metriche soddisfatte

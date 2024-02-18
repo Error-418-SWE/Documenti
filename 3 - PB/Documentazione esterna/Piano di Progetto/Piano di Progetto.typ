@@ -119,12 +119,11 @@
 == Scopo del documento
 Il documento _Piano di progetto_ ha il compito di governare la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e presentando un'analisi critica del lavoro fino a quel momento svolto. L'intento è rendicontare e valutare criticamente l'operato compiuto per  migliorarlo, ove necessario, e gestire in modo efficace ed efficiente le risorse.
 
-Il documento si articola in 5 sezioni principali:
-- *Panoramica generale*: dedicata all'analisi preventiva dei costi complessivi di realizzazione;
-- *Periodi di sviluppo*: dedicata all'analisi della suddivisione temporale dello sviluppo del progetto;
-- *Pianificazione del lavoro*: dedicata alla descrizione della metodologia di lavoro adottata;
-- *Preventivi di periodo*: dedicata alla pianificazione delle attività da svolgere per ciascuno sprint;
-- *Consuntivi di periodo*: dedicata all'analisi retrospettiva del lavoro svolto in ciascuno sprint. Riporta eventuali criticità ed azioni intraprese a fini migliorativi.
+- *Panoramica generale* (@panoramica-generale): dedicata all'analisi preventiva dei costi complessivi di realizzazione;
+- *Periodi di sviluppo* (@periodi-di-sviluppo): dedicata all'analisi della suddivisione temporale dello sviluppo del progetto;
+- *Pianificazione del lavoro* (@pianificazione-lavoro): dedicata alla descrizione della metodologia di lavoro adottata;
+- *Preventivi di periodo* (@preventivi): dedicata alla pianificazione delle attività da svolgere per ciascuno sprint;
+- *Consuntivi di periodo* (@consuntivi): dedicata all'analisi retrospettiva del lavoro svolto in ciascuno sprint. Riporta eventuali criticità ed azioni intraprese a fini migliorativi.
 
 == Glossario
 #glo_paragrafo
@@ -160,8 +159,7 @@ Il documento si articola in 5 sezioni principali:
 
 #pagebreak()
 
-
-= Panoramica generale
+= Panoramica generale <panoramica-generale>
 Identificati i rischi, le relative contromisure e il calendario di progetto, è stato definito, mediante una pianificazione a ritroso, un preventivo iniziale dei costi di realizzazione del progetto.
 
 È corretto evidenziare come i membri del gruppo non siano dotati di esperienza sufficiente per fornire un preventivo corretto e preciso sin dagli inizi dello sviluppo: per tale motivo, il prezzo indicato sarà soggetto a modifiche con l'avanzamento del progetto (seppur mai superando il prezzo preventivato in candidatura).
@@ -239,7 +237,7 @@ Il Verificatore è un ruolo presente durante l'intero progetto, che si occupa di
 
 #pagebreak()
 
-= Periodi di sviluppo
+= Periodi di sviluppo <periodi-di-sviluppo>
 == Introduzione
 Il periodo compreso tra l'aggiudicazione del capitolato e la data di consegna del prodotto viene suddiviso in 2 periodi principali dettati dalle revisioni esterne _Requirements and Technology Baseline (RTB)_ e _Product Baseline (PB)_, rispettivamente previste per il 27-01-2024 e il 20-03-2024.\
 Vengono pertanto a definirsi i seguenti periodi di sviluppo:
@@ -395,7 +393,7 @@ data)}
 
 #pagebreak()
 
-= Pianificazione del lavoro
+= Pianificazione del lavoro <pianificazione-lavoro>
 == Introduzione
 La pianificazione ricopre un ruolo fondamentale nello sviluppo dell'intero progetto. Svolge il compito di stabilire quali obiettivi raggiungere in periodi di tempo determinati, organizzando le risorse in modo da rendere lo sviluppo efficace ed efficiente. Lo scopo principale deve essere pianificare le azioni da intraprendere nel periodo successivo, definendo tempistiche, modalità e obiettivi.
 

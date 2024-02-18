@@ -1,27 +1,27 @@
 1.12.0,15-02-2024,268,DOC-416 Inserire tracciamento casi d'uso-requisiti,Banzato Alessio,Carraro Riccardo
 1.11.13,11-02-2024,243,DOC-400 Specificare le informazioni necessarie al collegamento con il database UC6.1,Carraro Riccardo,Gardin Giovanni
-1.11.12,11-02-2024,236,DOC-411 Specificare zoom della visuale UC11.3,Banzato Alessio,Nardo Silvio
-1.11.11,11-02-2024,234,DOC-410 Specificare rotazione della visuale UC11.2,Banzato Alessio,Nardo Silvio
-1.11.10,11-02-2024,226,DOC-409 Specificare spostamento della visuale UC11.1,Banzato Alessio,Gardin Giovanni
+1.11.12,11-02-2024,236,DOC-411 Specificare zoom della visuale UC-11.3,Banzato Alessio,Nardo Silvio
+1.11.11,11-02-2024,234,DOC-410 Specificare rotazione della visuale UC-11.2,Banzato Alessio,Nardo Silvio
+1.11.10,11-02-2024,226,DOC-409 Specificare spostamento della visuale UC-11.1,Banzato Alessio,Gardin Giovanni
 1.11.9,09-02-2024,222,DOC-406 Specificare informazioni visualizzate UC8,Banzato Alessio,Nardo Silvio
 1.11.8,09-02-2024,240,DOC-412 Aggiunta redazione di manuale d'uso ai requisiti di qualità,Gardin Giovanni,Banzato Alessio
 1.11.7,08-02-2024,233,DOC-392 Inserita versione Glossario nel documento Analisi dei Requisiti,Oseliero Antonio,Gardin Giovanni
 1.11.6,07-02-2024,218,DOC-395 Specificati i valori che possono essere modificati durante la modifica di uno scaffale,Nardo Silvio,Gardin Giovanni
 1.11.5,06-02-2024,218,DOC-395 Specificati i valori che possono essere modificati durante la modifica di uno scaffale,Nardo Silvio,Banzato Alessio
 1.11.4,06-02-2024,225,DOC-393 Specificati i valori di interesse relativi al ridimensionamento dell'ambiente di lavoro,Nardo Silvio,Banzato Alessio
-1.11.3,06-02-2024,224,DOC-408 Specificare informazioni visualizzate UC9,Banzato Alessio,Nardo Silvio
-1.11.2,06-02-2024,223,DOC-407 Modificare interrogazione con visualizzazione UC9,Banzato Alessio,Nardo Silvio
-1.11.1,06-02-2024,221,DOC-405 Modificare interrogazione con visualizzazione UC8,Banzato Alessio,Nardo Silvio
+1.11.3,06-02-2024,224,DOC-408 Specificare informazioni visualizzate UC-9,Banzato Alessio,Nardo Silvio
+1.11.2,06-02-2024,223,DOC-407 Modificare interrogazione con visualizzazione UC-9,Banzato Alessio,Nardo Silvio
+1.11.1,06-02-2024,221,DOC-405 Modificare interrogazione con visualizzazione UC-8,Banzato Alessio,Nardo Silvio
 1.11.0,06-02-2024,220,DOC-397 Specificato più dettagliatamente l'UC-4.2,Nardo Silvio,Banzato Alessio
 1.10.10,06-02-2024,218,DOC-395 Specificati i valori che possono essere modificati durante la modifica di uno scaffale,Nardo Silvio,Banzato Alessio
 1.10.9,06-02-2024,219,DOC 396 Specificato più dettagliatamente l'UC-4.1,Nardo Silvio,Banzato Alessio
 1.10.8,05-02-2024,216,DOC-414 Ridefinire VM2 come requisito funzionale,Banzato Alessio,Gardin Giovanni
 1.10.7,05-02-2024,216,DOC-413 Ridefinire VM1 come requisito funzionale,Banzato Alessio,Gardin Giovanni
-1.10.6,05-02-2024,217,DOC-394 Specificare dati necessari alla creazione dello scaffale UC3.1,Banzato Alessio,Nardo Silvio
+1.10.6,05-02-2024,217,DOC-394 Specificare dati necessari alla creazione dello scaffale UC-3.1,Banzato Alessio,Nardo Silvio
 1.10.5,04-02-2024,212,DOC-386 Corretto totale requisiti funzionali,Gardin Giovanni,Zaccone Rosario
-1.10.4,16-01-2024,191,DOC-372 Estensione UC 4,Oseliero Antonio,Zaccone Rosario
-1.10.3,16-01-2024,191,DOC-371 Estensione UC 3,Oseliero Antonio,Zaccone Rosario
-1.10.2,16-01-2024,191,DOC-371 Estensione UC 3,Oseliero Antonio,Carraro Riccardo
+1.10.4,16-01-2024,191,DOC-372 Estensione UC-4,Oseliero Antonio,Zaccone Rosario
+1.10.3,16-01-2024,191,DOC-371 Estensione UC-3,Oseliero Antonio,Zaccone Rosario
+1.10.2,16-01-2024,191,DOC-371 Estensione UC-3,Oseliero Antonio,Carraro Riccardo
 1.10.1,16-01-2024,179,DOC-352 Correzione UC-1 e UC-2,Oseliero Antonio,Carraro Riccardo
 1.9.0,15-01-2024,195,DOC-280 Aggiungere tabella con totali requisiti in calce al documento,Todesco Mattia,Zaccone Rosario
 1.8.0,15-01-2024,172,DOC-326 Ultimi capitoli e review in ottica RTB,Oseliero Antonio,Carraro Riccardo
@@ -31,8 +31,8 @@
 1.5.1,15-12-2023,102,DOC-226 Scomporre UC secondo feedback del Professor Cardin,Banzato Alessio,Todesco Mattia
 1.5.0,14-12-2023,94,DOC-197 Definzione requisiti di vincolo,Gardin Giovanni,Todesco Mattia
 1.4.1,12-12-2023,91,DOC-250 Correggere sezione degli UC del file Analisi dei requisiti,Banzato Alessio,Todesco Mattia
-1.4.0,10-12-2023,78,DOC-192 Redatte sezione Introduzione e Descrizione del prodotto,Gardin Giovanni,Todesco Mattia
-1.3.0,10-12-2023,88,DOC-196 Redazione requisiti di qualità,Gardin Giovanni,Todesco Mattia
+1.4.0,10-12-2023,78,DOC-192 Redigere sezione Introduzione e Descrizione del prodotto,Gardin Giovanni,Todesco Mattia
+1.3.0,10-12-2023,88,DOC-196 Redigere requisiti di qualità,Gardin Giovanni,Todesco Mattia
 1.2.8,05-12-2023,71,DOC-38 Analisi dei requisiti,Nardo Silvio,Gardin Giovanni
 1.2.7,05-12-2023,67,DOC-188 Completato UC-7,Oseliero Antonio,Carraro Riccardo
 1.2.6,05-12-2023,66,DOC-187 Completamento UC-6,Oseliero Antonio,Carraro Riccardo
@@ -42,6 +42,6 @@
 1.2.2,03-12-2023,54,DOC-183 Completamento UC-2,Carraro Riccardo,Oseliero Antonio
 1.2.1,03-12-2023,54,DOC-182 Completamento UC-1,Carraro Riccardo,Oseliero Antonio
 1.2.0,28-11-2023,39,DOC-100 Aggiungere UC da 7 a 11,Banzato Alessio,Oseliero Antonio
-1.1.0,27-11-2023,37,DOC-97 Aggiunto file analisi dei requisiti con uc fino alla 6.1,Nardo Silvio,Carraro Riccardo
-1.1.0,27-11-2023,37,DOC-97 Aggiunto file analisi dei requisiti con uc fino alla 6.1,Nardo Silvio,Oseliero Antonio
-1.0.0,18-11-2023,15,DOC-71 Pubblicazione analisi dei requisiti,Banzato Alessio,Todesco Mattia
+1.1.0,27-11-2023,37,DOC-97 Aggiunto file Analisi dei Requisiti con UC fino alla 6.1,Nardo Silvio,Carraro Riccardo
+1.1.0,27-11-2023,37,DOC-97 Aggiunto file Analisi dei Requisiti con UC fino alla 6.1,Nardo Silvio,Oseliero Antonio
+1.0.0,18-11-2023,15,DOC-71 Pubblicazione Analisi dei Requisiti,Banzato Alessio,Todesco Mattia

@@ -106,7 +106,7 @@ I membri del gruppo sono riportati nella tabella seguente:
   ),
 )
 
-Il gruppo aggiorna la stima dei costi, riducendola a *€ 13.055,00*. La data di consegna prevista rimane invariata ed è fissata al *20/03/2024*.
+Il gruppo aggiorna la stima dei costi, riducendola a *€ #TODO*. La data di consegna prevista rimane invariata ed è fissata al *#TODO*.
 
 #v(1em)
 

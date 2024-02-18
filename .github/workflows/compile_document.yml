@@ -19,7 +19,7 @@ jobs:
     name: Compile document
     runs-on: ubuntu-latest
     env:
-      REQUIRED_FILES: "template.typ common.typ logo.png roles.json documents.json Glossario.json"
+      REQUIRED_FILES: "${{ vars.TYPST_REQUIRED_FILES }}"
     steps:
       - name: Set up Git repository
         if: github.event.pull_request.merged == false

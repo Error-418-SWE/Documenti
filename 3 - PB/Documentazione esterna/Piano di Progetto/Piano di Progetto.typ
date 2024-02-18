@@ -117,7 +117,7 @@
 = Introduzione
 
 == Scopo del documento
-Il documento _Piano di progetto_ ha il compito di governare la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e presentando un'analisi critica del lavoro fino a quel momento svolto. L'intento è rendicontare e valutare criticamente l'operato compiuto per  migliorarlo, ove necessario, e gestire in modo efficace ed efficiente le risorse.
+Il documento #pdp ha il compito di governare la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e presentando un'analisi critica del lavoro fino a quel momento svolto. L'intento è rendicontare e valutare criticamente l'operato compiuto per  migliorarlo, ove necessario, e gestire in modo efficace ed efficiente le risorse.
 
 Il documento si articola in 6 sezioni principali:
 - *Analisi dei Rischi* (@analisi-rischi): dedicata all'analisi preventiva dei rischi e delle relative contromisure;
@@ -342,13 +342,13 @@ Il costo totale preventivato è di € 13055.
 
 == Analisi dei ruoli
 === Responsabile
-Il Responsabile è un ruolo presente durante l'intero progetto. Il suo compito è quello di gestire il gruppo e di assicurarsi che lo sviluppo proceda secondo le tempistiche predefinite e le aspettative del Committente. Deve inoltre redigere e far rispettare le Norme di Progetto, nonché le linee guida di sviluppo che l'intero gruppo deve rispettare. Essendo il ruolo più costoso, il numero di ore è stato scelto per favorire l'efficienza e non pesare eccessivamente sul costo finale.
+Il Responsabile è un ruolo presente durante l'intero progetto. Il suo compito è quello di gestire il gruppo e di assicurarsi che lo sviluppo proceda secondo le tempistiche predefinite e le aspettative del Committente. Deve inoltre redigere e far rispettare le #ndp, nonché le linee guida di sviluppo che l'intero gruppo deve rispettare. Essendo il ruolo più costoso, il numero di ore è stato scelto per favorire l'efficienza e non pesare eccessivamente sul costo finale.
 
 === Amministratore
-L'Amministratore è un ruolo presente durante l'intero progetto, in quanto si occupa di predisporre e controllare il corretto utilizzo delle procedure e degli strumenti definiti nelle Norme di Progetto, andando anche a gestire e implementare automatismi, migliorando così l'efficienza del gruppo. Il monte ore scelto è tale, poiché essendo questo un ruolo di controllo, non sono richieste un numero elevato di ore.
+L'Amministratore è un ruolo presente durante l'intero progetto, in quanto si occupa di predisporre e controllare il corretto utilizzo delle procedure e degli strumenti definiti nelle #ndp, andando anche a gestire e implementare automatismi, migliorando così l'efficienza del gruppo. Il monte ore scelto è tale, poiché essendo questo un ruolo di controllo, non sono richieste un numero elevato di ore.
 
 === Analista
-L'Analista è il ruolo preposto all'individuazione, redazione, aggiornamento e tracciamento dei requisiti del progetto. Il modello Agile adottato dal gruppo prevede che l'attività di analisi si svolga in modo incrementale, seppur preminente inizialmente, che permetterà la redazione del documento Analisi dei Requisiti ai fini della _Requirements and Technology Baseline_. Pertanto, per il ruolo di Analista il gruppo riserva un numero di ore durante il periodo PB qualora si necessitasse di rivedere o aggiornare i requisiti individuati.
+L'Analista è il ruolo preposto all'individuazione, redazione, aggiornamento e tracciamento dei requisiti del progetto. Il modello Agile adottato dal gruppo prevede che l'attività di analisi si svolga in modo incrementale, seppur preminente inizialmente, che permetterà la redazione del documento #adr ai fini della _Requirements and Technology Baseline_. Pertanto, per il ruolo di Analista il gruppo riserva un numero di ore durante il periodo PB qualora si necessitasse di rivedere o aggiornare i requisiti individuati.
 
 === Progettista
 Il Progettista ha il compito di delineare e documentare l'architettura del prodotto in modo da:
@@ -426,7 +426,7 @@ data)}
 == Periodo RTB
 - Periodo: dal 06-11-2023 al 26-01-2024 (56 giorni lavorativi);
 - Obiettivi di periodo:
-  - Analisi dei Requisiti;
+  - #adr;
   - Esplorazione e definizione dei domini tecnologico e applicativo;
   - Produzione del Proof of Concept (PoC);
   - Redazione documentazione relativa al periodo.
@@ -642,16 +642,16 @@ In questo primo periodo, l'assegnazione dei ruoli di Progettista e di Programmat
 == Sprint 2 dal 13-11-2023 al 20-11-2023
 
 === Obiettivi prefissati
-Gli obiettivi del secondo sprint si concentrano sull'individuazione degli Use Case del progetto, sul perfezionamento delle automazioni e sulla stesura iniziale delle Norme di Progetto.
+Gli obiettivi del secondo sprint si concentrano sull'individuazione degli Use Case del progetto, sul perfezionamento delle automazioni e sulla stesura iniziale delle #ndp.
 
 Gli obiettivi dello sprint 2 sono:
 - riconfigurazione della repository;
-- stesura della sezione _Introduzione_ del documento Norme di Progetto;
-- stesura della sezione _Processi di supporto_ del documento Norme di Progetto;
+- stesura della sezione _Introduzione_ del documento #ndp;
+- stesura della sezione _Processi di supporto_ del documento #ndp;
 - perfezionamento delle automazioni per la compilazione dei documenti;
 - implementazione delle automazioni per il versionamento dei documenti;
 - contatto con l'azienda Proponente per comunicare l'esito della candidatura;
-- meeting con l'azienda Proponente per riflettere sull'analisi dei requisiti e sulle tecnologie da usare;
+- meeting con l'azienda Proponente per riflettere sull'#adr e sulle tecnologie da usare;
 - inizio dell'individuazione e della stesura degli Use Case.
 
 === Preventivo costi
@@ -662,7 +662,7 @@ Nel secondo sprint il gruppo svolge compiti correttivi incentrati sul migliorame
 
 - *Verificatore*: al fine di garantire che le modifiche effettuate rispecchino gli standard qualitativi desiderati e implementino effettivamente le mancanze individuate dalla valutazione;
 
-- *Analista*: al fine di individuare e sviluppare testualmente i principali Use Case in ottica del documento Analisi dei Requisiti.
+- *Analista*: al fine di individuare e sviluppare testualmente i principali Use Case in ottica del documento #adr.
 
 In questo  periodo, l'assegnazione dei ruoli di Programmatore e Progettista è ritenuta precoce.
 
@@ -703,24 +703,24 @@ In questo  periodo, l'assegnazione dei ruoli di Programmatore e Progettista è r
 
 == Sprint 3 dal 20-11-2023 al 27-11-2023
 === Obiettivi prefissati
-Gli obiettivi del terzo sprint si concentrano sull'aggiornamento del documento Norme di Progetto, sul periodo di analisi dei requisiti (principalmente concentrata sui requisiti funzionali) e su un primo momento di esplorazione delle nuove tecnologie.
+Gli obiettivi del terzo sprint si concentrano sull'aggiornamento del documento #ndp, sul periodo di #adr (principalmente concentrata sui requisiti funzionali) e su un primo momento di esplorazione delle nuove tecnologie.
 
 Gli obiettivi dello sprint 3 sono:
 - proseguimento del processo di individuazione e stesura degli Use Case;
 - perfezionamento delle automazioni di versionamento documenti;
 - perfezionamento del template usato per i documenti;
-- aggiornamento del documento Norme di Progetto;
+- aggiornamento del documento #ndp;
 - studio iniziale della libreria Three.js;
 - meeting con l'azienda Proponente per esporre ipotesi e Use Case individuati, richiedere chiarimenti ed avanzare opportune richieste;
 - contatto con l'azienda Proponente per fissare il prossimo meeting.
 
 === Preventivo costi
-Nel terzo sprint, il gruppo svolge delle attività principalmente focalizzate sull'analisi dei requisiti e sull'aggiornamento e perfezionamento dei documenti e delle automazioni. In quest'ottica, vede l'impiego principale delle figure:
+Nel terzo sprint, il gruppo svolge delle attività principalmente focalizzate sull'#adr e sull'aggiornamento e perfezionamento dei documenti e delle automazioni. In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di:
   - gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
-  - aggiornare il documento Piano di Progetto.
+  - aggiornare il documento #pdp.
 - *Verificatore*: al fine di:
   - verificare la correttezza delle modifiche ai documenti;
   - effettuare un controllo sulla validità e formulazione degli Use Case individuati.
@@ -768,29 +768,29 @@ In questo periodo, l'assegnazione del ruolo di Programmatore è ritenuta precoce
 
 === Obiettivi prefissati
 Gli obiettivi del quarto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
-del documento Analisi dei Requisiti e sull'esplorazione delle nuove tecnologie.
+del documento #adr e sull'esplorazione delle nuove tecnologie.
 
 Gli obiettivi dello sprint 4 sono:
 - perfezionamento della stesura degli Use Case individuati finora;
-- redazione di una prima versione dell'Analisi dei Requisiti;
-- scelta di una data per un eventuale primo meeting con il Professor Cardin per ottenere un feedback sull'Analisi dei Requisiti;
-- proseguimento della redazione e aggiornamento del documento Norme di Progetto;
+- redazione di una prima versione dell'#adr;
+- scelta di una data per un eventuale primo meeting con il #cardin per ottenere un feedback sull'#adr;
+- proseguimento della redazione e aggiornamento del documento #ndp;
 - proseguimento periodo di studio di Three.js, finalizzato a:
  - creazione di alcuni scaffali nell'ambiente tridimensionale;
  - implementazione sistema di _drag and drop_;
  - parametrizzazione degli elementi presenti nell'applicazione.
 
 === Preventivo costi
-Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
+Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, #adr e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di:
   - gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
-  - aggiornare il documento Piano di Progetto.
-- *Analista*: al fine di perfezionare la stesura degli Use Case individuati e redarre una prima versione del documento Analisi dei Requisiti;
+  - aggiornare il documento #pdp.
+- *Analista*: al fine di perfezionare la stesura degli Use Case individuati e redarre una prima versione del documento #adr;
 - *Progettista*: al fine di condurre uno studio esplorativo sulla libreria Three.js;
 - *Programmatore*: al fine di esplorare in modo pratico le tecnologie relative ai PoC;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità degli Use Case individuati nel documento Analisi dei Requisiti.
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità degli Use Case individuati nel documento #adr.
 
 #figure(
   table(
@@ -831,31 +831,31 @@ Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
 
 === Obiettivi prefissati
 Gli obiettivi del quinto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
-del documento Analisi dei Requisiti e sullo sviluppo dei primi PoC.
+del documento #adr e sullo sviluppo dei primi PoC.
 
 Gli obiettivi dello sprint 5 sono:
 - perfezionamento del sistema di _drag and drop_ nel PoC;
 - creazione degli scaffali nel PoC;
 - creazione ambiente Docker;
-- svolgere meeting con il Professor Cardin in merito all'Analisi dei Requisiti;
-- perfezionare e aggiornare il documento Norme di Progetto;
-- aggiornamento del documento Analisi dei Requisiti, introducendo i requisiti non funzionali;
-- informarsi sul documento Piano di Qualifica;
+- svolgere meeting con il #cardin in merito all'#adr;
+- perfezionare e aggiornare il documento #ndp;
+- aggiornamento del documento #adr, introducendo i requisiti non funzionali;
+- informarsi sul documento #pdq;
 - aggiornare vecchi documenti con il nuovo template;
 - migliorare affidabilità GitHub Actions;
 - redigere il Glossario.
 
 === Preventivo costi
-Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, Analisi dei Requisiti e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
+Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, #adr e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira;
-- *Analista*: al fine di redarre il documento Analisi dei Requisiti;
+- *Analista*: al fine di redarre il documento #adr;
 - *Progettista*: al fine di continuare lo studio sulla libreria Three.js;
 - *Programmatore*: al fine di sviluppare i PoC relativi allo studio della libreria;
 - *Verificatore*: al fine di:
   - verificare la correttezza delle modifiche ai documenti;
-  - effettuare un controllo sulla validità e formulazione degli Use Case individuati e del documento Analisi dei Requisiti.
+  - effettuare un controllo sulla validità e formulazione degli Use Case individuati e del documento #adr.
 
 #figure(
   table(
@@ -899,22 +899,22 @@ Gli obiettivi del sesto sprint si focalizzano sul miglioramento dei PoC e dei di
 - avanzare con la redazione del PoC "A" integrando il funzionamento dei bin;
 - approfondire e migliorare l'utilizzo di Docker nel PoC corrispondente;
 - migliorare le GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
-- proseguire con il lavoro sul documento Norme di Progetto;
-- redigere introduzione del documento Piano di Qualifica;
-- adeguare l'Analisi dei Requisiti in funzione di quanto emerso durante lo scorso meeting con il Professor Cardin;
-- aggiungere al documento Analisi dei Requisiti la tabella che correli gli Use Case ai requisiti.
+- proseguire con il lavoro sul documento #ndp;
+- redigere introduzione del documento #pdq;
+- adeguare l'#adr in funzione di quanto emerso durante lo scorso meeting con il #cardin;
+- aggiungere al documento #adr la tabella che correli gli Use Case ai requisiti.
 
 === Preventivo costi
-Nel sesto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti Analisi dei Requisiti e Norme di Progetto.
-Il gruppo continua a produrre e migliorare PoC e inizia a scrivere il documento Piano di Qualifica.
+Nel sesto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti #adr e #ndp.
+Il gruppo continua a produrre e migliorare PoC e inizia a scrivere il documento #pdq.
 In quest'ottica vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
-- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira, redigere i verbali e aggiornare il documento Piano di Progetto;
-- *Analista*: al fine di redarre il documento Analisi dei Requisiti con relativi diagrammi UML;
+- *Amministratore*: al fine di gestire gli strumenti GitHub e Jira, redigere i verbali e aggiornare il documento #pdp;
+- *Analista*: al fine di redarre il documento #adr con relativi diagrammi UML;
 - *Progettista*: al fine di progettare i PoC;
 - *Programmatore*: al fine di sviluppare i PoC;
-- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti assicurandosi che siano coerenti con le Norme di Progetto.
+- *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti assicurandosi che siano coerenti con le #ndp.
 
 #figure(
   table(
@@ -954,11 +954,11 @@ In quest'ottica vede l'impiego principale delle figure:
 == Sprint 7 dal 18-12-2023 al 25-12-2023
 
 === Obiettivi prefissati
-Gli obiettivi del settimo sprint si focalizzano sul completamento del PoC A, terminare l'analisi dei requisiti e in generale sull'avanzamento dei documenti e miglioramento delle automazioni. Nel dettaglio gli obiettivi posti sono:
+Gli obiettivi del settimo sprint si focalizzano sul completamento del PoC A, terminare l'#adr e in generale sull'avanzamento dei documenti e miglioramento delle automazioni. Nel dettaglio gli obiettivi posti sono:
 - creazione di un PoC per il front-end e realizzazione di un PoC definitivo comprendente tutto il lavoro svolto finora;
-- espansione del Piano di Qualifica con l'individuazione delle metriche da utilizzare;
-- aggiornamento delle Norme di Progetto;
-- completamento del documento Analisi dei Requisiti con:
+- espansione del #pdq con l'individuazione delle metriche da utilizzare;
+- aggiornamento delle #ndp;
+- completamento del documento #adr con:
   - implementazione del tracciamento requisito-fonte;
   - revisione generale del documento per verificare la presenza e correttezza di tutti gli Use Case e requisiti necessari.
 - miglioramento delle GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
@@ -966,18 +966,18 @@ Gli obiettivi del settimo sprint si focalizzano sul completamento del PoC A, ter
 
 === Preventivo costi
 Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del PoC finale e sul proseguimento e miglioramento di tutti i documenti necessari alla Requirements and Technology Baseline. Di conseguenza saranno essenziali le figure di:
-- *Responsabile*: al fine di coordinare le attività e proseguire la redazione delle Norme di Progetto;
+- *Responsabile*: al fine di coordinare le attività e proseguire la redazione delle #ndp;
 - *Amministratore*: al fine di:
   - redigere i verbali;
-  - aggiornare il documento Piano di Progetto;
+  - aggiornare il documento #pdp;
   - gestire GitHub e Jira;
   - migliorare le GitHub Actions risolvendo gli errori legati al versionamento dei file e all'aggiornamento dei changelog.
-- *Analista*: al fine di migliorare il documento Analisi dei Requisiti e aggiungere il tracciamento requisito-fonte;
+- *Analista*: al fine di migliorare il documento #adr e aggiungere il tracciamento requisito-fonte;
 - *Progettista*: al fine di studiare e confrontare le tecnologie per il front-end individuate;
 - *Programmatore*: al fine di realizzare un PoC per il front-end e un PoC finale;
 - *Verificatore*: al fine di:
-  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto;
-  - individuare le metriche da inserire nel Piano di Qualifica.
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp;
+  - individuare le metriche da inserire nel #pdq.
 
 #figure(
   table(
@@ -1017,37 +1017,37 @@ Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del 
 == Sprint 8 dal 25-12-2023 al 01-01-2024
 
 === Obiettivi prefissati <obiettivi8>
-Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nel settimo sprint e sull'avanzamento del documento Norme di Progetto, oltre che sul miglioramento di alcuni aspetti di attività già concluse. Gli obiettivi prefissati per questo sprint sono:
+Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nel settimo sprint e sull'avanzamento del documento #ndp, oltre che sul miglioramento di alcuni aspetti di attività già concluse. Gli obiettivi prefissati per questo sprint sono:
 
 - miglioramento del Glossario:
   - rendere _case insensitive_ l'individuazione dei termini;
   - implementare la gestione di plurali e acronimi.
-- proseguimento del documento Analisi dei Requisiti con:
+- proseguimento del documento #adr con:
   - implementazione tracciamento requisito-fonte;
   - miglioramento della resa grafica dei diagrammi UML tramite la loro conversione in SVG.
-- proseguimento del documento Norme di Progetto, recuperando i capitoli non scritti nello sprint precedente e espandendone altri;
+- proseguimento del documento #ndp, recuperando i capitoli non scritti nello sprint precedente e espandendone altri;
 - perfezionamento del PoC finale;
 - miglioramento delle GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
 - studio e confronto delle tecnologie riguardanti le API (Next.js e Express.js);
 - realizzazione di un sito web per la documentazione;
-- realizzazione di una dashboard per monitorare le metriche definite nel Piano di Qualifica.
+- realizzazione di una dashboard per monitorare le metriche definite nel #pdq.
 
 === Preventivo costi
 Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di conseguenza saranno necessari tutti i ruoli presenti nel gruppo:
-- *Responsabile*: al fine di coordinare le attività e proseguire la redazione delle Norme di Progetto;
+- *Responsabile*: al fine di coordinare le attività e proseguire la redazione delle #ndp;
 - *Amministratore*: al fine di:
   - redigere i verbali;
-  - aggiornare il documento Piano di Progetto;
+  - aggiornare il documento #pdp;
   - gestire GitHub e Jira;
   - migliorare le GitHub Actions individuando e rimuovendo bug;
   - migliorare il Glossario secondo quanto descritto nel paragrafo di pianificazione di questo sprint.
 - *Analista*: al fine di:
-  - aggiungere il tracciamento requisito-fonte nel documento Analisi dei Requisiti;
+  - aggiungere il tracciamento requisito-fonte nel documento #adr;
   - convertire i diagrammi UML in SVG.
 - *Progettista*: al fine di studiare e confrontare le tecnologie per l'implementazione delle API;
 - *Programmatore*: al fine di proseguire con l'implementazione del PoC finale;
 - *Verificatore*: al fine di:
-  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto;
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp;
   - realizzare una dashboard per il monitoraggio delle metriche.
 
 #figure(
@@ -1090,9 +1090,9 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
 === Obiettivi prefissati <obiettivi9>
 Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nell'ottavo sprint, sulla revisione dei documenti e del PoC in vista della valutazione RTB. Gli obiettivi prefissati per questo sprint sono:
 
-- estensione e revisione del documento Norme di Progetto;
-- correzione degli errori riscontrati in alcuni UC nel documento Analisi dei Requisiti, compreso l'aggiornamento dei diagrammi UML associati;
-- realizzazione di una dashboard per monitorare le metriche definite nel Piano di Qualifica;
+- estensione e revisione del documento #ndp;
+- correzione degli errori riscontrati in alcuni UC nel documento #adr, compreso l'aggiornamento dei diagrammi UML associati;
+- realizzazione di una dashboard per monitorare le metriche definite nel #pdq;
 - revisione dei documenti prodotti finora;
 - risoluzione dei problemi legati all'automazione per il versionamento dei documenti;
 - ripresa dei contatti con il Proponente tramite l'invio di una comunicazione di aggiornamento corredata da un video demo del PoC.
@@ -1100,18 +1100,18 @@ Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività
 === Preventivo costi
 Gli obiettivi del nono sprint riguardano i seguenti ruoli:
 - *Responsabile*: al fine di:
-  - coordinare le attività e proseguire la redazione delle Norme di Progetto;
+  - coordinare le attività e proseguire la redazione delle #ndp;
   - contattare il Proponente fornendo aggiornamenti sull'avanzamento dei lavori.
 - *Amministratore*: al fine di:
   - redigere i verbali;
-  - aggiornare il documento Piano di Progetto;
+  - aggiornare il documento #pdp;
   - gestire GitHub e Jira;
   - migliorare le GitHub Actions individuando e rimuovendo bug;
   - realizzare una dashboard per il monitoraggio delle metriche.
-- *Analista*: al fine di correggere gli errori riscontrati in alcuni UC nel documento Analisi dei Requisiti;
+- *Analista*: al fine di correggere gli errori riscontrati in alcuni UC nel documento #adr;
 - *Verificatore*: al fine di:
   - revisionare i documenti prodotti nel corso degli sprint precedenti;
-  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto.
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp.
 
 #figure(
   table(
@@ -1170,15 +1170,15 @@ L'attività prevalente è la revisione documentale. I ruoli attivi durante quest
   - redarre la presentazione a supporto della valutazione RTB.
 - *Amministratore*: al fine di:
   - redigere i verbali;
-  - aggiornare il documento Piano di Progetto;
+  - aggiornare il documento #pdp;
   - aggiornare le visualizzazioni della dashboard di monitoraggio;
   - gestire GitHub e Jira.
 - *Analista*: al fine di:
-  - ultimare la revisione del documento Analisi dei Requisiti.
+  - ultimare la revisione del documento #adr.
 - *Programmatore*: al fine di:
   - identificare e correggere le cause del problema prestazionale del PoC.
 - *Verificatore*: al fine di:
-  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto;
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp;
   - ricontrollare i documenti prodotti e correggere eventuali errori riscontrati.
 
 #figure(
@@ -1222,13 +1222,13 @@ L'attività prevalente è la revisione documentale. I ruoli attivi durante quest
 
 Gli obiettivi dell'undicesimo sprint si incentrano sulla preparazione per il colloquio RTB oltre che sulla revisione di alcuni aspetti di attività già concluse. Gli obiettivi prefissati per questo sprint sono:
 
-- aggiornare il Piano di Qualifica con nuove metriche individuate riguardanti:
+- aggiornare il #pdq con nuove metriche individuate riguardanti:
   - budget utilizzato;
   - ore rimanenti.
-- rimuovere Express dal PoC a seguito del feedback del Professor Cardin;
+- rimuovere Express dal PoC a seguito del feedback del #cardin;
 - registrazione di un video dimostrazione del PoC destinato al proponente;
 - creazione di un collegamento tra Jira e Grafana per il cruscotto di controllo della qualità;
-- ultimare il documento Analisi dei Requisiti con alcune modifiche minori agli Use Cases;
+- ultimare il documento #adr con alcune modifiche minori agli Use Cases;
 - verificare la correttezza dei documenti redatti finora;
 - preparare la candidatura per il colloquio RTB:
   - Redigere nuova lettera di presentazione con aggiornamento di preventivo;
@@ -1241,16 +1241,16 @@ Sono state assegnate ore al ruolo di Verificatore e Analista a scapito di quello
 - *Responsabile*: al fine di coordinare le attività.
 - *Amministratore*: al fine di:
   - redigere i verbali;
-  - aggiornare il documento Piano di Progetto;
+  - aggiornare il documento #pdp;
   - gestire GitHub e Jira.
 - *Analista*: al fine di:
-  - ultimare alcune modifiche al documento Analisi dei Requisiti;
-  - ricontrollare interamente il documento di Analisi dei Requisiti.
+  - ultimare alcune modifiche al documento #adr;
+  - ricontrollare interamente il documento di #adr.
 - *Progettista*: al fine di mettere per iscritto le motivazioni che hanno portato alla scelta delle tecnologie utilizzate nel PoC.
 - *Verificatore*: al fine di:
-  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto;
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp;
   - ricontrollare i documenti prodotti e correggere eventuali errori riscontrati;
-  - inserire nel Piano di Qualifica alcune metriche nuove.
+  - inserire nel #pdq alcune metriche nuove.
 
 #figure(
   table(
@@ -1291,12 +1291,12 @@ Sono state assegnate ore al ruolo di Verificatore e Analista a scapito di quello
 
 === Obiettivi prefissati
 
-Gli obiettivi del dodicesimo sprint riguardano la partecipazione al colloquio RTB con il Professor Cardin, in data 25/01/2024 alle ore 8:40.
+Gli obiettivi del dodicesimo sprint riguardano la partecipazione al colloquio RTB con il #cardin, in data 25/01/2024 alle ore 8:40.
 
 In questo sprint inizia la sessione d'esame invernale. Gli obiettivi prefissati per questo sprint sono:
 - estensione dei termini di Glossario;
-- aggiunta di grafici significativi al Piano di Progetto, come ad esempio la suddivisione oraria per ruolo, mediante il pacchetto `plotst` di Typst;
-- correzione minore della tabella che riporta il computo dei requisiti totali nel documento di Analisi dei Requisiti;
+- aggiunta di grafici significativi al #pdp, come ad esempio la suddivisione oraria per ruolo, mediante il pacchetto `plotst` di Typst;
+- correzione minore della tabella che riporta il computo dei requisiti totali nel documento di #adr;
 - ripasso generale individuale e collettivo prima del colloquio RTB.
 
 === Preventivo costi
@@ -1305,10 +1305,10 @@ Dato lo scope ridotto del lavoro, questo sprint impiega un numero di ore inferio
 - *Responsabile*: al fine di coordinare le attività.
 - *Amministratore*: al fine di:
   - redigere i verbali;
-  - aggiornare il documento Piano di Progetto.
+  - aggiornare il documento #pdp.
 - *Progettista*: al fine di estendere i termini del Glossario.
 - *Verificatore*: al fine di:
-  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto;
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp;
   - ricontrollare i documenti prodotti e correggere eventuali errori riscontrati.
 
 #figure(
@@ -1358,7 +1358,7 @@ Questo sprint impiega:
   - organizzare il lavoro in reazione al feedback, se ricevuto.
 - *Amministratore*: al fine di:
   - redigere i verbali;
-  - aggiornare il documento Piano di Progetto.
+  - aggiornare il documento #pdp.
 
 #figure(
   table(
@@ -1398,9 +1398,9 @@ Questo sprint impiega:
 == Sprint 14 dal 04-02-2024 al 11-02-2024
 
 === Obiettivi prefissati
-Il feedback ricevuto dopo il colloquio RTB con il Professor Cardin ha evidenziato la necessità di una profonda revisione del documento di Analisi dei Requisiti, che pertanto è il focus principale di questo sprint. Gli obiettivi prefissati per questo sprint sono:
-- revisione, correzione ed estensione del documento Analisi dei Requisiti secondo il feedback ricevuto;
-- preparazione in vista del colloquio RTB con il Professor Vardanega (data da definire);
+Il feedback ricevuto dopo il colloquio RTB con il #cardin ha evidenziato la necessità di una profonda revisione del documento di #adr, che pertanto è il focus principale di questo sprint. Gli obiettivi prefissati per questo sprint sono:
+- revisione, correzione ed estensione del documento #adr secondo il feedback ricevuto;
+- preparazione in vista del colloquio RTB con il #vardanega (data da definire);
 - inclusione nella dashboard di monitoraggio delle metriche individuate nel corso dello sprint precedente;
 - estensione dei termini di Glossario;
 - invio aggiornamento sullo stato del progetto al Proponente.
@@ -1413,12 +1413,12 @@ Questo sprint impiega:
   - contattare il Proponente fornendo aggiornamenti sull'avanzamento dei lavori.
 - *Amministratore*: al fine di:
   - redigere i verbali;
-  - aggiornare il documento Piano di Progetto;
+  - aggiornare il documento #pdp;
   - aggiornare la dashboard di monitoraggio.
-- *Analista*: al fine di implementare le correzioni e le estensioni al documento Analisi dei Requisiti;
+- *Analista*: al fine di implementare le correzioni e le estensioni al documento #adr;
 - *Progettista*: al fine di estendere i termini del Glossario.
 - *Verificatore*: al fine di:
-  - verificare la correttezza del lavoro prodotto e la sua coerenza con le Norme di Progetto;
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp;
   - ricontrollare i documenti prodotti e correggere eventuali errori riscontrati.
 
 #figure(
@@ -1550,7 +1550,7 @@ Questa fase di retrospettiva è essenziale al fine di individuare possibili migl
 === Problematiche
 A causa di una sottostima del carico di lavoro per l'implementazione delle automazioni tramite GitHub Actions, alcuni obiettivi sono stati mancati, creando un effetto a catena che ha temporaneamente bloccato il caricamento di documenti nella repository.
 
-Un altro problema riguarda la comunicazione con l'azienda Proponente: sfortunatamente, la mail inviata non ha ricevuto riscontro in tempo, impedendo di procedere ulteriormente con l'analisi dei requisiti e la programmazione di un meeting con l'azienda.
+Un altro problema riguarda la comunicazione con l'azienda Proponente: sfortunatamente, la mail inviata non ha ricevuto riscontro in tempo, impedendo di procedere ulteriormente con l'#adr e la programmazione di un meeting con l'azienda.
 
 === Risoluzioni attuate
 Le automazioni riguardanti il versionamento verranno concluse nello sprint successivo.
@@ -1613,7 +1613,7 @@ La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di u
 A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effettivo inferiore a quanto preventivato:
 - Responsabile: il blocco temporaneo della repository e la mancata risposta dell'azienda non hanno permesso la produzione di documenti, limitando così il lavoro del Responsabile;
 
-- Analista: la mancata risposta da parte dell'azienda ha impedito agli analisti di iniziare l'analisi dei requisiti, limitando dunque il lavoro alla stesura di domande in merito al dominio tecnologico;
+- Analista: la mancata risposta da parte dell'azienda ha impedito agli analisti di iniziare l'#adr, limitando dunque il lavoro alla stesura di domande in merito al dominio tecnologico;
 
 - Verificatore: il mancato avanzamento ha prodotto documentazione ridotta rispetto a quanto preventivato, pertanto il Verificatore ha svolto un numero inferiore di ore.
 
@@ -1641,12 +1641,12 @@ Il ruolo dell'Amministratore, invece, ha visto un aumento delle ore rispetto a q
 
 === Obiettivi raggiunti
 - Riconfigurazione della repository;
-- Stesura della sezione _Introduzione_ del documento Norme di Progetto;
-- Stesura della sezione _Processi di supporto_ del documento Norme di Progetto;
+- Stesura della sezione _Introduzione_ del documento #ndp;
+- Stesura della sezione _Processi di supporto_ del documento #ndp;
 - Perfezionamento delle automazioni per la compilazione dei documenti;
 - Implementazione delle automazioni per il versionamento dei documenti;
 - Contatto con l'azienda Proponente per comunicare l'esito della candidatura;
-- Meeting con l'azienda Proponente per riflettere sull'analisi dei requisiti e sulle tecnologie da usare;
+- Meeting con l'azienda Proponente per riflettere sull'#adr e sulle tecnologie da usare;
 - Inizio dell'individuazione e della stesura degli Use Case.
 
 === Obiettivi mancati
@@ -1658,7 +1658,7 @@ Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obi
 - Scarsa reattività in fase di review.
 
 === Risoluzioni attuate
-- Per risolvere la problematica di una mancanza di struttura nei verbali, si sono fissate delle convenzioni da seguire nel documento Norme di Progetto;
+- Per risolvere la problematica di una mancanza di struttura nei verbali, si sono fissate delle convenzioni da seguire nel documento #ndp;
 - Per formare meglio il gruppo sulle modalità di utilizzo della repository, è stato dedicato tempo in più per fornire tutorial video e testuali a supporto del gruppo;
 - Per ovviare alla scarsa reattività in fase di review, il gruppo prende la responsabilità di visionare spesso la casella mail personale per capire quando c'è bisogno di una review o di risolvere una conversation GitHub, oltre a sollecitare i Verificatori via i canali di comunicazione interni del gruppo in caso di mancate revisioni.
 
@@ -1744,20 +1744,20 @@ A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore ef
 - Proseguimento del processo di individuazione e stesura degli Use Case;
 - Perfezionamento delle automazioni di versionamento documenti;
 - Perfezionamento del template usato per i documenti;
-- Aggiornamento parziale del documento Norme di Progetto;
+- Aggiornamento parziale del documento #ndp;
 - Studio iniziale della libreria Three.js;
 - Meeting con l'azienda Proponente per esporre ipotesi e Use Case individuati, richiedere chiarimenti ed avanzare opportune richieste;
 - Contatto con l'azienda Proponente per fissare il prossimo meeting.
 
 === Obiettivi mancati
-- Aggiornamento completo del documento Piano di Progetto con l'inserimento dei grafici di Gantt e di burndown.
+- Aggiornamento completo del documento #pdp con l'inserimento dei grafici di Gantt e di burndown.
 
 === Problematiche
 
 Nonostante la realizzazione soddisfacente della maggior parte degli obiettivi concordati, sono emerse alcune criticità durante l'implementazione del progetto:
 
 - si è riscontrata una pianificazione non ottimale e superficiale, attribuibile alla mancanza di un dettagliato processo di pianificazione durante la riunione precedente l'avvio dello sprint;
-- sono sorti problemi a causa della mancata definizione di standard per la creazione dei grafici di Gantt e burndown, comportando una stesura parziale dei paragrafi nel documento Piano di Progetto;
+- sono sorti problemi a causa della mancata definizione di standard per la creazione dei grafici di Gantt e burndown, comportando una stesura parziale dei paragrafi nel documento #pdp;
 - la durata dei meeting ha superato le aspettative a causa di alcune inefficienze temporali;
 - il gruppo ha rilevato la mancanza di standard per designare le persone responsabili della redazione dei verbali durante lo sprint.
 
@@ -1848,9 +1848,9 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
 
 === Obiettivi raggiunti
 - Perfezionamento della stesura degli Use Case individuati finora;
-- Redazione di una prima versione del documento Analisi dei Requisiti;
-- Scelta di una data per un eventuale primo meeting con il professor Cardin per ottenere un feedback sull'Analisi dei Requisiti;
-- Proseguimento della redazione e aggiornamento del documento Norme di Progetto;
+- Redazione di una prima versione del documento #adr;
+- Scelta di una data per un eventuale primo meeting con il #cardin per ottenere un feedback sull'#adr;
+- Proseguimento della redazione e aggiornamento del documento #ndp;
 - Proseguimento periodo di studio di Three.js,  finalizzato a:
  - creazione di scaffali nell'ambiente tridimensionale;
  - implementazione sistema di _drag and drop_;
@@ -1950,15 +1950,15 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 === Obiettivi raggiunti
 - Perfezionamento sistema di _drag and drop_ nel PoC;
 - Creazione degli scaffali nel PoC;
-- Miglioramento e aggiornamento documento Analisi dei Requisiti;
+- Miglioramento e aggiornamento documento #adr;
 - Realizzazione PoC relativo alla creazione e posizionamento di scaffali dell'ambiente di lavoro;
 - Realizzazione PoC relativo alla lettura e utilizzo di file SVG e comunicazione con database;
 - Realizzazione PoC che integra l'utilizzo di Docker;
 - Incontro con Proponente in data 06-12-23;
-- Incontro con professor Cardin in data 07-12-23;
+- Incontro con #cardin in data 07-12-23;
 - Redazione del Glossario;
-- Aggiornamento documento Norme di Progetto;
-- Aggiornamento documento Piano di Progetto;
+- Aggiornamento documento #ndp;
+- Aggiornamento documento #pdp;
 - Aggiornare vecchi documenti con nuovo template.
 
 === Obiettivi mancati
@@ -1972,7 +1972,7 @@ Durante il meeting di retrospettiva sono emerse le seguenti problematiche da mig
 
 === Risoluzioni attuate
 Conseguentemente ai problemi rilevati, sono state individuate le relative soluzioni da adottare:
-- normare le convenzioni di stesura del codice nelle Norme di Progetto;
+- normare le convenzioni di stesura del codice nelle #ndp;
 - impegnarsi a fissare delle scadenze infrasettimanali così da ridurre il carico di lavoro nel weekend;
 - utilizzare le board su Miro con anticipo aggiungendo il proprio feedback.
 
@@ -2056,13 +2056,13 @@ Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabi
   - miglioramento grafico degli scaffali;
   - posizionamento automatico dei bin nello scaffale al momento della sua creazione;
   - implementazione visualizzazione prodotti dei bin tramite alert JavaScript.
-- Aggiornamento documento Norme di Progetto;
-- Aggiornamento documento Analisi dei Requisiti con:
-  - refactoring degli Use Case secondo le indicazioni del Professor Cardin;
+- Aggiornamento documento #ndp;
+- Aggiornamento documento #adr con:
+  - refactoring degli Use Case secondo le indicazioni del #cardin;
   - redazione requisiti funzionali;
   - redazione requisiti di qualità;
   - redazione requisiti di vincolo.
-- Redazione introduzione Piano di Qualifica;
+- Redazione introduzione #pdq;
 - Meeting con l'azienda Proponente per:
   - esporre il PoC A;
   - aggiornare sullo stato dei lavori;
@@ -2076,12 +2076,12 @@ Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabi
 === Problematiche
 Durante il meeting di retrospettiva sono emerse le seguenti problematiche da migliorare:
 - mancata comunicazione di situazioni di difficoltà o problemi che hanno portato a rallentamenti nella produzione di un PoC per il front-end;
-- la stesura del documento Norme di Progetto ha una velocità di avanzamento troppo bassa.
+- la stesura del documento #ndp ha una velocità di avanzamento troppo bassa.
 
 === Risoluzioni attuate
 Conseguentemente ai problemi rilevati, sono state individuate le relative soluzioni da adottare:
 - si richiede ai componenti del gruppo una comunicazione rapida delle difficoltà e problemi, non appena questi si presentano;
-- il numero di persone assegnate alla redazione delle Norme di Progetto verrà incrementato da due a tre, in modo da garantire la produzione di un maggior numero di sezioni durante lo sprint.
+- il numero di persone assegnate alla redazione delle #ndp verrà incrementato da due a tre, in modo da garantire la produzione di un maggior numero di sezioni durante lo sprint.
 
 === Panoramica dei costi effettivi
 
@@ -2160,12 +2160,12 @@ Il ruolo di Programmatore presenta un monte ore effettivo minore rispetto a quel
 
 === Obiettivi raggiunti
 - Integrazione dei PoC realizzati in un unico PoC;
-- Individuazione di metriche di base per il Piano di Qualifica;
-- Aggiornamento del documento Norme di Progetto;
+- Individuazione di metriche di base per il #pdq;
+- Aggiornamento del documento #ndp;
 - Automatizzata l'individuazione dei termini del glossario nei documenti.
 
 === Obiettivi mancati
-- Implementazione del tracciamento requisito-fonte nel documento Analisi dei Requisiti;
+- Implementazione del tracciamento requisito-fonte nel documento #adr;
 - revisione generale del documento per verifcare la presenza e la correttezza di tutti gli Use Case e requisiti necessari;
 - Correzione di bug presenti nelle GitHub Actions.
 
@@ -2175,7 +2175,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 - il pool mensile di automatismi inclusi nel piano gratuito relativi ai ticket di Jira è stato esaurito;
 - lentezza nell'approvazione delle correzioni richieste nelle review;
 - nelle review delle pull request alcuni commenti risultano essere poco chiari e/o sbrigativi;
-- il progresso relativo al documento Norme di Progetto è risultato scarso in confronto con gli sprint precedenti, e in ritardo rispetto a quanto pianificato;
+- il progresso relativo al documento #ndp è risultato scarso in confronto con gli sprint precedenti, e in ritardo rispetto a quanto pianificato;
 - il tracciamento delle attività relative al PoC non ha lo stesso livello di precisione di quello delle attività documentali.
 
 === Risoluzioni attuate
@@ -2185,7 +2185,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   - indicando con precisione la natura dell'errore e, se utile, la sua localizzazione all'interno della riga;
   - fornendo una possibile correzione, quando appropriato;
   - nel caso di più occorrenze dello stesso errore, segnalarle tutte. Per evitare ripetizioni, fornire una valutazione della prima occorrenza ed inserire un riferimento a tale conversazione nelle occorrenze successive.
-- Per accelerare il lavoro sulle Norme di Progetto, chi ha redatto le Norme di Progetto nel corso degli sprint precedenti continuerà l'aﬃancamento nel corso dello sprint successivo;
+- Per accelerare il lavoro sulle #ndp, chi ha redatto le #ndp nel corso degli sprint precedenti continuerà l'aﬃancamento nel corso dello sprint successivo;
 - La natura esplorativa del PoC richiede ﬂessibilità nella pianiﬁcazione, ma si sottolinea la necessità di continuare a tracciare le attività per riferimento futuro.
 
 === Panoramica dei costi effettivi
@@ -2241,7 +2241,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   supplement: "Grafico"
 )
 
-Diversi ruoli risultano avere un monte ore minore rispetto a quello preventivato, a causa di rallentamenti nella stesura delle Norme di Progetto e, per quanto riguarda l'Analista, un rallentamento dovuto alla mancanza di materiale su cui lavorare: il materiale necessario era infatti presente in un branch di cui non era ancora stata fatta una pull request.
+Diversi ruoli risultano avere un monte ore minore rispetto a quello preventivato, a causa di rallentamenti nella stesura delle #ndp e, per quanto riguarda l'Analista, un rallentamento dovuto alla mancanza di materiale su cui lavorare: il materiale necessario era infatti presente in un branch di cui non era ancora stata fatta una pull request.
 
 === Monitoraggio costi e ore
 
@@ -2265,15 +2265,15 @@ Diversi ruoli risultano avere un monte ore minore rispetto a quello preventivato
 
 === Obiettivi raggiunti
 - Miglioramento del Glossario con gestione di plurali e acronimi dei termini ed evidenziazione _case insensitive_;
-- Implementato il tracciamento requisito-fonte nell'Analisi dei Requisiti;
-- Aggiornamento del documento Norme di Progetto;
+- Implementato il tracciamento requisito-fonte nell'#adr;
+- Aggiornamento del documento #ndp;
 - Realizzato sito web per la documentazione;
 - Automatizzata l'individuazione dei termini del Glossario nei documenti.
 - Realizzazione di una dashboard preliminare Grafana;
 - Perfezionamento PoC finale.
 
 === Obiettivi mancati
-- La dashboard di monitoraggio non implementa tutte le metriche individuate nel Piano di Qualifica;
+- La dashboard di monitoraggio non implementa tutte le metriche individuate nel #pdq;
 - Rimane da comprendere a fondo le implicazioni della scelta tra Next.js ed Express.js;
 - Permangono bug nelle GitHub Action.
 
@@ -2434,7 +2434,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   supplement: "Grafico"
 )
 
-La pianificazione delle attività per lo sprint 9 è stata conservativa. L'entità di alcune attività, specialmente quelle relative alle automazioni e alla dashboard, si sono rivelate sensibilmente minori del previsto. Il Progettista, inizialmente non previsto, è stato interpellato per la realizzazione della presentazione per il colloquio RTB con il Professor Cardin.
+La pianificazione delle attività per lo sprint 9 è stata conservativa. L'entità di alcune attività, specialmente quelle relative alle automazioni e alla dashboard, si sono rivelate sensibilmente minori del previsto. Il Progettista, inizialmente non previsto, è stato interpellato per la realizzazione della presentazione per il colloquio RTB con il #cardin.
 
 === Monitoraggio costi e ore
 
@@ -2459,7 +2459,7 @@ La pianificazione delle attività per lo sprint 9 è stata conservativa. L'entit
 === Obiettivi raggiunti
 - I problemi prestazionali del PoC sono stati risolti con successo;
 - Le automazioni hanno subito un refactoring al fine di migliorarne l'affidabilità, la flessibilità e il riuso;
-- I documenti Piano di Qualifica, Piano di Progetto sono stati verificati in vista della valutazione RTB;
+- I documenti #pdq, #pdp sono stati verificati in vista della valutazione RTB;
 - Preparazione della presentazione Google Slides a supporto della revisione RTB.
 
 === Obiettivi mancati
@@ -2549,8 +2549,8 @@ La presenza del Progettista, non pianificata, deriva dalla necessità di decider
 == Sprint 11 dal 14-01-2024 al 21-01-2024
 
 === Obiettivi raggiunti
-- Inviata la candidatura al Professor Cardin per il colloquio RTB;
-- Al Piano di Progetto sono state apportate modifiche minori per migliorare la leggibilità dei dati;
+- Inviata la candidatura al #cardin per il colloquio RTB;
+- Al #pdp sono state apportate modifiche minori per migliorare la leggibilità dei dati;
 - Il sito web è accessibile in ogni sua parte e comprende i riferimenti di ogni documento prodotto dal gruppo;
 - I contenuti della presentazione per il colloquio RTB sono stati definiti e il documento è stato completato.
 
@@ -2640,8 +2640,8 @@ La necessità dei ruoli di Responsabile e di Analista è stata minore rispetto a
 == Sprint 12 dal 21-01-2024 al 28-01-2024
 
 === Obiettivi raggiunti
-- Colloquio con il Professor Cardin superato con luce "ampiamente verde";
-- Aggiunta di grafici al Piano di Progetto:
+- Colloquio con il #cardin superato con luce "ampiamente verde";
+- Aggiunta di grafici al #pdp:
   - suddivisione oraria per ruolo per preventivi e consuntivi.
 
 === Obiettivi mancati
@@ -2728,13 +2728,13 @@ Il totale delle ore di lavoro preventivate è stato in gran parte rispettato. Tu
 == Sprint 13 dal 28-01-2024 al 04-02-2024
 
 === Obiettivi raggiunti
-- Preparazione della pianificazione dello sprint 14 a seguito del risultato del colloquio RTB sostenuto con il Professor Cardin, ricevuto il 31/01/2024.
+- Preparazione della pianificazione dello sprint 14 a seguito del risultato del colloquio RTB sostenuto con il #cardin, ricevuto il 31/01/2024.
 
 === Obiettivi mancati
 Nessuno.
 
 === Problematiche
-Il feedback ricevuto dal Professor Cardin evidenzia diverse lacune nel documento Analisi dei Requisiti. Sarà dunque necessario investire risorse per correggere e migliorare il documento. Ciò potrebbe influire negativamente sull'avanzamento del progetto.
+Il feedback ricevuto dal #cardin evidenzia diverse lacune nel documento #adr. Sarà dunque necessario investire risorse per correggere e migliorare il documento. Ciò potrebbe influire negativamente sull'avanzamento del progetto.
 
 === Risoluzioni attuate
 Nessuna.
@@ -2792,7 +2792,7 @@ Nessuna.
   supplement: "Grafico"
 )
 
-Lo sprint 13 è stato caratterizzato da un momento di pausa, dovuto alla concomitanza degli esami, conclusosi mercoledì 31/01/2024 con la ricezione del feedback da parte del Professor Cardin. Nel corso dei giorni rimanenti, il Responsabile ha aggiornato la pianificazione per adeguarla al diverso contesto di lavoro.
+Lo sprint 13 è stato caratterizzato da un momento di pausa, dovuto alla concomitanza degli esami, conclusosi mercoledì 31/01/2024 con la ricezione del feedback da parte del #cardin. Nel corso dei giorni rimanenti, il Responsabile ha aggiornato la pianificazione per adeguarla al diverso contesto di lavoro.
 
 === Monitoraggio costi e ore
 

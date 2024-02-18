@@ -104,7 +104,7 @@ I meeting avranno cadenza variabile, e saranno fissati al termine di altri incon
 - 3 - PB.
 
 === Documentazione prodotta
-In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di fornitura, la quale sarà resa disponibile al Proponente, _Sanmarco Informatica_, e ai Committenti, i professori Tullio Vardanega e Riccardo Cardin.
+In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di fornitura, la quale sarà resa disponibile al Proponente, _Sanmarco Informatica_, e ai Committenti, ovvero il #vardanega e il #cardin.
 
 ==== Valutazione dei capitolati
 Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese disponibili dai vari proponenti. Per ogni capitolato vengono presentati tre paragrafi:
@@ -112,24 +112,24 @@ Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese
 + *Dominio tecnologico*: vengono elencate le tecnologie consigliate dal Proponente del capitolato;
 + *Considerazioni*: il gruppo dà la propria valutazione sul capitolato.
 
-==== Analisi dei rischi
-Nel documento di Analisi dei rischi vengono presentati i rischi a cui il gruppo potrebbe essere esposto durante il periodo in cui lavora al progetto. Ogni rischio viene classificato secondo tre parametri:
+==== _Analisi dei rischi_
+Nel documento #pdp vengono presentati i rischi a cui il gruppo potrebbe essere esposto durante il periodo in cui lavora al progetto. Ogni rischio viene classificato secondo tre parametri:
 - *impatto*: esprime l'effetto generato dall'evento;
 - *probabilità*: esprime la probabilità del verificarsi del rischio;
 - *conseguenze*: effetti collaterali a breve o medio termine che il rischio può comportare.
 
 Ad ogni rischio sono inoltre associate delle buone pratiche da seguire per mitigarlo.
 
-==== Preventivo dei costi
+==== _Preventivo dei costi_
 Nel Preventivo dei costi viene esposta una tabella che presenta una previsione riguardo il numero di ore di lavoro totali, per membro e per ruolo e viene fornito un calcolo del costo totale del progetto. Prima della tabella vengono spiegate le motivazioni che hanno portato alla suddivisione oraria individuata, effettuando una tripartizione del periodo di lavoro complessivo e analizzando ogni ruolo presente all'interno del gruppo.
 
-==== Lettera di presentazione
-Breve documento dove il gruppo si presenta e dichiara il suo impegno nello svolgimento del capitolato scelto. Viene dato un riferimento al repository dove si potranno trovare i documenti necessari alla candidatura e vengono dichiarati il costo della realizzazione del prodotto e la data di consegna prevista.
+==== _Lettera di presentazione_
+Breve documento dove il gruppo si presenta e dichiara il suo impegno nello svolgimento del capitolato scelto. Viene fornito un riferimento al repository dove si potranno trovare i documenti necessari alla candidatura e vengono dichiarati il preventivo a finire e la data di consegna prevista.
 
-==== Analisi dei Requisiti
+==== #adr
 In questo documento vengono raccolti tutti gli Use Case e requisiti individuati dal gruppo con il supporto del Proponente. Ogni Use Case e requisito è identificato da un codice, così da essere facilmente individuabile e tracciabile. All'inizio del documento sono inoltre descritti i criteri di qualità che il gruppo ha seguito durante la redazione.
 
-==== Piano di Progetto
+==== #pdp
 Documento che governa la pianificazione dell'avanzamento del progetto, determinando task e obiettivi da raggiungere e analizzando il lavoro svolto. È articolato in cinque sezioni:
 - Rischi e loro mitigazione;
 - Divisione temporale di sviluppo;
@@ -137,17 +137,17 @@ Documento che governa la pianificazione dell'avanzamento del progetto, determina
 - Pianificazione del lavoro;
 - Consuntivo del progetto.
 
-==== Piano di Qualifica
-Nel Piano di Qualifica vengono fissati obiettivi di qualità e vengono descritti i processi necessari per conseguirli con relative procedure di controllo.
+==== #pdq
+Nel #pdq vengono fissati obiettivi di qualità e vengono descritti i processi necessari per conseguirli con relative procedure di controllo.
 
-==== Glossario
+==== #glo
 Nel Glossario vengono elencati e definiti in modo preciso tutti i termini rilevanti utilizzati all'interno del progetto. È un documento estremamente importante per evitare situazioni di ambiguità, e garantire così una corretta comprensione della documentazione da parte di tutte le parti coinvolte.
 
 === Strumenti utilizzati
 In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo di fornitura.
 
 - *Zoom*: applicazione per videoconferenze;
-- *Google slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il Committente riguardo l'andamento del lavoro;
+- *Google Slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il Committente riguardo l'andamento del lavoro;
 - *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
 
 = Processi di ciclo di vita
@@ -179,7 +179,7 @@ Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo d
 La pianificazione del processo è compito del Responsabile, il quale al termine dello sprint precedente, in base alle attività svolte e ai risultati ottenuti, pianifica le attività da svolgere nello sprint successivo. \
 La pianificazione è un'attività iterativa, che viene svolta all'inizio dello sprint. Il Responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \
 Questo processo permette di individuare le attività da svolgere, le risorse necessarie e le tempistiche di svolgimento, mediante il sistema di ticketing offerto da Jira.\
-Il risultato di questo processo è visibile all'interno del documento Piano di Progetto.\
+Il risultato di questo processo è visibile all'interno del documento #pdp.\
 \
 ===== Esecuzione
 Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto. \
@@ -215,7 +215,7 @@ Questa analisi individua i miglioramenti da apportare al processo di sviluppo, s
 L'attuazione è l'ultima fase del processo di gestione del ciclo di vita, e consiste nella messa in pratica delle contromisure stabilite durante la fase di verifica. \
 L'obiettivo è sopperire alle mancanze e alle inefficienze del processo di sviluppo, in modo da migliorare la qualità del prodotto e la produttività del gruppo. \
 Diventa compito del Responsabile stabilire le attività necessarie per attuare le contromisure, e di conseguenza di pianificare le attività da svolgere nello sprint successivo. \
-Il risultato di questo processo è visibile all'interno del documento Piano di Progetto.
+Il risultato di questo processo è visibile all'interno del documento #pdp.
 \
 \
 ==== Ruoli
@@ -230,7 +230,7 @@ Le responsabilità del Responsabile includono:
 
 + monitoraggio e gestione dei costi: tiene sotto controllo l'andamento del progetto, stima i costi e gestisce l'analisi dei rischi, garantendo che il progetto rimanga entro il budget previsto;
 
-+ norme di progetto: si occupa della stesura e dell'aggiornamento delle norme di progetto, che devono essere rispettate da tutti i membri del gruppo;
++ #ndp: si occupa della stesura e dell'aggiornamento delle #ndp, che devono essere rispettate da tutti i membri del gruppo;
 
 + relazioni esterne: gestisce tutte le interazioni con il Proponente e i Committenti assicurando una comunicazione fluida ed efficace;
 \ \
@@ -249,12 +249,12 @@ Le responsabilità dell'Amministratore includono:
 
 \ \
 ===== Analista
-L'Analista individua i bisogni del Proponente e li trasforma in requisiti che saranno l'input delle attività successive. Il suo lavoro si svolge intensamente nel periodo di avvio del progetto, e si conclude con la stesura dell'Analisi dei Requisiti. \
+L'Analista individua i bisogni del Proponente e li trasforma in requisiti che saranno l'input delle attività successive. Il suo lavoro si svolge intensamente nel periodo di avvio del progetto, e si conclude con la stesura dell'#adr. \
 Il suo compito è di rilevanza in quanto un'incompleta o superficiale analisi può impattare in modo sensibile sulle attività successive, causando ritardi e costi aggiuntivi, andando a pregiudicare la qualità e la completezza del prodotto finale. \
 
 Le responsabilità dell'Analista includono:
 
-+ documento di Analisi dei Requisiti: l'Analista è incaricato di redigere questo documento, che dettaglia i requisiti specifici del progetto.
++ documento di #adr: l'Analista è incaricato di redigere questo documento, che dettaglia i requisiti specifici del progetto.
 
 + interazione con i clienti: l'Analista lavora a stretto contatto con il Proponente o i Committenti per capire e studiare i loro bisogni;
 
@@ -262,7 +262,7 @@ Le responsabilità dell'Analista includono:
 
 + definizione del problema e degli obiettivi: l'Analista esamina la situazione attuale, identifica il problema e stabilisce gli obiettivi da raggiungere;
 
-+ trasformazione dei bisogni in requisiti: durante la stesura dell'Analisi dei Requisiti, l'Analista converte i bisogni dei clienti in requisiti specifici per la soluzione.
++ trasformazione dei bisogni in requisiti: durante la stesura dell'#adr, l'Analista converte i bisogni dei clienti in requisiti specifici per la soluzione.
 
 \ \
 ===== Progettista
@@ -289,7 +289,7 @@ Le sue responsabilità includono:
 
 \ \
 ===== Verificatore
-Il Verificatore controlla il lavoro svolto dagli altri membri del gruppo, assicurandosi che le norme di progetto e le aspettative siano rispettate. \
+Il Verificatore controlla il lavoro svolto dagli altri membri del gruppo, assicurandosi che le #ndp e le aspettative siano rispettate. \
 
 Le responsabilità del Verificatore includono:
 
@@ -427,10 +427,10 @@ Non sono previste variazioni della composizione dell'organizzazione, se non in v
 == Processo di pianificazione di progetto <pianificazione>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
 === Scopo
-Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato Piano di Progetto (@PdP).
+Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato #pdp (@PdP).
 
-=== Risultati (Piano di Progetto) <PdP>
-Il Piano di Progetto è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento accompagnata dai grafici di Gantt e di burndown. Sono presenti cinque sezioni, di cui le prime quattro rientrano nel processo di pianificazione:
+=== Risultati (#pdp) <PdP>
+Il #pdp è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento accompagnata dai grafici di Gantt e di burndown. Sono presenti cinque sezioni, di cui le prime quattro rientrano nel processo di pianificazione:
 
 + Rischi e loro mitigazione;
 + Divisione temporale di sviluppo;
@@ -455,7 +455,7 @@ In questa attività il gruppo deve definire tutto ciò che caratterizza il proge
 ===== Suddivisione temporale
 Il gruppo ha individuato tre periodi di lavoro principali:
 
-- raccolta e Analisi dei Requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con il Proponente;
+- raccolta e analisi dei requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con il Proponente;
 - sviluppo della Requirements and Technology Baseline (RTB): si studiano le tecnologie da utilizzare e si applicano le conoscenze acquisite per realizzare un PoC (Proof of Concept), ovvero un prodotto software che permetta di dimostrare la padronanza delle tecnologie selezionate ai fini dello sviluppo del progetto;
 - periodo di sviluppo del Minimum Viable Product (MVP): viene progettato e implementato un prodotto software che rispetti almeno i requisiti minimi di accettazione, e che offra tutte le funzionalità richieste.
 
@@ -472,7 +472,7 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
 + *Amministratore*: ruolo presente durante tutto il progetto. Ha il compito di:
   - predisporre e controllare il corretto utilizzo delle procedure e degli strumenti adottati;
   - implementare e manutenere gli automatismi in modo da migliorare l'efficienza del gruppo.
-+ *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento Analisi dei Requisiti, nel quale:
++ *Analista*: è presente principalmente nei primi due periodi del progetto. Si occupa di redigere il documento #adr, nel quale:
   - definisce i casi d'uso;
   - raccoglie e classifica i requisiti.
 + *Progettista*: ruolo presente principalmente negli ultimi due periodi, nei quali:
@@ -496,7 +496,7 @@ Il processo di valutazione e controllo ha lo scopo di determinare lo stato del p
 - costi;
 - obiettivi raggiunti.
 
-Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e viene messo per iscritto all'interno dei verbali di tali riunioni e nei paragrafi di consuntivo del Piano di Progetto.
+Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e viene messo per iscritto all'interno dei verbali di tali riunioni e nei paragrafi di consuntivo del #pdp.
 
 === Risultati
 Come risultato dell'implementazione del processo di valutazione e controllo si elencano i seguenti:
@@ -506,7 +506,7 @@ Come risultato dell'implementazione del processo di valutazione e controllo si e
 - viene autorizzata l'azione del progetto di avanzare (o meno) da un traguardo o evento programmato al successivo;
 - vengono registrati gli obiettivi raggiunti.
 
-I risultati sono espressi e analizzati nei paragrafi di consuntivo del Piano di Progetto.
+I risultati sono espressi e analizzati nei paragrafi di consuntivo del #pdp.
 
 === Attività
 ==== Piano di valutazione e controllo del progetto
@@ -534,7 +534,7 @@ Oltre a queste, Jira offre la funzionalità di visualizzazione di un burndown-ch
 
 Entrambe le rappresentazioni pongono nell'asse $x$ del grafico il tempo, indicato in giorni. Questi grafici contengono inoltre una retta rappresentante l'andamento ideale del lavoro, grazie alla quale risulta più semplice verificare l'efficienza del gruppo.
 
-Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consuntivo dello sprint nel Piano di Progetto, nel quale, oltre a fare un resoconto dello sprint, si analizza il suo l'aspetto economico: in base ai ruoli impegnati e al monte ore produttivo svolto, si calcola il costo effettivo del periodo concluso, aggiornando conseguentemente il costo preventivato e il documento Piano di Progetto. Questo indicatore contribuisce ad avere un resoconto completo del progetto, e permette al gruppo di comprendere meglio come sta lavorando e se sta gestendo correttamente le risorse a sua disposizione.
+Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consuntivo dello sprint nel #pdp, nel quale, oltre a fare un resoconto dello sprint, si analizza il suo l'aspetto economico: in base ai ruoli impegnati e al monte ore produttivo svolto, si calcola il costo effettivo del periodo concluso, aggiornando conseguentemente il costo preventivato e il documento #pdp. Questo indicatore contribuisce ad avere un resoconto completo del progetto, e permette al gruppo di comprendere meglio come sta lavorando e se sta gestendo correttamente le risorse a sua disposizione.
 
 ==== Controllo
 Nell'attività di controllo figurano i seguenti task:
@@ -609,32 +609,32 @@ Le decisioni possono riguardare diversi aspetti del capitolato, e la loro catego
 
 Le decisioni vengono dunque così classificate:
 + *Decisioni organizzative*: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto. Esempi notevoli sono le decisioni focalizzate alla coordinazione del gruppo o alla scelta degli strumenti da utilizzare per la gestione del progetto (ad esempio: scelta dell'ITS, delle piattaforme per la comunicazione e per la collaborazione):
-  - documento soggetto a modifiche: `Norme di Progetto`;
+  - documento soggetto a modifiche: #ndp;
   - ruoli responsabili dell'aggiornamento: Responsabile, Amministratori;
   - strategia di decision-making: collaborativa.
 
 + *Decisioni tecnologiche*: sono relative allo stack tecnologico da adottare durante lo sviluppo del progetto:
-  - documento soggetto a modifiche: `Norme di Progetto`;
+  - documento soggetto a modifiche: #ndp;
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making.
 
 + *Decisioni sui requisiti*: sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
-  - documento soggetto a modifiche: `Analisi dei Requisiti`;
+  - documento soggetto a modifiche: #adr;
   - ruoli responsabili dell'aggiornamento: Analisti;
   - strategia di decision-making: collaborativa.
 
 + *Decisioni di implementazione*: sono decisioni relative alla stesura del codice:
-  - documento soggetto a modifiche: `Norme di Progetto`, documenti tecnici (diagramma delle classi);
+  - documento soggetto a modifiche: #ndp, documenti tecnici (diagramma delle classi);
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti, Programmatori;
   - strategia di decision-making: expertise decision-making.
 
 + *Decisioni architetturali*: sono decisioni relative ai pattern e alle architetture riguardanti il software:
-  - documento soggetto a modifiche: `Norme di Progetto`, documenti tecnici (diagramma delle classi, diagramma dei casi d'uso);
+  - documento soggetto a modifiche: #ndp, documenti tecnici (diagramma delle classi, diagramma dei casi d'uso);
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making.
 
 + *Decisioni sulla qualità*: sono decisioni relative ai controlli di qualità:
-  - documento soggetto a modifiche: `Piano di Qualifica`;
+  - documento soggetto a modifiche: #pdq;
   - ruoli responsabili dell'aggiornamento: Responsabile, Verificatori;
   - strategia di decision-making: collaborativa.
 
@@ -899,11 +899,11 @@ Le informazioni possono essere tecniche, di progetto, organizzative e di accordo
 === Informazioni gestite
 Le informazioni gestite dal gruppo sono:
 - documentazione:
-  - Piano di Progetto;
-  - Norme di Progetto;
-  - Piano di Qualifica;
-  - Analisi dei Requisiti;
-  - Glossario;
+  - #pdp;
+  - #ndp;
+  - #pdq;
+  - #adr;
+  - #glo;
   - Verbali.
 - codice sorgente:
   - Proof of Concept (PoC);
@@ -970,9 +970,9 @@ Convenzioni stilistiche valide sia per i prodotti documentali che software.
 ===== Nomi dei documenti <norma_nomi_documenti>
 Ogni parola dei titoli dei documenti deve iniziare con la lettera maiuscola, ad eccezione delle preposizioni e degli articoli.\
 I verbali avranno come titolo la data del verbale nel formato _yyyy-mm-dd_.
-Ogni documento alla fine del nome riporta anche la versione nel formato _\_vX.Y.Z_. \
+Se si fa riferimento al contenuto di un documento, dopo il rispettivo titolo riportare anche la versione nel formato `\_vX.Y.Z`. \
 
-Esempio: `Norme di Progetto_v1.0.0.pdf`.
+Esempio: #ndp_v.
 
 ===== Formato data
 All'interno del documento, le date seguiranno il formato locale _dd/mm/yyyy_, mentre all'interno dei nomi dei file e dei commit di GitHub, il formato utilizzato sarà _yyyy-mm-dd_, dove:
@@ -1051,11 +1051,11 @@ A seguito dell'implementazione efficace del processo di misurazione:
 - i dati vengono analizzati e i risultati interpretati;
 - gli elementi informativi forniscono informazioni oggettive per poter prendere decisioni concrete.
 
-I risultati sono contenuti nel documento _Piano Di Qualifica_ v1.1.0.
+I risultati sono contenuti nel documento #pdq_v.
 
 === Attività
 
-Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito nel _Piano di Qualifica_ v1.1.0:
+Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito nel #pdq_v:
 
 + prepararsi per la misurazione:
 
@@ -1082,10 +1082,10 @@ Il gruppo deve implementare le seguenti attività in conformità con le politich
         - requisiti individuati.
 
     - definire procedure di raccolta, analisi, accesso e reportistica dei dati:
-        - Piano di Qualifica: definisce i criteri e le modalità di misurazione e reportistica dei dati misurati.
+        - #pdq: definisce i criteri e le modalità di misurazione e reportistica dei dati misurati.
 
     - definire criteri per valutare gli elementi informativi e il processo di misurazione:
-        - Piano di Qualifica: definisce i valori ottimali e accettabili della strategia di misurazione adottata a cui tutti i documenti prodotti devono conformarsi.
+        - #pdq: definisce i valori ottimali e accettabili della strategia di misurazione adottata a cui tutti i documenti prodotti devono conformarsi.
 
     - identificare e pianificare le azioni da intraprendere per i casi in cui i parametri di misurazione di qualità non vengano rispettati.
 
@@ -1102,7 +1102,7 @@ Il gruppo deve implementare le seguenti attività in conformità con le politich
     - registrare i risultati e comunicarli agli stakeholder:
         - vengono riferiti periodicamente al Proponente gli avanzamenti e la conformità del progetto alle richieste concordate.
 
-Maggiori dettagli in merito alla definizione, al calcolo e l'analisi delle metriche sono reperibili all'interno del documento _Piano di Qualifica_ v1.1.0
+Maggiori dettagli in merito alla definizione, al calcolo e l'analisi delle metriche sono reperibili all'interno del documento #pdq_v.
 
 == Processo di Controllo della Qualità <processo_controllo_qualità>
 
@@ -1180,7 +1180,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
   + *trattare incidenti e problemi*:
 
     + in caso di segnalazione di incidenti e problemi deve essere svolto un lavoro collettivo per la loro risoluzione;
-    + tutte le criticità devono prevedere risoluzioni e arginamenti già predisposti all'interno del documento dell'_Analisi dei Rischi_ v1.0.0.
+    + tutte le criticità devono prevedere risoluzioni e arginamenti già predisposti all'interno del documento #pdp_v.
     + nel caso tali problemi o incidenti siano di carattere generale, deve essere avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
 
 ==== Tecnologie <tecnologie_controllo>
@@ -1255,7 +1255,7 @@ La valutazione delle classi di soluzione può avvenire tramite:
 Sulla base dei risultati della valutazione, il gruppo individua una classe di soluzione preferita e la presenta al Proponente per la convalida.
 
 ==== Analisi dei requisiti
-Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste da questo processo. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
+Il documento #adr raccoglie le informazioni previste da questo processo. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
 
 == Processo di definizione di bisogni e requisiti degli stakeholder <processo_bisogni>
 
@@ -1300,7 +1300,7 @@ Le attività sono supportate, quando utile, da documenti, immagini, dimostratori
 
 Lo strumento adottato a supporto di queste operazioni è Miro.
 
-I bisogni espressi da Committente e Fornitore sono raccolti, catalogati, analizzati ed espressi nel documento di _Analisi dei Requisiti_ prodotto dal gruppo.
+I bisogni espressi da Committente e Fornitore sono raccolti, catalogati, analizzati ed espressi nel documento di #adr prodotto dal gruppo.
 
 Alcuni stakeholder possono avere interessi avversi a quelli del gruppo o in contrasto con gli interessi di altri stakeholder. Qualora gli interessi degli stakeholder siano tra di essi contrastanti, ma non siano avversi al gruppo o al sistema software, il gruppo si adopera per mediare i contrasti. La strategia di mediazione prevede l'identificazione di un sottoinsieme di interessi e bisogni comuni, il confronto con le parti e la definizione di strategie di mediazione calate nella fattispecie.
 
@@ -1327,7 +1327,7 @@ Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione de
 
 ==== Casi d'uso
 Si definisce un insieme di casi d'uso (anche detti use case, abbreviato in UC) che identifichi tutte le funzionalità attese.
-I casi d'uso sono definiti ed utilizzati nel documento di _Analisi dei Requisiti_. Essi sono:
+I casi d'uso sono definiti ed utilizzati nel documento di #adr. Essi sono:
 - fonte di bisogni e, indirettamente, di requisiti;
 - un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
 
@@ -1359,7 +1359,7 @@ I vincoli sono un tipo di requisito. Possono derivare da:
 Sono classificati per priorità e per fonte.
 
 ==== Analisi dei requisiti
-Il documento _Analisi dei Requisiti_ raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
+Il documento #adr raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
 #pagebreak()
 

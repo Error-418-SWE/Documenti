@@ -104,7 +104,7 @@ I meeting avranno cadenza variabile, e saranno fissati al termine di altri incon
 - 3 - PB.
 
 === Documentazione prodotta
-In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di fornitura, la quale sarà resa disponibile al Proponente, _Sanmarco Informatica_, e ai Committenti, i professori Tullio Vardanega e Riccardo Cardin.
+In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di fornitura, la quale sarà resa disponibile al Proponente, _Sanmarco Informatica_, e ai Committenti, ovvero il #vardanega e il #cardin.
 
 ==== Valutazione dei capitolati
 Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese disponibili dai vari proponenti. Per ogni capitolato vengono presentati tre paragrafi:

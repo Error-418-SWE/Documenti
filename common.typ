@@ -20,6 +20,11 @@
 #let glo_v   = text(glo_key + " v" + versions.at(glo_key), style: "italic")
 #let glo_vo  = versions.at(glo_key)
 
+#let man_key = "Manuale Utente"
+#let man     = text(man_key, style: "italic")
+#let man_v   = text(man_key + " v" + versions.at(man_key), style: "italic")
+#let man_vo  = versions.at(man_key)
+
 #let ndp_key = "Norme di Progetto"
 #let ndp     = text(ndp_key, style: "italic")
 #let ndp_v   = text(ndp_key + " v" + versions.at(ndp_key), style: "italic")

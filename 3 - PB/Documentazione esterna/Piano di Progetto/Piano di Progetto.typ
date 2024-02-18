@@ -649,7 +649,7 @@ del documento #adr e sull'esplorazione delle nuove tecnologie.
 Gli obiettivi dello sprint 4 sono:
 - perfezionamento della stesura degli Use Case individuati finora;
 - redazione di una prima versione dell'#adr;
-- scelta di una data per un eventuale primo meeting con il Professor Cardin per ottenere un feedback sull'#adr;
+- scelta di una data per un eventuale primo meeting con il #cardin per ottenere un feedback sull'#adr;
 - proseguimento della redazione e aggiornamento del documento #ndp;
 - proseguimento periodo di studio di Three.js, finalizzato a:
  - creazione di alcuni scaffali nell'ambiente tridimensionale;
@@ -713,7 +713,7 @@ Gli obiettivi dello sprint 5 sono:
 - perfezionamento del sistema di _drag and drop_ nel PoC;
 - creazione degli scaffali nel PoC;
 - creazione ambiente Docker;
-- svolgere meeting con il Professor Cardin in merito all'#adr;
+- svolgere meeting con il #cardin in merito all'#adr;
 - perfezionare e aggiornare il documento #ndp;
 - aggiornamento del documento #adr, introducendo i requisiti non funzionali;
 - informarsi sul documento #pdq;
@@ -777,7 +777,7 @@ Gli obiettivi del sesto sprint si focalizzano sul miglioramento dei PoC e dei di
 - migliorare le GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
 - proseguire con il lavoro sul documento #ndp;
 - redigere introduzione del documento #pdq;
-- adeguare l'#adr in funzione di quanto emerso durante lo scorso meeting con il Professor Cardin;
+- adeguare l'#adr in funzione di quanto emerso durante lo scorso meeting con il #cardin;
 - aggiungere al documento #adr la tabella che correli gli Use Case ai requisiti.
 
 === Preventivo costi
@@ -1101,7 +1101,7 @@ Gli obiettivi dell'undicesimo sprint si incentrano sulla preparazione per il col
 - aggiornare il #pdq con nuove metriche individuate riguardanti:
   - budget utilizzato;
   - ore rimanenti.
-- rimuovere Express dal PoC a seguito del feedback del Professor Cardin;
+- rimuovere Express dal PoC a seguito del feedback del #cardin;
 - registrazione di un video dimostrazione del PoC destinato al proponente;
 - creazione di un collegamento tra Jira e Grafana per il cruscotto di controllo della qualità;
 - ultimare il documento #adr con alcune modifiche minori agli Use Cases;
@@ -1167,7 +1167,7 @@ Sono state assegnate ore al ruolo di Verificatore e Analista a scapito di quello
 
 === Obiettivi prefissati
 
-Gli obiettivi del dodicesimo sprint riguardano la partecipazione al colloquio RTB con il Professor Cardin, in data 25/01/2024 alle ore 8:40.
+Gli obiettivi del dodicesimo sprint riguardano la partecipazione al colloquio RTB con il #cardin, in data 25/01/2024 alle ore 8:40.
 
 In questo sprint inizia la sessione d'esame invernale. Gli obiettivi prefissati per questo sprint sono:
 - estensione dei termini di Glossario;
@@ -1274,9 +1274,9 @@ Questo sprint impiega:
 == Sprint 14 dal 04-02-2024 al 11-02-2024
 
 === Obiettivi prefissati
-Il feedback ricevuto dopo il colloquio RTB con il Professor Cardin ha evidenziato la necessità di una profonda revisione del documento di #adr, che pertanto è il focus principale di questo sprint. Gli obiettivi prefissati per questo sprint sono:
+Il feedback ricevuto dopo il colloquio RTB con il #cardin ha evidenziato la necessità di una profonda revisione del documento di #adr, che pertanto è il focus principale di questo sprint. Gli obiettivi prefissati per questo sprint sono:
 - revisione, correzione ed estensione del documento #adr secondo il feedback ricevuto;
-- preparazione in vista del colloquio RTB con il Professor Vardanega (data da definire);
+- preparazione in vista del colloquio RTB con il #vardanega (data da definire);
 - inclusione nella dashboard di monitoraggio delle metriche individuate nel corso dello sprint precedente;
 - estensione dei termini di Glossario;
 - invio aggiornamento sullo stato del progetto al Proponente.
@@ -1725,7 +1725,7 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
 === Obiettivi raggiunti
 - Perfezionamento della stesura degli Use Case individuati finora;
 - Redazione di una prima versione del documento #adr;
-- Scelta di una data per un eventuale primo meeting con il professor Cardin per ottenere un feedback sull'#adr;
+- Scelta di una data per un eventuale primo meeting con il #cardin per ottenere un feedback sull'#adr;
 - Proseguimento della redazione e aggiornamento del documento #ndp;
 - Proseguimento periodo di studio di Three.js,  finalizzato a:
  - creazione di scaffali nell'ambiente tridimensionale;
@@ -1831,7 +1831,7 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
 - Realizzazione PoC relativo alla lettura e utilizzo di file SVG e comunicazione con database;
 - Realizzazione PoC che integra l'utilizzo di Docker;
 - Incontro con Proponente in data 06-12-23;
-- Incontro con professor Cardin in data 07-12-23;
+- Incontro con #cardin in data 07-12-23;
 - Redazione del Glossario;
 - Aggiornamento documento #ndp;
 - Aggiornamento documento #pdp;
@@ -1934,7 +1934,7 @@ Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabi
   - implementazione visualizzazione prodotti dei bin tramite alert JavaScript.
 - Aggiornamento documento #ndp;
 - Aggiornamento documento #adr con:
-  - refactoring degli Use Case secondo le indicazioni del Professor Cardin;
+  - refactoring degli Use Case secondo le indicazioni del #cardin;
   - redazione requisiti funzionali;
   - redazione requisiti di qualità;
   - redazione requisiti di vincolo.
@@ -2310,7 +2310,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   supplement: "Grafico"
 )
 
-La pianificazione delle attività per lo sprint 9 è stata conservativa. L'entità di alcune attività, specialmente quelle relative alle automazioni e alla dashboard, si sono rivelate sensibilmente minori del previsto. Il Progettista, inizialmente non previsto, è stato interpellato per la realizzazione della presentazione per il colloquio RTB con il Professor Cardin.
+La pianificazione delle attività per lo sprint 9 è stata conservativa. L'entità di alcune attività, specialmente quelle relative alle automazioni e alla dashboard, si sono rivelate sensibilmente minori del previsto. Il Progettista, inizialmente non previsto, è stato interpellato per la realizzazione della presentazione per il colloquio RTB con il #cardin.
 
 === Monitoraggio costi e ore
 
@@ -2425,7 +2425,7 @@ La presenza del Progettista, non pianificata, deriva dalla necessità di decider
 == Sprint 11 dal 14-01-2024 al 21-01-2024
 
 === Obiettivi raggiunti
-- Inviata la candidatura al Professor Cardin per il colloquio RTB;
+- Inviata la candidatura al #cardin per il colloquio RTB;
 - Al #pdp sono state apportate modifiche minori per migliorare la leggibilità dei dati;
 - Il sito web è accessibile in ogni sua parte e comprende i riferimenti di ogni documento prodotto dal gruppo;
 - I contenuti della presentazione per il colloquio RTB sono stati definiti e il documento è stato completato.
@@ -2516,7 +2516,7 @@ La necessità dei ruoli di Responsabile e di Analista è stata minore rispetto a
 == Sprint 12 dal 21-01-2024 al 28-01-2024
 
 === Obiettivi raggiunti
-- Colloquio con il Professor Cardin superato con luce "ampiamente verde";
+- Colloquio con il #cardin superato con luce "ampiamente verde";
 - Aggiunta di grafici al #pdp:
   - suddivisione oraria per ruolo per preventivi e consuntivi.
 
@@ -2604,13 +2604,13 @@ Il totale delle ore di lavoro preventivate è stato in gran parte rispettato. Tu
 == Sprint 13 dal 28-01-2024 al 04-02-2024
 
 === Obiettivi raggiunti
-- Preparazione della pianificazione dello sprint 14 a seguito del risultato del colloquio RTB sostenuto con il Professor Cardin, ricevuto il 31/01/2024.
+- Preparazione della pianificazione dello sprint 14 a seguito del risultato del colloquio RTB sostenuto con il #cardin, ricevuto il 31/01/2024.
 
 === Obiettivi mancati
 Nessuno.
 
 === Problematiche
-Il feedback ricevuto dal Professor Cardin evidenzia diverse lacune nel documento #adr. Sarà dunque necessario investire risorse per correggere e migliorare il documento. Ciò potrebbe influire negativamente sull'avanzamento del progetto.
+Il feedback ricevuto dal #cardin evidenzia diverse lacune nel documento #adr. Sarà dunque necessario investire risorse per correggere e migliorare il documento. Ciò potrebbe influire negativamente sull'avanzamento del progetto.
 
 === Risoluzioni attuate
 Nessuna.
@@ -2668,7 +2668,7 @@ Nessuna.
   supplement: "Grafico"
 )
 
-Lo sprint 13 è stato caratterizzato da un momento di pausa, dovuto alla concomitanza degli esami, conclusosi mercoledì 31/01/2024 con la ricezione del feedback da parte del Professor Cardin. Nel corso dei giorni rimanenti, il Responsabile ha aggiornato la pianificazione per adeguarla al diverso contesto di lavoro.
+Lo sprint 13 è stato caratterizzato da un momento di pausa, dovuto alla concomitanza degli esami, conclusosi mercoledì 31/01/2024 con la ricezione del feedback da parte del #cardin. Nel corso dei giorni rimanenti, il Responsabile ha aggiornato la pianificazione per adeguarla al diverso contesto di lavoro.
 
 === Monitoraggio costi e ore
 

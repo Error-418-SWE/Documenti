@@ -972,7 +972,7 @@ Ogni parola dei titoli dei documenti deve iniziare con la lettera maiuscola, ad 
 I verbali avranno come titolo la data del verbale nel formato _yyyy-mm-dd_.
 Ogni documento alla fine del nome riporta anche la versione nel formato _\_vX.Y.Z_. \
 
-esempio: `Norme di Progetto_v1.0.0.pdf`.
+Esempio: `Norme di Progetto_v1.0.0.pdf`.
 
 ===== Formato data
 All'interno del documento, le date seguiranno il formato locale _dd/mm/yyyy_, mentre all'interno dei nomi dei file e dei commit di GitHub, il formato utilizzato sarà _yyyy-mm-dd_, dove:
@@ -984,8 +984,8 @@ All'interno del documento, le date seguiranno il formato locale _dd/mm/yyyy_, me
 Convenzioni stilistiche specifiche per i prodotti documentali.
 
 ===== TODO
-Per indicare sezioni del documento da completare, il gruppo ha deciso di utilizzare il termine TODO, che verrà in automatico mostrato in rosso e riquadrato, riportando il messaggio _riferimento assente_.\
-Il risultato è il seguente: TODO.\
+Per indicare sezioni del documento da completare, il gruppo ha deciso di utilizzare il termine TODO, che verrà in automatico mostrato in rosso e riquadrato, riportando il messaggio "_Riferimento assente_".\
+Il risultato è il seguente: #TODO.\
 Questo permette di individuare facilmente le parti del documento da completare.
 ===== Corsivo, grassetto, maiuscole e monospace
 _Corsivo_:

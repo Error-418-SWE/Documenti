@@ -13,21 +13,22 @@
 1.11.2,06-02-2024,223,DOC-407 Modificare interrogazione con visualizzazione UC9,Banzato Alessio,Nardo Silvio
 1.11.1,06-02-2024,221,DOC-405 Modificare interrogazione con visualizzazione UC8,Banzato Alessio,Nardo Silvio
 1.11.0,06-02-2024,220,DOC-397 Specificato più dettagliatamente l'UC-4.2,Nardo Silvio,Banzato Alessio
-1.10.9,06-02-2024,218,DOC-395 Specificati i valori che possono essere modificati durante la modifica di uno scaffale,Nardo Silvio,Banzato Alessio
-1.10.8,06-02-2024,219,DOC 396 Specificato più dettagliatamente l'UC-4.1,Nardo Silvio,Banzato Alessio
-1.10.7,05-02-2024,216,DOC-413 DOC-414 Ridefinire VM1 e VM2 come funzionali,Banzato Alessio,Gardin Giovanni
+1.10.10,06-02-2024,218,DOC-395 Specificati i valori che possono essere modificati durante la modifica di uno scaffale,Nardo Silvio,Banzato Alessio
+1.10.9,06-02-2024,219,DOC 396 Specificato più dettagliatamente l'UC-4.1,Nardo Silvio,Banzato Alessio
+1.10.8,05-02-2024,216,DOC-414 Ridefinire VM2 come requisito funzionale,Banzato Alessio,Gardin Giovanni
+1.10.7,05-02-2024,216,DOC-413 Ridefinire VM1 come requisito funzionale,Banzato Alessio,Gardin Giovanni
 1.10.6,05-02-2024,217,DOC-394 Specificare dati necessari alla creazione dello scaffale UC3.1,Banzato Alessio,Nardo Silvio
 1.10.5,04-02-2024,212,DOC-386 Corretto totale requisiti funzionali,Gardin Giovanni,Zaccone Rosario
-1.10.4,16-01-2024,191,DOC-371 Estensione UC 3/4 ,Oseliero Antonio,Zaccone Rosario
-1.10.3,16-01-2024,191,DOC-371 Estensione UC 3/4 ,Oseliero Antonio,Zaccone Rosario
-1.10.2,16-01-2024,191,DOC-371 Estensione UC 3/4 ,Oseliero Antonio,Carraro Riccardo
+1.10.4,16-01-2024,191,DOC-372 Estensione UC 4,Oseliero Antonio,Zaccone Rosario
+1.10.3,16-01-2024,191,DOC-371 Estensione UC 3,Oseliero Antonio,Zaccone Rosario
+1.10.2,16-01-2024,191,DOC-371 Estensione UC 3,Oseliero Antonio,Carraro Riccardo
 1.10.1,16-01-2024,179,DOC-352 Correzione UC-1 e UC-2,Oseliero Antonio,Carraro Riccardo
-1.9.0,15-01-2024,195,DOC-280: aggiungere tabella con totali requisiti in calce al documento,Todesco Mattia,Zaccone Rosario
+1.9.0,15-01-2024,195,DOC-280 Aggiungere tabella con totali requisiti in calce al documento,Todesco Mattia,Zaccone Rosario
 1.8.0,15-01-2024,172,DOC-326 Ultimi capitoli e review in ottica RTB,Oseliero Antonio,Carraro Riccardo
 1.7.1,13-01-2024,178,DOC-258 Correggere dichiarazione tabelle analisi dei requisiti,Oseliero Antonio,Carraro Riccardo
 1.7.0,30-12-2023,128,DOC-195 Implementare tracciamento requisito fonte,Zaccone Rosario,Oseliero Antonio
 1.6.0,28-12-2023,123,DOC-194 Rendere gli UC in forma tabellare requisiti funzionali,Zaccone Rosario,Oseliero Antonio
-1.5.1,15-12-2023,102,DOC-226 Scomporre UC secondo feedback di Cardin,Banzato Alessio,Todesco Mattia
+1.5.1,15-12-2023,102,DOC-226 Scomporre UC secondo feedback del Professor Cardin,Banzato Alessio,Todesco Mattia
 1.5.0,14-12-2023,94,DOC-197 Definzione requisiti di vincolo,Gardin Giovanni,Todesco Mattia
 1.4.1,12-12-2023,91,DOC-250 Correggere sezione degli UC del file Analisi dei requisiti,Banzato Alessio,Todesco Mattia
 1.4.0,10-12-2023,78,DOC-192 Redatte sezione Introduzione e Descrizione del prodotto,Gardin Giovanni,Todesco Mattia

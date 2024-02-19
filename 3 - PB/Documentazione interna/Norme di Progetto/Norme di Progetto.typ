@@ -1361,7 +1361,7 @@ Sono classificati per priorità e per fonte.
 ==== Analisi dei requisiti
 Il documento #adr raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
-== Processo di definizione dell'architettura
+== Processo di definizione dell'architettura <processo_definizione_architettura>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
 
@@ -1399,6 +1399,7 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_controllo_qualità],[6.3.8 - Quality Assurance process],[Full],
     [@processo_missione],[6.4.1 - Business or Mission Analysis process],[Full],
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
+    [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

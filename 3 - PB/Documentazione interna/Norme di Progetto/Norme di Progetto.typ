@@ -1361,6 +1361,19 @@ Sono classificati per priorità e per fonte.
 ==== Analisi dei requisiti
 Il documento #adr raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
+== Processo di definizione dell'architettura
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
+
+=== Scopo
+
+Il processo di definizione dell'architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
+
+Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (#TODO).
+
+
+
+
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017

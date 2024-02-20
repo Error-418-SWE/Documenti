@@ -1371,8 +1371,14 @@ Il processo di definizione dell'architettura ha come scopo la creazione di uno o
 
 Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (#TODO).
 
+=== Preparazione e requisiti
 
+Il Progettista è il ruolo principale all'interno di questo processo. Il numero di persone assegnate a questo ruolo e le attività che esso dovrà svolgere vengono definite in maniera precisa durante la pianficazione dello _sprint_ che segue la riunione di retrospettiva. È importante che il Progettista abbia una buona conoscenza dei pattern architetturali e dei concetti principali che riguardano la progettazione architetturale. In particolare, di ogni pattern deve conoscere:
 
+- definizione;
+- aspetti positivi e negativi.
+
+È essenziale, inoltre, lo studio del documento #adr_v, degli obiettivi del prodotto, e delle tecnologie che il gruppo ha selezionato per la sua implementazione.
 
 #pagebreak()
 

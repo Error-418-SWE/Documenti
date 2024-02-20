@@ -954,15 +954,15 @@ Per soddisfare i precedenti parametri è stata definita una struttura per aiutar
   - assenti;
   - partecipanti esterni al gruppo (se presenti).
 + paragrafo "*ordine del giorno*": elenco degli argomenti trattati durante la riunione;
-+ *sottoparagrafi*:
-  coincidono con i dunti elencati in *ordine del giorno*, il contenuto di ogni paragrafo viene a sua volta diviso in sottoparagrafi.
-  Il primo sottoparagrafo viene definito "*Valutazione del progresso generale*", che descrive l'analisi sul lavoro svolto durante lo sprint precedente. Questo paragrafo è così definito:
++ paragrafo "*Valutazione del progresso generale*" descrive l'analisi sul lavoro svolto durante lo sprint precedente. Questo paragrafo è così definito:
   - valutazione sulla qualità del lavoro in merito alla velocità di avanzamento, evidenziando eventuali rallentamenti o meriti riscontrati.
-  - sottoparagrafi per ogni epic su cui si è lavorato, importante riportare una descrizione sul lavoro svolto, seguito da una tabella (automaticamente generata grazie al foglio di calcolo presente su Google Drive del gruppo) che riporta le task completate per quella epic.
+  - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportato una descrizione sul lavoro svolto, se i lavori svolti sono molti e diversi riportarli in forma di elenco puntato.
 + paragrafo "*Analisi di retrospettiva*", suddiviso in:
-  - tabella che riporta i valori calcolati dalle metriche presenti nel #pdq riguardo allo sprint (automaticamente calcolata dal foglio di calcolo precedentemente )
+  - tabella che riporta i valori calcolati dalle metriche presenti nel #pdq riguardo allo sprint, nello specifico riportare le metriche: task completate, SEV, SPV, SAC.
   - sottoparagrafo "*Keep doing*", riporta i meriti riscontrati dal gruppo;
-  - sottoparagrafo "*Improvements*", riporta i put
+  - sottoparagrafo "*Improvements*", riporta una serie di criticità riscontrate dal gruppo etichettate con un codice identificativo del tipo C_i_ con _i_ numero naturale positivo. Quindi una riportare una tabella che associa ad ogni criticità titolo e codice del metodo di risoluzione contenuto nel #pdp.
++ eventuali altri paragrafi che descrivono eventi di cui si ritiene importante la documentazione.
++ paragrafo "*Pianificazione*", riporta una tabella che riporta tutte le task programmate per il prossimo sprint. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso e disponibile nel Google Drive del gruppo.
 
 === Stile e convenzioni
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.

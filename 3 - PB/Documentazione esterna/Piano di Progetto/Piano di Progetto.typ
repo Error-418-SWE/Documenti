@@ -2904,6 +2904,133 @@ La pianificazione di questo sprint è stata precisa e rispettata. Il lavoro del 
   caption: "Monitoraggio, sprint 14"
 )
 
+
+== Sprint 15 dal 11-02-2024 al 18-02-2024
+=== Obiettivi raggiunti
+Lo Sprint 15 si è concluso raggiungendo tutti gli obiettivi pianificati.
+
+In data 16/02/2024 il gruppo ha sostenuto il colloquio con il #vardanega per il secondo sportello di valutazione RTB, di cui ha ottenuto l'esito, risultato positivo, in data 17/02/2024.
+
+In particolare durante lo sprint sono stati raggiunti i seguenti obiettivi:
+- #adr\:
+  - rimosso il termine "_richiesta_" nella nomeclatura dell'UC-7;
+  - specificate le API utilizzate dall'UC7.
+  - inserito tracciamento casi d'uso - requisiti;
+  - espressa la distinzione tra obiettivi obbligatori, desiderabili e opzionali.
+  - il gruppo considera completato l'aggiornamento e l'adeguamento del documento, ritenendolo pronto per una seconda revisione da parte del #cardin;
+
+- estensione del #glo\:
+  - le definizioni contenute all'interno del documento sono state aggiornate.
+
+- #ndp\:
+  - rimosso capitolo 3 riguardo stili e convenzioni non derivante dallo standard ISO/IEC 12207:2017, il cui contenuto era già assorbito dal capitolo 4.6.3 delle #ndp_v\.
+
+- #pdp\:
+  - redatti il consuntivo dello Sprint 14, terminato in data 4/02/2024, e preventivo dello Sprint 15 iniziato in data 11/02/2024.
+
+- Automazioni:
+  - aggiornate alcune componenti delle automazioni implementate nel _repository_ a seguito del rilascio di una loro nuova versione, in particolare:
+    - `upload-artifact` si aggiorna dalla versione _v3_ alla versione _v4_;
+    - `download-artifact` si aggiorna dalla versione _v3_ alla versione _v4_;
+    - `setup-python` si aggiorna dalla versione _v4_ alla versione _v5_.
+  - Rimossa la GitHub Action di supporto alla revisione di spellchecking mediante ChatGPT. Tale Action era stata precedentemente disattivata a causa dei risultati non soddisfacenti prodotti e dei numerosi falsi positivi generati.
+
+- Miglioramenti generali:
+  - i termini ricorrenti all'interno dei documenti (es. nome di documenti, nome dei professori, ...) sono stati resi variabili riutilizzabili durante la stesura dei documenti;
+  - la sezione dei riferimenti dei documenti è stata uniformata in seguito all'introduzione delle variabili sopra citate;
+  - aggiunta della data di ultima consultazione dei riferimenti esterni.
+
+=== Obiettivi mancati
+Nessuno.
+
+=== Problematiche
+Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+*P1*: Seppur durante lo Sprint siano state portate a termine tutte la task previste raggiungendo gli obiettivi prefissati, per alcune task non è stata rispettata la data di scadenza fissata. Ciò, pur non comportando rallentamenti o sovraccarico di lavoro, ha permesso di evidenziare nuovamente l'importanza di una comunicazione attiva.
+
+*P2*: Alcuni membri del gruppo evidenziano gli impegni universitari non ancora conclusi, che comportano una riduzione in termini di disponibilità.
+
+*P3*: Mancato sfruttamento del tempo alla conclusione delle task assegnate al singolo membro: si rinnova l'importanza di essere maggiormente proattivi.
+
+=== Risoluzioni attuate
+#figure(caption: [Risoluzioni attuate Sprint 15.],
+    table(
+      align: left,
+      columns: (auto, 1fr, auto),
+      [ID risoluzione], [Titolo], [Problematiche affrontate],
+      [RO1],[Riassegnazione task], [P1, P2],
+      [RO2],[Proattività],[P3]
+    )
+)
+
+=== Panoramica dei costi effettivi
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [3 (+1)],     [2 (-1)],     [1 (+1)],     [6 (+1)],
+    [Carraro],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
+    [Gardin],     [0],     [0],     [0],     [0],     [3],     [0],     [3],
+    [Nardo],     [0],     [2],     [3],     [0],     [0],     [0],     [5],
+    [Oseliero],     [0],     [1 (-1)],     [0],     [2],     [0],     [0],     [3 (-1)],
+    [Todesco],     [2 (-1)],     [0],     [2 (+2)],     [0],     [0],     [0],     [4 (+1)],
+    [Zaccone],     [1 (+1)],     [1 (+1)],     [0],     [0],     [0],     [1 (-3)],     [3 (-1)],
+    [Totale ore],     [3],     [4],     [5 (+2)],     [5 (+1)],     [5 (-1)],     [5 (-2)],     [27],
+    [Costo ruolo],     [90],     [80],     [125 (+50)],     [125 (+25)],     [75 (-15)],     [75 (-30)],     [570 (+30)],
+  ),
+  caption: "Prospetto del consuntivo, sprint 15"
+)
+#let data = (
+  ("Responsabile", 3, 3),
+  ("Amministratore", 4, 4),
+  ("Analista", 3, 5),
+  ("Progettista", 4, 5),
+  ("Programmatore", 6, 5),
+  ("Verificatore", 7, 5),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo sprint 15",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+
+=== Monitoraggio costi e ore
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [31],     [930],
+    [Amministratore],     [30],     [600],
+    [Analista],     [35],     [875],
+    [Progettista],     [19],     [475],
+    [Programmatore],     [160],     [2400],
+    [Verificatore],     [81],     [1215],
+    [Rimanente],     [356],     [6495],
+  ),
+  caption: "Monitoraggio, sprint 15"
+)
+
 // == Sprint n dal D1-M1-2024 al D2-M2-2024
 
 // === Obiettivi raggiunti

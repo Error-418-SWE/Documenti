@@ -944,18 +944,25 @@ I documenti pertanto sono così strutturati:
 + *Contenuto del file*: sezione successiva agli indici. Rappresenta il corpo del documento, suddiviso in paragrafi.
 
 ==== Struttura dei verbali <struttura-verbali>
-I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e la struttura semplificata. I verbali sono così strutturati:
-
-- *cover page* (@struttura-documenti);
-- *informazioni generali*:
-  - luogo;
+Il gruppo ha concordato sulla necessità di tenere traccia dei meeting interni ed esterni svolti, per questo vengono redatti dei verbali che devono essere precisi e completi nel riportare i punti fondamentali degli incontri.\
+Per soddisfare i precedenti parametri è stata definita una struttura per aiutare il redattore nella scrittura del documento:
++ *cover page* (@struttura-documenti);
++ paragrafo "*informazioni generali*":
+  - luogo: il luogo reale o digitale dove il gruppo insieme ad eventuali partecipanti esterni svolge il meeting;
   - data e ora nel formato (gg-mm-aaaa, hh:mm ~ hh:mm);
   - partecipanti;
   - assenti;
-  - referente aziendale (se presente).
-- *ordine del giorno*: elenco degli argomenti trattati durante la riunione;
-- *organizzazione attività*: elenco e spiegazione delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva;
-- *firma partecipanti esterni* (se presenti): firma dei partecipanti esterni alla riunione.
+  - partecipanti esterni al gruppo (se presenti).
++ paragrafo "*ordine del giorno*": elenco degli argomenti trattati durante la riunione;
++ *sottoparagrafi*:
+  coincidono con i dunti elencati in *ordine del giorno*, il contenuto di ogni paragrafo viene a sua volta diviso in sottoparagrafi.
+  Il primo sottoparagrafo viene definito "*Valutazione del progresso generale*", che descrive l'analisi sul lavoro svolto durante lo sprint precedente. Questo paragrafo è così definito:
+  - valutazione sulla qualità del lavoro in merito alla velocità di avanzamento, evidenziando eventuali rallentamenti o meriti riscontrati.
+  - sottoparagrafi per ogni epic su cui si è lavorato, importante riportare una descrizione sul lavoro svolto, seguito da una tabella (automaticamente generata grazie al foglio di calcolo presente su Google Drive del gruppo) che riporta le task completate per quella epic.
++ paragrafo "*Analisi di retrospettiva*", suddiviso in:
+  - tabella che riporta i valori calcolati dalle metriche presenti nel #pdq riguardo allo sprint (automaticamente calcolata dal foglio di calcolo precedentemente )
+  - sottoparagrafo "*Keep doing*", riporta i meriti riscontrati dal gruppo;
+  - sottoparagrafo "*Improvements*", riporta i put
 
 === Stile e convenzioni
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.

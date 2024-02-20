@@ -3014,6 +3014,10 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   supplement: "Grafico"
 )
 
+Durante lo Sprint 15 le ore preventivate (27) e le ore effettive (27) sono state rispettate, seppur la distribuzione di queste sia stata differente e maggiormente distribuita tra i membri del gruppo. In particolare:
+- Le ore preventivate di Responsabile e Amministratore, seppur quantitivamente rispettate, sono state ridistribuite tra i membri del gruppo;
+- Le ore di Analista sono state maggiori di quanto preventivato: il tracciamento UC - requsiti, per renderlo uniforme, automatico e facilmente estendibile è stato implementato mediante un automazione direttamente nei documenti in Typst e l'estensione dell'UC 7 ha richiesto più tempo del previsto;
+- Le ore di Progettista sono state maggiori di quanto preventivato: la progettazione dello schema ER del database è stata più complessa del previsto seppur permettendo di generare confronto tra i membri del gruppo;
 
 === Monitoraggio costi e ore
 #figure(
@@ -3030,6 +3034,13 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   ),
   caption: "Monitoraggio, sprint 15"
 )
+
+Lo Sprint 15 pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere tutti gli obiettivi prefissati. La distribuzione delle ore tra i membri del gruppo è stata differente da quanto preventivato, ma non ha comportato rallentamenti o sovraccarico di lavoro.
+
+Il rendimento positivo dello Sprint 15 è supportato dalle principali metriche esposte dal #pdq, quali:
+- CPI: Il Cost Performance Index passa dal valore 0.97 (allo Sprint 14) a 0.98, indicando un miglioramento del rendimento del gruppo;
+- EAC: L'Estimate At Completion passa dal valore 13.437,22 € (allo Sprint 15) a 13.292,70 €, indicando una riduzione del costo finale del progetto se il rendimento del gruppo rimarrà costante;
+
 
 // == Sprint n dal D1-M1-2024 al D2-M2-2024
 

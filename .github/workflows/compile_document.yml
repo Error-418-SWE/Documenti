@@ -12,7 +12,7 @@ on:
     outputs:
       artifact_url:
         description: "The compiled document artifact URL."
-        value: ${{ steps.artifact.outputs.artifact-url }}
+        value: ${{ jobs.compile.outputs.artifact_url }}
 
 jobs:
   compile:
@@ -20,6 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       REQUIRED_FILES: "${{ vars.TYPST_REQUIRED_FILES }}"
+    outputs:
+      artifact_url: '${{ steps.artifact.outputs.artifact-url }}'
+
     steps:
       - name: Set up Git repository
         if: github.event.pull_request.merged == false

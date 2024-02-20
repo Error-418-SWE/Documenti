@@ -294,6 +294,11 @@
     "acronyms": ["PEV"],
     "synonyms": []
   },
+  "Project Planned Value": {
+	"description": "Valore pianificato per l'intero progetto.",
+	"acronyms": ["PPV"],
+	"synonyms": []
+  },
   "Piano di Progetto": {
     "description": "Documento che permette di pianificare la suddivisione del lavoro, tenere traccia delle risorse consumate nei vari sprint, degli obbiettivi raggiunti e dei problemi e la loro risoluzione.",
     "acronyms": ["PdP"],
@@ -393,6 +398,11 @@
     "description": "Valore guadagnato dal progetto in un determinato sprint, dove lo stato di completamento del lavoro è espresso mediante il rapporto tra gli story points completati (SPC) e quelli pianificati per lo sprint (SPP).",
     "acronyms": ["SEV", "SCP", "SPP"],
     "synonyms": ["Story Points Completati", "Story Points Pianificati"]
+  },
+  "Sprint Planned Value": {
+	"description": "Valore pianificato per un determinato sprint",
+	"acronyms": ["SPV"],
+	"synonyms": []
   },
   "Sottotask": {
     "description": "Una parte di lavoro granulare necessaria per completare una story, un task o un bug.",

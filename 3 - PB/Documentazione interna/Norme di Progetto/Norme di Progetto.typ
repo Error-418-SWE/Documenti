@@ -960,7 +960,7 @@ Per soddisfare i precedenti parametri è stata definita una struttura per aiutar
 + paragrafo "*Analisi di retrospettiva*", suddiviso in:
   - tabella che riporta i valori calcolati dalle metriche presenti nel #pdq riguardo allo sprint, nello specifico riportare le metriche: task completate, SEV, SPV, SAC.
   - sottoparagrafo "*Keep doing*", riporta i meriti riscontrati dal gruppo;
-  - sottoparagrafo "*Improvements*", riporta una serie di criticità riscontrate dal gruppo etichettate con un codice identificativo del tipo C_i_ con _i_ numero naturale positivo. Quindi una riportare una tabella che associa ad ogni criticità titolo e codice del metodo di risoluzione contenuto nel #pdp.
+  - sottoparagrafo "*Improvements*", riporta una serie di criticità riscontrate dal gruppo etichettate con un codice identificativo del tipo C#emph[i] con #emph[i] numero naturale positivo. Quindi una riportare una tabella che associa ad ogni criticità titolo e codice del metodo di risoluzione contenuto nel #pdp.
 + eventuali altri paragrafi che descrivono eventi di cui si ritiene importante la documentazione.
 + paragrafo "*Pianificazione*", riporta una tabella che riporta tutte le task programmate per il prossimo sprint. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso e disponibile nel Google Drive del gruppo.
 

@@ -1037,6 +1037,40 @@ MAIUSCOLO:
 ===== Glossario
 Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una G in corsivo a pedice.
 
+===== Variabili Typst per termini ricorrenti
+
+Al fine di uniformare termini ricorrenti, vengono predisposte variabili utilizzabili nella redazione dei documenti. I termini in considerazione sono relativi a:
+- nomi di documenti
+- stakeholder;
+- documenti e la versione a cui si fa riferimento;
+- ultima data di accesso ad un link ad una risorsa web esterna.
+
+Di seguito viene riportata la tabella delle variabili e la loro rappresentazione all'interno del documento compilato:
+
+#figure(
+  table(
+    columns: 2,
+    [*Variabile*],[*Risultato*],
+    [`\#err418`],[#err418],
+    [`\#cardin`],[#cardin],
+    [`\#vardanega`],[#vardanega],
+    [`\#adr`],[#adr],
+    [`\#adr_v`],[#adr_v],
+    [`\#ris`],[#ris],
+    [`\#ris_v`],[#ris_v],
+    [`\#glo`],[#glo],
+    [`\#glo_v`],[#glo_v],
+    [`\#ndp`],[#ndp],
+    [`\#ndp_v`],[#ndp_v],
+    [`\#pdp`],[#pdp],
+    [`\#pdp_v`],[#pdp_v],
+    [`\#pdq`],[#pdq],
+    [`\#pdq_v`],[#pdq_v],
+    [`\#lastVisitedOn(day, month, year)`],[#lastVisitedOn(1, 1, 2024)],
+  ),
+  caption: "Variabili Typst per riferirsi a termini ricorrenti"
+)
+
 === Distribuzione delle informazioni
 Il gruppo condivide il materiale prodotto all'interno di un repository dedicato reperibile al link:\
 #align(link("https://github.com/Error-418-SWE/Documenti"), center)

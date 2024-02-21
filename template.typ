@@ -156,7 +156,7 @@ set document(
 // Insert company to recipients list
 for externalParticipant in externalParticipants {
   if externalParticipant.role.contains("Referente aziendale") {
-    recipients.insert(1, "Sanmarco Informatica")
+    recipients.insert(1, azienda)
     break
   }
 }

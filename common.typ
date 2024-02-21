@@ -42,6 +42,8 @@
 
 #let grafana = "https://error418swe.grafana.net/public-dashboards/9392efccc5a5427c850fc9ec81df7dff"
 
+#let azienda = "Sanmarco Informatica S.p.A."
+
 #let lastVisitedOn(day, month, year) = {
   if (year < 99) { year += 2000 }
   text("(ultimo accesso " + datetime(year: year, month: month, day: day).display("[day]/[month]/[year]") + ")", size: 0.8em, style: "italic", fill: luma(100))

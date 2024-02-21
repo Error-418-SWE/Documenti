@@ -963,12 +963,12 @@ Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e att
    - EAC: valore precedente e valore attuale;
    - rapporto tra SEV e SPV.
   - sottoparagrafo "*Keep doing*", riporta i meriti riscontrati dal gruppo;
-  - sottoparagrafo "*Improvements*", riporta una serie di criticità riscontrate dal gruppo etichettate con un codice identificativo.
+  - sottoparagrafo "*Improvements*", riporta le criticità riscontrate dal gruppo etichettate con un codice identificativo.
   I codici sono così composti:
    - *P*, lettera indicante una Problematica;
-   - *O/T*, a seconda del fatto che la problematica sia di origine organizzativa o tecnologica;
-   - *N*, valore naturale positivo che incrementa ad ogni nuova problematica di tipo organizzativo o tecnologico.
-  Quindi inserire una tabella che associa ogni criticità ad una risoluzione presente nel #pdp. La tabella deve riportare:
+   - *O/T*, a seconda se la problematica sia di origine organizzativa o tecnologica;
+   - *N*, intero naturale positivo che incrementa ad ogni nuova problematica di tipo organizzativo o tecnologico.
+  Quindi inserire la tabella che associa ogni criticità ad una risoluzione presente nel #pdp. La tabella deve riportare:
    - *ID risoluzione*;
    - *Titolo risoluzione*;
    - *Criticità affrontate*.

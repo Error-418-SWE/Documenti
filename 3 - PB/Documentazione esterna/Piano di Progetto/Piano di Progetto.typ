@@ -290,6 +290,86 @@ In caso di Accettazione del rischio è importante tenere monitorata nel tempo la
 Rallentamenti non preventivati che possono avere conseguenze a cascata sulle attività dipendenti e che possono coinvolgere più membri del gruppo per un periodo di tempo difficilmente prevedibile.
 
 
+=== Mancanza di task assegnate
+Uno o più membri del gruppo completano tutti i task a loro assegnati prima della fine dello sprit, rimanendo senza lavori programmati.
+La gravità è da considerarsi maggiore con l'aumentare dei giorni mancanti prima del prossimo meeting di retrospettiva, nel quale vengono definiti ed assegnati i successivi task.
+
+- Impatto: medio;
+- Probabilità: 3;
+- Soglie:
+  - se il periodo di tempo senza task assegnati è sufficientemente ampio da poter permettere al membro del gruppo coinvolto di proseguire con altri lavori, si adotta l' "Eliminazione del rischio";
+
+==== Opzioni di trattamento del rischio
+L'accettazione e la parziale riduzione del rischio non sono contemplate in quanto comporterebbero ritardi gravi e facilmente evitabili nell'avanzamento del progetto.
+
+===== Eliminazione del rischio
+*Strategia di trattamento* \
+Un membro del gruppo coinvolto può eliminare il rischio in molteplici modi:
+  - la prima azione da fare è contattare, tramite i canali comunicativi del gruppo, gli altri membri per verificare la possibilità di fornire loro il proprio contributo;
+  - nel caso in cui nessun membro beneficerebbe significativamente del contributo proposto, il successivo passo è controllare nello sprint backlog di Jira la presenza di task libere da poter prendere in carico;
+  - se lo sprint backlog risultasse completamente assegnato ad altri membri, i task liberi vanno cercati nel backlog completo di Jira;
+  - nel caso in cui tutti i task su Jira siano già stati assegnati, il membro coinvolto può eccezionalmente creare ed autoassegnarsi task in modo da poter proseguire con i lavori senza perdere tempo.
+
+
+\ *Conseguenze* \
+La massima riduzione del tempo sprecato è una priorità per il gruppo al fine di garantire il raggiungimento nei tempi attesi delle milestone prefissate.
+Se il rischio dovesse verificarsi più volte consecutivamente è necessario rivedere l'effettiva efficacia della programmazione dei task in sede di retrospettiva.
+
+
+=== Lenta ripresa a seguito di pause
+descrizione
+- Impatto: ;
+- Probabilità: ;
+- Soglie:
+==== Opzioni di trattamento del rischio
+===== Eliminazione del rischio
+*Strategia di trattamento* \
+\ *Conseguenze* \
+===== Riduzione della sua probabilità o gravità
+*Strategia di trattamento* \
+\ *Conseguenze* \
+===== Accettazione del rischio
+*Strategia di trattamento* \
+\ *Conseguenze* \
+
+
+
+=== Insufficiente preparazione teorica
+descrizione
+- Impatto: ;
+- Probabilità: ;
+- Soglie:
+==== Opzioni di trattamento del rischio
+===== Eliminazione del rischio
+*Strategia di trattamento* \
+\ *Conseguenze* \
+===== Riduzione della sua probabilità o gravità
+*Strategia di trattamento* \
+\ *Conseguenze* \
+===== Accettazione del rischio
+*Strategia di trattamento* \
+\ *Conseguenze* \
+
+
+
+
+=== Mancata ricezione di comunicazioni
+descrizione
+- Impatto: ;
+- Probabilità: ;
+- Soglie:
+==== Opzioni di trattamento del rischio
+===== Eliminazione del rischio
+*Strategia di trattamento* \
+\ *Conseguenze* \
+===== Riduzione della sua probabilità o gravità
+*Strategia di trattamento* \
+\ *Conseguenze* \
+===== Accettazione del rischio
+*Strategia di trattamento* \
+\ *Conseguenze* \
+
+
 #pagebreak()
 
 = Panoramica generale <panoramica-generale>

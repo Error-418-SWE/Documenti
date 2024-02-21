@@ -154,6 +154,11 @@
     "acronyms": [],
     "synonyms": []
   },
+	"Figma": {
+    "description": "Piattaforma collaborativa e web-based per l'editing grafico e il design di interfacce. Permette di progettare graficamente l'interfaccia per siti web desktop e mobile.",
+    "acronyms": [],
+    "synonyms": []
+  },
   "Git": {
     "description": "Software di versionamento distribuito utilizzabile tramite linea di comando.",
     "acronyms": [],

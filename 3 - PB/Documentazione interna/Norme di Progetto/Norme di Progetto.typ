@@ -1021,11 +1021,13 @@ Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una
 
 ===== Variabili Typst per termini ricorrenti
 
-Al fine di uniformare termini ricorrenti, vengono predisposte variabili utilizzabili nella redazione dei documenti. I termini in cosinderazione sono relativi a:
-- nomi di documenti o attori esterni;
-- riferimenti a documenti e la versione a cui si fa riferimento;
-- ultima data di accesso ad un link.
-Di seguito viene riportata la tabella delle variabili e la loro rappresentazione all'interno del documento compilato
+Al fine di uniformare termini ricorrenti, vengono predisposte variabili utilizzabili nella redazione dei documenti. I termini in considerazione sono relativi a:
+- nomi di documenti
+- stakeholder;
+- documenti e la versione a cui si fa riferimento;
+- ultima data di accesso ad un link ad una risorsa web esterna.
+
+Di seguito viene riportata la tabella delle variabili e la loro rappresentazione all'interno del documento compilato:
 
 #figure(
   table(

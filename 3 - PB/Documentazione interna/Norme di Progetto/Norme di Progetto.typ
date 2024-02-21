@@ -1021,16 +1021,16 @@ Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una
 
 ===== Variabili Typst per termini ricorrenti
 
-Il gruppo ho predisposto una serie di comandi Typst per riferirsi a termini usati molto frequentemente. In particolare troviamo:
+Al fine di uniformare termini ricorrenti, vengono predisposte variabili utilizzabili nella redazione dei documenti. I termini in cosinderazione sono relativi a:
 - nomi di documenti o attori esterni;
 - riferimenti a documenti e la versione a cui si fa riferimento;
 - ultima data di accesso ad un link.
-Di seguito viene riportata la tabella dei comandi e il risultato una volta ultimata la compilazione.
+Di seguito viene riportata la tabella delle variabili e la loro rappresentazione all'interno del documento compilato
 
 #figure(
   table(
     columns: 2,
-    [*Comando*],[*Risultato*],
+    [*Variabile*],[*Risultato*],
     [`\#err418`],[#err418],
     [`\#cardin`],[#cardin],
     [`\#vardanega`],[#vardanega],
@@ -1048,7 +1048,7 @@ Di seguito viene riportata la tabella dei comandi e il risultato una volta ultim
     [`\#pdq_v`],[#pdq_v],
     [`\#lastVisitedOn(day, month, year)`],[#lastVisitedOn(1, 1, 2024)],
   ),
-  caption: "Comandi Typst per riferirsi a termini frequenti"
+  caption: "Variabili Typst per riferirsi a termini ricorrenti"
 )
 
 === Distribuzione delle informazioni

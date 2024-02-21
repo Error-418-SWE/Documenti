@@ -346,42 +346,33 @@ Inoltre, prima di produrre avanzamenti nei lavori, è necessario che le norme re
 L'inevitabile rallentamento nella ripresa dei lavori viene mitigato e minimizzato così da poter produrre risultati soddisfacienti ed in linea con la qualità definita dal gruppo.
 
 
-
-
 === Insufficiente preparazione teorica
-descrizione
-- Impatto: ;
-- Probabilità: ;
+Il progetto richiede diverse conoscenze teoriche legate al perscorso di studi sulle quali sono basate molteplici attività fondamentali. Per esempio, lo studio dei requisiti e la produzione degli Use Case con i relativi diagrammi, oppure la fase di design architetturale ed i relativi pattern da considerare.
+Qualora uno o più membri del gruppo dovessero essere insufficientemente preparati sulla teoria necessaria, non potrebbero dare un valido contributo nell'avanzamento dei lavori.
+
+- Impatto: grave;
+- Probabilità: 2;
 - Soglie:
+  - se le lacune teoriche non sono troppo ampie e la pianificazione dei lavori lo permette, si adotta l' "Eliminazione del rischio";
+  - se il tempo necessario ad effettuare lo studio richiesto risulta significativamente esteso rispetto ai tempi dettati dalla pianificazione dei lavori, si adotta la "Riduzione della sua probabilità o gravità".
+
 ==== Opzioni di trattamento del rischio
 ===== Eliminazione del rischio
 *Strategia di trattamento* \
+I membri coinvolti devono colmare le lacune teoriche con lo studio individuale ed eventualmente, in aggiunta, con l'aiuto di altri membri del gruppo disponibili.
+Nel caso in cui la preparazione dovvesse risultare più lunga del previsto, rallentando così i lavori, è necessario segnalarlo tempestivamente al gruppo.
+
 \ *Conseguenze* \
+Il periodo di studio individuale potrebbe comportare rallentamenti non prevedibili con assoluta precisione. I membri coinvolti, successivamente al recupero degli argomenti teorici mancanti, possono fornire completamente il loro contributo nell'avanzamento dei lavori e nelle decisioni progettuali.
+
 ===== Riduzione della sua probabilità o gravità
 *Strategia di trattamento* \
-\ *Conseguenze* \
-===== Accettazione del rischio
-*Strategia di trattamento* \
-\ *Conseguenze* \
+Deve avvenire una pianificazione o ripianificazione dei lavori al fine di permettere ai membri coinvolti di svolgere solo attività non dipendenti dalle conoscente teoriche mancanti.
+Il recupero delle lacune deve comunque avvenire in tempi brevi.
 
-
-
-
-=== Mancata ricezione di comunicazioni
-descrizione
-- Impatto: ;
-- Probabilità: ;
-- Soglie:
-==== Opzioni di trattamento del rischio
-===== Eliminazione del rischio
-*Strategia di trattamento* \
 \ *Conseguenze* \
-===== Riduzione della sua probabilità o gravità
-*Strategia di trattamento* \
-\ *Conseguenze* \
-===== Accettazione del rischio
-*Strategia di trattamento* \
-\ *Conseguenze* \
+I membri coinvolti non forniranno il loro contributo per i lavori relativi alle conoscenze teoriche mancanti, questo potrebbe comportare ritardi e ripianificazioni non preventivate.
+Inoltre, le decisioni prese dal gruppo relative a scelte che necessitano delle conoscenze teoriche mancanti, non potranno beneficiare del contributo dei membri impreparati.
 
 
 #pagebreak()

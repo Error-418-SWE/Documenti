@@ -32,9 +32,9 @@ L'utente avrà la possibilità di cercare specifici prodotti all'interno del mag
   _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v" + glo_vo + ".pdf")_
   #lastVisitedOn(13,02,2024)
 
-- Documento #ris_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v" + ris_vo + ".pdf")_
-  #lastVisitedOn(13,02,2024)
+- Documento #pdp_v, Sezione 2 "Analisi dei Rischi": \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20interna/Piano%20di%20Progetto_v" + pdp_vo + ".pdf")_
+  #lastVisitedOn(21,02,2024)
 
 === Riferimenti normativi <riferimenti-normativi>
 

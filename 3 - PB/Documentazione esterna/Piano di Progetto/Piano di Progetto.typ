@@ -317,20 +317,34 @@ Se il rischio dovesse verificarsi più volte consecutivamente è necessario rive
 
 
 === Lenta ripresa a seguito di pause
-descrizione
-- Impatto: ;
-- Probabilità: ;
+Durante la durata del progetto è eccezionalmente possibile che avvengano dei rallentamenti dei lavori da parte di uno o più membri del gruppo.
+I rallentamenti in questione implicando un periodo in cui i membri coinvolti non partecipano, neanche in minima parte, attivamente ai lavori.
+Questo può avvenire, ad esempio, a seguito di particolari impegni personali o universitari.
+La ripresa dei lavori a pieno regime seguendo correttamente le norme prefissate ed utilizzando correttamente tutte le tecnologie, potrebbe essere non immediata, generando così il cosiddetto "cold start".
+Si ritiene fondamentale evitare o ridurre al minimo il suddetto effetto, così da minimizzare eventuali ritardi nei lavori o lavori svolti con un'insufficiente qualità.
+
+- Impatto: medio;
+- Probabilità: 1;
 - Soglie:
+  - se le circostanze consentono ai membri coinvolti di mantenere, nonostante i rallentamenti, un certo grado di familiarità con le norme, gli automatismi e le tecnologie adottate, si adotta l' "Eliminazione del rischio";
+  - se l'allontanamento dai lavori avviene senza il mantenimento di un certo grado di familiarità con le dinamiche inerne al gruppo, si adotta la "Riduzione della sua probabilità o gravità".
+
 ==== Opzioni di trattamento del rischio
 ===== Eliminazione del rischio
 *Strategia di trattamento* \
+I membri coinvolti devono mantenere familiarità con le norme, gli automatismi e le tecnologie adottate. Per farlo devono tenersi aggiornati sullo stato di avanzamento dei lavori e relativi possibili cambiamenti e decisioni prese dal gruppo, soprattutto relativamente alle _Norme di Progetto_.
+
 \ *Conseguenze* \
+Viene evitato il cosiddetto "cold start" e minimizzato il tempo necessario al recupero completo degli automatismi necessari a produrre progressi soddisfacienti nei lavori.
+
 ===== Riduzione della sua probabilità o gravità
 *Strategia di trattamento* \
+Al termine dell'allontanamento, i membri coinvolti devono assicurarsi di essere aggiornati riguardo lo stato di avanzamento dei lavori ed eventuali cambiamenti e decisioni avvenute nel corso del periodo di assenza.
+Inoltre, prima di produrre avanzamenti nei lavori, è necessario che le norme relative ai task da svolgere e le tecnologie da adottare, vengano recuperate e ristudiate.
+
 \ *Conseguenze* \
-===== Accettazione del rischio
-*Strategia di trattamento* \
-\ *Conseguenze* \
+L'inevitabile rallentamento nella ripresa dei lavori viene mitigato e minimizzato così da poter produrre risultati soddisfacienti ed in linea con la qualità definita dal gruppo.
+
 
 
 

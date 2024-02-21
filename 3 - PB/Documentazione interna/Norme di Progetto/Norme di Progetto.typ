@@ -1371,7 +1371,7 @@ Il processo di definizione dell'architettura ha come scopo la creazione di uno o
 
 Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (#TODO).
 
-=== Preparazione e requisiti
+=== Preparazione e requisiti <preparazione_architettura>
 
 Il Progettista è il ruolo principale all'interno di questo processo. Il numero di persone assegnate a questo ruolo e le attività che esso dovrà svolgere vengono definite in maniera precisa durante la pianficazione dello _sprint_ che segue la riunione di retrospettiva. È importante che il Progettista abbia una buona conoscenza dei pattern architetturali e dei concetti principali che riguardano la progettazione architetturale. In particolare, di ogni pattern deve conoscere:
 
@@ -1379,6 +1379,28 @@ Il Progettista è il ruolo principale all'interno di questo processo. Il numero 
 - aspetti positivi e negativi.
 
 È essenziale, inoltre, lo studio del documento #adr_v, degli obiettivi del prodotto, e delle tecnologie che il gruppo ha selezionato per la sua implementazione.
+
+=== Individuazione dell'architettura
+
+Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto che si andrà a sviluppare, così da individuare le alternative più adatte.
+
+Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_.
+
+Nel seguente elenco vengono descritte le principali caratteristiche che dovranno essere considerate nella definizione dell'architettura definitiva:
+
+- *sufficienza*: deve soddisfare tutti i requisiti;
+- *comprensibilità*: deve essere capita da tutti gli stakeholder;
+- *modularità*: deve essere composta da parti distinte;
+- *robustezza*: deve essere capace di gestire errori e condizioni limite;
+- *flessibilità*: deve essere facilmente modificabile;
+- *riusabilità*: le sue parti possono essere impiegate in altre applicazioni;
+- *disponibilità*: la sua manutenzione causa poca indisponibilità totale;
+- *sicurezza rispetto a malfunzionamenti*: deve funzionare anche in presenza di guasti;
+- *semplicità*: ogni parte contiene solo il necessario e niente di superfluo;
+- *incapsulazione*: deve nascondere all'esterno le parti interne dei suoi componenti;
+- *coesione*: deve raggruppare le parti che svolgono gli stessi compiti;
+- *basso accoppiamento*: parti distinte dipendono poco o niente le une dalle altre.
+
 
 #pagebreak()
 

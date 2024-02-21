@@ -445,7 +445,7 @@ if docType == "verbale" [
     }
   }
   #for other in externalParticipants {
-    allParticipants.insert(0, other.name)
+    allParticipants.insert(0, other.name + " (" + other.role + ")")
   }
 
   = Informazioni generali

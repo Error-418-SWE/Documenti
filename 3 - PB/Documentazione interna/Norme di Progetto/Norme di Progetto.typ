@@ -944,18 +944,36 @@ I documenti pertanto sono così strutturati:
 + *Contenuto del file*: sezione successiva agli indici. Rappresenta il corpo del documento, suddiviso in paragrafi.
 
 ==== Struttura dei verbali <struttura-verbali>
-I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e la struttura semplificata. I verbali sono così strutturati:
+Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e attività oggetto di discussione durante i meeting interni ed esterni, il gruppo raccoglie tali informazioni all'interno di verbali redatti al termine dei meeting. La struttura dei verbali è la seguente:
 
-- *cover page* (@struttura-documenti);
-- *informazioni generali*:
-  - luogo;
++ *cover page* (@struttura-documenti);
++ "*Informazioni generali*":
+  - luogo: il luogo reale o digitale dove il gruppo insieme ad eventuali partecipanti esterni svolge il meeting;
   - data e ora nel formato (gg-mm-aaaa, hh:mm ~ hh:mm);
   - partecipanti;
   - assenti;
-  - referente aziendale (se presente).
-- *ordine del giorno*: elenco degli argomenti trattati durante la riunione;
-- *organizzazione attività*: elenco e spiegazione delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva;
-- *firma partecipanti esterni* (se presenti): firma dei partecipanti esterni alla riunione.
+  - partecipanti esterni al gruppo (se presenti).
++ "*Ordine del giorno*": elenco degli argomenti trattati durante la riunione;
++ "*Valutazione del progresso generale*" descrive l'analisi sul lavoro svolto durante lo sprint precedente. Questo paragrafo è così definito:
+  - valutazione sulla qualità del lavoro in merito alla velocità di avanzamento, evidenziando eventuali rallentamenti o meriti riscontrati.
+  - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportato una descrizione sul lavoro svolto, se i lavori svolti sono molti e diversi riportarli in forma di elenco puntato.
++ "*Analisi di retrospettiva*", suddiviso in:
+  - lista di valori calcolati dalle metriche presenti nel #pdq riguardo allo sprint, nello specifico riportare:
+   - CPI: valore precedente e valore attuale;
+   - EAC: valore precedente e valore attuale;
+   - rapporto tra SEV e SPV.
+  - sottoparagrafo "*Keep doing*", riporta i meriti riscontrati dal gruppo;
+  - sottoparagrafo "*Improvements*", riporta le criticità riscontrate dal gruppo etichettate con un codice identificativo.
+  I codici sono così composti:
+   - *P*, lettera indicante una Problematica;
+   - *O/T*, a seconda se la problematica sia di origine organizzativa o tecnologica;
+   - *N*, intero naturale positivo che incrementa ad ogni nuova problematica di tipo organizzativo o tecnologico.
+  Quindi inserire la tabella che associa ogni criticità ad una risoluzione presente nel #pdp. La tabella deve riportare:
+   - *ID risoluzione*;
+   - *Titolo risoluzione*;
+   - *Criticità affrontate*.
++ eventuali ulteriori argomenti organizzati in paragrafi indipendenti;
++ "*Pianificazione*", riporta la tabella contenente le task programmate per lo Sprint successivo. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso realizzato in Google Sheets (maggiori dettagli in merito reperibili al paragrafo @google_sheets) e disponibile nel Google Drive del gruppo.
 
 === Stile e convenzioni
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.
@@ -1186,7 +1204,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 ==== Tecnologie <tecnologie_controllo>
 ===== Jira
 Jira, essendo l'ITS del gruppo, è la fonte principale di informazioni per il cruscotto di qualità.
-===== Google Sheets
+===== Google Sheets <google_sheets>
 Google Sheets viene utilizzato per rendere meglio manipolabili i dati provenienti da Jira, in modo da poterli analizzare con più facilità e calcolare comodamente metriche come CPI, EAC, EV.
 ===== Grafana
 Grafana è l'applicazione utilizzata per visualizzare i dati raccolti tramite l'implementazione di un cruscotto di qualità. Le informazioni mostrate sono le seguenti:

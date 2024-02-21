@@ -295,7 +295,7 @@
     "synonyms": []
   },
   "Project Planned Value": {
-	"description": "Valore pianificato per l'intero progetto in un preciso istante di tempo.",
+	"description": "Valore pianificato per l'intero progetto in un preciso istante di tempo. Il suo valore è determinato dalla somma del valore pianificato per ogni periodo di sviluppo fino all'istante di tempo preso in considerazione.",
 	"acronyms": ["PPV"],
 	"synonyms": []
   },

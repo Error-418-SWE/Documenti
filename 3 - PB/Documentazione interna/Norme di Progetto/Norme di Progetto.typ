@@ -34,7 +34,7 @@ L'utente avrà la possibilità di cercare specifici prodotti all'interno del mag
 
 - Documento #ris_v: \
   _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20interna/Piano%20di%20Progetto_v" + pdp_vo + ".pdf")_
-  #lastVisitedOn(13,02,2024)
+  #lastVisitedOn(21,02,2024)
 
 === Riferimenti normativi <riferimenti-normativi>
 

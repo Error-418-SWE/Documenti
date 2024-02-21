@@ -291,13 +291,14 @@ Rallentamenti non preventivati che possono avere conseguenze a cascata sulle att
 
 
 === Mancanza di task assegnate
-Uno o più membri del gruppo completano tutti i task a loro assegnati prima della fine dello sprit, rimanendo senza lavori programmati.
-La gravità è da considerarsi maggiore con l'aumentare dei giorni mancanti prima del prossimo meeting di retrospettiva, nel quale vengono definiti ed assegnati i successivi task.
+Uno o più membri del gruppo completano tutti i task a loro assegnati prima della fine dello sprint, rimanendo senza lavori programmati.
+
+La gravità è da considerarsi maggiore con l'aumentare dei giorni mancanti prima del prossimo meeting di retrospettiva, nel quale vengono definiti e assegnati i successivi task.
 
 - Impatto: medio;
 - Probabilità: 3;
 - Soglie:
-  - se il periodo di tempo senza task assegnati è sufficientemente ampio da poter permettere al membro del gruppo coinvolto di proseguire con altri lavori, si adotta l' "Eliminazione del rischio";
+  - se il periodo di tempo senza task assegnati è sufficientemente ampio da poter permettere al membro del gruppo coinvolto di proseguire con altri lavori, si adotta l' "Eliminazione del rischio".
 
 ==== Opzioni di trattamento del rischio
 L'accettazione e la parziale riduzione del rischio non sono contemplate in quanto comporterebbero ritardi gravi e facilmente evitabili nell'avanzamento del progetto.
@@ -318,7 +319,7 @@ Se il rischio dovesse verificarsi più volte consecutivamente è necessario rive
 
 === Lenta ripresa a seguito di pause
 Durante la durata del progetto è eccezionalmente possibile che avvengano dei rallentamenti dei lavori da parte di uno o più membri del gruppo.
-I rallentamenti in questione implicando un periodo in cui i membri coinvolti non partecipano, neanche in minima parte, attivamente ai lavori.
+I rallentamenti in questione implicano un periodo in cui i membri coinvolti non partecipano, neanche in minima parte, attivamente ai lavori.
 Questo può avvenire, ad esempio, a seguito di particolari impegni personali o universitari.
 La ripresa dei lavori a pieno regime seguendo correttamente le norme prefissate ed utilizzando correttamente tutte le tecnologie, potrebbe essere non immediata, generando così il cosiddetto "cold start".
 Si ritiene fondamentale evitare o ridurre al minimo il suddetto effetto, così da minimizzare eventuali ritardi nei lavori o lavori svolti con un'insufficiente qualità.
@@ -359,15 +360,15 @@ Qualora uno o più membri del gruppo dovessero essere insufficientemente prepara
 ==== Opzioni di trattamento del rischio
 ===== Eliminazione del rischio
 *Strategia di trattamento* \
-I membri coinvolti devono colmare le lacune teoriche con lo studio individuale ed eventualmente, in aggiunta, con l'aiuto di altri membri del gruppo disponibili.
-Nel caso in cui la preparazione dovvesse risultare più lunga del previsto, rallentando così i lavori, è necessario segnalarlo tempestivamente al gruppo.
+I membri coinvolti devono colmare le lacune teoriche con lo studio individuale, ed eventualmente, anche con l'aiuto di altri membri del gruppo disponibili.
+Nel caso in cui la preparazione dovesse risultare più lunga del previsto, rallentando così i lavori, è necessario segnalarlo tempestivamente al gruppo.
 
 \ *Conseguenze* \
 Il periodo di studio individuale potrebbe comportare rallentamenti non prevedibili con assoluta precisione. I membri coinvolti, successivamente al recupero degli argomenti teorici mancanti, possono fornire completamente il loro contributo nell'avanzamento dei lavori e nelle decisioni progettuali.
 
 ===== Riduzione della sua probabilità o gravità
 *Strategia di trattamento* \
-Deve avvenire una pianificazione o ripianificazione dei lavori al fine di permettere ai membri coinvolti di svolgere solo attività non dipendenti dalle conoscente teoriche mancanti.
+Deve avvenire una pianificazione o ripianificazione dei lavori al fine di permettere ai membri coinvolti di svolgere solo attività non dipendenti dalle conoscenze teoriche mancanti.
 Il recupero delle lacune deve comunque avvenire in tempi brevi.
 
 \ *Conseguenze* \

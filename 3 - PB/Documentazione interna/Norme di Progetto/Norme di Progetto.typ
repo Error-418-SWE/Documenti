@@ -958,9 +958,20 @@ Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e att
   - valutazione sulla qualità del lavoro in merito alla velocità di avanzamento, evidenziando eventuali rallentamenti o meriti riscontrati.
   - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportato una descrizione sul lavoro svolto, se i lavori svolti sono molti e diversi riportarli in forma di elenco puntato.
 + "*Analisi di retrospettiva*", suddiviso in:
-  - tabella che riporta i valori calcolati dalle metriche presenti nel #pdq riguardo allo sprint, nello specifico riportare le metriche: task completate, SEV, SPV, SAC.
+  - lista di valori calcolati dalle metriche presenti nel #pdq riguardo allo sprint, nello specifico riportare:
+   - CPI: valore precedente e valore attuale;
+   - EAC: valore precedente e valore attuale;
+   - rapporto tra SEV e SPV.
   - sottoparagrafo "*Keep doing*", riporta i meriti riscontrati dal gruppo;
-  - sottoparagrafo "*Improvements*", riporta una serie di criticità riscontrate dal gruppo etichettate con un codice identificativo del tipo C#emph[i] con #emph[i] numero naturale positivo. Quindi una riportare una tabella che associa ad ogni criticità titolo e codice del metodo di risoluzione contenuto nel #pdp.
+  - sottoparagrafo "*Improvements*", riporta una serie di criticità riscontrate dal gruppo etichettate con un codice identificativo.
+  I codici sono così composti:
+   - *P*, lettera indicante una Problematica;
+   - *O/T*, a seconda del fatto che la problematica sia di origine organizzativa o tecnologica;
+   - *N*, valore naturale positivo che incrementa ad ogni nuova problematica di tipo organizzativo o tecnologico.
+  Quindi inserire una tabella che associa ogni criticità ad una risoluzione presente nel #pdp. La tabella deve riportare:
+   - *ID risoluzione*;
+   - *Titolo risoluzione*;
+   - *Criticità affrontate*.
 + eventuali ulteriori argomenti organizzati in paragrafi indipendenti;
 + "*Pianificazione*", riporta la tabella contenente le task programmate per lo Sprint successivo. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso realizzato in Google Sheets (maggiori dettagli in merito reperibili al paragrafo @google_sheets) e disponibile nel Google Drive del gruppo.
 

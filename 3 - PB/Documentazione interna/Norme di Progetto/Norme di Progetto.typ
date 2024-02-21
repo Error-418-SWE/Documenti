@@ -1384,7 +1384,7 @@ Il Progettista è il ruolo principale all'interno di questo processo. Il numero 
 
 Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto che si andrà a sviluppare, così da individuare le alternative più adatte.
 
-Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_.
+Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_ (@specifica_tecnica).
 
 Nel seguente elenco vengono descritte le principali caratteristiche che dovranno essere considerate nella definizione dell'architettura definitiva:
 
@@ -1400,6 +1400,19 @@ Nel seguente elenco vengono descritte le principali caratteristiche che dovranno
 - *incapsulazione*: deve nascondere all'esterno le parti interne dei suoi componenti;
 - *coesione*: deve raggruppare le parti che svolgono gli stessi compiti;
 - *basso accoppiamento*: parti distinte dipendono poco o niente le une dalle altre.
+
+==== Specifica Tecnica <specifica_tecnica>
+
+Insieme all'architettura del prodotto costituisce uno degli output principali del processo. In questo documento viene descritto il prodotto dal punto di vista tecnico, ovvero dal lato tecnologico e architetturale.
+
+Gli argomenti principali trattati nel documento sono due:
+
++ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto, ciascuna con relativa descrizione, versione di utilizzo e motivazione della scelta;
++ *architettura*: vengono presentate:
+  + *architettura logica*: descrizione dell'architettura per componenti, ruoli, connessioni e interazioni;
+  + *architettura di deployment*: descrizione della procedura di deployment.
+
+Nel documento dovranno essere descritti nel dettaglio i design pattern, architetturali e non, utilizzati nel prodotto, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
 
 
 #pagebreak()

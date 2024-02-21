@@ -295,7 +295,7 @@
     "synonyms": []
   },
   "Project Planned Value": {
-	"description": "Valore pianificato per l'intero progetto.",
+	"description": "Valore pianificato per l'intero progetto in un preciso istante di tempo.",
 	"acronyms": ["PPV"],
 	"synonyms": []
   },
@@ -400,7 +400,7 @@
     "synonyms": ["Story Points Completati", "Story Points Pianificati"]
   },
   "Sprint Planned Value": {
-	"description": "Valore pianificato per un determinato sprint",
+	"description": "Valore pianificato che si intende produrre in un determinato periodo di sviluppo.",
 	"acronyms": ["SPV"],
 	"synonyms": []
   },

@@ -1413,6 +1413,26 @@ Sono classificati per priorità e per fonte.
 ==== Analisi dei requisiti
 Il documento #adr raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
+
+== Processo di Definizione del Design <processo_design>
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.5_
+=== Scopo
+Lo scopo del processo di Definizione del Design è di fornire dati e informazioni riguardo il sistema e i suoi elementi  per consentirne l'implementazione coerente con le entità architetturali definite nei modelli
+e nelle viste dell'architettura del sistema.
+=== Risultati
+Come risultato dell'efficace attuazione del processo di Definizione del Design:
+- vengono definite le caratteristiche di ogni elemento del sistema;
+- vengono allocati i requisiti software negli elementi di sistema;
+- vengono scelti i software da utilizzare per la creazione dei diagrammi a supporto del design;
+- vengono definite le interfacce fra gli elementi del sistema;
+- vengono valutate le alternative di design;
+- vengono disegnati i diagrammi a supporto del design;
+- viene effettuato il tracciamento fra i requisiti software e gli elementi di sistema.
+
+Le scelte di design relative agli elementi di sistema e i relativi diagrammi sono illustrati nel documento _Specifica Tecnica_.
+
+
+
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017

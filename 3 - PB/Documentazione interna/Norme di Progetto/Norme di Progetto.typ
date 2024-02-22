@@ -1432,7 +1432,6 @@ Come risultato dell'efficace attuazione del processo di Definizione del Design:
 Le scelte di design relative agli elementi di sistema e i relativi diagrammi sono illustrati nel documento _Specifica Tecnica_.
 
 === Attività
-
 ==== Pianificazione della Definizione del Design
 L'attività consiste nei seguenti task:
   + *definire la strategia della Definizione del Design*:\

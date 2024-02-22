@@ -1461,6 +1461,13 @@ L'attività consiste nei seguenti task:
   + *stabilire gli artefatti di design*:\
     gli artefatti di design prodotti da questo processo sono i diagrammi E-R per la modellazione del database, i diagrammi delle classi per la rappresentazione delle entità e delle loro relazioni nel sistema software, e dei mockup o wireframe per i prototipi dell'interfaccia grafica.
 
+==== Studio e scelta delle tecnologie mirate all'implementazione
+L'attività consiste nei seguenti task:
+  + *identificazione delle tecnologie*:\
+    le tecnologie vengono individuate fra quelle proposte dal Proponente, fra le conoscenze pregresse del gruppo e fra quelle rilevate in un primo periodo di esplorazione;
+  + *scelta delle tecnologie*:\
+    le tecnologie vengono scelte in seguito a discussioni interne fra i membri del gruppo e esterne con Committente e Proponente. La scelta è influenzata dagli aspetti positivi e negativi di ogni tecnologia, esplorati grazie alla realizzazione di diversi PoC, di piccola dimensione ed elevata semplicità finalizzati ad effettuare uno studio iniziale di fattibilità e ad una familiarizzazione con le nuove tecnologie. I PoC sono contenuti in un repository omonimo, e negli ultimi sprint del periodo di RTB vengono integrati in un'unica applicazione, per studiare l'integrazione fra i diversi componenti dello stack tecnologico.
+
 
 #pagebreak()
 

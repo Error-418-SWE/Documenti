@@ -1468,6 +1468,17 @@ L'attività consiste nei seguenti task:
   + *scelta delle tecnologie*:\
     le tecnologie vengono scelte in seguito a discussioni interne fra i membri del gruppo e esterne con Committente e Proponente. La scelta è influenzata dagli aspetti positivi e negativi di ogni tecnologia, esplorati grazie alla realizzazione di diversi PoC, di piccola dimensione ed elevata semplicità finalizzati ad effettuare uno studio iniziale di fattibilità e ad una familiarizzazione con le nuove tecnologie. I PoC sono contenuti in un repository omonimo, e negli ultimi sprint del periodo di RTB vengono integrati in un'unica applicazione, per studiare l'integrazione fra i diversi componenti dello stack tecnologico.
 
+==== Gestione della progettazione
+L'attività consiste nei seguenti task:
+  + *giustificare le scelte di design*:\
+    le scelte di design devono essere ben giustificate e documentate nel documento _Specifica Tecnica_. Le giustificazioni possono includere confronti con alternative possibili e analisi delle implicazioni a lungo termine delle decisioni prese. Questo livello di dettaglio aiuta a garantire che il design sia robusto, efficiente e in grado di soddisfare le esigenze del progetto in modo efficace;
+  + *stabilire il tracciamento tra gli elementi di design, i requisiti del sistema e le entità architetturali dell'architettura del sistema software*;
+  + *determinare lo stato del sistema software e del design degli elementi*:\
+    Il processo di Misurazione viene utilizzato per stabilire misure per la completezza e la qualità del design mentre progredisce. I processi di Verifica e Validazione vengono attivati per verificare e convalidare il design dettagliato e l'implementazione.
+    Ciò include la valutazione periodica delle caratteristiche di progettazione nel caso di evoluzione del sistema software e della sua architettura, nonché la previsione dell'eventuale obsolescenza dei componenti e delle tecnologie, la loro sostituzione nel tempo nel ciclo di vita del sistema software e le conseguenze per la definizione del design. Il processo di Gestione dei Rischi viene tipicamente applicato per valutare i rischi nella strategia di design;
+  + *fornire gli artefatti e le informazioni di design*:\
+    il processo di Gestione della Configurazione viene utilizzato per stabilire e mantenere elementi di configurazione e le linee guida per artefatti come modelli di progettazione, mentre il processo di Gestione delle Informazioni controlla gli elementi informativi, come descrizioni di progettazione e specifiche. Gli artefatti sono disponibili nel documento _Specifica Tecnica_.
+
 
 #pagebreak()
 

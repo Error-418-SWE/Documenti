@@ -1468,7 +1468,7 @@ L'attività consiste nei seguenti task:
   + *scelta delle tecnologie*:\
     le tecnologie vengono scelte in seguito a discussioni interne fra i membri del gruppo e esterne con Committente e Proponente. La scelta è influenzata dagli aspetti positivi e negativi di ogni tecnologia, esplorati grazie alla realizzazione di diversi PoC, di piccola dimensione ed elevata semplicità finalizzati ad effettuare uno studio iniziale di fattibilità e ad una familiarizzazione con le nuove tecnologie. I PoC sono contenuti in un repository omonimo, e negli ultimi sprint del periodo di RTB vengono integrati in un'unica applicazione, per studiare l'integrazione fra i diversi componenti dello stack tecnologico.
 
-==== Gestione della progettazione
+==== Gestione del design
 L'attività consiste nei seguenti task:
   + *giustificare le scelte di design*:\
     le scelte di design devono essere ben giustificate e documentate nel documento _Specifica Tecnica_. Le giustificazioni possono includere confronti con alternative possibili e analisi delle implicazioni a lungo termine delle decisioni prese. Questo livello di dettaglio aiuta a garantire che il design sia robusto, efficiente e in grado di soddisfare le esigenze del progetto in modo efficace;
@@ -1505,6 +1505,7 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_controllo_qualità],[6.3.8 - Quality Assurance process],[Full],
     [@processo_missione],[6.4.1 - Business or Mission Analysis process],[Full],
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
+    [@processo_design],[6.4.5 - Design Definition process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

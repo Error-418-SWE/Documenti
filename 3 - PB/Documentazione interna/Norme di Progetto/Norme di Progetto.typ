@@ -1479,7 +1479,6 @@ L'attività consiste nei seguenti task:
   + *fornire gli artefatti e le informazioni di design*:\
     il processo di Gestione della Configurazione viene utilizzato per stabilire e mantenere elementi di configurazione e le linee guida per artefatti come modelli di progettazione, mentre il processo di Gestione delle Informazioni controlla gli elementi informativi, come descrizioni di progettazione e specifiche. Gli artefatti sono disponibili nel documento _Specifica Tecnica_.
 
-
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017

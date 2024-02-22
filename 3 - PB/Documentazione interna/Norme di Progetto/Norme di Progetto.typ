@@ -1442,6 +1442,24 @@ L'attività consiste nei seguenti task:
   + *identificare e pianificare le tecnologie per supportare la Definizione del Design*:\
     le tecnologie da utilizzare per il design sono individuate dai Progettisti, che utilizzano Discord come piattaforma di comunicazione sia per la discussione interna che per ricevere feedback sul design da parte di tutti i membri del gruppo. I canali dedicati a queste attività sono "database" e "mvp".
 
+==== Progettazione degli elementi del sistema
+L'attività consiste nei seguenti task:
+  + *definire gli strumenti di design necessari*:\
+    i software utilizzati sono StarUML per la modellazione di diagrammi E-R e delle classi, Figma per la realizzazione di prototipi di interfaccia grafica. Poichè si utilizza StarUML, il linguaggio utilizzato per i diagrammi è l'UML;
+
+  + *trasformare le caratteristiche architetturali e di design nella progettazione in elementi del sistema*:\
+    le caratteristiche architetturali e di design sono trasformate in unità architetturali, rappresentate nei relativi diagrammi.
+    Le unità architetturali sono unità funzionali (o di responsabilità) ben definite, realizzabili da un singolo programmatore.
+    A una singola unità architetturale possono corrispondere uno o più moduli di codice, la cui corrispondenza unità – modulo è determinata dalle caratteristiche del linguaggio di programmazione utilizzato per la realizzazione;
+
+  + *esaminare le alternative di progettazione e la fattibilità dell'implementazione*:\
+    le alternative di design vengono esaminate e messe in confronto fra loro per arrivare ad una soluzione finale ottimale. Vengono anche prese in considerazioni le alternative di design proposte dagli altri membri del gruppo in fase di retrospettiva;
+
+  + *definire o ridefinire le interfacce fra gli elementi del sistema ed elementi esterni*:\
+    le interfacce vengono identificate e definite nel processo di Definizione dell'Architettura al livello o all'estensione necessari per l'intento architetturale e la comprensione. Queste vengono affinate nel processo di Definizione del Design basato sulle caratteristiche di progettazione, interfacce e interazioni degli elementi software con gli altri elementi che lo compongono e con entità esterne. A volte vengono identificate e definite ulteriori interfacce che non sono state affrontate nella Definizione dell'Architettura;
+
+  + *stabilire gli artefatti di design*:\
+    gli artefatti di design prodotti da questo processo sono i diagrammi E-R per la modellazione del database, i diagrammi delle classi per la rappresentazione delle entità e delle loro relazioni nel sistema software, e dei mockup o wireframe per i prototipi dell'interfaccia grafica.
 
 
 #pagebreak()

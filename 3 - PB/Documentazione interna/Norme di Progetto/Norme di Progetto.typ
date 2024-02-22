@@ -1431,6 +1431,18 @@ Come risultato dell'efficace attuazione del processo di Definizione del Design:
 
 Le scelte di design relative agli elementi di sistema e i relativi diagrammi sono illustrati nel documento _Specifica Tecnica_.
 
+=== Attività
+
+==== Pianificazione della Definizione del Design
+L'attività consiste nei seguenti task:
+  + *definire la strategia della Definizione del Design*:\
+    la strategia del processo di Definizione del Design si basa su una decomposizione del sistema in parti componibili, sull'organizzazione di tali componenti (stabilendo ruoli, responsabilità e interazioni), sullo stabilire le interfacce fra di essi e sull'uso di paradigmi di composizione per collegarli. I risultati di questa progettazione sono illustrati nei rispettivi diagrammi.
+    Viene anche valutato, se necessario e possibile, l'uso dei design pattern, illustrati nel testo _Design Patterns: Elements of Reusable Object-Oriented Software (1994)_, per standardizzare e ottimizzare l'implementazione delle interazioni tra le componenti del sistema;
+  + *selezionare principi e caratteristiche  di design*:\
+    i principi di design seguiti dal gruppo includono concetti base fondamentali come l'astrazione, la modularizzazione, l'incapsulamento, la separazione tra interfaccia e implementazione. Inoltre il gruppo si ispira ai principi della SOLID programming, per  creare software più modulare, scalabile, manutenibile e adattabile ai cambiamenti futuri;
+  + *identificare e pianificare le tecnologie per supportare la Definizione del Design*:\
+    le tecnologie da utilizzare per il design sono individuate dai Progettisti, che utilizzano Discord come piattaforma di comunicazione sia per la discussione interna che per ricevere feedback sul design da parte di tutti i membri del gruppo. I canali dedicati a queste attività sono "database" e "mvp".
+
 
 
 #pagebreak()

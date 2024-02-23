@@ -291,71 +291,71 @@ Rallentamenti non preventivati che possono avere conseguenze a cascata sulle att
 
 
 === Mancanza di task assegnate
-Uno o più membri del gruppo completano tutti i task a loro assegnati prima della fine dello sprint, rimanendo senza lavori programmati.
+Uno o più membri del gruppo completano tutti i task a loro assegnati prima della fine dello Sprint.
 
-La gravità è da considerarsi maggiore con l'aumentare dei giorni mancanti prima del prossimo meeting di retrospettiva, nel quale vengono definiti e assegnati i successivi task.
+L'impatto è tanto maggiore quanto l'aumentare dei giorni rimanenti al termine dello Sprint.
 
 - Impatto: medio;
 - Probabilità: 3;
 - Soglie:
-  - se il periodo di tempo senza task assegnati è sufficientemente ampio da poter permettere al membro del gruppo coinvolto di proseguire con altri lavori, si adotta l' "Eliminazione del rischio".
+  - se il periodo di tempo da trascorrere senza task assegnati entro il successivo Sprint è sufficientemente ampio da poter permettere al membro del gruppo coinvolto di proseguire con altri lavori, si adotta l' "Eliminazione del rischio".
 
 ==== Opzioni di trattamento del rischio
-L'accettazione e la parziale riduzione del rischio non sono contemplate in quanto comporterebbero ritardi gravi e facilmente evitabili nell'avanzamento del progetto.
+L'accettazione e la parziale riduzione del rischio non sono contemplate in quanto comporterebbero ritardi gravi.
 
 ===== Eliminazione del rischio
 *Strategia di trattamento* \
 Un membro del gruppo coinvolto può eliminare il rischio in molteplici modi:
-  - la prima azione da fare è contattare, tramite i canali comunicativi del gruppo, gli altri membri per verificare la possibilità di fornire loro il proprio contributo;
-  - nel caso in cui nessun membro beneficerebbe significativamente del contributo proposto, il successivo passo è controllare nello sprint backlog di Jira la presenza di task libere da poter prendere in carico;
+  - contattare, tramite i canali comunicativi del gruppo, gli altri membri per verificare la possibilità di fornire loro il proprio contributo;
+  - controllare nello sprint backlog di Jira la presenza di task libere da poter prendere in carico;
   - se lo sprint backlog risultasse completamente assegnato ad altri membri, i task liberi vanno cercati nel backlog completo di Jira;
-  - nel caso in cui tutti i task su Jira siano già stati assegnati, il membro coinvolto può eccezionalmente creare ed autoassegnarsi task in modo da poter proseguire con i lavori senza perdere tempo.
+  - nel caso in cui tutti i task su Jira siano già stati assegnati, il membro coinvolto può eccezionalmente creare ed autoassegnarsi task in modo da poter proseguire con i lavori.
 
 
 \ *Conseguenze* \
-La massima riduzione del tempo sprecato è una priorità per il gruppo al fine di garantire il raggiungimento nei tempi attesi delle milestone prefissate.
-Se il rischio dovesse verificarsi più volte consecutivamente è necessario rivedere l'effettiva efficacia della programmazione dei task in sede di retrospettiva.
+Minimizzare gli sprechi del tempo a disposizione è una priorità per il gruppo al fine di garantire il raggiungimento nei tempi attesi delle milestone prefissate.
+Se il rischio dovesse verificarsi più volte consecutivamente è necessario rivedere l'effettiva efficacia della pianificazione dei task in sede di retrospettiva.
 
 
 === Lenta ripresa a seguito di pause
 Durante la durata del progetto è eccezionalmente possibile che avvengano dei rallentamenti dei lavori da parte di uno o più membri del gruppo.
-I rallentamenti in questione implicano un periodo in cui i membri coinvolti non partecipano, neanche in minima parte, attivamente ai lavori.
+I rallentamenti in questione implicano un periodo in cui i membri coinvolti non dispongono di sufficiente disponibilità per partecipare alle attività di progetto.
 Questo può avvenire, ad esempio, a seguito di particolari impegni personali o universitari.
-La ripresa dei lavori a pieno regime seguendo correttamente le norme prefissate ed utilizzando correttamente tutte le tecnologie, potrebbe essere non immediata, generando così il cosiddetto "cold start".
-Si ritiene fondamentale evitare o ridurre al minimo il suddetto effetto, così da minimizzare eventuali ritardi nei lavori o lavori svolti con un'insufficiente qualità.
+La ripresa dei lavori a pieno regime seguendo correttamente le norme prefissate ed utilizzando correttamente tutte le tecnologie, potrebbe non essere immediata.
+Si ritiene fondamentale minimizzare l'impatto in termini di tempo e qualità sul lavoro svolto.
 
 - Impatto: medio;
 - Probabilità: 1;
 - Soglie:
   - se le circostanze consentono ai membri coinvolti di mantenere, nonostante i rallentamenti, un certo grado di familiarità con le norme, gli automatismi e le tecnologie adottate, si adotta l' "Eliminazione del rischio";
-  - se l'allontanamento dai lavori avviene senza il mantenimento di un certo grado di familiarità con le dinamiche inerne al gruppo, si adotta la "Riduzione della sua probabilità o gravità".
+  - se l'allontanamento dai lavori avviene senza il mantenimento di un certo grado di familiarità con le dinamiche interne al gruppo, si adotta la "Riduzione della sua probabilità o gravità".
 
 ==== Opzioni di trattamento del rischio
 ===== Eliminazione del rischio
 *Strategia di trattamento* \
-I membri coinvolti devono mantenere familiarità con le norme, gli automatismi e le tecnologie adottate. Per farlo devono tenersi aggiornati sullo stato di avanzamento dei lavori e relativi possibili cambiamenti e decisioni prese dal gruppo, soprattutto relativamente alle _Norme di Progetto_.
+I membri coinvolti devono mantenere familiarità con le norme, gli automatismi e le tecnologie adottate. Per farlo devono tenersi aggiornati sullo stato di avanzamento dei lavori e relativi possibili cambiamenti e decisioni prese dal gruppo, soprattutto relativamente alle #ndp.
 
 \ *Conseguenze* \
-Viene evitato il cosiddetto "cold start" e minimizzato il tempo necessario al recupero completo degli automatismi necessari a produrre progressi soddisfacienti nei lavori.
+Viene minimizzato il tempo necessario al recupero completo degli automatismi necessari a produrre progressi soddisfacienti nei lavori.
 
 ===== Riduzione della sua probabilità o gravità
 *Strategia di trattamento* \
 Al termine dell'allontanamento, i membri coinvolti devono assicurarsi di essere aggiornati riguardo lo stato di avanzamento dei lavori ed eventuali cambiamenti e decisioni avvenute nel corso del periodo di assenza.
-Inoltre, prima di produrre avanzamenti nei lavori, è necessario che le norme relative ai task da svolgere e le tecnologie da adottare, vengano recuperate e ristudiate.
+Inoltre, prima di produrre avanzamenti nei lavori, è necessario che le norme relative ai task da svolgere e le tecnologie da adottare, vengano recuperate.
 
 \ *Conseguenze* \
-L'inevitabile rallentamento nella ripresa dei lavori viene mitigato e minimizzato così da poter produrre risultati soddisfacienti ed in linea con la qualità definita dal gruppo.
+L'inevitabile rallentamento nella ripresa dei lavori viene mitigato e minimizzato così da poter produrre risultati soddisfacienti ed in linea con la qualità attesa dal gruppo.
 
 
 === Insufficiente preparazione teorica
-Il progetto richiede diverse conoscenze teoriche legate al perscorso di studi sulle quali sono basate molteplici attività fondamentali. Per esempio, lo studio dei requisiti e la produzione degli Use Case con i relativi diagrammi, oppure la fase di design architetturale ed i relativi pattern da considerare.
+Il progetto richiede conoscenze teoriche legate al perscorso di studi sulle quali sono basate molteplici attività fondamentali. Per esempio, lo studio dei requisiti e la produzione degli Use Case con i relativi diagrammi, oppure il processo di design architetturale ed i relativi pattern da considerare.
 Qualora uno o più membri del gruppo dovessero essere insufficientemente preparati sulla teoria necessaria, non potrebbero dare un valido contributo nell'avanzamento dei lavori.
 
 - Impatto: grave;
 - Probabilità: 2;
 - Soglie:
-  - se le lacune teoriche non sono troppo ampie e la pianificazione dei lavori lo permette, si adotta l' "Eliminazione del rischio";
-  - se il tempo necessario ad effettuare lo studio richiesto risulta significativamente esteso rispetto ai tempi dettati dalla pianificazione dei lavori, si adotta la "Riduzione della sua probabilità o gravità".
+  - se le lacune teoriche sono sufficientemente contenute da permetterene un recupero abbastanza rapido da non inficiare sulla pianificazione dei lavori, si adotta l'"Eliminazione del rischio";
+  - se il tempo necessario ad effettuare lo studio richiesto risulta significativamente esteso rispetto ai tempi dettati dalla pianificazione dei lavori, al punto da provocare rallentamenti che impedirebbero il corretto completamento dei task previsti, si adotta la "Riduzione della sua probabilità o gravità".
 
 ==== Opzioni di trattamento del rischio
 ===== Eliminazione del rischio
@@ -364,16 +364,18 @@ I membri coinvolti devono colmare le lacune teoriche con lo studio individuale, 
 Nel caso in cui la preparazione dovesse risultare più lunga del previsto, rallentando così i lavori, è necessario segnalarlo tempestivamente al gruppo.
 
 \ *Conseguenze* \
-Il periodo di studio individuale potrebbe comportare rallentamenti non prevedibili con assoluta precisione. I membri coinvolti, successivamente al recupero degli argomenti teorici mancanti, possono fornire completamente il loro contributo nell'avanzamento dei lavori e nelle decisioni progettuali.
+Il periodo di studio individuale potrebbe comportare rallentamenti non prevedibili con precisione. I membri coinvolti, successivamente al recupero degli argomenti teorici mancanti, possono fornire completamente il loro contributo nell'avanzamento dei lavori e nelle decisioni progettuali.
 
 ===== Riduzione della sua probabilità o gravità
 *Strategia di trattamento* \
 Deve avvenire una pianificazione o ripianificazione dei lavori al fine di permettere ai membri coinvolti di svolgere solo attività non dipendenti dalle conoscenze teoriche mancanti.
-Il recupero delle lacune deve comunque avvenire in tempi brevi.
+Il recupero delle lacune deve avvenire in tempi brevi.
 
 \ *Conseguenze* \
 I membri coinvolti non forniranno il loro contributo per i lavori relativi alle conoscenze teoriche mancanti, questo potrebbe comportare ritardi e ripianificazioni non preventivate.
-Inoltre, le decisioni prese dal gruppo relative a scelte che necessitano delle conoscenze teoriche mancanti, non potranno beneficiare del contributo dei membri impreparati.
+Tali ripianificazioni permetterebbero ai membri coinvolti di proseguire con l'avanzamento dei lavori nonostante le mancanze teoriche.
+Le decisioni prese dal gruppo relative a scelte che necessitano delle conoscenze teoriche mancanti, non potranno beneficiare del contributo dei membri impreparati.
+
 
 
 #pagebreak()

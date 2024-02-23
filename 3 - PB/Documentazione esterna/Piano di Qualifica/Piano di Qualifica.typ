@@ -323,7 +323,7 @@ L'EOU esprime la facilità del raggiungimento di un obiettivo nel prodotto softw
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
       align(center+horizon, [*Ease of Use*]), align(center+horizon,$<=5$), align(center+horizon,$<=7$),
     ),
-    caption: "Average Response Time"
+    caption: "Ease of Use"
 )
 
 

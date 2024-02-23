@@ -748,6 +748,22 @@ L'aggiornamento del numero di versione per la documentazione deve attenersi alle
 - `Y`: aggiornato all'aggiunta o alla rimozione di paragrafi;
 - `Z`: aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
 
+====== Software
+
+L'aggiornamento del numero di versione per il software deve attenersi alle seguenti regole:
+
+- `X`: deve essere aggiornato solo al raggiungimento di una versione del prodotto che abbia un set di funzionalità il più completo possibile. Inizialmente è dunque posto a `0`, e passerà a `1` solamente al momento in cui il prodotto sarà classificabile come MVP;
+- `Y`: deve essere aggiornato ogniqualvolta viene introdotta una nuova funzionalità nel codice o una nuova funzione;
+- `Z`: deve essere aggiornato ad ogni correzione di bug o cambiamento minore. Alcuni esempi di cambiamento minore sono:
+  - correzioni ortografiche:
+    - nei nomi di variabili;
+    - nei nomi di parametri;
+    - nei nomi di funzioni o metodi.
+  - cambiamento nel valore di parametri:
+    - cambiamento di colore di un elmento grafico;
+    - cambiamento di un valore numerico;
+    - cambiamento di un valore letterale.
+
 ===== Tracciamento modifiche <tracciamento-modifiche>
 Il tracciamento delle modifiche avviene per mezzo di automazioni che permettono di identificare:
 - versione del documento modificato;

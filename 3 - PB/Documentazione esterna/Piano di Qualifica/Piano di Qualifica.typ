@@ -273,9 +273,31 @@ Il Desiderable Requirements Coverage esprime la percentuale di copertura dei req
 )
 
 === ORC (Optional Requirements Coverage)
+L'Optional Requirements Coverage esprime la percentuale di copertura dei requisiti opzionali, cioè quei requisiti la cui implementazione è stata dichiarata facoltativa e con bassa priorità nell'#adr.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*ORC* = $display("Requisiti opzionali coperti"/"Requisiti opzionali totali")*100$]), align(center+horizon,$100%$), align(center+horizon,$>=0%$),
+    ),
+    caption: "Optional Requirements Coverage"
+)
+
 
 == Efficienza
 === ART (Average Response Time)
+L'ART si riferisce al tempo di risposta medio, cioè al periodo medio di tempo che trascorre tra l'innesco di una richiesta da parte dell'utente o del sistema e la ricezione della risposta o del risultato da parte del software.
+È misurato in secondi (_s_);
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Average Response Time*]), align(center+horizon,$<=2s$), align(center+horizon,$<=4$s),
+    ),
+    caption: "Average Response Time"
+)
 
 == Usabilità
 === LT (Learning Time)

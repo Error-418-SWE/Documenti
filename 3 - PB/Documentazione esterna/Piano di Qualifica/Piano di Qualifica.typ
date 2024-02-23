@@ -328,9 +328,55 @@ L'EOU esprime la facilità del raggiungimento di un obiettivo nel prodotto softw
 
 == Manutenibilità
 === CC (Ciclomatic Complexity)
+Il CC è una metrica utilizzata per misurare la complessità di un metodo. Essa fornisce una stima della complessità strutturale del codice sorgente contando il numero di cammini linearmente indipendenti attraverso il grafo di controllo del flusso del metodo.
+La formula è la seguente:\
+*CC*$(G) = e - n + p$\
+Dove G indica il grafo del controllo di flusso, e il numero di archi di G, n il numero di nodi di G e p il numero di componenti connesse da ogni arco.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Ciclomatic Complexity*]), align(center+horizon,$<=7$), align(center+horizon,$<=10$),
+    ),
+    caption: "Ciclomatic Complexity"
+)
+
 === CL (Coupling Level)
+Il CL misura il grado di dipendenza di una classe da altre classi nel sistema. Questa dipendenza può manifestarsi in vari modi, come l'invocazione di metodi di altre classi, il riferimento a istanze di altre classi, o la dipendenza da tipi definiti in altre classi.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Coupling Level*]), align(center+horizon,$<=4$), align(center+horizon,$<=6$),
+    ),
+    caption: "Coupling Level"
+)
+
 === RC (Responsability Count)
+misura il numero di responsabilità che una classe ha all'interno di un sistema software. Il concetto di responsabilità
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Responsability Count*]), align(center+horizon,$1$), align(center+horizon,$1$),
+    ),
+    caption: "Responsability Count"
+)
+
 === MPN (Method Parameters Number)
+Il MPN è una metrica che misura il numero di parametri di un metodo.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Method Parameters Number*]), align(center+horizon,$<=3$), align(center+horizon,$<=4$),
+    ),
+    caption: "Method Parameters Number"
+)
 
 == Affidabilità
 === FD (Failure density)

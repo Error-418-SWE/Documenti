@@ -306,6 +306,31 @@ Avere un resoconto delle metriche soddisfatte per ogni sprint permette di eviden
 //   caption: "Specifiche Manutenibilità del sistema"
 // )
 
+= Qualità di prodotto
+== Efficacia
+=== MRC (Mandatory Requirements Coverage)
+=== DRC (Desiderable Requirements Coverage)
+=== ORC (Optional Requirements Coverage)
+
+== Efficienza
+=== ART (Average Response Time)
+
+== Usabilità
+=== LT (Learning Time)
+=== EOU (Ease of Use)
+
+== Manutenibilità
+=== CC (Ciclomatic Complexity)
+=== CL (Coupling Level)
+=== RC (Responsability Count)
+=== MPN (Method Parameters Number)
+
+== Affidabilità
+=== FD (Failure density)
+
+== Portabilità
+=== SBV (Supported Browser Version)
+
 = Valutazione della qualità
 
 == Premessa

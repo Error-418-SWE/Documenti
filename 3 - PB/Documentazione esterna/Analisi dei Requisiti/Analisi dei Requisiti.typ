@@ -805,20 +805,30 @@ $bold("Scenario: ")$
 )
 
 $bold("Descrizione: ")$
-i prodotti vengono inseriti dal database nei rispettivi bin.
+A seguito della configurazione con il database il sistema:
+- crea gli scaffali e li posiziona nell'ambiente come indicato nel database;
+- crea ogni ripiano di ogni scaffale secondo le proprietà fornite dal database;
+- crea i bin secondo le proprietà indicate dal database e li colloca dove indicato (all'interno di un ripiano o in un altra area valida);
+- popola i bin con i rispettivi prodotti.
 
 $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato.
+- l'ambiente deve essere correttamente configurato;
+- il database deve essere correttamente configurato.
 
 $bold("Postcondizioni: ")$
-- i prodotti si trovano nei rispettivi bin.
+- il sistema è correttamente configurato con il database;
+- il sistema crea gli scaffali con caratteristiche e posizione indicate nel database;
+- il sistema crea i ripiani con caratteristiche e posizione indicate nel database;
+- il sistema crea i bin con caratteristiche e posizione indicate nel database;
+- il sistema popola i bin con i prodotti contenuti nel database;
+- il piano è popolato con scaffali, ripiani, bin e prodotti.
 
 $bold("Scenario: ")$
 - l'utente configura l'accesso al database;
-- l'utente inizia la procedura di caricamento dei prodotti.
+- il sistema popola il piano con scaffali, ripiani, bin e prodotti nelle posizioni e con le caratteristiche indicate nel database.
 
 $bold("Inclusioni: ")$
 - UC-6.1 Configurazione collegamento al database.
@@ -1235,6 +1245,11 @@ Dove:
     [FM-5.2.2], [Obbligatorio], [L'utente visualizza un errore per l'inserimento di dimensioni che non permettono all'oggetto di essere inserito nell'ambiente], [UC-5.2],
 
     [FD-6],[Desiderabile], [L'utente deve poter richiedere il caricamento dei dati da database], [UC-6],
+    [FD-6.0.1],[Desiderabile], [L'utente deve poter popolare automaticamente il piano leggendo i dati contenuti nel database], [UC-6],
+    [FD-6.0.2],[Desiderabile], [L'utente deve poter popolare il piano con gli scaffali caricati da database], [UC-6],
+    [FD-6.0.3],[Desiderabile], [L'utente deve poter popolare gli scaffali  con i ripiani caricati da database], [UC-6],
+    [FD-6.0.4],[Desiderabile], [L'utente deve poter popolare l'ambiente con i bin caricati da database], [UC-6],
+    [FD-6.0.5],[Desiderabile], [L'utente deve poter popolare i bin con i prodotti caricati da database], [UC-6],
     [FO-6.1], [Opzionale], [L'utente deve poter configurare i parametri di connessione al database], [UC-6.1],
     [FO-6.1.1], [Opzionale], [L'utente deve poter indicare il nome del database], [UC-6.1],
     [FO-6.1.2], [Opzionale], [L'utente deve poter indicare il nome utente per la connessione al database], [UC-6.1],

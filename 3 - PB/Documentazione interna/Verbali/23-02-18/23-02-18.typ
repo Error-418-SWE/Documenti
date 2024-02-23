@@ -30,7 +30,7 @@ In data 16/02/2024 il gruppo ha sostenuto il colloquio con il #vardanega per il 
 == #adr
 L'aggiornamento del documento #adr è terminato: il documento ora risponde e corregge le criticità evidenziate dal #cardin al primo sportello di valutazione RTB.
 
-Il gruppo considera completato l'aggiornamento e l'adeguamento del documento, ritenendolo pronto per una seconda revisione da parte del #cardin\.
+Il gruppo considera completato l'aggiornamento e l'adeguamento del documento, ritenendolo pronto per una seconda revisione.
 
 == #glo
 Le definizioni contenute all'interno del documento sono state estese.
@@ -59,7 +59,7 @@ La sezione dei riferimenti presente all'interno dei documenti soggetti a ciclo d
 Aggiunta la data di ultima consultazione ai riferimenti.
 
 = Analisi retrospettiva
-Lo Sprint 15 è terminato con il raggiungimento di tutti gli obiettivi prefissati, il cui rendimento positivo è sostenuto dalle principali metriche esposte dal #pdq\: 
+Lo Sprint 15 è terminato con il raggiungimento di tutti gli obiettivi prefissati, il cui rendimento positivo è sostenuto dalle principali metriche esposte dal #pdq\:
 - CPI di progetto cresce passando da 0.97 a 0.98;
 - EAC diminuisce passando da 13.437,22 a € 13.292,70;
 - $"SEV" >= "SPV"$

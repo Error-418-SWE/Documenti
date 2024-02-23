@@ -294,14 +294,37 @@ L'ART si riferisce al tempo di risposta medio, cioè al periodo medio di tempo c
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*Average Response Time*]), align(center+horizon,$<=2s$), align(center+horizon,$<=4$s),
+      align(center+horizon, [*Average Response Time*]), align(center+horizon,$<=2s$), align(center+horizon,$<=4s$),
     ),
     caption: "Average Response Time"
 )
 
 == Usabilità
 === LT (Learning Time)
+Il LT misura il tempo medio che gli utenti impiegano per apprendere ad utilizzare il software in modo efficace.
+È misurato in minuti (_m_).
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Learning Time*]), align(center+horizon,$<=15m$), align(center+horizon,$<=20m$),
+    ),
+    caption: "Average Response Time"
+)
+
 === EOU (Ease of Use)
+L'EOU esprime la facilità del raggiungimento di un obiettivo nel prodotto software. È misurato in quanti click l'utente deve effettuare prima di arrivare a portare a termine la funzionalità desiderata.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Ease of Use*]), align(center+horizon,$<=5$), align(center+horizon,$<=7$),
+    ),
+    caption: "Average Response Time"
+)
+
 
 == Manutenibilità
 === CC (Ciclomatic Complexity)

@@ -748,6 +748,8 @@ L'aggiornamento del numero di versione per la documentazione deve attenersi alle
 - `Y`: deve essere aggiornato all'aggiunta o alla rimozione di paragrafi;
 - `Z`: deve essere aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
 
+Il processo di aggiornamento della versione è reso automatico, come stabilito nella sezione dedicata a GitHub Actions (@automazioni).
+
 ====== Software
 
 L'aggiornamento del numero di versione per il software deve attenersi alle seguenti regole:

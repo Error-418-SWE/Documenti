@@ -1413,6 +1413,61 @@ Sono classificati per priorità e per fonte.
 ==== Analisi dei requisiti
 Il documento #adr raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
+== Processo di definizione dell'architettura <processo_definizione_architettura>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
+
+=== Scopo
+
+Il processo di definizione dell'architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
+
+Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (#TODO).
+
+=== Preparazione e requisiti <preparazione_architettura>
+
+Il Progettista è il ruolo principale all'interno di questo processo. Il numero di persone assegnate a questo ruolo e le attività che esso dovrà svolgere vengono definite in maniera precisa durante la riunione di retrospettiva e la pianificazione dello _Sprint_ che la segue.
+
+È importante che il Progettista abbia una buona conoscenza dei pattern architetturali e dei concetti principali che riguardano la progettazione architetturale. In particolare, di ogni pattern deve conoscere:
+
+- definizione;
+- aspetti positivi e negativi.
+
+È essenziale, inoltre, la conoscenza degli obiettivi del prodotto e lo studio del documento #adr_v e delle tecnologie che il gruppo ha selezionato per la sua implementazione.
+
+=== Individuazione dell'architettura
+
+Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto da sviluppare, in modo da individuare le alternative più adatte.
+
+Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_ (@specifica_tecnica).
+
+È importante che nella scelta architetturale si mantenga un certo focus sulle caratteristiche principali di una buona architettura, riportate nell'elenco che segue:
+
+- *sufficienza*: deve soddisfare i requisiti;
+- *comprensibilità*: deve essere capita da tutti gli stakeholder;
+- *modularità*: deve essere composta da parti distinte;
+- *robustezza*: deve essere capace di gestire errori e condizioni limite;
+- *flessibilità*: deve essere facilmente modificabile;
+- *riusabilità*: le sue parti possono essere impiegate in altre applicazioni;
+- *disponibilità*: la sua manutenzione causa poca indisponibilità totale;
+- *sicurezza rispetto a malfunzionamenti*: deve funzionare anche in presenza di guasti;
+- *semplicità*: ogni parte contiene solo il necessario e niente di superfluo;
+- *incapsulazione*: deve nascondere all'esterno le parti interne dei suoi componenti;
+- *coesione*: deve raggruppare le parti che svolgono gli stessi compiti;
+- *basso accoppiamento*: parti distinte dipendono poco o niente le une dalle altre.
+
+==== Specifica Tecnica <specifica_tecnica>
+
+Insieme all'architettura del prodotto costituisce uno degli output principali del processo. In questo documento viene descritto il prodotto dal punto di vista tecnico, ovvero dal lato tecnologico e architetturale.
+
+Gli argomenti principali trattati nel documento sono due:
+
++ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto, ciascuna con relativa descrizione, versione di utilizzo e motivazione della scelta;
++ *architettura*: vengono presentate:
+  + *architettura logica*: descrizione dell'architettura del prodotto per componenti, ruoli, connessioni e interazioni;
+  + *architettura di deployment*: descrizione della procedura di deployment.
+
+Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
+
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017
@@ -1438,6 +1493,7 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_controllo_qualità],[6.3.8 - Quality Assurance process],[Full],
     [@processo_missione],[6.4.1 - Business or Mission Analysis process],[Full],
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
+    [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

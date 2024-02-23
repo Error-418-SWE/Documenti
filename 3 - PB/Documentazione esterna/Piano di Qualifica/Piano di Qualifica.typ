@@ -255,11 +255,11 @@ Il Mandatory Requirements Coverage esprime la percentuale di copertura dei requi
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*MRC* = $display("Requisiti obbligatori coperti"/"Requisiti obbligatori totali")*100$]), align(center+horizon,$100%$), align(center+horizon,$100%$),
+      align(center+horizon, [*MRC* = $display("MR"_c/"MR"_t)*100$]), align(center+horizon,$100%$), align(center+horizon,$100%$),
     ),
     caption: "Mandatory Requirements Coverage"
 )
-
+Nella formula $"MR"_c$ indica il numero di requisiti obbligatori coperti, mentre $"MR"_t$ il numero totale di requisiti.
 === DRC (Desiderable Requirements Coverage)
 Il Desiderable Requirements Coverage esprime la percentuale di copertura dei requisiti desiderabili, cioè quei requisiti la cui implementazione è stata dichiarata opzionale ma con alta priorità nell'#adr.
 #figure(
@@ -267,10 +267,11 @@ Il Desiderable Requirements Coverage esprime la percentuale di copertura dei req
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*DRC* = $display("Requisiti desiderabili coperti"/"Requisiti desiderabili totali")*100$]), align(center+horizon,$100%$), align(center+horizon,$>=0%$),
+      align(center+horizon, [*DRC* = $display("DR"_c/"DR"_t)*100$]), align(center+horizon,$100%$), align(center+horizon,$>=0%$),
     ),
     caption: "Desiderable Requirements Coverage"
 )
+Nella formula $"DR"_c$ indica il numero di requisiti desiderabili coperti, mentre $"DR"_t$ il numero totale di requisiti desiderabili.
 
 === ORC (Optional Requirements Coverage)
 L'Optional Requirements Coverage esprime la percentuale di copertura dei requisiti opzionali, cioè quei requisiti la cui implementazione è stata dichiarata facoltativa e con bassa priorità nell'#adr.
@@ -279,16 +280,16 @@ L'Optional Requirements Coverage esprime la percentuale di copertura dei requisi
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*ORC* = $display("Requisiti opzionali coperti"/"Requisiti opzionali totali")*100$]), align(center+horizon,$100%$), align(center+horizon,$>=0%$),
+      align(center+horizon, [*ORC* = $display("OR"_c/"OR"_t)*100$]), align(center+horizon,$100%$), align(center+horizon,$>=0%$),
     ),
     caption: "Optional Requirements Coverage"
 )
-
+Nella formula $"OR"_c$ indica il numero di requisiti opzionali coperti, mentre $"OR"_t$ il numero totale di requisiti opzionali.
 
 == Efficienza
 === ART (Average Response Time)
 L'ART si riferisce al tempo di risposta medio, cioè al periodo medio di tempo che trascorre tra l'innesco di una richiesta da parte dell'utente o del sistema e la ricezione della risposta o del risultato da parte del software.
-È misurato in secondi (_s_);
+È misurato in secondi (_s_).
 #figure(
    table(
       columns: 3,
@@ -328,19 +329,18 @@ L'EOU esprime la facilità del raggiungimento di un obiettivo nel prodotto softw
 
 == Manutenibilità
 === CC (Ciclomatic Complexity)
-Il CC è una metrica utilizzata per misurare la complessità di un metodo. Essa fornisce una stima della complessità strutturale del codice sorgente contando il numero di cammini linearmente indipendenti attraverso il grafo di controllo del flusso del metodo.
-La formula è la seguente:\
-*CC*$(G) = e - n + p$\
-Dove G indica il grafo del controllo di flusso, e il numero di archi di G, n il numero di nodi di G e p il numero di componenti connesse da ogni arco.
+La CC è una metrica utilizzata per misurare la complessità di un metodo. Essa fornisce una stima della complessità strutturale del codice sorgente contando il numero di cammini linearmente indipendenti attraverso il grafo di controllo del flusso del metodo.
 #figure(
    table(
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*Ciclomatic Complexity*]), align(center+horizon,$<=7$), align(center+horizon,$<=10$),
+      align(center+horizon, [*CC*$(G) = e - n + p$]), align(center+horizon,$<=7$), align(center+horizon,$<=10$),
     ),
     caption: "Ciclomatic Complexity"
+
 )
+Nella formula  _G_ indica il grafo del controllo di flusso, _e_ il numero di archi di _G_, _n_ il numero di nodi di _G_ e _p_ il numero di componenti connesse da ogni arco.
 
 === CL (Coupling Level)
 Il CL misura il grado di dipendenza di una classe da altre classi nel sistema. Questa dipendenza può manifestarsi in vari modi, come l'invocazione di metodi di altre classi, il riferimento a istanze di altre classi, o la dipendenza da tipi definiti in altre classi.
@@ -355,7 +355,7 @@ Il CL misura il grado di dipendenza di una classe da altre classi nel sistema. Q
 )
 
 === RC (Responsability Count)
-misura il numero di responsabilità che una classe ha all'interno di un sistema software. Il concetto di responsabilità
+L'RC misura il numero di responsabilità che una classe ha all'interno di un sistema software. Il concetto di responsabilità seguito è quello illustrato da Robert C. Martin, detto _Uncle Bob_, nel libro _Clean Code: A Handbook of Agile Software Craftsmanship_.
 #figure(
    table(
       columns: 3,
@@ -379,10 +379,32 @@ Il MPN è una metrica che misura il numero di parametri di un metodo.
 )
 
 == Affidabilità
-=== FD (Failure density)
+=== FD (Failure Density)
+La FD è un indicatore della stabilità e della qualità del software. Questa metrica misura il numero di errori o difetti rilevati nel software rispetto alla dimensione o alla complessità del sistema.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*FD*$="T"_f/"T"_e*100$]), align(center+horizon,$<=0.01%$), align(center+horizon,$<=0.1%$),
+    ),
+    caption: "Failure Density"
+)
+Nella formula $"T"_e$ indica il numero di test eseguiti, mentre $"T"_f$ il numero di test falliti.
 
 == Portabilità
 === SBV (Supported Browser Version)
+La SBV è una metrica che indica la percentuale di browser supportati rispetto a quelle stabilite nel documento di #adr. I vari browser che devono essere rispettati e le relative versioni sono esplicitate nella sezione del documento riguardante i requisiti di qualità.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*SBV*$="V"_s/"V"_a*100$]), align(center+horizon,$100%$), align(center+horizon,$100%$),
+    ),
+    caption: "Supported Browser Version"
+)
+Nella formula $"V"_s$ indica il numero di versioni di browser supportate dal software, mentre $"V"_a$ indica il numero di versioni di browser stabilite da supportare nell'#adr.
 
 = Valutazione della qualità
 

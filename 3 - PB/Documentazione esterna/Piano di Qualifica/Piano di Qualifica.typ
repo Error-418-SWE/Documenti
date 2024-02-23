@@ -246,69 +246,19 @@ Dati:
 
 Avere un resoconto delle metriche soddisfatte per ogni sprint permette di evidenziare eventuali criticità e di attuare le misure di correzione necessarie, seguendo, come stabilito nelle #ndp_v al paragrafo _Processo di gestione dei modelli di ciclo di vita_, il ciclo PDCA per il miglioramento continuo.
 
-// = Qualità del prodotto
-// == Funzionalità
-// - *Requisiti soddisfatti*
-// #figure(
-//   table(
-//     columns: 3,
-//
-//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-//     [% requisiti obbligatori soddisfatti], [100%], [100%],
-//     [% requisiti desiderabili soddisfatti], [$>=0%$], [0%],
-//     [% requisiti opzionali soddisfatti], [$>=0%$], [0%],
-//   ),
-//   caption: "Specifiche Requisiti soddisfatti"
-// )
-
-// == Affidabilità
-// - *Densità degli errori*
-// #figure(
-//   table(
-//     columns: 3,
-//     rows: (auto, 30pt),
-//
-//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-//     align(center+horizon,$display(frac("Test con errori","Test eseguiti"))*100$), align(center+horizon,"0%"), align(center+horizon,$<=10%$),
-//   ),
-//   caption: "Specifiche Densità errori"
-// )
-// == Efficienza
-// - *Efficienza del sistema*
-// #figure(
-//   table(
-//     columns: 3,
-//
-//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-//     [Efficienza del sistema], [TBD], [TBD],
-//   ),
-//   caption: "Specifiche Efficienza del sistema"
-// )
-// == Usabilità
-// - *Facilità di utilizzo*
-// #figure(
-//   table(
-//     columns: 3,
-//
-//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-//     [Facilità di utilizzo del sistema], [TBD], [TBD],
-//   ),
-//   caption: "Specifiche Facilità di utilizzo"
-// )
-// == Manutenibilità
-// #figure(
-//   table(
-//     columns: 3,
-//
-//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-//     [Manutenibilità del sistema], [TBD], [TBD],
-//   ),
-//   caption: "Specifiche Manutenibilità del sistema"
-// )
-
 = Qualità di prodotto
 == Efficacia
 === MRC (Mandatory Requirements Coverage)
+Il Mandatory Requirements Coverage esprime la percentuale di copertura dei requisiti obbligatori, cioè quei requisiti la cui implementazione è stata dichiarata obbligatoria nell'#adr.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*MRC* = $display("Requisiti obbligatori coperti"/"Requisiti obbligatori")*100$]), align(center+horizon,$100%$), align(center+horizon,$100%$),
+    ),
+    caption: "Mandatory Requirements Coverage"
+)
 === DRC (Desiderable Requirements Coverage)
 === ORC (Optional Requirements Coverage)
 

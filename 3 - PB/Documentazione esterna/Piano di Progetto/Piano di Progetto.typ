@@ -305,11 +305,11 @@ L'accettazione e la parziale riduzione del rischio non sono contemplate in quant
 
 ===== Eliminazione del rischio
 *Strategia di trattamento* \
-Un membro del gruppo coinvolto può eliminare il rischio in molteplici modi:
-  - contattare, tramite i canali comunicativi del gruppo, gli altri membri per verificare la possibilità di fornire loro il proprio contributo;
-  - controllare nello sprint backlog di Jira la presenza di task libere da poter prendere in carico;
-  - se lo sprint backlog risultasse completamente assegnato ad altri membri, i task liberi vanno cercati nel backlog completo di Jira;
-  - nel caso in cui tutti i task su Jira siano già stati assegnati, il membro coinvolto può eccezionalmente creare ed autoassegnarsi task in modo da poter proseguire con i lavori.
+Al termine dei task assegnati al singolo individuo, si evidenziano due possibili scenari:
+
+- nel caso in cui lo Sprint backlog non sia stato completato, il membro del gruppo che ha terminato i task a lui assegnati deve procedere all'individuazione e alla selezione di un task non ancora assegnato;
+
+- nel caso in cui lo Sprint backlog risulti terminato o tutti i task in esso contenuti risultino già in corso o in verifica, sarà compito del membro del gruppo evidenziare la sua disponibilità agli altri membri. Si dovrà dunque procedere con l'assegnazione di un task proveniente dal project backlog o con la creazione e assegnazione di un nuovo task.
 
 
 \ *Conseguenze* \
@@ -317,7 +317,7 @@ Minimizzare gli sprechi del tempo a disposizione è una priorità per il gruppo 
 Se il rischio dovesse verificarsi più volte consecutivamente è necessario rivedere l'effettiva efficacia della pianificazione dei task in sede di retrospettiva.
 
 
-=== Lenta ripresa a seguito di pause
+=== Lenta ripresa dei lavori
 Durante la durata del progetto è eccezionalmente possibile che avvengano dei rallentamenti dei lavori da parte di uno o più membri del gruppo.
 I rallentamenti in questione implicano un periodo in cui i membri coinvolti non dispongono di sufficiente disponibilità per partecipare alle attività di progetto.
 Questo può avvenire, ad esempio, a seguito di particolari impegni personali o universitari.

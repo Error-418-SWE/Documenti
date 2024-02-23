@@ -1439,6 +1439,143 @@ Sono classificati per priorità e per fonte.
 ==== Analisi dei requisiti
 Il documento #adr raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
+== Processo di Definizione del Design <processo_design>
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.5_
+=== Scopo
+Lo scopo del processo di Definizione del Design è di fornire dati e informazioni riguardo il sistema e i suoi elementi  per consentirne l'implementazione coerente con le entità architetturali definite nei modelli
+e nelle viste dell'architettura del sistema.
+=== Risultati
+Come risultato dell'efficace attuazione del processo di Definizione del Design:
+- vengono definite le caratteristiche di ogni elemento del sistema;
+- vengono allocati i requisiti software negli elementi di sistema;
+- vengono scelti i software da utilizzare per la creazione dei diagrammi a supporto del design;
+- vengono definite le interfacce fra gli elementi del sistema;
+- vengono valutate le alternative di design;
+- vengono disegnati i diagrammi a supporto del design;
+- viene effettuato il tracciamento fra i requisiti software e gli elementi di sistema.
+
+Le scelte di design relative agli elementi di sistema e i relativi diagrammi sono illustrati nel documento _Specifica Tecnica_.
+
+=== Attività
+==== Pianificazione della Definizione del Design
+L'attività consiste nei seguenti task:
+  + *definire la strategia della Definizione del Design*:\
+    la strategia del processo di Definizione del Design consiste in:
+      - decomporre il sistema in parti componibili;
+      - organizzare di tali componenti (stabilendo ruoli, responsabilità e interazioni);
+      - stabilire le interfacce fra i componenti;
+      - stabilire i paradigmi di composizione per collegare i componenti fra loro.
+    I risultati di questa progettazione sono illustrati nei rispettivi diagrammi.
+    Viene anche valutato, se necessario e possibile, l'uso dei design pattern, illustrati nel testo _Design Patterns: Elements of Reusable Object-Oriented Software (1994)_, per standardizzare e ottimizzare l'implementazione delle interazioni tra le componenti del sistema;
+  + *selezionare principi e caratteristiche di design*:\
+    i Progettisti devono seguire concetti base fondamentali come l'astrazione, la modularizzazione, l'incapsulamento, la separazione tra interfaccia e implementazione. Inoltre devono rispettare i principi della SOLID programming, per creare software più modulare, scalabile, manutenibile e adattabile ai cambiamenti futuri;
+  + *scegliere le tecnologie a supporto della Definizione del Design*:\
+    la scelta delle tecnologie deve seguire questa prassi:
+      - i Progettisti devono individuare le possibili tecnologie in base alle loro conoscenze pregresse e ad un'esplorazione tecnologica, la discussione fra loro deve avvenire nei canali Discord "database" e "mvp";
+      - deve essere eseguito un breve studio di fattibilità per verificare la possibilità di utilizzo delle tecnologie;
+      - nei canali Discord "mvp" e "database", i Progettisti devono chiedere un confronto con gli altri membri del gruppo per valutare alternative tecnologiche o confermare le scelte fatte.
+
+==== Progettazione degli elementi del sistema
+L'attività consiste nei seguenti task:
+  + *definire gli strumenti di design necessari*:\
+    - riguardo i software, deve essere utilizzato StarUML per la modellazione di diagrammi E-R e delle classi. Figma deve essere impiegato per la realizzazione di prototipi di interfaccia grafica;
+    - riguardo i linguaggi, nei diagrammi di StarUML deve essere utilizzato l'UML.
+
+  + *trasformare le caratteristiche architetturali e di design nella progettazione in elementi del sistema*:\
+    - le caratteristiche architetturali e di design sono trasformate in unità architetturali, rappresentate nei relativi diagrammi.
+    Le unità architetturali sono unità funzionali (o di responsabilità) ben definite, realizzabili da un singolo programmatore.
+    A una singola unità architetturale possono corrispondere uno o più moduli di codice, la cui corrispondenza unità – modulo è determinata dalle caratteristiche del linguaggio di programmazione utilizzato per la realizzazione;
+
+  + *esaminare le alternative di progettazione e la fattibilità dell'implementazione*:\
+    - i Progettisti devono identificare le alternative di design;
+    - le alternative di design devono essere messe in confronto fra loro per arrivare ad una soluzione finale ottimale;
+    - deve essere preso in considerazione anche il parere degli altri membri del gruppo in fase di retrospettiva.
+
+  + *definire o ridefinire le interfacce fra gli elementi del sistema ed elementi esterni*:\
+    - le interfacce devono essere identificate e definite nel processo di Definizione dell'Architettura al livello o all'estensione necessari per l'intento architetturale e la comprensione;
+    - queste vengono devono essere raffinate nel processo di Definizione del Design basato sulle caratteristiche di progettazione, interfacce e interazioni degli elementi software con gli altri elementi che lo compongono e con entità esterne;
+    - possono essere identificate e definite ulteriori interfacce che non sono state affrontate nella Definizione dell'Architettura.
+
+  + *stabilire gli artefatti di design*:\
+    gli artefatti di design prodotti da questo processo sono i diagrammi E-R per la modellazione del database, i diagrammi delle classi per la rappresentazione delle entità e delle loro relazioni nel sistema software, e dei mockup o wireframe per i prototipi dell'interfaccia grafica.
+
+==== Studio e scelta delle tecnologie mirate all'implementazione
+L'attività consiste nei seguenti task:
+  + *identificazione delle tecnologie*:\
+    le tecnologie vengono individuate fra quelle proposte dal Proponente, fra le conoscenze pregresse del gruppo e fra quelle rilevate in un primo periodo di esplorazione;
+  + *studio delle tecnologie*:\
+    - per ogni tecnologia deve essere realizzato un PoC, di piccola dimensione ed elevata semplicità finalizzato ad effettuare uno studio iniziale di fattibilità e ad una familiarizzazione con le nuove tecnologie. I PoC sono contenuti nel repository omonimo, nel loro relativo branch. Per il loro sviluppo sono impiegati anche i Programmatori;
+    - i PoC devono essere integrati in un unico prodotto software, per studiare l'integrazione fra i diversi componenti dello stack tecnologico.
+  + *scelta delle tecnologie*:\
+    la scelta finale delle tecnologie avviene in seguito a discussioni interne fra i membri del gruppo e esterne con Committente e Proponente, che ne mettono in luce aspetti positivi e negativi relativamente alla dimensione del progetto.
+==== Gestione del design
+L'attività consiste nei seguenti task:
+  + *giustificare le scelte di design*:\
+    le scelte di design devono essere giustificate e documentate nel documento _Specifica Tecnica_. Le giustificazioni possono includere confronti con alternative possibili e analisi delle implicazioni a lungo termine delle decisioni prese. Questo livello di dettaglio aiuta a garantire che il design sia robusto, efficiente e in grado di soddisfare le esigenze del progetto in modo efficace;
+  + *stabilire il tracciamento tra gli elementi di design, i requisiti del sistema e le entità architetturali dell'architettura del sistema software*;
+  + *determinare lo stato del sistema software e del design degli elementi*:\
+    il processo di Misurazione deve essere utilizzato per stabilire misure per la completezza e la qualità del design mentre progredisce. I processi di Verifica e Validazione vengono attivati per verificare e convalidare il design dettagliato e l'implementazione.
+    Ciò include la valutazione periodica delle caratteristiche di progettazione nel caso di evoluzione del sistema software e della sua architettura, nonché la previsione dell'eventuale obsolescenza dei componenti e delle tecnologie, la loro sostituzione nel tempo nel ciclo di vita del sistema software e le conseguenze per la definizione del design. Il processo di Gestione dei Rischi viene tipicamente applicato per valutare i rischi nella strategia di design;
+  + *fornire gli artefatti e le informazioni di design*:\
+    - il processo di Gestione della Configurazione deve essere utilizzato per stabilire e mantenere elementi di configurazione e le linee guida per artefatti come modelli di progettazione;
+    - il processo di Gestione delle Informazioni deve controllare gli elementi informativi, come descrizioni di progettazione e specifiche;
+    - gli artefatti di design devono essere resi disponibili nel documento _Specifica Tecnica_.
+
+== Processo di definizione dell'architettura <processo_definizione_architettura>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
+
+=== Scopo
+
+Il processo di definizione dell'architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
+
+Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (#TODO).
+
+=== Preparazione e requisiti <preparazione_architettura>
+
+Il Progettista è il ruolo principale all'interno di questo processo. Il numero di persone assegnate a questo ruolo e le attività che esso dovrà svolgere vengono definite in maniera precisa durante la riunione di retrospettiva e la pianificazione dello _Sprint_ che la segue.
+
+È importante che il Progettista abbia una buona conoscenza dei pattern architetturali e dei concetti principali che riguardano la progettazione architetturale. In particolare, di ogni pattern deve conoscere:
+
+- definizione;
+- aspetti positivi e negativi.
+
+È essenziale, inoltre, la conoscenza degli obiettivi del prodotto e lo studio del documento #adr_v e delle tecnologie che il gruppo ha selezionato per la sua implementazione.
+
+=== Individuazione dell'architettura
+
+Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto da sviluppare, in modo da individuare le alternative più adatte.
+
+Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_ (@specifica_tecnica).
+
+È importante che nella scelta architetturale si mantenga un certo focus sulle caratteristiche principali di una buona architettura, riportate nell'elenco che segue:
+
+- *sufficienza*: deve soddisfare i requisiti;
+- *comprensibilità*: deve essere capita da tutti gli stakeholder;
+- *modularità*: deve essere composta da parti distinte;
+- *robustezza*: deve essere capace di gestire errori e condizioni limite;
+- *flessibilità*: deve essere facilmente modificabile;
+- *riusabilità*: le sue parti possono essere impiegate in altre applicazioni;
+- *disponibilità*: la sua manutenzione causa poca indisponibilità totale;
+- *sicurezza rispetto a malfunzionamenti*: deve funzionare anche in presenza di guasti;
+- *semplicità*: ogni parte contiene solo il necessario e niente di superfluo;
+- *incapsulazione*: deve nascondere all'esterno le parti interne dei suoi componenti;
+- *coesione*: deve raggruppare le parti che svolgono gli stessi compiti;
+- *basso accoppiamento*: parti distinte dipendono poco o niente le une dalle altre.
+
+==== Specifica Tecnica <specifica_tecnica>
+
+Insieme all'architettura del prodotto costituisce uno degli output principali del processo. In questo documento viene descritto il prodotto dal punto di vista tecnico, ovvero dal lato tecnologico e architetturale.
+
+Gli argomenti principali trattati nel documento sono due:
+
++ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto, ciascuna con relativa descrizione, versione di utilizzo e motivazione della scelta;
++ *architettura*: vengono presentate:
+  + *architettura logica*: descrizione dell'architettura del prodotto per componenti, ruoli, connessioni e interazioni;
+  + *architettura di deployment*: descrizione della procedura di deployment.
+
+Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
+
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017
@@ -1464,6 +1601,8 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_controllo_qualità],[6.3.8 - Quality Assurance process],[Full],
     [@processo_missione],[6.4.1 - Business or Mission Analysis process],[Full],
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
+    [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
+    [@processo_design],[6.4.5 - Design Definition process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

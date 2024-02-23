@@ -735,8 +735,8 @@ dove:
 
 Per il versionamento di qualsiasi prodotto del progetto è essenziale osservare i principi elencati di seguito:
 
-+ l'aggiornamento di una delle cifre del numero di versione azzera le cifre di rilevanza inferiore.
-+ un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi;
++ l'aggiornamento di una delle cifre del numero di versione azzera le cifre di rilevanza inferiore;
++ un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi e non preceduti da zeri;
 + numeri di versione con `X` pari a 0 indicano prodotti in lavorazione, da non considerarsi pronti al rilascio;
 + dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.
 
@@ -744,17 +744,17 @@ Per il versionamento di qualsiasi prodotto del progetto è essenziale osservare 
 
 L'aggiornamento del numero di versione per la documentazione deve attenersi alle seguenti regole:
 
-- `X`: aggiornato al cambiamento della struttura del documento. Riguarda dunque cambiamenti di organizzazione del documento, dei suoi paragrafi e della presentazione delle informazioni, nonché cambiamento dei parametri necessari nel template dei documenti;
-- `Y`: aggiornato all'aggiunta o alla rimozione di paragrafi;
-- `Z`: aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
+- `X`: deve essere aggiornato al cambiamento della struttura del documento. Riguarda dunque cambiamenti di organizzazione del documento, dei suoi paragrafi e della presentazione delle informazioni, nonché cambiamento dei parametri necessari nel template dei documenti;
+- `Y`: deve essere aggiornato all'aggiunta o alla rimozione di paragrafi;
+- `Z`: deve essere aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
 
 ====== Software
 
 L'aggiornamento del numero di versione per il software deve attenersi alle seguenti regole:
 
-- `X`: deve essere aggiornato solo al raggiungimento di una versione del prodotto che abbia un set di funzionalità il più completo possibile. Inizialmente è dunque posto a `0`, e passerà a `1` solamente al momento in cui il prodotto sarà classificabile come MVP;
-- `Y`: deve essere aggiornato ogniqualvolta viene introdotta una nuova funzionalità nel codice o una nuova funzione;
-- `Z`: deve essere aggiornato ad ogni correzione di bug o cambiamento minore. Alcuni esempi di cambiamento minore sono:
+- `X`: deve essere aggiornato solo al raggiungimento di una versione del prodotto che abbia un set di funzionalità il più completo possibile. Inizialmente è dunque posto a 0, e passerà a 1 solamente al momento in cui il prodotto sarà classificabile come MVP;
+- `Y`: deve essere aggiornato ogniqualvolta viene introdotta una nuova funzione nel codice o una nuova funzionalità al prodotto;
+- `Z`: deve essere aggiornato ad ogni correzione di bug o cambiamento minore. Alcuni esempi di cambiamenti minori sono:
   - correzioni ortografiche:
     - nei nomi di variabili;
     - nei nomi di parametri;

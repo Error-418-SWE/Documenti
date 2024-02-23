@@ -1442,7 +1442,7 @@ L'attività consiste nei seguenti task:
       - stabilire i paradigmi di composizione per collegare i componenti fra loro.
     I risultati di questa progettazione sono illustrati nei rispettivi diagrammi.
     Viene anche valutato, se necessario e possibile, l'uso dei design pattern, illustrati nel testo _Design Patterns: Elements of Reusable Object-Oriented Software (1994)_, per standardizzare e ottimizzare l'implementazione delle interazioni tra le componenti del sistema;
-  + *selezionare principi e caratteristiche  di design*:\
+  + *selezionare principi e caratteristiche di design*:\
     i Progettisti devono seguire concetti base fondamentali come l'astrazione, la modularizzazione, l'incapsulamento, la separazione tra interfaccia e implementazione. Inoltre devono rispettare i principi della SOLID programming, per creare software più modulare, scalabile, manutenibile e adattabile ai cambiamenti futuri;
   + *scegliere le tecnologie a supporto della Definizione del Design*:\
     la scelta delle tecnologie deve seguire questa prassi:

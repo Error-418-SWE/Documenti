@@ -1480,13 +1480,13 @@ L'attività consiste nei seguenti task:
     le tecnologie vengono individuate fra quelle proposte dal Proponente, fra le conoscenze pregresse del gruppo e fra quelle rilevate in un primo periodo di esplorazione;
   + *studio delle tecnologie*:\
     - per ogni tecnologia deve essere realizzato un PoC, di piccola dimensione ed elevata semplicità finalizzato ad effettuare uno studio iniziale di fattibilità e ad una familiarizzazione con le nuove tecnologie. I PoC sono contenuti nel repository omonimo, nel loro relativo branch. Per il loro sviluppo sono impiegati anche i Programmatori;
-    - i PoC devono essere integrati in un'unica applicazione, per studiare l'integrazione fra i diversi componenti dello stack tecnologico.
+    - i PoC devono essere integrati in un unico prodotto software, per studiare l'integrazione fra i diversi componenti dello stack tecnologico.
   + *scelta delle tecnologie*:\
     la scelta finale delle tecnologie avviene in seguito a discussioni interne fra i membri del gruppo e esterne con Committente e Proponente, che ne mettono in luce aspetti positivi e negativi relativamente alla dimensione del progetto.
 ==== Gestione del design
 L'attività consiste nei seguenti task:
   + *giustificare le scelte di design*:\
-    le scelte di design devono essere ben giustificate e documentate nel documento _Specifica Tecnica_. Le giustificazioni possono includere confronti con alternative possibili e analisi delle implicazioni a lungo termine delle decisioni prese. Questo livello di dettaglio aiuta a garantire che il design sia robusto, efficiente e in grado di soddisfare le esigenze del progetto in modo efficace;
+    le scelte di design devono essere giustificate e documentate nel documento _Specifica Tecnica_. Le giustificazioni possono includere confronti con alternative possibili e analisi delle implicazioni a lungo termine delle decisioni prese. Questo livello di dettaglio aiuta a garantire che il design sia robusto, efficiente e in grado di soddisfare le esigenze del progetto in modo efficace;
   + *stabilire il tracciamento tra gli elementi di design, i requisiti del sistema e le entità architetturali dell'architettura del sistema software*;
   + *determinare lo stato del sistema software e del design degli elementi*:\
     il processo di Misurazione deve essere utilizzato per stabilire misure per la completezza e la qualità del design mentre progredisce. I processi di Verifica e Validazione vengono attivati per verificare e convalidare il design dettagliato e l'implementazione.

@@ -720,7 +720,7 @@ Come risultato dell'implementazione riuscita del processo di Gestione della Conf
 - vengono stabilite le linee base di configurazione;
 - sono controllate le modifiche agli elementi sotto gestione della configurazione;
 - sono disponibili informazioni sullo stato della configurazione;
-- le release dei documenti sono controllate e approvate.
+- le release dei documenti e del software sono controllate e approvate.
 
 === Attività
 ==== Versionamento
@@ -728,15 +728,25 @@ Come risultato dell'implementazione riuscita del processo di Gestione della Conf
 Il versionamento è un processo che permette di tenere traccia delle modifiche effettuate su un prodotto software o documentale. Per ogni modifica viene creata una nuova versione del prodotto, che viene identificata da un numero di versione. Il numero di versione è composto da tre cifre separate da un punto, e segue la convenzione seguente:
 #align(center, `X.Y.Z`)
 dove:
-- X: indica il numero di versione principale, aggiornato al cambiamento della struttura del documento. Riguarda dunque cambiamenti di organizzazione del documento, dei suoi paragrafi e della presentazione delle informazioni, nonché cambiamento dei parametri necessari nel template dei documenti;
-- Y: indica il numero di versione secondaria, aggiornato all'aggiunta o alla rimozione di paragrafi;
-- Z: indica il numero di versione di revisione e correzione, aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
 
-L'aggiornamento di una delle cifre del numero di versione azzera le cifre di rilevanza inferiore.
-- Questo schema descrive il versionamento dei documenti;
-- Un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi;
-- Numeri di versione con `X` pari a 0 indicano documenti in lavorazione, da non considerarsi pronti al rilascio;
-- Dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.
+- `X`: indica il numero di versione principale;
+- `Y`: indica il numero di versione secondaria;
+- `Z`: indica il numero di versione di revisione e correzione.
+
+Per il versionamento di qualsiasi prodotto del progetto è essenziale osservare i principi elencati di seguito:
+
++ l'aggiornamento di una delle cifre del numero di versione azzera le cifre di rilevanza inferiore.
++ un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi;
++ numeri di versione con `X` pari a 0 indicano prodotti in lavorazione, da non considerarsi pronti al rilascio;
++ dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.
+
+====== Documentazione
+
+L'aggiornamento del numero di versione per la documentazione deve attenersi alle seguenti regole:
+
+- `X`: aggiornato al cambiamento della struttura del documento. Riguarda dunque cambiamenti di organizzazione del documento, dei suoi paragrafi e della presentazione delle informazioni, nonché cambiamento dei parametri necessari nel template dei documenti;
+- `Y`: aggiornato all'aggiunta o alla rimozione di paragrafi;
+- `Z`: aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
 
 ===== Tracciamento modifiche <tracciamento-modifiche>
 Il tracciamento delle modifiche avviene per mezzo di automazioni che permettono di identificare:

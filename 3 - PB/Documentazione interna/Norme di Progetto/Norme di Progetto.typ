@@ -32,9 +32,9 @@ L'utente avrà la possibilità di cercare specifici prodotti all'interno del mag
   _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v" + glo_vo + ".pdf")_
   #lastVisitedOn(13,02,2024)
 
-- Documento #ris_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Documentazione%20interna/Analisi%20dei%20Rischi_v" + ris_vo + ".pdf")_
-  #lastVisitedOn(13,02,2024)
+- Documento #pdp_v, Sezione 2 "Analisi dei Rischi": \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20interna/Piano%20di%20Progetto_v" + pdp_vo + ".pdf")_
+  #lastVisitedOn(21,02,2024)
 
 === Riferimenti normativi <riferimenti-normativi>
 
@@ -720,7 +720,7 @@ Come risultato dell'implementazione riuscita del processo di Gestione della Conf
 - vengono stabilite le linee base di configurazione;
 - sono controllate le modifiche agli elementi sotto gestione della configurazione;
 - sono disponibili informazioni sullo stato della configurazione;
-- le release dei documenti sono controllate e approvate.
+- le release dei documenti e del software sono controllate e approvate.
 
 === Attività
 ==== Versionamento
@@ -728,15 +728,43 @@ Come risultato dell'implementazione riuscita del processo di Gestione della Conf
 Il versionamento è un processo che permette di tenere traccia delle modifiche effettuate su un prodotto software o documentale. Per ogni modifica viene creata una nuova versione del prodotto, che viene identificata da un numero di versione. Il numero di versione è composto da tre cifre separate da un punto, e segue la convenzione seguente:
 #align(center, `X.Y.Z`)
 dove:
-- X: indica il numero di versione principale, aggiornato al cambiamento della struttura del documento. Riguarda dunque cambiamenti di organizzazione del documento, dei suoi paragrafi e della presentazione delle informazioni, nonché cambiamento dei parametri necessari nel template dei documenti;
-- Y: indica il numero di versione secondaria, aggiornato all'aggiunta o alla rimozione di paragrafi;
-- Z: indica il numero di versione di revisione e correzione, aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
 
-L'aggiornamento di una delle cifre del numero di versione azzera le cifre di rilevanza inferiore.
-- Questo schema descrive il versionamento dei documenti;
-- Un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi;
-- Numeri di versione con `X` pari a 0 indicano documenti in lavorazione, da non considerarsi pronti al rilascio;
-- Dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.
+- `X`: indica il numero di versione principale;
+- `Y`: indica il numero di versione secondaria;
+- `Z`: indica il numero di versione di revisione e correzione.
+
+Per il versionamento di qualsiasi prodotto del progetto è essenziale osservare i principi elencati di seguito:
+
++ l'aggiornamento di una delle cifre del numero di versione azzera le cifre di rilevanza inferiore;
++ un normale numero di versione deve avere la forma `X.Y.Z`, dove `X`, `Y` e `Z` sono interi non negativi e non preceduti da zeri;
++ numeri di versione con `X` pari a 0 indicano prodotti in lavorazione, da non considerarsi pronti al rilascio;
++ dopo il rilascio, il contenuto della versione non deve essere modificato. Qualsiasi modifica successiva al rilascio deve causare un cambio nel numero di versione.
+
+====== Documentazione
+
+L'aggiornamento del numero di versione per la documentazione deve attenersi alle seguenti regole:
+
+- `X`: deve essere aggiornato al cambiamento della struttura del documento. Riguarda dunque cambiamenti di organizzazione del documento, dei suoi paragrafi e della presentazione delle informazioni, nonché cambiamento dei parametri necessari nel template dei documenti;
+- `Y`: deve essere aggiornato all'aggiunta o alla rimozione di paragrafi;
+- `Z`: deve essere aggiornato a seguito di cambiamenti minimi o correzioni ortografiche.
+
+Il processo di aggiornamento della versione è reso automatico, come stabilito nella sezione dedicata a GitHub Actions (@automazioni).
+
+====== Software
+
+L'aggiornamento del numero di versione per il software deve attenersi alle seguenti regole:
+
+- `X`: deve essere aggiornato solo al raggiungimento di una versione del prodotto che abbia un set di funzionalità il più completo possibile. Inizialmente è dunque posto a 0, e passerà a 1 solamente al momento in cui il prodotto sarà classificabile come MVP;
+- `Y`: deve essere aggiornato ogniqualvolta viene introdotta una nuova funzione nel codice o una nuova funzionalità al prodotto;
+- `Z`: deve essere aggiornato ad ogni correzione di bug o cambiamento minore. Alcuni esempi di cambiamenti minori sono:
+  - correzioni ortografiche:
+    - nei nomi di variabili;
+    - nei nomi di parametri;
+    - nei nomi di funzioni o metodi.
+  - cambiamento nel valore di parametri:
+    - cambiamento di colore di un elmento grafico;
+    - cambiamento di un valore numerico;
+    - cambiamento di un valore letterale.
 
 ===== Tracciamento modifiche <tracciamento-modifiche>
 Il tracciamento delle modifiche avviene per mezzo di automazioni che permettono di identificare:
@@ -944,18 +972,36 @@ I documenti pertanto sono così strutturati:
 + *Contenuto del file*: sezione successiva agli indici. Rappresenta il corpo del documento, suddiviso in paragrafi.
 
 ==== Struttura dei verbali <struttura-verbali>
-I verbali assumono una struttura diversa rispetto agli altri documenti, dato il diverso scopo e la struttura semplificata. I verbali sono così strutturati:
+Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e attività oggetto di discussione durante i meeting interni ed esterni, il gruppo raccoglie tali informazioni all'interno di verbali redatti al termine dei meeting. La struttura dei verbali è la seguente:
 
-- *cover page* (@struttura-documenti);
-- *informazioni generali*:
-  - luogo;
++ *cover page* (@struttura-documenti);
++ "*Informazioni generali*":
+  - luogo: il luogo reale o digitale dove il gruppo insieme ad eventuali partecipanti esterni svolge il meeting;
   - data e ora nel formato (gg-mm-aaaa, hh:mm ~ hh:mm);
   - partecipanti;
   - assenti;
-  - referente aziendale (se presente).
-- *ordine del giorno*: elenco degli argomenti trattati durante la riunione;
-- *organizzazione attività*: elenco e spiegazione delle decisioni prese durante la riunione. Questo paragrafo rappresenta il risultato fondamentale delle riunioni di retrospettiva;
-- *firma partecipanti esterni* (se presenti): firma dei partecipanti esterni alla riunione.
+  - partecipanti esterni al gruppo (se presenti).
++ "*Ordine del giorno*": elenco degli argomenti trattati durante la riunione;
++ "*Valutazione del progresso generale*" descrive l'analisi sul lavoro svolto durante lo sprint precedente. Questo paragrafo è così definito:
+  - valutazione sulla qualità del lavoro in merito alla velocità di avanzamento, evidenziando eventuali rallentamenti o meriti riscontrati.
+  - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportato una descrizione sul lavoro svolto, se i lavori svolti sono molti e diversi riportarli in forma di elenco puntato.
++ "*Analisi di retrospettiva*", suddiviso in:
+  - lista di valori calcolati dalle metriche presenti nel #pdq riguardo allo sprint, nello specifico riportare:
+   - CPI: valore precedente e valore attuale;
+   - EAC: valore precedente e valore attuale;
+   - rapporto tra SEV e SPV.
+  - sottoparagrafo "*Keep doing*", riporta i meriti riscontrati dal gruppo;
+  - sottoparagrafo "*Improvements*", riporta le criticità riscontrate dal gruppo etichettate con un codice identificativo.
+  I codici sono così composti:
+   - *P*, lettera indicante una Problematica;
+   - *O/T*, a seconda se la problematica sia di origine organizzativa o tecnologica;
+   - *N*, intero naturale positivo che incrementa ad ogni nuova problematica di tipo organizzativo o tecnologico.
+  Quindi inserire la tabella che associa ogni criticità ad una risoluzione presente nel #pdp. La tabella deve riportare:
+   - *ID risoluzione*;
+   - *Titolo risoluzione*;
+   - *Criticità affrontate*.
++ eventuali ulteriori argomenti organizzati in paragrafi indipendenti;
++ "*Pianificazione*", riporta la tabella contenente le task programmate per lo Sprint successivo. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso realizzato in Google Sheets (maggiori dettagli in merito reperibili al paragrafo @google_sheets) e disponibile nel Google Drive del gruppo.
 
 === Stile e convenzioni
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.
@@ -1018,6 +1064,40 @@ MAIUSCOLO:
 
 ===== Glossario
 Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una G in corsivo a pedice.
+
+===== Variabili Typst per termini ricorrenti
+
+Al fine di uniformare termini ricorrenti, vengono predisposte variabili utilizzabili nella redazione dei documenti. I termini in considerazione sono relativi a:
+- nomi di documenti
+- stakeholder;
+- documenti e la versione a cui si fa riferimento;
+- ultima data di accesso ad un link ad una risorsa web esterna.
+
+Di seguito viene riportata la tabella delle variabili e la loro rappresentazione all'interno del documento compilato:
+
+#figure(
+  table(
+    columns: 2,
+    [*Variabile*],[*Risultato*],
+    [`\#err418`],[#err418],
+    [`\#cardin`],[#cardin],
+    [`\#vardanega`],[#vardanega],
+    [`\#adr`],[#adr],
+    [`\#adr_v`],[#adr_v],
+    [`\#ris`],[#ris],
+    [`\#ris_v`],[#ris_v],
+    [`\#glo`],[#glo],
+    [`\#glo_v`],[#glo_v],
+    [`\#ndp`],[#ndp],
+    [`\#ndp_v`],[#ndp_v],
+    [`\#pdp`],[#pdp],
+    [`\#pdp_v`],[#pdp_v],
+    [`\#pdq`],[#pdq],
+    [`\#pdq_v`],[#pdq_v],
+    [`\#lastVisitedOn(day, month, year)`],[#lastVisitedOn(1, 1, 2024)],
+  ),
+  caption: "Variabili Typst per riferirsi a termini ricorrenti"
+)
 
 === Distribuzione delle informazioni
 Il gruppo condivide il materiale prodotto all'interno di un repository dedicato reperibile al link:\
@@ -1186,7 +1266,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 ==== Tecnologie <tecnologie_controllo>
 ===== Jira
 Jira, essendo l'ITS del gruppo, è la fonte principale di informazioni per il cruscotto di qualità.
-===== Google Sheets
+===== Google Sheets <google_sheets>
 Google Sheets viene utilizzato per rendere meglio manipolabili i dati provenienti da Jira, in modo da poterli analizzare con più facilità e calcolare comodamente metriche come CPI, EAC, EV.
 ===== Grafana
 Grafana è l'applicazione utilizzata per visualizzare i dati raccolti tramite l'implementazione di un cruscotto di qualità. Le informazioni mostrate sono le seguenti:
@@ -1361,6 +1441,143 @@ Sono classificati per priorità e per fonte.
 ==== Analisi dei requisiti
 Il documento #adr raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
+== Processo di Definizione del Design <processo_design>
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.5_
+=== Scopo
+Lo scopo del processo di Definizione del Design è di fornire dati e informazioni riguardo il sistema e i suoi elementi  per consentirne l'implementazione coerente con le entità architetturali definite nei modelli
+e nelle viste dell'architettura del sistema.
+=== Risultati
+Come risultato dell'efficace attuazione del processo di Definizione del Design:
+- vengono definite le caratteristiche di ogni elemento del sistema;
+- vengono allocati i requisiti software negli elementi di sistema;
+- vengono scelti i software da utilizzare per la creazione dei diagrammi a supporto del design;
+- vengono definite le interfacce fra gli elementi del sistema;
+- vengono valutate le alternative di design;
+- vengono disegnati i diagrammi a supporto del design;
+- viene effettuato il tracciamento fra i requisiti software e gli elementi di sistema.
+
+Le scelte di design relative agli elementi di sistema e i relativi diagrammi sono illustrati nel documento _Specifica Tecnica_.
+
+=== Attività
+==== Pianificazione della Definizione del Design
+L'attività consiste nei seguenti task:
+  + *definire la strategia della Definizione del Design*:\
+    la strategia del processo di Definizione del Design consiste in:
+      - decomporre il sistema in parti componibili;
+      - organizzare di tali componenti (stabilendo ruoli, responsabilità e interazioni);
+      - stabilire le interfacce fra i componenti;
+      - stabilire i paradigmi di composizione per collegare i componenti fra loro.
+    I risultati di questa progettazione sono illustrati nei rispettivi diagrammi.
+    Viene anche valutato, se necessario e possibile, l'uso dei design pattern, illustrati nel testo _Design Patterns: Elements of Reusable Object-Oriented Software (1994)_, per standardizzare e ottimizzare l'implementazione delle interazioni tra le componenti del sistema;
+  + *selezionare principi e caratteristiche di design*:\
+    i Progettisti devono seguire concetti base fondamentali come l'astrazione, la modularizzazione, l'incapsulamento, la separazione tra interfaccia e implementazione. Inoltre devono rispettare i principi della SOLID programming, per creare software più modulare, scalabile, manutenibile e adattabile ai cambiamenti futuri;
+  + *scegliere le tecnologie a supporto della Definizione del Design*:\
+    la scelta delle tecnologie deve seguire questa prassi:
+      - i Progettisti devono individuare le possibili tecnologie in base alle loro conoscenze pregresse e ad un'esplorazione tecnologica, la discussione fra loro deve avvenire nei canali Discord "database" e "mvp";
+      - deve essere eseguito un breve studio di fattibilità per verificare la possibilità di utilizzo delle tecnologie;
+      - nei canali Discord "mvp" e "database", i Progettisti devono chiedere un confronto con gli altri membri del gruppo per valutare alternative tecnologiche o confermare le scelte fatte.
+
+==== Progettazione degli elementi del sistema
+L'attività consiste nei seguenti task:
+  + *definire gli strumenti di design necessari*:\
+    - riguardo i software, deve essere utilizzato StarUML per la modellazione di diagrammi E-R e delle classi. Figma deve essere impiegato per la realizzazione di prototipi di interfaccia grafica;
+    - riguardo i linguaggi, nei diagrammi di StarUML deve essere utilizzato l'UML.
+
+  + *trasformare le caratteristiche architetturali e di design nella progettazione in elementi del sistema*:\
+    - le caratteristiche architetturali e di design sono trasformate in unità architetturali, rappresentate nei relativi diagrammi.
+    Le unità architetturali sono unità funzionali (o di responsabilità) ben definite, realizzabili da un singolo programmatore.
+    A una singola unità architetturale possono corrispondere uno o più moduli di codice, la cui corrispondenza unità – modulo è determinata dalle caratteristiche del linguaggio di programmazione utilizzato per la realizzazione;
+
+  + *esaminare le alternative di progettazione e la fattibilità dell'implementazione*:\
+    - i Progettisti devono identificare le alternative di design;
+    - le alternative di design devono essere messe in confronto fra loro per arrivare ad una soluzione finale ottimale;
+    - deve essere preso in considerazione anche il parere degli altri membri del gruppo in fase di retrospettiva.
+
+  + *definire o ridefinire le interfacce fra gli elementi del sistema ed elementi esterni*:\
+    - le interfacce devono essere identificate e definite nel processo di Definizione dell'Architettura al livello o all'estensione necessari per l'intento architetturale e la comprensione;
+    - queste vengono devono essere raffinate nel processo di Definizione del Design basato sulle caratteristiche di progettazione, interfacce e interazioni degli elementi software con gli altri elementi che lo compongono e con entità esterne;
+    - possono essere identificate e definite ulteriori interfacce che non sono state affrontate nella Definizione dell'Architettura.
+
+  + *stabilire gli artefatti di design*:\
+    gli artefatti di design prodotti da questo processo sono i diagrammi E-R per la modellazione del database, i diagrammi delle classi per la rappresentazione delle entità e delle loro relazioni nel sistema software, e dei mockup o wireframe per i prototipi dell'interfaccia grafica.
+
+==== Studio e scelta delle tecnologie mirate all'implementazione
+L'attività consiste nei seguenti task:
+  + *identificazione delle tecnologie*:\
+    le tecnologie vengono individuate fra quelle proposte dal Proponente, fra le conoscenze pregresse del gruppo e fra quelle rilevate in un primo periodo di esplorazione;
+  + *studio delle tecnologie*:\
+    - per ogni tecnologia deve essere realizzato un PoC, di piccola dimensione ed elevata semplicità finalizzato ad effettuare uno studio iniziale di fattibilità e ad una familiarizzazione con le nuove tecnologie. I PoC sono contenuti nel repository omonimo, nel loro relativo branch. Per il loro sviluppo sono impiegati anche i Programmatori;
+    - i PoC devono essere integrati in un unico prodotto software, per studiare l'integrazione fra i diversi componenti dello stack tecnologico.
+  + *scelta delle tecnologie*:\
+    la scelta finale delle tecnologie avviene in seguito a discussioni interne fra i membri del gruppo e esterne con Committente e Proponente, che ne mettono in luce aspetti positivi e negativi relativamente alla dimensione del progetto.
+==== Gestione del design
+L'attività consiste nei seguenti task:
+  + *giustificare le scelte di design*:\
+    le scelte di design devono essere giustificate e documentate nel documento _Specifica Tecnica_. Le giustificazioni possono includere confronti con alternative possibili e analisi delle implicazioni a lungo termine delle decisioni prese. Questo livello di dettaglio aiuta a garantire che il design sia robusto, efficiente e in grado di soddisfare le esigenze del progetto in modo efficace;
+  + *stabilire il tracciamento tra gli elementi di design, i requisiti del sistema e le entità architetturali dell'architettura del sistema software*;
+  + *determinare lo stato del sistema software e del design degli elementi*:\
+    il processo di Misurazione deve essere utilizzato per stabilire misure per la completezza e la qualità del design mentre progredisce. I processi di Verifica e Validazione vengono attivati per verificare e convalidare il design dettagliato e l'implementazione.
+    Ciò include la valutazione periodica delle caratteristiche di progettazione nel caso di evoluzione del sistema software e della sua architettura, nonché la previsione dell'eventuale obsolescenza dei componenti e delle tecnologie, la loro sostituzione nel tempo nel ciclo di vita del sistema software e le conseguenze per la definizione del design. Il processo di Gestione dei Rischi viene tipicamente applicato per valutare i rischi nella strategia di design;
+  + *fornire gli artefatti e le informazioni di design*:\
+    - il processo di Gestione della Configurazione deve essere utilizzato per stabilire e mantenere elementi di configurazione e le linee guida per artefatti come modelli di progettazione;
+    - il processo di Gestione delle Informazioni deve controllare gli elementi informativi, come descrizioni di progettazione e specifiche;
+    - gli artefatti di design devono essere resi disponibili nel documento _Specifica Tecnica_.
+
+== Processo di definizione dell'architettura <processo_definizione_architettura>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
+
+=== Scopo
+
+Il processo di definizione dell'architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
+
+Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (#TODO).
+
+=== Preparazione e requisiti <preparazione_architettura>
+
+Il Progettista è il ruolo principale all'interno di questo processo. Il numero di persone assegnate a questo ruolo e le attività che esso dovrà svolgere vengono definite in maniera precisa durante la riunione di retrospettiva e la pianificazione dello _Sprint_ che la segue.
+
+È importante che il Progettista abbia una buona conoscenza dei pattern architetturali e dei concetti principali che riguardano la progettazione architetturale. In particolare, di ogni pattern deve conoscere:
+
+- definizione;
+- aspetti positivi e negativi.
+
+È essenziale, inoltre, la conoscenza degli obiettivi del prodotto e lo studio del documento #adr_v e delle tecnologie che il gruppo ha selezionato per la sua implementazione.
+
+=== Individuazione dell'architettura
+
+Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto da sviluppare, in modo da individuare le alternative più adatte.
+
+Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_ (@specifica_tecnica).
+
+È importante che nella scelta architetturale si mantenga un certo focus sulle caratteristiche principali di una buona architettura, riportate nell'elenco che segue:
+
+- *sufficienza*: deve soddisfare i requisiti;
+- *comprensibilità*: deve essere capita da tutti gli stakeholder;
+- *modularità*: deve essere composta da parti distinte;
+- *robustezza*: deve essere capace di gestire errori e condizioni limite;
+- *flessibilità*: deve essere facilmente modificabile;
+- *riusabilità*: le sue parti possono essere impiegate in altre applicazioni;
+- *disponibilità*: la sua manutenzione causa poca indisponibilità totale;
+- *sicurezza rispetto a malfunzionamenti*: deve funzionare anche in presenza di guasti;
+- *semplicità*: ogni parte contiene solo il necessario e niente di superfluo;
+- *incapsulazione*: deve nascondere all'esterno le parti interne dei suoi componenti;
+- *coesione*: deve raggruppare le parti che svolgono gli stessi compiti;
+- *basso accoppiamento*: parti distinte dipendono poco o niente le une dalle altre.
+
+==== Specifica Tecnica <specifica_tecnica>
+
+Insieme all'architettura del prodotto costituisce uno degli output principali del processo. In questo documento viene descritto il prodotto dal punto di vista tecnico, ovvero dal lato tecnologico e architetturale.
+
+Gli argomenti principali trattati nel documento sono due:
+
++ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto, ciascuna con relativa descrizione, versione di utilizzo e motivazione della scelta;
++ *architettura*: vengono presentate:
+  + *architettura logica*: descrizione dell'architettura del prodotto per componenti, ruoli, connessioni e interazioni;
+  + *architettura di deployment*: descrizione della procedura di deployment.
+
+Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
+
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017
@@ -1386,6 +1603,8 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_controllo_qualità],[6.3.8 - Quality Assurance process],[Full],
     [@processo_missione],[6.4.1 - Business or Mission Analysis process],[Full],
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
+    [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
+    [@processo_design],[6.4.5 - Design Definition process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

@@ -1,14 +1,20 @@
+1.21.0,23-02-2024,321,DOC-526 Descrivere versionamento del software,Banzato Alessio,Carraro Riccardo
+1.20.0,23-02-2024,319,DOC-162 Redigere sezione Technical Processes / Design Definition process,Zaccone Rosario,Carraro Riccardo
+1.19.0,23-02-2024,318,DOC-161 Redigere sezione Technical Processes/Architecture Definition process,Banzato Alessio,Carraro Riccardo
+1.18.0,21-02-2024,314,DOC-511 Aggiunto paragrafo variabiali in Typst,Oseliero Antonio,Carraro Riccardo
+1.17.8,21-02-2024,317,DOC-494 Aggiornare il riferimento all'Analisi dei Rischi,Gardin Giovanni,Carraro Riccardo
+1.17.7,21-02-2024,306,DOC-510 Aggiornare paragrafo 4.6.3 per contenuto verbali,Oseliero Antonio,Carraro Riccardo
 1.17.6,18-02-2024,298,DOC-506 Uso delle variabili per riferirsi ai professori,Gardin Giovanni,Carraro Riccardo
 1.17.5,18-02-2024,303,DOC-501 Uso delle variabili per riferirsi ai documenti,Gardin Giovanni,Carraro Riccardo
-1.17.4,15-02-2024,281,DOC-485: Revisionare Norme di Progetto con spell checker,Todesco Mattia,Carraro Riccardo
-1.17.3,15-02-2024,251,DOC-428 Revisionare paragrafo 5.4 delle Norme di Progetto,Zaccone Rosario,Nardo Silvio
+1.17.4,15-02-2024,281,DOC-485: Revisionare con spell checker,Todesco Mattia,Carraro Riccardo
+1.17.3,15-02-2024,251,DOC-428 Revisionare paragrafo 5.4,Zaccone Rosario,Nardo Silvio
 1.17.2,13-02-2024,263,DOC-464 Aggiunte date di ultimo accesso,Gardin Giovanni,Carraro Riccardo
 1.17.1,12-02-2024,257,DOC-431: Revisione paragrafo 5.7,Todesco Mattia,Carraro Riccardo
 1.17.0,11-02-2024,254,DOC-430: Revisione paragrafo 5.6,Todesco Mattia,Gardin Giovanni
 1.16.1,10-02-2024,235,DOC-424 Revisione capitolo 4,Todesco Mattia,Nardo Silvio
-1.16.0,09-02-2024,237,DOC-426 Revisionare paragrafo 5.2 delle Norme di Progetto,Zaccone Rosario,Gardin Giovanni
-1.15.2,08-02-2024,230,DOC-425 Revisionare paragrafo 5.1 delle Norme di Progetto,Zaccone Rosario,Gardin Giovanni
-1.15.1,08-02-2024,232,DOC-417 Inserita versione Glossario nelle Norme di Progetto,Oseliero Antonio,Gardin Giovanni
+1.16.0,09-02-2024,237,DOC-426 Revisionare paragrafo 5.2,Zaccone Rosario,Gardin Giovanni
+1.15.2,08-02-2024,230,DOC-425 Revisionare paragrafo 5.1,Zaccone Rosario,Gardin Giovanni
+1.15.1,08-02-2024,232,DOC-417 Inserita versione Glossario,Oseliero Antonio,Gardin Giovanni
 1.15.0,07-02-2024,229,DOC-423: Rimozione paragrafo 3,Todesco Mattia,Nardo Silvio
 1.14.1,21-01-2024,210,DOC-356 Revisione sezione Processi di supporto,Oseliero Antonio,Zaccone Rosario
 1.14.0,14-01-2024,163,DOC-289 Aggiornato il link relativo al documento Analisi dei rischi nelle norme di progetto,Nardo Silvio,Carraro Riccardo
@@ -33,4 +39,4 @@
 1.3.0,30-11-2023,49,DOC-109 Scrivere la sezione Processi di accordo/Fornitura,Banzato Alessio,Gardin Giovanni
 1.2.0,30-11-2023,48,DOC-44 Processi di gestione dell'infrastruttura,Gardin Giovanni,Banzato Alessio
 1.1.0,20-11-2023,23,DOC-42 Scrivere il paragrafo sulla documentazione,Oseliero Antonio,Gardin Giovanni
-1.0.0,18-11-2023,7,DOC-40 Pubblicazione Norme di Progetto,Zaccone Rosario,Oseliero Antonio
+1.0.0,18-11-2023,7,DOC-40 Pubblicazione documento,Zaccone Rosario,Oseliero Antonio

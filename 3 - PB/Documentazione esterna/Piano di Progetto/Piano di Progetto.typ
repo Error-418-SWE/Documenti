@@ -318,8 +318,7 @@ Se il rischio dovesse verificarsi più volte consecutivamente è necessario rive
 
 
 === Lenta ripresa dei lavori
-Durante la durata del progetto è eccezionalmente possibile che avvengano dei rallentamenti dei lavori da parte di uno o più membri del gruppo.
-I rallentamenti in questione implicano un periodo in cui i membri coinvolti non dispongono di sufficiente disponibilità per partecipare alle attività di progetto.
+Durante la durata del progetto è eccezionalmente possibile che si verifichino dei periodi in cui uno o più membri non dispongono di sufficiente disponibilità per partecipare alle attività di progetto.
 Questo può avvenire, ad esempio, a seguito di particolari impegni personali o universitari.
 La ripresa dei lavori a pieno regime seguendo correttamente le norme prefissate ed utilizzando correttamente tutte le tecnologie, potrebbe non essere immediata.
 Si ritiene fondamentale minimizzare l'impatto in termini di tempo e qualità sul lavoro svolto.

@@ -255,11 +255,23 @@ Il Mandatory Requirements Coverage esprime la percentuale di copertura dei requi
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*MRC* = $display("Requisiti obbligatori coperti"/"Requisiti obbligatori")*100$]), align(center+horizon,$100%$), align(center+horizon,$100%$),
+      align(center+horizon, [*MRC* = $display("Requisiti obbligatori coperti"/"Requisiti obbligatori totali")*100$]), align(center+horizon,$100%$), align(center+horizon,$100%$),
     ),
     caption: "Mandatory Requirements Coverage"
 )
+
 === DRC (Desiderable Requirements Coverage)
+Il Desiderable Requirements Coverage esprime la percentuale di copertura dei requisiti desiderabili, cioè quei requisiti la cui implementazione è stata dichiarata opzionale ma con alta priorità nell'#adr.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*DRC* = $display("Requisiti desiderabili coperti"/"Requisiti desiderabili totali")*100$]), align(center+horizon,$100%$), align(center+horizon,$>=0%$),
+    ),
+    caption: "Desiderable Requirements Coverage"
+)
+
 === ORC (Optional Requirements Coverage)
 
 == Efficienza

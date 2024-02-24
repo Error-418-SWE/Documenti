@@ -236,7 +236,7 @@ Qualora uno o più membri del gruppo dovessero essere insufficientemente prepara
 - *Impatto*: grave;
 - *Probabilità*: 2;
 - *Soglie*:
-  - se le lacune teoriche sono sufficientemente contenute da permetterene un recupero abbastanza rapido da non inficiare sulla pianificazione dei lavori, si adotta "OT-1.2.1 Eliminazione del rischio";
+  - se le lacune teoriche sono sufficientemente contenute da permetterne un recupero abbastanza rapido da non inficiare sulla pianificazione dei lavori, si adotta "OT-1.2.1 Eliminazione del rischio";
   - se il tempo necessario ad effettuare lo studio richiesto risulta significativamente esteso rispetto ai tempi dettati dalla pianificazione dei lavori, al punto da provocare rallentamenti che impedirebbero il corretto completamento dei task previsti, si adotta "OT-1.2.2 Riduzione della sua probabilità o gravità".
 
 *Opzioni di trattamento del rischio*

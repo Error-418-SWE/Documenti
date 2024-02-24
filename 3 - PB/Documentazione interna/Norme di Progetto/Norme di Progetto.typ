@@ -1157,6 +1157,20 @@ Il gruppo deve implementare le seguenti attività in conformità con le politich
         - errori ortografici;
         - percentuale metriche soddisfatte.
 
+    - definire la strategia di misurazione per la qualità del prodotto. La strategia scelta si compone di metriche mirate alla valutazione della qualità del prodotto, quali:
+        + MRC (Mandatory Requirements Coverage);
+        + DRC (Desiderable Requirements Coverage);
+        + ORC (Optional Requirements Coverage);
+        + ART (Average Response Time);
+        + LT (Learning Time);
+        + EOU (Ease of Use);
+        + CC (Ciclomatic Complexity);
+        + CL (Coupling Level);
+        + RC (Responsability Count);
+        + MPN (Method Parameters Number);
+        + FD (Failure Density);
+        + SBV (Supported Browser Version).
+
     - descrivere le caratteristiche del gruppo rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici:
         - richieste del Proponente;
         - requisiti individuati.

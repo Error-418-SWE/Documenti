@@ -805,7 +805,7 @@ $bold("Scenario: ")$
 )
 
 $bold("Descrizione: ")$
-A seguito della configurazione con il database il sistema:
+A seguito della configurazione con il database, il sistema:
 - crea gli scaffali con i parametri forniti da database (altezza, larghezza, profondità, numero di piani, numero di colonne, orientamento rispetto al piano);
 - posiziona gli scaffali sul piano secondo le coordinate x e y fornite da database;
 - crea i bin con i parametri forniti da database (altezza, larghezza, profondità) e li colloca dove indicato (all'interno di un ripiano o in un altra area valida);

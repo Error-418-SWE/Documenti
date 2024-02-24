@@ -196,8 +196,8 @@ Le tecnologie individuate o suggerite durante i processi di analisi e progettazi
 - Impatto: medio;
 - Probabilità: 4;
 - Soglie:
-  - se, compreso un ragionevole rallentamento dovuto all'apprendimento di nuove competenze, la complessità delle tecnologie risulta gestibile con le competenze attuali del gruppo e non compromette significativamente la tempistica del progetto, si adotta l'"OT-1.1.2 Accettazione del rischio";
-  - se la complessità delle tecnologie supera significativamente le competenze attuali del gruppo e potrebbe quindi causare gravi ritardi nell'avanzamento dei lavori, si adotta l'"OT-1.1.1 Riduzione della sua probabilità o gravità".
+  - se, compreso un ragionevole rallentamento dovuto all'apprendimento di nuove competenze, la complessità delle tecnologie risulta gestibile con le competenze attuali del gruppo e non compromette significativamente la tempistica del progetto, si adotta "OT-1.1.2 Accettazione del rischio";
+  - se la complessità delle tecnologie supera significativamente le competenze attuali del gruppo e potrebbe quindi causare gravi ritardi nell'avanzamento dei lavori, si adotta "OT-1.1.1 Riduzione della sua probabilità o gravità".
 
 *Opzioni di trattamento del rischio*
 
@@ -235,8 +235,8 @@ Qualora uno o più membri del gruppo dovessero essere insufficientemente prepara
 - Impatto: grave;
 - Probabilità: 2;
 - Soglie:
-  - se le lacune teoriche sono sufficientemente contenute da permetterene un recupero abbastanza rapido da non inficiare sulla pianificazione dei lavori, si adotta l'"OT-1.2.1 Eliminazione del rischio";
-  - se il tempo necessario ad effettuare lo studio richiesto risulta significativamente esteso rispetto ai tempi dettati dalla pianificazione dei lavori, al punto da provocare rallentamenti che impedirebbero il corretto completamento dei task previsti, si adotta l'"OT-1.2.2 Riduzione della sua probabilità o gravità".
+  - se le lacune teoriche sono sufficientemente contenute da permetterene un recupero abbastanza rapido da non inficiare sulla pianificazione dei lavori, si adotta "OT-1.2.1 Eliminazione del rischio";
+  - se il tempo necessario ad effettuare lo studio richiesto risulta significativamente esteso rispetto ai tempi dettati dalla pianificazione dei lavori, al punto da provocare rallentamenti che impedirebbero il corretto completamento dei task previsti, si adotta "OT-1.2.2 Riduzione della sua probabilità o gravità".
 
 *Opzioni di trattamento del rischio*
 
@@ -306,8 +306,8 @@ I contatti con il Proponente subiscono variazioni nella qualità e nella frequen
 - Impatto: grave;
 - Probabilità: 1;
 - Soglie:
-  - se il periodo critico previsto è sufficientemente breve da permettere al gruppo di continuare con un corretto avanzamento dei lavori nonostante la variazione nella comunicazione con il Proponente, si adotta l'"OT-4.1.2 Accettazione del rischio" mantenendo monitorata la situazione;
-  - se il periodo critico previsto può mettere a rischio il corretto avanzamento dei lavori o la qualità degli stessi, si adotta l'"OT-4.1.1 Riduzione della sua probabilità o gravità".
+  - se il periodo critico previsto è sufficientemente breve da permettere al gruppo di continuare con un corretto avanzamento dei lavori nonostante la variazione nella comunicazione con il Proponente, si adotta "OT-4.1.2 Accettazione del rischio" mantenendo monitorata la situazione;
+  - se il periodo critico previsto può mettere a rischio il corretto avanzamento dei lavori o la qualità degli stessi, si adotta "OT-4.1.1 Riduzione della sua probabilità o gravità".
 
 *Opzioni di trattamento del rischio*
 
@@ -345,8 +345,8 @@ Uno o più membri cessano temporaneamente la partecipazione attiva alle attivit�
 - Impatto: medio;
 - Probabilità: 3;
 - Soglie:
-  - se la cessazione della partecipazione da parte di uno o più membri del gruppo può causare un rallentamento nell'avanzamento dei lavori è necessario discutere con i diretti interessati al fine di inquadrare al meglio la situazione. Nel caso in cui tale dialogo rivelasse un'impossibilità nella ripresa delle attività in breve termine oppure nel caso in cui non sia possibile contattare i diretti interessati, è necessario attuare l'"OT-4.2.1 Riduzione della sua probabilità o gravità";
-  - in caso contrario, se contattando i membri coinvolti emerge la previsione certa di una corretta ripresa delle attività in breve tempo, si attua l'"OT-4.2.2 Accettazione del rischio".
+  - se la cessazione della partecipazione da parte di uno o più membri del gruppo può causare un rallentamento nell'avanzamento dei lavori è necessario discutere con i diretti interessati al fine di inquadrare al meglio la situazione. Nel caso in cui tale dialogo rivelasse un'impossibilità nella ripresa delle attività in breve termine oppure nel caso in cui non sia possibile contattare i diretti interessati, è necessario attuare "OT-4.2.1 Riduzione della sua probabilità o gravità";
+  - in caso contrario, se contattando i membri coinvolti emerge la previsione certa di una corretta ripresa delle attività in breve tempo, si attua "OT-4.2.2 Accettazione del rischio".
 
 *Opzioni di trattamento del rischio*
 
@@ -385,7 +385,7 @@ L'impatto è tanto maggiore quanto l'aumentare dei giorni rimanenti al termine d
 - Impatto: medio;
 - Probabilità: 3;
 - Soglie:
-  - se il periodo di tempo da trascorrere senza task assegnati entro il successivo Sprint è sufficientemente ampio da poter permettere al membro del gruppo coinvolto di proseguire con altri lavori, si adotta l'"OT-4.3.1 Eliminazione del rischio".
+  - se il periodo di tempo da trascorrere senza task assegnati entro il successivo Sprint è sufficientemente ampio da poter permettere al membro del gruppo coinvolto di proseguire con altri lavori, si adotta "OT-4.3.1 Eliminazione del rischio".
 
 *Opzioni di trattamento del rischio*
 L'accettazione e la parziale riduzione del rischio non sono contemplate in quanto comporterebbero ritardi gravi.
@@ -417,8 +417,8 @@ Si ritiene fondamentale minimizzare l'impatto in termini di tempo e qualità sul
 - Impatto: medio;
 - Probabilità: 1;
 - Soglie:
-  - se le circostanze consentono ai membri coinvolti di mantenere, nonostante i rallentamenti, un certo grado di familiarità con le norme, gli automatismi e le tecnologie adottate, si adotta l'"OT-4.4.1 Eliminazione del rischio";
-  - se l'allontanamento dai lavori avviene senza il mantenimento di un certo grado di familiarità con le dinamiche interne al gruppo, si adotta l'"OT-4.4.2 Riduzione della sua probabilità o gravità".
+  - se le circostanze consentono ai membri coinvolti di mantenere, nonostante i rallentamenti, un certo grado di familiarità con le norme, gli automatismi e le tecnologie adottate, si adotta "OT-4.4.1 Eliminazione del rischio";
+  - se l'allontanamento dai lavori avviene senza il mantenimento di un certo grado di familiarità con le dinamiche interne al gruppo, si adotta "OT-4.4.2 Riduzione della sua probabilità o gravità".
 
 *Opzioni di trattamento del rischio*
 

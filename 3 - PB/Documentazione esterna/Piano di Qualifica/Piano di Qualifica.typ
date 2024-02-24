@@ -66,6 +66,10 @@ Il gruppo si dota di una dashboard di monitoraggio per tenere traccia delle metr
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")_
   #lastVisitedOn(13, 02, 2024)
 
+- _Clean Code: A Handbook of Agile Software Craftsmanship_ di _Robert C. Martin_: \
+  _#link("https://www.ibs.it/clean-code-handbook-of-agile-libro-inglese-robert-martin/e/9780132350884")_
+  #lastVisitedOn(24, 02, 2024)
+
 
 = Qualità di processo
 
@@ -249,7 +253,9 @@ Avere un resoconto delle metriche soddisfatte per ogni sprint permette di eviden
 = Qualità di prodotto
 == Efficacia
 === MRC (Mandatory Requirements Coverage)
-Il Mandatory Requirements Coverage esprime la percentuale di copertura dei requisiti obbligatori, cioè quei requisiti la cui implementazione è stata dichiarata obbligatoria nell'#adr.
+Il Mandatory Requirements Coverage esprime la percentuale di copertura dei requisiti obbligatori, cioè quei requisiti la cui implementazione è stata dichiarata obbligatoria nell'#adr.\
+- $"MR"_c$: numero di requisiti obbligatori coperti;
+- $"MR"_t$: numero totale di requisiti obbligatori.
 #figure(
    table(
       columns: 3,
@@ -259,9 +265,11 @@ Il Mandatory Requirements Coverage esprime la percentuale di copertura dei requi
     ),
     caption: "Mandatory Requirements Coverage"
 )
-Nella formula $"MR"_c$ indica il numero di requisiti obbligatori coperti, mentre $"MR"_t$ il numero totale di requisiti.
+
 === DRC (Desiderable Requirements Coverage)
-Il Desiderable Requirements Coverage esprime la percentuale di copertura dei requisiti desiderabili, cioè quei requisiti la cui implementazione è stata dichiarata opzionale ma con alta priorità nell'#adr.
+Il Desiderable Requirements Coverage esprime la percentuale di copertura dei requisiti desiderabili, cioè quei requisiti la cui implementazione è stata dichiarata opzionale ma con alta priorità nell'#adr.\
+- $"DR"_c$: numero di requisiti desiderabili coperti;
+- $"DR"_t$: numero totale di requisiti desiderabili.
 #figure(
    table(
       columns: 3,
@@ -271,10 +279,11 @@ Il Desiderable Requirements Coverage esprime la percentuale di copertura dei req
     ),
     caption: "Desiderable Requirements Coverage"
 )
-Nella formula $"DR"_c$ indica il numero di requisiti desiderabili coperti, mentre $"DR"_t$ il numero totale di requisiti desiderabili.
 
 === ORC (Optional Requirements Coverage)
 L'Optional Requirements Coverage esprime la percentuale di copertura dei requisiti opzionali, cioè quei requisiti la cui implementazione è stata dichiarata facoltativa e con bassa priorità nell'#adr.
+- $"OR"_c$: numero di requisiti opzionali coperti;
+- $"OR"_t$: numero totale di requisiti opzionali.
 #figure(
    table(
       columns: 3,
@@ -284,7 +293,6 @@ L'Optional Requirements Coverage esprime la percentuale di copertura dei requisi
     ),
     caption: "Optional Requirements Coverage"
 )
-Nella formula $"OR"_c$ indica il numero di requisiti opzionali coperti, mentre $"OR"_t$ il numero totale di requisiti opzionali.
 
 == Efficienza
 === ART (Average Response Time)
@@ -360,7 +368,7 @@ Il CL misura il grado di dipendenza di una classe da altre classi nel sistema. Q
 )
 
 === RC (Responsability Count)
-L'RC misura il numero di responsabilità che una classe ha all'interno di un sistema software. Il concetto di responsabilità seguito è quello illustrato da Robert C. Martin, detto _Uncle Bob_, nel libro _Clean Code: A Handbook of Agile Software Craftsmanship_.
+L'RC misura il numero di responsabilità che una classe ha all'interno di un sistema software.
 #figure(
    table(
       columns: 3,
@@ -385,21 +393,24 @@ Il MPN è una metrica che misura il numero di parametri di un metodo.
 
 == Affidabilità
 === FD (Failure Density)
-La FD è un indicatore della stabilità e della qualità del software. Questa metrica misura il numero di errori o difetti rilevati nel software rispetto alla dimensione o alla complessità del sistema.
+La FD è un indicatore della stabilità e della qualità del software. Questa metrica misura il numero di errori o difetti rilevati nel software rispetto alla dimensione o alla complessità del sistema.\
+- $"T"_f$: numero di test falliti;
+- $"T"_e$: numero di test effettuati.
 #figure(
    table(
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*FD*$="T"_f/"T"_e*100$]), align(center+horizon,$<=0.01%$), align(center+horizon,$<=0.1%$),
+      align(center+horizon, [*FD*$="T"_f/"T"_e*100$]), align(center+horizon,$0%$), align(center+horizon,$0%$),
     ),
     caption: "Failure Density"
 )
-Nella formula $"T"_e$ indica il numero di test eseguiti, mentre $"T"_f$ il numero di test falliti.
 
 == Portabilità
 === SBV (Supported Browser Version)
-La SBV è una metrica che indica la percentuale di browser supportati rispetto a quelle stabilite nel documento di #adr. I vari browser che devono essere rispettati e le relative versioni sono esplicitate nella sezione del documento riguardante i requisiti di qualità.
+La SBV è una metrica che indica la percentuale di browser supportati rispetto a quelle stabilite nel documento di #adr. I vari browser che devono essere rispettati e le relative versioni sono esplicitate nella sezione del documento riguardante i requisiti di qualità.\
+- $"V"_s$: numero di versioni di browser supportate dal software;
+- $"V"_a$: numero di versioni di browser stabilite da supportare nell'#adr.
 #figure(
    table(
       columns: 3,
@@ -409,7 +420,6 @@ La SBV è una metrica che indica la percentuale di browser supportati rispetto a
     ),
     caption: "Supported Browser Version"
 )
-Nella formula $"V"_s$ indica il numero di versioni di browser supportate dal software, mentre $"V"_a$ indica il numero di versioni di browser stabilite da supportare nell'#adr.
 
 = Valutazione della qualità
 

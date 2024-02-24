@@ -329,7 +329,13 @@ L'EOU esprime la facilità del raggiungimento di un obiettivo nel prodotto softw
 
 == Manutenibilità
 === CC (Ciclomatic Complexity)
-La CC è una metrica utilizzata per misurare la complessità di un metodo. Essa fornisce una stima della complessità strutturale del codice sorgente contando il numero di cammini linearmente indipendenti attraverso il grafo di controllo del flusso del metodo.
+La CC è una metrica utilizzata per misurare la complessità di un metodo. Essa fornisce una stima della complessità strutturale del codice sorgente contando il numero di cammini linearmente indipendenti attraverso il grafo di controllo del flusso del metodo.\
+*Dati*:
+- _G_: grafo del controllo di flusso;
+- _e_: numero di archi di _G_;
+- _n_: numero di nodi di _G_;
+- _p_: numero di componenti connesse ad ogni arco.
+
 #figure(
    table(
       columns: 3,
@@ -340,7 +346,7 @@ La CC è una metrica utilizzata per misurare la complessità di un metodo. Essa 
     caption: "Ciclomatic Complexity"
 
 )
-Nella formula  _G_ indica il grafo del controllo di flusso, _e_ il numero di archi di _G_, _n_ il numero di nodi di _G_ e _p_ il numero di componenti connesse da ogni arco.
+
 
 === CL (Coupling Level)
 Il CL misura il grado di dipendenza di una classe da altre classi nel sistema. Questa dipendenza può manifestarsi in vari modi, come l'invocazione di metodi di altre classi, il riferimento a istanze di altre classi, o la dipendenza da tipi definiti in altre classi.

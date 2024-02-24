@@ -206,20 +206,21 @@ Le tecnologie individuate o suggerite durante i processi di analisi e progettazi
 *Strategia di trattamento*
 
 Viene considerata in sede di meeting la necessità di individuare tecnologie sostitutive che rimpiazzeranno quelle coinvolte, esse dovranno essere studiate ed implementate al fine di soddisfare i requisiti rimasti irrisolti a causa dell'occorrenza del rischio.
+
 Se si ritiene necessario, si richiede una maggiore partecipazione da parte degli altri membri del gruppo, con conseguente riassegnazione di attività e/o ruoli, per integrare le nuove tecnologie nel minor tempo possibile.
 
 *Conseguenze*
 
-Le analisi tecnologiche precedentemente svolte devono essere riviste in luce delle nuove opzioni individuate. Queste ultime possono essere a loro volta totalmente o parzialmente sconosciute al gruppo, il quale dovrà dedicare tempo, non preventivato precedentemente, alla loro comprensione ed integrazione.
+Le analisi tecnologiche precedentemente svolte devono essere riviste in luce delle nuove opzioni individuate. Quest'ultime possono essere a loro volta totalmente o parzialmente sconosciute al gruppo, il quale dovrà dedicare tempo, non preventivato precedentemente, alla loro comprensione ed integrazione.
 Le nuove tecnologie individuate possono potenzialmente generare nuovamente questo rischio portando ad un rallentamento grave nell'avanzamento dei lavori.
 
-*OT-1.1.2 Accettazione del rischio*
+\ *OT-1.1.2 Accettazione del rischio*
 
 *Strategia di trattamento*
 
 Il gruppo accetta la complessità delle tecnologie e si impegna a risolvere eventuali problemi nell'implementazione e utilizzo delle stesse.
 Se si ritiene necessario, si richiede una maggiore partecipazione da parte degli altri membri del gruppo, con conseguente riassegnazione di attività e/o ruoli, alla risoluzione degli eventuali problemi riscontrati.
-In caso di Accettazione del rischio è importante tenere monitorata nel tempo la situazione per accertarsi che le circostanze non richiedano una modifica nell'approccio di risoluzione.
+È importante tenere monitorata nel tempo la situazione per accertarsi che le circostanze non richiedano una modifica nell'approccio di risoluzione.
 
 *Conseguenze*
 
@@ -227,7 +228,7 @@ Rallentamenti non preventivati che possono avere conseguenze a cascata sulle att
 
 
 
-*RIS-1.2 Insufficiente preparazione teorica* <RIS-1.2>
+\ *RIS-1.2 Insufficiente preparazione teorica* <RIS-1.2>
 
 Il progetto richiede conoscenze teoriche legate al perscorso di studi sulle quali sono basate molteplici attività fondamentali. Per esempio, lo studio dei requisiti e la produzione degli Use Case con i relativi diagrammi, oppure il processo di design architetturale ed i relativi pattern da considerare.
 Qualora uno o più membri del gruppo dovessero essere insufficientemente preparati sulla teoria necessaria, non potrebbero dare un valido contributo nell'avanzamento dei lavori.
@@ -251,7 +252,7 @@ Nel caso in cui la preparazione dovesse risultare più lunga del previsto, ralle
 
 Il periodo di studio individuale potrebbe comportare rallentamenti non prevedibili con precisione. I membri coinvolti, successivamente al recupero degli argomenti teorici mancanti, possono fornire completamente il loro contributo nell'avanzamento dei lavori e nelle decisioni progettuali.
 
-*OT-1.2.2 Riduzione della sua probabilità o gravità*
+\ *OT-1.2.2 Riduzione della sua probabilità o gravità*
 
 *Strategia di trattamento*
 
@@ -268,7 +269,7 @@ Le decisioni prese dal gruppo relative a scelte che necessitano delle conoscenze
 
 === Rischi esterni
 
-*RIS-2.1 Rallentamento delle attività dovuto a cause esterne* <RIS-2.1>
+\ *RIS-2.1 Rallentamento delle attività dovuto a cause esterne* <RIS-2.1>
 
 Rallentamento nel completamento di attività e task assegnate derivato dalla congiunzione tra gli impegni individuali e progettuali.
 Esso comporta un generale ritardo nello sviluppo.
@@ -324,7 +325,7 @@ Si possono adottare, in accordo con il Proponente, una o più tra le seguenti st
 
 È prevista una modifica sostanziale, più o meno temporanea, nella comunicazione con il Proponente. Questo potrebbe portare a ritardi nei lavori dovuti ad un maggior impegno da parte del gruppo nel garantire l'adozione delle nuove pratiche.
 
-*OT-4.1.2 Accettazione del rischio*
+\ *OT-4.1.2 Accettazione del rischio*
 
 *Strategia di trattamento*
 
@@ -337,7 +338,7 @@ In caso di Accettazione del rischio è importante tenere monitorata nel tempo la
 Lo sviluppo potrebbe allontanarsi dalle linee guida o dalle aspettative del Proponente, non rispettando quanto preventivato o pianificato. Tale rischio, comporterebbe dunque la produzione di un software non in linea con le richieste, conducendo a rallentamenti per analisi, progettazione e implementazione aggiuntive.
 
 
-*RIS-4.2 Irreperibilità di un membro del gruppo* <RIS-4.2>
+\ *RIS-4.2 Irreperibilità di un membro del gruppo* <RIS-4.2>
 
 Uno o più membri cessano temporaneamente la partecipazione attiva alle attività del gruppo. È necessario evitare che la durata di queste assenze impedisca il regolare svolgimento delle attività di progetto.
 È da considerare ulteriormente grave la situazione in cui è mancata totalmente una segnalazione responsabile e preventiva di difficoltà o impedimenti da parte dei singoli membri coinvolti.
@@ -362,7 +363,7 @@ Viene sollecitato il dialogo con i membri coinvolti per capire la situazione e p
 Vengono ridotti, seppur non eliminati, i ritardi nell'avanzamento dei lavori.
 Le task svolte senza una chiara condivisione di informazioni da parte dei membri coinvolti possono portare a risultati non conformi con le decisioni prese dal gruppo di lavoro quindi possono risultare in parte o totalmente inutilizzabili.
 
-*OT-4.2.2 Accettazione del rischio*
+\ *OT-4.2.2 Accettazione del rischio*
 
 *Strategia di trattamento*
 
@@ -376,7 +377,7 @@ Lo stato di avanzamento dei lavori potrebbe subire ulteriori rallentamenti.
 
 
 
-*RIS-4.3 Mancanza di task assegnati* <RIS-4.3>
+\ *RIS-4.3 Mancanza di task assegnati* <RIS-4.3>
 
 Uno o più membri del gruppo completano tutti i task a loro assegnati prima della fine dello Sprint.
 Il periodo rimanente senza task assegnati è sufficientemente ampio da permettere ai membri coinvolti di proseguire i lavori.
@@ -407,7 +408,7 @@ Minimizzare gli sprechi del tempo a disposizione è una priorità per il gruppo 
 Se il rischio dovesse verificarsi più volte consecutivamente è necessario rivedere l'effettiva efficacia della pianificazione dei task in sede di retrospettiva.
 
 
-*RIS-4.4 Lenta ripresa dei lavori* <RIS-4.4>
+\ *RIS-4.4 Lenta ripresa dei lavori* <RIS-4.4>
 
 Durante la durata del progetto è eccezionalmente possibile che si verifichino dei periodi in cui uno o più membri non dispongono di sufficiente disponibilità per partecipare alle attività di progetto.
 Questo può avvenire, ad esempio, a seguito di particolari impegni personali o universitari.
@@ -432,7 +433,7 @@ I membri coinvolti devono mantenere familiarità con le norme, gli automatismi e
 
 Viene minimizzato il tempo necessario al recupero completo degli automatismi necessari a produrre progressi soddisfacienti nei lavori.
 
-*OT-4.4.2 Riduzione della sua probabilità o gravità*
+\ *OT-4.4.2 Riduzione della sua probabilità o gravità*
 
 *Strategia di trattamento*
 

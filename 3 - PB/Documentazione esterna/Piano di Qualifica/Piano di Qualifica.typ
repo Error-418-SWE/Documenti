@@ -66,6 +66,10 @@ Il gruppo si dota di una dashboard di monitoraggio per tenere traccia delle metr
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T8.pdf")_
   #lastVisitedOn(13, 02, 2024)
 
+- _Clean Code: A Handbook of Agile Software Craftsmanship_ di _Robert C. Martin_: \
+  _#link("https://www.ibs.it/clean-code-handbook-of-agile-libro-inglese-robert-martin/e/9780132350884")_
+  #lastVisitedOn(24, 02, 2024)
+
 
 = Qualità di processo
 
@@ -246,65 +250,176 @@ Dati:
 
 Avere un resoconto delle metriche soddisfatte per ogni sprint permette di evidenziare eventuali criticità e di attuare le misure di correzione necessarie, seguendo, come stabilito nelle #ndp_v al paragrafo _Processo di gestione dei modelli di ciclo di vita_, il ciclo PDCA per il miglioramento continuo.
 
-// = Qualità del prodotto
-// == Funzionalità
-// - *Requisiti soddisfatti*
-// #figure(
-//   table(
-//     columns: 3,
-//
-//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-//     [% requisiti obbligatori soddisfatti], [100%], [100%],
-//     [% requisiti desiderabili soddisfatti], [$>=0%$], [0%],
-//     [% requisiti opzionali soddisfatti], [$>=0%$], [0%],
-//   ),
-//   caption: "Specifiche Requisiti soddisfatti"
-// )
+= Qualità di prodotto
+== Efficacia
+=== MRC (Mandatory Requirements Coverage)
+Il Mandatory Requirements Coverage esprime la percentuale di copertura dei requisiti obbligatori, cioè quei requisiti la cui implementazione è stata dichiarata obbligatoria nell'#adr.\
+- $"MR"_c$: numero di requisiti obbligatori coperti;
+- $"MR"_t$: numero totale di requisiti obbligatori.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*MRC* = $display("MR"_c/"MR"_t)*100$]), align(center+horizon,$100%$), align(center+horizon,$100%$),
+    ),
+    caption: "Mandatory Requirements Coverage"
+)
 
-// == Affidabilità
-// - *Densità degli errori*
-// #figure(
-//   table(
-//     columns: 3,
-//     rows: (auto, 30pt),
-//
-//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-//     align(center+horizon,$display(frac("Test con errori","Test eseguiti"))*100$), align(center+horizon,"0%"), align(center+horizon,$<=10%$),
-//   ),
-//   caption: "Specifiche Densità errori"
-// )
-// == Efficienza
-// - *Efficienza del sistema*
-// #figure(
-//   table(
-//     columns: 3,
-//
-//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-//     [Efficienza del sistema], [TBD], [TBD],
-//   ),
-//   caption: "Specifiche Efficienza del sistema"
-// )
-// == Usabilità
-// - *Facilità di utilizzo*
-// #figure(
-//   table(
-//     columns: 3,
-//
-//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-//     [Facilità di utilizzo del sistema], [TBD], [TBD],
-//   ),
-//   caption: "Specifiche Facilità di utilizzo"
-// )
-// == Manutenibilità
-// #figure(
-//   table(
-//     columns: 3,
-//
-//     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-//     [Manutenibilità del sistema], [TBD], [TBD],
-//   ),
-//   caption: "Specifiche Manutenibilità del sistema"
-// )
+=== DRC (Desiderable Requirements Coverage)
+Il Desiderable Requirements Coverage esprime la percentuale di copertura dei requisiti desiderabili, cioè quei requisiti la cui implementazione è stata dichiarata opzionale ma con alta priorità nell'#adr.\
+- $"DR"_c$: numero di requisiti desiderabili coperti;
+- $"DR"_t$: numero totale di requisiti desiderabili.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*DRC* = $display("DR"_c/"DR"_t)*100$]), align(center+horizon,$100%$), align(center+horizon,$>=0%$),
+    ),
+    caption: "Desiderable Requirements Coverage"
+)
+
+=== ORC (Optional Requirements Coverage)
+L'Optional Requirements Coverage esprime la percentuale di copertura dei requisiti opzionali, cioè quei requisiti la cui implementazione è stata dichiarata facoltativa e con bassa priorità nell'#adr.
+- $"OR"_c$: numero di requisiti opzionali coperti;
+- $"OR"_t$: numero totale di requisiti opzionali.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*ORC* = $display("OR"_c/"OR"_t)*100$]), align(center+horizon,$100%$), align(center+horizon,$>=0%$),
+    ),
+    caption: "Optional Requirements Coverage"
+)
+
+== Efficienza
+=== ART (Average Response Time)
+L'ART si riferisce al tempo di risposta medio, cioè al periodo medio di tempo che trascorre tra l'innesco di una richiesta da parte dell'utente o del sistema e la ricezione della risposta o del risultato da parte del software.
+È misurato in secondi (_s_).
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Average Response Time*]), align(center+horizon,$<=2s$), align(center+horizon,$<=4s$),
+    ),
+    caption: "Average Response Time"
+)
+
+== Usabilità
+=== LT (Learning Time)
+Il LT misura il tempo medio che gli utenti impiegano per apprendere ad utilizzare il software in modo efficace.
+È misurato in minuti (_m_).
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Learning Time*]), align(center+horizon,$<=15m$), align(center+horizon,$<=20m$),
+    ),
+    caption: "Average Response Time"
+)
+
+=== EOU (Ease of Use)
+L'EOU esprime la facilità del raggiungimento di un obiettivo nel prodotto software. È misurato in quanti click l'utente deve effettuare prima di arrivare a portare a termine la funzionalità desiderata.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Ease of Use*]), align(center+horizon,$<=5$), align(center+horizon,$<=7$),
+    ),
+    caption: "Ease of Use"
+)
+
+
+== Manutenibilità
+=== CC (Ciclomatic Complexity)
+La CC è una metrica utilizzata per misurare la complessità di un metodo. Essa fornisce una stima della complessità strutturale del codice sorgente contando il numero di cammini linearmente indipendenti attraverso il grafo di controllo del flusso del metodo.\
+- _G_: grafo del controllo di flusso;
+- _e_: numero di archi di _G_;
+- _n_: numero di nodi di _G_;
+- _p_: numero di componenti connesse ad ogni arco.
+
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*CC*$(G) = e - n + p$]), align(center+horizon,$<=7$), align(center+horizon,$<=10$),
+    ),
+    caption: "Ciclomatic Complexity"
+
+)
+
+
+=== CL (Coupling Level)
+Il CL misura il grado di dipendenza di una classe da altre classi nel sistema. Questa dipendenza può manifestarsi in vari modi, come l'invocazione di metodi di altre classi, il riferimento a istanze di altre classi, o la dipendenza da tipi definiti in altre classi.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Coupling Level*]), align(center+horizon,$<=4$), align(center+horizon,$<=6$),
+    ),
+    caption: "Coupling Level"
+)
+
+=== RC (Responsability Count)
+L'RC misura il numero di responsabilità che una classe ha all'interno di un sistema software.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Responsability Count*]), align(center+horizon,$1$), align(center+horizon,$1$),
+    ),
+    caption: "Responsability Count"
+)
+
+=== MPN (Method Parameters Number)
+Il MPN è una metrica che misura il numero di parametri di un metodo.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*Method Parameters Number*]), align(center+horizon,$<=3$), align(center+horizon,$<=4$),
+    ),
+    caption: "Method Parameters Number"
+)
+
+== Affidabilità
+=== FD (Failure Density)
+La FD è un indicatore della stabilità e della qualità del software. Questa metrica misura il numero di errori o difetti rilevati nel software rispetto alla dimensione o alla complessità del sistema.\
+- $"T"_f$: numero di test falliti;
+- $"T"_e$: numero di test effettuati.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*FD*$="T"_f/"T"_e*100$]), align(center+horizon,$0%$), align(center+horizon,$0%$),
+    ),
+    caption: "Failure Density"
+)
+
+== Portabilità
+=== SBV (Supported Browser Version)
+La SBV è una metrica che indica la percentuale di browser supportati rispetto a quelle stabilite nel documento di #adr. I vari browser che devono essere rispettati e le relative versioni sono esplicitate nella sezione del documento riguardante i requisiti di qualità.\
+- $"V"_s$: numero di versioni di browser supportate dal software;
+- $"V"_a$: numero di versioni di browser stabilite da supportare nell'#adr.
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, 30pt),
+      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
+      align(center+horizon, [*SBV*$="V"_s/"V"_a*100$]), align(center+horizon,$100%$), align(center+horizon,$100%$),
+    ),
+    caption: "Supported Browser Version"
+)
 
 = Valutazione della qualità
 
@@ -318,11 +433,11 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 #figure(
   cetz.canvas({
     import cetz.plot
-    let EV_points(offset: 0) = ((4,2040), (5,2655), (6,3111.85), (7,3528.52), (8,3948.14), (9, 4573.14), (10, 4848.14), (11, 5084.39), (12, 5178.90), (13, 5224.62)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let EV_points(offset: 0) = ((4,2040), (5,2655), (6,3111.85), (7,3528.52), (8,3948.14), (9, 4573.14), (10, 4848.14), (11, 5084.39), (12, 5178.90), (13, 5224.62), (14, 5819.62), (15, 6442.69)).map(((x,y)) => {(x,y + offset * 1.5)})
 
-    let AC_point(offset: 1) = ((4,2075), (5,2620), (6,3140), (7,3515), (8,4090), (9, 4520), (10, 4875), (11, 5105), (12, 5285), (13, 5395)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let AC_point(offset: 1) = ((4,2075), (5,2620), (6,3140), (7,3515), (8,4090), (9, 4520), (10, 4875), (11, 5105), (12, 5285), (13, 5395), (14, 5990), (15, 6560)).map(((x,y)) => {(x,y + offset * 1.5)})
 
-    let PV_point(offset: 1) = ((4,2040), (5,2655), (6,3190), (7,3690), (8,4200), (9, 4825), (10, 5155), (11, 5470), (12, 5625), (13, 5705)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let PV_point(offset: 1) = ((4,2040), (5,2655), (6,3190), (7,3690), (8,4200), (9, 4825), (10, 5155), (11, 5470), (12, 5625), (13, 5705), (14, 6300), (15, 6840)).map(((x,y)) => {(x,y + offset * 1.5)})
 
     plot.plot(size: (12, 6), {
     plot.add(PV_point(offset: 1), line: "spline", label: "PPV")
@@ -351,7 +466,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 #figure(
   cetz.canvas({
     import cetz.plot
-    let CPI_points(offset: 0) = ((4,0.98), (5,1.01), (6,0.99), (7,1.00), (8,0.97), (9, 1.01), (10, 0.99), (11, 1.00), (12, 0.98), (13, 0.97)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let CPI_points(offset: 0) = ((4,0.98), (5,1.01), (6,0.99), (7,1.00), (8,0.97), (9, 1.01), (10, 0.99), (11, 1.00), (12, 0.98), (13, 0.97), (14, 0.97), (15, 0.98)).map(((x,y)) => {(x,y + offset * 1.5)})
 
     plot.plot(size: (12, 6), {
     plot.add(CPI_points(offset: 0), line: "linear", label: "CPI", mark: "triangle")
@@ -379,7 +494,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 #figure(
   cetz.canvas({
     import cetz.plot
-    let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13173.08), (7,   13004.98), (8, 13524.07), (9, 12903.30), (10, 13127.33), (11, 13107.92), (12, 13322.45), (13, 13480.74)).map(((x,y)) => {(x,y + offset * 100)})
+    let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13173.08), (7,   13004.98), (8, 13524.07), (9, 12903.30), (10, 13127.33), (11, 13107.92), (12, 13322.45), (13, 13480.74), (14, 13437.22), (15, 13292.70)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(EAC_points(offset: 0), line: "linear", label: "EAC", mark: "triangle", style: (stroke: (paint: red)))
@@ -413,13 +528,13 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
   cetz.canvas({
     import cetz.plot
 
-    let PdP_points(offset: 0) = ((4,1), (5,2), (6, 2), (7, 1), (8, 0), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
+    let PdP_points(offset: 0) = ((4,1), (5,2), (6, 2), (7, 1), (8, 0), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0), (14, 1), (15, 0)).map(((x,y)) => {(x,y + offset * 100)})
 
-    let PdQ_points(offset: 0) = ((4,0), (5,0), (6, 0), (7, 0), (8, 0), (9, 2), (10, 3), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
+    let PdQ_points(offset: 0) = ((4,0), (5,0), (6, 0), (7, 0), (8, 0), (9, 2), (10, 3), (11, 1), (12, 0), (13, 0), (14, 0), (15, 0)).map(((x,y)) => {(x,y + offset * 100)})
 
-    let AdR_points(offset: 0) = ((4,4), (5,4), (6, 2), (7, 2), (8, 3), (9, 1), (10, 0), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
+    let AdR_points(offset: 0) = ((4,4), (5,4), (6, 2), (7, 2), (8, 3), (9, 1), (10, 0), (11, 0), (12, 0), (13, 0), (14, 0), (15, 1)).map(((x,y)) => {(x,y + offset * 100)})
 
-    let GLS_points(offset: 0) = ((4,3), (5,2), (6, 0), (7, 0), (8, 2), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
+    let GLS_points(offset: 2) = ((4,3), (5,2), (6, 0), (7, 0), (8, 2), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0), (14, 0), (15, 0)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(PdP_points(offset: 0), line: "linear", label: "PdP", mark: "o")
@@ -447,13 +562,10 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
   cetz.canvas({
     import cetz.plot
 
-    let NdP_points(offset: 0) = ((4,2), (5,3), (6, 4), (7, 3), (8, 3), (9, 2), (10, 1), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
-
-    let RIS_points(offset: 0) = ((4,2), (5,1), (6, 0), (7, 0), (8, 0), (9, 0), (10, 0), (11, 1), (12, 0), (13, 0)).map(((x,y)) => {(x,y + offset * 100)})
+    let NdP_points(offset: 0) = ((4,2), (5,3), (6, 4), (7, 3), (8, 3), (9, 2), (10, 1), (11, 1), (12, 0), (13, 0), (14, 0), (15, 1)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(NdP_points(offset: 0), line: "linear", label: "NdP", mark: "o")
-    plot.add(RIS_points(offset: 0), line: "linear", label: "Analisi dei Rischi", mark: "o")
     plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
     plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
     },
@@ -485,7 +597,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
   cetz.canvas({
     import cetz.plot
 
-    let Metrics_points(offset: 0) = ((4,7/9*100), (5,8/9*100), (6, 7/9*100), (7, 8/9*100), (8, 6/9*100), (9, 8/9*100), (10, 7/9*100), (11, 6/9*100), (12, 6/9*100), (13, 6/9*100)).map(((x,y)) => {(x,y + offset * 100)})
+    let Metrics_points(offset: 0) = ((4,7/9*100), (5,8/9*100), (6, 7/9*100), (7, 8/9*100), (8, 6/9*100), (9, 8/9*100), (10, 7/9*100), (11, 6/9*100), (12, 6/9*100), (13, 6/9*100), (14, 8/9*100), (15, 7/9*100)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(Metrics_points(offset: 0), line: "linear", label: "% Metriche soddisfatte", mark: "triangle", style: (stroke: (paint: red)))

@@ -446,6 +446,7 @@ $bold("Scenario: ")$
 
 $bold("Descrizione: ")$
 dato un ambiente con elementi posizionati (come scaffali e/o bin), l'utente cerca di ridurre le dimensioni dell'ambiente in modo eccessivo, non permettendo di mantenere gli elementi precedentemente posizionati.
+
 $bold("Attore: ")$
 utente.
 
@@ -765,7 +766,7 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- inseriti dati dimensionali per la modifica o la creazione degli elementi dell'ambiente;
+- sono stati inseriti i dati dimensionali per la modifica o la creazione degli elementi dell'ambiente;
 - le dimensioni inserite non sono valide.
 
 $bold("Postcondizioni: ")$
@@ -784,7 +785,7 @@ $bold("Attore: ")$
 utente.
 
 $bold("Precondizioni: ")$
-- inseriti dati dimensionali per la modifica o la creazione degli elementi dell'ambiente;
+- sono stati inseriti i dati dimensionali per la modifica o la creazione degli elementi dell'ambiente;
 - le dimensioni inserite sono eccessive.
 
 $bold("Postcondizioni: ")$

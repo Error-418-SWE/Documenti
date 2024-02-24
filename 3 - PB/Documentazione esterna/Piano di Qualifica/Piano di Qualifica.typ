@@ -330,7 +330,6 @@ L'EOU esprime la facilità del raggiungimento di un obiettivo nel prodotto softw
 == Manutenibilità
 === CC (Ciclomatic Complexity)
 La CC è una metrica utilizzata per misurare la complessità di un metodo. Essa fornisce una stima della complessità strutturale del codice sorgente contando il numero di cammini linearmente indipendenti attraverso il grafo di controllo del flusso del metodo.\
-*Dati*:
 - _G_: grafo del controllo di flusso;
 - _e_: numero di archi di _G_;
 - _n_: numero di nodi di _G_;

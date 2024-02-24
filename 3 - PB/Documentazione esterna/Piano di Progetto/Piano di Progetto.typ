@@ -193,9 +193,9 @@ I rischi vengono codificati seguendo la struttura PMBOK, venendo quindi suddivis
 
 Le tecnologie individuate o suggerite durante i processi di analisi e progettazione potrebbero risultare complesse da comprendere e/o integrare.
 
-- Impatto: medio;
-- Probabilità: 4;
-- Soglie:
+- *Impatto*: medio;
+- *Probabilità*: 4;
+- *Soglie*:
   - se, compreso un ragionevole rallentamento dovuto all'apprendimento di nuove competenze, la complessità delle tecnologie risulta gestibile con le competenze attuali del gruppo e non compromette significativamente la tempistica del progetto, si adotta "OT-1.1.2 Accettazione del rischio";
   - se la complessità delle tecnologie supera significativamente le competenze attuali del gruppo e potrebbe quindi causare gravi ritardi nell'avanzamento dei lavori, si adotta "OT-1.1.1 Riduzione della sua probabilità o gravità".
 
@@ -233,9 +233,9 @@ Rallentamenti non preventivati che possono avere conseguenze a cascata sulle att
 Il progetto richiede conoscenze teoriche legate al perscorso di studi sulle quali sono basate molteplici attività fondamentali. Per esempio, lo studio dei requisiti e la produzione degli Use Case con i relativi diagrammi, oppure il processo di design architetturale ed i relativi pattern da considerare.
 Qualora uno o più membri del gruppo dovessero essere insufficientemente preparati sulla teoria necessaria, non potrebbero dare un valido contributo nell'avanzamento dei lavori.
 
-- Impatto: grave;
-- Probabilità: 2;
-- Soglie:
+- *Impatto*: grave;
+- *Probabilità*: 2;
+- *Soglie*:
   - se le lacune teoriche sono sufficientemente contenute da permetterene un recupero abbastanza rapido da non inficiare sulla pianificazione dei lavori, si adotta "OT-1.2.1 Eliminazione del rischio";
   - se il tempo necessario ad effettuare lo studio richiesto risulta significativamente esteso rispetto ai tempi dettati dalla pianificazione dei lavori, al punto da provocare rallentamenti che impedirebbero il corretto completamento dei task previsti, si adotta "OT-1.2.2 Riduzione della sua probabilità o gravità".
 
@@ -274,9 +274,9 @@ Le decisioni prese dal gruppo relative a scelte che necessitano delle conoscenze
 Rallentamento nel completamento di attività e task assegnate derivato dalla congiunzione tra gli impegni individuali e progettuali.
 Esso comporta un generale ritardo nello sviluppo.
 
-- Impatto: grave;
-- Probabilità: 4 _Probabilità aumentata nel periodo della sessione invernale_;
-- Soglie:
+- *Impatto*: grave;
+- *Probabilità*: 4 _Probabilità aumentata nel periodo della sessione invernale_;
+- *Soglie*:
   - se i rallentamenti previsti possono ridurre l'efficienza lavorativa del gruppo, si attua il trattamento: "OT-2.1.1 Riduzione della sua probabilità o gravità".
 
 *Opzioni di trattamento del rischio*
@@ -304,9 +304,9 @@ Le attività non svolte o completate parzialmente possono determinare uno slitta
 
 I contatti con il Proponente subiscono variazioni nella qualità e nella frequenza a causa di problematiche fuori dal controllo del gruppo. Questa situazione potrebbe causare un rallentamento significativo del lavoro, soprattutto durante l'analisi dei requisiti.
 
-- Impatto: grave;
-- Probabilità: 1;
-- Soglie:
+- *Impatto*: grave;
+- *Probabilità*: 1;
+- *Soglie*:
   - se il periodo critico previsto è sufficientemente breve da permettere al gruppo di continuare con un corretto avanzamento dei lavori nonostante la variazione nella comunicazione con il Proponente, si adotta "OT-4.1.2 Accettazione del rischio" mantenendo monitorata la situazione;
   - se il periodo critico previsto può mettere a rischio il corretto avanzamento dei lavori o la qualità degli stessi, si adotta "OT-4.1.1 Riduzione della sua probabilità o gravità".
 
@@ -343,9 +343,9 @@ Lo sviluppo potrebbe allontanarsi dalle linee guida o dalle aspettative del Prop
 Uno o più membri cessano temporaneamente la partecipazione attiva alle attività del gruppo. È necessario evitare che la durata di queste assenze impedisca il regolare svolgimento delle attività di progetto.
 È da considerare ulteriormente grave la situazione in cui è mancata totalmente una segnalazione responsabile e preventiva di difficoltà o impedimenti da parte dei singoli membri coinvolti.
 
-- Impatto: medio;
-- Probabilità: 3;
-- Soglie:
+- *Impatto*: medio;
+- *Probabilità*: 3;
+- *Soglie*:
   - se la cessazione della partecipazione da parte di uno o più membri del gruppo può causare un rallentamento nell'avanzamento dei lavori è necessario discutere con i diretti interessati al fine di inquadrare al meglio la situazione. Nel caso in cui tale dialogo rivelasse un'impossibilità nella ripresa delle attività in breve termine oppure nel caso in cui non sia possibile contattare i diretti interessati, è necessario attuare "OT-4.2.1 Riduzione della sua probabilità o gravità";
   - in caso contrario, se contattando i membri coinvolti emerge la previsione certa di una corretta ripresa delle attività in breve tempo, si attua "OT-4.2.2 Accettazione del rischio".
 
@@ -383,9 +383,9 @@ Uno o più membri del gruppo completano tutti i task a loro assegnati prima dell
 Il periodo rimanente senza task assegnati è sufficientemente ampio da permettere ai membri coinvolti di proseguire i lavori.
 L'impatto è tanto maggiore quanto l'aumentare dei giorni rimanenti al termine dello Sprint.
 
-- Impatto: medio;
-- Probabilità: 3;
-- Soglie:
+- *Impatto*: medio;
+- *Probabilità*: 3;
+- *Soglie*:
   - se il periodo di tempo da trascorrere senza task assegnati entro il successivo Sprint è sufficientemente ampio da poter permettere al membro del gruppo coinvolto di proseguire con altri lavori, si adotta "OT-4.3.1 Eliminazione del rischio".
 
 *Opzioni di trattamento del rischio*
@@ -415,9 +415,9 @@ Questo può avvenire, ad esempio, a seguito di particolari impegni personali o u
 La ripresa dei lavori a pieno regime seguendo correttamente le norme prefissate ed utilizzando correttamente tutte le tecnologie, potrebbe non essere immediata.
 Si ritiene fondamentale minimizzare l'impatto in termini di tempo e qualità sul lavoro svolto.
 
-- Impatto: medio;
-- Probabilità: 1;
-- Soglie:
+- *Impatto*: medio;
+- *Probabilità*: 1;
+- *Soglie*:
   - se le circostanze consentono ai membri coinvolti di mantenere, nonostante i rallentamenti, un certo grado di familiarità con le norme, gli automatismi e le tecnologie adottate, si adotta "OT-4.4.1 Eliminazione del rischio";
   - se l'allontanamento dai lavori avviene senza il mantenimento di un certo grado di familiarità con le dinamiche interne al gruppo, si adotta "OT-4.4.2 Riduzione della sua probabilità o gravità".
 

@@ -135,7 +135,7 @@ Il documento si articola in 6 sezioni principali:
 === Riferimenti a documentazione interna <riferimenti-interni>
 
 - Documento #glo_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v" + glo_vo + ".pdf")_
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Glossario_v" + glo_vo + ".pdf")_
   #lastVisitedOn(13,02,2024)
 
 === Riferimenti normativi <riferimenti-normativi>

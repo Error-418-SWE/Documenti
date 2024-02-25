@@ -29,8 +29,8 @@ L'utente avrà la possibilità di cercare specifici prodotti all'interno del mag
 === Riferimenti a documentazione interna <riferimenti-interni>
 
 - Documento #glo_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v" + glo_vo + ".pdf")_
-  #lastVisitedOn(13,02,2024)
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Glossario_v" + glo_vo + ".pdf")_
+  #lastVisitedOn(25,02,2024)
 
 - Documento #pdp_v, Sezione 2 "Analisi dei Rischi": \
   _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20interna/Piano%20di%20Progetto_v" + pdp_vo + ".pdf")_

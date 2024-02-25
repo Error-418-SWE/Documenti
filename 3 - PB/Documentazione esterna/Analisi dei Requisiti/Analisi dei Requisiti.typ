@@ -52,12 +52,12 @@ Il presente documento descrive i casi d'uso e i requisiti del progetto _Warehous
 === Riferimenti a documentazione interna <riferimenti-interni>
 
 - Documento #glo_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v" + glo_vo + ".pdf")_
-  #lastVisitedOn(13, 02, 2024)
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Glossario_v" + glo_vo + ".pdf")_
+  #lastVisitedOn(25, 02, 2024)
 
 - Documento #ndp_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20interna/Norme%20di%20Progetto_v" + ndp_vo + ".pdf")_
-  #lastVisitedOn(13, 02, 2024)
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/3%20-%20PB/Documentazione%20interna/Norme%20di%20Progetto_v" + ndp_vo + ".pdf")_
+  #lastVisitedOn(25, 02, 2024)
 
 === Riferimenti normativi <riferimenti-normativi>
 

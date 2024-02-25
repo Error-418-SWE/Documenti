@@ -57,16 +57,14 @@ In seguito a questa valutazione da parte del Proponente, il gruppo ha preso atto
 == feedback sul deploy dell'applicazione
 
 Il Proponente ha ritenuto interessante la proposta del gruppo di implementare il processo di deploy dell'applicazione utilizzando AzureVM (oltre a Docker).
-Il feedback generale ha evidenziato l'approvazione dei meccanismi di Continuous Integration e Continuous Deployment (CI/CD) implementati durante questa fase.
-Nel corso del deploy su Azure, il gruppo ha osservato la stabilità e le prestazioni della piattaforma e l'efficacia del sistema di CI/CD nel ridurre i tempi di rilascio e migliorare la gestione delle nuove funzionalità.
-
+Il feedback generale ha evidenziato l'approvazione dei meccanismi di Continuous Integration e Continuous Deployment (CI/CD) implementati.
 == Presentazione bozza diagramma ER
 
-Durante la presentazione della bozza del diagramma ER relativo al database di supporto all'applicazione, il Proponente ha esaminato positivamente il lavoro svolto dal gruppo e ha suggerito alcune modifiche per ottimizzare la struttura del database, prendendo in considerazione le seguenti considerazioni:
+Durante la presentazione della bozza del diagramma ER relativo al database di supporto all'applicazione, il Proponente ha valutato positivamente il lavoro svolto dal gruppo e ha suggerito alcune modifiche per ottimizzare la struttura del database, prendendo in considerazione le seguenti considerazioni:
 
 + schema ER:
   - codice identificativo dei bin completo (non numerati semplicemente da 1 a n ma completi di tutte le informazioni necessarie);
-  - ogni ripiano puo avere un numero di bin diverso;
+  - ogni ripiano può avere un numero di bin diverso;
   - l'altezza dello scaffale è la somma delle altezze dei ripiani che lo compongono.
 
 + bin:

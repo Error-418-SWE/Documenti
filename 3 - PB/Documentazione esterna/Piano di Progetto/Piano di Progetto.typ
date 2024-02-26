@@ -182,7 +182,7 @@ A ciascun rischio individuato si associano:
     - l'accettazione del rischio.
   - conseguenze relative a ciascuna delle azioni possibili, esse descrivono gli effetti collaterali a breve o medio termine che il rischio può comportare.
 
-I rischi vengono codificati seguendo la struttura PMBOK, venendo quindi suddivisi nelle categorie:
+I rischi sono suddivisi nelle categorie:
 + rischi tecnici;
 + rischi esterni;
 + rischi organizzativi;

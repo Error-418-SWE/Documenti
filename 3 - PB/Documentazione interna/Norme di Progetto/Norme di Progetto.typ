@@ -48,7 +48,7 @@ L'utente avrà la possibilità di cercare specifici prodotti all'interno del mag
 
 - Standard ISO/IEC/IEEE 12207:2017: \
   _#link("https://www.iso.org/obp/ui/en/#iso:std:iso-iec-ieee:12207:ed-1:v1:en")_
-  #lastVisitedOn(13,02,2024)
+  #lastVisitedOn(26,02,2024)
 
 - Standard ISO/IEC/IEEE 29148:2018: \
   _#link("https://ieeexplore.ieee.org/servlet/opac?punumber=8559684")_

@@ -88,7 +88,7 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.1.2_
 
 === Scopo e descrizione
 Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con Proponente e Committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
-=== Rapporti con il Proponente
+=== Rapporti con il Proponente <comunicazione_Proponente>
 Il dialogo tra il gruppo _Error_418_ e il Proponente dovrà essere attivo e frequente fino al termine del progetto didattico, in modo che si riescano a raccogliere più feedback possibili riguardo la correttezza del lavoro svolto. Questa comunicazione avverrà in due modalità:
 + scritta, asincrona, utilizzata per:
   - comunicazioni di breve durata;
@@ -422,6 +422,54 @@ I membri dell'organizzazione sono prestabiliti. Qualora le competenze interne al
 
 Non sono previste variazioni della composizione dell'organizzazione, se non in via straordinaria e comunque discussa preventivamente con il Committente.
 
+=== Processo di gestione della qualità <processo_gestione_qualità>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.5_
+
+==== Scopo
+
+Il processo di gestione della qualità ha lo scopo di garantire che i prodotti del progetto soddisfino gli obiettivi di qualità del gruppo e i bisogni del Proponente.
+
+=== Attività
+==== Pianificazione
+
+Il gruppo #err418 pone i seguenti principi di qualità:
+
++ tutto il materiale presente nei branch principali della repository (`src` e di conseguenza `main`) deve essere di buona qualità:
+  - tutti i prodotti del gruppo devono essere gestiti tramite repository su GitHub (@repository-github), nelle quali deve essere implementato il sistema di _featuring branching_;
+  - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di pull request (@controllo_release).
++ il contenuto della documentazione deve essere scritto in modo chiaro e comprensibile;
++ la documentazione prodotta deve seguire degli standard interni e/o esterni:
+  - standard interni:
+    - vengono definiti nel presente documento alla @norme-documentazione.
+  - standard esterni:
+    - il gruppo adotta i seguenti standard ISO:
+    #figure(table(
+      align: left,
+      columns: 2,
+      [*Standard ISO*], [*Documento*],
+      [12207:2017], [#ndp, #adr],
+      [9126 1:2001], [#pdq],
+    ), caption: [Tracciamento ISO-documenti])
+    In particolare, per ogni processo interno al presente documento viene specificato il grado di conformità allo standard ISO/IEC/IEEE 12207:2017 all'interno di una sezione dedicata (@tracciamento_paragrafi).
++ il codice prodotto deve seguire degli standard interni, definiti nel presente documento (#TODO);
++ la quantità di errori individuati nei prodotti del progetto, sia documentali che software, al momento in cui questi sono presenti nei branch principali della repository deve essere pari a 0;
++ il prodotto software deve soddisfare i bisogni e le richieste del Proponente;
+
+==== Valutazione
+
+La valutazione della qualità dei prodotti di progetto, dell'andamento del gruppo e dell'attuazione dei principi di qualità elencati in precedenza viene effettuata nei seguenti modi:
+
+- review delle pull request da parte del Verificatore:
+  - verifica dell'aderenza agli standard interni ed esterni;
+  - verifica della chiarezza e comprensibilità della documentazione;
+  - verifica della presenza di errori ortografici o di scrittura o esecuzione del codice.
+- testing del codice, come descritto nel presente documento (#TODO);
+- revisioni complessive dei prodotti del progetto:
+  - effettuate in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro.
+- utilizzo di metriche (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana);
+- comunicazione costante con il Proponente per raccogliere feedback e valutare l'adesione del lavoro alle sue richieste (@comunicazione_Proponente).
+
 = Processi di gestione tecnica
 
 == Processo di pianificazione di progetto <pianificazione>
@@ -452,7 +500,7 @@ In questa attività il gruppo deve definire tutto ciò che caratterizza il proge
 ==== Pianificazione del progetto e della gestione tecnica
 È l'attività principale del processo, nella quale viene definita nel concreto la pianificazione.
 
-===== Suddivisione temporale
+===== Suddivisione temporale <periodi_lavoro>
 Il gruppo ha individuato tre periodi di lavoro principali:
 
 - raccolta e analisi dei requisiti: vengono delineati i requisiti che il prodotto finale dovrà rispettare tramite un continuo rapporto con il Proponente;
@@ -906,7 +954,7 @@ Jira offre la possibilità di produrre grafici e report relativi all'avanzamento
 Il gruppo utilizza come metrica principale il burndown chart, che permette di avere una visione dell'avanzamento delle attività in base al tempo, basato sugli story point di ogni attività.
 
 
-==== Controllo delle release
+==== Controllo delle release <controllo_release>
 Il controllo delle release viene gestito tramite il meccanismo di pull request di GitHub.
 Prima di integrare i nuovi cambiamenti, viene aperta una pull request dall'assegnatario del task. La pull request deve avere un titolo valido (come descritto nel paragrafo dedicato @automazioni) e deve essere designato almeno un reviewer. Di norma il reviewer di base è il Verificatore, che svolge una supervisione sulla correttezza sintattica e semantica dei contenuti.
 Nel caso in cui ci sia bisogno di una figura con delle competenze specifiche per quanto riguarda la semantica e il contenuto del materiale da revisionare, il Verificatore può essere affiancato da altri membri del gruppo.
@@ -939,7 +987,7 @@ Le informazioni gestite dal gruppo sono:
 
 Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e distribuiti all'interno dei repository del gruppo.
 
-=== Documentazione
+=== Documentazione <norme-documentazione>
 
 ==== Struttura dei documenti <struttura-documenti>
 Ogni documento segue una struttura standard, stabilita nel template _template.typ_. \
@@ -1268,7 +1316,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 Jira, essendo l'ITS del gruppo, è la fonte principale di informazioni per il cruscotto di qualità.
 ===== Google Sheets <google_sheets>
 Google Sheets viene utilizzato per rendere meglio manipolabili i dati provenienti da Jira, in modo da poterli analizzare con più facilità e calcolare comodamente metriche come CPI, EAC, EV.
-===== Grafana
+===== Grafana  <grafana>
 Grafana è l'applicazione utilizzata per visualizzare i dati raccolti tramite l'implementazione di un cruscotto di qualità. Le informazioni mostrate sono le seguenti:
   - sprint rimanenti;
   - budget rimanente;
@@ -1580,7 +1628,7 @@ Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzat
 
 #pagebreak()
 
-= Tracciamento paragrafi ISO/IEC/IEEE 12207:2017
+= Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
 
 La tabella di seguito riportata consente di associare ogni capitolo del documento al rispettivo capitolo dello standard di riferimento. Viene riportato anche il grado di conformità:
 - *To outcome* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;

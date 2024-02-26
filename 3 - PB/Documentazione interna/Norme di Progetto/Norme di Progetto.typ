@@ -438,7 +438,7 @@ Il gruppo #err418 pone i seguenti principi di qualità:
 + tutto il materiale presente nei branch principali della repository (`src` e di conseguenza `main`) deve essere di buona qualità:
   - tutti i prodotti del gruppo devono essere gestiti tramite repository su GitHub (@repository-github), nelle quali deve essere implementato il sistema di _featuring branching_;
   - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di pull request (@controllo_release).
-+ il contenuto della documentazione deve essere scritto in modo chiaro e comprensibile;
++ il contenuto della documentazione deve seguire i principi di redazione descritti nella @stile-convenzioni;
 + la documentazione prodotta deve seguire degli standard interni e/o esterni:
   - standard interni:
     - vengono definiti nel presente documento alla @norme-documentazione.
@@ -453,8 +453,8 @@ Il gruppo #err418 pone i seguenti principi di qualità:
     ), caption: [Tracciamento ISO-documenti])
     In particolare, per ogni processo interno al presente documento viene specificato il grado di conformità allo standard ISO/IEC/IEEE 12207:2017 all'interno di una sezione dedicata (@tracciamento_paragrafi).
 + il codice prodotto deve seguire degli standard interni, definiti nel presente documento (#TODO);
-+ la quantità di errori individuati nei prodotti del progetto, sia documentali che software, al momento in cui questi sono presenti nei branch principali della repository deve essere pari a 0;
-+ il prodotto software deve soddisfare i bisogni e le richieste del Proponente;
++ il codice prodotto dal gruppo deve rispettare le metriche di qualità identificate nel #pdq;
++ il prodotto software deve soddisfare i bisogni e le richieste del Proponente, identificate nel #adr e catalogate in: obbligatorie, desiderabili e opzionali.
 
 ==== Valutazione
 
@@ -467,7 +467,7 @@ La valutazione della qualità dei prodotti di progetto, dell'andamento del grupp
 - testing del codice, come descritto nel presente documento (#TODO);
 - revisioni complessive dei prodotti del progetto:
   - effettuate in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro.
-- utilizzo di metriche (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana);
+- utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana);
 - comunicazione costante con il Proponente per raccogliere feedback e valutare l'adesione del lavoro alle sue richieste (@comunicazione_Proponente).
 
 = Processi di gestione tecnica
@@ -1051,7 +1051,7 @@ Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e att
 + eventuali ulteriori argomenti organizzati in paragrafi indipendenti;
 + "*Pianificazione*", riporta la tabella contenente le task programmate per lo Sprint successivo. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso realizzato in Google Sheets (maggiori dettagli in merito reperibili al paragrafo @google_sheets) e disponibile nel Google Drive del gruppo.
 
-=== Stile e convenzioni
+=== Stile e convenzioni <stile-convenzioni>
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.
 L'obiettivo è perseguire:
 - chiarezza;

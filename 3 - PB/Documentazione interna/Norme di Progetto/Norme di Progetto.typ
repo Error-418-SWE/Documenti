@@ -644,6 +644,7 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.4_
 
 === Scopo
 Lo scopo del processo di Gestione dei Rischi è identificare, analizzare, trattare e monitorare costantemente i rischi, così da poterli affrontare sistematicamente durante l'intero ciclo di vita del progetto.
+I rischi e le relative opzioni di trattamento vengono codificate univocamente per agevolare il tracciamento e l'organizzazione strutturale.
 
 === Risultati
 Come risultato dell'implementazione del processo di Gestione dei Rischi:
@@ -652,6 +653,30 @@ Come risultato dell'implementazione del processo di Gestione dei Rischi:
 - viene selezionato ed implementato un trattamento appropriato;
 - i rischi vengono valutati per verificare cambiamenti di stato e progressi nel trattamento.
 I risultati sono raccolti nel documento #ris.
+
+=== Struttura e codifica
+==== Struttura gerarchica
+I rischi vengono suddivisi nelle categorie principali descritte dal "Risk Breakdown Structure" PMBOK:
++ rischi tecnici;
++ rischi esterni;
++ rischi organizzativi;
++ rischi di project management.
+
+==== Codifica
+I rischi vengono codificati tramite la sigla "RIS" separata mediante un carattere "-" da due valori "x" e "y", divisi a loro volta da un carattere ".".
+- il valore di "x" identifica la categoria PMBOK corrispondente;
+- il valore "y" identifica il numero del rischio.
+
+Per esempio, il primo rischio della categoria "rischi esterni" avrà codice:
+#align(center, "RIS-2.1")
+
+Le opzioni di trattamento vengono codificate tramite la sigla "OT" separata mediante un carattere "-" da tre valori "x", "y" e "z", divisi a loro volta da un carattere ".".
+- il valore di "x" identifica la categoria PMBOK corrispondente al rischio di riferimento;
+- il valore "y" identifica il numero del rischio di riferimento;
+- il valore "z" identifica il numero dell'opzione di trattamento.
+
+Per esempio, la prima opzione di trattamento del rischio RIS-2.1 avrà codice:
+#align(center, "OT-2.1.1")
 
 === Attività e compiti
 

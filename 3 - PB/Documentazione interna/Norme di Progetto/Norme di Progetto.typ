@@ -1641,6 +1641,7 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_fornitura],[6.1.2 - Supply process],[To outcome],
     [@processo_ciclo_di_vita],[6.2.1 - Life cycle model management process],[To outcome],
     [@processo_risorse_umane],[6.2.4 - Human Resource Management process],[To outcome],
+    [@processo_gestione_qualità],[6.2.5 - Quality Management process],[To outcome],
     [@pianificazione],[6.3.1 - Project Planning process],[To outcome],
     [@valutazioneControllo],[6.3.2 - Project assessment and control process],[Full],
     [@processo_gestione_decisioni],[6.3.3 - Decision Management process],[Full],

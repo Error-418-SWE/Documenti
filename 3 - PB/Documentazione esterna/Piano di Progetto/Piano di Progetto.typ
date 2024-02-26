@@ -1683,7 +1683,7 @@ Questo sprint impiega:
 == Sprint 16 dal 18-02-2024 al 25-02-2024
 
 === Obiettivi prefissati
-In questo sprint si prosegue il lavoro di kick-off del design del MVP. Gli obiettivi prefissati per questo sprint sono:
+In questo sprint prosegue il lavoro di kick-off del design del MVP. Gli obiettivi prefissati per questo sprint sono:
 - ripresa dei colloqui con il Proponente, in modalità sincrona, il giorno 22/02/2024 alle ore 15:00;
 - accorpamento del documento #ris nel #pdp;
 - aggiornamento ed estensione del documento #pdp;
@@ -1694,6 +1694,26 @@ In questo sprint si prosegue il lavoro di kick-off del design del MVP. Gli obiet
 - generale adeguamento della documentazione al feedback ricevuto dal #vardanega a seguito del colloquio RTB.
 
 === Preventivo costi
+Questo sprint impiega:
+- *Responsabile*: al fine di:
+  - coordinare le attività;
+  - organizzare il lavoro in reazione al feedback;
+  - organizzare il meeting con il Proponente;
+  - contattare il Proponente fornendo aggiornamenti sull'avanzamento dei lavori;
+  - estendere le #ndp\;
+  - estendere l'#ris\.
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\;
+  - accorpare il documento #ris nel #pdp\.
+- *Analista*: al fine di:
+  - aggiornare il documento #adr a seguito dell'incontro con il Proponente.
+- *Progettista*: al fine di:
+  - definire le prime metriche di qualità del prodotto nel #pdq\;
+  - definire il diagramma delle classi del MVP.
+- *Programmatore*: al fine di preparare un mock-up dell'interfaccia utente del prodotto con Figma.
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp.
+
 
 #pagebreak()
 

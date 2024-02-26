@@ -152,6 +152,10 @@ Il documento si articola in 6 sezioni principali:
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T2.pdf")_
   #lastVisitedOn(13,02,2024)
 
+- _A guide to the project management body of knowledge (PMBOK guide)_ di Project Management Institute: \
+  _#link("https://openlibrary.org/works/OL16506273W/A_guide_to_the_project_management_body_of_knowledge_%28PMBOK_guide%29")_
+  #lastVisitedOn(26,02,2024)
+
 === Riferimenti informativi <riferimenti-informativi>
 
 - Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \

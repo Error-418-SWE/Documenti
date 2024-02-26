@@ -667,14 +667,16 @@ I rischi vengono codificati tramite la sigla "RIS" separata mediante un caratter
 - il valore di "x" identifica la categoria PMBOK corrispondente;
 - il valore "y" identifica il numero del rischio.
 
-Per esempio, il primo rischio della categoria "rischi esterni" avrà codice "RIS-2.1"
+Per esempio, il primo rischio della categoria "rischi esterni" avrà codice:
+#align(center, "RIS-2.1")
 
 Le opzioni di trattamento vengono codificate tramite la sigla "OT" separata mediante un carattere "-" da tre valori "x", "y" e "z", divisi a loro volta da un carattere ".".
 - il valore di "x" identifica la categoria PMBOK corrispondente al rischio di riferimento;
 - il valore "y" identifica il numero del rischio di riferimento;
 - il valore "z" identifica il numero dell'opzione di trattamento.
 
-Per esempio, la prima opzione di trattamento del rischio RIS-2.1 avrà codice "OT-2.1.1"
+Per esempio, la prima opzione di trattamento del rischio RIS-2.1 avrà codice:
+#align(center, "OT-2.1.1")
 
 === Attività e compiti
 

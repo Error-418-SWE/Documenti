@@ -1684,6 +1684,80 @@ Questo sprint impiega:
   supplement: "Grafico"
 )
 
+== Sprint 16 dal 18-02-2024 al 25-02-2024
+
+=== Obiettivi prefissati
+In questo sprint prosegue il lavoro di kick-off del design del MVP. Gli obiettivi prefissati sono:
+- ripresa dei colloqui con il Proponente, in modalità sincrona, il giorno 22/02/2024 alle ore 15:00;
+- accorpamento del documento #ris nel #pdp;
+- aggiornamento ed estensione del documento #pdp;
+- definizione nel #pdq delle prime metriche di qualità del prodotto;
+- estensione delle #ndp basata su _Architecture Definition process_ (6.4.4 del documento di riferimento) e _Design Definition process_ (6.4.5 del documento di riferimento);
+- preparazione di un mock-up dell'interfaccia utente del prodotto con Figma;
+- definizione del diagramma delle classi del MVP;
+- esplorazione degli strumenti di testing (Jest, Jasmine, Mocha per lo unit testing, Playwright per l'end-to-end testing);
+- generale adeguamento della documentazione al feedback ricevuto dal #vardanega a seguito del colloquio RTB.
+
+=== Preventivo costi
+Questo sprint impiega:
+- *Responsabile*: al fine di:
+  - coordinare le attività;
+  - organizzare il lavoro in reazione al feedback;
+  - organizzare il meeting con il Proponente, anche tramite la redazione di una board Miro di supporto;
+  - contattare il Proponente fornendo aggiornamenti sull'avanzamento dei lavori;
+  - estendere le #ndp\;
+  - estendere l'#ris\.
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\;
+  - accorpare il documento #ris nel #pdp\.
+- *Analista*: al fine di:
+  - aggiornare il documento #adr a seguito dell'incontro con il Proponente.
+- *Progettista*: al fine di:
+  - definire le prime metriche di qualità del prodotto nel #pdq\;
+  - definire il diagramma delle classi del MVP.
+- *Programmatore*: al fine di:
+  - definire la UX;
+  - esplorare gli strumenti di testing individuati e selezionare quelli più in linea con le esigenze del progetto, anche tramite la realizzazione di dimostratori tecnologici;
+  - preparare un mock-up dell'interfaccia utente del prodotto con Figma.
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp.
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [3],     [2],     [0],     [3],     [2],     [0],     [10],
+    [Carraro],     [0],     [0],     [2],     [1],     [0],     [2],     [5],
+    [Gardin],     [0],     [0],     [0],     [0],     [5],     [0],     [5],
+    [Nardo],     [0],     [2],     [2],     [0],     [0],     [4],     [8],
+    [Oseliero],     [0],     [2],     [0],     [0],     [2],     [0],     [4],
+    [Todesco],     [3],     [0],     [2],     [1],     [0],     [3],     [9],
+    [Zaccone],     [3],     [2],     [0],     [3],     [0],     [0],     [8],
+    [Totale ore],     [9],     [8],     [6],     [8],     [9],     [9],     [49],
+    [Costo ruolo],     [270],     [160],     [150],     [200],     [135],     [135],     [1050],
+  ),
+  caption: "Prospetto del preventivo, sprint 16"
+)
+#let data = (
+  ("Responsabile", 9),
+  ("Amministratore", 8),
+  ("Analista", 6),
+  ("Progettista", 8),
+  ("Programmatore", 9),
+  ("Verificatore", 9),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo sprint 16",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+
 #pagebreak()
 
 = Consuntivi di periodo <consuntivi>

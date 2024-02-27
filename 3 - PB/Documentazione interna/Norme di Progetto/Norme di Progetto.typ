@@ -1589,15 +1589,13 @@ Lo scopo del processo di implementazione è quello di realizzare uno specificato
 
 Questo processo risulta in un elemento di sistema che soddisfa specificati requisiti di sistema (inclusi requisiti specifici e i derivati), architetture e design.
 
-Per i sistemi software, lo scopo del processo di implementazione è quello di realizzare un elemento del sistema software.
-
 === Risultati
 
 Come risultato della corretta implementazione del processo di implementazione otteniamo:
 
-- vengono identificati vincoli implementativi che influenzano i requisiti, l'architettura o il design;
-- viene realizzato un elemento di sistema;
-- qualsiasi servizio o sistema abilitante per l'implementazione sono disponibili;
+- identificazione dei vincoli implementativi che influenzano i requisiti, l'architettura o il design;
+- realizzazione di un elemento di sistema;
+- qualsiasi servizio o sistema abilitante per l'implementazione è disponibile;
 - l'implementazione viene tracciata.
 
 === Attività
@@ -1609,26 +1607,21 @@ L'attività consiste dei seguenti task:
  - metodi per determinare il livello, la fonte e l'idoneità per codice riutilizzato o adattato;
  - procedure e metodi per lo sviluppo software, lo sviluppo di unit test e l'uso di peer review e unit test;
  - uso gestione della configurazione durante la costruzione del software;
- - ciclo di vita di sviluppo completo o specializzato e ambiente di supporto per realizzare e gestire requisiti, elementi software, specifiche di test e test cases
-     /* Test specifications are ‘written guidelines’ instructing the testers to run specific test suites and skip some. They consist of sections such as the goal of the particular test, the group of essential inputs, the group of expected results, methods to implement the test, and benchmarks to decide the acceptance of the specific feature.*/
-+ Identificare vincoli dalla strategia di implementazione e tecnologie di implementazione su: requisiti di sistema/software, caratteristiche architetturali, caratteristiche del design o tecniche dell'implementazione.;
+ - ciclo di vita di sviluppo completo o specializzato e ambiente di supporto per realizzare e gestire requisiti, elementi software e test cases;
++ Identificare vincoli dalla strategia di implementazione e tecnologie di implementazione su: requisiti di sistema/software, caratteristiche architetturali, caratteristiche del design o tecniche dell'implementazione;
 + identificare un piano per necessari e distinti ambienti software, inclusi sistemi abilitanti o servizi necessari per supportare lo sviluppo e il testing.
 
 ==== Eseguire l'implementazione
 L'attività consiste dei seguenti task:
-+ realizza o adatta elementi software secondo la strategia, vincoli e le procedure di implementazione definite;
-+ realizza o adatta elementi di servizio del sistema software;
-+ impacchetta e conserva gli elementi software di sistema;
-+ riporta prova evidenti che l'elemento software di sistema soddisfa i requisiti.
++ realizzare o adattare elementi software secondo la strategia, vincoli e le procedure di implementazione definite;
++ realizzare o adattare elementi di servizio del sistema software;
++ conservare gli elementi software di sistema;
++ riportare prove evidenti che l'elemento software di sistema soddisfa i requisiti.
 
+==== Gestire i risultati dell'implementazione e delle anomalie incontrate
+L'attività consiste dei seguenti task:
 
-
-
-
-Realize or adapt software elements, according to the strategy, constraints, and defined implementation
-procedures.
-
-
++ mantenere la tracciabilità degli elementi di sistema software implementati.
 
 #pagebreak()
 
@@ -1657,7 +1650,7 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
     [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
     [@processo_design],[6.4.5 - Design Definition process],[To outcome],
-    [@processo_implementazione],[6.4.7 - Implementation process],[#TODO],
+    [@processo_implementazione],[6.4.7 - Implementation process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

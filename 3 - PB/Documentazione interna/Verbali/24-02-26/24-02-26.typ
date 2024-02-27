@@ -17,7 +17,7 @@
   - Design pattern;
   - Architettura;
   - Diagramma ER.
-- To do.
+- Pianificazione.
 
 == Progettazione
 === Design pattern
@@ -40,18 +40,19 @@ In conseguenza di ciò, sorge la questione di come affrontare i design pattern i
 
 === Architettura
 
-Il gruppo discute sulla scelta dell'architettura più adatta al prodotto da sviluppare, individuando infine l'architettura layered come opzione principale, in quanto l'architettura esagonale, alternativa presa in considerazione, pone molta attenzione sulla business logic, la quale non è presente nel capitolato in quanto le API che verificano la possibilità di compiere determinate azioni sono simulate. Inoltre, la comunicazione tra componenti è unidirezionale: da database verso la presentation logic.
+Il gruppo discute sulla scelta dell'architettura più adatta al prodotto da sviluppare, individuando infine l'architettura layered come opzione principale, in quanto l'architettura esagonale, alternativa presa in considerazione, pone molta attenzione sulla business logic, la quale non è presente nel capitolato in quanto il prodotto richiesto è un visualizzatore, e di conseguenza non sono presenti dati su cui eseguire modifiche o validazioni. Inoltre, la comunicazione tra componenti è unidirezionale: da database verso la presentation logic.
 
-Per quanto riguarda l'architettura di deploy viene deciso di utilizzare un monolite.
+Si è concordato l'utilizzo di un monolite come architettura di deploy, vista la sua semplicità e velocità di sviluppo. Inoltre, non è presente un numero di moduli distinti tra loro tale da giustificare l'utilizzo di un'architettura a microservizi.
 
 === ER
 
 Il gruppo concorda con l'utilizzo del primo schema ER prodotto, applicando i seguenti aggiornamenti:
 
 - presenza di coordinate di posizionamento degli scaffali (verbale esterno del 22/02/2024);
-- considerazione dei bin esterni come appartenenti al ripiano 0 di uno scaffale con un singolo ripiano.
+- considerazione dei bin esterni come appartenenti ad un particolare scaffale con un unico ripiano ad altezza 0 e dimensioni uguali a quelle del piano;
+- modifica della relazione bin-prodotti: ora i prodotti possono essere presenti nel database ma non essere assegnati a nessun bin.
 
-== To do
+== Pianificazione
 
 Il gruppo contatterà via mail:
 

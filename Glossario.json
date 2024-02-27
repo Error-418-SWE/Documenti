@@ -434,6 +434,11 @@
     "acronyms": [],
     "synonyms": ["unit test"]
   },
+  "Test di integrazione": {
+    "description": "Attività di testing che verifica il corretto funzionamento dell'interazione o dell'interfaccia tra due o più moduli integrati.",
+    "acronyms": [],
+    "synonyms": []
+  },
   "Testing": {
     "description": "Attività di verifica e validazione del software tramite il collaudo di partizioni di esso.",
     "acronyms": [],

@@ -410,9 +410,9 @@
     "synonyms": ["Story Points Completati", "Story Points Pianificati"]
   },
   "Sprint Planned Value": {
-	"description": "Valore pianificato che si intende produrre in un determinato periodo di sviluppo.",
-	"acronyms": ["SPV"],
-	"synonyms": []
+  "description": "Valore pianificato che si intende produrre in un determinato periodo di sviluppo.",
+  "acronyms": ["SPV"],
+  "synonyms": []
   },
   "Sottotask": {
     "description": "Una parte di lavoro granulare necessaria per completare una story, un task o un bug.",

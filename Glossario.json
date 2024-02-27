@@ -429,6 +429,11 @@
     "acronyms": [],
     "synonyms": []
   },
+  "Test di unità": {
+    "description": "Attività di testing che verifica il corretto funzionamento di una singola unità di un software. A seconda del paradigma di programmazione adottato, l'unità può essere un singolo metodo, una classe, un modulo o un componente.",
+    "acronyms": [],
+    "synonyms": ["unit test"]
+  },
   "Testing": {
     "description": "Attività di verifica e validazione del software tramite il collaudo di partizioni di esso.",
     "acronyms": [],

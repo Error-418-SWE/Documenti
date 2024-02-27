@@ -439,6 +439,11 @@
     "acronyms": [],
     "synonyms": []
   },
+  "Test di sistema": {
+    "description": "Attività di testing che verifica il corretto funzionamento del sistema integrato nel suo complesso. Questa tipologia di test è anche detta \"end-to-end\".",
+    "acronyms": ["E2E"],
+    "synonyms": []
+  },
   "Testing": {
     "description": "Attività di verifica e validazione del software tramite il collaudo di partizioni di esso.",
     "acronyms": [],

@@ -244,6 +244,11 @@
     "acronyms": ["JSON"],
     "synonyms": []
   },
+  "Jest": {
+    "description": "Framework di testing per JavaScript. Offre la parallelizzazione dei test e il mocking delle dipendenze.",
+    "acronyms": [],
+    "synonyms": []
+  },
   "Jira": {
     "description": "Suite di software proprietari per l'ITS sviluppata da Atlassian, che consente il bug tracking e la gestione dei progetti sviluppati con metodologie agile.",
     "acronyms": [],

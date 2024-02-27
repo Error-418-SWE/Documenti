@@ -479,6 +479,11 @@
     "acronyms": [],
     "synonyms": []
   },
+  "Virtual Private Server": {
+    "description": "Macchina virtuale remota, venduta come servizio da un fornitore di servizi di hosting. Un VPS è un server dedicato virtualizzato, ovvero un server che condivide le risorse fisiche con altri server virtuali, ma che ha a disposizione risorse garantite.",
+    "acronyms": ["VPS"],
+    "synonyms": []
+  },
   "Web Graphics Library": {
     "description": "API per il rendering di grafica 3D e 2D interattiva e ad alte prestazioni all'interno di qualsiasi browser web compatibile senza l'uso di plugin.",
     "acronyms": ["WebGL"],

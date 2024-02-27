@@ -429,6 +429,11 @@
     "acronyms": [],
     "synonyms": []
   },
+  "Testing": {
+    "description": "Attività di verifica e validazione del software tramite il collaudo di partizioni di esso.",
+    "acronyms": [],
+    "synonyms": []
+  },
   "Ticket": {
     "description": "Rappresenta il lavoro da completare a sostegno degli obiettivi più ampi, ogni ticket è individuale e atomico.",
     "acronyms": [],

@@ -3164,8 +3164,8 @@ In particolare durante lo sprint sono stati raggiunti i seguenti obiettivi:
   - rimosso il termine "_richiesta_" nella nomeclatura dell'UC-7;
   - specificate le API utilizzate dall'UC7;
   - inserito tracciamento casi d'uso - requisiti;
-  - espressa la distinzione tra obiettivi obbligatori, desiderabili e opzionali.
-  - il gruppo considera completato l'aggiornamento e l'adeguamento del documento, ritenendolo pronto per una seconda revisione da parte del #cardin;
+  - espressa la distinzione tra obiettivi obbligatori, desiderabili e opzionali;
+  - il gruppo considera completato l'aggiornamento e l'adeguamento del documento, ritenendolo pronto per una seconda revisione da parte del #cardin.
 
 - estensione del #glo\:
   - le definizioni contenute all'interno del documento sono state aggiornate.
@@ -3193,6 +3193,7 @@ Nessuno.
 
 === Problematiche
 Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+
 *P1*: Seppur durante lo Sprint siano state portate a termine tutte la task previste raggiungendo gli obiettivi prefissati, per alcune task non è stata rispettata la data di scadenza fissata. Ciò, pur non comportando rallentamenti o sovraccarico di lavoro, ha permesso di evidenziare nuovamente l'importanza di una comunicazione attiva.
 
 *P2*: Alcuni membri del gruppo evidenziano gli impegni universitari non ancora conclusi, che comportano una riduzione in termini di disponibilità.
@@ -3265,7 +3266,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 Durante lo Sprint 15 le ore preventivate (27) e le ore effettive (27) sono state rispettate, seppur la distribuzione di queste sia stata differente e maggiormente distribuita tra i membri del gruppo. In particolare:
 - le ore preventivate di Responsabile e Amministratore, seppur quantitivamente rispettate, sono state ridistribuite tra i membri del gruppo;
 - le ore di Analista sono state maggiori di quanto preventivato: il tracciamento UC - requsiti, per renderlo uniforme, automatico e facilmente estendibile è stato implementato mediante un automazione direttamente nei documenti in Typst e l'estensione dell'UC 7 ha richiesto più tempo del previsto;
-- le ore di Progettista sono state maggiori di quanto preventivato: la progettazione dello schema ER del database è stata più complessa del previsto seppur permettendo di generare confronto tra i membri del gruppo;
+- le ore di Progettista sono state maggiori di quanto preventivato: la progettazione dello schema ER del database è stata più complessa del previsto seppur permettendo di generare confronto tra i membri del gruppo.
 
 === Monitoraggio costi e ore
 #figure(
@@ -3287,7 +3288,7 @@ Lo Sprint 15, pur comportando un costo superiore a quanto preventivato, ha perme
 
 Il rendimento positivo dello Sprint 15 è supportato dalle principali metriche esposte dal #pdq, quali:
 - CPI: il Cost Performance Index passa dal valore 0.97 (allo Sprint 14) a 0.98, indicando un miglioramento del rendimento del gruppo;
-- EAC: l'Estimate At Completion passa dal valore 13.437,22 € (allo Sprint 15) a 13.292,70 € (seppur ancora maggiore al BAC), indicando una riduzione del costo finale del progetto se il rendimento del gruppo rimarrà costante;
+- EAC: l'Estimate At Completion passa dal valore 13.437,22 € (allo Sprint 14) a 13.292,70 € (seppur ancora maggiore al BAC), indicando una riduzione del costo finale del progetto se il rendimento del gruppo rimarrà costante.
 
 
 == Sprint 16 dal 18-02-2024 al 25-02-2024

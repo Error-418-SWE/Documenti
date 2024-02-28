@@ -1,0 +1,167 @@
+[
+	{
+	  "ID task": "DOC-513",
+	  "Descrizione": "Preparare board Miro di supporto al meeting esterno",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-488",
+	  "Descrizione": "Specificare il ruolo dei partecipanti ad un meeting",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-96",
+	  "Descrizione": "Fornire un link all'artifact prodotto durante la compilazione",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-498",
+	  "Descrizione": "Aggiornare il secret BASELINE_DIR",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-499",
+	  "Descrizione": "Definire la lista di file di supporto Typst con variabile",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-491",
+	  "Descrizione": "Predisporre repo per PB",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-489",
+	  "Descrizione": "Includere il contenuto della Analisi dei Rischi",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-492",
+	  "Descrizione": "Estendere l'Analisi dei Rischi",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-515",
+	  "Descrizione": "Codificare rischi",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-516",
+	  "Descrizione": "Codificare metodi di risoluzione dei rischi",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-519",
+	  "Descrizione": "Estendere sezione di monitoraggio",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-517",
+	  "Descrizione": "Redigere consuntivo di periodo Sprint 15",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-161",
+	  "Descrizione": "Redigere sezione Technical processes/Architecture Definition process",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-510",
+	  "Descrizione": "Aggiornare paragrafo 4.6.3 per contenuto verbali",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-162",
+	  "Descrizione": "Redigere sezione Technical processes/Design Definition process",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-511",
+	  "Descrizione": "Aggiornare paragrafo 4.6.3 per riferimenti ai documenti",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-521",
+	  "Descrizione": "Definire metriche di prodotto",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-525",
+	  "Descrizione": "Aggiungere Figma agli strumenti adottati",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-526",
+	  "Descrizione": "Descrivere versionamento del software",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-522",
+	  "Descrizione": "Redigere verbale meeting di retrospettiva 18/02/2024",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-490",
+	  "Descrizione": "Correggere riferimenti assenti",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-514",
+	  "Descrizione": "Definire metriche di prodotto",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-520",
+	  "Descrizione": "Aggiornare grafici delle metriche per Sprint 15",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-524",
+	  "Descrizione": "Aggiungere Figma",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-493",
+	  "Descrizione": "Aggiornare il riferimento all'Analisi dei Rischi",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-500",
+	  "Descrizione": "Aggiornare occorrenze nomi documento",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-505",
+	  "Descrizione": "Aggiornare occorrenze professori",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-512",
+	  "Descrizione": "Automatizzare creazione tabelle Typst di pianificazione con JQL",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-523",
+	  "Descrizione": "Redigere verbale meeting esterno 22/02/2024",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-530",
+	  "Descrizione": "Redigere verbale meeting interno 22/02/2024",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-518",
+	  "Descrizione": "Redigere preventivo di periodo Sprint 16",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "WMS-39",
+	  "Descrizione": "Definire schema ER database",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "WMS-42",
+	  "Descrizione": "Realizzare mockup UI",
+	  "Ruolo": "Da definire"
+	}
+  ]

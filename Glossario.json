@@ -244,6 +244,11 @@
     "acronyms": ["JSON"],
     "synonyms": []
   },
+  "Jest": {
+    "description": "Framework di testing per JavaScript. Offre la parallelizzazione dei test e il mocking delle dipendenze.",
+    "acronyms": [],
+    "synonyms": []
+  },
   "Jira": {
     "description": "Suite di software proprietari per l'ITS sviluppata da Atlassian, che consente il bug tracking e la gestione dei progetti sviluppati con metodologie agile.",
     "acronyms": [],
@@ -405,9 +410,9 @@
     "synonyms": ["Story Points Completati", "Story Points Pianificati"]
   },
   "Sprint Planned Value": {
-	"description": "Valore pianificato che si intende produrre in un determinato periodo di sviluppo.",
-	"acronyms": ["SPV"],
-	"synonyms": []
+  "description": "Valore pianificato che si intende produrre in un determinato periodo di sviluppo.",
+  "acronyms": ["SPV"],
+  "synonyms": []
   },
   "Sottotask": {
     "description": "Una parte di lavoro granulare necessaria per completare una story, un task o un bug.",
@@ -421,6 +426,26 @@
   },
   "Story Point": {
     "description": "Unità di misura per esprimere una stima del lavoro complessivo richiesto per implementare completamente un ticket.",
+    "acronyms": [],
+    "synonyms": []
+  },
+  "Test di unità": {
+    "description": "Attività di testing che verifica il corretto funzionamento di una singola unità di un software. A seconda del paradigma di programmazione adottato, l'unità può essere un singolo metodo, una classe, un modulo o un componente.",
+    "acronyms": [],
+    "synonyms": ["unit test"]
+  },
+  "Test di integrazione": {
+    "description": "Attività di testing che verifica il corretto funzionamento dell'interazione o dell'interfaccia tra due o più moduli integrati.",
+    "acronyms": [],
+    "synonyms": []
+  },
+  "Test di sistema": {
+    "description": "Attività di testing che verifica il corretto funzionamento del sistema integrato nel suo complesso. Questa tipologia di test è anche detta \"end-to-end\".",
+    "acronyms": ["E2E"],
+    "synonyms": []
+  },
+  "Testing": {
+    "description": "Attività di verifica e validazione del software tramite il collaudo di partizioni di esso.",
     "acronyms": [],
     "synonyms": []
   },
@@ -472,6 +497,11 @@
   "Versionamento": {
     "description": "Processo di assegnazione di identificatori univoci a diversi momenti di sviluppo di un software o progetto. Comprende il recupero di versioni diverse da quella attuale e l'aggiornamento della versione stessa.",
     "acronyms": [],
+    "synonyms": []
+  },
+  "Virtual Private Server": {
+    "description": "Macchina virtuale remota, venduta come servizio da un fornitore di servizi di hosting. Un VPS è un server dedicato virtualizzato, ovvero un server che condivide le risorse fisiche con altri server virtuali, ma che ha a disposizione risorse garantite.",
+    "acronyms": ["VPS"],
     "synonyms": []
   },
   "Web Graphics Library": {

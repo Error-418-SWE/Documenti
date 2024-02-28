@@ -1665,6 +1665,44 @@ Gli argomenti principali trattati nel documento sono due:
 
 Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
 
+
+== Processo di integrazione <processo_integrazione>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.8_
+
+=== Scopo
+Il processo di integrazione ha lo scopo di combinare iterativamente elementi software al fine di ottenere un prodotto che soddisfi i requisiti rispettando l'architettura e il design definiti.
+È quindi necessario il coordinamento con i processi di [@processo_definizione_architettura] e [@processo_design].
+L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la Continuous Integration.
+
+
+=== Risultati
+Come risultato della corretta implementazione del processo di integrazione:
+- viene integrato il nuovo elemento software con il prodotto principale;
+- vengono eseguiti automaticamente i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione;
+- vengono identificati i risultati ed eventuali anomalie.
+
+=== Attività
+==== Pianificazione della strategia di integrazione
+
+  La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche "Continuous Integration" e "Continuous Deployment", al fine di garantire un frequente allineamento degli ambienti di lavoro tra i membri e avere costantemente la versione più aggiornata del prodotto disponibile e funzionante.
+  Essa prevede la gestione dell'integrazione degli elementi software e dell'esecuzione dei test di unità, integrazione e non regressione mediante automazioni GitHub Actions.
+  Testare automaticamente il prodotto ad ogni iterazione garantisce inoltre il rispetto dei requisiti descritti nel documento #adr_v e i processi di verifica.
+  A supporto dell'integrazione ed il deployment è inoltre presente un Virtual Private Server su Azure che esegue Docker.
+
+==== Esecuzione
+
+  Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella pull request vengono approvate da un verificatore, il quale attua la funzione di merge.
+  Le GitHub Action provvedono a:
+  - costruire l'immagine Docker e pubblicarla su Docker Hub e GitHub Container Registry tramite il file _build_docker.yml_;
+  - copiare il contenuto del repository sul Virtual Private Server e proseguire con l'avvio di Docker Compose tramite il file _deploy.yml_;
+  - creare, tramite il file _tag_semver.yml_, un tag di versione semantica per ogni push sul branch di development del Version Control System. Tale tag viene pubblicato su GitHub e viene creata una release;
+  - l'esecuzione dei test avviene tramite il file _test_nodejs.yml_.
+
+==== Gestione dei risultati
+  I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a causa dell'approvazione della pull request. Le GitHub Actions prevedono la visualizzazione di messaggi che descrivono gli eventuali errori insorti oppure, in loro assenza, della corretta esecuzione dell'automazione.
+  I test automatici forniscono un resoconto di tutti i test svolti con i relativi esiti nei log della GitHub Action corrispondente.
+
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
@@ -1693,6 +1731,7 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
     [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
     [@processo_design],[6.4.5 - Design Definition process],[To outcome],
+    [@processo_integrazione],[6.4.8 - Integration process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

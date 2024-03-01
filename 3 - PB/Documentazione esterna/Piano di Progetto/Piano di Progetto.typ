@@ -1757,6 +1757,47 @@ Questo sprint impiega:
   supplement: "Grafico"
 )
 
+== Sprint 17 dal 26-02-2024 al 03-03-2024
+
+=== Obiettivi prefissati
+In questo sprint si comincia il lavoro di definizione del design e si prosegue il lavoro sulla documentazione. Gli obiettivi prefissati sono:
+- meeting interno di design thinking, in modalità sincrona, il giorno 26/02/2024 ore 15:00;
+- colloquio con il Proponente, in modalità sincrona, il giorno 29/02/2024 alle ore 16:00;
+- estendere le #ndp con il paragrafo di Technical processes/Implementation process;
+- estendere le #ndp con il paragrafo di Technical processes/Integration process;
+- estendere le #ndp con il paragrafo di Technical processes/Verification process;
+- estendere le #ndp con il paragrafo di Organizational Project-Enabling processes/Quality Management process;
+- aggiornare #ndp normando il sistema di tracciamento rischi - risoluzione;
+- revisione del documento #adr;
+- redigere introduzione del documento Manuale Utente;
+- redigere introduzione del documento Specifica Tecnica;
+- redigere preventivo e consuntivo dello sprint 16 nel #pdp;
+- redigere preventivo sprint 17 nel #pdp;
+- aggiornare le metriche del #pdq con i dati aggiornati da Grafana;
+- preparare il mock-up dell'ui da presentare al Proponente;
+- aggiornare lo schema ER in seguito al feedback ricevuto da Proponente.
+
+
+=== Preventivo costi
+Questo sprint impiega:
+- *Responsabile*: al fine di:
+  - coordinare le attività;
+  - organizzare il lavoro in reazione al feedback;
+  - organizzare il meeting con il Proponente, anche tramite la redazione di una board Miro di supporto;
+  - estendere le #ndp\;
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\;
+- *Analista*: al fine di:
+  - revisionare il documento #adr a seguito dell'incontro con il Proponente.
+- *Progettista*: al fine di:
+  - aggiornare lo schema ER in seguito al meeting con il Proponente;
+- *Programmatore*: al fine di:
+  - aggiornare il mock-up prodotto per il meeting con il Proponente;
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp.
+
+#TODO TABELLA COSTI
+
 
 #pagebreak()
 

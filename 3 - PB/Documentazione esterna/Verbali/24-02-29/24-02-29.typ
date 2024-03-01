@@ -32,11 +32,11 @@ Gli attributi di dettaglio dell'entità `Prodotto`, quali `peso`, `larghezza`, `
 
 == Mock-up
 
-È stato mostrato al Proponente il mock-up realizzato, il quale è servito per illustrate e discutere alcune proprietà del MVP, in particolare:
+È stato mostrato al Proponente il mock-up realizzato, il quale è servito per illustrare e discutere alcune proprietà del MVP, in particolare:
 
 - è stata discussa la scelta di poter inserire la lunghezza in metri del lato maggiore del magazzino per lo scaling dell'ambiente a partire da un SVG. Questa scelta è stata approvata dal proponente, evidenziando comunque la necessità di poter ridimensionare l'ambiente e scalare tutti gli elementi del piano di conseguenza;
 - è stata confermata l'idea di notificare l'utente della presa in carico dell'operazione di spostamento da parte del sistema con una notifica toast;
-- è stata confermata l'idea di introdurre la possibilità di visualizzare tutti gli spostamenti effettuati dell'utente nella sessione corrente;
+- è stata confermata l'idea di introdurre la possibilità di visualizzare tutti gli spostamenti effettuati dall'utente nella sessione corrente;
 - è stata rielaborata la condizione per cui uno scaffale si possa eliminare solo se vuoto. Viene avanzata dal Proponente la possibilità che uno scaffale sia sempre eliminabile anche quando non vuoto. I prodotti contenuti nello scaffale vengono quindi visualizzati come "non assegnati" nell'apposita lista. L'utente ha quindi la possibilità di assegnarli ad altri bin vuoti;
 - con il Proponente è stata concordata la possibilità di modificare gli scaffali anche quando non vuoti nei seguenti casi:
   - l'utente vuole aumentare le dimensioni di uno scaffale;

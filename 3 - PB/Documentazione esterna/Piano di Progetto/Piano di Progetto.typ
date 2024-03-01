@@ -1784,19 +1784,54 @@ Questo sprint impiega:
   - coordinare le attività;
   - organizzare il lavoro in reazione al feedback;
   - organizzare il meeting con il Proponente, anche tramite la redazione di una board Miro di supporto;
-  - estendere le #ndp\;
+  - estendere le #ndp\.
 - *Amministratore*: al fine di:
   - redigere i verbali;
-  - aggiornare il documento #pdp\;
+  - aggiornare il documento #pdp\.
 - *Analista*: al fine di:
   - revisionare il documento #adr a seguito dell'incontro con il Proponente.
 - *Progettista*: al fine di:
   - aggiornare lo schema ER in seguito al meeting con il Proponente;
+  - definire una bozza dello schema delle classi.
 - *Programmatore*: al fine di:
   - aggiornare il mock-up prodotto per il meeting con il Proponente;
+  - modificare il database secondo il nuovo schema ER.
 - *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp.
 
-#TODO TABELLA COSTI
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [1],     [2],     [0],     [0],     [2],     [2],     [7],
+    [Carraro],     [2],     [1],     [0],     [3],     [0],     [0],     [6],
+    [Gardin],     [0],     [1],     [2],     [0],     [4],     [0],     [7],
+    [Nardo],     [1],     [0],     [3],     [2],     [0],     [0],     [6],
+    [Oseliero],     [1],     [2],     [0],     [0],     [0],     [3],     [6],
+    [Todesco],     [0],     [3],     [2],     [0],     [4],     [0],     [9],
+    [Zaccone],     [2],     [0],     [2],     [0],     [2],     [3],     [9],
+    [Totale ore],     [7],     [9],     [9],     [5],     [12],     [8],     [50],
+    [Costo ruolo],     [210],     [180],     [225],     [125],     [180],     [120],     [1040],
+  ),
+  caption: "Prospetto del preventivo, sprint 17"
+)
+#let data = (
+  ("Responsabile", 7),
+  ("Amministratore", 9),
+  ("Analista", 9),
+  ("Progettista", 5),
+  ("Programmatore", 12),
+  ("Verificatore", 8),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo sprint 17",
+  kind: "chart",
+  supplement: "Grafico"
+)
 
 
 #pagebreak()

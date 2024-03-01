@@ -3164,8 +3164,8 @@ In particolare durante lo sprint sono stati raggiunti i seguenti obiettivi:
   - rimosso il termine "_richiesta_" nella nomeclatura dell'UC-7;
   - specificate le API utilizzate dall'UC7;
   - inserito tracciamento casi d'uso - requisiti;
-  - espressa la distinzione tra obiettivi obbligatori, desiderabili e opzionali.
-  - il gruppo considera completato l'aggiornamento e l'adeguamento del documento, ritenendolo pronto per una seconda revisione da parte del #cardin;
+  - espressa la distinzione tra obiettivi obbligatori, desiderabili e opzionali;
+  - il gruppo considera completato l'aggiornamento e l'adeguamento del documento, ritenendolo pronto per una seconda revisione da parte del #cardin.
 
 - estensione del #glo\:
   - le definizioni contenute all'interno del documento sono state aggiornate.
@@ -3193,6 +3193,7 @@ Nessuno.
 
 === Problematiche
 Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+
 *P1*: Seppur durante lo Sprint siano state portate a termine tutte la task previste raggiungendo gli obiettivi prefissati, per alcune task non è stata rispettata la data di scadenza fissata. Ciò, pur non comportando rallentamenti o sovraccarico di lavoro, ha permesso di evidenziare nuovamente l'importanza di una comunicazione attiva.
 
 *P2*: Alcuni membri del gruppo evidenziano gli impegni universitari non ancora conclusi, che comportano una riduzione in termini di disponibilità.
@@ -3265,7 +3266,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 Durante lo Sprint 15 le ore preventivate (27) e le ore effettive (27) sono state rispettate, seppur la distribuzione di queste sia stata differente e maggiormente distribuita tra i membri del gruppo. In particolare:
 - le ore preventivate di Responsabile e Amministratore, seppur quantitivamente rispettate, sono state ridistribuite tra i membri del gruppo;
 - le ore di Analista sono state maggiori di quanto preventivato: il tracciamento UC - requsiti, per renderlo uniforme, automatico e facilmente estendibile è stato implementato mediante un automazione direttamente nei documenti in Typst e l'estensione dell'UC 7 ha richiesto più tempo del previsto;
-- le ore di Progettista sono state maggiori di quanto preventivato: la progettazione dello schema ER del database è stata più complessa del previsto seppur permettendo di generare confronto tra i membri del gruppo;
+- le ore di Progettista sono state maggiori di quanto preventivato: la progettazione dello schema ER del database è stata più complessa del previsto seppur permettendo di generare confronto tra i membri del gruppo.
 
 === Monitoraggio costi e ore
 #figure(
@@ -3287,7 +3288,151 @@ Lo Sprint 15, pur comportando un costo superiore a quanto preventivato, ha perme
 
 Il rendimento positivo dello Sprint 15 è supportato dalle principali metriche esposte dal #pdq, quali:
 - CPI: il Cost Performance Index passa dal valore 0.97 (allo Sprint 14) a 0.98, indicando un miglioramento del rendimento del gruppo;
-- EAC: l'Estimate At Completion passa dal valore 13.437,22 € (allo Sprint 15) a 13.292,70 € (seppur ancora maggiore al BAC), indicando una riduzione del costo finale del progetto se il rendimento del gruppo rimarrà costante;
+- EAC: l'Estimate At Completion passa dal valore 13.437,22 € (allo Sprint 14) a 13.292,70 € (seppur ancora maggiore al BAC), indicando una riduzione del costo finale del progetto se il rendimento del gruppo rimarrà costante.
+
+
+== Sprint 16 dal 18-02-2024 al 25-02-2024
+
+=== Obiettivi raggiunti
+
+Lo Sprint 16 si è concluso raggiungendo tutti gli obiettivi pianificati, in particolare:
+
+- ripresi i colloqui in modalità sincrona con il Proponente in data 22/02/2024;
+
+- #adr\:
+  - aggiornato il documento in seguito al colloquio con il Proponente.
+
+- #glo\:
+  - aggiunto Figma.
+
+- #ndp\:
+  - redatti capitoli riguardanti:
+    - processo di definizione dell'architettura (6.4.4 nello standard ISO/IEC 12207:2017);
+    - processo di definizione del design (6.4.5 nello standard ISO/IEC 12207:2017).
+  - aggiornato il paragrafo 4.6.4 con la descrizione delle variabili Typst riguardanti termini ricorrenti, in particolare:
+    - nome del gruppo;
+    - Committenti;
+    - nomi di documenti;
+    - nomi di documenti con versione;
+    - data di ultima consultazione dei riferimenti.
+  - aggiornato il paragrafo 4.6.3 riguardante il contenuto dei verbali;
+  - aggiunte le metriche di qualità del prodotto;
+  - aggiunto Figma tra gli strumenti utilizzati;
+  - descritto il versionamento del software.
+
+- #pdp\:
+  - accorpato documento #ris nel #pdp;
+  - estesa sezione di Analisi dei Rischi;
+  - codificati i rischi e relativi metodi di risoluzione;
+  - redatto consuntivo dello Sprint 15, terminato in data 18/02/2024.
+
+- #pdq\:
+  - definite metriche di qualità del prodotto;
+  - corretti riferimenti assenti;
+  - aggiornati i grafici delle metriche allo Sprint 15.
+
+- Automazioni:
+  - aggiornato template e file di supporto in modo da specificata l'affiliazione dei partecipanti esterni nei verbali;
+  - creato automazione per fornire un link all'artifact prodotto dalla compilazione dei documenti in pull request.
+
+- Miglioramenti generali:
+  - aggiornate occorrenze dei nomi di documenti e Committenti nella documentazione utilizzando variabili Typst.
+
+- Progettazione:
+  - definita una bozza del diagramma delle classi per il Minimum Viable Product;
+  - esplorati gli strumenti di testing (Jest, Jasmine, Mocha per lo unit testing, Playwright per l'end-to-end testing);
+  - preparato un mock-up dell'interfaccia utente del prodotto;
+  - definito il diagramma ER del database di supporto.
+
+=== Obiettivi mancati
+
+Nessuno.
+
+=== Problematiche
+
+Nessuna.
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [3],     [1 (-1)],     [0],     [3],     [2],     [1 (+1)],     [10],
+    [Carraro],     [0],     [0],     [2],     [2 (+1)],     [0],     [2],     [6 (+1)],
+    [Gardin],     [0],     [0],     [0],     [0],     [4 (-1)],     [1 (+1)],     [5],
+    [Nardo],     [0],     [3 (+1)],     [2],     [0],     [0],     [4],     [9 (+1)],
+    [Oseliero],     [0],     [2],     [0],     [0],     [2],     [0],     [4],
+    [Todesco],     [3],     [0],     [2],     [1],     [0],     [3],     [9],
+    [Zaccone],     [3],     [2],     [0],     [3],     [0],     [0],     [8],
+    [Totale ore],     [9],     [8],     [6],     [9 (+1)],     [8 (-1)],     [11 (+2)],     [51 (+2)],
+    [Costo ruolo],     [270],     [160],     [150],     [225 (+25)],     [120 (-15)],     [165 (+30)],     [1090 (+40)],
+  ),
+  caption: "Prospetto del consuntivo, sprint 16"
+)
+#let data = (
+  ("Responsabile", 9, 9),
+  ("Amministratore", 8, 8),
+  ("Analista", 6, 6),
+  ("Progettista", 8, 9),
+  ("Programmatore", 9, 8),
+  ("Verificatore", 9, 11),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo sprint 16",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Durante lo Sprint 16 le ore effettive (51) hanno superato di due unità le ore preventivate (49), in particolare:
+
+- l'aumento delle attività di progettazione ha portato a un incremento, seppur leggero, delle ore di Progettista;
+- le ore di Verificatore sono state maggiori di quanto preventivato: l'aumento delle attività di progettazione e le diverse attività svolte sulle #ndp e sull'#ris hanno necessitato di più risorse per essere verificate.
+
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [22],     [660],
+    [Amministratore],     [22],     [440],
+    [Analista],     [29],     [725],
+    [Progettista],     [10],     [250],
+    [Programmatore],     [152],     [2280],
+    [Verificatore],     [70],     [1050],
+    [Rimanente],     [305],     [5405],
+  ),
+  caption: "Monitoraggio, sprint 16"
+)
+
+Lo Sprint 16, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere tutti gli obiettivi prefissati. Nonostante la necessità di maggiori risorse orarie in alcuni ruoli, non sono stati rilevati rallentamenti nel completamento dei compiti previsti.
+
+Il rendimento positivo dello Sprint 16 è supportato dalle principali metriche esposte dal #pdq, quali:
+- CPI: il Cost Performance Index passa dal valore 0.98 (allo Sprint 15) a 1.01, indicando un miglioramento del rendimento del gruppo e raggiungendo un valore ottimale;
+- EAC: l'Estimate At Completion passa dal valore 13.292,70 € (allo Sprint 15) a 12.911,54 €, considerabile come valore ottimale in quanto minore del BAC. Il costo finale del progetto va dunque a ridursi ulteriormente rispetto allo Sprint 15.
 
 
 // == Sprint n dal D1-M1-2024 al D2-M2-2024

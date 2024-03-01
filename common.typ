@@ -70,5 +70,5 @@
     h(0.02em)
   })
 
-  Le definizioni sono dipoonibili nel documento #glo_v.
+  Le definizioni sono diponibili nel documento #glo_v.
 ]

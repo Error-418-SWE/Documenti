@@ -35,16 +35,16 @@ Il gruppo si dota di una dashboard di monitoraggio per tenere traccia delle metr
 === Riferimenti a documentazione interna <riferimenti-interni>
 
 - Documento #glo_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/2%20-%20RTB/Glossario_v" + glo_vo + ".pdf")_
-  #lastVisitedOn(13, 02, 2024)
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Glossario_v" + glo_vo + ".pdf")_
+  #lastVisitedOn(25, 02, 2024)
 
 - Documento #ndp_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20interna/Norme%20di%20Progetto_v" + ndp_vo + ".pdf")_
-  #lastVisitedOn(13, 02, 2024)
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/3%20-%20PB/Documentazione%20interna/Norme%20di%20Progetto_v" + ndp_vo + ".pdf")_
+  #lastVisitedOn(25, 02, 2024)
 
 - Documento #pdp_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/2%20-%20RTB/Documentazione%20esterna/Piano%20di%20Progetto_v" + pdp_vo + ".pdf")_
-  #lastVisitedOn(13, 02, 2024)
+  _#link("https://github.com/Error-418-SWE/Documenti/tree/main/3%20-%20PB/Documentazione%20esterna/Piano%20di%20Progetto_v" + pdp_vo + ".pdf")_
+  #lastVisitedOn(25, 02, 2024)
 
 === Riferimenti normativi <riferimenti-normativi>
 
@@ -433,19 +433,19 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 #figure(
   cetz.canvas({
     import cetz.plot
-    let EV_points(offset: 0) = ((4,2040), (5,2655), (6,3111.85), (7,3528.52), (8,3948.14), (9, 4573.14), (10, 4848.14), (11, 5084.39), (12, 5178.90), (13, 5224.62), (14, 5819.62), (15, 6442.69)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let EV_points(offset: 0) = ((4,2040), (5,2655), (6,3111.85), (7,3528.52), (8,3948.14), (9, 4573.14), (10, 4848.14), (11, 5084.39), (12, 5178.90), (13, 5224.62), (14, 5819.62), (15, 6442.69), (16, 7735)).map(((x,y)) => {(x,y + offset * 1.5)})
 
-    let AC_point(offset: 1) = ((4,2075), (5,2620), (6,3140), (7,3515), (8,4090), (9, 4520), (10, 4875), (11, 5105), (12, 5285), (13, 5395), (14, 5990), (15, 6560)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let AC_point(offset: 1) = ((4,2075), (5,2620), (6,3140), (7,3515), (8,4090), (9, 4520), (10, 4875), (11, 5105), (12, 5285), (13, 5395), (14, 5990), (15, 6560), (16, 7610)).map(((x,y)) => {(x,y + offset * 1.5)})
 
-    let PV_point(offset: 1) = ((4,2040), (5,2655), (6,3190), (7,3690), (8,4200), (9, 4825), (10, 5155), (11, 5470), (12, 5625), (13, 5705), (14, 6300), (15, 6840)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let PV_point(offset: 1) = ((4,2040), (5,2655), (6,3190), (7,3690), (8,4200), (9, 4825), (10, 5155), (11, 5470), (12, 5625), (13, 5705), (14, 6300), (15, 6840), (16, 7890)).map(((x,y)) => {(x,y + offset * 1.5)})
 
     plot.plot(size: (12, 6), {
     plot.add(PV_point(offset: 1), line: "spline", label: "PPV")
-    plot.add(AC_point(offset: 1), line: "spline", label: "PAC", style: (stroke: (paint: red)))
-    plot.add(EV_points(offset: 0), line: "spline", label: "PEV", style: (stroke: (paint: green)))
+    plot.add(AC_point(offset: 1), line: "spline", label: "PAC .", style: (stroke: (paint: red)))
+    plot.add(EV_points(offset: 0), line: "spline", label: "PEV .", style: (stroke: (paint: green)))
     plot.add-hline(13055, label: "BAC" , style: (stroke: (paint: blue, dash: "dotted")))
-    plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
-    plot.add-vline(20, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
+    plot.add-vline(13, label: "RTB ", style: (stroke: (paint: black, dash: "dotted")))
+    plot.add-vline(20, label: "PB " , style: (stroke: (paint: red, dash: "dotted")))
     },
     y-max: 14000,
     x-max: 21,
@@ -466,7 +466,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 #figure(
   cetz.canvas({
     import cetz.plot
-    let CPI_points(offset: 0) = ((4,0.98), (5,1.01), (6,0.99), (7,1.00), (8,0.97), (9, 1.01), (10, 0.99), (11, 1.00), (12, 0.98), (13, 0.97), (14, 0.97), (15, 0.98)).map(((x,y)) => {(x,y + offset * 1.5)})
+    let CPI_points(offset: 0) = ((4,0.98), (5,1.01), (6,0.99), (7,1.00), (8,0.97), (9, 1.01), (10, 0.99), (11, 1.00), (12, 0.98), (13, 0.97), (14, 0.97), (15, 0.98), (16, 1.02)).map(((x,y)) => {(x,y + offset * 1.5)})
 
     plot.plot(size: (12, 6), {
     plot.add(CPI_points(offset: 0), line: "linear", label: "CPI", mark: "triangle")
@@ -494,7 +494,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 #figure(
   cetz.canvas({
     import cetz.plot
-    let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13173.08), (7,   13004.98), (8, 13524.07), (9, 12903.30), (10, 13127.33), (11, 13107.92), (12, 13322.45), (13, 13480.74), (14, 13437.22), (15, 13292.70)).map(((x,y)) => {(x,y + offset * 100)})
+    let EAC_points(offset: 0) = ((4,13278.98), (5,12882.90), (6, 13173.08), (7,   13004.98), (8, 13524.07), (9, 12903.30), (10, 13127.33), (11, 13107.92), (12, 13322.45), (13, 13480.74), (14, 13437.22), (15, 13292.70), (16, 12844.02)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(EAC_points(offset: 0), line: "linear", label: "EAC", mark: "triangle", style: (stroke: (paint: red)))
@@ -528,13 +528,13 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
   cetz.canvas({
     import cetz.plot
 
-    let PdP_points(offset: 0) = ((4,1), (5,2), (6, 2), (7, 1), (8, 0), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0), (14, 1), (15, 0)).map(((x,y)) => {(x,y + offset * 100)})
+    let PdP_points(offset: 0) = ((4,1), (5,2), (6, 2), (7, 1), (8, 0), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0), (14, 1), (15, 0), (16, 2)).map(((x,y)) => {(x,y + offset * 100)})
 
-    let PdQ_points(offset: 0) = ((4,0), (5,0), (6, 0), (7, 0), (8, 0), (9, 2), (10, 3), (11, 1), (12, 0), (13, 0), (14, 0), (15, 0)).map(((x,y)) => {(x,y + offset * 100)})
+    let PdQ_points(offset: 0) = ((4,0), (5,0), (6, 0), (7, 0), (8, 0), (9, 2), (10, 3), (11, 1), (12, 0), (13, 0), (14, 0), (15, 0), (16, 1)).map(((x,y)) => {(x,y + offset * 100)})
 
-    let AdR_points(offset: 0) = ((4,4), (5,4), (6, 2), (7, 2), (8, 3), (9, 1), (10, 0), (11, 0), (12, 0), (13, 0), (14, 0), (15, 1)).map(((x,y)) => {(x,y + offset * 100)})
+    let AdR_points(offset: 0) = ((4,4), (5,4), (6, 2), (7, 2), (8, 3), (9, 1), (10, 0), (11, 0), (12, 0), (13, 0), (14, 0), (15, 1), (16, 0)).map(((x,y)) => {(x,y + offset * 100)})
 
-    let GLS_points(offset: 2) = ((4,3), (5,2), (6, 0), (7, 0), (8, 2), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0), (14, 0), (15, 0)).map(((x,y)) => {(x,y + offset * 100)})
+    let GLS_points(offset: 2) = ((4,3), (5,2), (6, 0), (7, 0), (8, 2), (9, 0), (10, 1), (11, 0), (12, 0), (13, 0), (14, 0), (15, 0), (16, 0)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(PdP_points(offset: 0), line: "linear", label: "PdP", mark: "o")
@@ -562,7 +562,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
   cetz.canvas({
     import cetz.plot
 
-    let NdP_points(offset: 0) = ((4,2), (5,3), (6, 4), (7, 3), (8, 3), (9, 2), (10, 1), (11, 1), (12, 0), (13, 0), (14, 0), (15, 1)).map(((x,y)) => {(x,y + offset * 100)})
+    let NdP_points(offset: 0) = ((4,2), (5,3), (6, 4), (7, 3), (8, 3), (9, 2), (10, 1), (11, 1), (12, 0), (13, 0), (14, 0), (15, 1), (16, 2)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(NdP_points(offset: 0), line: "linear", label: "NdP", mark: "o")
@@ -597,7 +597,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
   cetz.canvas({
     import cetz.plot
 
-    let Metrics_points(offset: 0) = ((4,7/9*100), (5,8/9*100), (6, 7/9*100), (7, 8/9*100), (8, 6/9*100), (9, 8/9*100), (10, 7/9*100), (11, 6/9*100), (12, 6/9*100), (13, 6/9*100), (14, 8/9*100), (15, 7/9*100)).map(((x,y)) => {(x,y + offset * 100)})
+    let Metrics_points(offset: 0) = ((4,7/9*100), (5,8/9*100), (6, 7/9*100), (7, 8/9*100), (8, 6/9*100), (9, 8/9*100), (10, 7/9*100), (11, 6/9*100), (12, 6/9*100), (13, 6/9*100), (14, 8/9*100), (15, 7/9*100), (16, 8/9*100)).map(((x,y)) => {(x,y + offset * 100)})
 
     plot.plot(size: (12, 6), {
     plot.add(Metrics_points(offset: 0), line: "linear", label: "% Metriche soddisfatte", mark: "triangle", style: (stroke: (paint: red)))

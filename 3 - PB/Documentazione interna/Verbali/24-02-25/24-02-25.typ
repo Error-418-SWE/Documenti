@@ -58,9 +58,9 @@ Il #pdq ha visto completati i lavori:
 
 = Analisi retrospettiva
 Lo Sprint 16 è terminato con il raggiungimento di tutti gli obiettivi prefissati, il cui rendimento positivo è sostenuto dalle principali metriche esposte dal #pdq\:
-- CPI di progetto cresce passando da 0.98 a 1.02;
-- EAC diminuisce passando da € 13.292,70 a € 12.844,02;
-- $"SEV" >= "SPV"$
+- CPI di progetto cresce passando da 0.98 a 1.01;
+- EAC diminuisce passando da € 13.292,70 a € 12.911,54;
+- $"SEV" >= "SPV"$.
 
 Maggiori dettagli in merito al valore delle metriche alla loro analisi sono reperibili all'interno dei documenti #pdq_v e #pdp_v.
 
@@ -74,7 +74,7 @@ Non sono state riscontrate criticità.
 
 = Pianificazione <pianificazione>
 
-Viene pianificata una riunione interna in data 26/02 alle ore 3:00 per discutere del design che il sistema software dovrà implementare.
+Viene pianificata una riunione interna in data 26/02 alle ore 15:00 per discutere del design che il sistema software dovrà implementare.
 
 #let table-json(data) = {
   let keys = data.at(0).keys()

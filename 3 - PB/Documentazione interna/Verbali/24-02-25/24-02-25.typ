@@ -22,7 +22,7 @@
 
 = Valutazione del progresso generale <avanzamento>
 
-Lo sprint 16 ha visto le task assegnate completate nei tempi previsti, non sono stati riscontrati rallentamenti o problematiche significative.
+Lo Sprint 16 ha visto le task assegnate completate nei tempi previsti, non sono stati riscontrati rallentamenti o problematiche significative.
 
 Il giorno giovedì 22/02/2024 si è svolto il meeting esterno con il Proponente, come pianificato, per aggiornare riguardo lo stato dei lavori.
 
@@ -36,7 +36,7 @@ Le #ndp hanno visto completati i lavori:
 - redazione capitolo Technical processes/Design Definition process;
 - redazione capitolo Technical processes/Architecture Definition process;
 - aggiornamento capitolo 4.6.3 per quanto riguarda il contenuto dei verbali interni;
-- aggiornamento capitolo 4.6.4 per quanto riguarda l'introduzione di variabili Typst per l'uso di termini ricorrenti.
+- aggiornamento capitolo 4.6.4 per quanto riguarda l'introduzione di variabili Typst per l'uso di termini ricorrenti;
 - redazione paragrafo inerente l'utilizzo di Figma tra gli strumenti utilizzati;
 - descrizione versionamento del codice;
 - definizione metriche di prodotto.
@@ -65,8 +65,8 @@ Lo Sprint 16 è terminato con il raggiungimento di tutti gli obiettivi prefissat
 Maggiori dettagli in merito al valore delle metriche alla loro analisi sono reperibili all'interno dei documenti #pdq_v e #pdp_v.
 
 == Keep doing <keep-doing>
-Come nello sprint precedente viene riconosciuto il ruolo del verificatore che ha saputo offrire review precise e tempestive.
-Come nello sprint precedente il gruppo ha saputo mantenere una modalità di lavoro e di comunicazione asincrona.
+Come nello sprint precedente viene riconosciuto il ruolo del Verificatore che ha saputo offrire review precise e tempestive.
+Come nello Sprint precedente il gruppo ha saputo mantenere una modalità di lavoro e di comunicazione asincrona.
 
 == Improvements <improvements>
 Non sono state riscontrate criticità.

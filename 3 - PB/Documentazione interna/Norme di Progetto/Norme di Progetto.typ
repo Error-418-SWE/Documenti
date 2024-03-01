@@ -1595,23 +1595,20 @@ Come risultato della corretta implementazione del processo di implementazione ot
 
 - identificazione dei vincoli implementativi che influenzano i requisiti, l'architettura o il design;
 - realizzazione di un elemento di sistema;
-- qualsiasi servizio o sistema abilitante per l'implementazione è disponibile;
 - l'implementazione viene tracciata.
 
 === Attività
 
 ==== Preparazione per l'implementazione
-L'attività consiste dei seguenti task:
-+ Definire una strategia d'implementazione, considerando:
- - standard di codice o di programmazione, politiche di unit test e standard specifici del linguaggio per l'implementazione delle feature;
- - metodi per determinare il livello, la fonte e l'idoneità per codice riutilizzato o adattato;
- - procedure e metodi per lo sviluppo software, lo sviluppo di unit test e l'uso di peer review e unit test;
- - uso gestione della configurazione durante la costruzione del software;
- - ciclo di vita di sviluppo completo o specializzato e ambiente di supporto per realizzare e gestire requisiti, elementi software e test cases;
-+ Identificare vincoli dalla strategia di implementazione e tecnologie di implementazione su: requisiti di sistema/software, caratteristiche architetturali, caratteristiche del design o tecniche dell'implementazione;
-+ identificare un piano per necessari e distinti ambienti software, inclusi sistemi abilitanti o servizi necessari per supportare lo sviluppo e il testing.
+Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte dello sviluppatore di una serie di unit test precedentemente allo sviluppo vero e proprio dell elemento di sistema.
+Data la mole di elementi grafici o interazioni utente che non sono né facili, né economici da testare automaticamente viene definito una modalità di testing manuale. Chi sviluppa l'elemento di sistema è responsabile della verifica del corretto funzionamento del codice scritto. Per aiutare il lavoro di verifica da parte del verificatore, riportare in pr tutte le funzionalità che si ha necessità di controllare manualmente.
+Nel caso di codice riutilizzato o adattato si segue il metodo precedentemente descritto per certificare la bontà del codice introdotto.
+
+no end to end
 
 ==== Eseguire l'implementazione
+Decisa una strategia di testing per l'elemento di sistema e, se possibile, scritti i test di unità il programmatore può quindi cominciare lo sviluppo o l'adeguamento del software.
+
 L'attività consiste dei seguenti task:
 + realizzare o adattare elementi software secondo la strategia, vincoli e le procedure di implementazione definite;
 + realizzare o adattare elementi di servizio del sistema software;

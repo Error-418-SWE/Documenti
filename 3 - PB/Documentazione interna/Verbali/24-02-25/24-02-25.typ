@@ -27,7 +27,7 @@ Lo sprint 16 ha visto le task assegnate completate nei tempi previsti, non sono 
 Il giorno giovedì 22/02/2024 si è svolto il meeting esterno con il Proponente, come pianificato, per aggiornare riguardo lo stato dei lavori.
 
 == Modifiche di carattere generale
-Predisposta la repo per contenere materiali inerenti la PB.
+Predisposta la repository per contenere materiali inerenti la PB.
 
 Aggiornati riferimenti di vari documenti, espanso il glossario e aggiornate le automazioni.
 

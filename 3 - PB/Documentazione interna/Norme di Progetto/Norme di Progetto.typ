@@ -1674,7 +1674,7 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.9_
 Il processo di verifica ha lo scopo di dimostrare la correttezza e l'adempimento di tutti i requisiti di un elemento di sistema, definiti in #adr_v, rispettando quanto definito nel #pdq_v.
 Nel caso in cui vengano identificati errori o mancanze, vengono fornite le informazioni necessarie a determinare la risoluzione delle anomalie riscontrate.
 
-Tali operazioni sono possibili mediante molteplici test automatici eseguiti in parte durante il [@processo_integrazione].
+Tali operazioni sono possibili mediante molteplici test automatici eseguiti in parte durante il processo di integrazione #TODO.
 Così facendo si garantisce l'individuazione di eventuali problemi tempestivamente, evitandone un accumulo indesiderato.
 
 === Risultati
@@ -1701,7 +1701,7 @@ Successivamente vengono eseguite automaticamente GitHub Actions atte allo svolgi
 Se queste ultime comprendono elementi software, vengono eseguiti test di unità e regressione.
 Inoltre a seguito dell'integrazione del codice, vengono eseguiti test di integrazione.
 
-Le GitHub Actions designate all'esecuzione dei test sono codificate nel file _test_nodejs.yml_.
+La GitHub Action designata all'esecuzione dei test è codificata nel file _test_nodejs.yml_.
 
 Nel caso in cui vengano effettuati test sul codice dinamici, l'ambiente di esecuzione è predefinito mediante l'utilizzo di Docker e Docker Compose.
 

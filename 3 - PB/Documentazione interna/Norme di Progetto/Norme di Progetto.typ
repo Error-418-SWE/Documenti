@@ -1672,7 +1672,8 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.8_
 
 === Scopo
 Il processo di integrazione ha lo scopo di combinare iterativamente elementi software al fine di ottenere un prodotto che soddisfi i requisiti rispettando l'architettura e il design definiti.
-È quindi necessario il coordinamento con i processi di [@processo_definizione_architettura] e [@processo_design].
+È quindi necessario il coordinamento con il processo di definizione dell'architettura (@processo_definizione_architettura) e il processo di design (@processo_design).
+
 L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la Continuous Integration.
 
 
@@ -1680,7 +1681,9 @@ L'integrazione del sistema software avviene automaticamente mediante strumenti c
 Come risultato della corretta implementazione del processo di integrazione:
 - viene integrato il nuovo elemento software con il prodotto principale;
 - vengono eseguiti automaticamente i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione;
-- vengono identificati i risultati ed eventuali anomalie.
+- vengono identificati i risultati ed eventuali anomalie;
+- i risultati dei test vengono registrati e possono essere visualizzati su GitHub;
+- gli elementi correttamente integrati vengono tracciati e possono essere visualizzati su GitHub.
 
 === Attività
 ==== Pianificazione della strategia di integrazione
@@ -1694,14 +1697,17 @@ Come risultato della corretta implementazione del processo di integrazione:
 
   Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella pull request vengono approvate da un verificatore, il quale attua la funzione di merge.
   Le GitHub Action provvedono a:
-  - costruire l'immagine Docker e pubblicarla su Docker Hub e GitHub Container Registry tramite il file _build_docker.yml_;
+  - costruire l'immagine Docker e pubblicarla su Docker Hub e GitHub Container Registry tramite la action "build_docker", le cui caratteristiche e job sono descritti nel file _build_docker.yml_;
   - copiare il contenuto del repository sul Virtual Private Server e proseguire con l'avvio di Docker Compose tramite il file _deploy.yml_;
-  - creare, tramite il file _tag_semver.yml_, un tag di versione semantica per ogni push sul branch di development del Version Control System. Tale tag viene pubblicato su GitHub e viene creata una release;
-  - l'esecuzione dei test avviene tramite il file _test_nodejs.yml_.
+  - creare, tramite la action "tag_semver", le cui caratteristiche e job sono descritti nel file _tag_semver.yml_, un tag di versione semantica per ogni push sul branch di development del Version Control System. Tale tag viene pubblicato su GitHub e viene creata una release;
+  - l'esecuzione dei test avviene tramite la action "test_nodejs", le cui caratteristiche e job sono descritti nel file _test_nodejs.yml_.
 
 ==== Gestione dei risultati
   I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a causa dell'approvazione della pull request. Le GitHub Actions prevedono la visualizzazione di messaggi che descrivono gli eventuali errori insorti oppure, in loro assenza, della corretta esecuzione dell'automazione.
+
   I test automatici forniscono un resoconto di tutti i test svolti con i relativi esiti nei log della GitHub Action corrispondente.
+
+  Su GitHub è possibile visualizzare l'insieme delle pull request apporvate e correttamente integrate, in questo modo è possibile tenere traccia degli elementi che costituiscono il prodotto.
 
 #pagebreak()
 

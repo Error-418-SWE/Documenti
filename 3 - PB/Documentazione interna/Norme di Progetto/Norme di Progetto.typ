@@ -1687,18 +1687,16 @@ Come risultato della corretta implementazione del processo di implementazione ot
 === Attività
 
 ==== Preparazione per l'implementazione
-Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del progettista di una serie di unit test precedentemente allo sviluppo vero e proprio dell elemento di sistema.
+Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del Progettista di una serie di unit test precedentemente allo sviluppo vero e proprio dell'elemento di sistema. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
 
 In caso di modifica eseguendo nuovamente i test si garantisce che il software sviluppato e testato in precedenza funzioni ancora come previsto. In caso contrario, si parlerebbe di regressione.
 
-Data la mole di elementi grafici o interazioni utente che non sono né facili, né economici da testare automaticamente viene definito una modalità di testing manuale. Chi sviluppa l'elemento di sistema è responsabile della verifica del corretto funzionamento del codice scritto.
+Data la mole di elementi grafici o interazioni utente che non sono né facili, né economici da testare automaticamente viene definita una modalità di testing manuale: chi sviluppa l'elemento di sistema è responsabile della verifica del corretto funzionamento del codice scritto. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
 
-Per aiutare il lavoro di verifica da parte del verificatore, riportare in pr tutte le funzionalità che si ha necessità di controllare manualmente.
-
-Nel caso di codice riutilizzato o adattato si segue il metodo precedentemente descritto per certificare la bontà del codice introdotto.
+Per aiutare il lavoro di verifica da parte del Verificatore, riportare in pr tutte le funzionalità che si ha necessità di controllare manualmente.
 
 ==== Eseguire l'implementazione
-Decisa una strategia di testing per l'elemento di sistema e, se possibile, scritti i test di unità il programmatore può quindi cominciare lo sviluppo o l'adeguamento del software.
+Decisa una strategia di testing per l'elemento di sistema e, se possibile, scritti i test di unità il Programmatore può quindi cominciare lo sviluppo o l'adeguamento del software.
 
 Prima di sottoporre il software a verifica bisogna assicurarsi che l'elemento di sistema non regredisca le funzionalità tramite l'esecuzione dei test.
 ==== Gestire i risultati dell'implementazione e delle anomalie incontrate

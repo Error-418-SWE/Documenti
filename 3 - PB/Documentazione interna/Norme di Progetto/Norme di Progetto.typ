@@ -1665,6 +1665,43 @@ Gli argomenti principali trattati nel documento sono due:
 
 Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
 
+== Processo di implementazione
+<processo_implementazione>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.7_
+
+=== Scopo
+
+Lo scopo del processo di implementazione è quello di realizzare uno specificato elemento di sistema. Questo processo trasforma requisiti, architetture e design, includendo le interfacce, in azioni che creano un elemento di sistema in accordo con le prassi della tecnologia implementativa selezionata, usando appropriate specialità o discipline tecniche.
+
+Questo processo risulta in un elemento di sistema che soddisfa specificati requisiti di sistema (inclusi requisiti specifici e i derivati), architetture e design.
+
+=== Risultati
+
+Come risultato della corretta implementazione del processo di implementazione otteniamo:
+
+- identificazione dei vincoli implementativi che influenzano i requisiti, l'architettura o il design;
+- realizzazione di un elemento di sistema;
+- l'implementazione viene tracciata.
+
+=== Attività
+
+==== Preparazione per l'implementazione
+Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del Progettista di una serie di unit test precedentemente allo sviluppo vero e proprio dell'elemento di sistema. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
+
+In caso di modifica eseguendo nuovamente i test si garantisce che il software sviluppato e testato in precedenza funzioni ancora come previsto. In caso contrario, si parlerebbe di regressione.
+
+Data la mole di elementi grafici o interazioni utente che non sono né facili, né economici da testare automaticamente viene definita una modalità di testing manuale: chi sviluppa l'elemento di sistema è responsabile della verifica del corretto funzionamento del codice scritto. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
+
+Per aiutare il lavoro di verifica da parte del Verificatore, riportare in pr tutte le funzionalità che si ha necessità di controllare manualmente.
+
+==== Eseguire l'implementazione
+Decisa una strategia di testing per l'elemento di sistema e, se possibile, scritti i test di unità il Programmatore può quindi cominciare lo sviluppo o l'adeguamento del software.
+
+Prima di sottoporre il software a verifica bisogna assicurarsi che l'elemento di sistema non regredisca le funzionalità tramite l'esecuzione dei test.
+==== Gestire i risultati dell'implementazione e delle anomalie incontrate
+
+L'elemento approvato in fase di verifica viene quindi integrato nel sistema come descritto nel paragrafo #TODO.
 
 == Processo di integrazione <processo_integrazione>
 
@@ -1737,6 +1774,7 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
     [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
     [@processo_design],[6.4.5 - Design Definition process],[To outcome],
+    [@processo_implementazione],[6.4.7 - Implementation process],[To outcome],
     [@processo_integrazione],[6.4.8 - Integration process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"

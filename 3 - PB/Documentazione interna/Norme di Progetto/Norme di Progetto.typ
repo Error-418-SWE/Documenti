@@ -1703,7 +1703,7 @@ Inoltre a seguito dell'integrazione del codice, vengono eseguiti test di integra
 
 La GitHub Action designata all'esecuzione dei test è codificata nel file _test_nodejs.yml_.
 
-Nel caso in cui vengano effettuati test sul codice dinamici, l'ambiente di esecuzione è predefinito mediante l'utilizzo di Docker e Docker Compose.
+L'utilizzo di Docker permette l'esecuzione di test dinamici in un ambiente comune per gli sviluppatori, garantendo la ripetibilità dei test indipendentemente dall'hardware che li esegue.
 
 ==== Gestione dei risultati
 I risultati ottenuti sono visualizzati su GitHub nella sezione relativa alle automazioni avvenute nella pull request dell'elemento verificato.

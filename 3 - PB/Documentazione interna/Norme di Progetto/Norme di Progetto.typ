@@ -1665,6 +1665,86 @@ Gli argomenti principali trattati nel documento sono due:
 
 Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
 
+== Processo di implementazione
+<processo_implementazione>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.7_
+
+=== Scopo
+
+Lo scopo del processo di implementazione è quello di realizzare uno specificato elemento di sistema. Questo processo trasforma requisiti, architetture e design, includendo le interfacce, in azioni che creano un elemento di sistema in accordo con le prassi della tecnologia implementativa selezionata, usando appropriate specialità o discipline tecniche.
+
+Questo processo risulta in un elemento di sistema che soddisfa specificati requisiti di sistema (inclusi requisiti specifici e i derivati), architetture e design.
+
+=== Risultati
+
+Come risultato della corretta implementazione del processo di implementazione otteniamo:
+
+- identificazione dei vincoli implementativi che influenzano i requisiti, l'architettura o il design;
+- realizzazione di un elemento di sistema;
+- l'implementazione viene tracciata.
+
+=== Attività
+
+==== Preparazione per l'implementazione
+Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del Progettista di una serie di unit test precedentemente allo sviluppo vero e proprio dell'elemento di sistema. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
+
+In caso di modifica eseguendo nuovamente i test si garantisce che il software sviluppato e testato in precedenza funzioni ancora come previsto. In caso contrario, si parlerebbe di regressione.
+
+Data la mole di elementi grafici o interazioni utente che non sono né facili, né economici da testare automaticamente viene definita una modalità di testing manuale: chi sviluppa l'elemento di sistema è responsabile della verifica del corretto funzionamento del codice scritto. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
+
+Per aiutare il lavoro di verifica da parte del Verificatore, riportare in pr tutte le funzionalità che si ha necessità di controllare manualmente.
+
+==== Eseguire l'implementazione
+Decisa una strategia di testing per l'elemento di sistema e, se possibile, scritti i test di unità il Programmatore può quindi cominciare lo sviluppo o l'adeguamento del software.
+
+Prima di sottoporre il software a verifica bisogna assicurarsi che l'elemento di sistema non regredisca le funzionalità tramite l'esecuzione dei test.
+==== Gestire i risultati dell'implementazione e delle anomalie incontrate
+
+L'elemento approvato in fase di verifica viene quindi integrato nel sistema come descritto nel paragrafo #TODO.
+
+== Processo di integrazione <processo_integrazione>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.8_
+
+=== Scopo
+Il processo di integrazione ha lo scopo di combinare iterativamente elementi software al fine di ottenere un prodotto che soddisfi i requisiti rispettando l'architettura e il design definiti.
+È quindi necessario il coordinamento con il processo di definizione dell'architettura (@processo_definizione_architettura) e il processo di design (@processo_design).
+
+L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la Continuous Integration.
+
+
+=== Risultati
+Come risultato della corretta implementazione del processo di integrazione:
+- viene integrato il nuovo elemento software con il prodotto principale;
+- vengono eseguiti automaticamente i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione;
+- vengono identificati i risultati ed eventuali anomalie;
+- i risultati dei test vengono registrati e possono essere visualizzati su GitHub;
+- gli elementi correttamente integrati vengono tracciati e possono essere visualizzati su GitHub.
+
+=== Attività
+==== Pianificazione della strategia di integrazione
+
+  La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche "Continuous Integration" e "Continuous Deployment", al fine di garantire un frequente allineamento degli ambienti di lavoro tra i membri e avere costantemente la versione più aggiornata del prodotto disponibile e funzionante.
+  Essa prevede la gestione dell'integrazione degli elementi software e dell'esecuzione dei test di unità, integrazione e non regressione mediante automazioni GitHub Actions.
+  Testare automaticamente il prodotto ad ogni iterazione garantisce inoltre il rispetto dei requisiti descritti nel documento #adr_v e i processi di verifica.
+  A supporto dell'integrazione ed il deployment è inoltre presente un Virtual Private Server su Azure che esegue Docker.
+
+==== Esecuzione
+
+  Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella pull request vengono approvate da un Verificatore, il quale attua la funzione di merge.
+  Le GitHub Action provvedono a:
+  - costruire l'immagine Docker e pubblicarla su Docker Hub e GitHub Container Registry tramite la action "build_docker", le cui caratteristiche e job sono descritti nel file _build_docker.yml_;
+  - copiare il contenuto del repository sul Virtual Private Server e proseguire con l'avvio di Docker Compose tramite il file _deploy.yml_;
+  - creare, tramite la action "tag_semver", le cui caratteristiche e job sono descritti nel file _tag_semver.yml_, un tag di versione semantica per ogni push sul branch di development del Version Control System. Tale tag viene pubblicato su GitHub e viene creata una release;
+  - l'esecuzione dei test avviene tramite la action "test_nodejs", le cui caratteristiche e job sono descritti nel file _test_nodejs.yml_.
+
+==== Gestione dei risultati
+  I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a causa dell'approvazione della pull request. Le GitHub Actions prevedono la visualizzazione di messaggi che descrivono gli eventuali errori insorti oppure, in loro assenza, della corretta esecuzione dell'automazione.
+
+  I test automatici forniscono un resoconto di tutti i test svolti con i relativi esiti nei log della GitHub Action corrispondente.
+
+  Su GitHub è possibile visualizzare l'insieme delle pull request apporvate e correttamente integrate, in questo modo è possibile tenere traccia degli elementi che costituiscono il prodotto.
 
 == Processo di verifica <processo_verifica>
 
@@ -1716,8 +1796,6 @@ Questi ultimi dovranno agire di conseguenza risolvendo i problemi emersi o piani
 
 Per avere traccia degli elementi verificati che costituiscono il prodotto, su GitHub è possibile visualizzare l'insieme delle pull request approvate ed integrate mediante merge.
 
-
-
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
@@ -1746,6 +1824,9 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
     [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
     [@processo_design],[6.4.5 - Design Definition process],[To outcome],
+    [@processo_verifica],[6.4.9 - Verification process],[To outcome],
+    [@processo_implementazione],[6.4.7 - Implementation process],[To outcome],
+    [@processo_integrazione],[6.4.8 - Integration process],[To outcome],
     [@processo_verifica],[6.4.9 - Verification process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"

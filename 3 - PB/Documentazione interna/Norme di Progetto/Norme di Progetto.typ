@@ -1746,6 +1746,56 @@ Come risultato della corretta implementazione del processo di integrazione:
 
   Su GitHub è possibile visualizzare l'insieme delle pull request apporvate e correttamente integrate, in questo modo è possibile tenere traccia degli elementi che costituiscono il prodotto.
 
+== Processo di verifica <processo_verifica>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.9_
+
+=== Scopo
+Il processo di verifica ha lo scopo di dimostrare la correttezza e l'adempimento di tutti i requisiti di un elemento di sistema, definiti in #adr_v, rispettando quanto definito nel #pdq_v.
+Nel caso in cui vengano identificati errori o mancanze, vengono fornite le informazioni necessarie a determinare la risoluzione delle anomalie riscontrate.
+
+Tali operazioni sono possibili mediante molteplici test automatici eseguiti in parte durante il processo di integrazione #TODO.
+Così facendo si garantisce l'individuazione di eventuali problemi tempestivamente, evitandone un accumulo indesiderato.
+
+=== Risultati
+Come risultato della corretta applicazione del processo di verifica, per ogni elemento:
+- viene effettuata una verifica manuale da parte di uno o più Verificatori;
+- nel caso in cui il soggetto della verifica sia un elemento software:
+  - vengono eseguiti i test automatici di unità;
+  - vengono eseguiti i test automatici di regressione;
+  - vengono eseguiti i test automatici di integrazione;
+- vengono rilevati eventuali problemi legati al rispetto della correttezza, dei requisiti o dell'architettura, in funzione di quanto definito;
+- in caso di errori vengono riportati i dati che forniscono informazioni per le azioni correttive;
+- in caso di mancanza di anomalie viene fornita evidenza che il sistema verificato garantisce piena conformità.
+
+
+=== Attività
+==== Esecuzione
+
+La prima attività di verifica avviene tramite delle GitHub Actions eseguite automaticamente alla pubblicazione di una pull request e alla sua approvazione da parte di un Verificatore.
+Esse eseguono dei test statici sulla correttezza dell'elemento analizzato, fornendo risultati sui singoli esiti dei test.
+
+I Verificatori approvano le modifiche successivamente ad un'analisi manuale che garantisca la conformità con le norme stabilite.
+
+Successivamente vengono eseguite automaticamente GitHub Actions atte allo svolgimento di ulteriori test dipendenti dalla natura delle modifiche soggette a verifica.
+Se queste ultime comprendono elementi software, vengono eseguiti test di unità e regressione.
+Inoltre a seguito dell'integrazione del codice, vengono eseguiti test di integrazione.
+
+La GitHub Action designata all'esecuzione dei test è codificata nel file _test_nodejs.yml_.
+
+L'utilizzo di Docker permette l'esecuzione di test dinamici in un ambiente comune per gli sviluppatori, garantendo la ripetibilità dei test indipendentemente dall'hardware che li esegue.
+
+==== Gestione dei risultati
+I risultati ottenuti sono visualizzati su GitHub nella sezione relativa alle automazioni avvenute nella pull request dell'elemento verificato.
+
+Se a seguito di tutti i test non emergono anomalie o errori, la verifica è avvenuta correttamente e viene confermata la conformità degli elementi analizzati.
+Possono quindi proseguire i processi che comprendono le pratiche di Continuous Integration e Continuous Delivery e la pull request GitHub viene chiusa conseguentemente ad una funzione di merge attuata da un Verificatore.
+
+Contrariamente, nel caso in cui almeno un'attività di verifica faccia emergere problematiche, le modifiche non possono essere integrate nel sistema e vengono notificati gli autori degli elementi di interesse.
+Questi ultimi dovranno agire di conseguenza risolvendo i problemi emersi o pianificandone la risoluzione.
+
+Per avere traccia degli elementi verificati che costituiscono il prodotto, su GitHub è possibile visualizzare l'insieme delle pull request approvate ed integrate mediante merge.
+
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
@@ -1774,8 +1824,10 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
     [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
     [@processo_design],[6.4.5 - Design Definition process],[To outcome],
+    [@processo_verifica],[6.4.9 - Verification process],[To outcome],
     [@processo_implementazione],[6.4.7 - Implementation process],[To outcome],
     [@processo_integrazione],[6.4.8 - Integration process],[To outcome],
+    [@processo_verifica],[6.4.9 - Verification process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

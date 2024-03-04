@@ -40,6 +40,11 @@
 #let pdq_v   = text(pdq_key + " v" + versions.at(pdq_key), style: "italic")
 #let pdq_vo  = versions.at(pdq_key)
 
+#let st_key = "Specifica Tecnica"
+#let st     = text(st_key, style: "italic")
+#let st_v   = text(st_key + " v" + versions.at(st_key), style: "italic")
+#let st_vo  = versions.at(st_key)
+
 #let grafana = "https://error418swe.grafana.net/public-dashboards/9392efccc5a5427c850fc9ec81df7dff"
 
 #let azienda = "Sanmarco Informatica S.p.A."
@@ -70,5 +75,5 @@
     h(0.02em)
   })
 
-  Le definizioni sono dipoonibili nel documento #glo_v.
+  Le definizioni sono diponibili nel documento #glo_v.
 ]

@@ -22,12 +22,12 @@
 	{
 	  "ID task": "DOC-553",
 	  "Descrizione": "Redigere consuntivo di periodo Sprint 17",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Amministratore"
 	},
 	{
 	  "ID task": "DOC-554",
 	  "Descrizione": "Redigere preventivo dello Sprint 18",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Amministratore"
 	},
 	{
 	  "ID task": "DOC-546",
@@ -37,22 +37,22 @@
 	{
 	  "ID task": "DOC-555",
 	  "Descrizione": "Redigere verbale interno 03/03/2024",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Amministratore"
 	},
 	{
 	  "ID task": "DOC-556",
 	  "Descrizione": "Redigere verbale interno XX/03/2024",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Amministratore"
 	},
 	{
 	  "ID task": "DOC-557",
 	  "Descrizione": "Redigere verbale esterno 07/03/2024",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Amministratore"
 	},
 	{
 	  "ID task": "DOC-558",
 	  "Descrizione": "Redigere verbale interno 07/03/2024",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Amministratore"
 	},
 	{
 	  "ID task": "DOC-559",
@@ -62,126 +62,126 @@
 	{
 	  "ID task": "DOC-560",
 	  "Descrizione": "Aggiornare metriche allo Sprint 17",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Verificatore"
 	},
 	{
 	  "ID task": "DOC-561",
 	  "Descrizione": "Individuare la struttura del documento",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Progettista"
 	},
 	{
 	  "ID task": "DOC-562",
 	  "Descrizione": "Redigere sezione [nome sezione sul database][da rinominare prima di aprire il branch]",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Progettista"
 	},
 	{
 	  "ID task": "DOC-563",
 	  "Descrizione": "Redigere sezione [nome sezione sull'architettura][da rinominare prima di aprire il branch]",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Progettista"
 	},
 	{
 	  "ID task": "WMS-60",
 	  "Descrizione": "Prenotare colloquio con il Professor Cardin",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Responsabile"
 	},
 	{
 	  "ID task": "WMS-48",
 	  "Descrizione": "Configurare production.yml per Docker Compose",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Amministratore"
 	},
 	{
 	  "ID task": "WMS-49",
 	  "Descrizione": "Definire schema del database PostgreSQL",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Progettista"
 	},
 	{
 	  "ID task": "WMS-50",
 	  "Descrizione": "Popolare la tabella Zone",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-51",
 	  "Descrizione": "Popolare la tabella Product",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-52",
 	  "Descrizione": "Popolare la tabella Category",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-53",
 	  "Descrizione": "Popolare la tabella Level",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-61",
 	  "Descrizione": "Popolare la tabella Column",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-54",
 	  "Descrizione": "Popolare la tabella Bin",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-58",
 	  "Descrizione": "Integrare caricamento SVG con API di sanificazione",
-	  "Ruolo": "Da definire"
+	  "Ruolo": ""
 	},
 	{
 	  "ID task": "WMS-59",
 	  "Descrizione": "Rimozione selezione multipla degli SVG",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-63",
 	  "Descrizione": "Implementare pattern middleware",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-71",
 	  "Descrizione": "Implementare importazione dei dati da DB",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-70",
 	  "Descrizione": "Implementare schermata di caricamento dei dati da DB",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-72",
 	  "Descrizione": "Realizzare creazione piano rettangolare in Three.js",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-73",
 	  "Descrizione": "Realizzare creazione piano personalizzato SVG in Three.js",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-65",
 	  "Descrizione": "Aggiornare form di creazione Zona",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-66",
 	  "Descrizione": "Aggiungere eliminazione Zona",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-67",
 	  "Descrizione": "Aggiungere modifica Zona",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-68",
 	  "Descrizione": "Aggiungere lista di riepilogo prodotti in Zona",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	},
 	{
 	  "ID task": "WMS-69",
 	  "Descrizione": "Aggiungere lista di riepilogo Bin in Zona",
-	  "Ruolo": "Da definire"
+	  "Ruolo": "Programmatore"
 	}
   ]

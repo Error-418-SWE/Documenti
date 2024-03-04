@@ -1760,7 +1760,7 @@ Questo sprint impiega:
 == Sprint 17 dal 26-02-2024 al 03-03-2024
 
 === Obiettivi prefissati
-In questo sprint si comincia il lavoro di definizione del design e si prosegue il lavoro sulla documentazione. Gli obiettivi prefissati sono:
+Questo sprint si occupa di cominciare il lavoro di definizione del design e di proseguire il lavoro sulla documentazione. Gli obiettivi prefissati sono:
 - meeting interno di design thinking, in modalità sincrona, il giorno 26/02/2024 ore 15:00;
 - colloquio con il Proponente, in modalità sincrona, il giorno 29/02/2024 alle ore 16:00;
 - estendere le #ndp con il paragrafo di Technical processes/Implementation process;
@@ -1768,14 +1768,14 @@ In questo sprint si comincia il lavoro di definizione del design e si prosegue i
 - estendere le #ndp con il paragrafo di Technical processes/Verification process;
 - estendere le #ndp con il paragrafo di Organizational Project-Enabling processes/Quality Management process;
 - aggiornare #ndp normando il sistema di tracciamento rischi - risoluzione;
-- revisione del documento #adr;
+- #adr: revisione del documento;
 - redigere introduzione del documento Manuale Utente;
 - redigere introduzione del documento Specifica Tecnica;
-- redigere preventivo e consuntivo dello sprint 16 nel #pdp;
-- redigere preventivo sprint 17 nel #pdp;
+- #pdp: redigere preventivo e consuntivo dello sprint 16;
+- #pdp: redigere preventivo sprint 17;
 - aggiornare le metriche del #pdq con i dati aggiornati da Grafana;
-- preparare il mock-up dell'ui da presentare al Proponente;
-- aggiornare lo schema ER in seguito al feedback ricevuto da Proponente.
+- preparare il mock-up dell'UI da presentare al Proponente;
+- aggiornare lo schema ER in seguito al feedback ricevuto dal Proponente.
 
 
 === Preventivo costi
@@ -1795,7 +1795,8 @@ Questo sprint impiega:
   - definire una bozza dello schema delle classi.
 - *Programmatore*: al fine di:
   - aggiornare il mock-up prodotto per il meeting con il Proponente;
-  - modificare il database secondo il nuovo schema ER.
+  - modificare il database secondo il nuovo schema ER;
+  - iniziare i lavori sul database.
 - *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp.
 
 #figure(

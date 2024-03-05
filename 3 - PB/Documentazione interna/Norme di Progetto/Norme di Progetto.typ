@@ -1796,6 +1796,9 @@ Questi ultimi dovranno agire di conseguenza risolvendo i problemi emersi o piani
 
 Per avere traccia degli elementi verificati che costituiscono il prodotto, su GitHub è possibile visualizzare l'insieme delle pull request approvate ed integrate mediante merge.
 
+== Processo di Transizione
+Lo scopo del processo di Transizione è di sabilire
+
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>

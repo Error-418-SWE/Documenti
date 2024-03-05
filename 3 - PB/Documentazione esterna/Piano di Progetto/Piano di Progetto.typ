@@ -1837,7 +1837,7 @@ Questo sprint impiega:
 == Sprint 18 dal 03/03/2024 al 10/03/2024
 === Obiettivi prefissati
 
-In questo sprint prosegue il lavoro di kick-off del design del MVP. Gli obiettivi prefissati sono:
+In questo sprint proseguono le attività di design e di implementazione. Gli obiettivi prefissati sono:
 - colloquio con il Proponente in data 07/03/2024;
 - aggiornamento ed estensione del documento #pdp;
 - aggiornamento grafici delle metriche nel #pdq allo Sprint 17;
@@ -1850,7 +1850,7 @@ In questo sprint prosegue il lavoro di kick-off del design del MVP. Gli obiettiv
 - implementazione e popolazione database PostgreSQL;
 - implementazione pattern middleware;
 - realizzazione creazione ambiente Three.js;
-- aggiornamento e aggiunta di funzionalità riguardanti le Zone dell'ambiente.
+- aggiornamento e aggiunta di funzionalità riguardanti le Zone dell'ambiente nel mock-up.
 
 === Preventivo costi
 Questo sprint impiega:

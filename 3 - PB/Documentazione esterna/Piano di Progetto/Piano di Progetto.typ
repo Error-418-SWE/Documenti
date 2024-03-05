@@ -1834,6 +1834,79 @@ Questo sprint impiega:
   supplement: "Grafico"
 )
 
+== Sprint 18 dal 03/03/2024 al 10/03/2024
+=== Obiettivi prefissati
+
+In questo sprint prosegue il lavoro di kick-off del design del MVP. Gli obiettivi prefissati sono:
+- colloquio con il Proponente in data 07/03/2024;
+- aggiornamento ed estensione del documento #pdp;
+- aggiornamento grafici delle metriche nel #pdq allo Sprint 17;
+- aggiornamento della dashboard Grafana allo Sprint 17;
+- estensione delle #ndp basata su _Transition process_ (6.4.10 del documento di riferimento) e _Validation process_ (6.4.11 del documento di riferimento);
+- continuazione della revisione dell'#adr;
+- richiedere colloquio in modalità sincrona con #cardin per discutere dei dubbi riguardanti la progettazione;
+- individuazione della struttura del documento #st;
+- redazione sezioni riguardanti il database e l'architettura nella #st;
+- implementazione e popolazione database PostgreSQL;
+- implementazione pattern middleware;
+- realizzazione creazione ambiente Three.js;
+- aggiornamento e aggiunta di funzionalità riguardanti le Zone dell'ambiente.
+
+=== Preventivo costi
+Questo sprint impiega:
+- *Responsabile*: al fine di:
+  - coordinare le attività;
+  - organizzare il lavoro in reazione al feedback;
+  - organizzare il meeting con il Proponente, anche tramite la redazione di una board Miro di supporto;
+  - contattare il #cardin per richiedere un colloquio in modalità sincrona;
+  - estendere le #ndp\.
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
+- *Analista*: al fine di:
+  - proseguire con la revisione del documento #adr.
+- *Progettista*: al fine di:
+  - proseguire con la definizione dell'architettura del prodotto.
+- *Programmatore*: al fine di:
+  - implementare e popolare il database;
+  - iniziare l'implementazione delle prime funzionalità del prodotto.
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp.
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [1],     [1],     [1],     [0],     [4],     [2],     [9],
+    [Carraro],     [0],     [1],     [2],     [1],     [2],     [1],     [7],
+    [Gardin],     [2],     [0],     [2],     [0],     [1],     [3],     [8],
+    [Nardo],     [1],     [3],     [0],     [0],     [4],     [0],     [8],
+    [Oseliero],     [1],     [0],     [0],     [1],     [3],     [3],     [8],
+    [Todesco],     [2],     [0],     [2],     [0],     [3],     [0],     [7],
+    [Zaccone],     [0],     [2],     [2],     [0],     [3],     [0],     [7],
+    [Totale ore],     [7],     [7],     [9],     [2],     [20],     [9],     [54],
+    [Costo ruolo],     [210],     [140],     [225],     [50],     [300],     [135],     [1060],
+  ),
+  caption: "Prospetto del preventivo, sprint 18"
+)
+#let data = (
+  ("Responsabile", 7),
+  ("Amministratore", 7),
+  ("Analista", 9),
+  ("Progettista", 2),
+  ("Programmatore", 20),
+  ("Verificatore", 9),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo sprint 18",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
 
 #pagebreak()
 

@@ -167,7 +167,11 @@ Il prodotto non prevede elementi hardware propri o interfacce con elementi hardw
 
 ==== Interfacce software
 
-WMS3 richiede l'accesso in lettura ad un database SQL per il caricamento e la visualizzazione dei dati.
+WMS3 si interfaccia, in sola lettura, con un database SQL al fine di:
+- importare i dati necessari alla costruzione della vista 3D;
+- ottenere lo stato interno del magazzino e le informazioni sulla merce contenuta al suo interno.
+
+È previsto che lo schema ER del database venga fornito dal Gruppo al Proponente come artefatto.
 
 ==== Interfacce di comunicazione
 

@@ -1839,14 +1839,14 @@ Questo sprint impiega:
 
 In questo sprint proseguono le attività di design e di implementazione. Gli obiettivi prefissati sono:
 - colloquio con il Proponente in data 07/03/2024;
-- aggiornamento ed estensione del documento #pdp;
+- aggiornamento ed estensione del documento #pdp\;
 - aggiornamento grafici delle metriche nel #pdq allo Sprint 17;
 - aggiornamento della dashboard Grafana allo Sprint 17;
-- estensione delle #ndp basata su _Transition process_ (6.4.10 del documento di riferimento) e _Validation process_ (6.4.11 del documento di riferimento);
-- continuazione della revisione dell'#adr;
-- richiedere colloquio in modalità sincrona con #cardin per discutere dei dubbi riguardanti la progettazione;
-- individuazione della struttura del documento #st;
-- redazione sezioni riguardanti il database e l'architettura nella #st;
+- estensione delle #ndp basata su _Transition process_ (6.4.10 dello standard di riferimento) e _Validation process_ (6.4.11 dello standard di riferimento);
+- continuazione della revisione dell'#adr\;
+- richiedere colloquio in modalità sincrona con il #cardin per discutere dei dubbi riguardanti la progettazione;
+- individuazione della struttura del documento #st\;
+- redazione sezioni riguardanti il database e l'architettura nella #st\;
 - implementazione e popolazione database PostgreSQL;
 - implementazione pattern middleware;
 - realizzazione creazione ambiente Three.js;
@@ -1864,13 +1864,13 @@ Questo sprint impiega:
   - redigere i verbali;
   - aggiornare il documento #pdp\.
 - *Analista*: al fine di:
-  - proseguire con la revisione del documento #adr.
+  - proseguire con la revisione del documento #adr\.
 - *Progettista*: al fine di:
   - proseguire con la definizione dell'architettura del prodotto.
 - *Programmatore*: al fine di:
   - implementare e popolare il database;
   - iniziare l'implementazione delle prime funzionalità del prodotto.
-- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp.
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp\.
 
 #figure(
   table(

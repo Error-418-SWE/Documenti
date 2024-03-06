@@ -149,11 +149,11 @@ Di seguito sono forniti maggiori dettagli riguardo le modalità con cui utenti e
 
 ==== Interfacce utente
 
-WMS3 è una _web application_ acceduta e operata tramite browser. L'interfaccia utente (IU) è _web-based_ e _responsive_.
+WMS3 è una _web application_ acceduta e operata tramite browser. L'interfaccia utente (UI) è _web-based_ e _responsive_.
 
-Lo scenario di interazione primario avviene tramite mouse e tastiera; tuttavia, è prevista la piena operabilità anche tramite touchscreen. Sarà possibile operare da dispositivi mobili quali tablet e smartphone.
+Lo scenario di interazione primario avviene tramite mouse e tastiera; tuttavia, è prevista l'operabilità anche tramite touchscreen. Sarà possibile operare da dispositivi mobili quali tablet e smartphone.
 
-Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport_ del dispositivo in uso.
+Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport_ del dispositivo in uso. L'insieme completo di funzionalità dovrà essere offerto almeno su computer tramite mouse e tastiera.
 
 ==== Interfacce hardware
 

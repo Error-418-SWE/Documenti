@@ -157,9 +157,9 @@ Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport
 
 ==== Interfacce hardware
 
-Il prodotto è acceduto tramite browser. Deve supportare l'esecuzione sui seguenti dispositivi:
-- computer desktop, tramite mouse e tastiera;
-- dispositivi mobili (es. tablet) in dotazione agli adetti di magazzino.
+Il prodotto è acceduto tramite browser. Ne è prevista l'esecuzione sui seguenti dispositivi:
+- computer, tramite mouse e tastiera;
+- dispositivi mobili touchscreen (es. tablet) in dotazione agli adetti di magazzino.
 
 Il browser e il dispositivo devono essere compatibili con lo standard WebGL.
 

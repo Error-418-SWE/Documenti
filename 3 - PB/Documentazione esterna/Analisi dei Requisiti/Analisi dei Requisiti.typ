@@ -107,22 +107,23 @@ Il presente documento descrive i casi d'uso e i requisiti del progetto _Warehous
 
 == Obiettivi del prodotto
 
-Il prodotto software oggetto di questo documento è un gestionale di magazzino (WMS) che offre una visualizzazione 3D del magazzino ed un set di funzionalità logistiche di base.
+Il prodotto software oggetto di questo documento è un gestionale di magazzino (WMS, _"Warehouse Management Software"_) che offre una visualizzazione 3D del magazzino ed un set di funzionalità logistiche di base.
 
 == Ambito del prodotto
 
 Il prodotto software oggetto di questo documento è denominato *WMS3*, un gestionale di magazzino che offre le seguenti funzionalità:
 - visualizzazione tridimensionale di un magazzino, con possibilità di muovere la vista;
 - visualizzazione delle informazioni della merce presente in magazzino;
+- esecuzione di operazioni CRUD non persistenti sugli scaffali;
 - caricamento dei dati relativi alle merci da un database SQL;
-- emissione di richieste di spostamento della merce all'interno del magazzino;
+- emissione di richieste di movimentazione della merce all'interno del magazzino;
 - filtraggio e ricerca delle merci con rappresentazione grafica dei risultati;
 - importazione di planimetrie in formato SVG.
 
 I gestionali di magazzino tradizionali presentano una serie di problematiche:
 - rappresentazione 2D del contenuto del magazzino;
 - software pensato per un uso esclusivamente desktop;
-- interfaccia di gestione complessa (@wms-tradizionale), inadatta all'uso tramite touchscreen;
+- interfaccia di gestione complessa (@wms-tradizionale), inadatta all'uso tramite touchscreen o da parte di personale non tecnico;
 - interpretazione dei dati e delle viste laboriosa e soggetta ad errore umano;
 - tempi di formazione del personale lunghi a causa della complessità degli strumenti.
 

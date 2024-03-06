@@ -180,6 +180,7 @@ Per la comunicazione tra le sue componenti, con l'utente e con servizi esterni, 
 ==== Vincoli di memoria
 
 Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
+Il Capitolato non prevede che WMS3 offra la persistenza dei dati.
 
 ==== Requisiti di adattamento al contesto
 

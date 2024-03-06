@@ -222,7 +222,7 @@ Il prodotto sarà caratterizzato da:
 
 L'utente tipico di WMS3 è un supervisore di magazzino. Ci si aspetta che la maggior parte degli accessi a WMS3 avvengano da ufficio, tramite un computer desktop dotato di mouse e tastiera; tuttavia, non si può escludere che l'utente possa accedere a WMS3 tramite dispositivo mobile.
 
-L'utente tipico è avvezzo all'uso del computer e dei dispositivi mobili. Conosce il dominio applicativo.
+L'utente tipico è avvezzo all'uso del computer e dei dispositivi mobili. Conosce il dominio applicativo e ha già dimestichezza con altri strumenti di gestione di magazzino.
 
 === Limitazioni
 

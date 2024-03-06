@@ -236,9 +236,11 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 
 === Ipotesi e dipendenze
 
-+ Disponibilità di un database SQL;
++ Disponibilità di un database SQL popolato;
 + Disponibilità di un browser compatibile con WebGL;
-+ Disponibilità di un sistema proprietario per notificare, in questo caso, la richiesta di spostamento di un prodotto all'interno del magazzino al personale designato.
++ Disponibilità di un sistema proprietario per:
+  + notificare la richiesta di spostamento di un prodotto all'interno del magazzino al personale designato;
+  + ricevere il responso sulla liceità dell'operazione richiesta al punto precedente.
 
 
 == Principi di redazione

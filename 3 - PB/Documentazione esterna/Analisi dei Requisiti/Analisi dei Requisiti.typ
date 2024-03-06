@@ -185,14 +185,14 @@ Il Capitolato non prevede che WMS3 offra la persistenza dei dati.
 ==== Requisiti di adattamento al contesto
 
 WMS3 per essere eseguito richiede:
-- un *browser* che supporta WebGL 2.0 (per le specifiche riguardanti i vari browser compatibili consultare la sezione @vincoli);
-- *Node.js* versione 20.11.0 (latest LTS) o superiore;
-- Un database relazionale che si interfacci con le API fornite dal gruppo (il gruppo utilizza *Postgresql* versione 16.1);
+- un *browser* che supporti WebGL 2.0 (per le specifiche riguardanti i vari browser compatibili consultare la sezione @vincoli);
+- un server *Node.js* versione 20.11.0 (latest LTS) o superiore;
+- un database relazionale SQL che si interfacci con le API fornite dal gruppo (il gruppo utilizza *PostgreSQL* versione 16.2);
 - *Docker Compose* versione 2.23.3 o superiore;
 - *Docker* versione 24.0.7 o superiore;
 
-Il gruppo ha deciso di utilizzare la tecnologia Docker per permettere una maggiore portabilità e facilitare il deploy. \
-La gestione di più container simultanei avviene mediante Docker Compose. \
+Il gruppo ha deciso di utilizzare la tecnologia Docker per permettere una maggiore portabilità e facilitare il deploy. La gestione simultanea dei container avviene mediante Docker Compose.
+
 Le specifiche sui browser sono imposte dall'utilizzo da parte del gruppo di *Three.js* per implementare l'ambiente 3D.
 
 ==== Interfacce a servizi

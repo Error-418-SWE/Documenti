@@ -143,9 +143,7 @@ Il vantaggio principale di WMS3, rispetto ai tradizionali gestionali di magazzin
 
 === Interazioni
 
-WMS3 si integra con, ma non comprende nel proprio ambito:
-+ database SQL esterno per ottenere lo stato interno del magazzino;
-+ sistema esterno per la notifica degli ordini di movimentazione tramite API RESTful.
+Di seguito sono forniti maggiori dettagli riguardo le modalità con cui utenti e altri software possano interagire con WMS3.
 
 // Qui ci starebbe un bel diagramma...
 

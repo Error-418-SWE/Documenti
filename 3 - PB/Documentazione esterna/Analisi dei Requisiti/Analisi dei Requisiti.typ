@@ -197,7 +197,13 @@ Le specifiche sui browser sono imposte dall'utilizzo da parte del gruppo di *Thr
 
 ==== Interfacce a servizi
 
-WMS3 dovrà inviare messaggi ad uno o più servizi esterni per comunicare gli ordini di movimentazione richiesti dall'utente. Dovrà inoltre ricevere e gestire messaggi che comunicano l'esito dell'ordine di movimentazione richiesto.
+WMS3 dovrà inviare messaggi ad un servizio esterno per comunicare gli ordini di movimentazione richiesti dall'utente. Dovrà inoltre ricevere e gestire messaggi che comunicano l'esito dell'ordine di movimentazione richiesto.
+
+WMS3 si integra con un sistema esterno per l'immissione degli ordini di movimentazione tramite API RESTful, ma non lo comprende nel proprio ambito. Tale API esterna è incaricata di stabilire se una richiesta di movimentazione inserita tramite WMS3 sia lecita e, quindi, valida per l'inserimento a sistema. I parametri su cui si basa sono recuperati autonomamente dalle fonti dati opportune.
+
+Qualora una richiesta di movimentazione non fosse ritenuta valida, la richiesta di movimentazione è da ritenersi annullata.
+
+WMS3 simulerà il comportamento di tale API con un algoritmo che accetti o rifiuti le richieste di movimentazione in maniera pseudocasuale.
 
 === Funzionalità del prodotto
 

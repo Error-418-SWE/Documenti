@@ -106,13 +106,13 @@ Il database è composto da 6 entità:
 
     - ID: identificativo univoco e seriale di un ripiano;
     - Height: altezza del ripiano;
-    - Level_order: ordine del ripiano (rispetto agli altri nello scaffale).
+    - Level_order: posizione nel ripiano (rispetto agli altri nello scaffale).
 
 - *Column*: rappresenta una colonna dello scaffale. Composto da:
 
     - ID: identificativo univoco e seriale di una colonna;
     - Width: larghezza della colonna;
-    - Column_order: ordine della colonna (rispetto alle altre nello scaffale).
+    - Column_order: posizione nella colonna (rispetto alle altre nello scaffale).
 
 - *Zone*: rappresenta una zona del piano del magazzino. Composto da:
 

@@ -15,7 +15,7 @@
 
 #let requirements = json("Requisiti.json");
 #let derivedRequirements(reference) = {
-  box(width: 1fr, stroke: 0.5pt + luma(140), inset: 3pt)[
+  box(width: 1fr, stroke: 0.5pt + luma(140), inset: 4pt)[
     #text("Requisiti derivati: ", weight: "bold")
     #text(requirements.at(reference).join(", ") + ".")
   ]
@@ -101,27 +101,29 @@ Il presente documento descrive i casi d'uso e i requisiti del progetto _Warehous
   _#link("https://registry.khronos.org/webgl/specs/latest/2.0/")_
   #lastVisitedOn(13, 02, 2024)
 
+#pagebreak()
 
 = Descrizione del prodotto
 
 == Obiettivi del prodotto
 
-Il prodotto software oggetto di questo documento è un gestionale di magazzino (WMS) che offre una visualizzazione 3D del magazzino ed un set di funzionalità logistiche di base.
+Il prodotto software oggetto di questo documento è un gestionale di magazzino (WMS, _"Warehouse Management Software"_) che offre una visualizzazione 3D del magazzino ed un set di funzionalità logistiche di base.
 
 == Ambito del prodotto
 
 Il prodotto software oggetto di questo documento è denominato *WMS3*, un gestionale di magazzino che offre le seguenti funzionalità:
 - visualizzazione tridimensionale di un magazzino, con possibilità di muovere la vista;
 - visualizzazione delle informazioni della merce presente in magazzino;
+- esecuzione di operazioni CRUD non persistenti sugli scaffali;
 - caricamento dei dati relativi alle merci da un database SQL;
-- emissione di richieste di spostamento della merce all'interno del magazzino;
+- emissione di richieste di movimentazione della merce all'interno del magazzino;
 - filtraggio e ricerca delle merci con rappresentazione grafica dei risultati;
 - importazione di planimetrie in formato SVG.
 
 I gestionali di magazzino tradizionali presentano una serie di problematiche:
 - rappresentazione 2D del contenuto del magazzino;
 - software pensato per un uso esclusivamente desktop;
-- interfaccia di gestione complessa (@wms-tradizionale), inadatta all'uso tramite touchscreen;
+- interfaccia di gestione complessa (@wms-tradizionale), inadatta all'uso tramite touchscreen o da parte di personale non tecnico;
 - interpretazione dei dati e delle viste laboriosa e soggetta ad errore umano;
 - tempi di formazione del personale lunghi a causa della complessità degli strumenti.
 
@@ -141,25 +143,23 @@ Il vantaggio principale di WMS3, rispetto ai tradizionali gestionali di magazzin
 
 === Interazioni
 
-WMS3 si integra con, ma non comprende nel proprio ambito:
-+ database SQL esterno per ottenere lo stato interno del magazzino;
-+ sistema esterno per la notifica degli ordini di movimentazione tramite API RESTful.
+Di seguito sono forniti maggiori dettagli riguardo le modalità con cui utenti e altri software possano interagire con WMS3.
 
 // Qui ci starebbe un bel diagramma...
 
 ==== Interfacce utente
 
-WMS3 è una _web application_ acceduta e operata tramite browser. L'interfaccia utente (IU) è _web-based_ e _responsive_.
+WMS3 è una _web application_ acceduta e operata tramite browser. L'interfaccia utente (UI) è _web-based_ e _responsive_.
 
-Lo scenario di interazione primario avviene tramite mouse e tastiera; tuttavia, è prevista la piena operabilità anche tramite touchscreen. Sarà possibile operare da dispositivi mobili quali tablet e smartphone.
+Lo scenario di interazione primario avviene tramite mouse e tastiera; tuttavia, è prevista l'operabilità anche tramite touchscreen. Sarà possibile operare da dispositivi mobili quali tablet e smartphone.
 
-Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport_ del dispositivo in uso.
+Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport_ del dispositivo in uso. L'insieme completo di funzionalità dovrà essere offerto almeno su computer tramite mouse e tastiera.
 
 ==== Interfacce hardware
 
-Il prodotto è acceduto tramite browser. Deve supportare l'esecuzione sui seguenti dispositivi:
-- computer desktop, tramite mouse e tastiera;
-- dispositivi mobili (es. tablet) in dotazione agli adetti di magazzino.
+Il prodotto è acceduto tramite browser. Ne è prevista l'esecuzione sui seguenti dispositivi:
+- computer, tramite mouse e tastiera;
+- dispositivi mobili touchscreen (es. tablet) in dotazione agli adetti di magazzino.
 
 Il browser e il dispositivo devono essere compatibili con lo standard WebGL.
 
@@ -167,7 +167,11 @@ Il prodotto non prevede elementi hardware propri o interfacce con elementi hardw
 
 ==== Interfacce software
 
-WMS3 richiede l'accesso in lettura ad un database SQL per il caricamento e la visualizzazione dei dati.
+WMS3 si interfaccia, in sola lettura, con un database SQL al fine di:
+- importare i dati necessari alla costruzione della vista 3D;
+- ottenere lo stato interno del magazzino e le informazioni sulla merce contenuta al suo interno.
+
+È previsto che lo schema ER del database venga fornito dal Gruppo al Proponente come artefatto.
 
 ==== Interfacce di comunicazione
 
@@ -176,52 +180,127 @@ Per la comunicazione tra le sue componenti, con l'utente e con servizi esterni, 
 ==== Vincoli di memoria
 
 Non sono definiti vincoli o limiti sulle memorie primaria e secondaria.
+Il Capitolato non prevede che WMS3 offra la persistenza dei dati.
 
 ==== Requisiti di adattamento al contesto
 
 WMS3 per essere eseguito richiede:
-- un *browser* che supporta WebGL 2.0 (per le specifiche riguardanti i vari browser compatibili consultare la sezione @vincoli);
-- *Node.js* versione 20.11.0 (latest LTS) o superiore;
-- Un database relazionale che si interfacci con le API fornite dal gruppo (il gruppo utilizza *Postgresql* versione 16.1);
+- un *browser* che supporti WebGL 2.0 (per le specifiche riguardanti i vari browser compatibili consultare la sezione @vincoli);
+- un server *Node.js* versione 20.11.0 (latest LTS) o superiore;
+- un database relazionale SQL che si interfacci con le API fornite dal gruppo (il gruppo utilizza *PostgreSQL* versione 16.2);
 - *Docker Compose* versione 2.23.3 o superiore;
 - *Docker* versione 24.0.7 o superiore;
 
-Il gruppo ha deciso di utilizzare la tecnologia Docker per permettere una maggiore portabilità e facilitare il deploy. \
-La gestione di più container simultanei avviene mediante Docker Compose. \
+Il gruppo ha deciso di utilizzare la tecnologia Docker per permettere una maggiore portabilità e facilitare il deploy. La gestione simultanea dei container avviene mediante Docker Compose.
+
 Le specifiche sui browser sono imposte dall'utilizzo da parte del gruppo di *Three.js* per implementare l'ambiente 3D.
 
 ==== Interfacce a servizi
 
-WMS3 dovrà inviare messaggi ad uno o più servizi esterni per comunicare gli ordini di movimentazione richiesti dall'utente. Dovrà inoltre ricevere e gestire messaggi che comunicano l'esito dell'ordine di movimentazione richiesto.
+WMS3 dovrà inviare messaggi ad un servizio esterno per comunicare gli ordini di movimentazione richiesti dall'utente. Dovrà inoltre ricevere e gestire messaggi che comunicano l'esito dell'ordine di movimentazione richiesto.
+
+WMS3 si integra con un sistema esterno per l'immissione degli ordini di movimentazione tramite API RESTful, ma non lo comprende nel proprio ambito. Tale API esterna è incaricata di stabilire se una richiesta di movimentazione inserita tramite WMS3 sia lecita e, quindi, valida per l'inserimento a sistema. I parametri su cui si basa sono recuperati autonomamente dalle fonti dati opportune.
+
+Qualora una richiesta di movimentazione non fosse ritenuta valida, la richiesta di movimentazione è da ritenersi annullata.
+
+WMS3 simulerà il comportamento di tale API con un algoritmo che accetti o rifiuti le richieste di movimentazione in maniera pseudocasuale.
+
+=== Descrizione degli oggetti di dominio
+
+Questo paragrafo fornisce una descrizione dettagliata degli oggetti di dominio, già in parte descritti nel #glo.
+
+==== Ambiente
+Di planimetria rettangolare oppure personalizzata basata su un file SVG caricato durante la configurazione, rappresenta l'interno del magazzino su cui opera l'addetto.
+Le proprietà sono descritte nella @props-ambiente.
+
+#figure(
+  table(
+    columns: 2,
+    [*Proprietà*], [*Descrizione*],
+    [Lunghezza], [$>0$ \[m\]],
+    [Larghezza], [$>0$ \[m\]\ Per planimetrie ricavate da SVG, la larghezza viene calcolata moltiplicando la lunghezza per il rapporto d'aspetto del file SVG.],
+  ),
+  caption: "Proprietà dell'Ambiente"
+) <props-ambiente>
+
+==== Zona
+Porzione dell'ambiente atta a contenere uno o più bin, organizzati su livelli e colonne. Le proprietà di ciascuna zona sono descritte nella @props-zona.
+
+#figure(
+  table(
+    columns: 2,
+    [*Proprietà*], [*Descrizione*],
+    [Lunghezza], [$>0$ \[m\]],
+    [Larghezza], [$>0$ \[m\]\ Non inferiore alla somma delle larghezze delle colonne.],
+    [Altezza], [$>0$ \[m\]\ Non inferiore alla somma delle altezze dei livelli.],
+    [Numero di colonne], [$>=1$],
+    [Numero di livelli], [$>=1$],
+  ),
+  caption: "Proprietà di una zona"
+) <props-zona>
+
+Le colonne di una stessa zona possono avere larghezze differenti.
+
+#figure(
+  table(
+    columns: (10em, 10em),
+    [*Proprietà*], [*Descrizione*],
+    [Larghezza], [$>0$ \[m\]],
+  ),
+  caption: "Proprietà di una colonna di una zona"
+) <props-livello>
+
+I livelli partono da terra e sono anche detti "ripiani". Sono numerati dal basso verso l'alto in modo incrementale, a partire da 1. I livelli di una stessa zona possono avere altezze differenti.
+
+#figure(
+  table(
+    columns: (10em, 10em),
+    [*Proprietà*], [*Descrizione*],
+    [Altezza], [$>0$ \[m\]],
+  ),
+  caption: "Proprietà di un livello di una zona"
+) <props-livello>
+
+Una zona con un solo livello è anche detta "*area a terra*". Modella una zona del magazzino atta a conservare un prodotto per un periodo di tempo tipicamente limitato. Solitamente si tratta di zone di carico/scarico.
+
+Una zona con più di un livello è anche detta "*scaffale*".
+
+==== Bin
+Posizione di una zona atta ad accogliere fino ad un prodotto. Individuata dall'intersezione di livelli e colonne.
+
+==== Prodotto
+Elemento ospitabile in un bin.
 
 === Funzionalità del prodotto
 
-Il prodotto sarà caratterizzato da:
-- *ambiente*:
-  - l'interno di un magazzino, di forma quadrata o rettangolare delimitato sui quattro lati che rappresenta il reale magazzino su cui deve operare l'addetto;
-  - caratterizzato da una griglia (o grid) a terra che permette all'utente di collocare gli oggetti nell'ambiente con maggiore o minore precisione a seconda delle esigenze;
-  - le dimensioni e la finezza della grid devono essere modificabili;
-  - deve essere navigabile tramite diverse periferiche (freccie direzionali, mouse, touch del dispositivo) e in diversi modi (sui tre assi, zoom-in/zoom-out, rotazione).
-  - può essere creato vuoto o tramite un file SVG; nel primo caso abbiamo un piano vuoto di dimensioni predefinite, mentre nel secondo caso il file SVG viene usato per disegnare sul piano le forme degli scaffali da inserire nell'ambiente.
-- *scaffalature*:
-  - scaffali con caratteristiche personalizzabili (altezza, larghezza, profondità, numero di scaffali e il numero di colonne in cui è diviso uno scaffale) che rappresentano i reali scaffali nel magazzino;
-  - è possibile definire in fase di creazione l'orientamento (verticale od orizzontale) dello scaffale;
-  - al loro interno contengono dei bin;
-  - possono essere spostati, modificati, creati o eliminati.
-- *bin*:
-  - è possibile crearli, modificarli o eliminarli;
-  - leggere le informazioni riguardanti il bin stesso e il loro contenuto;
-  - rappresentano lo spazio occupabile da un prodotto nel magazzino.
-- *prodotti*:
-  - rappresentano i reali prodotti contenuti nel magazzino;
-  - contengono diverse informazioni riguardo il prodotto;
-  - sono contenuti in un bin e possono essere spostati verso un bin differente;
-  - è possibile la ricerca dei prodotti attraverso dei parametri quali: id, nome, scaffale.
+Le componenti della visualizzazione 3D godono delle seguenti caratteristiche:
+
+- *Ambiente*:
+  - dimensioni e planimetria personalizzabili;
+  - caratterizzato da una griglia (o _grid_) a terra che permette all'utente di collocare con _snapping_ le zone;
+  - le dimensioni e la finezza della _grid_ possono essere regolate dall'utente;
+  - navigabile tramite diverse periferiche (frecce direzionali, _mouse_, _touchscreen_ del dispositivo) e in diversi modi (_pan_ sui tre assi, _zoom-in_, _zoom-out_, rotazione).
+
+- *Zona*:
+  - operazioni CRUD sulle zone;
+  - operazione di spostamento;
+  - personalizzazione delle proprietà in fase di creazione;
+  - ispezione per ottenere informazioni sulla zona e sul suo contenuto;
+  - ricercabili per ID.
+
+- *Bin*:
+  - ispezione per ottenere informazioni sul bin e sul suo contenuto.
+
+- *Prodotto*:
+  - se ne può richiedere lo spostamento (movimentazione) verso un altro bin;
+  - ispezione per ottenere informazioni;
+  - ricercabili per ID, nome o categoria.
+
 === Caratteristiche degli utenti
 
 L'utente tipico di WMS3 è un supervisore di magazzino. Ci si aspetta che la maggior parte degli accessi a WMS3 avvengano da ufficio, tramite un computer desktop dotato di mouse e tastiera; tuttavia, non si può escludere che l'utente possa accedere a WMS3 tramite dispositivo mobile.
 
-L'utente tipico è avvezzo all'uso del computer e dei dispositivi mobili. Conosce il dominio applicativo.
+L'utente tipico è avvezzo all'uso del computer e dei dispositivi mobili. Conosce il dominio applicativo e ha già dimestichezza con altri strumenti di gestione di magazzino.
 
 === Limitazioni
 
@@ -235,9 +314,11 @@ Non sono noti requisiti limitanti la capacità dell'organizzazione di realizzare
 
 === Ipotesi e dipendenze
 
-+ Disponibilità di un database SQL;
++ Disponibilità di un database SQL popolato;
 + Disponibilità di un browser compatibile con WebGL;
-+ Disponibilità di un sistema proprietario per notificare, in questo caso, la richiesta di spostamento di un prodotto all'interno del magazzino al personale designato.
++ Disponibilità di un sistema proprietario per:
+  + notificare la richiesta di spostamento di un prodotto all'interno del magazzino al personale designato;
+  + ricevere il responso sulla liceità dell'operazione richiesta al punto precedente.
 
 
 == Principi di redazione

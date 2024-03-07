@@ -1,0 +1,17 @@
+[
+	{
+	  "ID task": "WMS-80",
+	  "Descrizione": "Implementare la classe zona",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-81",
+	  "Descrizione": "Implementare la classe bin",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	   "ID task": "WMS-82",
+	   "Descrizione": "Implementare la classe prodotto",
+       "Ruolo": "Programmatore"
+	}
+]

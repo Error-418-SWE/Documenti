@@ -73,6 +73,61 @@ Il prodotto offre le seguenti funzionalità principali:
 
 == Database
 
+#figure(
+  image("ER.png", width: 100%),
+  caption: [
+    Schema ER del Database.
+  ],
+)
+
+=== Entità
+
+Il database è composto da 6 entità:
+
+- *Product*: rappresenta un prodotto presente all'interno del magazzino. Composto da:
+
+    - ID: identificativo univoco e seriale di un prodotto;
+    - Name: nome del prodotto;
+    - Weight: peso del prodotto;
+    - Width: larghezza del prodotto;
+    - Length: lunghezza del prodotto;
+    - Height: altezza del prodotto.
+
+- *Category*: rappresenta la categoria di appartenenza dei prodotti. Composto da:
+
+    - ID: identificativo univoco e seriale di una categoria;
+    - Name: nome della categoria.
+
+- *Bin*: rappresenta uno spazio del magazzino in cui è possibile inserire un prodotto. Composto da:
+
+    - ID: identificativo univoco e seriale di un bin.
+
+- *Level*: rappresenta un ripiano dello scaffale. Composto da:
+
+    - ID: identificativo univoco e seriale di un ripiano;
+    - Height: altezza del ripiano;
+    - Level_order: ordine del ripiano (rispetto agli altri nello scaffale).
+
+- *Column*: rappresenta una colonna dello scaffale. Composto da:
+
+    - ID: identificativo univoco e seriale di una colonna;
+    - Width: larghezza della colonna;
+    - Column_order: ordine della colonna (rispetto alle altre nello scaffale).
+
+- *Zone*: rappresenta una zona del piano del magazzino. Composto da:
+
+    - ID: identificativo univoco e seriale di una zona;
+    - XCoordinate: coordinata orizzontale della zona;
+    - YCoordinate: coordinata verticale della zona;
+    - Length: lunghezza della zona;
+    - Orientation: orientamento della zona.
+
+=== Interrogazione del database
+
+Il database viene utilizzato dall'applicazione per il caricamento, il posizionamento e la visualizzazione dei prodotti all'interno del magazzino.
+In nessun caso il database verrà modificato dall'applicazione.
+
+
 == Struttura (vari layer)
 
 == Design pattern utilizzati

@@ -73,7 +73,7 @@ Il prodotto offre le seguenti funzionalità principali:
 
 == Database
 
-In questa sezione viene presentato lo schema base di dati realizzato con PostgreSQL.
+In questa sezione viene presentato lo schema della base di dati realizzata con PostgreSQL.
 
 Esso è cosi composto:
 

@@ -3585,6 +3585,166 @@ Il rendimento positivo dello Sprint 16 è supportato dalle principali metriche e
 - EAC: l'Estimate At Completion passa dal valore 13.292,70 € (allo Sprint 15) a 12.911,54 €, considerabile come valore ottimale in quanto minore del BAC. Il costo finale del progetto va dunque a ridursi ulteriormente rispetto allo Sprint 15.
 
 
+== Sprint 17 dal 25-02-2024 al 03-03-2024
+
+=== Obiettivi raggiunti
+
+Lo Sprint 17 si è concluso raggiungendo la quasi totalità degli obiettivi pianificati, in particolare:
+
+- colloquio con il Proponente in data 29/02/2024;
+
+- #glo\:
+  - aggiunte definizioni di:
+    - Jest;
+    - Virtual Private Server;
+    - Testing;
+    - Unit test;
+    - Test di integrazione;
+    - Test di sistema.
+
+- #man\:
+  - creato documento;
+  - redatta sezione Introduzione.
+
+- #ndp\:
+  - redatti i capitoli:
+    - Processo di implementazione;
+    - Processo di gestione della qualità;
+    - Processo di integrazione;
+    - Processo di verifica.
+  - normato il sistema di tracciamento rischi-risoluzioni.
+
+- #pdp\:
+  - redatto preventivo dello Sprint 16, iniziato in data 18/02/2024;
+  - redatto consuntivo dello Sprint 16, terminato in data 25/02/2024.
+
+- #pdq\:
+  - aggiornati i grafici di monitoraggio delle metriche allo Sprint 16;
+  - aggiornata la dashboard con i dati sullo Sprint 16.
+
+- #st\:
+  - creato documento;
+  - redatta sezione Introduzione.
+
+- Automazioni:
+  - corretto errore di registrazione versione.
+
+- Progettazione:
+  - aggiornato schema ER del database;
+  - aggiornato mock-up e presentato al Proponente.
+
+- Codifica:
+  - implementato modulo di sanificazione SVG;
+  - implementata pagina di selezione modalità di creazione ambiente.
+
+
+=== Obiettivi mancati
+
+- #adr\:
+  - è iniziata, ma non terminata, la revisione completa del documento, comprensiva dell'aggiornamento riguardo le scelte fatte con il Proponente in data 29/02/2024.
+- Progettazione:
+  - non sono ancora definite in modo preciso l'architettura e i design pattern da utilizzare.
+
+=== Problematiche
+Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+
+*P01*: Sono presenti dei dubbi riguardo il design del prodotto, nonostante i chiarimenti forniti dal #cardin via mail.
+
+=== Risoluzioni attuate
+
+#figure(caption: [Soluzioni individuate alle criticità riscontrate.],
+    table(
+      align: left,
+      columns: (auto, 1fr, auto),
+      [ID risoluzione], [Titolo], [Criticità affrontate],
+      [R1],[Richiesta di colloquio via Zoom al #cardin], [P01]
+    )
+)
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [1],     [2],     [0],     [0],     [2],     [2],     [7],
+    [Carraro],     [2],     [1],     [0],     [2 (-1)],     [0],     [0],     [5 (-1)],
+    [Gardin],     [0],     [1],     [2],     [0],     [4],     [0],     [7],
+    [Nardo],     [1],     [0],     [3],     [2],     [0],     [0],     [6],
+    [Oseliero],     [2 (+1)],     [2],     [0],     [0],     [0],     [3],     [7 (+1)],
+    [Todesco],     [0],     [3],     [2],     [0],     [4],     [1 (+1)],     [10 (+1)],
+    [Zaccone],     [2],     [0],     [3 (+1)],     [0],     [2],     [3],     [10 (+1)],
+    [Totale ore],     [8 (+1)],     [9],     [10 (+1)],     [4 (-1)],     [12],     [9 (+1)],     [52 (+2)],
+    [Costo ruolo],     [240 (+30)],     [180],     [250 (+25)],     [100 (-25)],     [180],     [135 (+15)],     [1085 (+45)],
+  ),
+  caption: "Prospetto del consuntivo, sprint 17"
+)
+#let data = (
+  ("Responsabile", 7, 8),
+  ("Amministratore", 9, 9),
+  ("Analista", 9, 10),
+  ("Progettista", 5, 4),
+  ("Programmatore", 12, 12),
+  ("Verificatore", 8, 9),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo sprint 17",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Durante lo Sprint 17 le ore effettive (52) hanno superato di due unità le ore preventivate (50), in particolare:
+
+- Analista e Responsabile hanno avuto un leggero incremento orario, dovuto alla quantità di lavoro effettuata nei documenti #ndp e #adr;
+- il Verificatore ha avuto un lieve aumento di ore in risposta al punto precedente.
+
+Il costo dello Sprint è stato influenzato dall'aumento di ore di Responsabile e Verificatore, in quanto il costo dell'ora di Analista in più è stato bilanciato indirettamente da un calo unitario delle ore di Progettista, avvenuta a causa dei dubbi sorti riguardo il design del prodotto.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [14],     [420],
+    [Amministratore],     [13],     [260],
+    [Analista],     [19],     [475],
+    [Progettista],     [6],     [150],
+    [Programmatore],     [140],     [2100],
+    [Verificatore],     [61],     [915],
+    [Rimanente],     [253],     [4320],
+  ),
+  caption: "Monitoraggio, sprint 17"
+)
+
+Lo Sprint 17, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere quasi la totalità degli obiettivi prefissati.
+
+Il rendimento positivo dello Sprint 17 è supportato dalle principali metriche esposte dal #pdq, quali:
+- CPI: il Cost Performance Index passa dal valore 1.01 (allo Sprint 16) a 0.99. Nonostante il lieve calo continua a rappresentare un valore accettabile (>=0.95), e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
+- EAC: l'Estimate At Completion passa dal valore 12.911,54 € (allo Sprint 16) a 13.155,40 €. Anche se aumentato, il gruppo non lo considera problematico, in quanto l'incremento risulta contenuto.
+
+
 // == Sprint n dal D1-M1-2024 al D2-M2-2024
 
 // === Obiettivi raggiunti

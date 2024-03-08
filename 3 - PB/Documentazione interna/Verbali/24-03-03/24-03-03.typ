@@ -27,7 +27,7 @@ Il giorno giovedì 29/02/2024 si è svolto il meeting esterno con il Proponente,
 
 == #adr
 
-L'#adr ha visto l'inizio della sua revisione completa, che verrà proseguita nel prossimo Sprint.
+L'#adr ha visto l'inizio della sua revisione completa, che proseguirà nel prossimo Sprint.
 
 == #glo
 

@@ -71,12 +71,12 @@
 	},
 	{
 	  "ID task": "DOC-562",
-	  "Descrizione": "Redigere sezione [nome sezione sul database][da rinominare prima di aprire il branch]",
+	  "Descrizione": "Redigere sezione Database",
 	  "Ruolo": "Progettista"
 	},
 	{
 	  "ID task": "DOC-563",
-	  "Descrizione": "Redigere sezione [nome sezione sull'architettura][da rinominare prima di aprire il branch]",
+	  "Descrizione": "Redigere sezione Architettura",
 	  "Ruolo": "Progettista"
 	},
 	{

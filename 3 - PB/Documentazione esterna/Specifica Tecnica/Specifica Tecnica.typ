@@ -127,6 +127,24 @@ Il database è composto da 6 entità:
     - Length: lunghezza della zona;
     - Orientation: orientamento della zona.
 
+=== Relazioni
+
+All'interno del database le relazioni fra le differenti entità sono del tipo:
+
+- *Zero..One to One* per quanto riguarda le entità:
+  - Product e Bin.
+
+- *One to Many* per quanto riguarda le entità:
+
+  - Bin e Level;
+  - Bin e Column;
+  - Level e Zone;
+  - Column e Zone.
+
+- *Many to Zero..Many* per quanto riguarda le entità:
+
+  - Product e Category.
+
 === Interrogazione del database
 
 Il database viene utilizzato dall'applicazione per il caricamento, il posizionamento e la visualizzazione dei prodotti all'interno del magazzino.

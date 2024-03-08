@@ -78,7 +78,7 @@ In questa sezione viene presentato lo schema della base di dati realizzata con P
 Esso è cosi composto:
 
 #figure(
-  image("ER.png", width: 100%),
+  image("./imgs/ER.png", width: 100%),
   caption: [
     Schema ER del Database.
   ],
@@ -98,7 +98,7 @@ Il database è composto da 6 entità:
     - Length: lunghezza del prodotto;
     - Height: altezza del prodotto.
 
-- *Category*: rappresenta la categoria di appartenenza dei prodotti. Composto da:
+- *Category*: rappresenta la categoria merceologica di appartenenza del prodotto. Composto da:
 
     - ID: identificativo univoco e seriale di una categoria;
     - Name: nome della categoria.
@@ -111,15 +111,16 @@ Il database è composto da 6 entità:
 
     - ID: identificativo univoco e seriale di un ripiano;
     - Height: altezza del ripiano;
-    - Level_order: ordine del ripiano (rispetto agli altri nello scaffale).
+    - Level_order: valore incrementale che rappresenta la posizione del ripiano all'interno di uno scaffale.
+      Se il suo valore è 0 allora esso rappresenta una zona a terra.
 
 - *Column*: rappresenta una colonna dello scaffale. Composto da:
 
     - ID: identificativo univoco e seriale di una colonna;
     - Width: larghezza della colonna;
-    - Column_order: ordine della colonna (rispetto alle altre nello scaffale).
+    - Column_order: valore incrementale che rappresenta la posizione della colonna all'interno di uno scaffale.
 
-- *Zone*: rappresenta una zona del piano del magazzino. Composto da:
+- *Zone*: rappresenta una zona del piano del magazzino. Essa può essere sia uno scaffale che una zona a terra. Composto da:
 
     - ID: identificativo univoco e seriale di una zona;
     - XCoordinate: coordinata orizzontale della zona;

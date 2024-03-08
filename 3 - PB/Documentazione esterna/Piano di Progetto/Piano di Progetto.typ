@@ -3589,9 +3589,9 @@ Il rendimento positivo dello Sprint 16 è supportato dalle principali metriche e
 
 === Obiettivi raggiunti
 
-Lo Sprint 17 si è concluso raggiungendo quasi la totalità degli obiettivi pianificati, in particolare:
+Lo Sprint 17 si è concluso raggiungendo la quasi totalità degli obiettivi pianificati, in particolare:
 
-- colloquio con Proponente in data 29/02/2024;
+- colloquio con il Proponente in data 29/02/2024;
 
 - #glo\:
   - aggiunte definizioni di:

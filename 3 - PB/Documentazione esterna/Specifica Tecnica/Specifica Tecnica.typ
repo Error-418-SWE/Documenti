@@ -57,3 +57,25 @@ Il prodotto offre le seguenti funzionalità principali:
 === Riferimenti informativi <riferimenti-informativi>
 
 #pagebreak()
+
+= Tecnologie
+
+== Introduzione
+
+== Elenco delle tecnologie
+
+
+= Architettura del prodotto
+
+== Descrizione generale
+
+== Diagramma delle classi
+
+== Database
+
+== Struttura (vari layer)
+
+== Design pattern utilizzati
+
+
+= Requisiti soddisfatti ( aggiungere tabella requisiti soddisfatti)

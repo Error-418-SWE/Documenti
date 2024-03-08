@@ -63,7 +63,7 @@ Il #pdp ha visto completati i lavori:
 
 == #pdq
 
-Il #pdq ah visto completati i lavori:
+Il #pdq ha visto completati i lavori:
   - aggiornamento i grafici delle metriche per lo Sprint 16;
   - aggiornamento della dashboard con i dati sullo Sprint 16.
 

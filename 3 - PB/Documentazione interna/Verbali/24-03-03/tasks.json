@@ -1,0 +1,187 @@
+[
+	{
+	  "ID task": "DOC-168",
+	  "Descrizione": "Redigere sezione Technical processes/Validation process",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-167",
+	  "Descrizione": "Redigere sezione Technical processes/Transition process",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-552",
+	  "Descrizione": "Rinominare verbale 18/02/2024",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-538",
+	  "Descrizione": "Redigere preventivo Sprint 17",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-553",
+	  "Descrizione": "Redigere consuntivo di periodo Sprint 17",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-554",
+	  "Descrizione": "Redigere preventivo dello Sprint 18",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-546",
+	  "Descrizione": "Revisionare documento",
+	  "Ruolo": "Analista"
+	},
+	{
+	  "ID task": "DOC-555",
+	  "Descrizione": "Redigere verbale interno 03/03/2024",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-556",
+	  "Descrizione": "Redigere verbale interno XX/03/2024",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-557",
+	  "Descrizione": "Redigere verbale esterno 07/03/2024",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-558",
+	  "Descrizione": "Redigere verbale interno 07/03/2024",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-559",
+	  "Descrizione": "Aggiornare dashboard",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "DOC-560",
+	  "Descrizione": "Aggiornare metriche allo Sprint 17",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-561",
+	  "Descrizione": "Individuare la struttura del documento",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-562",
+	  "Descrizione": "Redigere sezione Database",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-563",
+	  "Descrizione": "Redigere sezione Architettura",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "WMS-60",
+	  "Descrizione": "Prenotare colloquio con il Professor Cardin",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "ID task": "WMS-48",
+	  "Descrizione": "Configurare production.yml per Docker Compose",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "WMS-49",
+	  "Descrizione": "Definire schema del database PostgreSQL",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "WMS-50",
+	  "Descrizione": "Popolare la tabella Zone",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-51",
+	  "Descrizione": "Popolare la tabella Product",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-52",
+	  "Descrizione": "Popolare la tabella Category",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-53",
+	  "Descrizione": "Popolare la tabella Level",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-61",
+	  "Descrizione": "Popolare la tabella Column",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-54",
+	  "Descrizione": "Popolare la tabella Bin",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-58",
+	  "Descrizione": "Integrare caricamento SVG con API di sanificazione",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-59",
+	  "Descrizione": "Rimozione selezione multipla degli SVG",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-63",
+	  "Descrizione": "Implementare pattern middleware",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-71",
+	  "Descrizione": "Implementare importazione dei dati da DB",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-70",
+	  "Descrizione": "Implementare schermata di caricamento dei dati da DB",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-72",
+	  "Descrizione": "Realizzare creazione piano rettangolare in Three.js",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-73",
+	  "Descrizione": "Realizzare creazione piano personalizzato SVG in Three.js",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-65",
+	  "Descrizione": "Aggiornare form di creazione Zona",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-66",
+	  "Descrizione": "Aggiungere eliminazione Zona",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-67",
+	  "Descrizione": "Aggiungere modifica Zona",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-68",
+	  "Descrizione": "Aggiungere lista di riepilogo prodotti in Zona",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-69",
+	  "Descrizione": "Aggiungere lista di riepilogo Bin in Zona",
+	  "Ruolo": "Programmatore"
+	}
+  ]

@@ -68,6 +68,22 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
 
 == Elenco delle tecnologie
 
+#figure(
+  table(
+    columns: 3,
+    [*Tecnologia*], [*Descrizione*], [*Versione*],
+    [],     [],     [],
+    [],     [],     [],
+    [],     [],     [],
+    [],     [],     [],
+    [],     [],     [],
+    [],     [],     [],
+    [],     [],     [],
+    [],     [],     [],
+    [],     [],     [],
+  ),
+  caption: "Tecnologie utilizzate"
+)
 
 = Architettura del prodotto
 

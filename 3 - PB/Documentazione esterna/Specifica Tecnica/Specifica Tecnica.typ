@@ -68,6 +68,8 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
 
 == Elenco delle tecnologie
 
+=== Tecnologie per la produzione dei documenti (?)
+
 #figure(
   table(
     columns: 3,
@@ -83,6 +85,35 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
     [],     [],     [],
   ),
   caption: "Tecnologie utilizzate"
+)
+
+=== Tecnologie per lo sviluppo dell'applicazione
+
+#figure(
+  table(
+    columns: 3,
+    [*Tecnologia*], [*Descrizione*], [*Versione*],
+    [Azure],     [],     [],
+    [Docker],     [],     [],
+    [Docker-compose],     [],     [],
+    [Next.js],     [],     [],
+    [Node.js],     [],     [],
+    [PostgreSQL],     [],     [],
+    [React],     [],     [],
+  ),
+  caption: "Tecnologie utilizzate per lo sviluppo"
+)
+
+
+=== Tecnologie per il testing
+
+#figure(
+  table(
+    columns: 3,
+    [*Tecnologia*], [*Descrizione*], [*Versione*],
+    [Jest],     [Framework di testing per JavaScript. Utilizzato principalmente per lo unit testing, esso offre la parallelizzazione dei test e il mocking delle dipendenze.],     [29.7],
+  ),
+  caption: "Tecnologie utilizzate per il testing"
 )
 
 = Architettura del prodotto

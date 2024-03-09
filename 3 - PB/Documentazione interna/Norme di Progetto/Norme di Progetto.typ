@@ -1796,6 +1796,33 @@ Questi ultimi dovranno agire di conseguenza risolvendo i problemi emersi o piani
 
 Per avere traccia degli elementi verificati che costituiscono il prodotto, su GitHub è possibile visualizzare l'insieme delle pull request approvate ed integrate mediante merge.
 
+== Processo di Validazione <processo_validazione>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.11_
+
+=== Scopo
+
+Il processo di Validazione serve a fornire prove oggettive che il sistema, quando in uso, soddisfi i requisiti esposti dal Proponente descritti nell'#adr.
+
+Lo scopo del processo è quindi quello di accertare l'abilità del sistema, o di un suo specifico elemento, di soddisfare in determinate specifiche condizioni operative l'obbietivo per cui è stato creato.
+
+=== Risultati
+
+Come risultato della corretta implemenazione del processo di Validazione otteniamo:
+- individuazione di limiti e vincoli che influenzano i requisiti, il design e l'archiettura;
+- feedback da parte del Proponente in merito al lavoro svolto;
+- evidenza che il sistema o l'elemento di sistema realizza i bisogni del Proponente.
+
+=== Attività
+==== Preparazione alla validazione
+La validazione viene svolta prima internamente al gruppo, il Programmatore deve fornire, su indicazione del Progettista, un elemento software che viene quindi revisionato dal Verificatore. Il Verificatore quindi dopo aver accertato la bontà del codice prodotto come descrito nei paragrafi del processo di implementazione (@processo_implementazione), di integrazione (@processo_integrazione), e di verifica (@processo_verifica).
+
+==== Effettuare la validazione
+Il gruppo si ritrova durante dei meeting definiti settimanalmente con il Proponente per discutere dello stato di avanzamento dei lavori. Qui viene quindi mostrato il sistema in funzione (definito come MVC (_Minimum Viable Product_) in quanto il sistema potrebbe ancora non essere del tutto refinito e presentare problematiche in determinate circostanze o assenze di funzionalità perché ancora non del utto implementate) in modo da ottenere feedback riguardo al raggiungimento o meno dei requisiti descritti in #adr e dei bisogni dell'utente.
+
+==== Gestire i risultati della validazione
+Una volta che il sistema o un elemenbto di sistema viene approvato da Verificatore, Progettista e Proponente il suddetto requisito può dirsi ragggiunto e viene quindi documentato all'interno del documento di #st dove viene realizzato un traccamento funzionalità-requisito.
+
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
@@ -1824,10 +1851,10 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
     [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
     [@processo_design],[6.4.5 - Design Definition process],[To outcome],
-    [@processo_verifica],[6.4.9 - Verification process],[To outcome],
     [@processo_implementazione],[6.4.7 - Implementation process],[To outcome],
     [@processo_integrazione],[6.4.8 - Integration process],[To outcome],
     [@processo_verifica],[6.4.9 - Verification process],[To outcome],
+    [@processo_validazione],[6.4.11 - Validation process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

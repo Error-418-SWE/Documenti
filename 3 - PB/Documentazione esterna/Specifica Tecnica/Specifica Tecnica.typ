@@ -62,6 +62,10 @@ Il prodotto offre le seguenti funzionalità principali:
 
 == Introduzione
 
+In questa sezione vengono esposte ed esaminate in maniera dettagliata le tecnologie utilizzate nel processo di sviluppo, testing e distribuzione del prodotto _WMS3_.
+
+Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end che nel back-end, compresa la gestione del database e l'integrazione con i servizi previsti.
+
 == Elenco delle tecnologie
 
 

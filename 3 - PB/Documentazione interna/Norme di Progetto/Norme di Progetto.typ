@@ -1797,9 +1797,24 @@ Questi ultimi dovranno agire di conseguenza risolvendo i problemi emersi o piani
 Per avere traccia degli elementi verificati che costituiscono il prodotto, su GitHub è possibile visualizzare l'insieme delle pull request approvate ed integrate mediante merge.
 
 == Processo di Transizione
-Lo scopo del processo di Transizione è di stabilire la capacità di un sistema di fornire servizi specificati dalle richieste del Proponente.
+Lo scopo del processo di Transizione è di stabilire la capacità di un sistema di fornire servizi specificati dalle richieste del Proponente all'interno di un'ambiente operativo differente da quello di sviluppo.
 
-Questo processo abilita la diverse parti del sistema in uno stato di operaivià in maniera ordinata e pianificata. Questo processo è usato nella fase
+=== Risultati
+Come risultato della corretta applicazione del processo di transizione, otteniamo:
+
+- il #mu viene redatto;
+- gli utenti vengono supportati e allenati all'utilizzo del sistema;
+- viene rilasciata una versione del sistema;
+- viene effetuato il deploy su Azure.
+
+=== Attività
+=== Rilascio dell'ultima versione del sistema
+La repository Github dedicata a WMS3 si compone di un branch dev necessario per gli sviluppatori in quanto fonte da cui vengono creati i feature branch necessari al conseguimento degli obiettivi di una task e in quano destinazione dei merge a seguito delle pull request. Viene quindi definito un altro branch release, orfano e luogo in cui vengono effettuate le release del sistema.
+
+Le release avvengono solo quanto il gruppo concorda che il sistema sia sufficientemente maturo e pronto per l'utilizzo. Le release possono avvenire anche in caso di breaking changes o di aggiunte o modifiche sostanziali al sistema rispetto all'ultima versione rilasciata.
+
+Ad ogni release del sistema deve essere rilasciato anche i documenti di #mu e #st che documentano le novità apportate.
+
 
 #pagebreak()
 

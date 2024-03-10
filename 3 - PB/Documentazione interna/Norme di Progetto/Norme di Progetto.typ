@@ -1802,26 +1802,26 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.11_
 
 === Scopo
 
-Il processo di Validazione serve a fornire prove oggettive che il sistema, quando in uso, soddisfi i requisiti esposti dal Proponente descritti nell'#adr.
+Il processo di Validazione si occupa di fornire prove oggettive che il sistema soddisfi i requisiti esposti dal Proponente descritti nell'#adr.
 
-Lo scopo del processo è quindi quello di accertare l'abilità del sistema, o di un suo specifico elemento, di soddisfare in determinate specifiche condizioni operative l'obbietivo per cui è stato creato.
+Lo scopo del processo è quindi quello di accertare l'abilità del sistema, o di un suo specifico elemento, di soddisfare in determinate specifiche condizioni operative l'obiettivo per cui è stato creato.
 
 === Risultati
 
-Come risultato della corretta implemenazione del processo di Validazione otteniamo:
-- individuazione di limiti e vincoli che influenzano i requisiti, il design e l'archiettura;
+Come risultato della corretta implementazione del processo di Validazione otteniamo:
+- individuazione di limiti e vincoli che influenzano i requisiti, il design e l'architettura;
 - feedback da parte del Proponente in merito al lavoro svolto;
-- evidenza che il sistema o l'elemento di sistema realizza i bisogni del Proponente.
+- evidenza che il sistema o l'elemento di sistema soddisfa i bisogni del Proponente.
 
 === Attività
 ==== Preparazione alla validazione
-La validazione viene svolta prima internamente al gruppo, il Programmatore deve fornire, su indicazione del Progettista, un elemento software che viene quindi revisionato dal Verificatore come descritto nei paragrafi del processo di implementazione (@processo_implementazione), di integrazione (@processo_integrazione), e di verifica (@processo_verifica). Il sistema si ritiene quindi in uno stato accettabile, anche se incompleto, e pronto per essere mostrato al Proponente.
+La validazione viene svolta prima internamente al gruppo, il Programmatore deve fornire un elemento software che soddisfi le indicazioni date dal Progettista e che possieda le qualità minime di accettabilità per passare la revisione del Verificatore come descritto nei paragrafi del processo di implementazione (@processo_implementazione), di integrazione (@processo_integrazione), e di verifica (@processo_verifica). Il sistema si ritiene quindi in uno stato accettabile, anche se incompleto, e pronto per essere mostrato al Proponente.
 
 ==== Effettuare la validazione
-Il gruppo si ritrova durante dei meeting definiti settimanalmente con il Proponente per discutere dello stato di avanzamento dei lavori. Qui viene quindi mostrato il sistema in funzione (definito come MVC (_Minimum Viable Product_) in quanto il sistema potrebbe ancora non essere del tutto refinito e presentare problematiche in determinate circostanze o assenze di funzionalità perché ancora non del tutto implementate), con particolare enfasi sulle novità introdotte e le difficoltà incontrate. Il Proponente fornisce quindi feedback riguardo l'adempimento dei bisogni espressi, e aiuta il gruppo chiarendo particolari inerenti la realtà di riferimento a cui il sistema è indirizzato.
+Il gruppo pianifica dei meeting settimanali con il Proponente per esaminare lo stato di avanzamento dei lavori. Qui viene quindi mostrato il sistema in funzione (definito come MVC (_Minimum Viable Product_) in quanto il sistema potrebbe ancora non essere del tutto rifinito e presentare problematiche in determinate circostanze o assenze di funzionalità perché ancora non del tutto implementate), con particolare enfasi sulle novità introdotte e le difficoltà incontrate. Il Proponente fornisce quindi feedback riguardo l'adempimento dei bisogni espressi, e aiuta il gruppo chiarendo particolari inerenti la realtà di riferimento a cui il sistema è indirizzato.
 
 ==== Gestire i risultati della validazione
-Su indicazione del Proponente l'elemento software viene modificato qual'ora vengano riscontrate cricità influenzando eventualmente architettura, design e requisiti.
+In seguito alle direttive del Proponente, l'elemento software viene adattato per affrontare eventuali criticità emerse durante il processo, potenzialmente influenzando l'architettura, il design e i requisiti.
 Una volta che il sistema o un elemento di sistema viene approvato da Verificatore, Progettista e Proponente viene quindi considerato come abile a soddisfare i requisiti descritti nell'#adr nella maniera descritta dal design ed esplicitata dall'architettura individuata con le tecnologie individuate durante RTB. L'adempimento di requisiti da parte di uno specifico elemento di sistema viene quindi tracciato all'interno del documento si #st.
 #pagebreak()
 

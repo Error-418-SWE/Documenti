@@ -31,7 +31,7 @@ Il dubbio sull'implementarle o meno, poiché quest'ultime sono prive di comporta
 === Business Logic
 Il gruppo ha discusso sull'effettiva presenza della business logic in seguito al feedback ricevuto dal #cardin. Questa è stata individuata principalmente nella parte che interroga l’API REST esterna e negli oggetti che rappresentano le istanze del database.\
 Si è discusso il modo in cui gli oggetti della business logic devono essere convertiti in oggetti della presentation logic, e si è posta la norma di non utilizzare gli oggetti ritornati dalle API direttamente nella webapp.\
-Inoltre, in seguito alle osservazioni del #cardin, si è deciso di implementare due diverse applicazioni, una per il backend e una per il frontend, entrambe con architettura a strati.
+In seguito alle osservazioni del #cardin, si è deciso di implementare due diverse applicazioni, una per il backend e una per il frontend, entrambe con architettura a strati.
 === Design Pattern
 Il gruppo, su consiglio del #cardin, decide di inserire design pattern solo se ritenuti necessari, anche perché la loro implementazione porta ad overhead. I pattern ad ora individuati sono:
 + middleware: per separare frontend da backend;

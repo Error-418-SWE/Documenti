@@ -1815,14 +1815,14 @@ Come risultato della corretta implemenazione del processo di Validazione ottenia
 
 === Attività
 ==== Preparazione alla validazione
-La validazione viene svolta prima internamente al gruppo, il Programmatore deve fornire, su indicazione del Progettista, un elemento software che viene quindi revisionato dal Verificatore. Il Verificatore quindi dopo aver accertato la bontà del codice prodotto come descrito nei paragrafi del processo di implementazione (@processo_implementazione), di integrazione (@processo_integrazione), e di verifica (@processo_verifica).
+La validazione viene svolta prima internamente al gruppo, il Programmatore deve fornire, su indicazione del Progettista, un elemento software che viene quindi revisionato dal Verificatore come descritto nei paragrafi del processo di implementazione (@processo_implementazione), di integrazione (@processo_integrazione), e di verifica (@processo_verifica). Il sistema si ritiene quindi in uno stato accettabile, anche se incompleto, e pronto per essere mostrato al Proponente.
 
 ==== Effettuare la validazione
-Il gruppo si ritrova durante dei meeting definiti settimanalmente con il Proponente per discutere dello stato di avanzamento dei lavori. Qui viene quindi mostrato il sistema in funzione (definito come MVC (_Minimum Viable Product_) in quanto il sistema potrebbe ancora non essere del tutto refinito e presentare problematiche in determinate circostanze o assenze di funzionalità perché ancora non del utto implementate) in modo da ottenere feedback riguardo al raggiungimento o meno dei requisiti descritti in #adr e dei bisogni dell'utente.
+Il gruppo si ritrova durante dei meeting definiti settimanalmente con il Proponente per discutere dello stato di avanzamento dei lavori. Qui viene quindi mostrato il sistema in funzione (definito come MVC (_Minimum Viable Product_) in quanto il sistema potrebbe ancora non essere del tutto refinito e presentare problematiche in determinate circostanze o assenze di funzionalità perché ancora non del tutto implementate), con particolare enfasi sulle novità introdotte e le difficoltà incontrate. Il Proponente fornisce quindi feedback riguardo l'adempimento dei bisogni espressi, e aiuta il gruppo chiarendo particolari inerenti la realtà di riferimento a cui il sistema è indirizzato.
 
 ==== Gestire i risultati della validazione
-Una volta che il sistema o un elemenbto di sistema viene approvato da Verificatore, Progettista e Proponente il suddetto requisito può dirsi ragggiunto e viene quindi documentato all'interno del documento di #st dove viene realizzato un traccamento funzionalità-requisito.
-
+Su indicazione del Proponente l'elemento software viene modificato qual'ora vengano riscontrate cricità influenzando eventualmente architettura, design e requisiti.
+Una volta che il sistema o un elemento di sistema viene approvato da Verificatore, Progettista e Proponente viene quindi considerato come abile a soddisfare i requisiti descritti nell'#adr nella maniera descritta dal design ed esplicitata dall'architettura individuata con le tecnologie individuate durante RTB. L'adempimento di requisiti da parte di uno specifico elemento di sistema viene quindi tracciato all'interno del documento si #st.
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>

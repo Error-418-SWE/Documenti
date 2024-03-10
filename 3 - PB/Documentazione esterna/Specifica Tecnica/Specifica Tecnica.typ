@@ -93,13 +93,45 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
   table(
     columns: 3,
     [*Tecnologia*], [*Descrizione*], [*Versione*],
-    [Azure],     [],     [],
-    [Docker],     [],     [],
-    [Docker-compose],     [],     [],
-    [Next.js],     [],     [],
-    [Node.js],     [],     [],
-    [PostgreSQL],     [],     [],
-    [React],     [],     [],
+
+    [Azure],
+    [],
+    [],
+
+    [Docker],
+    [Software utilizzato per il processo di deployment di applicazioni software. Permette di
+    eseguire processi informatici in ambienti isolati chiamati container.],
+    [],
+
+    [Docker-compose],
+    [Strumento per la definizione e l'esecuzione di applicazioni multi-container],
+    [],
+
+    [Next.js],
+    [],
+    [],
+
+    [Node.js],
+    [Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli.],
+    [],
+
+    [PostgreSQL],
+    [],
+    [],
+
+    [React],
+    [],
+    [],
+
+    [Three.js],
+    [Libreria JavaScript cross-browser utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL],
+    [],
+
+    [Typescript],
+    [],
+    [],
+
+
   ),
   caption: "Tecnologie utilizzate per lo sviluppo"
 )

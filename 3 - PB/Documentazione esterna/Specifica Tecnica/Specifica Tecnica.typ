@@ -85,12 +85,16 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
     [24.0.9],
 
     [Docker-compose],
-    [Strumento per la definizione e l'esecuzione di applicazioni multi-container],
+    [Strumento per la definizione e l'esecuzione di applicazioni multi-container.],
     [3.9],
 
     [Fiber],
     [Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React.],
     [8.15.16],
+
+    [HTML],
+    [Linguaggio di markup standard utilizzato per la creazione di pagine web.],
+    [5.0],
 
     [Next.js],
     [Framework di sviluppo web front-end basato su React. utilizzato per la creazione di applicazioni web.],
@@ -121,7 +125,7 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
     [5.3.3],
 
   ),
-  caption: "Tecnologie utilizzate per lo sviluppo"
+  caption: "Tecnologie utilizzate per lo sviluppo."
 )
 
 
@@ -135,7 +139,7 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
     [Framework di testing per JavaScript. Utilizzato principalmente per lo unit testing, esso offre la parallelizzazione dei test e il mocking delle dipendenze.],
     [29.7.0],
   ),
-  caption: "Tecnologie utilizzate per il testing"
+  caption: "Tecnologie utilizzate per il testing."
 )
 
 = Architettura del prodotto

@@ -1796,7 +1796,7 @@ Questi ultimi dovranno agire di conseguenza risolvendo i problemi emersi o piani
 
 Per avere traccia degli elementi verificati che costituiscono il prodotto, su GitHub è possibile visualizzare l'insieme delle pull request approvate ed integrate mediante merge.
 
-== Processo di Transizione
+== Processo di Transizione <processo_transizione>
 Lo scopo del processo di Transizione è di stabilire la capacità di un sistema di fornire servizi specificati dalle richieste del Proponente all'interno di un'ambiente operativo differente da quello di sviluppo.
 
 === Risultati
@@ -1871,10 +1871,10 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
     [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
     [@processo_design],[6.4.5 - Design Definition process],[To outcome],
-    [@processo_verifica],[6.4.9 - Verification process],[To outcome],
     [@processo_implementazione],[6.4.7 - Implementation process],[To outcome],
     [@processo_integrazione],[6.4.8 - Integration process],[To outcome],
     [@processo_verifica],[6.4.9 - Verification process],[To outcome],
+    [@processo_transizione],[6.4.10 - Transition process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

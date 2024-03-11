@@ -56,3 +56,26 @@ Il prodotto offre le seguenti funzionalità principali:
 
 #pagebreak()
 
+= Requisiti
+
+== Requisiti di sistema minimi
+
+== Requisiti di sistema consigliati
+
+== Requisiti hardware
+
+== Browser
+
+
+= Installazione
+
+== Clonare il repository
+
+== Avviare la web app
+
+
+= Istruzioni d'uso
+
+
+= Supporto tecnico
+  ( contattare la mail del gruppo per malfunzionamenti ecc... paragrafo piccolo magari con suggerimento su come scrivere la mail: -oggetto "nome evento" -corpo -allegato)

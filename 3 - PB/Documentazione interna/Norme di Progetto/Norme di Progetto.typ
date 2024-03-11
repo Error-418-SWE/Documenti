@@ -1796,6 +1796,7 @@ Questi ultimi dovranno agire di conseguenza risolvendo i problemi emersi o piani
 
 Per avere traccia degli elementi verificati che costituiscono il prodotto, su GitHub è possibile visualizzare l'insieme delle pull request approvate ed integrate mediante merge.
 
+
 == Processo di Transizione <processo_transizione>
 Lo scopo del processo di Transizione è di stabilire la capacità di un sistema di fornire servizi specificati dalle richieste del Proponente all'interno di un'ambiente operativo differente da quello di sviluppo.
 
@@ -1843,6 +1844,35 @@ Questo permette di usufruire del sistema senza la necessità di scaricare le ult
 /* DA AGGIUNGERE IN CASO DECIDIAMO DI FARLI, AGGIORNARE ANCHE IL RESTO DEI PARAGRAFI
 Il deploy su Azure agevola anche l'esecuzione dei testing end-to-end.
 */
+
+== Processo di Validazione <processo_validazione>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.11_
+
+=== Scopo
+
+Il processo di Validazione si occupa di fornire prove oggettive che il sistema soddisfi i requisiti esposti dal Proponente descritti nell'#adr.
+
+Lo scopo del processo è quindi quello di accertare l'abilità del sistema, o di un suo specifico elemento, di soddisfare in determinate specifiche condizioni operative l'obiettivo per cui è stato creato.
+
+=== Risultati
+
+Come risultato della corretta implementazione del processo di Validazione otteniamo:
+- individuazione di limiti e vincoli che influenzano i requisiti, il design e l'architettura;
+- feedback da parte del Proponente in merito al lavoro svolto;
+- evidenza che il sistema o l'elemento di sistema soddisfa i bisogni del Proponente.
+
+=== Attività
+==== Preparazione alla validazione
+La validazione viene svolta prima internamente al gruppo, il Programmatore deve fornire un elemento software che soddisfi le indicazioni date dal Progettista e che possieda le qualità minime di accettabilità per passare la revisione del Verificatore come descritto nei paragrafi del processo di implementazione (@processo_implementazione), di integrazione (@processo_integrazione), e di verifica (@processo_verifica). Il sistema si ritiene quindi in uno stato accettabile, anche se incompleto, e pronto per essere mostrato al Proponente.
+
+==== Effettuare la validazione
+Il gruppo pianifica dei meeting settimanali con il Proponente per esaminare lo stato di avanzamento dei lavori. Qui viene quindi mostrato il sistema in funzione (definito come MVC (_Minimum Viable Product_) in quanto il sistema potrebbe ancora non essere del tutto rifinito e presentare problematiche in determinate circostanze o assenze di funzionalità perché ancora non del tutto implementate), con particolare enfasi sulle novità introdotte e le difficoltà incontrate. Il Proponente fornisce quindi feedback riguardo l'adempimento dei bisogni espressi, e aiuta il gruppo chiarendo particolari inerenti la realtà di riferimento a cui il sistema è indirizzato.
+
+==== Gestire i risultati della validazione
+In seguito alle direttive del Proponente, l'elemento software viene adattato per affrontare eventuali criticità emerse durante il processo, potenzialmente influenzando l'architettura, il design e i requisiti.
+Una volta che il sistema o un elemento di sistema viene approvato da Verificatore, Progettista e Proponente viene quindi considerato come abile a soddisfare i requisiti descritti nell'#adr nella maniera descritta dal design ed esplicitata dall'architettura individuata con le tecnologie individuate durante RTB. L'adempimento di requisiti da parte di uno specifico elemento di sistema viene quindi tracciato all'interno del documento di #st.
+
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
@@ -1875,6 +1905,7 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_integrazione],[6.4.8 - Integration process],[To outcome],
     [@processo_verifica],[6.4.9 - Verification process],[To outcome],
     [@processo_transizione],[6.4.10 - Transition process],[To outcome],
+    [@processo_validazione],[6.4.11 - Validation process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

@@ -7,6 +7,9 @@
   authors: (
     "Banzato Alessio",
   ),
+  reviewers: (
+    "Todesco Mattia",
+  ),
   timeStart: "15:10",
   timeEnd: "16:15",
 );

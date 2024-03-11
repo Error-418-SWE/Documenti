@@ -25,7 +25,7 @@
     "synonyms": []
   },
 	"Azure": {
-    "description": "Piattaforma di servizi cloud fornita da Microsoft che permette di distribuire applicazioni e servizi su cloud",
+    "description": "Piattaforma fornita da Microsoft che permette di distribuire applicazioni e servizi su cloud.",
     "acronyms": ["AzureVM"],
     "synonyms": []
   },

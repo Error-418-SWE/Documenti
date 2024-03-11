@@ -75,18 +75,18 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
     columns: 3,
     [*Tecnologia*], [*Descrizione*], [*Versione*],
 
-    [Azure],
-    [Servizio di Microsoft Azure che consente agli utenti, tra le altre cose, di eseguire macchine virtuali completamente configurabili nel cloud.],
-    [/],
-
     [Docker],
     [Software utilizzato per il processo di deployment di applicazioni software. Permette di
     eseguire processi informatici in ambienti isolati chiamati container.],
-    [24.0.9],
+    [24.0.7],
 
     [Docker-compose],
     [Strumento per la definizione e l'esecuzione di applicazioni multi-container.],
-    [3.9],
+    [2.23.3],
+
+    [Drei],
+    [Libreria che fornisce componenti e utilità per semplificare lo sviluppo di applicazioni in 3D utilizzando React e Three.js.],
+    [9.97.6],
 
     [Fiber],
     [Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React.],
@@ -97,12 +97,12 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
     [5.0],
 
     [Next.js],
-    [Framework di sviluppo web front-end basato su React. utilizzato per la creazione di applicazioni web.],
+    [Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web.],
     [14.1.0],
 
     [Node.js],
     [Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli.],
-    [20.11.20],
+    [20.11.0],
 
     [PostgreSQL],
     [Sistema di gestione di database relazionali.],
@@ -114,7 +114,7 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
 
     [Tailwind CSS],
     [Framework CSS utilizzato per lo sviluppo di interfacce utente web.],
-    [2.2.1],
+    [3.4.1],
 
     [Three.js],
     [Libreria JavaScript utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL.],
@@ -136,7 +136,7 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
     columns: 3,
     [*Tecnologia*], [*Descrizione*], [*Versione*],
     [Jest],
-    [Framework di testing per JavaScript. Utilizzato principalmente per lo unit testing, esso offre la parallelizzazione dei test e il mocking delle dipendenze.],
+    [Framework di testing per JavaScript. Utilizzato principalmente per lo unit testing, offre la parallelizzazione dei test e il mocking delle dipendenze.],
     [29.7.0],
   ),
   caption: "Tecnologie utilizzate per il testing."

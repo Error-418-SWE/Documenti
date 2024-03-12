@@ -789,6 +789,108 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero definire il passo della griglia di aggancio per poter disporre le zone in modo ordinato. Il passo è un numero non negativo espresso in metri."
 )
 
+=== Importazione delle zone da database <uc4>
+
+#image("./imgs/uc4.png")
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "I dati relativi alle zone sono stati importati correttamente dal database"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona l'importazione delle zone dal database"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'importazione dal database fallisce"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero importare le zone dal database per poterle visualizzare nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Importazione dei bin da database (@uc4.1)]
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore importazione dati da database (@uc6)]
+)
+
+==== Importazione dei bin da database <uc4.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D",
+  "L'utente ha importato le zone dal database"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "I dati relativi ai bin sono stati importati correttamente dal database"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona l'importazione dei bin dal database"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero importare i bin dal database per poterli visualizzare nell'ambiente 3D all'interno delle zone importate"
+)
+
+=== Importazione dei prodotti da database <uc5>
+
+#image("./imgs/uc5.png")
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "I dati relativi ai prodotti sono stati importati correttamente dal database"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona l'importazione dei prodotti dal database"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'importazione dal database fallisce"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero importare i prodotti dal database per poterli visualizzare nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore importazione dati da database (@uc6)]
+)
+
+=== Visualizzazione errore importazione dati da database <uc6>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D",
+  "L'utente ha richiesto l'importazione dei dati dal database"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo all'importazione dei dati dal database"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona l'importazione dei dati dal database ma l'importazione fallisce"
+)
+
 // FINE UC
 
 #set heading(numbering: "1.1")

@@ -327,21 +327,36 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 - *Zone e Bin* (@uc-zone): operazioni CRUD sulle zone e gestione dei bin;
 - *Prodotti* (@uc-prodotti): gestione dei prodotti e della loro movimentazione.
 
-
-  #let requirements = json("Requisiti.json");
-  #let derivedRequirements(reference) = {
-    box(width: 1fr, stroke: 0.5pt + luma(140), inset: 4pt)[
-      #text("Requisiti derivati: ", weight: "bold")
-      #text(requirements.at(reference).join(", ") + ".")
-    ]
-  }
-
-  #let setUCHeadingCounterTo(value) = {
-    let i = 1
-    while i < value {
-      counter(heading).step(level: 3)
-      i+=1
+// Utilities for UC printing
+#let printUseCaseInfo(title, ..items) = {
+  text(title, weight: "bold")
+  text(": ")
+  if items.pos().len() > 1 {
+    linebreak()
+    for item in items.pos() {
+      if item == items.pos().at(items.pos().len() - 1) [+ #item\.]
+      else [+ #item\;]
     }
+  }
+  else {
+    text(items.pos().join("") + ".")
+    linebreak()
+  }
+}
+
+#let requirements = json("Requisiti.json");
+#let derivedRequirements(reference) = {
+  box(width: 1fr, stroke: 0.5pt + luma(140), inset: 4pt)[
+    #text("Requisiti derivati: ", weight: "bold")
+    #text(requirements.at(reference).join(", ") + ".")
+  ]
+}
+
+#let setUCHeadingCounterTo(value) = {
+  let i = 1
+  while i < value {
+    counter(heading).step(level: 3)
+    i+=1
   }
 }
 

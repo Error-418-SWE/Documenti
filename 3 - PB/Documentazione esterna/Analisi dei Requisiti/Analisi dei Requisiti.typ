@@ -891,6 +891,111 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente seleziona l'importazione dei dati dal database ma l'importazione fallisce"
 )
 
+=== Spostamento del POV <uc7>
+
+#image("./imgs/uc7.png")
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente interagisce con il sistema per cambiare il proprio punto di vista sull'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha cambiato il proprio punto di vista"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente cambia il proprio punto di vista sull'ambiente 3D tramite mouse, tastiera o touchscreen"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero cambiare il mio punto di vista sull'ambiente 3D per poter visualizzare ed esplorare l'ambiente da diverse angolazioni"
+)
+
+==== Rotazione
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente interagisce con il sistema per ruotare il proprio punto di vista attorno all'asse longitudinale"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha ruotato il punto di vista lungo l'asse longitudinale"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente ruota il punto di vista tramite mouse, tastiera o touchscreen"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero ruotare il punto di vista attorno all'asse longitudinale per poter visualizzare l'ambiente 3D da diverse angolazioni"
+)
+
+==== Pan
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente interagisce con il sistema per spostare il proprio punto di vista lungo l'asse orizzontale"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha spostato il punto di vista lungo l'asse orizzontale"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente sposta il punto di vista tramite mouse, tastiera o touchscreen"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero spostare orizzontalmente il punto di vista per poter visualizzare l'ambiente 3D da diverse posizioni"
+)
+
+==== Zoom-in
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente interagisce con il sistema per effettuare lo zoom-in"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha ristretto il proprio campo visivo sull'ambiente 3D",
+  "L'utente ha avvicinato il proprio punto di vista all'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente effettua lo zoom-in tramite mouse, tastiera o touchscreen"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero effettuare lo zoom-in per poter visualizzare l'ambiente 3D da diverse distanze"
+)
+
+==== Zoom-out
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente interagisce con il sistema per effettuare lo zoom-out"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha allargato il proprio campo visivo sull'ambiente 3D",
+  "L'utente ha allontanato il proprio punto di vista sull'ambiente 3D",
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente effettua lo zoom-out tramite mouse, tastiera o touchscreen"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero effettuare lo zoom-out per poter visualizzare l'ambiente 3D da diverse distanze"
+)
+
+
 // FINE UC
 
 #set heading(numbering: "1.1")

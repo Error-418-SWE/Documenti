@@ -640,6 +640,131 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un errore relativo al lato maggiore non positivo"
 )
 
+=== Modifica ambiente 3D
+
+#image("./imgs/uc2.png")
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D durante la sessione corrente"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha modificato la configurazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente modifica l'ambiente 3D attualmente configurato"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero modificare un ambiente 3D già configurato, espandendo o riducendo la sua superficie"
+)
+
+==== Definizione larghezza
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D durante la sessione corrente",
+  "L'utente sta riconfigurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha ridefinito la larghezza dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero",
+  "L'utente inserisce un valore inferiore a quello iniziale"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero ridefinire la larghezza dell'ambiente 3D a seguito della sua configurazione iniziale"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore larghezza non positiva (@uc2.1.1)],
+  [Errore dimensione inferiore a quella iniziale (@uc2.3)]
+)
+
+===== Visualizzazione errore larghezza non positiva <uc2.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D durante la sessione corrente",
+  "L'utente sta riconfigurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla larghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza dell'ambiente 3D pari o minore di zero"
+)
+
+==== Definizione lunghezza
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D durante la sessione corrente",
+  "L'utente sta riconfigurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha ridefinito la lunghezza dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero ridefinire la lunghezza dell'ambiente 3D a seguito della sua configurazione iniziale"
+)
+
+===== Visualizzazione errore lunghezza non positiva <uc2.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D durante la sessione corrente",
+  "L'utente sta riconfigurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla lunghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza dell'ambiente 3D pari o minore di zero"
+)
+
+==== Errore dimensione inferiore a quella iniziale <uc2.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D con planimetria definita da file SVG",
+  "L'utente sta riconfigurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla dimensione inserita inferiore al rispettivo valore indicato durante la configurazione iniziale dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore di dimensione (lunghezza o larghezza) inferiore a quella iniziale"
+)
+
 
 // FINE UC
 

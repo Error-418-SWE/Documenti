@@ -185,7 +185,10 @@ WMS3 simulerà il comportamento di tale API con un algoritmo che accetti o rifiu
 Questo paragrafo fornisce una descrizione dettagliata degli oggetti di dominio, già in parte descritti nel #glo.
 
 ==== Ambiente
-Di planimetria rettangolare oppure personalizzata basata su un file SVG caricato durante la configurazione, rappresenta l'interno del magazzino su cui opera l'addetto.
+Di planimetria rettangolare oppure personalizzata (basata su un file SVG caricato durante la configurazione), rappresenta lo spazio interno del magazzino su cui opera l'addetto.
+
+Per agevolare il collocamento delle zone, l'ambiente può essere dotato di una griglia di aggancio posta sulla superficie dell'ambiente.
+
 Le proprietà sono descritte nella @props-ambiente.
 
 #figure(
@@ -765,6 +768,26 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente inserisce un valore di dimensione (lunghezza o larghezza) inferiore a quella iniziale"
 )
 
+=== Definizione passo griglia di aggancio <uc3>
+
+#image("./imgs/uc3.png")
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha creato un ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito il passo della griglia di aggancio, ovvero un numero non negativo espresso in metri"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un valore del passo della griglia di aggancio"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire il passo della griglia di aggancio per poter disporre le zone in modo ordinato. Il passo è un numero non negativo espresso in metri."
+)
 
 // FINE UC
 

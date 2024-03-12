@@ -318,22 +318,15 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 
 = Use Case
 
-{ // Utilities for UC printing
-  #let printUseCaseInfo(title, ..items) = {
-    text(title, weight: "bold")
-    text(": ")
-    if items.pos().len() > 1 {
-      linebreak()
-      for item in items.pos() {
-        if item == items.pos().at(items.pos().len() - 1) [+ #item\.]
-        else [+ #item\;]
-      }
-    }
-    else {
-      text(items.pos().join("") + ".")
-      linebreak()
-    }
-  }
+== Introduzione
+
+In questa sezione sono presentati i casi d'uso e i relativi diagrammi relativi a WMS3. I casi d'uso sono stati definiti a seguito dell'analisi del dominio di applicazione e delle funzionalità richieste dal Proponente, durante riunioni interne ed esterne. Le modalità di definizione sono descritte in #ndp_v, alle sezioni _Processo di analisi della missione_ e _Processo di definizione di bisogni e requisiti degli stakeholder_.
+
+I casi d'uso sono organizzati secondo il dominio di appartenenza:
+- *Ambiente 3D* (@uc-ambiente): configurazione e modifica dell'ambiente 3D;
+- *Zone e Bin* (@uc-zone): operazioni CRUD sulle zone e gestione dei bin;
+- *Prodotti* (@uc-prodotti): gestione dei prodotti e della loro movimentazione.
+
 
   #let requirements = json("Requisiti.json");
   #let derivedRequirements(reference) = {

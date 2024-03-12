@@ -13,31 +13,6 @@
   isExternalUse: true,
 );
 
-#let requirements = json("Requisiti.json");
-#let derivedRequirements(reference) = {
-  box(width: 1fr, stroke: 0.5pt + luma(140), inset: 4pt)[
-    #text("Requisiti derivati: ", weight: "bold")
-    #text(requirements.at(reference).join(", ") + ".")
-  ]
-}
-
-// WIP, non rimuovere
-//
-// #let placeDerivedRequirements() = {
-//   let header = locate(loc => {
-//     let elems = query(selector(heading).before(loc), loc)
-//     if elems == () {
-//       panic("La funzione non ha rilevato di essere in una sezione di UC.")
-//     }
-//     else {
-//       text("Requisiti derivati: ", weight: "bold")
-//       requirements.at(elems.last().numbering).join(", ")
-//       "."
-//     }
-//   })
-//   header
-// }
-
 = Introduzione
 
 == Scopo del documento
@@ -343,14 +318,39 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 
 = Use Case
 
-#set heading(numbering: (..nums) => {
-  let values = nums.pos();
-  if (values.len() > 0){
-      values.at(values.len() - 1) = values.at(values.len() - 1);
+{ // Utilities for UC printing
+  #let printUseCaseInfo(title, ..items) = {
+    text(title, weight: "bold")
+    text(": ")
+    if items.pos().len() > 1 {
+      linebreak()
+      for item in items.pos() {
+        if item == items.pos().at(items.pos().len() - 1) [+ #item\.]
+        else [+ #item\;]
+      }
+    }
+    else {
+      text(items.pos().join("") + ".")
+      linebreak()
+    }
   }
-  values = values.slice(1)
-  return "UC--" + values.map(str).join(".");
-})
+
+  #let requirements = json("Requisiti.json");
+  #let derivedRequirements(reference) = {
+    box(width: 1fr, stroke: 0.5pt + luma(140), inset: 4pt)[
+      #text("Requisiti derivati: ", weight: "bold")
+      #text(requirements.at(reference).join(", ") + ".")
+    ]
+  }
+
+  #let setUCHeadingCounterTo(value) = {
+    let i = 1
+    while i < value {
+      counter(heading).step(level: 3)
+      i+=1
+    }
+  }
+}
 
 #set par(first-line-indent: 0pt)
 

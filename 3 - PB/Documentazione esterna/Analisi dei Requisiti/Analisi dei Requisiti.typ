@@ -364,6 +364,281 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 // INIZIO UC
 
+== Ambiente 3D <uc-ambiente>
+
+#set heading(numbering: (..nums) => {
+  let values = nums.pos().slice(2);
+  return "UC--" + values.map(str).join(".");
+}, supplement: "Caso d'uso")
+
+#image("./imgs/uc_ambiente.png")
+
+=== Configurazione ambiente 3D <uc1>
+
+#image("./imgs/uc1.png")
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha configurato l'ambiente 3D",
+  "L'utente dispone di una visualizzazione 3D del magazzino"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la modalità di configurazione di un ambiente 3D tra le opzioni disponibili"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero configurare un ambiente 3D che rappresenti un magazzino"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Configurazione ambiente 3D con planimetria rettangolare (@uc1.1)],
+  [Configurazione ambiente 3D con planimetria definita da file SVG (@uc1.2)]
+)
+
+==== Configurazione ambiente 3D con planimetria rettangolare <uc1.1>
+
+#image("./imgs/uc1.1.png")
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente sta configurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha configurato un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la modalità di configurazione di un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero configurare un ambiente 3D che rappresenti un magazzino con planimetria rettangolare"
+)
+
+===== Definizione della larghezza del magazzino
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza dell'ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza dell'ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire la larghezza dell'ambiente 3D che rappresenti un magazzino con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore larghezza non positiva (@uc1.1.1.1)]
+)
+
+====== Visualizzazione errore larghezza non positiva <uc1.1.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla larghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza dell'ambiente 3D con planimetria rettangolare minore o uguale a zero"
+)
+
+===== Definizione della lunghezza del magazzino
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la lunghezza dell'ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza dell'ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire la lunghezza dell'ambiente 3D che rappresenti un magazzino con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore lunghezza non positiva (@uc1.1.2.1)]
+)
+
+====== Visualizzazione errore lunghezza non positiva <uc1.1.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla lunghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza dell'ambiente 3D con planimetria rettangolare minore o uguale a zero"
+)
+
+==== Configurazione ambiente 3D con planimetria definita da file SVG <uc1.2>
+
+#image("./imgs/uc1.2.png")
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente sta configurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha configurato un ambiente 3D con planimetria definita a partire da file SVG"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la modalità di configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero configurare un ambiente 3D con planimetria definita a partire da un file SVG"
+)
+
+===== Caricamento file SVG
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha caricato correttamente un file SVG valido da utilizzare come planimetria dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un file SVG da caricare"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente seleziona un file SVG vuoto",
+  "L'utente seleziona un file non valido al fine della creazione dell'ambiente 3D",
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero caricare un file SVG da utilizzare come planimetria dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore file vuoto (@uc1.2.1.1)],
+  [Visualizzazione errore file non valido (@uc1.2.1.2)]
+)
+
+====== Visualizzazione errore file vuoto <uc1.2.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo al caricamento di un file vuoto"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un file SVG da caricare",
+  [Nel file SVG caricato non è presente alcun elemento grafico (come `path`, `rect`, `circle`, `ellipse`, `line`, `polyline`, `polygon`, `text`, `g`)]
+)
+
+====== Visualizzazione errore file non valido <uc1.2.1.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo al caricamento di un file non valido"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un file non valido (privo della corretta sintassi XML) da caricare"
+)
+
+===== Definizione del lato maggiore del magazzino
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito il lato maggiore dell'ambiente 3D con planimetria definita da file SVG",
+  "Il sistema ha calcolato il valore del lato minore dell'ambiente 3D con planimetria definita da file SVG a partire dagli attributi del file caricato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore del lato maggiore dell'ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire il lato maggiore dell'ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore lato non positivo (@uc1.2.2.1)]
+)
+
+====== Visualizzazione errore lato non positivo <uc1.2.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore del lato maggiore dell'ambiente 3D con planimetria definita da file SVG pari o minore di zero"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo al lato maggiore non positivo"
+)
 
 
 // FINE UC

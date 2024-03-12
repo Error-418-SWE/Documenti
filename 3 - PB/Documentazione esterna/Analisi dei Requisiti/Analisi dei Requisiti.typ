@@ -524,6 +524,9 @@ Dove:
   caption: [Requisiti di qualità]
 )
 
+== Requisiti prestazionali <requisiti-prestazioni>
+L'analisi dei requisiti condotta da #err418 non ha individuato alcun requisito prestazionale.
+
 == Requisiti di vincolo <requisiti-vincolo><vincoli>
 
 #figure(

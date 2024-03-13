@@ -374,8 +374,6 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   return "UC--" + values.map(str).join(".");
 }, supplement: "Caso d'uso")
 
-#image("./imgs/uc_ambiente.png")
-
 === Configurazione ambiente 3D <uc1>
 
 #image("./imgs/UC1.svg")

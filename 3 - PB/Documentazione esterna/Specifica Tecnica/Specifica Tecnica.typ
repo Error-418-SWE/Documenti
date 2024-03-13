@@ -63,8 +63,85 @@ Il prodotto offre le seguenti funzionalità principali:
 
 == Introduzione
 
+In questa sezione vengono esposte ed esaminate le tecnologie utilizzate nel processo di sviluppo e testing del prodotto _WMS3_.
+
+Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end che nel back-end, compresa la gestione del database e l'integrazione con i servizi previsti.
+
 == Elenco delle tecnologie
 
+=== Tecnologie per lo sviluppo dell'applicazione
+
+#figure(
+  table(
+    columns: 3,
+    [*Tecnologia*], [*Descrizione*], [*Versione*],
+
+    [Docker],
+    [Software utilizzato per il processo di deployment di applicazioni software. Permette di
+    eseguire processi informatici in ambienti isolati chiamati container.],
+    [24.0.7],
+
+    [Docker-compose],
+    [Strumento per la definizione e l'esecuzione di applicazioni multi-container.],
+    [2.23.3],
+
+    [Drei],
+    [Libreria che fornisce componenti e utilità per semplificare lo sviluppo di applicazioni in 3D utilizzando React e Three.js.],
+    [9.97.6],
+
+    [Fiber],
+    [Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React.],
+    [8.15.16],
+
+    [HTML],
+    [Linguaggio di markup standard utilizzato per la creazione di pagine web.],
+    [5.0],
+
+    [Next.js],
+    [Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web.],
+    [14.1.0],
+
+    [Node.js],
+    [Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli.],
+    [20.11.0],
+
+    [PostgreSQL],
+    [Sistema di gestione di database relazionali.],
+    [16.2],
+
+    [React],
+    [Libreria JavaScript utilizzata per la creazione di interfacce utente dinamiche e reattive. Si basa sul concetto di "components", ovvero blocchi di codice autonomi che gestiscono la propria logica e rendering.],
+    [18.0.0],
+
+    [Tailwind CSS],
+    [Framework CSS utilizzato per lo sviluppo di interfacce utente web.],
+    [3.4.1],
+
+    [Three.js],
+    [Libreria JavaScript utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL.],
+    [0.161.2],
+
+    [Typescript],
+    [Superset di JavaScript che aggiunge tipizzazione, offrendo maggiore struttura al codice.],
+    [5.3.3],
+
+  ),
+  caption: "Tecnologie utilizzate per lo sviluppo."
+)
+
+
+=== Tecnologie per il testing
+
+#figure(
+  table(
+    columns: 3,
+    [*Tecnologia*], [*Descrizione*], [*Versione*],
+    [Jest],
+    [Framework di testing per JavaScript. Utilizzato principalmente per lo unit testing, offre la parallelizzazione dei test e il mocking delle dipendenze.],
+    [29.7.0],
+  ),
+  caption: "Tecnologie utilizzate per il testing."
+)
 
 = Architettura del prodotto
 

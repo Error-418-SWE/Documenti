@@ -743,6 +743,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero ridefinire la lunghezza dell'ambiente 3D a seguito della sua configurazione iniziale"
 )
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore lunghezza non positiva (@uc2.2.1)],
+  [Errore dimensione inferiore a quella iniziale (@uc2.3)]
+)
 
 ===== Visualizzazione errore lunghezza non positiva <uc2.2.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -799,7 +804,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "User story associata",
-  "Come utente, desidero definire il passo della griglia di aggancio per poter disporre le zone in modo ordinato. Il passo è un numero non negativo espresso in metri."
+  "Come utente, desidero definire il passo della griglia di aggancio per poter disporre le zone in modo ordinato. Il passo è un numero non negativo espresso in metri"
 )
 
 === Importazione delle zone da database <uc4>
@@ -1048,7 +1053,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Postcondizioni",
-  "La lista delle movimentazione è stata azzerata",
+  "La lista delle movimentazioni è stata azzerata",
 )
 #printUseCaseInfo(
   "Scenario principale",

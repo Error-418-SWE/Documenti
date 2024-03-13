@@ -1744,7 +1744,7 @@ Come risultato della corretta implementazione del processo di integrazione:
 
   I test automatici forniscono un resoconto di tutti i test svolti con i relativi esiti nei log della GitHub Action corrispondente.
 
-  Su GitHub è possibile visualizzare l'insieme delle pull request apporvate e correttamente integrate, in questo modo è possibile tenere traccia degli elementi che costituiscono il prodotto.
+  Su GitHub è possibile visualizzare l'insieme delle pull request approvate e correttamente integrate, in questo modo è possibile tenere traccia degli elementi che costituiscono il prodotto.
 
 == Processo di verifica <processo_verifica>
 
@@ -1796,6 +1796,81 @@ Questi ultimi dovranno agire di conseguenza risolvendo i problemi emersi o piani
 
 Per avere traccia degli elementi verificati che costituiscono il prodotto, su GitHub è possibile visualizzare l'insieme delle pull request approvate ed integrate mediante merge.
 
+
+== Processo di Transizione <processo_transizione>
+Lo scopo del processo di Transizione è di stabilire la capacità di un sistema di fornire servizi specificati dalle richieste del Proponente all'interno di un'ambiente operativo differente da quello di sviluppo.
+
+=== Risultati
+Come risultato della corretta applicazione del processo di transizione, otteniamo che:
+
+- il #man viene redatto;
+- gli utenti vengono supportati e formati all'utilizzo del sistema;
+- viene rilasciata una versione del sistema;
+- viene effettuato il deploy su Azure.
+
+=== Attività
+Questo processo è composto da varie attività indipendenti e di diversa natura.
+
+Le seguenti attività non sono quindi necessariamente consequenziali, ma la loro corretta applicazione porta al conseguimento dei risultati precedentemente descritti.
+
+==== Rilascio dell'ultima versione del sistema
+Il repository GitHub dedicata a WMS3 si compone di un branch `dev` necessario per gli sviluppatori, in quanto fonte da cui vengono creati i feature branch necessari al conseguimento degli obiettivi di una task e destinazione dei merge a seguito delle successive pull request. Viene quindi definito un altro branch `release`, orfano e luogo in cui vengono effettuate i rilasci del sistema.
+
+I rilasci avvengono solo quanto il sistema viene ritenuto sufficientemente maturo e pronto per l'utilizzo o quando vengono:
+- aggiunte modifiche sostanziali al sistema rispetto all'ultima versione rilasciata;
+- risolti bug critici;
+- avanzamento del sistema rilasciato ad una versione più aggiornata.
+I rilasci del prodotto avvengono sempre dal branch di partenza `dev` a quello di destinazione `release`, in quanto solo il codice contenuto in `dev` soddisfa i requisiti di qualità imposti dal gruppo e permette la corretta esecuzione dei processi di implementazione (@processo_implementazione), integrazione (@processo_integrazione) e verifica (@processo_verifica).
+
+Ad ogni release del sistema devono essere rilasciati anche i documenti #man e #st aggiornati che documentano le novità apportate.
+
+==== Redazione del documento #man
+Al fine di istruire gli utenti del sistema al suo corretto utilizzo, il gruppo mette a disposizione il documento #man.
+
+In questo documento viene riportato in particolare:
+- installazione locale del sistema;
+- best practice, descrizione dei servizi offerti dal sistema;
+- guida all'utilizzo delle interfacce per la creazione, modifica e popolamento dell'ambiente 3D.
+
+Il #man viene redatto seguendo i principi di redazione dei documenti descritti nel paragrafo riguardante il processo di gestione delle informazioni (@processo_gestione_informazioni).
+
+==== Deploy su Azure
+Il gruppo ha definito una GitHub Action chiamata _Deploy to VPS_ (i cui job sono descritti nel file _deploy.yml_) il cui compito è quello di effettuare il deploy del sistema aggiornato all'ultima versione rilasciata sul branch `dev` all'interno della macchina virtuale di Azure.
+
+Questo permette di usufruire del sistema senza la necessità di scaricare le ultime modifiche in locale e ricreare le immagini Docker.
+
+/* DA AGGIUNGERE IN CASO DECIDIAMO DI FARLI, AGGIORNARE ANCHE IL RESTO DEI PARAGRAFI
+Il deploy su Azure agevola anche l'esecuzione dei testing end-to-end.
+*/
+
+== Processo di Validazione <processo_validazione>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.11_
+
+=== Scopo
+
+Il processo di Validazione si occupa di fornire prove oggettive che il sistema soddisfi i requisiti esposti dal Proponente descritti nell'#adr.
+
+Lo scopo del processo è quindi quello di accertare l'abilità del sistema, o di un suo specifico elemento, di soddisfare in determinate specifiche condizioni operative l'obiettivo per cui è stato creato.
+
+=== Risultati
+
+Come risultato della corretta implementazione del processo di Validazione otteniamo:
+- individuazione di limiti e vincoli che influenzano i requisiti, il design e l'architettura;
+- feedback da parte del Proponente in merito al lavoro svolto;
+- evidenza che il sistema o l'elemento di sistema soddisfa i bisogni del Proponente.
+
+=== Attività
+==== Preparazione alla validazione
+La validazione viene svolta prima internamente al gruppo, il Programmatore deve fornire un elemento software che soddisfi le indicazioni date dal Progettista e che possieda le qualità minime di accettabilità per passare la revisione del Verificatore come descritto nei paragrafi del processo di implementazione (@processo_implementazione), di integrazione (@processo_integrazione), e di verifica (@processo_verifica). Il sistema si ritiene quindi in uno stato accettabile, anche se incompleto, e pronto per essere mostrato al Proponente.
+
+==== Effettuare la validazione
+Il gruppo pianifica dei meeting settimanali con il Proponente per esaminare lo stato di avanzamento dei lavori. Qui viene quindi mostrato il sistema in funzione (definito come MVC (_Minimum Viable Product_) in quanto il sistema potrebbe ancora non essere del tutto rifinito e presentare problematiche in determinate circostanze o assenze di funzionalità perché ancora non del tutto implementate), con particolare enfasi sulle novità introdotte e le difficoltà incontrate. Il Proponente fornisce quindi feedback riguardo l'adempimento dei bisogni espressi, e aiuta il gruppo chiarendo particolari inerenti la realtà di riferimento a cui il sistema è indirizzato.
+
+==== Gestire i risultati della validazione
+In seguito alle direttive del Proponente, l'elemento software viene adattato per affrontare eventuali criticità emerse durante il processo, potenzialmente influenzando l'architettura, il design e i requisiti.
+Una volta che il sistema o un elemento di sistema viene approvato da Verificatore, Progettista e Proponente viene quindi considerato come abile a soddisfare i requisiti descritti nell'#adr nella maniera descritta dal design ed esplicitata dall'architettura individuata con le tecnologie individuate durante RTB. L'adempimento di requisiti da parte di uno specifico elemento di sistema viene quindi tracciato all'interno del documento di #st.
+
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
@@ -1824,10 +1899,11 @@ La tabella di seguito riportata consente di associare ogni capitolo del document
     [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
     [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
     [@processo_design],[6.4.5 - Design Definition process],[To outcome],
-    [@processo_verifica],[6.4.9 - Verification process],[To outcome],
     [@processo_implementazione],[6.4.7 - Implementation process],[To outcome],
     [@processo_integrazione],[6.4.8 - Integration process],[To outcome],
     [@processo_verifica],[6.4.9 - Verification process],[To outcome],
+    [@processo_transizione],[6.4.10 - Transition process],[To outcome],
+    [@processo_validazione],[6.4.11 - Validation process],[To outcome],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

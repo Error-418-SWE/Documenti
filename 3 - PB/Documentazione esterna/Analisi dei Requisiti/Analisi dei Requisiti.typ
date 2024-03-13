@@ -976,6 +976,114 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero effettuare lo zoom-out per poter visualizzare l'ambiente 3D da diverse distanze"
 )
+
+=== Reimpostazione ambiente 3D <uc11>
+
+#image("./imgs/UC11.svg")
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La configurazione dell'ambiente 3D è stata reimpostata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la reimpostazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero reimpostare un ambiente 3D già configurato, compresi i dati eventualmente importati da database e quelli immessi manualmente, per poter ricominciare da zero con impostazioni diverse"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Reset movimentazioni (@uc11.1)],
+  [Reset modifiche alle zone (@uc11.2)],
+  [Reset planimetria (@uc11.3)],
+  [Rimozione dati importati (@uc11.4)]
+)
+
+==== Reset movimentazioni <uc11.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha impostato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La lista delle movimentazione è stata azzerata",
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la reimpostazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero reimpostare le movimentazioni per poter tornare allo stato iniziale"
+)
+
+==== Reset modifiche alle zone <uc11.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha impostato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Tutte le modifiche alle zone (incluse aggiunte e cancellazioni) sono state annullate"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la reimpostazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero reimpostare le modifiche alle zone per poter ricominciare da zero la configurazione dell'ambiente 3D"
+)
+
+==== Reset planimetria <uc11.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La configurazione della planimetria è stata reimpostata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la reimpostazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero reimpostare la planimetria per poter ricominciare da zero la configurazione dell'ambiente 3D"
+)
+
+==== Rimozione dati importati <uc11.4>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "I dati importati da database sono stati rimossi"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la reimpostazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero rimuovere i dati importati da database per poter ricominciare da zero la configurazione dell'ambiente 3D"
+)
+
 #set heading(numbering: "1.1")
 
 == Zone e Bin <uc-zone>

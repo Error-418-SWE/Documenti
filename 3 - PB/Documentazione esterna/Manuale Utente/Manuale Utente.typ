@@ -78,4 +78,17 @@ Il prodotto offre le seguenti funzionalità principali:
 
 
 = Supporto tecnico
-  ( contattare la mail del gruppo per malfunzionamenti ecc... paragrafo piccolo magari con suggerimento su come scrivere la mail: -oggetto "nome evento" -corpo -allegato)
+
+Per qualsiasi problema di installazione, difficoltà di utilizzo o malfunzionamento del software, è possibile contattare #err418 tramite l'indirizzo mail #link("mailto:error418swe@gmail.com"), presente anche nel frontespizio del presente documento.
+
+Per facilitare l'individuazione della mail nella casella si consiglia di scrivere l'oggetto nel seguente modo:
+#align(center, `[WMS3] Oggetto`)
+
+Nel corpo del messaggio è importante descrivere:
+
+- browser utilizzato, indicando, se possibile, la versione;
+- elenco dettagliato delle azioni effettuate che hanno portato al problema.
+
+Se utile a una miglior comprensione del problema è possibile allegare degli screenshot della schermata che presenta l'errore.
+
+Per assicurare un miglior supporto tecnico, la mail inviata verrà inoltrata in automatico ad ogni membro del gruppo, in modo da avere maggiore sicurezza della sua lettura.

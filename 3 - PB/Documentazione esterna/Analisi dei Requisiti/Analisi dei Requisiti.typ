@@ -891,29 +891,8 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente seleziona l'importazione dei dati dal database ma l'importazione fallisce"
 )
 
-=== Spostamento del POV <uc7>
-
-#image("./imgs/uc7.png")
-#printUseCaseInfo("Attore principale", "Utente")
-#printUseCaseInfo(
-  "Precondizioni",
-  "L'utente ha creato un ambiente 3D",
-  "L'utente interagisce con il sistema per cambiare il proprio punto di vista sull'ambiente 3D"
-)
-#printUseCaseInfo(
-  "Postcondizioni",
-  "L'utente ha cambiato il proprio punto di vista"
-)
-#printUseCaseInfo(
-  "Scenario principale",
-  "L'utente cambia il proprio punto di vista sull'ambiente 3D tramite mouse, tastiera o touchscreen"
-)
-#printUseCaseInfo(
-  "User story associata",
-  "Come utente, desidero cambiare il mio punto di vista sull'ambiente 3D per poter visualizzare ed esplorare l'ambiente da diverse angolazioni"
-)
-
-==== Rotazione
+=== Rotazione del POV <uc7>
+#image("./imgs/UC7.svg")
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -933,7 +912,8 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero ruotare il punto di vista attorno all'asse longitudinale per poter visualizzare l'ambiente 3D da diverse angolazioni"
 )
 
-==== Pan
+=== Pan del POV <uc8>
+#image("./imgs/UC8.svg")
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -953,7 +933,8 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero spostare orizzontalmente il punto di vista per poter visualizzare l'ambiente 3D da diverse posizioni"
 )
 
-==== Zoom-in
+=== Zoom-in sull'ambiente 3D <uc9>
+#image("./imgs/UC9.svg")
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -974,7 +955,8 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero effettuare lo zoom-in per poter visualizzare l'ambiente 3D da diverse distanze"
 )
 
-==== Zoom-out
+=== Zoom-out sull'ambiente 3D <uc10>
+#image("./imgs/UC10.svg")
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",

@@ -378,7 +378,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Configurazione ambiente 3D <uc1>
 
-#image("./imgs/uc1.png")
+#image("./imgs/UC1.svg")
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -405,7 +405,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 ==== Configurazione ambiente 3D con planimetria rettangolare <uc1.1>
 
-#image("./imgs/uc1.1.png")
+#image("./imgs/UC1.1.svg")
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -515,7 +515,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 ==== Configurazione ambiente 3D con planimetria definita da file SVG <uc1.2>
 
-#image("./imgs/uc1.2.png")
+#image("./imgs/UC1.2.svg")
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -645,7 +645,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Modifica ambiente 3D
 
-#image("./imgs/uc2.png")
+#image("./imgs/UC2.svg")
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -770,7 +770,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Definizione passo griglia di aggancio <uc3>
 
-#image("./imgs/uc3.png")
+#image("./imgs/UC3.svg")
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -791,7 +791,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Importazione delle zone da database <uc4>
 
-#image("./imgs/uc4.png")
+#image("./imgs/UC4.svg")
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -846,7 +846,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Importazione dei prodotti da database <uc5>
 
-#image("./imgs/uc5.png")
+#image("./imgs/UC5.svg")
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",

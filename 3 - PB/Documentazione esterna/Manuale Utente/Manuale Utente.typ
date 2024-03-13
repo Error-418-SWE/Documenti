@@ -85,8 +85,6 @@ oppure
 
 == Avviare la web app
 
-Requisito essenziale per avviare l'applicazione è avere installato localmente Docker (#link("https://docs.docker.com/")) e Docker Compose (#link("https://docs.docker.com/compose/")).
-
 Per avviare la web app è necessario spostarsi all'interno della cartella scaricata in precedenza ed eseguire il comando
 
 #align(center, `docker compose up -d`)

@@ -376,7 +376,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Configurazione ambiente 3D <uc1>
 
-#image("./imgs/UC1.svg")
+#figure(
+  image("./imgs/UC1.svg"),
+  caption: "Diagramma UC--1"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -403,7 +406,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 ==== Configurazione ambiente 3D con planimetria rettangolare <uc1.1>
 
-#image("./imgs/UC1.1.svg")
+#figure(
+  image("./imgs/UC1.1.svg"),
+  caption: "Diagramma UC--1.1"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -513,7 +519,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 ==== Configurazione ambiente 3D con planimetria definita da file SVG <uc1.2>
 
-#image("./imgs/UC1.2.svg")
+#figure(
+  image("./imgs/UC1.2.svg"),
+  caption: "Diagramma UC--1.2"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -643,7 +652,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Modifica ambiente 3D
 
-#image("./imgs/UC2.svg")
+#figure(
+  image("./imgs/UC2.svg"),
+  caption: "Diagramma UC--2"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -768,7 +780,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Definizione passo griglia di aggancio <uc3>
 
-#image("./imgs/UC3.svg")
+#figure(
+  image("./imgs/UC3.svg"),
+  caption: "Diagramma UC--3"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -789,7 +804,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Importazione delle zone da database <uc4>
 
-#image("./imgs/UC4.svg")
+#figure(
+  image("./imgs/UC4.svg"),
+  caption: "Diagramma UC--4"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -844,7 +862,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Importazione dei prodotti da database <uc5>
 
-#image("./imgs/UC5.svg")
+#figure(
+  image("./imgs/UC5.svg"),
+  caption: "Diagramma UC--5"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -890,7 +911,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 
 === Rotazione del POV <uc7>
-#image("./imgs/UC7.svg")
+#figure(
+  image("./imgs/UC7.svg"),
+  caption: "Diagramma UC--7"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -911,7 +935,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 
 === Pan del POV <uc8>
-#image("./imgs/UC8.svg")
+#figure(
+  image("./imgs/UC8.svg"),
+  caption: "Diagramma UC--8"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -932,7 +959,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 
 === Zoom-in sull'ambiente 3D <uc9>
-#image("./imgs/UC9.svg")
+#figure(
+  image("./imgs/UC9.svg"),
+  caption: "Diagramma UC--9"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -954,7 +984,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 
 === Zoom-out sull'ambiente 3D <uc10>
-#image("./imgs/UC10.svg")
+#figure(
+  image("./imgs/UC10.svg"),
+  caption: "Diagramma UC--10"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -977,7 +1010,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Reimpostazione ambiente 3D <uc11>
 
-#image("./imgs/UC11.svg")
+#figure(
+  image("./imgs/UC11.svg"),
+  caption: "Diagramma UC--11"
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",

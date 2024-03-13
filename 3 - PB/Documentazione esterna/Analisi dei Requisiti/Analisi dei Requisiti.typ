@@ -786,7 +786,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 === Definizione passo griglia di aggancio <uc3>
 
 #figure(
-  image("./imgs/UC3.svg"),
+  image("./imgs/UC3.svg", width: 60%),
   caption: "Diagramma UC--3"
 )
 #printUseCaseInfo("Attore principale", "Utente")
@@ -868,7 +868,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 === Importazione dei prodotti da database <uc5>
 
 #figure(
-  image("./imgs/UC5.svg"),
+  image("./imgs/UC5.svg", width: 90%),
   caption: "Diagramma UC--5"
 )
 #printUseCaseInfo("Attore principale", "Utente")
@@ -917,7 +917,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Rotazione del POV <uc7>
 #figure(
-  image("./imgs/UC7.svg"),
+  image("./imgs/UC7.svg", width: 60%),
   caption: "Diagramma UC--7"
 )
 #printUseCaseInfo("Attore principale", "Utente")
@@ -941,7 +941,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Pan del POV <uc8>
 #figure(
-  image("./imgs/UC8.svg"),
+  image("./imgs/UC8.svg", width: 60%),
   caption: "Diagramma UC--8"
 )
 #printUseCaseInfo("Attore principale", "Utente")
@@ -965,7 +965,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Zoom-in sull'ambiente 3D <uc9>
 #figure(
-  image("./imgs/UC9.svg"),
+  image("./imgs/UC9.svg", width: 60%),
   caption: "Diagramma UC--9"
 )
 #printUseCaseInfo("Attore principale", "Utente")
@@ -990,7 +990,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 === Zoom-out sull'ambiente 3D <uc10>
 #figure(
-  image("./imgs/UC10.svg"),
+  image("./imgs/UC10.svg", width: 60%),
   caption: "Diagramma UC--10"
 )
 #printUseCaseInfo("Attore principale", "Utente")

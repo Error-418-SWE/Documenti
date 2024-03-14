@@ -1152,9 +1152,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   let values = nums.pos().slice(2);
   return "UC--" + values.map(str).join(".");
 }, supplement: "Caso d'uso")
-#setUCHeadingCounterTo(17)
-
-// FINE UC
+#pagebreak()
 
 #set heading(numbering: "1.1")
 

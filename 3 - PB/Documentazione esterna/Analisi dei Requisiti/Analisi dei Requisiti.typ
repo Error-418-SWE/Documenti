@@ -410,6 +410,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   image("./imgs/UC1.1.svg"),
   caption: "Diagramma UC--1.1"
 )
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Configurazione ambiente 3D (@uc1)]
+)
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -522,6 +526,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 #figure(
   image("./imgs/UC1.2.svg"),
   caption: "Diagramma UC--1.2"
+)
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Configurazione ambiente 3D (@uc1)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -1149,18 +1157,18 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 == Codice identificativo
 Ogni requisito è caratterizzato da un codice identificativo definito nel seguente modo:
-#align(`[Tipologia][Importanza]-[Numero]`, center)
+#align(`[Tipologia][Classificazione]-[Sequenza]`, center)
 Dove:
 - `Tipologia` può assumere i valori:
   - `F`: funzionale;
   - `Q`: di qualità;
   - `V`: di vincolo.
-- `Importanza` può assumere i valori:
+- `Classificazione` può assumere i valori:
   - `M`: mandatory, obbligatorio;
   - `D`: desiderabile;
   - `O`: opzionale.
-- `Numero` rappresenta l'identificativo numerico del requisito. Se sono presenti sottocasi, il loro numero viene rappresentato come segue:
-#align(`NumeroPadre.NumeroFiglio`, center)
+- `Sequenza` rappresenta l'identificativo numerico del requisito. Se sono presenti sottocasi, il loro numero viene rappresentato come segue:
+#align(`NumeroPadre.NumeroFiglio{...}`, center)
 
 #show figure: set block(breakable: true)
 
@@ -1168,7 +1176,7 @@ Dove:
 
 #figure(
   table(
-    columns: 4,
+    columns: (14%, 19%, 51%, 16%),
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
     [FM-1], [Obbligatorio], [L'utente deve poter creare il magazzino], [UC-1],
@@ -1292,7 +1300,7 @@ Dove:
 
 #figure(
   table(
-    columns: 4,
+    columns: (14%, 19%, 51%, 16%),
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
     [QM-1], [Obbligatorio], [Deve essere rispettato quanto previsto dalle #ndp_v], [Decisione\ interna],
@@ -1314,7 +1322,7 @@ L'analisi dei requisiti condotta da #err418 non ha individuato alcun requisito p
 
 #figure(
   table(
-    columns: 4,
+    columns: (14%, 19%, 51%, 16%),
     align: left,
     [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
     [VM-1], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0], [Interno],
@@ -1336,12 +1344,12 @@ L'analisi dei requisiti condotta da #err418 non ha individuato alcun requisito p
 
 #figure(
   table(
-    columns: 2,
+    columns: (auto, 1fr, 1fr, 1fr, 1fr),
     align: left,
-    [*Tipo Requisito*], [*Numero totale*],
-    [Requisiti funzionali], [96],
-    [Requisiti di qualità], [8],
-    [Requisiti di vincolo], [11],
+    [*Tipologia*], [Obbligatori], [Desiderabili], [Opzionali], [*Totale*],
+    [Requisiti funzionali], [#TODO], [#TODO], [#TODO], [#TODO],
+    [Requisiti di qualità], [#TODO], [#TODO], [#TODO], [#TODO],
+    [Requisiti di vincolo], [#TODO], [#TODO], [#TODO], [#TODO],
   ),
   caption: [Riepilogo requisiti]
 )

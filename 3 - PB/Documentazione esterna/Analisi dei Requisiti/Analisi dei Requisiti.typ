@@ -365,7 +365,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 #set par(first-line-indent: 0pt)
 
-// INIZIO UC
+#show heading.where(level: 3): it => {v(3em, weak: true); it}
+#show heading.where(level: 4): it => {v(3em, weak: true); it}
+#show heading.where(level: 5): it => {v(3em, weak: true); it}
+#show heading.where(level: 6): it => {v(3em, weak: true); it}
 
 == Ambiente 3D <uc-ambiente>
 

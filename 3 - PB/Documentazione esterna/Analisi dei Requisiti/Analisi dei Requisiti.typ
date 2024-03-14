@@ -1152,6 +1152,83 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   let values = nums.pos().slice(2);
   return "UC--" + values.map(str).join(".");
 }, supplement: "Caso d'uso")
+=== Ricerca prodotti <ucc>
+
+#figure(
+  image("./imgs/UCc.svg"),
+  caption: "Diagramma UC--c"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha richiesto l'importazione dei prodotti",
+  "Il sistema ha importato correttamente almeno un prodotto"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza i risultati della ricerca filtrati secondo il termine inserito"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce il termine di ricerca e filtra la lista dei prodotti"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero poter ricercare un prodotto per individuarlo velocemente nella lista dei prodotti"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Ricerca per ID prodotto (@ucc.1)],
+  [Ricerca per nome prodotto (@ucc.2)],
+  [Ricerca per categoria prodotto (@ucc.3)]
+)
+
+==== Ricerca per ID prodotto <ucc.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Ricerca prodotti (@ucc)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti filtrata secondo l'ID del prodotto inserito come termine di ricerca"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce l'ID del prodotto da cercare"
+)
+
+==== Ricerca per nome prodotto <ucc.2>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Ricerca prodotti (@ucc)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti filtrata secondo il nome di prodotto inserito come termine di ricerca"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce il nome del prodotto da cercare"
+)
+
+==== Ricerca per categoria prodotto <ucc.3>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Ricerca prodotti (@ucc)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti filtrata secondo la categoria inserita come termine di ricerca"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce la categoria di prodotto desiderata"
+)
+
 === Visualizzazione cronologia ordini di movimentazione <uce>
 #figure(
   image("./imgs/UCe.svg", width: 115%),

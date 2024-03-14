@@ -1152,6 +1152,123 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   let values = nums.pos().slice(2);
   return "UC--" + values.map(str).join(".");
 }, supplement: "Caso d'uso")
+=== Visualizzazione cronologia ordini di movimentazione <uce>
+#figure(
+  image("./imgs/UCe.svg", width: 115%),
+  caption: "Diagramma UC--e"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la cronologia degli ordini di movimentazione immessi"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la cronologia degli ordini di movimentazione immessi per poterli monitorare"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione singolo ordine di movimentazione (@uce.1)]
+)
+
+==== Visualizzazione singolo ordine di movimentazione <uce.1>
+#figure(
+  image("./imgs/UCe.1.svg", width: 80%),
+  caption: "Diagramma UC--e.1"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative ad un singolo ordine di movimentazione presente in lista"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID bin di destinazione (@uce.1.2)],
+  [Visualizzazione ID prodotto (@uce.1.3)],
+  [Visualizzazione nome prodotto (@uce.1.4)],
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione ID bin di partenza (@uce.1.1)]
+)
+
+===== Visualizzazione ID bin di partenza <uce.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della cronologia degli ordini di movimentazione",
+  "L'origine della movimentazione è un bin"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del bin di partenza dell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un ordine di movimentazione presente in lista"
+)
+
+===== Visualizzazione ID bin di destinazione <uce.1.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del bin di destinazione dell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un ordine di movimentazione presente in lista"
+)
+
+===== Visualizzazione ID prodotto <uce.1.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del prodotto oggetto dell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un ordine di movimentazione presente in lista"
+)
+
+===== Visualizzazione nome prodotto <uce.1.4>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza il nome del prodotto oggetto dell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un ordine di movimentazione presente in lista"
+)
+
 === Ispezione ordine di movimentazione <ucn>
 #figure(
   image("./imgs/UCn.svg"),

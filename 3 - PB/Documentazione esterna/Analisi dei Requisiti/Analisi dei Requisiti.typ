@@ -1152,6 +1152,152 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   let values = nums.pos().slice(2);
   return "UC--" + values.map(str).join(".");
 }, supplement: "Caso d'uso")
+=== Visualizzazione informazioni prodotto <uca>
+
+#figure(
+  image("./imgs/UCa.svg", width: 75%),
+  caption: "Diagramma UC--a"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha richiesto l'importazione dei prodotti",
+  "Il sistema ha importato correttamente almeno un prodotto"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative al prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare le informazioni associate ai prodotti presenti nel magazzino"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID prodotto (@uca.1)],
+  [Visualizzazione nome prodotto (@uca.2)],
+  [Visualizzazione categoria prodotto (@uca.3)],
+  [Visualizzazione larghezza prodotto (@uca.4)],
+  [Visualizzazione lunghezza prodotto (@uca.5)],
+  [Visualizzazione profondità prodotto (@uca.6)],
+  [Visualizzazione peso prodotto (@uca.7)],
+)
+
+#figure(
+  image("./imgs/UCa.1.svg", width: 75%),
+  caption: "Diagramma UC--a.1"
+)
+
+==== Visualizzazione ID prodotto <uca.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+==== Visualizzazione nome prodotto <uca.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza il nome del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+
+==== Visualizzazione categoria prodotto <uca.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la categoria del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+
+==== Visualizzazione larghezza prodotto <uca.4>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la larghezza del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+
+==== Visualizzazione lunghezza prodotto <uca.5>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lunghezza del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+
+==== Visualizzazione profondità prodotto <uca.6>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la profondità del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+
+==== Visualizzazione peso prodotto <uca.7>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza il peso del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+
 === Ricerca prodotti <ucc>
 
 #figure(

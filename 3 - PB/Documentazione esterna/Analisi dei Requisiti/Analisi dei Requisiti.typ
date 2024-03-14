@@ -1146,6 +1146,34 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   let values = nums.pos().slice(2);
   return "UC--" + values.map(str).join(".");
 }, supplement: "Caso d'uso")
+=== Eliminazione zona
+
+#figure(
+  image("./imgs/UCg.svg", width: 60%),
+  caption: "Diagramma UC--g"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La zona è stata eliminata dall'ambiente 3D",
+  "I prodotti collocati nei bin della zona rimossa sono elencati nella lista dei prodotti senza collocazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la zona da eliminare",
+  "L'utente conferma l'eliminazione della zona"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero eliminare una zona dall'ambiente 3D per fare spazio ad altre zone o semplicemente per rimuoverla"
+)
+
 === Spostamento POV su zona specifica
 
 #figure(

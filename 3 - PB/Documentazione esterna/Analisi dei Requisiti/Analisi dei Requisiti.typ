@@ -1298,6 +1298,215 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente seleziona un prodotto da ispezionare"
 )
 
+=== Visualizzazione lista prodotti <ucb>
+
+#figure(
+  image("./imgs/UCb.svg", width: 115%),
+  caption: "Diagramma UC--b"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha richiesto l'importazione dei prodotti",
+  "Il sistema ha importato correttamente almeno un prodotto"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti importati secondo il criterio selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione di una delle liste di prodotti tra quelle disponibili"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la lista dei prodotti importati da database e visualizzarne i dettagli"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Visualizzazione lista prodotti non collocati (@ucb.1)],
+  [Visualizzazione lista prodotti collocati (@ucb.2)]
+)
+
+==== Visualizzazione lista prodotti non collocati <ucb.1>
+#figure(
+  image("./imgs/UCb.1.1.svg", width: 80%),
+  caption: "Diagramma UC--b.1"
+)
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Visualizzazione lista prodotti (@ucb)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti non collocati nei bin"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della lista dei prodotti non collocati nei bin"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la lista dei prodotti non collocati nei bin delle zone dell'ambiente 3D per poterli collocare"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione singolo prodotto (@ucb.1.1)]
+)
+
+===== Visualizzazione singolo prodotto <ucb.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative ad un singolo prodotto, non collocato nei bin, presente in lista"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della lista dei prodotti non collocati nei bin"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Visualizzazione singolo prodotto collocato (@ucb.2.1)]
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione nome prodotto (@ucb.1.1.1)],
+  [Visualizzazione ID prodotto (@ucb.1.1.2)],
+  [Visualizzazione categoria prodotto (@ucb.1.1.3)]
+)
+
+====== Visualizzazione nome prodotto <ucb.1.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza il nome del prodotto visualizzato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei prodotti"
+)
+
+====== Visualizzazione ID prodotto <ucb.1.1.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del prodotto visualizzato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei prodotti"
+)
+
+====== Visualizzazione categoria prodotto <ucb.1.1.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la categoria del prodotto visualizzato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei prodotti"
+)
+
+==== Visualizzazione lista prodotti collocati <ucb.2>
+#figure(
+  image("./imgs/UCb.2.1.svg", width: 80%),
+  caption: "Diagramma UC--b.2.1"
+)
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Visualizzazione lista prodotti (@ucb)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti collocati nei bin"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della lista dei prodotti collocati nei bin"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la lista dei prodotti collocati nei bin delle zone dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione singolo prodotto collocato (@ucb.2.1)]
+)
+
+===== Visualizzazione singolo prodotto collocato <ucb.2.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Visualizzazione singolo prodotto non collocato (@ucb.1.1)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti collocati nei bin"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative ad un singolo prodotto, collocato in un bin, presente in lista"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della lista dei prodotti collocati nei bin"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID zona di appartenenza (@ucb.2.1.1)],
+  [Visualizzazione ID bin di appartenenza (@ucb.2.1.2)]
+)
+
+====== Visualizzazione ID zona di appartenenza <ucb.2.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti collocati"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID della zona di appartenenza del prodotto visualizzato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei prodotti collocati"
+)
+
+====== Visualizzazione ID bin di appartenenza <ucb.2.1.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti collocati"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del bin dove si trova il prodotto visualizzato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei prodotti collocati"
+)
+
 === Ricerca prodotti <ucc>
 
 #figure(

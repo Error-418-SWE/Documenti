@@ -113,10 +113,35 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 
 = Installazione
 
-== Clonare il repository
+== Scaricare il progetto
+
+Ci sono due modalità tramite cui è possibile scaricare il progetto: la prima, e più consigliata, è eseguire il download del progetto in formato zip o tar.gz dalla pagina
+
+#align(center, link("https://github.com/Error-418-SWE/WMS3/releases"))
+
+In alternativa, se nel dispositivo è presente Git, si può clonare il repository con il comando
+
+#align(center, `git clone git@github.com:Error-418-SWE/WMS3.git`)
+
+oppure
+
+#align(center, `git clone https://github.com/Error-418-SWE/WMS3.git`)
 
 == Avviare la web app
 
+Per avviare la web app è necessario spostarsi all'interno della cartella scaricata in precedenza ed eseguire il comando
+
+#align(center, `docker compose up -d`)
+
+Questo avvierà i container Docker che formano il prodotto, il quale sarà poi visualizzabile e utilizzabile all'indirizzo
+
+#align(center, link("http://localhost:3000/"))
+
+== Terminare l'esecuzione
+
+Chiudere la finestra browser non terminerà completamente l'esecuzione dell'applicazione, in quanto Docker Compose continuerà ad eseguire in background. La terminazione completa si effettua con il comando
+
+#align(center, `docker compose down`)
 
 = Istruzioni d'uso
 

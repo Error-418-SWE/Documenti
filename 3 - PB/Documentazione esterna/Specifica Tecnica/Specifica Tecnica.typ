@@ -151,7 +151,7 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
 Per garantire modularità e separazione delle responsabilità, il programma adotta l'architettura "layered".
 Nello specifico vengono individuati tre strati:
 
-- *Persistence layer*: gestisce l'accesso al database e fornisce gli stumenti dedicati alla lettura dei suoi dati persistenti. I dati letti vengono processati al fine di poter creare gli elementi del Business layer;
+- *Persistence layer*: gestisce l'accesso al database e fornisce gli strumenti dedicati alla lettura dei suoi dati persistenti. I dati letti vengono processati al fine di poter creare gli elementi del Business layer;
 
 - *Business layer*: si occupa di elaborare i dati ricevuti dallo strato di persistenza e applicare le regole di business definite. È responsabile di implementare la logica dell'applicazione in modo indipendente dalle tecnologie di persistenza e di presentazione utilizzate;
 
@@ -159,15 +159,18 @@ Nello specifico vengono individuati tre strati:
 
 
 == Design pattern utilizzati
-I Design pattern introdotti nell'architettura dell'applicazione sono:
 
-- *pattern Data mapper*: viene utilizzato per interpretare i dati letti del database mantenendo separate la logica di business dal layer di persistenza. Le classi relative a questo pattern fungono da intermediari tra l'applicazione e la sorgente dati e sono responsabili della conversione delle strutture dati atte alla persistenza in oggetti del dominio dell'applicazione;
+=== Data mapper
+Viene utilizzato per interpretare i dati letti del database mantenendo separate la logica di business dal layer di persistenza. Le classi relative a questo pattern fungono da intermediari tra l'applicazione e la sorgente dati e sono responsabili della conversione delle strutture dati atte alla persistenza in oggetti del dominio dell'applicazione.
 
-- *pattern Repository*: come per il precedente pattern, viene implementato per separare la logica di business dalla logica di accesso ai dati. Le classi relative a questo pattern eseguono operazioni di lettura, aumentando l'astrazione dei dettagli specifici della persistenza dei dati e permettendo all'applicazione di interagirvi in modo indipendente dal tipo di archivio sottostante;
+=== Repository
+Come per il precedente pattern, viene implementato per separare la logica di business dalla logica di accesso ai dati. Le classi relative a questo pattern eseguono operazioni di lettura, aumentando l'astrazione dei dettagli specifici della persistenza dei dati e permettendo all'applicazione di interagirvi in modo indipendente dal tipo di archivio sottostante.
 
-- *pattern Provider*: applicato nel contesto tecnologico del progetto, soprattutto rispetto all'utilizzo di React, vengono sfruttate delle API per permette di gestire e trasferire i dati attraverso l'albero dei componenti in modo strutturato, evitando il "prop drilling", ovvero l'effetto che si verifica nei casi in cui è necessario trasportare i dati attraverso più livelli di componenti, anche se alcuni di essi non ne necessitano;
+=== Provider
+Applicato nel contesto tecnologico del progetto, soprattutto rispetto all'utilizzo di React, vengono sfruttate delle API per permette di gestire e trasferire i dati attraverso l'albero dei componenti in modo strutturato, evitando il "prop drilling", ovvero l'effetto che si verifica nei casi in cui è necessario trasportare i dati attraverso più livelli di componenti, anche se alcuni di essi non ne necessitano.
 
-- *pattern Strategy*: consente di definire una famiglia di algoritmi, incapsularli in classi separate e renderli intercambiabili. In questo modo è possibile applicare l'algoritmo appropriato senza dover conoscere i dettagli implementativi.
+=== Strategy
+Consente di definire una famiglia di algoritmi, incapsularli in classi separate e renderli intercambiabili. In questo modo è possibile applicare l'algoritmo appropriato senza dover conoscere i dettagli implementativi.
 
 
 
@@ -176,18 +179,18 @@ Ciascun layer possiede il suo indipendente sistema di classi e componenti e prev
 
 === Persistence layer
 Mediante delle chiamate API vengono letti i dati utili all'applicazione da un database esterno e vengono forniti degli adeguati file Json.
-Questi ultimi vengono utilizzati dalle classi derivate dall'adozione del pattern "Data mapper":
-- l'interfaccia DataMapperInterface;
-- binMapper: implementa DataMapperInterface ed è responsabile della creazione di oggetti "bin";
-- productMapper: implementa DataMapperInterface ed è responsabile della creazione di oggetti "product";
-- zoneMapper: implementa DataMapperInterface ed è responsabile della creazione di oggetti "zone".
+Questi ultimi vengono utilizzati dalle classi derivate dall'adozione del pattern Data mapper:
+- l'interfaccia `DataMapperInterface`;
+- `binMapper`: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Bin`;
+- `productMapper`: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Product`;
+- `zoneMapper`: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Zone`.
 
 
-Al fine di dividere ulteriormente il Persistence layer dal Business layer, viene applicato il pattern "Repository" mediante le classi:
-- l'interfaccia DataRepositoryInterface;
-- binRepository: implementa DataRepositoryInterface ed è responsabile delle chiamate API relative agli oggetti "bin";
-- productRepository: implementa DataRepositoryInterface ed è responsabile delle chiamate API relative agli oggetti "product";
-- zoneRepository: implementa DataRepositoryInterface ed è responsabile delle chiamate API relative agli oggetti "zone".
+Al fine di dividere ulteriormente il Persistence layer dal Business layer, viene applicato il pattern Repository mediante le classi:
+- l'interfaccia `DataRepositoryInterface`;
+- `binRepository`: implementa `DataRepositoryInterface` ed è responsabile delle chiamate API relative agli oggetti `Bin`;
+- `productRepository`: implementa `DataRepositoryInterface` ed è responsabile delle chiamate API relative agli oggetti `Product`;
+- `zoneRepository`: implementa `DataRepositoryInterface` ed è responsabile delle chiamate API relative agli oggetti `Zone`.
 
 Queste classi utilizzano le corrispondenti classi del pattern Data mapper.
 
@@ -213,10 +216,10 @@ Le classi che vengono utilizzate per rappresentare il modello dell'applicativo s
   - *height*: numero in virgola mobile che rappresenta l'altezza del bin;
   - *length*: numero in virgola mobile che rappresenta la profondità del bin;
   - *width*: numero in virgola mobile che rappresenta la larghezza del bin;
-  - *product*: riferimento al prodotto contenuto nel bin. Può essere "null".
+  - *product*: riferimento al prodotto contenuto nel bin. Può essere `null`.
 
 Per ogni attributo è presente il corrispondente metodo get.
-Sono presenti i metodi set per gli attributi id e product.
+Sono presenti i metodi set per gli attributi `id` e `product`.
 
 \
 - *Zone*:
@@ -272,15 +275,15 @@ Sono presenti i metodi set per gli attributi id e product.
   rappresenta il piano dell'ambiente 3D, i suoi attributi sono:
   - *length*: numero in virgola mobile che rappresenta la profondità del piano;
   - *width*: numero in virgola mobile che rappresenta la larghezza del piano;
-  - *SVG*: stringa che contiene il path al file SVG se presente. Nel caso in cui non sia stato identificato nessun file SVG, la variabile è "null".
+  - *SVG*: stringa che contiene il path al file SVG se presente. Nel caso in cui non sia stato identificato nessun file SVG, la variabile è `null`.
 
   Per ogni attributo è presente il corrispondente metodo get.
 
-  Potendo generare l'oggetto Floor con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern "Strategy" e le relative classi:
-  - FloorStrategyContext;
-  - l'interfaccia FloorStrategy;
-  - StandardFloorStrategy (che implementa FloorStrategy);
-  - CustomFloorStrategy (che implementa FloorStrategy).
+  Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy e le relative classi:
+  - `FloorStrategyContext`;
+  - l'interfaccia `FloorStrategy`;
+  - `StandardFloorStrategy` (che implementa `FloorStrategy`);
+  - `CustomFloorStrategy` (che implementa `FloorStrategy`).
 
 
 #figure(
@@ -298,47 +301,47 @@ Sono presenti i metodi set per gli attributi id e product.
 )
 
 
-In aggiunta alle classi, per aderire all'adozione del pattern "Provider", sono presenti:
-- binsProvider;
-- floorProvider;
-- formContextProvider;
-- ordersProvider;
-- productsProvider;
-- zonesProvider;
-- ElementDetailsProvider.
+In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti:
+- `binsProvider`;
+- `floorProvider`;
+- `formContextProvider`;
+- `ordersProvider`;
+- `productsProvider`;
+- `zonesProvider`;
+- `ElementDetailsProvider`.
 
 
 === Presentation layer
 ==== UI
 L'interfaccia utente è realizzata mediante diversi componenti nativi React e componenti personalizzati.
 Gli elementi creati appositamente per la nostra applicazione sono:
-- creationForm;
-- dropFileArea;
-- manualCreationFrame;
-- svgCreationFrame;
-- zodScheme;
-- binItemDetails;
-- orderItem;
-- ordersPanel;
-- productItem;
-- productItemDetails;
-- productsPanel;
-- restoreItem;
-- settingsPanel;
-- bin_columns;
-- levelItem;
-- zoneCreationFrame;
-- zoneItem;
-- zoneItemDetails;
-- zonePanel;
-- zoneZodSchemes;
-- panel.
+- `creationForm`;
+- `dropFileArea`;
+- `manualCreationFrame`;
+- `svgCreationFrame`;
+- `zodScheme`;
+- `binItemDetails`;
+- `orderItem`;
+- `ordersPanel`;
+- `productItem`;
+- `productItemDetails`;
+- `productsPanel`;
+- `restoreItem`;
+- `settingsPanel`;
+- `bin_columns`;
+- `levelItem`;
+- `zoneCreationFrame`;
+- `zoneItem`;
+- `zoneItemDetails`;
+- `zonePanel`;
+- `zoneZodSchemes`;
+- `panel`.
 
 
-==== Trhee.js
+==== Three.js
 L'ambiente tridimensionale è realizzato mediante i componenti:
-- Floor;
-- Warehouse.
+- `Floor`;
+- `Warehouse`.
 
 
 == Database

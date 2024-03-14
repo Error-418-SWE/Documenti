@@ -1685,11 +1685,12 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Postcondizioni",
   "L'ordine di movimentazione è annullato",
   "L'ordine di movimentazione non viene inserito nella cronologia",
-  "Il prodotto non viene spostato"
+  "Il prodotto non viene spostato",
+  "L'utente visualizza un errore relativo all'impossibilità di spostare il prodotto"
 )
 #printUseCaseInfo(
   "Scenario principale",
-  "L'utente visualizza un errore relativo all'impossibilità di spostare il prodotto",
+  "L'utente ha richiesto lo spostamento di un prodotto verso un bin già occupato"
 )
 
 ==== Invio richiesta di movimentazione <ucd.3>
@@ -1726,11 +1727,12 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Postcondizioni",
   "L'ordine di movimentazione è annullato",
   "L'ordine di movimentazione non viene inserito nella cronologia",
-  "Il prodotto non viene spostato"
+  "Il prodotto non viene spostato",
+  "L'utente visualizza un errore relativo all'impossibilità di spostare il prodotto",
 )
 #printUseCaseInfo(
   "Scenario principale",
-  "L'utente visualizza un errore relativo all'impossibilità di spostare il prodotto",
+  "L'utente ha richiesto lo spostamento di un prodotto ma il sistema ha negato la richiesta"
 )
 
 ===== Visualizzazione errore di connessione alla API <ucd.3.2>
@@ -1744,11 +1746,12 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Postcondizioni",
   "L'ordine di movimentazione è annullato",
   "L'ordine di movimentazione non viene inserito nella cronologia",
-  "Il prodotto non viene spostato"
+  "Il prodotto non viene spostato",
+  "L'utente visualizza un errore relativo all'impossibilità di connettersi alla API",
 )
 #printUseCaseInfo(
   "Scenario principale",
-  "L'utente visualizza un errore relativo all'impossibilità di connettersi alla API",
+  "L'utente ha richiesto lo spostamento di un prodotto ma la API non ha fornito risposta in tempo utile"
 )
 
 === Visualizzazione cronologia ordini di movimentazione <uce>

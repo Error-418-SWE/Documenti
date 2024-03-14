@@ -1313,11 +1313,12 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Postcondizioni",
-  "L'utente visualizza i risultati della ricerca filtrati secondo il termine inserito"
+  "L'utente visualizza i risultati della ricerca filtrati secondo il termine inserito e la modalità scelta"
 )
 #printUseCaseInfo(
   "Scenario principale",
-  "L'utente inserisce il termine di ricerca e filtra la lista dei prodotti"
+  "L'utente seleziona la modalità di ricerca tra quelle disponibili",
+  "L'utente inserisce il termine di ricerca"
 )
 #printUseCaseInfo(
   "User story associata",

@@ -1375,6 +1375,144 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente inserisce la categoria di prodotto desiderata"
 )
 
+=== Spostamento prodotto <ucd>
+#figure(
+  image("./imgs/UCd.svg", width: 120%),
+  caption: "Diagramma UC--d"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha richiesto l'importazione dei prodotti",
+  "Il sistema ha importato correttamente almeno un prodotto"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il sistema inserisce l'ordine di movimentazione del prodotto verso il bin di destinazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede lo spostamento di un prodotto verso un bin di destinazione"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero spostare un prodotto verso un bin di destinazione per poterlo (ri)collocare nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Spostamento prodotto non collocato in un bin (@ucd.1)],
+  [Spostamento prodotto collocato in un bin (@ucd.2)]
+)
+
+==== Spostamento prodotto non collocato in un bin <ucd.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Spostamento prodotto (@ucd)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il prodotto selezionato non è collocato in un bin",
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Invio richiesta di movimentazione (@ucd.3)],
+)
+
+==== Spostamento prodotto collocato in un bin <ucd.2>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Spostamento prodotto (@ucd)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il prodotto selezionato è collocato in un bin",
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Invio richiesta di movimentazione (@ucd.3)],
+  [Visualizzazione errore spostamento impossibile (@ucd.2.1)]
+)
+
+===== Visualizzazione errore spostamento impossibile <ucd.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha immesso un ordine di movimentazione per lo spostamento di un prodotto",
+  "Il bin di destinazione è occupato"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'ordine di movimentazione è annullato",
+  "L'ordine di movimentazione non viene inserito nella cronologia",
+  "Il prodotto non viene spostato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un errore relativo all'impossibilità di spostare il prodotto",
+)
+
+==== Invio richiesta di movimentazione <ucd.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto lo spostamento di un prodotto",
+  "Il bin di destinazione è libero"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il sistema inserisce l'ordine di movimentazione del prodotto verso il bin di destinazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto",
+  "L'utente seleziona un bin di destinazione",
+  "L'utente immette l'odine di movimentazione del prodotto"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione errore spostamento negato (@ucd.3.1)],
+  [Visualizzazione errore di connessione alla API (@ucd.3.2)],
+)
+
+===== Visualizzazione errore spostamento negato <ucd.3.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha immesso un ordine di movimentazione per lo spostamento di un prodotto",
+  "Il sistema ha negato lo spostamento del prodotto"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'ordine di movimentazione è annullato",
+  "L'ordine di movimentazione non viene inserito nella cronologia",
+  "Il prodotto non viene spostato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un errore relativo all'impossibilità di spostare il prodotto",
+)
+
+===== Visualizzazione errore di connessione alla API <ucd.3.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha immesso un ordine di movimentazione per lo spostamento di un prodotto",
+  "Il sistema non è connesso alla API"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'ordine di movimentazione è annullato",
+  "L'ordine di movimentazione non viene inserito nella cronologia",
+  "Il prodotto non viene spostato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un errore relativo all'impossibilità di connettersi alla API",
+)
+
 === Visualizzazione cronologia ordini di movimentazione <uce>
 #figure(
   image("./imgs/UCe.svg", width: 115%),

@@ -58,13 +58,57 @@ Il prodotto offre le seguenti funzionalità principali:
 
 = Requisiti
 
+Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'applicazione, comprese le caratteristiche necessarie per configurare l'ambiente di sviluppo del progetto.
+
 == Requisiti di sistema minimi
 
-== Requisiti di sistema consigliati
+#figure(
+  table(
+    columns: 3,
+    [*Componente*], [*Versione*], [*Riferimenti*],
+
+    [Docker],[>= 24.0.7],[https://docs.docker.com/],
+    [Docker-compose],[>= 2.23.3],[https://docs.docker.com/compose/],
+    [WSL (se da SO Windows)],[>= 1.1.3],[https://ubuntu.com/desktop/wsl],
+
+  ),
+  caption: "Requisiti di sistema minimi."
+)
 
 == Requisiti hardware
 
+#figure(
+  table(
+    columns: 2,
+    [*Componente*], [*Requisito minimo*],
+
+    [Processore],[Processore a 64 bit con SLAT (Second Level Address Translation)],
+    [Memoria RAM],[4GB DDR4],
+    [Virtualizzazione],[Abilitare la virtualizzazione hardware nel BIOS],
+    [Spazio su disco], [20 GB],
+
+  ),
+  caption: "Requisiti hardware."
+)
+
 == Browser
+
+#figure(
+  table(
+    columns: 2,
+    [*Browser*], [*Versione*],
+
+    [Google Chrome],[>= 89],
+    [Microsoft Edge],[>= 89],
+    [Mozilla Firefox],[>= 16.4],
+    [Apple Safari],[>= 108],
+    [Opera Browser],[>= 76],
+    [Google Chrome per Android],[>= 89],
+    [Apple Safari per iOS],[>= 17.1],
+    [Samsung Internet],[>= 23],
+  ),
+  caption: "Browser supportati."
+)
 
 
 = Installazione

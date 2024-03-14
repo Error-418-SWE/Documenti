@@ -178,22 +178,31 @@ Consente di definire una famiglia di algoritmi, incapsularli in classi separate 
 Ciascun layer possiede il suo indipendente sistema di classi e componenti e prevede metodi per comunicare con i layer adiacenti.
 
 === Persistence layer
-Mediante delle chiamate API vengono letti i dati utili all'applicazione da un database esterno e vengono forniti degli adeguati file Json.
-Questi ultimi vengono utilizzati dalle classi derivate dall'adozione del pattern Data mapper:
+Mediante delle Server Action offerte da Next.js, vengono eseguite delle query SQL atte alla lettura dei dati utili all'applicazione da un database esterno.
+Tali funzioni vengono utilizzate in:
+- `getAllBins`: ritorna le informazioni di tutti i bin lette dal database;
+- `getBinById`: dato un codice identificativo univoco, ritorna le informazioni relative al bin corrispondente lette dal database;
+- `getAllProducts`: ritorna le informazioni di tutti i prodotti lette dal database;
+- `getProductById`: dato un codice identificativo univoco, ritorna le informazioni relative al prodotto corrispondente lette dal database;
+- `SVGSanitize`: dato un path ad un file SVG caricato, ritorna il path del relativo file SVG sanificato, ovvero normalizzato e reso sicuro;
+- `readSavedSVG`: ritorna il contenuto del file SVG salvato su server;
+- `saveSVG`: dato il path di un file SVG, esso viene caricato sul server;
+- `getAllZones`: ritorna le informazioni di tutte le zone lette dal database;
+- `getBinsByZoneId`: dato un codice identificativo univoco, ritorna le informazioni relative a tutti i bin contenuti nella zona corrispondente lette dal database;
+- `getZoneById`: dato un codice identificativo univoco, ritorna le informazioni relative alla zona corrispondente lette dal database.
+
+
+Al fine di agevolare la divisione tra il Persistence layer ed il Business layer, viene applicato il pattern Repository mediante le classi:
+- l'interfaccia `DataRepositoryInterface`;
+- `binRepository`: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Bin`;
+- `productRepository`: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Product`;
+- `zoneRepository`: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Zone`.
+
+Queste classi utilizzano le corrispondenti classi del pattern Data mapper:
 - l'interfaccia `DataMapperInterface`;
 - `binMapper`: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Bin`;
 - `productMapper`: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Product`;
 - `zoneMapper`: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Zone`.
-
-
-Al fine di dividere ulteriormente il Persistence layer dal Business layer, viene applicato il pattern Repository mediante le classi:
-- l'interfaccia `DataRepositoryInterface`;
-- `binRepository`: implementa `DataRepositoryInterface` ed è responsabile delle chiamate API relative agli oggetti `Bin`;
-- `productRepository`: implementa `DataRepositoryInterface` ed è responsabile delle chiamate API relative agli oggetti `Product`;
-- `zoneRepository`: implementa `DataRepositoryInterface` ed è responsabile delle chiamate API relative agli oggetti `Zone`.
-
-Queste classi utilizzano le corrispondenti classi del pattern Data mapper.
-
 
 
 #figure(

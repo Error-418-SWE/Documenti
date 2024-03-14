@@ -289,11 +289,11 @@ Sono presenti i metodi set per gli attributi `id` e `product`.
   Per ogni attributo è presente il corrispondente metodo get.
 
   Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy e le relative classi:
-  - `FloorStrategyContext`;
-  - l'interfaccia `FloorStrategy`;
-  - `StandardFloorStrategy` (che implementa `FloorStrategy`);
-  - `CustomFloorStrategy` (che implementa `FloorStrategy`).
 
+  - l'interfaccia `FloorStrategy`: rappresenta la creazione di un elemento `Floor`;
+  - `StandardFloorStrategy`: implementa `FloorStrategy` e rappresenta la creazione di un elemento `Floor` senza file SVG;
+  - `CustomFloorStrategy`: implementa `FloorStrategy` e rappresenta la creazione di un elemento `Floor` con file SVG;
+  - `FloorStrategyContext`: utilizza un `FloorStrategy` per generare un elemento `Floor`.
 
 #figure(
   image("./imgs/Business Layer classes.png", width: 100%),

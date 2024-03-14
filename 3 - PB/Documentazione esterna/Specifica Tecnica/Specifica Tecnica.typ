@@ -310,14 +310,14 @@ Sono presenti i metodi set per gli attributi `id` e `product`.
 )
 
 
-In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti:
-- `binsProvider`;
-- `floorProvider`;
-- `formContextProvider`;
-- `ordersProvider`;
-- `productsProvider`;
-- `zonesProvider`;
-- `ElementDetailsProvider`.
+In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i file:
+- `binsProvider`: fornisce un provider per gestire dati relativi agli oggetti `Bin`;
+- `floorProvider`: fornisce un provider per gestire dati relativi agli oggetti `Floor`;
+- `formContextProvider`: fornisce un provider per gestire dati relativi allo stato di processing di un form;
+- `ordersProvider`: fornisce un provider per gestire dati relativi agli oggetti `Order`;
+- `productsProvider`: fornisce un provider per gestire dati relativi agli oggetti `Product`;
+- `zonesProvider`: fornisce un provider per gestire dati relativi agli oggetti `Zone`;
+- `ElementDetailsProvider`: fornisce un provider per gestire dati relativi ad elementi generici nel contesto React.
 
 
 === Presentation layer

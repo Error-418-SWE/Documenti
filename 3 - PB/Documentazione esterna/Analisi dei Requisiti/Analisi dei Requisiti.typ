@@ -1136,6 +1136,8 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero rimuovere i dati importati da database per poter ricominciare da zero la configurazione dell'ambiente 3D"
 )
 
+#pagebreak()
+
 #set heading(numbering: "1.1")
 
 == Zone e Bin <uc-zone>
@@ -1144,6 +1146,8 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   let values = nums.pos().slice(2);
   return "UC--" + values.map(str).join(".");
 }, supplement: "Caso d'uso")
+#pagebreak()
+
 #set heading(numbering: "1.1")
 
 == Prodotti <uc-prodotti>

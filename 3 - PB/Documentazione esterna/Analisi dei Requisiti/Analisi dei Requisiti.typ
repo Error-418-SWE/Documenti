@@ -355,6 +355,8 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   ]
 }
 
+// INIZIO UC
+
 #let setUCHeadingCounterTo(value) = {
   let i = 1
   while i < value {
@@ -1156,8 +1158,9 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 #set heading(numbering: "1.1")
 
-= Requisiti <requisiti>
+// FINE UC
 
+= Requisiti <requisiti>
 == Codice identificativo
 Ogni requisito è caratterizzato da un codice identificativo definito nel seguente modo:
 #align(`[Tipologia][Classificazione]-[Sequenza]`, center)

@@ -1184,7 +1184,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Visualizzazione categoria prodotto (@uca.3)],
   [Visualizzazione larghezza prodotto (@uca.4)],
   [Visualizzazione lunghezza prodotto (@uca.5)],
-  [Visualizzazione profondità prodotto (@uca.6)],
+  [Visualizzazione altezza prodotto (@uca.6)],
   [Visualizzazione peso prodotto (@uca.7)],
 )
 
@@ -1207,13 +1207,17 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona un prodotto da ispezionare"
 )
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sull'ID di un prodotto"
+)
+
 ==== Visualizzazione nome prodotto <uca.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
   "L'utente ha selezionato un prodotto da ispezionare"
 )
-
 #printUseCaseInfo(
   "Postcondizioni",
   "L'utente visualizza il nome del prodotto selezionato"
@@ -1221,6 +1225,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 #printUseCaseInfo(
   "Scenario principale",
   "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sul nome di un prodotto"
 )
 
 ==== Visualizzazione categoria prodotto <uca.3>
@@ -1237,6 +1245,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona un prodotto da ispezionare"
 )
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sulla categoria di un prodotto"
+)
 
 ==== Visualizzazione larghezza prodotto <uca.4>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1251,6 +1263,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 #printUseCaseInfo(
   "Scenario principale",
   "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sulla larghezza di un prodotto"
 )
 
 ==== Visualizzazione lunghezza prodotto <uca.5>
@@ -1267,8 +1283,12 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona un prodotto da ispezionare"
 )
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sulla lunghezza di un prodotto"
+)
 
-==== Visualizzazione profondità prodotto <uca.6>
+==== Visualizzazione altezza prodotto <uca.6>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1276,11 +1296,15 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Postcondizioni",
-  "L'utente visualizza la profondità del prodotto selezionato"
+  "L'utente visualizza l'altezza del prodotto selezionato"
 )
 #printUseCaseInfo(
   "Scenario principale",
   "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sull'altezza di un prodotto"
 )
 
 ==== Visualizzazione peso prodotto <uca.7>
@@ -1296,6 +1320,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 #printUseCaseInfo(
   "Scenario principale",
   "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sul peso di un prodotto"
 )
 
 === Visualizzazione lista prodotti <ucb>

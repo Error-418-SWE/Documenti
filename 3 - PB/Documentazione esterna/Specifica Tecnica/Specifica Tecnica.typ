@@ -220,8 +220,8 @@ Le classi che vengono utilizzate per rappresentare il modello dell'applicativo s
   rappresenta un elemento bin, ovvero uno spazio definito in grado di contenere un prodotto.
   I suoi attributi sono:
   - *id*: interno che rappresenta il codice identificativo univoco del bin;
-  - *level*: intero che rappresenta il codice identificativo univoco del livello di appartenenza;
-  - *column*: intero che rappresenta il codice identificativo univoco della colonna di appartenenza;
+  - *level*: intero che rappresenta il numero del del livello di appartenenza;
+  - *column*: intero che rappresenta il numero della colonna di appartenenza;
   - *height*: numero in virgola mobile che rappresenta l'altezza del bin;
   - *length*: numero in virgola mobile che rappresenta la profondità del bin;
   - *width*: numero in virgola mobile che rappresenta la larghezza del bin;

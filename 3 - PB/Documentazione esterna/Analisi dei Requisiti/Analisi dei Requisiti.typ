@@ -1173,6 +1173,49 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero eliminare una zona dall'ambiente 3D per fare spazio ad altre zone o semplicemente per rimuoverla"
 )
+=== Ricerca zona <ucr>
+#figure(
+  image("./imgs/UCr.svg", width: 80%),
+  caption: "Diagramma UC--r"
+)
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza i risultati della ricerca filtrati secondo il termine inserito e la modalità scelta"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la modalità di ricerca tra quelle disponibili",
+  "L'utente inserisce il termine di ricerca"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero poter ricercare una zona per individuarla velocemente nella lista delle zone"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Ricerca per ID zona (@ucr.1)],
+)
+
+==== Ricerca per ID zona <ucr.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Ricerca prodotti (@ucc)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista delle zone filtrata secondo l'ID della zona inserito come termine di ricerca"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce l'ID della zona da cercare"
+)
+
+=== Ispezione bin
 
 === Spostamento POV su zona specifica
 

@@ -1146,6 +1146,34 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   let values = nums.pos().slice(2);
   return "UC--" + values.map(str).join(".");
 }, supplement: "Caso d'uso")
+=== Spostamento POV su bin specifico
+
+#figure(
+  image("./imgs/UCj.svg", width: 80%),
+  caption: "Diagramma UC--j"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'inquadratura dell'ambiente 3D si sposta sul bin specificato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare",
+  "L'utente richiede lo spostamento del POV così da inquadrare il bin"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero spostare il POV sull'ambiente 3D per poter visualizzare un bin specifico"
+)
+
+
 #pagebreak()
 
 #set heading(numbering: "1.1")

@@ -1152,6 +1152,69 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   let values = nums.pos().slice(2);
   return "UC--" + values.map(str).join(".");
 }, supplement: "Caso d'uso")
+=== Ispezione ordine di movimentazione <ucn>
+#figure(
+  image("./imgs/UCn.svg"),
+  caption: "Diagramma UC--n"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha immesso almeno un ordine di movimentazione valido"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza i bin coinvolti nell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione dei bin coinvolti nell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare in modo grafico i bin coinvolti nell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Evidenziazione bin di destinazione (@ucn.1)]
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Evidenziazione bin di partenza (@ucn.2)]
+)
+
+==== Evidenziazione bin di destinazione <ucn.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione dei bin coinvolti nell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il bin di destinazione dell'ordine di movimentazione viene evidenziato graficamente"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione dei bin coinvolti nell'ordine di movimentazione"
+)
+
+==== Evidenziazione bin di partenza <ucn.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione dei bin coinvolti nell'ordine di movimentazione",
+  "L'origine della movimentazione è un bin"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il bin di partenza dell'ordine di movimentazione viene evidenziato graficamente"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione dei bin coinvolti nell'ordine di movimentazione"
+)
+
 #pagebreak()
 
 #set heading(numbering: "1.1")

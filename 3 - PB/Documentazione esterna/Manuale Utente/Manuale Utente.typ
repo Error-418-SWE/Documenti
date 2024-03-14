@@ -69,7 +69,7 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 
     [Docker],[$>=$ 24.0.7],[https://docs.docker.com/],
     [Docker-compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
-    [WSL (se da SO Windows)],[>= 1.1.3],[https://ubuntu.com/desktop/wsl],
+    [WSL (se da SO Windows)],[$>=$ 1.1.3],[https://ubuntu.com/desktop/wsl],
 
   ),
   caption: "Requisiti di sistema minimi"

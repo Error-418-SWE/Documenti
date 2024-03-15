@@ -364,8 +364,9 @@ Gli elementi creati appositamente per la nostra applicazione sono:
 
 ==== Three.js
 L'ambiente tridimensionale è realizzato mediante i componenti:
-- `Floor`;
-- `Warehouse`.
+- `Floor`: elemento che rappresenta il piano dell'ambiente di lavoro;
+- `bin3D`: elemento che rappresenta un bin nell'ambiente di lavoro;
+- `Warehouse`: elemento che rappresenta i limiti dell'ambiente visualizzato.
 
 
 == Database

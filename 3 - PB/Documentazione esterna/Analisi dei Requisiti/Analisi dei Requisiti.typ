@@ -1203,7 +1203,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 ==== Ricerca per ID zona <ucr.1>
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Ricerca prodotti (@ucc)]
+  [Ricerca prodotti (@ucr)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(

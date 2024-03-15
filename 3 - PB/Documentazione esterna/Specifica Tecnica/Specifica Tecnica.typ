@@ -324,27 +324,42 @@ In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono pre
 ==== UI
 L'interfaccia utente è realizzata mediante diversi componenti nativi React e componenti personalizzati.
 Gli elementi creati appositamente per la nostra applicazione sono:
-- `creationForm`;
-- `dropFileArea`;
-- `manualCreationFrame`;
-- `svgCreationFrame`;
-- `zodScheme`;
-- `binItemDetails`;
-- `orderItem`;
-- `ordersPanel`;
-- `productItem`;
-- `productItemDetails`;
-- `productsPanel`;
-- `restoreItem`;
-- `settingsPanel`;
-- `bin_columns`;
-- `levelItem`;
-- `zoneCreationFrame`;
-- `zoneItem`;
-- `zoneItemDetails`;
-- `zonePanel`;
-- `zoneZodSchemes`;
-- `panel`.
+
+- *creation*:
+  - `creationForm`: componente dedicato alla selezione della modalità di creazione dell'ambiente di lavoro;
+  - `dropFileArea`: componente dedicato all'inserimento di un file SVG;
+  - `manualCreationFrame`: componente dedicato alla creazione manuale dell'ambiente di lavoro;
+  - `svgCreationFrame`: componente dedicato alla creazione dell'ambiente di lavoro in seguito al caricamento di un file SVG;
+  - `zodScheme`: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro;
+
+- *bin*:
+  - `binItemDetails`: componente dedicato alla visualizzazione delle informazioni dettagliate di un bin;
+
+- *orders*:
+  - `orderItem`: componente dedicato alla visualizzazione di un ordine;
+  - `ordersPanel`: componente dedicato alla visualizzazione di tutti gli ordini;
+
+- *products*:
+  - `productItem`: componente dedicato alla visualizzazione di un prodotto;
+  - `productItemDetails`: componente dedicato alla visualizzazione delle informazioni dettagliate di un prodotto;
+  - `productsPanel`: componente dedicato alla visualizzazione di tutti i prodotti;
+
+- *settings*:
+  - `floorDimensionsItem`: componente dedicato alla visualizzazione delle dimensioni del piano;
+  - `restoreItem`: componente dedicato al comando atto al ripristino dell'ambiente di lavoro;
+  - `settingsPanel`: componente dedicato al pannello delle impostazioni contenente `floorDimensionsItem` e `restoreItem`;
+  - `zodDimensionScheme`: schema dedicato alla validazione dei dati dimensionali per la modifica del piano;
+
+- *zone*:
+  - `bin_columns`: componente dedicato alla visualizzazione delle colonne di bin di una zona;
+  - `levelItem`: componente dedicato alla visualizzazione di un livello;
+  - `zoneCreationFrame`: componente dedicato alla creazione di una zona;
+  - `zoneItem`: componente dedicato alla visualizzazione di una zona;
+  - `zoneItemDetails`: componente dedicato alla visualizzazione delle informazioni dettagliate di una zona;
+  - `zonePanel`: componente dedicato alla visualizzazione di tutte le zone;
+  - `zoneZodSchemes`: schema dedicato alla validazione dei dati necessari alla creazione di una zona;
+
+- `panel`: componente atto a contenere e visualizzare ordinatamente altri componenti.
 
 
 ==== Three.js

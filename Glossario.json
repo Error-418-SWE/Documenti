@@ -24,6 +24,11 @@
     "acronyms": [],
     "synonyms": []
   },
+	"Azure": {
+    "description": "Piattaforma fornita da Microsoft che permette di distribuire applicazioni e servizi su cloud.",
+    "acronyms": ["AzureVM"],
+    "synonyms": []
+  },
   "Backlog": {
     "description": "Gruppo di attività da completare per conseguire un certo obiettivo.",
     "acronyms": [],
@@ -209,24 +214,24 @@
     "acronyms": [],
     "synonyms": []
   },
-  "International Electrotechnical Commission": {
-    "description": "Organizzazione internazionale per la definizione di standard in materia di elettricità, elettronica e tecnologie correlate. Molti dei suoi standard sono definiti in collaborazione con l'ISO.",
-    "acronyms": ["IEC"],
-    "synonyms": []
-  },
   "Ingegneria del Software": {
     "description": "Disciplina che si occupa della progettazione, sviluppo, test e manutenzione del software. Adotta un approccio sistematico, disciplinato e quantificabile, che mira a creare software di alta qualità, affidabile e manutenibile. ",
     "acronyms": ["IS", "SWE"],
     "synonyms": []
   },
+  "International Electrotechnical Commission": {
+    "description": "Organizzazione internazionale per la definizione di standard in materia di elettricità, elettronica e tecnologie correlate. Molti dei suoi standard sono definiti in collaborazione con l'ISO.",
+    "acronyms": ["IEC"],
+    "synonyms": []
+  },
+	"International Organization for Standardization": {
+    "description": "Principale organizzazione internazionale che si occupa di definire norme tecniche, dette anche \"norme ISO\" oppure \"standard ISO\".",
+    "acronyms": ["ISO"],
+    "synonyms": []
+  },
   "Issue": {
     "description": "Specifico problema riscontrato durante una delle fasi del ciclo di vita del prodotto sviluppato.",
     "acronyms": [],
-    "synonyms": []
-  },
-  "International Organization for Standardization": {
-    "description": "Principale organizzazione internazionale che si occupa di definire norme tecniche, dette anche \"norme ISO\" oppure \"standard ISO\".",
-    "acronyms": ["ISO"],
     "synonyms": []
   },
   "Issue Tracking System": {
@@ -289,10 +294,40 @@
     "acronyms": [],
     "synonyms": []
   },
+	"Next.js": {
+    "description": "Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web.",
+    "acronyms": [],
+    "synonyms": ["Next"]
+  },
   "Node.js": {
     "description": "Runtime system open source e multipiattaforma orientato agli eventi per l'esecuzione di codice JavaScript. Gli sviluppatori possono estenderne le funzionalità tramite moduli.",
     "acronyms": [],
     "synonyms": ["Node"]
+  },
+	"Piano di Progetto": {
+    "description": "Documento che permette di pianificare la suddivisione del lavoro, tenere traccia delle risorse consumate nei vari sprint, degli obbiettivi raggiunti e dei problemi e la loro risoluzione.",
+    "acronyms": ["PdP"],
+    "synonyms": []
+  },
+  "Piano di Qualifica": {
+    "description": "Specifica degli obiettivi quantitativi di qualità di prodotto e di processo. Il documento è una misurazione del raggiungimento di tali obiettivi allo stato corrente, tale che sia un cruscotto di valutazione della qualità.",
+    "acronyms": ["PdQ"],
+    "synonyms": []
+  },
+	"PostgreSQL": {
+    "description": "Sistema di gestione di database relazionali.",
+    "acronyms": [],
+    "synonyms": ["Postgres"]
+  },
+  "Product Baseline": {
+    "description": "Milestone che corrisponde a due diverse revisioni con il committente del progetto. Lo scopo della revisione è quello di vagliare la maturità della baseline architetturale del prodotto software e sua realizzazione.",
+    "acronyms": ["PB"],
+    "synonyms": []
+  },
+	"Progetto didattico": {
+    "description": "Tipologia di progetto offerta all'interno di un percorso didattico. Deve avere durata limitata, e ha come obiettivo lo sviluppo di abilità e competenze tramite la realizzazione di un prodotto finale.",
+    "acronyms": [],
+    "synonyms": []
   },
   "Project Actual Cost": {
     "description": "Costo effettivo sostenuto dal gruppo dall'inizio del progetto, definito come sommatoria dei SAC.",
@@ -305,44 +340,24 @@
     "synonyms": []
   },
   "Project Planned Value": {
-	"description": "Valore pianificato per l'intero progetto in un preciso istante di tempo. Il suo valore è determinato dalla somma del valore pianificato per ogni periodo di sviluppo fino all'istante di tempo preso in considerazione.",
-	"acronyms": ["PPV"],
-	"synonyms": []
-  },
-  "Piano di Progetto": {
-    "description": "Documento che permette di pianificare la suddivisione del lavoro, tenere traccia delle risorse consumate nei vari sprint, degli obbiettivi raggiunti e dei problemi e la loro risoluzione.",
-    "acronyms": ["PdP"],
-    "synonyms": []
-  },
-  "Piano di Qualifica": {
-    "description": "Specifica degli obiettivi quantitativi di qualità di prodotto e di processo. Il documento è una misurazione del raggiungimento di tali obiettivi allo stato corrente, tale che sia un cruscotto di valutazione della qualità.",
-    "acronyms": ["PdQ"],
-    "synonyms": []
-  },
-  "Product Baseline": {
-    "description": "Milestone che corrisponde a due diverse revisioni con il committente del progetto. Lo scopo della revisione è quello di vagliare la maturità della baseline architetturale del prodotto software e sua realizzazione.",
-    "acronyms": ["PB"],
-    "synonyms": []
+		"description": "Valore pianificato per l'intero progetto in un preciso istante di tempo. Il suo valore è determinato dalla somma del valore pianificato per ogni periodo di sviluppo fino all'istante di tempo preso in considerazione.",
+		"acronyms": ["PPV"],
+		"synonyms": []
   },
   "Proof of Concept": {
     "description": "Realizzazione incompleta o abbozzata di un determinato progetto o metodo. Il suo scopo è quello di dimostrare la fattibilità o confermare la validità delle tecnologie scelte per la realizzazione del progetto.",
     "acronyms": ["PoC"],
     "synonyms": []
   },
-  "Proponente": {
-    "description": "Azienda o ente che propone il capitolato d'appalto per il progetto didattico.",
-    "acronyms": [],
-    "synonyms": []
-  },
-  "Progetto didattico": {
-    "description": "Tipologia di progetto offerta all'interno di un percorso didattico. Deve avere durata limitata, e ha come obiettivo lo sviluppo di abilità e competenze tramite la realizzazione di un prodotto finale.",
-    "acronyms": [],
-    "synonyms": []
-  },
   "Pull Request": {
     "description": "Richiesta, rivolta all'autore originale di un software da parte di suoi collaboratori, di includere modifiche al suo progetto. Questa richiesta ha come oggetto due branch, sui quali, in caso di accettazione della PR, viene effettuato un merge (unione).",
     "acronyms": ["PR"],
     "synonyms": []
+  },
+	"React": {
+    "description": "Libreria JavaScript utilizzata per la creazione di interfacce utente dinamiche e reattive. Si basa sul concetto di components, ovvero blocchi di codice autonomi che gestiscono la propria logica e rendering.",
+    "acronyms": [],
+    "synonyms": ["React.js"]
   },
   "Redattore": {
     "description": "Persona che si occupa della redazione di un documento e della correzione di eventuali errori segnalati dal verificatore, rimanendo a disposizione in caso di dubbi/confronto.",
@@ -364,6 +379,11 @@
     "acronyms": [],
     "synonyms": []
   },
+	"Review": {
+    "description": "Revisione di documenti o codice. È un processo di peer review utilizzato per individuare eventuali problemi e migliorare la qualità del prodotto. È un'attività fondamentale per garantire uno standard qualitativo al prodotto.",
+    "acronyms": [],
+    "synonyms": ["Revisione"]
+  },
   "Ripiano": {
     "description": "Ognuna delle superfici piane e orizzontali di uno scaffale.",
     "acronyms": [],
@@ -374,18 +394,48 @@
     "acronyms": [],
     "synonyms": []
   },
-  "Review": {
-    "description": "Revisione di documenti o codice. È un processo di peer review utilizzato per individuare eventuali problemi e migliorare la qualità del prodotto. È un'attività fondamentale per garantire uno standard qualitativo al prodotto.",
-    "acronyms": [],
-    "synonyms": ["Revisione"]
-  },
   "Scaffale": {
     "description": "Elemento presente all'interno del magazzino costituito da uno o più ripiani orizzontali che permettono lo stoccaggio della merce.",
     "acronyms": [],
     "synonyms": []
   },
+	"Scalable Vector Graphics": {
+    "description": "Formato di file di grafica vettoriale bidimensionale basato su XML sviluppato dal World Wide Web Consortium.",
+    "acronyms": ["SVG"],
+    "synonyms": []
+  },
   "Scrum": {
     "description": "Framework agile di gestione dello sviluppo di progetti complessi con l'obiettivo di consegnare il maggior valore business nel più breve tempo possibile.",
+    "acronyms": [],
+    "synonyms": []
+  },
+	"Sottotask": {
+    "description": "Una parte di lavoro granulare necessaria per completare una story, un task o un bug.",
+    "acronyms": [],
+    "synonyms": []
+  },
+	"Sprint": {
+    "description": "Uno sprint è un breve periodo di tempo (una settimana nel nostro specifico caso), in cui un team Scrum collabora per completare una determinata quantità di lavoro. Gli sprint rappresentano una parte essenziale delle metodologie Scrum e Agile.",
+    "acronyms": [],
+    "synonyms": []
+  },
+  "Sprint Actual Cost": {
+    "description": "Somma dei costi sostenuti dal gruppo in un determinato sprint.",
+    "acronyms": ["SAC"],
+    "synonyms": []
+  },
+	"Sprint Earned Value": {
+    "description": "Valore guadagnato dal progetto in un determinato sprint, dove lo stato di completamento del lavoro è espresso mediante il rapporto tra gli story points completati (SPC) e quelli pianificati per lo sprint (SPP).",
+    "acronyms": ["SEV", "SCP", "SPP"],
+    "synonyms": ["Story Points Completati", "Story Points Pianificati"]
+  },
+	"Sprint Planned Value": {
+		"description": "Valore pianificato che si intende produrre in un determinato periodo di sviluppo.",
+		"acronyms": ["SPV"],
+		"synonyms": []
+	},
+	"Story Point": {
+    "description": "Unità di misura per esprimere una stima del lavoro complessivo richiesto per implementare completamente un ticket.",
     "acronyms": [],
     "synonyms": []
   },
@@ -394,39 +444,14 @@
     "acronyms": ["SQL"],
     "synonyms": []
   },
-  "Scalable Vector Graphics": {
-    "description": "Formato di file di grafica vettoriale bidimensionale basato su XML sviluppato dal World Wide Web Consortium.",
-    "acronyms": ["SVG"],
-    "synonyms": []
-  },
-  "Sprint Actual Cost": {
-    "description": "Somma dei costi sostenuti dal gruppo in un determinato sprint.",
-    "acronyms": ["SAC"],
-    "synonyms": []
-  },
-  "Sprint Earned Value": {
-    "description": "Valore guadagnato dal progetto in un determinato sprint, dove lo stato di completamento del lavoro è espresso mediante il rapporto tra gli story points completati (SPC) e quelli pianificati per lo sprint (SPP).",
-    "acronyms": ["SEV", "SCP", "SPP"],
-    "synonyms": ["Story Points Completati", "Story Points Pianificati"]
-  },
-  "Sprint Planned Value": {
-  "description": "Valore pianificato che si intende produrre in un determinato periodo di sviluppo.",
-  "acronyms": ["SPV"],
-  "synonyms": []
-  },
-  "Sottotask": {
-    "description": "Una parte di lavoro granulare necessaria per completare una story, un task o un bug.",
+	"Test di integrazione": {
+    "description": "Attività di testing che verifica il corretto funzionamento dell'interazione o dell'interfaccia tra due o più moduli integrati.",
     "acronyms": [],
     "synonyms": []
   },
-  "Sprint": {
-    "description": "Uno sprint è un breve periodo di tempo (una settimana nel nostro specifico caso), in cui un team Scrum collabora per completare una determinata quantità di lavoro. Gli sprint rappresentano una parte essenziale delle metodologie Scrum e Agile.",
-    "acronyms": [],
-    "synonyms": []
-  },
-  "Story Point": {
-    "description": "Unità di misura per esprimere una stima del lavoro complessivo richiesto per implementare completamente un ticket.",
-    "acronyms": [],
+	"Test di sistema": {
+    "description": "Attività di testing che verifica il corretto funzionamento del sistema integrato nel suo complesso. Questa tipologia di test è anche detta \"end-to-end\".",
+    "acronyms": ["E2E"],
     "synonyms": []
   },
   "Test di unità": {
@@ -434,18 +459,13 @@
     "acronyms": [],
     "synonyms": ["unit test"]
   },
-  "Test di integrazione": {
-    "description": "Attività di testing che verifica il corretto funzionamento dell'interazione o dell'interfaccia tra due o più moduli integrati.",
+  "Testing": {
+    "description": "Attività di verifica e validazione del software tramite il collaudo di partizioni di esso.",
     "acronyms": [],
     "synonyms": []
   },
-  "Test di sistema": {
-    "description": "Attività di testing che verifica il corretto funzionamento del sistema integrato nel suo complesso. Questa tipologia di test è anche detta \"end-to-end\".",
-    "acronyms": ["E2E"],
-    "synonyms": []
-  },
-  "Testing": {
-    "description": "Attività di verifica e validazione del software tramite il collaudo di partizioni di esso.",
+	"Three.js": {
+    "description": "Libreria JavaScript cross-browser utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL.",
     "acronyms": [],
     "synonyms": []
   },
@@ -453,11 +473,6 @@
     "description": "Rappresenta il lavoro da completare a sostegno degli obiettivi più ampi, ogni ticket è individuale e atomico.",
     "acronyms": [],
     "synonyms": ["task", "story"]
-  },
-  "Three.js": {
-    "description": "Libreria JavaScript cross-browser utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL.",
-    "acronyms": [],
-    "synonyms": []
   },
   "TypeScript": {
     "description": "Linguaggio di programmazione fortemente tipizzato che si basa su JavaScript. Il codice TypeScript può infatti essere facilmente convertito in JavaScript, e funziona ovunque funzioni anche JavaScript.",
@@ -489,30 +504,30 @@
     "acronyms": [],
     "synonyms": []
   },
-  "Versione": {
-    "description": "Nello sviluppo software indica un determinato stato dello sviluppo di un software, programma, documento o applicazione.",
-    "acronyms": [],
-    "synonyms": []
-  },
-  "Versionamento": {
+	"Versionamento": {
     "description": "Processo di assegnazione di identificatori univoci a diversi momenti di sviluppo di un software o progetto. Comprende il recupero di versioni diverse da quella attuale e l'aggiornamento della versione stessa.",
     "acronyms": [],
     "synonyms": []
+  },
+  "Versione": {
+    "description": "Nello sviluppo software indica un determinato stato dello sviluppo di un software, programma, documento o applicazione.",
+    "acronyms": [],
+    "synonyms": ["Version"]
   },
   "Virtual Private Server": {
     "description": "Macchina virtuale remota, venduta come servizio da un fornitore di servizi di hosting. Un VPS è un server dedicato virtualizzato, ovvero un server che condivide le risorse fisiche con altri server virtuali, ma che ha a disposizione risorse garantite.",
     "acronyms": ["VPS"],
     "synonyms": []
   },
+	"Way of Working": {
+    "description": "Rappresenta il modo di lavorare del gruppo. È la descrizione di tutte le tecnologie, attività, metodologie adottate dal gruppo e di come queste sono utilizzate.",
+    "acronyms": ["WoW", "NdP"],
+    "synonyms": ["Norme di Progetto"]
+  },
   "Web Graphics Library": {
     "description": "API per il rendering di grafica 3D e 2D interattiva e ad alte prestazioni all'interno di qualsiasi browser web compatibile senza l'uso di plugin.",
     "acronyms": ["WebGL"],
     "synonyms": []
-  },
-  "Way of Working": {
-    "description": "Rappresenta il modo di lavorare del gruppo. È la descrizione di tutte le tecnologie, attività, metodologie adottate dal gruppo e di come queste sono utilizzate.",
-    "acronyms": ["WoW", "NdP"],
-    "synonyms": ["Norme di Progetto"]
   },
   "Zoom": {
     "description": "Servizio di videoconferenza basato su cloud che permette di effettuare chiamate audio o video. Consente di registrare le sessioni per essere poi visualizzate in seguito.",

@@ -148,12 +148,12 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
 == Descrizione generale
 
 == Struttura
-Per garantire modularità e separazione delle responsabilità, il programma adotta l'architettura "layered".
-Nello specifico vengono individuati tre strati:
+Il software WMS3 al fine di perseguire manutenibilità, flessibilità e scalabilità, adotta ed implementa un'architettura "layered", nota anche come "Multi-tier architecture".
+Tale architettura permette di individuare e suddividere la logica del software in 3 principali aspetti, definiti tier (separation of concerns), quali:
 
-- *Persistence layer*: gestisce l'accesso al database e fornisce gli strumenti dedicati alla lettura dei suoi dati persistenti. I dati letti vengono processati al fine di poter creare gli elementi del Business layer;
+- *Persistence layer*: gestisce l'accesso al database e fornisce gli strumenti dedicati alla lettura dei dati al suo interno. I dati letti vengono processati al fine di poter creare gli elementi del Business layer;
 
-- *Business layer*: si occupa di elaborare i dati ricevuti dallo strato di persistenza e applicare le regole di business definite. È responsabile di implementare la logica dell'applicazione in modo indipendente dalle tecnologie di persistenza e di presentazione utilizzate;
+- *Business layer*: si occupa di elaborare i dati ricevuti dal layer di persistenza e applicare le regole di business definite. È responsabile di implementare la logica dell'applicazione in modo indipendente dalle tecnologie di persistenza e di presentazione utilizzate;
 
 - *Presentation layer*: permette di trasformare i dati elaborati dal Business layer e le informazioni in una forma comprensibile e accessibile agli utenti finali. Questo include la creazione di interfacce utente grafiche e visualizzazioni 3D degli elementi di interesse.
 

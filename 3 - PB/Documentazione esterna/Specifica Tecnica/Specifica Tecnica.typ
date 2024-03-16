@@ -182,7 +182,9 @@ Il database è composto da 6 entità:
 
 - *Bin*: rappresenta uno spazio del magazzino in cui è possibile inserire un prodotto. Composto da:
 
-    - ID: identificativo univoco e seriale di un bin.
+    - ID: identificativo univoco di un bin, esso è cosi composto:
+
+    #align(center, `ID zona + _ + Column_Order + _ + Level_Order"`)
 
 - *Level*: rappresenta un ripiano dello scaffale. Composto da:
 

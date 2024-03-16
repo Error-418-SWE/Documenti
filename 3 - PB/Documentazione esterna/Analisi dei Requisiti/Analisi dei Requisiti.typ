@@ -1146,6 +1146,12 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   let values = nums.pos().slice(2);
   return "UC--" + values.map(str).join(".");
 }, supplement: "Caso d'uso")
+
+=== Creazione zona <uck>
+
+=== Modifica zona <uct>
+#TODO
+
 === Eliminazione zona
 
 #figure(

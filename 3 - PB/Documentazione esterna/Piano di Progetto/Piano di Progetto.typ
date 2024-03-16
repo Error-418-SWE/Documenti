@@ -3745,6 +3745,151 @@ Il rendimento positivo dello Sprint 17 è supportato dalle principali metriche e
 - EAC: l'Estimate At Completion passa dal valore 12.911,54 € (allo Sprint 16) a 13.155,40 €. Anche se aumentato, il gruppo non lo considera problematico, in quanto l'incremento risulta contenuto.
 
 
+== Sprint 18 dal 03-03-2024 al 10-03-2024
+
+=== Obiettivi raggiunti
+
+Lo Sprint 18 si è concluso raggiungendo buona parte degli obiettivi pianificati, in particolare:
+
+- colloquio con Proponente in data 07/03/2024;
+
+- #adr\:
+  - proseguite revisione e aggiornamento del documento.
+
+- #ndp\:
+  - redatto il capitolo Processo di validazione.
+
+- #pdp\:
+  - redatto preventivo dello Sprint 17, iniziato in data 25/02/2024;
+  - redatto consuntivo dello Sprint 17, terminato in data 03/03/2024;
+  - redatto preventivo dello Sprint 18, iniziato in data 03/03/2024.
+
+- #st\:
+  - individuata struttura del documento;
+  - redatta sezione Database.
+
+- Progettazione:
+  - svolto colloquio con il #cardin.
+
+- Codifica:
+  - migliorato e popolato il database di supporto;
+  - implementata l'importazione dei dati da database;
+  - aggiornato Docker compose;
+  - implementate le classi:
+    - `Product`;
+    - `Bin`;
+    - `Zone`.
+  - implementati i pannelli;
+  - rimossi elementi superflui.
+
+
+=== Obiettivi mancati
+
+- #adr\:
+  - non è ancora terminata la revisione completa del documento, comprensiva anche di aggiornamento dei casi d'uso e requisiti. Verrà completata obbligatoriamente entro la fine del prossimo Sprint.
+- #pdq\:
+  - non sono state aggiornate le metriche all'interno del documento;
+  - mancato aggiornamento della dashboard Grafana allo Sprint 18.
+
+=== Problematiche
+Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+
+*P01*: Mancata comunicazione degli avanzamenti riguardo lo sviluppo del MVP hanno creato incomprensioni tra chi scriveva codice e chi si occupava della redazione della #st.
+
+*P02*: Difficoltà nell'utilizzare le tecnologie adottate.
+
+=== Risoluzioni attuate
+
+#figure(caption: [Soluzioni individuate alle criticità riscontrate.],
+    table(
+      align: left,
+      columns: (auto, 1fr, auto),
+      [ID risoluzione], [Titolo], [Criticità affrontate],
+      [R1], [Aggiornamento continuo sugli sviluppi], [P01],
+      [OT-1.1.2\ (#pdp_v)], [Accettazione del rischio], [P02]
+    )
+)
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [1],     [1],     [1],     [0],     [4],     [2],     [9],
+    [Carraro],     [0],     [1],     [2],     [1],     [4 (+2)],     [1],     [9 (+2)],
+    [Gardin],     [2],     [0],     [2],     [0],     [1],     [3],     [8],
+    [Nardo],     [0],     [3],     [0],     [1 (+1)],     [4],     [2 (+2)],     [10 (+3)],
+    [Oseliero],     [ (-1)],     [0],     [0],     [1],     [4 (+1)],     [3],     [8],
+    [Todesco],     [2],     [0],     [2],     [0],     [3],     [0],     [7],
+    [Zaccone],     [0],     [2],     [2],     [0],     [3],     [0],     [7],
+    [Totale ore],     [5 (-1)],     [7],     [9],     [3 (+1)],     [23 (+3)],     [11 (+2)],     [58 (+5)],
+    [Costo ruolo],     [150 (-30)],     [140],     [225],     [75 (+25)],     [345 (+45)],     [165 (+30)],     [1100 (+70)],
+  ),
+  caption: "Prospetto del consuntivo, sprint 18"
+)
+#let data = (
+  ("Responsabile", 6, 5),
+  ("Amministratore", 7, 7),
+  ("Analista", 9, 9),
+  ("Progettista", 2, 3),
+  ("Programmatore", 20, 23),
+  ("Verificatore", 9, 11),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo sprint 18",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Durante lo Sprint 18 le ore effettive (58) hanno superato di due unità le ore preventivate (53), in particolare:
+
+- Progettista e Programmatore hanno avuto un aumento di ore causato dalla quantità di lavoro svolto sullo sviluppo del MVP e sulla stesura della #st\;
+- il Verificatore ha avuto un lieve aumento di ore in risposta al punto precedente e al lavoro che si sta svolgendo sull'#adr\.
+
+L'aumento del costo dello Sprint è stato influenzato principalmente dalle ore di Progettista e Programmatore, in quanto il costo causato dall'aumento orario del Verificatore è stato bilanciato indirettamente da un calo di ore nel Responsabile.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [9],     [270],
+    [Amministratore],     [6],     [120],
+    [Analista],     [10],     [250],
+    [Progettista],     [3],     [75],
+    [Programmatore],     [117],     [1755],
+    [Verificatore],     [50],     [750],
+    [Rimanente],     [195],     [3220],
+  ),
+  caption: "Monitoraggio, sprint 18"
+)
+
+#TODO
+
+
 // == Sprint n dal D1-M1-2024 al D2-M2-2024
 
 // === Obiettivi raggiunti

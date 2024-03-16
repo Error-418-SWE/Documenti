@@ -1181,6 +1181,214 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero eliminare una zona dall'ambiente 3D per fare spazio ad altre zone o semplicemente per rimuoverla"
 )
+
+=== Ispezione zona <ucq>
+
+#figure(
+  image("./imgs/UCq.svg", width: 110%),
+  caption: "Diagramma UC--q"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative alla zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare le informazioni relative a una zona, come dimensioni e bin presenti al suo interno"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID zona (@ucq.1)],
+  [Visualizzazione larghezza zona (@ucq.2)],
+  [Visualizzazione lunghezza zona (@ucq.3)],
+  [Visualizzazione altezza zona (@ucq.4)],
+  [Evidenziazione zona selezionata (@ucq.5)],
+  [Visualizzazione lista bin inclusi nella zona (@ucq.6)]
+)
+
+==== Visualizzazione ID zona <ucq.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID della zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'ID di una zona per poterla identificare in modo univoco"
+)
+
+==== Visualizzazione larghezza zona <ucq.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la larghezza della zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+
+==== Visualizzazione lunghezza zona <ucq.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lunghezza della zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+
+==== Visualizzazione altezza zona <ucq.4>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la altezza della zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+
+==== Evidenziazione zona selezionata <ucq.5>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La zona selezionata è evidenziata nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero che la zona ispezionata venga evidenziata graficamente per poterla individuare a colpo d'occhio nell'ambiente 3D"
+)
+
+==== Visualizzazione lista bin inclusi nella zona <ucq.6>
+#figure(
+  image("./imgs/UCq.6.svg", width: 90%),
+  caption: "Diagramma UC--q.3"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei bin inclusi nella zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la lista dei bin inclusi in una zona per poter controllare la disposizione dei prodotti e il tasso di occupazione della zona stessa"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione singolo bin (@ucq.6.1)]
+)
+
+===== Visualizzazione singolo bin <ucq.6.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta ispezionando una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative ad un singolo bin presente nella zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista delle zone"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID bin (@ucq.6.1.1)],
+  [Visualizzazione stato bin (@ucq.6.1.2)],
+)
+
+====== Visualizzazione ID bin <ucq.6.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta ispezionando una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei bin"
+)
+
+====== Visualizzazione stato bin <ucq.6.1.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta ispezionando una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza lo stato di occupazione del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei bin"
+)
+
 === Collocamento della zona nello spazio 3D
 #figure(
   image("./imgs/UCy.svg", width: 110%),

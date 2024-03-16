@@ -1540,7 +1540,6 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero spostare il POV sull'ambiente 3D per poter visualizzare un bin specifico"
 )
 
-
 #pagebreak()
 
 #set heading(numbering: "1.1")

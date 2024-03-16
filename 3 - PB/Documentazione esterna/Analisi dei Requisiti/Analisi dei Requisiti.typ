@@ -1360,7 +1360,131 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente inserisce l'ID della zona da cercare"
 )
 
-=== Ispezione bin
+=== Ispezione bin <uci>
+#figure(
+  image("./imgs/UCi.svg"),
+  caption: "Diagramma UC--i"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative al bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare le informazioni associate ai bin presenti nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID bin (@uci.1)],
+  [Visualizzazione lunghezza (@uci.2)],
+  [Visualizzazione larghezza (@uci.3)],
+  [Visualizzazione altezza (@uci.4)],
+  [Evidenziazione bin selezionato (@uci.5)],
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione informazioni prodotto (@uca)]
+)
+
+==== Visualizzazione ID bin <uci.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+
+==== Visualizzazione lunghezza bin <uci.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lunghezza del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+
+==== Visualizzazione larghezza bin <uci.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la larghezza del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+
+==== Visualizzazione altezza bin <uci.4>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'altezza del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+
+==== Evidenziazione bin selezionato <uci.5>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il bin selezionato è evidenziato nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero che il bin ispezionato venga evidenziato graficamente per poterlo individuare a colpo d'occhio nell'ambiente 3D"
+)
 
 === Spostamento POV su zona specifica
 

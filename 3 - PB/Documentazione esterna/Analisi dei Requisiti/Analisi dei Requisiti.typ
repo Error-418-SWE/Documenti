@@ -334,7 +334,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 #let printUseCaseInfo(title, ..items) = {
   text(title, weight: "bold")
   text(": ")
-  if items.pos().len() > 1 {
+  if items.pos().len() > 1 or title in ("Precondizioni", "Postcondizioni", "Inclusioni", "Estensioni", "Generalizzazioni", "Generalizzazione di") {
     linebreak()
     for item in items.pos() {
       if item == items.pos().at(items.pos().len() - 1) [+ #item\.]

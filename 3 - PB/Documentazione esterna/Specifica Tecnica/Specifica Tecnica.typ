@@ -235,7 +235,11 @@ Le classi che vengono utilizzate per rappresentare il modello dell'applicativo s
   rappresenta un elemento bin, ovvero uno spazio definito in grado di contenere un prodotto.
   I suoi attributi sono:
 
-  - *id*: interno che rappresenta il codice identificativo univoco del bin;
+  - *id*: stringa di massimo dieci caratteri che rappresenta il codice identificativo univoco del bin.
+  Essa è composta da:
+    #align(center, "id zona + _ + lettera corrispondente alla colonna + _ + numero del livello")
+  la lettera corrispondente alla colonna fa riferimento ad una mappatura per cui "A" equivale alla colonna zero e viene incrementata seguendo i caratteri dell'alfabeto inglese con l'aumentare del numero della colonna.
+  Dopo la lettera "Z" viene utilizzato "AA" proseguendo con la logica descritta;
 
   - *level*: intero che rappresenta il numero del del livello di appartenenza;
 
@@ -251,6 +255,7 @@ Le classi che vengono utilizzate per rappresentare il modello dell'applicativo s
 
 Per ogni attributo è presente il corrispondente metodo get.
 Sono presenti i metodi set per gli attributi `id` e `product`.
+Inoltre è previsto il metodo `Clear` che permette di assegnare il valore `null` all'attributo che riferisce il prodotto contenuto nel bin.
 
 \
 - *Zone*:
@@ -260,9 +265,9 @@ Sono presenti i metodi set per gli attributi `id` e `product`.
 
   - *id*: interno che rappresenta il codice identificativo univoco della zona;
 
-  - *xcoordinate*: numero in virgola mobile che rappresenta la coordinata X di posizione;
+  - *xcoordinate*: numero in virgola mobile che rappresenta la coordinata X di posizione nel piano;
 
-  - *ycoordinate*: numero in virgola mobile che rappresenta la coordinata Y di posizione;
+  - *ycoordinate*: numero in virgola mobile che rappresenta la coordinata Y di posizione nel piano;
 
   - *height*: numero in virgola mobile che rappresenta l'altezza della zona;
 
@@ -310,7 +315,7 @@ Sono presenti i metodi set per gli attributi `id` e `product`.
 \
 - *Order*:
 
-  rappresenta la richiesta di uno spostamento di un prodotto tra due bin.
+  rappresenta un ordine di spostamento di un prodotto tra due bin.
   I suoi attributi sono:
 
   - *id*: interno che rappresenta il codice identificativo univoco della richiesta;
@@ -336,13 +341,13 @@ Sono presenti i metodi set per gli attributi `id` e `product`.
 
   Per ogni attributo è presente il corrispondente metodo get.
 
-  Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy e le relative classi:
+  Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy e le relative classi che implementano l'interfaccia `FloorStrategy`:
 
-  - l'interfaccia *FloorStrategy*: rappresenta la creazione di un elemento `Floor`;
+  - *StandardFloorStrategy*: rappresenta la creazione di un elemento `Floor` senza file SVG;
 
-  - *StandardFloorStrategy*: implementa `FloorStrategy` e rappresenta la creazione di un elemento `Floor` senza file SVG;
+  - *CustomFloorStrategy*: rappresenta la creazione di un elemento `Floor` con file SVG;
 
-  - *CustomFloorStrategy*: implementa `FloorStrategy` e rappresenta la creazione di un elemento `Floor` con file SVG;
+  Inoltre è presente la classe:
 
   - *FloorStrategyContext*: utilizza un `FloorStrategy` per generare un elemento `Floor`.
 
@@ -361,13 +366,11 @@ Sono presenti i metodi set per gli attributi `id` e `product`.
 )
 
 
-In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i file:
+In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i componenti:
 
 - *binsProvider*: fornisce un provider per gestire dati relativi agli oggetti `Bin`;
 
 - *floorProvider*: fornisce un provider per gestire dati relativi agli oggetti `Floor`;
-
-- *formContextProvider*: fornisce un provider per gestire dati relativi allo stato di processing di un form;
 
 - *ordersProvider*: fornisce un provider per gestire dati relativi agli oggetti `Order`;
 
@@ -375,7 +378,7 @@ In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono pre
 
 - *zonesProvider*: fornisce un provider per gestire dati relativi agli oggetti `Zone`;
 
-- *ElementDetailsProvider*: fornisce un provider per gestire dati relativi ad elementi generici nel contesto React.
+- *ElementDetailsProvider*: fornisce un provider per gestire dati relativi ai componenti da visualizzare in un pannello dedicato.
 
 
 === Presentation layer

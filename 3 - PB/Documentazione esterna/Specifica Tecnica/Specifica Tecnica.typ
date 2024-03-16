@@ -452,7 +452,7 @@ L'ambiente tridimensionale è realizzato mediante i componenti:
 
 - *bin3D*: elemento che rappresenta un bin nell'ambiente di lavoro;
 
-- *Warehouse*: elemento che rappresenta i limiti dell'ambiente visualizzato.
+- *Warehouse*: elemento che contiene la logica principale della visualizzazione dell'ambiente grafico ed il canvas con gli elementi 3D.
 
 
 == Database

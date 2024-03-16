@@ -1879,17 +1879,17 @@ Questo sprint impiega:
     [Banzato],     [1],     [1],     [1],     [0],     [4],     [2],     [9],
     [Carraro],     [0],     [1],     [2],     [1],     [2],     [1],     [7],
     [Gardin],     [2],     [0],     [2],     [0],     [1],     [3],     [8],
-    [Nardo],     [1],     [3],     [0],     [0],     [4],     [0],     [8],
+    [Nardo],     [0],     [3],     [0],     [0],     [4],     [0],     [7],
     [Oseliero],     [1],     [0],     [0],     [1],     [3],     [3],     [8],
     [Todesco],     [2],     [0],     [2],     [0],     [3],     [0],     [7],
     [Zaccone],     [0],     [2],     [2],     [0],     [3],     [0],     [7],
-    [Totale ore],     [7],     [7],     [9],     [2],     [20],     [9],     [54],
-    [Costo ruolo],     [210],     [140],     [225],     [50],     [300],     [135],     [1060],
+    [Totale ore],     [6],     [7],     [9],     [2],     [20],     [9],     [53],
+    [Costo ruolo],     [180],     [140],     [225],     [50],     [300],     [135],     [1030],
   ),
   caption: "Prospetto del preventivo, sprint 18"
 )
 #let data = (
-  ("Responsabile", 7),
+  ("Responsabile", 6),
   ("Amministratore", 7),
   ("Analista", 9),
   ("Progettista", 2),

@@ -1173,6 +1173,67 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero eliminare una zona dall'ambiente 3D per fare spazio ad altre zone o semplicemente per rimuoverla"
 )
+=== Visualizzazione lista zone <ucl>
+#figure(
+  image("./imgs/UCl.svg"),
+  caption: "Diagramma UC--l"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista delle zone presenti nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della lista delle zone"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la lista delle zone presenti nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione singola zona (@ucl.1)],
+)
+
+==== Visualizzazione singola zona <ucl.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista delle zone",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative ad una singola zona presente in lista"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista delle zone"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID zona (@ucl.1.1)],
+)
+===== Visualizzazione ID zona <ucl.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista delle zone"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID della zona visualizzata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista delle zone"
+)
+
 === Ricerca zona <ucr>
 #figure(
   image("./imgs/UCr.svg", width: 80%),

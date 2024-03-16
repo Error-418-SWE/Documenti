@@ -390,23 +390,23 @@ Gli elementi creati appositamente per la nostra applicazione sono:
 
   - *creationForm*: componente dedicato alla selezione della modalità di creazione dell'ambiente di lavoro;
 
-  - *dropFileArea*: componente dedicato all'inserimento di un file SVG;
+  - *dropFileArea*: componente dedicato al caricamento di un file SVG;
 
   - *manualCreationFrame*: componente dedicato alla creazione manuale dell'ambiente di lavoro;
 
   - *svgCreationFrame*: componente dedicato alla creazione dell'ambiente di lavoro in seguito al caricamento di un file SVG;
 
-  - *zodScheme*: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro;
+  - *zodScheme*: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro.
 
 - *bin*:
 
-  - *binItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di un bin;
+  - *binItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di un bin.
 
 - *orders*:
 
   - *orderItem*: componente dedicato alla visualizzazione di un ordine;
 
-  - *ordersPanel*: componente dedicato alla visualizzazione di tutti gli ordini;
+  - *ordersPanel*: componente dedicato alla visualizzazione di tutti gli ordini.
 
 - *products*:
 
@@ -414,7 +414,7 @@ Gli elementi creati appositamente per la nostra applicazione sono:
 
   - *productItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di un prodotto;
 
-  - *productsPanel*: componente dedicato alla visualizzazione di tutti i prodotti;
+  - *productsPanel*: componente dedicato alla visualizzazione di tutti i prodotti.
 
 - *settings*:
 
@@ -424,7 +424,7 @@ Gli elementi creati appositamente per la nostra applicazione sono:
 
   - *settingsPanel*: componente dedicato al pannello delle impostazioni contenente `floorDimensionsItem` e `restoreItem`;
 
-  - *zodDimensionScheme*: schema dedicato alla validazione dei dati dimensionali per la modifica del piano;
+  - *zodDimensionScheme*: schema dedicato alla validazione dei dati dimensionali per la modifica del piano.
 
 - *zone*:
 
@@ -440,7 +440,7 @@ Gli elementi creati appositamente per la nostra applicazione sono:
 
   - *zonePanel*: componente dedicato alla visualizzazione di tutte le zone;
 
-  - *zoneZodSchemes*: schema dedicato alla validazione dei dati necessari alla creazione di una zona;
+  - *zoneZodSchemes*: schema dedicato alla validazione dei dati necessari alla creazione di una zona.
 
 - *panel*: componente atto a contenere e visualizzare ordinatamente altri componenti.
 

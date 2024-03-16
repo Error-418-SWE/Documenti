@@ -184,7 +184,7 @@ Il database è composto da 6 entità:
 
     - ID: identificativo univoco di un bin, esso è cosi composto:
 
-    #align(center, `id zona + _ + Column_Order + _ + Level_Order"`)
+    #align(center, `ID zona + _ + Column_Order + _ + Level_Order"`)
 
 - *Level*: rappresenta un ripiano dello scaffale. Composto da:
 

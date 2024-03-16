@@ -179,7 +179,7 @@ Ciascun layer possiede il suo indipendente sistema di classi e componenti e prev
 
 === Persistence layer
 Mediante delle Server Action offerte da Next.js, vengono eseguite delle query SQL atte alla lettura dei dati utili all'applicazione da un database esterno.
-Tali funzioni vengono utilizzate in:
+Esse sono implementate e rese disponibili in file separati, organizzati nell'omonima cartella "Server Action", contenente:
 
 - *getAllBins*: ritorna le informazioni di tutti i bin lette dal database;
 
@@ -189,11 +189,11 @@ Tali funzioni vengono utilizzate in:
 
 - *getProductById*: dato un codice identificativo univoco, ritorna le informazioni relative al prodotto corrispondente lette dal database;
 
-- *SVGSanitize*: dato un path ad un file SVG caricato, ritorna il path del relativo file SVG sanificato, ovvero normalizzato e reso sicuro;
+- *SVGSanitize*: dato un path ad un file SVG caricato, ritorna il path del relativo file SVG sanificato, ovvero normalizzato e reso sicuro, prevenendo attacchi XSS;
 
 - *readSavedSVG*: ritorna il contenuto del file SVG salvato su server;
 
-- *saveSVG*: dato il path di un file SVG, esso viene caricato sul server;
+- *saveSVG*: dato il contenuto di un file SVG, esso viene salvato come "saved.svg";
 
 - *getAllZones*: ritorna le informazioni di tutte le zone lette dal database;
 
@@ -202,25 +202,22 @@ Tali funzioni vengono utilizzate in:
 - *getZoneById*: dato un codice identificativo univoco, ritorna le informazioni relative alla zona corrispondente lette dal database.
 
 
-Al fine di agevolare la divisione tra il Persistence layer ed il Business layer, viene applicato il pattern Repository mediante le classi:
+Al fine di agevolare la divisione tra il Persistence layer ed il Business layer, viene utilizzato il pattern Repository mediante classi che implementano l'interfaccia `dataRepositoryInterface`, quali:
 
-- l'interfaccia *DataRepositoryInterface*;
+- *binRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Bin`;
 
-- *binRepository*: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Bin`;
+- *productRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Product`;
 
-- *productRepository*: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Product`;
+- *zoneRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Zone`.
 
-- *zoneRepository*: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Zone`.
+Il pattern Repository impiega in maniera consequenziale le classi correlate del pattern Data Mapper, le quali implementano l'interfaccia `DataMapperInterface`.
+Di seguito sono elencate le classi specifiche:
 
-Queste classi utilizzano le corrispondenti classi del pattern Data mapper:
+- *binMapper*: è responsabile della creazione di oggetti `Bin`;
 
-- l'interfaccia *DataMapperInterface*;
+- *productMapper*: è responsabile della creazione di oggetti `Product`;
 
-- *binMapper*: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Bin`;
-
-- *productMapper*: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Product`;
-
-- *zoneMapper*: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Zone`.
+- *zoneMapper*: è responsabile della creazione di oggetti `Zone`.
 
 
 #figure(

@@ -1179,6 +1179,82 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero eliminare una zona dall'ambiente 3D per fare spazio ad altre zone o semplicemente per rimuoverla"
 )
+=== Collocamento della zona nello spazio 3D
+#figure(
+  image("./imgs/UCy.svg", width: 110%),
+  caption: "Diagramma UC--y"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La zona è stata collocata nello spazio 3D",
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  [L'utente seleziona una zona da collocare, tramite creazione (@uck) o modifica (@uct)],
+  "L'utente posiziona la zona nell'ambiente 3D",
+  "L'utente conferma il collocamento della zona nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero collocare una zona in una posizione specifica dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Evidenziazione zona non collocabile (@ucy.1)],
+)
+
+==== Evidenziazione zona non collocabile <ucy.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente ha selezionato una zona da collocare",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  [L'utente visualizza un _hint_ grafico relativo all'impossibilità di collocare la zona nella posizione desiderata],
+  "La zona non viene collocata nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente tenta di collocare una zona in una posizione non valida"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Evidenziazione zona collisa con zone già collocate (@ucy.1.1)],
+  [Evidenziazione zona non collocabile perché al di fuori del perimetro (@ucy.1.2)],
+)
+
+===== Evidenziazione zona collisa con zone già collocate <ucy.1.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Evidenziazione zona non collocabile (@ucy.1)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente tenta di collocare una zona in una posizione già occupata da un'altra zona",
+  "Le zone si sovrappongono e collidono"
+)
+
+===== Evidenziazione zona non collocabile perché al di fuori del perimetro <ucy.1.2>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Evidenziazione zona non collocabile (@ucy.1)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente tenta di collocare una zona al di fuori del perimetro dell'ambiente 3D"
+)
+
 === Visualizzazione lista zone <ucl>
 #figure(
   image("./imgs/UCl.svg"),

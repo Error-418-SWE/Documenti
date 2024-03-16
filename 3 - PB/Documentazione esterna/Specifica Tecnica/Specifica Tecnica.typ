@@ -383,10 +383,10 @@ In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono pre
 
 === Presentation layer
 ==== UI
-L'interfaccia utente è realizzata mediante diversi componenti nativi React e componenti personalizzati.
-Gli elementi creati appositamente per la nostra applicazione sono:
+L'interfaccia utente è realizzata mediante elementi importati da Shadcn-UI e componenti personalizzati.
+Gli elementi creati appositamente per WMS3 sono i seguenti:
 
-- *creation*:
+- *Form di creazione*:
 
   - *creationForm*: componente dedicato alla selezione della modalità di creazione dell'ambiente di lavoro;
 
@@ -394,7 +394,7 @@ Gli elementi creati appositamente per la nostra applicazione sono:
 
   - *manualCreationFrame*: componente dedicato alla creazione manuale dell'ambiente di lavoro;
 
-  - *svgCreationFrame*: componente dedicato alla creazione dell'ambiente di lavoro in seguito al caricamento di un file SVG;
+  - *svgCreationFrame*: componente dedicato alla definizione dei parametri di creazione dell'ambiente di lavoro mediante file SVG;
 
   - *zodScheme*: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro.
 
@@ -420,7 +420,7 @@ Gli elementi creati appositamente per la nostra applicazione sono:
 
   - *floorDimensionsItem*: componente dedicato alla visualizzazione delle dimensioni del piano;
 
-  - *restoreItem*: componente dedicato al comando atto al ripristino dell'ambiente di lavoro;
+  - *restoreItem*: componente dedicato al comando atto al ripristino o alla reimpostazione dell'ambiente di lavoro;
 
   - *settingsPanel*: componente dedicato al pannello delle impostazioni contenente `floorDimensionsItem` e `restoreItem`;
 
@@ -430,7 +430,7 @@ Gli elementi creati appositamente per la nostra applicazione sono:
 
   - *bin_columns*: componente dedicato alla visualizzazione delle colonne di bin di una zona;
 
-  - *levelItem*: componente dedicato alla visualizzazione di un livello;
+  - *levelItem*: componente dedicato alla visualizzazione di un livello della zona durante il processo di creazione/modifica dello stesso;
 
   - *zoneCreationFrame*: componente dedicato alla creazione di una zona;
 
@@ -440,9 +440,9 @@ Gli elementi creati appositamente per la nostra applicazione sono:
 
   - *zonePanel*: componente dedicato alla visualizzazione di tutte le zone;
 
-  - *zoneZodSchemes*: schema dedicato alla validazione dei dati necessari alla creazione di una zona.
+  - *zoneZodSchemes*: schemi dedicati alla validazione dei dati necessari alla creazione di una zona, sia durante la configurazione manuale, che mediante inserimento di un file SVG.
 
-- *panel*: componente atto a contenere e visualizzare ordinatamente altri componenti.
+- *panel*: componente atto a contenere e visualizzare altri componenti.
 
 
 ==== Three.js

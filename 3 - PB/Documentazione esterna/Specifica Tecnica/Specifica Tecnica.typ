@@ -189,7 +189,7 @@ Esse sono implementate e rese disponibili in file separati, organizzati nell'omo
 
 - *getProductById*: dato un codice identificativo univoco, ritorna le informazioni relative al prodotto corrispondente lette dal database;
 
-- *SVGSanitize*: dato un path ad un file SVG caricato, ritorna il path del relativo file SVG sanificato, ovvero normalizzato e reso sicuro, prevenendo attacchi XSS;
+- *SVGSanitize*: dato un path ad un file SVG caricato, ritorna il contenuto del relativo file SVG sanificato, ovvero normalizzato e reso sicuro, prevenendo attacchi XSS;
 
 - *readSavedSVG*: ritorna il contenuto del file SVG salvato su server;
 

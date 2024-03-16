@@ -1206,6 +1206,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 #printUseCaseInfo(
   "Precondizioni",
   "L'utente ha richiesto la visualizzazione della lista delle zone",
+  "È presente almeno una zona nell'ambiente 3D"
 )
 #printUseCaseInfo(
   "Postcondizioni",
@@ -1223,7 +1224,8 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
-  "L'utente ha richiesto la visualizzazione della lista delle zone"
+  "L'utente ha richiesto la visualizzazione della lista delle zone",
+  "È presente almeno una zona nell'ambiente 3D"
 )
 #printUseCaseInfo(
   "Postcondizioni",

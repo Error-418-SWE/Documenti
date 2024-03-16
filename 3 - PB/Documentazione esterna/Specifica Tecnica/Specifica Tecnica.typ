@@ -180,29 +180,47 @@ Ciascun layer possiede il suo indipendente sistema di classi e componenti e prev
 === Persistence layer
 Mediante delle Server Action offerte da Next.js, vengono eseguite delle query SQL atte alla lettura dei dati utili all'applicazione da un database esterno.
 Tali funzioni vengono utilizzate in:
-- `getAllBins`: ritorna le informazioni di tutti i bin lette dal database;
-- `getBinById`: dato un codice identificativo univoco, ritorna le informazioni relative al bin corrispondente lette dal database;
-- `getAllProducts`: ritorna le informazioni di tutti i prodotti lette dal database;
-- `getProductById`: dato un codice identificativo univoco, ritorna le informazioni relative al prodotto corrispondente lette dal database;
-- `SVGSanitize`: dato un path ad un file SVG caricato, ritorna il path del relativo file SVG sanificato, ovvero normalizzato e reso sicuro;
-- `readSavedSVG`: ritorna il contenuto del file SVG salvato su server;
-- `saveSVG`: dato il path di un file SVG, esso viene caricato sul server;
-- `getAllZones`: ritorna le informazioni di tutte le zone lette dal database;
-- `getBinsByZoneId`: dato un codice identificativo univoco, ritorna le informazioni relative a tutti i bin contenuti nella zona corrispondente lette dal database;
-- `getZoneById`: dato un codice identificativo univoco, ritorna le informazioni relative alla zona corrispondente lette dal database.
+
+- *getAllBins*: ritorna le informazioni di tutti i bin lette dal database;
+
+- *getBinById*: dato un codice identificativo univoco, ritorna le informazioni relative al bin corrispondente lette dal database;
+
+- *getAllProducts*: ritorna le informazioni di tutti i prodotti lette dal database;
+
+- *getProductById*: dato un codice identificativo univoco, ritorna le informazioni relative al prodotto corrispondente lette dal database;
+
+- *SVGSanitize*: dato un path ad un file SVG caricato, ritorna il path del relativo file SVG sanificato, ovvero normalizzato e reso sicuro;
+
+- *readSavedSVG*: ritorna il contenuto del file SVG salvato su server;
+
+- *saveSVG*: dato il path di un file SVG, esso viene caricato sul server;
+
+- *getAllZones*: ritorna le informazioni di tutte le zone lette dal database;
+
+- *getBinsByZoneId*: dato un codice identificativo univoco, ritorna le informazioni relative a tutti i bin contenuti nella zona corrispondente lette dal database;
+
+- *getZoneById*: dato un codice identificativo univoco, ritorna le informazioni relative alla zona corrispondente lette dal database.
 
 
 Al fine di agevolare la divisione tra il Persistence layer ed il Business layer, viene applicato il pattern Repository mediante le classi:
-- l'interfaccia `DataRepositoryInterface`;
-- `binRepository`: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Bin`;
-- `productRepository`: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Product`;
-- `zoneRepository`: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Zone`.
+
+- l'interfaccia *DataRepositoryInterface*;
+
+- *binRepository*: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Bin`;
+
+- *productRepository*: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Product`;
+
+- *zoneRepository*: implementa `DataRepositoryInterface` ed è responsabile dell'ottenimento dei dati relativi agli oggetti `Zone`.
 
 Queste classi utilizzano le corrispondenti classi del pattern Data mapper:
-- l'interfaccia `DataMapperInterface`;
-- `binMapper`: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Bin`;
-- `productMapper`: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Product`;
-- `zoneMapper`: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Zone`.
+
+- l'interfaccia *DataMapperInterface*;
+
+- *binMapper*: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Bin`;
+
+- *productMapper*: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Product`;
+
+- *zoneMapper*: implementa `DataMapperInterface` ed è responsabile della creazione di oggetti `Zone`.
 
 
 #figure(
@@ -219,12 +237,19 @@ Le classi che vengono utilizzate per rappresentare il modello dell'applicativo s
 
   rappresenta un elemento bin, ovvero uno spazio definito in grado di contenere un prodotto.
   I suoi attributi sono:
+
   - *id*: interno che rappresenta il codice identificativo univoco del bin;
+
   - *level*: intero che rappresenta il numero del del livello di appartenenza;
+
   - *column*: intero che rappresenta il numero della colonna di appartenenza;
+
   - *height*: numero in virgola mobile che rappresenta l'altezza del bin;
+
   - *length*: numero in virgola mobile che rappresenta la profondità del bin;
+
   - *width*: numero in virgola mobile che rappresenta la larghezza del bin;
+
   - *product*: riferimento al prodotto contenuto nel bin. Può essere `null`.
 
 Per ogni attributo è presente il corrispondente metodo get.
@@ -235,33 +260,52 @@ Sono presenti i metodi set per gli attributi `id` e `product`.
 
   rappresenta un elemento zona, può essere interpretata come uno scaffale oppure, nel caso abbia un solo livello, come una zona del piano definita per contenere bin.
   I suoi attributi sono:
+
   - *id*: interno che rappresenta il codice identificativo univoco della zona;
+
   - *xcoordinate*: numero in virgola mobile che rappresenta la coordinata X di posizione;
+
   - *ycoordinate*: numero in virgola mobile che rappresenta la coordinata Y di posizione;
+
   - *height*: numero in virgola mobile che rappresenta l'altezza della zona;
+
   - *length*: numero in virgola mobile che rappresenta la profondità della zona;
+
   - *width*: numero in virgola mobile che rappresenta la larghezza della zona;
+
   - *bins*: lista di elementi Bin contenuti nella zona;
+
   - *orientation*: booleano che identifica l'orientamento (perpendicolare o parallelo) della zona rispetto all'asse delle ascisse del piano.
 
   \
   Per ogni attributo è presente il corrispondente metodo get.
   Sono inoltre presenti i metodi:
+
   - *getLevels*: ritorna una lista contenente le liste di bin che rappresentano i livelli della zona;
+
   - *getColumns*: ritorna una lista contenente le liste di bin che rappresentano le colonne della zona;
+
   - *getMaxUsedLevel*: ritorna il numero dell'ultimo livello della zona con almeno un bin contenente un prodotto;
+
   - *getMaxUsedColumn*: ritorna il numero dell'ultima colonna della zona con almeno un bin contenente un prodotto.
 
 \
 - *Product*:
 
   rappresenta un prodotto, i suoi attributi sono:
+
   - *id*: interno che rappresenta il codice identificativo univoco del prodotto;
+
   - *name*: stringa che rappresenta il nome del prodotto;
+
   - *weight*: numero in virgola mobile che rappresenta il peso del prodotto;
+
   - *height*: numero in virgola mobile che rappresenta l'altezza del prodotto;
+
   - *length*: numero in virgola mobile che rappresenta la profondità del prodotto;
+
   - *width*: numero in virgola mobile che rappresenta la larghezza del prodotto;
+
   - *categories*: lista di stringhe che rappresentano le categorie del prodotto.
 
   Per ogni attributo è presente il corrispondente metodo get.
@@ -271,9 +315,13 @@ Sono presenti i metodi set per gli attributi `id` e `product`.
 
   rappresenta la richiesta di uno spostamento di un prodotto tra due bin.
   I suoi attributi sono:
+
   - *id*: interno che rappresenta il codice identificativo univoco della richiesta;
+
   - *startPoint*: riferimento al bin iniziale;
+
   - *endPoint*: riferimento al bin finale;
+
   - *product*: riferimento al prodotto da spostare.
 
   Per ogni attributo è presente il corrispondente metodo get.
@@ -282,18 +330,24 @@ Sono presenti i metodi set per gli attributi `id` e `product`.
 - *Floor*:
 
   rappresenta il piano dell'ambiente 3D, i suoi attributi sono:
+
   - *length*: numero in virgola mobile che rappresenta la profondità del piano;
+
   - *width*: numero in virgola mobile che rappresenta la larghezza del piano;
+
   - *SVG*: stringa che contiene il path al file SVG se presente. Nel caso in cui non sia stato identificato nessun file SVG, la variabile è `null`.
 
   Per ogni attributo è presente il corrispondente metodo get.
 
   Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy e le relative classi:
 
-  - l'interfaccia `FloorStrategy`: rappresenta la creazione di un elemento `Floor`;
-  - `StandardFloorStrategy`: implementa `FloorStrategy` e rappresenta la creazione di un elemento `Floor` senza file SVG;
-  - `CustomFloorStrategy`: implementa `FloorStrategy` e rappresenta la creazione di un elemento `Floor` con file SVG;
-  - `FloorStrategyContext`: utilizza un `FloorStrategy` per generare un elemento `Floor`.
+  - l'interfaccia *FloorStrategy*: rappresenta la creazione di un elemento `Floor`;
+
+  - *StandardFloorStrategy*: implementa `FloorStrategy` e rappresenta la creazione di un elemento `Floor` senza file SVG;
+
+  - *CustomFloorStrategy*: implementa `FloorStrategy` e rappresenta la creazione di un elemento `Floor` con file SVG;
+
+  - *FloorStrategyContext*: utilizza un `FloorStrategy` per generare un elemento `Floor`.
 
 #figure(
   image("./imgs/Business Layer classes.png", width: 100%),
@@ -311,13 +365,20 @@ Sono presenti i metodi set per gli attributi `id` e `product`.
 
 
 In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i file:
-- `binsProvider`: fornisce un provider per gestire dati relativi agli oggetti `Bin`;
-- `floorProvider`: fornisce un provider per gestire dati relativi agli oggetti `Floor`;
-- `formContextProvider`: fornisce un provider per gestire dati relativi allo stato di processing di un form;
-- `ordersProvider`: fornisce un provider per gestire dati relativi agli oggetti `Order`;
-- `productsProvider`: fornisce un provider per gestire dati relativi agli oggetti `Product`;
-- `zonesProvider`: fornisce un provider per gestire dati relativi agli oggetti `Zone`;
-- `ElementDetailsProvider`: fornisce un provider per gestire dati relativi ad elementi generici nel contesto React.
+
+- *binsProvider*: fornisce un provider per gestire dati relativi agli oggetti `Bin`;
+
+- *floorProvider*: fornisce un provider per gestire dati relativi agli oggetti `Floor`;
+
+- *formContextProvider*: fornisce un provider per gestire dati relativi allo stato di processing di un form;
+
+- *ordersProvider*: fornisce un provider per gestire dati relativi agli oggetti `Order`;
+
+- *productsProvider*: fornisce un provider per gestire dati relativi agli oggetti `Product`;
+
+- *zonesProvider*: fornisce un provider per gestire dati relativi agli oggetti `Zone`;
+
+- *ElementDetailsProvider*: fornisce un provider per gestire dati relativi ad elementi generici nel contesto React.
 
 
 === Presentation layer
@@ -326,47 +387,72 @@ L'interfaccia utente è realizzata mediante diversi componenti nativi React e co
 Gli elementi creati appositamente per la nostra applicazione sono:
 
 - *creation*:
-  - `creationForm`: componente dedicato alla selezione della modalità di creazione dell'ambiente di lavoro;
-  - `dropFileArea`: componente dedicato all'inserimento di un file SVG;
-  - `manualCreationFrame`: componente dedicato alla creazione manuale dell'ambiente di lavoro;
-  - `svgCreationFrame`: componente dedicato alla creazione dell'ambiente di lavoro in seguito al caricamento di un file SVG;
-  - `zodScheme`: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro;
+
+  - *creationForm*: componente dedicato alla selezione della modalità di creazione dell'ambiente di lavoro;
+
+  - *dropFileArea*: componente dedicato all'inserimento di un file SVG;
+
+  - *manualCreationFrame*: componente dedicato alla creazione manuale dell'ambiente di lavoro;
+
+  - *svgCreationFrame*: componente dedicato alla creazione dell'ambiente di lavoro in seguito al caricamento di un file SVG;
+
+  - *zodScheme*: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro;
 
 - *bin*:
-  - `binItemDetails`: componente dedicato alla visualizzazione delle informazioni dettagliate di un bin;
+
+  - *binItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di un bin;
 
 - *orders*:
-  - `orderItem`: componente dedicato alla visualizzazione di un ordine;
-  - `ordersPanel`: componente dedicato alla visualizzazione di tutti gli ordini;
+
+  - *orderItem*: componente dedicato alla visualizzazione di un ordine;
+
+  - *ordersPanel*: componente dedicato alla visualizzazione di tutti gli ordini;
 
 - *products*:
-  - `productItem`: componente dedicato alla visualizzazione di un prodotto;
-  - `productItemDetails`: componente dedicato alla visualizzazione delle informazioni dettagliate di un prodotto;
-  - `productsPanel`: componente dedicato alla visualizzazione di tutti i prodotti;
+
+  - *productItem*: componente dedicato alla visualizzazione di un prodotto;
+
+  - *productItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di un prodotto;
+
+  - *productsPanel*: componente dedicato alla visualizzazione di tutti i prodotti;
 
 - *settings*:
-  - `floorDimensionsItem`: componente dedicato alla visualizzazione delle dimensioni del piano;
-  - `restoreItem`: componente dedicato al comando atto al ripristino dell'ambiente di lavoro;
-  - `settingsPanel`: componente dedicato al pannello delle impostazioni contenente `floorDimensionsItem` e `restoreItem`;
-  - `zodDimensionScheme`: schema dedicato alla validazione dei dati dimensionali per la modifica del piano;
+
+  - *floorDimensionsItem*: componente dedicato alla visualizzazione delle dimensioni del piano;
+
+  - *restoreItem*: componente dedicato al comando atto al ripristino dell'ambiente di lavoro;
+
+  - *settingsPanel*: componente dedicato al pannello delle impostazioni contenente `floorDimensionsItem` e `restoreItem`;
+
+  - *zodDimensionScheme*: schema dedicato alla validazione dei dati dimensionali per la modifica del piano;
 
 - *zone*:
-  - `bin_columns`: componente dedicato alla visualizzazione delle colonne di bin di una zona;
-  - `levelItem`: componente dedicato alla visualizzazione di un livello;
-  - `zoneCreationFrame`: componente dedicato alla creazione di una zona;
-  - `zoneItem`: componente dedicato alla visualizzazione di una zona;
-  - `zoneItemDetails`: componente dedicato alla visualizzazione delle informazioni dettagliate di una zona;
-  - `zonePanel`: componente dedicato alla visualizzazione di tutte le zone;
-  - `zoneZodSchemes`: schema dedicato alla validazione dei dati necessari alla creazione di una zona;
 
-- `panel`: componente atto a contenere e visualizzare ordinatamente altri componenti.
+  - *bin_columns*: componente dedicato alla visualizzazione delle colonne di bin di una zona;
+
+  - *levelItem*: componente dedicato alla visualizzazione di un livello;
+
+  - *zoneCreationFrame*: componente dedicato alla creazione di una zona;
+
+  - *zoneItem*: componente dedicato alla visualizzazione di una zona;
+
+  - *zoneItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di una zona;
+
+  - *zonePanel*: componente dedicato alla visualizzazione di tutte le zone;
+
+  - *zoneZodSchemes*: schema dedicato alla validazione dei dati necessari alla creazione di una zona;
+
+- *panel*: componente atto a contenere e visualizzare ordinatamente altri componenti.
 
 
 ==== Three.js
 L'ambiente tridimensionale è realizzato mediante i componenti:
-- `Floor`: elemento che rappresenta il piano dell'ambiente di lavoro;
-- `bin3D`: elemento che rappresenta un bin nell'ambiente di lavoro;
-- `Warehouse`: elemento che rappresenta i limiti dell'ambiente visualizzato.
+
+- *Floor*: elemento che rappresenta il piano dell'ambiente di lavoro;
+
+- *bin3D*: elemento che rappresenta un bin nell'ambiente di lavoro;
+
+- *Warehouse*: elemento che rappresenta i limiti dell'ambiente visualizzato.
 
 
 == Database

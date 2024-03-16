@@ -24,13 +24,13 @@
 
 = Valutazione del progresso generale <avanzamento>
 
-Lo Sprint 18 ha visto buona parte delle task assegnate completate nei tempi previsti. Le task non concluse risultano comunque in corso d'opera e verranno portate in verifica in tempi brevi.
+Lo Sprint 18 ha visto buona parte delle task assegnate completate nei tempi previsti. Le task non concluse risultano comunque in corso d'opera e verranno portate in verifica nel prossimo Sprint.
 
 Il giorno giovedì 07/03/2024 si è svolto il meeting esterno con il Proponente, come pianificato, per aggiornare riguardo lo stato dei lavori.
 
 == #adr
 
-È proseguita e quasi conclusa la completa revisione del documento.
+È proseguita la completa revisione del documento.
 
 == #ndp
 
@@ -75,7 +75,7 @@ Maggiori dettagli in merito al valore delle metriche alla loro analisi sono repe
 
 == Keep doing <keep-doing>
 
-I chiarimenti ottenuti dal #cardin si sono rivelati un punto di svolta importante.
+I chiarimenti ottenuti dal #cardin si sono rivelati un punto di svolta importante per la progettazione del prodotto software.
 
 Il gruppo si ritiene soddisfatto dell'andamento dei lavori e della comunicazione con il Proponente.
 

@@ -1178,7 +1178,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Definizione orientamento zona (@uc12.3)],
   [Definizione colonne zona (@uc12.4)],
   [Definizione livelli zona (@uc12.5)],
-  [Collocamento della zona nell'ambiente 3D (@ucy)]
+  [Collocamento della zona nell'ambiente 3D (@uc16)]
 )
 
 ==== Definizione ID zona <uc12.1>
@@ -1569,14 +1569,14 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente inserisce un valore dell'altezza minore o uguale a zero"
 )
 
-=== Modifica zona <uct>
+=== Modifica zona <uc13>
 #TODO
 
-=== Eliminazione zona
+=== Eliminazione zona <uc14>
 
 #figure(
-  image("./imgs/UCg.svg", width: 60%),
-  caption: "Diagramma UC--g"
+  image("./imgs/UC14.svg", width: 60%),
+  caption: "Diagramma UC--14"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -1600,11 +1600,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero eliminare una zona dall'ambiente 3D per fare spazio ad altre zone o semplicemente per rimuoverla"
 )
 
-=== Ispezione zona <ucq>
+=== Ispezione zona <uc15>
 
 #figure(
-  image("./imgs/UCq.svg", width: 110%),
-  caption: "Diagramma UC--q"
+  image("./imgs/UC15.svg", width: 110%),
+  caption: "Diagramma UC--15"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -1627,15 +1627,15 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione ID zona (@ucq.1)],
-  [Visualizzazione larghezza zona (@ucq.2)],
-  [Visualizzazione lunghezza zona (@ucq.3)],
-  [Visualizzazione altezza zona (@ucq.4)],
-  [Evidenziazione zona selezionata (@ucq.5)],
-  [Visualizzazione lista bin inclusi nella zona (@ucq.6)]
+  [Visualizzazione ID zona (@uc15.1)],
+  [Visualizzazione larghezza zona (@uc15.2)],
+  [Visualizzazione lunghezza zona (@uc15.3)],
+  [Visualizzazione altezza zona (@uc15.4)],
+  [Evidenziazione zona selezionata (@uc15.5)],
+  [Visualizzazione lista bin inclusi nella zona (@uc15.6)]
 )
 
-==== Visualizzazione ID zona <ucq.1>
+==== Visualizzazione ID zona <uc15.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1656,7 +1656,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero visualizzare l'ID di una zona per poterla identificare in modo univoco"
 )
 
-==== Visualizzazione larghezza zona <ucq.2>
+==== Visualizzazione larghezza zona <uc15.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1673,7 +1673,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente seleziona una zona da ispezionare"
 )
 
-==== Visualizzazione lunghezza zona <ucq.3>
+==== Visualizzazione lunghezza zona <uc15.3>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1690,7 +1690,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente seleziona una zona da ispezionare"
 )
 
-==== Visualizzazione altezza zona <ucq.4>
+==== Visualizzazione altezza zona <uc15.4>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1707,7 +1707,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente seleziona una zona da ispezionare"
 )
 
-==== Evidenziazione zona selezionata <ucq.5>
+==== Evidenziazione zona selezionata <uc15.5>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1728,10 +1728,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero che la zona ispezionata venga evidenziata graficamente per poterla individuare a colpo d'occhio nell'ambiente 3D"
 )
 
-==== Visualizzazione lista bin inclusi nella zona <ucq.6>
+==== Visualizzazione lista bin inclusi nella zona <uc15.6>
 #figure(
-  image("./imgs/UCq.6.svg", width: 90%),
-  caption: "Diagramma UC--q.6"
+  image("./imgs/UC15.6.svg", width: 90%),
+  caption: "Diagramma UC--15.6"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -1754,10 +1754,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione singolo bin (@ucq.6.1)]
+  [Visualizzazione singolo bin (@uc15.6.1)]
 )
 
-===== Visualizzazione singolo bin <ucq.6.1>
+===== Visualizzazione singolo bin <uc15.6.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1773,11 +1773,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione ID bin (@ucq.6.1.1)],
-  [Visualizzazione stato bin (@ucq.6.1.2)],
+  [Visualizzazione ID bin (@uc15.6.1.1)],
+  [Visualizzazione stato bin (@uc15.6.1.2)],
 )
 
-====== Visualizzazione ID bin <ucq.6.1.1>
+====== Visualizzazione ID bin <uc15.6.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1792,7 +1792,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un elemento della lista dei bin"
 )
 
-====== Visualizzazione stato bin <ucq.6.1.2>
+====== Visualizzazione stato bin <uc15.6.1.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1807,10 +1807,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un elemento della lista dei bin"
 )
 
-=== Collocamento della zona nell'ambiente 3D <ucy>
+=== Collocamento della zona nell'ambiente 3D <uc16>
 #figure(
-  image("./imgs/UCy.svg", width: 110%),
-  caption: "Diagramma UC--y"
+  image("./imgs/UC16.svg", width: 110%),
+  caption: "Diagramma UC--16"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -1834,10 +1834,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Estensioni",
-  [Evidenziazione zona non collocabile (@ucy.1)],
+  [Evidenziazione zona non collocabile (@uc16.1)],
 )
 
-==== Evidenziazione zona non collocabile <ucy.1>
+==== Evidenziazione zona non collocabile <uc16.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1856,14 +1856,14 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Generalizzazioni",
-  [Evidenziazione zona collisa con zone già collocate (@ucy.1.1)],
-  [Evidenziazione zona non collocabile perché al di fuori del perimetro (@ucy.1.2)],
+  [Evidenziazione zona collisa con zone già collocate (@uc16.1.1)],
+  [Evidenziazione zona non collocabile perché al di fuori del perimetro (@uc16.1.2)],
 )
 
-===== Evidenziazione zona collisa con zone già collocate <ucy.1.1>
+===== Evidenziazione zona collisa con zone già collocate <uc16.1.1>
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Evidenziazione zona non collocabile (@ucy.1)]
+  [Evidenziazione zona non collocabile (@uc16.1)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -1872,10 +1872,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Le zone si sovrappongono e collidono"
 )
 
-===== Evidenziazione zona non collocabile perché al di fuori del perimetro <ucy.1.2>
+===== Evidenziazione zona non collocabile perché al di fuori del perimetro <uc16.1.2>
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Evidenziazione zona non collocabile (@ucy.1)]
+  [Evidenziazione zona non collocabile (@uc16.1)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -1883,10 +1883,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente tenta di collocare una zona al di fuori del perimetro dell'ambiente 3D"
 )
 
-=== Visualizzazione lista zone <ucl>
+=== Visualizzazione lista zone <uc17>
 #figure(
-  image("./imgs/UCl.svg"),
-  caption: "Diagramma UC--l"
+  image("./imgs/UC17.svg"),
+  caption: "Diagramma UC--17"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -1908,10 +1908,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione singola zona (@ucl.1)],
+  [Visualizzazione singola zona (@uc17.1)],
 )
 
-==== Visualizzazione singola zona <ucl.1>
+==== Visualizzazione singola zona <uc17.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1928,9 +1928,9 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione ID zona (@ucl.1.1)],
+  [Visualizzazione ID zona (@uc17.1.1)],
 )
-===== Visualizzazione ID zona <ucl.1.1>
+===== Visualizzazione ID zona <uc17.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1946,10 +1946,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un elemento della lista delle zone"
 )
 
-=== Ricerca zona <ucr>
+=== Ricerca zona <uc18>
 #figure(
-  image("./imgs/UCr.svg", width: 80%),
-  caption: "Diagramma UC--r"
+  image("./imgs/UC18.svg", width: 80%),
+  caption: "Diagramma UC--18"
 )
 #printUseCaseInfo(
   "Precondizioni",
@@ -1970,13 +1970,13 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Generalizzazioni",
-  [Ricerca per ID zona (@ucr.1)],
+  [Ricerca per ID zona (@uc18.1)],
 )
 
-==== Ricerca per ID zona <ucr.1>
+==== Ricerca per ID zona <uc18.1>
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Ricerca prodotti (@ucr)]
+  [Ricerca prodotti (@uc18)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -1988,10 +1988,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente inserisce l'ID della zona da cercare"
 )
 
-=== Ispezione bin <uci>
+=== Ispezione bin <uc19>
 #figure(
-  image("./imgs/UCi.svg"),
-  caption: "Diagramma UC--i"
+  image("./imgs/UC19.svg"),
+  caption: "Diagramma UC--19"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2014,18 +2014,18 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione ID bin (@uci.1)],
-  [Visualizzazione lunghezza (@uci.2)],
-  [Visualizzazione larghezza (@uci.3)],
-  [Visualizzazione altezza (@uci.4)],
-  [Evidenziazione bin selezionato (@uci.5)],
+  [Visualizzazione ID bin (@uc19.1)],
+  [Visualizzazione lunghezza (@uc19.2)],
+  [Visualizzazione larghezza (@uc19.3)],
+  [Visualizzazione altezza (@uc19.4)],
+  [Evidenziazione bin selezionato (@uc19.5)],
 )
 #printUseCaseInfo(
   "Estensioni",
-  [Visualizzazione informazioni prodotto (@uca)]
+  [Visualizzazione informazioni prodotto (@uc22)]
 )
 
-==== Visualizzazione ID bin <uci.1>
+==== Visualizzazione ID bin <uc19.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2042,7 +2042,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente seleziona un bin da ispezionare"
 )
 
-==== Visualizzazione lunghezza bin <uci.2>
+==== Visualizzazione lunghezza bin <uc19.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2059,7 +2059,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente seleziona un bin da ispezionare"
 )
 
-==== Visualizzazione larghezza bin <uci.3>
+==== Visualizzazione larghezza bin <uc19.3>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2076,7 +2076,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente seleziona un bin da ispezionare"
 )
 
-==== Visualizzazione altezza bin <uci.4>
+==== Visualizzazione altezza bin <uc19.4>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2093,7 +2093,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente seleziona un bin da ispezionare"
 )
 
-==== Evidenziazione bin selezionato <uci.5>
+==== Evidenziazione bin selezionato <uc19.5>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2114,11 +2114,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero che il bin ispezionato venga evidenziato graficamente per poterlo individuare a colpo d'occhio nell'ambiente 3D"
 )
 
-=== Spostamento POV su zona specifica
+=== Spostamento POV su zona specifica <uc20>
 
 #figure(
-  image("./imgs/UCz.svg", width: 80%),
-  caption: "Diagramma UC--z"
+  image("./imgs/UC20.svg", width: 80%),
+  caption: "Diagramma UC--20"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2141,11 +2141,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero spostare il POV sull'ambiente 3D per poter visualizzare una zona specifica"
 )
 
-=== Spostamento POV su bin specifico
+=== Spostamento POV su bin specifico <uc21>
 
 #figure(
-  image("./imgs/UCj.svg", width: 80%),
-  caption: "Diagramma UC--j"
+  image("./imgs/UC21.svg", width: 80%),
+  caption: "Diagramma UC--21"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2180,11 +2180,14 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 }, supplement: "Caso d'uso")
 #setUCHeadingCounterTo(22)
 
-=== Visualizzazione informazioni prodotto <uca>
+=== Visualizzazione informazioni prodotto <uc22>
 
 #figure(
-  image("./imgs/UCa.svg", width: 75%),
-  caption: "Diagramma UC--a"
+  [
+    #image("./imgs/UC22.svg", width: 75%)
+    #image("./imgs/UC22.1.svg", width: 75%)
+  ],
+  caption: "Diagramma UC--22"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2207,21 +2210,16 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione ID prodotto (@uca.1)],
-  [Visualizzazione nome prodotto (@uca.2)],
-  [Visualizzazione categoria prodotto (@uca.3)],
-  [Visualizzazione larghezza prodotto (@uca.4)],
-  [Visualizzazione lunghezza prodotto (@uca.5)],
-  [Visualizzazione altezza prodotto (@uca.6)],
-  [Visualizzazione peso prodotto (@uca.7)],
+  [Visualizzazione ID prodotto (@uc22.1)],
+  [Visualizzazione nome prodotto (@uc22.2)],
+  [Visualizzazione categoria prodotto (@uc22.3)],
+  [Visualizzazione larghezza prodotto (@uc22.4)],
+  [Visualizzazione lunghezza prodotto (@uc22.5)],
+  [Visualizzazione altezza prodotto (@uc22.6)],
+  [Visualizzazione peso prodotto (@uc22.7)],
 )
 
-#figure(
-  image("./imgs/UCa.1.svg", width: 75%),
-  caption: "Diagramma UC--a.1"
-)
-
-==== Visualizzazione ID prodotto <uca.1>
+==== Visualizzazione ID prodotto <uc22.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2240,7 +2238,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero visualizzare l'informazione sull'ID di un prodotto"
 )
 
-==== Visualizzazione nome prodotto <uca.2>
+==== Visualizzazione nome prodotto <uc22.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2259,7 +2257,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero visualizzare l'informazione sul nome di un prodotto"
 )
 
-==== Visualizzazione categoria prodotto <uca.3>
+==== Visualizzazione categoria prodotto <uc22.3>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2278,7 +2276,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero visualizzare l'informazione sulla categoria di un prodotto"
 )
 
-==== Visualizzazione larghezza prodotto <uca.4>
+==== Visualizzazione larghezza prodotto <uc22.4>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2297,7 +2295,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero visualizzare l'informazione sulla larghezza di un prodotto"
 )
 
-==== Visualizzazione lunghezza prodotto <uca.5>
+==== Visualizzazione lunghezza prodotto <uc22.5>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2316,7 +2314,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero visualizzare l'informazione sulla lunghezza di un prodotto"
 )
 
-==== Visualizzazione altezza prodotto <uca.6>
+==== Visualizzazione altezza prodotto <uc22.6>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2335,7 +2333,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero visualizzare l'informazione sull'altezza di un prodotto"
 )
 
-==== Visualizzazione peso prodotto <uca.7>
+==== Visualizzazione peso prodotto <uc22.7>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2354,11 +2352,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Come utente, desidero visualizzare l'informazione sul peso di un prodotto"
 )
 
-=== Visualizzazione lista prodotti <ucb>
+=== Visualizzazione lista prodotti <uc23>
 
 #figure(
-  image("./imgs/UCb.svg", width: 115%),
-  caption: "Diagramma UC--b"
+  image("./imgs/UC23.svg", width: 115%),
+  caption: "Diagramma UC--23"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2381,18 +2379,18 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Generalizzazioni",
-  [Visualizzazione lista prodotti non collocati (@ucb.1)],
-  [Visualizzazione lista prodotti collocati (@ucb.2)]
+  [Visualizzazione lista prodotti non collocati (@uc23.1)],
+  [Visualizzazione lista prodotti collocati (@uc23.2)]
 )
 
-==== Visualizzazione lista prodotti non collocati <ucb.1>
+==== Visualizzazione lista prodotti non collocati <uc23.1>
 #figure(
-  image("./imgs/UCb.1.1.svg", width: 80%),
-  caption: "Diagramma UC--b.1"
+  image("./imgs/UC23.1.1.svg", width: 80%),
+  caption: "Diagramma UC--23.1"
 )
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Visualizzazione lista prodotti (@ucb)]
+  [Visualizzazione lista prodotti (@uc23)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2409,10 +2407,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione singolo prodotto (@ucb.1.1)]
+  [Visualizzazione singolo prodotto (@uc23.1.1)]
 )
 
-===== Visualizzazione singolo prodotto <ucb.1.1>
+===== Visualizzazione singolo prodotto <uc23.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2428,16 +2426,16 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Generalizzazioni",
-  [Visualizzazione singolo prodotto collocato (@ucb.2.1)]
+  [Visualizzazione singolo prodotto collocato (@uc23.2.1)]
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione nome prodotto (@ucb.1.1.1)],
-  [Visualizzazione ID prodotto (@ucb.1.1.2)],
-  [Visualizzazione categoria prodotto (@ucb.1.1.3)]
+  [Visualizzazione nome prodotto (@uc23.1.1.1)],
+  [Visualizzazione ID prodotto (@uc23.1.1.2)],
+  [Visualizzazione categoria prodotto (@uc23.1.1.3)]
 )
 
-====== Visualizzazione nome prodotto <ucb.1.1.1>
+====== Visualizzazione nome prodotto <uc23.1.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2452,7 +2450,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un elemento della lista dei prodotti"
 )
 
-====== Visualizzazione ID prodotto <ucb.1.1.2>
+====== Visualizzazione ID prodotto <uc23.1.1.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2467,7 +2465,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un elemento della lista dei prodotti"
 )
 
-====== Visualizzazione categoria prodotto <ucb.1.1.3>
+====== Visualizzazione categoria prodotto <uc23.1.1.3>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2482,14 +2480,14 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un elemento della lista dei prodotti"
 )
 
-==== Visualizzazione lista prodotti collocati <ucb.2>
+==== Visualizzazione lista prodotti collocati <uc23.2>
 #figure(
-  image("./imgs/UCb.2.1.svg", width: 80%),
-  caption: "Diagramma UC--b.2.1"
+  image("./imgs/UC23.2.1.svg", width: 80%),
+  caption: "Diagramma UC--23.2.1"
 )
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Visualizzazione lista prodotti (@ucb)]
+  [Visualizzazione lista prodotti (@uc23)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2506,13 +2504,13 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione singolo prodotto collocato (@ucb.2.1)]
+  [Visualizzazione singolo prodotto collocato (@uc23.2.1)]
 )
 
-===== Visualizzazione singolo prodotto collocato <ucb.2.1>
+===== Visualizzazione singolo prodotto collocato <uc23.2.1>
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Visualizzazione singolo prodotto non collocato (@ucb.1.1)]
+  [Visualizzazione singolo prodotto non collocato (@uc23.1.1)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2529,11 +2527,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione ID zona di appartenenza (@ucb.2.1.1)],
-  [Visualizzazione ID bin di appartenenza (@ucb.2.1.2)]
+  [Visualizzazione ID zona di appartenenza (@uc23.2.1.1)],
+  [Visualizzazione ID bin di appartenenza (@uc23.2.1.2)]
 )
 
-====== Visualizzazione ID zona di appartenenza <ucb.2.1.1>
+====== Visualizzazione ID zona di appartenenza <uc23.2.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2548,7 +2546,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un elemento della lista dei prodotti collocati"
 )
 
-====== Visualizzazione ID bin di appartenenza <ucb.2.1.2>
+====== Visualizzazione ID bin di appartenenza <uc23.2.1.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2563,11 +2561,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un elemento della lista dei prodotti collocati"
 )
 
-=== Ricerca prodotti <ucc>
+=== Ricerca prodotti <uc24>
 
 #figure(
-  image("./imgs/UCc.svg"),
-  caption: "Diagramma UC--c"
+  image("./imgs/UC24.svg"),
+  caption: "Diagramma UC--24"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2591,15 +2589,15 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Generalizzazioni",
-  [Ricerca per ID prodotto (@ucc.1)],
-  [Ricerca per nome prodotto (@ucc.2)],
-  [Ricerca per categoria prodotto (@ucc.3)]
+  [Ricerca per ID prodotto (@uc24.1)],
+  [Ricerca per nome prodotto (@uc24.2)],
+  [Ricerca per categoria prodotto (@uc24.3)]
 )
 
-==== Ricerca per ID prodotto <ucc.1>
+==== Ricerca per ID prodotto <uc24.1>
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Ricerca prodotti (@ucc)]
+  [Ricerca prodotti (@uc24)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2611,10 +2609,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente inserisce l'ID del prodotto da cercare"
 )
 
-==== Ricerca per nome prodotto <ucc.2>
+==== Ricerca per nome prodotto <uc24.2>
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Ricerca prodotti (@ucc)]
+  [Ricerca prodotti (@uc24)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2626,10 +2624,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente inserisce il nome del prodotto da cercare"
 )
 
-==== Ricerca per categoria prodotto <ucc.3>
+==== Ricerca per categoria prodotto <uc24.3>
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Ricerca prodotti (@ucc)]
+  [Ricerca prodotti (@uc24)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2641,10 +2639,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente inserisce la categoria di prodotto desiderata"
 )
 
-=== Spostamento prodotto <ucd>
+=== Spostamento prodotto <uc25>
 #figure(
-  image("./imgs/UCd.svg", width: 120%),
-  caption: "Diagramma UC--d"
+  image("./imgs/UC25.svg", width: 120%),
+  caption: "Diagramma UC--25"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2667,14 +2665,14 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Generalizzazioni",
-  [Spostamento prodotto non collocato in un bin (@ucd.1)],
-  [Spostamento prodotto collocato in un bin (@ucd.2)]
+  [Spostamento prodotto non collocato in un bin (@uc25.1)],
+  [Spostamento prodotto collocato in un bin (@uc25.2)]
 )
 
-==== Spostamento prodotto non collocato in un bin <ucd.1>
+==== Spostamento prodotto non collocato in un bin <uc25.1>
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Spostamento prodotto (@ucd)]
+  [Spostamento prodotto (@uc25)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2683,13 +2681,13 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Invio richiesta di movimentazione (@ucd.3)],
+  [Invio richiesta di movimentazione (@uc25.3)],
 )
 
-==== Spostamento prodotto collocato in un bin <ucd.2>
+==== Spostamento prodotto collocato in un bin <uc25.2>
 #printUseCaseInfo(
   "Generalizzazione di",
-  [Spostamento prodotto (@ucd)]
+  [Spostamento prodotto (@uc25)]
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2698,11 +2696,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Estensioni",
-  [Invio richiesta di movimentazione (@ucd.3)],
-  [Visualizzazione errore spostamento impossibile (@ucd.2.1)]
+  [Invio richiesta di movimentazione (@uc25.3)],
+  [Visualizzazione errore spostamento impossibile (@uc25.2.1)]
 )
 
-===== Visualizzazione errore spostamento impossibile <ucd.2.1>
+===== Visualizzazione errore spostamento impossibile <uc25.2.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2721,7 +2719,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente ha richiesto lo spostamento di un prodotto verso un bin già occupato"
 )
 
-==== Invio richiesta di movimentazione <ucd.3>
+==== Invio richiesta di movimentazione <uc25.3>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2740,11 +2738,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione errore spostamento negato (@ucd.3.1)],
-  [Visualizzazione errore di connessione alla API (@ucd.3.2)],
+  [Visualizzazione errore spostamento negato (@uc25.3.1)],
+  [Visualizzazione errore di connessione alla API (@uc25.3.2)],
 )
 
-===== Visualizzazione errore spostamento negato <ucd.3.1>
+===== Visualizzazione errore spostamento negato <uc25.3.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2763,7 +2761,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente ha richiesto lo spostamento di un prodotto ma il sistema ha negato la richiesta"
 )
 
-===== Visualizzazione errore di connessione alla API <ucd.3.2>
+===== Visualizzazione errore di connessione alla API <uc25.3.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2782,10 +2780,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente ha richiesto lo spostamento di un prodotto ma la API non ha fornito risposta in tempo utile"
 )
 
-=== Visualizzazione cronologia ordini di movimentazione <uce>
+=== Visualizzazione cronologia ordini di movimentazione <uc26>
 #figure(
-  image("./imgs/UCe.svg", width: 115%),
-  caption: "Diagramma UC--e"
+  image("./imgs/UC26.svg", width: 115%),
+  caption: "Diagramma UC--26"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2806,13 +2804,13 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione singolo ordine di movimentazione (@uce.1)]
+  [Visualizzazione singolo ordine di movimentazione (@uc26.1)]
 )
 
-==== Visualizzazione singolo ordine di movimentazione <uce.1>
+==== Visualizzazione singolo ordine di movimentazione <uc26.1>
 #figure(
-  image("./imgs/UCe.1.svg", width: 80%),
-  caption: "Diagramma UC--e.1"
+  image("./imgs/UC26.1.svg", width: 80%),
+  caption: "Diagramma UC--26.1"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2829,16 +2827,16 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Visualizzazione ID bin di destinazione (@uce.1.2)],
-  [Visualizzazione ID prodotto (@uce.1.3)],
-  [Visualizzazione nome prodotto (@uce.1.4)],
+  [Visualizzazione ID bin di destinazione (@uc26.1.2)],
+  [Visualizzazione ID prodotto (@uc26.1.3)],
+  [Visualizzazione nome prodotto (@uc26.1.4)],
 )
 #printUseCaseInfo(
   "Estensioni",
-  [Visualizzazione ID bin di partenza (@uce.1.1)]
+  [Visualizzazione ID bin di partenza (@uc26.1.1)]
 )
 
-===== Visualizzazione ID bin di partenza <uce.1.1>
+===== Visualizzazione ID bin di partenza <uc26.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2854,7 +2852,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un ordine di movimentazione presente in lista"
 )
 
-===== Visualizzazione ID bin di destinazione <uce.1.2>
+===== Visualizzazione ID bin di destinazione <uc26.1.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2869,7 +2867,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un ordine di movimentazione presente in lista"
 )
 
-===== Visualizzazione ID prodotto <uce.1.3>
+===== Visualizzazione ID prodotto <uc26.1.3>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2884,7 +2882,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un ordine di movimentazione presente in lista"
 )
 
-===== Visualizzazione nome prodotto <uce.1.4>
+===== Visualizzazione nome prodotto <uc26.1.4>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2899,10 +2897,10 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un ordine di movimentazione presente in lista"
 )
 
-=== Ispezione ordine di movimentazione <ucn>
+=== Ispezione ordine di movimentazione <uc27>
 #figure(
-  image("./imgs/UCn.svg"),
-  caption: "Diagramma UC--n"
+  image("./imgs/UC27.svg"),
+  caption: "Diagramma UC--27"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2924,14 +2922,14 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Inclusioni",
-  [Evidenziazione bin di destinazione (@ucn.1)]
+  [Evidenziazione bin di destinazione (@uc27.1)]
 )
 #printUseCaseInfo(
   "Estensioni",
-  [Evidenziazione bin di partenza (@ucn.2)]
+  [Evidenziazione bin di partenza (@uc27.2)]
 )
 
-==== Evidenziazione bin di destinazione <ucn.1>
+==== Evidenziazione bin di destinazione <uc27.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -2946,7 +2944,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente richiede la visualizzazione dei bin coinvolti nell'ordine di movimentazione"
 )
 
-==== Evidenziazione bin di partenza <ucn.2>
+==== Evidenziazione bin di partenza <uc27.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",

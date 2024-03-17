@@ -1282,7 +1282,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Postcondizioni",
-  "L'utente visualizza la altezza della zona selezionata"
+  "L'utente visualizza l'altezza della zona selezionata"
 )
 #printUseCaseInfo(
   "Scenario principale",
@@ -1313,7 +1313,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 ==== Visualizzazione lista bin inclusi nella zona <ucq.6>
 #figure(
   image("./imgs/UCq.6.svg", width: 90%),
-  caption: "Diagramma UC--q.3"
+  caption: "Diagramma UC--q.6"
 )
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(

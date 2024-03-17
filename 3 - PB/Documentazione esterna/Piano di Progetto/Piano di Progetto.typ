@@ -3863,7 +3863,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   supplement: "Grafico"
 )
 
-Durante lo Sprint 18 le ore effettive (58) hanno superato di due unità le ore preventivate (53), in particolare:
+Durante lo Sprint 18 le ore effettive (58) hanno superato di cinque unità le ore preventivate (53), in particolare:
 
 - Progettista e Programmatore hanno avuto un aumento di ore causato dalla quantità di lavoro svolto sullo sviluppo del MVP e sulla stesura della #st\;
 - il Verificatore ha avuto un lieve aumento di ore in risposta al punto precedente e al lavoro che si sta svolgendo sull'#adr\.

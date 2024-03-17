@@ -220,12 +220,9 @@ Di seguito sono elencate le classi specifiche:
 - *zoneMapper*: è responsabile della creazione di oggetti `Zone`.
 
 
-#figure(
-  image("./imgs/Persistence Layer patterns class diagram.png", width: 100%),
-  caption: [
-    Diagramma delle classi del layer di persistenza
-  ],
-)
+
+Diagramma delle classi del layer di persistenza: #TODO
+
 
 === Business layer
 Le classi che vengono utilizzate per rappresentare il modello dell'applicativo sono:
@@ -351,19 +348,13 @@ Inoltre è previsto il metodo `Clear` che permette di assegnare il valore `null`
 
   - *FloorStrategyContext*: utilizza un `FloorStrategy` per generare un elemento `Floor`.
 
-#figure(
-  image("./imgs/Business Layer classes.png", width: 100%),
-  caption: [
-    Diagramma delle classi del layer di business
-  ],
-)
 
-#figure(
-  image("./imgs/Business Layer floor.png", width: 100%),
-  caption: [
-    Diagramma delle classi Floor del layer di business
-  ],
-)
+Diagramma delle classi del layer di business: #TODO
+
+
+
+Diagramma delle classi Floor del layer di business: #TODO
+
 
 
 In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i componenti:

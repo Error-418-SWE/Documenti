@@ -38,7 +38,7 @@ Sono state presentate al Proponente le funzionalità implementate finora nell'MV
 Il Proponente è risultato soddisfatto ed entusiasta dei progressi raggiunti con l'MVP, ed ha evidenziato una buona usabilità e interfaccia grafica del software.
 
 == Presentazione dei pattern
-Sono stati presentati i principali design pattern implementati finora, ponendo particolare attenzione ai Data Mapper e ai Repository che hanno consentino una logica del software indipendente dalla struttura dei dati grezzi.
+Sono stati presentati i principali design pattern implementati finora, ponendo particolare attenzione ai Data Mapper e ai Repository che hanno consentito la realizzazione di una logica del software indipendente dalla struttura dei dati grezzi.
 
 == Presentazione codice
 Su richiesta del Proponente, è stato mostrato il codice del software. Si sono discussi vari dubbi e trovate soluzioni:

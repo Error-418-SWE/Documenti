@@ -1501,7 +1501,8 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Postcondizioni",
-  "L'utente ha definito l'altezza dei livelli della zona secondo una delle modalità disponibili"
+  "L'utente ha definito l'altezza dei livelli della zona secondo una delle modalità disponibili",
+  "L'altezza della zona è calcolata come la somma delle altezze dei singoli livelli"
 )
 #printUseCaseInfo(
   "Scenario principale",

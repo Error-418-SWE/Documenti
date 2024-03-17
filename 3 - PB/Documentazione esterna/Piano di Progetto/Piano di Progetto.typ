@@ -1936,7 +1936,7 @@ Questo Sprint impiega:
 - *Progettista*: al fine di:
   - redarre le sezioni della #st\.
 - *Programmatore*: al fine di:
-  - collaborare con il Progettista nella stesura della #st;
+  - collaborare con il Progettista nella stesura della #st\;
   - implementare la UI;
   - implementare gli elementi 3D.
 - *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp\.

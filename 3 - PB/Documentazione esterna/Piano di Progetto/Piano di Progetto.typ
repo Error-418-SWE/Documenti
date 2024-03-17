@@ -1908,6 +1908,74 @@ Questo sprint impiega:
 )
 
 
+== Sprint 19 dal 10/03/2024 al 17/03/2024
+=== Obiettivi prefissati
+
+In questo Sprint il lavoro si concentra principalmente sulla stesura di #st, #man e sull'implementazione del MVP. Gli obiettivi prefissati sono:
+- colloquio con il Proponente in data 15/03/2024;
+- aggiornamento ed estensione del documento #pdp\;
+- aggiornamento grafici delle metriche nel #pdq allo Sprint 18;
+- aggiornamento della dashboard Grafana allo Sprint 18;
+- continuazione e conclusione della revisione e aggiornamento dell'#adr\;
+- redazione sezioni riguardanti diagrammi delle classi e design pattern nella #st\;
+- redazione sezioni requisiti e supporto tecnico nel #man\;
+- implementazione completa della UI del MVP;
+- iniziare l'implmentazione degli elementi 3D.
+
+=== Preventivo costi
+Questo Sprint impiega:
+- *Responsabile*: al fine di:
+  - coordinare le attività;
+  - organizzare il lavoro in reazione al feedback;
+  - organizzare il meeting con il Proponente.
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
+- *Analista*: al fine di:
+  - proseguire con la revisione del documento #adr\.
+- *Progettista*: al fine di:
+  - redarre le sezioni della #st\.
+- *Programmatore*: al fine di:
+  - collaborare con il Progettista nella stesura della #st;
+  - implementare la UI;
+  - implementare gli elementi 3D.
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp\.
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [1],     [0],     [4],     [3],     [8],
+    [Carraro],     [0],     [1],     [0],     [0],     [3],     [2],     [6],
+    [Gardin],     [1],     [0],     [1],     [0],     [3],     [3],     [8],
+    [Nardo],     [0],     [1],     [2],     [0],     [4],     [0],     [7],
+    [Oseliero],     [2],     [0],     [0],     [1],     [3],     [1],     [7],
+    [Todesco],     [1],     [0],     [0],     [0],     [4],     [2],     [7],
+    [Zaccone],     [0],     [0],     [1],     [0],     [4],     [2],     [7],
+    [Totale ore],     [4],     [2],     [5],     [1],     [25],     [13],     [50],
+    [Costo ruolo],     [120],     [40],     [125],     [25],     [375],     [195],     [880],
+  ),
+  caption: "Prospetto del preventivo, sprint 19"
+)
+#let data = (
+  ("Responsabile", 4),
+  ("Amministratore", 2),
+  ("Analista", 5),
+  ("Progettista", 1),
+  ("Programmatore", 25),
+  ("Verificatore", 13),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo sprint 19",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
 #pagebreak()
 
 = Consuntivi di periodo <consuntivi>

@@ -3887,7 +3887,11 @@ L'aumento del costo dello Sprint è stato influenzato principalmente dalle ore d
   caption: "Monitoraggio, sprint 18"
 )
 
-#TODO
+Nonostante l'aumento del costo preventivato, lo Sprint 18 ha permesso di completare buona parte degli obiettivi previsti.
+
+Il rendimento positivo dello Sprint 18 è supportato dalle principali metriche esposte dal #pdq, quali:
+- CPI: il Cost Performance Index rimane costante a 0.99, rappresentando ancora un valore accettabile ($>=0.95$) e rimanendo molto vicino all'ottimalità, rappresentata da valori $>=1$;
+- EAC: l'Estimate At Completion passa dal valore di 13.155,40 € (allo Sprint 17) a € 13.210,90. Nonostante sia aumentato rientra comunque nelle condizioni di accettabilità.
 
 
 // == Sprint n dal D1-M1-2024 al D2-M2-2024

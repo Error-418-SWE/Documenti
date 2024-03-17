@@ -1140,7 +1140,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 #pagebreak()
 
-#set heading(numbering: "1.1")
+#set heading(numbering: "1.1", supplement: "Sezione")
 
 == Zone e Bin <uc-zone>
 
@@ -2170,7 +2170,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 #pagebreak()
 
-#set heading(numbering: "1.1")
+#set heading(numbering: "1.1", supplement: "Sezione")
 
 == Prodotti <uc-prodotti>
 

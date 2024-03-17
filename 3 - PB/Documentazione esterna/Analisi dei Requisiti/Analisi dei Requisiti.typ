@@ -1389,7 +1389,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente visualizza un elemento della lista dei bin"
 )
 
-=== Collocamento della zona nello spazio 3D
+=== Collocamento della zona nell'ambiente 3D <ucy>
 #figure(
   image("./imgs/UCy.svg", width: 110%),
   caption: "Diagramma UC--y"
@@ -1402,11 +1402,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Postcondizioni",
-  "La zona è stata collocata nello spazio 3D",
+  "La zona è stata collocata nell'ambiente 3D",
 )
 #printUseCaseInfo(
   "Scenario principale",
-  [L'utente seleziona una zona da collocare, tramite creazione (@uck) o modifica (@uct)],
+  [L'utente seleziona una zona da collocare, tramite creazione (@uc12) o modifica (#TODO)],
   "L'utente posiziona la zona nell'ambiente 3D",
   "L'utente conferma il collocamento della zona nell'ambiente 3D"
 )

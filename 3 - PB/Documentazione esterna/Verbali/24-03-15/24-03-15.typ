@@ -33,8 +33,8 @@ Sono state presentate al Proponente le funzionalità implementate finora nell'MV
 - ispezione dei prodotti, bin e zone;
 - creazione di una zona;
 - lista degli ordini di movimentazione;
-- risincronizzazione;
-- reimpostazione.
+- risincronizzazione dell'ambiente;
+- reimpostazione dell'ambiente.
 Il Proponente è risultato soddisfatto ed entusiasta dei progressi raggiunti con l'MVP, ed ha evidenziato una buona usabilità e interfaccia grafica del software.
 
 == Presentazione dei pattern

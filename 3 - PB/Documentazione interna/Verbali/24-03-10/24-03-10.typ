@@ -69,7 +69,11 @@ L'attività di codifica ha visto completati i lavori:
 
 = Analisi retrospettiva
 
-#TODO
+Lo Sprint 18 è terminato con il raggiungimento di buona parte degli obiettivi prefissati. Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq\:
+- CPI di progetto rimane costante a 0.99, rappresentando ancora un valore accettabile ($>=0.95$) e rimanendo molto vicino all'ottimalità, rappresentata da valori $>=1$;
+- EAC aumenta passando da € 13.155,40 a € 13.210,90. Nonostante sia aumentato rientra comunque nelle condizioni di accettabilità;
+- $"SEV" >= "SPV"$.
+
 
 Maggiori dettagli in merito al valore delle metriche alla loro analisi sono reperibili all'interno dei documenti #pdq_v e #pdp_v.
 

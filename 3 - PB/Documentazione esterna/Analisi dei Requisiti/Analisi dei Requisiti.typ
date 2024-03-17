@@ -1150,8 +1150,423 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 }, supplement: "Caso d'uso")
 #setUCHeadingCounterTo(12)
 
-=== Creazione zona <uck>
-#TODO
+=== Creazione zona <uc12>
+
+#figure(
+  image("./imgs/UC12.svg", width: 120%),
+  caption: "Diagramma UC--12"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La zona è stata aggiunta all'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente configura una nuova zona da creare",
+  "L'utente colloca la zona in una posizione valida nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Definizione ID zona (@uc12.1)],
+  [Definizione lunghezza zona (@uc12.2)],
+  [Definizione orientamento zona (@uc12.3)],
+  [Definizione colonne zona (@uc12.4)],
+  [Definizione livelli zona (@uc12.5)],
+  [Collocamento della zona nell'ambiente 3D (@ucy)]
+)
+
+==== Definizione ID zona <uc12.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito l'ID della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore dell'ID della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore già utilizzato per un'altra zona"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire l'ID di una zona per poterla identificare in modo univoco"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore ID zona già in uso (@uc12.1.1)]
+)
+
+===== Visualizzazione errore ID zona già in uso <uc12.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo all'ID della zona già in uso"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore dell'ID della zona già associato ad un'altra zona"
+)
+
+==== Definizione lunghezza zona <uc12.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la lunghezza della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire la lunghezza di una zona per poterla collocare nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore lunghezza non positiva (@uc12.2.1)]
+)
+
+===== Visualizzazione errore lunghezza non positiva <uc12.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla lunghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza della zona pari o minore di zero"
+)
+
+==== Definizione orientamento zona <uc12.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito l'orientamento della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un valore dell'orientamento della zona tra i valori disponibili"
+)
+#printUseCaseInfo(
+  "User story associata",
+  [Come utente, desidero definire l'orientamento di una zona (tra "nord-sud" (`NS`) e "ovest-est" (`WE`)) per poterla collocare nell'ambiente 3D]
+)
+
+==== Definizione colonne zona <uc12.4>
+#figure(
+  image("./imgs/UC12.4.svg", width: 120%),
+  caption: "Diagramma UC--12.4"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito le proprietà delle colonne della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente definisce le proprietà delle colonne della zona"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero personalizzare le colonne di una zona per poterla rendere il più simile possibile all'ambiente reale"
+)
+
+===== Definizione numero colonne <uc12.4.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito il numero di colonne della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce il numero di colonne della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+
+===== Definizione larghezza colonne <uc12.4.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza delle colonne della zona",
+  "La larghezza della zona è calcolata come la somma delle larghezze delle singole colonne"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente definisce la larghezza delle colonne della zona secondo una delle modalità disponibili"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Definizione larghezza colonne tramite equa distribuzione (@uc12.4.2.1)],
+  [Definizione larghezza colonne personalizzata (@uc12.4.2.2)]
+)
+
+====== Definizione larghezza colonne tramite equa distribuzione <uc12.4.2.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Definizione larghezza colonne (@uc12.4.2)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza delle colonne della zona",
+  "La larghezza della zona è suddivisa equamente in tante parti quante sono le colonne",
+  "La larghezza della zona è calcolata come la somma delle larghezze delle singole colonne"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la modalità di equa distribuzione della larghezza delle colonne",
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Definizione larghezza zona (@uc12.4.2.1.1)]
+)
+
+======= Definizione larghezza zona <uc12.4.2.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore larghezza non positiva (@uc12.4.3)]
+)
+
+====== Definizione larghezza colonne personalizzata <uc12.4.2.2>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Definizione larghezza colonne (@uc12.4.2)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza delle colonne della zona",
+  "La larghezza della zona è suddivisa in tante parti quante sono le colonne, ciascuna con larghezza personalizzata",
+  "La larghezza della zona è calcolata come la somma delle larghezze delle singole colonne"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente definisce la larghezza di ciascuna colonna della zona"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Definizione larghezza singola colonna (@uc12.4.2.2.1)]
+)
+
+======= Definizione larghezza singola colonna <uc12.4.2.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona",
+  "L'utente ha selezionato la modalità di definizione personalizzata della larghezza delle colonne"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza di una colonna della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza di una colonna della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore larghezza non positiva (@uc12.4.3)]
+)
+
+===== Visualizzazione errore larghezza non positiva <uc12.4.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla larghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza minore o uguale a zero"
+)
+
+==== Definizione livelli zona <uc12.5>
+#figure(
+  image("./imgs/UC12.5.svg", width: 80%),
+  caption: "Diagramma UC--12.5"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito le proprietà dei livelli della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente definisce le proprietà dei livelli della zona"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero personalizzare i livelli di una zona per poterla rendere il più simile possibile all'ambiente reale"
+)
+
+===== Definizione numero livelli <uc12.5.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito il numero di livelli della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce il numero di livelli della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+
+===== Definizione altezza livelli <uc12.5.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito l'altezza dei livelli della zona secondo una delle modalità disponibili"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una modalità di definizione dell'altezza dei livelli della zona tra quelle disponibili"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Definizione altezza livelli personalizzata (@uc12.5.2.1)],
+)
+
+====== Definizione altezza livelli personalizzata <uc12.5.2.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Definizione altezza livelli (@uc12.5.2)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito l'altezza dei livelli della zona",
+  "L'altezza della zona è suddivisa in tante parti quante sono i livelli, ciascuna con altezza personalizzata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente definisce l'altezza di ciascun livello della zona"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Definizione altezza singolo livello (@uc12.5.2.1.1)]
+)
+
+======= Definizione altezza singolo livello <uc12.5.2.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona",
+  "L'utente ha selezionato la modalità di definizione personalizzata dell'altezza dei livelli della zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito l'altezza di un livello della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore dell'altezza di un livello della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+
+======== Visualizzazione errore altezza non positiva <uc12.5.2.1.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona",
+  "L'utente ha selezionato la modalità di definizione personalizzata dell'altezza dei livelli della zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo all'altezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore dell'altezza minore o uguale a zero"
+)
 
 === Modifica zona <uct>
 #TODO

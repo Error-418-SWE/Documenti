@@ -48,7 +48,7 @@ Il prodotto offre le seguenti funzionalità principali:
 
 - Documento #st_v: \
   _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20esterna/Specifica%20Tecnica_v" + st_vo + ".pdf")_
-  #lastVisitedOn(25, 02, 2024)
+  #lastVisitedOn(18, 03, 2024)
 
 === Riferimenti normativi <riferimenti-normativi>
 
@@ -64,8 +64,6 @@ Il prodotto offre le seguenti funzionalità principali:
 
 Di seguito sono elencate le versioni dei browser minime necessarie per l'esecuzione dell'applicazione.
 Per i requisiti di sistema e hardware si rimanda al documento #st_v.
-
-== Browser
 
 #figure(
   table(
@@ -84,7 +82,6 @@ Per i requisiti di sistema e hardware si rimanda al documento #st_v.
   caption: "Browser supportati"
 )
 
-#pagebreak()
 
 = Istruzioni d'uso
 

@@ -421,7 +421,7 @@ Gli elementi creati appositamente per WMS3 sono i seguenti:
 
 - *zone*:
 
-  - *bin_columns*: componente dedicato alla visualizzazione delle colonne di bin di una zona;
+  - *bin_columns*: componente dedicato alla visualizzazione delle colonne di bin di una zona (necessario al componente `ZoneItemDetails` utilizzato);
 
   - *levelItem*: componente dedicato alla visualizzazione di un livello della zona durante il processo di creazione/modifica dello stesso;
 

@@ -46,6 +46,10 @@ Il prodotto offre le seguenti funzionalità principali:
   _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Glossario_v" + glo_vo + ".pdf")_
   #lastVisitedOn(25, 02, 2024)
 
+- Documento #st_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20esterna/Specifica%20Tecnica_v" + st_vo + ".pdf")_
+  #lastVisitedOn(25, 02, 2024)
+
 === Riferimenti normativi <riferimenti-normativi>
 
 - Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \
@@ -58,36 +62,8 @@ Il prodotto offre le seguenti funzionalità principali:
 
 = Requisiti
 
-Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'applicazione, comprese le caratteristiche necessarie per configurare l'ambiente di sviluppo del progetto.
-
-== Requisiti di sistema minimi
-
-#figure(
-  table(
-    columns: 3,
-    [*Componente*], [*Versione*], [*Riferimenti*],
-
-    [Docker],[$>=$ 24.0.7],[https://docs.docker.com/],
-    [Docker-compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
-
-  ),
-  caption: "Requisiti di sistema minimi"
-)
-
-== Requisiti hardware
-
-#figure(
-  table(
-    columns: 2,
-    [*Componente*], [*Requisito minimo*],
-
-    [Processore],[Processore a 64 bit con SLAT (Second Level Address Translation)],
-    [Memoria RAM],[4GB DDR4],
-    [Spazio su disco], [$>=$ 20 GB],
-
-  ),
-  caption: "Requisiti hardware"
-)
+Di seguito sono elencate le versioni dei browser minime necessarie per l'esecuzione dell'applicazione.
+Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
 == Browser
 
@@ -108,8 +84,11 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
   caption: "Browser supportati"
 )
 
+#pagebreak()
+
 = Istruzioni d'uso
 
+#pagebreak()
 
 = Supporto tecnico
 

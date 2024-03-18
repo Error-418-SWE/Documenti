@@ -193,7 +193,7 @@ Esse sono implementate e rese disponibili in file separati, organizzati nell'omo
 
 - *readSavedSVG*: ritorna il contenuto del file SVG salvato su server;
 
-- *saveSVG*: dato il contenuto di un file SVG, esso viene salvato come "saved.svg";
+- *saveSVG*: dato il contenuto di un file SVG, esso viene salvato come _saved.svg_;
 
 - *getAllZones*: ritorna le informazioni di tutte le zone lette dal database;
 
@@ -233,10 +233,12 @@ Le classi che vengono utilizzate per rappresentare il modello dell'applicativo s
   I suoi attributi sono:
 
   - *id*: stringa di massimo dieci caratteri che rappresenta il codice identificativo univoco del bin.
-  Essa è composta da:
-    #align(center, "id zona + _ + lettera corrispondente alla colonna + _ + numero del livello")
-  la lettera corrispondente alla colonna fa riferimento ad una mappatura per cui "A" equivale alla colonna zero e viene incrementata seguendo i caratteri dell'alfabeto inglese con l'aumentare del numero della colonna.
-  Dopo la lettera "Z" viene utilizzato "AA" proseguendo con la logica descritta;
+    Essa è composta da:
+    #align(center, "idZona_letteraColonna_numeroLivello")
+
+    La lettera corrispondente alla colonna fa riferimento ad una mappatura per cui "A" equivale alla colonna zero e viene incrementata seguendo i caratteri dell'alfabeto inglese con l'aumentare del numero della colonna.
+
+    Dopo la lettera "Z" viene utilizzato "AA" proseguendo con la logica descritta;
 
   - *level*: intero che rappresenta il numero del del livello di appartenenza;
 

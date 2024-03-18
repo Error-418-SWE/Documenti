@@ -242,6 +242,13 @@ I livelli partono da terra e sono anche detti "ripiani". Sono numerati dal basso
   caption: "Proprietà di un livello di una zona"
 ) <props-livello>
 
+Una rappresentazione esemplificativa del modello di zona adottato per questo progetto è in @schema-zona.
+
+#figure(
+  image("./imgs/zona.svg", width: 70%),
+  caption: "Rappresentazione schematica di una zona con tre livelli e tre colonne. In giallo è evidenziato uno dei bin."
+) <schema-zona>
+
 Una zona con un solo livello è anche detta "*area a terra*". Modella una zona del magazzino atta a conservare un prodotto per un periodo di tempo tipicamente limitato. Solitamente si tratta di zone di carico/scarico.
 
 Una zona con più di un livello è anche detta "*scaffale*".

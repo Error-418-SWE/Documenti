@@ -46,23 +46,31 @@ Sono state redatte le sezioni relative alla:
 
 Inoltre è stata aggiunta la sezione riguardante l'installazione.
 
+== #man
+
+Sono stati eseguiti e verificati i task:
+- individuazione della struttura del documento;
+- redazione della sezione relativa ai requisiti;
+- redazione della sezione relativa all'installazione;
+- redazione della sezione relativa al supporto tecnico.
+
 == Codifica
 
 L'attività di codifica ha visto completati i lavori:
 - realizzazione della creazione del piano rettangolare in Three.js;
 - implementazione della lettura del file SVG;
-- implementazione dell'elemento "Order Panel Item";
+- implementazione dell'elemento `orderItem`;
 - implementazione del pulsante "reimposta" nel Settings Panel;
 - implementazione della creazione di una zona;
 - implementazione della modifica di una zona;
 - implementazione dell'eliminazione di una zona;
 - rimozione del pulsante "sincronizzazione" da Order Panel;
 - implementazione del pulsante "sincronizzazione" in Settings Panel;
-- implementazione del componente "Prodotto Details";
-- implementazione "Product Item" per il Product Panel;
+- implementazione del componente `productItemDetails`;
+- implementazione `productItem` per il Product Panel;
 - implementazione dei campi di modifica delle dimensioni della planimetria in Settings Panel;
 - implementazione di una simulazione delle API per lo spostamento dei prodotti;
-- Implementazione test per le API prodotte.
+- implementazione test per le Server Actions prodotte.
 
 
 = Analisi retrospettiva

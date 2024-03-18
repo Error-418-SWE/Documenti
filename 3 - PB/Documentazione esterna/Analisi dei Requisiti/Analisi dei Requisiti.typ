@@ -187,7 +187,7 @@ Questo paragrafo fornisce una descrizione dettagliata degli oggetti di dominio, 
 ==== Ambiente
 Di planimetria rettangolare oppure personalizzata (basata su un file SVG caricato durante la configurazione), rappresenta lo spazio interno del magazzino su cui opera l'addetto.
 
-Per agevolare il collocamento delle zone, l'ambiente può essere dotato di una griglia di aggancio posta sulla superficie dell'ambiente.
+Per agevolare il collocamento delle zone, l'ambiente può essere dotato di una griglia di aggancio posta sulla superficie dell'ambiente. La griglia avrà passo regolabile dall'utente.
 
 Le proprietà sono descritte nella @props-ambiente.
 
@@ -198,7 +198,7 @@ Le proprietà sono descritte nella @props-ambiente.
     [Lunghezza], [$>0$ \[m\]],
     [Larghezza], [$>0$ \[m\]\ Per planimetrie ricavate da SVG, la larghezza viene calcolata moltiplicando la lunghezza per il rapporto d'aspetto del file SVG.],
   ),
-  caption: "Proprietà dell'Ambiente"
+  caption: "Proprietà dell'ambiente"
 ) <props-ambiente>
 
 ==== Zona

@@ -1333,7 +1333,26 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Scenari alternativi",
-  "L'utente inserisce un valore minore o uguale a zero"
+  "L'utente inserisce un valore minore di 1"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore numero colonne non conforme (@uc12.4.1.1)]
+)
+
+====== Visualizzazione errore numero colonne non conforme <uc12.4.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo al valore immesso non conforme"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un numero di colonne minore di 1"
 )
 
 ===== Definizione larghezza colonne <uc12.4.2>
@@ -1500,6 +1519,25 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 #printUseCaseInfo(
   "Scenari alternativi",
   "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore numero livelli minore di zero (@uc12.5.1.1)]
+)
+
+====== Visualizzazione errore numero livelli minore di zero <uc12.5.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo al valore immesso minore di zero"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un numero di livelli minore di zero"
 )
 
 ===== Definizione altezza livelli <uc12.5.2>

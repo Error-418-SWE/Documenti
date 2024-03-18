@@ -1367,7 +1367,6 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Postcondizioni",
   "L'utente ha definito la larghezza delle colonne della zona",
   "La larghezza della zona è suddivisa equamente in tante parti quante sono le colonne",
-  "La larghezza della zona è calcolata come la somma delle larghezze delle singole colonne"
 )
 #printUseCaseInfo(
   "Scenario principale",

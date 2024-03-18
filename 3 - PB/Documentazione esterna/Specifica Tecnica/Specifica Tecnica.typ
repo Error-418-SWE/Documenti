@@ -58,6 +58,60 @@ Il prodotto offre le seguenti funzionalità principali:
 
 #pagebreak()
 
+= Requisiti
+
+Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'applicazione, comprese le caratteristiche necessarie per configurare l'ambiente di sviluppo del progetto.
+
+== Requisiti di sistema minimi
+
+#figure(
+  table(
+    columns: 3,
+    [*Componente*], [*Versione*], [*Riferimenti*],
+
+    [Docker],[$>=$ 24.0.7],[https://docs.docker.com/],
+    [Docker-compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
+
+  ),
+  caption: "Requisiti di sistema minimi"
+)
+
+== Requisiti hardware
+
+#figure(
+  table(
+    columns: 2,
+    [*Componente*], [*Requisito minimo*],
+
+    [Processore],[Processore a 64 bit con SLAT (Second Level Address Translation)],
+    [Memoria RAM],[4GB DDR4],
+    [Spazio su disco], [$>=$ 20 GB],
+
+  ),
+  caption: "Requisiti hardware"
+)
+
+== Browser
+
+#figure(
+  table(
+    columns: 2,
+    [*Browser*], [*Versione*],
+
+    [Google Chrome],[$>=$ 89],
+    [Microsoft Edge],[$>=$ 89],
+    [Mozilla Firefox],[$>=$ 16.4],
+    [Apple Safari],[$>=$ 108],
+    [Opera Browser],[$>=$ 76],
+    [Google Chrome per Android],[$>=$ 89],
+    [Apple Safari per iOS],[$>=$ 17.1],
+    [Samsung Internet],[$>=$ 23],
+  ),
+  caption: "Browser supportati"
+)
+
+#pagebreak()
+
 = Installazione
 
 == Scaricare il progetto
@@ -89,6 +143,8 @@ Questo avvierà i container Docker che formano il prodotto, il quale sarà poi v
 Chiudere la finestra browser non terminerà completamente l'esecuzione dell'applicazione, in quanto Docker Compose continuerà ad eseguire in background. La terminazione completa si effettua con il comando
 
 #align(center, `docker compose down`)
+
+#pagebreak()
 
 = Tecnologie
 
@@ -173,6 +229,8 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
   ),
   caption: "Tecnologie utilizzate per il testing."
 )
+
+#pagebreak()
 
 = Architettura del prodotto
 
@@ -267,5 +325,6 @@ In nessun caso il database verrà modificato dall'applicazione.
 
 == Design pattern utilizzati
 
+#pagebreak()
 
 = Requisiti soddisfatti ( aggiungere tabella requisiti soddisfatti)

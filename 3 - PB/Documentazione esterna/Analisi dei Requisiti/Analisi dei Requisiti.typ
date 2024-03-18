@@ -1570,7 +1570,115 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 
 === Modifica zona <uc13>
-#TODO
+
+#figure(
+  image("./imgs/UC13.svg", width: 120%),
+  caption: "Diagramma UC--13"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La zona è stata modificata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la zona da modificare",
+  "L'utente modifica le proprietà della zona"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero modificare le proprietà di una zona, creata in precedenza o importata da database, per poterla adattare alle mie esigenze"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Definizione lunghezza zona (@uc12.2)],
+  [Definizione orientamento zona (@uc12.3)],
+  [Definizione colonne zona (@uc12.4)],
+  [Definizione livelli zona (@uc12.5)],
+  [Collocamento della zona nell'ambiente 3D (@uc16)]
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Rimozione singola colonna (@uc13.1)],
+  [Rimozione singolo livello (@uc13.2)],
+)
+
+==== Rimozione singola colonna <uc13.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente sta modificando una zona",
+  "La zona modificata possiede almeno 2 colonne"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La colonna selezionata è stata rimossa dalla zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una colonna vuota da rimuovere",
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente seleziona una colonna con almeno un bin occupato",
+  "L'utente seleziona una colonna vuota con indice inferiore ad una colonna con almeno un bin occupato"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore operazione impossibile perché insiste su bin occupato (@uc13.3)]
+)
+
+==== Rimozione singolo livello <uc13.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente sta modificando una zona",
+  "La zona modificata possiede almeno 2 livelli"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il livello selezionato è stato rimosso dalla zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un livello vuoto da rimuovere",
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente seleziona un livello con almeno un bin occupato",
+  "L'utente seleziona un livello vuoto con indice inferiore ad un livello con almeno un bin occupato"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore operazione impossibile perché insiste su bin occupato (@uc13.3)]
+)
+
+==== Visualizzazione errore operazione impossibile perché insiste su bin occupato <uc13.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente sta modificando una zona",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo all'impossibilità di rimuovere la colonna o il livello selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la rimozione di una colonna o di un livello con almeno un bin occupato"
+)
 
 === Eliminazione zona <uc14>
 

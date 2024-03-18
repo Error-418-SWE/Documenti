@@ -2291,10 +2291,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 === Visualizzazione informazioni prodotto <uc22>
 
 #figure(
-  [
-    #image("./imgs/UC22.svg", width: 75%)
-    #image("./imgs/UC22.1.svg", width: 75%)
-  ],
+  image("./imgs/UC22.1.svg", width: 75%),
   caption: "Diagramma UC--22"
 )
 #printUseCaseInfo("Attore principale", "Utente")

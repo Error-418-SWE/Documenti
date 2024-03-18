@@ -443,7 +443,9 @@ L'ambiente tridimensionale è realizzato mediante i componenti:
 
 - *Floor*: elemento che rappresenta il piano dell'ambiente di lavoro;
 
-- *bin3D*: elemento che rappresenta un bin nell'ambiente di lavoro;
+- *Bin3D*: elemento che rappresenta un bin nell'ambiente di lavoro;
+
+- *Zone3D*: elemento che rappresenta uno scaffale o un'area del piano dedicata al contenimento di bin nell'ambiente di lavoro;
 
 - *Warehouse*: elemento che contiene la logica principale della visualizzazione dell'ambiente grafico ed il canvas con gli elementi 3D.
 

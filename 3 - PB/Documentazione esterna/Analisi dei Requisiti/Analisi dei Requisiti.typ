@@ -1731,7 +1731,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "User story associata",
-  "Come utente, desidero visualizzare le informazioni relative a una zona, come dimensioni e bin presenti al suo interno"
+  "Come utente, desidero visualizzare le informazioni associate ad una zona"
 )
 #printUseCaseInfo(
   "Inclusioni",

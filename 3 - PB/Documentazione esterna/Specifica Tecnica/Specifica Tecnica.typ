@@ -48,6 +48,10 @@ Il prodotto offre le seguenti funzionalità principali:
   _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Glossario_v" + glo_vo + ".pdf")_
   #lastVisitedOn(25, 02, 2024)
 
+- Documento #adr_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20esterna/Analisi%20dei%20Requisiti_v" + adr_vo + ".pdf")_
+  #lastVisitedOn(25, 02, 2024)
+
 === Riferimenti normativi <riferimenti-normativi>
 
 - Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \
@@ -55,6 +59,60 @@ Il prodotto offre le seguenti funzionalità principali:
   #lastVisitedOn(13, 02, 2024)
 
 === Riferimenti informativi <riferimenti-informativi>
+
+#pagebreak()
+
+= Requisiti
+
+Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'applicazione, comprese le caratteristiche necessarie per configurare l'ambiente di sviluppo del progetto.
+
+== Requisiti di sistema minimi
+
+#figure(
+  table(
+    columns: 3,
+    [*Componente*], [*Versione*], [*Riferimenti*],
+
+    [Docker],[$>=$ 24.0.7],[https://docs.docker.com/],
+    [Docker-compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
+
+  ),
+  caption: "Requisiti di sistema minimi"
+)
+
+== Requisiti hardware
+
+#figure(
+  table(
+    columns: 2,
+    [*Componente*], [*Requisito minimo*],
+
+    [Processore],[Processore a 64 bit con SLAT (Second Level Address Translation)],
+    [Memoria RAM],[4GB DDR4],
+    [Spazio su disco], [$>=$ 20 GB],
+
+  ),
+  caption: "Requisiti hardware"
+)
+
+== Browser
+
+#figure(
+  table(
+    columns: 2,
+    [*Browser*], [*Versione*],
+
+    [Google Chrome],[$>=$ 89],
+    [Microsoft Edge],[$>=$ 89],
+    [Mozilla Firefox],[$>=$ 16.4],
+    [Apple Safari],[$>=$ 108],
+    [Opera Browser],[$>=$ 76],
+    [Google Chrome per Android],[$>=$ 89],
+    [Apple Safari per iOS],[$>=$ 17.1],
+    [Samsung Internet],[$>=$ 23],
+  ),
+  caption: "Browser supportati"
+)
 
 #pagebreak()
 
@@ -89,6 +147,8 @@ Questo avvierà i container Docker che formano il prodotto, il quale sarà poi v
 Chiudere la finestra browser non terminerà completamente l'esecuzione dell'applicazione, in quanto Docker Compose continuerà ad eseguire in background. La terminazione completa si effettua con il comando
 
 #align(center, `docker compose down`)
+
+#pagebreak()
 
 = Tecnologie
 
@@ -173,6 +233,8 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
   ),
   caption: "Tecnologie utilizzate per il testing."
 )
+
+#pagebreak()
 
 = Architettura del prodotto
 
@@ -267,5 +329,6 @@ In nessun caso il database verrà modificato dall'applicazione.
 
 == Design pattern utilizzati
 
+#pagebreak()
 
 = Requisiti soddisfatti ( aggiungere tabella requisiti soddisfatti)

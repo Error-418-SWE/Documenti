@@ -1920,7 +1920,7 @@ In questo Sprint il lavoro si concentra principalmente sulla stesura di #st, #ma
 - redazione sezioni riguardanti diagrammi delle classi e design pattern nella #st\;
 - redazione sezioni requisiti e supporto tecnico nel #man\;
 - implementazione completa della UI del MVP;
-- iniziare l'implmentazione degli elementi 3D.
+- iniziare l'implementazione degli elementi 3D.
 
 === Preventivo costi
 Questo Sprint impiega:

@@ -357,12 +357,20 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   }
 }
 
-#let requirements = json("Requisiti.json");
+#let requirements = json("requirements.json");
+
 #let derivedRequirements(reference) = {
-  box(width: 1fr, stroke: 0.5pt + luma(140), inset: 4pt)[
-    #text("Requisiti derivati: ", weight: "bold")
-    #text(requirements.at(reference).join(", ") + ".")
-  ]
+  let subset = ()
+  for key in requirements.keys() {
+    for req in requirements.at(key) {
+      if lower(req.source) == ("uc–" + reference) {
+        subset.push(req.id)
+      }
+    }
+  }
+  if subset.len() > 0 {
+    return printUseCaseInfo("Requisiti derivati", subset.join(", "))
+  }
 }
 
 // INIZIO UC
@@ -420,9 +428,9 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Configurazione ambiente 3D con planimetria rettangolare (@uc1.1)],
   [Configurazione ambiente 3D con planimetria definita da file SVG (@uc1.2)]
 )
+#derivedRequirements("1")
 
 ==== Configurazione ambiente 3D con planimetria rettangolare <uc1.1>
-
 #figure(
   image("./imgs/UC1.1.svg"),
   caption: "Diagramma UC--1.1"
@@ -449,8 +457,9 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero configurare un ambiente 3D che rappresenti un magazzino con planimetria rettangolare"
 )
+#derivedRequirements("1.1")
 
-===== Definizione della larghezza del magazzino
+===== Definizione della larghezza ambiente 3D <uc1.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -477,6 +486,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore larghezza non positiva (@uc1.1.1.1)]
 )
+#derivedRequirements("1.1.1")
 
 ====== Visualizzazione errore larghezza non positiva <uc1.1.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -493,8 +503,9 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce un valore della larghezza dell'ambiente 3D con planimetria rettangolare minore o uguale a zero"
 )
+#derivedRequirements("1.1.1.1")
 
-===== Definizione della lunghezza del magazzino
+===== Definizione della lunghezza ambiente 3D <uc1.1.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -521,6 +532,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore lunghezza non positiva (@uc1.1.2.1)]
 )
+#derivedRequirements("1.1.2")
 
 ====== Visualizzazione errore lunghezza non positiva <uc1.1.2.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -537,6 +549,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce un valore della lunghezza dell'ambiente 3D con planimetria rettangolare minore o uguale a zero"
 )
+#derivedRequirements("1.1.2.1")
 
 ==== Configurazione ambiente 3D con planimetria definita da file SVG <uc1.2>
 
@@ -566,8 +579,9 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero configurare un ambiente 3D con planimetria definita a partire da un file SVG"
 )
+#derivedRequirements("1.2")
 
-===== Caricamento file SVG
+===== Caricamento file SVG <uc1.2.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -596,6 +610,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Visualizzazione errore file vuoto (@uc1.2.1.1)],
   [Visualizzazione errore file non valido (@uc1.2.1.2)]
 )
+#derivedRequirements("1.2.1")
 
 ====== Visualizzazione errore file vuoto <uc1.2.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -613,6 +628,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente seleziona un file SVG da caricare",
   [Nel file SVG caricato non è presente alcun elemento grafico (come `path`, `rect`, `circle`, `ellipse`, `line`, `polyline`, `polygon`, `text`, `g`)]
 )
+#derivedRequirements("1.2.1.1")
 
 ====== Visualizzazione errore file non valido <uc1.2.1.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -629,8 +645,9 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona un file non valido (privo della corretta sintassi XML) da caricare"
 )
+#derivedRequirements("1.2.1.2")
 
-===== Definizione del lato maggiore del magazzino
+===== Definizione del lato maggiore del magazzino <uc1.2.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -658,6 +675,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore lato non positivo (@uc1.2.2.1)]
 )
+#derivedRequirements("1.2.2")
 
 ====== Visualizzazione errore lato non positivo <uc1.2.2.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -674,8 +692,9 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Postcondizioni",
   "L'utente visualizza un errore relativo al lato maggiore non positivo"
 )
+#derivedRequirements("1.2.2.1")
 
-=== Modifica ambiente 3D
+=== Modifica ambiente 3D <uc2>
 
 #figure(
   image("./imgs/UC2.svg"),
@@ -699,8 +718,9 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero modificare un ambiente 3D già configurato, espandendo o riducendo la sua superficie"
 )
+#derivedRequirements("2")
 
-==== Definizione larghezza
+==== Definizione larghezza <uc2.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -730,6 +750,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Visualizzazione errore larghezza non positiva (@uc2.1.1)],
   [Errore dimensione inferiore a quella iniziale (@uc2.3)]
 )
+#derivedRequirements("2.1")
 
 ===== Visualizzazione errore larghezza non positiva <uc2.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -747,8 +768,9 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce un valore della larghezza dell'ambiente 3D pari o minore di zero"
 )
+#derivedRequirements("2.1.1")
 
-==== Definizione lunghezza
+==== Definizione lunghezza <uc2.2>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -773,6 +795,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Visualizzazione errore lunghezza non positiva (@uc2.2.1)],
   [Errore dimensione inferiore a quella iniziale (@uc2.3)]
 )
+#derivedRequirements("2.2")
 
 ===== Visualizzazione errore lunghezza non positiva <uc2.2.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -790,6 +813,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce un valore della lunghezza dell'ambiente 3D pari o minore di zero"
 )
+#derivedRequirements("2.2.1")
 
 ==== Errore dimensione inferiore a quella iniziale <uc2.3>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -807,6 +831,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce un valore di dimensione (lunghezza o larghezza) inferiore a quella iniziale"
 )
+#derivedRequirements("2.3")
 
 === Definizione passo griglia di aggancio <uc3>
 
@@ -831,6 +856,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero definire il passo della griglia di aggancio per poter disporre le zone in modo ordinato. Il passo è un numero non negativo espresso in metri"
 )
+#derivedRequirements("3")
 
 === Importazione delle zone da database <uc4>
 
@@ -846,7 +872,8 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Postcondizioni",
-  "I dati relativi alle zone sono stati importati correttamente dal database"
+  "I dati relativi alle zone sono stati importati correttamente dal database",
+  "Le zone importate sono state collocate nell'ambiente 3D"
 )
 #printUseCaseInfo(
   "Scenario principale",
@@ -868,6 +895,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore importazione dati da database (@uc6)]
 )
+#derivedRequirements("4")
 
 ==== Importazione dei bin da database <uc4.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -889,6 +917,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero importare i bin dal database per poterli visualizzare nell'ambiente 3D all'interno delle zone importate"
 )
+#derivedRequirements("4.1")
 
 === Importazione dei prodotti da database <uc5>
 
@@ -922,6 +951,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore importazione dati da database (@uc6)]
 )
+#derivedRequirements("5")
 
 === Visualizzazione errore importazione dati da database <uc6>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -939,6 +969,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona l'importazione dei dati dal database ma l'importazione fallisce"
 )
+#derivedRequirements("6")
 
 === Rotazione del POV <uc7>
 #figure(
@@ -963,6 +994,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero ruotare il punto di vista attorno all'asse longitudinale per poter visualizzare l'ambiente 3D da diverse angolazioni"
 )
+#derivedRequirements("7")
 
 === Pan del POV <uc8>
 #figure(
@@ -987,6 +1019,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero spostare orizzontalmente il punto di vista per poter visualizzare l'ambiente 3D da diverse posizioni"
 )
+#derivedRequirements("8")
 
 === Zoom-in sull'ambiente 3D <uc9>
 #figure(
@@ -1012,6 +1045,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero effettuare lo zoom-in per poter visualizzare l'ambiente 3D da diverse distanze"
 )
+#derivedRequirements("9")
 
 === Zoom-out sull'ambiente 3D <uc10>
 #figure(
@@ -1037,6 +1071,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero effettuare lo zoom-out per poter visualizzare l'ambiente 3D da diverse distanze"
 )
+#derivedRequirements("10")
 
 === Reimpostazione ambiente 3D <uc11>
 
@@ -1069,6 +1104,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Reset planimetria (@uc11.3)],
   [Rimozione dati importati (@uc11.4)]
 )
+#derivedRequirements("11")
 
 ==== Reset movimentazioni <uc11.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1088,6 +1124,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero reimpostare le movimentazioni per poter tornare allo stato iniziale"
 )
+#derivedRequirements("11.1")
 
 ==== Reset modifiche alle zone <uc11.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1107,6 +1144,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero reimpostare le modifiche alle zone per poter ricominciare da zero la configurazione dell'ambiente 3D"
 )
+#derivedRequirements("11.2")
 
 ==== Reset planimetria <uc11.3>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1127,6 +1165,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero reimpostare la planimetria per poter ricominciare da zero la configurazione dell'ambiente 3D"
 )
+#derivedRequirements("11.3")
 
 ==== Rimozione dati importati <uc11.4>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1147,6 +1186,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero rimuovere i dati importati da database per poter ricominciare da zero la configurazione dell'ambiente 3D"
 )
+#derivedRequirements("11.4")
 
 #pagebreak()
 
@@ -1190,6 +1230,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Definizione livelli zona (@uc12.5)],
   [Collocamento della zona nell'ambiente 3D (@uc16)]
 )
+#derivedRequirements("12")
 
 ==== Definizione ID zona <uc12.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1217,6 +1258,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore ID zona già in uso (@uc12.1.1)]
 )
+#derivedRequirements("12.1")
 
 ===== Visualizzazione errore ID zona già in uso <uc12.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1232,6 +1274,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce un valore dell'ID della zona già associato ad un'altra zona"
 )
+#derivedRequirements("12.1.1")
 
 ==== Definizione lunghezza zona <uc12.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1259,6 +1302,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore lunghezza non positiva (@uc12.2.1)]
 )
+#derivedRequirements("12.2")
 
 ===== Visualizzazione errore lunghezza non positiva <uc12.2.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1274,6 +1318,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce un valore della lunghezza della zona pari o minore di zero"
 )
+#derivedRequirements("12.2.1")
 
 ==== Definizione orientamento zona <uc12.3>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1293,6 +1338,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   [Come utente, desidero definire l'orientamento di una zona (tra "nord-sud" (`NS`) e "ovest-est" (`WE`)) per poterla collocare nell'ambiente 3D]
 )
+#derivedRequirements("12.3")
 
 ==== Definizione colonne zona <uc12.4>
 #figure(
@@ -1316,6 +1362,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero personalizzare le colonne di una zona per poterla rendere il più simile possibile all'ambiente reale"
 )
+#derivedRequirements("12.4")
 
 ===== Definizione numero colonne <uc12.4.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1339,6 +1386,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore numero colonne non conforme (@uc12.4.1.1)]
 )
+#derivedRequirements("12.4.1")
 
 ====== Visualizzazione errore numero colonne non conforme <uc12.4.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1354,6 +1402,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce un numero di colonne minore di 1"
 )
+#derivedRequirements("12.4.1.1")
 
 ===== Definizione larghezza colonne <uc12.4.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1375,6 +1424,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Definizione larghezza colonne tramite equa distribuzione (@uc12.4.2.1)],
   [Definizione larghezza colonne personalizzata (@uc12.4.2.2)]
 )
+#derivedRequirements("12.4.2")
 
 ====== Definizione larghezza colonne tramite equa distribuzione <uc12.4.2.1>
 #printUseCaseInfo(
@@ -1395,6 +1445,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Inclusioni",
   [Definizione larghezza zona (@uc12.4.2.1.1)]
 )
+#derivedRequirements("12.4.2.1")
 
 ======= Definizione larghezza zona <uc12.4.2.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1418,6 +1469,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore larghezza non positiva (@uc12.4.3)]
 )
+#derivedRequirements("12.4.2.1.1")
 
 ====== Definizione larghezza colonne personalizzata <uc12.4.2.2>
 #printUseCaseInfo(
@@ -1439,6 +1491,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Inclusioni",
   [Definizione larghezza singola colonna (@uc12.4.2.2.1)]
 )
+#derivedRequirements("12.4.2.2")
 
 ======= Definizione larghezza singola colonna <uc12.4.2.2.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1463,6 +1516,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore larghezza non positiva (@uc12.4.3)]
 )
+#derivedRequirements("12.4.2.2.1")
 
 ===== Visualizzazione errore larghezza non positiva <uc12.4.3>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1478,6 +1532,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce un valore della larghezza minore o uguale a zero"
 )
+#derivedRequirements("12.4.3")
 
 ==== Definizione livelli zona <uc12.5>
 #figure(
@@ -1501,6 +1556,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero personalizzare i livelli di una zona per poterla rendere il più simile possibile all'ambiente reale"
 )
+#derivedRequirements("12.5")
 
 ===== Definizione numero livelli <uc12.5.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1524,6 +1580,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore numero livelli minore di zero (@uc12.5.1.1)]
 )
+#derivedRequirements("12.5.1")
 
 ====== Visualizzazione errore numero livelli minore di zero <uc12.5.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1539,6 +1596,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce un numero di livelli minore di zero"
 )
+#derivedRequirements("12.5.1.1")
 
 ===== Definizione altezza livelli <uc12.5.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1559,6 +1617,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Generalizzazioni",
   [Definizione altezza livelli personalizzata (@uc12.5.2.1)],
 )
+#derivedRequirements("12.5.2")
 
 ====== Definizione altezza livelli personalizzata <uc12.5.2.1>
 #printUseCaseInfo(
@@ -1579,6 +1638,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Inclusioni",
   [Definizione altezza singolo livello (@uc12.5.2.1.1)]
 )
+#derivedRequirements("12.5.2.1")
 
 ======= Definizione altezza singolo livello <uc12.5.2.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1599,6 +1659,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenari alternativi",
   "L'utente inserisce un valore minore o uguale a zero"
 )
+#derivedRequirements("12.5.2.1.1")
 
 ======== Visualizzazione errore altezza non positiva <uc12.5.2.1.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1615,6 +1676,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce un valore dell'altezza minore o uguale a zero"
 )
+#derivedRequirements("12.5.2.1.1.1")
 
 === Modifica zona <uc13>
 
@@ -1655,6 +1717,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Rimozione singola colonna (@uc13.1)],
   [Rimozione singolo livello (@uc13.2)],
 )
+#derivedRequirements("13")
 
 ==== Rimozione singola colonna <uc13.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1682,6 +1745,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore operazione impossibile perché insiste su bin occupato (@uc13.3)]
 )
+#derivedRequirements("13.1")
 
 ==== Rimozione singolo livello <uc13.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1709,6 +1773,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione errore operazione impossibile perché insiste su bin occupato (@uc13.3)]
 )
+#derivedRequirements("13.2")
 
 ==== Visualizzazione errore operazione impossibile perché insiste su bin occupato <uc13.3>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1726,6 +1791,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente richiede la rimozione di una colonna o di un livello con almeno un bin occupato"
 )
+#derivedRequirements("13.3")
 
 === Eliminazione zona <uc14>
 
@@ -1754,6 +1820,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero eliminare una zona dall'ambiente 3D per fare spazio ad altre zone o semplicemente per rimuoverla"
 )
+#derivedRequirements("14")
 
 === Ispezione zona <uc15>
 
@@ -1789,6 +1856,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Evidenziazione zona selezionata (@uc15.5)],
   [Visualizzazione lista bin inclusi nella zona (@uc15.6)]
 )
+#derivedRequirements("15")
 
 ==== Visualizzazione ID zona <uc15.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1810,6 +1878,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero visualizzare l'ID di una zona per poterla identificare in modo univoco"
 )
+#derivedRequirements("15.1")
 
 ==== Visualizzazione larghezza zona <uc15.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1827,6 +1896,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona una zona da ispezionare"
 )
+#derivedRequirements("15.2")
 
 ==== Visualizzazione lunghezza zona <uc15.3>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1844,6 +1914,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona una zona da ispezionare"
 )
+#derivedRequirements("15.3")
 
 ==== Visualizzazione altezza zona <uc15.4>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1861,6 +1932,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona una zona da ispezionare"
 )
+#derivedRequirements("15.4")
 
 ==== Evidenziazione zona selezionata <uc15.5>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1882,6 +1954,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero che la zona ispezionata venga evidenziata graficamente per poterla individuare a colpo d'occhio nell'ambiente 3D"
 )
+#derivedRequirements("15.5")
 
 ==== Visualizzazione lista bin inclusi nella zona <uc15.6>
 #figure(
@@ -1911,6 +1984,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Inclusioni",
   [Visualizzazione singolo bin (@uc15.6.1)]
 )
+#derivedRequirements("15.6")
 
 ===== Visualizzazione singolo bin <uc15.6.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1931,6 +2005,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Visualizzazione ID bin (@uc15.6.1.1)],
   [Visualizzazione stato bin (@uc15.6.1.2)],
 )
+#derivedRequirements("15.6.1")
 
 ====== Visualizzazione ID bin <uc15.6.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1946,6 +2021,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un elemento della lista dei bin"
 )
+#derivedRequirements("15.6.1.1")
 
 ====== Visualizzazione stato bin <uc15.6.1.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -1961,6 +2037,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un elemento della lista dei bin"
 )
+#derivedRequirements("15.6.1.2")
 
 === Collocamento della zona nell'ambiente 3D <uc16>
 #figure(
@@ -1979,7 +2056,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Scenario principale",
-  [L'utente seleziona una zona da collocare, tramite creazione (@uc12) o modifica (#TODO)],
+  [L'utente seleziona una zona da collocare, tramite creazione (@uc12) o modifica (@uc13)],
   "L'utente posiziona la zona nell'ambiente 3D",
   "L'utente conferma il collocamento della zona nell'ambiente 3D"
 )
@@ -1991,6 +2068,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Evidenziazione zona non collocabile (@uc16.1)],
 )
+#derivedRequirements("16")
 
 ==== Evidenziazione zona non collocabile <uc16.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2014,6 +2092,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Evidenziazione zona collisa con zone già collocate (@uc16.1.1)],
   [Evidenziazione zona non collocabile perché al di fuori del perimetro (@uc16.1.2)],
 )
+#derivedRequirements("16.1")
 
 ===== Evidenziazione zona collisa con zone già collocate <uc16.1.1>
 #printUseCaseInfo(
@@ -2026,6 +2105,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "L'utente tenta di collocare una zona in una posizione già occupata da un'altra zona",
   "Le zone si sovrappongono e collidono"
 )
+#derivedRequirements("16.1.1")
 
 ===== Evidenziazione zona non collocabile perché al di fuori del perimetro <uc16.1.2>
 #printUseCaseInfo(
@@ -2037,6 +2117,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente tenta di collocare una zona al di fuori del perimetro dell'ambiente 3D"
 )
+#derivedRequirements("16.1.2")
 
 === Visualizzazione lista zone <uc17>
 #figure(
@@ -2065,6 +2146,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Inclusioni",
   [Visualizzazione singola zona (@uc17.1)],
 )
+#derivedRequirements("17")
 
 ==== Visualizzazione singola zona <uc17.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2085,6 +2167,8 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Inclusioni",
   [Visualizzazione ID zona (@uc17.1.1)],
 )
+#derivedRequirements("17.1")
+
 ===== Visualizzazione ID zona <uc17.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
@@ -2100,6 +2184,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un elemento della lista delle zone"
 )
+#derivedRequirements("17.1.1")
 
 === Ricerca zona <uc18>
 #figure(
@@ -2127,6 +2212,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Generalizzazioni",
   [Ricerca per ID zona (@uc18.1)],
 )
+#derivedRequirements("18")
 
 ==== Ricerca per ID zona <uc18.1>
 #printUseCaseInfo(
@@ -2142,6 +2228,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce l'ID della zona da cercare"
 )
+#derivedRequirements("18.1")
 
 === Ispezione bin <uc19>
 #figure(
@@ -2179,6 +2266,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione informazioni prodotto (@uc22)]
 )
+#derivedRequirements("19")
 
 ==== Visualizzazione ID bin <uc19.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2196,6 +2284,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona un bin da ispezionare"
 )
+#derivedRequirements("19.1")
 
 ==== Visualizzazione lunghezza bin <uc19.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2213,6 +2302,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona un bin da ispezionare"
 )
+#derivedRequirements("19.2")
 
 ==== Visualizzazione larghezza bin <uc19.3>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2230,6 +2320,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona un bin da ispezionare"
 )
+#derivedRequirements("19.3")
 
 ==== Visualizzazione altezza bin <uc19.4>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2247,6 +2338,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente seleziona un bin da ispezionare"
 )
+#derivedRequirements("19.4")
 
 ==== Evidenziazione bin selezionato <uc19.5>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2268,6 +2360,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero che il bin ispezionato venga evidenziato graficamente per poterlo individuare a colpo d'occhio nell'ambiente 3D"
 )
+#derivedRequirements("19.5")
 
 === Spostamento POV su zona specifica <uc20>
 
@@ -2295,6 +2388,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero spostare il POV sull'ambiente 3D per poter visualizzare una zona specifica"
 )
+#derivedRequirements("20")
 
 === Spostamento POV su bin specifico <uc21>
 
@@ -2322,6 +2416,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero spostare il POV sull'ambiente 3D per poter visualizzare un bin specifico"
 )
+#derivedRequirements("21")
 
 #pagebreak()
 
@@ -2370,6 +2465,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Visualizzazione altezza prodotto (@uc22.6)],
   [Visualizzazione peso prodotto (@uc22.7)],
 )
+#derivedRequirements("22")
 
 ==== Visualizzazione ID prodotto <uc22.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2389,6 +2485,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero visualizzare l'informazione sull'ID di un prodotto"
 )
+#derivedRequirements("22.1")
 
 ==== Visualizzazione nome prodotto <uc22.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2408,6 +2505,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero visualizzare l'informazione sul nome di un prodotto"
 )
+#derivedRequirements("22.2")
 
 ==== Visualizzazione categoria prodotto <uc22.3>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2427,6 +2525,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero visualizzare l'informazione sulla categoria di un prodotto"
 )
+#derivedRequirements("22.3")
 
 ==== Visualizzazione larghezza prodotto <uc22.4>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2446,6 +2545,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero visualizzare l'informazione sulla larghezza di un prodotto"
 )
+#derivedRequirements("22.4")
 
 ==== Visualizzazione lunghezza prodotto <uc22.5>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2465,6 +2565,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero visualizzare l'informazione sulla lunghezza di un prodotto"
 )
+#derivedRequirements("22.5")
 
 ==== Visualizzazione altezza prodotto <uc22.6>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2484,6 +2585,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero visualizzare l'informazione sull'altezza di un prodotto"
 )
+#derivedRequirements("22.6")
 
 ==== Visualizzazione peso prodotto <uc22.7>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2503,6 +2605,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "User story associata",
   "Come utente, desidero visualizzare l'informazione sul peso di un prodotto"
 )
+#derivedRequirements("22.7")
 
 === Visualizzazione lista prodotti <uc23>
 
@@ -2534,6 +2637,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Visualizzazione lista prodotti non collocati (@uc23.1)],
   [Visualizzazione lista prodotti collocati (@uc23.2)]
 )
+#derivedRequirements("23")
 
 ==== Visualizzazione lista prodotti non collocati <uc23.1>
 #figure(
@@ -2561,6 +2665,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Inclusioni",
   [Visualizzazione singolo prodotto (@uc23.1.1)]
 )
+#derivedRequirements("23.1")
 
 ===== Visualizzazione singolo prodotto <uc23.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2586,6 +2691,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Visualizzazione ID prodotto (@uc23.1.1.2)],
   [Visualizzazione categoria prodotto (@uc23.1.1.3)]
 )
+#derivedRequirements("23.1.1")
 
 ====== Visualizzazione nome prodotto <uc23.1.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2601,6 +2707,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un elemento della lista dei prodotti"
 )
+#derivedRequirements("23.1.1.1")
 
 ====== Visualizzazione ID prodotto <uc23.1.1.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2616,6 +2723,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un elemento della lista dei prodotti"
 )
+#derivedRequirements("23.1.1.2")
 
 ====== Visualizzazione categoria prodotto <uc23.1.1.3>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2631,6 +2739,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un elemento della lista dei prodotti"
 )
+#derivedRequirements("23.1.1.3")
 
 ==== Visualizzazione lista prodotti collocati <uc23.2>
 #figure(
@@ -2658,6 +2767,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Inclusioni",
   [Visualizzazione singolo prodotto collocato (@uc23.2.1)]
 )
+#derivedRequirements("23.2")
 
 ===== Visualizzazione singolo prodotto collocato <uc23.2.1>
 #printUseCaseInfo(
@@ -2682,6 +2792,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Visualizzazione ID zona di appartenenza (@uc23.2.1.1)],
   [Visualizzazione ID bin di appartenenza (@uc23.2.1.2)]
 )
+#derivedRequirements("23.2.1")
 
 ====== Visualizzazione ID zona di appartenenza <uc23.2.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2697,6 +2808,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un elemento della lista dei prodotti collocati"
 )
+#derivedRequirements("23.2.1.1")
 
 ====== Visualizzazione ID bin di appartenenza <uc23.2.1.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2712,6 +2824,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un elemento della lista dei prodotti collocati"
 )
+#derivedRequirements("23.2.1.2")
 
 === Ricerca prodotti <uc24>
 
@@ -2745,6 +2858,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Ricerca per nome prodotto (@uc24.2)],
   [Ricerca per categoria prodotto (@uc24.3)]
 )
+#derivedRequirements("24")
 
 ==== Ricerca per ID prodotto <uc24.1>
 #printUseCaseInfo(
@@ -2760,6 +2874,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce l'ID del prodotto da cercare"
 )
+#derivedRequirements("24.1")
 
 ==== Ricerca per nome prodotto <uc24.2>
 #printUseCaseInfo(
@@ -2775,6 +2890,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce il nome del prodotto da cercare"
 )
+#derivedRequirements("24.2")
 
 ==== Ricerca per categoria prodotto <uc24.3>
 #printUseCaseInfo(
@@ -2790,6 +2906,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente inserisce la categoria di prodotto desiderata"
 )
+#derivedRequirements("24.3")
 
 === Spostamento prodotto <uc25>
 #figure(
@@ -2820,6 +2937,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Spostamento prodotto non collocato in un bin (@uc25.1)],
   [Spostamento prodotto collocato in un bin (@uc25.2)]
 )
+#derivedRequirements("25")
 
 ==== Spostamento prodotto non collocato in un bin <uc25.1>
 #printUseCaseInfo(
@@ -2835,6 +2953,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Inclusioni",
   [Invio richiesta di movimentazione (@uc25.3)],
 )
+#derivedRequirements("25.1")
 
 ==== Spostamento prodotto collocato in un bin <uc25.2>
 #printUseCaseInfo(
@@ -2851,6 +2970,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Invio richiesta di movimentazione (@uc25.3)],
   [Visualizzazione errore spostamento impossibile (@uc25.2.1)]
 )
+#derivedRequirements("25.2")
 
 ===== Visualizzazione errore spostamento impossibile <uc25.2.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2870,6 +2990,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente ha richiesto lo spostamento di un prodotto verso un bin già occupato"
 )
+#derivedRequirements("25.2.1")
 
 ==== Invio richiesta di movimentazione <uc25.3>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2893,6 +3014,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   [Visualizzazione errore spostamento negato (@uc25.3.1)],
   [Visualizzazione errore di connessione alla API (@uc25.3.2)],
 )
+#derivedRequirements("25.3")
 
 ===== Visualizzazione errore spostamento negato <uc25.3.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2912,6 +3034,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente ha richiesto lo spostamento di un prodotto ma il sistema ha negato la richiesta"
 )
+#derivedRequirements("25.3.1")
 
 ===== Visualizzazione errore di connessione alla API <uc25.3.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -2931,6 +3054,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente ha richiesto lo spostamento di un prodotto ma la API non ha fornito risposta in tempo utile"
 )
+#derivedRequirements("25.3.2")
 
 === Visualizzazione cronologia ordini di movimentazione <uc26>
 #figure(
@@ -2958,6 +3082,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Inclusioni",
   [Visualizzazione singolo ordine di movimentazione (@uc26.1)]
 )
+#derivedRequirements("26")
 
 ==== Visualizzazione singolo ordine di movimentazione <uc26.1>
 #figure(
@@ -2987,6 +3112,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Visualizzazione ID bin di partenza (@uc26.1.1)]
 )
+#derivedRequirements("26.1")
 
 ===== Visualizzazione ID bin di partenza <uc26.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -3003,6 +3129,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un ordine di movimentazione presente in lista"
 )
+#derivedRequirements("26.1.1")
 
 ===== Visualizzazione ID bin di destinazione <uc26.1.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -3018,6 +3145,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un ordine di movimentazione presente in lista"
 )
+#derivedRequirements("26.1.2")
 
 ===== Visualizzazione ID prodotto <uc26.1.3>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -3033,6 +3161,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un ordine di movimentazione presente in lista"
 )
+#derivedRequirements("26.1.3")
 
 ===== Visualizzazione nome prodotto <uc26.1.4>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -3048,6 +3177,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente visualizza un ordine di movimentazione presente in lista"
 )
+#derivedRequirements("26.1.4")
 
 === Ispezione ordine di movimentazione <uc27>
 #figure(
@@ -3080,6 +3210,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Estensioni",
   [Evidenziazione bin di partenza (@uc27.2)]
 )
+#derivedRequirements("27")
 
 ==== Evidenziazione bin di destinazione <uc27.1>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -3095,6 +3226,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente richiede la visualizzazione dei bin coinvolti nell'ordine di movimentazione"
 )
+#derivedRequirements("27.1")
 
 ==== Evidenziazione bin di partenza <uc27.2>
 #printUseCaseInfo("Attore principale", "Utente")
@@ -3111,6 +3243,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
   "Scenario principale",
   "L'utente richiede la visualizzazione dei bin coinvolti nell'ordine di movimentazione"
 )
+#derivedRequirements("27.2")
 
 #pagebreak()
 
@@ -3119,6 +3252,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 // FINE UC
 
 = Requisiti <requisiti>
+
 == Codice identificativo
 Ogni requisito è caratterizzato da un codice identificativo definito nel seguente modo:
 #align(`[Tipologia][Classificazione]-[Sequenza]`, center)
@@ -3136,145 +3270,31 @@ Dove:
 
 #show figure: set block(breakable: true)
 
+#show ">=": [$>=$]
+
 == Requisiti funzionali <requisiti-funzionali>
 
 #figure(
   table(
-    columns: (14%, 19%, 51%, 16%),
+    columns: (11%, 19%, 50%, 20%),
     align: left,
-    [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [FM-1], [Obbligatorio], [L'utente deve poter creare il magazzino], [UC-1],
-    [FM-1.1], [Obbligatorio], [L'utente deve poter caricare un file SVG contenente la pianta del magazzino], [UC-1.1],
-    [FM-1.1.1], [Obbligatorio], [L'utente deve sempre poter creare un magazzino tramite caricamento di un file SVG, quando possibile], [UC-1.1],
-    [FD-1.1.2], [Desiderabile], [L'utente deve poter definire le altezze degli elementi del file SVG tramite trascinamento verso l'alto], [Verbale esterno\ 23-12-06],
-    [FM-1.1.3], [Obbligatorio], [L'utente visualizza un errore di importazione del file SVG], [UC-1.1.1],
-    [FM-1.1.3.1], [Obbligatorio], [L'utente visualizza un errore dato dal caricamento di un file SVG privo di informazioni], [UC-1.1.1.1],
-    [FM-1.1.3.2], [Obbligatorio], [L'utente visualizza un errore dato da informazioni incongruenti nel file SVG], [UC-1.1.1.2],
-    [FM-1.2], [Obbligatorio], [L'utente deve sempre poter creare un ambiente di lavoro vuoto, quando possibile], [UC-1.2],
-
-    [FM-2], [Obbligatorio], [L'utente deve poter modificare le dimensioni del magazzino dopo la sua creazione], [UC-2],
-    [FM-2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza del magazzino dopo la sua creazione], [UC-2],
-    [FM-2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza del magazzino dopo la sua creazione], [UC-2],
-    [FM-2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza del magazzino dopo la sua creazione], [UC-2],
-    [FM-2.4], [Obbligatorio], [L'utente visualizza un errore relativo alla riduzione eccessiva delle dimensioni dell'ambiente vuoto], [UC-2.1],
-    [FM-2.5], [Obbligatorio], [L'utente visualizza un errore relativo alla riduzione eccessiva delle dimensioni dell'ambiente non vuoto], [UC-2.2],
-
-    [FM-3], [Obbligatorio], [L'utente deve poter gestire gli scaffali], [UC-3],
-    [FM-3.1], [Obbligatorio], [L'utente deve poter creare gli scaffali], [UC-3.1],
-    [FM-3.1.1], [Obbligatorio], [L'utente deve poter definire le dimensioni degli scaffali], [UC-3.1],
-    [FM-3.1.1.1], [Obbligatorio], [L'utente deve poter definire la lunghezza degli scaffali], [UC-3.1],
-    [FM-3.1.1.2], [Obbligatorio], [L'utente deve poter definire la profondità degli scaffali], [UC-3.1],
-    [FM-3.1.1.3], [Obbligatorio], [L'utente deve poter definire l'orientamento rispetto al piano degli scaffali], [UC-3.1],
-    [FM-3.1.1.4], [Obbligatorio], [L'utente deve poter definire la larghezza degli scaffali], [UC-3.1],
-    [FM-3.1.1.5], [Obbligatorio], [L'utente deve poter definire il numero di piani degli scaffali], [UC-3.1],
-    [FD-3.1.1.6], [Desiderabile], [L'utente deve poter definire altezze diverse per ogni piano degli scaffali], [Verbale esterno\ 23-12-15],
-    [FM-3.1.2], [Obbligatorio], [L'utente deve poter posizionare gli scaffali creati nell'ambiente], [UC-3.1],
-    [FM-3.2], [Obbligatorio], [L'utente deve poter modificare gli scaffali], [UC-3.2],
-    [FM-3.2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza degli scaffali], [UC-3.2],
-    [FM-3.2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza degli scaffali], [UC-3.2],
-    [FM-3.2.3], [Obbligatorio], [L'utente deve poter modificare la profondità degli scaffali], [UC-3.2],
-    [FM-3.2.4], [Obbligatorio], [L'utente deve poter modificare l'orientamento rispetto al piano degli scaffali], [UC-3.2],
-    [FM-3.2.5], [Obbligatorio], [L'utente deve poter modificare il numero di piani gli scaffali], [UC-3.2],
-    [FM-3.3], [Obbligatorio], [L'utente deve poter spostare gli scaffali all'interno del magazzino], [UC-3.3],
-    [FM-3.3.1], [Obbligatorio], [L'utente deve poter spostare gli scaffali in orizzontale], [UC-3.3],
-    [FM-3.3.2], [Obbligatorio], [L'utente deve poter spostare gli scaffali in profondità], [UC-3.3],
-    [FM-3.3.3], [Obbligatorio], [L'utente deve poter ruotare gli scaffali], [UC-3.3],
-    [FM-3.3.3.1], [Obbligatorio], [L'utente deve poter ruotare gli scaffali con angoli di 90°], [UC-3.3],
-    [FO-3.3.3.2], [Opzionale], [L'utente deve poter ruotare gli scaffali con angoli diversi da 90°], [Verbale esterno\ 23-12-06],
-    [FM-3.3.4], [Obbligatorio], [L'utente visualizza un errore riguardo lo spostamento dello scaffale in una zona non libera], [UC-3.3.1],
-    [FM-3.4], [Obbligatorio], [L'utente deve poter eliminare gli scaffali], [UC-3.4],
-    [FM-3.4.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'eliminazione di uno scaffale non vuoto], [UC-3.4.1],
-
-    [FM-4], [Obbligatorio], [L'utente deve poter gestire i bin], [UC-4],
-    [FM-4.1], [Obbligatorio], [L'utente deve poter creare i bin], [UC-4.1],
-    [FM-4.1.1], [Obbligatorio], [L'utente deve poter definire le dimensioni dei bin], [UC-4.1],
-    [FM-4.1.1.1], [Obbligatorio], [L'utente deve poter definire la profondità dei bin], [UC-4.1],
-    [FM-4.1.1.2], [Obbligatorio], [L'utente deve poter definire la larghezza dei bin], [UC-4.1],
-    [FM-4.1.1.3], [Obbligatorio], [L'utente deve poter definire l'altezza dei bin], [UC-4.1],
-    [FM-4.2], [Obbligatorio], [L'utente deve poter modificare i bin], [UC-4.2],
-    [FM-4.2.1], [Obbligatorio], [L'utente deve poter modificare la profondità dei bin], [UC-4.2],
-    [FM-4.2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza dei bin], [UC-4.2],
-    [FM-4.2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza dei bin], [UC-4.2],
-    [FM-4.3], [Obbligatorio], [L'utente deve poter eliminare i bin], [UC-4.3],
-    [FM-4.3.1], [Obbligatorio], [L'utente visualizza un errore riguardo la cancellazione di un bin non vuoto], [UC-4.3.1],
-
-    [FM-5], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dati dimensionali non validi], [UC-5],
-    [FM-5.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dimensioni negative o uguali a zero], [UC-5.1],
-    [FM-5.1.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di una lunghezza negativa o uguale a zero], [UC-5.1],
-    [FM-5.1.2], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di una larghezza negativa o uguale a zero], [UC-5.1],
-    [FM-5.1.3], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di un'altezza negativa o uguale a zero], [UC-5.1],
-    [FM-5.2], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dimensioni eccessive], [UC-5.2],
-    [FM-5.2.1], [Obbligatorio], [L'utente visualizza un errore per l'inserimento di dimensioni che creano collisioni tra l'oggetto modificato e altri elementi dell'ambiente], [UC-5.2],
-    [FM-5.2.2], [Obbligatorio], [L'utente visualizza un errore per l'inserimento di dimensioni che non permettono all'oggetto di essere inserito nell'ambiente], [UC-5.2],
-
-    [FD-6],[Desiderabile], [L'utente deve poter richiedere il caricamento dei dati da database], [UC-6],
-    [FD-6.0.1],[Desiderabile], [L'utente deve poter popolare automaticamente l'ambiente leggendo i dati contenuti nel database], [UC-6],
-    [FD-6.0.2],[Desiderabile], [L'utente deve poter popolare l'ambiente con gli scaffali caricati da database], [UC-6],
-    [FD-6.0.3],[Desiderabile], [L'utente deve poter popolare l'ambiente con i bin caricati da database], [UC-6],
-    [FD-6.0.4],[Desiderabile], [L'utente deve poter popolare i bin con i prodotti caricati da database], [UC-6],
-    [FO-6.1], [Opzionale], [L'utente deve poter configurare i parametri di connessione al database], [UC-6.1],
-    [FO-6.1.1], [Opzionale], [L'utente deve poter indicare il nome del database], [UC-6.1],
-    [FO-6.1.2], [Opzionale], [L'utente deve poter indicare il nome utente per la connessione al database], [UC-6.1],
-    [FO-6.1.3], [Opzionale], [L'utente deve poter indicare la password per la connessione al database], [UC-6.1],
-    [FO-6.1.4], [Opzionale], [L'utente deve poter indicare l'indirizzo del database], [UC-6.1],
-    [FO-6.1.5], [Opzionale], [L'utente deve poter indicare la porta del database], [UC-6.1],
-    [FD-6.2], [Desiderabile], [L'utente deve poter testare la connessione al database], [UC-6.1],
-    [FD-6.3], [Desiderabile], [L'utente visualizza un errore se i dati contenuti nel database non sono conformi], [UC-6.2],
-    [FD-6.4], [Desiderabile], [L'utente visualizza un errore se i dati contenuti nel database sono errati], [UC-6.2],
-
-    [FM-7], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin ad un altro], [UC-7],
-    [FM-7.1], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin d'origine ad un altro di destinazione], [UC-7],
-    [FM-7.2], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin ad un altro tramite _drag and drop_], [UC-7],
-    [FM-7.3], [Obbligatorio], [Il sistema deve interrogare una API RESTful per accertare che lo spostamento sia lecito], [UC-7],
-    [FD-7.4], [Desiderabile], [Il sistema deve evidenziare il bin di partenza per rendere evidente la richiesta di spostamento], [UC-7],
-    [FD-7.5], [Desiderabile], [Il sistema deve evidenziare il bin di destinazione per rendere evidente la richiesta di spostamento], [UC-7],
-
-    [FM-8], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di un bin selezionato], [UC-8],
-    [FM-8.1], [Obbligatorio], [L'utente deve poter visualizzare le informazioni del prodotto contenuto in un bin selezionato], [UC-8],
-
-    [FM-9], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di uno scaffale selezionato], [UC-9],
-
-    [FD-10], [Desiderabile], [L'utente deve poter ricercare un prodotto], [UC-10],
-    [FD-10.1], [Desiderabile], [L'utente deve poter ricercare un prodotto per ID], [UC-10.1],
-    [FD-10.2], [Desiderabile], [L'utente deve poter ricercare un prodotto per nome], [UC-10.2],
-    [FD-10.3], [Desiderabile], [L'utente deve poter ricercare uno scaffale], [UC-10.3],
-    [FD-10.4], [Desiderabile], [Il sistema deve fornire la lista dei risultati di ricerca], [UC-10],
-    [FD-10.5], [Desiderabile], [Il sistema deve evidenziare i risultati di ricerca], [UC-10],
-
-    [FM-11], [Obbligatorio], [L'utente deve poter esplorare visivamente il magazzino], [UC-11],
-    [FM-11.1], [Obbligatorio], [L'utente deve poter muovere la visuale sui tre assi], [UC-11.1],
-    [FM-11.2], [Obbligatorio], [L'utente deve poter ruotare la visuale], [UC-11.2],
-    [FM-11.3], [Obbligatorio], [L'utente deve poter effettuare operazioni di zoom della visuale], [UC-11.3],
-    [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom-in], [UC-11.3],
-    [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom-out], [UC-11.3],
-
-    [FM-12], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login], [Capitolato],
-
-    [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato],
-
-    [FM-14], [Obbligatorio], [Il prodotto si deve avviare allo stato iniziale ogni volta che viene ricaricata la pagina], [Capitolato],
-    [FM-14.1], [Obbligatorio], [Il prodotto non persiste in locale (cookie, `localStorage`) le modifiche fatte all'ambiente], [Capitolato],
-    [FM-14.2], [Obbligatorio], [Il prodotto non persiste sul database le modifiche fatte all'ambiente], [Capitolato],
-    [FM-14.3], [Obbligatorio], [Il prodotto non deve fornire alcuna opzione per il salvataggio dei dati], [Capitolato]
+    [*Codice*], [*Riferimento*], [*Descrizione*], [*Classificazione*],
+    ..requirements.at("functional").map(item => item.values().slice(0,4).flatten()).flatten()
   ),
   caption: [Requisiti funzionali]
 )
+
+#show "#ndp_v": [#ndp_v]
+#show "#pdq_v": [#pdq_v]
 
 == Requisiti di qualità <requisiti-qualita>
 
 #figure(
   table(
-    columns: (14%, 19%, 51%, 16%),
+    columns: (11%, 19%, 50%, 20%),
     align: left,
-    [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [QM-1], [Obbligatorio], [Deve essere rispettato quanto previsto dalle #ndp_v], [Decisione\ interna],
-    [QM-2], [Obbligatorio], [Deve essere rispettato quanto previsto dal #pdq_v], [Decisione\ interna],
-    [QM-3], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico], [Capitolato],
-    [QM-4], [Obbligatorio], [Devono essere consegnati i diagrammi UML degli UC], [Capitolato],
-    [QM-5], [Obbligatorio], [Deve essere consegnata la lista dei bug risolti], [Capitolato],
-    [QM-6], [Obbligatorio], [Deve essere fornito un manuale d'uso per l'utente], [Decisione\ interna],
-    [QO-7], [Opzionale], [Deve essere consegnato lo schema del DB], [Capitolato],
-    [QO-8], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate], [Capitolato],
+    [*Codice*], [*Riferimento*], [*Descrizione*], [*Classificazione*],
+    ..requirements.at("quality").map(item => item.values().slice(0,4).flatten()).flatten()
   ),
   caption: [Requisiti di qualità]
 )
@@ -3286,34 +3306,71 @@ L'analisi dei requisiti condotta da #err418 non ha individuato alcun requisito p
 
 #figure(
   table(
-    columns: (14%, 19%, 51%, 16%),
+    columns: (11%, 19%, 50%, 20%),
     align: left,
-    [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [VM-1], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0], [Interno],
-    [VM-2], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0], [Interno],
-    [VM-3], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva], [Interno],
-    [VM-4], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva], [Interno],
-    [VM-5], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva], [Interno],
-    [VM-6], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva], [Interno],
-    [VM-7], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva], [Interno],
-    [VM-8], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva], [Interno],
-    [VM-9], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva], [Interno],
-    [VM-10], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva], [Interno],
-    [VO-11], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose], [VE 23-11-15]
+    [*Codice*], [*Riferimento*], [*Descrizione*], [*Classificazione*],
+    ..requirements.at("constraints").map(item => item.values().slice(0,4).flatten()).flatten()
   ),
   caption: [Requisiti di vincolo]
 )
 
 == Riepilogo requisiti <requisiti-riepilogo>
 
+#let types = ("", "functional", "quality", "constraints", "performance", "security")
+
+#let categories = ("", "Obbligatorio", "Desiderabile", "Opzionale")
+
+#let countRequirements(type, category) = {
+  if type not in types { panic("Tipologia di requisito errata") }
+  if category not in categories { panic("Categoria di requisito errata") }
+
+  let counter = 0
+
+  if (type == "" and category == "") {
+    for key in requirements.keys() {
+      counter = counter + requirements.at(key).len()
+    }
+  }
+  else if (type != "" and category == "") {
+    counter = requirements.at(type).len()
+  }
+  else if (type == "" and category != "") {
+    for key in requirements.keys() {
+      counter = counter + requirements.at(key).filter(item => item.at("cat") == category).len()
+    }
+  }
+  else if (type != "" and category != "") {
+    counter = requirements.at(type).filter(item => item.at("cat") == category).len()
+  }
+
+  return counter
+}
+
 #figure(
   table(
-    columns: (auto, 1fr, 1fr, 1fr, 1fr),
+    columns: (30%, 16%, 16%, 16%, 12%),
     align: left,
     [*Tipologia*], [Obbligatori], [Desiderabili], [Opzionali], [*Totale*],
-    [Requisiti funzionali], [#TODO], [#TODO], [#TODO], [#TODO],
-    [Requisiti di qualità], [#TODO], [#TODO], [#TODO], [#TODO],
-    [Requisiti di vincolo], [#TODO], [#TODO], [#TODO], [#TODO],
+    [Requisiti funzionali],
+    [#countRequirements("functional", "Obbligatorio")],
+    [#countRequirements("functional", "Desiderabile")],
+    [#countRequirements("functional", "Opzionale")],
+    [#countRequirements("functional", "")],
+    [Requisiti di qualità],
+    [#countRequirements("quality", "Obbligatorio")],
+    [#countRequirements("quality", "Desiderabile")],
+    [#countRequirements("quality", "Opzionale")],
+    [#countRequirements("quality", "")],
+    [Requisiti prestazionali],
+    [#countRequirements("performance", "Obbligatorio")],
+    [#countRequirements("performance", "Desiderabile")],
+    [#countRequirements("performance", "Opzionale")],
+    [#countRequirements("performance", "")],
+    [Requisiti di vincolo],
+    [#countRequirements("constraints", "Obbligatorio")],
+    [#countRequirements("constraints", "Desiderabile")],
+    [#countRequirements("constraints", "Opzionale")],
+    [#countRequirements("constraints", "")]
   ),
   caption: [Riepilogo requisiti]
 )

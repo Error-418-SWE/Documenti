@@ -48,6 +48,10 @@ Il prodotto offre le seguenti funzionalità principali:
   _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Glossario_v" + glo_vo + ".pdf")_
   #lastVisitedOn(25, 02, 2024)
 
+- Documento #adr_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20esterna/Analisi%20dei%20Requisiti_v" + adr_vo + ".pdf")_
+  #lastVisitedOn(25, 02, 2024)
+
 === Riferimenti normativi <riferimenti-normativi>
 
 - Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \

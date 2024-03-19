@@ -3255,7 +3255,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 
 == Codice identificativo
 Ogni requisito è caratterizzato da un codice identificativo definito nel seguente modo:
-#align(`[Tipologia][Classificazione]-[Sequenza]`, center)
+#align(`[Tipologia][Classificazione]–[Sequenza]`, center)
 Dove:
 - `Tipologia` può assumere i valori:
   - `F`: funzionale;
@@ -3265,8 +3265,7 @@ Dove:
   - `M`: mandatory, obbligatorio;
   - `D`: desiderabile;
   - `O`: opzionale.
-- `Sequenza` rappresenta l'identificativo numerico del requisito. Se sono presenti sottocasi, il loro numero viene rappresentato come segue:
-#align(`NumeroPadre.NumeroFiglio{...}`, center)
+- `Sequenza` rappresenta l'identificativo numerico del requisito.
 
 #show figure: set block(breakable: true)
 

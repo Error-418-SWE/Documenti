@@ -13,31 +13,6 @@
   isExternalUse: true,
 );
 
-#let requirements = json("Requisiti.json");
-#let derivedRequirements(reference) = {
-  box(width: 1fr, stroke: 0.5pt + luma(140), inset: 4pt)[
-    #text("Requisiti derivati: ", weight: "bold")
-    #text(requirements.at(reference).join(", ") + ".")
-  ]
-}
-
-// WIP, non rimuovere
-//
-// #let placeDerivedRequirements() = {
-//   let header = locate(loc => {
-//     let elems = query(selector(heading).before(loc), loc)
-//     if elems == () {
-//       panic("La funzione non ha rilevato di essere in una sezione di UC.")
-//     }
-//     else {
-//       text("Requisiti derivati: ", weight: "bold")
-//       requirements.at(elems.last().numbering).join(", ")
-//       "."
-//     }
-//   })
-//   header
-// }
-
 = Introduzione
 
 == Scopo del documento
@@ -159,7 +134,7 @@ Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport
 
 Il prodotto è acceduto tramite browser. Ne è prevista l'esecuzione sui seguenti dispositivi:
 - computer, tramite mouse e tastiera;
-- dispositivi mobili touchscreen (es. tablet) in dotazione agli adetti di magazzino.
+- dispositivi mobili touchscreen (es. tablet) in dotazione agli addetti di magazzino.
 
 Il browser e il dispositivo devono essere compatibili con lo standard WebGL.
 
@@ -210,7 +185,10 @@ WMS3 simulerà il comportamento di tale API con un algoritmo che accetti o rifiu
 Questo paragrafo fornisce una descrizione dettagliata degli oggetti di dominio, già in parte descritti nel #glo.
 
 ==== Ambiente
-Di planimetria rettangolare oppure personalizzata basata su un file SVG caricato durante la configurazione, rappresenta l'interno del magazzino su cui opera l'addetto.
+Di planimetria rettangolare oppure personalizzata (basata su un file SVG caricato durante la configurazione), rappresenta lo spazio interno del magazzino su cui opera l'addetto.
+
+Per agevolare il collocamento delle zone, l'ambiente può essere dotato di una griglia di aggancio posta sulla superficie dell'ambiente. La griglia avrà passo regolabile dall'utente.
+
 Le proprietà sono descritte nella @props-ambiente.
 
 #figure(
@@ -220,7 +198,7 @@ Le proprietà sono descritte nella @props-ambiente.
     [Lunghezza], [$>0$ \[m\]],
     [Larghezza], [$>0$ \[m\]\ Per planimetrie ricavate da SVG, la larghezza viene calcolata moltiplicando la lunghezza per il rapporto d'aspetto del file SVG.],
   ),
-  caption: "Proprietà dell'Ambiente"
+  caption: "Proprietà dell'ambiente"
 ) <props-ambiente>
 
 ==== Zona
@@ -230,6 +208,7 @@ Porzione dell'ambiente atta a contenere uno o più bin, organizzati su livelli e
   table(
     columns: 2,
     [*Proprietà*], [*Descrizione*],
+    [ID], [Identificatore alfanumerico univoco.],
     [Lunghezza], [$>0$ \[m\]],
     [Larghezza], [$>0$ \[m\]\ Non inferiore alla somma delle larghezze delle colonne.],
     [Altezza], [$>0$ \[m\]\ Non inferiore alla somma delle altezze dei livelli.],
@@ -239,27 +218,36 @@ Porzione dell'ambiente atta a contenere uno o più bin, organizzati su livelli e
   caption: "Proprietà di una zona"
 ) <props-zona>
 
-Le colonne di una stessa zona possono avere larghezze differenti.
+Le colonne di una stessa zona possono avere larghezze differenti. Ciascuna zona contiene almeno una colonna. Le colonne di una stessa zona sono numerate in modo incrementale.
 
 #figure(
   table(
     columns: (10em, 10em),
     [*Proprietà*], [*Descrizione*],
+    [ID], [Identificatore alfanumerico univoco.],
     [Larghezza], [$>0$ \[m\]],
   ),
   caption: "Proprietà di una colonna di una zona"
-) <props-livello>
+) <props-colonna>
 
-I livelli partono da terra e sono anche detti "ripiani". Sono numerati dal basso verso l'alto in modo incrementale, a partire da 1. I livelli di una stessa zona possono avere altezze differenti.
+I livelli partono da terra e sono anche detti "ripiani". Sono numerati dal basso verso l'alto in modo incrementale, a partire da 0. I livelli di una stessa zona possono avere altezze differenti. Ciascuna zona contiene almeno un livello.
 
 #figure(
   table(
     columns: (10em, 10em),
     [*Proprietà*], [*Descrizione*],
+    [ID], [Identificatore alfanumerico univoco.],
     [Altezza], [$>0$ \[m\]],
   ),
   caption: "Proprietà di un livello di una zona"
 ) <props-livello>
+
+Una rappresentazione esemplificativa del modello di zona adottato per questo progetto è in @schema-zona.
+
+#figure(
+  image("./imgs/zona.svg", width: 70%),
+  caption: "Rappresentazione schematica di una zona con tre livelli e tre colonne. In giallo è evidenziato uno dei bin."
+) <schema-zona>
 
 Una zona con un solo livello è anche detta "*area a terra*". Modella una zona del magazzino atta a conservare un prodotto per un periodo di tempo tipicamente limitato. Solitamente si tratta di zone di carico/scarico.
 
@@ -343,1090 +331,3046 @@ Questo documento è redatto in modo incrementale, così da risultare sempre conf
 
 = Use Case
 
-#set heading(numbering: (..nums) => {
-  let values = nums.pos();
-  if (values.len() > 0){
-      values.at(values.len() - 1) = values.at(values.len() - 1);
+== Introduzione
+
+In questa sezione sono presentati i casi d'uso e i relativi diagrammi relativi a WMS3. I casi d'uso sono stati definiti a seguito dell'analisi del dominio di applicazione e delle funzionalità richieste dal Proponente, durante riunioni interne ed esterne. Le modalità di definizione sono descritte in #ndp_v, alle sezioni _Processo di analisi della missione_ e _Processo di definizione di bisogni e requisiti degli stakeholder_.
+
+I casi d'uso sono organizzati secondo il dominio di appartenenza:
+- *Ambiente 3D* (@uc-ambiente): configurazione e modifica dell'ambiente 3D;
+- *Zone e Bin* (@uc-zone): operazioni CRUD sulle zone e gestione dei bin;
+- *Prodotti* (@uc-prodotti): gestione dei prodotti e della loro movimentazione.
+
+// Utilities for UC printing
+#let printUseCaseInfo(title, ..items) = {
+  text(title, weight: "bold")
+  text(": ")
+  if items.pos().len() > 1 or title in ("Precondizioni", "Postcondizioni", "Inclusioni", "Estensioni", "Generalizzazioni", "Generalizzazione di") {
+    linebreak()
+    for item in items.pos() {
+      if item == items.pos().at(items.pos().len() - 1) [+ #item\.]
+      else [+ #item\;]
+    }
   }
-  values = values.slice(1)
-  return "UC--" + values.map(str).join(".");
-})
+  else {
+    text(items.pos().join("") + ".")
+    linebreak()
+  }
+}
+
+#let requirements = json("requirements.json");
+
+#let derivedRequirements(reference) = {
+  let subset = ()
+  for key in requirements.keys() {
+    for req in requirements.at(key) {
+      if lower(req.source) == ("uc–" + reference) {
+        subset.push(req.id)
+      }
+    }
+  }
+  if subset.len() > 0 {
+    return printUseCaseInfo("Requisiti derivati", subset.join(", "))
+  }
+}
+
+// INIZIO UC
+
+#let setUCHeadingCounterTo(value) = {
+  let i = 1
+  while i < value {
+    counter(heading).step(level: 3)
+    i+=1
+  }
+}
 
 #set par(first-line-indent: 0pt)
 
-== Creazione magazzino <uc1>
-#figure(
-  image("./imgs/uc1.png", format: "png"),
-  caption: [
-    UML UC-1
-  ],
-)
+#show heading.where(level: 3): it => {v(3em, weak: true); it}
+#show heading.where(level: 4): it => {v(3em, weak: true); it}
+#show heading.where(level: 5): it => {v(3em, weak: true); it}
+#show heading.where(level: 6): it => {v(3em, weak: true); it}
+#show heading.where(level: 7): it => {v(3em, weak: true); it}
+#show heading.where(level: 8): it => {v(3em, weak: true); it}
 
-#derivedRequirements("UC-1")
+== Ambiente 3D <uc-ambiente>
 
-=== Importazione mappa magazzino da file SVG
-$bold("Descrizione: ")$
-all'avvio dell'applicazione e in ogni momento si desideri, si può decidere di caricare un file SVG il quale viene utilizzato dal programma per configurare le aree di lavoro.
+#set heading(numbering: (..nums) => {
+  let values = nums.pos().slice(2);
+  return "UC--" + values.map(str).join(".");
+}, supplement: "Caso d'uso")
 
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- è stato dato inizio alla procedura di configurazione dell'ambiente di lavoro tramite file.
-
-$bold("Postcondizioni: ")$
-- il file SVG è stato caricato con successo e il programma ha configurato l'ambiente di conseguenza;
-- l'ambiente così generato ha rimosso eventuali elementi precedentemente configurati.
-
-$bold("Scenario: ")$
-- l'utente carica un file SVG tramite un'apposita interfaccia.
-
-$bold("Estensioni: ")$
-- UC-1.1.1 Visualizzazione errore lettura del file SVG.
-
-#derivedRequirements("UC-1.1")
-
-==== Visualizzazione errore lettura del file SVG
-$bold("Descrizione: ")$
-il file caricato dall'utente non ha permesso al programma di configurare l'ambiente di lavoro.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'utente ha caricato un file per la configurazione dell'ambiente di lavoro;
-- il programma non ha potuto configurare l'ambiente di lavoro a causa del file caricato.
-
-$bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore.
-
-$bold("Scenario: ")$
-- l'utente ha caricato un file non adatto.
-
-$bold("Generalizzazioni: ")$
-- UC-1.1.1.1 Visualizzazione errore lettura del file SVG dovuto a file privo di informazioni;
-- UC-1.1.1.2 Visualizzazione errore lettura del file SVG dovuto a informazioni fornite incongruenti.
-
-#derivedRequirements("UC-1.1.1")
-
-===== Visualizzazione errore file privo di informazioni
-$bold("Descrizione: ")$
-il file SVG caricato non contiene informazioni utili alla configurazione dell'ambiente.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- è stato caricato un file per la configurazione dell'ambiente;
-- il file è stato aperto correttamente dal programma;
-- il programma non ha potuto ottenere informazioni dal file.
-
-$bold("Postcondizioni: ")$
-- viene visualizzato l'errore relativo al caricamento di un file SVG privo di informazioni.
-
-$bold("Scenario: ")$
-- L'utente ha caricato un file SVG vuoto o con informazioni non utili.
-
-#derivedRequirements("UC-1.1.1.1")
-
-===== Visualizzazione errore informazioni del file incongruenti
-$bold("Descrizione: ")$
-il file SVG caricato contiene informazioni incongruenti e quindi non utilizzabili per la configurazione dell'ambiente.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- è stato caricato un file per la configurazione dell'ambiente;
-- tale file è stato aperto correttamente dal programma;
-- il programma ha ricavato informazioni non valide dal file.
-
-$bold("Postcondizioni: ")$
-- viene visualizzato l'errore relativo al caricamento di un file con informazioni incongruenti.
-
-$bold("Scenario: ")$
-- L'utente ha caricato un file per la configurazione dell'ambiente contenente informazioni incongruenti.
-
-#derivedRequirements("UC-1.1.1.2")
-
-=== Creazione magazzino vuoto
-$bold("Descrizione: ")$
-all'avvio dell'applicativo è possibile creare un ambiente vuoto di dimensioni predefinite da cui iniziare. Tale funzionalità, rimane disponibile durante l'utilizzo dell'applicativo qualora si volesse ripristinare l'ambiente.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- è stato dato inizio alla procedura di creazione dell'ambiente di lavoro vuoto.
-
-$bold("Postcondizioni: ")$
-- è stato generato un ambiente di lavoro vuoto di dimensioni predefinite;
-- l'ambiente così generato ha rimosso eventuali elementi precedentemente configurati.
-
-$bold("Scenario: ")$
-- l'utente crea un ambiente di lavoro vuoto con dimensioni predefinite.
-
-#derivedRequirements("UC-1.2")
-
-== Modifica dimensioni del magazzino <uc2>
+=== Configurazione ambiente 3D <uc1>
 
 #figure(
-  image("./imgs/uc2.png", format: "png"),
-  caption: [
-    UML UC-2
-  ],
+  image("./imgs/UC1.svg"),
+  caption: "Diagramma UC--1"
 )
-$bold("Descrizione: ")$
-la larghezza e la lunghezza dell'ambiente di lavoro possono essere modificate successivamente alla sua configurazione iniziale.
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha configurato l'ambiente 3D",
+  "L'utente dispone di una visualizzazione 3D del magazzino"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la modalità di configurazione di un ambiente 3D tra le opzioni disponibili"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero configurare un ambiente 3D che rappresenti un magazzino"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Configurazione ambiente 3D con planimetria rettangolare (@uc1.1)],
+  [Configurazione ambiente 3D con planimetria definita da file SVG (@uc1.2)]
+)
+#derivedRequirements("1")
 
-L'utente può decidere, per ciascun valore modificabile, di sostituirlo specificando il nuovo valore oppure di lasciarlo inalterato.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- almeno una configurazione dell'ambiente deve essere avvenuta con successo;
-
-$bold("Postcondizioni: ")$
-- l'ambiente di lavoro è stato correttamente modificato in funzione delle richieste dell'utente.
-
-$bold("Scenario: ")$
-- l'utente avvia la modifica dell'ambiente di lavoro;
-- l'utente può inserire una nuova larghezza dell'ambiente di lavoro;
-- l'utente può inserire una nuova lunghezza dell'ambiente di lavoro;
-- l'utente conferma la nuova configurazione di valori.
-
-$bold("Estensioni: ")$
-- UC-2.1 Visualizzazione errore dimensioni magazzino troppo piccole;
-- UC-2.2 Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente.
-
-#derivedRequirements("UC-2")
-
-=== Visualizzazione errore dimensioni magazzino troppo piccole
-
-$bold("Descrizione: ")$
-l'utente vuole modificare le dimensioni dell'ambiente riducendole eccessivamente.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'utente ha creato l'ambiente di lavoro manualmente;
-- l'ambiente è stato creato correttamente;
-- l'ambiente di lavoro risulta vuoto.
-
-$bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo al fatto che le dimensioni dell'ambiente non possono essere ulteriormente diminuite.
-
-$bold("Scenario: ")$
-- l'utente vuole ridurre le dimensioni dell'ambiente oltre una soglia minima.
-
-#derivedRequirements("UC-2.1")
-
-=== Visualizzazione errore dimensioni troppo piccole rispetto rispetto agli elementi nell'ambiente
-
-$bold("Descrizione: ")$
-dato un ambiente con elementi posizionati (come scaffali e/o bin), l'utente cerca di ridurre le dimensioni dell'ambiente in modo eccessivo, non permettendo di mantenere gli elementi precedentemente posizionati.
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'utente ha creato l' ambiente di lavoro manualmente;
-- l'ambiente è stato creato correttamente;
-- l'ambiente di lavoro risulta non vuoto.
-
-$bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo al fatto che stia cercando di diminuire troppo le dimensioni dell'ambiente nonostante gli elementi presenti.
-
-$bold("Scenario: ")$
-- l'utente vuole ridurre la dimensione dell'ambiente nonostante l'ambiente di lavoro contenga elementi le cui posizioni non risulterebbero più valide alle nuove dimensioni ridotte.
-
-#derivedRequirements("UC-2.2")
-
-== Gestione scaffali <uc3>
+==== Configurazione ambiente 3D con planimetria rettangolare <uc1.1>
 #figure(
-  image("./imgs/uc3.png", format: "png"),
-  caption: [
-    UML UC-3
-  ],
+  image("./imgs/UC1.1.svg"),
+  caption: "Diagramma UC--1.1"
 )
-
-#derivedRequirements("UC-3")
-
-=== Creazione scaffale
-$bold("Descrizione: ")$
-uno scaffale viene creato in base ai valori inseriti dall'utente quali: altezza, larghezza, profondità, numero di piani e colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
-Quindi viene aggiunto nell'ambiente in una posizione valida specificata. Successivamente vengono creati i bin contenuti dallo scaffale e posizionati in esso.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'ambiente di lavoro deve essere stato configurato con successo.
-
-$bold("Postcondizioni: ")$
-- nell'ambiente di lavoro è stato aggiunto un nuovo scaffale;
-- nello scaffale creato sono stati aggiunti i bin da esso contenuti.
-
-$bold("Scenario: ")$
-- l'utente seleziona l'aggiunta di uno scaffale;
-- l'utente inserisce l'altezza dello scaffale;
-- l'utente inserisce la larghezza dello scaffale;
-- l'utente inserisce la profondità dello scaffale;
-- l'utente inserisce il numero di piani dello scaffale;
-- l'utente inserisce il numero di colonne dello scaffale;
-- l'utente seleziona l'orientamento dello scaffale nel piano (orizzontale o verticale);
-- l'utente posiziona lo scaffale in una posizione valida nell'ambiente di lavoro.
-
-$bold("Estensioni: ")$
-- UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
-
-#derivedRequirements("UC-3.1")
-
-=== Modifica scaffale
-$bold("Descrizione: ")$
-modifica delle caratteristiche di uno scaffale già esistente.
-
-Le caratteristiche che definiscono lo scaffale vengono visualizzate e possono essere modificate, nello specifico i valori sono: altezza, larghezza, profondità, numero di piani e colonne in cui è suddiviso e orientamento nel piano (orizzontale o verticale).
-
-L'utente può decidere, per ciascuno di essi, di sostituirlo specificando il nuovo valore oppure di lasciarlo inalterato.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- nell'ambiente deve essere posizionato almeno uno scaffale.
-
-$bold("Postcondizioni: ")$
-- i valori di uno scaffale scelto sono stati modificati come indicato.
-
-$bold("Scenario: ")$
-- l'utente seleziona uno scaffale nell'ambiente di lavoro;
-- l'utente seleziona il comando per la modifica dello scaffale;
-- l'utente può inserire una nuova altezza dello scaffale;
-- l'utente può inserire una nuova larghezza dello scaffale;
-- l'utente può inserire una nuova profondità dello scaffale;
-- l'utente può inserire un nuovo numero di piani dello scaffale;
-- l'utente può inserire un nuovo numero di colonne dello scaffale;
-- l'utente può selezionare un diverso orientamento dello scaffale nel piano (orizzontale o verticale);
-- l'utente conferma la nuova configurazione di valori.
-
-$bold("Estensioni: ")$
-- UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
-
-#derivedRequirements("UC-3.2")
-
-=== Spostamento scaffale
-$bold("Descrizione: ")$
-l'utente intende spostare la posizione di uno scaffale presente nell'ambiente 3D.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- nell'ambiente deve essere posizionato almeno uno scaffale.
-
-$bold("Postcondizioni: ")$
-- lo scaffale spostato si trova nella nuova posizione scelta dall'utente.
-
-$bold("Scenario: ")$
-- l'utente seleziona uno scaffale nell'ambiente di lavoro;
-- l'utente sposta lo scaffale nella nuova posizione desiderata nell'ambiente 3D.
-
-$bold("Estensioni: ")$
-- UC-3.3.1 Visualizzazione errore spostamento dello scaffale in zona non libera
-
-#derivedRequirements("UC-3.3")
-
-==== Visualizzazione errore spostamento dello scaffale in zona non libera
-$bold("Descrizione: ")$
-è stata richiesto lo spostamento di uno scaffale in una zona non libera.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- avviata l'attività di spostamento dello scaffale;
-- lo scaffale interessato viene posto in una zona occupata.
-
-$bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo allo spostamento dello scaffale.
-
-$bold("Scenario: ")$
-- l'utente ha richiesto lo spostamento di uno scaffale in una zona non libera.
-
-#derivedRequirements("UC-3.3.1")
-
-=== Eliminazione scaffale
-$bold("Descrizione: ")$
-lo scaffale selezionato presente nell'ambiente viene eliminato.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- nell'ambiente deve essere posizionato almeno uno scaffale;
-- la modalità di modifica dell'ambiente deve essere attiva;
-- lo scaffale da eliminare deve contenere solo bin vuoti.
-
-$bold("Postcondizioni: ")$
-- lo scaffale selezionato viene rimosso dall'ambiente;
-- vengono rimossi i bin in esso contenuti.
-
-$bold("Scenario: ")$
-- l'utente seleziona uno scaffale nell'ambiente;
-- l'utente seleziona il comando per la rimozione dello scaffale;
-- l'utente conferma l'operazione da una finestra di conferma.
-
-$bold("Estensioni: ")$
-- UC-3.4.1 Visualizzazione errore scaffale da eliminare non vuoto.
-
-#derivedRequirements("UC-3.4")
-
-==== Visualizzazione errore scaffale da eliminare non vuoto
-$bold("Descrizione: ")$
-è stata richiesta l'eliminazione di uno scaffale contenente almeno un bin non vuoto.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'attività di eliminazione di uno scaffale deve essere stata attivata;
-- lo scaffale interessato contiene almeno un bin non vuoto.
-
-$bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo all'eliminazione di uno scaffale non vuoto.
-
-$bold("Scenario: ")$
-- l'utente ha richiesto l'eliminazione di uno scaffale non vuoto.
-
-#derivedRequirements("UC-3.4.1")
-
-== Gestione bin <uc4>
-#figure(
-  image("./imgs/uc4.png", format: "png"),
-  caption: [
-    UML UC-4
-  ],
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Configurazione ambiente 3D (@uc1)]
 )
-
-#derivedRequirements("UC-4")
-
-=== Creazione di un bin
-$bold("Descrizione: ")$
-deve essere possibile creare e aggiungere nell'ambiente delle aree adibite a contenere prodotti, definite nel contesto come bin. In fase di creazione deve essere possibile definire le caratteristiche che il bin dovrà avere, quali: altezza, larghezza e profondità.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato;
-- deve esistere almeno un'area libera e valida.
-
-$bold("Postcondizioni: ")$
-- l'area selezionata viene classificata come bin.
-
-$bold("Scenario: ")$
-- l'utente seleziona l'aggiunta di un bin;
-- l'utente inserisce l'altezza del bin;
-- l'utente inserisce la larghezza del bin;
-- l'utente inserisce la profondità del bin;
-- l'utente posiziona il bin in una posizione valida nell'ambiente di lavoro.
-
-#derivedRequirements("UC-4.1")
-
-=== Modifica di un bin
-$bold("Descrizione: ")$
-modifica delle caratteristiche di un bin esterno già esistente.
-
-Le caratteristiche che definiscono il bin vengono visualizzate e possono essere modificate, nello specifico i valori sono: altezza, larghezza, profondità.
-
-L'utente può decidere, per ciascuno di essi, di sostituirlo specificando il nuovo valore oppure di lasciarlo inalterato.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato e deve esistere almeno un bin modificabile.
-
-$bold("Postcondizioni: ")$
-- le dimensioni del bin sono state ridefinite.
-
-$bold("Scenario: ")$
-- l'utente seleziona un bin;
-- l'utente seleziona il comando per la modifica del bin;
-- l'utente può inserire una nuova altezza del bin;
-- l'utente può inserire una nuova larghezza del bin;
-- l'utente può inserire una nuova profondità del bin;
-- l'utente conferma la nuova configurazione di valori.
-
-$bold("Estensioni: ")$
-- UC-5 Visualizzazione errore inserimento dati dimensionali non validi.
-
-#derivedRequirements("UC-4.2")
-
-=== Eliminazione bin
-$bold("Descrizione: ")$
-deve essere possibile eliminare un bin.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato;
-- deve esistere almeno un bin vuoto.
-
-$bold("Postcondizioni: ")$
-- il bin è tornato ad essere un'area libera.
-
-$bold("Scenario: ")$
-- l'utente entra nella modalità di modifica;
-- l'utente seleziona un bin vuoto;
-- l'utente chiede di eliminare il bin;
-- viene richiesta la conferma dell'eliminazione.
-
-$bold("Estensioni: ")$
-- UC-4.3.1 Errore cancellazione bin non vuoto.
-
-#derivedRequirements("UC-4.3")
-
-==== Errore cancellazione bin non vuoto
-$bold("Descrizione: ")$
-è stata richiesta l'eliminazione di un bin non vuoto.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'attività di eliminazione di un bin deve essere stata attivata;
-- il bin interessato contiene un prodotto.
-
-$bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo all'eliminazione di un bin non vuoto.
-
-$bold("Scenario: ")$
-- l'utente ha richiesto l'eliminazione di un bin non vuoto.
-
-#derivedRequirements("UC-4.3.1")
-
-== Visualizzazione errore inserimento dati dimensionali non validi <uc5>
-#figure(
-  image("./imgs/uc5.png", format: "png"),
-  caption: [
-    UML UC-5
-  ],
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente sta configurando l'ambiente 3D"
 )
-$bold("Descrizione: ")$
-i dati inseriti per la modifica delle dimensioni dell'elemento interessato non sono validi.
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha configurato un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la modalità di configurazione di un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero configurare un ambiente 3D che rappresenti un magazzino con planimetria rettangolare"
+)
+#derivedRequirements("1.1")
 
-$bold("Attore: ")$
-utente.
+===== Definizione della larghezza ambiente 3D <uc1.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza dell'ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza dell'ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire la larghezza dell'ambiente 3D che rappresenti un magazzino con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore larghezza non positiva (@uc1.1.1.1)]
+)
+#derivedRequirements("1.1.1")
 
-$bold("Precondizioni: ")$
-- inseriti dati per la modifica o la creazione degli elementi dell'ambiente;
-- tali dati non sono utilizzabili dal programma.
+====== Visualizzazione errore larghezza non positiva <uc1.1.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla larghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza dell'ambiente 3D con planimetria rettangolare minore o uguale a zero"
+)
+#derivedRequirements("1.1.1.1")
 
-$bold("Postcondizioni: ")$
-- viene visualizzato l'errore relativo all'inserimento di dati non validi.
+===== Definizione della lunghezza ambiente 3D <uc1.1.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la lunghezza dell'ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza dell'ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire la lunghezza dell'ambiente 3D che rappresenti un magazzino con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore lunghezza non positiva (@uc1.1.2.1)]
+)
+#derivedRequirements("1.1.2")
 
-$bold("Scenario: ")$
-- l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente non validi.
+====== Visualizzazione errore lunghezza non positiva <uc1.1.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria rettangolare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla lunghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza dell'ambiente 3D con planimetria rettangolare minore o uguale a zero"
+)
+#derivedRequirements("1.1.2.1")
 
-$bold("Generalizzazioni: ")$
-- UC-5.1.1 Dimensioni negative o uguali a 0;
-- UC-5.1.2 Dimensioni eccessive.
-
-#derivedRequirements("UC-5")
-
-=== Dimensioni negative o uguali a zero
-$bold("Descrizione: ")$
-le dimensioni inserite per la modifica dell'elemento interessato sono minori o uguali a zero.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- inseriti dati dimensionali per la modifica o la creazione degli elementi dell'ambiente;
-- le dimensioni inserite non sono valide.
-
-$bold("Postcondizioni: ")$
-- viene visualizzato l'errore relativo all'inserimento di dimensioni non valide.
-
-$bold("Scenario: ")$
-- l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente minori o uguali a zero.
-
-#derivedRequirements("UC-5.1")
-
-=== Dimensioni eccessive
-$bold("Descrizione: ")$
-le dimensioni inserite per la modifica dell'elemento interessato eccessive per il contesto di inserimento.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- inseriti dati dimensionali per la modifica o la creazione degli elementi dell'ambiente;
-- le dimensioni inserite sono eccessive.
-
-$bold("Postcondizioni: ")$
-- viene visualizzato l'errore relativo all'inserimento di dimensioni eccessive.
-
-$bold("Scenario: ")$
-- l'utente inserisce dati relativi alla configurazione degli elementi dell'ambiente eccessivi.
-
-#derivedRequirements("UC-5.2")
-
-== Caricamento dati da database <uc6>
+==== Configurazione ambiente 3D con planimetria definita da file SVG <uc1.2>
 
 #figure(
-  image("./imgs/uc6.png", format: "png"),
-  caption: [
-    UML UC-6
-  ],
+  image("./imgs/UC1.2.svg"),
+  caption: "Diagramma UC--1.2"
 )
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Configurazione ambiente 3D (@uc1)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente sta configurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha configurato un ambiente 3D con planimetria definita a partire da file SVG"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la modalità di configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero configurare un ambiente 3D con planimetria definita a partire da un file SVG"
+)
+#derivedRequirements("1.2")
 
-$bold("Descrizione: ")$
-A seguito della configurazione con il database, il sistema:
-- crea gli scaffali con i parametri forniti da database (altezza, larghezza, profondità, numero di piani, numero di colonne, orientamento rispetto al piano);
-- posiziona gli scaffali sul piano secondo le coordinate x e y fornite da database;
-- crea i bin con i parametri forniti da database (altezza, larghezza, profondità) e li colloca dove indicato (all'interno di un ripiano o in un altra area valida);
-- popola i bin con i rispettivi prodotti.
+===== Caricamento file SVG <uc1.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha caricato correttamente un file SVG valido da utilizzare come planimetria dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un file SVG da caricare"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente seleziona un file SVG vuoto",
+  "L'utente seleziona un file non valido al fine della creazione dell'ambiente 3D",
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero caricare un file SVG da utilizzare come planimetria dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore file vuoto (@uc1.2.1.1)],
+  [Visualizzazione errore file non valido (@uc1.2.1.2)]
+)
+#derivedRequirements("1.2.1")
 
-$bold("Attore: ")$
-utente.
+====== Visualizzazione errore file vuoto <uc1.2.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo al caricamento di un file vuoto"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un file SVG da caricare",
+  [Nel file SVG caricato non è presente alcun elemento grafico (come `path`, `rect`, `circle`, `ellipse`, `line`, `polyline`, `polygon`, `text`, `g`)]
+)
+#derivedRequirements("1.2.1.1")
 
-$bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato;
-- il database deve essere correttamente configurato.
+====== Visualizzazione errore file non valido <uc1.2.1.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo al caricamento di un file non valido"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un file non valido (privo della corretta sintassi XML) da caricare"
+)
+#derivedRequirements("1.2.1.2")
 
-$bold("Postcondizioni: ")$
-- il sistema crea gli scaffali con caratteristiche (altezza, larghezza, profondità, numero di piani, numero di colonne, orientamento rispetto al piano) e posizione (coordinate x e y) indicate nel database;
-- il sistema crea i bin con caratteristiche (altezza, larghezza, profondità) e posizione indicate nel database;
-- il sistema popola i bin con i prodotti contenuti nel database;
-- l'ambiente è popolato con scaffali, ripiani, bin e prodotti.
+===== Definizione del lato maggiore del magazzino <uc1.2.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito il lato maggiore dell'ambiente 3D con planimetria definita da file SVG",
+  "Il sistema ha calcolato il valore del lato minore dell'ambiente 3D con planimetria definita da file SVG a partire dagli attributi del file caricato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore del lato maggiore dell'ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire il lato maggiore dell'ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore lato non positivo (@uc1.2.2.1)]
+)
+#derivedRequirements("1.2.2")
 
-$bold("Scenario: ")$
-- l'utente configura l'accesso al database;
-- il sistema popola l'ambiente con scaffali, ripiani, bin e prodotti secondo quanto stabilito nel database.
+====== Visualizzazione errore lato non positivo <uc1.2.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha selezionato la configurazione di un ambiente 3D con planimetria definita da file SVG"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore del lato maggiore dell'ambiente 3D con planimetria definita da file SVG pari o minore di zero"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo al lato maggiore non positivo"
+)
+#derivedRequirements("1.2.2.1")
 
-$bold("Inclusioni: ")$
-- UC-6.1 Configurazione collegamento al database.
-
-$bold("Estensioni: ")$
-- UC-6.2 Visualizzazione messaggio di errore.
-
-#derivedRequirements("UC-6")
-
-=== Configurazione collegamento al database
-$bold("Descrizione: ")$
-l'utente imposta i dati necessari all'interfacciamento del prodotto con il database in cui sono contenuti i dati relativi ai prodotti e il loro posizionamento. I dati necessari alla configurazione del collegamento sono i seguenti:
-- indirizzo dell'host;
-- porta;
-- nome del database;
-- username;
-- password.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato;
-- il database deve essere disponibile;
-- l'utente deve disporre delle credenziali per accedere al database.
-
-$bold("Postcondizioni: ")$
-- il sistema è correttamente configurato per accedere al database.
-
-$bold("Scenario: ")$
-- l'utente vuole configurare i dati necessari alla configurazione del collegamento al database, quali:
-  - indirizzo dell'host;
-  - porta;
-  - nome del database;
-  - username;
-  - password.
-
-#derivedRequirements("UC-6.1")
-
-=== Visualizzazione messaggio di errore
-$bold("Descrizione: ")$
-i dati contenuti nel database sono in un formato non conforme o sono errati.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'utente ha iniziato la procedura di caricamento dati da database;
-- l'accesso al database deve essere stato correttamente configurato.
-
-$bold("Postcondizioni: ")$
-- all'utente viene notificato l'errore relativo alla presenza di dati errati o non conformi all'interno del database.
-
-$bold("Scenario: ")$
-- l'utente prova a caricare i dati dal database ma questi sono errati o non conformi a quelli che il sistema può riconoscere (es. numero scaffali/bin incompatibile con le coordinate dei prodotti).
-
-#derivedRequirements("UC-6.2")
-
-== Richiesta di spostamento di un prodotto <uc7>
+=== Modifica ambiente 3D <uc2>
 
 #figure(
-  image("./imgs/uc7.png", format: "png"),
-  caption: [
-    UML UC-7
-  ],
+  image("./imgs/UC2.svg"),
+  caption: "Diagramma UC--2"
 )
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D durante la sessione corrente"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha modificato la configurazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente modifica l'ambiente 3D attualmente configurato"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero modificare un ambiente 3D già configurato, espandendo o riducendo la sua superficie"
+)
+#derivedRequirements("2")
 
-$bold("Descrizione: ")$
-l'utente seleziona il prodotto di cui desidera una ricollocazione all'interno del magazzino e avvia una richiesta di spostamento verso un altro bin.
+==== Definizione larghezza <uc2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D durante la sessione corrente",
+  "L'utente sta riconfigurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha ridefinito la larghezza dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero",
+  "L'utente inserisce un valore inferiore a quello iniziale"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero ridefinire la larghezza dell'ambiente 3D a seguito della sua configurazione iniziale"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore larghezza non positiva (@uc2.1.1)],
+  [Errore dimensione inferiore a quella iniziale (@uc2.3)]
+)
+#derivedRequirements("2.1")
 
-$bold("Attore: ")$
-utente.
+===== Visualizzazione errore larghezza non positiva <uc2.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D durante la sessione corrente",
+  "L'utente sta riconfigurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla larghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza dell'ambiente 3D pari o minore di zero"
+)
+#derivedRequirements("2.1.1")
 
-$bold("Precondizioni: ")$
-- devono esistere almeno due bin distinti;
-- uno dei due bin deve contenere un prodotto;
-- uno dei due bin deve essere vuoto.
+==== Definizione lunghezza <uc2.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D durante la sessione corrente",
+  "L'utente sta riconfigurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha ridefinito la lunghezza dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero ridefinire la lunghezza dell'ambiente 3D a seguito della sua configurazione iniziale"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore lunghezza non positiva (@uc2.2.1)],
+  [Errore dimensione inferiore a quella iniziale (@uc2.3)]
+)
+#derivedRequirements("2.2")
 
-$bold("Postcondizioni: ")$
-- il bin di partenza viene evidenziato in modo da identificare il fatto che da quel bin è in atto uno spostamento;
-- il bin di arrivo viene evidenziato in modo da identificare il fatto che in quel bin è in atto uno spostamento.
+===== Visualizzazione errore lunghezza non positiva <uc2.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D durante la sessione corrente",
+  "L'utente sta riconfigurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla lunghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza dell'ambiente 3D pari o minore di zero"
+)
+#derivedRequirements("2.2.1")
 
-$bold("Scenario: ")$
-- l'utente seleziona un bin che contiene un prodotto;
-- l'utente sposta il prodotto all'interno di un bin vuoto;
-- vengono inviati all'API RESTful il bin di partenza e di destinazione del prodotto;
-- viene verificata la fattibilità dello spostamento dalle API RESTful;
-- viene inviata una notifica di spostamento al magazzino tramite API RESTful;
-- i due bin, di origine e di destinazione, vengono evidenziati per segnalare lo spostamento in corso.
+==== Errore dimensione inferiore a quella iniziale <uc2.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha configurato un ambiente 3D con planimetria definita da file SVG",
+  "L'utente sta riconfigurando l'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla dimensione inserita inferiore al rispettivo valore indicato durante la configurazione iniziale dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore di dimensione (lunghezza o larghezza) inferiore a quella iniziale"
+)
+#derivedRequirements("2.3")
 
-#derivedRequirements("UC-7")
-
-== Visualizzazione di un bin <uc8>
+=== Definizione passo griglia di aggancio <uc3>
 
 #figure(
-  image("./imgs/uc8.png", format: "png"),
-  caption: [
-    UML UC-8
-  ],
+  image("./imgs/UC3.svg", width: 60%),
+  caption: "Diagramma UC--3"
 )
-$bold("Descrizione: ")$
-vengono visualizzate le informazioni di un determinato bin e, se presente, del prodotto che contiene.
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha creato un ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito il passo della griglia di aggancio, ovvero un numero non negativo espresso in metri"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un valore del passo della griglia di aggancio"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire il passo della griglia di aggancio per poter disporre le zone in modo ordinato. Il passo è un numero non negativo espresso in metri"
+)
+#derivedRequirements("3")
 
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato e deve esistere almeno un bin.
-
-$bold("Postcondizioni: ")$
-- vengono visualizzate le informazioni del bin e, se presente, del prodotto che contiene.
-
-$bold("Scenario: ")$
-- l'utente seleziona un bin;
-- vengono visualizzate le seguenti informazioni relative al bin selezionato:
-  - codice identificativo del bin;
-  - stato del bin (occupato o vuoto);
-  - tipologia di prodotto che contiene, in caso di bin non vuoto;
-  - id dello scaffale che lo contiene;
-  - posizione del bin all'interno dello scaffale (piano e colonna).
-
-#derivedRequirements("UC-8")
-
-== Visualizzazione di uno scaffale <uc9>
+=== Importazione delle zone da database <uc4>
 
 #figure(
-  image("./imgs/uc9.png", format: "png"),
-  caption: [
-    UML UC-9
-  ],
+  image("./imgs/UC4.svg"),
+  caption: "Diagramma UC--4"
 )
-$bold("Descrizione: ")$
-deve essere possibile visualizzare le informazioni relative ad uno specifico scaffale.
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "I dati relativi alle zone sono stati importati correttamente dal database",
+  "Le zone importate sono state collocate nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona l'importazione delle zone dal database"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'importazione dal database fallisce"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero importare le zone dal database per poterle visualizzare nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Importazione dei bin da database (@uc4.1)]
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore importazione dati da database (@uc6)]
+)
+#derivedRequirements("4")
 
-$bold("Attore: ")$
-utente.
+==== Importazione dei bin da database <uc4.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D",
+  "L'utente ha importato le zone dal database"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "I dati relativi ai bin sono stati importati correttamente dal database"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona l'importazione dei bin dal database"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero importare i bin dal database per poterli visualizzare nell'ambiente 3D all'interno delle zone importate"
+)
+#derivedRequirements("4.1")
 
-$bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato e deve esistere almeno uno scaffale.
-
-$bold("Postcondizioni: ")$
-- vengono visualizzate le informazioni dello scaffale.
-
-$bold("Scenario: ")$
-- l'utente seleziona uno scaffale;
-- vengono visualizzate le seguenti informazioni relative allo scaffale selezionato:
-  - codice identificativo dello scaffale;
-  - numero totale di bin che contiene;
-  - numero di bin contenuti occupati;
-  - numero di bin contenuti vuoti;
-  - altezza dello scaffale;
-  - larghezza dello scaffale;
-  - profondità dello scaffale;
-  - numero di piani;
-  - numero di colonne.
-
-#derivedRequirements("UC-9")
-
-== Ricerca prodotti <uc10>
+=== Importazione dei prodotti da database <uc5>
 
 #figure(
-  image("./imgs/uc10.png", format: "png"),
-  caption: [
-    UML UC-10
-  ],
+  image("./imgs/UC5.svg", width: 90%),
+  caption: "Diagramma UC--5"
 )
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "I dati relativi ai prodotti sono stati importati correttamente dal database"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona l'importazione dei prodotti dal database"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'importazione dal database fallisce"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero importare i prodotti dal database per poterli visualizzare nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore importazione dati da database (@uc6)]
+)
+#derivedRequirements("5")
 
-$bold("Descrizione: ")$
-l'utente ricerca un prodotto.
+=== Visualizzazione errore importazione dati da database <uc6>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D",
+  "L'utente ha richiesto l'importazione dei dati dal database"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo all'importazione dei dati dal database"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona l'importazione dei dati dal database ma l'importazione fallisce"
+)
+#derivedRequirements("6")
 
-$bold("Attore: ")$
-utente.
+=== Rotazione del POV <uc7>
+#figure(
+  image("./imgs/UC7.svg", width: 60%),
+  caption: "Diagramma UC--7"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente interagisce con il sistema per ruotare il proprio punto di vista attorno all'asse longitudinale"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha ruotato il punto di vista lungo l'asse longitudinale"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente ruota il punto di vista tramite mouse, tastiera o touchscreen"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero ruotare il punto di vista attorno all'asse longitudinale per poter visualizzare l'ambiente 3D da diverse angolazioni"
+)
+#derivedRequirements("7")
 
-$bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato.
+=== Panning del POV <uc8>
+#figure(
+  image("./imgs/UC8.svg", width: 60%),
+  caption: "Diagramma UC--8"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente interagisce con il sistema per spostare il proprio punto di vista lungo l'asse orizzontale"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha spostato il punto di vista lungo l'asse orizzontale"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente sposta il punto di vista tramite mouse, tastiera o touchscreen"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero spostare orizzontalmente il punto di vista per poter visualizzare l'ambiente 3D da diverse posizioni"
+)
+#derivedRequirements("8")
 
-$bold("Postcondizioni: ")$
-- l'utente visualizza la posizione del bin contenente il prodotto ricercato.
+=== Zoom-in sull'ambiente 3D <uc9>
+#figure(
+  image("./imgs/UC9.svg", width: 60%),
+  caption: "Diagramma UC--9"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente interagisce con il sistema per effettuare lo zoom-in"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha ristretto il proprio campo visivo sull'ambiente 3D",
+  "L'utente ha avvicinato il proprio punto di vista all'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente effettua lo zoom-in tramite mouse, tastiera o touchscreen"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero effettuare lo zoom-in per poter visualizzare l'ambiente 3D da diverse distanze"
+)
+#derivedRequirements("9")
 
-$bold("Scenario: ")$
-- l'utente ricerca un prodotto;
-- il bin contenente il prodotto cercato viene evidenziato.
+=== Zoom-out sull'ambiente 3D <uc10>
+#figure(
+  image("./imgs/UC10.svg", width: 60%),
+  caption: "Diagramma UC--10"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente interagisce con il sistema per effettuare lo zoom-out"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha allargato il proprio campo visivo sull'ambiente 3D",
+  "L'utente ha allontanato il proprio punto di vista sull'ambiente 3D",
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente effettua lo zoom-out tramite mouse, tastiera o touchscreen"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero effettuare lo zoom-out per poter visualizzare l'ambiente 3D da diverse distanze"
+)
+#derivedRequirements("10")
 
-$bold("Generalizzazioni: ")$
-- UC-10.1 Ricerca per ID;
-- UC-10.2 Ricerca per Nome;
-- UC-10.3 Ricerca per Scaffale.
-
-#derivedRequirements("UC-10")
-
-=== Ricerca per ID
-$bold("Descrizione: ")$
-l'utente ricerca un prodotto tramite il suo ID di magazzino.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato.
-
-$bold("Postcondizioni: ")$
-- l'utente visualizza la posizione del bin contenente il prodotto ricercato.
-
-$bold("Scenario: ")$
-- l'utente ricerca un prodotto usando come chiave l'ID univoco di magazzino;
-- il bin contenente il prodotto cercato viene evidenziato.
-
-#derivedRequirements("UC-10.1")
-
-=== Ricerca per Nome
-$bold("Descrizione: ")$
-l'utente ricerca un prodotto tramite il nome associato al prodotto.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato.
-
-$bold("Postcondizioni: ")$
-- l'utente visualizza la posizione del bin contenente il prodotto ricercato.
-
-$bold("Scenario: ")$
-- l'utente ricerca un prodotto usando come chiave per la ricerca il nome del prodotto;
-- il bin contenente il prodotto cercato viene evidenziato;
-- i prodotti associati al nome possono essere più di uno.
-
-#derivedRequirements("UC-10.2")
-
-=== Ricerca per Scaffale
-$bold("Descrizione: ")$
-l'utente ricerca i prodotti contenuti all'interno di uno scaffale del magazzino.
-
-$bold("Attore: ")$
-utente.
-
-$bold("Precondizioni: ")$
-- l'ambiente deve essere correttamente configurato.
-
-$bold("Postcondizioni: ")$
-- l'utente visualizza la posizione dei prodotti contenuti nello scaffale cercato.
-
-$bold("Scenario: ")$
-- l'utente ricerca i materiali contenuti all'interno di uno scaffale del magazzino;
-- lo scaffale viene evidenziato.
-
-#derivedRequirements("UC-10.3")
-
-== Esplorazione magazzino <uc11>
+=== Reimpostazione ambiente 3D <uc11>
 
 #figure(
-  image("./imgs/uc11.png", format: "png", width: 60%),
-  caption: [
-    UML UC-11
-  ],
+  image("./imgs/UC11.svg"),
+  caption: "Diagramma UC--11"
 )
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La configurazione dell'ambiente 3D è stata reimpostata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la reimpostazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero reimpostare un ambiente 3D già configurato, compresi i dati eventualmente importati da database e quelli immessi manualmente, per poter ricominciare da zero con impostazioni diverse"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Reset movimentazioni (@uc11.1)],
+  [Reset modifiche alle zone (@uc11.2)],
+  [Reset planimetria (@uc11.3)],
+  [Rimozione dati importati (@uc11.4)]
+)
+#derivedRequirements("11")
 
-#derivedRequirements("UC-11")
+==== Reset movimentazioni <uc11.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha impostato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La lista delle movimentazioni è stata azzerata",
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la reimpostazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero reimpostare le movimentazioni per poter tornare allo stato iniziale"
+)
+#derivedRequirements("11.1")
 
-=== Spostamento della visuale lungo gli assi
-$bold("Descrizione: ")$
-successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può visualizzare il magazzino e spostare la visuale lungo almeno uno dei tre assi (orizzontale, verticale, longitudinale).
+==== Reset modifiche alle zone <uc11.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha impostato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Tutte le modifiche alle zone (incluse aggiunte e cancellazioni) sono state annullate"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la reimpostazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero reimpostare le modifiche alle zone per poter ricominciare da zero la configurazione dell'ambiente 3D"
+)
+#derivedRequirements("11.2")
 
-$bold("Attore: ")$
-utente.
+==== Reset planimetria <uc11.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La configurazione della planimetria è stata reimpostata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la reimpostazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero reimpostare la planimetria per poter ricominciare da zero la configurazione dell'ambiente 3D"
+)
+#derivedRequirements("11.3")
 
-$bold("Precondizioni: ")$
-- il sistema è stato correttamente configurato.
+==== Rimozione dati importati <uc11.4>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha impostato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "I dati importati da database sono stati rimossi"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la reimpostazione dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero rimuovere i dati importati da database per poter ricominciare da zero la configurazione dell'ambiente 3D"
+)
+#derivedRequirements("11.4")
 
-$bold("Postcondizioni: ")$
-- l'utente ha spostato la visuale sul magazzino nella direzione di almeno uno dei tre assi (orizzontale, verticale, longitudinale).
+#pagebreak()
 
-$bold("Scenario: ")$
-- l'utente visualizza il magazzino;
-- l'utente può spostare la visuale del magazzino lungo l'asse verticale;
-- l'utente può spostare la visuale del magazzino lungo l'asse orizzontale;
-- l'utente può spostare la visuale del magazzino lungo l'asse longitudinale;
-- l'utente ha cambiato la prospettiva sul magazzino.
+#set heading(numbering: "1.1", supplement: "Sezione")
 
-#derivedRequirements("UC-11.1")
+== Zone e Bin <uc-zone>
 
-=== Rotazione della visuale
-$bold("Descrizione: ")$
-successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può visualizzare il magazzino e ruotare la visuale sul magazzino in senso orario o antiorario.
+#set heading(numbering: (..nums) => {
+  let values = nums.pos().slice(2);
+  return "UC--" + values.map(str).join(".");
+}, supplement: "Caso d'uso")
+#setUCHeadingCounterTo(12)
 
-$bold("Attore: ")$
-utente.
+=== Creazione zona <uc12>
 
-$bold("Precondizioni: ")$
-- il sistema è stato correttamente configurato.
+#figure(
+  image("./imgs/UC12.svg", width: 120%),
+  caption: "Diagramma UC--12"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La zona è stata aggiunta all'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente configura una nuova zona da creare",
+  "L'utente colloca la zona in una posizione valida nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Definizione ID zona (@uc12.1)],
+  [Definizione lunghezza zona (@uc12.2)],
+  [Definizione orientamento zona (@uc12.3)],
+  [Definizione colonne zona (@uc12.4)],
+  [Definizione livelli zona (@uc12.5)],
+  [Collocamento della zona nell'ambiente 3D (@uc16)]
+)
+#derivedRequirements("12")
 
-$bold("Postcondizioni: ")$
-- l'utente ha ruotato la visuale sul magazzino in senso orario o antiorario.
+==== Definizione ID zona <uc12.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito l'ID della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore dell'ID della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore già utilizzato per un'altra zona"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire l'ID di una zona per poterla identificare in modo univoco"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore ID zona già in uso (@uc12.1.1)]
+)
+#derivedRequirements("12.1")
 
-$bold("Scenario: ")$
-- l'utente visualizza il magazzino;
-- l'utente può ruotare la visuale in senso orario;
-- l'utente può ruotare la visuale in senso antiorario;
-- l'utente ha cambiato la prospettiva sul magazzino.
+===== Visualizzazione errore ID zona già in uso <uc12.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo all'ID della zona già in uso"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore dell'ID della zona già associato ad un'altra zona"
+)
+#derivedRequirements("12.1.1")
 
-#derivedRequirements("UC-11.2")
+==== Definizione lunghezza zona <uc12.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la lunghezza della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero definire la lunghezza di una zona per poterla collocare nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore lunghezza non positiva (@uc12.2.1)]
+)
+#derivedRequirements("12.2")
 
-=== Zoom della visuale
-$bold("Descrizione: ")$
-successivamente alla configurazione dell'ambiente di lavoro (@uc1), l'utente può effettuare uno zoom-in o uno zoom-out per avvicinare o allontanare la visuale dal magazzino.
+===== Visualizzazione errore lunghezza non positiva <uc12.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla lunghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della lunghezza della zona pari o minore di zero"
+)
+#derivedRequirements("12.2.1")
 
-$bold("Attore: ")$
-utente.
+==== Definizione orientamento zona <uc12.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito l'orientamento della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un valore dell'orientamento della zona tra i valori disponibili"
+)
+#printUseCaseInfo(
+  "User story associata",
+  [Come utente, desidero definire l'orientamento di una zona (tra "nord-sud" (`NS`) e "ovest-est" (`WE`)) per poterla collocare nell'ambiente 3D]
+)
+#derivedRequirements("12.3")
 
-$bold("Precondizioni: ")$
-- il sistema è stato correttamente configurato.
+==== Definizione colonne zona <uc12.4>
+#figure(
+  image("./imgs/UC12.4.svg", width: 120%),
+  caption: "Diagramma UC--12.4"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito le proprietà delle colonne della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente definisce le proprietà delle colonne della zona"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero personalizzare le colonne di una zona per poterla rendere il più simile possibile all'ambiente reale"
+)
+#derivedRequirements("12.4")
 
-$bold("Postcondizioni: ")$
-- l'utente ha avvicinato o allontanato la visuale dal magazzino.
+===== Definizione numero colonne <uc12.4.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito il numero di colonne della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce il numero di colonne della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore di 1"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore numero colonne non conforme (@uc12.4.1.1)]
+)
+#derivedRequirements("12.4.1")
 
-$bold("Scenario: ")$
-- l'utente visualizza il magazzino;
-- l'utente può avvicinarsi al magazzino e ai suoi elementi tramite uno zoom-in;
-- l'utente può allontanarsi dal magazzino e dai suoi elementi tramite uno zoom-out;
-- l'utente ha cambiato la prospettiva sul magazzino.
+====== Visualizzazione errore numero colonne non conforme <uc12.4.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo al valore immesso non conforme"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un numero di colonne minore di 1"
+)
+#derivedRequirements("12.4.1.1")
 
-#derivedRequirements("UC-11.3")
+===== Definizione larghezza colonne <uc12.4.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza delle colonne della zona",
+  "La larghezza della zona è calcolata come la somma delle larghezze delle singole colonne"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente definisce la larghezza delle colonne della zona secondo una delle modalità disponibili"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Definizione larghezza colonne tramite equa distribuzione (@uc12.4.2.1)],
+  [Definizione larghezza colonne personalizzata (@uc12.4.2.2)]
+)
+#derivedRequirements("12.4.2")
+
+====== Definizione larghezza colonne tramite equa distribuzione <uc12.4.2.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Definizione larghezza colonne (@uc12.4.2)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza delle colonne della zona",
+  "La larghezza della zona è suddivisa equamente in tante parti quante sono le colonne",
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la modalità di equa distribuzione della larghezza delle colonne",
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Definizione larghezza zona (@uc12.4.2.1.1)]
+)
+#derivedRequirements("12.4.2.1")
+
+======= Definizione larghezza zona <uc12.4.2.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore larghezza non positiva (@uc12.4.3)]
+)
+#derivedRequirements("12.4.2.1.1")
+
+====== Definizione larghezza colonne personalizzata <uc12.4.2.2>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Definizione larghezza colonne (@uc12.4.2)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza delle colonne della zona",
+  "La larghezza della zona è suddivisa in tante parti quante sono le colonne, ciascuna con larghezza personalizzata",
+  "La larghezza della zona è calcolata come la somma delle larghezze delle singole colonne"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente definisce la larghezza di ciascuna colonna della zona"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Definizione larghezza singola colonna (@uc12.4.2.2.1)]
+)
+#derivedRequirements("12.4.2.2")
+
+======= Definizione larghezza singola colonna <uc12.4.2.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona",
+  "L'utente ha selezionato la modalità di definizione personalizzata della larghezza delle colonne"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito la larghezza di una colonna della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza di una colonna della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore larghezza non positiva (@uc12.4.3)]
+)
+#derivedRequirements("12.4.2.2.1")
+
+===== Visualizzazione errore larghezza non positiva <uc12.4.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo alla larghezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore della larghezza minore o uguale a zero"
+)
+#derivedRequirements("12.4.3")
+
+==== Definizione livelli zona <uc12.5>
+#figure(
+  image("./imgs/UC12.5.svg", width: 80%),
+  caption: "Diagramma UC--12.5"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito le proprietà dei livelli della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente definisce le proprietà dei livelli della zona"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero personalizzare i livelli di una zona per poterla rendere il più simile possibile all'ambiente reale"
+)
+#derivedRequirements("12.5")
+
+===== Definizione numero livelli <uc12.5.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito il numero di livelli della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce il numero di livelli della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore numero livelli minore o uguale a zero (@uc12.5.1.1)]
+)
+#derivedRequirements("12.5.1")
+
+====== Visualizzazione errore numero livelli minore o uguale a zero <uc12.5.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo al valore immesso minore o uguale a zero"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un numero di livelli minore o uguale a zero"
+)
+#derivedRequirements("12.5.1.1")
+
+===== Definizione altezza livelli <uc12.5.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito l'altezza dei livelli della zona secondo una delle modalità disponibili",
+  "L'altezza della zona è calcolata come la somma delle altezze dei singoli livelli"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una modalità di definizione dell'altezza dei livelli della zona tra quelle disponibili"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Definizione altezza livelli personalizzata (@uc12.5.2.1)],
+)
+#derivedRequirements("12.5.2")
+
+====== Definizione altezza livelli personalizzata <uc12.5.2.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Definizione altezza livelli (@uc12.5.2)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito l'altezza dei livelli della zona",
+  "L'altezza della zona è suddivisa in tante parti quante sono i livelli, ciascuna con altezza personalizzata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente definisce l'altezza di ciascun livello della zona"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Definizione altezza singolo livello (@uc12.5.2.1.1)]
+)
+#derivedRequirements("12.5.2.1")
+
+======= Definizione altezza singolo livello <uc12.5.2.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona",
+  "L'utente ha selezionato la modalità di definizione personalizzata dell'altezza dei livelli della zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente ha definito l'altezza di un livello della zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore dell'altezza di un livello della zona"
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente inserisce un valore minore o uguale a zero"
+)
+#derivedRequirements("12.5.2.1.1")
+
+======== Visualizzazione errore altezza non positiva <uc12.5.2.1.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta configurando una nuova zona",
+  "L'utente ha selezionato la modalità di definizione personalizzata dell'altezza dei livelli della zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo all'altezza non positiva"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce un valore dell'altezza minore o uguale a zero"
+)
+#derivedRequirements("12.5.2.1.1.1")
+
+=== Modifica zona <uc13>
+
+#figure(
+  image("./imgs/UC13.svg", width: 120%),
+  caption: "Diagramma UC--13"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La zona è stata modificata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la zona da modificare",
+  "L'utente modifica le proprietà della zona"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero modificare le proprietà di una zona, creata in precedenza o importata da database, per poterla adattare alle mie esigenze"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Definizione lunghezza zona (@uc12.2)],
+  [Definizione orientamento zona (@uc12.3)],
+  [Definizione colonne zona (@uc12.4)],
+  [Definizione livelli zona (@uc12.5)],
+  [Collocamento della zona nell'ambiente 3D (@uc16)]
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Rimozione singola colonna (@uc13.1)],
+  [Rimozione singolo livello (@uc13.2)],
+)
+#derivedRequirements("13")
+
+==== Rimozione singola colonna <uc13.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente sta modificando una zona",
+  "La zona modificata possiede almeno 2 colonne"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La colonna selezionata è stata rimossa dalla zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una colonna vuota da rimuovere",
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente seleziona una colonna con almeno un bin occupato",
+  "L'utente seleziona una colonna vuota con indice inferiore ad una colonna con almeno un bin occupato"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore operazione impossibile perché insiste su bin occupato (@uc13.3)]
+)
+#derivedRequirements("13.1")
+
+==== Rimozione singolo livello <uc13.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente sta modificando una zona",
+  "La zona modificata possiede almeno 2 livelli"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il livello selezionato è stato rimosso dalla zona"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un livello vuoto da rimuovere",
+)
+#printUseCaseInfo(
+  "Scenari alternativi",
+  "L'utente seleziona un livello con almeno un bin occupato",
+  "L'utente seleziona un livello vuoto con indice inferiore ad un livello con almeno un bin occupato"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione errore operazione impossibile perché insiste su bin occupato (@uc13.3)]
+)
+#derivedRequirements("13.2")
+
+==== Visualizzazione errore operazione impossibile perché insiste su bin occupato <uc13.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente sta modificando una zona",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza un errore relativo all'impossibilità di rimuovere la colonna o il livello selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la rimozione di una colonna o di un livello con almeno un bin occupato"
+)
+#derivedRequirements("13.3")
+
+=== Eliminazione zona <uc14>
+
+#figure(
+  image("./imgs/UC14.svg", width: 60%),
+  caption: "Diagramma UC--14"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La zona è stata eliminata dall'ambiente 3D",
+  "I prodotti collocati nei bin della zona rimossa sono elencati nella lista dei prodotti senza collocazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la zona da eliminare",
+  "L'utente conferma l'eliminazione della zona"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero eliminare una zona dall'ambiente 3D per fare spazio ad altre zone o semplicemente per rimuoverla"
+)
+#derivedRequirements("14")
+
+=== Ispezione zona <uc15>
+
+#figure(
+  image("./imgs/UC15.svg", width: 110%),
+  caption: "Diagramma UC--15"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative alla zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare le informazioni associate ad una zona"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID zona (@uc15.1)],
+  [Visualizzazione larghezza zona (@uc15.2)],
+  [Visualizzazione lunghezza zona (@uc15.3)],
+  [Visualizzazione altezza zona (@uc15.4)],
+  [Evidenziazione zona selezionata (@uc15.5)],
+  [Visualizzazione lista bin inclusi nella zona (@uc15.6)]
+)
+#derivedRequirements("15")
+
+==== Visualizzazione ID zona <uc15.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID della zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'ID di una zona per poterla identificare in modo univoco"
+)
+#derivedRequirements("15.1")
+
+==== Visualizzazione larghezza zona <uc15.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la larghezza della zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+#derivedRequirements("15.2")
+
+==== Visualizzazione lunghezza zona <uc15.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lunghezza della zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+#derivedRequirements("15.3")
+
+==== Visualizzazione altezza zona <uc15.4>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'altezza della zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+#derivedRequirements("15.4")
+
+==== Evidenziazione zona selezionata <uc15.5>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La zona selezionata è evidenziata nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero che la zona ispezionata venga evidenziata graficamente per poterla individuare a colpo d'occhio nell'ambiente 3D"
+)
+#derivedRequirements("15.5")
+
+==== Visualizzazione lista bin inclusi nella zona <uc15.6>
+#figure(
+  image("./imgs/UC15.6.svg", width: 90%),
+  caption: "Diagramma UC--15.6"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei bin inclusi nella zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la lista dei bin inclusi in una zona per poter controllare la disposizione dei prodotti e il tasso di occupazione della zona stessa"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione singolo bin (@uc15.6.1)]
+)
+#derivedRequirements("15.6")
+
+===== Visualizzazione singolo bin <uc15.6.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta ispezionando una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative ad un singolo bin presente nella zona selezionata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista delle zone"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID bin (@uc15.6.1.1)],
+  [Visualizzazione stato bin (@uc15.6.1.2)],
+)
+#derivedRequirements("15.6.1")
+
+====== Visualizzazione ID bin <uc15.6.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta ispezionando una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei bin"
+)
+#derivedRequirements("15.6.1.1")
+
+====== Visualizzazione stato bin <uc15.6.1.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente sta ispezionando una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza lo stato di occupazione del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei bin"
+)
+#derivedRequirements("15.6.1.2")
+
+=== Collocamento della zona nell'ambiente 3D <uc16>
+#figure(
+  image("./imgs/UC16.svg", width: 110%),
+  caption: "Diagramma UC--16"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "La zona è stata collocata nell'ambiente 3D",
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  [L'utente seleziona una zona da collocare, tramite creazione (@uc12) o modifica (@uc13)],
+  "L'utente posiziona la zona nell'ambiente 3D",
+  "L'utente conferma il collocamento della zona nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero collocare una zona in una posizione specifica dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Evidenziazione zona non collocabile (@uc16.1)],
+)
+#derivedRequirements("16")
+
+==== Evidenziazione zona non collocabile <uc16.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "L'utente ha selezionato una zona da collocare",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  [L'utente visualizza un _hint_ grafico relativo all'impossibilità di collocare la zona nella posizione desiderata],
+  "La zona non viene collocata nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente tenta di collocare una zona in una posizione non valida"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Evidenziazione zona collisa con zone già collocate (@uc16.1.1)],
+  [Evidenziazione zona non collocabile perché al di fuori del perimetro (@uc16.1.2)],
+)
+#derivedRequirements("16.1")
+
+===== Evidenziazione zona collisa con zone già collocate <uc16.1.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Evidenziazione zona non collocabile (@uc16.1)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente tenta di collocare una zona in una posizione già occupata da un'altra zona",
+  "Le zone si sovrappongono e collidono"
+)
+#derivedRequirements("16.1.1")
+
+===== Evidenziazione zona non collocabile perché al di fuori del perimetro <uc16.1.2>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Evidenziazione zona non collocabile (@uc16.1)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente tenta di collocare una zona al di fuori del perimetro dell'ambiente 3D"
+)
+#derivedRequirements("16.1.2")
+
+=== Visualizzazione lista zone <uc17>
+#figure(
+  image("./imgs/UC17.svg"),
+  caption: "Diagramma UC--17"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista delle zone presenti nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della lista delle zone"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la lista delle zone presenti nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione singola zona (@uc17.1)],
+)
+#derivedRequirements("17")
+
+==== Visualizzazione singola zona <uc17.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista delle zone",
+  "È presente almeno una zona nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative ad una singola zona presente in lista"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista delle zone"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID zona (@uc17.1.1)],
+)
+#derivedRequirements("17.1")
+
+===== Visualizzazione ID zona <uc17.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista delle zone",
+  "È presente almeno una zona nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID della zona visualizzata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista delle zone"
+)
+#derivedRequirements("17.1.1")
+
+=== Ricerca zona <uc18>
+#figure(
+  image("./imgs/UC18.svg", width: 80%),
+  caption: "Diagramma UC--18"
+)
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza i risultati della ricerca filtrati secondo il termine inserito e la modalità scelta"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la modalità di ricerca tra quelle disponibili",
+  "L'utente inserisce il termine di ricerca"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero poter ricercare una zona per individuarla velocemente nella lista delle zone"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Ricerca per ID zona (@uc18.1)],
+)
+#derivedRequirements("18")
+
+==== Ricerca per ID zona <uc18.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Ricerca prodotti (@uc18)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista delle zone filtrata secondo l'ID della zona inserito come termine di ricerca"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce l'ID della zona da cercare"
+)
+#derivedRequirements("18.1")
+
+=== Ispezione bin <uc19>
+#figure(
+  image("./imgs/UC19.svg"),
+  caption: "Diagramma UC--19"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative al bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare le informazioni associate ai bin presenti nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID bin (@uc19.1)],
+  [Visualizzazione lunghezza (@uc19.2)],
+  [Visualizzazione larghezza (@uc19.3)],
+  [Visualizzazione altezza (@uc19.4)],
+  [Evidenziazione bin selezionato (@uc19.5)],
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione informazioni prodotto (@uc22)]
+)
+#derivedRequirements("19")
+
+==== Visualizzazione ID bin <uc19.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+#derivedRequirements("19.1")
+
+==== Visualizzazione lunghezza bin <uc19.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lunghezza del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+#derivedRequirements("19.2")
+
+==== Visualizzazione larghezza bin <uc19.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la larghezza del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+#derivedRequirements("19.3")
+
+==== Visualizzazione altezza bin <uc19.4>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'altezza del bin selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+#derivedRequirements("19.4")
+
+==== Evidenziazione bin selezionato <uc19.5>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il bin selezionato è evidenziato nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero che il bin ispezionato venga evidenziato graficamente per poterlo individuare a colpo d'occhio nell'ambiente 3D"
+)
+#derivedRequirements("19.5")
+
+=== Spostamento POV su zona specifica <uc20>
+
+#figure(
+  image("./imgs/UC20.svg", width: 80%),
+  caption: "Diagramma UC--20"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'inquadratura dell'ambiente 3D si sposta sulla zona specificata"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona una zona da ispezionare",
+  "L'utente richiede lo spostamento del POV così da inquadrare la zona"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero spostare il POV sull'ambiente 3D per poter visualizzare una zona specifica"
+)
+#derivedRequirements("20")
+
+=== Spostamento POV su bin specifico <uc21>
+
+#figure(
+  image("./imgs/UC21.svg", width: 80%),
+  caption: "Diagramma UC--21"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha creato un ambiente 3D",
+  "Nell'ambiente 3D è presente almeno una zona"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'inquadratura dell'ambiente 3D si sposta sul bin specificato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un bin da ispezionare",
+  "L'utente richiede lo spostamento del POV così da inquadrare il bin"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero spostare il POV sull'ambiente 3D per poter visualizzare un bin specifico"
+)
+#derivedRequirements("21")
+
+#pagebreak()
+
+#set heading(numbering: "1.1", supplement: "Sezione")
+
+== Prodotti <uc-prodotti>
+
+#set heading(numbering: (..nums) => {
+  let values = nums.pos().slice(2);
+  return "UC--" + values.map(str).join(".");
+}, supplement: "Caso d'uso")
+#setUCHeadingCounterTo(22)
+
+=== Visualizzazione informazioni prodotto <uc22>
+
+#figure(
+  image("./imgs/UC22.1.svg", width: 75%),
+  caption: "Diagramma UC--22"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha richiesto l'importazione dei prodotti",
+  "Il sistema ha importato correttamente almeno un prodotto"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative al prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare le informazioni associate ai prodotti presenti nel magazzino"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID prodotto (@uc22.1)],
+  [Visualizzazione nome prodotto (@uc22.2)],
+  [Visualizzazione categoria prodotto (@uc22.3)],
+  [Visualizzazione larghezza prodotto (@uc22.4)],
+  [Visualizzazione lunghezza prodotto (@uc22.5)],
+  [Visualizzazione altezza prodotto (@uc22.6)],
+  [Visualizzazione peso prodotto (@uc22.7)],
+)
+#derivedRequirements("22")
+
+==== Visualizzazione ID prodotto <uc22.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sull'ID di un prodotto"
+)
+#derivedRequirements("22.1")
+
+==== Visualizzazione nome prodotto <uc22.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza il nome del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sul nome di un prodotto"
+)
+#derivedRequirements("22.2")
+
+==== Visualizzazione categoria prodotto <uc22.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la categoria del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sulla categoria di un prodotto"
+)
+#derivedRequirements("22.3")
+
+==== Visualizzazione larghezza prodotto <uc22.4>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la larghezza del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sulla larghezza di un prodotto"
+)
+#derivedRequirements("22.4")
+
+==== Visualizzazione lunghezza prodotto <uc22.5>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lunghezza del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sulla lunghezza di un prodotto"
+)
+#derivedRequirements("22.5")
+
+==== Visualizzazione altezza prodotto <uc22.6>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'altezza del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sull'altezza di un prodotto"
+)
+#derivedRequirements("22.6")
+
+==== Visualizzazione peso prodotto <uc22.7>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha selezionato un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza il peso del prodotto selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto da ispezionare"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare l'informazione sul peso di un prodotto"
+)
+#derivedRequirements("22.7")
+
+=== Visualizzazione lista prodotti <uc23>
+
+#figure(
+  image("./imgs/UC23.svg", width: 115%),
+  caption: "Diagramma UC--23"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha richiesto l'importazione dei prodotti",
+  "Il sistema ha importato correttamente almeno un prodotto"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti importati secondo il criterio selezionato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione di una delle liste di prodotti tra quelle disponibili"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la lista dei prodotti importati da database e visualizzarne i dettagli"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Visualizzazione lista prodotti non collocati (@uc23.1)],
+  [Visualizzazione lista prodotti collocati (@uc23.2)]
+)
+#derivedRequirements("23")
+
+==== Visualizzazione lista prodotti non collocati <uc23.1>
+#figure(
+  image("./imgs/UC23.1.1.svg", width: 80%),
+  caption: "Diagramma UC--23.1"
+)
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Visualizzazione lista prodotti (@uc23)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti non collocati nei bin"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della lista dei prodotti non collocati nei bin"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la lista dei prodotti non collocati nei bin delle zone dell'ambiente 3D per poterli collocare"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione singolo prodotto (@uc23.1.1)]
+)
+#derivedRequirements("23.1")
+
+===== Visualizzazione singolo prodotto <uc23.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative ad un singolo prodotto, non collocato nei bin, presente in lista"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della lista dei prodotti non collocati nei bin"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Visualizzazione singolo prodotto collocato (@uc23.2.1)]
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione nome prodotto (@uc23.1.1.1)],
+  [Visualizzazione ID prodotto (@uc23.1.1.2)],
+  [Visualizzazione categoria prodotto (@uc23.1.1.3)]
+)
+#derivedRequirements("23.1.1")
+
+====== Visualizzazione nome prodotto <uc23.1.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza il nome del prodotto visualizzato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei prodotti"
+)
+#derivedRequirements("23.1.1.1")
+
+====== Visualizzazione ID prodotto <uc23.1.1.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del prodotto visualizzato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei prodotti"
+)
+#derivedRequirements("23.1.1.2")
+
+====== Visualizzazione categoria prodotto <uc23.1.1.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la categoria del prodotto visualizzato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei prodotti"
+)
+#derivedRequirements("23.1.1.3")
+
+==== Visualizzazione lista prodotti collocati <uc23.2>
+#figure(
+  image("./imgs/UC23.2.1.svg", width: 80%),
+  caption: "Diagramma UC--23.2.1"
+)
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Visualizzazione lista prodotti (@uc23)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti collocati nei bin"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della lista dei prodotti collocati nei bin"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la lista dei prodotti collocati nei bin delle zone dell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione singolo prodotto collocato (@uc23.2.1)]
+)
+#derivedRequirements("23.2")
+
+===== Visualizzazione singolo prodotto collocato <uc23.2.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Visualizzazione singolo prodotto non collocato (@uc23.1.1)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti collocati nei bin"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative ad un singolo prodotto, collocato in un bin, presente in lista"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della lista dei prodotti collocati nei bin"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID zona di appartenenza (@uc23.2.1.1)],
+  [Visualizzazione ID bin di appartenenza (@uc23.2.1.2)]
+)
+#derivedRequirements("23.2.1")
+
+====== Visualizzazione ID zona di appartenenza <uc23.2.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti collocati"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID della zona di appartenenza del prodotto visualizzato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei prodotti collocati"
+)
+#derivedRequirements("23.2.1.1")
+
+====== Visualizzazione ID bin di appartenenza <uc23.2.1.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della lista dei prodotti collocati"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del bin dove si trova il prodotto visualizzato"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un elemento della lista dei prodotti collocati"
+)
+#derivedRequirements("23.2.1.2")
+
+=== Ricerca prodotti <uc24>
+
+#figure(
+  image("./imgs/UC24.svg"),
+  caption: "Diagramma UC--24"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha richiesto l'importazione dei prodotti",
+  "Il sistema ha importato correttamente almeno un prodotto"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza i risultati della ricerca filtrati secondo il termine inserito e la modalità scelta"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona la modalità di ricerca tra quelle disponibili",
+  "L'utente inserisce il termine di ricerca"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero poter ricercare un prodotto per individuarlo velocemente nella lista dei prodotti"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Ricerca per ID prodotto (@uc24.1)],
+  [Ricerca per nome prodotto (@uc24.2)],
+  [Ricerca per categoria prodotto (@uc24.3)]
+)
+#derivedRequirements("24")
+
+==== Ricerca per ID prodotto <uc24.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Ricerca prodotti (@uc24)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti filtrata secondo l'ID del prodotto inserito come termine di ricerca"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce l'ID del prodotto da cercare"
+)
+#derivedRequirements("24.1")
+
+==== Ricerca per nome prodotto <uc24.2>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Ricerca prodotti (@uc24)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti filtrata secondo il nome di prodotto inserito come termine di ricerca"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce il nome del prodotto da cercare"
+)
+#derivedRequirements("24.2")
+
+==== Ricerca per categoria prodotto <uc24.3>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Ricerca prodotti (@uc24)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la lista dei prodotti filtrata secondo la categoria inserita come termine di ricerca"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente inserisce la categoria di prodotto desiderata"
+)
+#derivedRequirements("24.3")
+
+=== Spostamento prodotto <uc25>
+#figure(
+  image("./imgs/UC25.svg", width: 120%),
+  caption: "Diagramma UC--25"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha richiesto l'importazione dei prodotti",
+  "Il sistema ha importato correttamente almeno un prodotto"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il sistema inserisce l'ordine di movimentazione del prodotto verso il bin di destinazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede lo spostamento di un prodotto verso un bin di destinazione"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero spostare un prodotto verso un bin di destinazione per poterlo (ri)collocare nell'ambiente 3D"
+)
+#printUseCaseInfo(
+  "Generalizzazioni",
+  [Spostamento prodotto non collocato in un bin (@uc25.1)],
+  [Spostamento prodotto collocato in un bin (@uc25.2)]
+)
+#derivedRequirements("25")
+
+==== Spostamento prodotto non collocato in un bin <uc25.1>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Spostamento prodotto (@uc25)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il prodotto selezionato non è collocato in un bin",
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Invio richiesta di movimentazione (@uc25.3)],
+)
+#derivedRequirements("25.1")
+
+==== Spostamento prodotto collocato in un bin <uc25.2>
+#printUseCaseInfo(
+  "Generalizzazione di",
+  [Spostamento prodotto (@uc25)]
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il prodotto selezionato è collocato in un bin",
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Invio richiesta di movimentazione (@uc25.3)],
+  [Visualizzazione errore spostamento impossibile (@uc25.2.1)]
+)
+#derivedRequirements("25.2")
+
+===== Visualizzazione errore spostamento impossibile <uc25.2.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha immesso un ordine di movimentazione per lo spostamento di un prodotto",
+  "Il bin di destinazione è occupato"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'ordine di movimentazione è annullato",
+  "L'ordine di movimentazione non viene inserito nella cronologia",
+  "Il prodotto non viene spostato",
+  "L'utente visualizza un errore relativo all'impossibilità di spostare il prodotto"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente ha richiesto lo spostamento di un prodotto verso un bin già occupato"
+)
+#derivedRequirements("25.2.1")
+
+==== Invio richiesta di movimentazione <uc25.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto lo spostamento di un prodotto",
+  "Il bin di destinazione è libero"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il sistema inserisce l'ordine di movimentazione del prodotto verso il bin di destinazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente seleziona un prodotto",
+  "L'utente seleziona un bin di destinazione",
+  "L'utente immette l'odine di movimentazione del prodotto"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione errore spostamento negato (@uc25.3.1)],
+  [Visualizzazione errore di connessione alla API (@uc25.3.2)],
+)
+#derivedRequirements("25.3")
+
+===== Visualizzazione errore spostamento negato <uc25.3.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha immesso un ordine di movimentazione per lo spostamento di un prodotto",
+  "Il sistema ha negato lo spostamento del prodotto"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'ordine di movimentazione è annullato",
+  "L'ordine di movimentazione non viene inserito nella cronologia",
+  "Il prodotto non viene spostato",
+  "L'utente visualizza un errore relativo all'impossibilità di spostare il prodotto",
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente ha richiesto lo spostamento di un prodotto ma il sistema ha negato la richiesta"
+)
+#derivedRequirements("25.3.1")
+
+===== Visualizzazione errore di connessione alla API <uc25.3.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha immesso un ordine di movimentazione per lo spostamento di un prodotto",
+  "Il sistema non è connesso alla API"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'ordine di movimentazione è annullato",
+  "L'ordine di movimentazione non viene inserito nella cronologia",
+  "Il prodotto non viene spostato",
+  "L'utente visualizza un errore relativo all'impossibilità di connettersi alla API",
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente ha richiesto lo spostamento di un prodotto ma la API non ha fornito risposta in tempo utile"
+)
+#derivedRequirements("25.3.2")
+
+=== Visualizzazione cronologia ordini di movimentazione <uc26>
+#figure(
+  image("./imgs/UC26.svg", width: 115%),
+  caption: "Diagramma UC--26"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza la cronologia degli ordini di movimentazione immessi"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare la cronologia degli ordini di movimentazione immessi per poterli monitorare"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione singolo ordine di movimentazione (@uc26.1)]
+)
+#derivedRequirements("26")
+
+==== Visualizzazione singolo ordine di movimentazione <uc26.1>
+#figure(
+  image("./imgs/UC26.1.svg", width: 80%),
+  caption: "Diagramma UC--26.1"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza le informazioni relative ad un singolo ordine di movimentazione presente in lista"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Visualizzazione ID bin di destinazione (@uc26.1.2)],
+  [Visualizzazione ID prodotto (@uc26.1.3)],
+  [Visualizzazione nome prodotto (@uc26.1.4)],
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Visualizzazione ID bin di partenza (@uc26.1.1)]
+)
+#derivedRequirements("26.1")
+
+===== Visualizzazione ID bin di partenza <uc26.1.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della cronologia degli ordini di movimentazione",
+  "L'origine della movimentazione è un bin"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del bin di partenza dell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un ordine di movimentazione presente in lista"
+)
+#derivedRequirements("26.1.1")
+
+===== Visualizzazione ID bin di destinazione <uc26.1.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del bin di destinazione dell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un ordine di movimentazione presente in lista"
+)
+#derivedRequirements("26.1.2")
+
+===== Visualizzazione ID prodotto <uc26.1.3>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza l'ID del prodotto oggetto dell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un ordine di movimentazione presente in lista"
+)
+#derivedRequirements("26.1.3")
+
+===== Visualizzazione nome prodotto <uc26.1.4>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione della cronologia degli ordini di movimentazione"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza il nome del prodotto oggetto dell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente visualizza un ordine di movimentazione presente in lista"
+)
+#derivedRequirements("26.1.4")
+
+=== Ispezione ordine di movimentazione <uc27>
+#figure(
+  image("./imgs/UC27.svg"),
+  caption: "Diagramma UC--27"
+)
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "Il sistema è operativo",
+  "L'utente ha immesso almeno un ordine di movimentazione valido"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "L'utente visualizza i bin coinvolti nell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione dei bin coinvolti nell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "User story associata",
+  "Come utente, desidero visualizzare in modo grafico i bin coinvolti nell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Inclusioni",
+  [Evidenziazione bin di destinazione (@uc27.1)]
+)
+#printUseCaseInfo(
+  "Estensioni",
+  [Evidenziazione bin di partenza (@uc27.2)]
+)
+#derivedRequirements("27")
+
+==== Evidenziazione bin di destinazione <uc27.1>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione dei bin coinvolti nell'ordine di movimentazione"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il bin di destinazione dell'ordine di movimentazione viene evidenziato graficamente"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione dei bin coinvolti nell'ordine di movimentazione"
+)
+#derivedRequirements("27.1")
+
+==== Evidenziazione bin di partenza <uc27.2>
+#printUseCaseInfo("Attore principale", "Utente")
+#printUseCaseInfo(
+  "Precondizioni",
+  "L'utente ha richiesto la visualizzazione dei bin coinvolti nell'ordine di movimentazione",
+  "L'origine della movimentazione è un bin"
+)
+#printUseCaseInfo(
+  "Postcondizioni",
+  "Il bin di partenza dell'ordine di movimentazione viene evidenziato graficamente"
+)
+#printUseCaseInfo(
+  "Scenario principale",
+  "L'utente richiede la visualizzazione dei bin coinvolti nell'ordine di movimentazione"
+)
+#derivedRequirements("27.2")
+
+#pagebreak()
 
 #set heading(numbering: "1.1")
 
-= Requisiti
+// FINE UC
+
+= Requisiti <requisiti>
 
 == Codice identificativo
 Ogni requisito è caratterizzato da un codice identificativo definito nel seguente modo:
-#align(`[Tipologia][Importanza]-[Numero]`, center)
+#align(`[Tipologia][Classificazione]–[Sequenza]`, center)
 Dove:
 - `Tipologia` può assumere i valori:
   - `F`: funzionale;
   - `Q`: di qualità;
   - `V`: di vincolo.
-- `Importanza` può assumere i valori:
+- `Classificazione` può assumere i valori:
   - `M`: mandatory, obbligatorio;
   - `D`: desiderabile;
   - `O`: opzionale.
-- `Numero` rappresenta l'identificativo numerico del requisito. Se sono presenti sottocasi, il loro numero viene rappresentato come segue:
-#align(`NumeroPadre.NumeroFiglio`, center)
+- `Sequenza` rappresenta l'identificativo numerico del requisito.
 
 #show figure: set block(breakable: true)
 
-== Requisiti funzionali
+#show ">=": [$>=$]
+#show "<=": [$<=$]
+
+== Requisiti funzionali <requisiti-funzionali>
 
 #figure(
   table(
-    columns: 4,
+    columns: (11%, 19%, 50%, 20%),
     align: left,
-    [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [FM-1], [Obbligatorio], [L'utente deve poter creare il magazzino], [UC-1],
-    [FM-1.1], [Obbligatorio], [L'utente deve poter caricare un file SVG contenente la pianta del magazzino], [UC-1.1],
-    [FM-1.1.1], [Obbligatorio], [L'utente deve sempre poter creare un magazzino tramite caricamento di un file SVG, quando possibile], [UC-1.1],
-    [FD-1.1.2], [Desiderabile], [L'utente deve poter definire le altezze degli elementi del file SVG tramite trascinamento verso l'alto], [Verbale esterno\ 23-12-06],
-    [FM-1.1.3], [Obbligatorio], [L'utente visualizza un errore di importazione del file SVG], [UC-1.1.1],
-    [FM-1.1.3.1], [Obbligatorio], [L'utente visualizza un errore dato dal caricamento di un file SVG privo di informazioni], [UC-1.1.1.1],
-    [FM-1.1.3.2], [Obbligatorio], [L'utente visualizza un errore dato da informazioni incongruenti nel file SVG], [UC-1.1.1.2],
-    [FM-1.2], [Obbligatorio], [L'utente deve sempre poter creare un ambiente di lavoro vuoto, quando possibile], [UC-1.2],
-
-    [FM-2], [Obbligatorio], [L'utente deve poter modificare le dimensioni del magazzino dopo la sua creazione], [UC-2],
-    [FM-2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza del magazzino dopo la sua creazione], [UC-2],
-    [FM-2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza del magazzino dopo la sua creazione], [UC-2],
-    [FM-2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza del magazzino dopo la sua creazione], [UC-2],
-    [FM-2.4], [Obbligatorio], [L'utente visualizza un errore relativo alla riduzione eccessiva delle dimensioni dell'ambiente vuoto], [UC-2.1],
-    [FM-2.5], [Obbligatorio], [L'utente visualizza un errore relativo alla riduzione eccessiva delle dimensioni dell'ambiente non vuoto], [UC-2.2],
-
-    [FM-3], [Obbligatorio], [L'utente deve poter gestire gli scaffali], [UC-3],
-    [FM-3.1], [Obbligatorio], [L'utente deve poter creare gli scaffali], [UC-3.1],
-    [FM-3.1.1], [Obbligatorio], [L'utente deve poter definire le dimensioni degli scaffali], [UC-3.1],
-    [FM-3.1.1.1], [Obbligatorio], [L'utente deve poter definire la lunghezza degli scaffali], [UC-3.1],
-    [FM-3.1.1.2], [Obbligatorio], [L'utente deve poter definire la profondità degli scaffali], [UC-3.1],
-    [FM-3.1.1.3], [Obbligatorio], [L'utente deve poter definire l'orientamento rispetto al piano degli scaffali], [UC-3.1],
-    [FM-3.1.1.4], [Obbligatorio], [L'utente deve poter definire la larghezza degli scaffali], [UC-3.1],
-    [FM-3.1.1.5], [Obbligatorio], [L'utente deve poter definire il numero di piani degli scaffali], [UC-3.1],
-    [FD-3.1.1.6], [Desiderabile], [L'utente deve poter definire altezze diverse per ogni piano degli scaffali], [Verbale esterno\ 23-12-15],
-    [FM-3.1.2], [Obbligatorio], [L'utente deve poter posizionare gli scaffali creati nell'ambiente], [UC-3.1],
-    [FM-3.2], [Obbligatorio], [L'utente deve poter modificare gli scaffali], [UC-3.2],
-    [FM-3.2.1], [Obbligatorio], [L'utente deve poter modificare la lunghezza degli scaffali], [UC-3.2],
-    [FM-3.2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza degli scaffali], [UC-3.2],
-    [FM-3.2.3], [Obbligatorio], [L'utente deve poter modificare la profondità degli scaffali], [UC-3.2],
-    [FM-3.2.4], [Obbligatorio], [L'utente deve poter modificare l'orientamento rispetto al piano degli scaffali], [UC-3.2],
-    [FM-3.2.5], [Obbligatorio], [L'utente deve poter modificare il numero di piani gli scaffali], [UC-3.2],
-    [FM-3.3], [Obbligatorio], [L'utente deve poter spostare gli scaffali all'interno del magazzino], [UC-3.3],
-    [FM-3.3.1], [Obbligatorio], [L'utente deve poter spostare gli scaffali in orizzontale], [UC-3.3],
-    [FM-3.3.2], [Obbligatorio], [L'utente deve poter spostare gli scaffali in profondità], [UC-3.3],
-    [FM-3.3.3], [Obbligatorio], [L'utente deve poter ruotare gli scaffali], [UC-3.3],
-    [FM-3.3.3.1], [Obbligatorio], [L'utente deve poter ruotare gli scaffali con angoli di 90°], [UC-3.3],
-    [FO-3.3.3.2], [Opzionale], [L'utente deve poter ruotare gli scaffali con angoli diversi da 90°], [Verbale esterno\ 23-12-06],
-    [FM-3.3.4], [Obbligatorio], [L'utente visualizza un errore riguardo lo spostamento dello scaffale in una zona non libera], [UC-3.3.1],
-    [FM-3.4], [Obbligatorio], [L'utente deve poter eliminare gli scaffali], [UC-3.4],
-    [FM-3.4.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'eliminazione di uno scaffale non vuoto], [UC-3.4.1],
-
-    [FM-4], [Obbligatorio], [L'utente deve poter gestire i bin], [UC-4],
-    [FM-4.1], [Obbligatorio], [L'utente deve poter creare i bin], [UC-4.1],
-    [FM-4.1.1], [Obbligatorio], [L'utente deve poter definire le dimensioni dei bin], [UC-4.1],
-    [FM-4.1.1.1], [Obbligatorio], [L'utente deve poter definire la profondità dei bin], [UC-4.1],
-    [FM-4.1.1.2], [Obbligatorio], [L'utente deve poter definire la larghezza dei bin], [UC-4.1],
-    [FM-4.1.1.3], [Obbligatorio], [L'utente deve poter definire l'altezza dei bin], [UC-4.1],
-    [FM-4.2], [Obbligatorio], [L'utente deve poter modificare i bin], [UC-4.2],
-    [FM-4.2.1], [Obbligatorio], [L'utente deve poter modificare la profondità dei bin], [UC-4.2],
-    [FM-4.2.2], [Obbligatorio], [L'utente deve poter modificare la larghezza dei bin], [UC-4.2],
-    [FM-4.2.3], [Obbligatorio], [L'utente deve poter modificare l'altezza dei bin], [UC-4.2],
-    [FM-4.3], [Obbligatorio], [L'utente deve poter eliminare i bin], [UC-4.3],
-    [FM-4.3.1], [Obbligatorio], [L'utente visualizza un errore riguardo la cancellazione di un bin non vuoto], [UC-4.3.1],
-
-    [FM-5], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dati dimensionali non validi], [UC-5],
-    [FM-5.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dimensioni negative o uguali a zero], [UC-5.1],
-    [FM-5.1.1], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di una lunghezza negativa o uguale a zero], [UC-5.1],
-    [FM-5.1.2], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di una larghezza negativa o uguale a zero], [UC-5.1],
-    [FM-5.1.3], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di un'altezza negativa o uguale a zero], [UC-5.1],
-    [FM-5.2], [Obbligatorio], [L'utente visualizza un errore riguardo l'inserimento di dimensioni eccessive], [UC-5.2],
-    [FM-5.2.1], [Obbligatorio], [L'utente visualizza un errore per l'inserimento di dimensioni che creano collisioni tra l'oggetto modificato e altri elementi dell'ambiente], [UC-5.2],
-    [FM-5.2.2], [Obbligatorio], [L'utente visualizza un errore per l'inserimento di dimensioni che non permettono all'oggetto di essere inserito nell'ambiente], [UC-5.2],
-
-    [FD-6],[Desiderabile], [L'utente deve poter richiedere il caricamento dei dati da database], [UC-6],
-    [FD-6.0.1],[Desiderabile], [L'utente deve poter popolare automaticamente l'ambiente leggendo i dati contenuti nel database], [UC-6],
-    [FD-6.0.2],[Desiderabile], [L'utente deve poter popolare l'ambiente con gli scaffali caricati da database], [UC-6],
-    [FD-6.0.3],[Desiderabile], [L'utente deve poter popolare l'ambiente con i bin caricati da database], [UC-6],
-    [FD-6.0.4],[Desiderabile], [L'utente deve poter popolare i bin con i prodotti caricati da database], [UC-6],
-    [FO-6.1], [Opzionale], [L'utente deve poter configurare i parametri di connessione al database], [UC-6.1],
-    [FO-6.1.1], [Opzionale], [L'utente deve poter indicare il nome del database], [UC-6.1],
-    [FO-6.1.2], [Opzionale], [L'utente deve poter indicare il nome utente per la connessione al database], [UC-6.1],
-    [FO-6.1.3], [Opzionale], [L'utente deve poter indicare la password per la connessione al database], [UC-6.1],
-    [FO-6.1.4], [Opzionale], [L'utente deve poter indicare l'indirizzo del database], [UC-6.1],
-    [FO-6.1.5], [Opzionale], [L'utente deve poter indicare la porta del database], [UC-6.1],
-    [FD-6.2], [Desiderabile], [L'utente deve poter testare la connessione al database], [UC-6.1],
-    [FD-6.3], [Desiderabile], [L'utente visualizza un errore se i dati contenuti nel database non sono conformi], [UC-6.2],
-    [FD-6.4], [Desiderabile], [L'utente visualizza un errore se i dati contenuti nel database sono errati], [UC-6.2],
-
-    [FM-7], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin ad un altro], [UC-7],
-    [FM-7.1], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin d'origine ad un altro di destinazione], [UC-7],
-    [FM-7.2], [Obbligatorio], [L'utente deve poter spostare un prodotto da un bin ad un altro tramite _drag and drop_], [UC-7],
-    [FM-7.3], [Obbligatorio], [Il sistema deve interrogare una API RESTful per accertare che lo spostamento sia lecito], [UC-7],
-    [FD-7.4], [Desiderabile], [Il sistema deve evidenziare il bin di partenza per rendere evidente la richiesta di spostamento], [UC-7],
-    [FD-7.5], [Desiderabile], [Il sistema deve evidenziare il bin di destinazione per rendere evidente la richiesta di spostamento], [UC-7],
-
-    [FM-8], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di un bin selezionato], [UC-8],
-    [FM-8.1], [Obbligatorio], [L'utente deve poter visualizzare le informazioni del prodotto contenuto in un bin selezionato], [UC-8],
-
-    [FM-9], [Obbligatorio], [L'utente deve poter visualizzare le informazioni di uno scaffale selezionato], [UC-9],
-
-    [FD-10], [Desiderabile], [L'utente deve poter ricercare un prodotto], [UC-10],
-    [FD-10.1], [Desiderabile], [L'utente deve poter ricercare un prodotto per ID], [UC-10.1],
-    [FD-10.2], [Desiderabile], [L'utente deve poter ricercare un prodotto per nome], [UC-10.2],
-    [FD-10.3], [Desiderabile], [L'utente deve poter ricercare uno scaffale], [UC-10.3],
-    [FD-10.4], [Desiderabile], [Il sistema deve fornire la lista dei risultati di ricerca], [UC-10],
-    [FD-10.5], [Desiderabile], [Il sistema deve evidenziare i risultati di ricerca], [UC-10],
-
-    [FM-11], [Obbligatorio], [L'utente deve poter esplorare visivamente il magazzino], [UC-11],
-    [FM-11.1], [Obbligatorio], [L'utente deve poter muovere la visuale sui tre assi], [UC-11.1],
-    [FM-11.2], [Obbligatorio], [L'utente deve poter ruotare la visuale], [UC-11.2],
-    [FM-11.3], [Obbligatorio], [L'utente deve poter effettuare operazioni di zoom della visuale], [UC-11.3],
-    [FM-11.3.1], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom-in], [UC-11.3],
-    [FM-11.3.2], [Obbligatorio], [L'utente deve poter effettuare l'operazione di zoom-out], [UC-11.3],
-
-    [FM-12], [Obbligatorio], [Il prodotto deve essere ad accesso pubblico, ovvero senza login], [Capitolato],
-
-    [FM-13], [Obbligatorio], [Il prodotto deve prevedere una sola tipologia di utente], [Capitolato],
-
-    [FM-14], [Obbligatorio], [Il prodotto si deve avviare allo stato iniziale ogni volta che viene ricaricata la pagina], [Capitolato],
-    [FM-14.1], [Obbligatorio], [Il prodotto non persiste in locale (cookie, `localStorage`) le modifiche fatte all'ambiente], [Capitolato],
-    [FM-14.2], [Obbligatorio], [Il prodotto non persiste sul database le modifiche fatte all'ambiente], [Capitolato],
-    [FM-14.3], [Obbligatorio], [Il prodotto non deve fornire alcuna opzione per il salvataggio dei dati], [Capitolato]
+    [*Codice*], [*Riferimento*], [*Descrizione*], [*Classificazione*],
+    ..requirements.at("functional").map(item => item.values().slice(0,4).flatten()).flatten()
   ),
   caption: [Requisiti funzionali]
 )
 
-== Requisiti di qualità
+#show "#ndp_v": [#ndp_v]
+#show "#pdq_v": [#pdq_v]
+
+== Requisiti di qualità <requisiti-qualita>
 
 #figure(
   table(
-    columns: 4,
+    columns: (11%, 19%, 50%, 20%),
     align: left,
-    [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [QM-1], [Obbligatorio], [Deve essere rispettato quanto previsto dalle #ndp_v], [Decisione\ interna],
-    [QM-2], [Obbligatorio], [Deve essere rispettato quanto previsto dal #pdq_v], [Decisione\ interna],
-    [QM-3], [Obbligatorio], [Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico], [Capitolato],
-    [QM-4], [Obbligatorio], [Devono essere consegnati i diagrammi UML degli UC], [Capitolato],
-    [QM-5], [Obbligatorio], [Deve essere consegnata la lista dei bug risolti], [Capitolato],
-    [QM-6], [Obbligatorio], [Deve essere fornito un manuale d'uso per l'utente], [Decisione\ interna],
-    [QO-7], [Opzionale], [Deve essere consegnato lo schema del DB], [Capitolato],
-    [QO-8], [Opzionale], [Deve essere consegnata la documentazione delle API realizzate], [Capitolato],
+    [*Codice*], [*Riferimento*], [*Descrizione*], [*Classificazione*],
+    ..requirements.at("quality").map(item => item.values().slice(0,4).flatten()).flatten()
   ),
   caption: [Requisiti di qualità]
 )
 
-== Requisiti di vincolo <vincoli>
+== Requisiti prestazionali <requisiti-prestazioni>
+L'analisi dei requisiti condotta da #err418 non ha individuato alcun requisito prestazionale.
+
+== Requisiti di vincolo <requisiti-vincolo><vincoli>
 
 #figure(
   table(
-    columns: 4,
+    columns: (11%, 19%, 50%, 20%),
     align: left,
-    [*Codice*], [*Classificazione*], [*Descrizione*], [*Riferimento*],
-    [VM-1], [Obbligatorio], [Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0], [Interno],
-    [VM-2], [Obbligatorio], [L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0], [Interno],
-    [VM-3], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome versione 89 o successiva], [Interno],
-    [VM-4], [Obbligatorio], [L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva], [Interno],
-    [VM-5], [Obbligatorio], [L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva], [Interno],
-    [VM-6], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari versione 108 o successiva], [Interno],
-    [VM-7], [Obbligatorio], [L'utente deve utilizzare un browser Opera Browser versione 76 o successiva], [Interno],
-    [VM-8], [Obbligatorio], [L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva], [Interno],
-    [VM-9], [Obbligatorio], [L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva], [Interno],
-    [VM-10], [Obbligatorio], [L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva], [Interno],
-    [VO-11], [Opzionale], [Il prodotto deve essere eseguibile in un container Docker o Docker Compose], [VE 23-11-15]
+    [*Codice*], [*Riferimento*], [*Descrizione*], [*Classificazione*],
+    ..requirements.at("constraints").map(item => item.values().slice(0,4).flatten()).flatten()
   ),
   caption: [Requisiti di vincolo]
 )
 
-== Riepilogo requisiti
+== Riepilogo requisiti <requisiti-riepilogo>
+
+#let types = ("", "functional", "quality", "constraints", "performance", "security")
+
+#let categories = ("", "Obbligatorio", "Desiderabile", "Opzionale")
+
+#let countRequirements(type, category) = {
+  if type not in types { panic("Tipologia di requisito errata") }
+  if category not in categories { panic("Categoria di requisito errata") }
+
+  let counter = 0
+
+  if (type == "" and category == "") {
+    for key in requirements.keys() {
+      counter = counter + requirements.at(key).len()
+    }
+  }
+  else if (type != "" and category == "") {
+    counter = requirements.at(type).len()
+  }
+  else if (type == "" and category != "") {
+    for key in requirements.keys() {
+      counter = counter + requirements.at(key).filter(item => item.at("cat") == category).len()
+    }
+  }
+  else if (type != "" and category != "") {
+    counter = requirements.at(type).filter(item => item.at("cat") == category).len()
+  }
+
+  return counter
+}
 
 #figure(
   table(
-    columns: 2,
+    columns: (30%, 16%, 16%, 16%, 12%),
     align: left,
-    [*Tipo Requisito*], [*Numero totale*],
-    [Requisiti funzionali], [96],
-    [Requisiti di qualità], [8],
-    [Requisiti di vincolo], [11],
+    [*Tipologia*], [Obbligatori], [Desiderabili], [Opzionali], [*Totale*],
+    [Requisiti funzionali],
+    [#countRequirements("functional", "Obbligatorio")],
+    [#countRequirements("functional", "Desiderabile")],
+    [#countRequirements("functional", "Opzionale")],
+    [#countRequirements("functional", "")],
+    [Requisiti di qualità],
+    [#countRequirements("quality", "Obbligatorio")],
+    [#countRequirements("quality", "Desiderabile")],
+    [#countRequirements("quality", "Opzionale")],
+    [#countRequirements("quality", "")],
+    [Requisiti prestazionali],
+    [#countRequirements("performance", "Obbligatorio")],
+    [#countRequirements("performance", "Desiderabile")],
+    [#countRequirements("performance", "Opzionale")],
+    [#countRequirements("performance", "")],
+    [Requisiti di vincolo],
+    [#countRequirements("constraints", "Obbligatorio")],
+    [#countRequirements("constraints", "Desiderabile")],
+    [#countRequirements("constraints", "Opzionale")],
+    [#countRequirements("constraints", "")]
   ),
   caption: [Riepilogo requisiti]
 )

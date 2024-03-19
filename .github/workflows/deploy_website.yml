@@ -14,6 +14,14 @@ on:
         type: string
 
 jobs:
+  fail-fast:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if common.typ
+        run: |
+          if [[ "${{ inputs.file_name }}" == *"common"* ]]; then
+            exit 0
+          fi
   extract:
     name: Extract info from preamble and log
     runs-on: ubuntu-latest

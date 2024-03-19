@@ -3270,6 +3270,7 @@ Dove:
 #show figure: set block(breakable: true)
 
 #show ">=": [$>=$]
+#show "<=": [$<=$]
 
 == Requisiti funzionali <requisiti-funzionali>
 

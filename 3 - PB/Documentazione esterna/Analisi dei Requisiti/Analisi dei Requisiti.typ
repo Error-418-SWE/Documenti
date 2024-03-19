@@ -134,7 +134,7 @@ Le funzionalità esposte all'utente variano in base all'ampiezza della _viewport
 
 Il prodotto è acceduto tramite browser. Ne è prevista l'esecuzione sui seguenti dispositivi:
 - computer, tramite mouse e tastiera;
-- dispositivi mobili touchscreen (es. tablet) in dotazione agli adetti di magazzino.
+- dispositivi mobili touchscreen (es. tablet) in dotazione agli addetti di magazzino.
 
 Il browser e il dispositivo devono essere compatibili con lo standard WebGL.
 

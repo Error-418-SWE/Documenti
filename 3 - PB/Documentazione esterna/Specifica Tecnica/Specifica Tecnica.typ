@@ -221,8 +221,15 @@ Di seguito sono elencate le classi specifiche:
 
 
 
-Diagramma delle classi del layer di persistenza: #TODO
+#figure(
+  image("./imgs/Persistence Layer patterns class diagram.svg", width: 100%),
+  caption: [
+    Diagramma delle classi del layer di persistenza
+  ],
+)
 
+Nel diagramma delle classi del layer di persistenza fornito, le classi `Zone`, `Bin` e `Product` sono rappresentate senza gli attributi e i metodi per garantire una maggiore chiarezza grafica.
+Tali informazioni sono rappresentate dettagliatamente nel diagramma delle classi del layer di business.
 
 === Business layer
 Le classi che vengono utilizzate per rappresentare il modello dell'applicativo sono:
@@ -351,12 +358,19 @@ Inoltre è previsto il metodo `Clear` che permette di assegnare il valore `null`
   - *FloorStrategyContext*: utilizza un `FloorStrategy` per generare un elemento `Floor`.
 
 
-Diagramma delle classi del layer di business: #TODO
+#figure(
+  image("./imgs/Business Layer classes.svg", width: 100%),
+  caption: [
+    Diagramma delle classi del layer di business
+  ],
+)
 
-
-
-Diagramma delle classi Floor del layer di business: #TODO
-
+#figure(
+  image("./imgs/Business Layer floor.svg", width: 100%),
+  caption: [
+    Diagramma delle classi Floor del layer di business
+  ],
+)
 
 
 In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i componenti:

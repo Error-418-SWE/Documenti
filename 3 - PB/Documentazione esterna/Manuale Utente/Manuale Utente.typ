@@ -46,6 +46,10 @@ Il prodotto offre le seguenti funzionalità principali:
   _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Glossario_v" + glo_vo + ".pdf")_
   #lastVisitedOn(25, 02, 2024)
 
+- Documento #st_v: \
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20esterna/Specifica%20Tecnica_v" + st_vo + ".pdf")_
+  #lastVisitedOn(18, 03, 2024)
+
 === Riferimenti normativi <riferimenti-normativi>
 
 - Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \
@@ -58,49 +62,30 @@ Il prodotto offre le seguenti funzionalità principali:
 
 = Requisiti
 
-== Requisiti di sistema minimi
+Di seguito sono elencate le versioni dei browser minime necessarie per l'esecuzione dell'applicazione.
+Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
-== Requisiti di sistema consigliati
+#figure(
+  table(
+    columns: 2,
+    [*Browser*], [*Versione*],
 
-== Requisiti hardware
+    [Google Chrome],[$>=$ 89],
+    [Microsoft Edge],[$>=$ 89],
+    [Mozilla Firefox],[$>=$ 16.4],
+    [Apple Safari],[$>=$ 108],
+    [Opera Browser],[$>=$ 76],
+    [Google Chrome per Android],[$>=$ 89],
+    [Apple Safari per iOS],[$>=$ 17.1],
+    [Samsung Internet],[$>=$ 23],
+  ),
+  caption: "Browser supportati"
+)
 
-== Browser
-
-
-= Installazione
-
-== Scaricare il progetto
-
-Ci sono due modalità tramite cui è possibile scaricare il progetto: la prima, e più consigliata, è eseguire il download del progetto in formato zip o tar.gz dalla pagina
-
-#align(center, link("https://github.com/Error-418-SWE/WMS3/releases"))
-
-In alternativa, se nel dispositivo è presente Git, si può clonare il repository con il comando
-
-#align(center, `git clone git@github.com:Error-418-SWE/WMS3.git`)
-
-oppure
-
-#align(center, `git clone https://github.com/Error-418-SWE/WMS3.git`)
-
-== Avviare la web app
-
-Per avviare la web app è necessario spostarsi all'interno della cartella scaricata in precedenza ed eseguire il comando
-
-#align(center, `docker compose up -d`)
-
-Questo avvierà i container Docker che formano il prodotto, il quale sarà poi visualizzabile e utilizzabile all'indirizzo
-
-#align(center, link("http://localhost:3000/"))
-
-== Terminare l'esecuzione
-
-Chiudere la finestra browser non terminerà completamente l'esecuzione dell'applicazione, in quanto Docker Compose continuerà ad eseguire in background. La terminazione completa si effettua con il comando
-
-#align(center, `docker compose down`)
 
 = Istruzioni d'uso
 
+#pagebreak()
 
 = Supporto tecnico
 

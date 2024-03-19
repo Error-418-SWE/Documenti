@@ -1879,17 +1879,17 @@ Questo sprint impiega:
     [Banzato],     [1],     [1],     [1],     [0],     [4],     [2],     [9],
     [Carraro],     [0],     [1],     [2],     [1],     [2],     [1],     [7],
     [Gardin],     [2],     [0],     [2],     [0],     [1],     [3],     [8],
-    [Nardo],     [1],     [3],     [0],     [0],     [4],     [0],     [8],
+    [Nardo],     [0],     [3],     [0],     [0],     [4],     [0],     [7],
     [Oseliero],     [1],     [0],     [0],     [1],     [3],     [3],     [8],
     [Todesco],     [2],     [0],     [2],     [0],     [3],     [0],     [7],
     [Zaccone],     [0],     [2],     [2],     [0],     [3],     [0],     [7],
-    [Totale ore],     [7],     [7],     [9],     [2],     [20],     [9],     [54],
-    [Costo ruolo],     [210],     [140],     [225],     [50],     [300],     [135],     [1060],
+    [Totale ore],     [6],     [7],     [9],     [2],     [20],     [9],     [53],
+    [Costo ruolo],     [180],     [140],     [225],     [50],     [300],     [135],     [1030],
   ),
   caption: "Prospetto del preventivo, sprint 18"
 )
 #let data = (
-  ("Responsabile", 7),
+  ("Responsabile", 6),
   ("Amministratore", 7),
   ("Analista", 9),
   ("Progettista", 2),
@@ -1907,6 +1907,74 @@ Questo sprint impiega:
   supplement: "Grafico"
 )
 
+
+== Sprint 19 dal 10/03/2024 al 17/03/2024
+=== Obiettivi prefissati
+
+In questo Sprint il lavoro si concentra principalmente sulla stesura di #st, #man e sull'implementazione del MVP. Gli obiettivi prefissati sono:
+- colloquio con il Proponente in data 15/03/2024;
+- aggiornamento ed estensione del documento #pdp\;
+- aggiornamento grafici delle metriche nel #pdq allo Sprint 18;
+- aggiornamento della dashboard Grafana allo Sprint 18;
+- continuazione e conclusione della revisione e aggiornamento dell'#adr\;
+- redazione sezioni riguardanti diagrammi delle classi e design pattern nella #st\;
+- redazione sezioni requisiti e supporto tecnico nel #man\;
+- implementazione completa della UI del MVP;
+- iniziare l'implementazione degli elementi 3D.
+
+=== Preventivo costi
+Questo Sprint impiega:
+- *Responsabile*: al fine di:
+  - coordinare le attività;
+  - organizzare il lavoro in reazione al feedback;
+  - organizzare il meeting con il Proponente.
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
+- *Analista*: al fine di:
+  - proseguire con la revisione del documento #adr\.
+- *Progettista*: al fine di:
+  - redarre le sezioni della #st\.
+- *Programmatore*: al fine di:
+  - collaborare con il Progettista nella stesura della #st\;
+  - implementare la UI;
+  - implementare gli elementi 3D.
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp\.
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [1],     [0],     [4],     [3],     [8],
+    [Carraro],     [0],     [1],     [0],     [0],     [3],     [2],     [6],
+    [Gardin],     [1],     [0],     [1],     [0],     [3],     [3],     [8],
+    [Nardo],     [0],     [1],     [2],     [0],     [4],     [0],     [7],
+    [Oseliero],     [2],     [0],     [0],     [1],     [3],     [1],     [7],
+    [Todesco],     [1],     [0],     [0],     [0],     [4],     [2],     [7],
+    [Zaccone],     [0],     [0],     [1],     [0],     [4],     [2],     [7],
+    [Totale ore],     [4],     [2],     [5],     [1],     [25],     [13],     [50],
+    [Costo ruolo],     [120],     [40],     [125],     [25],     [375],     [195],     [880],
+  ),
+  caption: "Prospetto del preventivo, sprint 19"
+)
+#let data = (
+  ("Responsabile", 4),
+  ("Amministratore", 2),
+  ("Analista", 5),
+  ("Progettista", 1),
+  ("Programmatore", 25),
+  ("Verificatore", 13),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo sprint 19",
+  kind: "chart",
+  supplement: "Grafico"
+)
 
 #pagebreak()
 
@@ -3743,6 +3811,155 @@ Lo Sprint 17, pur comportando un costo superiore a quanto preventivato, ha perme
 Il rendimento positivo dello Sprint 17 è supportato dalle principali metriche esposte dal #pdq, quali:
 - CPI: il Cost Performance Index passa dal valore 1.01 (allo Sprint 16) a 0.99. Nonostante il lieve calo continua a rappresentare un valore accettabile (>=0.95), e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
 - EAC: l'Estimate At Completion passa dal valore 12.911,54 € (allo Sprint 16) a 13.155,40 €. Anche se aumentato, il gruppo non lo considera problematico, in quanto l'incremento risulta contenuto.
+
+
+== Sprint 18 dal 03-03-2024 al 10-03-2024
+
+=== Obiettivi raggiunti
+
+Lo Sprint 18 si è concluso raggiungendo buona parte degli obiettivi pianificati, in particolare:
+
+- colloquio con Proponente in data 07/03/2024;
+
+- #adr\:
+  - proseguite revisione e aggiornamento del documento.
+
+- #ndp\:
+  - redatto il capitolo Processo di validazione.
+
+- #pdp\:
+  - redatto preventivo dello Sprint 17, iniziato in data 25/02/2024;
+  - redatto consuntivo dello Sprint 17, terminato in data 03/03/2024;
+  - redatto preventivo dello Sprint 18, iniziato in data 03/03/2024.
+
+- #st\:
+  - individuata struttura del documento;
+  - redatta sezione Database.
+
+- Progettazione:
+  - svolto colloquio con il #cardin.
+
+- Codifica:
+  - migliorato e popolato il database di supporto;
+  - implementata l'importazione dei dati da database;
+  - aggiornato Docker compose;
+  - implementate le classi:
+    - `Product`;
+    - `Bin`;
+    - `Zone`.
+  - implementati i pannelli;
+  - rimossi elementi superflui.
+
+
+=== Obiettivi mancati
+
+- #adr\:
+  - non è ancora terminata la revisione completa del documento, comprensiva anche di aggiornamento dei casi d'uso e requisiti. Verrà completata obbligatoriamente entro la fine del prossimo Sprint.
+- #pdq\:
+  - non sono state aggiornate le metriche all'interno del documento;
+  - mancato aggiornamento della dashboard Grafana allo Sprint 18.
+
+=== Problematiche
+Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+
+*P01*: Mancata comunicazione degli avanzamenti riguardo lo sviluppo del MVP hanno creato incomprensioni tra chi scriveva codice e chi si occupava della redazione della #st.
+
+*P02*: Difficoltà nell'utilizzare le tecnologie adottate.
+
+=== Risoluzioni attuate
+
+#figure(caption: [Soluzioni individuate alle criticità riscontrate.],
+    table(
+      align: left,
+      columns: (auto, 1fr, auto),
+      [ID risoluzione], [Titolo], [Criticità affrontate],
+      [R1], [Aggiornamento continuo sugli sviluppi], [P01],
+      [OT-1.1.2\ (#pdp_v)], [Accettazione del rischio], [P02]
+    )
+)
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [1],     [1],     [1],     [0],     [4],     [2],     [9],
+    [Carraro],     [0],     [1],     [2],     [1],     [4 (+2)],     [1],     [9 (+2)],
+    [Gardin],     [2],     [0],     [2],     [0],     [1],     [3],     [8],
+    [Nardo],     [0],     [3],     [0],     [1 (+1)],     [4],     [2 (+2)],     [10 (+3)],
+    [Oseliero],     [ (-1)],     [0],     [0],     [1],     [4 (+1)],     [3],     [8],
+    [Todesco],     [2],     [0],     [2],     [0],     [3],     [0],     [7],
+    [Zaccone],     [0],     [2],     [2],     [0],     [3],     [0],     [7],
+    [Totale ore],     [5 (-1)],     [7],     [9],     [3 (+1)],     [23 (+3)],     [11 (+2)],     [58 (+5)],
+    [Costo ruolo],     [150 (-30)],     [140],     [225],     [75 (+25)],     [345 (+45)],     [165 (+30)],     [1100 (+70)],
+  ),
+  caption: "Prospetto del consuntivo, sprint 18"
+)
+#let data = (
+  ("Responsabile", 6, 5),
+  ("Amministratore", 7, 7),
+  ("Analista", 9, 9),
+  ("Progettista", 2, 3),
+  ("Programmatore", 20, 23),
+  ("Verificatore", 9, 11),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo sprint 18",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Durante lo Sprint 18 le ore effettive (58) hanno superato di cinque unità le ore preventivate (53), in particolare:
+
+- Progettista e Programmatore hanno avuto un aumento di ore causato dalla quantità di lavoro svolto sullo sviluppo del MVP e sulla stesura della #st\;
+- il Verificatore ha avuto un lieve aumento di ore in risposta al punto precedente e al lavoro che si sta svolgendo sull'#adr\.
+
+L'aumento del costo dello Sprint è stato influenzato principalmente dalle ore di Progettista e Programmatore, in quanto il costo causato dall'aumento orario del Verificatore è stato bilanciato indirettamente da un calo di ore nel Responsabile.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [9],     [270],
+    [Amministratore],     [6],     [120],
+    [Analista],     [10],     [250],
+    [Progettista],     [3],     [75],
+    [Programmatore],     [117],     [1755],
+    [Verificatore],     [50],     [750],
+    [Rimanente],     [195],     [3220],
+  ),
+  caption: "Monitoraggio, sprint 18"
+)
+
+Nonostante l'aumento del costo preventivato, lo Sprint 18 ha permesso di completare buona parte degli obiettivi previsti.
+
+Il rendimento positivo dello Sprint 18 è supportato dalle principali metriche esposte dal #pdq, quali:
+- CPI: il Cost Performance Index rimane costante a 0.99, rappresentando ancora un valore accettabile ($>=0.95$) e rimanendo molto vicino all'ottimalità, rappresentata da valori $>=1$;
+- EAC: l'Estimate At Completion passa dal valore di 13.155,40 € (allo Sprint 17) a € 13.210,90. Nonostante sia aumentato rientra comunque nelle condizioni di accettabilità.
 
 
 // == Sprint n dal D1-M1-2024 al D2-M2-2024

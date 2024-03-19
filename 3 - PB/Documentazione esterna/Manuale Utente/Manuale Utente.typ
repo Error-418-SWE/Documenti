@@ -84,6 +84,27 @@ Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
 
 = Istruzioni d'uso
+== Avvio e Configurazione dell'ambiente
+
+Il software all'avvio si presenta come segue:
+#figure(
+  image("./imgs/avvio.png", width: 60%),
+  caption: [
+    Avvio del software
+  ],
+)
+qui vengono proposte due diverse configurazioni iniziali possibili, *Planimetria rettangolare* e *Planimetria personalizzata*. Le differenze tra le due modalità di lavoro verranno descritte nei capitoli dedicati. Si può scegliere una modalità di lavoro selezionandola nel pannello qui sopra riportato e premendo il pulsante *Prossimo* in basso a destra.
+
+=== Inizializzazione Planimetria Rettangolare
+
+Selezionata la Planimetria Rettangolare
+
+#figure(
+  image("./imgs/rettangolare.png", width: 60%),
+  caption: [
+    Definizione del piano rettangolare
+  ],
+)
 
 #pagebreak()
 

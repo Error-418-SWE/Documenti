@@ -1153,59 +1153,65 @@
 	"quality": [
 		{
 			"id": "QM-1",
-			"cat":
-			"Obbligatorio",
-			"description": "Deve essere rispettato quanto previsto dal documento #ndp_v",
 			"source": "Decisione interna",
+			"description": "Deve essere rispettato quanto previsto dal documento #ndp_v",
+			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
 			"id": "QM-2",
-			"cat": "Obbligatorio",
-			"description": "Deve essere rispettato quanto previsto dal documento #pdq_v",
 			"source": "Decisione interna",
+			"description": "Deve essere rispettato quanto previsto dal documento #pdq_v",
+			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
 			"id": "QM-3",
-			"cat": "Obbligatorio",
-			"description": "Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico",
 			"source": "Capitolato",
+			"description": "Il codice sorgente deve essere consegnato utilizzando un repository GitHub pubblico",
+			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
 			"id": "QM-4",
-			"cat": "Obbligatorio",
-			"description": "Devono essere consegnati i diagrammi UML degli UC",
 			"source": "Capitolato",
+			"description": "Devono essere consegnati i diagrammi UML degli UC",
+			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
 			"id": "QM-5",
-			"cat": "Obbligatorio",
-			"description": "Deve essere consegnata la lista dei bug risolti",
 			"source": "Capitolato",
+			"description": "Deve essere consegnata la lista dei bug risolti",
+			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "QM-6",
-			"cat": "Obbligatorio",
-			"description": "Deve essere fornito un manuale d'uso per l'utente",
 			"source": "Decisione interna",
+			"description": "Deve essere fornito un manuale d'uso per l'utente",
+			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
 			"id": "QO-7",
-			"cat": "Opzionale",
-			"description": "Deve essere consegnato lo schema del DB",
 			"source": "Capitolato",
+			"description": "Deve essere consegnato lo schema del DB",
+			"cat": "Opzionale",
 			"achieved": true
 		},
 		{
 			"id": "QO-8",
-			"cat": "Opzionale",
-			"description": "Deve essere consegnata la documentazione delle API realizzate",
 			"source": "Capitolato",
+			"description": "Deve essere consegnata la documentazione delle API realizzate",
+			"cat": "Opzionale",
+			"achieved": false
+		},
+		{
+			"id": "QM-9",
+			"cat": "Obbligatorio",
+			"description": "Deve essere fornita la documentazione dell'architettura del prodotto",
+			"source": "Decisione interna",
 			"achieved": false
 		}
 	],
@@ -1214,79 +1220,79 @@
 	"constraints": [
 		{
 			"id": "VM-1",
-			"cat": "Obbligatorio",
+			"source": "Decisione interna",
 			"description": "Il browser utilizzato per accedere al prodotto deve supportare WebGL 2.0",
-			"source": "Interno",
+			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "VM-2",
-			"cat": "Obbligatorio",
+			"source": "Decisione interna",
 			"description": "L'hardware del client utilizzato per accedere al prodotto deve supportare OpenGL ES 3.0",
-			"source": "Interno",
+			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "VM-3",
-			"cat": "Obbligatorio",
+			"source": "Decisione interna",
 			"description": "L'utente deve utilizzare un browser Google Chrome versione 89 o successiva",
-			"source": "Interno",
+			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "VM-4",
-			"cat": "Obbligatorio",
+			"source": "Decisione interna",
 			"description": "L'utente deve utilizzare un browser Microsoft Edge versione 89 o successiva",
-			"source": "Interno",
+			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "VM-5",
-			"cat": "Obbligatorio",
+			"source": "Decisione interna",
 			"description": "L'utente deve utilizzare un browser Mozilla Firefox versione 16.4 o successiva",
-			"source": "Interno",
+			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "VM-6",
-			"cat": "Obbligatorio",
+			"source": "Decisione interna",
 			"description": "L'utente deve utilizzare un browser Apple Safari versione 108 o successiva",
-			"source": "Interno",
+			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "VM-7",
-			"cat": "Obbligatorio",
+			"source": "Decisione interna",
 			"description": "L'utente deve utilizzare un browser Opera Browser versione 76 o successiva",
-			"source": "Interno",
+			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "VM-8",
-			"cat": "Obbligatorio",
+			"source": "Decisione interna",
 			"description": "L'utente deve utilizzare un browser Google Chrome per Android versione 89 o successiva",
-			"source": "Interno",
+			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "VM-9",
-			"cat": "Obbligatorio",
+			"source": "Decisione interna",
 			"description": "L'utente deve utilizzare un browser Apple Safari per iOS versione 17.1 o successiva",
-			"source": "Interno",
+			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "VM-10",
-			"cat": "Obbligatorio",
+			"source": "Decisione interna",
 			"description": "L'utente deve utilizzare un browser Samsung Internet versione 23 o successiva",
-			"source": "Interno",
+			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "VO-11",
-			"cat": "Opzionale",
-			"description": "Il prodotto deve essere eseguibile in un container Docker o Docker Compose",
 			"source": "VE 23-11-15",
+			"description": "Il prodotto deve essere eseguibile in un container Docker o Docker Compose",
+			"cat": "Opzionale",
 			"achieved": false
 		}
 	]

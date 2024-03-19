@@ -234,7 +234,7 @@ Le classi che vengono utilizzate per rappresentare il modello dell'applicativo s
 
   - *id*: stringa di massimo dieci caratteri che rappresenta il codice identificativo univoco del bin.
     Essa è composta da:
-    #align(center, "idZona_letteraColonna_numeroLivello")
+    #align(center, `idZona_letteraColonna_numeroLivello`)
 
     La lettera corrispondente alla colonna fa riferimento ad una mappatura per cui "A" equivale alla colonna zero e viene incrementata seguendo i caratteri dell'alfabeto inglese con l'aumentare del numero della colonna.
 

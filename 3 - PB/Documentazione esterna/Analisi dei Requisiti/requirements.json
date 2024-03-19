@@ -409,7 +409,7 @@
 		{
 			"id": "FD-59",
 			"source": "UC–12.3",
-			"description": "L'utente deve poter scegliere tra `NS` e `WE` come orientamento della zona da creare",
+			"description": "L'utente deve poter scegliere tra \"NS\" e \"WE\" come orientamento della zona da creare",
 			"cat": "Desiderabile",
 			"achieved": false
 		},

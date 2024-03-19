@@ -45,14 +45,14 @@
 		{
 			"id": "FM-7",
 			"source": "UC–1.1.1.1",
-			"description": "L'utente deve visualizzare un errore se la larghezza indicata non è positiva (>=0)",
+			"description": "L'utente deve visualizzare un errore se la larghezza indicata non è positiva (<=0)",
 			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "FM-8",
 			"source": "UC–1.1.2.1",
-			"description": "L'utente deve visualizzare un errore se la lunghezza indicata non è positiva (>=0)",
+			"description": "L'utente deve visualizzare un errore se la lunghezza indicata non è positiva (<=0)",
 			"cat": "Obbligatorio",
 			"achieved": false
 		},
@@ -72,8 +72,15 @@
 		},
 		{
 			"id": "FD-11",
-			"source": "UC–1.2.1.1",
+			"source": "UC–1.2.1",
 			"description": "Il file SVG deve contenere almeno un elemento grafico tra path, rect, circle, ellipse, line, polyline, polygon, text, g per essere considerato valido",
+			"cat": "Desiderabile",
+			"achieved": false
+		},
+		{
+			"id": "FD-XX",
+			"source": "UC–1.2.1.1",
+			"description": "L'utente deve ricevere un messaggio di errore qualora avesse caricato un file SVG privo di elementi grafici (path, rect, circle, ellipse, line, polyline, polygon, text, g)",
 			"cat": "Desiderabile",
 			"achieved": false
 		},
@@ -87,20 +94,20 @@
 		{
 			"id": "FD-13",
 			"source": "UC–1.2.1.2",
-			"description": "L'utente deve ricevere un messaggio di errore qualora avesse caricato un  file SVG non valido o corrotto",
+			"description": "L'utente deve ricevere un messaggio di errore qualora avesse caricato un file SVG non valido o corrotto",
 			"cat": "Desiderabile",
 			"achieved": false
 		},
 		{
 			"id": "FD-14",
-			"source": "Decisione interna",
+			"source": "UC–1.2.2",
 			"description": "L'utente che abbia scelto la modalità di configurazione a partire da un file SVG, deve poter indicare il solo lato maggiore del magazzino per configurare la planimetria",
 			"cat": "Desiderabile",
 			"achieved": false
 		},
 		{
 			"id": "FD-15",
-			"source": "Decisione interna",
+			"source": "UC–1.2.2",
 			"description": "Il sistema deve determinare il valore del lato minore a partire dal rapporto di aspetto del file SVG e dai dati forniti dall'utente",
 			"cat": "Desiderabile",
 			"achieved": false
@@ -108,7 +115,7 @@
 		{
 			"id": "FD-16",
 			"source": "UC–1.2.2.1",
-			"description": "L'utente deve visualizzare un errore se il valore indicato come lato maggiore non è positivo (>=0)",
+			"description": "L'utente deve visualizzare un errore se il valore indicato come lato maggiore non è positivo (<=0)",
 			"cat": "Desiderabile",
 			"achieved": false
 		},
@@ -136,42 +143,42 @@
 		{
 			"id": "FM-20",
 			"source": "UC–2.1",
-			"description": "L'utente deve poter ridefinire la lunghezza dell'ambiente 3D corrente",
+			"description": "L'utente deve poter ridefinire la larghezza dell'ambiente 3D corrente",
 			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "FM-21",
 			"source": "UC–2.2",
-			"description": "L'utente deve poter ridefinire la larghezza dell'ambiente 3D corrente",
+			"description": "L'utente deve poter ridefinire la lunghezza dell'ambiente 3D corrente",
 			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
-			"id": "FM-22",
+			"id": "FD-22",
 			"source": "Decisione interna",
 			"description": "L'utente che abbia configurato un ambiente 3D a partire da file SVG non può definire un valore di lunghezza inferiore a quello corrente",
-			"cat": "Obbligatorio",
+			"cat": "Desiderabile",
 			"achieved": false
 		},
 		{
-			"id": "FM-23",
+			"id": "FD-23",
 			"source": "Decisione interna",
 			"description": "L'utente che abbia configurato un ambiente 3D a partire da file SVG non può definire un valore di larghezza inferiore a quello corrente",
-			"cat": "Obbligatorio",
+			"cat": "Desiderabile",
 			"achieved": false
 		},
 		{
 			"id": "FM-24",
 			"source": "UC–2.1.1",
-			"description": "L'utente deve visualizzare un errore se il nuovo valore di larghezza indicato non è positivo (>=0)",
+			"description": "L'utente deve visualizzare un errore se il nuovo valore di larghezza indicato non è positivo (<=0)",
 			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "FM-25",
 			"source": "UC–2.2.1",
-			"description": "L'utente deve visualizzare un errore se il nuovo valore di lunghezza indicato non è positivo (>=0)",
+			"description": "L'utente deve visualizzare un errore se il nuovo valore di lunghezza indicato non è positivo (<=0)",
 			"cat": "Obbligatorio",
 			"achieved": false
 		},
@@ -389,7 +396,7 @@
 			"id": "FM-56",
 			"source": "UC–12.1.1",
 			"description": "L'utente deve visualizzare un errore qualora avesse indicato un codice identificativo già in uso",
-			"cat": "Obbligatorio",
+			"cat": "Desiderabile",
 			"achieved": false
 		},
 		{
@@ -402,7 +409,7 @@
 		{
 			"id": "FM-58",
 			"source": "UC–12.2.1",
-			"description": "L'utente deve visualizzare un errore se la lunghezza indicata non è positiva (>=0)",
+			"description": "L'utente deve visualizzare un errore se la lunghezza indicata non è positiva (<=0)",
 			"cat": "Obbligatorio",
 			"achieved": false
 		},
@@ -487,7 +494,7 @@
 		{
 			"id": "FD-71",
 			"source": "UC–12.4.3",
-			"description": "L'utente deve visualizzare un errore se la larghezza indicata per la singola colonna non è positiva (>=0)",
+			"description": "L'utente deve visualizzare un errore se la larghezza indicata per la singola colonna non è positiva (<=0)",
 			"cat": "Desiderabile",
 			"achieved": false
 		},
@@ -536,7 +543,7 @@
 		{
 			"id": "FM-78",
 			"source": "UC–12.5.2.1.1",
-			"description": "L'utente deve visualizzare un errore se l'altezza indicata per il singolo livello non è positiva (>=0)",
+			"description": "L'utente deve visualizzare un errore se l'altezza indicata per il singolo livello non è positiva (<=0)",
 			"cat": "Obbligatorio",
 			"achieved": false
 		},
@@ -619,7 +626,7 @@
 		},
 		{
 			"id": "FM-90",
-			"source": "VE",
+			"source": "VE 24-02-29",
 			"description": "I prodotti collocati in una zona rimossa non devono essere cancellati",
 			"cat": "Obbligatorio",
 			"achieved": false
@@ -731,7 +738,7 @@
 		},
 		{
 			"id": "FM-106",
-			"source": "UC–16.1.1",
+			"source": "UC–16.1.2",
 			"description": "Il sistema deve impedire il collocamente di una zona al di fuori del perimetro dell'ambiente 3D",
 			"cat": "Obbligatorio",
 			"achieved": false
@@ -808,14 +815,14 @@
 		},
 		{
 			"id": "FM-117",
-			"source": "UC–19.4",
+			"source": "UC–22",
 			"description": "L'utente deve poter visualizzare le informazioni associate al prodotto eventualmente contenuto nel bin",
 			"cat": "Obbligatorio",
 			"achieved": false
 		},
 		{
 			"id": "FM-118",
-			"source": "VE 23-11-15",
+			"source": "VE 23-11-23",
 			"description": "Ogni bin può contenere al massimo 1 prodotto",
 			"cat": "Obbligatorio",
 			"achieved": false
@@ -850,42 +857,42 @@
 		},
 		{
 			"id": "FD-123",
-			"source": "Decisione interna",
+			"source": "UC–22.2",
 			"description": "L'utente deve poter visualizzare il nome del prodotto ispezionato",
 			"cat": "Desiderabile",
 			"achieved": false
 		},
 		{
 			"id": "FD-124",
-			"source": "Decisione interna",
+			"source": "UC–22.3",
 			"description": "L'utente deve poter visualizzare la categoria del prodotto ispezionato",
 			"cat": "Desiderabile",
 			"achieved": false
 		},
 		{
 			"id": "FD-125",
-			"source": "Decisione interna",
+			"source": "UC–22.4",
 			"description": "L'utente deve poter visualizzare la larghezza del prodotto ispezionato",
 			"cat": "Desiderabile",
 			"achieved": false
 		},
 		{
 			"id": "FD-126",
-			"source": "Decisione interna",
+			"source": "UC–22.5",
 			"description": "L'utente deve poter visualizzare la lunghezza del prodotto ispezionato",
 			"cat": "Desiderabile",
 			"achieved": false
 		},
 		{
 			"id": "FD-127",
-			"source": "Decisione interna",
+			"source": "UC–22.6",
 			"description": "L'utente deve poter visualizzare l'altezza del prodotto ispezionato",
 			"cat": "Desiderabile",
 			"achieved": false
 		},
 		{
 			"id": "FD-128",
-			"source": "Decisione interna",
+			"source": "UC–22.7",
 			"description": "L'utente deve poter visualizzare il peso del prodotto ispezionato",
 			"cat": "Desiderabile",
 			"achieved": false
@@ -1109,14 +1116,14 @@
 		},
 		{
 			"id": "FD-160",
-			"source": "UC–26.1.1",
+			"source": "UC–26.1.3",
 			"description": "L'utente deve poter visualizzare l'ID del prodotto oggetto dell'ordine di movimentazione convalidato",
 			"cat": "Desiderabile",
 			"achieved": false
 		},
 		{
 			"id": "FD-161",
-			"source": "UC–26.1.1",
+			"source": "UC–26.1.4",
 			"description": "L'utente deve poter visualizzare il nome del prodotto oggetto dell'ordine di movimentazione convalidato",
 			"cat": "Desiderabile",
 			"achieved": false

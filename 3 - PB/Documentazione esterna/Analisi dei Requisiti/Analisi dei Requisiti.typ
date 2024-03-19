@@ -218,7 +218,7 @@ Porzione dell'ambiente atta a contenere uno o più bin, organizzati su livelli e
   caption: "Proprietà di una zona"
 ) <props-zona>
 
-Le colonne di una stessa zona possono avere larghezze differenti.
+Le colonne di una stessa zona possono avere larghezze differenti. Ciascuna zona contiene almeno una colonna. Le colonne di una stessa zona sono numerate in modo incrementale.
 
 #figure(
   table(
@@ -228,9 +228,9 @@ Le colonne di una stessa zona possono avere larghezze differenti.
     [Larghezza], [$>0$ \[m\]],
   ),
   caption: "Proprietà di una colonna di una zona"
-) <props-livello>
+) <props-colonna>
 
-I livelli partono da terra e sono anche detti "ripiani". Sono numerati dal basso verso l'alto in modo incrementale, a partire da 1. I livelli di una stessa zona possono avere altezze differenti.
+I livelli partono da terra e sono anche detti "ripiani". Sono numerati dal basso verso l'alto in modo incrementale, a partire da 0. I livelli di una stessa zona possono avere altezze differenti. Ciascuna zona contiene almeno un livello.
 
 #figure(
   table(
@@ -1578,11 +1578,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Estensioni",
-  [Visualizzazione errore numero livelli minore di zero (@uc12.5.1.1)]
+  [Visualizzazione errore numero livelli minore o uguale a zero (@uc12.5.1.1)]
 )
 #derivedRequirements("12.5.1")
 
-====== Visualizzazione errore numero livelli minore di zero <uc12.5.1.1>
+====== Visualizzazione errore numero livelli minore o uguale a zero <uc12.5.1.1>
 #printUseCaseInfo("Attore principale", "Utente")
 #printUseCaseInfo(
   "Precondizioni",
@@ -1590,11 +1590,11 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #printUseCaseInfo(
   "Postcondizioni",
-  "L'utente visualizza un errore relativo al valore immesso minore di zero"
+  "L'utente visualizza un errore relativo al valore immesso minore o uguale a zero"
 )
 #printUseCaseInfo(
   "Scenario principale",
-  "L'utente inserisce un numero di livelli minore di zero"
+  "L'utente inserisce un numero di livelli minore o uguale a zero"
 )
 #derivedRequirements("12.5.1.1")
 

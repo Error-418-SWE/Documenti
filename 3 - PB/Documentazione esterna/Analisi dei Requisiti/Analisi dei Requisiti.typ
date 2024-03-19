@@ -996,7 +996,7 @@ I casi d'uso sono organizzati secondo il dominio di appartenenza:
 )
 #derivedRequirements("7")
 
-=== Pan del POV <uc8>
+=== Panning del POV <uc8>
 #figure(
   image("./imgs/UC8.svg", width: 60%),
   caption: "Diagramma UC--8"

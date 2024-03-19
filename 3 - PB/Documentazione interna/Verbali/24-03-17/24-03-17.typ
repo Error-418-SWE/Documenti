@@ -110,4 +110,20 @@ A seguito del posticipo della data di consegna comunicata dal gruppo durante lo 
 
 = Pianificazione <pianificazione>
 
-#TODO
+#let table-json(data) = {
+  let keys = data.at(0).keys()
+  table(
+    align: left,
+    columns: keys.len(),
+    ..keys,
+    ..data.map(
+      row => keys.map(
+        key => row.at(key, default: [n/a])
+      )
+    ).flatten()
+  )
+}
+#show figure: set block(breakable: true)
+#figure(caption: [Task pianificate per lo Sprint 20.],
+  table-json(json("tasks.json"))
+)

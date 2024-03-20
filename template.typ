@@ -167,9 +167,16 @@ set page(
     text(
       0.75em,
       if counter(page).at(loc).first() > 1 [
-        #upper(title) v#documentVersion
-        #h(1fr)
-        #groupName
+        #grid(
+          columns: 7,
+          move(dx: 0pt, dy: 5.5pt, image("logo_simple.png", height: 2em)),
+          h(0.5em),
+          groupName,
+          h(1fr),
+          upper(title),
+          h(0.5em),
+          [v#documentVersion]
+        )
         #line(length: 100%, stroke: 0.25pt)
       ]
     )

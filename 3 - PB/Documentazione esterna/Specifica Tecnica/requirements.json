@@ -965,14 +965,14 @@
 			"source": "UC–24.1",
 			"description": "L'utente deve poter filtrare la lista dei prodotti collocati in base all'ID",
 			"cat": "Desiderabile",
-			"achieved": true
+			"achieved": false
 		},
 		{
 			"id": "FD–139",
 			"source": "UC–24.1",
 			"description": "L'utente deve poter filtrare la lista dei prodotti non collocati in base all'ID",
 			"cat": "Desiderabile",
-			"achieved": true
+			"achieved": false
 		},
 		{
 			"id": "FD–140",

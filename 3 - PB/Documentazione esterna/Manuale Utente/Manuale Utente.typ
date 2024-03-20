@@ -85,6 +85,72 @@ Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
 
 = Istruzioni d'uso
+== Avvio e Configurazione dell'ambiente
+
+Il software all'avvio si presenta come segue:
+#figure(
+  image("./imgs/avvio.png", width: 60%),
+  caption: [
+    Schermata iniziale
+  ],
+) <avvio>
+qui vengono proposte due diverse configurazioni iniziali possibili, *Planimetria rettangolare* e *Planimetria personalizzata*. Le differenze tra le due modalità di lavoro verranno descritte nei capitoli dedicati.
+
+Si può scegliere una modalità di lavoro selezionandola nel pannello di @avvio e premendo il pulsante *Prossimo* in basso a destra.
+
+=== Inizializzazione Planimetria Rettangolare
+
+#figure(
+  image("./imgs/planimetria_rettangolare.png", width: 60%),
+  caption: [
+    Definizione parametri del piano rettangolare
+  ],
+) <piano_rettangolare>
+
+Selezionata l'opzione "Planimetria rettangolare" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_rettangolare, dove sarà possibile definire la lunghezza e la profondità del magazzino che vogliamo creare.
+
+Per terminare la configurazione del piano è richiesto che i due parametri siano entrambi maggiori di 0, in caso contrario verrà impedito di procedere alla visualizzazione del piano e verrà mostrato un messaggio di errore.
+
+Inoltre, selezionando l'opzione "Importa i prodotti da database", una volta terminata la configurazione dell'ambiente verrà caricata nell'apposita finestra la lista dei prodotti presenti nel database.
+
+Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
+
+=== Inizializzazione Planimetria Personalizzata
+
+#figure(
+  image("./imgs/planimetria_personalizzata.png", width: 50%),
+  caption: [
+    Definizione parametri del piano personalizzato
+  ],
+) <piano_personalizzato>
+
+Selezionata l'opzione "Planimetria personalizzata" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_personalizzato, dove sarà possibile caricare il file SVG che verrà disegnato sul piano, e inserire la misura del lato maggiore del magazzino, in modo da scalarne correttamente la pianta.
+
+Il sistema ritornerà un errore e impedirà la visualizzazione del piano nel caso in cui:
+- il file SVG non venga inserito correttamente;
+- il file SVG non sia valido;
+- il valore associato al lato maggiore sia minore o uguale a 0.
+
+"Nella schermata sono inoltre presenti due checkbox per l'importazione dei dati da database:
+
+- "Importa gli scaffali dal database": permette di importare gli scaffali presenti nel database, i quali verranno successivamente visualizzati all'interno dell'ambiente 3D;
+- "Importa i prodotti dal database": permette di importare i prodotti presenti nel database, e, se selezionata l'opzione precedente, di popolare gli scaffali presenti con i rispettivi prodotti.
+
+Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
+
+=== Completamento configurazione dell'ambiente
+
+#figure(
+    grid(
+        columns: (auto, auto),
+        rows:    (auto, auto),
+        [ #image("./imgs/piano_rettangolare.png", width: 90%)],
+        [ #image("./imgs/piano_personalizzato.png", width: 90%)],
+    ),caption: [ Corretta configurazione del piano rettangolare (sinistra) e del piano personalizzato (destra)],
+) <fine_configurazione_iniziale>
+
+
+Una volta che l'ambiente è stato correttamente configurato è possibile cominciare a lavorare con il piano 3D che si presenta come mostrato in in @fine_configurazione_iniziale (in questo caso i piani rappresentati sono entrambi vuoti).
 
 == Creazione zona
 

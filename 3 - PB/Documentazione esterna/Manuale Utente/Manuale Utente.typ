@@ -90,7 +90,7 @@ Il software all'avvio si presenta come segue:
 #figure(
   image("./imgs/avvio.png", width: 60%),
   caption: [
-    Avvio del software
+    Schermata iniziale
   ],
 ) <avvio>
 qui vengono proposte due diverse configurazioni iniziali possibili, *Planimetria rettangolare* e *Planimetria personalizzata*. Le differenze tra le due modalità di lavoro verranno descritte nei capitoli dedicati.
@@ -106,14 +106,13 @@ Si può scegliere una modalità di lavoro selezionandola nel pannello di @avvio 
   ],
 ) <piano_rettangolare>
 
-Selezionata la Planimetria Rettangolare nella schermata di @avvio il sistema mostrerà la schermata mostrata in @piano_rettangolare, dove è possibile definire la lunghezza e la profondità del magazzino che vogliamo creare.
+Selezionata l'opzione "Planimetria rettangolare" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_rettangolare, dove sarà possibile definire la lunghezza e la profondità del magazzino che vogliamo creare.
 
-Per terminare la configurazione del piano è richiesto che i due parametri siano entrambi maggiori di 0, in caso contrario verrà impedito di procedere alla visualizzazione del piano e verrà visualizzato un errore.
+Per terminare la configurazione del piano è richiesto che i due parametri siano entrambi maggiori di 0, in caso contrario verrà impedito di procedere alla visualizzazione del piano e verrà mostrato un messaggio di errore.
 
-Spuntando invece le checkbox "importa i prodotti dal database" il sistema, terminata la configurazione dell'ambiente, caricherà nell'apposita finestra
-*Product* i prodotti presenti nel database.
+Inoltre, selezionando l'opzione "Importa i prodotti da database", una volta terminata la configurazione dell'ambiente verrà caricata nell'apposita finestra la lista dei prodotti presenti nel database.
 
-Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, premere il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio
+Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
 
 === Inizializzazione Planimetria Personalizzata
 
@@ -124,16 +123,19 @@ Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambi
   ],
 ) <piano_personalizzato>
 
-Selezionata la Planimetria Personalizzata nella schermata di @avvio il sistema mostrerà la schermata mostrata in @piano_personalizzato, dove è possibile caricare il file SVG che verrà disegnato sul piano e la misura del lato maggiore in modo da scalare correttamente la piantina che verrà disegnata.
+Selezionata l'opzione "Planimetria personalizzata" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_personalizzato, dove sarà possibile caricare il file SVG che verrà disegnato sul piano, e inserire la misura del lato maggiore del magazzino, in modo da scalarne correttamente la pianta.
 
 Il sistema ritornerà un errore e impedirà la visualizzazione del piano nel caso in cui:
 - il file SVG non venga inserito correttamente;
 - il file SVG non sia valido;
 - il valore associato al lato maggiore sia minore o uguale a 0.
 
-Spuntando invece le checkbox "importa gli scaffali dal database" e "importa i prodotti dal database" il sistema userà i dati presenti nel database per creare gli scaffali e popolarli con i prodotti presenti nel database, mostrando anche i prodotti non assegnati nell'apposita finestra *Product*. In caso contrario il piano verrà mostrato completamente vuoto.
+"Nella schermata sono inoltre presenti due checkbox per l'importazione dei dati da database:
 
-Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, premere il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio
+- "Importa gli scaffali dal database": permette di importare gli scaffali presenti nel database, i quali verranno successivamente visualizzati all'interno dell'ambiente 3D;
+- "Importa i prodotti dal database": permette di importare i prodotti presenti nel database, e, se selezionata l'opzione precedente, di popolare gli scaffali presenti con i rispettivi prodotti.
+
+Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
 
 === Completamento configurazione dell'ambiente
 
@@ -147,7 +149,7 @@ Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambi
 ) <fine_configurazione_iniziale>
 
 
-Una volta che l'ambiente è stato correttamente configurato è possibile cominciare a lavorare con il piano 3D che si presenta come rappresentato in @fine_configurazione_iniziale (in questo caso i piani rappresentati sono entrambi vuoti).
+Una volta che l'ambiente è stato correttamente configurato è possibile cominciare a lavorare con il piano 3D che si presenta come mostrato in in @fine_configurazione_iniziale (in questo caso i piani rappresentati sono entrambi vuoti).
 
 #pagebreak()
 

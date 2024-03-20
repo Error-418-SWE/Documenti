@@ -414,15 +414,15 @@ Per una visione più completa sui requisiti si rimanda al documento #adr_v.
 
 #let filterFunctionalRequirements() = {
   let subset = ()
-  let fields = ("id", "source", "achieved")
+  let fields = ("id", "description", "achieved")
     for item in requirements.at("functional") {
       for field in fields {
         if field == "achieved" {
           if item.at(field) {
-            subset.push("Vero")
+            subset.push("Soddisfatto")
           }
           else {
-            subset.push("Falso")
+            subset.push("Non soddisfatto")
           }
         }
         else {
@@ -435,9 +435,9 @@ Per una visione più completa sui requisiti si rimanda al documento #adr_v.
 
 #figure(
   table(
-    columns: (33%, 33%, 33%),
+    columns: (15%, 65%, 20%),
     align: center,
-    [*Codice*], [*Riferimento*], [*Soddisfatto*],
+    [*Codice*], [*Descrizione*], [*Stato*],
     ..filterFunctionalRequirements()
   ),
   caption: [Requisiti funzionali]
@@ -447,15 +447,15 @@ Per una visione più completa sui requisiti si rimanda al documento #adr_v.
 
 #let filterQualityRequirements() = {
   let subset = ()
-  let fields = ("id", "source", "achieved")
+  let fields = ("id", "description", "achieved")
     for item in requirements.at("quality") {
       for field in fields {
         if field == "achieved" {
           if item.at(field) {
-            subset.push("Vero")
+            subset.push("Soddisfatto")
           }
           else {
-            subset.push("Falso")
+            subset.push("Non soddisfatto")
           }
         }
         else {
@@ -468,9 +468,9 @@ Per una visione più completa sui requisiti si rimanda al documento #adr_v.
 
 #figure(
   table(
-    columns: (33%, 33%, 33%),
+    columns: (15%, 65%, 20%),
     align: center,
-    [*Codice*], [*Riferimento*], [*Soddisfatto*],
+    [*Codice*], [*Descrizione*], [*Stato*],
     ..filterQualityRequirements()
   ),
   caption: [Requisiti di qualità]
@@ -480,15 +480,15 @@ Per una visione più completa sui requisiti si rimanda al documento #adr_v.
 
 #let filterConstraintsRequirements() = {
   let subset = ()
-  let fields = ("id", "source", "achieved")
+  let fields = ("id", "description", "achieved")
     for item in requirements.at("constraints") {
       for field in fields {
         if field == "achieved" {
           if item.at(field) {
-            subset.push("Vero")
+            subset.push("Soddisfatto")
           }
           else {
-            subset.push("Falso")
+            subset.push("Non soddisfatto")
           }
         }
         else {
@@ -501,9 +501,9 @@ Per una visione più completa sui requisiti si rimanda al documento #adr_v.
 
 #figure(
   table(
-    columns: (33%, 33%, 33%),
+    columns: (15%, 65%, 20%),
     align: center,
-    [*Codice*], [*Riferimento*], [*Soddisfatto*],
+    [*Codice*], [*Descrizione*], [*Stato*],
     ..filterConstraintsRequirements()
   ),
   caption: [Requisiti di vincolo]

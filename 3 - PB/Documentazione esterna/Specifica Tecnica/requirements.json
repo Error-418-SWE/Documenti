@@ -82,7 +82,7 @@
 			"source": "UC–1.2.1.1",
 			"description": "L'utente deve ricevere un messaggio di errore qualora avesse caricato un file SVG privo di elementi grafici (path, rect, circle, ellipse, line, polyline, polygon, text, g)",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–13",
@@ -187,35 +187,35 @@
 			"source": "UC–3",
 			"description": "L'utente deve poter disporre di una griglia di aggancio come aiuto al posizionamento delle zone nell'ambiente 3D",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–28",
 			"source": "UC–3",
 			"description": "Il passo della griglia deve essere configurabile",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–29",
 			"source": "UC–3",
 			"description": "L'utente deve poter disattivare la griglia di posizionamento",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–30",
 			"source": "UC–3",
 			"description": "La griglia deve essere configurabile durante le normali operazioni sull'ambiente 3D, non esclusivamente durante la configurazione dell'ambiente",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–31",
 			"source": "UC–3",
 			"description": "Se il passo di griglia non è nullo, il collocamento delle zone deve agganciarsi ad essa",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–32",
@@ -250,7 +250,7 @@
 			"source": "Decisione interna",
 			"description": "L'importazione delle zone può avvenire solo se l'utente ha configurato un ambiente 3D a partire da file SVG",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–37",
@@ -390,7 +390,7 @@
 			"source": "UC–12.1",
 			"description": "L'utente deve poter indicare una sequenza alfanumerica come codice identificativo delle nuove zone create",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–57",
@@ -468,7 +468,7 @@
 			"source": "UC–12.4.2.1.1",
 			"description": "L'utente deve indicare la larghezza complessiva della nuova zona, qualora avesse richiesto la suddivisione della stessa in colonne di equa larghezza",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–68",
@@ -769,7 +769,7 @@
 			"source": "UC–18.1",
 			"description": "Le zone che rispondono ai criteri di ricerca devono essere evidenziate graficamente",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FM–111",
@@ -965,42 +965,42 @@
 			"source": "UC–24.1",
 			"description": "L'utente deve poter filtrare la lista dei prodotti collocati in base all'ID",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–139",
 			"source": "UC–24.1",
 			"description": "L'utente deve poter filtrare la lista dei prodotti non collocati in base all'ID",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–140",
 			"source": "UC–24.2",
 			"description": "L'utente deve poter filtrare la lista dei prodotti collocati in base al nome",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–141",
 			"source": "UC–24.2",
 			"description": "L'utente deve poter filtrare la lista dei prodotti non collocati in base al nome",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–142",
 			"source": "UC–24.3",
 			"description": "L'utente deve poter filtrare la lista dei prodotti collocati in base alla categoria",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–143",
 			"source": "UC–24.3",
 			"description": "L'utente deve poter filtrare la lista dei prodotti non collocati in base alla categoria",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–144",
@@ -1105,42 +1105,42 @@
 			"source": "UC–26",
 			"description": "L'utente deve poter visualizzare l'ID del bin di partenza degli ordini di movimentazione convalidati se l'operazione è partita da un bin",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–159",
 			"source": "UC–26.1.2",
 			"description": "L'utente deve poter visualizzare l'ID del bin di destinazione dell'ordine di movimentazione convalidato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–160",
 			"source": "UC–26.1.3",
 			"description": "L'utente deve poter visualizzare l'ID del prodotto oggetto dell'ordine di movimentazione convalidato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–161",
 			"source": "UC–26.1.4",
 			"description": "L'utente deve poter visualizzare il nome del prodotto oggetto dell'ordine di movimentazione convalidato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–162",
 			"source": "UC–26.1.1",
 			"description": "L'utente deve poter visualizzare l'ID del bin di partenza degli ordini di movimentazione convalidati se l'operazione è partita da un bin",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–163",
 			"source": "UC–27",
 			"description": "L'utente può poter ispezionare un singolo ordine di movimentazione convalidato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FM–164",

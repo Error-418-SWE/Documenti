@@ -11,6 +11,59 @@
  isExternalUse: true,
 );
 
+// Utilities for UC printing
+
+#let printUseCaseInfo(title, ..items) = {
+  text(title, weight: "bold")
+  text(": ")
+  if items.pos().len() > 1 or title in ("Precondizioni", "Postcondizioni", "Inclusioni", "Estensioni", "Generalizzazioni", "Generalizzazione di") {
+    linebreak()
+    for item in items.pos() {
+      if item == items.pos().at(items.pos().len() - 1) [+ #item\.]
+      else [+ #item\;]
+    }
+  }
+  else {
+    text(items.pos().join("") + ".")
+    linebreak()
+  }
+}
+
+#let requirements = json("requirements.json");
+
+#let derivedRequirements(reference) = {
+  let subset = ()
+  for key in requirements.keys() {
+    for req in requirements.at(key) {
+      if lower(req.source) == ("uc–" + reference) {
+        subset.push(req.id)
+      }
+    }
+  }
+  if subset.len() > 0 {
+    return printUseCaseInfo("Requisiti derivati", subset.join(", "))
+  }
+}
+
+// INIZIO UC
+
+#let setUCHeadingCounterTo(value) = {
+  let i = 1
+  while i < value {
+    counter(heading).step(level: 3)
+    i+=1
+  }
+}
+
+#set par(first-line-indent: 0pt)
+
+#show heading.where(level: 3): it => {v(3em, weak: true); it}
+#show heading.where(level: 4): it => {v(3em, weak: true); it}
+#show heading.where(level: 5): it => {v(3em, weak: true); it}
+#show heading.where(level: 6): it => {v(3em, weak: true); it}
+#show heading.where(level: 7): it => {v(3em, weak: true); it}
+#show heading.where(level: 8): it => {v(3em, weak: true); it}
+
 = Introduzione
 
 == Scopo del documento
@@ -50,11 +103,26 @@ Il prodotto offre le seguenti funzionalità principali:
 
 === Riferimenti normativi <riferimenti-normativi>
 
+- Regolamento del progetto didattico: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
+  #lastVisitedOn(20, 03, 2024)
+
 - Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
   #lastVisitedOn(13, 02, 2024)
 
 === Riferimenti informativi <riferimenti-informativi>
+
+- Verbali interni;
+- Verbali esterni;
+- Analisi dei requisiti: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf")_
+  #lastVisitedOn(20, 03, 2024)
+
+- Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
+  _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_
+  #lastVisitedOn(20, 03, 2024)
+
 
 #pagebreak()
 
@@ -234,4 +302,112 @@ In nessun caso il database verrà modificato dall'applicazione.
 == Design pattern utilizzati
 
 
-= Requisiti soddisfatti ( aggiungere tabella requisiti soddisfatti)
+= Requisiti soddisfatti
+
+Di seguito vengono riportati i requisti funzionali, di qualità e di vincolo soddisfatti dall'applicazione.
+
+Per una visione più completa sui requisiti si rimanda al documento #adr_v.
+
+== Requisiti funzionali soddisfatti
+
+#show figure: set block(breakable: true)
+#show "#ndp_v": [#ndp_v]
+#show "#pdq_v": [#pdq_v]
+#let requirementsSubset = ()
+
+#let filterFunctionalRequirements() = {
+  let subset = ()
+  let fields = ("id", "source", "achieved")
+    for item in requirements.at("functional") {
+      for field in fields {
+        if field == "achieved" {
+          if item.at(field) {
+            subset.push("Vero")
+          }
+          else {
+            subset.push("Falso")
+          }
+        }
+        else {
+          subset.push(item.at(field))
+        }
+      }
+    }
+  return subset
+}
+
+#figure(
+  table(
+    columns: (33%, 33%, 33%),
+    align: center,
+    [*Codice*], [*Riferimento*], [*Soddisfatto*],
+    ..filterFunctionalRequirements()
+  ),
+  caption: [Requisiti funzionali]
+)
+
+== Requisiti di qualità soddisfatti
+
+#let filterQualityRequirements() = {
+  let subset = ()
+  let fields = ("id", "source", "achieved")
+    for item in requirements.at("quality") {
+      for field in fields {
+        if field == "achieved" {
+          if item.at(field) {
+            subset.push("Vero")
+          }
+          else {
+            subset.push("Falso")
+          }
+        }
+        else {
+          subset.push(item.at(field))
+        }
+      }
+    }
+  return subset
+}
+
+#figure(
+  table(
+    columns: (33%, 33%, 33%),
+    align: center,
+    [*Codice*], [*Riferimento*], [*Soddisfatto*],
+    ..filterQualityRequirements()
+  ),
+  caption: [Requisiti di qualità]
+)
+
+== Requisiti di vincolo soddisfatti
+
+#let filterConstraintsRequirements() = {
+  let subset = ()
+  let fields = ("id", "source", "achieved")
+    for item in requirements.at("constraints") {
+      for field in fields {
+        if field == "achieved" {
+          if item.at(field) {
+            subset.push("Vero")
+          }
+          else {
+            subset.push("Falso")
+          }
+        }
+        else {
+          subset.push(item.at(field))
+        }
+      }
+    }
+  return subset
+}
+
+#figure(
+  table(
+    columns: (33%, 33%, 33%),
+    align: center,
+    [*Codice*], [*Riferimento*], [*Soddisfatto*],
+    ..filterConstraintsRequirements()
+  ),
+  caption: [Requisiti di vincolo]
+)

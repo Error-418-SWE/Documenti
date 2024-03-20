@@ -3966,7 +3966,7 @@ Il rendimento positivo dello Sprint 18 è supportato dalle principali metriche e
 
 === Obiettivi raggiunti
 
-Lo Sprint 18 si è concluso raggiungendo buona parte degli obiettivi pianificati, in particolare:
+Lo Sprint 19 si è concluso raggiungendo buona parte degli obiettivi pianificati, in particolare:
 
 - colloquio con Proponente in data 15/03/2024;
 

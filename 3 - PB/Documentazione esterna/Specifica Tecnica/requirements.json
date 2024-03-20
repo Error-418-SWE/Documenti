@@ -68,7 +68,7 @@
 			"source": "Decisione interna",
 			"description": "Il file SVG deve essere sanificato prima dell'importazione",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–11",
@@ -89,35 +89,35 @@
 			"source": "UC–1.2.1.2",
 			"description": "Il file SVG deve essere validato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–14",
 			"source": "UC–1.2.1.2",
 			"description": "L'utente deve ricevere un messaggio di errore qualora avesse caricato un file SVG non valido o corrotto",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–15",
 			"source": "UC–1.2.2",
 			"description": "L'utente che abbia scelto la modalità di configurazione a partire da un file SVG, deve poter indicare il solo lato maggiore del magazzino per configurare la planimetria",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–16",
 			"source": "UC–1.2.2",
 			"description": "Il sistema deve determinare il valore del lato minore a partire dal rapporto di aspetto del file SVG e dai dati forniti dall'utente",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–17",
 			"source": "UC–1.2.2.1",
 			"description": "L'utente deve visualizzare un errore se il valore indicato come lato maggiore non è positivo (<=0)",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FM–18",
@@ -159,14 +159,14 @@
 			"source": "Decisione interna",
 			"description": "L'utente che abbia configurato un ambiente 3D a partire da file SVG non può definire un valore di lunghezza inferiore a quello corrente",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–24",
 			"source": "Decisione interna",
 			"description": "L'utente che abbia configurato un ambiente 3D a partire da file SVG non può definire un valore di larghezza inferiore a quello corrente",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FM–25",
@@ -257,7 +257,7 @@
 			"source": "UC–6",
 			"description": "L'utente deve visualizzare un messaggio di errore nel caso l'importazione non dovesse andare a buon fine",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–38",
@@ -397,7 +397,7 @@
 			"source": "UC–12.1.1",
 			"description": "L'utente deve visualizzare un errore qualora avesse indicato un codice identificativo già in uso",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FM–58",
@@ -454,14 +454,14 @@
 			"source": "UC–12.4.2",
 			"description": "L'utente deve poter personalizzare la larghezza delle colonne della nuova zona",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–66",
 			"source": "UC–12.4.2.1",
 			"description": "L'utente deve poter suddividere la larghezza della nuova zona in colonne di equa larghezza",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–67",
@@ -475,28 +475,28 @@
 			"source": "UC–12.4.2.2",
 			"description": "L'utente deve poter suddividere la larghezza della nuova zona in colonne di larghezza specifica",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–69",
 			"source": "UC–12.4.2.2.1",
 			"description": "L'utente deve poter indicare la larghezza di ciascuna colonna, qualora avesse richiesto la suddivisione della nuova zona in colonne di larghezza specifica",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–70",
 			"source": "UC–12.4.2.2.1",
 			"description": "Il sistema deve determinare il valore della larghezza della zona dalla somma delle larghezze delle singole colonne",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–71",
 			"source": "UC–12.4.3",
 			"description": "L'utente deve visualizzare un errore se la larghezza indicata per la singola colonna non è positiva (<=0)",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FM–72",
@@ -762,7 +762,7 @@
 			"source": "UC–18.1",
 			"description": "L'utente deve poter cercare le zone in base all'ID",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–110",
@@ -909,42 +909,42 @@
 			"source": "Decisione interna",
 			"description": "L'utente deve poter distinguere tra prodotti collocati in un bin e non collocati",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–131",
 			"source": "UC–23.2",
 			"description": "L'utente deve poter visualizzare la lista dei prodotti collocati",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–132",
 			"source": "UC–23.1",
 			"description": "L'utente deve poter visualizzare la lista dei prodotti non collocati",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–133",
 			"source": "UC–23.1.1.1",
 			"description": "L'utente deve poter visualizzare il nome del prodotto nella lista dei prodotti (collocati e non)",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–134",
 			"source": "UC–23.1.1.2",
 			"description": "L'utente deve poter visualizzare l'ID del prodotto nella lista dei prodotti (collocati e non)",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–135",
 			"source": "UC–23.1.1.3",
 			"description": "L'utente deve poter visualizzare la categoria del prodotto nella lista dei prodotti (collocati e non)",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–136",
@@ -1007,7 +1007,7 @@
 			"source": "Decisione interna",
 			"description": "I filtri di ricerca devono essere mutuamente esclusivi",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–145",
@@ -1084,7 +1084,7 @@
 			"source": "UC–25.3",
 			"description": "Quando un ordine di movimentazione è convalidato, esso viene inserito in una cronologia delle operazioni accessibile dall'utente",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FM–156",
@@ -1098,7 +1098,7 @@
 			"source": "UC–26",
 			"description": "L'utente deve poter visualizzare la cronologia degli ordini di movimentazione convalidati",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–158",

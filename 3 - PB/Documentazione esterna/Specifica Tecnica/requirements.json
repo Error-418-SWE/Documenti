@@ -138,7 +138,7 @@
 			"source": "VE 24-03-07",
 			"description": "L'utente deve poter visualizzare un'anteprima delle modifiche alla planimetria prima di confermare l'operazione",
 			"cat": "Opzionale",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FM–21",
@@ -222,28 +222,28 @@
 			"source": "UC–4",
 			"description": "L'utente deve poter importare le zone da un database",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–33",
 			"source": "UC–4",
 			"description": "L'utente deve poter importare le zone da un database durante la fase di configurazione dell'ambiente 3D",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–34",
 			"source": "UC–4",
 			"description": "Le zone importate devono essere collocate automaticamente nell'ambiente 3D, nella posizione descritta dal database",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–35",
 			"source": "UC–4.1",
 			"description": "I bin delle zone devono essere importati contestualmente all'importazione delle zone",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–36",
@@ -264,14 +264,14 @@
 			"source": "UC–5",
 			"description": "L'utente deve poter importare i prodotti da database",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–39",
 			"source": "UC–5",
 			"description": "Quando l'utente importa zone e prodotti da un database, i prodotti devono essere collocati nei rispettivi bin di appartenenza",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FM–40",
@@ -418,7 +418,7 @@
 			"source": "UC–12.3",
 			"description": "L'utente deve poter scegliere tra \"NS\" e \"WE\" come orientamento della zona da creare",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FM–61",
@@ -439,7 +439,7 @@
 			"source": "VE 23-12-15",
 			"description": "L'identificazione delle colonne deve avvenire tramite lettere crescenti in senso lessicografico a partire da \"A\"",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 
 		{
@@ -846,63 +846,63 @@
 			"source": "UC–22",
 			"description": "L'utente deve poter visualizzare le informazioni associate ad un prodotto importato da database",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–122",
 			"source": "UC–22.1",
 			"description": "L'utente deve poter visualizzare l'ID del prodotto ispezionato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–123",
 			"source": "UC–22.2",
 			"description": "L'utente deve poter visualizzare il nome del prodotto ispezionato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–124",
 			"source": "UC–22.3",
 			"description": "L'utente deve poter visualizzare la categoria del prodotto ispezionato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–125",
 			"source": "UC–22.4",
 			"description": "L'utente deve poter visualizzare la larghezza del prodotto ispezionato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–126",
 			"source": "UC–22.5",
 			"description": "L'utente deve poter visualizzare la lunghezza del prodotto ispezionato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–127",
 			"source": "UC–22.6",
 			"description": "L'utente deve poter visualizzare l'altezza del prodotto ispezionato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–128",
 			"source": "UC–22.7",
 			"description": "L'utente deve poter visualizzare il peso del prodotto ispezionato",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–129",
 			"source": "UC–23",
 			"description": "L'utente deve poter visualizzare la lista dei prodotti importati da database",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–130",
@@ -1212,7 +1212,7 @@
 			"source": "Capitolato",
 			"description": "Deve essere consegnata la documentazione delle API realizzate",
 			"cat": "Opzionale",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "QM–9",
@@ -1300,7 +1300,7 @@
 			"source": "VE 23-11-15",
 			"description": "Il prodotto deve essere eseguibile in un container Docker o Docker Compose",
 			"cat": "Opzionale",
-			"achieved": false
+			"achieved": true
 		}
 	]
 }

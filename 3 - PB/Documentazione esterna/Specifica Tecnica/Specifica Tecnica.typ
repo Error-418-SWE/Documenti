@@ -11,59 +11,6 @@
  isExternalUse: true,
 );
 
-// Utilities for UC printing
-
-#let printUseCaseInfo(title, ..items) = {
-  text(title, weight: "bold")
-  text(": ")
-  if items.pos().len() > 1 or title in ("Precondizioni", "Postcondizioni", "Inclusioni", "Estensioni", "Generalizzazioni", "Generalizzazione di") {
-    linebreak()
-    for item in items.pos() {
-      if item == items.pos().at(items.pos().len() - 1) [+ #item\.]
-      else [+ #item\;]
-    }
-  }
-  else {
-    text(items.pos().join("") + ".")
-    linebreak()
-  }
-}
-
-#let requirements = json("requirements.json");
-
-#let derivedRequirements(reference) = {
-  let subset = ()
-  for key in requirements.keys() {
-    for req in requirements.at(key) {
-      if lower(req.source) == ("uc–" + reference) {
-        subset.push(req.id)
-      }
-    }
-  }
-  if subset.len() > 0 {
-    return printUseCaseInfo("Requisiti derivati", subset.join(", "))
-  }
-}
-
-// INIZIO UC
-
-#let setUCHeadingCounterTo(value) = {
-  let i = 1
-  while i < value {
-    counter(heading).step(level: 3)
-    i+=1
-  }
-}
-
-#set par(first-line-indent: 0pt)
-
-#show heading.where(level: 3): it => {v(3em, weak: true); it}
-#show heading.where(level: 4): it => {v(3em, weak: true); it}
-#show heading.where(level: 5): it => {v(3em, weak: true); it}
-#show heading.where(level: 6): it => {v(3em, weak: true); it}
-#show heading.where(level: 7): it => {v(3em, weak: true); it}
-#show heading.where(level: 8): it => {v(3em, weak: true); it}
-
 = Introduzione
 
 == Scopo del documento
@@ -410,7 +357,9 @@ Per una visione più completa sui requisiti si rimanda al documento #adr_v.
 #show figure: set block(breakable: true)
 #show "#ndp_v": [#ndp_v]
 #show "#pdq_v": [#pdq_v]
-#let requirementsSubset = ()
+#show "<=": [$<=$]
+#let requirements = json("requirements.json");
+
 
 #let filterFunctionalRequirements() = {
   let subset = ()
@@ -436,7 +385,7 @@ Per una visione più completa sui requisiti si rimanda al documento #adr_v.
 #figure(
   table(
     columns: (15%, 65%, 20%),
-    align: center,
+    align: (center, left, center),
     [*Codice*], [*Descrizione*], [*Stato*],
     ..filterFunctionalRequirements()
   ),
@@ -469,7 +418,7 @@ Per una visione più completa sui requisiti si rimanda al documento #adr_v.
 #figure(
   table(
     columns: (15%, 65%, 20%),
-    align: center,
+    align: (center, left, center),
     [*Codice*], [*Descrizione*], [*Stato*],
     ..filterQualityRequirements()
   ),
@@ -502,7 +451,7 @@ Per una visione più completa sui requisiti si rimanda al documento #adr_v.
 #figure(
   table(
     columns: (15%, 65%, 20%),
-    align: center,
+    align: (center, left, center),
     [*Codice*], [*Descrizione*], [*Stato*],
     ..filterConstraintsRequirements()
   ),

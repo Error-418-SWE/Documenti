@@ -448,6 +448,20 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 
   Per ogni attributo è presente il corrispondente metodo get.
 
+
+
+\
+- *SVG*:
+
+  rappresenta un file SVG utilizzato per la configurazione dell'ambiente di lavoro mediante file.
+  I suoi attributi sono:
+
+  - *length*: numero in virgola mobile che rappresenta la lunghezza dell'immagine rappresentata dal file;
+  - *width*: numero in virgola mobile che rappresenta la larghezza dell'immagine rappresentata dal file;
+  - *svg*: stringa contenente il path del file.
+
+  Per ogni attributo è presente il corrispondente metodo get.
+
 \
 - *Floor*:
 

@@ -279,6 +279,8 @@ Esse sono implementate e rese disponibili in file separati, organizzati nell'omo
 
 - *getBinById*: dato un codice identificativo univoco, ritorna le informazioni relative al bin corrispondente lette dal database;
 
+- *getAllCategories*: ritorna le informazioni di tutte le categorie di prodotti lette dal database;
+
 - *getAllProducts*: ritorna le informazioni di tutti i prodotti lette dal database;
 
 - *getProductById*: dato un codice identificativo univoco, ritorna le informazioni relative al prodotto corrispondente lette dal database;

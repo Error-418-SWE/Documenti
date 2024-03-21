@@ -505,6 +505,12 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 
 In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i componenti:
 
+- *warehouseProvider*: fornisce un provider per gestire dati relativi alle variabili di contesto dell'ambiente grafico;
+
+- *ElementDetailsProvider*: fornisce un provider per gestire dati relativi ai componenti da visualizzare in un pannello dedicato;
+
+- *formContextProvider*: fornisce un provider per gestire dati relativi allo stato di processing di un form;
+
 - *binsProvider*: fornisce un provider per gestire dati relativi agli oggetti `Bin`;
 
 - *floorProvider*: fornisce un provider per gestire dati relativi agli oggetti `Floor`;
@@ -513,9 +519,7 @@ In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono pre
 
 - *productsProvider*: fornisce un provider per gestire dati relativi agli oggetti `Product`;
 
-- *zonesProvider*: fornisce un provider per gestire dati relativi agli oggetti `Zone`;
-
-- *ElementDetailsProvider*: fornisce un provider per gestire dati relativi ai componenti da visualizzare in un pannello dedicato.
+- *zonesProvider*: fornisce un provider per gestire dati relativi agli oggetti `Zone`.
 
 
 === Presentation layer

@@ -208,7 +208,7 @@ Porzione dell'ambiente atta a contenere uno o più bin, organizzati su livelli e
   table(
     columns: 2,
     [*Proprietà*], [*Descrizione*],
-    [ID], [Identificatore alfanumerico univoco.],
+    [ID], [Identificatore numerico univoco.],
     [Lunghezza], [$>0$ \[m\]],
     [Larghezza], [$>0$ \[m\]\ Non inferiore alla somma delle larghezze delle colonne.],
     [Altezza], [$>0$ \[m\]\ Non inferiore alla somma delle altezze dei livelli.],
@@ -224,7 +224,7 @@ Le colonne di una stessa zona possono avere larghezze differenti. Ciascuna zona 
   table(
     columns: (10em, 10em),
     [*Proprietà*], [*Descrizione*],
-    [ID], [Identificatore alfanumerico univoco.],
+    [ID], [Identificatore alfabetico univoco.],
     [Larghezza], [$>0$ \[m\]],
   ),
   caption: "Proprietà di una colonna di una zona"
@@ -236,7 +236,7 @@ I livelli partono da terra e sono anche detti "ripiani". Sono numerati dal basso
   table(
     columns: (10em, 10em),
     [*Proprietà*], [*Descrizione*],
-    [ID], [Identificatore alfanumerico univoco.],
+    [ID], [Identificatore numerico univoco.],
     [Altezza], [$>0$ \[m\]],
   ),
   caption: "Proprietà di un livello di una zona"
@@ -257,7 +257,7 @@ Una zona con più di un livello è anche detta "*scaffale*".
 Posizione di una zona atta ad accogliere fino ad un prodotto. Individuata dall'intersezione di livelli e colonne.
 
 ==== Prodotto
-Elemento ospitabile in un bin.
+Elemento ospitabile in un bin. Non ci sono richieste specifiche sulle proprietà di un prodotto.
 
 === Funzionalità del prodotto
 

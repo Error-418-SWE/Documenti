@@ -180,7 +180,7 @@ Premendo il tasto sinistro e spostando il mouse verso destra ruoteremo il piano 
     ),caption: [Zoom-in e zoom-out],
 ) <camera_zoom>
 
-Ruotando la rotella del mouse in avanti la camera si avvicinerà all'oggetto che desideriamo ingrandire (zoom-in), girandola al contrario la camera si allontanerà dall'oggetto (zoom-out) come mostrato in @camera_zoom.
+Ruotando la rotella del mouse in avanti è possibile avvicinarsi all'oggetto desiderato (zoom-in), mentre ci si può allontanare (zoom-out) ruotandola nel senso opposto, come mostrato in @camera_zoom.
 
 === Panning
 
@@ -194,7 +194,7 @@ Ruotando la rotella del mouse in avanti la camera si avvicinerà all'oggetto che
     ),caption: [Panning della camera],
 ) <camera_panning>
 
-Premendo il tasto destro del mouse e spostando il mouse in una delle quattro direzioni (su, giù, destra e sinistra) otterremo il panning della camera, ovvero lo spostamento sui due assi della camera rispetto al piano come mostrato in figura @camera_panning
+Premendo il tasto destro del mouse e spostando il mouse in una delle quattro direzioni (su, giù, destra e sinistra) otterremo il panning della camera, ovvero lo spostamento sui due assi della camera rispetto al piano come mostrato in figura @camera_panning.
 
 
 #pagebreak()

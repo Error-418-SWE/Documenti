@@ -355,9 +355,22 @@ Le classi che vengono utilizzate per rappresentare il modello dell'applicativo s
 
   - *product*: riferimento al prodotto contenuto nel bin. Può essere `null`.
 
+  - *state*: enum `BinState` che identifica lo stato di un bin contestualmente alla richiesta di spostamento dei prodotti.
+
+    Può assumere i valori:
+
+    - *Idle*: valore di default, dichiara che il bin non è coinvolto in richieste di spostamento di prodotti;
+
+    - *ProductIncoming*: dichiara che il bin è coinvolto in una richiesta di spostamento di un prodotto, il quale deve essere immesso al suo interno;
+
+    - *ProductOutgoing*: dichiara che il bin è coinvolto in una richiesta di spostamento del prodotto al suo interno, il quale deve essere prelevato.
+
+
 Per ogni attributo è presente il corrispondente metodo get.
-Sono presenti i metodi set per gli attributi `id` e `product`.
-Inoltre è previsto il metodo `Clear` che permette di assegnare il valore `null` all'attributo che riferisce il prodotto contenuto nel bin.
+
+Sono presenti i metodi set per gli attributi `id`, `product` e `state`.
+
+Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore `null` all'attributo che riferisce il prodotto contenuto nel bin.
 
 \
 - *Zone*:

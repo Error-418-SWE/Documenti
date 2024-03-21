@@ -926,7 +926,7 @@ L'intero processo di versionamento è accompagnato da una serie di automazioni, 
 #figure(image("./imgs/flusso_actions.svg", format: "svg"), caption: [Workflow delle automazioni]);
 
 Alla creazione della pull request si avvia il workflow per la compilazione e la registrazione delle modifiche avvenute. Prima di procedere è necessario inserire informazioni essenziali ai fini di ottenere maggiore chiarezza e tracciabilità nel messaggio di pull request, quali:
-- titolo conforme, contenente il nome del task di riferimento su Jira legata alla pull request, nel formato _DOC-XXX titolo_;
+- titolo conforme, contenente il nome del task di riferimento su Jira legata alla pull request, nel formato `DOC-XXX titolo`;
 - identificativo di almeno un verificatore;
 - eventuali note aggiuntive.
 Il workflow è composto dai seguenti passaggi:

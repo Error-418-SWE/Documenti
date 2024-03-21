@@ -874,15 +874,15 @@ Il gruppo #err418 ha creato un'organizzazione omonima su GitHub in modo da gesti
 - `website`: contiene i file sorgente del sito web che espone la documentazione del gruppo.
 
 Documenti è organizzata in modo da suddividere la documentazione necessaria alle revisioni esterne che il gruppo dovrà affrontare:
-- *RTB*: contiene i file necessari alla Requirements and Technology Baseline;
-  - *Documentazione esterna*: contiene i documenti ad uso esterno;
+- *RTB*: contiene i file necessari alla Requirements and Technology Baseline:
+  - *Documentazione esterna*: contiene i documenti ad uso esterno:
     - *Verbali*: contiene i verbali delle riunioni esterne;
-    - *doc_file_name*
+    - *doc_file_name*:
       - _doc_file_name.typ_: file sorgente del documento;
       - _log.csv_: registro delle modifiche associato al documento.
-  - *Documentazione interna*: contiene i documenti ad uso interno;
+  - *Documentazione interna*: contiene i documenti ad uso interno:
       - *Verbali*: contiene i verbali delle riunioni interne;
-    - *doc_file_name*
+    - *doc_file_name*:
       - _doc_file_name.typ_: file sorgente del documento;
       - _log.csv_: registro delle modifiche associato al documento.
 - *PB*: contiene i file necessari alla Product Baseline. È organizzata allo stesso modo della cartella dedicata alla RTB.
@@ -914,7 +914,7 @@ La repository è organizzata in due sottocartelle principali, da cui si diramano
   - *node_modules*: cartella generata automaticamente da `npm` (Node Package Manager) utile alla gestione delle dipendenze di Node.js;
   - *pages*: API prodotte dal gruppo;
   - *public*: file SVG per la creazione del magazzino e una sottocartella di icone;
-  - *ServerActions*: file relativi all'implementazione delle Server Actions utilizzate
+  - *ServerActions*: file relativi all'implementazione delle Server Actions utilizzate;
   - *Strategy*: file relativi all'implementazione del pattern Strategy.
 
 Anche in questa repository, come per Documenti, viene applicato il _feature branching_, utilizzando `dev` come branch di appoggio per l'apertura dei branch di feature, identificati dal codice `WMS-XXX`, dove `XXX` è il numero del relativo task su Jira.

@@ -266,6 +266,13 @@ Applicato nel contesto tecnologico del progetto, soprattutto rispetto all'utiliz
 === Strategy
 Consente di definire una famiglia di algoritmi, incapsularli in classi separate e renderli intercambiabili. In questo modo è possibile applicare l'algoritmo appropriato senza dover conoscere i dettagli implementativi.
 
+È stato implementato nella gestione di diversi algoritmi di creazione del piano, degli algoritmi di ricerca dei prodotti e degli algoritmi di ricerca delle zone.
+
+=== Factory
+Permette, definendo un'interfaccia comune, la creazione di oggetti senza specificarne esplicitamente le classi esatte, lasciando alle sottoclassi la decisione su quale istanziare.
+
+È stato adottato per separare l'implementazione dalla creazione degli oggetti relativi agli algoritmi di ricerca dei prodotti e delle zone.
+
 
 
 == Classi e Componenti

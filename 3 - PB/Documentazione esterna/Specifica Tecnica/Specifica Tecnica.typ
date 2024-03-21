@@ -348,7 +348,7 @@ In nessun caso il database verrà modificato dall'applicazione.
 
 = Requisiti soddisfatti
 
-Di seguito vengono riportati i requisti funzionali, di qualità e di vincolo soddisfatti dall'applicazione.
+Di seguito vengono riportati i requisti funzionali e di qualità soddisfatti dall'applicazione.
 
 Per una visione più completa sui requisiti si rimanda al documento #adr_v.
 
@@ -423,37 +423,4 @@ Per una visione più completa sui requisiti si rimanda al documento #adr_v.
     ..filterQualityRequirements()
   ),
   caption: [Requisiti di qualità]
-)
-
-== Requisiti di vincolo soddisfatti
-
-#let filterConstraintsRequirements() = {
-  let subset = ()
-  let fields = ("id", "description", "achieved")
-    for item in requirements.at("constraints") {
-      for field in fields {
-        if field == "achieved" {
-          if item.at(field) {
-            subset.push("Soddisfatto")
-          }
-          else {
-            subset.push("Non soddisfatto")
-          }
-        }
-        else {
-          subset.push(item.at(field))
-        }
-      }
-    }
-  return subset
-}
-
-#figure(
-  table(
-    columns: (15%, 65%, 20%),
-    align: (center, left, center),
-    [*Codice*], [*Descrizione*], [*Stato*],
-    ..filterConstraintsRequirements()
-  ),
-  caption: [Requisiti di vincolo]
 )

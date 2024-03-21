@@ -82,7 +82,7 @@
 			"source": "UC–1.2.1.1",
 			"description": "L'utente deve ricevere un messaggio di errore qualora avesse caricato un file SVG privo di elementi grafici (path, rect, circle, ellipse, line, polyline, polygon, text, g)",
 			"cat": "Desiderabile",
-			"achieved": true
+			"achieved": false
 		},
 		{
 			"id": "FD–13",

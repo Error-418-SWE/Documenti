@@ -3,6 +3,7 @@
 #show: project.with(
  title: "Manuale Utente",
  authors: (
+   "Nardo Silvio",
    "Todesco Mattia",
  ),
  showLog: true,
@@ -196,6 +197,37 @@ Ruotando la rotella del mouse in avanti è possibile avvicinarsi all'oggetto des
 
 Premendo il tasto destro del mouse e spostando il mouse in una delle quattro direzioni (su, giù, destra e sinistra) otterremo il panning della camera, ovvero lo spostamento sui due assi della camera rispetto al piano come mostrato in figura @camera_panning.
 
+== Creazione zona
+
+Successivamente alla creazione dell'ambiente di lavoro è possibile creare le zone contenenti i bin in modo personalizzato.
+
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+Selezionando da esso la voce "Zone" si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente.
+Al suo interno, sul lato destro, è presente un pulsante nero contenente un "+".
+Alla sua pressione verrà reso disponibile, sulla destra della schermata, il pannello "Nuova zona" nel quale sarà possibile inserire tutti i dati utili alla creazione della zona personalizzata.
+
+I dati necessari alla creazione sono:
+- *ID*: numero intero che rappresenta il codice identificativo univoco della zona;
+- *Direzione*: può assumere valore `NS`(North-South) o `EW`(East-West) e rappresenta l'orientamento della zona rispetto al piano;
+- *Dimensioni*:
+  - *profondità*: numero reale che definisce la profondità della zona;
+  - *larghezza*: numero reale che definisce la larghezza della zona. Essa è definibile dall'utente solo se è selezionata l'opzione "\# colonne uguali", altrimenti nello stesso campo viene mostrata automaticamente la larghezza calcolata come somma delle larghezze delle singole colonne;
+  - *altezza*: numero reale che definisce l'altezza della zona. Essa viene mostrata automaticamente come somma delle altezze dei singoli livelli.
+
+- *Colonne*:
+  tramite un pulsante di opzione, è possibile selezionare la modalità di configurazione delle colonne.
+  Esse sono:
+    - *colonne uguali*: tramite l'opzione "\# colonne uguali" è possibile dichiarare che tutte le colonne della zona avranno larghezza uguale e definire il *numero di colonne* con un numero intero. In questo modo la larghezza di ogni singola colonna sarà uguale alla divisione tra la larghezza della zona dichiarata e il numero di colonne;
+    - *colonne personalizzate*: tramite l'opzione "Colonne personalizzate" è possibile specificare la *larghezza delle colonne* singolarmente dentro ad un apposito form separando ciascun valore (rappresentato da un numero reale) con degli spazi.
+
+      Per esempio, se viene inserito:
+      #align(center, `2 1 3 1.5`)
+      si sta dichiarando che la zona possiede quattro colonne rispettivamente di larghezza 2, 1, 3 e 1.5.
+
+- *aggiunta livelli*: a destra del numero attuale di livelli configurati, è presente un pulsante bianco contenente un "+" che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* indicata mediante un numero reale.
+
+Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
+Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo.
 
 #pagebreak()
 

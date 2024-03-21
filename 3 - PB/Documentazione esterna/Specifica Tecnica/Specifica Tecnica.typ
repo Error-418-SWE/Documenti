@@ -396,7 +396,12 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 
   \
   Per ogni attributo è presente il corrispondente metodo get.
+
+  Sono presenti i metodi set per gli attributi `xcoordinate` e `ycoordinate`.
+
   Sono inoltre presenti i metodi:
+
+  - *getBin*: dato un codice identificativo univoco, ritorna l'elemento `Bin` corrispondente presente in `bins`, oppure `null` se non presente;
 
   - *getLevels*: ritorna una lista contenente le liste di bin che rappresentano i livelli della zona;
 

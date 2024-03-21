@@ -378,7 +378,7 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
   rappresenta un elemento zona, può essere interpretata come uno scaffale oppure, nel caso abbia un solo livello, come una zona del piano definita per contenere bin.
   I suoi attributi sono:
 
-  - *id*: interno che rappresenta il codice identificativo univoco della zona;
+  - *id*: intero che rappresenta il codice identificativo univoco della zona;
 
   - *xcoordinate*: numero in virgola mobile che rappresenta la coordinata X di posizione nel piano;
 
@@ -416,7 +416,7 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 
   rappresenta un prodotto, i suoi attributi sono:
 
-  - *id*: interno che rappresenta il codice identificativo univoco del prodotto;
+  - *id*: intero che rappresenta il codice identificativo univoco del prodotto;
 
   - *name*: stringa che rappresenta il nome del prodotto;
 
@@ -438,7 +438,7 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
   rappresenta un ordine di spostamento di un prodotto tra due bin.
   I suoi attributi sono:
 
-  - *id*: interno che rappresenta il codice identificativo univoco della richiesta;
+  - *id*: intero che rappresenta il codice identificativo univoco della richiesta;
 
   - *startPoint*: riferimento al bin iniziale;
 

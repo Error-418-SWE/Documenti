@@ -509,7 +509,21 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
   ],
 )
 
+\
+Per gestire la possibilità di cercare specifici prodotti e specifiche zone, sono state realizzate delle classi che permettono l'implementazione dei design pattern Strategy e Factory.
 
+Le classi relative al design pattern Strategy implementano l'interfaccia `SearchStrategy` e sono:
+
+- *ProductSearchStrategy*: permette la ricerca di prodotti in base al loro codice identificativo, nome o categoria;
+
+- *ZoneSearchStrategy*: permette la ricerca di zone in base al loro codice identificativo.
+
+\
+La classe relativa al design pattern Factory è:
+
+- *SearchStrategyFactory*: permette l'adozione del corretto algoritmo di ricerca in funzione del tipo di oggetto fornito.
+
+\
 In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i componenti:
 
 - *warehouseProvider*: fornisce un provider per gestire dati relativi alle variabili di contesto dell'ambiente grafico;

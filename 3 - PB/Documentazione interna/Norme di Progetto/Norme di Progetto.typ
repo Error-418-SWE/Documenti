@@ -891,7 +891,7 @@ Questi ultimi vengono identificati dal codice DOC-XXX, dove XXX è il numero del
 L'intero processo di versionamento è accompagnato da una serie di automazioni, realizzate tramite GitHub Actions, che sollevano i componenti del gruppo dall'onere manuale di attività come la compilazione dei documenti, l'aggiornamento del registro delle modifiche (file _log.csv_) e la pubblicazione dei documenti dopo la verifica.
 
 *Workflow delle automazioni:*
-#figure(image("./imgs/flusso_actions.svg", format: "svg"), caption: [Workflow delle automazioni]);
+#figure(image("./imgs/workflow_actions.svg", format: "svg", width: 100%), caption: [Workflow delle automazioni]);
 
 Alla creazione della pull request si avvia il workflow per la compilazione e la registrazione delle modifiche avvenute. Prima di procedere è necessario inserire informazioni essenziali ai fini di ottenere maggiore chiarezza e tracciabilità nel messaggio di pull request, quali:
 - titolo conforme, contenente il nome del task di riferimento su Jira legata alla pull request, nel formato _DOC-XXX titolo_;

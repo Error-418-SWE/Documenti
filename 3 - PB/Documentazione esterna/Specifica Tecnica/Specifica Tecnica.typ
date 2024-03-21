@@ -471,9 +471,11 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 
   - *width*: numero in virgola mobile che rappresenta la larghezza del piano;
 
-  - *SVG*: stringa che contiene il path al file SVG se presente. Nel caso in cui non sia stato identificato nessun file SVG, la variabile è `null`.
+  - *SVG*: elemento `SVG` utilizzato per la configurazione dell'ambiente di lavoro. Nel caso in cui non sia stato identificato nessun file SVG, la variabile è `null`.
 
-  Per ogni attributo è presente il corrispondente metodo get.
+  Per ogni attributo è presente il corrispondente metodo get e set.
+
+  Inoltre è presente un metodo clone.
 
   Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy e le relative classi che implementano l'interfaccia `FloorStrategy`:
 

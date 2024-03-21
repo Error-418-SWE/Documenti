@@ -388,7 +388,7 @@
 		{
 			"id": "FD–56",
 			"source": "UC–12.1",
-			"description": "L'utente deve poter indicare una sequenza alfanumerica come codice identificativo delle nuove zone create",
+			"description": "L'utente deve poter indicare una sequenza numerica come codice identificativo delle nuove zone create",
 			"cat": "Desiderabile",
 			"achieved": true
 		},

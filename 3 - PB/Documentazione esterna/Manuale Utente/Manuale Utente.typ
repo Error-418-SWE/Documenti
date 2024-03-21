@@ -152,6 +152,51 @@ Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambi
 
 Una volta che l'ambiente è stato correttamente configurato è possibile cominciare a lavorare con il piano 3D che si presenta come mostrato in in @fine_configurazione_iniziale (in questo caso i piani rappresentati sono entrambi vuoti).
 
+== Movimento nell'ambiente tridimensionale
+Il sistema permette tre diversi tipi di movimento di camera all'interno dell'ambiente: rotazione del piano, zoom-in e zoom-out e lo spostamento della camera sui due assi (panning).
+
+=== Rotazione della piano
+
+#figure(
+    grid(
+        columns: 3,
+        rows:    (auto, auto),
+        [ #image("./imgs/rotazione_1.png", width: 80%)],
+        [ #image("./imgs/rotazione_2.png", width: 75%)],
+        [ #image("./imgs/mouse_tasto_sinistro.png", width: 50%)],
+    ),caption: [Rotazione del piano rispetto la camera],
+) <camera_rotazione>
+
+Premendo il tasto sinistro e spostando il mouse verso destra ruoteremo il piano rispetto alla camera in senso antiorario, muovendolo invece verso sinistra verrà ruotato in senso orario, come mostrato in @camera_rotazione. Nello stesso modo, spostando il mouse verso il basso possiamo cambiare l'angolazione del piano.
+
+=== Zoom-in, Zoom-out
+
+#figure(
+    grid(
+        columns: 3,
+        rows:    (auto, auto),
+        [ #image("./imgs/zoom-in.png", width: 80%)],
+        [ #image("./imgs/zoom-out.png", width: 75%)],
+        [ #image("./imgs/mouse_rotella.png", width: 30%)],
+    ),caption: [Zoom-in e zoom-out],
+) <camera_zoom>
+
+Ruotando la rotella del mouse in avanti è possibile avvicinarsi all'oggetto desiderato (zoom-in), mentre ci si può allontanare (zoom-out) ruotandola nel senso opposto, come mostrato in @camera_zoom.
+
+=== Panning
+
+#figure(
+    grid(
+        columns: 3,
+        rows:    (auto, auto),
+        [ #image("./imgs/panning_1.png", width: 70%)],
+        [ #image("./imgs/panning_2.png", width: 70%)],
+        [ #image("./imgs/mouse_tasto_destro.png", width: 50%)],
+    ),caption: [Panning della camera],
+) <camera_panning>
+
+Premendo il tasto destro del mouse e spostando il mouse in una delle quattro direzioni (su, giù, destra e sinistra) otterremo il panning della camera, ovvero lo spostamento sui due assi della camera rispetto al piano come mostrato in figura @camera_panning.
+
 == Creazione zona
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile creare le zone contenenti i bin in modo personalizzato.
@@ -183,8 +228,6 @@ I dati necessari alla creazione sono:
 
 Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
 Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo.
-
-
 
 #pagebreak()
 

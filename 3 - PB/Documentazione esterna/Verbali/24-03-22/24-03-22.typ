@@ -8,7 +8,7 @@
     "Banzato Alessio",
   ),
   reviewers: (
-    " ",
+    "Gardin Giovanni",
   ),
   missingMembers: (
     "Todesco Mattia",

@@ -3959,7 +3959,7 @@ Nonostante l'aumento del costo preventivato, lo Sprint 18 ha permesso di complet
 
 Il rendimento positivo dello Sprint 18 è supportato dalle principali metriche esposte dal #pdq, quali:
 - CPI: il Cost Performance Index rimane costante a 0.99, rappresentando ancora un valore accettabile ($>=0.95$) e rimanendo molto vicino all'ottimalità, rappresentata da valori $>=1$;
-- EAC: l'Estimate At Completion passa dal valore di 13.155,40 € (allo Sprint 17) a € 13.210,90. Nonostante sia aumentato rientra comunque nelle condizioni di accettabilità.
+- EAC: l'Estimate At Completion passa dal valore di 13.155,40 € (allo Sprint 17) a 13.210,90 €. Nonostante sia aumentato rientra comunque nelle condizioni di accettabilità.
 
 
 == Sprint 19 dal 10-03-2024 al 17-03-2024
@@ -4106,7 +4106,11 @@ L'aumento del costo dello Sprint, però, è stato influenzato principalmente dal
   caption: "Monitoraggio, sprint 19"
 )
 
-#TODO
+Nonostante l'aumento di costo, durante lo Sprint 19 sono stati raggiunti buona parte degli obiettivi.
+
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
+- CPI: il Cost Performance Index diminuisce, passando dal valore 0.99 (allo Sprint 19) a 0.98, ma nonostante ciò rimane nell'intervallo di accettabilità ($>=$0.95);
+- EAC: l'Estimate At Completion passa dal valore 13.155,40 € (allo Sprint 19) a 13.321,30 €. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
 
 
 // == Sprint n dal D1-M1-2024 al D2-M2-2024

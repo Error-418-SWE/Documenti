@@ -1697,16 +1697,15 @@ Gli argomenti principali trattati nel documento sono due:
 
 Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
 
-== Processo di implementazione
-<processo_implementazione>
+== Processo di implementazione <processo_implementazione>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.7_
 
 === Scopo
 
-Lo scopo del processo di implementazione è quello di realizzare uno specificato elemento di sistema. Questo processo trasforma requisiti, architetture e design, includendo le interfacce, in azioni che creano un elemento di sistema in accordo con le prassi della tecnologia implementativa selezionata, usando appropriate specialità o discipline tecniche.
+Lo scopo del processo di implementazione è di concretizzare un elemento specifico del sistema. Questo processo traduce i requisiti, le architetture e i design (includendo le interfacce), in azioni che danno vita ad un elemento di sistema in linea con le pratiche della tecnologia implementativa selezionata, facendo uso delle specializzazioni e discipline tecniche appropriate.
 
-Questo processo risulta in un elemento di sistema che soddisfa specificati requisiti di sistema (inclusi requisiti specifici e i derivati), architetture e design.
+Il risultato di questo processo è un elemento del sistema che soddisfa i requisiti specifici e derivati del sistema, nonché le architetture e i design definiti.
 
 === Risultati
 
@@ -1714,26 +1713,29 @@ Come risultato della corretta implementazione del processo di implementazione ot
 
 - identificazione dei vincoli implementativi che influenzano i requisiti, l'architettura o il design;
 - realizzazione di un elemento di sistema;
-- l'implementazione viene tracciata.
+- l'implementazione di tale elemento viene tracciata.
 
 === Attività
 
 ==== Preparazione per l'implementazione
-Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del Progettista di una serie di unit test precedentemente allo sviluppo vero e proprio dell'elemento di sistema. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
 
-In caso di modifica eseguendo nuovamente i test si garantisce che il software sviluppato e testato in precedenza funzioni ancora come previsto. In caso contrario, si parlerebbe di regressione.
+Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test specifici per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del Progettista di una serie di unit test precedentemente allo sviluppo vero e proprio dell'elemento di sistema. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
 
-Data la mole di elementi grafici o interazioni utente che non sono né facili, né economici da testare automaticamente viene definita una modalità di testing manuale: chi sviluppa l'elemento di sistema è responsabile della verifica del corretto funzionamento del codice scritto. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
+In caso di modifica è necessario reiterare l'esecuzione dei test sviluppati, al fine di garantire che il software sviluppato e testato in precedenza funzioni ancora come previsto. In caso contrario, si parlerebbe di regressione.
 
-Per aiutare il lavoro di verifica da parte del Verificatore, riportare in pr tutte le funzionalità che si ha necessità di controllare manualmente.
+Considerando la complessità degli elementi grafici e delle interazioni utente che non possono essere facilmente o economicamente testati in modo automatico, viene istituita una modalità di testing manuale. In questa modalità, è responsabilità dello sviluppatore dell'elemento di sistema (Programmatore) verificare che il codice scritto funzioni correttamente. Questo vale sia per il codice sviluppato in proprio sia per quello riutilizzato o esterno, che viene adattato per soddisfare i requisiti specifici.
+
+Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in pr tutte le funzionalità che si ha necessità di controllare manualmente.
 
 ==== Eseguire l'implementazione
-Decisa una strategia di testing per l'elemento di sistema e, se possibile, scritti i test di unità il Programmatore può quindi cominciare lo sviluppo o l'adeguamento del software.
 
-Prima di sottoporre il software a verifica bisogna assicurarsi che l'elemento di sistema non regredisca le funzionalità tramite l'esecuzione dei test.
+Decisa una strategia di testing per l'elemento di sistema e scritti i relativi test di unità, il Programmatore può quindi procedere allo sviluppo o all'adeguamento del software.
+
+Prima di sottoporre il software a verifica è necessario assicurarsi che l'elemento di sistema non regredisca le funzionalità tramite l'esecuzione di testing dedicato.
+
 ==== Gestire i risultati dell'implementazione e delle anomalie incontrate
 
-L'elemento approvato in fase di verifica viene quindi integrato nel sistema come descritto nel paragrafo #TODO.
+L'elemento approvato in fase di verifica viene quindi integrato nel sistema come descritto nel paragrafo @processo_integrazione.
 
 == Processo di integrazione <processo_integrazione>
 

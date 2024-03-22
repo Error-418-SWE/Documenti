@@ -1976,6 +1976,87 @@ Questo Sprint impiega:
   supplement: "Grafico"
 )
 
+
+== Sprint 20 dal 17/03/2024 al 24/03/2024
+=== Obiettivi prefissati
+
+Questo Sprint ha come obiettivi principali l'implementazione del MVP e la stesura del #man\. Sarà inoltre iniziata l'attività di revisione degli ultimi capitoli redatti delle #ndp\. Gli obiettivi prefissati sono:
+- fissare un colloquio con il Proponente;
+- aggiornamento ed estensione del documento #pdp\;
+- aggiornamento grafici delle metriche nel #pdq allo Sprint 19;
+- aggiornamento della dashboard Grafana allo Sprint 19;
+- revisione dei seguenti capitoli delle #ndp\:
+  - Processo di gestione della qualità;
+  - Processo di implementazione;
+  - Processo di integrazione;
+  - Processo di verifica;
+  - Processo di transizione;
+  - Processo di validazione.
+- conclusione della revisione dell'#adr e conseguente invio del documento al #cardin\;
+- redazione della sezione della #st riguardante i requisiti soddisfatti dal prodotto;
+- redazione delle seguenti sezioni del #man\:
+  - Configurazione ambiente;
+  - Creazione zona;
+  - Modifica zona;
+  - Impostazioni.
+- spostare la sezione di requisiti di sistema e hardware dal #man alla #st\;
+- concludere lo sviluppo del MVP.
+
+
+=== Preventivo costi
+Questo Sprint impiega:
+- *Responsabile*: al fine di:
+  - coordinare le attività;
+  - organizzare il lavoro in reazione al feedback;
+  - organizzare il meeting con il Proponente, anche tramite la redazione di una board Miro di supporto;
+  - revisionare i capitoli delle #ndp\.
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
+- *Analista*: al fine di:
+  - concludere la revisione e l'aggiornamento dell'#adr\.
+- *Programmatore*: al fine di:
+  - proseguire e concludere lo sviluppo del MVP;
+  - redigere le sezioni del #man\.
+- *Verificatore*: al fine di:
+  - verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp\;
+  - affiancare il Responsabile nella revisione delle #ndp\.
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [0],     [4],     [3],     [7],
+    [Carraro],     [1],     [0],     [1],     [0],     [5],     [0],     [7],
+    [Gardin],     [0],     [0],     [0],     [0],     [6],     [3],     [9],
+    [Nardo],     [0],     [0],     [0],     [0],     [5],     [4],     [9],
+    [Oseliero],     [2],     [1],     [0],     [0],     [5],     [2],     [10],
+    [Todesco],     [0],     [0],     [1],     [0],     [7],     [1],     [9],
+    [Zaccone],     [0],     [0],     [0],     [0],     [6],     [3],     [9],
+    [Totale ore],     [3],     [1],     [2],     [0],     [38],     [16],     [60],
+    [Costo ruolo],     [90],     [20],     [50],     [0],     [570],     [240],     [970],
+  ),
+  caption: "Prospetto del preventivo, sprint 20"
+)
+#let data = (
+  ("Responsabile", 3),
+  ("Amministratore", 1),
+  ("Analista", 2),
+  ("Progettista", 0),
+  ("Programmatore", 38),
+  ("Verificatore", 16),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo sprint 20",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
 #pagebreak()
 
 = Consuntivi di periodo <consuntivi>

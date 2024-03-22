@@ -496,7 +496,7 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 
 
 #figure(
-  image("./imgs/Business Layer classes.svg", width: 100%),
+  image("./imgs/Business Layer classes.svg", width: 90%),
   caption: [
     Diagramma delle classi del layer di business
   ],
@@ -522,6 +522,14 @@ Le classi relative al design pattern Strategy implementano l'interfaccia `Search
 La classe relativa al design pattern Factory è:
 
 - *SearchStrategyFactory*: permette l'adozione del corretto algoritmo di ricerca in funzione del tipo di oggetto fornito.
+
+#figure(
+  image("./imgs/Business Layer search.svg", width: 100%),
+  caption: [
+    Diagramma delle classi Search del layer di business
+  ],
+)
+
 
 \
 In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i componenti:

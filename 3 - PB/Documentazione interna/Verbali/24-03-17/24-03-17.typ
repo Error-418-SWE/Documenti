@@ -76,7 +76,11 @@ L'attività di codifica ha visto completati i lavori:
 = Analisi retrospettiva
 
 Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq\:
-#TODO
+
+- CPI di progetto rimane costante a 0.98, rappresentando ancora un valore accettabile ($>=0.95$) e rimanendo molto vicino all'ottimalità, rappresentata da valori $>=1$;
+
+- EAC aumenta passando da € 13.210,90 a € 13.321,30. Nonostante l'aumento, rientra nelle condizioni di accettabilità.
+
 
 Maggiori dettagli in merito al valore delle metriche alla loro analisi sono reperibili all'interno dei documenti #pdq_v e #pdp_v.
 

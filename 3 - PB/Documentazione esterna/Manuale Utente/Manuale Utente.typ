@@ -197,7 +197,7 @@ Ruotando la rotella del mouse in avanti è possibile avvicinarsi all'oggetto des
 
 Premendo il tasto destro del mouse e spostando il mouse in una delle quattro direzioni (su, giù, destra e sinistra) otterremo il panning della camera, ovvero lo spostamento sui due assi della camera rispetto al piano come mostrato in figura @camera_panning.
 
-== Creazione zona
+== Creazione zona <creazione_zona>
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile creare le zone contenenti i bin in modo personalizzato.
 
@@ -228,6 +228,35 @@ I dati necessari alla creazione sono:
 
 Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
 Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo.
+
+
+== Modifica zona
+
+Successivamente alla creazione dell'ambiente di lavoro è possibile modificare le zone posizionate cambiandone i parametri dimensionali e di orientamento, potendo modificare o aggiungere le colonne e i livelli desiderati.
+
+Non è possibile rimuovere colonne o livelli già presenti nella zona soggetta a modifiche.
+
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+
+Selezionando da esso la voce "Zone" si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente.
+
+In tale lista, per ogni elemento zona elencato, è presente un pulsante raffigurante un'occhio che, alla sua pressione, permette la visualizzazione sulla destra dello schermo del pannello relativo alle informazioni della relativa zona.
+
+Sulla parte inferiore di tale pannello è presente il pulsante "Modifica" che, se premuto, permette di poter modificare alcuni parametri della zona in oggetto.
+
+I parametri modificabili sono gli stessi che vengono richiesti durante la @creazione_zona (Creazione zona) e seguono i medesimi vincoli, con le seguenti eccezioni:
+
+  - non è possibile modificare il parametro `ID`;
+
+  - nel caso in cui venga selezionata l'opzione "\# colonne uguali", non è possibile inserire un numero di colonne inferiore al valore specificato nella precedente configurazione;
+
+  - nel caso in cui venga selezionata l'opzione "Colonne personalizzate", non è possibile ridurre il numero di larghezze delle colonne specificate nell'apposito form, rispetto al numero di colonne precedentemente configurate;
+
+  - non è possibile rimuovere livelli configurati prima della modifica in corso.
+
+
+Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla Zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
+
 
 #pagebreak()
 

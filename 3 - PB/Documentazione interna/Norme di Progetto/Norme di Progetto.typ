@@ -1721,7 +1721,9 @@ Come risultato della corretta implementazione del processo di implementazione ot
 
 Prima dell'inizio effettivo dello sviluppo, viene introdotta una fase di progettazione, come delineato nei capitoli disponibili alla @processo_design e alla @processo_definizione_architettura.
 
-Questa fase è fondamentale, poiché al suo completamento si dispone già di una struttura ben definita del sistema, che include le sue componenti principali, le loro interazioni e le funzionalità che devono essere implementate. Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi.
+Questa fase è fondamentale, poiché al suo completamento si dispone già di una struttura ben definita del sistema, che include le sue componenti principali, le loro interazioni e le funzionalità che devono essere implementate.
+
+Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi.
 
 Inoltre, la fase di progettazione trasforma il processo di sviluppo in una sorta di "traduzione" dal concetto astratto del design al linguaggio concreto del codice. Gli sviluppatori ricevono già una visione chiara di ciò che devono realizzare, il che semplifica il lavoro e permette di concentrare l'attenzione sull'attuazione delle specifiche stabilite durante la fase di progettazione.
 
@@ -1740,6 +1742,23 @@ Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate i
 ==== Implementazione
 
 Decisa una strategia di testing per l'elemento di sistema e scritti i relativi test di unità, il Programmatore può quindi procedere allo sviluppo o all'adeguamento del software.
+
+Per garantire una standardizzazione e una migliore gestione del codice software, sono state implementate diverse pratiche di organizzazione e normativa come segue:
+
++ approccio organizzato alla struttura delle cartelle:
+  - ciascuna categoria di elementi è assegnata a una cartella specifica (@repository-github):
+    - tutti i file correlati ad uno specifico pattern sono organizzati all'interno di una cartella dedicata esclusivamente a quel pattern;
+    - tutti i file riguardanti l'interfaccia utente sono raggruppati in una cartella apposita;
+    - all'interno di alcune cartelle, come "ServerActions", è presente una ulteriore suddivisione degli elementi in sotto-cartelle per zone specifiche, come Zone, Bin, ecc., seguendo una logica di organizzazione interna coerente.
+
++ adottato il principio per cui un elemento/componente/classe = un file. Pratica che semplifica la gestione e la ricerca dei componenti all'interno del progetto, garantendo una maggiore chiarezza e coerenza nel codice.
+
++ nomenclatura delle variabili, dei metodi e delle funzioni, si attiene al principio che i nomi devono essere descrittivi e parlanti. Questo significa che i nomi dovrebbero riflettere chiaramente il loro scopo e la loro funzione all'interno del sistema, facilitando così la comprensione e la manutenzione del codice.
+
++ buone pratiche per la codifica:
+  - conduzione di regolari revisioni del codice da parte di membri del gruppo per identificare e correggere errori e migliorare la qualità complessiva del codice;
+  - scrittura di test automatici per verificare il comportamento delle singole unità di codice;
+  - identificazione e rimozione del codice duplicato per ridurre la complessità e migliorare la manutenibilità. Questo può essere fatto estraendo il codice duplicato in funzioni o classi riutilizzabili.
 
 Prima di sottoporre il software a verifica è necessario assicurarsi che l'elemento di sistema non regredisca le funzionalità tramite l'esecuzione di testing dedicato.
 

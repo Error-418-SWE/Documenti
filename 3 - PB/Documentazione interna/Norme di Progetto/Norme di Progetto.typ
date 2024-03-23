@@ -1713,9 +1713,19 @@ Come risultato della corretta implementazione del processo di implementazione ot
 
 - identificazione dei vincoli implementativi che influenzano i requisiti, l'architettura o il design;
 - realizzazione di un elemento di sistema;
-- l'implementazione di tale elemento viene tracciata.
+- tracciamento dell'implementazione di tale elemento.
 
 === Attività
+
+==== Progettazione dell'elemento da implementare
+
+Prima dell'inizio effettivo dello sviluppo, viene introdotta una fase di progettazione, come delineato nei capitoli disponibili alla @processo_design e alla @processo_definizione_architettura.
+
+Questa fase è fondamentale, poiché al suo completamento si dispone già di una struttura ben definita del sistema, che include le sue componenti principali, le loro interazioni e le funzionalità che devono essere implementate. Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi.
+
+Inoltre, la fase di progettazione trasforma il processo di sviluppo in una sorta di "traduzione" dal concetto astratto del design al linguaggio concreto del codice. Gli sviluppatori ricevono già una visione chiara di ciò che devono realizzare, il che semplifica il lavoro e permette di concentrare l'attenzione sull'attuazione delle specifiche stabilite durante la fase di progettazione.
+
+Questo approccio non solo aumenta l'efficienza dello sviluppo, ma riduce anche il rischio di errori e conflitti nel codice finale.
 
 ==== Preparazione per l'implementazione
 
@@ -1727,15 +1737,15 @@ Considerando la complessità degli elementi grafici e delle interazioni utente c
 
 Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in pr tutte le funzionalità che si ha necessità di controllare manualmente.
 
-==== Eseguire l'implementazione
+==== Implementazione
 
 Decisa una strategia di testing per l'elemento di sistema e scritti i relativi test di unità, il Programmatore può quindi procedere allo sviluppo o all'adeguamento del software.
 
 Prima di sottoporre il software a verifica è necessario assicurarsi che l'elemento di sistema non regredisca le funzionalità tramite l'esecuzione di testing dedicato.
 
-==== Gestire i risultati dell'implementazione e delle anomalie incontrate
+==== Gestione dei risultati dell'implementazione e delle anomalie incontrate
 
-L'elemento approvato in fase di verifica viene quindi integrato nel sistema come descritto nel paragrafo @processo_integrazione.
+L'elemento approvato in fase di verifica (@processo_verifica) viene quindi integrato nel sistema come descritto nel paragrafo @processo_integrazione.
 
 == Processo di integrazione <processo_integrazione>
 

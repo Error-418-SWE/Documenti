@@ -55,11 +55,26 @@ Il prodotto offre le seguenti funzionalità principali:
 
 === Riferimenti normativi <riferimenti-normativi>
 
+- Regolamento del progetto didattico: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/PD2.pdf")_
+  #lastVisitedOn(20, 03, 2024)
+
 - Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
   #lastVisitedOn(13, 02, 2024)
 
 === Riferimenti informativi <riferimenti-informativi>
+
+- Verbali interni;
+- Verbali esterni;
+- Analisi dei requisiti: \
+  _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Dispense/T5.pdf")_
+  #lastVisitedOn(20, 03, 2024)
+
+- Analisi e descrizione delle funzionalità, Use Case e relativi diagrammi (UML): \
+  _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_
+  #lastVisitedOn(20, 03, 2024)
+
 
 #pagebreak()
 
@@ -714,4 +729,81 @@ In nessun caso il database verrà modificato dall'applicazione.
 
 #pagebreak()
 
-= Requisiti soddisfatti ( aggiungere tabella requisiti soddisfatti)
+= Requisiti soddisfatti
+
+Di seguito vengono riportati i requisti funzionali e di qualità soddisfatti dall'applicazione.
+
+Per una visione più completa sui requisiti si rimanda al documento #adr_v.
+
+== Requisiti funzionali soddisfatti
+
+#show figure: set block(breakable: true)
+#show "#ndp_v": [#ndp_v]
+#show "#pdq_v": [#pdq_v]
+#show "<=": [$<=$]
+#let requirements = json("requirements.json");
+
+
+#let filterFunctionalRequirements() = {
+  let subset = ()
+  let fields = ("id", "description", "achieved")
+    for item in requirements.at("functional") {
+      for field in fields {
+        if field == "achieved" {
+          if item.at(field) {
+            subset.push("Soddisfatto")
+          }
+          else {
+            subset.push("Non soddisfatto")
+          }
+        }
+        else {
+          subset.push(item.at(field))
+        }
+      }
+    }
+  return subset
+}
+
+#figure(
+  table(
+    columns: (15%, 65%, 20%),
+    align: (center, left, center),
+    [*Codice*], [*Descrizione*], [*Stato*],
+    ..filterFunctionalRequirements()
+  ),
+  caption: [Requisiti funzionali]
+)
+
+== Requisiti di qualità soddisfatti
+
+#let filterQualityRequirements() = {
+  let subset = ()
+  let fields = ("id", "description", "achieved")
+    for item in requirements.at("quality") {
+      for field in fields {
+        if field == "achieved" {
+          if item.at(field) {
+            subset.push("Soddisfatto")
+          }
+          else {
+            subset.push("Non soddisfatto")
+          }
+        }
+        else {
+          subset.push(item.at(field))
+        }
+      }
+    }
+  return subset
+}
+
+#figure(
+  table(
+    columns: (15%, 65%, 20%),
+    align: (center, left, center),
+    [*Codice*], [*Descrizione*], [*Stato*],
+    ..filterQualityRequirements()
+  ),
+  caption: [Requisiti di qualità]
+)

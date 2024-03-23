@@ -3,6 +3,7 @@
 #show: project.with(
  title: "Manuale Utente",
  authors: (
+   "Nardo Silvio",
    "Todesco Mattia",
  ),
  showLog: true,
@@ -84,6 +85,149 @@ Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
 
 = Istruzioni d'uso
+== Avvio e Configurazione dell'ambiente
+
+Il software all'avvio si presenta come segue:
+#figure(
+  image("./imgs/avvio.png", width: 60%),
+  caption: [
+    Schermata iniziale
+  ],
+) <avvio>
+qui vengono proposte due diverse configurazioni iniziali possibili, *Planimetria rettangolare* e *Planimetria personalizzata*. Le differenze tra le due modalità di lavoro verranno descritte nei capitoli dedicati.
+
+Si può scegliere una modalità di lavoro selezionandola nel pannello di @avvio e premendo il pulsante *Prossimo* in basso a destra.
+
+=== Inizializzazione Planimetria Rettangolare
+
+#figure(
+  image("./imgs/planimetria_rettangolare.png", width: 60%),
+  caption: [
+    Definizione parametri del piano rettangolare
+  ],
+) <piano_rettangolare>
+
+Selezionata l'opzione "Planimetria rettangolare" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_rettangolare, dove sarà possibile definire la lunghezza e la profondità del magazzino che vogliamo creare.
+
+Per terminare la configurazione del piano è richiesto che i due parametri siano entrambi maggiori di 0, in caso contrario verrà impedito di procedere alla visualizzazione del piano e verrà mostrato un messaggio di errore.
+
+Inoltre, selezionando l'opzione "Importa i prodotti da database", una volta terminata la configurazione dell'ambiente verrà caricata nell'apposita finestra la lista dei prodotti presenti nel database.
+
+Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
+
+=== Inizializzazione Planimetria Personalizzata
+
+#figure(
+  image("./imgs/planimetria_personalizzata.png", width: 50%),
+  caption: [
+    Definizione parametri del piano personalizzato
+  ],
+) <piano_personalizzato>
+
+Selezionata l'opzione "Planimetria personalizzata" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_personalizzato, dove sarà possibile caricare il file SVG che verrà disegnato sul piano, e inserire la misura del lato maggiore del magazzino, in modo da scalarne correttamente la pianta.
+
+Il sistema ritornerà un errore e impedirà la visualizzazione del piano nel caso in cui:
+- il file SVG non venga inserito correttamente;
+- il file SVG non sia valido;
+- il valore associato al lato maggiore sia minore o uguale a 0.
+
+"Nella schermata sono inoltre presenti due checkbox per l'importazione dei dati da database:
+
+- "Importa gli scaffali dal database": permette di importare gli scaffali presenti nel database, i quali verranno successivamente visualizzati all'interno dell'ambiente 3D;
+- "Importa i prodotti dal database": permette di importare i prodotti presenti nel database, e, se selezionata l'opzione precedente, di popolare gli scaffali presenti con i rispettivi prodotti.
+
+Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
+
+=== Completamento configurazione dell'ambiente
+
+#figure(
+    grid(
+        columns: (auto, auto),
+        rows:    (auto, auto),
+        [ #image("./imgs/piano_rettangolare.png", width: 90%)],
+        [ #image("./imgs/piano_personalizzato.png", width: 90%)],
+    ),caption: [ Corretta configurazione del piano rettangolare (sinistra) e del piano personalizzato (destra)],
+) <fine_configurazione_iniziale>
+
+
+Una volta che l'ambiente è stato correttamente configurato è possibile cominciare a lavorare con il piano 3D che si presenta come mostrato in in @fine_configurazione_iniziale (in questo caso i piani rappresentati sono entrambi vuoti).
+
+== Movimento nell'ambiente tridimensionale
+Il sistema permette tre diversi tipi di movimento di camera all'interno dell'ambiente: rotazione del piano, zoom-in e zoom-out e lo spostamento della camera sui due assi (panning).
+
+=== Rotazione della piano
+
+#figure(
+    grid(
+        columns: 3,
+        rows:    (auto, auto),
+        [ #image("./imgs/rotazione_1.png", width: 80%)],
+        [ #image("./imgs/rotazione_2.png", width: 75%)],
+        [ #image("./imgs/mouse_tasto_sinistro.png", width: 50%)],
+    ),caption: [Rotazione del piano rispetto la camera],
+) <camera_rotazione>
+
+Premendo il tasto sinistro e spostando il mouse verso destra ruoteremo il piano rispetto alla camera in senso antiorario, muovendolo invece verso sinistra verrà ruotato in senso orario, come mostrato in @camera_rotazione. Nello stesso modo, spostando il mouse verso il basso possiamo cambiare l'angolazione del piano.
+
+=== Zoom-in, Zoom-out
+
+#figure(
+    grid(
+        columns: 3,
+        rows:    (auto, auto),
+        [ #image("./imgs/zoom-in.png", width: 80%)],
+        [ #image("./imgs/zoom-out.png", width: 75%)],
+        [ #image("./imgs/mouse_rotella.png", width: 30%)],
+    ),caption: [Zoom-in e zoom-out],
+) <camera_zoom>
+
+Ruotando la rotella del mouse in avanti è possibile avvicinarsi all'oggetto desiderato (zoom-in), mentre ci si può allontanare (zoom-out) ruotandola nel senso opposto, come mostrato in @camera_zoom.
+
+=== Panning
+
+#figure(
+    grid(
+        columns: 3,
+        rows:    (auto, auto),
+        [ #image("./imgs/panning_1.png", width: 70%)],
+        [ #image("./imgs/panning_2.png", width: 70%)],
+        [ #image("./imgs/mouse_tasto_destro.png", width: 50%)],
+    ),caption: [Panning della camera],
+) <camera_panning>
+
+Premendo il tasto destro del mouse e spostando il mouse in una delle quattro direzioni (su, giù, destra e sinistra) otterremo il panning della camera, ovvero lo spostamento sui due assi della camera rispetto al piano come mostrato in figura @camera_panning.
+
+== Creazione zona
+
+Successivamente alla creazione dell'ambiente di lavoro è possibile creare le zone contenenti i bin in modo personalizzato.
+
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+Selezionando da esso la voce "Zone" si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente.
+Al suo interno, sul lato destro, è presente un pulsante nero contenente un "+".
+Alla sua pressione verrà reso disponibile, sulla destra della schermata, il pannello "Nuova zona" nel quale sarà possibile inserire tutti i dati utili alla creazione della zona personalizzata.
+
+I dati necessari alla creazione sono:
+- *ID*: numero intero che rappresenta il codice identificativo univoco della zona;
+- *Direzione*: può assumere valore `NS`(North-South) o `EW`(East-West) e rappresenta l'orientamento della zona rispetto al piano;
+- *Dimensioni*:
+  - *profondità*: numero reale che definisce la profondità della zona;
+  - *larghezza*: numero reale che definisce la larghezza della zona. Essa è definibile dall'utente solo se è selezionata l'opzione "\# colonne uguali", altrimenti nello stesso campo viene mostrata automaticamente la larghezza calcolata come somma delle larghezze delle singole colonne;
+  - *altezza*: numero reale che definisce l'altezza della zona. Essa viene mostrata automaticamente come somma delle altezze dei singoli livelli.
+
+- *Colonne*:
+  tramite un pulsante di opzione, è possibile selezionare la modalità di configurazione delle colonne.
+  Esse sono:
+    - *colonne uguali*: tramite l'opzione "\# colonne uguali" è possibile dichiarare che tutte le colonne della zona avranno larghezza uguale e definire il *numero di colonne* con un numero intero. In questo modo la larghezza di ogni singola colonna sarà uguale alla divisione tra la larghezza della zona dichiarata e il numero di colonne;
+    - *colonne personalizzate*: tramite l'opzione "Colonne personalizzate" è possibile specificare la *larghezza delle colonne* singolarmente dentro ad un apposito form separando ciascun valore (rappresentato da un numero reale) con degli spazi.
+
+      Per esempio, se viene inserito:
+      #align(center, `2 1 3 1.5`)
+      si sta dichiarando che la zona possiede quattro colonne rispettivamente di larghezza 2, 1, 3 e 1.5.
+
+- *aggiunta livelli*: a destra del numero attuale di livelli configurati, è presente un pulsante bianco contenente un "+" che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* indicata mediante un numero reale.
+
+Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
+Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo.
 
 #pagebreak()
 

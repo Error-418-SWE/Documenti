@@ -862,39 +862,71 @@ Ogni documento, nella sezione direttamente sottostante all'indice, mostra in for
 ===== Tecnologie adoperate
 ====== GitHub <repository-github>
 Lo strumento di versionamento scelto dal gruppo è GitHub.
-Il gruppo Error_418 ha creato un'organizzazione omonima su GitHub in modo da gestire e separare il lavoro in più repository pensate per scopi e contenuti diversi:
-- *Documenti*: repository contenente la documentazione prodotta;
-- *PoC*: repository contenente i Proof of Concept prodotti.
+Il gruppo #err418 ha creato un'organizzazione omonima su GitHub in modo da gestire e separare il lavoro in più repository pensate per scopi e contenuti diversi:
 
-Documenti è la repository dedicata alla documentazione prodotta, la quale possiede due branch principali:
+- Documenti: documentazione;
+- WMS3: codice sorgente;
+- PoC: Proof of Concept.
+
+*Documenti* è la repository dedicata alla documentazione prodotta, la quale possiede tre branch principali:
 - `main`: contiene i file pdf dei documenti prodotti solamente in seguito ad un processo di review con esito positivo;
-- `src`: contiene i file sorgenti dei documenti prodotti, file di configurazione e di supporto.
+- `src`: contiene i file sorgente dei documenti prodotti, file di configurazione e di supporto;
+- `website`: contiene i file sorgente del sito web che espone la documentazione del gruppo.
 
 Documenti è organizzata in modo da suddividere la documentazione necessaria alle revisioni esterne che il gruppo dovrà affrontare:
-- *RTB*: contiene i file necessari alla Requirements and Technology Baseline;
-  - *Documentazione esterna*: contiene i documenti ad uso esterno;
+- *RTB*: contiene i file necessari alla Requirements and Technology Baseline:
+  - *Documentazione esterna*: contiene i documenti ad uso esterno:
     - *Verbali*: contiene i verbali delle riunioni esterne;
-    - *doc_file_name* /
-      - doc_file_name.typ: file sorgente del documento;
-      - log.csv: registro delle modifiche associato al documento;
-  - *Documentazione interna*: contiene i documenti ad uso interno;
+    - *doc_file_name*:
+      - _doc_file_name.typ_: file sorgente del documento;
+      - _log.csv_: registro delle modifiche associato al documento.
+  - *Documentazione interna*: contiene i documenti ad uso interno:
       - *Verbali*: contiene i verbali delle riunioni interne;
-    - *doc_file_name* /
-      - doc_file_name.typ: file sorgente del documento;
-      - log.csv: registro delle modifiche associato al documento;
-- *PB*: contiene i file necessari alla Product Baseline.
+    - *doc_file_name*:
+      - _doc_file_name.typ_: file sorgente del documento;
+      - _log.csv_: registro delle modifiche associato al documento.
+- *PB*: contiene i file necessari alla Product Baseline. È organizzata allo stesso modo della cartella dedicata alla RTB.
 
 Al fine di garantire uno svolgimento delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _featuring branching_. È presente un branch per le release e un branch per lo sviluppo dal quale vengono creati dei branch per ogni nuova funzionalità o modifica da apportare.
-Questi ultimi vengono identificati dal codice DOC-XXX, dove XXX è il numero del relativo task su Jira. I branch di feature vengono integrati tramite pull request.
+Questi ultimi vengono identificati dal codice `DOC-XXX`, dove `XXX` è il numero del relativo task su Jira. I branch di feature vengono integrati tramite pull request.
+
+*WMS3* è la repository che contiene il codice sorgente del prodotto software sviluppato dal gruppo. È presente un branch principale, `dev`, in cui si trova il codice sorgente relativo all'ultima versione del prodotto, reperibile anche nella sezione Releases presente sulla destra dell'interfaccia di GitHub.
+
+La repository è organizzata in due sottocartelle principali, da cui si diramano diverse cartelle secondarie:
+- *db*: contiene il file SQL utile alla creazione e popolamento del database di supporto;
+- *web*: contiene il codice sorgente di frontend e backend, e si dirama in:
+  - *\_\_test\_\_*: contiene i test del software, in particolare:
+    - *DataMapperTest*: test riguardanti il pattern Data Mapper;
+    - *Integration Test*: test di integrazione;
+    - *Unit Test*: test di unità delle classi del modello.
+  - *app*: file riguardanti la pagina principale e lo stile;
+  - *components*: componenti utilizzati nel prodotto, in particolare:
+    - *custom*: componenti personalizzati, quali:
+      - form di creazione dell'ambiente 3D;
+      - pannelli per la visualizzazione delle impostazioni e delle varie liste di elementi del prodotto.
+    - *providers*: file relativi all'implementazione del pattern Provider;
+    - *ThreeComponents*: file relativi agli elementi 3D;
+    - *ui*: file relativi agli elementi dell'interfaccia grafica.
+  - *dataMapper*: file relativi all'implementazione del pattern Data Mapper;
+  - *dataRepository*: file relativi all'implementazione del pattern Repository;
+  - *lib*: contiene un file riguardante il merge tra più classi del framework Tailwind CSS;
+  - *model*: file relativi alle classi del modello;
+  - *node_modules*: cartella generata automaticamente da `npm` (Node Package Manager) utile alla gestione delle dipendenze di Node.js;
+  - *pages*: API prodotte dal gruppo;
+  - *public*: file SVG per la creazione del magazzino e una sottocartella di icone;
+  - *ServerActions*: file relativi all'implementazione delle Server Actions utilizzate;
+  - *Strategy*: file relativi all'implementazione del pattern Strategy.
+
+Anche in questa repository, come per Documenti, viene applicato il _feature branching_, utilizzando `dev` come branch di appoggio per l'apertura dei branch di feature, identificati dal codice `WMS-XXX`, dove `XXX` è il numero del relativo task su Jira.
 
 ====== GitHub Actions <automazioni>
 L'intero processo di versionamento è accompagnato da una serie di automazioni, realizzate tramite GitHub Actions, che sollevano i componenti del gruppo dall'onere manuale di attività come la compilazione dei documenti, l'aggiornamento del registro delle modifiche (file _log.csv_) e la pubblicazione dei documenti dopo la verifica.
 
 *Workflow delle automazioni:*
-#figure(image("./imgs/flusso_actions.svg", format: "svg"), caption: [Workflow delle automazioni]);
+#figure(image("./imgs/workflow_actions.svg", format: "svg", width: 100%), caption: [Workflow delle automazioni]);
 
 Alla creazione della pull request si avvia il workflow per la compilazione e la registrazione delle modifiche avvenute. Prima di procedere è necessario inserire informazioni essenziali ai fini di ottenere maggiore chiarezza e tracciabilità nel messaggio di pull request, quali:
-- titolo conforme, contenente il nome del task di riferimento su Jira legata alla pull request, nel formato _DOC-XXX titolo_;
+- titolo conforme, contenente il nome del task di riferimento su Jira legata alla pull request, nel formato `DOC-XXX titolo`;
 - identificativo di almeno un verificatore;
 - eventuali note aggiuntive.
 Il workflow è composto dai seguenti passaggi:

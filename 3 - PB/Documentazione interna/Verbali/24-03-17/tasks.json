@@ -95,21 +95,6 @@
 	  "Ruolo": "Responsabile"
 	},
 	{
-	  "Descrizione": "Redigere paragrafo sui componenti",
-	  "ID task": "DOC-617",
-	  "Ruolo": "Progettista"
-	},
-	{
-	  "Descrizione": "Redigere paragrafo sulle classi",
-	  "ID task": "DOC-618",
-	  "Ruolo": "Progettista"
-	},
-	{
-	  "Descrizione": "Redigere paragrafo sui design pattern",
-	  "ID task": "DOC-619",
-	  "Ruolo": "Progettista"
-	},
-	{
 	  "Descrizione": "Rimuovere sezione requisiti di sistema e hardware",
 	  "ID task": "DOC-620",
 	  "Ruolo": "Progettista"

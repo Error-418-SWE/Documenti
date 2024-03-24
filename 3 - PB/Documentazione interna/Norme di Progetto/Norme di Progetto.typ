@@ -1751,7 +1751,7 @@ Per garantire una standardizzazione e una migliore gestione del codice, devono e
 
 + ogni componente e ogni classe deve essere implementata in un proprio file. Questa pratica semplifica la gestione  e la ricerca dei componenti all'interno del progetto, garantendo una maggiore chiarezza e coerenza nel codice. Può essere fatta un'eccezione a questa norma nel caso in cui vengano adottati design pattern che risultano più manutenibili se le loro classi sono implementate tutte nello stesso file;
 
-+ i nomi di variabili, metodi e funzioni devono essere parlanti, ovvero devono riflettere il loro scopo e la loro funzione all'interno del sistema, così da facilitare la comprensione e manutenzione del codice.
++ i nomi di variabili, metodi e funzioni devono essere parlanti, ovvero devono riflettere il loro scopo e la loro funzione all'interno del sistema, così da facilitare la comprensione e manutenzione del codice;
 
 + buone pratiche per la codifica:
   - conduzione di regolari revisioni del codice da parte di membri del gruppo per identificare e correggere errori e migliorare la qualità complessiva del codice;

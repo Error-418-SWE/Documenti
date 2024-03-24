@@ -1719,15 +1719,14 @@ Come risultato della corretta implementazione del processo di implementazione ot
 
 ==== Progettazione dell'elemento da implementare
 
-Prima dell'inizio effettivo dello sviluppo, viene introdotta una fase di progettazione, come delineato nei capitoli disponibili alla @processo_design e alla @processo_definizione_architettura.
+È necessario che prima dell'inizio effettivo dello sviluppo di un elemento software, questo sia stato definito dai processi di definizione dell'architettura (@processo_definizione_architettura) e del design (@processo_design).
 
-Questa fase è fondamentale, poiché al suo completamento si dispone già di una struttura ben definita del sistema, che include le sue componenti principali, le loro interazioni e le funzionalità che devono essere implementate.
+Questi processi sono fondamentali, poiché al loro completamento si dispone già di una struttura ben definita del sistema, che include le sue componenti principali, le loro interazioni e le funzionalità che devono essere implementate.
 
 Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi.
 
-Inoltre, la fase di progettazione trasforma il processo di sviluppo in una sorta di "traduzione" dal concetto astratto del design al linguaggio concreto del codice. Gli sviluppatori ricevono già una visione chiara di ciò che devono realizzare, il che semplifica il lavoro e permette di concentrare l'attenzione sull'attuazione delle specifiche stabilite durante la fase di progettazione.
+Questo approccio fornisce quindi una guida chiara per i Programmatori, riducendo il rischio di deviazioni o malintesi, in quanto trasforma il processo di implementazione in una traduzione del design in codice.
 
-Questo approccio non solo aumenta l'efficienza dello sviluppo, ma riduce anche il rischio di errori e conflitti nel codice finale.
 
 ==== Preparazione per l'implementazione
 
@@ -1743,17 +1742,16 @@ Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate i
 
 Decisa una strategia di testing per l'elemento di sistema e scritti i relativi test di unità, il Programmatore può quindi procedere allo sviluppo o all'adeguamento del software.
 
-Per garantire una standardizzazione e una migliore gestione del codice software, sono state implementate diverse pratiche di organizzazione e normativa come segue:
+Per garantire una standardizzazione e una migliore gestione del codice, devono essere adottate le seguenti norme e pratiche di organizzazione:
 
-+ approccio organizzato alla struttura delle cartelle:
-  - ciascuna categoria di elementi è assegnata a una cartella specifica (@repository-github):
-    - tutti i file correlati ad uno specifico pattern sono organizzati all'interno di una cartella dedicata esclusivamente a quel pattern;
-    - tutti i file riguardanti l'interfaccia utente sono raggruppati in una cartella apposita;
-    - all'interno di alcune cartelle, come "ServerActions", è presente una ulteriore suddivisione degli elementi in sotto-cartelle per zone specifiche, come Zone, Bin, ecc., seguendo una logica di organizzazione interna coerente.
+  + ciascuna categoria di elementi deve essere assegnata a una cartella specifica (@repository-github):
+    - tutti i file correlati ad uno specifico pattern devono essere organizzati all'interno di una cartella dedicata esclusivamente a quel pattern;
+    - tutti i file riguardanti l'interfaccia utente devono essere raggruppati in una cartella apposita;
+    - se all'interno di una cartella sono presenti più file legati ad una stessa classe del modello, devono essere raggruppati in una sottocartella dedicata.
 
-+ adottato il principio per cui un elemento/componente/classe = un file. Pratica che semplifica la gestione e la ricerca dei componenti all'interno del progetto, garantendo una maggiore chiarezza e coerenza nel codice.
++ ogni componente e ogni classe deve essere implementata in un proprio file. Questa pratica semplifica la gestione  e la ricerca dei componenti all'interno del progetto, garantendo una maggiore chiarezza e coerenza nel codice. Può essere fatta un'eccezione a questa norma nel caso in cui vengano adottati design pattern che risultano più manutenibili se le loro classi sono implementate tutte nello stesso file;
 
-+ nomenclatura delle variabili, dei metodi e delle funzioni, si attiene al principio che i nomi devono essere descrittivi e parlanti. Questo significa che i nomi dovrebbero riflettere chiaramente il loro scopo e la loro funzione all'interno del sistema, facilitando così la comprensione e la manutenzione del codice.
++ i nomi di variabili, metodi e funzioni devono essere parlanti, ovvero devono riflettere il loro scopo e la loro funzione all'interno del sistema, così da facilitare la comprensione e manutenzione del codice.
 
 + buone pratiche per la codifica:
   - conduzione di regolari revisioni del codice da parte di membri del gruppo per identificare e correggere errori e migliorare la qualità complessiva del codice;
@@ -1764,7 +1762,7 @@ Prima di sottoporre il software a verifica è necessario assicurarsi che l'eleme
 
 ==== Gestione dei risultati dell'implementazione e delle anomalie incontrate
 
-L'elemento approvato in fase di verifica (@processo_verifica) viene quindi integrato nel sistema come descritto nel paragrafo @processo_integrazione.
+L'elemento implementato deve essere approvato durante il processo di verifica (@processo_verifica) e integrato nel sistema come descritto nella @processo_integrazione.
 
 == Processo di integrazione <processo_integrazione>
 

@@ -234,7 +234,11 @@ Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà 
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile modificare le zone posizionate cambiandone i parametri dimensionali e di orientamento, potendo modificare o aggiungere le colonne e i livelli desiderati.
 
-Non è possibile rimuovere colonne o livelli già presenti nella zona soggetta a modifiche.
+È possibile rimuovere una colonna già presente nella zona soggetta a modifiche esclusivamente se contiene solo bin senza prodotti al suo interno e se non sono presenti colonne, con indice superiore a quello della colonna da rimuovere, che contengono almeno un bin occupato.
+
+Tale logica concerne anche la rimozione dei livelli.
+
+Per esempio, durante la modifica di una zona formata da tre livelli (contenenti prodotti solo nel secondo) e cinque colonne (contenenti prodotti solo nelle prime tre), sarà possibile rimuovere la quarta o la quinta colonna (se prive di prodotti) ma non le precedenti. Similmente sarà possibile rimuovere il terzo livello (se privo di prodotti) ma non i precedenti.
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
 
@@ -244,16 +248,7 @@ In tale lista, per ogni elemento zona elencato, è presente un pulsante raffigur
 
 Sulla parte inferiore di tale pannello è presente il pulsante "Modifica" che, se premuto, permette di poter modificare alcuni parametri della zona in oggetto.
 
-I parametri modificabili sono gli stessi che vengono richiesti durante la @creazione_zona (Creazione zona) e seguono i medesimi vincoli, con le seguenti eccezioni:
-
-  - non è possibile modificare il parametro `ID`;
-
-  - nel caso in cui venga selezionata l'opzione "\# colonne uguali", non è possibile inserire un numero di colonne inferiore al valore specificato nella precedente configurazione;
-
-  - nel caso in cui venga selezionata l'opzione "Colonne personalizzate", non è possibile ridurre il numero di larghezze delle colonne specificate nell'apposito form, rispetto al numero di colonne precedentemente configurate;
-
-  - non è possibile rimuovere livelli configurati prima della modifica in corso.
-
+I parametri modificabili sono gli stessi che vengono richiesti durante la creazione della zona (@creazione_zona) e seguono i medesimi vincoli, fuorché il parametro `ID`, il quale non è modificabile.
 
 Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla Zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
 

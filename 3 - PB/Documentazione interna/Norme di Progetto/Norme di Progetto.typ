@@ -1734,9 +1734,9 @@ Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire
 
 In caso di modifica è necessario reiterare l'esecuzione dei test sviluppati, al fine di garantire che il software sviluppato e testato in precedenza funzioni ancora come previsto. In caso contrario, si parlerebbe di regressione.
 
-Considerando la complessità degli elementi grafici e delle interazioni utente che non possono essere facilmente o economicamente testati in modo automatico, viene istituita una modalità di testing manuale. In questa modalità, è responsabilità dello sviluppatore dell'elemento di sistema (Programmatore) verificare che il codice scritto funzioni correttamente. Questo vale sia per il codice sviluppato in proprio sia per quello riutilizzato o esterno, che viene adattato per soddisfare i requisiti specifici.
+Considerando la complessità degli elementi grafici e delle interazioni utente che non possono essere facilmente o economicamente testati in modo automatico, viene istituita una modalità di testing manuale. In questa modalità, è responsabilità dello sviluppatore dell'elemento di sistema (Programmatore e Verificatore) quella di accertarsi che il codice scritto funzioni correttamente. Questo vale sia per il codice sviluppato in proprio sia per quello riutilizzato o esterno, che viene adattato per soddisfare i requisiti specifici.
 
-Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in pr tutte le funzionalità che si ha necessità di controllare manualmente.
+Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in Pull Request tutte le funzionalità che si ha necessità di controllare manualmente, oltre al riferimento al task interessato su Jira.
 
 ==== Implementazione
 
@@ -1749,7 +1749,7 @@ Per garantire una standardizzazione e una migliore gestione del codice, devono e
     - tutti i file riguardanti l'interfaccia utente devono essere raggruppati in una cartella apposita;
     - se all'interno di una cartella sono presenti più file legati ad una stessa classe del modello, devono essere raggruppati in una sottocartella dedicata.
 
-+ ogni componente e ogni classe deve essere implementata in un proprio file. Questa pratica semplifica la gestione  e la ricerca dei componenti all'interno del progetto, garantendo una maggiore chiarezza e coerenza nel codice. Può essere fatta un'eccezione a questa norma nel caso in cui vengano adottati design pattern che risultano più manutenibili se le loro classi sono implementate tutte nello stesso file;
++ ogni componente e ogni classe deve essere implementata in un proprio file. Questa pratica semplifica la gestione e la ricerca dei componenti all'interno del progetto, garantendo una maggiore chiarezza e coerenza nel codice. Può essere fatta un'eccezione a questa norma nel caso in cui vengano adottati design pattern che risultano più manutenibili se le loro classi sono implementate tutte nello stesso file;
 
 + i nomi di variabili, metodi e funzioni devono essere parlanti, ovvero devono riflettere il loro scopo e la loro funzione all'interno del sistema, così da facilitare la comprensione e manutenzione del codice;
 

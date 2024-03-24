@@ -201,14 +201,15 @@ Premendo il tasto destro del mouse e spostando il mouse in una delle quattro dir
 
 #figure(
     grid(
-        columns: 2,
+        columns: 3,
         rows:    (auto, auto),
+        [ #image("./imgs/keyboard_wasd.jpg", width: 45%)],
         [ #image("./imgs/keyboard_arrow.png", width: 40%)],
         [ #image("./imgs/keyboard_shift.jpg", width: 40%)],
     ),caption: [Movimento con le frecce direzionali],
 ) <camera_direzionali>
 
-L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle frecce direzionali, che permettono il movimento nella direzione indicata dalla freccia. Con il tasto Shift è possibile aumentare la velocità di spostamento con le frecce direzionali.
+L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle frecce direzionali (o in alternativa i tasti W, A, S, D), che permettono il movimento nella direzione indicata dalla freccia. Con il tasto Shift è possibile aumentare la velocità di spostamento.
 
 == Creazione zona
 

@@ -1846,9 +1846,9 @@ Questo processo è composto da varie attività indipendenti e di diversa natura.
 Le seguenti attività non sono quindi necessariamente consequenziali, ma la loro corretta applicazione porta al conseguimento dei risultati precedentemente descritti.
 
 ==== Rilascio dell'ultima versione del sistema
-Il repository GitHub dedicata a WMS3 si compone di un branch `dev` necessario per gli sviluppatori, in quanto fonte da cui vengono creati i feature branch necessari al conseguimento degli obiettivi di una task e destinazione dei merge a seguito delle successive pull request. Viene quindi definito un altro branch `release`, orfano e luogo in cui vengono effettuate i rilasci del sistema.
+Il repository GitHub dedicato a WMS3 si compone di un branch `dev` necessario per gli sviluppatori, in quanto fonte da cui vengono creati i feature branch necessari al conseguimento degli obiettivi di una task e destinazione dei merge a seguito delle successive pull request. Viene quindi definito un altro branch `release`, orfano e luogo in cui vengono effettuate i rilasci del sistema.
 
-I rilasci avvengono solo quanto il sistema viene ritenuto sufficientemente maturo e pronto per l'utilizzo o quando vengono:
+I rilasci avvengono solo quando il sistema viene ritenuto sufficientemente maturo e pronto per l'utilizzo o quando vengono:
 - aggiunte modifiche sostanziali al sistema rispetto all'ultima versione rilasciata;
 - risolti bug critici;
 - avanzamento del sistema rilasciato ad una versione più aggiornata.

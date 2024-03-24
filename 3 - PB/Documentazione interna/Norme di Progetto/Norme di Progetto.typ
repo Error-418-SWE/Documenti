@@ -823,7 +823,7 @@ L'aggiornamento del numero di versione per la documentazione deve attenersi alle
 
 Il processo di aggiornamento della versione è reso automatico, come stabilito nella sezione dedicata a GitHub Actions (@automazioni).
 
-====== Software
+====== Software <versionamento>
 
 L'aggiornamento del numero di versione per il software deve attenersi alle seguenti regole:
 
@@ -1849,21 +1849,19 @@ I risultati della corretta applicazione del processo di transizione sono:
 - viene garantito il funzionamento dei servizi e l'operatività del sistema;
 - vengono identificati i risultati e le anomalie della transizione;
 - viene stabilita la tracciabilità degli elementi trasferiti;
-- viene redatto del documento #man;
+- viene redatto del documento #man\;
 - viene fornito supporto e formazione degli utenti all'utilizzo del sistema.
 
 === Attività
 
 ==== Rilascio dell'ultima versione di sistema
 
-I rilasci del sistema avvengono esclusivamente quando esso viene ritenuto sufficientemente maturo e pronto per l'utilizzo e sono avvenuti sostanziali cambiamenti rispetto alla precedente versione rilasciata, come avanzamenti significativi o risoluzione di bug critici.
-
 Il repository GitHub dedicato a WMS3 è provvisto di un branch principale `dev`, il quale rappresenta la fonte da cui vengono creati i feature branch.
-Questi ultimi sono necessari al conseguimento degli obiettivi di un task e destinazione dei merge a seguito delle successive pull request.
+Questi ultimi sono necessari al conseguimento degli obiettivi di un task e oggetto dei merge a seguito delle successive pull request.
 
-I rilasci del prodotto avvengono sempre dal branch di partenza `dev`, in quanto il codice contenuto in esso garantisce il soddisfacimento dei requisiti di qualità imposti dal gruppo.
+I rilasci del prodotto devono avvenire sempre dal branch di partenza `dev`, in quanto il codice contenuto in esso garantisce il soddisfacimento dei requisiti di qualità imposti dal gruppo.
 
-Ogni release avvenuta con successo, in conformità con il superamento dei test e le procedure descritte nei processi di implementazione (@processo_implementazione), integrazione (@processo_integrazione) e verifica (@processo_verifica), genera una release specifica tracciata e consultabile (@tracciabilità_risultati_release) con relativo numero di release aggiornato.
+Ogni release avvenuta con successo, in conformità con il superamento dei test e le procedure descritte nei processi di implementazione (@processo_implementazione), integrazione (@processo_integrazione) e verifica (@processo_verifica), deve generare una release specifica tracciata e consultabile (@tracciabilità_risultati_release) con relativo numero di versione aggiornato (@versionamento).
 
 Ad ogni modifica del sistema devono venire aggiornati anche i documenti #man e #st, al fine di includere la documentazione relativa alle modifiche apportate.
 
@@ -1876,25 +1874,23 @@ Questo permette la fruizione del sistema senza la necessità di dover scaricare 
 
 ==== Redazione del documento #man
 
-Al fine di fornire agli utenti di WMS3 una guida documentale atta ad indicare il suo corretto utilizzo, il gruppo mette a disposizione il documento #man.
+Al fine di fornire agli utenti di WMS3 una guida documentale atta ad indicare il suo corretto utilizzo, il gruppo deve mettere a disposizione il documento #man.
 
-In esso viene riportato:
-
-- installazione locale del sistema;
+In esso deve venire riportato:
 
 - guida all'avvio e configurazione dell'ambiente;
 
-- descrizione dei servizi offerti dal sistema;
+- descrizione delle funzionalità offerte dal sistema;
 
-- guida dettagliata all'utilizzo dei servizi offerti.
+- guida dettagliata all'utilizzo delle funzionalità offerte.
 
 
-Il #man viene redatto seguendo i principi di redazione dei documenti descritti nel paragrafo riguardante il processo di gestione delle informazioni (@processo_gestione_informazioni).
+Il #man deve venire redatto seguendo i principi di redazione dei documenti descritti nel paragrafo riguardante il processo di gestione delle informazioni (@processo_gestione_informazioni).
 
 
 ==== Tracciabilità risultati <tracciabilità_risultati_release>
 
-I risultati relativi a controlli e test automatici avvenuti in fase di release, sono visualizzati su GitHub nella sezione relativa alle automazioni avvenute nella pull request dell'elemento in oggetto.
+I risultati relativi a controlli e test automatici avvenuti in fase di release sono visualizzati su GitHub nella sezione relativa alle automazioni avvenute nella pull request dell'elemento in oggetto.
 
 Se da essi non emergono anomalie o errori, la transizione è avvenuta correttamente e viene confermata la conformità degli elementi analizzati.
 

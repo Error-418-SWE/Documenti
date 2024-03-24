@@ -1709,7 +1709,7 @@ Il risultato di questo processo è un elemento del sistema che soddisfa i requis
 
 === Risultati
 
-Come risultato della corretta implementazione del processo di implementazione otteniamo:
+La corretta realizzazione del processo di implementazione produce i seguenti risultati:"
 
 - identificazione dei vincoli implementativi che influenzano i requisiti, l'architettura o il design;
 - realizzazione di un elemento di sistema;
@@ -1723,20 +1723,19 @@ Come risultato della corretta implementazione del processo di implementazione ot
 
 Questi processi sono fondamentali, poiché al loro completamento si dispone già di una struttura ben definita del sistema, che include le sue componenti principali, le loro interazioni e le funzionalità che devono essere implementate.
 
-Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi.
-
-Questo approccio fornisce quindi una guida chiara per i Programmatori, riducendo il rischio di deviazioni o malintesi, in quanto trasforma il processo di implementazione in una traduzione del design in codice.
-
+Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi in quanto trasforma il processo di implementazione in una traduzione del design in codice.
 
 ==== Preparazione per l'implementazione
 
-Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test specifici per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del Progettista di una serie di unit test precedentemente allo sviluppo vero e proprio dell'elemento di sistema. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
+Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test specifici per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del Progettista di una serie di test di unità precedentemente allo sviluppo vero e proprio dell'elemento di sistema. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
 
 In caso di modifica è necessario reiterare l'esecuzione dei test sviluppati, al fine di garantire che il software sviluppato e testato in precedenza funzioni ancora come previsto. In caso contrario, si parlerebbe di regressione.
 
 Considerando la complessità degli elementi grafici e delle interazioni utente che non possono essere facilmente o economicamente testati in modo automatico, viene istituita una modalità di testing manuale. In questa modalità, è responsabilità dello sviluppatore dell'elemento di sistema (Programmatore e Verificatore) quella di accertarsi che il codice scritto funzioni correttamente. Questo vale sia per il codice sviluppato in proprio sia per quello riutilizzato o esterno, che viene adattato per soddisfare i requisiti specifici.
 
 Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in Pull Request tutte le funzionalità che si ha necessità di controllare manualmente, oltre al riferimento al task interessato su Jira.
+
+Una volta che i singoli moduli sono stati sviluppati e testati mediante i test di unità, si procede al processo di integrazione (@processo_integrazione), durante il quale vengono assemblati e combinati per formare il sistema completo. A questo punto, vengono eseguiti i test di integrazione per verificare che i vari moduli interagiscano correttamente tra loro e che il sistema nel suo complesso funzioni come previsto.
 
 ==== Implementazione
 
@@ -1753,9 +1752,14 @@ Per garantire una standardizzazione e una migliore gestione del codice, devono e
 
 + i nomi di variabili, metodi e funzioni devono essere parlanti, ovvero devono riflettere il loro scopo e la loro funzione all'interno del sistema, così da facilitare la comprensione e manutenzione del codice;
 
++ stile di codifica:
+  - notazione camel per nomi di file e variabili;
+  -
+  -
+
+
 + buone pratiche per la codifica:
-  - conduzione di regolari revisioni del codice da parte di membri del gruppo per identificare e correggere errori e migliorare la qualità complessiva del codice;
-  - scrittura di test automatici per verificare il comportamento delle singole unità di codice;
+  - scrittura di test automatici per verificare il comportamento delle singole unità di codice (@processo_verifica);
   - identificazione e rimozione del codice duplicato per ridurre la complessità e migliorare la manutenibilità. Questo può essere fatto estraendo il codice duplicato in funzioni o classi riutilizzabili.
 
 Prima di sottoporre il software a verifica è necessario assicurarsi che l'elemento di sistema non regredisca le funzionalità tramite l'esecuzione di testing dedicato.

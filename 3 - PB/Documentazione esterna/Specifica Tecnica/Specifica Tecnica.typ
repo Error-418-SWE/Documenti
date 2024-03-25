@@ -269,22 +269,22 @@ Tale architettura permette di individuare e suddividere la logica del software i
 
 == Design pattern utilizzati
 
-=== Data mapper
-Viene utilizzato per interpretare i dati letti del database mantenendo separate la logica di business dal layer di persistenza. Le classi relative a questo pattern fungono da intermediari tra l'applicazione e la sorgente dati e sono responsabili della conversione delle strutture dati atte alla persistenza in oggetti del dominio dell'applicazione.
+=== Data Mapper <data_mapper>
+Il design pattern Data Mapper viene utilizzato per interpretare i dati letti del database mantenendo separate la logica di business dal layer di persistenza. Le classi relative a questo pattern fungono da intermediari tra l'applicazione e la sorgente dati e sono responsabili della conversione delle strutture dati atte alla persistenza in oggetti del dominio dell'applicazione.
 
-=== Repository
-Viene implementato per separare la logica di business dalla logica di accesso ai dati. Le classi relative a questo pattern eseguono operazioni di lettura, aumentando l'astrazione dei dettagli specifici della persistenza dei dati e permettendo all'applicazione di interagirvi in modo indipendente dal tipo di archivio sottostante.
+=== Repository <repository>
+Il design pattern Repository viene implementato per separare la logica di business dalla logica di accesso ai dati. Le classi relative a questo pattern eseguono operazioni di lettura, aumentando l'astrazione dei dettagli specifici della persistenza dei dati e permettendo all'applicazione di interagirvi in modo indipendente dal tipo di archivio sottostante.
 
-=== Provider
-Applicato nel contesto tecnologico del progetto, soprattutto rispetto all'utilizzo di React, vengono sfruttate delle Context API per permette di gestire e trasferire i dati attraverso l'albero dei componenti in modo strutturato, evitando il "prop drilling", ovvero l'effetto che si verifica nei casi in cui è necessario trasportare i dati attraverso più livelli di componenti, anche se alcuni di essi non ne necessitano.
+=== Provider <provider>
+Il design pattern Provider viene applicato nel contesto tecnologico del progetto, soprattutto rispetto all'utilizzo di React, vengono sfruttate delle Context API per permette di gestire e trasferire i dati attraverso l'albero dei componenti in modo strutturato, evitando il "prop drilling", ovvero l'effetto che si verifica nei casi in cui è necessario trasportare i dati attraverso più livelli di componenti, anche se alcuni di essi non ne necessitano.
 
-=== Strategy
-Consente di definire una famiglia di algoritmi, incapsularli in classi separate e renderli intercambiabili. In questo modo è possibile applicare l'algoritmo appropriato senza dover conoscere i dettagli implementativi.
+=== Strategy <strategy>
+Il design pattern Strategy consente di definire una famiglia di algoritmi, incapsularli in classi separate e renderli intercambiabili. In questo modo è possibile applicare l'algoritmo appropriato senza dover conoscere i dettagli implementativi.
 
 È stato implementato nella gestione di diversi algoritmi di creazione del piano, degli algoritmi di ricerca dei prodotti e degli algoritmi di ricerca delle zone.
 
-=== Factory
-Permette, definendo un'interfaccia comune, la creazione di oggetti senza specificarne esplicitamente le classi esatte, lasciando alle sottoclassi la decisione su quale istanziare.
+=== Factory <factory>
+Il design pattern Factory permette, definendo un'interfaccia comune, la creazione di oggetti senza specificarne esplicitamente le classi esatte, lasciando alle sottoclassi la decisione su quale istanziare.
 
 È stato adottato per separare l'implementazione dalla creazione degli oggetti relativi agli algoritmi di ricerca dei prodotti e delle zone.
 
@@ -294,7 +294,7 @@ Permette, definendo un'interfaccia comune, la creazione di oggetti senza specifi
 Ciascun layer possiede il suo indipendente sistema di classi e componenti e prevede metodi per comunicare con i layer adiacenti.
 
 === Persistence layer
-Mediante delle Server Action offerte da Next.js, vengono eseguite delle query SQL atte alla lettura dei dati utili all'applicazione da un database esterno.
+Mediante le Server Action offerte da Next.js, vengono eseguite delle query SQL atte alla lettura dei dati utili all'applicazione da un database esterno.
 Esse sono implementate e rese disponibili in file separati, organizzati nell'omonima cartella "Server Action", contenente:
 
 - *getAllBins*: ritorna le informazioni di tutti i bin lette dal database;
@@ -320,7 +320,7 @@ Esse sono implementate e rese disponibili in file separati, organizzati nell'omo
 - *getZoneById*: dato un codice identificativo univoco, ritorna le informazioni relative alla zona corrispondente lette dal database.
 
 
-Al fine di agevolare la divisione tra il Persistence layer ed il Business layer, viene utilizzato il pattern Repository mediante classi che implementano l'interfaccia `dataRepositoryInterface`, quali:
+Al fine di agevolare la divisione tra il Persistence layer ed il Business layer, viene utilizzato il pattern Repository (@repository) mediante classi che implementano l'interfaccia `dataRepositoryInterface`, quali:
 
 - *binRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Bin`;
 
@@ -328,7 +328,7 @@ Al fine di agevolare la divisione tra il Persistence layer ed il Business layer,
 
 - *zoneRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Zone`.
 
-Il pattern Repository impiega in maniera consequenziale le classi correlate del pattern Data Mapper, le quali implementano l'interfaccia `DataMapperInterface`.
+Il pattern Repository impiega in maniera consequenziale le classi correlate del pattern Data Mapper (@data_mapper), le quali implementano l'interfaccia `DataMapperInterface`.
 Di seguito sono elencate le classi specifiche:
 
 - *binMapper*: è responsabile della creazione di oggetti `Bin`;
@@ -419,9 +419,9 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
   \
   Per ogni attributo è presente il corrispondente metodo get.
 
-  Sono presenti i metodi set per gli attributi `xcoordinate` e `ycoordinate`.
+  Sono disponibili i metodi set per gli attributi `xcoordinate` e `ycoordinate`.
 
-  Sono inoltre presenti i metodi:
+  Sono inoltre forniti i metodi:
 
   - *getBin*: dato un codice identificativo univoco, ritorna l'elemento `Bin` corrispondente presente in `bins`, oppure `null` se non presente;
 
@@ -497,9 +497,9 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 
   Per ogni attributo è presente il corrispondente metodo get e set.
 
-  Inoltre è presente un metodo clone.
+  Inoltre è presente il metodo `clone` utile per creare una copia dell'oggetto invocante.
 
-  Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy e le relative classi che implementano l'interfaccia `FloorStrategy`:
+  Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy (@strategy) e le relative classi che implementano l'interfaccia `FloorStrategy`:
 
   - *StandardFloorStrategy*: rappresenta la creazione di un elemento `Floor` senza file SVG;
 
@@ -525,7 +525,7 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 )
 
 \
-Per gestire la possibilità di cercare specifici prodotti e specifiche zone, sono state realizzate delle classi che permettono l'implementazione dei design pattern Strategy e Factory.
+Per gestire la possibilità di cercare specifici prodotti e specifiche zone, sono state realizzate delle classi che permettono l'implementazione dei design pattern Strategy (@strategy) e Factory (@factory).
 
 Le classi relative al design pattern Strategy implementano l'interfaccia `SearchStrategy` e sono:
 
@@ -547,7 +547,7 @@ La classe relativa al design pattern Factory è:
 
 
 \
-In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i componenti:
+In aggiunta alle classi, per aderire all'adozione del pattern Provider (@provider), sono presenti i componenti:
 
 - *warehouseProvider*: fornisce un provider per gestire dati relativi alle variabili di contesto dell'ambiente grafico;
 
@@ -569,7 +569,8 @@ In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono pre
 === Presentation layer
 ==== UI
 L'interfaccia utente è realizzata mediante elementi importati da Shadcn-UI e componenti personalizzati.
-Gli elementi creati appositamente per WMS3 sono i seguenti:
+
+I componenti realizzati sono i seguenti:
 
 - *Form di creazione*:
 
@@ -583,17 +584,17 @@ Gli elementi creati appositamente per WMS3 sono i seguenti:
 
   - *zodScheme*: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro.
 
-- *bin*:
+- *Componenti relativi ai bin*:
 
   - *binItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di un bin.
 
-- *orders*:
+- *Componenti relativi agli ordini*:
 
   - *orderItem*: componente dedicato alla visualizzazione di un ordine;
 
-  - *ordersPanel*: componente dedicato alla visualizzazione di tutti gli ordini.
+  - *ordersPanel*: componente dedicato alla visualizzazione ordinata di tutti gli ordini dall'ultimo effettuato al meno recente. Ogni ordine è rappresentato da un `OrderItem`.
 
-- *products*:
+- *Componenti relativi ai prodotti*:
 
   - *productItem*: componente dedicato alla visualizzazione di un prodotto;
 
@@ -601,17 +602,17 @@ Gli elementi creati appositamente per WMS3 sono i seguenti:
 
   - *productsPanel*: componente dedicato alla visualizzazione di tutti i prodotti.
 
-- *settings*:
+- *Componenti relativi alle impostazioni*:
 
   - *floorDimensionsItem*: componente dedicato alla visualizzazione delle dimensioni del piano;
 
-  - *restoreItem*: componente dedicato al comando atto al ripristino o alla reimpostazione dell'ambiente di lavoro;
+  - *restoreItem*: componente dedicato al comando atto al ripristino o alla reimpostazione dell'ambiente di lavoro. Il ripristino permette di caricare nuovamente, con i parametri precedentemente specificati, l'ambiente di lavoro, mentre è possibile eseguirne una riconfigurazione mediante la reimpostazione;
 
-  - *settingsPanel*: componente dedicato al pannello delle impostazioni contenente `floorDimensionsItem` e `restoreItem`;
+  - *settingsPanel*: componente dedicato al pannello delle impostazioni contenente la versione del software e i componenti `floorDimensionsItem` e `restoreItem`;
 
   - *zodDimensionScheme*: schema dedicato alla validazione dei dati dimensionali per la modifica del piano.
 
-- *zone*:
+- *Zone*:
 
   - *bin_columns*: componente dedicato alla visualizzazione delle colonne di bin di una zona (necessario al componente `ZoneItemDetails` utilizzato);
 
@@ -627,7 +628,7 @@ Gli elementi creati appositamente per WMS3 sono i seguenti:
 
   - *zoneZodSchemes*: schemi dedicati alla validazione dei dati necessari alla creazione di una zona, sia durante la configurazione manuale, che mediante inserimento di un file SVG.
 
-- *panel*: componente atto a contenere e visualizzare altri componenti.
+- *panel*: componente generico utilizzato per la visualizzazione e l'organizzazione dei componenti al suo interno.
 
 
 ==== Three.js

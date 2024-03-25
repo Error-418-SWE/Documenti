@@ -258,6 +258,9 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
 
 == Struttura
 Il software WMS3 al fine di perseguire manutenibilità, flessibilità e scalabilità, adotta ed implementa un'architettura "layered", nota anche come "Multi-tier architecture".
+
+I layer definiti sono "closed", ovvero una richiesta si sposta esclusivamente da un livello superiore a quello immediatamente sottostante.
+
 Tale architettura permette di individuare e suddividere la logica del software in 3 principali aspetti, definiti tier (separation of concerns), quali:
 
 - *Persistence layer*: gestisce l'accesso al database e fornisce gli strumenti dedicati alla lettura dei dati al suo interno. I dati letti vengono processati al fine di poter creare gli elementi del Business layer;
@@ -270,7 +273,7 @@ Tale architettura permette di individuare e suddividere la logica del software i
 == Design pattern utilizzati
 
 === Data Mapper <data_mapper>
-Il design pattern Data Mapper viene utilizzato per interpretare i dati letti del database mantenendo separate la logica di business dal layer di persistenza. Le classi relative a questo pattern fungono da intermediari tra l'applicazione e la sorgente dati e sono responsabili della conversione delle strutture dati atte alla persistenza in oggetti del dominio dell'applicazione.
+Il design pattern Data Mapper viene utilizzato per interpretare i dati letti del database mantenendo separate la logica di business dal layer di persistenza. Le classi relative a questo pattern fungono da intermediari tra l'applicazione e la sorgente dati e sono responsabili della conversione delle strutture dati atte alla persistenza (ottenute in formato JSON a seguito di query al database) in oggetti del dominio dell'applicazione.
 
 === Repository <repository>
 Il design pattern Repository viene implementato per separare la logica di business dalla logica di accesso ai dati. Le classi relative a questo pattern eseguono operazioni di lettura, aumentando l'astrazione dei dettagli specifici della persistenza dei dati e permettendo all'applicazione di interagirvi in modo indipendente dal tipo di archivio sottostante.

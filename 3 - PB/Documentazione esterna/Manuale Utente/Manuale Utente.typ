@@ -211,7 +211,7 @@ Premendo il tasto destro del mouse e spostando il mouse in una delle quattro dir
 
 L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle frecce direzionali (o in alternativa i tasti W, A, S, D), che permettono il movimento nella direzione indicata dalla freccia. Con il tasto Shift è possibile aumentare la velocità di spostamento.
 
-== Creazione zona
+== Creazione zona <creazione_zona>
 
 #figure(
     grid(
@@ -253,6 +253,30 @@ I dati necessari alla creazione sono:
 Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
 Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo.
 
+
+== Modifica zona
+
+Successivamente alla creazione dell'ambiente di lavoro è possibile modificare le zone posizionate cambiandone i parametri dimensionali e di orientamento, potendo modificare o aggiungere le colonne e i livelli desiderati.
+
+È possibile rimuovere una colonna già presente nella zona soggetta a modifiche esclusivamente se contiene solo bin senza prodotti al suo interno e se non sono presenti colonne, con indice superiore a quello della colonna da rimuovere, che contengono almeno un bin occupato.
+
+Tale logica concerne anche la rimozione dei livelli.
+
+Per esempio, durante la modifica di una zona formata da tre livelli (contenenti prodotti solo nel secondo) e cinque colonne (contenenti prodotti solo nelle prime tre), sarà possibile rimuovere la quarta o la quinta colonna (se prive di prodotti) ma non le precedenti. Similmente sarà possibile rimuovere il terzo livello (se privo di prodotti) ma non i precedenti.
+
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+
+Selezionando da esso la voce "Zone" si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente.
+
+In tale lista, per ogni elemento zona elencato, è presente un pulsante raffigurante un'occhio che, alla sua pressione, permette la visualizzazione sulla destra dello schermo del pannello relativo alle informazioni della relativa zona.
+
+Sulla parte inferiore di tale pannello è presente il pulsante "Modifica" che, se premuto, permette di poter modificare alcuni parametri della zona in oggetto.
+
+I parametri modificabili sono gli stessi che vengono richiesti durante la creazione della zona (@creazione_zona) e seguono i medesimi vincoli, fuorché il parametro `ID`, il quale non è modificabile.
+
+Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla Zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
+
+
 == Impostazioni
 
 #figure(
@@ -279,6 +303,7 @@ Da notare che nel caso di modifica di un piano personalizzato il ridimensionamen
 Nell'ultima sezione in basso, *Demo*, troviamo due pulsanti:
 - *Risincronizza*: permette riportare il piano al suo stato iniziale, annullando tutte le modifiche e gli spostamenti effettuati;
 - *Reimposta*: permette di eliminare tutto il lavoro fatto sul piano e tornare alla schermata di @avvio.
+
 
 #pagebreak()
 

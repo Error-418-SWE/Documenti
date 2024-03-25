@@ -1,0 +1,232 @@
+[
+	{
+	  "Descrizione": "Scrivere guida per Impostazioni",
+	  "ID task": "DOC-546",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Scrivere guida per Modifica zona",
+	  "ID task": "DOC-559",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Scrivere guida per Creazione zona",
+	  "ID task": "DOC-560",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Scrivere guida per Configurazione ambiente",
+	  "ID task": "DOC-563",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Aggiornare dashboard di monitoraggio",
+	  "ID task": "DOC-585",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "Descrizione": "Redigere preventivo di periodo Sprint 20",
+	  "ID task": "DOC-586",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "Descrizione": "Redigere consuntivo di periodo Sprint 19",
+	  "ID task": "DOC-590",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "Descrizione": "Aggiornare descrizione repo WMS3",
+	  "ID task": "DOC-602",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "Descrizione": "Revisionare sezione Transition process",
+	  "ID task": "DOC-605",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "Descrizione": "Revisionare sezione Validation process",
+	  "ID task": "DOC-607",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "Descrizione": "Revisionare sezione Verification process",
+	  "ID task": "DOC-608",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "Descrizione": "Revisionare sezione Integration process",
+	  "ID task": "DOC-609",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "Descrizione": "Revisionare sezione Implementation process",
+	  "ID task": "DOC-610",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "Descrizione": "Revisionare sezione Quality management process",
+	  "ID task": "DOC-611",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "Descrizione": "Confermare incontro settimanale",
+	  "ID task": "DOC-612",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "Descrizione": "Caricare verbali firmati nel repository",
+	  "ID task": "DOC-613",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "Descrizione": "Inviare email al Referente aziendale con verbali da firmare",
+	  "ID task": "DOC-614",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "Descrizione": "Inviare email al Prof. Cardin per sottoporre documento aggiornato",
+	  "ID task": "DOC-615",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "Descrizione": "Inviare email al Prof. Cardin per individuazione diagramma dei componenti",
+	  "ID task": "DOC-616",
+	  "Ruolo": "Responsabile"
+	},
+	{
+	  "Descrizione": "Rimuovere sezione requisiti di sistema e hardware",
+	  "ID task": "DOC-620",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "Descrizione": "Redigere verbale interno 17/03/2024",
+	  "ID task": "DOC-621",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "Descrizione": "Redigere verbale interno 15/03/2024",
+	  "ID task": "DOC-622",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "Descrizione": "Implementare check per decidere se caricare dati dal database",
+	  "ID task": "DOC-623",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Implementare collocamento dei prodotti in \"Non collocato\" alla cancellazione di uno scaffale",
+	  "ID task": "DOC-624",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Implementare possibiltà di cancellare uno scaffale selezionato",
+	  "ID task": "DOC-625",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Implementare notifica di spostamento richiesto",
+	  "ID task": "DOC-626",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Implementare possibilità di drag and drop da un bin pieno ad un altro per spostare il prodotto",
+	  "ID task": "DOC-627",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Implementare possibilità di selezionare un bin e mostrarne il contenuto",
+	  "ID task": "DOC-628",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Implementare possibilità di selezionare uno scaffale nell'ambiente e mostrare i suoi dettagli",
+	  "ID task": "DOC-629",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Implementare spostamento della visuale sul prodotto cercato (mediante pulsante)",
+	  "ID task": "WMS-114",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Implementare spostamento della visuale sullo scaffale ricercato (mediante pulsante)",
+	  "ID task": "WMS-115",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Implementare funzionalità di ricerca degli scaffali",
+	  "ID task": "WMS-116",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Caricare la lista delle categorie dei prodotti nel Product Panel",
+	  "ID task": "WMS-117",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Implementare funzionalità di ricerca dei prodotti",
+	  "ID task": "WMS-118",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Implementare posizionamento dello scaffale nell'ambiente",
+	  "ID task": "WMS-119",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Scrittura Manuale Utente",
+	  "ID task": "WMS-120",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Aggiungere tabella dei requisiti soddisfatti",
+	  "ID task": "WMS-121",
+	  "Ruolo": "Analista"
+	},
+	{
+	  "Descrizione": "Aggiornamento metriche",
+	  "ID task": "WMS-122",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "Descrizione": "Realizzare creazione piano personalizzato SVG in Three.js",
+	  "ID task": "WMS-123",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Aggiungere modifica Zona",
+	  "ID task": "WMS-124",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Aggiungere eliminazione Zona",
+	  "ID task": "WMS-125",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Aggiornare form di creazione Zona",
+	  "ID task": "WMS-126",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "Descrizione": "Redigere Specifica Tecnica",
+	  "ID task": "WMS-65",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "Descrizione": "Aggiornare metriche allo Sprint 18 manualmente",
+	  "ID task": "WMS-66",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "Descrizione": "Correggere importazione dati Jira in Grafana",
+	  "ID task": "WMS-67",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "Descrizione": "Revisionare documento Analisi dei Requisiti",
+	  "ID task": "WMS-73",
+	  "Ruolo": "Analista"
+	}
+  ]

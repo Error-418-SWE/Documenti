@@ -1709,7 +1709,7 @@ Il risultato di questo processo è un elemento del sistema che soddisfa i requis
 
 === Risultati
 
-La corretta realizzazione del processo di implementazione produce i seguenti risultati:"
+La corretta realizzazione del processo di implementazione produce i seguenti risultati:
 
 - identificazione dei vincoli implementativi che influenzano i requisiti, l'architettura o il design;
 - realizzazione di un elemento di sistema;
@@ -1731,7 +1731,8 @@ Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire
 
 In caso di modifica è necessario reiterare l'esecuzione dei test sviluppati, al fine di garantire che il software sviluppato e testato in precedenza funzioni ancora come previsto. In caso contrario, si parlerebbe di regressione.
 
-Considerando la complessità degli elementi grafici e delle interazioni utente che non possono essere facilmente o economicamente testati in modo automatico, viene istituita una modalità di testing manuale. In questa modalità, è responsabilità dello sviluppatore dell'elemento di sistema (Programmatore e Verificatore) quella di accertarsi che il codice scritto funzioni correttamente. Questo vale sia per il codice sviluppato in proprio sia per quello riutilizzato o esterno, che viene adattato per soddisfare i requisiti specifici.
+Considerando la complessità degli elementi grafici e delle interazioni utente che non possono essere facilmente o economicamente testati in modo automatico, viene istituita una modalità di testing manuale, che deve essere eseguita prima dallo sviluppatore dell'elemento di sistema (Programmatore) durante l'implementazione, e successivamente dal Verificatore, quando controlla il lavoro presente nella Pull Request relativa.
+Questo vale sia per il codice sviluppato in proprio sia per quello riutilizzato o esterno, che viene adattato per soddisfare i requisiti specifici.
 
 Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in Pull Request tutte le funzionalità che si ha necessità di controllare manualmente, oltre al riferimento al task interessato su Jira.
 
@@ -1756,11 +1757,10 @@ Per garantire una standardizzazione e una migliore gestione del codice, devono e
 
 + regole di codifica:
 
-  - type safety con Typescript attraverso l'utilizzo di tipi specifici e limitando al massimo l'uso del tipo any;
+  - type safety con Typescript attraverso l'utilizzo di tipi specifici e limitando al massimo l'uso del tipo `any`;
   - notazione camel per nomi di file e variabili;
   - indentazione del codice di tipo Egyptian braces;
-  - limitare al massimo la lunghezza dei metodi;
-  - limitare al massimo la lunghezza delle righe di codice.
+  - limitare il più possibile la lunghezza di metodi e delle singole righe di codice, perseguendo i principi di leggibilità e manutenibilità.
 
 + buone pratiche per la codifica:
 

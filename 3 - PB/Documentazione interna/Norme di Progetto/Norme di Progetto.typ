@@ -1735,7 +1735,8 @@ Considerando la complessità degli elementi grafici e delle interazioni utente c
 
 Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in Pull Request tutte le funzionalità che si ha necessità di controllare manualmente, oltre al riferimento al task interessato su Jira.
 
-Una volta che i singoli moduli sono stati sviluppati e testati mediante i test di unità, si procede al processo di integrazione (@processo_integrazione), durante il quale vengono assemblati e combinati per formare il sistema completo. A questo punto, vengono eseguiti i test di integrazione per verificare che i vari moduli interagiscano correttamente tra loro e che il sistema nel suo complesso funzioni come previsto.
+Una volta che i singoli moduli sono stati sviluppati e testati mediante i test di unità, comincia il processo di integrazione (@processo_integrazione), durante il quale vengono assemblati e combinati per formare il sistema completo.
+A questo punto, vengono eseguiti i test di integrazione per verificare che i vari moduli interagiscano correttamente tra loro e che il sistema nel suo complesso funzioni come previsto.
 
 ==== Implementazione
 
@@ -1743,7 +1744,8 @@ Decisa una strategia di testing per l'elemento di sistema e scritti i relativi t
 
 Per garantire una standardizzazione e una migliore gestione del codice, devono essere adottate le seguenti norme e pratiche di organizzazione:
 
-  + ciascuna categoria di elementi deve essere assegnata a una cartella specifica (@repository-github):
++ ciascuna categoria di elementi deve essere assegnata a una cartella specifica (@repository-github):
+
     - tutti i file correlati ad uno specifico pattern devono essere organizzati all'interno di una cartella dedicata esclusivamente a quel pattern;
     - tutti i file riguardanti l'interfaccia utente devono essere raggruppati in una cartella apposita;
     - se all'interno di una cartella sono presenti più file legati ad una stessa classe del modello, devono essere raggruppati in una sottocartella dedicata.
@@ -1753,13 +1755,16 @@ Per garantire una standardizzazione e una migliore gestione del codice, devono e
 + i nomi di variabili, metodi e funzioni devono essere parlanti, ovvero devono riflettere il loro scopo e la loro funzione all'interno del sistema, così da facilitare la comprensione e manutenzione del codice;
 
 + stile di codifica:
-  - notazione camel per nomi di file e variabili;
-  -
-  -
 
+  - type safety con Typescript attraverso l'utilizzo di tipi specifici e limitando al massimo l'uso del tipo any;
+  - notazione camel per nomi di file e variabili;
+  - indentazione di tipo Egyptian braces;
+  - limitare al massimo la lunghezza dei metodi;
+  - limitare al massimo la lunghezza delle righe di codice.
 
 + buone pratiche per la codifica:
-  - scrittura di test automatici per verificare il comportamento delle singole unità di codice (@processo_verifica);
+
+  - sviluppo di test automatici al fine di verificare il comportamento delle singole unità di codice (@processo_verifica);
   - identificazione e rimozione del codice duplicato per ridurre la complessità e migliorare la manutenibilità. Questo può essere fatto estraendo il codice duplicato in funzioni o classi riutilizzabili.
 
 Prima di sottoporre il software a verifica è necessario assicurarsi che l'elemento di sistema non regredisca le funzionalità tramite l'esecuzione di testing dedicato.

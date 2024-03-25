@@ -41,12 +41,12 @@ Sono state presentate al Proponente le funzionalità dell'MVP sviluppate dall'ul
 - ispezione zone tramite doppio click;
 - movimento della camera mediante tastiera (frecce direzionali o tasti W, A, S, D).
 
-Il Proponente sono risultati soddisfatti delle funzionalità implementate.
+Il Proponente è risultato soddisfatto delle funzionalità implementate.
 
 Sono state inoltre illustrate le funzionalità che verranno implementate entro il prossimo incontro:
 
-- *possibilità di muoversi all'interno dell'ambiente tramite tastiera durante il dragging di un prodotto*: se l'utente vuole spostare un bin in una zona non presente nell'inquadratura, potrà muovere la camera utilizzando la tastiera mentre mantiene il prodotto ancorato al cursore. Il Proponente approvano questa scelta;
-- *collocamento di un prodotto dalla lista dei non collocati all'interno di un bin vuoto*: risulta difficile implementare il _drag and drop_ poiché ci si deve spostare da un elemento di UI all'ambiente Three.js. Il Proponente espongono la possibilità di implementare questa funzionalità all'interno del pannello di visualizzazione dei dettagli di un bin. Aprendo il pannello relativo ad un bin vuoto si può dare la possibilità di aggiungere un prodotto dalla lista tramite un tasto o un elemento simile.
+- *possibilità di muoversi all'interno dell'ambiente tramite tastiera durante il dragging di un prodotto*: se l'utente vuole spostare un bin in una zona non presente nell'inquadratura, potrà muovere la camera utilizzando la tastiera mentre mantiene il prodotto ancorato al cursore. Il Proponente approva questa scelta;
+- *collocamento di un prodotto dalla lista dei non collocati all'interno di un bin vuoto*: risulta difficile implementare il _drag and drop_ poiché ci si deve spostare da un elemento di UI all'ambiente Three.js. Il Proponente espone la possibilità di implementare questa funzionalità all'interno del pannello di visualizzazione dei dettagli di un bin. Aprendo il pannello relativo ad un bin vuoto si può dare la possibilità di aggiungere un prodotto dalla lista tramite un tasto o un elemento simile.
 
 == Presentazione dei pattern per la ricerca
 

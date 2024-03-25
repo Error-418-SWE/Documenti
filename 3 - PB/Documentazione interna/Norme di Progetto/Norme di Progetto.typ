@@ -1754,7 +1754,7 @@ Per garantire una standardizzazione e una migliore gestione del codice, devono e
 
 + i nomi di variabili, metodi e funzioni devono essere parlanti, ovvero devono riflettere il loro scopo e la loro funzione all'interno del sistema, così da facilitare la comprensione e manutenzione del codice;
 
-+ stile di codifica:
++ regole di codifica:
 
   - type safety con Typescript attraverso l'utilizzo di tipi specifici e limitando al massimo l'uso del tipo any;
   - notazione camel per nomi di file e variabili;

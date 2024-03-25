@@ -153,7 +153,7 @@ Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambi
 Una volta che l'ambiente è stato correttamente configurato è possibile cominciare a lavorare con il piano 3D che si presenta come mostrato in in @fine_configurazione_iniziale (in questo caso i piani rappresentati sono entrambi vuoti).
 
 == Movimento nell'ambiente tridimensionale
-Il sistema permette tre diversi tipi di movimento di camera all'interno dell'ambiente: rotazione del piano, zoom-in e zoom-out e lo spostamento della camera sui due assi (panning).
+Il sistema permette quattro diversi tipi di movimento di camera all'interno dell'ambiente: rotazione del piano, zoom-in e zoom-out, lo spostamento della camera sui due assi (panning) e con le frecce direzionali.
 
 === Rotazione della piano
 
@@ -197,7 +197,31 @@ Ruotando la rotella del mouse in avanti è possibile avvicinarsi all'oggetto des
 
 Premendo il tasto destro del mouse e spostando il mouse in una delle quattro direzioni (su, giù, destra e sinistra) otterremo il panning della camera, ovvero lo spostamento sui due assi della camera rispetto al piano come mostrato in figura @camera_panning.
 
+=== Movimento con frecce direzionali
+
+#figure(
+    grid(
+        columns: 3,
+        rows:    (auto, auto),
+        [ #image("./imgs/keyboard_wasd.jpg", width: 45%)],
+        [ #image("./imgs/keyboard_arrow.png", width: 40%)],
+        [ #image("./imgs/keyboard_shift.jpg", width: 40%)],
+    ),caption: [Movimento con le frecce direzionali],
+) <camera_direzionali>
+
+L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle frecce direzionali (o in alternativa i tasti W, A, S, D), che permettono il movimento nella direzione indicata dalla freccia. Con il tasto Shift è possibile aumentare la velocità di spostamento.
+
 == Creazione zona <creazione_zona>
+
+#figure(
+    grid(
+        columns: 3,
+        rows:    (auto, auto),
+        [ #image("./imgs/creazione_zone_1.png", width: 90%)],
+        [ #image("./imgs/creazione_zone_2.png", width: 74%)],
+        [ #image("./imgs/creazione_zone_3.png", width: 80%)],
+    ),caption: [Da sinistra: menù di creazione zona, menù di configurazione dei ripiani ed esempio di zona creata manualmente],
+) <creazione_zona>
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile creare le zone contenenti i bin in modo personalizzato.
 

@@ -35,3 +35,7 @@ Non vengono aggiunte nuove task allo Sprint. Si prosegue, dunque, con le attivit
 
 - possibilità di muoversi all'interno dell'ambiente tramite tastiera durante il dragging di un prodotto;
 - collocamento di un prodotto dalla lista dei non collocati all'interno di un bin vuoto.
+
+= Nota conclusiva
+
+Data la natura dimostrativa del meeting esterno e l'avvicinarsi della conclusione del progetto didattico, non sono emerse ulteriori discussioni. Ogni membro del gruppo è consapevole del lavoro da svolgere e degli obiettivi da raggiungere, concordemente con quanto stabilito e pianificato per lo Sprint corrente.

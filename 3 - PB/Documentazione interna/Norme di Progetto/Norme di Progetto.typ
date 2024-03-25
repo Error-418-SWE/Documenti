@@ -1736,8 +1736,10 @@ Questo vale sia per il codice sviluppato in proprio sia per quello riutilizzato 
 
 Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in Pull Request tutte le funzionalità che si ha necessità di controllare manualmente, oltre al riferimento al task interessato su Jira.
 
-Una volta che i singoli moduli sono stati sviluppati e testati mediante i test di unità, comincia il processo di integrazione (@processo_integrazione), durante il quale vengono assemblati e combinati per formare il sistema completo.
-A questo punto, vengono eseguiti i test di integrazione per verificare che i vari moduli interagiscano correttamente tra loro e che il sistema nel suo complesso funzioni come previsto.
+Dopo aver sviluppato e testato i singoli moduli attraverso i test di unità, inizia il processo di integrazione (@processo_integrazione). Durante questa fase, i moduli vengono combinati e assemblati per formare il sistema completo, dopodiché, vengono eseguiti test di integrazione mirati per assicurare che i vari componenti interagiscano correttamente tra loro e che il sistema nel suo complesso funzioni senza intoppi.
+
+Tuttavia, i test di integrazione vanno oltre la semplice unione delle parti del software. Essi costituiscono una metodologia completa per testare le porzioni di codice che si richiamano reciprocamente. Il loro obiettivo principale è garantire che le interazioni tra i moduli siano gestite in modo accurato e che il flusso dei dati avvenga senza errori, assicurando così il corretto funzionamento del sistema nel suo complesso.
+Un esempio concreto di ciò si riscontra nell'esecuzione dei test di integrazione per le API/Server Action, dove spesso si utilizza il Mocking per simulare il comportamento del database. Questa pratica consente di verificare come le API interagiscono con il database senza dover effettivamente coinvolgere un ambiente di sviluppo reale.
 
 ==== Implementazione
 
@@ -1760,7 +1762,7 @@ Per garantire una standardizzazione e una migliore gestione del codice, devono e
   - type safety con Typescript attraverso l'utilizzo di tipi specifici e limitando al massimo l'uso del tipo `any`;
   - notazione camel per nomi di file e variabili;
   - indentazione del codice di tipo Egyptian braces;
-  - limitare il più possibile la lunghezza di metodi e delle singole righe di codice, perseguendo i principi di leggibilità e manutenibilità.
+  - limitare il più possibile la lunghezza di metodi e delle singole righe di codice, perseguendo i principi di leggibilità e manutenibilità. #TODO //precisare lunghezza massima metodi e righe
 
 + buone pratiche per la codifica:
 

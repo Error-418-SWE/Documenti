@@ -258,11 +258,11 @@ Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà 
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile modificare le zone posizionate cambiandone i parametri dimensionali e di orientamento, potendo modificare o aggiungere le colonne e i livelli desiderati.
 
-È possibile rimuovere una colonna già presente nella zona soggetta a modifiche esclusivamente se contiene solo bin senza prodotti al suo interno e se non sono presenti colonne, con indice superiore a quello della colonna da rimuovere, che contengono almeno un bin occupato.
+Durante un'azione di modifica di una zona è possibile rimuovere una o più colonne già presenti esclusivamente se contengono solo bin senza prodotti al loro interno e se non sono presenti colonne con indice superiore a quello dell'insieme di colonne da rimuovere.
 
 Tale logica concerne anche la rimozione dei livelli.
 
-Per esempio, durante la modifica di una zona formata da tre livelli (contenenti prodotti solo nel secondo) e cinque colonne (contenenti prodotti solo nelle prime tre), sarà possibile rimuovere la quarta o la quinta colonna (se prive di prodotti) ma non le precedenti. Similmente sarà possibile rimuovere il terzo livello (se privo di prodotti) ma non i precedenti.
+Per esempio, durante la modifica di una zona formata da tre livelli (contenenti prodotti solo nel secondo) e cinque colonne (contenenti prodotti solo nelle prime tre), sarà possibile rimuovere la quarta colonna (se priva di prodotti) oppure sia la quarta che la quinta (purché entrambe siano prive di prodotti), ma non le precedenti. Similmente sarà possibile rimuovere il terzo livello (se privo di prodotti) ma non i precedenti.
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
 

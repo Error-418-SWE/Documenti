@@ -1,4 +1,5 @@
 #import "/template.typ": *
+#import table: cell, header
 
 #show: project.with(
  title: "Specifica Tecnica",
@@ -15,28 +16,26 @@
 = Introduzione
 
 == Scopo del documento
+Il presente documento si pone come obiettivo la descrizione dettagliata delle scelte progettuali effettuate, al fine di garantire una comprensione chiara e completa del software "WMS3: Warehouse Management 3D". 
 
-Il presente documento ha lo scopo di illustrare e motivare le scelte architetturali effettuate dal gruppo durante le fasi di progettazione e codifica del prodotto _WMS3_.
+Gli aspetti fondamentali riguardano l'architettura implementativa, analizzazndo tecnologie e design pattern adottati, e l'archietettura di deployment del prodotto.
 
-Questo documento include i diagrammi delle classi per illustrare l'architettura e le funzionalità del prodotto, insieme alle tecnologie selezionate dal team per la realizzazione del progetto.
+Mediante il documento si intende fornire le linee guida per lo sviluppo del software, garantendo la coerenza con i  requisiti individuati nel documento di Analisi dei Requisiti e il loro soddisfacimento.
 
-== Approccio al documento
+== Approccio alla redazione
 
-Il presente documento viene redatto in modo incrementale in modo da assicurare la coerenza delle informazioni al suo interno con gli sviluppi in corso e le esigenze evolutive del progetto.
+Il presente documento viene redatto in modo incrementale assicurando la coerenza delle informazioni al suo interno con gli sviluppi in corso e le esigenze evolutive del progetto.
 
 == Scopo del prodotto
+Il fine ultimo è lo sviluppo di un software, “WMS3: Warehouse Management 3D”, che rivoluziona la gestione di un magazzino, trascendendo la rappresentazione bidimensionale tradizionale a favore di un ambiente tridimensionale più informativo e intuitivo.
 
-Il seguente documento tratta del programma denominato _WMS3: Warehouse Management 3D_, avente come obiettivo la realizzazione di un sistema di gestione di magazzino in tre dimensioni.
+“WMS3” si distingue per le sue funzionalità avanzate, tra cui la creazione personalizzata di un magazzino e delle sue componenti, arricchita da una visualizzazione tridimensionale che offre una comprensione spaziale ottimale grazie alla possibilità di manipolare la vista.
 
-Il prodotto offre le seguenti funzionalità principali:
-- possibilità di creazione di un magazzino e delle sue componenti;
-- visualizzazione tridimensionale del magazzino, con possibilità di muovere la vista;
-- visualizzazione delle informazioni della merce presente in magazzino;
-- caricamento dei dati relativi alle merci da un database SQL;
-- emissione di richieste di spostamento della merce all'interno del magazzino;
-- filtraggio e ricerca delle merci con rappresentazione grafica dei risultati;
-- importazione di planimetrie in formato SVG.
+Il software consente inoltre l'accesso e la visualizzazione delle informazioni relative alla merce e alla disposizione degli scaffali, sfruttando un database SQL per il caricamento di tali dati.
 
+Un altro aspetto fondamentale di “WMS3” è la facilità con cui è possibile emettere richieste di spostamento della merce all'interno del magazzino, rendendo la gestione logistica un processo semplice e intuitivo. Il software integra funzionalità di filtraggio e ricerca delle merci, presentando i risultati in modo grafico per una interpretazione immediata.
+
+Per concludere, “WMS3” supporta la personalizzazione dell'ambiente attraverso l'importazione di planimetrie in formato SVG, permettendo una configurazione avanzata del layout del magazzino.
 
 == Glossario
 #glo_paragrafo
@@ -134,9 +133,9 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 
 = Installazione
 
-== Scaricare il progetto
+== Scaricare il progetto <download>
 
-Ci sono due modalità tramite cui è possibile scaricare il progetto: la prima, e più consigliata, è eseguire il download del progetto in formato zip o tar.gz dalla pagina
+Vengono fornite due modalità di download del prodotto WMS3: la prima (consigliata) è eseguire il download del prodotto in formato zip o tar.gz dalla pagina
 
 #align(center, link("https://github.com/Error-418-SWE/WMS3/releases"))
 
@@ -150,17 +149,20 @@ oppure
 
 == Avviare la web app
 
-Per avviare la web app è necessario spostarsi all'interno della cartella scaricata in precedenza ed eseguire il comando
+Per avviare la web app è necessario collocarsi all'interno della cartella scaricata al passaggio _Scaricare il progetto_ (@download) ed eseguire il comando
 
 #align(center, `docker compose up -d`)
 
-Questo avvierà i container Docker che formano il prodotto, il quale sarà poi visualizzabile e utilizzabile all'indirizzo
+Questo avvierà i container Docker che formano il prodotto:
+- Container PostgreSQL (database);
+- Container Web (web app).
+
+Completato l'avvio dei container, la web app sarà disponibile all'indirizzo
 
 #align(center, link("http://localhost:3000/"))
 
 == Terminare l'esecuzione
-
-Chiudere la finestra browser non terminerà completamente l'esecuzione dell'applicazione, in quanto Docker Compose continuerà ad eseguire in background. La terminazione completa si effettua con il comando
+Per terminare l'esecuzione della web app è necessario collocarsi nella cartella scaricata al passaggio _Scaricare il progetto_ (@download) ed eseguire il comando
 
 #align(center, `docker compose down`)
 
@@ -170,13 +172,95 @@ Chiudere la finestra browser non terminerà completamente l'esecuzione dell'appl
 
 == Introduzione
 
-In questa sezione vengono esposte ed esaminate le tecnologie utilizzate nel processo di sviluppo e testing del prodotto _WMS3_.
+In questa sezione, viene presentata una panoramica completa degli strumenti e delle tecnologie utilizzati per lo sviluppo e l'implementazione del software “WMS3”. Questo include una descrizione dettagliata delle tecnologie, del linguaggio di programmazione adottato, delle librerie e dei framework necessari.
 
-Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end che nel back-end, compresa la gestione del database e l'integrazione con i servizi previsti.
+L'obiettivo principale è assicurare che il software sia sviluppato utilizzando le tecnologie adeguate in termini di efficacia ed efficienza.
 
 == Elenco delle tecnologie
 
-=== Tecnologie per lo sviluppo dell'applicazione
+=== Tecnologie implementative
+
+#figure(
+  table(
+    columns: 3,
+    [*Tecnologia*], [*Descrizione*], [*Versione*],
+    [Typescript],
+    [Superset di JavaScript che aggiunge tipizzazione, offrendo maggiore struttura al codice.],
+    [5.3.3],
+
+    [HTML],
+    [Linguaggio di markup standard utilizzato per la creazione di pagine web.],
+    [5.0],
+
+    [Next.js],
+    [Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web.],
+    [14.1.0],
+    
+    [Node.js],
+    [Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli.],
+    [20.11.0],
+
+    [React],
+    [Libreria JavaScript utilizzata per la creazione di interfacce utente dinamiche e reattive. Si basa sul concetto di "components", ovvero blocchi di codice autonomi che gestiscono la propria logica e rendering.],
+    [18.0.0],
+
+    [Tailwind CSS],
+    [Framework CSS utilizzato per lo sviluppo di interfacce utente web.],
+    [3.4.1],
+
+    [Shadcn-UI],
+    [Libreria di componenti React personalizzati per la creazione di interfacce utente.],
+    [0.8.0],
+
+    cell(
+      colspan: 3,
+      fill: gray.lighten(50%), 
+      [*Tecnologie ambiente 3D*]
+    ),
+
+    [Drei],
+    [Libreria che fornisce componenti e utilità per semplificare lo sviluppo di applicazioni in 3D utilizzando React e Three.js.],
+    [9.97.6],
+
+    [Fiber],
+    [Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React.],
+    [8.15.16],
+
+    [Three.js],
+    [Libreria JavaScript utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL.],
+    [0.161.2],
+
+  ),
+  caption: "Tecnologie utilizzate per lo sviluppo."
+)
+
+=== Tecnologie per la persistenza dei dati
+
+#figure(
+  table(
+    columns: (1fr, 3fr, 1fr),
+    [*Tecnologia*], [*Descrizione*], [*Versione*],
+    [PostgreSQL],
+    [Sistema di gestione di database relazionali.],
+    [16.2],
+  ),
+  caption: "Tecnologie utilizzate per la persistenza dei dati."
+)
+\
+=== Tecnologie per il testing
+
+#figure(
+  table(
+    columns: 3,
+    [*Tecnologia*], [*Descrizione*], [*Versione*],
+    [Jest],
+    [Framework di testing per JavaScript. Utilizzato principalmente per lo unit testing, offre la parallelizzazione dei test e il mocking delle dipendenze.],
+    [29.7.0],
+  ),
+  caption: "Tecnologie utilizzate per il testing."
+)
+
+=== Tecnologie per il deployment
 
 #figure(
   table(
@@ -191,75 +275,18 @@ Ciò avviene prestando attenzione alle tecnologie impiegate sia nel front-end ch
     [Docker-compose],
     [Strumento per la definizione e l'esecuzione di applicazioni multi-container.],
     [2.23.3],
-
-    [Drei],
-    [Libreria che fornisce componenti e utilità per semplificare lo sviluppo di applicazioni in 3D utilizzando React e Three.js.],
-    [9.97.6],
-
-    [Fiber],
-    [Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React.],
-    [8.15.16],
-
-    [HTML],
-    [Linguaggio di markup standard utilizzato per la creazione di pagine web.],
-    [5.0],
-
-    [Next.js],
-    [Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web.],
-    [14.1.0],
-
-    [Node.js],
-    [Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli.],
-    [20.11.0],
-
-    [PostgreSQL],
-    [Sistema di gestione di database relazionali.],
-    [16.2],
-
-    [React],
-    [Libreria JavaScript utilizzata per la creazione di interfacce utente dinamiche e reattive. Si basa sul concetto di "components", ovvero blocchi di codice autonomi che gestiscono la propria logica e rendering.],
-    [18.0.0],
-
-    [Tailwind CSS],
-    [Framework CSS utilizzato per lo sviluppo di interfacce utente web.],
-    [3.4.1],
-
-    [Three.js],
-    [Libreria JavaScript utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL.],
-    [0.161.2],
-
-    [Typescript],
-    [Superset di JavaScript che aggiunge tipizzazione, offrendo maggiore struttura al codice.],
-    [5.3.3],
-
   ),
-  caption: "Tecnologie utilizzate per lo sviluppo."
-)
-
-
-=== Tecnologie per il testing
-
-#figure(
-  table(
-    columns: 3,
-    [*Tecnologia*], [*Descrizione*], [*Versione*],
-    [Jest],
-    [Framework di testing per JavaScript. Utilizzato principalmente per lo unit testing, offre la parallelizzazione dei test e il mocking delle dipendenze.],
-    [29.7.0],
-  ),
-  caption: "Tecnologie utilizzate per il testing."
+  caption: "Tecnologie utilizzate per il deploy."
 )
 
 #pagebreak()
 
-= Architettura del prodotto
+= Architettura di sistema
 
-== Descrizione generale
-
-== Struttura
+== Architettura di implementazione 
 Il software WMS3 al fine di perseguire manutenibilità, flessibilità e scalabilità, adotta ed implementa un'architettura "layered", nota anche come "Multi-tier architecture".
 
-I layer definiti sono "closed", ovvero una richiesta si sposta esclusivamente da un livello superiore a quello immediatamente sottostante.
+I layer definiti sono "closed", ovvero una richiesta si sposta esclusivamente da un livello superiore a quello immediatamente adiacente.
 
 Tale architettura permette di individuare e suddividere la logica del software in 3 principali aspetti, definiti tier (separation of concerns), quali:
 
@@ -269,6 +296,20 @@ Tale architettura permette di individuare e suddividere la logica del software i
 
 - *Presentation layer*: permette di trasformare i dati elaborati dal Business layer e le informazioni in una forma comprensibile e accessibile agli utenti finali. Questo include la creazione di interfacce utente grafiche e visualizzazioni 3D degli elementi di interesse.
 
+#figure(
+  image("./imgs/layeredArchitecture.png", width: 100%),
+  caption: [
+    Layered architecture.
+  ],
+)
+
+=== Vantaggi
+- Ogni livello dell'archiettetura crea un livello di astrazione che permette di perseguire _separation of concerns_ e di rendere il software più manutenibile e scalabile;
+- Semplicità di implementazione in termini di costi e tempo;
+- Facilità di test e debug;
+
+=== Svantaggi
+- Cambiamenti consistenti possono richiedere modifiche in layer diversi.
 
 == Design pattern utilizzati
 

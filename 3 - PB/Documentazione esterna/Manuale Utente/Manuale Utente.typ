@@ -221,7 +221,7 @@ L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle f
         [ #image("./imgs/creazione_zone_2.png", width: 74%)],
         [ #image("./imgs/creazione_zone_3.png", width: 80%)],
     ),caption: [Da sinistra: menù di creazione zona, menù di configurazione dei ripiani ed esempio di zona creata manualmente],
-) <creazione_zona>
+)
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile creare le zone contenenti i bin in modo personalizzato.
 

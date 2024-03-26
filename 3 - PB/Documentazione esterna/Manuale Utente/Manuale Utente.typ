@@ -289,11 +289,9 @@ Successivamente all'inserimento dei dati rappresentativi della zona modificata, 
 
 === Spostamento tramite drag and drop
 
-Lo spostamento tra due posizioni di un prodotto avviene tramite drag and drop.
+Lo spostamento di un prodotto da un bin a un altro avviene tramite _drag and drop_. Posizionando il puntatore del mouse sul prodotto che si desidera spostare e premendo il tasto sinistro possiamo "prendere" il prodotto. Tenendo premuto il tasto sinistro è possibile spostare il prodotto in prossimità della posizione in cui vogliamo posizionarlo e quindi, rilasciando il tasto sinistro, effettuare lo spostamento. È possibile spostare prodotti solamente all'interno di bin vuoti.
 
-Posizionando il puntatore del mouse sul prodotto che si desidera spostare e premendo il tasto sinistro possiamo "prendere" il prodotto, tenendo premuto il tasto sinistro spostiamo il prodotto in prossimità della posizione in cui vogliamo posizionarlo e quindi, rilasciando il tasto sinistro, effettuiamo lo spostamento.
-
-Una notifica ci avviserà della possibilità di effettuare lo spostamento (controllato tramite un sistema proprietario, diverso da WMS3), in caso di esito positivo la posizione di partenza e quella di arrivo vengono evidenziati di giallo e verde rispettivamente come evidenziato in @spostamento
+In basso a destra nello schermo, una notifica avviserà della possibilità o meno di effettuare lo spostamento. In caso di esito positivo, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde, come rappresentato in @spostamento
 
 === Spostamento prodotto non collocato
 

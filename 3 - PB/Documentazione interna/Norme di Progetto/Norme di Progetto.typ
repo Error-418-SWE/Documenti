@@ -796,7 +796,7 @@ Come risultato dell'implementazione riuscita del processo di Gestione della Conf
 - le release dei documenti e del software sono controllate e approvate.
 
 === Attività
-==== Versionamento
+==== Versionamento <versionamento>
 ===== Generalità
 Il versionamento è un processo che permette di tenere traccia delle modifiche effettuate su un prodotto software o documentale. Per ogni modifica viene creata una nuova versione del prodotto, che viene identificata da un numero di versione. Il numero di versione è composto da tre cifre separate da un punto, e segue la convenzione seguente:
 #align(center, `X.Y.Z`)
@@ -823,7 +823,7 @@ L'aggiornamento del numero di versione per la documentazione deve attenersi alle
 
 Il processo di aggiornamento della versione è reso automatico, come stabilito nella sezione dedicata a GitHub Actions (@automazioni).
 
-====== Software <versionamento>
+====== Software <versionamento_software>
 
 L'aggiornamento del numero di versione per il software deve attenersi alle seguenti regole:
 
@@ -1783,51 +1783,75 @@ Come risultato della corretta implementazione del processo di integrazione:
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.9_
 
 === Scopo
-Il processo di verifica ha lo scopo di dimostrare la correttezza e l'adempimento di tutti i requisiti di un elemento di sistema, definiti in #adr_v, rispettando quanto definito nel #pdq_v.
+Il processo di verifica ha lo scopo di dimostrare la correttezza di una parte del sistema e l'adempimento di tutti i requisiti che la riguardano, definiti nel documento #adr_v, rispettando le metriche di qualità del prodotto definite nel #pdq_v.
 Nel caso in cui vengano identificati errori o mancanze, vengono fornite le informazioni necessarie a determinare la risoluzione delle anomalie riscontrate.
 
-Tali operazioni sono possibili mediante molteplici test automatici eseguiti in parte durante il processo di integrazione #TODO.
+Tali operazioni sono possibili mediante test automatici eseguiti, in parte, durante il processo di integrazione (@processo_integrazione), e test manuali eseguiti dai componenti del gruppo.
 Così facendo si garantisce l'individuazione di eventuali problemi tempestivamente, evitandone un accumulo indesiderato.
 
 === Risultati
 Come risultato della corretta applicazione del processo di verifica, per ogni elemento:
 - viene effettuata una verifica manuale da parte di uno o più Verificatori;
-- nel caso in cui il soggetto della verifica sia un elemento software:
-  - vengono eseguiti i test automatici di unità;
-  - vengono eseguiti i test automatici di regressione;
-  - vengono eseguiti i test automatici di integrazione;
+- vengono eseguiti i test automatici di unità e di integrazione;
 - vengono rilevati eventuali problemi legati al rispetto della correttezza, dei requisiti o dell'architettura, in funzione di quanto definito;
 - in caso di errori vengono riportati i dati che forniscono informazioni per le azioni correttive;
 - in caso di mancanza di anomalie viene fornita evidenza che il sistema verificato garantisce piena conformità.
 
 
 === Attività
+
 ==== Esecuzione
 
-La prima attività di verifica avviene tramite delle GitHub Actions eseguite automaticamente alla pubblicazione di una pull request e alla sua approvazione da parte di un Verificatore.
-Esse eseguono dei test statici sulla correttezza dell'elemento analizzato, fornendo risultati sui singoli esiti dei test.
+===== Verifiche preliminari
 
-I Verificatori approvano le modifiche successivamente ad un'analisi manuale che garantisca la conformità con le norme stabilite.
+La prima attività di verifica avviene durante l'implementazione del software. In questa attività devono essere sviluppati, dove possibile, i test di unità su cui si baserà l'elemento software da implementare, sia esso un pattern o una classe, seguendo così il principio del _Test Driven Development_. I test qui sviluppati rientrano nei test automatici adottati da #err418, e devono essere inseriti all'interno di una cartella dedicata nella repository WMS3 (@repository-github), denominata `__test__`.
 
-Successivamente vengono eseguite automaticamente GitHub Actions atte allo svolgimento di ulteriori test dipendenti dalla natura delle modifiche soggette a verifica.
-Se queste ultime comprendono elementi software, vengono eseguiti test di unità e regressione.
-Inoltre a seguito dell'integrazione del codice, vengono eseguiti test di integrazione.
+All'interno della cartella `__test__` dovranno essere implementati anche i test di integrazione, i quali dovranno verificare la corretta interazione tra tutte le parti di sistema. Questo tipo di test dovrà essere implementato, dove necessario, con l'utilizzo di mock.
 
-La GitHub Action designata all'esecuzione dei test è codificata nel file _test_nodejs.yml_.
+Tutti i test automatici dovranno essere implementati utilizzando il framework di testing Jest, e dovranno essere eseguibili tramite il comando
 
-L'utilizzo di Docker permette l'esecuzione di test dinamici in un ambiente comune per gli sviluppatori, garantendo la ripetibilità dei test indipendentemente dall'hardware che li esegue.
+#align(center, [
+  `npm test`
+
+  oppure
+
+  `npm run test`]
+)
+
+
+Come citato nel processo di implementazione (@processo_implementazione), talvolta non è possibile implementare test automatici poiché risulterebbe troppo complicato e oneroso. Questo avviene quando il soggetto dell'implementazione è:
+- una componente grafica appartenente alla UI o all'ambiente 3D;
+- una determinata interazione tra utente e sistema che risulta difficile da automatizzare.
+
+In questi casi il Programmatore dovrà testare manualmente ciò che sta implementando, per assicurare che l'elemento venga rappresentato correttamente, o che le interazioni con l'utente non presentino problemi.
+
+===== Verifiche in Pull Request
+
+Tutti i test di unità e di integrazione implementati dovranno essere eseguiti automaticamente dalle GitHub Actions (@automazioni) ogni volta che una Pull Request (@controllo_release) viene aperta o aggiornata nel suo contenuto. L'automazione designata all'esecuzione dei test dovrà essere codificata nel file _test_nodejs.yml_, situato nella repository WMS3 al percorso `WMS3/.github/workflows/`.
+
+Successivamente all'esecuzione dei test automatici, il Verificatore potrà controllare il contenuto della Pull Request. In particolare dovrà fare delle verifiche manuali atte ad accertare che:
+
+- il codice scritto rispetti quanto definito nel processo di implementazione (@processo_implementazione);
+- il codice esegua senza problemi;
+- l'elemento implementato nella Pull Request sia visualizzato correttamente all'interno del prodotto, e assolva tutte le funzionalità ad esso richieste dalla #st_v e dall'#adr_v\.
 
 ==== Gestione dei risultati
-I risultati ottenuti sono visualizzati su GitHub nella sezione relativa alle automazioni avvenute nella pull request dell'elemento verificato.
 
-Se a seguito di tutti i test non emergono anomalie o errori, la verifica è avvenuta correttamente e viene confermata la conformità degli elementi analizzati.
-Possono quindi proseguire i processi che comprendono le pratiche di Continuous Integration e Continuous Delivery e la pull request GitHub viene chiusa conseguentemente ad una funzione di merge attuata da un Verificatore.
+I risultati ottenuti dai test sono visualizzati su GitHub:
 
-Contrariamente, nel caso in cui almeno un'attività di verifica faccia emergere problematiche, le modifiche non possono essere integrate nel sistema e vengono notificati gli autori degli elementi di interesse.
-Questi ultimi dovranno agire di conseguenza risolvendo i problemi emersi o pianificandone la risoluzione.
+- all'interno della Pull Request, sotto forma di commenti del Verificatore, per i test manuali;
+- nella sezione relativa alle automazioni eseguite nella Pull Request, per i test automatici.
 
-Per avere traccia degli elementi verificati che costituiscono il prodotto, su GitHub è possibile visualizzare l'insieme delle pull request approvate ed integrate mediante merge.
+Se a seguito di tutti i test non emergono anomalie o errori, la Pull Request dovrà essere accettata e chiusa dal Verificatore, il quale avvierà il merge all'interno del branch `dev`. Al momento della chiusura dovranno essere eseguite altre automazioni riguardanti il versionamento (@versionamento_software). È possibile visualizzare l'insieme delle Pull Request approvate ed integrate mediante merge all'interno di GitHub.
 
+Nel caso in cui almeno un'attività di verifica faccia emergere problematiche, le modifiche non possono essere integrate nel branch principale. La segnalazione e gestione degli errori dovrà avvenire nel seguente modo:
+
+- *errori nei test automatici*: vengono segnalati dalle GitHub Actions. È possibile visualizzare il log dell'esecuzione dell'automazione nella sezione Actions della repository. Il Programmatore dovrà quindi controllare il log ed effettuare le correzioni necessarie a risolvere l'errore che si è presentato;
+- *errori nei test manuali*: vengono segnalati dal Verificatore tramite commenti nella Pull Request. Il Verificatore dovrà inserire dei commenti nei quali dovrà descrivere nel modo più dettagliato possibile gli errori riscontrati, evitando così ambiguità e incomprensioni. Il commento dovrà essere inserito nel file relativo all'elemento o alla funzionalità che presenta errori, e, se possibile, nella riga dove si è individuato l'errore.
+
+Il Programmatore dovrà quindi individuare la causa di questi errori e risolverli nel minor tempo possibile, così da evitare situazioni di stallo nello sviluppo del software.
+
+Tutti i bug riscontrati dovranno essere tracciati e raccolti all'interno di Jira, in modo da creare una lista che sarà consegnata al Proponente a termine del progetto.
 
 == Processo di Transizione <processo_transizione>
 

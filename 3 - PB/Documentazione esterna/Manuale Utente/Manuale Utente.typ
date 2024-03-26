@@ -211,7 +211,7 @@ Premendo il tasto destro del mouse e spostando il mouse in una delle quattro dir
 
 L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle frecce direzionali (o in alternativa i tasti W, A, S, D), che permettono il movimento nella direzione indicata dalla freccia. Con il tasto Shift è possibile aumentare la velocità di spostamento.
 
-== Creazione zona <creazione_zona>
+== Creazione zona
 
 #figure(
     grid(
@@ -276,6 +276,31 @@ I parametri modificabili sono gli stessi che vengono richiesti durante la creazi
 
 Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla Zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
 
+== Richiesta spostamento prodotto
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/spostamento_drag_and_drop.png", width: 80%)],
+        [ #image("./imgs/spostamento_non_collocato.png", width: 80%)],
+    ),caption: [Spostamento prodotti con drag and drop (sinistra), menù spostamento prodotti non collocati (destra)],
+) <spostamento>
+
+=== Spostamento tramite drag and drop
+
+Lo spostamento di un prodotto da un bin a un altro avviene tramite _drag and drop_. Posizionando il puntatore del mouse sul prodotto che si desidera spostare e premendo il tasto sinistro possiamo "prendere" il prodotto. Tenendo premuto il tasto sinistro è possibile spostare il prodotto in prossimità della posizione in cui vogliamo posizionarlo e quindi, rilasciando il tasto sinistro, effettuare lo spostamento. È possibile spostare prodotti solamente all'interno di bin vuoti.
+
+In basso a destra nello schermo, una notifica avviserà della possibilità o meno di effettuare lo spostamento. In caso di esito positivo, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde, come rappresentato in @spostamento
+
+=== Spostamento prodotto non collocato
+
+I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti*, possono essere posizionati nel seguente modo:
+- ricerco la posizione in cui voglio collocare il prodotto nell'ambiente (deve essere vuota);
+- doppio click sulla posizione desiderata;
+- nel menù che apparirà (@spostamento), premere il pulsante *Seleziona*;
+- selezionare il prodotto desiderato e premere *Conferma*;
+- il prodotto risulta collocato.
 
 == Impostazioni
 

@@ -452,7 +452,7 @@ Il gruppo #err418 pone i seguenti principi di qualità:
       [9126 1:2001], [#pdq],
     ), caption: [Tracciamento ISO-documenti])
     In particolare, per ogni processo interno al presente documento viene specificato il grado di conformità allo standard ISO/IEC/IEEE 12207:2017 all'interno di una sezione dedicata (@tracciamento_paragrafi).
-+ il codice prodotto deve seguire degli standard interni, definiti nel presente documento (#TODO);
++ il codice prodotto deve seguire degli standard interni, definiti nel presente documento (@processo_implementazione);
 + il codice prodotto dal gruppo deve rispettare le metriche di qualità identificate nel #pdq;
 + il prodotto software deve soddisfare i bisogni e le richieste del Proponente, identificate nel #adr e catalogate in: obbligatorie, desiderabili e opzionali.
 
@@ -464,7 +464,7 @@ La valutazione della qualità dei prodotti di progetto, dell'andamento del grupp
   - verifica dell'aderenza agli standard interni ed esterni;
   - verifica della chiarezza e comprensibilità della documentazione;
   - verifica della presenza di errori ortografici o di scrittura o esecuzione del codice.
-- testing del codice, come descritto nel presente documento (#TODO);
+- testing del codice, come descritto nel presente documento (@processo_verifica);
 - revisioni complessive dei prodotti del progetto:
   - effettuate in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro.
 - utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana);
@@ -1650,7 +1650,7 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
 
 Il processo di definizione dell'architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
 
-Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (#TODO).
+Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (@processo_design).
 
 === Preparazione e requisiti <preparazione_architettura>
 

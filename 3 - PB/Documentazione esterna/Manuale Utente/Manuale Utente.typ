@@ -276,6 +276,33 @@ I parametri modificabili sono gli stessi che vengono richiesti durante la creazi
 
 Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla Zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
 
+== Richiesta spostamento prodotto
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/spostamento_drag_and_drop.png", width: 80%)],
+        [ #image("./imgs/spostamento_non_collocato.png", width: 80%)],
+    ),caption: [Spostamento prodotti con drag and drop (sinistra), menù spostamento prodotti non collocati (destra)],
+) <spostamento>
+
+=== Spostamento tramite drag and drop
+
+Lo spostamento tra due posizioni di un prodotto avviene tramite drag and drop.
+
+Posizionando il puntatore del mouse sul prodotto che si desidera spostare e premendo il tasto sinistro possiamo "prendere" il prodotto, tenendo premuto il tasto sinistro spostiamo il prodotto in prossimità della posizione in cui vogliamo posizionarlo e quindi, rilasciando il tasto sinistro, effettuiamo lo spostamento.
+
+Una notifica ci avviserà della possibilità di effettuare lo spostamento (controllato tramite un sistema proprietario, diverso da WMS3), in caso di esito positivo la posizione di partenza e quella di arrivo vengono evidenziati di giallo e verde rispettivamente come evidenziato in @spostamento
+
+=== Spostamento prodotto non collocato
+
+I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti*, possono essere posizionati nel seguente modo:
+- ricerco la posizione in cui voglio collocare il prodotto nell'ambiente (deve essere vuota);
+- doppio click sulla posizione desiderata;
+- nel menù che apparirà (@spostamento), premere il pulsante *Seleziona*;
+- selezionare il prodotto desiderato e premere *Conferma*;
+- il prodotto risulta collocato.
 
 == Impostazioni
 

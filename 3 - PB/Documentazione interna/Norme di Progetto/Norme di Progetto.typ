@@ -33,7 +33,7 @@ L'utente avrà la possibilità di cercare specifici prodotti all'interno del mag
   #lastVisitedOn(25,02,2024)
 
 - Documento #pdp_v, Sezione 2 "Analisi dei Rischi": \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20interna/Piano%20di%20Progetto_v" + pdp_vo + ".pdf")_
+  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20esterna/Piano%20di%20Progetto_v" + pdp_vo + ".pdf")_
   #lastVisitedOn(21,02,2024)
 
 === Riferimenti normativi <riferimenti-normativi>
@@ -823,7 +823,7 @@ L'aggiornamento del numero di versione per la documentazione deve attenersi alle
 
 Il processo di aggiornamento della versione è reso automatico, come stabilito nella sezione dedicata a GitHub Actions (@automazioni).
 
-====== Software
+====== Software <versionamento>
 
 L'aggiornamento del numero di versione per il software deve attenersi alle seguenti regole:
 
@@ -1830,50 +1830,72 @@ Per avere traccia degli elementi verificati che costituiscono il prodotto, su Gi
 
 
 == Processo di Transizione <processo_transizione>
-Lo scopo del processo di Transizione è di stabilire la capacità di un sistema di fornire servizi specificati dalle richieste del Proponente all'interno di un'ambiente operativo differente da quello di sviluppo.
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.10_
+
+=== Scopo
+
+Il processo di Transizione ha lo scopo di stabilire la capacità del sistema di fornire i servizi specificati dalle richieste del Proponente (descritti in #adr_v ), all'interno di un ambiente operativo.
+
+Coinvolge l'installazione del sistema verificato al fine di consentire l'operatività in ambienti diversi, come quelli di sviluppo, test o rilascio in una diversa infrastruttura.
+
 
 === Risultati
-Come risultato della corretta applicazione del processo di transizione, otteniamo che:
 
-- il #man viene redatto;
-- gli utenti vengono supportati e formati all'utilizzo del sistema;
-- viene rilasciata una versione del sistema;
-- viene effettuato il deploy su Azure.
+I risultati della corretta applicazione del processo di transizione sono:
+
+- avviene il rilascio di una versione del sistema;
+- viene effettuato il deploy del software su Azure;
+- viene garantito il funzionamento dei servizi e l'operatività del sistema;
+- vengono identificati i risultati e le anomalie della transizione;
+- viene stabilita la tracciabilità degli elementi trasferiti;
+- viene redatto del documento #man\;
+- viene fornito supporto e formazione degli utenti all'utilizzo del sistema.
 
 === Attività
-Questo processo è composto da varie attività indipendenti e di diversa natura.
 
-Le seguenti attività non sono quindi necessariamente consequenziali, ma la loro corretta applicazione porta al conseguimento dei risultati precedentemente descritti.
+==== Rilascio dell'ultima versione di sistema
 
-==== Rilascio dell'ultima versione del sistema
-Il repository GitHub dedicata a WMS3 si compone di un branch `dev` necessario per gli sviluppatori, in quanto fonte da cui vengono creati i feature branch necessari al conseguimento degli obiettivi di una task e destinazione dei merge a seguito delle successive pull request. Viene quindi definito un altro branch `release`, orfano e luogo in cui vengono effettuate i rilasci del sistema.
+Il repository GitHub dedicato a WMS3 è provvisto di un branch principale `dev`, il quale rappresenta la fonte da cui vengono creati i feature branch.
+Questi ultimi sono necessari al conseguimento degli obiettivi di un task e oggetto dei merge a seguito delle successive pull request.
 
-I rilasci avvengono solo quanto il sistema viene ritenuto sufficientemente maturo e pronto per l'utilizzo o quando vengono:
-- aggiunte modifiche sostanziali al sistema rispetto all'ultima versione rilasciata;
-- risolti bug critici;
-- avanzamento del sistema rilasciato ad una versione più aggiornata.
-I rilasci del prodotto avvengono sempre dal branch di partenza `dev` a quello di destinazione `release`, in quanto solo il codice contenuto in `dev` soddisfa i requisiti di qualità imposti dal gruppo e permette la corretta esecuzione dei processi di implementazione (@processo_implementazione), integrazione (@processo_integrazione) e verifica (@processo_verifica).
+I rilasci del prodotto devono avvenire sempre dal branch di partenza `dev`, in quanto il codice contenuto in esso garantisce il soddisfacimento dei requisiti di qualità imposti dal gruppo.
 
-Ad ogni release del sistema devono essere rilasciati anche i documenti #man e #st aggiornati che documentano le novità apportate.
+Ogni release avvenuta con successo, in conformità con il superamento dei test e le procedure descritte nei processi di implementazione (@processo_implementazione), integrazione (@processo_integrazione) e verifica (@processo_verifica), deve generare una release specifica tracciata e consultabile (@tracciabilità_risultati_release) con relativo numero di versione aggiornato (@versionamento).
 
-==== Redazione del documento #man
-Al fine di istruire gli utenti del sistema al suo corretto utilizzo, il gruppo mette a disposizione il documento #man.
-
-In questo documento viene riportato in particolare:
-- installazione locale del sistema;
-- best practice, descrizione dei servizi offerti dal sistema;
-- guida all'utilizzo delle interfacce per la creazione, modifica e popolamento dell'ambiente 3D.
-
-Il #man viene redatto seguendo i principi di redazione dei documenti descritti nel paragrafo riguardante il processo di gestione delle informazioni (@processo_gestione_informazioni).
+Ad ogni modifica del sistema devono venire aggiornati anche i documenti #man e #st, al fine di includere la documentazione relativa alle modifiche apportate.
 
 ==== Deploy su Azure
-Il gruppo ha definito una GitHub Action chiamata _Deploy to VPS_ (i cui job sono descritti nel file _deploy.yml_) il cui compito è quello di effettuare il deploy del sistema aggiornato all'ultima versione rilasciata sul branch `dev` all'interno della macchina virtuale di Azure.
 
-Questo permette di usufruire del sistema senza la necessità di scaricare le ultime modifiche in locale e ricreare le immagini Docker.
+Il gruppo ha definito una GitHub Action chiamata _Deploy to VPS_ (i cui job sono descritti nel file _deploy.yml_) la quale effettua il deploy del sistema, aggiornato all'ultima versione rilasciata sul branch `dev`, all'interno della macchina virtuale di Azure.
 
-/* DA AGGIUNGERE IN CASO DECIDIAMO DI FARLI, AGGIORNARE ANCHE IL RESTO DEI PARAGRAFI
-Il deploy su Azure agevola anche l'esecuzione dei testing end-to-end.
-*/
+Questo permette la fruizione del sistema senza la necessità di dover scaricare le ultime modifiche sul proprio dispositivo e senza dover ricreare le relative immagini Docker.
+
+
+==== Redazione del documento #man
+
+Al fine di fornire agli utenti di WMS3 una guida documentale atta ad indicare il suo corretto utilizzo, il gruppo deve mettere a disposizione il documento #man.
+
+In esso deve venire riportato:
+
+- guida all'avvio e configurazione dell'ambiente;
+
+- descrizione delle funzionalità offerte dal sistema;
+
+- guida dettagliata all'utilizzo delle funzionalità offerte.
+
+
+Il #man deve venire redatto seguendo i principi di redazione dei documenti descritti nel paragrafo riguardante il processo di gestione delle informazioni (@processo_gestione_informazioni).
+
+
+==== Tracciabilità risultati <tracciabilità_risultati_release>
+
+I risultati relativi a controlli e test automatici avvenuti in fase di release sono visualizzati su GitHub nella sezione relativa alle automazioni avvenute nella pull request dell'elemento in oggetto.
+
+Se da essi non emergono anomalie o errori, la transizione è avvenuta correttamente e viene confermata la conformità degli elementi analizzati.
+
+Per avere traccia degli elementi verificati che costituiscono le singole release del prodotto, su GitHub è possibile visualizzare l'insieme delle release e lo storico delle corrispondenti pull request approvate ed integrate.
+
 
 == Processo di Validazione <processo_validazione>
 

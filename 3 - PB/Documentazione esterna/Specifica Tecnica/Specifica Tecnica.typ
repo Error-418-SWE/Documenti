@@ -250,8 +250,7 @@ JSON (JavaScript Object Notation) è un formato di scambio dati leggero e indipe
 - Risultato delle interrogazioni al database;
 - Risultato delle chiamate API.
 
-== Tecnologie per la persistenza dei dati
-
+\
 === SQL
 SQL (Structured Query Language) è un linguaggio di programmazione utilizzato per la gestione dei database relazionali. Viene utilizzato per la creazione, la modifica e la gestione dei dati all'interno del database.
 Nel contesto del capitolato, le operazioni svolte sul database sono esclusivamente di tipo interrogativo.
@@ -260,6 +259,18 @@ Nel contesto del capitolato, le operazioni svolte sul database sono esclusivamen
 - Interrogazione del database relazionale.
 
 \
+== Tencologie per la validazione dei dati
+=== Zod
+Zod è una libreria di validazione dei dati per TypeScript. Viene utilizzata per definire schemi di validazione dei dati e garantire che i dati ricevuti siano conformi a tali schemi.
+
+*Versione: * 3.22.4.
+
+*Contesto di utilizzo: *
+- Validazione dei dati inseriti dall'utente.
+
+\
+== Tecnologie per la persistenza dei dati
+
 === PostgreSQL
 PostgreSQL è un sistema di gestione di database relazionali. Viene utilizzato per la memorizzazione e la gestione dei dati relativi al software “WMS3”.
 

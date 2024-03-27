@@ -16,7 +16,7 @@
 = Introduzione
 
 == Scopo del documento
-Il presente documento si pone come obiettivo la descrizione dettagliata delle scelte progettuali effettuate, al fine di garantire una comprensione chiara e completa del software "WMS3: Warehouse Management 3D". 
+Il presente documento si pone come obiettivo la descrizione dettagliata delle scelte progettuali effettuate, al fine di garantire una comprensione chiara e completa del software "WMS3: Warehouse Management 3D".
 
 Gli aspetti fondamentali riguardano l'architettura implementativa, analizzazndo tecnologie e design pattern adottati, e l'archietettura di deployment del prodotto.
 
@@ -174,116 +174,151 @@ Per terminare l'esecuzione della web app è necessario collocarsi nella cartella
 
 In questa sezione, viene presentata una panoramica completa degli strumenti e delle tecnologie utilizzati per lo sviluppo e l'implementazione del software “WMS3”. Questo include una descrizione dettagliata delle tecnologie, del linguaggio di programmazione adottato, delle librerie e dei framework necessari.
 
-L'obiettivo principale è assicurare che il software sia sviluppato utilizzando le tecnologie adeguate in termini di efficacia ed efficienza.
+L'obiettivo principale è assicurare che il software sia sviluppato utilizzando le tecnologie adeguate in termini di efficacia ed efficienza e che soddisfi i requisiti individuati nel documento #adr.
 
-== Elenco delle tecnologie
+== Linguaggi utilizzati
 
-=== Tecnologie implementative
+=== HTML
+HTML (HyperText Markup Language) è il linguaggio di markup standard utilizzato per la creazione di pagine web. Viene utilizzato per definire la struttura e il contenuto delle pagine web.
 
-#figure(
-  table(
-    columns: 3,
-    [*Tecnologia*], [*Descrizione*], [*Versione*],
-    [Typescript],
-    [Superset di JavaScript che aggiunge tipizzazione, offrendo maggiore struttura al codice.],
-    [5.3.3],
+*Versione: * 5.0.
 
-    [HTML],
-    [Linguaggio di markup standard utilizzato per la creazione di pagine web.],
-    [5.0],
+*Contesto di utilizzo: *
+- Definizione struttura componenti web;
 
-    [Next.js],
-    [Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web.],
-    [14.1.0],
-    
-    [Node.js],
-    [Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli.],
-    [20.11.0],
-
-    [React],
-    [Libreria JavaScript utilizzata per la creazione di interfacce utente dinamiche e reattive. Si basa sul concetto di "components", ovvero blocchi di codice autonomi che gestiscono la propria logica e rendering.],
-    [18.0.0],
-
-    [Tailwind CSS],
-    [Framework CSS utilizzato per lo sviluppo di interfacce utente web.],
-    [3.4.1],
-
-    [Shadcn-UI],
-    [Libreria di componenti React personalizzati per la creazione di interfacce utente.],
-    [0.8.0],
-
-    cell(
-      colspan: 3,
-      fill: gray.lighten(50%), 
-      [*Tecnologie ambiente 3D*]
-    ),
-
-    [Drei],
-    [Libreria che fornisce componenti e utilità per semplificare lo sviluppo di applicazioni in 3D utilizzando React e Three.js.],
-    [9.97.6],
-
-    [Fiber],
-    [Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React.],
-    [8.15.16],
-
-    [Three.js],
-    [Libreria JavaScript utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL.],
-    [0.161.2],
-
-  ),
-  caption: "Tecnologie utilizzate per lo sviluppo."
-)
-
-=== Tecnologie per la persistenza dei dati
-
-#figure(
-  table(
-    columns: (1fr, 3fr, 1fr),
-    [*Tecnologia*], [*Descrizione*], [*Versione*],
-    [PostgreSQL],
-    [Sistema di gestione di database relazionali.],
-    [16.2],
-  ),
-  caption: "Tecnologie utilizzate per la persistenza dei dati."
-)
 \
-=== Tecnologie per il testing
+=== CSS
+CSS (Cascading Style Sheets) è un linguaggio utilizzato per definire lo stile e la presentazione delle pagine web. Viene utilizzato per definire la formattazione, il layout e il design delle pagine web.
 
-#figure(
-  table(
-    columns: 3,
-    [*Tecnologia*], [*Descrizione*], [*Versione*],
-    [Jest],
-    [Framework di testing per JavaScript. Utilizzato principalmente per lo unit testing, offre la parallelizzazione dei test e il mocking delle dipendenze.],
-    [29.7.0],
-  ),
-  caption: "Tecnologie utilizzate per il testing."
-)
+*Versione: * 3.0.
 
-=== Tecnologie per il deployment
+*Contesto di utilizzo: *
+- Definizione stile e layout componenti web;
 
-#figure(
-  table(
-    columns: 3,
-    [*Tecnologia*], [*Descrizione*], [*Versione*],
+*Librerie e framework*
+- *Tailwind CSS*
+  - Framework CSS utilizzato per lo sviluppo di interfacce utente web. Offre una serie di classi predefinite per la definizione dello stile degli elementi.
+  - *Versione: * 3.4.1.
+  - *Link: * [https://tailwindcss.com/]
 
-    [Docker],
-    [Software utilizzato per il processo di deployment di applicazioni software. Permette di
-    eseguire processi informatici in ambienti isolati chiamati container.],
-    [24.0.7],
+\
+=== Typescript
+Typescript è un superset di JavaScript che aggiunge tipizzazione statica al linguaggio, offrendo maggiore struttura al codice. Questo permette di rilevare errori di programmazione in fase di sviluppo, riducendo il rischio di bug e semplificando la manutenzione del codice.
 
-    [Docker-compose],
-    [Strumento per la definizione e l'esecuzione di applicazioni multi-container.],
-    [2.23.3],
-  ),
-  caption: "Tecnologie utilizzate per il deploy."
-)
+*Versione: * 5.3.3.
+
+*Contesto di utilizzo: *
+- Definizione tipi e interfacce per i dati;
+- Implementazione dei componenti react;
+- Codifica lato front-end e back-end;
+- Implementazione ambiente 3D.
+
+*Librerie e framework*
+- *Next.js*
+  - Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web. Offre funzionalità avanzate come il rendering lato server, la generazione di pagine statiche e la gestione delle route.
+  - *Versione: * 14.1.0.
+  - *Link: * [https://nextjs.org/]
+\
+- *React*
+  - Libreria JavaScript utilizzata per la creazione di interfacce utente dinamiche e reattive. Si basa sul concetto di "components", ovvero blocchi di codice autonomi che gestiscono la propria logica e rendering.
+  - *Versione: * 18.0.0.
+  - *Link: * [https://reactjs.org/]
+\
+- *Node.js*
+  - Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli. Viene utilizzato per eseguire il codice JavaScript lato server.
+  - *Versione: * 20.11.0.
+  - *Link: * [https://nodejs.org/]
+\
+- *Shadcn-UI*
+  - Libreria di componenti React personalizzati per la creazione di interfacce utente. Offre una serie di componenti pronti all'uso per la realizzazione di interfacce grafiche.
+  - *Versione: * 0.8.0.
+  - *Link: * [https://shadcn-ui.com/]
+
+*Librerie e framework ambiente 3D*
+- *Drei*
+  - Libreria che fornisce componenti e utilità per semplificare lo sviluppo di applicazioni in 3D utilizzando React e Three.js. Offre funzionalità avanzate per la creazione di ambienti 3D interattivi.
+  - *Versione: * 9.97.6.
+  - *Link: * [https://www.npmjs.com/package/@react-three/drei]
+\
+- *Fiber*
+  - Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React. Offre funzionalità avanzate per la creazione di grafica 3D animata.
+  - *Versione: * 8.15.16.
+  - *Link: * [https://docs.pmnd.rs/react-three-fiber/getting-started/introduction]
+\
+- *Three.js*
+  - Libreria JavaScript utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL. Offre funzionalità avanzate per la creazione di ambienti 3D interattivi.
+  - *Versione: * 0.161.2.
+  - *Link: * [https://threejs.org/]
+
+\
+=== JSON
+JSON (JavaScript Object Notation) è un formato di scambio dati leggero e indipendente dal linguaggio. Viene utilizzato per la trasmissione e lo scambio di dati tra client e server. Utilizzato principalmente nelle comunicazioni nella rete, trova naturale utilizzo nello sviluppo di una web app.
+
+*Contesto di utilizzo: *
+- Risultato delle interrogazioni al database;
+- Risultato delle chiamate API.
+
+== Tecnologie per la persistenza dei dati
+
+=== SQL
+SQL (Structured Query Language) è un linguaggio di programmazione utilizzato per la gestione dei database relazionali. Viene utilizzato per la creazione, la modifica e la gestione dei dati all'interno del database.
+Nel contesto del capitolato, le operazioni svolte sul database sono esclusivamente di tipo interrogativo.
+
+*Contesto di utilizzo: *
+- Interrogazione del database relazionale.
+
+\
+=== PostgreSQL
+PostgreSQL è un sistema di gestione di database relazionali. Viene utilizzato per la memorizzazione e la gestione dei dati relativi al software “WMS3”.
+
+*Versione: * 16.2.
+
+*Contesto di utilizzo: *
+- Memorizzazione e gestione dei dati relativi ai bin, ai prodotti e alle zone del magazzino.
+
+\
+== Tecnologie per il testing
+=== Jest
+Jest è un framework di testing per JavaScript e Typescript. Viene utilizzato principalmente per lo unit e l'integration testing, offrendo funzionalità avanzate come la parallelizzazione dei test e il mocking delle dipendenze.
+
+*Versione: * 29.7.0.
+
+*Contesto di utilizzo: *
+- Implementazione della suite di unit testing;
+- Implementazione della suite di integration testing.
+
+\
+== Tecnologie per il deployment
+=== Docker
+Docker è un software utilizzato per il processo di deployment di applicazioni software. Permette di eseguire processi informatici in ambienti isolati chiamati container, garantendo la portabilità e la scalabilità delle applicazioni.
+
+*Versione: * 24.0.7.
+
+*Contesto di utilizzo: *
+- Deployment del software “WMS3” mediante container Docker;
+- Isolamento dell'ambiente di sviluppo.
+
+*Container docker utilizzati*
+- *PostgreSQL*: container per il database relazionale;
+  - Immagine: `postgres:16.2`.
+
+- *Web*: container per l'applicazione web;
+  - Immagine: `node:20-alpine`.
+
+\
+=== Docker-compose
+Docker-compose è uno strumento per la definizione e l'esecuzione di applicazioni multi-container. Viene utilizzato per gestire l'orchestrazione dei container Docker e semplificare il processo di deployment.
+
+*Versione: * 2.23.3.
+
+*Contesto di utilizzo: *
+- Gestione dell'orchestrazione dei container Docker utilizzati;
 
 #pagebreak()
 
 = Architettura di sistema
 
-== Architettura di implementazione 
+== Architettura di implementazione
 Il software WMS3 al fine di perseguire manutenibilità, flessibilità e scalabilità, adotta ed implementa un'architettura "layered", nota anche come "Multi-tier architecture".
 
 I layer definiti sono "closed", ovvero una richiesta si sposta esclusivamente da un livello superiore a quello immediatamente adiacente.

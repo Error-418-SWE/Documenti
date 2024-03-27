@@ -515,42 +515,62 @@ Il layer di business è responsabile dell'elaborazione dei dati ricevuti dal lay
 === Business Objects
 Le classi del Business layer rappresentano gli oggetti di interesse per l'applicazione. Queste classi rappresentanti il modello di dominio dell'applicazione devono risultare indipendenti dalle tecnologie utilizzate per la persistenza dei dati e la presentazione.
 
-=== Classi di modello
-- *Bin*:
+=== Bin
 
-  rappresenta un elemento bin, ovvero uno spazio definito in grado di contenere un prodotto.
+Rappresenta un elemento bin, ovvero uno spazio definito in grado di contenere un prodotto.
 
-  \
-  *Attributi*:
-  - *id*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco del bin. La struttura dell'id è la seguente:
-    #align(center, `idZona_letteraColonna_numeroLivello`)
+\
+*Attributi*:
+- *id*: 
+  - *descrizione*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco del bin. La struttura dell'id è la seguente:
+  #align(center, `idZona_letteraColonna_numeroLivello`)
 
-    La lettera corrispondente alla colonna fa riferimento ad una mappatura per cui "A" equivale alla colonna zero e viene incrementata seguendo i caratteri dell'alfabeto inglese con l'aumentare del numero della colonna.
+  La lettera corrispondente alla colonna fa riferimento ad una mappatura per cui "A" equivale alla colonna zero e viene incrementata seguendo i caratteri dell'alfabeto inglese con l'aumentare del numero della colonna.
 
-    Dopo la lettera "Z" viene utilizzato "AA" proseguendo con la logica descritta;
+  Dopo la lettera "Z" viene utilizzato "AA" proseguendo con la logica descritta;
+  - *tipo*: string.
+  - *visibilità*: private.
+\
+- *level*:
+  - *descrizione*: intero che rappresenta il numero del livello di appartenenza;
+  - *tipo*: number.
+  - *visibilità*: private.
 
-  - *level*: intero che rappresenta il numero del del livello di appartenenza;
+\
+- *column*:
+  - *descrizione*: intero che rappresenta il numero della colonna di appartenenza;
+  - *tipo*: number.
+  - *visibilità*: private.
+\
+- *height*:
+  - *descrizione*: numero in virgola mobile che rappresenta l'altezza del bin;
+  - *tipo*: number.
+  - *visibilità*: private.
+\
+- *length*:
+  - *descrizione*: numero in virgola mobile che rappresenta la profondità del bin;
+  - *tipo*: number.
+  - *visibilità*: private.
+\
+- *width*:
+  - *descrizione*: numero in virgola mobile che rappresenta la larghezza del bin;
+  - *tipo*: number.
+  - *visibilità*: private.
+\
+- *product*:
+  - *descrizione*: oggetto `Product` che rappresenta il prodotto contenuto nel bin;
+  - *tipo*: Product.
+  - *visibilità*: private.
 
-  - *column*: intero che rappresenta il numero della colonna di appartenenza;
-
-  - *height*: numero in virgola mobile che rappresenta l'altezza del bin;
-
-  - *length*: numero in virgola mobile che rappresenta la profondità del bin;
-
-  - *width*: numero in virgola mobile che rappresenta la larghezza del bin;
-
-  - *product*: riferimento al prodotto contenuto nel bin. Può essere `null`.
-
-  - *state*: enum `BinState` che identifica lo stato di un bin contestualmente alla richiesta di spostamento dei prodotti.
-
-    Può assumere i valori:
-
-    - *Idle*: valore di default, dichiara che il bin non è coinvolto in richieste di spostamento di prodotti;
-
-    - *ProductIncoming*: dichiara che il bin è coinvolto in una richiesta di spostamento di un prodotto, il quale deve essere immesso al suo interno;
-
-    - *ProductOutgoing*: dichiara che il bin è coinvolto in una richiesta di spostamento del prodotto al suo interno, il quale deve essere prelevato.
-
+\
+- *state*:
+  - *descrizione*: enum `BinState` che identifica lo stato di un bin contestualmente alla richiesta di spostamento dei prodotti.
+    - *Valori dell'enumerazione*:
+      - *Idle*: valore di default, dichiara che il bin non è coinvolto in richieste di spostamento di prodotti;
+      - *ProductIncoming*: dichiara che il bin è coinvolto in una richiesta di spostamento di un prodotto, il quale deve essere immesso al suo interno;
+      - *ProductOutgoing*: dichiara che il bin è coinvolto in una richiesta di spostamento del prodotto al suo interno, il quale deve essere prelevato.
+  - *tipo*: BinState.
+  - *visibilità*: private.
 
 \
 *Metodi*:
@@ -564,147 +584,289 @@ Le classi del Business layer rappresentano gli oggetti di interesse per l'applic
   - *tipo di ritorno*: void.
 
 \
-- *Zone*:
+=== Zone
 
-  rappresenta una zona di contenimento dei bin, interpretabile come scaffale (se a più livelli) o area singola di stoccaggio (se a un solo livello).
-
-  \
-  *Attributi*:
-  - *id*: intero che rappresenta il codice identificativo univoco della zona;
-
-  - *xcoordinate*: numero in virgola mobile che rappresenta la coordinata X di posizione nel piano;
-
-  - *ycoordinate*: numero in virgola mobile che rappresenta la coordinata Y di posizione nel piano;
-
-  - *height*: numero in virgola mobile che rappresenta l'altezza della zona;
-
-  - *length*: numero in virgola mobile che rappresenta la profondità della zona;
-
-  - *width*: numero in virgola mobile che rappresenta la larghezza della zona;
-
-  - *bins*: lista di elementi Bin contenuti nella zona;
-
-  - *orientation*: booleano che identifica l'orientamento (perpendicolare o parallelo) della zona rispetto all'asse delle ascisse del piano.
-
-  \
-  *Metodi*:
-  - *Getters*:
-    - Getters presenti per ogni attributo della classe.
-  - Setter:
-    - *setXCoordinate*:
-      - *obiettivo*: permette di modificare la coordinata X di posizione nel piano;
-      - *parametri*: `x:number` che rappresenta la nuova coordinata X;
-      - *tipo di ritorno*: void.
-    - *setYCoordinate*:
-      - *obiettivo*: permette di modificare la coordinata Y di posizione nel piano;
-      - *parametri*: `y:number` che rappresenta la nuova coordinata Y;
-      - *tipo di ritorno*: void.
-
-  - *getBin*:
-    - *obiettivo*: ottenere il bin corrispondente al codice identificativo univoco;
-    - *parametri*: `id:string` del bin interessato;
-    - *tipo di ritorno*: `Bin` corrispondente al codice identificativo univoco o NULL.
-
-  - *getLevels*:
-    - *obiettivo*: ottenere una lista contenente le liste di bin che rappresentano i livelli della zona;
-    - *parametri*: nessuno;
-    - *tipo di ritorno*: lista di liste di bin `Bin[[]]`.
-
-  - *getColumns*:
-    - *obiettivo*: ottenere una lista contenente le liste di bin che rappresentano le colonne della zona;
-    - *parametri*: nessuno;
-    - *tipo di ritorno*: lista di liste di bin `Bin[[]]`.
-
-  - *getMaxUsedLevel*:
-    - *obiettivo*: ottenere il numero dell'ultimo livello della zona con almeno un bin contenente un prodotto;
-    - *parametri*: nessuno;
-    - *tipo di ritorno*: intero che rappresenta il numero dell'ultimo livello `number`.
-
-  - *getMaxUsedColumn*:
-    - *obiettivo*: ottenere il numero dell'ultima colonna della zona con almeno un bin contenente un prodotto;
-    - *parametri*: nessuno;
-    - *tipo di ritorno*: intero che rappresenta il numero dell'ultima colonna `number`.
+Rappresenta una zona di contenimento dei bin, interpretabile come scaffale (se a più livelli) o area singola di stoccaggio (se a un solo livello).
 
 \
-- *Product*:
+*Attributi*:
+- *id*:
+  - *descrizione*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco della zona;
+  - *tipo*: string.
+  - *visibilità*: private.
 
-  rappresenta il prodotto da gestire in magazzino.
+\
+- *xcoordinate*:
+  - *descrizione*: numero in virgola mobile che rappresenta la coordinata X di posizione nel piano;
+  - *tipo*: number.
+  - *visibilità*: private.
+
+\
+- *ycoordinate*:
+  - *descrizione*: numero in virgola mobile che rappresenta la coordinata Y di posizione nel piano;
+  - *tipo*: number.
+  - *visibilità*: private.
+
+\
+- *height*:
+  - *descrizione*: numero in virgola mobile che rappresenta l'altezza della zona;
+  - *tipo*: number.
+  - *visibilità*: private.
+
+\
+- *length*:
+  - *descrizione*: numero in virgola mobile che rappresenta la profondità della zona;
+  - *tipo*: number.
+  - *visibilità*: private.
+
+\
+- *width*: 
+  - *descrizione*: numero in virgola mobile che rappresenta la larghezza della zona;
+  - *tipo*: number.
+  - *visibilità*: private.
+
+\
+- *bins*:
+  - *descrizione*: lista di oggetti `Bin` che rappresentano i bin presenti nella zona;
+  - *tipo*: Bin[].
+  - *visibilità*: private.
+
+\
+- *orientation*: 
+  - *descrizione*: enum `ZoneOrientation` che identifica l'orientamento della zona rispetto all'asse X.
+  - *tipo*: boolean.
+    - *True*: orientamento orizzontale, parallelo all'asse X;
+    - *False*: orientamento verticale, perpendicolare all'asse X.
+  - *visibilità*: private. 
+
+\
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
+- Setter:
+  - *setXCoordinate*:
+    - *obiettivo*: permette di modificare la coordinata X di posizione nel piano;
+    - *parametri*: `x:number` che rappresenta la nuova coordinata X;
+    - *tipo di ritorno*: void.
+  - *setYCoordinate*:
+    - *obiettivo*: permette di modificare la coordinata Y di posizione nel piano;
+    - *parametri*: `y:number` che rappresenta la nuova coordinata Y;
+    - *tipo di ritorno*: void.
+- *getBin*:
+  - *obiettivo*: ottenere il bin corrispondente al codice identificativo univoco;
+  - *parametri*: `id:string` del bin interessato;
+  - *tipo di ritorno*: `Bin` corrispondente al codice identificativo univoco o NULL.
+
+- *getLevels*:
+  - *obiettivo*: ottenere una lista contenente le liste di bin che rappresentano i livelli della zona;
+  - *parametri*: nessuno;
+  - *tipo di ritorno*: lista di liste di bin `Bin[[]]`.
+
+- *getColumns*:
+  - *obiettivo*: ottenere una lista contenente le liste di bin che rappresentano le colonne della zona;
+  - *parametri*: nessuno;
+  - *tipo di ritorno*: lista di liste di bin `Bin[[]]`.
+
+- *getMaxUsedLevel*:
+  - *obiettivo*: ottenere il numero dell'ultimo livello della zona con almeno un bin contenente un prodotto;
+  - *parametri*: nessuno;
+  - *tipo di ritorno*: intero che rappresenta il numero dell'ultimo livello `number`.
+
+- *getMaxUsedColumn*:
+  - *obiettivo*: ottenere il numero dell'ultima colonna della zona con almeno un bin contenente un prodotto;
+  - *parametri*: nessuno;
+  - *tipo di ritorno*: intero che rappresenta il numero dell'ultima colonna `number`.
+
+\
+=== Product
+
+rappresenta il prodotto da gestire in magazzino.
+
+\
+*Attributi*:
+- *id*:
+  - *descrizione*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco del prodotto;
+  - *tipo*: string.
+  - *visibilità*: private.
+
+\
+- *name*:
+  - *descrizione*: stringa che rappresenta il nome del prodotto;
+  - *tipo*: string.
+  - *visibilità*: private.
+
+\
+- *weight*:
+  - *descrizione*: numero in virgola mobile che rappresenta il peso del prodotto;
+  - *tipo*: number.
+  - *visibilità*: private.
+
+\
+- *height*:
+  - *descrizione*: numero in virgola mobile che rappresenta l'altezza del prodotto;
+  - *tipo*: number.
+  - *visibilità*: private.
+
+\
+- *length*: 
+  - *descrizione*: numero in virgola mobile che rappresenta la profondità del prodotto;
+  - *tipo*: number.
+  - *visibilità*: private.
+
+\
+- *width*:
+  - *descrizione*: numero in virgola mobile che rappresenta la larghezza del prodotto;
+  - *tipo*: number.
+  - *visibilità*: private.
+
+\
+- *categories*:
+  - *descrizione*: lista di stringhe che rappresentano le categorie di appartenenza del prodotto;
+  - *tipo*: string[].
+  - *visibilità*: private.
+
+\
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
+
+\
+=== Order
+  
+Rappresenta un ordine di movimentazione di un prodotto tra un bin di partenza e uno di destinazione.
+
+\
+*Attributi*:
+- *id*:
+  - *descrizione*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco dell'ordine;
+  - *tipo*: string.
+  - *visibilità*: private.
+
+\
+- *startPoint*:
+  - *descrizione*: oggetto `Bin` che rappresenta il bin di partenza dell'ordine;
+  - *tipo*: Bin.
+  - *visibilità*: private.
+
+\
+- *endPoint*:
+  - *descrizione*: oggetto `Bin` che rappresenta il bin di destinazione dell'ordine;
+  - *tipo*: Bin.
+  - *visibilità*: private.
+
+\
+- *product*: 
+  - *descrizione*: oggetto `Product` che rappresenta il prodotto coinvolto nell'ordine;
+  - *tipo*: Product.
+  - *visibilità*: private.
+
+\
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
+
+\
+=== SVG
+Rappresenta un file SVG utilizzato per la configurazione dell'ambiente di lavoro mediante file SVG.
+
+\
+*Attributi*:
+- *length*:
+  - *descrizione*: numero in virgola mobile che rappresenta la profondità dell'immagine rappresentata dal file;
+  - *tipo*: number.
+  - *visibilità*: private.
+
+\
+- *width*:
+  - *descrizione*: numero in virgola mobile che rappresenta la larghezza dell'immagine rappresentata dal file;
+  - *tipo*: number.
+  - *visibilità*: private.
+
+\
+- *svg*: 
+  - *descrizione*: stringa che rappresenta il contenuto del file SVG;
+  - *tipo*: string.
+  - *visibilità*: private.
 
   \
-  *Attributi*:
-  - *id*: intero che rappresenta il codice identificativo univoco del prodotto;
-
-  - *name*: stringa che rappresenta il nome del prodotto;
-
-  - *weight*: numero in virgola mobile che rappresenta il peso del prodotto;
-
-  - *height*: numero in virgola mobile che rappresenta l'altezza del prodotto;
-
-  - *length*: numero in virgola mobile che rappresenta la profondità del prodotto;
-
-  - *width*: numero in virgola mobile che rappresenta la larghezza del prodotto;
-
-  - *categories*: lista di stringhe che rappresentano le categorie del prodotto.
-
-  \
-  *Metodi*:
-  - *Getters*:
-    - Getters presenti per ogni attributo della classe.
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
 
 \
-- *Order*:
-
-  rappresenta un ordine di spostamento di un prodotto tra due bin.
-  I suoi attributi sono:
-
-  - *id*: intero che rappresenta il codice identificativo univoco della richiesta;
-
-  - *startPoint*: riferimento al bin iniziale;
-
-  - *endPoint*: riferimento al bin finale;
-
-  - *product*: riferimento al prodotto da spostare.
-
-  Per ogni attributo è presente il corrispondente metodo get.
-
-
+=== Floor
+Rappresenta il piano dell'ambiente 3D.
 
 \
-- *SVG*:
-
-  rappresenta un file SVG utilizzato per la configurazione dell'ambiente di lavoro mediante file.
-  I suoi attributi sono:
-
-  - *length*: numero in virgola mobile che rappresenta la lunghezza dell'immagine rappresentata dal file;
-  - *width*: numero in virgola mobile che rappresenta la larghezza dell'immagine rappresentata dal file;
-  - *svg*: stringa contenente il path del file.
-
-  Per ogni attributo è presente il corrispondente metodo get.
+*Attributi*:
+- *length*:
+  - *descrizione*: numero in virgola mobile che rappresenta la profondità del piano;
+  - *tipo*: number.
+  - *visibilità*: private.
 
 \
-- *Floor*:
+- *width*:
+  - *descrizione*: numero in virgola mobile che rappresenta la larghezza del piano;
+  - *tipo*: number.
+  - *visibilità*: private.
 
-  rappresenta il piano dell'ambiente 3D, i suoi attributi sono:
+\
+- *SVG*: 
+  - *descrizione*: oggetto `SVG` che rappresenta il file SVG del piano;
+  - *tipo*: SVG.
+  - *visibilità*: private.
 
-  - *length*: numero in virgola mobile che rappresenta la profondità del piano;
+\
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
+- *Setters*:
+  - Setters presenti per gli attributi `length`, `width` e `SVG`.
+- *clone*:
+  - *obiettivo*: permette di creare una copia dell'oggetto invocante;
+  - *parametri*: nessuno;
+  - *tipo di ritorno*: `Floor`.
 
-  - *width*: numero in virgola mobile che rappresenta la larghezza del piano;
+\
+=== FloorStrategy #text(size: 10pt, fill: gray, style: "italic", "Strategy Pattern")
+Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy e le relative classi che implementano l'interfaccia `FloorStrategy`.
 
-  - *SVG*: elemento `SVG` utilizzato per la configurazione dell'ambiente di lavoro. Nel caso in cui non sia stato identificato nessun file SVG, la variabile è `null`.
+La scelta di tale pattern è dettata dalla necessità di separare l'algoritmo di creazione dell'oggetto `Floor` dalla sua implementazione, permettendo di variare il comportamento dell'oggetto in base al contesto. L'input dell'algoritmo di creazione è il medesimo, ma il comportamento varia a seconda della strategia adottata.
 
-  Per ogni attributo è presente il corrispondente metodo get e set.
+\
+*Interfaccia implementata*
+- *FloorStrategy*: interfaccia che definisce il metodo per la creazione di un oggetto `Floor`.
+  - *Metodi*
+    - *createFloor*: metodo astratto che definisce la logica di creazione dell'oggetto `Floor`.
+      - *parametri*: `URLSearchParams` che rappresenta i parametri per la creazione dell'oggetto `Floor`.
+      - *tipo di ritorno*: Promise contente l'oggetto `Floor`creato.
 
-  Inoltre è presente il metodo `clone` utile per creare una copia dell'oggetto invocante.
+\
+*Classi implementate*
 
-  Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy e le relative classi che implementano l'interfaccia `FloorStrategy`:
+Le classi che implementano l'interfaccia `FloorStrategy` sono:
+- *StandardFloorStrategy*:
+  - *obiettivo*: rappresenta la creazione di un elemento `Floor` senza file SVG;
+  - *metodo*: `createFloor`.
 
-  - *StandardFloorStrategy*: rappresenta la creazione di un elemento `Floor` senza file SVG;
+- *CustomFloorStrategy*:
+  - *obiettivo*: rappresenta la creazione di un elemento `Floor` con file SVG;
+  - *metodo*: `createFloor`.
 
-  - *CustomFloorStrategy*: rappresenta la creazione di un elemento `Floor` con file SVG;
+La decisione in merito alla strategia da adottare è sancita dalla classe `FloorStrategyContext`. Questa classe, in base alla presenza o meno del file SVG, sceglie la strategia da adottare per la creazione dell'oggetto `Floor`.
 
-  Inoltre è presente la classe:
+\
+*FloorStrategyContext*
 
-  - *FloorStrategyContext*: utilizza un `FloorStrategy` per generare un elemento `Floor`.
+*Attributi*
+- *strategy*: oggetto che implementa l'interfaccia `FloorStrategy` che rappresenta la strategia da adottare per la creazione dell'oggetto `Floor`.
+*Metodi*
+- *Setters*:
+  - *setStrategy*: metodo che permette di impostare la strategia da adottare per la creazione dell'oggetto `Floor`.
+- *createFloor*: 
+  - *obiettivo*: metodo che permette di creare l'oggetto `Floor` in base alla strategia adottata;
+  - *parametri*: `URLSearchParams` che rappresenta i parametri per la creazione dell'oggetto `Floor`;
+  - *tipo di ritorno*: Promise contenente l'oggetto `Floor` creato.
 
 
 #figure(
@@ -722,18 +884,112 @@ Le classi del Business layer rappresentano gli oggetti di interesse per l'applic
 )
 
 \
-Per gestire la possibilità di cercare specifici prodotti e specifiche zone, sono state realizzate delle classi che permettono l'implementazione dei design pattern Strategy e Factory.
-
-Le classi relative al design pattern Strategy implementano l'interfaccia `SearchStrategy` e sono:
-
-- *ProductSearchStrategy*: permette la ricerca di prodotti in base al loro codice identificativo, nome o categoria;
-
-- *ZoneSearchStrategy*: permette la ricerca di zone in base al loro codice identificativo.
+=== Search Engine #text(size: 10pt, fill: gray, style: "italic", "Factory e Strategy Pattern")
+Il Factory Pattern utilizzato insieme allo Strategy Pattern permette di gestire la possibilità di cercare specifici prodotti e specifiche zone. Disponendo infatti di famiglie diverse di algoritmi per la ricerca (Strategy Pattern per Zone e Product), il Factory Pattern permette di adottare il corretto algoritmo in funzione del tipo di oggetto fornito.
 
 \
-La classe relativa al design pattern Factory è:
+Lo strategy pattern permette di definire una famiglia di algoritmi, incapsularli e renderli intercambiabili. Questo pattern permette di variare l'algoritmo indipendentemente dal contesto in cui viene utilizzato, rendendo facilmente estendibile il sistema di ricerca.
 
-- *SearchStrategyFactory*: permette l'adozione del corretto algoritmo di ricerca in funzione del tipo di oggetto fornito.
+\
+*Interfaccia implementata*
+- *SearchStrategy\<T extends Zone | Product>*: interfaccia che definisce il metodo per la ricerca di un oggetto. L'interfaccia è parametrizzata in modo da poter essere utilizzata per la ricerca di oggetti di tipo `Zone` o `Product`.
+
+\
+*Metodi*
+  - *search*: metodo astratto che definisce la logica di ricerca dell'oggetto.
+    - *parametri*: 
+      - *list : T[]*: lista di oggetti in cui cercare;
+      - *query : string*: stringa da cercare;
+      - *type : string*: tipo di ricerca da effettuare;
+    - *tipo di ritorno*: Promise contenente la lista di oggetti che rispondono al parametro di ricerca.
+
+\
+*Classi implementate*
+- *ProductSearchStrategy*:
+
+  Permette la ricerca di prodotti in base al loro codice identificativo, nome o categoria;
+
+  *Attributi*
+   - Nessuno.
+
+  \
+  *Metodi*
+    - *search*:
+      - *obiettivo*: ricerca di prodotti in base al loro codice identificativo, nome o categoria;
+      - *parametri*: 
+        - *list : Product[]*: lista di prodotti in cui cercare;
+        - *query : string*: stringa da cercare;
+        - *type : string*: tipo di ricerca da effettuare;
+          - *Valori ammessi*: "id", "name", "category".
+      - *tipo di ritorno*: lista di prodotti che rispondono al parametro di ricerca `Product[]`.
+    
+    \
+    - *searchById*:
+      - *obiettivo*: ricerca di prodotti in base al loro codice identificativo;
+      - *parametri*: 
+        - *list : Product[]*: lista di prodotti in cui cercare;
+        - *query : string*: stringa da cercare;
+      - *tipo di ritorno*: lista di prodotti che rispondono al parametro di ricerca `Product[]`.
+    
+    \
+    - *searchByName*:
+      - *obiettivo*: ricerca di prodotti in base al loro nome;
+      - *parametri*: 
+        - *list : Product[]*: lista di prodotti in cui cercare;
+        - *query : string*: stringa da cercare;
+      - *tipo di ritorno*: lista di prodotti che rispondono al parametro di ricerca `Product[]`.
+    
+    \
+    - *searchByCategory*:
+      - *obiettivo*: ricerca di prodotti in base alla categoria;
+      - *parametri*: 
+        - *list : Product[]*: lista di prodotti in cui cercare;
+        - *query : string*: stringa da cercare;
+      - *tipo di ritorno*: lista di prodotti che rispondono al parametro di ricerca `Product[]`.
+
+\
+- *ZoneSearchStrategy*:
+
+  Permette la ricerca di zone in base al loro codice identificativo.
+
+  *Attributi*
+   - Nessuno.
+
+  \
+  *Metodi*
+    - *search*:
+      - *obiettivo*: ricerca di zone in base al loro codice identificativo;
+      - *parametri*: 
+        - *list : Zone[]*: lista di zone in cui cercare;
+        - *query : string*: stringa da cercare;
+        - *type : string*: tipo di ricerca da effettuare;
+          - *Valori ammessi*: "id".
+      - *tipo di ritorno*: lista di zone che rispondono al parametro di ricerca `Zone[]`.
+  
+    \
+    - *searchById*:
+      - *obiettivo*: ricerca di zone in base al loro codice identificativo;
+      - *parametri*: 
+        - *list : Zone[]*: lista di zone in cui cercare;
+        - *query : string*: stringa da cercare;
+      - *tipo di ritorno*: lista di zone che rispondono al parametro di ricerca `Zone[]`.
+
+\
+- *SearchStrategyFactory*:
+
+Permette la creazione di oggetti `SearchStrategy` in base al tipo di oggetto da cercare.
+
+*Attributi*
+- Nessuno.
+
+\
+*Metodi*
+- *static createSearchStrategy\<T extends Zone | Product>*:
+  - *obiettivo*: creazione di oggetti `SearchStrategy` in base al tipo di oggetto da cercare;
+  - *parametri*: 
+    - *type : string*: tipo di oggetto da cercare;
+      - *Valori ammessi*: "zone", "product".
+  - *tipo di ritorno*: oggetto `SearchStrategy` corrispondente al tipo di oggetto da cercare.
 
 #figure(
   image("./imgs/Business Layer search.svg", width: 100%),
@@ -744,25 +1000,125 @@ La classe relativa al design pattern Factory è:
 
 
 \
-In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i componenti:
+=== Provider Pattern
+Il Provider Pattern permette di gestire lo stato dell'applicazione in modo centralizzato, permettendo di mantenere lo stato dell'applicazione in un unico punto, semplificando la gestione e la condivisione dei dati tra i componenti. Questo pattern inoltre previene il fenomeno di prop drilling, ovvero la necessità di passare dati attraverso più livelli di componenti valori che non sono utilizzati direttamente dal componente intermedio.
 
-- *warehouseProvider*: fornisce un provider per gestire dati relativi alle variabili di contesto dell'ambiente grafico;
+\
+Questo pattern è derivativo dall'utilizzo di React e Nextjs, che permettono di utilizzare i context per la gestione dello stato dell'applicazione.
 
-- *ElementDetailsProvider*: fornisce un provider per gestire dati relativi ai componenti da visualizzare in un pannello dedicato;
+\
+*Componenti implementati*
 
-- *formContextProvider*: fornisce un provider per gestire dati relativi allo stato di processing di un form;
+*Provider del modello*
+- *zonesProvider*:
+  - *obiettivo*: fornisce un provider per gestire dati relativi agli oggetti `Zone`.
+  - *stato gestito*: 
+    - *zones*: lista di oggetti `Zone` che rappresentano le zone dell'ambiente di lavoro;
+      - *tipo*: Zone[];
+    - *setZones*: funzione che permette di modificare la lista di oggetti `Zone`;
+      - *tipo*: (zones: Zone[]) => void;
+    - *zonesLoaded*: booleano che rappresenta lo stato di caricamento delle zone;
+      - *tipo*: boolean;
+    - *setZonesLoaded*: funzione che permette di modificare lo stato di caricamento delle zone.
+      - *tipo*: (loaded: boolean) => void.
+  - *tipo*: JSX.Element.
 
-- *binsProvider*: fornisce un provider per gestire dati relativi agli oggetti `Bin`;
+\
+- *productsProvider*: 
+  - *obiettivo*: fornisce un provider per gestire dati relativi agli oggetti `Product`.
+  - *stato gestito*: 
+    - *products*: lista di oggetti `Product` che rappresentano i prodotti dell'ambiente di lavoro;
+      - *tipo*: Product[];
+    - *setProducts*: funzione che permette di modificare la lista di oggetti `Product`;
+      - *tipo*: (products: Product[]) => void;
+    - *productsLoaded*: booleano che rappresenta lo stato di caricamento dei prodotti;
+      - *tipo*: boolean;
+    - *setProductsLoaded*: funzione che permette di modificare lo stato di caricamento dei prodotti.
+      - *tipo*: (loaded: boolean) => void.
+  - *tipo*: JSX.Element.
 
-- *floorProvider*: fornisce un provider per gestire dati relativi agli oggetti `Floor`;
+\
+- *binsProvider*:
+  - *obiettivo*: fornisce un provider per gestire dati relativi agli oggetti `Bin`.
+  - *stato gestito*: 
+    - *bins*: lista di oggetti `Bin` che rappresentano i bin dell'ambiente di lavoro;
+      - *tipo*: Bin[];
+    - *setBins*: funzione che permette di modificare la lista di oggetti `Bin`;
+      - *tipo*: (bins: Bin[]) => void;
+    - *binsLoaded*: booleano che rappresenta lo stato di caricamento dei bin;
+      - *tipo*: boolean;
+    - *setBinsLoaded*: funzione che permette di modificare lo stato di caricamento dei bin.
+      - *tipo*: (loaded: boolean) => void.
+  - *tipo*: JSX.Element.
 
-- *ordersProvider*: fornisce un provider per gestire dati relativi agli oggetti `Order`;
+\
+- *ordersProvider*:
+  - *obiettivo*: fornisce un provider per gestire dati relativi agli oggetti `Order`.
+  - *stato gestito*: 
+    - *orders*: lista di oggetti `Order` che rappresentano gli ordini dell'ambiente di lavoro;
+      - *tipo*: Order[];
+    - *setOrders*: funzione che permette di modificare la lista di oggetti `Order`.
+      - *tipo*: (orders: Order[]) => void;
+  - *tipo*: JSX.Element.
 
-- *productsProvider*: fornisce un provider per gestire dati relativi agli oggetti `Product`;
+\
+- *floorProvider*:
+  - *obiettivo*: fornisce un provider per gestire dati relativi all'oggetto `Floor`.
+  - *stato gestito*: 
+    - *floor*: oggetto `Floor` che rappresenta il piano dell'ambiente di lavoro;
+      - *tipo*: Floor;
+    - *setFloor*: funzione che permette di modificare l'oggetto `Floor`;
+      - *tipo*: (floor: Floor) => void;
+    - *floorRefresher*: valore intero utilizzato per forzare il refresh del piano;
+      - *tipo*: number;
+    - *setFloorRefresher*: funzione che permette di modificare il valore di `floorRefresher`. 
+      - *tipo*: (refresher: number) => void.
+  - *tipo*: JSX.Element.
 
-- *zonesProvider*: fornisce un provider per gestire dati relativi agli oggetti `Zone`.
+\
+*Provider per elementi UI*
+- *ElementDetailsProvider*
+  - *obiettivo*: fornisce un provider per gestire dati relativi ai componenti da visualizzare in un pannello dedicato.
+  - *stato gestito*: 
+    - *elementDetails*: oggetto che rappresenta il componente da visualizzare;
+      - *tipo*: JSX.Element;
+    - *setElementDetails*: funzione che permette di modificare l'oggetto `element`.
+      - *tipo*: (element: JSX.Element) => void.
+    - *showElementDetails*: booleano che rappresenta la visibilità del pannello;
+      - *tipo*: boolean;
+    - *setShowElementDetails*: funzione che permette di modificare la visibilità del pannello.
+      - *tipo*: (show: boolean) => void.
+  - *tipo*: JSX.Element.
 
+\
+- *formContextProvider*: 
+  - *obiettivo*: fornisce un provider per gestire dati relativi allo stato di processing di un form. Utilizzato per il lo stato di processing del file SVG caricato durante il processo di configurazione dell'ambiente.
+  - *stato gestito*: 
+    - *processing*: booleano che rappresenta lo stato di processing del form;
+      - *tipo*: boolean;
+    - *setProcessing*: funzione che permette di modificare lo stato di processing del form.
+      - *tipo*: (processing: boolean) => void.
+  - *tipo*: JSX.Element.
 
+\
+*Provider ambiente 3D*
+- *warehouseProvider*
+  - *obiettivo*: fornisce un provider per gestire dati relativi alle variabili di contesto dell'ambiente grafico.
+  - *stato gestito*:
+    - *selectedBin*: oggetto `Bin` che rappresenta il bin selezionato
+      - *tipo*: Bin;
+    - *setSelectedBin*: funzione che permette di modificare l'oggetto `selectedBin`.
+      - *tipo*: (bin: Bin) => void;
+    - *gridCellSize*: numero in virgola mobile che rappresenta la dimensione di una cella della griglia;
+      - *tipo*: number;
+    - *setGridCellSize*: funzione che permette di modificare la dimensione di una cella della griglia.
+      - *tipo*: (size: number) => void;
+    - *moveCameraToPosition*: funzione che permette di spostare la camera in una posizione specifica.
+      - *tipo*: (position: Vector3) => void;
+    - *cameraRef*: riferimento alla camera dell'ambiente 3D.
+      - *tipo*: RefObject\<CameraControls\>;
+
+\
 == Presentation layer
 === UI
 L'interfaccia utente è realizzata mediante elementi importati da Shadcn-UI e componenti personalizzati.

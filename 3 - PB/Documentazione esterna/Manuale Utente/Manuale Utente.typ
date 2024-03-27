@@ -211,7 +211,7 @@ Premendo il tasto destro del mouse e spostando il mouse in una delle quattro dir
 
 L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle frecce direzionali (o in alternativa i tasti W, A, S, D), che permettono il movimento nella direzione indicata dalla freccia. Con il tasto Shift è possibile aumentare la velocità di spostamento.
 
-== Creazione zona
+== Creazione zona <creazione_zona>
 
 #figure(
     grid(

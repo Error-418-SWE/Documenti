@@ -288,24 +288,24 @@ Successivamente all'inserimento dei dati rappresentativi della zona modificata, 
     ),caption: [Menù di ispezione zone (sinistra e centro) e menù di ispezione bin (destra)],
 ) <ispezione>
 
-È possibile in ogni momento ispezionare una zona, facendo doppio click sul quadratino rosso nell'angolo in basso usato anche per lo spostamento, si aprirà quindi il menù in figura @ispezione (sinistra e centro), dove vengono riportate in ordine:
+È possibile in ogni momento ispezionare una zona facendo doppio click sul cubetto rosso presente in uno dei suoi angoli, usato anche per lo spostamento. Si aprirà quindi il menù in figura @ispezione (sinistra e centro), dove vengono riportate in ordine:
 - id della zona;
 - orientamento e dimensioni;
 - lista di bin che riporta per ogni voce:
   - id del bin;
-  - stato (libero o se occupato riporta il nome del prodotto contenuto);
-  - un pulsante che (se occupato) mostra il contenuto del bin con il menù in @ispezione (destra).
+  - stato ("Libero" o, se occupato, nome del prodotto contenuto);
+  - pulsante per la visualizzazione dei dettagli del bin (menù in @ispezione a destra), presente solo se il bin è occupato.
 
-Per ispezionare il contenuto di un bin è sufficiente fare doppio click sul bin desiderato ed aprire il menù in figura @ispezione (destra).
+Per ispezionare il contenuto di un bin è possibile, in alternativa al pulsante citato in precedenza, fare doppio click sul bin desiderato ed aprire il menù in figura @ispezione (destra).
 Verranno mostrati:
 - id del bin;
 - dimensioni del bin;
-- se presente, informazioni sul prodotto contenuto tra le quali:
-  - nome prodotto;
-  - id prodotto;
-  - categoria del prodotto;
-  - dimensioni del prodotto;
-  - peso del prodotto.
+- informazioni sul prodotto contenuto, se presente:
+  - nome;
+  - id;
+  - categoria;
+  - dimensioni;
+  - peso.
 
 == Richiesta spostamento prodotto
 

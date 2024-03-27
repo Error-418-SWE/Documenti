@@ -1740,14 +1740,16 @@ L'elemento approvato in fase di verifica viene quindi integrato nel sistema come
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.8_
 
 === Scopo
+
 Il processo di integrazione ha lo scopo di combinare iterativamente elementi software al fine di ottenere un prodotto che soddisfi i requisiti rispettando l'architettura e il design definiti.
 È quindi necessario il coordinamento con il processo di definizione dell'architettura (@processo_definizione_architettura) e il processo di design (@processo_design).
 
 L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la Continuous Integration.
 
-
 === Risultati
+
 Come risultato della corretta implementazione del processo di integrazione:
+
 - viene integrato il nuovo elemento software con il prodotto principale;
 - vengono eseguiti automaticamente i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione;
 - vengono identificati i risultati ed eventuali anomalie;
@@ -1755,28 +1757,35 @@ Come risultato della corretta implementazione del processo di integrazione:
 - gli elementi correttamente integrati vengono tracciati e possono essere visualizzati su GitHub.
 
 === Attività
+
 ==== Pianificazione della strategia di integrazione
 
-  La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche "Continuous Integration" e "Continuous Deployment", al fine di garantire un frequente allineamento degli ambienti di lavoro tra i membri e avere costantemente la versione più aggiornata del prodotto disponibile e funzionante.
+  La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche "Continuous Integration" e "Continuous Deployment", al fine di garantire un frequente allineamento degli ambienti di lavoro tra i membri ed avere costantemente la versione più aggiornata del prodotto disponibile e funzionante.
+
   Essa prevede la gestione dell'integrazione degli elementi software e dell'esecuzione dei test di unità, integrazione e non regressione mediante automazioni GitHub Actions.
   Testare automaticamente il prodotto ad ogni iterazione garantisce inoltre il rispetto dei requisiti descritti nel documento #adr_v e i processi di verifica.
-  A supporto dell'integrazione ed il deployment è inoltre presente un Virtual Private Server su Azure che esegue Docker.
+
+Per supportare l'integrazione e il deployment, è disponibile un Virtual Private Server su Azure che ospita un ambiente Docker, su cui viene eseguito il container con l'ultima versione del prodotto disponibile.
 
 ==== Esecuzione
 
-  Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella pull request vengono approvate da un Verificatore, il quale attua la funzione di merge.
+  Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella Pull Request vengono approvate da un Verificatore, il quale attua la funzione di merge.
   Le GitHub Action provvedono a:
+
   - costruire l'immagine Docker e pubblicarla su Docker Hub e GitHub Container Registry tramite la action "build_docker", le cui caratteristiche e job sono descritti nel file _build_docker.yml_;
   - copiare il contenuto del repository sul Virtual Private Server e proseguire con l'avvio di Docker Compose tramite il file _deploy.yml_;
   - creare, tramite la action "tag_semver", le cui caratteristiche e job sono descritti nel file _tag_semver.yml_, un tag di versione semantica per ogni push sul branch di development del Version Control System. Tale tag viene pubblicato su GitHub e viene creata una release;
   - l'esecuzione dei test avviene tramite la action "test_nodejs", le cui caratteristiche e job sono descritti nel file _test_nodejs.yml_.
 
 ==== Gestione dei risultati
-  I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a causa dell'approvazione della pull request. Le GitHub Actions prevedono la visualizzazione di messaggi che descrivono gli eventuali errori insorti oppure, in loro assenza, della corretta esecuzione dell'automazione.
+
+  I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'approvazione della Pull Request. Le GitHub Actions prevedono la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'automazione.
 
   I test automatici forniscono un resoconto di tutti i test svolti con i relativi esiti nei log della GitHub Action corrispondente.
 
-  Su GitHub è possibile visualizzare l'insieme delle pull request approvate e correttamente integrate, in questo modo è possibile tenere traccia degli elementi che costituiscono il prodotto.
+  Su GitHub è possibile accedere ad un registro completo delle Pull Request che sono state approvate e integrate correttamente nel repository.
+  Questo registro fornisce una traccia chiara e dettagliata degli elementi che costituiscono il prodotto, consentendo ai membri del gruppo di tenere traccia delle modifiche apportate al codice sorgente e di monitorare il processo di sviluppo del software.
+  Tramite questa funzionalità, è possibile visualizzare le modifiche specifiche apportate a ciascun file, nonché i commenti e le discussioni associate a ciascuna Pull Request, offrendo così una panoramica completa delle modifiche e delle decisioni prese durante il ciclo di sviluppo del software.
 
 == Processo di verifica <processo_verifica>
 

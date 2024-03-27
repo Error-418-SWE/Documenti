@@ -421,6 +421,58 @@ La SBV è una metrica che indica la percentuale di browser supportati rispetto a
     caption: "Supported Browser Version"
 )
 
+= Test
+
+In questa sezione vengono elencati i test eseguiti sul prodotto che, come riportato in #ndp_v, possono essere:
+- *test di unità*: per testare una singola unità software;
+- *test di regressione*: per verificare il corretto funzionamento del software, dopo l'implementazione di una nuova funzionalità o la risoluzione di eventuali bug;
+- *test di integrazione*: per verificare la corretta integrazione delle parti del sistema.
+
+Ad ogni test viene associato un codice definito come segue:
+#align(`[Tipologia][Sequenza]`, center)
+Tipologia indica il tipo di test:
+- `U`: test di unità;
+- `I`: test di integrazione;
+
+Ad ogni test è associato un esito che può essere:
+- `P`: positivo, il test ha dato esito positivo;
+- `N`: negativo, il test ha dato esito negativo.
+
+#figure(
+   table(
+      columns: 3,
+      rows: (auto, auto),
+      align: left,
+      [*Codice*],[*Descrizione*],[*Stato*],
+      [U1],[*Bin*: verifica che il metodo `getId()` ritorni correttamente l'Id del bin],[P],
+      [U2],[*Bin*: verifica che il metodo `getLevel()` ritorni correttamente il piano del bin],[P],
+      [U3],[*Bin*: verifica che il metodo `getColumn()` ritorni correttamente la colonna del bin],[P],
+      [U4],[*Bin*: verifica che il metodo `getHeight()` ritorni correttamente l'altezza del bin],[P],
+      [U5],[*Bin*: verifica che il metodo `getLength()` ritorni correttamente la lunghezza del bin],[P],
+      [U6],[*Bin*: verifica che il metodo `getWidth()` ritorni correttamente la colonna del bin],[P],
+      [U7],[*Bin*: verifica che il metodo `getProduct()` ritorni correttamente il prodotto contenuto nel bin],[P],
+      [U8],[*Bin*: verifica che il metodo `setId()` modifichi correttamente l'Id del bin],[P],
+      [U9 - U10],[*Bin*: verifica che il metodo `setProduct()` modifichi correttamente il prodotto contenuto nel bin],[P],
+      [U11 - U12],[*Bin*: verifica che il metodo `clearProduct()` assegni il valore `null` all'attributo product],[P],
+      [U13],[*Floor*: verifica che il metodo `getLength()` ritorni correttamente la lunghezza del piano],[P],
+      [U14],[*Floor*: verifica che il metodo `setLength()` modifichi correttamente la lunghezza del piano],[P],
+      [U15],[*Floor*: verifica che il metodo `getWidth()` ritorni correttamente la larghezza del piano],[P],
+      [U16],[*Floor*: verifica che il metodo `setWidth()` modifichi correttamente la larghezza del piano],[P],
+      [U17],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano
+
+      *SVG*: verifica che `getString()` ritorni correttamente la stringa contenente l'SVG],[P],
+      [U18],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano
+
+      *SVG*: verifica che `getLength()` ritorni correttamente la lunghezza del piano SVG],[P],
+      [U19],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano
+
+      *SVG*: verifica che `getWidth()` ritorni correttamente la larghezza del piano SVG],[P],
+      [U20],[*Floor*: verifica che il metodo `setSVG()` modifichi correttamente le dimensioni del piano SVG],[P],
+      [U21],[*Floor*: verifica che il metodo `clone()` ritorni correttamente un clone del piano],[P],
+    ),
+    caption: "Tabella tracciamento test - risultato"
+)
+
 = Valutazione della qualità
 
 == Premessa

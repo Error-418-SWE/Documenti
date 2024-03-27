@@ -214,7 +214,7 @@ L'EAC rappresenta il costo stimato al termine del progetto. Tale metrica viene c
   caption: "Specifiche metrica EAC"
 )
 
-Il costo totale del capitolato non può essere maggiore rispetto a quanto espresso in candidatura, pertanto gli unici valori accettbili (e ottimali) sono pari o inferiori rispetto al *BAC*. Dipendendo strettamente dall'indice di performance (*CPI*), il valore della metrica *EAC* può subire variazioni anche al rialzo. Sarà compito del gruppo assorbire eventuali costi aggiuntivi, al fine di mantenere il valore della metrica *EAC* entro i limiti stabiliti in prospettiva della milestone esterna *PB*.
+Il costo totale del capitolato non può essere maggiore rispetto a quanto espresso in candidatura, pertanto gli unici valori accettabili (e ottimali) sono pari o inferiori rispetto al *BAC*. Dipendendo strettamente dall'indice di performance (*CPI*), il valore della metrica *EAC* può subire variazioni anche al rialzo. Sarà compito del gruppo assorbire eventuali costi aggiuntivi, al fine di mantenere il valore della metrica *EAC* entro i limiti stabiliti in prospettiva della milestone esterna *PB*.
 
 == Processi di supporto
 === Documentazione
@@ -510,7 +510,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
   }),
   caption: "Rapporto tra PPV, PAC e PEV"
 )
-*RTB*: In questo primo periodo, il gruppo è consapevole che il valore pianficato *PPV* risulti superiore a quanto prodotto nell'effettivo indicato dal *PEV*. Nonostante ciò, il gruppo è sempre riuscito a mantenere il valore del *PEV* non solo in crescita, ma anche superiore all'80% del *PPV*.
+*RTB*: In questo primo periodo, il gruppo è consapevole che il valore pianificato *PPV* risulti superiore a quanto prodotto nell'effettivo indicato dal *PEV*. Nonostante ciò, il gruppo è sempre riuscito a mantenere il valore del *PEV* non solo in crescita, ma anche superiore all'80% del *PPV*.
 
 #pagebreak()
 

@@ -16,7 +16,7 @@
 = Introduzione
 
 == Scopo del documento
-Il presente documento si pone come obiettivo la descrizione dettagliata delle scelte progettuali effettuate, al fine di garantire una comprensione chiara e completa del software "WMS3: Warehouse Management 3D". 
+Il presente documento si pone come obiettivo la descrizione dettagliata delle scelte progettuali effettuate, al fine di garantire una comprensione chiara e completa del software "WMS3: Warehouse Management 3D".
 
 Gli aspetti fondamentali riguardano l'architettura implementativa, analizzazndo tecnologie e design pattern adottati, e l'archietettura di deployment del prodotto.
 
@@ -195,7 +195,7 @@ L'obiettivo principale è assicurare che il software sia sviluppato utilizzando 
     [Next.js],
     [Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web.],
     [14.1.0],
-    
+
     [Node.js],
     [Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli.],
     [20.11.0],
@@ -214,7 +214,7 @@ L'obiettivo principale è assicurare che il software sia sviluppato utilizzando 
 
     cell(
       colspan: 3,
-      fill: gray.lighten(50%), 
+      fill: gray.lighten(50%),
       [*Tecnologie ambiente 3D*]
     ),
 
@@ -283,7 +283,7 @@ L'obiettivo principale è assicurare che il software sia sviluppato utilizzando 
 
 = Architettura di sistema
 
-== Architettura di implementazione 
+== Architettura di implementazione
 Il software WMS3 al fine di perseguire manutenibilità, flessibilità e scalabilità, adotta ed implementa un'architettura "layered", nota anche come "Multi-tier architecture".
 
 I layer definiti sono "closed", ovvero una richiesta si sposta esclusivamente da un livello superiore a quello immediatamente adiacente.
@@ -296,6 +296,8 @@ Tale architettura permette di individuare e suddividere la logica del software i
 
 - *Presentation layer*: permette di trasformare i dati elaborati dal Business layer e le informazioni in una forma comprensibile e accessibile agli utenti finali. Questo include la creazione di interfacce utente grafiche e visualizzazioni 3D degli elementi di interesse.
 
+Ciascun layer possiede il suo sistema di classi e componenti e prevede metodi per comunicare con i layer adiacenti.
+
 #figure(
   image("./imgs/layeredArchitecture.png", width: 100%),
   caption: [
@@ -306,82 +308,194 @@ Tale architettura permette di individuare e suddividere la logica del software i
 === Vantaggi
 - Ogni livello dell'archiettetura crea un livello di astrazione che permette di perseguire _separation of concerns_ e di rendere il software più manutenibile e scalabile;
 - Semplicità di implementazione in termini di costi e tempo;
-- Facilità di test e debug;
+- Semplicità di test e debug.
 
 === Svantaggi
 - Cambiamenti consistenti possono richiedere modifiche in layer diversi.
 
-== Design pattern utilizzati
+== Persistence layer
+Il layer di persistenza è responsabile della gestione dell'accesso al database e della lettura dei dati al suo interno. I dati letti vengono processati e trasformati in oggetti del Business layer.
 
-=== Data Mapper <data_mapper>
-Il design pattern Data Mapper viene utilizzato per interpretare i dati letti del database mantenendo separate la logica di business dal layer di persistenza. Le classi relative a questo pattern fungono da intermediari tra l'applicazione e la sorgente dati e sono responsabili della conversione delle strutture dati atte alla persistenza (ottenute in formato JSON a seguito di query al database) in oggetti del dominio dell'applicazione.
+\
+=== Nextjs Server Actions
 
-=== Repository <repository>
-Il design pattern Repository viene implementato per separare la logica di business dalla logica di accesso ai dati. Le classi relative a questo pattern eseguono operazioni di lettura, aumentando l'astrazione dei dettagli specifici della persistenza dei dati e permettendo all'applicazione di interagirvi in modo indipendente dal tipo di archivio sottostante.
+L'accesso al database avviene mediante Server Actions, feature offerta da Nextjs che permette la definizione di codice eseguibile solamente lato server senza eseguire operazioni di fetch tipiche delle chiamate API. Questo permette di non esporre sulla rete endpoint sensibili e di mantenere la sicurezza dei dati.
 
-=== Provider <provider>
-Il design pattern Provider viene applicato nel contesto tecnologico del progetto, soprattutto rispetto all'utilizzo di React, vengono sfruttate delle Context API per permette di gestire e trasferire i dati attraverso l'albero dei componenti in modo strutturato, evitando il "prop drilling", ovvero l'effetto che si verifica nei casi in cui è necessario trasportare i dati attraverso più livelli di componenti, anche se alcuni di essi non ne necessitano.
+Quando viene richiamata una server action, Next.js può restituire sia l'interfaccia utente aggiornata sia i nuovi dati in un'unica risposta, integrandosi perfettamente con l'architettura cahcing and revalidating di Next.js.
 
-=== Strategy <strategy>
-Il design pattern Strategy consente di definire una famiglia di algoritmi, incapsularli in classi separate e renderli intercambiabili. In questo modo è possibile applicare l'algoritmo appropriato senza dover conoscere i dettagli implementativi.
+Le server action sono del tutto analoghe all'utilizzo di una funzione all'interno del codice, ma con la differenza che la sua esecuzione avviene lato server, mediante una chiamata POST interamente gestita da Next.js.
 
-È stato implementato nella gestione di diversi algoritmi di creazione del piano, degli algoritmi di ricerca dei prodotti e degli algoritmi di ricerca delle zone.
+Il risultato della chiamata viene restituito in formato JSON.
 
-=== Factory <factory>
-Il design pattern Factory permette, definendo un'interfaccia comune, la creazione di oggetti senza specificarne esplicitamente le classi esatte, lasciando alle sottoclassi la decisione su quale istanziare.
+\
+=== Server Actions implementate
 
-È stato adottato per separare l'implementazione dalla creazione degli oggetti relativi agli algoritmi di ricerca dei prodotti e delle zone.
+Le Server Actions implementate trovano applicazione in operazioni di lettura dal database, pertanto la natura asincrona delle operazioni implica l'utilizzo di Promise per la gestione dei risultati.
 
+- *getAllBins*:
+  - *obiettivo: * ottenere le informazioni di tutti i bin presenti nel database;
+  - *parametri: * nessuno;
+  - *risultati*
+    - *Esito positivo: * JSON contenente lista dei _bin_ presenti nel database.
+    - *Esito negativo: * JSON vuoto.
+\
+- *getBinById*:
+  - *obiettivo: * dato un codice identificativo univoco, ritorna le informazioni relative al bin corrispondente lette dal database;
+  - *parametri: * `id:string` del bin interessato;
+  - *risultati*
+    - *Esito positivo: * JSON contenente le informazioni del bin corrispondente.
+    - *Esito negativo: * JSON vuoto.
 
+\
+- *getAllCategories*:
+  - *obiettivo: * ottenere le informazioni di tutte le categorie presenti nel database;
+  - *parametri: * nessuno;
+  - *risultati*
+    - *Esito positivo: * JSON contenente lista delle categorie presenti nel database.
+    - *Esito negativo: * JSON vuoto.
 
-== Classi e Componenti
-Ciascun layer possiede il suo indipendente sistema di classi e componenti e prevede metodi per comunicare con i layer adiacenti.
+\
+- *getAllProducts*:
+  - *obiettivo: * ottenere le informazioni di tutti i prodotti presenti nel database;
+  - *parametri: * nessuno;
+  - *risultati*
+    - *Esito positivo: * JSON contenente lista dei prodotti presenti nel database.
+    - *Esito negativo: * JSON vuoto.
 
-=== Persistence layer
-Mediante le Server Action offerte da Next.js, vengono eseguite delle query SQL atte alla lettura dei dati utili all'applicazione da un database esterno.
-Esse sono implementate e rese disponibili in file separati, organizzati nell'omonima cartella "Server Action", contenente:
+\
+- *getProductById*:
+  - *obiettivo: * dato un codice identificativo univoco, ritorna le informazioni relative al prodotto corrispondente lette dal database;
+  - *parametri: * `id:string` del prodotto interessato;
+  - *risultati*
+    - *Esito positivo: * JSON contenente le informazioni del prodotto corrispondente.
+    - *Esito negativo: * JSON vuoto.
 
-- *getAllBins*: ritorna le informazioni di tutti i bin lette dal database;
+\
+- *SVGSanitize*:
+  - *obiettivo: * dato un file SVG, ne effettua la sanificazione da elementi non necessari;
+  - *parametri: * `svg:string` del file SVG da sanificare;
+  - *risultati*
+    - *Esito positivo: * JSON contenente il file SVG pulito.
+    - *Esito negativo: * JSON vuoto.
 
-- *getBinById*: dato un codice identificativo univoco, ritorna le informazioni relative al bin corrispondente lette dal database;
+\
+- *readSavedSVG*:
+  - *obiettivo: * leggere il contenuto di un file SVG salvato;
+  - *parametri: * nessuno;
+  - *risultati*
+    - *Esito positivo: * JSON contenente il file SVG salvato.
+    - *Esito negativo: * JSON vuoto.
 
-- *getAllCategories*: ritorna le informazioni di tutte le categorie di prodotti lette dal database;
+\
+- *saveSVG*:
+  - *obiettivo: * salvare un file SVG sul server;
+  - *parametri: * `svg:string` del file SVG da salvare;
+  - *risultati*
+    - *Esito positivo: * JSON contenente il file SVG salvato.
+    - *Esito negativo: * JSON vuoto.
 
-- *getAllProducts*: ritorna le informazioni di tutti i prodotti lette dal database;
+\
+- *getAllZones*:
+  - *obiettivo: * ottenere le informazioni di tutte le zone presenti nel database;
+  - *parametri: * nessuno;
+  - *risultati*
+    - *Esito positivo: * JSON contenente lista delle zone presenti nel database.
+    - *Esito negativo: * JSON vuoto.
 
-- *getProductById*: dato un codice identificativo univoco, ritorna le informazioni relative al prodotto corrispondente lette dal database;
+\
+- *getBinsByZoneId*:
+  - *obiettivo: * dato un codice identificativo univoco, ritorna le informazioni relative ai bin presenti nella zona corrispondente lette dal database;
+  - *parametri: * `id:string` della zona interessata;
+  - *risultati*
+    - *Esito positivo: * JSON contenente lista dei bin presenti nella zona corrispondente.
+    - *Esito negativo: * JSON vuoto.
 
-- *SVGSanitize*: dato un path ad un file SVG caricato, ritorna il contenuto del relativo file SVG sanificato, ovvero normalizzato e reso sicuro, prevenendo attacchi XSS;
+\
+- *getZoneById*:
+  - *obiettivo: * dato un codice identificativo univoco, ritorna le informazioni relative alla zona corrispondente lette dal database;
+  - *parametri: * `id:string` della zona interessata;
+  - *risultati*
+    - *Esito positivo: * JSON contenente le informazioni della zona corrispondente.
+    - *Esito negativo: * JSON vuoto.
 
-- *readSavedSVG*: ritorna il contenuto del file SVG salvato su server;
+\
+=== Repository Pattern
+Il Repository Pattern permette di separare la logica di business dalla logica di accesso ai dati, garantendo una maggiore flessibilità e manutenibilità del codice. L'obiettivo è creare un livello di astrazione tra la logica di accesso ai dati e la logica di business, consentendo di modificare l'implementazione del database senza influenzare il codice di business.
 
-- *saveSVG*: dato il contenuto di un file SVG, esso viene salvato come _saved.svg_;
+*Vantaggi*
+- Dependency inversion principle: i moduli di alto livello non dipendono dai moduli di basso livello, rendendo la logica di business indipendente dalla logica di accesso ai dati;
+- La separazione tra la logica di business e la logica di accesso ai dati semplifica la manutenzione e il testing del codice;
 
-- *getAllZones*: ritorna le informazioni di tutte le zone lette dal database;
+\
+*Interfaccia imlplementata*
+- *DataMapperInterface*: interfaccia che definisce i metodi per la creazione di oggetti a partire dai dati letti dal database.
+  - *Metodi*
+    - *getAll*:
+      - *obiettivo: * ottenere tutte le informazioni relative agli oggetti;
+      - *parametri: * nessuno;
+      - *risultati*
+        - *Esito positivo: * Promise contenente la lista degli oggetti;
+        - *Esito negativo: * Promise contenente lista vuota.
+    - *getById*:
+      - *obiettivo: * ottenere le informazioni relative all'oggetto corrispondente al codice identificativo univoco;
+      - *parametri: * `id:string` dell'oggetto interessato;
+      - *risultati*
+        - *Esito positivo: * Promise contenente le informazioni dell'oggetto corrispondente;
+        - *Esito negativo: * Promise contenente lsita vuota.
 
-- *getBinsByZoneId*: dato un codice identificativo univoco, ritorna le informazioni relative a tutti i bin contenuti nella zona corrispondente lette dal database;
+\
+*Classi implementate*
 
-- *getZoneById*: dato un codice identificativo univoco, ritorna le informazioni relative alla zona corrispondente lette dal database.
+L'interfaccia `DataMapperInterface` è implementata dalle seguenti classi:
 
+- *binRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Bin`.
+  - *Metodi*
+    - *getAll*: ottenere tutte le informazioni relative ai bin;
+    - *getById*: ottenere le informazioni relative al bin corrispondente al codice identificativo univoco.
 
-Al fine di agevolare la divisione tra il Persistence layer ed il Business layer, viene utilizzato il pattern Repository (@repository) mediante classi che implementano l'interfaccia `dataRepositoryInterface`, quali:
-
-- *binRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Bin`;
-
-- *productRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Product`;
+- *productRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Product`.
+  - *Metodi*
+    - *getAll*: ottenere tutte le informazioni relative ai prodotti;
+    - *getById*: ottenere le informazioni relative al prodotto corrispondente al codice identificativo univoco.
 
 - *zoneRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Zone`.
+  - *Metodi*
+    - *getAll*: ottenere tutte le informazioni relative alle zone;
+    - *getById*: ottenere le informazioni relative alla zona corrispondente al codice identificativo univoco.
 
-Il pattern Repository impiega in maniera consequenziale le classi correlate del pattern Data Mapper (@data_mapper), le quali implementano l'interfaccia `DataMapperInterface`.
-Di seguito sono elencate le classi specifiche:
+\
+=== Data Mapper Pattern
+Il Data Mapper Pattern, assieme al Repository Pattern, permette di separare la logica di business dalla logica di accesso ai dati. Il Data Mapper Pattern si occupa di mappare i dati letti dal database in oggetti del Business layer, garantendo una maggiore flessibilità e manutenibilità del codice.
 
-- *binMapper*: è responsabile della creazione di oggetti `Bin`;
+Permette la mappatura dei dati letti dal database in oggetti del Business layer, stabilendo un contratto che i dati letti devono rispettare per essere trasformati in oggetti.
 
-- *productMapper*: è responsabile della creazione di oggetti `Product`;
+*Vantaggi*
+- Separazione della logica di business dalla logica di accesso ai dati;
+- Permette di circoscrivere la complessità relativa alla logica di creazione degli oggetti di business;
+- Maggiore flessibilità e manutenibilità del codice;
+- Facilità di testing e debugging.
 
-- *zoneMapper*: è responsabile della creazione di oggetti `Zone`.
+\
+*Interfaccia implementata*
+- *DataMapperInterface*: interfaccia che definisce i metodi per la creazione di oggetti a partire dai dati letti dal database.
+  - *Metodi*
+    - *toDomain*: metodo astratto che definisce la logica di mappatura dei dati JSON recuperati dal database in oggetti di businness.
+      - *parametri*: `data:JSON` contenente i dati recuperati dal database;
+      - *risultati*: oggetto di tipo `T` corrispondente all'oggetto di business.
 
+\
+*Classi implementate*
+- *binMapper*: è responsabile della creazione di oggetti `Bin`.
+  - *Metodi*
+    - *toDomain*: mappatura dei dati JSON in oggetti `Bin`.
 
+- *productMapper*: è responsabile della creazione di oggetti `Product`.
+  - *Metodi*
+    - *toDomain*: mappatura dei dati JSON in oggetti `Product`.
+
+- *zoneMapper*: è responsabile della creazione di oggetti `Zone`
+  - *Metodi*
+    - *toDomain*: mappatura dei dati JSON in oggetti `Zone`.
 
 #figure(
   image("./imgs/Persistence Layer patterns class diagram.svg", width: 100%),
@@ -393,16 +507,22 @@ Di seguito sono elencate le classi specifiche:
 Nel diagramma delle classi del layer di persistenza fornito, le classi `Zone`, `Bin` e `Product` sono rappresentate senza gli attributi e i metodi per garantire una maggiore chiarezza grafica.
 Tali informazioni sono rappresentate dettagliatamente nel diagramma delle classi del layer di business.
 
-=== Business layer
-Le classi che vengono utilizzate per rappresentare il modello dell'applicativo sono:
+\
+== Business layer
+Il layer di business è responsabile dell'elaborazione dei dati ricevuti dal layer di persistenza e dell'applicazione delle regole di business definite. È responsabile di implementare la logica dell'applicazione in modo indipendente dalle tecnologie di persistenza e di presentazione utilizzate.
 
+\
+=== Business Objects
+Le classi del Business layer rappresentano gli oggetti di interesse per l'applicazione. Queste classi rappresentanti il modello di dominio dell'applicazione devono risultare indipendenti dalle tecnologie utilizzate per la persistenza dei dati e la presentazione.
+
+=== Classi di modello
 - *Bin*:
 
   rappresenta un elemento bin, ovvero uno spazio definito in grado di contenere un prodotto.
-  I suoi attributi sono:
 
-  - *id*: stringa di massimo dieci caratteri che rappresenta il codice identificativo univoco del bin.
-    Essa è composta da:
+  \
+  *Attributi*:
+  - *id*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco del bin. La struttura dell'id è la seguente:
     #align(center, `idZona_letteraColonna_numeroLivello`)
 
     La lettera corrispondente alla colonna fa riferimento ad una mappatura per cui "A" equivale alla colonna zero e viene incrementata seguendo i caratteri dell'alfabeto inglese con l'aumentare del numero della colonna.
@@ -432,18 +552,24 @@ Le classi che vengono utilizzate per rappresentare il modello dell'applicativo s
     - *ProductOutgoing*: dichiara che il bin è coinvolto in una richiesta di spostamento del prodotto al suo interno, il quale deve essere prelevato.
 
 
-Per ogni attributo è presente il corrispondente metodo get.
-
-Sono presenti i metodi set per gli attributi `id`, `product` e `state`.
-
-Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore `null` all'attributo che riferisce il prodotto contenuto nel bin.
+\
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
+- *Setters*:
+  - Setters presenti per gli attributi `id`, `product` e `state`.
+- *clearProduct*:
+  - *obiettivo*: Metodo che permette di assegnare il valore `null` all'attributo `product`.
+  - *parametri*: nessuno.
+  - *tipo di ritorno*: void.
 
 \
 - *Zone*:
 
-  rappresenta un elemento zona, può essere interpretata come uno scaffale oppure, nel caso abbia un solo livello, come una zona del piano definita per contenere bin.
-  I suoi attributi sono:
+  rappresenta una zona di contenimento dei bin, interpretabile come scaffale (se a più livelli) o area singola di stoccaggio (se a un solo livello).
 
+  \
+  *Attributi*:
   - *id*: intero che rappresenta il codice identificativo univoco della zona;
 
   - *xcoordinate*: numero in virgola mobile che rappresenta la coordinata X di posizione nel piano;
@@ -461,27 +587,51 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
   - *orientation*: booleano che identifica l'orientamento (perpendicolare o parallelo) della zona rispetto all'asse delle ascisse del piano.
 
   \
-  Per ogni attributo è presente il corrispondente metodo get.
+  *Metodi*:
+  - *Getters*:
+    - Getters presenti per ogni attributo della classe.
+  - Setter:
+    - *setXCoordinate*:
+      - *obiettivo*: permette di modificare la coordinata X di posizione nel piano;
+      - *parametri*: `x:number` che rappresenta la nuova coordinata X;
+      - *tipo di ritorno*: void.
+    - *setYCoordinate*:
+      - *obiettivo*: permette di modificare la coordinata Y di posizione nel piano;
+      - *parametri*: `y:number` che rappresenta la nuova coordinata Y;
+      - *tipo di ritorno*: void.
 
-  Sono disponibili i metodi set per gli attributi `xcoordinate` e `ycoordinate`.
+  - *getBin*:
+    - *obiettivo*: ottenere il bin corrispondente al codice identificativo univoco;
+    - *parametri*: `id:string` del bin interessato;
+    - *tipo di ritorno*: `Bin` corrispondente al codice identificativo univoco o NULL.
 
-  Sono inoltre forniti i metodi:
+  - *getLevels*:
+    - *obiettivo*: ottenere una lista contenente le liste di bin che rappresentano i livelli della zona;
+    - *parametri*: nessuno;
+    - *tipo di ritorno*: lista di liste di bin `Bin[[]]`.
 
-  - *getBin*: dato un codice identificativo univoco, ritorna l'elemento `Bin` corrispondente presente in `bins`, oppure `null` se non presente;
+  - *getColumns*:
+    - *obiettivo*: ottenere una lista contenente le liste di bin che rappresentano le colonne della zona;
+    - *parametri*: nessuno;
+    - *tipo di ritorno*: lista di liste di bin `Bin[[]]`.
 
-  - *getLevels*: ritorna una lista contenente le liste di bin che rappresentano i livelli della zona;
+  - *getMaxUsedLevel*:
+    - *obiettivo*: ottenere il numero dell'ultimo livello della zona con almeno un bin contenente un prodotto;
+    - *parametri*: nessuno;
+    - *tipo di ritorno*: intero che rappresenta il numero dell'ultimo livello `number`.
 
-  - *getColumns*: ritorna una lista contenente le liste di bin che rappresentano le colonne della zona;
-
-  - *getMaxUsedLevel*: ritorna il numero dell'ultimo livello della zona con almeno un bin contenente un prodotto;
-
-  - *getMaxUsedColumn*: ritorna il numero dell'ultima colonna della zona con almeno un bin contenente un prodotto.
+  - *getMaxUsedColumn*:
+    - *obiettivo*: ottenere il numero dell'ultima colonna della zona con almeno un bin contenente un prodotto;
+    - *parametri*: nessuno;
+    - *tipo di ritorno*: intero che rappresenta il numero dell'ultima colonna `number`.
 
 \
 - *Product*:
 
-  rappresenta un prodotto, i suoi attributi sono:
+  rappresenta il prodotto da gestire in magazzino.
 
+  \
+  *Attributi*:
   - *id*: intero che rappresenta il codice identificativo univoco del prodotto;
 
   - *name*: stringa che rappresenta il nome del prodotto;
@@ -496,7 +646,10 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 
   - *categories*: lista di stringhe che rappresentano le categorie del prodotto.
 
-  Per ogni attributo è presente il corrispondente metodo get.
+  \
+  *Metodi*:
+  - *Getters*:
+    - Getters presenti per ogni attributo della classe.
 
 \
 - *Order*:
@@ -543,7 +696,7 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 
   Inoltre è presente il metodo `clone` utile per creare una copia dell'oggetto invocante.
 
-  Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy (@strategy) e le relative classi che implementano l'interfaccia `FloorStrategy`:
+  Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy e le relative classi che implementano l'interfaccia `FloorStrategy`:
 
   - *StandardFloorStrategy*: rappresenta la creazione di un elemento `Floor` senza file SVG;
 
@@ -569,7 +722,7 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 )
 
 \
-Per gestire la possibilità di cercare specifici prodotti e specifiche zone, sono state realizzate delle classi che permettono l'implementazione dei design pattern Strategy (@strategy) e Factory (@factory).
+Per gestire la possibilità di cercare specifici prodotti e specifiche zone, sono state realizzate delle classi che permettono l'implementazione dei design pattern Strategy e Factory.
 
 Le classi relative al design pattern Strategy implementano l'interfaccia `SearchStrategy` e sono:
 
@@ -591,7 +744,7 @@ La classe relativa al design pattern Factory è:
 
 
 \
-In aggiunta alle classi, per aderire all'adozione del pattern Provider (@provider), sono presenti i componenti:
+In aggiunta alle classi, per aderire all'adozione del pattern Provider, sono presenti i componenti:
 
 - *warehouseProvider*: fornisce un provider per gestire dati relativi alle variabili di contesto dell'ambiente grafico;
 
@@ -610,8 +763,8 @@ In aggiunta alle classi, per aderire all'adozione del pattern Provider (@provide
 - *zonesProvider*: fornisce un provider per gestire dati relativi agli oggetti `Zone`.
 
 
-=== Presentation layer
-==== UI
+== Presentation layer
+=== UI
 L'interfaccia utente è realizzata mediante elementi importati da Shadcn-UI e componenti personalizzati.
 
 I componenti realizzati sono i seguenti:
@@ -675,7 +828,7 @@ I componenti realizzati sono i seguenti:
 - *panel*: componente generico utilizzato per la visualizzazione e l'organizzazione dei componenti al suo interno.
 
 
-==== Three.js
+=== Three.js
 L'ambiente tridimensionale è realizzato mediante i componenti:
 
 - *Floor*: elemento che rappresenta il piano dell'ambiente di lavoro;

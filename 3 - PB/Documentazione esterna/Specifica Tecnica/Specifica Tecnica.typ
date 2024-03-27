@@ -16,9 +16,9 @@
 = Introduzione
 
 == Scopo del documento
-Il presente documento si pone come obiettivo la descrizione dettagliata delle scelte progettuali effettuate, al fine di garantire una comprensione chiara e completa del software "WMS3: Warehouse Management 3D".
+Il presente documento ha come obiettivo la descrizione dettagliata delle scelte progettuali effettuate, al fine di garantire una comprensione chiara e completa del software "WMS3: Warehouse Management 3D", proposto da Sanmarco Informatica S.p.A.
 
-Gli aspetti fondamentali riguardano l'architettura implementativa, analizzazndo tecnologie e design pattern adottati, e l'archietettura di deployment del prodotto.
+Gli aspetti fondamentali riguardano l'architettura implementativa, analizzando tecnologie e design pattern adottati, e l'architettura di deployment del prodotto.
 
 Mediante il documento si intende fornire le linee guida per lo sviluppo del software, garantendo la coerenza con i  requisiti individuati nel documento di Analisi dei Requisiti e il loro soddisfacimento.
 
@@ -177,78 +177,70 @@ In questa sezione, viene presentata una panoramica completa degli strumenti e de
 L'obiettivo principale è assicurare che il software sia sviluppato utilizzando le tecnologie adeguate in termini di efficacia ed efficienza e che soddisfi i requisiti individuati nel documento #adr.
 
 == Linguaggi utilizzati
-
-=== HTML
-HTML (HyperText Markup Language) è il linguaggio di markup standard utilizzato per la creazione di pagine web. Viene utilizzato per definire la struttura e il contenuto delle pagine web.
-
-*Versione: * 5.0.
-
-*Contesto di utilizzo: *
-- Definizione struttura componenti web;
-
-\
 === CSS
 CSS (Cascading Style Sheets) è un linguaggio utilizzato per definire lo stile e la presentazione delle pagine web. Viene utilizzato per definire la formattazione, il layout e il design delle pagine web.
 
 *Versione: * 3.0.
 
 *Contesto di utilizzo: *
-- Definizione stile e layout componenti web;
+- Definizione stile e layout componenti web.
 
 *Librerie e framework*
 - *Tailwind CSS*
   - Framework CSS utilizzato per lo sviluppo di interfacce utente web. Offre una serie di classi predefinite per la definizione dello stile degli elementi.
   - *Versione: * 3.4.1.
-  - *Link: * [https://tailwindcss.com/]
+  - *Link: * https://tailwindcss.com/ #lastVisitedOn(27, 03, 2024)
 
 \
-=== Typescript
-Typescript è un superset di JavaScript che aggiunge tipizzazione statica al linguaggio, offrendo maggiore struttura al codice. Questo permette di rilevare errori di programmazione in fase di sviluppo, riducendo il rischio di bug e semplificando la manutenzione del codice.
+=== TypeScript
+TypeScript è un superset di JavaScript che aggiunge tipizzazione statica al linguaggio, offrendo maggiore struttura al codice. Questo permette di rilevare errori di programmazione in fase di sviluppo, riducendo il rischio di bug e semplificando la manutenzione del codice.
 
 *Versione: * 5.3.3.
 
 *Contesto di utilizzo: *
 - Definizione tipi e interfacce per i dati;
-- Implementazione dei componenti react;
+- Implementazione dei componenti React;
 - Codifica lato front-end e back-end;
 - Implementazione ambiente 3D.
 
 *Librerie e framework*
 - *Next.js*
-  - Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web. Offre funzionalità avanzate come il rendering lato server, la generazione di pagine statiche e la gestione delle route.
+  - Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web. Offre funzionalità avanzate realizzazione di API, gestione del routing e Server Action.
   - *Versione: * 14.1.0.
-  - *Link: * [https://nextjs.org/]
+  - *Link: * https://nextjs.org/ #lastVisitedOn(27, 03, 2024)
 \
 - *React*
-  - Libreria JavaScript utilizzata per la creazione di interfacce utente dinamiche e reattive. Si basa sul concetto di "components", ovvero blocchi di codice autonomi che gestiscono la propria logica e rendering.
+  - Libreria JavaScript utilizzata per la creazione di interfacce utente dinamiche, reattive e stateful. Si basa sul concetto di "components", ovvero blocchi di codice autonomi che gestiscono la propria logica e rendering.
   - *Versione: * 18.0.0.
-  - *Link: * [https://reactjs.org/]
+  - *Link: * https://reactjs.org/ #lastVisitedOn(27, 03, 2024)
 \
 - *Node.js*
   - Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli. Viene utilizzato per eseguire il codice JavaScript lato server.
   - *Versione: * 20.11.0.
-  - *Link: * [https://nodejs.org/]
+  - *Link: * https://nodejs.org/ #lastVisitedOn(27, 03, 2024)
 \
-- *Shadcn-UI*
-  - Libreria di componenti React personalizzati per la creazione di interfacce utente. Offre una serie di componenti pronti all'uso per la realizzazione di interfacce grafiche.
+- *Shadcn/ui*
+  - Raccolta di componenti React personalizzati per la creazione di interfacce utente. Offre una serie di componenti pronti all'uso per la realizzazione di interfacce grafiche.
   - *Versione: * 0.8.0.
-  - *Link: * [https://shadcn-ui.com/]
+  - *Link: * https://ui.shadcn.com/ #lastVisitedOn(27, 03, 2024)
 
 *Librerie e framework ambiente 3D*
-- *Drei*
-  - Libreria che fornisce componenti e utilità per semplificare lo sviluppo di applicazioni in 3D utilizzando React e Three.js. Offre funzionalità avanzate per la creazione di ambienti 3D interattivi.
-  - *Versione: * 9.97.6.
-  - *Link: * [https://www.npmjs.com/package/@react-three/drei]
-\
-- *Fiber*
-  - Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React. Offre funzionalità avanzate per la creazione di grafica 3D animata.
-  - *Versione: * 8.15.16.
-  - *Link: * [https://docs.pmnd.rs/react-three-fiber/getting-started/introduction]
-\
 - *Three.js*
   - Libreria JavaScript utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL. Offre funzionalità avanzate per la creazione di ambienti 3D interattivi.
   - *Versione: * 0.161.2.
-  - *Link: * [https://threejs.org/]
+  - *Link: * https://threejs.org/ #lastVisitedOn(27, 03, 2024)
+
+\
+- *\@react-three/fiber*
+  - Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React. Offre funzionalità avanzate per la creazione di grafica 3D animata.
+  - *Versione: * 8.15.16.
+  - *Link: * https://docs.pmnd.rs/react-three-fiber/getting-started/introduction #lastVisitedOn(27, 03, 2024)
+
+\
+- *\@react-three/drei*
+  - Libreria che fornisce componenti e utilità per semplificare lo sviluppo di applicazioni in 3D utilizzando React e Three.js. Offre funzionalità avanzate per la creazione di ambienti 3D interattivi.
+  - *Versione: * 9.97.6.
+  - *Link: * https://www.npmjs.com/package/@react-three/drei #lastVisitedOn(27, 03, 2024)
 
 \
 === JSON
@@ -279,7 +271,7 @@ PostgreSQL è un sistema di gestione di database relazionali. Viene utilizzato p
 \
 == Tecnologie per il testing
 === Jest
-Jest è un framework di testing per JavaScript e Typescript. Viene utilizzato principalmente per lo unit e l'integration testing, offrendo funzionalità avanzate come la parallelizzazione dei test e il mocking delle dipendenze.
+Jest è un framework di testing per JavaScript e TypeScript. Viene utilizzato principalmente per lo unit e l'integration testing, offrendo funzionalità avanzate come la parallelizzazione dei test e il mocking delle dipendenze.
 
 *Versione: * 29.7.0.
 
@@ -295,10 +287,10 @@ Docker è un software utilizzato per il processo di deployment di applicazioni s
 *Versione: * 24.0.7.
 
 *Contesto di utilizzo: *
-- Deployment del software “WMS3” mediante container Docker;
+- Deployment del software "WMS3" mediante container Docker;
 - Isolamento dell'ambiente di sviluppo.
 
-*Container docker utilizzati*
+*Immagini Docker utilizzate*
 - *PostgreSQL*: container per il database relazionale;
   - Immagine: `postgres:16.2`.
 
@@ -312,7 +304,7 @@ Docker-compose è uno strumento per la definizione e l'esecuzione di applicazion
 *Versione: * 2.23.3.
 
 *Contesto di utilizzo: *
-- Gestione dell'orchestrazione dei container Docker utilizzati;
+- Gestione dell'orchestrazione dei container Docker utilizzati.
 
 #pagebreak()
 

@@ -28,13 +28,16 @@ Oltre alle funzionalità già presentate nei precedenti meeting, sono state aggi
 
 - posizionamento nei bin di prodotti non collocati;
 - posizionamento delle zone nel piano agevolata mediante una grid attivabile;
+- posizionamento automatico della visuale su una zona specificata;
 - movimento della visuale tramite tastiera durante lo spostamento di una zona o prodotto.
 
 Il Proponente è risultato soddisfatto di quanto presentato e ha confermato il corretto soddisfacimento di tutti i requisiti derivati dal capitolato emersi durante lo sviluppo del progetto, sia riguardanti i requisiti minimi che desiderabili.
 
 Inoltre è stata apprezzata l'attenzione data all'usabilità del prodotto.
 
+\
+_Il Proponente riconosce il prodotto software del gruppo Error_418 come MVP del capitolato_
 
 == Pianificazione incontri futuri
-Durante il meeting è stato fissato un futuro incontro per la data 09/04/2024 in presenza a Padova.
+
 A seguito del meeting odierno, gli incontri periodici sono da considerarsi conclusi e il Proponente ha espresso la sua disponibilità per futuri aggiornamenti sul progetto e ad eventuali attività legate alla Customer Acceptance.

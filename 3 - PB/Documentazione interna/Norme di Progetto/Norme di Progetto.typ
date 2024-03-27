@@ -1736,10 +1736,7 @@ Questo vale sia per il codice sviluppato in proprio sia per quello riutilizzato 
 
 Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in Pull Request tutte le funzionalità che si ha necessità di controllare manualmente, oltre al riferimento al task interessato su Jira.
 
-Dopo aver sviluppato e testato i singoli moduli attraverso i test di unità, inizia il processo di integrazione (@processo_integrazione). Durante questa fase, i moduli vengono combinati e assemblati per formare il sistema completo, dopodiché, vengono eseguiti test di integrazione mirati per assicurare che i vari componenti interagiscano correttamente tra loro e che il sistema nel suo complesso funzioni senza intoppi.
-
-Tuttavia, i test di integrazione vanno oltre la semplice unione delle parti del software. Essi costituiscono una metodologia completa per testare le porzioni di codice che si richiamano reciprocamente. Il loro obiettivo principale è garantire che le interazioni tra i moduli siano gestite in modo accurato e che il flusso dei dati avvenga senza errori, assicurando così il corretto funzionamento del sistema nel suo complesso.
-Un esempio concreto di ciò si riscontra nell'esecuzione dei test di integrazione per le API/Server Action, dove spesso si utilizza il Mocking per simulare il comportamento del database. Questa pratica consente di verificare come le API interagiscono con il database senza dover effettivamente coinvolgere un ambiente di sviluppo reale.
+Dopo aver sviluppato e testato i singoli moduli attraverso i test di unità, inizia il processo di integrazione (@processo_integrazione).
 
 ==== Implementazione
 

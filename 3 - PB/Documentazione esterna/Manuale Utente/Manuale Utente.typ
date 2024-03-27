@@ -276,6 +276,37 @@ I parametri modificabili sono gli stessi che vengono richiesti durante la creazi
 
 Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla Zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
 
+== Ispezione Bin, Prodotti e Zone
+
+#figure(
+    grid(
+        columns: 3,
+        rows:    (auto, auto),
+        [ #image("./imgs/ispezione_1.png", width: 80%)],
+        [ #image("./imgs/ispezione_2.png", width: 100%)],
+        [ #image("./imgs/ispezione_3.png", width: 75%)],
+    ),caption: [Menù di ispezione zone (sinistra e centro) e menù di ispezione bin (destra)],
+) <ispezione>
+
+È possibile in ogni momento ispezionare una zona facendo doppio click sul cubetto rosso presente in uno dei suoi angoli, usato anche per lo spostamento. Si aprirà quindi il menù in figura @ispezione (sinistra e centro), dove vengono riportate in ordine:
+- id della zona;
+- orientamento e dimensioni;
+- lista di bin che riporta per ogni voce:
+  - id del bin;
+  - stato ("Libero" o, se occupato, nome del prodotto contenuto);
+  - pulsante per la visualizzazione dei dettagli del bin (menù in @ispezione a destra), presente solo se il bin è occupato.
+
+Per ispezionare il contenuto di un bin è possibile, in alternativa al pulsante citato in precedenza, fare doppio click sul bin desiderato ed aprire il menù in figura @ispezione (destra).
+Verranno mostrati:
+- id del bin;
+- dimensioni del bin;
+- informazioni sul prodotto contenuto, se presente:
+  - nome;
+  - id;
+  - categoria;
+  - dimensioni;
+  - peso.
+
 == Richiesta spostamento prodotto
 
 #figure(

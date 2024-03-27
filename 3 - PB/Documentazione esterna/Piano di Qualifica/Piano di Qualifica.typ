@@ -476,6 +476,13 @@ Ad ogni test è associato un esito che può essere:
       [U-3.2],[*Order*: verifica che il metodo `getStartPoint()` ritorni correttamente il bin di partenza dell'ordine],[P],
       [U-3.3],[*Order*: verifica che il metodo `getEndPoint()` ritorni correttamente il bin di arrivo dell'ordine],[P],
       [U-3.4],[*Order*: verifica che il metodo `getProduct()` ritorni correttamente il prodotto dell'ordine],[P],
+      [U-4.1],[*Product*: verifica che il metodo `getId()` ritorni correttamente l'Id del prodotto],[P],
+      [U-4.2],[*Product*: verifica che il metodo `getName()` ritorni correttamente il nome del prodotto],[P],
+      [U-4.3],[*Product*: verifica che il metodo `getWeight()` ritorni correttamente il peso del prodotto],[P],
+      [U-4.4],[*Product*: verifica che il metodo `getLength()` ritorni correttamente la lunghezza del prodotto],[P],
+      [U-4.5],[*Product*: verifica che il metodo `getWidth()` ritorni correttamente la larghezza del prodotto],[P],
+      [U-4.6],[*Product*: verifica che il metodo `getHeight()` ritorni correttamente l'altezza del prodotto],[P],
+      [U-4.7],[*Product*: verifica che il metodo `getCategories()` ritorni correttamente la categoria merceologica del prodotto],[P],
     ),
     caption: "Tabella tracciamento test - risultato"
 )

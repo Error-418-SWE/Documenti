@@ -1791,11 +1791,14 @@ L'integrazione del sistema software avviene automaticamente mediante strumenti c
 
 Come risultato della corretta implementazione del processo di integrazione:
 
-- viene integrato il nuovo elemento software con il prodotto principale;
-- vengono eseguiti automaticamente i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione;
-- vengono identificati i risultati ed eventuali anomalie;
-- i risultati dei test vengono registrati e possono essere visualizzati su GitHub;
-- gli elementi correttamente integrati vengono tracciati e possono essere visualizzati su GitHub.
+- i nuovi elementi software implementati sono integrati con la _codebase_ esistente;
+- il sistema software è composto dall'integrazione degli elementi software implementati;
+- i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione sono eseguiti automaticamente;
+- le interfacce tra gli elementi software sono definite, implementate e aggiornate;
+- le interfacce tra il sistema software e gli elementi esterni sono definite, implementate e aggiornate;
+- gli strumenti di supporto al processo di integrazione sono individuati, configurati e in funzione;
+- i risultati dell'integrazione sono identificati, assieme ad eventuali anomalie;
+- i risultati dei test sono registrati e possono essere visualizzati dai membri del gruppo.
 
 === Attività
 

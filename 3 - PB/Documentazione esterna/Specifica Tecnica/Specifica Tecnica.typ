@@ -1001,10 +1001,10 @@ Permette la creazione di oggetti `SearchStrategy` in base al tipo di oggetto da 
 
 \
 === Provider Pattern
-Il Provider Pattern permette di gestire lo stato dell'applicazione in modo centralizzato, permettendo di mantenere lo stato dell'applicazione in un unico punto, semplificando la gestione e la condivisione dei dati tra i componenti. Questo pattern inoltre previene il fenomeno di prop drilling, ovvero la necessità di passare dati attraverso più livelli di componenti valori che non sono utilizzati direttamente dal componente intermedio.
+Il Provider Pattern permette di gestire lo stato dell'applicazione in modo centralizzato, permettendo di mantenere lo stato dell'applicazione in un unico punto, semplificando la gestione e la condivisione dei dati tra i componenti. Questo pattern inoltre previene il fenomeno di prop drilling, ovvero la necessità di passare attraverso più livelli di componenti valori che non sono utilizzati direttamente dal componente intermedio.
 
 \
-Questo pattern è derivativo dall'utilizzo di React e Nextjs, che permettono di utilizzare i context per la gestione dello stato dell'applicazione.
+Questo pattern è derivativo dall'utilizzo di React e Nextjs, che permettono di utilizzare le Context API per la gestione dello stato dell'applicazione.
 
 \
 *Componenti implementati*
@@ -1125,77 +1125,356 @@ L'interfaccia utente è realizzata mediante elementi importati da Shadcn-UI e co
 
 I componenti realizzati sono i seguenti:
 
-- *Form di creazione*:
+- *Form di configurazione dell'ambiente*:
 
-  - *creationForm*: componente dedicato alla selezione della modalità di creazione dell'ambiente di lavoro;
+  - *creationForm*:
+    - *descrizione*: componente dinamico dedicato alla creazione dell'ambiente di lavoro. Rappresenta la struttura portante del form di configurazione dell'ambiente di lavoro, contenendo al suo interno i componenti `manualCreationFrame` e `svgCreationFrame`.
+    - *interazione con l'utente*:
+      - *RadioGroup*: permette di selezionare il metodo di creazione dell'ambiente di lavoro;
+        - *nome:* "choice";
+        - *opzioni*: 
+          - *manuale*: "Creazione manuale";
+          - *custom*: "Creazione mediante file SVG".
+      
+      - *manualCreationFrame*: componente dedicato alla creazione manuale dell'ambiente di lavoro;
+      
+      - *svgCreationFrame*: componente dedicato alla definizione dei parametri di creazione dell'ambiente di lavoro mediante file SVG.
 
-  - *dropFileArea*: componente dedicato al caricamento di un file SVG;
+      - *CheckBox*: permette di selezionare se importare o meno i dati relativi ai Prodotti dal database. 
+        - *nome*: "loadProdotti";
+    
+    - *validazione*:
+      - *zodScheme*: schema dinamico dedicato alla validazione dei dati di creazione dell'ambiente di lavoro. La validazione è effettuata in base al metodo di creazione selezionato determinato dal valore di "choice".
 
-  - *manualCreationFrame*: componente dedicato alla creazione manuale dell'ambiente di lavoro;
+        - *manualCreationSchema*: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro mediante configurazione manuale. In particolare:
+          - *choice*: deve corrispondere a "manuale";
+          - *loadProdotti*: booleano.
+          - *larghezza*: number e maggiore di 0;
+          - *profondità*: number e maggiore di 0;
+        
+        - *svgCreationSchema*: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro mediante file SVG. In particolare:
+          - *choice*: deve corrispondere a "custom";
+          - *loadProdotti*: booleano;
+          - *loadScaffali*: booleano;
+          - *latoMaggiore*: number e maggiore di 0;
+          - *svg*: stringa non vuota. 
 
-  - *svgCreationFrame*: componente dedicato alla definizione dei parametri di creazione dell'ambiente di lavoro mediante file SVG;
+  \
+  - *manualCreationFrame*: 
+    - *descrizione*: componente dedicato alla creazione manuale dell'ambiente di lavoro. Contiene i campi relativi alla definizione delle dimensioni del piano.
+    - *interazione con l'utente*:
+      - *Input*: permette di inserire la larghezza del piano;
+        - *nome*: "larghezza";
+      - *Input*: permette di inserire la profondità del piano;
+        - *nome*: "profondità".
+    - *validazione*
+      - *manualCreationSchema*.
 
-  - *zodScheme*: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro.
+  \
+  - *svgCreationFrame*:
+    - *descrizione*: componente dedicato alla definizione dei parametri di creazione dell'ambiente di lavoro mediante file SVG.
+    - *interazione con l'utente*:
+      - *dropFileArea*: permette di caricare un file SVG.
+      - *Input*: permette di inserire il lato maggiore del piano;
+        - *nome*: "latoMaggiore";
+      - *CheckBox*: permette di selezionare se importare o meno i dati relativi ai Scaffali dal database.
+        - *nome*: "loadScaffali";
+    - *validazione*:
+      - *svgCreationSchema*.
+  \
+  - *dropFileArea*: 
+    - *descrizione*: componente dedicato al caricamento di un file SVG.
+    - *interazione con l'utente*:
+      - *FileInput*: permette di selezionare un file da caricare;
+        - *nome*: "file";
+        - *formato file ammesso*: "image/svg+xml";
+        - *dimensione massima file:* 10MB.
+    - *validazione*:
+      - *svgCreationSchema*.
 
-- *Componenti relativi ai bin*:
-
-  - *binItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di un bin.
-
-- *Componenti relativi agli ordini*:
-
-  - *orderItem*: componente dedicato alla visualizzazione di un ordine;
-
-  - *ordersPanel*: componente dedicato alla visualizzazione ordinata di tutti gli ordini dall'ultimo effettuato al meno recente. Ogni ordine è rappresentato da un `OrderItem`.
-
+\
 - *Componenti relativi ai prodotti*:
 
-  - *productItem*: componente dedicato alla visualizzazione di un prodotto;
+  - *productItem*:
+    - *descrizione*: componente dedicato alla visualizzazione di un prodotto.
+    - *parametri*: 
+      - *product*: oggetto `Product` che rappresenta il prodotto da visualizzare.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco del prodotto;
+      - *Nome*: nome del prodotto;
+      - *Categorie*: categorie di appartenenza del prodotto.
+    - *interazione con l'utente*:
+      - *Button*: permette di visualizzare i dettagli del prodotto;
+        - *azione*: mostra i dettagli del prodotto mediante il componente `productItemDetails`.
 
-  - *productItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di un prodotto;
+  - *productsPanel*:
+    - *descrizione*: componente dedicato alla visualizzazione di tutti i prodotti presenti nel magazzino. Ogni prodotto è rappresentato da un `ProductItem`.
+    - *interazione con l'utente*:
+      - *SearchBar*: permette di cercare un prodotto all'interno della lista;
+        - *azione*: filtra i prodotti presenti in base alla stringa inserita.
+        - *tipologia di ricerca*:
+          - *ID*: ricerca per codice identificativo univoco;
+          - *Nome*: ricerca per nome;
+      - *Combobox*: permette di selezionare la categoria di appartenenza dei prodotti da visualizzare;
+        - *opzioni*: lista di categorie di appartenenza dei prodotti presenti nel magazzino.
+      - *Tabs*: permette di visuallizza o i prodotti collocati o i prodotti non collocati;
+        - *opzioni*:
+          - *Collocati*: visualizza solo i prodotti collocati;
+          - *Non collocati*: visualizza solo i prodotti non collocati.
+      
+  \
+  - *productItemDetails*: 
+    - *descrizione*: componente dedicato alla visualizzazione delle informazioni dettagliate di un prodotto.
+    - *parametri*: 
+      - *product*: oggetto `Product` che rappresenta il prodotto di cui visualizzare i dettagli.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco del prodotto;
+      - *Nome*: nome del prodotto;
+      - *Peso*: peso del prodotto;
+      - *Larghezza*: larghezza del prodotto;
+      - *Lunghezza*: lunghezza del prodotto;
+      - *Altezza*: altezza del prodotto;
+      - *Categorie*: categorie di appartenenza del prodotto.
 
-  - *productsPanel*: componente dedicato alla visualizzazione di tutti i prodotti.
+\
+- *Componenti relativi ai bin*:
+  - *binItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di un bin.
+    - *parametri*: 
+      - *bin*: oggetto `Bin` che rappresenta il bin di cui visualizzare i dettagli.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco del bin;
+      - *Larghezza*: larghezza del bin;
+      - *Lunghezza*: lunghezza del prodotto;
+      - *Altezza*: altezza del prodotto.
+      - *ProductItemDetails*: componente dedicato alla visualizzazione dei dati di un prodotto. Visibile solo se all'interno del bin è presente un prodotto.
+    - *interazione con l'utente*:
+      - *ProductComboBox*: nel caso il bin fosse vuoto, è possibile collocare al suo interno un prodotto selezionandolo dalla lista dei prodotti non collocati;
+    
+  \
+  - *ProductComboBox*:
+    - *descrizione*: componente dedicato alla selezione di un prodotto da collocare in un bin.
+    - *parametri*: 
+      - *bin*: oggetto `Bin` che rappresenta il bin in cui collocare il prodotto;
+    - *interazione con l'utente*:
+      - *Combobox*: permette di selezionare un prodotto dalla lista dei prodotti non collocati;
+        - *opzioni*: lista di oggetti `Product` non collocati.
 
+\
+- *Componenti relativi agli ordini*:
+
+  - *orderItem*:
+    - *descrizione*: componente dedicato alla visualizzazione di un ordine.
+    - *parametri*: 
+      - *order*: oggetto `Order` che rappresenta l'ordine da visualizzare.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco dell'ordine;
+      - *Prodotto*: nome del prodotto coinvolto nell'ordine;
+      - *Bin di partenza*: codice identificativo univoco del bin di partenza;
+      - *Bin di destinazione*: codice identificativo univoco del bin di destinazione.
+
+  - *ordersPanel*:
+    - *descrizione*: componente dedicato alla visualizzazione di tutti gli ordini presenti nel magazzino. Ogni ordine è rappresentato da un `OrderItem`.
+
+\
 - *Componenti relativi alle impostazioni*:
 
-  - *floorDimensionsItem*: componente dedicato alla visualizzazione delle dimensioni del piano;
+  - *settingsPanel*:
+    - *descrizione*: componente dedicato alla visualizzazione delle impostazioni dell'applicazione e della versione dell'applicativo.
+    - *interazione con l'utente*:
+      - floorDimensionsItem: componente dedicato alla visualizzazione e modifica delle dimensioni del piano;
+      - restoreItem: componente dedicato al ripristino o alla reimpostazione dell'ambiente di lavoro.
+    - *validazione*:
+      - *zodDimensionScheme*: schema dedicato alla validazione dei dati dimensionali per la modifica del piano. In particolare:
+        - *larghezza*: number e maggiore di 0;
+        - *profondità*: number e maggiore di 0.
 
-  - *restoreItem*: componente dedicato al comando atto al ripristino o alla reimpostazione dell'ambiente di lavoro. Il ripristino permette di caricare nuovamente, con i parametri precedentemente specificati, l'ambiente di lavoro, mentre è possibile eseguirne una riconfigurazione mediante la reimpostazione;
+  \
+  - *floorDimensionsItem*:
+    - *descrizione*: componente dedicato alla visualizzazione e modifica delle dimensioni del piano.
+    - *interazione con l'utente*:
+      - *Input*: permette di inserire la larghezza del piano;
+        - *nome*: "larghezza";
+      - *Input*: permette di inserire la profondità del piano;
+        - *nome*: "profondità".
+    - *validazione*:
+      - *zodDimensionScheme*.
+  
+  \
+  - *restoreItem*:
+    - *descrizione*: componente dedicato al ripristino o alla reimpostazione dell'ambiente di lavoro.
+    - *interazione con l'utente*:
+      - *Button*: permette di ripristinare l'ambiente di lavoro;
+        - *azione*: ripristina l'ambiente di lavoro allo stato iniziale.
+      - *Button*: permette di reimpostare l'ambiente di lavoro;
+        - *azione*: riporta al `creationForm` avviando nuovamente la procedura di configurazione dell'ambiente. 
 
-  - *settingsPanel*: componente dedicato al pannello delle impostazioni contenente la versione del software e i componenti `floorDimensionsItem` e `restoreItem`;
-
-  - *zodDimensionScheme*: schema dedicato alla validazione dei dati dimensionali per la modifica del piano.
-
+\
 - *Zone*:
 
-  - *bin_columns*: componente dedicato alla visualizzazione delle colonne di bin di una zona (necessario al componente `ZoneItemDetails` utilizzato);
+  - *zoneCreationFrame*:
+    - *descrizione*: componente dedicato alla creazione e/o modifica di una zona.
+    - *parametri*:
+      - *zone*: oggetto `Zone` che rappresenta la zona da modificare, opzionale.
+    - *interazione con l'utente*:
+      - *Input*: permette di insereire l'ID della zona (disabilitato in caso di modifica);
+        - *nome*: "ID";
+      - *Input*: permette di inserire la lunghezza della zona;
+        - *nome*: "lunghezza";
+      - *Input*: permette di inserire la larghezza della zona;
+        - *nome*: "larghezza";
+      - *Input*: permette di inserire l'altezza della zona;
+        - *nome*: "altezza";
+      - *Combobox*: permette di selezionare l'orientamento della zona;
+        - *opzioni*: "Verticale", "Orizzontale".
+      - *RadioGroup*: permette di indicare la modalità di definizione delle colonne:
+        - *opzioni*:
+          - *manuale*: Abilita il campo "nColumns" per l'inserimento manuale del numero di colonne di larghezza uguale in cui suddividere la zona;
+          - *custom*: Abilita il campo "customColumns" per l'inserimento della stringa rappresentate le dimensioni delle colonne in cui suddividere la zona.
+            - *formato*: "dim1 dim2 dim3 ...  dimn". 
+      - *Button*: permette di incrementare il numero di livelli della zona;
+        - *azione*: aggiunge un livello alla zona. Ogni livello aggiunto è rappresentato dal componente `levelItem`.
+      - *Button*: permette di salvare la zona;
+        - *azione*: salva la zona.
+    - *validazione*:
+      - *zoneZodSchemes*: schema dedicato alla validazione dei dati di creazione e modifica di una zona. In particolare:
+        - *ID*: stringa non vuota;
+        - *lunghezza*: number e maggiore di 0;
+        - *larghezza*: number e maggiore di 0;
+        - *altezza*: number e maggiore di 0;
+        - *orientamento*: stringa non vuota;
+        - *nColumns*: number e maggiore di 0;
+        - *customColumns*: stringa non vuota.
 
-  - *levelItem*: componente dedicato alla visualizzazione di un livello della zona durante il processo di creazione/modifica dello stesso;
+  \
+  - *levelItem*:
+    - *descrizione*: componente dedicato alla visualizzazione di un ripiano durante il processo di modifica o creazione.
+    - *informazioni visualizzate*:
+      - *Livello del piano*: livello identificativo del ripiano: indica la posizione del ripiano all'interno dello scaffale;
+      - *Altezza*: altezza del ripiano.
+    - *interazione con l'utente*:
+      - *Input*: permette di inserire l'altezza del ripiano;
+        - *nome*: "altezza";
+      - *Button*: permette di eliminare il ripiano;
+        - *azione*: elimina il ripiano.
 
-  - *zoneCreationFrame*: componente dedicato alla creazione di una zona;
+  \
+  - *bin_columns*: 
+    - *descrizione*: definisce le colonne del componente `data-table` utilizzato all'interno di `zoneItemDetails` per la visualizzazione dei bin presenti all'interno della zona interssata. Le colonne definite sono:
+      - *Id*: id del bin;
+      - *Prodotto*: nome del prodotto presente all'interno del bin (se presente);
+      - *Button*: permette di visualizzare i dettagli del bin;
+        - *azione*: mostra i dettagli del bin mediante il componente `binItemDetails`.   
 
-  - *zoneItem*: componente dedicato alla visualizzazione di una zona;
+  \
+  - *zoneItem*:
+    - *descrizione*: componente dedicato alla visualizzazione di una zona.
+    - *parametri*: 
+      - *zone*: oggetto `Zone` che rappresenta la zona da visualizzare.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco della zona;
+    - *interazione con l'utente*:
+      - *Button*: permette di visualizzare i dettagli della zona;
+        - *azione*: mostra i dettagli della zona mediante il componente `zoneItemDetails`.
+      - *Button*: permette di cancellare la zona;
+        - *azione*: cancella la zona.
+  
+  \
+  - *zoneItemDetails*: 
+    - *descrizione*: componente dedicato alla visualizzazione delle informazioni dettagliate di una zona.
+    - *parametri*: 
+      - *zone*: oggetto `Zone` che rappresenta la zona di cui visualizzare i dettagli.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco della zona;
+      - *Lunghezza*: lunghezza della zona;
+      - *Larghezza*: larghezza della zona;
+      - *Altezza*: altezza della zona;
+      - *Orientamento*: orientamento della zona;
+      - *Data-Table*: visualizzazione dei bin presenti all'interno della zona mediante il componente `bin_columns`.
+    - *interazione con l'utente*:
+      - *Button*: permette di modificare la zona;
+        - *azione*: modifica la zona mediante il componente `zoneCreationFrame`.
+      - *Button*: permette di cancellare la zona;
+        - *azione*: cancella la zona.
 
-  - *zoneItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di una zona;
+  \
+  - *zonePanel*:
+    - *descrizione*: componente dedicato alla visualizzazione di tutte le zone presenti nel magazzino. Ogni zona è rappresentata da un `ZoneItem`.
+    - *interazione con l'utente*:
+      - *SearchBar*: permette di cercare una zona all'interno della lista;
+        - *azione*: filtra le zone presenti in base alla stringa inserita.
+        - *tipologia di ricerca*:
+          - *ID*: ricerca per codice identificativo univoco.
+      - *Button*: permette di aggiungere una nuova zona;
+        - *azione*: aggiunge una nuova zona mediante il componente `zoneCreationFrame`.
 
-  - *zonePanel*: componente dedicato alla visualizzazione di tutte le zone;
+- *Panel*:
+  - *descrizione*: componente dedicato alla visualizzazione di un pannello laterale. Utilizzato dai componenti `zonePanel`, `productsPanel`, `ordersPanel` e `settingsPanel`. 
 
-  - *zoneZodSchemes*: schemi dedicati alla validazione dei dati necessari alla creazione di una zona, sia durante la configurazione manuale, che mediante inserimento di un file SVG.
-
-- *panel*: componente generico utilizzato per la visualizzazione e l'organizzazione dei componenti al suo interno.
-
-
+\
 === Three.js
-L'ambiente tridimensionale è realizzato mediante i componenti:
+Gli oggetti di modello vengono passati come parametri ai componenti Three.js per la loro creazione, rendendo dunque indipendente la rappresentazione grafica dall'oggetto di modello. 
 
-- *Floor*: elemento che rappresenta il piano dell'ambiente di lavoro;
+Mediante l'utilizzo dei framework \@react-three/fiber e \@react-three/drei, è possibile creare facilmente elementi 3D all'interno di un'applicazione React trattando gli elementi come componenti.
 
-- *Bin3D*: elemento che rappresenta un bin nell'ambiente di lavoro;
+\
+- *Floor*:
+  - *descrizione*: componente dedicato alla visualizzazione del piano dell'ambiente di lavoro.
+  - *parametri*:
+    - Floor: oggetto `Floor` che rappresenta il piano dell'ambiente di lavoro.
 
-- *Zone3D*: elemento che rappresenta uno scaffale o un'area del piano dedicata al contenimento di bin nell'ambiente di lavoro;
+\
+- *Bin3D*:
+  - *descrizione*: componente dedicato alla visualizzazione di un bin all'interno dell'ambiente di lavoro.
+  - *parametri*:
+    - Bin: oggetto `Bin` che rappresenta il bin da visualizzare.
+  - *visualizzazione*:
+    - *box*: rappresenta il bin all'interno dell'ambiente di lavoro. Il colore del box varia a seconda dei seguenti fattori:
+      - *blu*: bin occupato contenente un prodotto;
+      - *nero*: bin occupato non contenente un prodotto;
+      - *rosso*: bin selezionato;
+      - *giallo*: bin di destinazione di un ordine;
+      - *verde*: bin di partenza di un ordine.
+  - *interazione con l'utente*:
+    - *onDoubleClick*: permette di selezionare il bin visualizzando i dettagli mediante i componenti `binItemDetails` e `productItemDetails` (se contenente un prodotto);
+    - *onDrag*: permette di spostare il bin all'interno dell'ambiente di lavoro, in modo da generare un nuovo ordine di spostamento. L'evento onDrag è disponibile solo per i bin3D che rappresentano un bin il cui _state_ ottenibile dal metodo `getBinState` risulta *Idle* e con un prodotto al suo interno;
 
-- *Warehouse*: elemento che contiene la logica principale della visualizzazione dell'ambiente grafico ed il canvas con gli elementi 3D.
+\
+- *Zone3D*:
+  - *descrizione*: componente dedicato alla visualizzazione di una zona all'interno dell'ambiente di lavoro. I bin al suo interno sono generati e visualizzati mediante il componente `Bin3D`.
+  - *parametri*:
+    - Zone: oggetto `Zone` che rappresenta la zona da visualizzare.
+  - *interazione con l'utente*:
+    - *onDoubleClick*: permette di selezionare la zona visualizzando i dettagli mediante il componente `zoneItemDetails`;
+    - *onDrag*: permette di spostare la zona all'interno dell'ambiente di lavoro.
 
+\
+- *Warehouse*:
+  - *descrizione*: componente dedicato alla visualizzazione dell'ambiente di lavoro e del Canvas di rendering.
+  - *interazione con l'utente*:
+    - *Zone3D*: permette di visualizzare le zone presenti all'interno dell'ambiente di lavoro;
+    - *Floor*: permette di visualizzare il piano dell'ambiente di lavoro;
+    - *Grid*: permette di visualizzare la griglia di riferimento per il collocamento degli scaffali nell'ambiente di lavoro;
+    - *GridModeSelector*: permette di selezionare la dimensione della griglia di riferimento.
+    - *CameraControls ed ExtendedCameraControls*: permette di controllare la camera all'interno dell'ambiente di lavoro. 
+    - *KeyboardControls*: permette di controllare la camera mediante tastiera.
 
+\
+- *ExtendedCameraControls*:
+  - *descrizione*: componente dedicato al controllo avanzato della camera all'interno dell'ambiente di lavoro.
+  - *interazione con l'utente*:
+    - *onKeyDown*: permette di reimpostare la posizione della camera mediante il tasto "R";
+    - *useFrame*: intercettati i tasti "W", "A", "S", "D" e "Shift" permette di spostare la camera all'interno dell'ambiente di lavoro. 
+
+\
+- *GridModeSelector*:
+  - *descrizione*: componente dedicato alla selezione della dimensione della griglia di riferimento.
+  - *interazione con l'utente*:
+    - *ToggleGruop*: permette di selezionare la dimensione della griglia di riferimento;
+      - *opzioni*: 
+        - *0*: griglia non visibile;
+        - *0.1*: griglia con celle di 0.1 unità, rappesentanti 10cm;
+        - *0.5*: griglia con celle di 0.5 unità, rappesentanti 50cm;
+        - *1*: griglia con celle di 1 unità, rappesentanti 1m.
 == Database
 
 In questa sezione viene presentato lo schema della base di dati realizzata con PostgreSQL.

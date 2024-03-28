@@ -759,9 +759,9 @@ I container sono all'interno della stessa rete `webnet` che utilizza il driver d
 )
 
 \
-=== Avviare la web app
+=== Avvio di WMS3
 
-Per avviare la web app è necessario collocarsi all'interno della cartella scaricata al passaggio _Scaricare il progetto_ (@download_WMS3) ed eseguire il comando
+Per avviare la web app è necessario collocarsi all'interno della cartella scaricata al passaggio _Download di WMS3_ (@download_WMS3) ed eseguire il comando
 
 #align(center, `docker compose up`)
 
@@ -772,7 +772,7 @@ Completato l'avvio dei container, la web app sarà disponibile all'indirizzo
 
 \
 === Terminare l'esecuzione
-Per terminare l'esecuzione è necessario collocarsi nella cartella scaricata al passaggio _Scaricare il progetto_ (@download_WMS3) ed eseguire il comando
+Per terminare l'esecuzione è necessario collocarsi nella cartella scaricata al passaggio _Download di WMS3_ (@download_WMS3) ed eseguire il comando
 
 #align(center, `docker compose down`)
 

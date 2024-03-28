@@ -422,17 +422,23 @@ I membri dell'organizzazione sono prestabiliti. Qualora le competenze interne al
 
 Non sono previste variazioni della composizione dell'organizzazione, se non in via straordinaria e comunque discussa preventivamente con il Committente.
 
-=== Processo di gestione della qualità <processo_gestione_qualità>
+=== Processo di Gestione della Qualità <processo_gestione_qualità>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.5_
 
 ==== Scopo
+Il processo di Gestione della Qualità ha lo scopo di garantire che i prodotti del progetto soddisfino gli obiettivi di qualità del gruppo e i bisogni del Proponente.
 
-Il processo di gestione della qualità ha lo scopo di garantire che i prodotti del progetto soddisfino gli obiettivi di qualità del gruppo e i bisogni del Proponente.
+==== Risultati
+Come risultato dell'efficace attuazione del processo di Gestione della Qualità:
+- vengono definiti e implementati gli obiettivi, le politiche e le procedure di Gestione della Qualità del gruppo;
+- vengono stabiliti i criteri e i metodi di valutazione della qualità;
+- vengono fornite risorse e informazioni ai progetti per supportare l'operazione e il monitoraggio delle attività di garanzia della qualità del progetto;
+- vengono raccolti e analizzati i risultati delle valutazioni della garanzia della qualità;
+- le politiche e le procedure di Gestione della Qualità vengono migliorate basandosi sui risultati dei progetti e dell'organizzazione.
 
-=== Attività
-==== Pianificazione
-
+==== Attività
+===== Pianificazione
 Il gruppo #err418 pone i seguenti principi di qualità:
 
 + tutto il materiale presente nei branch principali della repository (`src` e di conseguenza `main`) deve essere di buona qualità:
@@ -452,11 +458,11 @@ Il gruppo #err418 pone i seguenti principi di qualità:
       [9126 1:2001], [#pdq],
     ), caption: [Tracciamento ISO-documenti])
     In particolare, per ogni processo interno al presente documento viene specificato il grado di conformità allo standard ISO/IEC/IEEE 12207:2017 all'interno di una sezione dedicata (@tracciamento_paragrafi).
-+ il codice prodotto deve seguire degli standard interni, definiti nel presente documento (#TODO);
++ il codice prodotto deve seguire degli standard interni, definiti nella @processo_implementazione;
 + il codice prodotto dal gruppo deve rispettare le metriche di qualità identificate nel #pdq;
 + il prodotto software deve soddisfare i bisogni e le richieste del Proponente, identificate nel #adr e catalogate in: obbligatorie, desiderabili e opzionali.
 
-==== Valutazione
+===== Valutazione
 
 La valutazione della qualità dei prodotti di progetto, dell'andamento del gruppo e dell'attuazione dei principi di qualità elencati in precedenza viene effettuata nei seguenti modi:
 
@@ -464,11 +470,18 @@ La valutazione della qualità dei prodotti di progetto, dell'andamento del grupp
   - verifica dell'aderenza agli standard interni ed esterni;
   - verifica della chiarezza e comprensibilità della documentazione;
   - verifica della presenza di errori ortografici o di scrittura o esecuzione del codice.
-- testing del codice, come descritto nel presente documento (#TODO);
+- testing del codice, come descritto in @processo_integrazione e @processo_verifica;
 - revisioni complessive dei prodotti del progetto:
   - effettuate in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro.
 - utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana);
 - comunicazione costante con il Proponente per raccogliere feedback e valutare l'adesione del lavoro alle sue richieste (@comunicazione_Proponente).
+
+===== Attuazione di azioni correttive
+L'attività di attuazione di azioni correttive consiste nei seguenti task:
+- individuazione dei documenti da correggere in fase di retrospettiva;
+- individuazione delle azioni correttive da compiere;
+- apertura dei relativi task di revisione dei documenti su Jira;
+- svolgimento dei task aperti con successiva verifica in fase di pull request.
 
 = Processi di gestione tecnica
 

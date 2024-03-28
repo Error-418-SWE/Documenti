@@ -455,11 +455,6 @@ Il Repository Pattern permette di separare la logica di business dalla logica di
 
 L'interfaccia `DataMapperInterface` è implementata dalle seguenti classi:
 
-- *binRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Bin`.
-  - *Metodi*:
-    - *getAll*: ottiene tutte le informazioni relative ai bin;
-    - *getById*: ottiene le informazioni relative al bin corrispondente al codice identificativo univoco.
-
 - *productRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Product`.
   - *Metodi*:
     - *getAll*: ottiene tutte le informazioni relative ai prodotti;
@@ -1053,20 +1048,6 @@ Questo contesto, mediante i componenti Provider implementati, permette di condiv
     - *productsLoaded*: booleano che rappresenta lo stato di caricamento dei prodotti;
       - *tipo*: `boolean`.
     - *setProductsLoaded*: funzione che permette di modificare lo stato di caricamento dei prodotti.
-      - *tipo*: `(loaded: boolean) => void`.
-  - *tipo*: `JSX.Element`.
-
-\
-- *binsProvider*:
-  - *obiettivo*: fornisce un provider per gestire dati relativi agli oggetti `Bin`;
-  - *stato gestito*:
-    - *bins*: lista di oggetti `Bin` che rappresentano i bin dell'ambiente di lavoro;
-      - *tipo*: `Bin[]`.
-    - *setBins*: funzione che permette di modificare la lista di oggetti `Bin`;
-      - *tipo*: `(bins: Bin[]) => void`.
-    - *binsLoaded*: booleano che rappresenta lo stato di caricamento dei bin;
-      - *tipo*: `boolean`.
-    - *setBinsLoaded*: funzione che permette di modificare lo stato di caricamento dei bin.
       - *tipo*: `(loaded: boolean) => void`.
   - *tipo*: `JSX.Element`.
 

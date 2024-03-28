@@ -24,7 +24,7 @@
 
 Durante lo Sprint 20 sono state completate buona parte delle task previste, ed è stato quasi concluso lo sviluppo del MVP.
 
-Il giorno venerdì 22/03/2024 si è svolto il meeting esterno con il Proponente per un aggiornamento riguardo lo stato dei lavori e l'illustrazione degli ultimi avanzamento del MVP.
+Il giorno venerdì 22/03/2024 si è svolto il meeting esterno con il Proponente per un aggiornamento riguardo lo stato dei lavori e l'illustrazione degli ultimi avanzamenti del MVP.
 
 == #adr
 

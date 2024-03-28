@@ -74,6 +74,55 @@ Per concludere, “WMS3” supporta la personalizzazione dell'ambiente attravers
   _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_
   #lastVisitedOn(20, 03, 2024)
 
+=== Riferimenti a documentazione tecnica <riferimenti-tecnici>
+
+- Docker: \
+  _#link("https://docs.docker.com/engine/")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Docker Compose: \
+  _#link("https://docs.docker.com/compose/")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Jest: \
+  _#link("https://jestjs.io/docs/getting-started")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Next.js: \
+  _#link("https://nextjs.org/docs")_
+  #lastVisitedOn(28, 03, 2024)
+
+- PostgreSQL: \
+  _#link("https://www.postgresql.org/docs/16/index.html")_
+  #lastVisitedOn(28, 03, 2024)
+
+- React: \
+  _#link("https://react.dev/reference/react")_
+  #lastVisitedOn(28, 03, 2024)
+
+- @react-three/drei: \
+  _#link("https://github.com/pmndrs/drei?tab=readme-ov-file#index")_
+  #lastVisitedOn(28, 03, 2024)
+
+- @react-three/fiber: \
+  _#link("https://docs.pmnd.rs/react-three-fiber/")_
+  #lastVisitedOn(28, 03, 2024)
+
+- shadcn/ui: \
+  _#link("https://ui.shadcn.com/docs")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Tailwind CSS: \
+  _#link("https://tailwindcss.com/docs/")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Three.js: \
+  _#link("https://threejs.org/docs/")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Zod: \
+  _#link("https://zod.dev/")_
+  #lastVisitedOn(28, 03, 2024)
 
 #pagebreak()
 

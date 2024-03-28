@@ -130,44 +130,6 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 )
 
 #pagebreak()
-
-= Installazione
-
-== Scaricare il progetto <download>
-
-Vengono fornite due modalità di download del prodotto WMS3: la prima (consigliata) è eseguire il download del prodotto in formato zip o tar.gz dalla pagina
-
-#align(center, link("https://github.com/Error-418-SWE/WMS3/releases"))
-
-In alternativa, se nel dispositivo è presente Git, si può clonare il repository con il comando
-
-#align(center, `git clone git@github.com:Error-418-SWE/WMS3.git`)
-
-oppure
-
-#align(center, `git clone https://github.com/Error-418-SWE/WMS3.git`)
-
-== Avviare la web app
-
-Per avviare la web app è necessario collocarsi all'interno della cartella scaricata al passaggio _Scaricare il progetto_ (@download) ed eseguire il comando
-
-#align(center, `Docker compose up -d`)
-
-Questo avvierà i container Docker che formano il prodotto:
-- Container PostgreSQL (database);
-- Container Web (web app).
-
-Completato l'avvio dei container, la web app sarà disponibile all'indirizzo
-
-#align(center, link("http://localhost:3000/"))
-
-== Terminare l'esecuzione
-Per terminare l'esecuzione della web app è necessario collocarsi nella cartella scaricata al passaggio _Scaricare il progetto_ (@download) ed eseguire il comando
-
-#align(center, `Docker compose down`)
-
-#pagebreak()
-
 = Tecnologie
 
 == Introduzione
@@ -687,7 +649,7 @@ L'ambiente tridimensionale è realizzato mediante i componenti:
 - *Warehouse*: elemento che contiene la logica principale della visualizzazione dell'ambiente grafico ed il canvas con gli elementi 3D.
 
 \
-= Archietettura di deployment
+= Architettura di deployment
 Nel contesto del progetto didattico, l'adozione di un'architettura monolitica è stata determinata valutando fattori strategici in termini di risorse, tempi ed esperienza del gruppo.
 
 == Analisi dell'architettura monolitica
@@ -695,20 +657,20 @@ L'architettura monolitica rappresenta un modello di progettazione architetturale
 
 Nel contesto del progetto didattico, l'architettura monolitica è stata scelta tenendo conto dei seguenti vantaggi e considerazioni:
 
-- *Gestione di una singola unità*: l'intero set di funzionalità risisede in unico sistema. Questo approccio semplifica lo sviluppo e la manutenzione del codice, rimuovendo la complessità associata alla comunicazione tra servizi e alla gestione dei dati distribuiti in un'architettura distribuita;
+- *Gestione di una singola unità*: l'intero set di funzionalità risiede in unico sistema. Questo approccio semplifica lo sviluppo e la manutenzione del codice, rimuovendo la complessità associata alla comunicazione tra servizi e alla gestione dei dati distribuiti in un'architettura a microservizi;
 
 - *Sviluppo e testing*: data l'esperienza limitata del gruppo, l'adozione di un'architettura monolitica permette di concentrarsi sullo sviluppo e il testing del prodotto in modo più immediato e diretto, concentrandosi maggiormente sulla realizzazione delle funzionalità chiave del progetto rispetto alla gestione delle complessità di un'architettura distribuita;
 
-- *Aggiornamenti e manutenzione*: la gestione di unico sistema semplifica la manutenzione e i numerosi aggiornamenti del codice durante lo sviluppo dettati dalla limitata esperienza del gruppo. Tuttavia, apportare modifiche consistenti può richiedere mofiche in parti diverse del sistema.
+- *Aggiornamenti e manutenzione*: la gestione di unico sistema semplifica la manutenzione e i numerosi aggiornamenti del codice durante lo sviluppo dettati dalla limitata esperienza del gruppo. Tuttavia, apportare modifiche consistenti può richiedere aggiornamenti in parti diverse del sistema.
 
-- *Deployment*: l'architettura monolitica semplifica il processo di deployment dovendo gestire un unico sistema.
+- *Deployment*: l'architettura monolitica semplifica il processo di deployment, dovendo gestire un unico sistema.
 
 == Deployment con Docker
 Il processo di deployment del software è gestito mediante l'utilizzo di Docker e Docker-compose. La scelta di utilizzare Docker è stata determinata dai seguenti fattori:
 
-- *Isolamento*: Docker permette di eseguire processi informatici in ambienti isolati chiamati container. Questo garantisce che il software funzioni in modo coerente e affidabile creando una base comune di sviluppo tra gli sviluppatori e garantendo che il prodotto software sia indipendente dall'ambiente di esecuzione;
+- *Isolamento*: Docker permette di eseguire processi informatici in ambienti isolati chiamati container. Questo garantisce che il software funzioni in modo coerente e affidabile creando una base comune di sviluppo tra i Programmatori e garantendo che il prodotto software sia indipendente dall'ambiente di esecuzione;
 
-- *Portabilità*: Docker semplifica il processo di deployment del software in diversi ambienti, garantendo che il software funzioni in modo coerente e affidabile su qualsiasi piattaforma;
+- *Portabilità*: Docker semplifica il processo di deployment del prodotto in diversi ambienti, garantendo che il software funzioni in modo coerente e affidabile su qualsiasi piattaforma;
 
 - *Semplicità di installazione e avvio*: impostata la configurazione dei Docker file e di Docker-compose, l'avvio e la gestione dei container è semplice e veloce.
 
@@ -723,15 +685,15 @@ Sono presenti due container:
 - *app*: container contenente l'applicazione web;
   - *Immagine*: `node:20-alpine`;
   - *Porta*: `3000`;
-  - *Dipendenza*: postgres;
-  - *Rete*: webnet.
+  - *Dipendenza*: `postgres`;
+  - *Rete*: `webnet`.
 
 
 - *postgres*: container contenente il database PostgreSQL;
   - *Immagine*: `postgres:16.2`;
   - *Porta*: `5432`;
   - *Dipendenza*: nessuna;
-  - *Rete*: webnet.
+  - *Rete*: `webnet`.
 
 I container sono all'interno della stessa rete `webnet` che utilizza il driver di rete `bridge`.
 

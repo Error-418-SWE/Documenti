@@ -1817,6 +1817,9 @@ La strategia di integrazione prevede il coordinamento con:
 - il processo di Validazione (@processo_validazione), per confermare che il sistema software integrato soddisfi gli scopi e le funzionalità previste;
 - il processo di Controllo della Qualità (@processo_controllo_qualità) per supportare la verifica e la validazione del sistema software integrato, individuare e risolvere i problemi e le inconformità.
 
+===== Identificazione dei criteri di integrazione
+
+L'integrazione degli elementi software deve avvenire in modo incrementale, e deve risultare nella creazione di un sistema software integrato eseguibile senza errori e consistente con l'architettura e il design definiti. Il soddisfacimento dei requisiti funzionali e non funzionali descritti nel documento #adr_v è conseguito incrementalmente come risultato dei passaggi di integrazione.
 
 ==== Esecuzione
 

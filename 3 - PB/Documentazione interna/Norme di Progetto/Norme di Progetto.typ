@@ -1838,13 +1838,11 @@ L'attuazione successiva della strategia di integrazione prosegue fino a che il s
 
 L'integrazione degli elementi software, individuati e specificati tramite i processi di definizione dell'architettura(@processo_definizione_architettura) e di definizione del design (@processo_design), avviene elemento per elemento, secondo l'ordine di implementazione stabilito durante la pianificazione delle attività. Qualora un elemento software non fosse ancora disponibile per l'integrazione, la funzionalità può essere temporaneamente simulata tramite l'uso di _mock_ o _stub_. Prima di convalidarne la conformità, il sistema software così integrato viene sottoposto a verifica e validazione per garantire che soddisfi i requisiti e le aspettative degli stakeholder.
 
-Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella Pull Request vengono approvate da un Verificatore, il quale attua la funzione di merge.
-Le GitHub Action provvedono a:
-
-- costruire l'immagine Docker e pubblicarla su Docker Hub e GitHub Container Registry tramite la action "build_docker", le cui caratteristiche e job sono descritti nel file _build_docker.yml_;
-- copiare il contenuto del repository sul Virtual Private Server e proseguire con l'avvio di Docker Compose tramite il file _deploy.yml_;
-- creare, tramite la action "tag_semver", le cui caratteristiche e job sono descritti nel file _tag_semver.yml_, un tag di versione semantica per ogni push sul branch di development del Version Control System. Tale tag viene pubblicato su GitHub e viene creata una release;
-- l'esecuzione dei test avviene tramite la action "test_nodejs", le cui caratteristiche e job sono descritti nel file _test_nodejs.yml_.
+A seguito di tali attività, il Verificatore può approvare la Pull Request e, tramite la funzione di _merge_, integrare l'elemento software implementato nel sistema software. A supporto di tale operazione, è prevista l'esecuzione di GitHub Action che provvedono a:
+- costruire un artefatto sotto forma di immagine Docker, e pubblicarlo sui _container registries_ Docker Hub e GitHub Container Registry tramite la action `build_docker` (`build_docker.yml`);
+- creare e associare al sistema integrato, tramite la action `tag_semver` (`tag_semver.yml`), un tag di versione semantica per identificare univocamente la release. Il versionamento avviene in accordo con la @versionamento_software. Lo step di versionamento predefinito è di livello "patch" (es. `1.0.0` #sym.arrow.r `1.0.1`), ma può essere esplicitato dal Programmatore nel messaggio di commit tramite i modificatori:
+  - `#patch`, per incrementare il numero di patch (z);
+  - `#minor`, per incrementare il numero di minor (y).
 
 ==== Gestione dei risultati di integrazione
 

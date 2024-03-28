@@ -176,7 +176,16 @@ In questa sezione, viene presentata una panoramica completa degli strumenti e de
 
 L'obiettivo principale è assicurare che il software sia sviluppato utilizzando le tecnologie adeguate in termini di efficacia ed efficienza e che soddisfi i requisiti individuati nel documento #adr.
 
-== Linguaggi utilizzati
+== Tecnologie implementative
+=== HTML
+HTML (HyperText Markup Language) è un linguaggio di markup utilizzato per la creazione di pagine web. Viene utilizzato per definire la struttura e il contenuto delle pagine web.
+
+*Versione: * 5.0;
+
+*Contesto di utilizzo: *
+- Definizione della struttura dei componenti web.
+
+\
 === CSS
 CSS (Cascading Style Sheets) è un linguaggio utilizzato per definire lo stile e la presentazione delle pagine web. Viene utilizzato per definire la formattazione, il layout e il design delle pagine web.
 
@@ -243,22 +252,6 @@ TypeScript è un superset di JavaScript che aggiunge tipizzazione statica al lin
   - *Link: * https://www.npmjs.com/package/@react-three/drei #lastVisitedOn(27, 03, 2024)
 
 \
-=== JSON
-JSON (JavaScript Object Notation) è un formato di scambio dati leggero e indipendente dal linguaggio. Viene utilizzato per la trasmissione e lo scambio di dati tra client e server. Utilizzato principalmente nelle comunicazioni nella rete, trova naturale utilizzo nello sviluppo di una web app.
-
-*Contesto di utilizzo: *
-- Risultato delle interrogazioni al database;
-- Risultato delle chiamate API.
-
-\
-=== SQL
-SQL (Structured Query Language) è un linguaggio di programmazione utilizzato per la gestione dei database relazionali. Viene utilizzato per la creazione, la modifica e la gestione dei dati all'interno del database.
-Nel contesto del capitolato, le operazioni svolte sul database sono esclusivamente di tipo interrogativo.
-
-*Contesto di utilizzo: *
-- Interrogazione del database relazionale.
-
-\
 == Tencologie per la validazione dei dati
 === Zod
 Zod è una libreria di validazione dei dati per TypeScript. Viene utilizzata per definire schemi di validazione dei dati e garantire che i dati ricevuti siano conformi a tali schemi.
@@ -271,6 +264,22 @@ Zod è una libreria di validazione dei dati per TypeScript. Viene utilizzata per
 \
 == Tecnologie per la persistenza dei dati
 
+=== SQL
+SQL (Structured Query Language) è un linguaggio di programmazione utilizzato per la gestione dei database relazionali. Viene utilizzato per la creazione, la modifica e la gestione dei dati all'interno del database.
+Nel contesto del capitolato, le operazioni svolte sul database sono esclusivamente di tipo interrogativo.
+
+*Contesto di utilizzo: *
+- Interrogazione del database relazionale.
+
+\
+=== JSON
+JSON (JavaScript Object Notation) è un formato di scambio dati leggero e indipendente dal linguaggio. Viene utilizzato per la trasmissione e lo scambio di dati tra client e server. Utilizzato principalmente nelle comunicazioni nella rete, trova naturale utilizzo nello sviluppo di una web app.
+
+*Contesto di utilizzo: *
+- Risultato delle interrogazioni al database;
+- Risultato delle chiamate API.
+
+\
 === PostgreSQL
 PostgreSQL è un sistema di gestione di database relazionali. Viene utilizzato per la memorizzazione e la gestione dei dati relativi al software “WMS3”.
 

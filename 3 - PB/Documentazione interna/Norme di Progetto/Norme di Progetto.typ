@@ -1825,7 +1825,8 @@ L'integrazione degli elementi software deve avvenire in modo incrementale, e dev
 
 Il gruppo si dota dei seguenti strumenti e servizi abilitanti per implementare la strategia di integrazione:
 - GitHub Actions, per l'automazione delle attività di integrazione e di verifica nel repository GitHub;
-- Node.js (npm) e Jest per l'esecuzione dei test negli ambienti di sviluppo locali.
+- Node.js (npm) e Jest per l'esecuzione dei test negli ambienti di sviluppo locali;
+- Jira, per la registrazione dei risultati dei test e delle anomalie riscontrate.
 
 L'uso degli strumenti e dei servizi abilitanti è regolato nell'ambito del processo di verifica (@processo_verifica).
 
@@ -1847,13 +1848,25 @@ Le GitHub Action provvedono a:
 
 ==== Gestione dei risultati di integrazione
 
-I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'approvazione della Pull Request. Le GitHub Actions prevedono la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'automazione.
+I risultati delle attività di integrazione includono:
+- il responso dell'esecuzione delle attività di testing automatico;
+- il risultato delle attività di verifica e validazione svolte dal Verificatore;
+- l'identificazione e la risoluzione dei problemi di integrazione tra elementi software;
+- quando applicabile, l'identificazione e la risoluzione delle anomalie imputabili agli strumenti o alle modalità di integrazione adottate (si rimanda al processo di Controllo della Qualità, @processo_controllo_qualità).
 
-I test automatici forniscono un resoconto di tutti i test svolti con i relativi esiti nei log della GitHub Action corrispondente.
+I risultati sono registrati nel repository GitHub e nell'ITS adottato dal gruppo. Quando necessario, i risultati delle attività di integrazione possono essere condivisi con l'Amministratore per la risoluzione di problemi legati agli strumenti abilitanti o per l'adozione di altre misure correttive, in accordo con le parti coinvolte.
 
-Su GitHub è possibile accedere ad un registro completo delle Pull Request che sono state approvate e integrate correttamente nel repository.
-Questo registro fornisce una traccia chiara e dettagliata degli elementi che costituiscono il prodotto, consentendo ai membri del gruppo di tenere traccia delle modifiche apportate al codice sorgente e di monitorare il processo di sviluppo del software.
-Tramite questa funzionalità, è possibile visualizzare le modifiche specifiche apportate a ciascun file, nonché i commenti e le discussioni associate a ciascuna Pull Request, offrendo così una panoramica completa delle modifiche e delle decisioni prese durante il ciclo di sviluppo del software.
+===== Tracciabilità degli elementi del sistema software
+
+La tracciabilità tra gli elementi del sistema software, la PR associata, e i requisiti avviene per mezzo di Jira. I ticket direttamente associabili ad un requisito ne riportano il codice identificativo nell'apposito campo. In questo modo, è possibile risalire a quali elementi del sistema software soddisfino un determinato requisito e, di conseguenza, quale sia lo stato di avanzamento del progetto in termini di requisiti soddisfatti.
+
+Tramite GitHub, è inoltre reso disponibile un registro delle Pull Request approvate (e dunque integrate) o chiuse/rifiutate, liberamente consultabile da tutti i membri del gruppo.
+
+Dopo l'approvazione, a ciascun sistema software risultato dell'integrazione di elementi software implementati sarà associato un numero di versione (come descritto nella @versionamento_software). Questo numero di versione sarà utilizzato per identificare il sistema software e per tracciare le modifiche apportate nel tempo. In accordo con quanto descritto in questa sezione, ad un numero di versione superiore corrisponderà un numero di requisiti soddisfatti superiore.
+
+Ciascuna versione del sistema software integrato, intesa come artefatto eseguibile, dovrà essere conservata e resa disponibile per il download tramite le apposite funzionalità di GitHub.
+
+I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'apertura o chiusura di una Pull Request. Le GitHub Actions devono prevedere la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'integrazione.
 
 == Processo di verifica <processo_verifica>
 

@@ -1,4 +1,4 @@
-#import "/template.typ": *
+#import "/template_modern.typ": *
 
 #show: project.with(
  title: "Manuale Utente",

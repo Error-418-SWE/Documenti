@@ -177,10 +177,10 @@ In questa sezione, viene presentata una panoramica completa degli strumenti e de
 L'obiettivo principale è assicurare che il software sia sviluppato utilizzando le tecnologie adeguate in termini di efficacia ed efficienza e che soddisfi i requisiti individuati nel documento #adr.
 
 == Tecnologie implementative
-=== HTML
-HTML (HyperText Markup Language) è un linguaggio di markup utilizzato per la creazione di pagine web. Viene utilizzato per definire la struttura e il contenuto delle pagine web.
+=== JSX
+JSX (JavaScript XML) è un'estensione di sintassi di JavaScript che consente di scrivere codice HTML all'interno di file JavaScript. Viene utilizzato per definire la struttura delle interfacce utente all'interno delle applicazioni React.
 
-*Versione: * 5.0;
+*Versione: * 18.0.0.
 
 *Contesto di utilizzo: *
 - Definizione della struttura dei componenti web.

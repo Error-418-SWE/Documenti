@@ -1697,43 +1697,80 @@ Gli argomenti principali trattati nel documento sono due:
 
 Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
 
-== Processo di implementazione
-<processo_implementazione>
+== Processo di implementazione <processo_implementazione>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.7_
 
 === Scopo
 
-Lo scopo del processo di implementazione è quello di realizzare uno specificato elemento di sistema. Questo processo trasforma requisiti, architetture e design, includendo le interfacce, in azioni che creano un elemento di sistema in accordo con le prassi della tecnologia implementativa selezionata, usando appropriate specialità o discipline tecniche.
+Lo scopo del processo di implementazione è di concretizzare un elemento specifico del sistema. Questo processo traduce i requisiti, le architetture e i design (includendo le interfacce), in azioni che danno vita ad un elemento di sistema in linea con le pratiche della tecnologia implementativa selezionata, facendo uso delle specializzazioni e discipline tecniche appropriate.
 
-Questo processo risulta in un elemento di sistema che soddisfa specificati requisiti di sistema (inclusi requisiti specifici e i derivati), architetture e design.
+Il risultato di questo processo è un elemento del sistema che soddisfa i requisiti specifici e derivati del sistema, nonché le architetture e i design definiti.
 
 === Risultati
 
-Come risultato della corretta implementazione del processo di implementazione otteniamo:
+La corretta realizzazione del processo di implementazione produce i seguenti risultati:
 
 - identificazione dei vincoli implementativi che influenzano i requisiti, l'architettura o il design;
 - realizzazione di un elemento di sistema;
-- l'implementazione viene tracciata.
+- tracciamento dell'implementazione di tale elemento.
 
 === Attività
 
+==== Progettazione dell'elemento da implementare
+
+È necessario che prima dell'inizio effettivo dello sviluppo di un elemento software, questo sia stato definito dai processi di definizione dell'architettura (@processo_definizione_architettura) e del design (@processo_design).
+
+Questi processi sono fondamentali, poiché al loro completamento si dispone già di una struttura ben definita del sistema, che include le sue componenti principali, le loro interazioni e le funzionalità che devono essere implementate.
+
+Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi in quanto trasforma il processo di implementazione in una traduzione del design in codice.
+
 ==== Preparazione per l'implementazione
-Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del Progettista di una serie di unit test precedentemente allo sviluppo vero e proprio dell'elemento di sistema. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
 
-In caso di modifica eseguendo nuovamente i test si garantisce che il software sviluppato e testato in precedenza funzioni ancora come previsto. In caso contrario, si parlerebbe di regressione.
+Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test specifici per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del Progettista di una serie di test di unità precedentemente allo sviluppo vero e proprio dell'elemento di sistema. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
 
-Data la mole di elementi grafici o interazioni utente che non sono né facili, né economici da testare automaticamente viene definita una modalità di testing manuale: chi sviluppa l'elemento di sistema è responsabile della verifica del corretto funzionamento del codice scritto. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
+In caso di modifica è necessario reiterare l'esecuzione dei test sviluppati, al fine di garantire che il software sviluppato e testato in precedenza funzioni ancora come previsto. In caso contrario, si parlerebbe di regressione.
 
-Per aiutare il lavoro di verifica da parte del Verificatore, riportare in pr tutte le funzionalità che si ha necessità di controllare manualmente.
+Considerando la complessità degli elementi grafici e delle interazioni utente che non possono essere facilmente o economicamente testati in modo automatico, viene istituita una modalità di testing manuale, che deve essere eseguita prima dallo sviluppatore dell'elemento di sistema (Programmatore) durante l'implementazione, e successivamente dal Verificatore, quando controlla il lavoro presente nella Pull Request relativa.
+Questo vale sia per il codice sviluppato in proprio sia per quello riutilizzato o esterno, che viene adattato per soddisfare i requisiti specifici.
 
-==== Eseguire l'implementazione
-Decisa una strategia di testing per l'elemento di sistema e, se possibile, scritti i test di unità il Programmatore può quindi cominciare lo sviluppo o l'adeguamento del software.
+Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in Pull Request tutte le funzionalità che si ha necessità di controllare manualmente, oltre al riferimento al task interessato su Jira.
 
-Prima di sottoporre il software a verifica bisogna assicurarsi che l'elemento di sistema non regredisca le funzionalità tramite l'esecuzione dei test.
-==== Gestire i risultati dell'implementazione e delle anomalie incontrate
+Dopo aver sviluppato e testato i singoli moduli attraverso i test di unità, inizia il processo di integrazione (@processo_integrazione).
 
-L'elemento approvato in fase di verifica viene quindi integrato nel sistema come descritto nel paragrafo #TODO.
+==== Implementazione
+
+Decisa una strategia di testing per l'elemento di sistema e scritti i relativi test di unità, il Programmatore può quindi procedere allo sviluppo o all'adeguamento del software.
+
+Per garantire una standardizzazione e una migliore gestione del codice, devono essere adottate le seguenti norme e pratiche di organizzazione:
+
++ ciascuna categoria di elementi deve essere assegnata a una cartella specifica (@repository-github):
+
+    - tutti i file correlati ad uno specifico pattern devono essere organizzati all'interno di una cartella dedicata esclusivamente a quel pattern;
+    - tutti i file riguardanti l'interfaccia utente devono essere raggruppati in una cartella apposita;
+    - se all'interno di una cartella sono presenti più file legati ad una stessa classe del modello, devono essere raggruppati in una sottocartella dedicata.
+
++ ogni componente e ogni classe deve essere implementata in un proprio file. Questa pratica semplifica la gestione e la ricerca dei componenti all'interno del progetto, garantendo una maggiore chiarezza e coerenza nel codice. Può essere fatta un'eccezione a questa norma nel caso in cui vengano adottati design pattern che risultano più manutenibili se le loro classi sono implementate tutte nello stesso file;
+
++ i nomi di variabili, metodi e funzioni devono essere parlanti, ovvero devono riflettere il loro scopo e la loro funzione all'interno del sistema, così da facilitare la comprensione e manutenzione del codice;
+
++ regole di codifica:
+
+  - type safety con Typescript attraverso l'utilizzo di tipi specifici e limitando al massimo l'uso del tipo `any`;
+  - notazione camel per nomi di file e variabili;
+  - indentazione del codice di tipo Egyptian braces;
+  - limitare il più possibile la lunghezza di metodi e delle singole righe di codice, perseguendo i principi di leggibilità e manutenibilità. #TODO //precisare lunghezza massima metodi e righe
+
++ buone pratiche per la codifica:
+
+  - sviluppo di test automatici al fine di verificare il comportamento delle singole unità di codice (@processo_verifica);
+  - identificazione e rimozione del codice duplicato per ridurre la complessità e migliorare la manutenibilità. Questo può essere fatto estraendo il codice duplicato in funzioni o classi riutilizzabili.
+
+Prima di sottoporre il software a verifica è necessario assicurarsi che l'elemento di sistema non regredisca le funzionalità tramite l'esecuzione di testing dedicato.
+
+==== Gestione dei risultati dell'implementazione e delle anomalie incontrate
+
+L'elemento implementato deve essere approvato durante il processo di verifica (@processo_verifica) e integrato nel sistema come descritto nella @processo_integrazione.
 
 == Processo di integrazione <processo_integrazione>
 

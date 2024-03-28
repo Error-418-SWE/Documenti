@@ -1829,7 +1829,13 @@ Il gruppo si dota dei seguenti strumenti e servizi abilitanti per implementare l
 
 L'uso degli strumenti e dei servizi abilitanti è regolato nell'ambito del processo di verifica (@processo_verifica).
 
-==== Esecuzione
+==== Attuazione della strategia di integrazione
+
+L'integrazione degli elementi software implementati avviene attuando quanto prescritto dalla strategia di integrazione, utilizzando le procedure e i servizi abilitanti individuati.
+
+L'attuazione successiva della strategia di integrazione prosegue fino a che il sistema software completo risponde a tutte le caratteristiche individuate e descritte nel documento #adr_v.
+
+L'integrazione degli elementi software, individuati e specificati tramite i processi di definizione dell'architettura(@processo_definizione_architettura) e di definizione del design (@processo_design), avviene elemento per elemento, secondo l'ordine di implementazione stabilito durante la pianificazione delle attività. Qualora un elemento software non fosse ancora disponibile per l'integrazione, la funzionalità può essere temporaneamente simulata tramite l'uso di _mock_ o _stub_. Prima di convalidarne la conformità, il sistema software così integrato viene sottoposto a verifica e validazione per garantire che soddisfi i requisiti e le aspettative degli stakeholder.
 
   Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella Pull Request vengono approvate da un Verificatore, il quale attua la funzione di merge.
   Le GitHub Action provvedono a:

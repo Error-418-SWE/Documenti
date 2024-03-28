@@ -1778,8 +1778,12 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.8_
 
 === Scopo
 
-Il processo di integrazione ha lo scopo di combinare iterativamente elementi software al fine di ottenere un prodotto che soddisfi i requisiti rispettando l'architettura e il design definiti.
-È quindi necessario il coordinamento con il processo di definizione dell'architettura (@processo_definizione_architettura) e il processo di design (@processo_design).
+Il processo di integrazione ha lo scopo di combinare iterativamente un insieme di elementi software al fine di ottenere un prodotto che soddisfi i requisiti, rispettando l'architettura e il design definiti.
+
+Di conseguenza, esso viene attuato in coordinamento con:
+- il processo di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni);
+- il processo di definizione dell'architettura (@processo_definizione_architettura);
+- il processo di definizione del design (@processo_design).
 
 L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la Continuous Integration.
 

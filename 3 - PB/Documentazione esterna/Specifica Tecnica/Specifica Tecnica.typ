@@ -16,7 +16,7 @@
 = Introduzione
 
 == Scopo del documento
-Il presente documento si pone come obiettivo la descrizione dettagliata delle scelte progettuali effettuate, al fine di garantire una comprensione chiara e completa del software "WMS3: Warehouse Management 3D". 
+Il presente documento si pone come obiettivo la descrizione dettagliata delle scelte progettuali effettuate, al fine di garantire una comprensione chiara e completa del software "WMS3: Warehouse Management 3D".
 
 Gli aspetti fondamentali riguardano l'architettura implementativa, analizzazndo tecnologie e design pattern adottati, e l'archietettura di deployment del prodotto.
 
@@ -88,8 +88,8 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
     columns: 3,
     [*Componente*], [*Versione*], [*Riferimenti*],
 
-    [Docker],[$>=$ 24.0.7],[https://docs.docker.com/],
-    [Docker-compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
+    [Docker],[$>=$ 24.0.7],[https://docs.Docker.com/],
+    [Docker-compose],[$>=$ 2.23.3],[https://docs.Docker.com/compose/],
 
   ),
   caption: "Requisiti di sistema minimi"
@@ -151,7 +151,7 @@ oppure
 
 Per avviare la web app è necessario collocarsi all'interno della cartella scaricata al passaggio _Scaricare il progetto_ (@download) ed eseguire il comando
 
-#align(center, `docker compose up -d`)
+#align(center, `Docker compose up -d`)
 
 Questo avvierà i container Docker che formano il prodotto:
 - Container PostgreSQL (database);
@@ -164,7 +164,7 @@ Completato l'avvio dei container, la web app sarà disponibile all'indirizzo
 == Terminare l'esecuzione
 Per terminare l'esecuzione della web app è necessario collocarsi nella cartella scaricata al passaggio _Scaricare il progetto_ (@download) ed eseguire il comando
 
-#align(center, `docker compose down`)
+#align(center, `Docker compose down`)
 
 #pagebreak()
 
@@ -195,7 +195,7 @@ L'obiettivo principale è assicurare che il software sia sviluppato utilizzando 
     [Next.js],
     [Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web.],
     [14.1.0],
-    
+
     [Node.js],
     [Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli.],
     [20.11.0],
@@ -214,7 +214,7 @@ L'obiettivo principale è assicurare che il software sia sviluppato utilizzando 
 
     cell(
       colspan: 3,
-      fill: gray.lighten(50%), 
+      fill: gray.lighten(50%),
       [*Tecnologie ambiente 3D*]
     ),
 
@@ -283,7 +283,7 @@ L'obiettivo principale è assicurare che il software sia sviluppato utilizzando 
 
 = Architettura di sistema
 
-== Architettura di implementazione 
+== Architettura di implementazione
 Il software WMS3 al fine di perseguire manutenibilità, flessibilità e scalabilità, adotta ed implementa un'architettura "layered", nota anche come "Multi-tier architecture".
 
 I layer definiti sono "closed", ovvero una richiesta si sposta esclusivamente da un livello superiore a quello immediatamente adiacente.
@@ -686,8 +686,98 @@ L'ambiente tridimensionale è realizzato mediante i componenti:
 
 - *Warehouse*: elemento che contiene la logica principale della visualizzazione dell'ambiente grafico ed il canvas con gli elementi 3D.
 
+\
+= Archietettura di deployment
+Nel contesto del progetto didattico, l'adozione di un'architettura monolitica è stata determinata valutando fattori strategici in termini di risorse, tempi ed esperienza del gruppo.
 
-== Database
+== Analisi dell'architettura monolitica
+L'architettura monolitica rappresenta un modello di progettazione architetturale in cui tutte le funzionalità e i componenti del prodotto software risiedono in un unico sistema autocontenuto e indipendente.
+
+Nel contesto del progetto didattico, l'architettura monolitica è stata scelta tenendo conto dei seguenti vantaggi e considerazioni:
+
+- *Gestione di una singola unità*: l'intero set di funzionalità risisede in unico sistema. Questo approccio semplifica lo sviluppo e la manutenzione del codice, rimuovendo la complessità associata alla comunicazione tra servizi e alla gestione dei dati distribuiti in un'architettura distribuita;
+
+- *Sviluppo e testing*: data l'esperienza limitata del gruppo, l'adozione di un'architettura monolitica permette di concentrarsi sullo sviluppo e il testing del prodotto in modo più immediato e diretto, concentrandosi maggiormente sulla realizzazione delle funzionalità chiave del progetto rispetto alla gestione delle complessità di un'architettura distribuita;
+
+- *Aggiornamenti e manutenzione*: la gestione di unico sistema semplifica la manutenzione e i numerosi aggiornamenti del codice durante lo sviluppo dettati dalla limitata esperienza del gruppo. Tuttavia, apportare modifiche consistenti può richiedere mofiche in parti diverse del sistema.
+
+- *Deployment*: l'architettura monolitica semplifica il processo di deployment dovendo gestire un unico sistema.
+
+== Deployment con Docker
+Il processo di deployment del software è gestito mediante l'utilizzo di Docker e Docker-compose. La scelta di utilizzare Docker è stata determinata dai seguenti fattori:
+
+- *Isolamento*: Docker permette di eseguire processi informatici in ambienti isolati chiamati container. Questo garantisce che il software funzioni in modo coerente e affidabile creando una base comune di sviluppo tra gli sviluppatori e garantendo che il prodotto software sia indipendente dall'ambiente di esecuzione;
+
+- *Portabilità*: Docker semplifica il processo di deployment del software in diversi ambienti, garantendo che il software funzioni in modo coerente e affidabile su qualsiasi piattaforma;
+
+- *Semplicità di installazione e avvio*: impostata la configurazione dei Docker file e di Docker-compose, l'avvio e la gestione dei container è semplice e veloce.
+
+In conclusione, l'architettura monolitica si allinea perfettamente con le esigenze e le limitazioni del progetto, rendendola una scelta ragionata e valida. Questa scelta permette di concentrarsi sulle priorità chiave: sviluppare un prodotto funzionante e di alta qualità in tempi ragionevoli, pur mantenendo la flessibilità di apportare modifiche in base alle esigenze emergenti.
+
+\
+=== Ambiente Docker
+I container Docker sono organizzati e gestiti mediante Docker-compose.
+
+Sono presenti due container:
+
+- *app*: container contenente l'applicazione web;
+  - *Immagine*: `node:20-alpine`;
+  - *Porta*: `3000`;
+  - *Dipendenza*: postgres;
+  - *Rete*: webnet.
+
+
+- *postgres*: container contenente il database PostgreSQL;
+  - *Immagine*: `postgres:16.2`;
+  - *Porta*: `5432`;
+  - *Dipendenza*: nessuna;
+  - *Rete*: webnet.
+
+I container sono all'interno della stessa rete `webnet` che utilizza il driver di rete `bridge`.
+
+#figure(
+  image("./imgs/docker-env.png", width: 70%),
+  caption: [
+    Ambiente Docker
+  ],
+)
+
+\
+== Deployment e installazione
+
+=== Download di WMS3 <download_WMS3>
+
+#figure(
+  table(
+    columns: (auto, 1fr),
+    [*Modalità*], [*Source*],
+    [Link diretto (consigliato)], [#link("https://github.com/Error-418-SWE/WMS3/releases")],
+    [Shell], [`git clone git@github.com:Error-418-SWE/WMS3.git`],
+    [Shell], [`git clone https://github.com/Error-418-SWE/WMS3.git`]
+  ),
+  caption: "Modalità di download WMS3."
+)
+
+\
+=== Avviare la web app
+
+Per avviare la web app è necessario collocarsi all'interno della cartella scaricata al passaggio _Scaricare il progetto_ (@download_WMS3) ed eseguire il comando
+
+#align(center, `docker compose up`)
+
+\
+Completato l'avvio dei container, la web app sarà disponibile all'indirizzo
+
+#align(center, link("http://localhost:3000/"))
+
+\
+=== Terminare l'esecuzione
+Per terminare l'esecuzione è necessario collocarsi nella cartella scaricata al passaggio _Scaricare il progetto_ (@download_WMS3) ed eseguire il comando
+
+#align(center, `docker compose down`)
+
+\
+= Database
 
 In questa sezione viene presentato lo schema della base di dati realizzata con PostgreSQL.
 
@@ -701,7 +791,7 @@ Esso è cosi composto:
 )
 
 
-=== Entità
+== Entità
 
 Il database è composto da 6 entità:
 
@@ -746,7 +836,7 @@ Il database è composto da 6 entità:
     - Length: lunghezza della zona;
     - Orientation: orientamento della zona.
 
-=== Relazioni
+== Relazioni
 
 All'interno del database le relazioni fra le differenti entità sono del tipo:
 

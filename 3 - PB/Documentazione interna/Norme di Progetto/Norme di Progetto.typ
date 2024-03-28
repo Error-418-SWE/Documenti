@@ -1802,14 +1802,21 @@ Come risultato della corretta implementazione del processo di integrazione:
 
 === Attività
 
-==== Pianificazione della strategia di integrazione
+==== Definizione della strategia di integrazione
 
-  La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche "Continuous Integration" e "Continuous Deployment", al fine di garantire un frequente allineamento degli ambienti di lavoro tra i membri ed avere costantemente la versione più aggiornata del prodotto disponibile e funzionante.
+La strategia individuata deve garantire il coordinamento tempestivo delle attività dei processi di implementazione e di integrazione.
 
-  Essa prevede la gestione dell'integrazione degli elementi software e dell'esecuzione dei test di unità, integrazione e non regressione mediante automazioni GitHub Actions.
-  Testare automaticamente il prodotto ad ogni iterazione garantisce inoltre il rispetto dei requisiti descritti nel documento #adr_v e i processi di verifica.
+La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche di _Continuous Integration_ (CI) e _Continuous Deployment_ (CD), al fine di permettere un frequente allineamento degli ambienti di lavoro tra i membri ed garantire che la versione più aggiornata del prodotto sia sempre disponibile, funzionante e verificata.
 
-Per supportare l'integrazione e il deployment, è disponibile un Virtual Private Server su Azure che ospita un ambiente Docker, su cui viene eseguito il container con l'ultima versione del prodotto disponibile.
+Tale strategia prevede l'esecuzione di test di unità, di integrazione e di regressione negli ambienti locali di sviluppo e nel repository centrale, tramite GitHub Actions.
+
+La strategia di integrazione prevede il coordinamento con:
+- il processi di Verifica (@processo_verifica), per:
+  + fornire evidenza obiettiva che il sistema software integrato soddisfi i requisiti;
+  + identificare e risolvere le anomalie riscontrate, sia nel software che negli elementi ad esso associati quali requisiti, test, architettura e design;
+- il processo di Validazione (@processo_validazione), per confermare che il sistema software integrato soddisfi gli scopi e le funzionalità previste;
+- il processo di Controllo della Qualità (@processo_controllo_qualità) per supportare la verifica e la validazione del sistema software integrato, individuare e risolvere i problemi e le inconformità.
+
 
 ==== Esecuzione
 

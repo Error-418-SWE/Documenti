@@ -1849,12 +1849,17 @@ Le GitHub Action provvedono a:
 ==== Gestione dei risultati di integrazione
 
 I risultati delle attività di integrazione includono:
+- il sistema software integrato;
 - il responso dell'esecuzione delle attività di testing automatico;
 - il risultato delle attività di verifica e validazione svolte dal Verificatore;
 - l'identificazione e la risoluzione dei problemi di integrazione tra elementi software;
 - quando applicabile, l'identificazione e la risoluzione delle anomalie imputabili agli strumenti o alle modalità di integrazione adottate (si rimanda al processo di Controllo della Qualità, @processo_controllo_qualità).
 
-I risultati sono registrati nel repository GitHub e nell'ITS adottato dal gruppo. Quando necessario, i risultati delle attività di integrazione possono essere condivisi con l'Amministratore per la risoluzione di problemi legati agli strumenti abilitanti o per l'adozione di altre misure correttive, in accordo con le parti coinvolte.
+Il sistema software integrato rappresenta una *baseline di prodotto*.
+
+I risultati sono registrati nel repository GitHub e nell'ITS adottato dal gruppo. Quando necessario, i risultati delle attività di integrazione possono essere condivisi con:
+- l'Amministratore per la risoluzione di problemi legati agli strumenti abilitanti o per l'adozione di altre misure correttive, in accordo con le parti coinvolte;
+- il Proponente e/o il Committente per la convalida del sistema software integrato.
 
 ===== Tracciabilità degli elementi del sistema software
 

@@ -36,7 +36,7 @@ Il Proponente è risultato soddisfatto di quanto presentato e ha confermato il c
 Inoltre è stata apprezzata l'attenzione data all'usabilità del prodotto.
 
 \
-_Il Proponente riconosce il prodotto software del gruppo Error_418 come MVP del capitolato_
+Il Proponente riconosce il prodotto software del gruppo Error_418 come MVP del capitolato.
 
 == Pianificazione incontri futuri
 

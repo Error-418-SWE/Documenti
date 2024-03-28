@@ -2014,34 +2014,34 @@ Una volta che il sistema o un elemento di sistema viene approvato da Verificator
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
 
 La tabella di seguito riportata consente di associare ogni capitolo del documento al rispettivo capitolo dello standard di riferimento. Viene riportato anche il grado di conformità:
-- *To outcome* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
+- *To outcomes* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
 - *Full* indica che il capitolo riporta fedelmente le indicazioni dello standard con poche o nessuna azione di adeguamento.
 
 #figure(
   table(
     columns: 3,
     [*Capitolo Norme*],[*Capitolo Standard*],[*Conformance Level*],
-    [@processo_fornitura],[6.1.2 - Supply process],[To outcome],
-    [@processo_ciclo_di_vita],[6.2.1 - Life cycle model management process],[To outcome],
-    [@processo_risorse_umane],[6.2.4 - Human Resource Management process],[To outcome],
-    [@processo_gestione_qualità],[6.2.5 - Quality Management process],[To outcome],
-    [@pianificazione],[6.3.1 - Project Planning process],[To outcome],
+    [@processo_fornitura],[6.1.2 - Supply process],[To outcomes],
+    [@processo_ciclo_di_vita],[6.2.1 - Life cycle model management process],[To outcomes],
+    [@processo_risorse_umane],[6.2.4 - Human Resource Management process],[To outcomes],
+    [@processo_gestione_qualità],[6.2.5 - Quality Management process],[To outcomes],
+    [@pianificazione],[6.3.1 - Project Planning process],[To outcomes],
     [@valutazioneControllo],[6.3.2 - Project assessment and control process],[Full],
     [@processo_gestione_decisioni],[6.3.3 - Decision Management process],[Full],
     [@processo_gestione_rischi],[6.3.4 - Risk Management process],[Full],
-    [@processo_gestione_configurazione],[6.3.5 - Configuration Management process],[To outcome],
-    [@processo_gestione_informazioni],[6.3.6 - Information Management process],[To outcome],
-    [@processo_misurazione],[6.3.7 - Measurement process],[To outcome],
+    [@processo_gestione_configurazione],[6.3.5 - Configuration Management process],[To outcomes],
+    [@processo_gestione_informazioni],[6.3.6 - Information Management process],[To outcomes],
+    [@processo_misurazione],[6.3.7 - Measurement process],[To outcomes],
     [@processo_controllo_qualità],[6.3.8 - Quality Assurance process],[Full],
     [@processo_missione],[6.4.1 - Business or Mission Analysis process],[Full],
-    [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
-    [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
-    [@processo_design],[6.4.5 - Design Definition process],[To outcome],
-    [@processo_implementazione],[6.4.7 - Implementation process],[To outcome],
-    [@processo_integrazione],[6.4.8 - Integration process],[To outcome],
-    [@processo_verifica],[6.4.9 - Verification process],[To outcome],
-    [@processo_transizione],[6.4.10 - Transition process],[To outcome],
-    [@processo_validazione],[6.4.11 - Validation process],[To outcome],
+    [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcomes],
+    [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcomes],
+    [@processo_design],[6.4.5 - Design Definition process],[To outcomes],
+    [@processo_implementazione],[6.4.7 - Implementation process],[To outcomes],
+    [@processo_integrazione],[6.4.8 - Integration process],[To outcomes],
+    [@processo_verifica],[6.4.9 - Verification process],[To outcomes],
+    [@processo_transizione],[6.4.10 - Transition process],[To outcomes],
+    [@processo_validazione],[6.4.11 - Validation process],[To outcomes],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

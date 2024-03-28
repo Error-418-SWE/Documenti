@@ -66,7 +66,7 @@ Note per l'uso:
 - Contenuto;
 
 ------------------------------- QUICKSTART DOCUMENTO -------------------------------
-#import "/template.typ": *
+#import "/template.typ": * // oppure #import "/template_modern.typ": *
 
 #show: project.with(
   title: "Titolo",

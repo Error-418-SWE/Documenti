@@ -1837,23 +1837,23 @@ L'attuazione successiva della strategia di integrazione prosegue fino a che il s
 
 L'integrazione degli elementi software, individuati e specificati tramite i processi di definizione dell'architettura(@processo_definizione_architettura) e di definizione del design (@processo_design), avviene elemento per elemento, secondo l'ordine di implementazione stabilito durante la pianificazione delle attività. Qualora un elemento software non fosse ancora disponibile per l'integrazione, la funzionalità può essere temporaneamente simulata tramite l'uso di _mock_ o _stub_. Prima di convalidarne la conformità, il sistema software così integrato viene sottoposto a verifica e validazione per garantire che soddisfi i requisiti e le aspettative degli stakeholder.
 
-  Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella Pull Request vengono approvate da un Verificatore, il quale attua la funzione di merge.
-  Le GitHub Action provvedono a:
+Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella Pull Request vengono approvate da un Verificatore, il quale attua la funzione di merge.
+Le GitHub Action provvedono a:
 
-  - costruire l'immagine Docker e pubblicarla su Docker Hub e GitHub Container Registry tramite la action "build_docker", le cui caratteristiche e job sono descritti nel file _build_docker.yml_;
-  - copiare il contenuto del repository sul Virtual Private Server e proseguire con l'avvio di Docker Compose tramite il file _deploy.yml_;
-  - creare, tramite la action "tag_semver", le cui caratteristiche e job sono descritti nel file _tag_semver.yml_, un tag di versione semantica per ogni push sul branch di development del Version Control System. Tale tag viene pubblicato su GitHub e viene creata una release;
-  - l'esecuzione dei test avviene tramite la action "test_nodejs", le cui caratteristiche e job sono descritti nel file _test_nodejs.yml_.
+- costruire l'immagine Docker e pubblicarla su Docker Hub e GitHub Container Registry tramite la action "build_docker", le cui caratteristiche e job sono descritti nel file _build_docker.yml_;
+- copiare il contenuto del repository sul Virtual Private Server e proseguire con l'avvio di Docker Compose tramite il file _deploy.yml_;
+- creare, tramite la action "tag_semver", le cui caratteristiche e job sono descritti nel file _tag_semver.yml_, un tag di versione semantica per ogni push sul branch di development del Version Control System. Tale tag viene pubblicato su GitHub e viene creata una release;
+- l'esecuzione dei test avviene tramite la action "test_nodejs", le cui caratteristiche e job sono descritti nel file _test_nodejs.yml_.
 
-==== Gestione dei risultati
+==== Gestione dei risultati di integrazione
 
-  I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'approvazione della Pull Request. Le GitHub Actions prevedono la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'automazione.
+I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'approvazione della Pull Request. Le GitHub Actions prevedono la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'automazione.
 
-  I test automatici forniscono un resoconto di tutti i test svolti con i relativi esiti nei log della GitHub Action corrispondente.
+I test automatici forniscono un resoconto di tutti i test svolti con i relativi esiti nei log della GitHub Action corrispondente.
 
-  Su GitHub è possibile accedere ad un registro completo delle Pull Request che sono state approvate e integrate correttamente nel repository.
-  Questo registro fornisce una traccia chiara e dettagliata degli elementi che costituiscono il prodotto, consentendo ai membri del gruppo di tenere traccia delle modifiche apportate al codice sorgente e di monitorare il processo di sviluppo del software.
-  Tramite questa funzionalità, è possibile visualizzare le modifiche specifiche apportate a ciascun file, nonché i commenti e le discussioni associate a ciascuna Pull Request, offrendo così una panoramica completa delle modifiche e delle decisioni prese durante il ciclo di sviluppo del software.
+Su GitHub è possibile accedere ad un registro completo delle Pull Request che sono state approvate e integrate correttamente nel repository.
+Questo registro fornisce una traccia chiara e dettagliata degli elementi che costituiscono il prodotto, consentendo ai membri del gruppo di tenere traccia delle modifiche apportate al codice sorgente e di monitorare il processo di sviluppo del software.
+Tramite questa funzionalità, è possibile visualizzare le modifiche specifiche apportate a ciascun file, nonché i commenti e le discussioni associate a ciascuna Pull Request, offrendo così una panoramica completa delle modifiche e delle decisioni prese durante il ciclo di sviluppo del software.
 
 == Processo di verifica <processo_verifica>
 

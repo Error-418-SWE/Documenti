@@ -22,7 +22,7 @@
 - Pianificazione incontri futuri.
 
 == Presentazione MVP
-Sono state presentate al Proponente le diverse funzionalità implementate nell'MVP atte a rispettare i requisiti espressi nel documento #st_v, disponibile al link: #align(left,link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20esterna/Specifica%20Tecnica_v" + st_vo + ".pdf")) nella sezione "Requisiti soddisfatti".
+Sono state presentate al Proponente le diverse funzionalità implementate nel MVP atte a rispettare i requisiti espressi nel documento #adr_v, disponibile al link: #align(left,link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20esterna/Specifica%20Tecnica_v" + st_vo + ".pdf")) nella sezione "Requisiti soddisfatti".
 
 Oltre alle funzionalità già presentate nei precedenti meeting, sono state aggiunte:
 
@@ -31,12 +31,12 @@ Oltre alle funzionalità già presentate nei precedenti meeting, sono state aggi
 - posizionamento automatico della visuale su una zona specificata;
 - movimento della visuale tramite tastiera durante lo spostamento di una zona o prodotto.
 
-Il Proponente è risultato soddisfatto di quanto presentato e ha confermato il corretto soddisfacimento di tutti i requisiti derivati dal capitolato emersi durante lo sviluppo del progetto, sia riguardanti i requisiti minimi che desiderabili.
+Il Proponente è risultato soddisfatto di quanto presentato e ha confermato il corretto soddisfacimento di tutti i requisiti derivati dal capitolato emersi durante lo sviluppo del progetto, sia minimi che desiderabili.
 
 Inoltre è stata apprezzata l'attenzione data all'usabilità del prodotto.
 
-\
-Il Proponente riconosce il prodotto software del gruppo Error_418 come MVP del capitolato.
+
+Il Proponente riconosce il prodotto software del gruppo #err418 come MVP.
 
 == Pianificazione incontri futuri
 

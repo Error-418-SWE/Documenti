@@ -495,9 +495,10 @@ Ad ogni test è associato un esito che può essere:
       [U-5.10],[*Zone*: verifica che il metodo `getLevel()` ritorni correttamente i livelli della zona],[P],
       [U-5.11],[*Zone*: verifica che il metodo `getMaxUsedLevel()` ritorni correttamente il livello utilizzato più alto],[P],
       [U-5.12],[*Zone*: verifica che il metodo `getMaxUsedColumn()` ritorni correttamente la colonna utilizzata più a destra],[P],
-
-
-
+      [U-6.1],[*BinMapper*: verifica che la classe crei correttamente un bin vuoto da un file JSON],[P],
+      [U-6.2],[*BinMapper*: verifica che la classe crei correttamente un bin con prodotto da un file JSON],[P],
+      [U-7.1],[*ProductMapper*: verifica che la classe crei correttamente un prodotto da un file JSON],[P],
+      [U-8.1],[*ZoneMapper*: verifica che la classe crei correttamente una zona da un file JSON],[P],
     ),
     caption: "Tabella tracciamento test - risultato"
 )

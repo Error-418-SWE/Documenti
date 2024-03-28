@@ -483,6 +483,21 @@ Ad ogni test è associato un esito che può essere:
       [U-4.5],[*Product*: verifica che il metodo `getWidth()` ritorni correttamente la larghezza del prodotto],[P],
       [U-4.6],[*Product*: verifica che il metodo `getHeight()` ritorni correttamente l'altezza del prodotto],[P],
       [U-4.7],[*Product*: verifica che il metodo `getCategories()` ritorni correttamente la categoria merceologica del prodotto],[P],
+      [U-5.1],[*Zone*: verifica che il metodo `getId()` ritorni correttamente l'Id della zona],[P],
+      [U-5.2],[*Zone*: verifica che il metodo `getXcoordinate()` ritorni correttamente la coordinata x della zona],[P],
+      [U-5.3],[*Zone*: verifica che il metodo `getYcoordinate()` ritorni correttamente la coordinata y della zona],[P],
+      [U-5.4],[*Zone*: verifica che il metodo `getHeight()` ritorni correttamente l'altezza della zona],[P],
+      [U-5.5],[*Zone*: verifica che il metodo `getLength()` ritorni correttamente la lunghezza della zona],[P],
+      [U-5.6],[*Zone*: verifica che il metodo `getWidth()` ritorni correttamente la larghezza della zona],[P],
+      [U-5.7],[*Zone*: verifica che il metodo `getBin()` ritorni correttamente il bin della zona],[P],
+      [U-5.8],[*Zone*: verifica che il metodo `getBin()` ritorni correttamente undefined quando ricercato un bin con id non valido],[P],
+      [U-5.9],[*Zone*: verifica che il metodo `getColumn()` ritorni correttamente le colonne della zona],[P],
+      [U-5.10],[*Zone*: verifica che il metodo `getLevel()` ritorni correttamente i livelli della zona],[P],
+      [U-5.11],[*Zone*: verifica che il metodo `getMaxUsedLevel()` ritorni correttamente il livello utilizzato più alto],[P],
+      [U-5.12],[*Zone*: verifica che il metodo `getMaxUsedColumn()` ritorni correttamente la colonna utilizzata più a destra],[P],
+
+
+
     ),
     caption: "Tabella tracciamento test - risultato"
 )

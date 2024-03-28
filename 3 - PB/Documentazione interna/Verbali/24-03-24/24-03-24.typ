@@ -28,7 +28,7 @@ Il giorno venerdì 22/03/2024 si è svolto il meeting esterno con il Proponente 
 
 == #adr
 
-Sono state concluse l'aggiornamento e l'estensione del documento, il quale è stato mandato in revisione al #cardin dopo un ultimo controllo da parte dei membri del gruppo.
+Sono stati conclusi l'aggiornamento e l'estensione del documento, il quale è stato mandato in revisione al #cardin dopo un ultimo controllo da parte dei membri del gruppo.
 
 == #man
 

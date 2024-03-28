@@ -1821,6 +1821,14 @@ La strategia di integrazione prevede il coordinamento con:
 
 L'integrazione degli elementi software deve avvenire in modo incrementale, e deve risultare nella creazione di un sistema software integrato eseguibile senza errori e consistente con l'architettura e il design definiti. Il soddisfacimento dei requisiti funzionali e non funzionali descritti nel documento #adr_v è conseguito incrementalmente come risultato dei passaggi di integrazione.
 
+===== Identificazione dei servizi abilitanti
+
+Il gruppo si dota dei seguenti strumenti e servizi abilitanti per implementare la strategia di integrazione:
+- GitHub Actions, per l'automazione delle attività di integrazione e di verifica nel repository GitHub;
+- Node.js (npm) e Jest per l'esecuzione dei test negli ambienti di sviluppo locali.
+
+L'uso degli strumenti e dei servizi abilitanti è regolato nell'ambito del processo di verifica (@processo_verifica).
+
 ==== Esecuzione
 
   Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella Pull Request vengono approvate da un Verificatore, il quale attua la funzione di merge.

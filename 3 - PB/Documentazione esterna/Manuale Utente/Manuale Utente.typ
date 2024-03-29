@@ -276,6 +276,27 @@ I parametri modificabili sono gli stessi che vengono richiesti durante la creazi
 
 Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla Zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
 
+== Eliminazione zona
+
+Successivamente alla creazione dell'ambiente di lavoro è possibile eliminare una zona in esso collocata.
+
+Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO), è presente un pulsante rosso con scritto "Elimina".
+Alla sua pressione verrà aperto il pannello di conferma dell'operazione, in quanto irreversibile.
+
+Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo pannello, la relativa zona (e conseguentemente tutti i bin in essa contenuti) verrà rimossa dall'ambiente di lavoro e dalla lista delle zone (#TODO).
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/pulsante_eliminazione_zona.png", width: 80%)],
+        [ #image("./imgs/conferma_eliminazione_zona.png", width: 100%)],
+    ),caption: [Pulsante di eliminazione zona (sinistra) e pannello di conferma eliminazione zona (destra)],
+)
+
+Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno visualizzabili nella lista dei prodotti non collocati (#TODO) in attesa di una nuova collocazione.
+
+
 == Ispezione Bin, Prodotti e Zone
 
 #figure(

@@ -1,4 +1,4 @@
-#import "/template.typ": *
+#import "/template_modern.typ": *
 
 #show: project.with(
  title: "Manuale Utente",
@@ -221,7 +221,7 @@ L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle f
         [ #image("./imgs/creazione_zone_2.png", width: 74%)],
         [ #image("./imgs/creazione_zone_3.png", width: 80%)],
     ),caption: [Da sinistra: menù di creazione zona, menù di configurazione dei ripiani ed esempio di zona creata manualmente],
-) <creazione_zona>
+)
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile creare le zone contenenti i bin in modo personalizzato.
 
@@ -258,11 +258,11 @@ Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà 
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile modificare le zone posizionate cambiandone i parametri dimensionali e di orientamento, potendo modificare o aggiungere le colonne e i livelli desiderati.
 
-È possibile rimuovere una colonna già presente nella zona soggetta a modifiche esclusivamente se contiene solo bin senza prodotti al suo interno e se non sono presenti colonne, con indice superiore a quello della colonna da rimuovere, che contengono almeno un bin occupato.
+Durante un'azione di modifica di una zona è possibile rimuovere una o più colonne già presenti esclusivamente se contengono solo bin senza prodotti al loro interno e se non sono presenti colonne con indice superiore a quello dell'insieme di colonne da rimuovere.
 
 Tale logica concerne anche la rimozione dei livelli.
 
-Per esempio, durante la modifica di una zona formata da tre livelli (contenenti prodotti solo nel secondo) e cinque colonne (contenenti prodotti solo nelle prime tre), sarà possibile rimuovere la quarta o la quinta colonna (se prive di prodotti) ma non le precedenti. Similmente sarà possibile rimuovere il terzo livello (se privo di prodotti) ma non i precedenti.
+Per esempio, durante la modifica di una zona formata da tre livelli (contenenti prodotti solo nel secondo) e cinque colonne (contenenti prodotti solo nelle prime tre), sarà possibile rimuovere la quarta colonna (se priva di prodotti) oppure sia la quarta che la quinta (purché entrambe siano prive di prodotti), ma non le precedenti. Similmente sarà possibile rimuovere il terzo livello (se privo di prodotti) ma non i precedenti.
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
 
@@ -276,6 +276,62 @@ I parametri modificabili sono gli stessi che vengono richiesti durante la creazi
 
 Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla Zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
 
+== Ispezione Bin, Prodotti e Zone
+
+#figure(
+    grid(
+        columns: 3,
+        rows:    (auto, auto),
+        [ #image("./imgs/ispezione_1.png", width: 80%)],
+        [ #image("./imgs/ispezione_2.png", width: 100%)],
+        [ #image("./imgs/ispezione_3.png", width: 75%)],
+    ),caption: [Menù di ispezione zone (sinistra e centro) e menù di ispezione bin (destra)],
+) <ispezione>
+
+È possibile in ogni momento ispezionare una zona facendo doppio click sul cubetto rosso presente in uno dei suoi angoli, usato anche per lo spostamento. Si aprirà quindi il menù in figura @ispezione (sinistra e centro), dove vengono riportate in ordine:
+- id della zona;
+- orientamento e dimensioni;
+- lista di bin che riporta per ogni voce:
+  - id del bin;
+  - stato ("Libero" o, se occupato, nome del prodotto contenuto);
+  - pulsante per la visualizzazione dei dettagli del bin (menù in @ispezione a destra), presente solo se il bin è occupato.
+
+Per ispezionare il contenuto di un bin è possibile, in alternativa al pulsante citato in precedenza, fare doppio click sul bin desiderato ed aprire il menù in figura @ispezione (destra).
+Verranno mostrati:
+- id del bin;
+- dimensioni del bin;
+- informazioni sul prodotto contenuto, se presente:
+  - nome;
+  - id;
+  - categoria;
+  - dimensioni;
+  - peso.
+
+== Richiesta spostamento prodotto
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/spostamento_drag_and_drop.png", width: 80%)],
+        [ #image("./imgs/spostamento_non_collocato.png", width: 80%)],
+    ),caption: [Spostamento prodotti con drag and drop (sinistra), menù spostamento prodotti non collocati (destra)],
+) <spostamento>
+
+=== Spostamento tramite drag and drop
+
+Lo spostamento di un prodotto da un bin a un altro avviene tramite _drag and drop_. Posizionando il puntatore del mouse sul prodotto che si desidera spostare e premendo il tasto sinistro possiamo "prendere" il prodotto. Tenendo premuto il tasto sinistro è possibile spostare il prodotto in prossimità della posizione in cui vogliamo posizionarlo e quindi, rilasciando il tasto sinistro, effettuare lo spostamento. È possibile spostare prodotti solamente all'interno di bin vuoti.
+
+In basso a destra nello schermo, una notifica avviserà della possibilità o meno di effettuare lo spostamento. In caso di esito positivo, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde, come rappresentato in @spostamento
+
+=== Spostamento prodotto non collocato
+
+I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti*, possono essere posizionati nel seguente modo:
+- ricerco la posizione in cui voglio collocare il prodotto nell'ambiente (deve essere vuota);
+- doppio click sulla posizione desiderata;
+- nel menù che apparirà (@spostamento), premere il pulsante *Seleziona*;
+- selezionare il prodotto desiderato e premere *Conferma*;
+- il prodotto risulta collocato.
 
 == Impostazioni
 

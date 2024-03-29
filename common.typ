@@ -77,3 +77,53 @@
 
   Le definizioni sono diponibili nel documento #glo_v.
 ]
+
+#let infobox(type, message) = {
+  let icon = ""
+  let color = rgb("#FFFFFF")
+  let colors = ()
+  if (type == "notice") {
+    icon = "i"
+    colors = (
+      boxFill: rgb("#93C5FD"),
+      boxStroke: rgb("#60A5FA"),
+      iconFill: rgb("#60A5FA"),
+      iconStroke: rgb("#3B82F6"),
+      iconGlyph: rgb("#1D4ED8"),
+      textFill: rgb("#172554")
+    )
+  } else if (type == "warning") {
+    icon = "!"
+    colors = (
+      boxFill: rgb("#FDE047"),
+      boxStroke: rgb("#FACC15"),
+      iconFill: rgb("#EAB308"),
+      iconStroke: rgb("#CA8A04"),
+      iconGlyph: rgb("#A16207"),
+      textFill: rgb("#422006")
+    )
+  } else {
+    panic("Type must be [notice | warning]")
+  }
+  rect(
+    width: 100%,
+    radius: 0.25em,
+    inset: 1.5em,
+    fill: colors.boxFill,
+    stroke: 0.75pt + colors.boxStroke,
+    stack(
+      dir: ltr,
+      spacing: 1.5em,
+      circle(
+        stroke: colors.iconStroke,
+        fill: colors.iconFill
+      )[
+        #set align(center + horizon)
+        #text(weight: "bold", fill: colors.iconGlyph, icon)
+      ],
+      box(width: 90%)[
+        #text(fill: colors.textFill, message)
+      ]
+    )
+  )
+}

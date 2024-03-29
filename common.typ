@@ -78,6 +78,7 @@
   Le definizioni sono disponibili nel documento #glo_v.
 ]
 
+
 #let infobox(type, message) = {
   let icon = ""
   let color = rgb("#FFFFFF")

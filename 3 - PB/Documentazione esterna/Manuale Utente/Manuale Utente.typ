@@ -280,7 +280,7 @@ Successivamente all'inserimento dei dati rappresentativi della zona modificata, 
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile eliminare una zona in esso collocata.
 
-Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO), è presente un pulsante rosso con scritto "Elimina".
+Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO), è presente un pulsante rosso contenente la scritta "Elimina".
 Alla sua pressione verrà aperto il pannello di conferma dell'operazione, in quanto irreversibile.
 
 Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo pannello, la relativa zona (e conseguentemente tutti i bin in essa contenuti) verrà rimossa dall'ambiente di lavoro e dalla lista delle zone (#TODO).

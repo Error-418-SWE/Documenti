@@ -433,17 +433,17 @@ Il processo di Gestione della Qualità ha lo scopo di garantire che i prodotti d
 Come risultato dell'efficace attuazione del processo di Gestione della Qualità:
 - vengono definiti e implementati gli obiettivi, le politiche e le procedure di Gestione della Qualità del gruppo;
 - vengono stabiliti i criteri e i metodi di valutazione della qualità;
-- vengono fornite risorse e informazioni ai progetti per supportare l'operazione e il monitoraggio delle attività di garanzia della qualità del progetto;
+- vengono fornite risorse e informazioni al progetto per supportare l'operazione e il monitoraggio delle attività di garanzia della qualità del progetto;
 - vengono raccolti e analizzati i risultati delle valutazioni della garanzia della qualità;
-- le politiche e le procedure di Gestione della Qualità vengono migliorate basandosi sui risultati dei progetti e dell'organizzazione.
+- le politiche e le procedure di Gestione della Qualità vengono migliorate basandosi sui risultati del progetto e dell'organizzazione.
 
 ==== Attività
 ===== Pianificazione
 Il gruppo #err418 pone i seguenti principi di qualità:
 
-+ tutto il materiale presente nei branch principali della repository (`src` e di conseguenza `main`) deve essere di buona qualità:
++ tutto il materiale presente nei branch principali della repository (`src` e, di conseguenza, `main` per Documenti, e `dev` per WMS3) deve essere di buona qualità:
   - tutti i prodotti del gruppo devono essere gestiti tramite repository su GitHub (@repository-github), nelle quali deve essere implementato il sistema di _featuring branching_;
-  - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di pull request (@controllo_release).
+  - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di Pull Request (@controllo_release).
 + il contenuto della documentazione deve seguire i principi di redazione descritti nella @stile-convenzioni;
 + la documentazione prodotta deve seguire degli standard interni e/o esterni:
   - standard interni:
@@ -466,11 +466,11 @@ Il gruppo #err418 pone i seguenti principi di qualità:
 
 La valutazione della qualità dei prodotti di progetto, dell'andamento del gruppo e dell'attuazione dei principi di qualità elencati in precedenza viene effettuata nei seguenti modi:
 
-- review delle pull request da parte del Verificatore:
+- review delle Pull Request da parte del Verificatore:
   - verifica dell'aderenza agli standard interni ed esterni;
   - verifica della chiarezza e comprensibilità della documentazione;
   - verifica della presenza di errori ortografici o di scrittura o esecuzione del codice.
-- testing del codice, come descritto in @processo_integrazione e @processo_verifica;
+- testing del codice, come descritto nel processo di integrazione (@processo_integrazione) e nel processo di verifica (@processo_verifica);
 - revisioni complessive dei prodotti del progetto:
   - effettuate in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro.
 - utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana);
@@ -478,10 +478,10 @@ La valutazione della qualità dei prodotti di progetto, dell'andamento del grupp
 
 ===== Attuazione di azioni correttive
 L'attività di attuazione di azioni correttive consiste nei seguenti task:
-- individuazione dei documenti da correggere in fase di retrospettiva;
+- individuazione dei documenti da correggere in retrospettiva;
 - individuazione delle azioni correttive da compiere;
 - apertura dei relativi task di revisione dei documenti su Jira;
-- svolgimento dei task aperti con successiva verifica in fase di pull request.
+- svolgimento dei task aperti con successiva verifica in Pull Request.
 
 = Processi di gestione tecnica
 

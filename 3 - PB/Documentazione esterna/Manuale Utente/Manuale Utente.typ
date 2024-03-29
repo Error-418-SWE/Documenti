@@ -264,27 +264,27 @@ Tale logica concerne anche la rimozione dei livelli.
 
 Per esempio, durante la modifica di una zona formata da tre livelli (contenenti prodotti solo nel secondo) e cinque colonne (contenenti prodotti solo nelle prime tre), sarà possibile rimuovere la quarta colonna (se priva di prodotti) oppure sia la quarta che la quinta (purché entrambe siano prive di prodotti), ma non le precedenti. Similmente sarà possibile rimuovere il terzo livello (se privo di prodotti) ma non i precedenti.
 
-Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO), è presente un pulsante contenente la scritta "Modifica".
+Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO), è presente un pulsante contenente la scritta "Modifica" (@pulsante_modifica_zona).
 
 #figure(
   image("./imgs/pulsante_modifica_zona.png", width: 40%),
   caption: [
     Pulsante di modifica di una zona
   ],
-)
+) <pulsante_modifica_zona>
 
 Alla sua pressione sarà permesso all'utente di poter modificare alcuni parametri della zona in oggetto.
 
 Essi sono i medesimi richiesti durante la creazione della zona (@creazione_zona) e seguono gli stessi vincoli, fuorché il parametro `ID`, il quale non è modificabile.
 
-Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
+Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla zona" (@pulsante_salvataggio_modifica_zona) per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
 
 #figure(
   image("./imgs/pulsante_salvataggio_modifiche_zona.png", width: 40%),
   caption: [
     Pulsante di salvataggio delle modifica di una zona
   ],
-)
+) <pulsante_salvataggio_modifica_zona>
 
 == Ispezione Bin, Prodotti e Zone
 

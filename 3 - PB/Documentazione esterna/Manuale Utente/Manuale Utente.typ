@@ -264,17 +264,27 @@ Tale logica concerne anche la rimozione dei livelli.
 
 Per esempio, durante la modifica di una zona formata da tre livelli (contenenti prodotti solo nel secondo) e cinque colonne (contenenti prodotti solo nelle prime tre), sarà possibile rimuovere la quarta colonna (se priva di prodotti) oppure sia la quarta che la quinta (purché entrambe siano prive di prodotti), ma non le precedenti. Similmente sarà possibile rimuovere il terzo livello (se privo di prodotti) ma non i precedenti.
 
-Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO), è presente un pulsante contenente la scritta "Modifica".
 
-Selezionando da esso la voce "Zone" si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente.
+#figure(
+  image("./imgs/pulsante_modifica_zona.png", width: 40%),
+  caption: [
+    Pulsante di modifica di una zona
+  ],
+)
 
-In tale lista, per ogni elemento zona elencato, è presente un pulsante raffigurante un'occhio che, alla sua pressione, permette la visualizzazione sulla destra dello schermo del pannello relativo alle informazioni della relativa zona.
+Alla sua pressione sarà permesso all'utente di poter modificare alcuni parametri della zona in oggetto.
 
-Sulla parte inferiore di tale pannello è presente il pulsante "Modifica" che, se premuto, permette di poter modificare alcuni parametri della zona in oggetto.
+Essi sono i medesimi richiesti durante la creazione della zona (@creazione_zona) e seguono gli stessi vincoli, fuorché il parametro `ID`, il quale non è modificabile.
 
-I parametri modificabili sono gli stessi che vengono richiesti durante la creazione della zona (@creazione_zona) e seguono i medesimi vincoli, fuorché il parametro `ID`, il quale non è modificabile.
+Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
 
-Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla Zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
+#figure(
+  image("./imgs/pulsante_salvataggio_modifiche_zona.png", width: 40%),
+  caption: [
+    Pulsante di salvataggio delle modifica di una zona
+  ],
+)
 
 == Ispezione Bin, Prodotti e Zone
 

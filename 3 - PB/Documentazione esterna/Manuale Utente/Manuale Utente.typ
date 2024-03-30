@@ -315,19 +315,30 @@ Successivamente all'inserimento dei dati rappresentativi della zona modificata, 
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile eliminare una zona in esso collocata.
 
-Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO), è presente un pulsante rosso contenente la scritta "Elimina".
-Alla sua pressione verrà aperto il pannello di conferma dell'operazione, in quanto irreversibile.
+Per eseguire tale operazione è possibile interagire con:
 
-Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo pannello, la relativa zona (e conseguentemente tutti i bin in essa contenuti) verrà rimossa dall'ambiente di lavoro e dalla lista delle zone (#TODO).
+- il pulsante rosso contenente la scritta "Elimina" contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO);
+
+- il pulsante contenente l'icona raffigurante un cestino presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da eliminare.
 
 #figure(
     grid(
         columns: 2,
         rows:    (auto, auto),
         [ #image("./imgs/pulsante_eliminazione_zona.png", width: 80%)],
-        [ #image("./imgs/conferma_eliminazione_zona.png", width: 100%)],
-    ),caption: [Pulsante di eliminazione zona (sinistra) e pannello di conferma eliminazione zona (destra)],
-)
+        [ #image("./imgs/pulsante_cestino_zone.png", width: 100%)],
+    ),caption: [Pulsante "Elimina" di eliminazione zona (sinistra) e pulsanti "cestino" di eliminazione zona (destra)],
+)<immagini_pulsanti_eliminazione_zona>
+
+Alla pressione di uno dei pulsanti elencati, verrà aperto il pannello di conferma dell'operazione, in quanto irreversibile.
+
+#figure(
+  image("./imgs/conferma_eliminazione_zona.png", width: 50%),
+  caption: [Pannello di conferma eliminazione zona
+  ],
+) <immagine_pannello_conferma_eliminazione_zona>
+
+Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo pannello, la relativa zona (e conseguentemente tutti i bin in essa contenuti) verrà rimossa dall'ambiente di lavoro e dalla lista delle zone.
 
 Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno visualizzabili nella lista dei prodotti non collocati (#TODO) in attesa di una nuova collocazione.
 

@@ -216,8 +216,23 @@ L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle f
 === Visualizzazione lista zone <visualizzazione_lista_zone>
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
-Selezionando da esso la voce "Zone" si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente.
 
+Selezionando da esso la prima icona (@icona_lista_zone sinistra), la quale corrisponde alla voce "Zone", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente (@icona_lista_zone destra).
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/pulsante_zone.png", width: 70%)],
+        [ #image("./imgs/lista_zone.png", width: 70%)],
+    ),caption: [Icona "Zone" (sinistra) e pannello contenente la lista delle zone (destra)],
+) <icona_lista_zone>
+
+Ogni riga di tale lista corrisponde ad una zona, la quale viene identificata dal suo parametro `ID`.
+Ad esso seguono le icone relative all'ispezione della zona (#TODO), rappresentata da un occhio, e alla sua eliminazione (@eliminazione_zona), rappresentata da un cestino.
+
+Nel caso in cui venga creata una nuova zona (@creazione_zona), essa verrà aggiunta alla lista delle zone.
+Similmente, se una zona dovesse essere eliminata dall'ambiente, essa verrebbe rimossa dalla lista.
 
 
 == Creazione zona <creazione_zona>
@@ -262,7 +277,7 @@ I dati necessari alla creazione sono:
 
 - *aggiunta livelli*: a destra del numero attuale di livelli configurati, è presente un pulsante bianco contenente la scritta "Aggiungi" che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* indicata mediante un numero reale.
 
-Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" (@pulsante_crea_zona) per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
+Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" (@pulsante_crea_zona sinistra) per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
 Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo.
 
 #figure(
@@ -296,7 +311,7 @@ I parametri modificabili sono gli stessi che vengono richiesti durante la creazi
 
 Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla Zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
 
-== Eliminazione zona
+== Eliminazione zona <eliminazione_zona>
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile eliminare una zona in esso collocata.
 

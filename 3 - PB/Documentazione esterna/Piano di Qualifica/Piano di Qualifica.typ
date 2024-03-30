@@ -432,7 +432,7 @@ Ad ogni test viene associato un codice definito come segue:
 #align(`[Tipologia]-[Test Suite].[Sequenza]`, center)
 *Tipologia* indica il tipo di test:
 - `U`: test di unità;
-- `I`: test di integrazione;
+- `I`: test di integrazione.
 
 *Test Suite* e *Sequenza* sono numeri interi.
 
@@ -461,11 +461,11 @@ Ad ogni test è associato un esito che può essere:
       [U-2.2],[*Floor*: verifica che il metodo `setLength()` modifichi correttamente la lunghezza del piano],[P],
       [U-2.3],[*Floor*: verifica che il metodo `getWidth()` ritorni correttamente la larghezza del piano],[P],
       [U-2.4],[*Floor*: verifica che il metodo `setWidth()` modifichi correttamente la larghezza del piano],[P],
-      [U-2.5],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano
+      [U-2.5],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano\
       *SVG*: verifica che `getString()` ritorni correttamente la stringa contenente l'SVG],[P],
-      [U-2.6],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano
+      [U-2.6],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano\
       *SVG*: verifica che `getLength()` ritorni correttamente la lunghezza del piano SVG],[P],
-      [U-2.7],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano
+      [U-2.7],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano\
       *SVG*: verifica che `getWidth()` ritorni correttamente la larghezza del piano SVG],[P],
       [U-2.8],[*Floor*: verifica che il metodo `setSVG()` modifichi correttamente le dimensioni del piano SVG],[P],
       [U-2.9],[*Floor*: verifica che il metodo `clone()` ritorni correttamente un clone del piano],[P],

@@ -18,6 +18,7 @@
 
 - Valutazione del progresso generale;
 - Analisi retrospettiva;
+- Prossimo meeting;
 - Pianificazione.
 
 = Valutazione del progresso generale <avanzamento>
@@ -93,6 +94,10 @@ Il gruppo si ritiene soddisfatto di come sta lavorando, in particolare riguardo 
 == Improvements <improvements>
 
 Non sono state riscontrate criticità.
+
+= Prossimo meeting
+
+Il prossimo meeting di retrospettiva, previsto per domenica 31/03/2024 alle ore 15:00, viene anticipato alla mattina di sabato 30/03/2024 a causa delle festività pasquali. L'orario del meeting sarà definito nei prossimi giorni tramite sondaggio interno su Discord.
 
 = Pianificazione <pianificazione>
 

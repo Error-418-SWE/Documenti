@@ -234,6 +234,60 @@ Ad esso seguono le icone relative all'ispezione della zona (#TODO), rappresentat
 Nel caso in cui venga creata una nuova zona (@creazione_zona), essa verrà aggiunta alla lista delle zone.
 Similmente, se una zona dovesse essere eliminata dall'ambiente, essa verrebbe rimossa dalla lista.
 
+=== Ispezione zona <ispezione_zona>
+
+Successivamente alla creazione dell'ambiente di lavoro è possibile ispezionare le zone in esso contenute visualizzandone i specifici dettagli.
+
+Per eseguire tale operazione è possibile interagire con:
+
+  - il pulsante contenente l'icona raffigurante un occhio (@immagini_pulsanti_ispezione_zona sinistra) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da ispezionare;
+
+  - il cubo rosso presente nelle coordinate (0,0) rispetto alla zona, visibile nel caso in cui il cursore del mouse sia sovrapposto a tale zona (@immagini_pulsanti_ispezione_zona destra). Per eseguire l'ispezione, tale cubo deve essere premuto con un doppio click del tasto sinistro del mouse.
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/pulsante_occhio_zona.png", width: 80%)],
+        [ #image("./imgs/cubo_zona.png", width: 100%)],
+    ),caption: [Pulsante "occhio" per l'ispezione zona (sinistra) e cubo utile all'interazione con una zona (destra)],
+)<immagini_pulsanti_ispezione_zona>
+
+\
+L'esecuzione di almeno una delle modalità elencate permette la visualizzazione, sulla destra dello schermo, del pannello relativo alle informazioni della zona di interesse (@immagine_pannello_ispezione_zona).
+
+#figure(
+  image("./imgs/pannello_ispezione_zona.png", width: 40%),
+  caption: [
+    Pannello di ispezione zona
+  ],
+) <immagine_pannello_ispezione_zona>
+
+\
+In esso vengono visualizzati:
+
+- *ID*: numero intero che rappresenta il codice identificativo univoco della zona, è visualizzato come titolo del pannello;
+
+- *Direzione*: può assumere valore `NS` (North-South) o `EW` (East-West) e rappresenta l'orientamento della zona rispetto al piano;
+
+- *Dimensioni*: tre campi rispettivamente relativi a:
+
+  - *Lunghezza*: numero reale che definisce la lunghezza della zona;
+
+  - *Larghezza*: numero reale che definisce la larghezza della zona;
+
+  - *Altezza*: numero reale che definisce l'altezza della zona.
+
+- *Lista dei Bin*: tabella che elenca, per tutti i bin della zona:
+  - codice alfanumerico identificativo univoco del bin;
+  - contenuto del bin ("Libero" se vuoto);
+  - pulsante per l'ispezione del bin (#TODO) se non vuoto.
+
+\
+Nella parte inferiore del pannello sono presenti i pulsanti contenenti le scritte:
+  - *Localizza*: se premuto permette lo spostamento della visuale sulla zona (#TODO);
+  - *Modifica*: se premuto permette la modifica della zona (@modifica_zona);
+  - *Elimina*: se premuto permette l'eliminazione della zona (@eliminazione_zona).
 
 == Creazione zona <creazione_zona>
 
@@ -289,7 +343,7 @@ Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà 
     ),caption: [Pulsante di creazione zona (sinistra) e nuova zona creata nell'ambiente di lavoro (destra)],
 ) <pulsante_crea_zona>
 
-== Modifica zona
+== Modifica zona <modifica_zona>
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile modificare le zone posizionate cambiandone i parametri dimensionali e di orientamento, potendo modificare o aggiungere le colonne e i livelli desiderati.
 
@@ -299,7 +353,7 @@ Tale logica concerne anche la rimozione dei livelli.
 
 Per esempio, durante la modifica di una zona formata da tre livelli (contenenti prodotti solo nel secondo) e cinque colonne (contenenti prodotti solo nelle prime tre), sarà possibile rimuovere la quarta colonna (se priva di prodotti) oppure sia la quarta che la quinta (purché entrambe siano prive di prodotti), ma non le precedenti. Similmente sarà possibile rimuovere il terzo livello (se privo di prodotti) ma non i precedenti.
 
-Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO), è presente un pulsante contenente la scritta "Modifica" (@pulsante_modifica_zona).
+Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@ispezione_zona), è presente un pulsante contenente la scritta "Modifica" (@pulsante_modifica_zona).
 
 #figure(
   image("./imgs/pulsante_modifica_zona.png", width: 40%),
@@ -327,9 +381,9 @@ Successivamente alla creazione dell'ambiente di lavoro è possibile eliminare un
 
 Per eseguire tale operazione è possibile interagire con:
 
-- il pulsante rosso contenente la scritta "Elimina" contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO);
+- il pulsante rosso contenente la scritta "Elimina" contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@immagini_pulsanti_eliminazione_zona sinistra);
 
-- il pulsante contenente l'icona raffigurante un cestino presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da eliminare.
+- il pulsante contenente l'icona raffigurante un cestino (@immagini_pulsanti_eliminazione_zona destra) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da eliminare.
 
 #figure(
     grid(

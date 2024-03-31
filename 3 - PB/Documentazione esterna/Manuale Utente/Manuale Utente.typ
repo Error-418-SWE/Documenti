@@ -211,48 +211,83 @@ Premendo il tasto destro del mouse e spostando il mouse in una delle quattro dir
 
 L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle frecce direzionali (o in alternativa i tasti W, A, S, D), che permettono il movimento nella direzione indicata dalla freccia. Con il tasto Shift è possibile aumentare la velocità di spostamento.
 
-== Creazione zona <creazione_zona>
+== Visualizzazione zone
+
+=== Visualizzazione lista zone <visualizzazione_lista_zone>
+
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+
+Selezionando da esso la prima icona (@icona_lista_zone sinistra), la quale corrisponde alla voce "Zone", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente (@icona_lista_zone destra).
 
 #figure(
     grid(
-        columns: 3,
+        columns: 2,
         rows:    (auto, auto),
-        [ #image("./imgs/creazione_zone_1.png", width: 90%)],
-        [ #image("./imgs/creazione_zone_2.png", width: 74%)],
-        [ #image("./imgs/creazione_zone_3.png", width: 80%)],
-    ),caption: [Da sinistra: menù di creazione zona, menù di configurazione dei ripiani ed esempio di zona creata manualmente],
-)
+        [ #image("./imgs/pulsante_zone.png", width: 70%)],
+        [ #image("./imgs/lista_zone.png", width: 70%)],
+    ),caption: [Icona "Zone" (sinistra) e pannello contenente la lista delle zone (destra)],
+) <icona_lista_zone>
+
+Ogni riga di tale lista corrisponde ad una zona, la quale viene identificata dal suo parametro `ID`.
+Ad esso seguono le icone relative all'ispezione della zona (#TODO), rappresentata da un occhio, e alla sua eliminazione (@eliminazione_zona), rappresentata da un cestino.
+
+Nel caso in cui venga creata una nuova zona (@creazione_zona), essa verrà aggiunta alla lista delle zone.
+Similmente, se una zona dovesse essere eliminata dall'ambiente, essa verrebbe rimossa dalla lista.
+
+
+== Creazione zona <creazione_zona>
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile creare le zone contenenti i bin in modo personalizzato.
 
-Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
-Selezionando da esso la voce "Zone" si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente.
-Al suo interno, sul lato destro, è presente un pulsante nero contenente un "+".
-Alla sua pressione verrà reso disponibile, sulla destra della schermata, il pannello "Nuova zona" nel quale sarà possibile inserire tutti i dati utili alla creazione della zona personalizzata.
+Sul lato destro superiore del pannello relativo alla visualizzazione della lista delle zone (@visualizzazione_lista_zone), è presente un pulsante nero contenente la scritta "+ Nuova" (@immagine_pulsante_nuova_zona).
+
+#figure(
+  image("./imgs/pulsante_nuova_zona.png", width: 50%),
+  caption: [
+    Pulsante di creazione di una nuova zona
+  ],
+) <immagine_pulsante_nuova_zona>
+
+Alla sua pressione verrà reso disponibile, sulla destra della schermata, il pannello "Nuova zona" (@immagine_pannello_nuova_zona) nel quale sarà possibile inserire tutti i dati utili alla creazione della zona personalizzata.
+
+#figure(
+  image("./imgs/pannello_nuova_zona.png", width: 50%),
+  caption: [
+    Pannello di creazione di una nuova zona
+  ],
+) <immagine_pannello_nuova_zona>
 
 I dati necessari alla creazione sono:
 - *ID*: numero intero che rappresenta il codice identificativo univoco della zona;
-- *Direzione*: può assumere valore `NS`(North-South) o `EW`(East-West) e rappresenta l'orientamento della zona rispetto al piano;
+- *Direzione*: può assumere valore `Nord-Sud` o `Est-Ovest` e rappresenta l'orientamento della zona rispetto al piano;
 - *Dimensioni*:
-  - *profondità*: numero reale che definisce la profondità della zona;
-  - *larghezza*: numero reale che definisce la larghezza della zona. Essa è definibile dall'utente solo se è selezionata l'opzione "\# colonne uguali", altrimenti nello stesso campo viene mostrata automaticamente la larghezza calcolata come somma delle larghezze delle singole colonne;
-  - *altezza*: numero reale che definisce l'altezza della zona. Essa viene mostrata automaticamente come somma delle altezze dei singoli livelli.
+  - *Lunghezza*: numero reale che definisce la lunghezza della zona;
+  - *Larghezza*: numero reale che definisce la larghezza della zona. Essa è definibile dall'utente solo se è selezionata l'opzione "Dividi in parti uguali", altrimenti nello stesso campo viene mostrata automaticamente la larghezza calcolata come somma delle larghezze delle singole colonne;
+  - *Altezza*: numero reale che definisce l'altezza della zona. Essa viene mostrata automaticamente come somma delle altezze dei singoli livelli.
 
 - *Colonne*:
   tramite un pulsante di opzione, è possibile selezionare la modalità di configurazione delle colonne.
   Esse sono:
-    - *colonne uguali*: tramite l'opzione "\# colonne uguali" è possibile dichiarare che tutte le colonne della zona avranno larghezza uguale e definire il *numero di colonne* con un numero intero. In questo modo la larghezza di ogni singola colonna sarà uguale alla divisione tra la larghezza della zona dichiarata e il numero di colonne;
+    - *colonne uguali*: tramite l'opzione "Dividi in parti uguali" è possibile dichiarare che tutte le colonne della zona avranno larghezza uguale e definire il *numero di colonne* con un numero intero. In questo modo la larghezza di ogni singola colonna sarà uguale alla divisione tra la larghezza della zona dichiarata e il numero di colonne;
     - *colonne personalizzate*: tramite l'opzione "Colonne personalizzate" è possibile specificare la *larghezza delle colonne* singolarmente dentro ad un apposito form separando ciascun valore (rappresentato da un numero reale) con degli spazi.
 
       Per esempio, se viene inserito:
       #align(center, `2 1 3 1.5`)
       si sta dichiarando che la zona possiede quattro colonne rispettivamente di larghezza 2, 1, 3 e 1.5.
 
-- *aggiunta livelli*: a destra del numero attuale di livelli configurati, è presente un pulsante bianco contenente un "+" che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* indicata mediante un numero reale.
+- *aggiunta livelli*: a destra del numero attuale di livelli configurati, è presente un pulsante bianco contenente la scritta "Aggiungi" che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* indicata mediante un numero reale.
 
-Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
+Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" (@pulsante_crea_zona sinistra) per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
 Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo.
 
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/pulsante_crea_zona.png", width: 74%)],
+        [ #image("./imgs/creazione_zone_3.png", width: 80%)],
+    ),caption: [Pulsante di creazione zona (sinistra) e nuova zona creata nell'ambiente di lavoro (destra)],
+) <pulsante_crea_zona>
 
 == Modifica zona
 
@@ -264,17 +299,59 @@ Tale logica concerne anche la rimozione dei livelli.
 
 Per esempio, durante la modifica di una zona formata da tre livelli (contenenti prodotti solo nel secondo) e cinque colonne (contenenti prodotti solo nelle prime tre), sarà possibile rimuovere la quarta colonna (se priva di prodotti) oppure sia la quarta che la quinta (purché entrambe siano prive di prodotti), ma non le precedenti. Similmente sarà possibile rimuovere il terzo livello (se privo di prodotti) ma non i precedenti.
 
-Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO), è presente un pulsante contenente la scritta "Modifica" (@pulsante_modifica_zona).
 
-Selezionando da esso la voce "Zone" si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente.
+#figure(
+  image("./imgs/pulsante_modifica_zona.png", width: 40%),
+  caption: [
+    Pulsante di modifica di una zona
+  ],
+) <pulsante_modifica_zona>
 
-In tale lista, per ogni elemento zona elencato, è presente un pulsante raffigurante un'occhio che, alla sua pressione, permette la visualizzazione sulla destra dello schermo del pannello relativo alle informazioni della relativa zona.
+Alla sua pressione sarà permesso all'utente di poter modificare alcuni parametri della zona in oggetto.
 
-Sulla parte inferiore di tale pannello è presente il pulsante "Modifica" che, se premuto, permette di poter modificare alcuni parametri della zona in oggetto.
+Essi sono i medesimi richiesti durante la creazione della zona (@creazione_zona) e seguono gli stessi vincoli, fuorché il parametro `ID`, il quale non è modificabile.
 
-I parametri modificabili sono gli stessi che vengono richiesti durante la creazione della zona (@creazione_zona) e seguono i medesimi vincoli, fuorché il parametro `ID`, il quale non è modificabile.
+Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla zona" (@pulsante_salvataggio_modifica_zona) per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
 
-Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla Zona" per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
+#figure(
+  image("./imgs/pulsante_salvataggio_modifiche_zona.png", width: 40%),
+  caption: [
+    Pulsante di salvataggio delle modifica di una zona
+  ],
+) <pulsante_salvataggio_modifica_zona>
+
+== Eliminazione zona <eliminazione_zona>
+
+Successivamente alla creazione dell'ambiente di lavoro è possibile eliminare una zona in esso collocata.
+
+Per eseguire tale operazione è possibile interagire con:
+
+- il pulsante rosso contenente la scritta "Elimina" contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (#TODO);
+
+- il pulsante contenente l'icona raffigurante un cestino presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da eliminare.
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/pulsante_eliminazione_zona.png", width: 80%)],
+        [ #image("./imgs/pulsante_cestino_zone.png", width: 100%)],
+    ),caption: [Pulsante "Elimina" di eliminazione zona (sinistra) e pulsanti "cestino" di eliminazione zona (destra)],
+)<immagini_pulsanti_eliminazione_zona>
+
+Alla pressione di uno dei pulsanti elencati, verrà aperto il pannello di conferma dell'operazione, in quanto irreversibile.
+
+#figure(
+  image("./imgs/conferma_eliminazione_zona.png", width: 50%),
+  caption: [Pannello di conferma eliminazione zona
+  ],
+) <immagine_pannello_conferma_eliminazione_zona>
+
+Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo pannello, la relativa zona (e conseguentemente tutti i bin in essa contenuti) verrà rimossa dall'ambiente di lavoro e dalla lista delle zone.
+
+Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno visualizzabili nella lista dei prodotti non collocati (#TODO) in attesa di una nuova collocazione.
+
 
 == Ispezione Bin, Prodotti e Zone
 

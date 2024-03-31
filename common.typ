@@ -75,7 +75,7 @@
     h(0.02em)
   })
 
-  Le definizioni sono diponibili nel documento #glo_v.
+  Le definizioni sono disponibili nel documento #glo_v.
 ]
 
 #let infobox(type, message) = {

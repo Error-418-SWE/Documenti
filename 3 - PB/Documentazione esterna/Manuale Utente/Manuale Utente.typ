@@ -285,9 +285,19 @@ In esso vengono visualizzati:
 
 \
 Nella parte inferiore del pannello sono presenti i pulsanti contenenti le scritte:
-  - *Localizza*: se premuto permette lo spostamento della visuale sulla zona (#TODO);
+  - *Localizza*: se premuto (@immagine_pulsante_localizza_zona) riposiziona automaticamente la visuale sulla zona, in modo da permettere una più immediata visualizzazione e localizzazione della stessa;
   - *Modifica*: se premuto permette la modifica della zona (@modifica_zona);
   - *Elimina*: se premuto permette l'eliminazione della zona (@eliminazione_zona).
+
+
+#figure(
+  image("./imgs/pulsante_localizza_zona.png", width: 50%),
+  caption: [
+    Pulsante localizza zona
+  ],
+) <immagine_pulsante_localizza_zona>
+
+
 
 == Creazione zona <creazione_zona>
 

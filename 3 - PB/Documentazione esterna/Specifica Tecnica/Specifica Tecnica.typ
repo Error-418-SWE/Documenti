@@ -100,11 +100,11 @@ Per concludere, “WMS3” supporta la personalizzazione dell'ambiente attravers
   _#link("https://react.dev/reference/react")_
   #lastVisitedOn(28, 03, 2024)
 
-- @react-three/drei: \
+- \@react-three/drei: \
   _#link("https://github.com/pmndrs/drei?tab=readme-ov-file#index")_
   #lastVisitedOn(28, 03, 2024)
 
-- @react-three/fiber: \
+- \@react-three/fiber: \
   _#link("https://docs.pmnd.rs/react-three-fiber/")_
   #lastVisitedOn(28, 03, 2024)
 
@@ -301,7 +301,7 @@ TypeScript è un superset di JavaScript che aggiunge tipizzazione statica al lin
   - *Link: * https://www.npmjs.com/package/@react-three/drei #lastVisitedOn(27, 03, 2024)
 
 \
-== Tencologie per la validazione dei dati
+== Tecnologie per la validazione dei dati
 === Zod
 Zod è una libreria di validazione dei dati per TypeScript. Viene utilizzata per definire schemi di validazione dei dati e garantire che i dati ricevuti siano conformi a tali schemi.
 

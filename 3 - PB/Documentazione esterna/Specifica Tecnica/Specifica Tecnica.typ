@@ -326,11 +326,11 @@ Quando viene richiamata una Server Action, Next.js può restituire sia l'interfa
 #figure(
   image("./imgs/nextjs-caching.png", width: 80%),
   caption: [
-    Next.js caching and revalidating.
+    Next.js caching and revalidating
   ],
 )
 
-Le Server Action sono del tutto analoghe all'utilizzo di una funzione all'interno del codice, ma con la differenza che la sua esecuzione avviene lato server, mediante una chiamata POST interamente gestita da Next.js.
+Le Server Actions sono del tutto analoghe all'utilizzo di una funzione all'interno del codice, ma con la differenza che la loro esecuzione avviene lato server, mediante una chiamata POST interamente gestita da Next.js.
 
 Il risultato della chiamata viene restituito in formato JSON.
 
@@ -349,7 +349,7 @@ Le Server Actions implementate trovano applicazione in operazioni di lettura dal
 - *getBinById*:
   - *obiettivo: * dato un codice identificativo univoco, ritorna le informazioni relative al bin corrispondente lette dal database;
   - *parametri: * `id:string` del bin interessato;
-  - *risultati; *
+  - *risultati: *
     - *Esito positivo: * JSON contenente le informazioni del bin corrispondente;
     - *Esito negativo: * JSON vuoto.
 
@@ -568,7 +568,7 @@ Rappresenta un elemento bin, ovvero uno spazio definito in grado di contenere un
       - *Idle*: valore di default, dichiara che il bin non è coinvolto in richieste di spostamento di prodotti;
       - *ProductIncoming*: dichiara che il bin è coinvolto in una richiesta di spostamento di un prodotto, il quale deve essere immesso al suo interno;
       - *ProductOutgoing*: dichiara che il bin è coinvolto in una richiesta di spostamento del prodotto al suo interno, il quale deve essere prelevato.
-  - *tipo*: BinState.
+  - *tipo*: `BinState`;
   - *visibilità*: `private`.
 
 \
@@ -680,12 +680,12 @@ Rappresenta una zona di contenimento dei bin, interpretabile come scaffale (se a
 - *getMaxUsedLevel*:
   - *obiettivo*: ottenere il numero dell'ultimo livello della zona con almeno un bin contenente un prodotto;
   - *parametri*: nessuno;
-  - *tipo di ritorno*: intero che rappresenta il numero dell'ultimo livello `number`;
+  - *tipo di ritorno*: intero che rappresenta il numero dell'ultimo livello `number`.
 
 - *getMaxUsedColumn*:
   - *obiettivo*: ottenere il numero dell'ultima colonna della zona con almeno un bin contenente un prodotto;
   - *parametri*: nessuno;
-  - *tipo di ritorno*: intero che rappresenta il numero dell'ultima colonna `number`;
+  - *tipo di ritorno*: intero che rappresenta il numero dell'ultima colonna `number`.
 
 \
 === Product
@@ -696,13 +696,13 @@ Rappresenta il prodotto da gestire in magazzino.
 *Attributi*:
 - *id*:
   - *descrizione*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco del prodotto;
-  - *tipo*: `string`.
+  - *tipo*: `string`;
   - *visibilità*: `private`.
 
 \
 - *name*:
   - *descrizione*: stringa che rappresenta il nome del prodotto;
-  - *tipo*: `string`.
+  - *tipo*: `string`;
   - *visibilità*: `private`.
 
 \
@@ -732,7 +732,7 @@ Rappresenta il prodotto da gestire in magazzino.
 \
 - *categories*:
   - *descrizione*: lista di stringhe che rappresentano le categorie di appartenenza del prodotto;
-  - *tipo*: `string[]`.
+  - *tipo*: `string[]`;
   - *visibilità*: `private`.
 
 \
@@ -749,25 +749,25 @@ Rappresenta un ordine di movimentazione di un prodotto tra un bin di partenza e 
 *Attributi*:
 - *id*:
   - *descrizione*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco dell'ordine;
-  - *tipo*: `string`.
+  - *tipo*: `string`;
   - *visibilità*: `private`.
 
 \
 - *startPoint*:
   - *descrizione*: oggetto `Bin` che rappresenta il bin di partenza dell'ordine;
-  - *tipo*: `Bin`.
+  - *tipo*: `Bin`;
   - *visibilità*: `private`.
 
 \
 - *endPoint*:
   - *descrizione*: oggetto `Bin` che rappresenta il bin di destinazione dell'ordine;
-  - *tipo*: `Bin`.
+  - *tipo*: `Bin`;
   - *visibilità*: `private`.
 
 \
 - *product*:
   - *descrizione*: oggetto `Product` che rappresenta il prodotto coinvolto nell'ordine;
-  - *tipo*: `Product`.
+  - *tipo*: `Product`;
   - *visibilità*: `private`.
 
 \
@@ -795,7 +795,7 @@ Rappresenta un file SVG utilizzato per la configurazione dell'ambiente di lavoro
 \
 - *svg*:
   - *descrizione*: stringa che rappresenta il contenuto del file SVG;
-  - *tipo*: `string`.
+  - *tipo*: `string`;
   - *visibilità*: `private`.
 
   \
@@ -823,7 +823,7 @@ Rappresenta il piano dell'ambiente 3D.
 \
 - *SVG*:
   - *descrizione*: oggetto `SVG` che rappresenta il file SVG del piano;
-  - *tipo*: SVG.
+  - *tipo*: `SVG`;
   - *visibilità*: `private`.
 
 \
@@ -938,7 +938,7 @@ Lo Strategy Pattern permette di definire una famiglia di algoritmi, incapsularli
       - *obiettivo*: ricerca di prodotti in base al loro codice identificativo;
       - *parametri*:
         - *list : Product[]*: lista di prodotti in cui cercare;
-        - *query : string*: stringa da cercare;
+        - *query : string*: stringa da cercare.
       - *tipo di ritorno*: lista di prodotti che rispondono al parametro di ricerca `Product[]`.
 
     \
@@ -946,7 +946,7 @@ Lo Strategy Pattern permette di definire una famiglia di algoritmi, incapsularli
       - *obiettivo*: ricerca di prodotti in base al loro nome;
       - *parametri*:
         - *list : Product[]*: lista di prodotti in cui cercare;
-        - *query : string*: stringa da cercare;
+        - *query : string*: stringa da cercare.
       - *tipo di ritorno*: lista di prodotti che rispondono al parametro di ricerca `Product[]`.
 
     \
@@ -954,7 +954,7 @@ Lo Strategy Pattern permette di definire una famiglia di algoritmi, incapsularli
       - *obiettivo*: ricerca di prodotti in base alla categoria;
       - *parametri*:
         - *list : Product[]*: lista di prodotti in cui cercare;
-        - *query : string*: stringa da cercare;
+        - *query : string*: stringa da cercare.
       - *tipo di ritorno*: lista di prodotti che rispondono al parametro di ricerca `Product[]`.
 
 \
@@ -971,7 +971,7 @@ Lo Strategy Pattern permette di definire una famiglia di algoritmi, incapsularli
       - *obiettivo*: ricerca di zone in base al loro codice identificativo;
       - *parametri*:
         - *list : Zone[]*: lista di zone in cui cercare;
-        - *query : string*: stringa da cercare;
+        - *query : string*: stringa da cercare.
         - *type : string*: tipo di ricerca da effettuare;
           - *Valori ammessi*: "id".
       - *tipo di ritorno*: lista di zone che rispondono al parametro di ricerca `Zone[]`.
@@ -1121,7 +1121,7 @@ Questo contesto, mediante i componenti Provider implementati, permette di condiv
 \
 == Presentation layer
 === UI
-L'interfaccia utente è realizzata mediante elementi importati da Shadcn-UI e componenti personalizzati.
+L'interfaccia utente è realizzata mediante elementi importati da shadcn/u e componenti personalizzati.
 
 I componenti realizzati sono i seguenti:
 

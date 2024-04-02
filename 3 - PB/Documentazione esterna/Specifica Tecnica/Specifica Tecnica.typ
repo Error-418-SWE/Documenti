@@ -16,9 +16,10 @@
 = Introduzione
 
 == Scopo del documento
-Il presente documento si pone come obiettivo la descrizione dettagliata delle scelte progettuali effettuate, al fine di garantire una comprensione chiara e completa del software "WMS3: Warehouse Management 3D". 
 
-Gli aspetti fondamentali riguardano l'architettura implementativa, analizzazndo tecnologie e design pattern adottati, e l'archietettura di deployment del prodotto.
+Il presente documento ha come obiettivo la descrizione dettagliata delle scelte progettuali effettuate, al fine di garantire una comprensione chiara e completa del software "WMS3: Warehouse Management 3D", proposto da Sanmarco Informatica S.p.A.
+
+Gli aspetti fondamentali riguardano l'architettura implementativa, analizzando tecnologie e design pattern adottati, e l'architettura di deployment del prodotto.
 
 Mediante il documento si intende fornire le linee guida per lo sviluppo del software, garantendo la coerenza con i  requisiti individuati nel documento di Analisi dei Requisiti e il loro soddisfacimento.
 
@@ -74,6 +75,55 @@ Per concludere, “WMS3” supporta la personalizzazione dell'ambiente attravers
   _#link("https://www.math.unipd.it/~rcardin/swea/2022/Diagrammi%20Use%20Case.pdf")_
   #lastVisitedOn(20, 03, 2024)
 
+=== Riferimenti a documentazione tecnica <riferimenti-tecnici>
+
+- Docker: \
+  _#link("https://docs.docker.com/engine/")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Docker Compose: \
+  _#link("https://docs.docker.com/compose/")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Jest: \
+  _#link("https://jestjs.io/docs/getting-started")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Next.js: \
+  _#link("https://nextjs.org/docs")_
+  #lastVisitedOn(28, 03, 2024)
+
+- PostgreSQL: \
+  _#link("https://www.postgresql.org/docs/16/index.html")_
+  #lastVisitedOn(28, 03, 2024)
+
+- React: \
+  _#link("https://react.dev/reference/react")_
+  #lastVisitedOn(28, 03, 2024)
+
+- \@react-three/drei: \
+  _#link("https://github.com/pmndrs/drei?tab=readme-ov-file#index")_
+  #lastVisitedOn(28, 03, 2024)
+
+- \@react-three/fiber: \
+  _#link("https://docs.pmnd.rs/react-three-fiber/")_
+  #lastVisitedOn(28, 03, 2024)
+
+- shadcn/ui: \
+  _#link("https://ui.shadcn.com/docs")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Tailwind CSS: \
+  _#link("https://tailwindcss.com/docs/")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Three.js: \
+  _#link("https://threejs.org/docs/")_
+  #lastVisitedOn(28, 03, 2024)
+
+- Zod: \
+  _#link("https://zod.dev/")_
+  #lastVisitedOn(28, 03, 2024)
 
 #pagebreak()
 
@@ -130,160 +180,169 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 )
 
 #pagebreak()
-
-= Installazione
-
-== Scaricare il progetto <download>
-
-Vengono fornite due modalità di download del prodotto WMS3: la prima (consigliata) è eseguire il download del prodotto in formato zip o tar.gz dalla pagina
-
-#align(center, link("https://github.com/Error-418-SWE/WMS3/releases"))
-
-In alternativa, se nel dispositivo è presente Git, si può clonare il repository con il comando
-
-#align(center, `git clone git@github.com:Error-418-SWE/WMS3.git`)
-
-oppure
-
-#align(center, `git clone https://github.com/Error-418-SWE/WMS3.git`)
-
-== Avviare la web app
-
-Per avviare la web app è necessario collocarsi all'interno della cartella scaricata al passaggio _Scaricare il progetto_ (@download) ed eseguire il comando
-
-#align(center, `docker compose up -d`)
-
-Questo avvierà i container Docker che formano il prodotto:
-- Container PostgreSQL (database);
-- Container Web (web app).
-
-Completato l'avvio dei container, la web app sarà disponibile all'indirizzo
-
-#align(center, link("http://localhost:3000/"))
-
-== Terminare l'esecuzione
-Per terminare l'esecuzione della web app è necessario collocarsi nella cartella scaricata al passaggio _Scaricare il progetto_ (@download) ed eseguire il comando
-
-#align(center, `docker compose down`)
-
-#pagebreak()
-
 = Tecnologie
 
 == Introduzione
 
 In questa sezione, viene presentata una panoramica completa degli strumenti e delle tecnologie utilizzati per lo sviluppo e l'implementazione del software “WMS3”. Questo include una descrizione dettagliata delle tecnologie, del linguaggio di programmazione adottato, delle librerie e dei framework necessari.
 
-L'obiettivo principale è assicurare che il software sia sviluppato utilizzando le tecnologie adeguate in termini di efficacia ed efficienza.
+L'obiettivo principale è assicurare che il software sia sviluppato utilizzando le tecnologie adeguate in termini di efficacia ed efficienza e che soddisfi i requisiti individuati nel documento #adr.
 
-== Elenco delle tecnologie
+== Tecnologie implementative
+=== JSX
+JSX (JavaScript XML) è un'estensione di sintassi di JavaScript che consente di scrivere codice HTML all'interno di file JavaScript. Viene utilizzato per definire la struttura delle interfacce utente all'interno delle applicazioni React.
 
-=== Tecnologie implementative
+*Versione: * 18.0.0.
 
-#figure(
-  table(
-    columns: 3,
-    [*Tecnologia*], [*Descrizione*], [*Versione*],
-    [Typescript],
-    [Superset di JavaScript che aggiunge tipizzazione, offrendo maggiore struttura al codice.],
-    [5.3.3],
+*Contesto di utilizzo: *
+- Definizione della struttura dei componenti web.
 
-    [HTML],
-    [Linguaggio di markup standard utilizzato per la creazione di pagine web.],
-    [5.0],
-
-    [Next.js],
-    [Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web.],
-    [14.1.0],
-    
-    [Node.js],
-    [Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli.],
-    [20.11.0],
-
-    [React],
-    [Libreria JavaScript utilizzata per la creazione di interfacce utente dinamiche e reattive. Si basa sul concetto di "components", ovvero blocchi di codice autonomi che gestiscono la propria logica e rendering.],
-    [18.0.0],
-
-    [Tailwind CSS],
-    [Framework CSS utilizzato per lo sviluppo di interfacce utente web.],
-    [3.4.1],
-
-    [Shadcn-UI],
-    [Libreria di componenti React personalizzati per la creazione di interfacce utente.],
-    [0.8.0],
-
-    cell(
-      colspan: 3,
-      fill: gray.lighten(50%), 
-      [*Tecnologie ambiente 3D*]
-    ),
-
-    [Drei],
-    [Libreria che fornisce componenti e utilità per semplificare lo sviluppo di applicazioni in 3D utilizzando React e Three.js.],
-    [9.97.6],
-
-    [Fiber],
-    [Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React.],
-    [8.15.16],
-
-    [Three.js],
-    [Libreria JavaScript utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL.],
-    [0.161.2],
-
-  ),
-  caption: "Tecnologie utilizzate per lo sviluppo."
-)
-
-=== Tecnologie per la persistenza dei dati
-
-#figure(
-  table(
-    columns: (1fr, 3fr, 1fr),
-    [*Tecnologia*], [*Descrizione*], [*Versione*],
-    [PostgreSQL],
-    [Sistema di gestione di database relazionali.],
-    [16.2],
-  ),
-  caption: "Tecnologie utilizzate per la persistenza dei dati."
-)
 \
-=== Tecnologie per il testing
+=== CSS
+CSS (Cascading Style Sheets) è un linguaggio utilizzato per definire lo stile e la presentazione delle pagine web. Viene utilizzato per definire la formattazione, il layout e il design delle pagine web.
 
-#figure(
-  table(
-    columns: 3,
-    [*Tecnologia*], [*Descrizione*], [*Versione*],
-    [Jest],
-    [Framework di testing per JavaScript. Utilizzato principalmente per lo unit testing, offre la parallelizzazione dei test e il mocking delle dipendenze.],
-    [29.7.0],
-  ),
-  caption: "Tecnologie utilizzate per il testing."
-)
+*Versione: * 3.0.
 
-=== Tecnologie per il deployment
+*Contesto di utilizzo: *
+- Definizione stile e layout componenti web.
 
-#figure(
-  table(
-    columns: 3,
-    [*Tecnologia*], [*Descrizione*], [*Versione*],
+*Librerie e framework*
+- *Tailwind CSS*
+  - Framework CSS utilizzato per lo sviluppo di interfacce utente web. Offre una serie di classi predefinite per la definizione dello stile degli elementi.
+  - *Versione: * 3.4.1.
+  - *Link: * https://tailwindcss.com/ #lastVisitedOn(27, 03, 2024)
 
-    [Docker],
-    [Software utilizzato per il processo di deployment di applicazioni software. Permette di
-    eseguire processi informatici in ambienti isolati chiamati container.],
-    [24.0.7],
+\
+=== TypeScript
+TypeScript è un superset di JavaScript che aggiunge tipizzazione statica al linguaggio, offrendo maggiore struttura al codice. Questo permette di rilevare errori di programmazione in fase di sviluppo, riducendo il rischio di bug e semplificando la manutenzione del codice.
 
-    [Docker-compose],
-    [Strumento per la definizione e l'esecuzione di applicazioni multi-container.],
-    [2.23.3],
-  ),
-  caption: "Tecnologie utilizzate per il deploy."
-)
+*Versione: * 5.3.3.
+
+*Contesto di utilizzo: *
+- Definizione tipi e interfacce per i dati;
+- Implementazione dei componenti React;
+- Codifica lato front-end e back-end;
+- Implementazione ambiente 3D.
+
+*Librerie e framework*
+- *Next.js*
+  - Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web. Offre funzionalità avanzate realizzazione di API, gestione del routing e Server Action.
+  - *Versione: * 14.1.0.
+  - *Link: * https://nextjs.org/ #lastVisitedOn(27, 03, 2024)
+\
+- *React*
+  - Libreria JavaScript utilizzata per la creazione di interfacce utente dinamiche, reattive e stateful. Si basa sul concetto di "components", ovvero blocchi di codice autonomi che gestiscono la propria logica e rendering.
+  - *Versione: * 18.0.0.
+  - *Link: * https://reactjs.org/ #lastVisitedOn(27, 03, 2024)
+\
+- *Node.js*
+  - Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli. Viene utilizzato per eseguire il codice JavaScript lato server.
+  - *Versione: * 20.11.0.
+  - *Link: * https://nodejs.org/ #lastVisitedOn(27, 03, 2024)
+\
+- *Shadcn/ui*
+  - Raccolta di componenti React personalizzati per la creazione di interfacce utente. Offre una serie di componenti pronti all'uso per la realizzazione di interfacce grafiche.
+  - *Versione: * 0.8.0.
+  - *Link: * https://ui.shadcn.com/ #lastVisitedOn(27, 03, 2024)
+
+*Librerie e framework ambiente 3D*
+- *Three.js*
+  - Libreria JavaScript utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL. Offre funzionalità avanzate per la creazione di ambienti 3D interattivi.
+  - *Versione: * 0.161.2.
+  - *Link: * https://threejs.org/ #lastVisitedOn(27, 03, 2024)
+
+\
+- *\@react-three/fiber*
+  - Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React. Offre funzionalità avanzate per la creazione di grafica 3D animata.
+  - *Versione: * 8.15.16.
+  - *Link: * https://docs.pmnd.rs/react-three-fiber/getting-started/introduction #lastVisitedOn(27, 03, 2024)
+
+\
+- *\@react-three/drei*
+  - Libreria che fornisce componenti e utilità per semplificare lo sviluppo di applicazioni in 3D utilizzando React e Three.js. Offre funzionalità avanzate per la creazione di ambienti 3D interattivi.
+  - *Versione: * 9.97.6.
+  - *Link: * https://www.npmjs.com/package/@react-three/drei #lastVisitedOn(27, 03, 2024)
+
+\
+== Tecnologie per la validazione dei dati
+=== Zod
+Zod è una libreria di validazione dei dati per TypeScript. Viene utilizzata per definire schemi di validazione dei dati e garantire che i dati ricevuti siano conformi a tali schemi.
+
+*Versione: * 3.22.4.
+
+*Contesto di utilizzo: *
+- Validazione dei dati inseriti dall'utente.
+
+\
+== Tecnologie per la persistenza dei dati
+
+=== SQL
+SQL (Structured Query Language) è un linguaggio di programmazione utilizzato per la gestione dei database relazionali. Viene utilizzato per la creazione, la modifica e la gestione dei dati all'interno del database.
+Nel contesto del capitolato, le operazioni svolte sul database sono esclusivamente di tipo interrogativo.
+
+*Contesto di utilizzo: *
+- Interrogazione del database relazionale.
+
+\
+=== JSON
+JSON (JavaScript Object Notation) è un formato di scambio dati leggero e indipendente dal linguaggio. Viene utilizzato per la trasmissione e lo scambio di dati tra client e server. Utilizzato principalmente nelle comunicazioni nella rete, trova naturale utilizzo nello sviluppo di una web app.
+
+*Contesto di utilizzo: *
+- Risultato delle interrogazioni al database;
+- Risultato delle chiamate API.
+
+\
+=== PostgreSQL
+PostgreSQL è un sistema di gestione di database relazionali. Viene utilizzato per la memorizzazione e la gestione dei dati relativi al software “WMS3”.
+
+*Versione: * 16.2.
+
+*Contesto di utilizzo: *
+- Memorizzazione e gestione dei dati relativi ai bin, ai prodotti e alle zone del magazzino.
+
+\
+== Tecnologie per il testing
+=== Jest
+Jest è un framework di testing per JavaScript e TypeScript. Viene utilizzato principalmente per lo unit e l'integration testing, offrendo funzionalità avanzate come la parallelizzazione dei test e il mocking delle dipendenze.
+
+*Versione: * 29.7.0.
+
+*Contesto di utilizzo: *
+- Implementazione della suite di unit testing;
+- Implementazione della suite di integration testing.
+
+\
+== Tecnologie per il deployment
+=== Docker
+Docker è un software utilizzato per il processo di deployment di applicazioni software. Permette di eseguire processi informatici in ambienti isolati chiamati container, garantendo la portabilità e la scalabilità delle applicazioni.
+
+*Versione: * 24.0.7.
+
+*Contesto di utilizzo: *
+- Deployment del software "WMS3" mediante container Docker;
+- Isolamento dell'ambiente di sviluppo.
+
+*Immagini Docker utilizzate*
+- *PostgreSQL*: container per il database relazionale;
+  - Immagine: `postgres:16.2`.
+
+- *Web*: container per l'applicazione web;
+  - Immagine: `node:20-alpine`.
+
+\
+=== Docker-compose
+Docker-compose è uno strumento per la definizione e l'esecuzione di applicazioni multi-container. Viene utilizzato per gestire l'orchestrazione dei container Docker e semplificare il processo di deployment.
+
+*Versione: * 2.23.3.
+
+*Contesto di utilizzo: *
+- Gestione dell'orchestrazione dei container Docker utilizzati.
 
 #pagebreak()
 
 = Architettura di sistema
 
-== Architettura di implementazione 
+== Architettura di implementazione
 Il software WMS3 al fine di perseguire manutenibilità, flessibilità e scalabilità, adotta ed implementa un'architettura "layered", nota anche come "Multi-tier architecture".
 
 I layer definiti sono "closed", ovvero una richiesta si sposta esclusivamente da un livello superiore a quello immediatamente adiacente.
@@ -296,6 +355,8 @@ Tale architettura permette di individuare e suddividere la logica del software i
 
 - *Presentation layer*: permette di trasformare i dati elaborati dal Business layer e le informazioni in una forma comprensibile e accessibile agli utenti finali. Questo include la creazione di interfacce utente grafiche e visualizzazioni 3D degli elementi di interesse.
 
+Ciascun layer possiede il suo sistema di classi e componenti e prevede metodi per comunicare con i layer adiacenti.
+
 #figure(
   image("./imgs/layeredArchitecture.png", width: 100%),
   caption: [
@@ -304,84 +365,198 @@ Tale architettura permette di individuare e suddividere la logica del software i
 )
 
 === Vantaggi
-- Ogni livello dell'archiettetura crea un livello di astrazione che permette di perseguire _separation of concerns_ e di rendere il software più manutenibile e scalabile;
+- Ogni livello dell'archiettetura crea un livello di astrazione che permette di perseguire la _separation of concerns_ e di rendere il software più manutenibile e scalabile;
 - Semplicità di implementazione in termini di costi e tempo;
-- Facilità di test e debug;
+- Semplicità di test e debug.
 
 === Svantaggi
 - Cambiamenti consistenti possono richiedere modifiche in layer diversi.
 
-== Design pattern utilizzati
+== Persistence layer
+Il layer di persistenza è responsabile della gestione dell'accesso al database e della lettura dei dati al suo interno. I dati letti vengono processati e trasformati in oggetti del Business layer.
 
-=== Data Mapper <data_mapper>
-Il design pattern Data Mapper viene utilizzato per interpretare i dati letti del database mantenendo separate la logica di business dal layer di persistenza. Le classi relative a questo pattern fungono da intermediari tra l'applicazione e la sorgente dati e sono responsabili della conversione delle strutture dati atte alla persistenza (ottenute in formato JSON a seguito di query al database) in oggetti del dominio dell'applicazione.
+\
+=== Next.js Server Actions
 
-=== Repository <repository>
-Il design pattern Repository viene implementato per separare la logica di business dalla logica di accesso ai dati. Le classi relative a questo pattern eseguono operazioni di lettura, aumentando l'astrazione dei dettagli specifici della persistenza dei dati e permettendo all'applicazione di interagirvi in modo indipendente dal tipo di archivio sottostante.
+L'accesso al database avviene mediante Server Actions, feature offerta da Next.js che permette la definizione di codice eseguibile solamente lato server, senza eseguire operazioni di fetch tipiche delle chiamate API. Questo permette di non esporre sulla rete endpoint sensibili e di mantenere la sicurezza dei dati.
 
-=== Provider <provider>
-Il design pattern Provider viene applicato nel contesto tecnologico del progetto, soprattutto rispetto all'utilizzo di React, vengono sfruttate delle Context API per permette di gestire e trasferire i dati attraverso l'albero dei componenti in modo strutturato, evitando il "prop drilling", ovvero l'effetto che si verifica nei casi in cui è necessario trasportare i dati attraverso più livelli di componenti, anche se alcuni di essi non ne necessitano.
+Quando viene richiamata una Server Action, Next.js può restituire sia l'interfaccia utente aggiornata sia i nuovi dati in un'unica risposta, integrandosi perfettamente con l'architettura _caching and revalidating_ di Next.js. Tale architettura implementa una strategia di caching ottimizzata per massimizzare le prestazioni e minimizzare i costi. Questo comporta la generazione statica delle route e la memorizzazione nella cache delle richieste di dati. Il diagramma sottostante illustra il comportamento predefinito della cache: una route viene generata staticamente al momento della compilazione o quando viene visitata per la prima volta.
 
-=== Strategy <strategy>
-Il design pattern Strategy consente di definire una famiglia di algoritmi, incapsularli in classi separate e renderli intercambiabili. In questo modo è possibile applicare l'algoritmo appropriato senza dover conoscere i dettagli implementativi.
+#figure(
+  image("./imgs/nextjs-caching.png", width: 80%),
+  caption: [
+    Next.js caching and revalidating
+  ],
+)
 
-È stato implementato nella gestione di diversi algoritmi di creazione del piano, degli algoritmi di ricerca dei prodotti e degli algoritmi di ricerca delle zone.
+Le Server Actions sono del tutto analoghe all'utilizzo di una funzione all'interno del codice, ma con la differenza che la loro esecuzione avviene lato server, mediante una chiamata POST interamente gestita da Next.js.
 
-=== Factory <factory>
-Il design pattern Factory permette, definendo un'interfaccia comune, la creazione di oggetti senza specificarne esplicitamente le classi esatte, lasciando alle sottoclassi la decisione su quale istanziare.
+Il risultato della chiamata viene restituito in formato JSON.
 
-È stato adottato per separare l'implementazione dalla creazione degli oggetti relativi agli algoritmi di ricerca dei prodotti e delle zone.
+\
+=== Server Actions implementate
 
+Le Server Actions implementate trovano applicazione in operazioni di lettura dal database, pertanto la natura asincrona delle operazioni implica l'utilizzo di Promise per la gestione dei risultati.
 
+- *getAllBins*:
+  - *obiettivo: * ottenere le informazioni di tutti i bin presenti nel database;
+  - *parametri: * nessuno;
+  - *risultati:*
+    - *Esito positivo: * JSON contenente lista dei bin presenti nel database;
+    - *Esito negativo: * JSON vuoto.
+\
+- *getBinById*:
+  - *obiettivo: * dato un codice identificativo univoco, ritorna le informazioni relative al bin corrispondente lette dal database;
+  - *parametri: * `id:string` del bin interessato;
+  - *risultati: *
+    - *Esito positivo: * JSON contenente le informazioni del bin corrispondente;
+    - *Esito negativo: * JSON vuoto.
 
-== Classi e Componenti
-Ciascun layer possiede il suo indipendente sistema di classi e componenti e prevede metodi per comunicare con i layer adiacenti.
+\
+- *getAllCategories*:
+  - *obiettivo: * ottenere le informazioni di tutte le categorie presenti nel database;
+  - *parametri: * nessuno;
+  - *risultati: *
+    - *Esito positivo: * JSON contenente lista delle categorie presenti nel database;
+    - *Esito negativo: * JSON vuoto.
 
-=== Persistence layer
-Mediante le Server Action offerte da Next.js, vengono eseguite delle query SQL atte alla lettura dei dati utili all'applicazione da un database esterno.
-Esse sono implementate e rese disponibili in file separati, organizzati nell'omonima cartella "Server Action", contenente:
+\
+- *getAllProducts*:
+  - *obiettivo: * ottenere le informazioni di tutti i prodotti presenti nel database;
+  - *parametri: * nessuno;
+  - *risultati: *
+    - *Esito positivo: * JSON contenente lista dei prodotti presenti nel database;
+    - *Esito negativo: * JSON vuoto.
 
-- *getAllBins*: ritorna le informazioni di tutti i bin lette dal database;
+\
+- *getProductById*:
+  - *obiettivo: * dato un codice identificativo univoco, ritorna le informazioni relative al prodotto corrispondente lette dal database;
+  - *parametri: * `id:string` del prodotto interessato;
+  - *risultati: *
+    - *Esito positivo: * JSON contenente le informazioni del prodotto corrispondente;
+    - *Esito negativo: * JSON vuoto.
 
-- *getBinById*: dato un codice identificativo univoco, ritorna le informazioni relative al bin corrispondente lette dal database;
+\
+- *SVGSanitize*:
+  - *obiettivo: * dato un file SVG, ne effettua la sanificazione da elementi non necessari;
+  - *parametri: * `svg:string` del file SVG da sanificare;
+  - *risultati: *
+    - *Esito positivo: * JSON contenente il file SVG pulito;
+    - *Esito negativo: * JSON vuoto.
 
-- *getAllCategories*: ritorna le informazioni di tutte le categorie di prodotti lette dal database;
+\
+- *readSavedSVG*:
+  - *obiettivo: * leggere il contenuto di un file SVG salvato;
+  - *parametri: * nessuno;
+  - *risultati: *
+    - *Esito positivo: * JSON contenente il file SVG salvato;
+    - *Esito negativo: * JSON vuoto.
 
-- *getAllProducts*: ritorna le informazioni di tutti i prodotti lette dal database;
+\
+- *saveSVG*:
+  - *obiettivo: * salvare un file SVG sul server;
+  - *parametri: * `svg:string` del file SVG da salvare;
+  - *risultati: *
+    - *Esito positivo: * JSON contenente il file SVG salvato;
+    - *Esito negativo: * JSON vuoto.
 
-- *getProductById*: dato un codice identificativo univoco, ritorna le informazioni relative al prodotto corrispondente lette dal database;
+\
+- *getAllZones*:
+  - *obiettivo: * ottenere le informazioni di tutte le zone presenti nel database;
+  - *parametri: * nessuno;
+  - *risultati: *
+    - *Esito positivo: * JSON contenente lista delle zone presenti nel database;
+    - *Esito negativo: * JSON vuoto.
 
-- *SVGSanitize*: dato un path ad un file SVG caricato, ritorna il contenuto del relativo file SVG sanificato, ovvero normalizzato e reso sicuro, prevenendo attacchi XSS;
+\
+- *getBinsByZoneId*:
+  - *obiettivo: * dato un codice identificativo univoco, ritorna le informazioni relative ai bin presenti nella zona corrispondente lette dal database;
+  - *parametri: * `id:string` della zona interessata;
+  - *risultati: *
+    - *Esito positivo: * JSON contenente lista dei bin presenti nella zona corrispondente;
+    - *Esito negativo: * JSON vuoto.
 
-- *readSavedSVG*: ritorna il contenuto del file SVG salvato su server;
+\
+- *getZoneById*:
+  - *obiettivo: * dato un codice identificativo univoco, ritorna le informazioni relative alla zona corrispondente lette dal database;
+  - *parametri: * `id:string` della zona interessata;
+  - *risultati: *
+    - *Esito positivo: * JSON contenente le informazioni della zona corrispondente;
+    - *Esito negativo: * JSON vuoto.
 
-- *saveSVG*: dato il contenuto di un file SVG, esso viene salvato come _saved.svg_;
+\
+=== Repository Pattern
+Il Repository Pattern permette di separare la logica di business dalla logica di accesso ai dati, garantendo una maggiore flessibilità e manutenibilità del codice. L'obiettivo è creare un livello di astrazione tra la logica di accesso ai dati e la logica di business, consentendo di modificare l'implementazione del database senza influenzare il codice di business.
 
-- *getAllZones*: ritorna le informazioni di tutte le zone lette dal database;
+*Vantaggi*
+- Dependency inversion principle: i moduli di alto livello non dipendono dai moduli di basso livello, rendendo la logica di business indipendente dalla logica di accesso ai dati;
+- La separazione tra la logica di business e la logica di accesso ai dati semplifica la manutenzione e il testing del codice.
 
-- *getBinsByZoneId*: dato un codice identificativo univoco, ritorna le informazioni relative a tutti i bin contenuti nella zona corrispondente lette dal database;
+\
+*Interfaccia implementata*
+- *DataMapperInterface*: interfaccia che definisce i metodi per la creazione di oggetti a partire dai dati letti dal database.
+  - *Metodi:*
+    - *getAll*:
+      - *obiettivo: * ottenere tutte le informazioni relative agli oggetti;
+      - *parametri: * nessuno;
+      - *risultati: *
+        - *Esito positivo: * Promise contenente la lista degli oggetti;
+        - *Esito negativo: * Promise contenente lista vuota.
+    - *getById*:
+      - *obiettivo: * ottenere le informazioni relative all'oggetto corrispondente al codice identificativo univoco;
+      - *parametri: * `id:string` dell'oggetto interessato;
+      - *risultati: *
+        - *Esito positivo: * Promise contenente le informazioni dell'oggetto corrispondente;
+        - *Esito negativo: * Promise contenente lsita vuota.
 
-- *getZoneById*: dato un codice identificativo univoco, ritorna le informazioni relative alla zona corrispondente lette dal database.
+\
+*Classi implementate*
 
+L'interfaccia `DataMapperInterface` è implementata dalle seguenti classi:
 
-Al fine di agevolare la divisione tra il Persistence layer ed il Business layer, viene utilizzato il pattern Repository (@repository) mediante classi che implementano l'interfaccia `dataRepositoryInterface`, quali:
-
-- *binRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Bin`;
-
-- *productRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Product`;
+- *productRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Product`.
+  - *Metodi*:
+    - *getAll*: ottiene tutte le informazioni relative ai prodotti;
+    - *getById*: ottiene le informazioni relative al prodotto corrispondente al codice identificativo univoco.
 
 - *zoneRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Zone`.
+  - *Metodi*:
+    - *getAll*: ottiene tutte le informazioni relative alle zone;
+    - *getById*: ottiene le informazioni relative alla zona corrispondente al codice identificativo univoco.
 
-Il pattern Repository impiega in maniera consequenziale le classi correlate del pattern Data Mapper (@data_mapper), le quali implementano l'interfaccia `DataMapperInterface`.
-Di seguito sono elencate le classi specifiche:
+\
+=== Data Mapper Pattern
+Il Data Mapper Pattern, assieme al Repository Pattern, permette di separare la logica di business dalla logica di accesso ai dati. Il Data Mapper Pattern si occupa di mappare i dati letti dal database in oggetti del Business layer, garantendo una maggiore flessibilità e manutenibilità del codice.
 
-- *binMapper*: è responsabile della creazione di oggetti `Bin`;
+Permette la mappatura dei dati letti dal database in oggetti del Business layer, stabilendo un contratto che i dati letti devono rispettare per essere trasformati in oggetti.
 
-- *productMapper*: è responsabile della creazione di oggetti `Product`;
+*Vantaggi*
+- Separazione della logica di business dalla logica di accesso ai dati;
+- Permette di circoscrivere la complessità relativa alla logica di creazione degli oggetti di business;
+- Maggiore flessibilità e manutenibilità del codice;
+- Facilità di testing e debugging.
 
-- *zoneMapper*: è responsabile della creazione di oggetti `Zone`.
+\
+*Interfaccia implementata*
+- *DataMapperInterface*: interfaccia che definisce i metodi per la creazione di oggetti a partire dai dati letti dal database.
+  - *Metodi:*
+    - *toDomain*: metodo astratto che definisce la logica di mappatura dei dati JSON recuperati dal database in oggetti di business.
+      - *parametri*: `data:JSON` contenente i dati recuperati dal database;
+      - *risultati*: oggetto di tipo `T` corrispondente all'oggetto di business.
 
+\
+*Classi implementate*
+- *binMapper*: è responsabile della creazione di oggetti `Bin`.
+  - *Metodi:*
+    - *toDomain*: mappatura dei dati JSON in oggetti `Bin`.
 
+- *productMapper*: è responsabile della creazione di oggetti `Product`.
+  - *Metodi:*
+    - *toDomain*: mappatura dei dati JSON in oggetti `Product`.
+
+- *zoneMapper*: è responsabile della creazione di oggetti `Zone`
+  - *Metodi:*
+    - *toDomain*: mappatura dei dati JSON in oggetti `Zone`.
 
 #figure(
   image("./imgs/Persistence Layer patterns class diagram.svg", width: 100%),
@@ -393,165 +568,374 @@ Di seguito sono elencate le classi specifiche:
 Nel diagramma delle classi del layer di persistenza fornito, le classi `Zone`, `Bin` e `Product` sono rappresentate senza gli attributi e i metodi per garantire una maggiore chiarezza grafica.
 Tali informazioni sono rappresentate dettagliatamente nel diagramma delle classi del layer di business.
 
-=== Business layer
-Le classi che vengono utilizzate per rappresentare il modello dell'applicativo sono:
+\
+== Business layer
+Il layer di business è responsabile dell'elaborazione dei dati ricevuti dal layer di persistenza e dell'applicazione delle regole di business definite. È responsabile di implementare la logica dell'applicazione in modo indipendente dalle tecnologie di persistenza e di presentazione utilizzate.
 
-- *Bin*:
+\
+=== Bin
 
-  rappresenta un elemento bin, ovvero uno spazio definito in grado di contenere un prodotto.
-  I suoi attributi sono:
+Rappresenta un elemento bin, ovvero uno spazio definito in grado di contenere un prodotto.
 
-  - *id*: stringa di massimo dieci caratteri che rappresenta il codice identificativo univoco del bin.
-    Essa è composta da:
-    #align(center, `idZona_letteraColonna_numeroLivello`)
+\
+*Attributi*:
+- *id*:
+  - *descrizione*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco del bin. La struttura dell'id è la seguente:
+  #align(center, `idZona_letteraColonna_numeroLivello`)
 
-    La lettera corrispondente alla colonna fa riferimento ad una mappatura per cui "A" equivale alla colonna zero e viene incrementata seguendo i caratteri dell'alfabeto inglese con l'aumentare del numero della colonna.
+    La lettera corrispondente alla colonna fa riferimento ad una mappatura per cui "A" equivale alla colonna zero, e viene incrementata seguendo i caratteri dell'alfabeto inglese con l'aumentare del numero della colonna.
 
     Dopo la lettera "Z" viene utilizzato "AA" proseguendo con la logica descritta;
-
-  - *level*: intero che rappresenta il numero del del livello di appartenenza;
-
-  - *column*: intero che rappresenta il numero della colonna di appartenenza;
-
-  - *height*: numero in virgola mobile che rappresenta l'altezza del bin;
-
-  - *length*: numero in virgola mobile che rappresenta la profondità del bin;
-
-  - *width*: numero in virgola mobile che rappresenta la larghezza del bin;
-
-  - *product*: riferimento al prodotto contenuto nel bin. Può essere `null`.
-
-  - *state*: enum `BinState` che identifica lo stato di un bin contestualmente alla richiesta di spostamento dei prodotti.
-
-    Può assumere i valori:
-
-    - *Idle*: valore di default, dichiara che il bin non è coinvolto in richieste di spostamento di prodotti;
-
-    - *ProductIncoming*: dichiara che il bin è coinvolto in una richiesta di spostamento di un prodotto, il quale deve essere immesso al suo interno;
-
-    - *ProductOutgoing*: dichiara che il bin è coinvolto in una richiesta di spostamento del prodotto al suo interno, il quale deve essere prelevato.
-
-
-Per ogni attributo è presente il corrispondente metodo get.
-
-Sono presenti i metodi set per gli attributi `id`, `product` e `state`.
-
-Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore `null` all'attributo che riferisce il prodotto contenuto nel bin.
+  - *tipo*: `string`;
+  - *visibilità*: `private`.
+\
+- *level*:
+  - *descrizione*: intero che rappresenta il numero del livello di appartenenza;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
 
 \
-- *Zone*:
+- *column*:
+  - *descrizione*: intero che rappresenta il numero della colonna di appartenenza;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+\
+- *height*:
+  - *descrizione*: numero in virgola mobile che rappresenta l'altezza del bin;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+\
+- *length*:
+  - *descrizione*: numero in virgola mobile che rappresenta la profondità del bin;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+\
+- *width*:
+  - *descrizione*: numero in virgola mobile che rappresenta la larghezza del bin;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+\
+- *product*:
+  - *descrizione*: oggetto `Product` che rappresenta il prodotto contenuto nel bin;
+  - *tipo*: `Product`;
+  - *visibilità*: `private`.
 
-  rappresenta un elemento zona, può essere interpretata come uno scaffale oppure, nel caso abbia un solo livello, come una zona del piano definita per contenere bin.
-  I suoi attributi sono:
+\
+- *state*:
+  - *descrizione*: enumerazione `BinState` che identifica lo stato di un bin contestualmente alla richiesta di spostamento dei prodotti.
+    - *Valori dell'enumerazione*:
+      - *Idle*: valore di default, dichiara che il bin non è coinvolto in richieste di spostamento di prodotti;
+      - *ProductIncoming*: dichiara che il bin è coinvolto in una richiesta di spostamento di un prodotto, il quale deve essere immesso al suo interno;
+      - *ProductOutgoing*: dichiara che il bin è coinvolto in una richiesta di spostamento del prodotto al suo interno, il quale deve essere prelevato.
+  - *tipo*: `BinState`;
+  - *visibilità*: `private`.
 
-  - *id*: intero che rappresenta il codice identificativo univoco della zona;
+\
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
+- *Setters*:
+  - *setId*:
+    - *obiettivo*: permette di modificare l'attributo `id`;
+    - *parametri*: `id:string` che rappresenta il nuovo codice identificativo univoco;
+    - *tipo di ritorno*: `void`.
+  - *setProduct*:
+    - *obiettivo*: permette di assegnare un prodotto al bin;
+    - *parametri*: `product:Product` che rappresenta il prodotto da assegnare;
+    - *tipo di ritorno*: `void`.
+  - *setState*:
+    - *obiettivo*: permette di modificare lo stato del bin;
+    - *parametri*: `state:BinState` che rappresenta il nuovo stato;
+    - *tipo di ritorno*: `void`.
+- *clearProduct*:
+  - *obiettivo*: permette di assegnare il valore `null` all'attributo `product`;
+  - *parametri*: nessuno;
+  - *tipo di ritorno*: `void`.
 
-  - *xcoordinate*: numero in virgola mobile che rappresenta la coordinata X di posizione nel piano;
+\
+=== Zone
 
-  - *ycoordinate*: numero in virgola mobile che rappresenta la coordinata Y di posizione nel piano;
+Rappresenta una zona di contenimento dei bin, interpretabile come scaffale (se a più livelli) o area singola di stoccaggio (se a un solo livello).
 
-  - *height*: numero in virgola mobile che rappresenta l'altezza della zona;
+\
+*Attributi*:
+- *id*:
+  - *descrizione*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco della zona;
+  - *tipo*: `string`;
+  - *visibilità*: `private`.
 
-  - *length*: numero in virgola mobile che rappresenta la profondità della zona;
+\
+- *xcoordinate*:
+  - *descrizione*: numero in virgola mobile che rappresenta la coordinata X di posizione nel piano;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
 
-  - *width*: numero in virgola mobile che rappresenta la larghezza della zona;
+\
+- *ycoordinate*:
+  - *descrizione*: numero in virgola mobile che rappresenta la coordinata Y di posizione nel piano;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
 
-  - *bins*: lista di elementi Bin contenuti nella zona;
+\
+- *height*:
+  - *descrizione*: numero in virgola mobile che rappresenta l'altezza della zona;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
 
-  - *orientation*: booleano che identifica l'orientamento (perpendicolare o parallelo) della zona rispetto all'asse delle ascisse del piano.
+\
+- *length*:
+  - *descrizione*: numero in virgola mobile che rappresenta la profondità della zona;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+
+\
+- *width*:
+  - *descrizione*: numero in virgola mobile che rappresenta la larghezza della zona;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+
+\
+- *bins*:
+  - *descrizione*: lista di oggetti `Bin` che rappresentano i bin presenti nella zona;
+  - *tipo*: `Bin[]`;
+  - *visibilità*: `private`.
+
+\
+- *orientation*:
+  - *descrizione*: enumerazione `ZoneOrientation` che identifica l'orientamento della zona rispetto all'asse X.
+  - *tipo*: `boolean`:
+    - *True*: orientamento orizzontale, parallelo all'asse X;
+    - *False*: orientamento verticale, perpendicolare all'asse X.
+  - *visibilità*: `private`.
+
+\
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
+- *Setters*:
+  - *setXCoordinate*:
+    - *obiettivo*: permette di modificare la coordinata X di posizione nel piano;
+    - *parametri*: `x:number` che rappresenta la nuova coordinata X;
+    - *tipo di ritorno*: void.
+  - *setYCoordinate*:
+    - *obiettivo*: permette di modificare la coordinata Y di posizione nel piano;
+    - *parametri*: `y:number` che rappresenta la nuova coordinata Y;
+    - *tipo di ritorno*: void.
+- *getBin*:
+  - *obiettivo*: ottenere il bin corrispondente ad un codice identificativo univoco;
+  - *parametri*: `id:string` del bin interessato;
+  - *tipo di ritorno*: `Bin` corrispondente al codice identificativo univoco fornito o `null`.
+
+- *getLevels*:
+  - *obiettivo*: ottenere una lista contenente le liste di bin che rappresentano i livelli della zona;
+  - *parametri*: nessuno;
+  - *tipo di ritorno*: lista di liste di bin `Bin[[]]`.
+
+- *getColumns*:
+  - *obiettivo*: ottenere una lista contenente le liste di bin che rappresentano le colonne della zona;
+  - *parametri*: nessuno;
+  - *tipo di ritorno*: lista di liste di bin `Bin[[]]`.
+
+- *getMaxUsedLevel*:
+  - *obiettivo*: ottenere il numero dell'ultimo livello della zona con almeno un bin contenente un prodotto;
+  - *parametri*: nessuno;
+  - *tipo di ritorno*: intero che rappresenta il numero dell'ultimo livello `number`.
+
+- *getMaxUsedColumn*:
+  - *obiettivo*: ottenere il numero dell'ultima colonna della zona con almeno un bin contenente un prodotto;
+  - *parametri*: nessuno;
+  - *tipo di ritorno*: intero che rappresenta il numero dell'ultima colonna `number`.
+
+\
+=== Product
+
+Rappresenta il prodotto da gestire in magazzino.
+
+\
+*Attributi*:
+- *id*:
+  - *descrizione*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco del prodotto;
+  - *tipo*: `string`;
+  - *visibilità*: `private`.
+
+\
+- *name*:
+  - *descrizione*: stringa che rappresenta il nome del prodotto;
+  - *tipo*: `string`;
+  - *visibilità*: `private`.
+
+\
+- *weight*:
+  - *descrizione*: numero in virgola mobile che rappresenta il peso del prodotto;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+
+\
+- *height*:
+  - *descrizione*: numero in virgola mobile che rappresenta l'altezza del prodotto;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+
+\
+- *length*:
+  - *descrizione*: numero in virgola mobile che rappresenta la profondità del prodotto;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+
+\
+- *width*:
+  - *descrizione*: numero in virgola mobile che rappresenta la larghezza del prodotto;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+
+\
+- *categories*:
+  - *descrizione*: lista di stringhe che rappresentano le categorie di appartenenza del prodotto;
+  - *tipo*: `string[]`;
+  - *visibilità*: `private`.
+
+\
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
+
+\
+=== Order
+
+Rappresenta un ordine di movimentazione di un prodotto tra un bin di partenza e uno di destinazione.
+
+\
+*Attributi*:
+- *id*:
+  - *descrizione*: stringa di massimo 10 caratteri che rappresenta il codice identificativo univoco dell'ordine;
+  - *tipo*: `string`;
+  - *visibilità*: `private`.
+
+\
+- *startPoint*:
+  - *descrizione*: oggetto `Bin` che rappresenta il bin di partenza dell'ordine;
+  - *tipo*: `Bin`;
+  - *visibilità*: `private`.
+
+\
+- *endPoint*:
+  - *descrizione*: oggetto `Bin` che rappresenta il bin di destinazione dell'ordine;
+  - *tipo*: `Bin`;
+  - *visibilità*: `private`.
+
+\
+- *product*:
+  - *descrizione*: oggetto `Product` che rappresenta il prodotto coinvolto nell'ordine;
+  - *tipo*: `Product`;
+  - *visibilità*: `private`.
+
+\
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
+
+\
+=== SVG
+Rappresenta un file SVG utilizzato per la configurazione dell'ambiente di lavoro mediante file SVG.
+
+\
+*Attributi*:
+- *length*:
+  - *descrizione*: numero in virgola mobile che rappresenta la profondità dell'immagine rappresentata dal file;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+
+\
+- *width*:
+  - *descrizione*: numero in virgola mobile che rappresenta la larghezza dell'immagine rappresentata dal file;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
+
+\
+- *svg*:
+  - *descrizione*: stringa che rappresenta il contenuto del file SVG;
+  - *tipo*: `string`;
+  - *visibilità*: `private`.
 
   \
-  Per ogni attributo è presente il corrispondente metodo get.
-
-  Sono disponibili i metodi set per gli attributi `xcoordinate` e `ycoordinate`.
-
-  Sono inoltre forniti i metodi:
-
-  - *getBin*: dato un codice identificativo univoco, ritorna l'elemento `Bin` corrispondente presente in `bins`, oppure `null` se non presente;
-
-  - *getLevels*: ritorna una lista contenente le liste di bin che rappresentano i livelli della zona;
-
-  - *getColumns*: ritorna una lista contenente le liste di bin che rappresentano le colonne della zona;
-
-  - *getMaxUsedLevel*: ritorna il numero dell'ultimo livello della zona con almeno un bin contenente un prodotto;
-
-  - *getMaxUsedColumn*: ritorna il numero dell'ultima colonna della zona con almeno un bin contenente un prodotto.
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
 
 \
-- *Product*:
-
-  rappresenta un prodotto, i suoi attributi sono:
-
-  - *id*: intero che rappresenta il codice identificativo univoco del prodotto;
-
-  - *name*: stringa che rappresenta il nome del prodotto;
-
-  - *weight*: numero in virgola mobile che rappresenta il peso del prodotto;
-
-  - *height*: numero in virgola mobile che rappresenta l'altezza del prodotto;
-
-  - *length*: numero in virgola mobile che rappresenta la profondità del prodotto;
-
-  - *width*: numero in virgola mobile che rappresenta la larghezza del prodotto;
-
-  - *categories*: lista di stringhe che rappresentano le categorie del prodotto.
-
-  Per ogni attributo è presente il corrispondente metodo get.
+=== Floor
+Rappresenta il piano dell'ambiente 3D.
 
 \
-- *Order*:
+*Attributi*:
+- *length*:
+  - *descrizione*: numero in virgola mobile che rappresenta la profondità del piano;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
 
-  rappresenta un ordine di spostamento di un prodotto tra due bin.
-  I suoi attributi sono:
-
-  - *id*: intero che rappresenta il codice identificativo univoco della richiesta;
-
-  - *startPoint*: riferimento al bin iniziale;
-
-  - *endPoint*: riferimento al bin finale;
-
-  - *product*: riferimento al prodotto da spostare.
-
-  Per ogni attributo è presente il corrispondente metodo get.
-
-
+\
+- *width*:
+  - *descrizione*: numero in virgola mobile che rappresenta la larghezza del piano;
+  - *tipo*: `number`;
+  - *visibilità*: `private`.
 
 \
 - *SVG*:
-
-  rappresenta un file SVG utilizzato per la configurazione dell'ambiente di lavoro mediante file.
-  I suoi attributi sono:
-
-  - *length*: numero in virgola mobile che rappresenta la lunghezza dell'immagine rappresentata dal file;
-  - *width*: numero in virgola mobile che rappresenta la larghezza dell'immagine rappresentata dal file;
-  - *svg*: stringa contenente il path del file.
-
-  Per ogni attributo è presente il corrispondente metodo get.
+  - *descrizione*: oggetto `SVG` che rappresenta il file SVG del piano;
+  - *tipo*: `SVG`;
+  - *visibilità*: `private`.
 
 \
-- *Floor*:
+*Metodi*:
+- *Getters*:
+  - Getters presenti per ogni attributo della classe.
+- *Setters*:
+  - Setters presenti per gli attributi `length`, `width` e `SVG`.
+- *clone*:
+  - *obiettivo*: permette di creare una copia dell'oggetto invocante;
+  - *parametri*: nessuno;
+  - *tipo di ritorno*: `Floor`.
 
-  rappresenta il piano dell'ambiente 3D, i suoi attributi sono:
+\
+=== FloorStrategy #text(size: 10pt, fill: gray, style: "italic", "Strategy Pattern")
+Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy e le relative classi che implementano l'interfaccia `FloorStrategy`.
 
-  - *length*: numero in virgola mobile che rappresenta la profondità del piano;
+La scelta di tale pattern è dettata dalla necessità di separare l'algoritmo di creazione dell'oggetto `Floor` dalla sua implementazione, permettendo di variare il comportamento dell'oggetto in base al contesto. L'input dell'algoritmo di creazione è il medesimo, ma il comportamento varia a seconda della strategia adottata.
 
-  - *width*: numero in virgola mobile che rappresenta la larghezza del piano;
+\
+*Interfaccia implementata*
+- *FloorStrategy*: interfaccia che definisce il metodo per la creazione di un oggetto `Floor`.
+  - *Metodi*:
+    - *createFloor*: metodo astratto che definisce la logica di creazione dell'oggetto `Floor`.
+      - *parametri*: `URLSearchParams` che rappresenta i parametri per la creazione dell'oggetto `Floor`;
+      - *tipo di ritorno*: Promise contente l'oggetto `Floor` creato.
 
-  - *SVG*: elemento `SVG` utilizzato per la configurazione dell'ambiente di lavoro. Nel caso in cui non sia stato identificato nessun file SVG, la variabile è `null`.
+\
+*Classi implementate*
 
-  Per ogni attributo è presente il corrispondente metodo get e set.
+Le classi che implementano l'interfaccia `FloorStrategy` sono:
+- *StandardFloorStrategy*:
+  - *obiettivo*: rappresenta la creazione di un elemento `Floor` senza file SVG;
+  - *metodo*: `createFloor`.
 
-  Inoltre è presente il metodo `clone` utile per creare una copia dell'oggetto invocante.
+- *CustomFloorStrategy*:
+  - *obiettivo*: rappresenta la creazione di un elemento `Floor` con file SVG;
+  - *metodo*: `createFloor`.
 
-  Potendo generare l'oggetto `Floor` con modalità diverse a seconda della presenza del file SVG, la sua creazione è gestita tramite il design pattern Strategy (@strategy) e le relative classi che implementano l'interfaccia `FloorStrategy`:
+La decisione in merito alla strategia da adottare è sancita dalla classe `FloorStrategyContext`. Questa classe, in base alla presenza o meno del file SVG, sceglie la strategia da adottare per la creazione dell'oggetto `Floor`.
 
-  - *StandardFloorStrategy*: rappresenta la creazione di un elemento `Floor` senza file SVG;
+\
+*FloorStrategyContext*
 
-  - *CustomFloorStrategy*: rappresenta la creazione di un elemento `Floor` con file SVG;
-
-  Inoltre è presente la classe:
-
-  - *FloorStrategyContext*: utilizza un `FloorStrategy` per generare un elemento `Floor`.
+*Attributi*
+- *strategy*: oggetto che implementa l'interfaccia `FloorStrategy` che rappresenta la strategia da adottare per la creazione dell'oggetto `Floor`.
+*Metodi*
+- *Setters*:
+  - *setStrategy*: metodo che permette di impostare la strategia da adottare per la creazione dell'oggetto `Floor`.
+- *createFloor*:
+  - *obiettivo*: metodo che permette di creare l'oggetto `Floor` in base alla strategia adottata;
+  - *parametri*: `URLSearchParams` che rappresenta i parametri per la creazione dell'oggetto `Floor`;
+  - *tipo di ritorno*: Promise contenente l'oggetto `Floor` creato.
 
 
 #figure(
@@ -569,18 +953,112 @@ Inoltre è previsto il metodo `clearProduct` che permette di assegnare il valore
 )
 
 \
-Per gestire la possibilità di cercare specifici prodotti e specifiche zone, sono state realizzate delle classi che permettono l'implementazione dei design pattern Strategy (@strategy) e Factory (@factory).
-
-Le classi relative al design pattern Strategy implementano l'interfaccia `SearchStrategy` e sono:
-
-- *ProductSearchStrategy*: permette la ricerca di prodotti in base al loro codice identificativo, nome o categoria;
-
-- *ZoneSearchStrategy*: permette la ricerca di zone in base al loro codice identificativo.
+=== Search Engine #text(size: 10pt, fill: gray, style: "italic", "Factory e Strategy Pattern")
+Il Factory Pattern, utilizzato insieme allo Strategy Pattern, permette di gestire la possibilità di cercare specifici prodotti e specifiche zone. Disponendo infatti di famiglie diverse di algoritmi per la ricerca (Strategy Pattern per Zone e Product), il Factory Pattern permette di adottare il corretto algoritmo in funzione del tipo di oggetto fornito.
 
 \
-La classe relativa al design pattern Factory è:
+Lo Strategy Pattern permette di definire una famiglia di algoritmi, incapsularli e renderli intercambiabili. Questo pattern permette di variare l'algoritmo indipendentemente dal contesto in cui viene utilizzato, rendendo facilmente estendibile il sistema di ricerca.
 
-- *SearchStrategyFactory*: permette l'adozione del corretto algoritmo di ricerca in funzione del tipo di oggetto fornito.
+\
+*Interfaccia implementata*
+- *SearchStrategy\<T extends Zone | Product>*: interfaccia che definisce il metodo per la ricerca di un oggetto. L'interfaccia è parametrizzata in modo da poter essere utilizzata per la ricerca di oggetti di tipo `Zone` o `Product`.
+
+\
+*Metodi*
+  - *search*: metodo astratto che definisce la logica di ricerca dell'oggetto.
+    - *parametri*:
+      - *list : T[]*: lista di oggetti in cui cercare;
+      - *query : string*: stringa da cercare;
+      - *type : string*: tipo di ricerca da effettuare;
+    - *tipo di ritorno*: Promise contenente la lista di oggetti che rispondono al parametro di ricerca.
+
+\
+*Classi implementate*
+- *ProductSearchStrategy*:
+
+  Permette la ricerca di prodotti in base al loro codice identificativo, nome o categoria;
+
+  *Attributi*
+   - Nessuno.
+
+  \
+  *Metodi*
+    - *search*:
+      - *obiettivo*: ricerca di prodotti in base al loro codice identificativo, nome o categoria;
+      - *parametri*:
+        - *list : Product[]*: lista di prodotti in cui cercare;
+        - *query : string*: stringa da cercare;
+        - *type : string*: tipo di ricerca da effettuare;
+          - *Valori ammessi*: "id", "name", "category".
+      - *tipo di ritorno*: lista di prodotti che rispondono al parametro di ricerca `Product[]`.
+
+    \
+    - *searchById*:
+      - *obiettivo*: ricerca di prodotti in base al loro codice identificativo;
+      - *parametri*:
+        - *list : Product[]*: lista di prodotti in cui cercare;
+        - *query : string*: stringa da cercare.
+      - *tipo di ritorno*: lista di prodotti che rispondono al parametro di ricerca `Product[]`.
+
+    \
+    - *searchByName*:
+      - *obiettivo*: ricerca di prodotti in base al loro nome;
+      - *parametri*:
+        - *list : Product[]*: lista di prodotti in cui cercare;
+        - *query : string*: stringa da cercare.
+      - *tipo di ritorno*: lista di prodotti che rispondono al parametro di ricerca `Product[]`.
+
+    \
+    - *searchByCategory*:
+      - *obiettivo*: ricerca di prodotti in base alla categoria;
+      - *parametri*:
+        - *list : Product[]*: lista di prodotti in cui cercare;
+        - *query : string*: stringa da cercare.
+      - *tipo di ritorno*: lista di prodotti che rispondono al parametro di ricerca `Product[]`.
+
+\
+- *ZoneSearchStrategy*:
+
+  Permette la ricerca di zone in base al loro codice identificativo.
+
+  *Attributi*
+   - Nessuno.
+
+  \
+  *Metodi*
+    - *search*:
+      - *obiettivo*: ricerca di zone in base al loro codice identificativo;
+      - *parametri*:
+        - *list : Zone[]*: lista di zone in cui cercare;
+        - *query : string*: stringa da cercare.
+        - *type : string*: tipo di ricerca da effettuare;
+          - *Valori ammessi*: "id".
+      - *tipo di ritorno*: lista di zone che rispondono al parametro di ricerca `Zone[]`.
+
+    \
+    - *searchById*:
+      - *obiettivo*: ricerca di zone in base al loro codice identificativo;
+      - *parametri*:
+        - *list : Zone[]*: lista di zone in cui cercare;
+        - *query : string*: stringa da cercare;
+      - *tipo di ritorno*: lista di zone che rispondono al parametro di ricerca `Zone[]`.
+
+\
+- *SearchStrategyFactory*:
+
+Permette la creazione di oggetti `SearchStrategy` in base al tipo di oggetto da cercare.
+
+*Attributi*
+- Nessuno.
+
+\
+*Metodi*
+- *static createSearchStrategy\<T extends Zone | Product>*:
+  - *obiettivo*: creazione di oggetti `SearchStrategy` in base al tipo di oggetto da cercare;
+  - *parametri*:
+    - *type : string*: tipo di oggetto da cercare;
+      - *Valori ammessi*: "zone", "product".
+  - *tipo di ritorno*: oggetto `SearchStrategy` corrispondente al tipo di oggetto da cercare.
 
 #figure(
   image("./imgs/Business Layer search.svg", width: 100%),
@@ -591,103 +1069,565 @@ La classe relativa al design pattern Factory è:
 
 
 \
-In aggiunta alle classi, per aderire all'adozione del pattern Provider (@provider), sono presenti i componenti:
+=== Provider Pattern
+Il Provider Pattern permette di gestire lo stato dell'applicazione in modo centralizzato, permettendo di mantenere lo stato dell'applicazione in un unico punto, semplificando la gestione e la condivisione dei dati tra i componenti. Questo pattern inoltre previene il fenomeno di prop drilling, ovvero la necessità di passare attraverso più livelli di componenti valori che non sono utilizzati direttamente dal componente intermedio.
 
-- *warehouseProvider*: fornisce un provider per gestire dati relativi alle variabili di contesto dell'ambiente grafico;
+Inoltre, creando un sistema di controllo dello stato centralizzato e condiviso, si evita la duplicazione dei dati e si facilita la manutenzione del codice.
 
-- *ElementDetailsProvider*: fornisce un provider per gestire dati relativi ai componenti da visualizzare in un pannello dedicato;
+\
+Questo pattern è derivativo dall'utilizzo di React come framework, in quanto la sua stessa natura funzionale è incentrata sulla gestione dello stato dell'applicazione e dei componenti. Le Context API pertanto prevedono la possibilità di dichiarare un contesto contenente dati e funzioni che possono essere condivisi tra i componenti figli.
 
-- *formContextProvider*: fornisce un provider per gestire dati relativi allo stato di processing di un form;
+Questo contesto, mediante i componenti Provider implementati, permette di condividere lo stato dell'applicazione tra i componenti figli, evitando la necessità di passare manualmente i dati attraverso i componenti intermedi.
 
-- *binsProvider*: fornisce un provider per gestire dati relativi agli oggetti `Bin`;
+\
+*Componenti implementati*
 
-- *floorProvider*: fornisce un provider per gestire dati relativi agli oggetti `Floor`;
+*Provider del modello*
+- *zonesProvider*:
+  - *obiettivo*: fornisce un provider per gestire dati relativi agli oggetti `Zone`;
+  - *stato gestito*:
+    - *zones*: lista di oggetti `Zone` che rappresentano le zone dell'ambiente di lavoro;
+      - *tipo*: `Zone[]`.
+    - *setZones*: funzione che permette di modificare la lista di oggetti `Zone`;
+      - *tipo*: `(zones: Zone[]) => void`.
+    - *zonesLoaded*: booleano che rappresenta lo stato di caricamento delle zone;
+      - *tipo*: `boolean`.
+    - *setZonesLoaded*: funzione che permette di modificare lo stato di caricamento delle zone.
+      - *tipo*: `(loaded: boolean) => void`.
+  - *tipo*: `JSX.Element`.
 
-- *ordersProvider*: fornisce un provider per gestire dati relativi agli oggetti `Order`;
+\
+- *productsProvider*:
+  - *obiettivo*: fornisce un provider per gestire dati relativi agli oggetti `Product`;
+  - *stato gestito*:
+    - *products*: lista di oggetti `Product` che rappresentano i prodotti dell'ambiente di lavoro;
+      - *tipo*: `Product[]`.
+    - *setProducts*: funzione che permette di modificare la lista di oggetti `Product`;
+      - *tipo*: `(products: Product[]) => void`.
+    - *productsLoaded*: booleano che rappresenta lo stato di caricamento dei prodotti;
+      - *tipo*: `boolean`.
+    - *setProductsLoaded*: funzione che permette di modificare lo stato di caricamento dei prodotti.
+      - *tipo*: `(loaded: boolean) => void`.
+  - *tipo*: `JSX.Element`.
 
-- *productsProvider*: fornisce un provider per gestire dati relativi agli oggetti `Product`;
+\
+- *ordersProvider*:
+  - *obiettivo*: fornisce un provider per gestire dati relativi agli oggetti `Order`;
+  - *stato gestito*:
+    - *orders*: lista di oggetti `Order` che rappresentano gli ordini dell'ambiente di lavoro;
+      - *tipo*: `Order[]`.
+    - *setOrders*: funzione che permette di modificare la lista di oggetti `Order`.
+      - *tipo*: `(orders: Order[]) => void`.
+  - *tipo*: `JSX.Element`.
 
-- *zonesProvider*: fornisce un provider per gestire dati relativi agli oggetti `Zone`.
+\
+- *floorProvider*:
+  - *obiettivo*: fornisce un provider per gestire dati relativi all'oggetto `Floor`;
+  - *stato gestito*:
+    - *floor*: oggetto `Floor` che rappresenta il piano dell'ambiente di lavoro;
+      - *tipo*: `Floor`.
+    - *setFloor*: funzione che permette di modificare l'oggetto `Floor`;
+      - *tipo*: `(floor: Floor) => void`.
+    - *floorRefresher*: valore intero utilizzato per forzare il refresh del piano;
+      - *tipo*: `number`.
+    - *setFloorRefresher*: funzione che permette di modificare il valore di `floorRefresher`.
+      - *tipo*: `(refresher: number) => void`.
+  - *tipo*: `JSX.Element`.
 
+\
+*Provider per elementi UI*
+- *ElementDetailsProvider*
+  - *obiettivo*: fornisce un provider per gestire dati relativi ai componenti da visualizzare in un pannello dedicato;
+  - *stato gestito*:
+    - *elementDetails*: oggetto che rappresenta il componente da visualizzare;
+      - *tipo*: `JSX.Element`.
+    - *setElementDetails*: funzione che permette di modificare l'oggetto `element`;
+      - *tipo*: `(element: JSX.Element) => void`.
+    - *showElementDetails*: booleano che rappresenta la visibilità del pannello;
+      - *tipo*: `boolean`;
+    - *setShowElementDetails*: funzione che permette di modificare la visibilità del pannello.
+      - *tipo*: `(show: boolean) => void`.
+  - *tipo*: `JSX.Element`.
 
-=== Presentation layer
-==== UI
-L'interfaccia utente è realizzata mediante elementi importati da Shadcn-UI e componenti personalizzati.
+\
+- *formContextProvider*:
+  - *obiettivo*: fornisce un provider per gestire dati relativi allo stato di processing di un form. Utilizzato per il lo stato di processing del file SVG caricato durante il processo di configurazione dell'ambiente;
+  - *stato gestito*:
+    - *processing*: booleano che rappresenta lo stato di processing del form;
+      - *tipo*: `boolean`.
+    - *setProcessing*: funzione che permette di modificare lo stato di processing del form.
+      - *tipo*: `(processing: boolean) => void`.
+  - *tipo*: `JSX.Element`.
+
+\
+*Provider ambiente 3D*
+- *warehouseProvider*
+  - *obiettivo*: fornisce un provider per gestire dati relativi alle variabili di contesto dell'ambiente grafico;
+  - *stato gestito*:
+    - *selectedBin*: oggetto `Bin` che rappresenta il bin selezionato;
+      - *tipo*: `Bin`.
+    - *setSelectedBin*: funzione che permette di modificare l'oggetto `selectedBin`;
+      - *tipo*: `(bin: Bin) => void`.
+    - *gridCellSize*: numero in virgola mobile che rappresenta la dimensione di una cella della griglia;
+      - *tipo*: `number`.
+    - *setGridCellSize*: funzione che permette di modificare la dimensione di una cella della griglia;
+      - *tipo*: `(size: number) => void`.
+    - *moveCameraToPosition*: funzione che permette di spostare la camera in una posizione specifica.
+      - *tipo*: `(position: Vector3) => void`.
+    - *cameraRef*: riferimento alla camera dell'ambiente 3D.
+      - *tipo*: `RefObject\<CameraControls\>`.
+
+\
+== Presentation layer
+=== UI
+L'interfaccia utente è realizzata mediante elementi importati da shadcn/u e componenti personalizzati.
 
 I componenti realizzati sono i seguenti:
 
-- *Form di creazione*:
+- *Form di configurazione dell'ambiente*:
 
-  - *creationForm*: componente dedicato alla selezione della modalità di creazione dell'ambiente di lavoro;
+  - *creationForm*:
+    - *descrizione*: componente dinamico dedicato alla creazione dell'ambiente di lavoro. Rappresenta la struttura portante del form di configurazione dell'ambiente di lavoro, contenendo al suo interno i componenti `manualCreationFrame` e `svgCreationFrame`.
+    - *interazione con l'utente*:
+      - *RadioGroup*: permette di selezionare il metodo di creazione dell'ambiente di lavoro;
+        - *nome:* "choice";
+        - *opzioni*:
+          - *manuale*: "Creazione manuale";
+          - *custom*: "Creazione mediante file SVG".
 
-  - *dropFileArea*: componente dedicato al caricamento di un file SVG;
+      - *manualCreationFrame*: componente dedicato alla creazione manuale dell'ambiente di lavoro;
 
-  - *manualCreationFrame*: componente dedicato alla creazione manuale dell'ambiente di lavoro;
+      - *svgCreationFrame*: componente dedicato alla definizione dei parametri di creazione dell'ambiente di lavoro mediante file SVG;
 
-  - *svgCreationFrame*: componente dedicato alla definizione dei parametri di creazione dell'ambiente di lavoro mediante file SVG;
+      - *CheckBox*: permette di selezionare se importare o meno i dati relativi ai Prodotti dal database.
+        - *nome*: "loadProdotti";
 
-  - *zodScheme*: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro.
+    - *validazione*:
+      - *zodScheme*: schema dinamico dedicato alla validazione dei dati di creazione dell'ambiente di lavoro. La validazione è effettuata in base al metodo di creazione selezionato determinato dal valore di "choice".
 
-- *Componenti relativi ai bin*:
+        - *manualCreationSchema*: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro mediante configurazione manuale. In particolare:
+          - *choice*: deve corrispondere a "manuale";
+          - *loadProdotti*: `boolean`;
+          - *larghezza*: `number` e maggiore di 0;
+          - *profondità*: `number` e maggiore di 0.
 
-  - *binItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di un bin.
+        - *svgCreationSchema*: schema dedicato alla validazione dei dati di creazione dell'ambiente di lavoro mediante file SVG. In particolare:
+          - *choice*: deve corrispondere a "custom";
+          - *loadProdotti*: `boolean`;
+          - *loadScaffali*: `boolean`;
+          - *latoMaggiore*: `number` e maggiore di 0;
+          - *svg*: stringa non vuota.
 
-- *Componenti relativi agli ordini*:
+  \
+  - *manualCreationFrame*:
+    - *descrizione*: componente dedicato alla creazione manuale dell'ambiente di lavoro. Contiene i campi relativi alla definizione delle dimensioni del piano.
+    - *interazione con l'utente*:
+      - *Input*: permette di inserire la larghezza del piano;
+        - *nome*: "larghezza".
+      - *Input*: permette di inserire la profondità del piano.
+        - *nome*: "profondità".
+    - *validazione*:
+      - *manualCreationSchema*.
 
-  - *orderItem*: componente dedicato alla visualizzazione di un ordine;
+  \
+  - *svgCreationFrame*:
+    - *descrizione*: componente dedicato alla definizione dei parametri di creazione dell'ambiente di lavoro mediante file SVG;
+    - *interazione con l'utente*:
+      - *dropFileArea*: permette di caricare un file SVG;
+      - *Input*: permette di inserire il lato maggiore del piano;
+        - *nome*: "latoMaggiore".
+      - *CheckBox*: permette di selezionare se importare o meno i dati relativi ai Scaffali dal database.
+        - *nome*: "loadScaffali".
+    - *validazione*:
+      - *svgCreationSchema*.
+  \
+  - *dropFileArea*:
+    - *descrizione*: componente dedicato al caricamento di un file SVG;
+    - *interazione con l'utente*:
+      - *FileInput*: permette di selezionare un file da caricare;
+        - *nome*: "file";
+        - *formato file ammesso*: "image/svg+xml";
+        - *dimensione massima file:* 10MB.
+    - *validazione*:
+      - *svgCreationSchema*.
 
-  - *ordersPanel*: componente dedicato alla visualizzazione ordinata di tutti gli ordini dall'ultimo effettuato al meno recente. Ogni ordine è rappresentato da un `OrderItem`.
-
+\
 - *Componenti relativi ai prodotti*:
 
-  - *productItem*: componente dedicato alla visualizzazione di un prodotto;
+  - *productItem*:
+    - *descrizione*: componente dedicato alla visualizzazione di un prodotto;
+    - *parametri*:
+      - *product*: oggetto `Product` che rappresenta il prodotto da visualizzare.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco del prodotto;
+      - *Nome*: nome del prodotto;
+      - *Categorie*: categorie di appartenenza del prodotto.
+    - *interazione con l'utente*:
+      - *Button*: permette di visualizzare i dettagli del prodotto;
+        - *azione*: mostra i dettagli del prodotto mediante il componente `productItemDetails`.
 
-  - *productItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di un prodotto;
+  - *productsPanel*:
+    - *descrizione*: componente dedicato alla visualizzazione di tutti i prodotti presenti nel magazzino. Ogni prodotto è rappresentato da un `ProductItem`;
+    - *interazione con l'utente*:
+      - *SearchBar*: permette di cercare un prodotto all'interno della lista;
+        - *azione*: filtra i prodotti presenti in base alla stringa inserita;
+        - *tipologia di ricerca*:
+          - *ID*: ricerca per codice identificativo univoco;
+          - *Nome*: ricerca per nome.
+      - *Combobox*: permette di selezionare la categoria di appartenenza dei prodotti da visualizzare;
+        - *opzioni*: lista di categorie di appartenenza dei prodotti presenti nel magazzino.
+      - *Tabs*: permette di visuallizza o i prodotti collocati o i prodotti non collocati.
+        - *opzioni*:
+          - *Collocati*: visualizza solo i prodotti collocati;
+          - *Non collocati*: visualizza solo i prodotti non collocati.
 
-  - *productsPanel*: componente dedicato alla visualizzazione di tutti i prodotti.
+  \
+  - *productItemDetails*:
+    - *descrizione*: componente dedicato alla visualizzazione delle informazioni dettagliate di un prodotto;
+    - *parametri*:
+      - *product*: oggetto `Product` che rappresenta il prodotto di cui visualizzare i dettagli.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco del prodotto;
+      - *Nome*: nome del prodotto;
+      - *Peso*: peso del prodotto;
+      - *Larghezza*: larghezza del prodotto;
+      - *Lunghezza*: lunghezza del prodotto;
+      - *Altezza*: altezza del prodotto;
+      - *Categorie*: categorie di appartenenza del prodotto.
 
+\
+- *Componenti relativi ai bin*:
+  - *binItemDetails*:
+    - *descrizione*: componente dedicato alla visualizzazione delle informazioni dettagliate di un bin;
+    - *parametri*:
+      - *bin*: oggetto `Bin` che rappresenta il bin di cui visualizzare i dettagli.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco del bin;
+      - *Larghezza*: larghezza del bin;
+      - *Lunghezza*: lunghezza del prodotto;
+      - *Altezza*: altezza del prodotto;
+      - *ProductItemDetails*: componente dedicato alla visualizzazione dei dati di un prodotto. Visibile solo se all'interno del bin è presente un prodotto.
+    - *interazione con l'utente*:
+      - *ProductComboBox*: nel caso il bin fosse vuoto, è possibile collocare al suo interno un prodotto selezionandolo dalla lista dei prodotti non collocati.
+
+  \
+  - *ProductComboBox*:
+    - *descrizione*: componente dedicato alla selezione di un prodotto da collocare in un bin;
+    - *parametri*:
+      - *bin*: oggetto `Bin` che rappresenta il bin in cui collocare il prodotto.
+    - *interazione con l'utente*:
+      - *Combobox*: permette di selezionare un prodotto dalla lista dei prodotti non collocati.
+        - *opzioni*: lista di oggetti `Product` non collocati.
+
+\
+- *Componenti relativi agli ordini*:
+
+  - *orderItem*:
+    - *descrizione*: componente dedicato alla visualizzazione di un ordine;
+    - *parametri*:
+      - *order*: oggetto `Order` che rappresenta l'ordine da visualizzare.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco dell'ordine;
+      - *Prodotto*: nome del prodotto coinvolto nell'ordine;
+      - *Bin di partenza*: codice identificativo univoco del bin di partenza;
+      - *Bin di destinazione*: codice identificativo univoco del bin di destinazione.
+
+  - *ordersPanel*:
+    - *descrizione*: componente dedicato alla visualizzazione di tutti gli ordini presenti nel magazzino. Ogni ordine è rappresentato da un `OrderItem`.
+
+\
 - *Componenti relativi alle impostazioni*:
 
-  - *floorDimensionsItem*: componente dedicato alla visualizzazione delle dimensioni del piano;
+  - *settingsPanel*:
+    - *descrizione*: componente dedicato alla visualizzazione delle impostazioni dell'applicazione e della versione dell'applicativo;
+    - *interazione con l'utente*:
+      - floorDimensionsItem: componente dedicato alla visualizzazione e modifica delle dimensioni del piano;
+      - restoreItem: componente dedicato al ripristino o alla reimpostazione dell'ambiente di lavoro.
+    - *validazione*:
+      - *zodDimensionScheme*: schema dedicato alla validazione dei dati dimensionali per la modifica del piano. In particolare:
+        - *larghezza*: number e maggiore di 0;
+        - *profondità*: number e maggiore di 0.
 
-  - *restoreItem*: componente dedicato al comando atto al ripristino o alla reimpostazione dell'ambiente di lavoro. Il ripristino permette di caricare nuovamente, con i parametri precedentemente specificati, l'ambiente di lavoro, mentre è possibile eseguirne una riconfigurazione mediante la reimpostazione;
+  \
+  - *floorDimensionsItem*:
+    - *descrizione*: componente dedicato alla visualizzazione e modifica delle dimensioni del piano;
+    - *interazione con l'utente*:
+      - *Input*: permette di inserire la larghezza del piano;
+        - *nome*: "larghezza".
+      - *Input*: permette di inserire la profondità del piano.
+        - *nome*: "profondità".
+    - *validazione*:
+      - *zodDimensionScheme*.
 
-  - *settingsPanel*: componente dedicato al pannello delle impostazioni contenente la versione del software e i componenti `floorDimensionsItem` e `restoreItem`;
+  \
+  - *restoreItem*:
+    - *descrizione*: componente dedicato al ripristino o alla reimpostazione dell'ambiente di lavoro;
+    - *interazione con l'utente*:
+      - *Button*: permette di ripristinare l'ambiente di lavoro;
+        - *azione*: ripristina l'ambiente di lavoro allo stato iniziale.
+      - *Button*: permette di reimpostare l'ambiente di lavoro.
+        - *azione*: riporta al `creationForm` avviando nuovamente la procedura di configurazione dell'ambiente.
 
-  - *zodDimensionScheme*: schema dedicato alla validazione dei dati dimensionali per la modifica del piano.
-
+\
 - *Zone*:
 
-  - *bin_columns*: componente dedicato alla visualizzazione delle colonne di bin di una zona (necessario al componente `ZoneItemDetails` utilizzato);
+  - *zoneCreationFrame*:
+    - *descrizione*: componente dedicato alla creazione e/o modifica di una zona;
+    - *parametri*:
+      - *zone*: oggetto `Zone` che rappresenta la zona da modificare, opzionale.
+    - *interazione con l'utente*:
+      - *Input*: permette di insereire l'ID della zona (disabilitato in caso di modifica);
+        - *nome*: "ID".
+      - *Input*: permette di inserire la lunghezza della zona;
+        - *nome*: "lunghezza".
+      - *Input*: permette di inserire la larghezza della zona;
+        - *nome*: "larghezza".
+      - *Input*: permette di inserire l'altezza della zona;
+        - *nome*: "altezza".
+      - *Combobox*: permette di selezionare l'orientamento della zona;
+        - *opzioni*: "Verticale", "Orizzontale".
+      - *RadioGroup*: permette di indicare la modalità di definizione delle colonne:
+        - *opzioni*:
+          - *manuale*: Abilita il campo "nColumns" per l'inserimento manuale del numero di colonne di larghezza uguale in cui suddividere la zona;
+          - *custom*: Abilita il campo "customColumns" per l'inserimento della stringa rappresentate le dimensioni delle colonne in cui suddividere la zona.
+            - *formato*: "dim1 dim2 dim3 ...  dimn".
+      - *Button*: permette di incrementare il numero di livelli della zona;
+        - *azione*: aggiunge un livello alla zona. Ogni livello aggiunto è rappresentato dal componente `levelItem`.
+      - *Button*: permette di salvare la zona.
+        - *azione*: salva la zona.
+    - *validazione*:
+      - *zoneZodSchemes*: schema dedicato alla validazione dei dati di creazione e modifica di una zona. In particolare:
+        - *ID*: stringa non vuota;
+        - *lunghezza*: `number` e maggiore di 0;
+        - *larghezza*: `number` e maggiore di 0;
+        - *altezza*: `number` e maggiore di 0;
+        - *orientamento*: stringa non vuota;
+        - *nColumns*: `number` e maggiore di 0;
+        - *customColumns*: stringa non vuota.
 
-  - *levelItem*: componente dedicato alla visualizzazione di un livello della zona durante il processo di creazione/modifica dello stesso;
+  \
+  - *levelItem*:
+    - *descrizione*: componente dedicato alla visualizzazione di un ripiano durante il processo di modifica o creazione;
+    - *informazioni visualizzate*:
+      - *Livello del piano*: livello identificativo del ripiano: indica la posizione del ripiano all'interno dello scaffale;
+      - *Altezza*: altezza del ripiano.
+    - *interazione con l'utente*:
+      - *Input*: permette di inserire l'altezza del ripiano;
+        - *nome*: "altezza".
+      - *Button*: permette di eliminare il ripiano.
+        - *azione*: elimina il ripiano.
 
-  - *zoneCreationFrame*: componente dedicato alla creazione di una zona;
+  \
+  - *bin_columns*:
+    - *descrizione*: definisce le colonne del componente `data-table` utilizzato all'interno di `zoneItemDetails` per la visualizzazione dei bin presenti all'interno della zona interssata. Le colonne definite sono:
+      - *Id*: id del bin;
+      - *Prodotto*: nome del prodotto presente all'interno del bin (se presente);
+      - *Button*: permette di visualizzare i dettagli del bin.
+        - *azione*: mostra i dettagli del bin mediante il componente `binItemDetails`.
 
-  - *zoneItem*: componente dedicato alla visualizzazione di una zona;
+  \
+  - *zoneItem*:
+    - *descrizione*: componente dedicato alla visualizzazione di una zona;
+    - *parametri*:
+      - *zone*: oggetto `Zone` che rappresenta la zona da visualizzare.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco della zona.
+    - *interazione con l'utente*:
+      - *Button*: permette di visualizzare i dettagli della zona;
+        - *azione*: mostra i dettagli della zona mediante il componente `zoneItemDetails`.
+      - *Button*: permette di cancellare la zona.
+        - *azione*: cancella la zona.
 
-  - *zoneItemDetails*: componente dedicato alla visualizzazione delle informazioni dettagliate di una zona;
+  \
+  - *zoneItemDetails*:
+    - *descrizione*: componente dedicato alla visualizzazione delle informazioni dettagliate di una zona;
+    - *parametri*:
+      - *zone*: oggetto `Zone` che rappresenta la zona di cui visualizzare i dettagli.
+    - *informazioni visualizzate*:
+      - *ID*: codice identificativo univoco della zona;
+      - *Lunghezza*: lunghezza della zona;
+      - *Larghezza*: larghezza della zona;
+      - *Altezza*: altezza della zona;
+      - *Orientamento*: orientamento della zona;
+      - *Data-Table*: visualizzazione dei bin presenti all'interno della zona mediante il componente `bin_columns`.
+    - *interazione con l'utente*:
+      - *Button*: permette di modificare la zona;
+        - *azione*: modifica la zona mediante il componente `zoneCreationFrame`.
+      - *Button*: permette di cancellare la zona.
+        - *azione*: cancella la zona.
 
-  - *zonePanel*: componente dedicato alla visualizzazione di tutte le zone;
+  \
+  - *zonePanel*:
+    - *descrizione*: componente dedicato alla visualizzazione di tutte le zone presenti nel magazzino. Ogni zona è rappresentata da un `ZoneItem`;
+    - *interazione con l'utente*:
+      - *SearchBar*: permette di cercare una zona all'interno della lista;
+        - *azione*: filtra le zone presenti in base alla stringa inserita;
+        - *tipologia di ricerca*:
+          - *ID*: ricerca per codice identificativo univoco.
+      - *Button*: permette di aggiungere una nuova zona.
+        - *azione*: aggiunge una nuova zona mediante il componente `zoneCreationFrame`.
 
-  - *zoneZodSchemes*: schemi dedicati alla validazione dei dati necessari alla creazione di una zona, sia durante la configurazione manuale, che mediante inserimento di un file SVG.
+- *Panel*:
+  - *descrizione*: componente dedicato alla visualizzazione di un pannello laterale. Utilizzato dai componenti `zonePanel`, `productsPanel`, `ordersPanel` e `settingsPanel`.
 
-- *panel*: componente generico utilizzato per la visualizzazione e l'organizzazione dei componenti al suo interno.
+\
+=== Three.js
+Gli oggetti di modello vengono passati come parametri ai componenti Three.js per la loro creazione, rendendo dunque indipendente l'oggetto di business indipendente dalla sua rappresentazione grafica.
+
+Mediante l'utilizzo dei framework \@react-three/fiber e \@react-three/drei, è possibile creare elementi 3D all'interno di un'applicazione React trattando gli elementi come componenti.
+
+\
+- *Floor*:
+  - *descrizione*: componente dedicato alla visualizzazione del piano dell'ambiente di lavoro;
+  - *parametri*:
+    - Floor: oggetto `Floor` che rappresenta il piano dell'ambiente di lavoro.
+
+\
+- *Bin3D*:
+  - *descrizione*: componente dedicato alla visualizzazione di un bin all'interno dell'ambiente di lavoro;
+  - *parametri*:
+    - Bin: oggetto `Bin` che rappresenta il bin da visualizzare.
+  - *visualizzazione*:
+    - *box*: rappresenta il bin all'interno dell'ambiente di lavoro. Il colore del box varia a seconda dei seguenti fattori:
+      - *blu*: bin occupato contenente un prodotto;
+      - *nero*: bin occupato non contenente un prodotto;
+      - *rosso*: bin selezionato;
+      - *giallo*: bin di destinazione di un ordine;
+      - *verde*: bin di partenza di un ordine.
+  - *interazione con l'utente*:
+    - *onDoubleClick*: permette di selezionare il bin visualizzando i dettagli mediante i componenti `binItemDetails` e `productItemDetails` (se contenente un prodotto);
+    - *onDrag*: permette di spostare il bin all'interno dell'ambiente di lavoro, in modo da generare un nuovo ordine di spostamento. L'evento onDrag è disponibile solo per i bin3D che rappresentano un bin il cui _state_ ottenibile dal metodo `getBinState` risulta *Idle* e con un prodotto al suo interno.
+
+\
+- *Zone3D*:
+  - *descrizione*: componente dedicato alla visualizzazione di una zona all'interno dell'ambiente di lavoro. I bin al suo interno sono generati e visualizzati mediante il componente `Bin3D`;
+  - *parametri*:
+    - Zone: oggetto `Zone` che rappresenta la zona da visualizzare.
+  - *interazione con l'utente*:
+    - *onDoubleClick*: permette di selezionare la zona visualizzando i dettagli mediante il componente `zoneItemDetails`;
+    - *onDrag*: permette di spostare la zona all'interno dell'ambiente di lavoro.
+
+\
+- *Warehouse*:
+  - *descrizione*: componente dedicato alla visualizzazione dell'ambiente di lavoro e del Canvas di rendering;
+  - *interazione con l'utente*:
+    - *Zone3D*: permette di visualizzare le zone presenti all'interno dell'ambiente di lavoro;
+    - *Floor*: permette di visualizzare il piano dell'ambiente di lavoro;
+    - *Grid*: permette di visualizzare la griglia di riferimento per il collocamento degli scaffali nell'ambiente di lavoro;
+    - *GridModeSelector*: permette di selezionare la dimensione della griglia di riferimento;
+    - *CameraControls ed ExtendedCameraControls*: permette di controllare la camera all'interno dell'ambiente di lavoro;
+    - *KeyboardControls*: permette di controllare la camera mediante tastiera.
+
+\
+- *ExtendedCameraControls*:
+  - *descrizione*: componente dedicato al controllo avanzato della camera all'interno dell'ambiente di lavoro;
+  - *interazione con l'utente*:
+    - *onKeyDown*: permette di reimpostare la posizione della camera mediante il tasto "R";
+    - *useFrame*: intercettati i tasti "W", "A", "S", "D" e "Shift" permette di spostare la camera all'interno dell'ambiente di lavoro.
+
+\
+- *GridModeSelector*:
+  - *descrizione*: componente dedicato alla selezione della dimensione della griglia di riferimento;
+  - *interazione con l'utente*:
+    - *ToggleGruop*: permette di selezionare la dimensione della griglia di riferimento;
+      - *opzioni*:
+        - *0*: griglia non visibile;
+        - *0.1*: griglia con celle di 0.1 unità, rappesentanti 10cm;
+        - *0.5*: griglia con celle di 0.5 unità, rappesentanti 50cm;
+        - *1*: griglia con celle di 1 unità, rappesentanti 1m.
+
+\
+= Architettura di deployment
+Nel contesto del progetto didattico, l'adozione di un'architettura monolitica è stata determinata valutando fattori strategici in termini di risorse, tempi ed esperienza del gruppo.
+
+== Analisi dell'architettura monolitica
+L'architettura monolitica rappresenta un modello di progettazione architetturale in cui tutte le funzionalità e i componenti del prodotto software risiedono in un unico sistema autocontenuto e indipendente.
+
+Nel contesto del progetto didattico, l'architettura monolitica è stata scelta tenendo conto dei seguenti vantaggi e considerazioni:
+
+- *Gestione di una singola unità*: l'intero set di funzionalità risiede in unico sistema. Questo approccio semplifica lo sviluppo e la manutenzione del codice, rimuovendo la complessità associata alla comunicazione tra servizi e alla gestione dei dati distribuiti in un'architettura a microservizi;
+
+- *Sviluppo e testing*: data l'esperienza limitata del gruppo, l'adozione di un'architettura monolitica permette di concentrarsi sullo sviluppo e il testing del prodotto in modo più tempestivo e diretto, e di focalizzarsi maggiormente sulla realizzazione delle funzionalità chiave del progetto rispetto alla gestione delle complessità di un'architettura distribuita;
+
+- *Aggiornamenti e manutenzione*: la gestione di un unico sistema semplifica la manutenzione e i numerosi aggiornamenti del codice durante lo sviluppo dettati dalla limitata esperienza del gruppo. Tuttavia, apportare modifiche consistenti può richiedere aggiornamenti in parti diverse del sistema.
+
+- *Deployment*: l'architettura monolitica semplifica il processo di deployment, dovendo gestire un unico sistema.
+
+== Deployment con Docker
+Il processo di deployment del software è gestito mediante l'utilizzo di Docker e Docker-compose. La scelta di utilizzare Docker è stata determinata dai seguenti fattori:
+
+- *Isolamento*: Docker permette di eseguire processi informatici in ambienti isolati chiamati container. Questo garantisce che il software funzioni in modo coerente e affidabile, creando una base comune di sviluppo tra i Programmatori e garantendo che il prodotto software sia isolato dall'ambiente di esecuzione;
+
+- *Portabilità*: Docker semplifica il processo di deployment del prodotto in diversi ambienti, garantendo che il software funzioni in modo coerente e affidabile su qualsiasi piattaforma;
+
+- *Semplicità di installazione e avvio*: impostata la configurazione dei `Dockerfile` e di Docker-compose, l'avvio e la gestione dei container è standardizzata.
+
+In conclusione, l'architettura monolitica si allinea perfettamente con le esigenze e le limitazioni del progetto, rendendola una scelta ragionata e valida. Questa scelta permette di concentrarsi sulle priorità chiave: sviluppare un prodotto funzionante e di alta qualità in tempi ragionevoli, pur mantenendo la flessibilità di apportare modifiche in base alle esigenze emerse.
+
+\
+=== Ambiente Docker
+I container Docker sono organizzati e gestiti mediante Docker-compose.
+
+Sono presenti due container:
+
+- *app*: container contenente l'applicazione web;
+  - *Immagine*: `node:20-alpine`;
+  - *Porta*: `3000`;
+  - *Dipendenza*: `postgres`;
+  - *Rete*: `webnet`.
 
 
-==== Three.js
-L'ambiente tridimensionale è realizzato mediante i componenti:
+- *postgres*: container contenente il database PostgreSQL;
+  - *Immagine*: `postgres:16.2`;
+  - *Porta*: `5432`;
+  - *Dipendenza*: nessuna;
+  - *Rete*: `webnet`.
 
-- *Floor*: elemento che rappresenta il piano dell'ambiente di lavoro;
+I container sono all'interno della stessa rete `webnet` che utilizza il driver di rete `bridge`.
 
-- *Bin3D*: elemento che rappresenta un bin nell'ambiente di lavoro;
+#figure(
+  image("./imgs/docker-env.png", width: 70%),
+  caption: [
+    Ambiente Docker
+  ],
+)
 
-- *Zone3D*: elemento che rappresenta uno scaffale o un'area del piano dedicata al contenimento di bin nell'ambiente di lavoro;
+\
+== Deployment e installazione
 
-- *Warehouse*: elemento che contiene la logica principale della visualizzazione dell'ambiente grafico ed il canvas con gli elementi 3D.
+=== Download di WMS3 <download_WMS3>
 
+#figure(
+  table(
+    columns: (auto, 1fr),
+    [*Modalità*], [*Source*],
+    [Link diretto (consigliato)], [#link("https://github.com/Error-418-SWE/WMS3/releases")],
+    [Shell], [`git clone git@github.com:Error-418-SWE/WMS3.git`],
+    [Shell], [`git clone https://github.com/Error-418-SWE/WMS3.git`]
+  ),
+  caption: "Modalità di download WMS3"
+)
 
-== Database
+\
+=== Avvio di WMS3
+
+Per avviare la web app è necessario collocarsi all'interno della cartella scaricata al passaggio _Download di WMS3_ (@download_WMS3) ed eseguire il comando
+
+#align(center, `docker compose up`)
+
+\
+Completato l'avvio dei container, la web app sarà disponibile all'indirizzo
+
+#align(center, link("http://localhost:3000/"))
+
+\
+=== Terminare l'esecuzione
+Per terminare l'esecuzione è necessario collocarsi nella cartella scaricata al passaggio _Download di WMS3_ (@download_WMS3) ed eseguire il comando
+
+#align(center, `docker compose down`)
+
+\
+= Database
 
 In questa sezione viene presentato lo schema della base di dati realizzata con PostgreSQL.
 
@@ -701,7 +1641,7 @@ Esso è cosi composto:
 )
 
 
-=== Entità
+== Entità
 
 Il database è composto da 6 entità:
 
@@ -746,7 +1686,7 @@ Il database è composto da 6 entità:
     - Length: lunghezza della zona;
     - Orientation: orientamento della zona.
 
-=== Relazioni
+== Relazioni
 
 All'interno del database le relazioni fra le differenti entità sono del tipo:
 
@@ -768,9 +1708,6 @@ All'interno del database le relazioni fra le differenti entità sono del tipo:
 
 Il database viene utilizzato dall'applicazione per il caricamento, il posizionamento e la visualizzazione dei prodotti all'interno del magazzino.
 In nessun caso il database verrà modificato dall'applicazione.
-
-
-
 
 #pagebreak()
 

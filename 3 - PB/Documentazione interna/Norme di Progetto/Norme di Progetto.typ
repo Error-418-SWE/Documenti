@@ -1777,43 +1777,101 @@ L'elemento implementato deve essere approvato durante il processo di verifica (@
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.8_
 
 === Scopo
-Il processo di integrazione ha lo scopo di combinare iterativamente elementi software al fine di ottenere un prodotto che soddisfi i requisiti rispettando l'architettura e il design definiti.
-È quindi necessario il coordinamento con il processo di definizione dell'architettura (@processo_definizione_architettura) e il processo di design (@processo_design).
+
+Il processo di integrazione ha lo scopo di combinare iterativamente un insieme di elementi software al fine di ottenere un prodotto che soddisfi i requisiti, rispettando l'architettura e il design definiti.
+
+Di conseguenza, esso viene attuato in coordinamento con:
+- il processo di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni);
+- il processo di definizione dell'architettura (@processo_definizione_architettura).
+- il processo di definizione del design (@processo_design);
 
 L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la Continuous Integration.
 
-
 === Risultati
+
 Come risultato della corretta implementazione del processo di integrazione:
-- viene integrato il nuovo elemento software con il prodotto principale;
-- vengono eseguiti automaticamente i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione;
-- vengono identificati i risultati ed eventuali anomalie;
-- i risultati dei test vengono registrati e possono essere visualizzati su GitHub;
-- gli elementi correttamente integrati vengono tracciati e possono essere visualizzati su GitHub.
+
+- i nuovi elementi software implementati sono integrati con la _codebase_ esistente;
+- il sistema software è composto dall'integrazione degli elementi software implementati;
+- i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione sono eseguiti automaticamente;
+- le interfacce tra gli elementi software sono definite, implementate e aggiornate;
+- le interfacce tra il sistema software e gli elementi esterni sono definite, implementate e aggiornate;
+- gli strumenti di supporto al processo di integrazione sono individuati, configurati e in funzione;
+- i risultati dell'integrazione sono identificati, assieme ad eventuali anomalie;
+- i risultati dei test sono registrati e possono essere visualizzati dai membri del gruppo.
 
 === Attività
-==== Pianificazione della strategia di integrazione
 
-  La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche "Continuous Integration" e "Continuous Deployment", al fine di garantire un frequente allineamento degli ambienti di lavoro tra i membri e avere costantemente la versione più aggiornata del prodotto disponibile e funzionante.
-  Essa prevede la gestione dell'integrazione degli elementi software e dell'esecuzione dei test di unità, integrazione e non regressione mediante automazioni GitHub Actions.
-  Testare automaticamente il prodotto ad ogni iterazione garantisce inoltre il rispetto dei requisiti descritti nel documento #adr_v e i processi di verifica.
-  A supporto dell'integrazione ed il deployment è inoltre presente un Virtual Private Server su Azure che esegue Docker.
+==== Definizione della strategia di integrazione
 
-==== Esecuzione
+La strategia individuata deve garantire il coordinamento tempestivo delle attività dei processi di implementazione e di integrazione.
 
-  Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella pull request vengono approvate da un Verificatore, il quale attua la funzione di merge.
-  Le GitHub Action provvedono a:
-  - costruire l'immagine Docker e pubblicarla su Docker Hub e GitHub Container Registry tramite la action "build_docker", le cui caratteristiche e job sono descritti nel file _build_docker.yml_;
-  - copiare il contenuto del repository sul Virtual Private Server e proseguire con l'avvio di Docker Compose tramite il file _deploy.yml_;
-  - creare, tramite la action "tag_semver", le cui caratteristiche e job sono descritti nel file _tag_semver.yml_, un tag di versione semantica per ogni push sul branch di development del Version Control System. Tale tag viene pubblicato su GitHub e viene creata una release;
-  - l'esecuzione dei test avviene tramite la action "test_nodejs", le cui caratteristiche e job sono descritti nel file _test_nodejs.yml_.
+La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche di _Continuous Integration_ (CI) e _Continuous Deployment_ (CD), al fine di permettere un frequente allineamento degli ambienti di lavoro tra i membri e garantire che la versione più aggiornata del prodotto sia sempre disponibile, funzionante e verificata.
 
-==== Gestione dei risultati
-  I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a causa dell'approvazione della pull request. Le GitHub Actions prevedono la visualizzazione di messaggi che descrivono gli eventuali errori insorti oppure, in loro assenza, della corretta esecuzione dell'automazione.
+Tale strategia prevede l'esecuzione di test di unità e di integrazione negli ambienti locali di sviluppo e nel repository centrale, tramite GitHub Actions.
 
-  I test automatici forniscono un resoconto di tutti i test svolti con i relativi esiti nei log della GitHub Action corrispondente.
+La strategia di integrazione prevede il coordinamento con:
+- il processo di Verifica (@processo_verifica), per:
+  + fornire evidenza obiettiva che il sistema software integrato soddisfi i requisiti;
+  + identificare e risolvere le anomalie riscontrate, sia nel software che negli elementi ad esso associati quali requisiti, test, architettura e design.
+- il processo di Validazione (@processo_validazione), per confermare che il sistema software integrato soddisfi gli scopi e le funzionalità previste;
+- il processo di Controllo della Qualità (@processo_controllo_qualità) per supportare la verifica e la validazione del sistema software integrato, individuare e risolvere i problemi e le inconformità.
 
-  Su GitHub è possibile visualizzare l'insieme delle pull request approvate e correttamente integrate, in questo modo è possibile tenere traccia degli elementi che costituiscono il prodotto.
+===== Identificazione dei criteri di integrazione
+
+L'integrazione degli elementi software deve avvenire in modo incrementale, e deve risultare nella creazione di un sistema software integrato eseguibile senza errori e consistente con l'architettura e il design definiti. Il soddisfacimento dei requisiti funzionali e non funzionali descritti nel documento #adr_v è conseguito incrementalmente come risultato dei passaggi di integrazione.
+
+===== Identificazione dei servizi abilitanti
+
+Il gruppo si dota dei seguenti strumenti e servizi abilitanti per implementare la strategia di integrazione:
+- GitHub Actions, per l'automazione delle attività di integrazione e di verifica nel repository GitHub;
+- Node.js (npm) e Jest, per l'esecuzione dei test negli ambienti di sviluppo locali;
+- Coveralls, per la valutazione della copertura dei test eseguiti;
+- Jira, per la registrazione dei risultati dei test e delle anomalie riscontrate.
+
+L'uso degli strumenti e dei servizi abilitanti è regolato nell'ambito del processo di verifica (@processo_verifica).
+
+==== Attuazione della strategia di integrazione
+
+L'integrazione degli elementi software implementati avviene attuando quanto prescritto dalla strategia di integrazione, utilizzando le procedure e i servizi abilitanti individuati.
+
+L'attuazione successiva della strategia di integrazione prosegue fino a che il sistema software completo risponde a tutte le caratteristiche individuate e descritte nel documento #adr_v.
+
+L'integrazione degli elementi software, individuati e specificati tramite i processi di definizione dell'architettura (@processo_definizione_architettura) e di definizione del design (@processo_design), avviene elemento per elemento, secondo l'ordine di implementazione stabilito durante la pianificazione delle attività. Qualora un elemento software non fosse ancora disponibile per l'integrazione, la funzionalità può essere temporaneamente simulata tramite l'uso di _mock_ o _stub_. Prima di convalidarne la conformità, il sistema software così integrato viene sottoposto a verifica e validazione per garantire che soddisfi i requisiti e le aspettative degli stakeholder.
+
+A seguito di tali attività, il Programmatore invia i cambiamenti proposti al repository, tramite il meccanisimo descritto nella @controllo_release. Il Verificatore può approvare la Pull Request e, tramite la funzione di _merge_, integrare l'elemento software implementato nel sistema software. A supporto di tale operazione, è prevista l'esecuzione di GitHub Actions che provvedono a:
+- creare e associare al sistema integrato, tramite la action `tag_semver.yml`, un tag di versione semantica per identificare univocamente la release. Il versionamento avviene in accordo con la @versionamento_software. Lo step di versionamento predefinito è di livello "patch" (es. `1.0.0` #sym.arrow.r `1.0.1`), ma può essere esplicitato dal Programmatore nel messaggio di commit tramite i modificatori:
+  - `#patch`, per incrementare il numero di patch (z);
+  - `#minor`, per incrementare il numero di minor (y).
+- costruire un artefatto sotto forma di immagine Docker, e pubblicarlo sui _container registries_ Docker Hub e GitHub Container Registry tramite la action `build_docker` (`build_docker.yml`);
+- calcolare la copertura dei test eseguiti sul sistema integrato con Coveralls, e pubblicarla come report sulla Pull Request tramite la action `test_nodejs.yml`;
+
+==== Gestione dei risultati di integrazione
+
+I risultati delle attività di integrazione includono:
+- il sistema software integrato;
+- il responso dell'esecuzione delle attività di testing automatico;
+- il risultato delle attività di verifica e validazione svolte dal Verificatore;
+- l'identificazione e la risoluzione dei problemi di integrazione tra elementi software;
+- quando applicabile, l'identificazione e la risoluzione delle anomalie imputabili agli strumenti o alle modalità di integrazione adottate (si rimanda al processo di Controllo della Qualità, @processo_controllo_qualità).
+
+Il sistema software integrato rappresenta una *baseline di prodotto*.
+
+I risultati sono registrati nel repository GitHub e nell'ITS adottato dal gruppo. Quando necessario, i risultati delle attività di integrazione possono essere condivisi con:
+- l'Amministratore per la risoluzione di problemi legati agli strumenti abilitanti o per l'adozione di altre misure correttive, in accordo con le parti coinvolte;
+- il Proponente e/o il Committente per la convalida del sistema software integrato.
+
+===== Tracciabilità degli elementi del sistema software
+
+La tracciabilità tra gli elementi del sistema software, la Pull Request associata, e i requisiti avviene per mezzo di Jira. I ticket direttamente associabili ad un requisito ne riportano il codice identificativo nell'apposito campo. In questo modo, è possibile risalire a quali elementi del sistema software soddisfino un determinato requisito e, di conseguenza, quale sia lo stato di avanzamento del progetto in termini di requisiti soddisfatti.
+
+Tramite GitHub, è inoltre reso disponibile un registro delle Pull Request approvate (e dunque integrate) o chiuse/rifiutate, liberamente consultabile da tutti i membri del gruppo.
+
+Dopo l'approvazione, a ciascun sistema software risultato dell'integrazione di elementi software implementati sarà associato un numero di versione (come descritto nella @versionamento_software). Questo numero di versione sarà utilizzato per identificare il sistema software e per tracciare le modifiche apportate nel tempo. In accordo con quanto descritto in questa sezione, ad un numero di versione superiore corrisponderà un numero di requisiti soddisfatti superiore.
+
+Ciascuna versione del sistema software integrato, intesa come artefatto eseguibile, dovrà essere conservata e resa disponibile per il download tramite le apposite funzionalità di GitHub.
+
+I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'apertura o chiusura di una Pull Request. Le GitHub Actions devono prevedere la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'integrazione.
 
 == Processo di verifica <processo_verifica>
 
@@ -2015,34 +2073,34 @@ Tali considerazioni e decisioni prese devono essere presenti nel verbale consegu
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
 
 La tabella di seguito riportata consente di associare ogni capitolo del documento al rispettivo capitolo dello standard di riferimento. Viene riportato anche il grado di conformità:
-- *To outcome* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
+- *To outcomes* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
 - *Full* indica che il capitolo riporta fedelmente le indicazioni dello standard con poche o nessuna azione di adeguamento.
 
 #figure(
   table(
     columns: 3,
     [*Capitolo Norme*],[*Capitolo Standard*],[*Conformance Level*],
-    [@processo_fornitura],[6.1.2 - Supply process],[To outcome],
-    [@processo_ciclo_di_vita],[6.2.1 - Life cycle model management process],[To outcome],
-    [@processo_risorse_umane],[6.2.4 - Human Resource Management process],[To outcome],
-    [@processo_gestione_qualità],[6.2.5 - Quality Management process],[To outcome],
-    [@pianificazione],[6.3.1 - Project Planning process],[To outcome],
+    [@processo_fornitura],[6.1.2 - Supply process],[To outcomes],
+    [@processo_ciclo_di_vita],[6.2.1 - Life cycle model management process],[To outcomes],
+    [@processo_risorse_umane],[6.2.4 - Human Resource Management process],[To outcomes],
+    [@processo_gestione_qualità],[6.2.5 - Quality Management process],[To outcomes],
+    [@pianificazione],[6.3.1 - Project Planning process],[To outcomes],
     [@valutazioneControllo],[6.3.2 - Project assessment and control process],[Full],
     [@processo_gestione_decisioni],[6.3.3 - Decision Management process],[Full],
     [@processo_gestione_rischi],[6.3.4 - Risk Management process],[Full],
-    [@processo_gestione_configurazione],[6.3.5 - Configuration Management process],[To outcome],
-    [@processo_gestione_informazioni],[6.3.6 - Information Management process],[To outcome],
-    [@processo_misurazione],[6.3.7 - Measurement process],[To outcome],
+    [@processo_gestione_configurazione],[6.3.5 - Configuration Management process],[To outcomes],
+    [@processo_gestione_informazioni],[6.3.6 - Information Management process],[To outcomes],
+    [@processo_misurazione],[6.3.7 - Measurement process],[To outcomes],
     [@processo_controllo_qualità],[6.3.8 - Quality Assurance process],[Full],
     [@processo_missione],[6.4.1 - Business or Mission Analysis process],[Full],
-    [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
-    [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
-    [@processo_design],[6.4.5 - Design Definition process],[To outcome],
-    [@processo_implementazione],[6.4.7 - Implementation process],[To outcome],
-    [@processo_integrazione],[6.4.8 - Integration process],[To outcome],
-    [@processo_verifica],[6.4.9 - Verification process],[To outcome],
-    [@processo_transizione],[6.4.10 - Transition process],[To outcome],
-    [@processo_validazione],[6.4.11 - Validation process],[To outcome],
+    [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcomes],
+    [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcomes],
+    [@processo_design],[6.4.5 - Design Definition process],[To outcomes],
+    [@processo_implementazione],[6.4.7 - Implementation process],[To outcomes],
+    [@processo_integrazione],[6.4.8 - Integration process],[To outcomes],
+    [@processo_verifica],[6.4.9 - Verification process],[To outcomes],
+    [@processo_transizione],[6.4.10 - Transition process],[To outcomes],
+    [@processo_validazione],[6.4.11 - Validation process],[To outcomes],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

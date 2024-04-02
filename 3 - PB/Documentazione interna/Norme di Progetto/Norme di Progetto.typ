@@ -1861,7 +1861,7 @@ I risultati sono registrati nel repository GitHub e nell'ITS adottato dal gruppo
 
 ===== Tracciabilità degli elementi del sistema software
 
-La tracciabilità tra gli elementi del sistema software, la PR associata, e i requisiti avviene per mezzo di Jira. I ticket direttamente associabili ad un requisito ne riportano il codice identificativo nell'apposito campo. In questo modo, è possibile risalire a quali elementi del sistema software soddisfino un determinato requisito e, di conseguenza, quale sia lo stato di avanzamento del progetto in termini di requisiti soddisfatti.
+La tracciabilità tra gli elementi del sistema software, la Pull Request associata, e i requisiti avviene per mezzo di Jira. I ticket direttamente associabili ad un requisito ne riportano il codice identificativo nell'apposito campo. In questo modo, è possibile risalire a quali elementi del sistema software soddisfino un determinato requisito e, di conseguenza, quale sia lo stato di avanzamento del progetto in termini di requisiti soddisfatti.
 
 Tramite GitHub, è inoltre reso disponibile un registro delle Pull Request approvate (e dunque integrate) o chiuse/rifiutate, liberamente consultabile da tutti i membri del gruppo.
 

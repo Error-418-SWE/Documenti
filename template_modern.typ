@@ -81,7 +81,7 @@ let groupMembers = ("Banzato Alessio","Carraro Riccardo", "Gardin Giovanni" ,"Na
 let recipients = ("Gruppo " + groupName, "Vardanega Tullio", "Cardin Riccardo")
 let changelogData = csv("log.csv")
 let logo = "logo.png"
-let product_logo = "wms3_logo.svg"
+let product_logo = "logo_wms3.svg"
 
 // Import parameters
 let title = title

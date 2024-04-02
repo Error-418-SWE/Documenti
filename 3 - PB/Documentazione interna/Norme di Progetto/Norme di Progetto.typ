@@ -1808,7 +1808,7 @@ La strategia individuata deve garantire il coordinamento tempestivo delle attivi
 
 La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche di _Continuous Integration_ (CI) e _Continuous Deployment_ (CD), al fine di permettere un frequente allineamento degli ambienti di lavoro tra i membri e garantire che la versione più aggiornata del prodotto sia sempre disponibile, funzionante e verificata.
 
-Tale strategia prevede l'esecuzione di test di unità, di integrazione e di regressione negli ambienti locali di sviluppo e nel repository centrale, tramite GitHub Actions.
+Tale strategia prevede l'esecuzione di test di unità e di integrazione negli ambienti locali di sviluppo e nel repository centrale, tramite GitHub Actions.
 
 La strategia di integrazione prevede il coordinamento con:
 - il processo di Verifica (@processo_verifica), per:

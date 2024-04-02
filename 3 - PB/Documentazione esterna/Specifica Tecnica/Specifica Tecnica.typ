@@ -180,44 +180,6 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 )
 
 #pagebreak()
-
-= Installazione
-
-== Scaricare il progetto <download>
-
-Vengono fornite due modalità di download del prodotto WMS3: la prima (consigliata) è eseguire il download del prodotto in formato zip o tar.gz dalla pagina
-
-#align(center, link("https://github.com/Error-418-SWE/WMS3/releases"))
-
-In alternativa, se nel dispositivo è presente Git, si può clonare il repository con il comando
-
-#align(center, `git clone git@github.com:Error-418-SWE/WMS3.git`)
-
-oppure
-
-#align(center, `git clone https://github.com/Error-418-SWE/WMS3.git`)
-
-== Avviare la web app
-
-Per avviare la web app è necessario collocarsi all'interno della cartella scaricata al passaggio _Scaricare il progetto_ (@download) ed eseguire il comando
-
-#align(center, `docker compose up -d`)
-
-Questo avvierà i container Docker che formano il prodotto:
-- Container PostgreSQL (database);
-- Container Web (web app).
-
-Completato l'avvio dei container, la web app sarà disponibile all'indirizzo
-
-#align(center, link("http://localhost:3000/"))
-
-== Terminare l'esecuzione
-Per terminare l'esecuzione della web app è necessario collocarsi nella cartella scaricata al passaggio _Scaricare il progetto_ (@download) ed eseguire il comando
-
-#align(center, `docker compose down`)
-
-#pagebreak()
-
 = Tecnologie
 
 == Introduzione
@@ -1575,7 +1537,97 @@ Mediante l'utilizzo dei framework \@react-three/fiber e \@react-three/drei, è p
         - *1*: griglia con celle di 1 unità, rappesentanti 1m.
 
 \
-== Database
+= Architettura di deployment
+Nel contesto del progetto didattico, l'adozione di un'architettura monolitica è stata determinata valutando fattori strategici in termini di risorse, tempi ed esperienza del gruppo.
+
+== Analisi dell'architettura monolitica
+L'architettura monolitica rappresenta un modello di progettazione architetturale in cui tutte le funzionalità e i componenti del prodotto software risiedono in un unico sistema autocontenuto e indipendente.
+
+Nel contesto del progetto didattico, l'architettura monolitica è stata scelta tenendo conto dei seguenti vantaggi e considerazioni:
+
+- *Gestione di una singola unità*: l'intero set di funzionalità risiede in unico sistema. Questo approccio semplifica lo sviluppo e la manutenzione del codice, rimuovendo la complessità associata alla comunicazione tra servizi e alla gestione dei dati distribuiti in un'architettura a microservizi;
+
+- *Sviluppo e testing*: data l'esperienza limitata del gruppo, l'adozione di un'architettura monolitica permette di concentrarsi sullo sviluppo e il testing del prodotto in modo più tempestivo e diretto, e di focalizzarsi maggiormente sulla realizzazione delle funzionalità chiave del progetto rispetto alla gestione delle complessità di un'architettura distribuita;
+
+- *Aggiornamenti e manutenzione*: la gestione di un unico sistema semplifica la manutenzione e i numerosi aggiornamenti del codice durante lo sviluppo dettati dalla limitata esperienza del gruppo. Tuttavia, apportare modifiche consistenti può richiedere aggiornamenti in parti diverse del sistema.
+
+- *Deployment*: l'architettura monolitica semplifica il processo di deployment, dovendo gestire un unico sistema.
+
+== Deployment con Docker
+Il processo di deployment del software è gestito mediante l'utilizzo di Docker e Docker-compose. La scelta di utilizzare Docker è stata determinata dai seguenti fattori:
+
+- *Isolamento*: Docker permette di eseguire processi informatici in ambienti isolati chiamati container. Questo garantisce che il software funzioni in modo coerente e affidabile, creando una base comune di sviluppo tra i Programmatori e garantendo che il prodotto software sia isolato dall'ambiente di esecuzione;
+
+- *Portabilità*: Docker semplifica il processo di deployment del prodotto in diversi ambienti, garantendo che il software funzioni in modo coerente e affidabile su qualsiasi piattaforma;
+
+- *Semplicità di installazione e avvio*: impostata la configurazione dei `Dockerfile` e di Docker-compose, l'avvio e la gestione dei container è standardizzata.
+
+In conclusione, l'architettura monolitica si allinea perfettamente con le esigenze e le limitazioni del progetto, rendendola una scelta ragionata e valida. Questa scelta permette di concentrarsi sulle priorità chiave: sviluppare un prodotto funzionante e di alta qualità in tempi ragionevoli, pur mantenendo la flessibilità di apportare modifiche in base alle esigenze emerse.
+
+\
+=== Ambiente Docker
+I container Docker sono organizzati e gestiti mediante Docker-compose.
+
+Sono presenti due container:
+
+- *app*: container contenente l'applicazione web;
+  - *Immagine*: `node:20-alpine`;
+  - *Porta*: `3000`;
+  - *Dipendenza*: `postgres`;
+  - *Rete*: `webnet`.
+
+
+- *postgres*: container contenente il database PostgreSQL;
+  - *Immagine*: `postgres:16.2`;
+  - *Porta*: `5432`;
+  - *Dipendenza*: nessuna;
+  - *Rete*: `webnet`.
+
+I container sono all'interno della stessa rete `webnet` che utilizza il driver di rete `bridge`.
+
+#figure(
+  image("./imgs/docker-env.png", width: 70%),
+  caption: [
+    Ambiente Docker
+  ],
+)
+
+\
+== Deployment e installazione
+
+=== Download di WMS3 <download_WMS3>
+
+#figure(
+  table(
+    columns: (auto, 1fr),
+    [*Modalità*], [*Source*],
+    [Link diretto (consigliato)], [#link("https://github.com/Error-418-SWE/WMS3/releases")],
+    [Shell], [`git clone git@github.com:Error-418-SWE/WMS3.git`],
+    [Shell], [`git clone https://github.com/Error-418-SWE/WMS3.git`]
+  ),
+  caption: "Modalità di download WMS3"
+)
+
+\
+=== Avvio di WMS3
+
+Per avviare la web app è necessario collocarsi all'interno della cartella scaricata al passaggio _Download di WMS3_ (@download_WMS3) ed eseguire il comando
+
+#align(center, `docker compose up`)
+
+\
+Completato l'avvio dei container, la web app sarà disponibile all'indirizzo
+
+#align(center, link("http://localhost:3000/"))
+
+\
+=== Terminare l'esecuzione
+Per terminare l'esecuzione è necessario collocarsi nella cartella scaricata al passaggio _Download di WMS3_ (@download_WMS3) ed eseguire il comando
+
+#align(center, `docker compose down`)
+
+\
+= Database
 
 In questa sezione viene presentato lo schema della base di dati realizzata con PostgreSQL.
 
@@ -1589,7 +1641,7 @@ Esso è cosi composto:
 )
 
 
-=== Entità
+== Entità
 
 Il database è composto da 6 entità:
 
@@ -1634,7 +1686,7 @@ Il database è composto da 6 entità:
     - Length: lunghezza della zona;
     - Orientation: orientamento della zona.
 
-=== Relazioni
+== Relazioni
 
 All'interno del database le relazioni fra le differenti entità sono del tipo:
 
@@ -1656,9 +1708,6 @@ All'interno del database le relazioni fra le differenti entità sono del tipo:
 
 Il database viene utilizzato dall'applicazione per il caricamento, il posizionamento e la visualizzazione dei prodotti all'interno del magazzino.
 In nessun caso il database verrà modificato dall'applicazione.
-
-
-
 
 #pagebreak()
 

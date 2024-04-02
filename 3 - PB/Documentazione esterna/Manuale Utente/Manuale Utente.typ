@@ -197,7 +197,7 @@ Ruotando la rotella del mouse in avanti è possibile avvicinarsi all'oggetto des
 
 Premendo il tasto destro del mouse e spostando il mouse in una delle quattro direzioni (su, giù, destra e sinistra) otterremo il panning della camera, ovvero lo spostamento sui due assi della camera rispetto al piano come mostrato in figura @camera_panning.
 
-=== Movimento con frecce direzionali
+=== Movimento con frecce direzionali <movimento_frecce_direzionali>
 
 #figure(
     grid(
@@ -352,6 +352,49 @@ Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà 
         [ #image("./imgs/creazione_zone_3.png", width: 80%)],
     ),caption: [Pulsante di creazione zona (sinistra) e nuova zona creata nell'ambiente di lavoro (destra)],
 ) <pulsante_crea_zona>
+
+
+== Spostamento zona nell'ambiente 3D <collocamento_zona>
+
+Successivamente alla creazione dell'ambiente di lavoro è possibile spostare una zona in esso collocata.
+
+Per eseguire tale operazione è possibile interagire con il cubo rosso, presente nelle coordinate (0,0) rispetto alla zona, visibile nel caso in cui il cursore del mouse venga sovrapposto ad essa (@immagini_pulsanti_ispezione_zona destra).
+
+Per realizzare lo spostamento è sufficiente premere il tasto sinistro del mouse sopra al cubo descritto e, mantenendo la pressione di tale tasto, spostare il mouse per riposizionare la zona interessata nell'ambiente di lavoro.
+
+Per rendere più agevole la fase di spostamento, è possibile muovere la visuale come descritto nella sezione "Movimento con frecce direzionali" (@movimento_frecce_direzionali).
+
+Durante questa fase la base della zona sarà di colore verde nel caso in cui essa non collida con altri elementi dell'ambiente di lavoro, rossa altrimenti.
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/spostamento_zona_verde.png", width: 80%)],
+        [ #image("./imgs/spostamento_zona_rosso.png", width: 80%)],
+    ),caption: [Spostamento zona non in collisione (sinistra) e spostamento zona in collisione (destra)],
+) <immagini_spostamento_zona>
+
+\
+Per confermare la posizione desiderata per la zona soggetta allo spostamento, è sufficiente rilasciare il tasto sinistro del mouse.
+
+Nel caso in cui la zona fosse in collisione con altri elementi dell'ambiente di lavoro, essa verrà posizionata nell'ultima locazione valida da essa raggiunta durante la fase di spostamento.
+
+=== Griglia
+
+Per agevolare il posizionamento di una zona durante la fase di spostamento, è possibile usufruire della "Griglia" tramite il relativo pannello (@immagine_grid) presente nella parte inferiore destra dello schermo.
+
+#figure(
+  image("./imgs/grid.png", width: 50%),
+  caption: [
+    Pannello di selezione passo Griglia
+  ],
+) <immagine_grid>
+
+\
+Nel caso in cui da esso venga selezionato un valore diverso da zero, nel piano dell'ambiente di lavoro sarà possibile visualizzare una griglia con passo uguale al valore selezionato.
+
+Quando essa è attiva, lo spostamento di una zona avverrà esclusivamente nelle posizioni coincidenti con le intersezioni della griglia, potendo quindi modificare la propria posizione in funzione di valori multipli del passo selezionato.
 
 == Modifica zona <modifica_zona>
 

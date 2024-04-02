@@ -88,8 +88,8 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
     columns: 3,
     [*Componente*], [*Versione*], [*Riferimenti*],
 
-    [Docker],[$>=$ 24.0.7],[https://docs.Docker.com/],
-    [Docker-compose],[$>=$ 2.23.3],[https://docs.Docker.com/compose/],
+    [Docker],[$>=$ 24.0.7],[https://docs.docker.com/],
+    [Docker-compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
 
   ),
   caption: "Requisiti di sistema minimi"
@@ -659,22 +659,22 @@ Nel contesto del progetto didattico, l'architettura monolitica è stata scelta t
 
 - *Gestione di una singola unità*: l'intero set di funzionalità risiede in unico sistema. Questo approccio semplifica lo sviluppo e la manutenzione del codice, rimuovendo la complessità associata alla comunicazione tra servizi e alla gestione dei dati distribuiti in un'architettura a microservizi;
 
-- *Sviluppo e testing*: data l'esperienza limitata del gruppo, l'adozione di un'architettura monolitica permette di concentrarsi sullo sviluppo e il testing del prodotto in modo più immediato e diretto, concentrandosi maggiormente sulla realizzazione delle funzionalità chiave del progetto rispetto alla gestione delle complessità di un'architettura distribuita;
+- *Sviluppo e testing*: data l'esperienza limitata del gruppo, l'adozione di un'architettura monolitica permette di concentrarsi sullo sviluppo e il testing del prodotto in modo più tempestivo e diretto, e di focalizzarsi maggiormente sulla realizzazione delle funzionalità chiave del progetto rispetto alla gestione delle complessità di un'architettura distribuita;
 
-- *Aggiornamenti e manutenzione*: la gestione di unico sistema semplifica la manutenzione e i numerosi aggiornamenti del codice durante lo sviluppo dettati dalla limitata esperienza del gruppo. Tuttavia, apportare modifiche consistenti può richiedere aggiornamenti in parti diverse del sistema.
+- *Aggiornamenti e manutenzione*: la gestione di un unico sistema semplifica la manutenzione e i numerosi aggiornamenti del codice durante lo sviluppo dettati dalla limitata esperienza del gruppo. Tuttavia, apportare modifiche consistenti può richiedere aggiornamenti in parti diverse del sistema.
 
 - *Deployment*: l'architettura monolitica semplifica il processo di deployment, dovendo gestire un unico sistema.
 
 == Deployment con Docker
 Il processo di deployment del software è gestito mediante l'utilizzo di Docker e Docker-compose. La scelta di utilizzare Docker è stata determinata dai seguenti fattori:
 
-- *Isolamento*: Docker permette di eseguire processi informatici in ambienti isolati chiamati container. Questo garantisce che il software funzioni in modo coerente e affidabile creando una base comune di sviluppo tra i Programmatori e garantendo che il prodotto software sia indipendente dall'ambiente di esecuzione;
+- *Isolamento*: Docker permette di eseguire processi informatici in ambienti isolati chiamati container. Questo garantisce che il software funzioni in modo coerente e affidabile, creando una base comune di sviluppo tra i Programmatori e garantendo che il prodotto software sia isolato dall'ambiente di esecuzione;
 
 - *Portabilità*: Docker semplifica il processo di deployment del prodotto in diversi ambienti, garantendo che il software funzioni in modo coerente e affidabile su qualsiasi piattaforma;
 
-- *Semplicità di installazione e avvio*: impostata la configurazione dei Docker file e di Docker-compose, l'avvio e la gestione dei container è semplice e veloce.
+- *Semplicità di installazione e avvio*: impostata la configurazione dei `Dockerfile` e di Docker-compose, l'avvio e la gestione dei container è standardizzata.
 
-In conclusione, l'architettura monolitica si allinea perfettamente con le esigenze e le limitazioni del progetto, rendendola una scelta ragionata e valida. Questa scelta permette di concentrarsi sulle priorità chiave: sviluppare un prodotto funzionante e di alta qualità in tempi ragionevoli, pur mantenendo la flessibilità di apportare modifiche in base alle esigenze emergenti.
+In conclusione, l'architettura monolitica si allinea perfettamente con le esigenze e le limitazioni del progetto, rendendola una scelta ragionata e valida. Questa scelta permette di concentrarsi sulle priorità chiave: sviluppare un prodotto funzionante e di alta qualità in tempi ragionevoli, pur mantenendo la flessibilità di apportare modifiche in base alle esigenze emerse.
 
 \
 === Ambiente Docker
@@ -717,7 +717,7 @@ I container sono all'interno della stessa rete `webnet` che utilizza il driver d
     [Shell], [`git clone git@github.com:Error-418-SWE/WMS3.git`],
     [Shell], [`git clone https://github.com/Error-418-SWE/WMS3.git`]
   ),
-  caption: "Modalità di download WMS3."
+  caption: "Modalità di download WMS3"
 )
 
 \

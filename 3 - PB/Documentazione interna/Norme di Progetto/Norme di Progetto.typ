@@ -1782,8 +1782,8 @@ Il processo di integrazione ha lo scopo di combinare iterativamente un insieme d
 
 Di conseguenza, esso viene attuato in coordinamento con:
 - il processo di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni);
-- il processo di definizione del design (@processo_design);
 - il processo di definizione dell'architettura (@processo_definizione_architettura).
+- il processo di definizione del design (@processo_design);
 
 L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la Continuous Integration.
 
@@ -1806,14 +1806,14 @@ Come risultato della corretta implementazione del processo di integrazione:
 
 La strategia individuata deve garantire il coordinamento tempestivo delle attività dei processi di implementazione e di integrazione.
 
-La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche di _Continuous Integration_ (CI) e _Continuous Deployment_ (CD), al fine di permettere un frequente allineamento degli ambienti di lavoro tra i membri ed garantire che la versione più aggiornata del prodotto sia sempre disponibile, funzionante e verificata.
+La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche di _Continuous Integration_ (CI) e _Continuous Deployment_ (CD), al fine di permettere un frequente allineamento degli ambienti di lavoro tra i membri e garantire che la versione più aggiornata del prodotto sia sempre disponibile, funzionante e verificata.
 
 Tale strategia prevede l'esecuzione di test di unità, di integrazione e di regressione negli ambienti locali di sviluppo e nel repository centrale, tramite GitHub Actions.
 
 La strategia di integrazione prevede il coordinamento con:
-- il processi di Verifica (@processo_verifica), per:
+- il processo di Verifica (@processo_verifica), per:
   + fornire evidenza obiettiva che il sistema software integrato soddisfi i requisiti;
-  + identificare e risolvere le anomalie riscontrate, sia nel software che negli elementi ad esso associati quali requisiti, test, architettura e design;
+  + identificare e risolvere le anomalie riscontrate, sia nel software che negli elementi ad esso associati quali requisiti, test, architettura e design.
 - il processo di Validazione (@processo_validazione), per confermare che il sistema software integrato soddisfi gli scopi e le funzionalità previste;
 - il processo di Controllo della Qualità (@processo_controllo_qualità) per supportare la verifica e la validazione del sistema software integrato, individuare e risolvere i problemi e le inconformità.
 
@@ -1836,12 +1836,12 @@ L'integrazione degli elementi software implementati avviene attuando quanto pres
 
 L'attuazione successiva della strategia di integrazione prosegue fino a che il sistema software completo risponde a tutte le caratteristiche individuate e descritte nel documento #adr_v.
 
-L'integrazione degli elementi software, individuati e specificati tramite i processi di definizione dell'architettura(@processo_definizione_architettura) e di definizione del design (@processo_design), avviene elemento per elemento, secondo l'ordine di implementazione stabilito durante la pianificazione delle attività. Qualora un elemento software non fosse ancora disponibile per l'integrazione, la funzionalità può essere temporaneamente simulata tramite l'uso di _mock_ o _stub_. Prima di convalidarne la conformità, il sistema software così integrato viene sottoposto a verifica e validazione per garantire che soddisfi i requisiti e le aspettative degli stakeholder.
+L'integrazione degli elementi software, individuati e specificati tramite i processi di definizione dell'architettura (@processo_definizione_architettura) e di definizione del design (@processo_design), avviene elemento per elemento, secondo l'ordine di implementazione stabilito durante la pianificazione delle attività. Qualora un elemento software non fosse ancora disponibile per l'integrazione, la funzionalità può essere temporaneamente simulata tramite l'uso di _mock_ o _stub_. Prima di convalidarne la conformità, il sistema software così integrato viene sottoposto a verifica e validazione per garantire che soddisfi i requisiti e le aspettative degli stakeholder.
 
-A seguito di tali attività, il Verificatore può approvare la Pull Request e, tramite la funzione di _merge_, integrare l'elemento software implementato nel sistema software. A supporto di tale operazione, è prevista l'esecuzione di GitHub Action che provvedono a:
+A seguito di tali attività, il Verificatore può approvare la Pull Request e, tramite la funzione di _merge_, integrare l'elemento software implementato nel sistema software. A supporto di tale operazione, è prevista l'esecuzione di GitHub Actions che provvedono a:
 - creare e associare al sistema integrato, tramite la action `tag_semver` (`tag_semver.yml`), un tag di versione semantica per identificare univocamente la release. Il versionamento avviene in accordo con la @versionamento_software. Lo step di versionamento predefinito è di livello "patch" (es. `1.0.0` #sym.arrow.r `1.0.1`), ma può essere esplicitato dal Programmatore nel messaggio di commit tramite i modificatori:
   - `#patch`, per incrementare il numero di patch (z);
-  - `#minor`, per incrementare il numero di minor (y);
+  - `#minor`, per incrementare il numero di minor (y).
 - costruire un artefatto sotto forma di immagine Docker, e pubblicarlo sui _container registries_ Docker Hub e GitHub Container Registry tramite la action `build_docker` (`build_docker.yml`).
 
 ==== Gestione dei risultati di integrazione

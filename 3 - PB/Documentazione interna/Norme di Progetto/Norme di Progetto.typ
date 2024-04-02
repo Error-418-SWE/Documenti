@@ -1825,7 +1825,8 @@ L'integrazione degli elementi software deve avvenire in modo incrementale, e dev
 
 Il gruppo si dota dei seguenti strumenti e servizi abilitanti per implementare la strategia di integrazione:
 - GitHub Actions, per l'automazione delle attività di integrazione e di verifica nel repository GitHub;
-- Node.js (npm) e Jest per l'esecuzione dei test negli ambienti di sviluppo locali;
+- Node.js (npm) e Jest, per l'esecuzione dei test negli ambienti di sviluppo locali;
+- Coveralls, per la valutazione della copertura dei test eseguiti;
 - Jira, per la registrazione dei risultati dei test e delle anomalie riscontrate.
 
 L'uso degli strumenti e dei servizi abilitanti è regolato nell'ambito del processo di verifica (@processo_verifica).

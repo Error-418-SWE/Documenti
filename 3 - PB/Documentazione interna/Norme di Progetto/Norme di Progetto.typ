@@ -2029,27 +2029,44 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.11_
 
 === Scopo
 
-Il processo di Validazione si occupa di fornire prove oggettive che il sistema soddisfi i requisiti esposti dal Proponente descritti nell'#adr.
+Il processo di Validazione si occupa di fornire prove oggettive che il sistema soddisfi i requisiti del Proponente, descritti nel documento #adr_v.
 
-Lo scopo del processo è quindi quello di accertare l'abilità del sistema, o di un suo specifico elemento, di soddisfare in determinate specifiche condizioni operative l'obiettivo per cui è stato creato.
+Lo scopo del processo è quindi accertare la capacità del sistema, o di un suo elemento, di soddisfare, in specifiche condizioni operative, l'obiettivo per cui è stato creato.
 
 === Risultati
 
-Come risultato della corretta implementazione del processo di Validazione otteniamo:
-- individuazione di limiti e vincoli che influenzano i requisiti, il design e l'architettura;
-- feedback da parte del Proponente in merito al lavoro svolto;
-- evidenza che il sistema o l'elemento di sistema soddisfa i bisogni del Proponente.
+Come risultato della corretta implementazione del processo di Validazione si ottiene:
+- individuazione di limiti e vincoli che influenzano i requisiti, il design e l'architettura del sistema;
+- feedback da parte del Proponente in merito allo stato di avanzamento e qualità del lavoro svolto;
+- evidenza che il sistema, o l'elemento di sistema, soddisfi i requisiti dichiarati;
+- tracciamento di eventuali anomalie riscontrate.
+
 
 === Attività
-==== Preparazione alla validazione
-La validazione viene svolta prima internamente al gruppo, il Programmatore deve fornire un elemento software che soddisfi le indicazioni date dal Progettista e che possieda le qualità minime di accettabilità per passare la revisione del Verificatore come descritto nei paragrafi del processo di implementazione (@processo_implementazione), di integrazione (@processo_integrazione), e di verifica (@processo_verifica). Il sistema si ritiene quindi in uno stato accettabile, anche se incompleto, e pronto per essere mostrato al Proponente.
+==== Validazione interna
 
-==== Effettuare la validazione
-Il gruppo pianifica dei meeting settimanali con il Proponente per esaminare lo stato di avanzamento dei lavori. Qui viene quindi mostrato il sistema in funzione (definito come MVC (_Minimum Viable Product_) in quanto il sistema potrebbe ancora non essere del tutto rifinito e presentare problematiche in determinate circostanze o assenze di funzionalità perché ancora non del tutto implementate), con particolare enfasi sulle novità introdotte e le difficoltà incontrate. Il Proponente fornisce quindi feedback riguardo l'adempimento dei bisogni espressi, e aiuta il gruppo chiarendo particolari inerenti la realtà di riferimento a cui il sistema è indirizzato.
+Dopo aver apportato avanzamenti al software e a seguito dell'attuazione del processo di verifica (@processo_verifica), devono avvenire delle analisi e test manuali per constatare lo stato di soddisfacimento dei requisiti. I risultati di tali analisi devono essere discussi durante i meeting di retrospettiva in quanto fondamentali per la pianificazione delle future attività.
+I test manuali precedentemente menzionati devono avvenire mediante l'utilizzo di Docker Compose, permettendo così l'esecuzione su un ambiente con caratteristiche standard, e prevedono l'esecuzione manuale delle funzionalità implementate atte a soddisfare i requisiti definiti.
 
-==== Gestire i risultati della validazione
-In seguito alle direttive del Proponente, l'elemento software viene adattato per affrontare eventuali criticità emerse durante il processo, potenzialmente influenzando l'architettura, il design e i requisiti.
-Una volta che il sistema o un elemento di sistema viene approvato da Verificatore, Progettista e Proponente viene quindi considerato come abile a soddisfare i requisiti descritti nell'#adr nella maniera descritta dal design ed esplicitata dall'architettura individuata con le tecnologie individuate durante RTB. L'adempimento di requisiti da parte di uno specifico elemento di sistema viene quindi tracciato all'interno del documento di #st.
+
+==== Validazione esterna
+
+Al fine di esaminare lo stato di avanzamento dei lavori, il gruppo deve pianificare dei meeting settimanali con il Proponente, al quale deve venire presentato il sistema in funzione.
+
+Il feedback ricevuto dal Proponente durante questi meeting è essenziale per il proseguimento dei lavori e la loro pianificazione.
+Al termine del meeting, il gruppo dovrà effettuare una riunione interna per discutere dei feedback ricevuti e valutare, se necessario, azioni correttive da applicare.
+
+Nel momento in cui il gruppo avrà soddisfatto tutti i requisiti obbligatori definiti nel documento #adr_v e implementato tutte le funzionalità desiderate, dovrà avvenire il meeting esterno di validazione finale del software. Il gruppo presenterà il prodotto sviluppato al Proponente, il quale, a seguito di un'attenta analisi, potrà affermare il totale adempimento dei requisiti obbligatori e delle funzionalità concordate, riconoscendo il prodotto sviluppato come Minimum Viable Product (MVP) atteso dal capitolato.
+
+==== Gestione dei risultati della validazione
+
+Nel caso in cui il software venga riconosciuto come MVP e approvato definitivamente dal Proponente, il lavoro su di esso deve subire una riduzione di priorità o arrestarsi totalmente, dando maggiore importanza all'eventuale documentazione incompleta in vista della revisione PB.
+L'adempimento dei requisiti da parte del prodotto sviluppato deve essere tracciato all'interno del documento #st_v.
+
+Contrariamente, nel caso in cui emergano problematiche o mancanze, esse devono venire discusse e affrontate in un meeting interno al fine di eseguire una mirata pianificazione dei task correttivi.
+Questi ultimi vengono registrati su Jira in modo tale da ottenere maggiore chiarezza riguardo l'organizzazione del gruppo e l'avanzamento dei lavori.
+Tali considerazioni e decisioni prese devono essere presenti nel verbale conseguente al relativo meeting interno.
+
 
 #pagebreak()
 

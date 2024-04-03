@@ -422,26 +422,33 @@ I membri dell'organizzazione sono prestabiliti. Qualora le competenze interne al
 
 Non sono previste variazioni della composizione dell'organizzazione, se non in via straordinaria e comunque discussa preventivamente con il Committente.
 
-=== Processo di gestione della qualità <processo_gestione_qualità>
+=== Processo di Gestione della Qualità <processo_gestione_qualità>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.5_
 
 ==== Scopo
+Il processo di Gestione della Qualità ha lo scopo di garantire che i prodotti e i servizi del progetto soddisfino gli obiettivi di qualità del gruppo e i bisogni del Proponente.
 
-Il processo di gestione della qualità ha lo scopo di garantire che i prodotti del progetto soddisfino gli obiettivi di qualità del gruppo e i bisogni del Proponente.
+==== Risultati
+Come risultato dell'efficace attuazione del processo di Gestione della Qualità:
+- vengono definiti e implementati gli obiettivi, le politiche e le procedure di Gestione della Qualità del gruppo;
+- vengono stabiliti i criteri e i metodi di valutazione della qualità;
+- vengono fornite risorse e informazioni al progetto per supportare l'operazione e il monitoraggio delle attività di garanzia della qualità del progetto;
+- vengono raccolti e analizzati i risultati delle valutazioni della garanzia della qualità;
+- le politiche e le procedure di Gestione della Qualità vengono migliorate basandosi sui risultati del progetto e dell'organizzazione.
 
-=== Attività
-==== Pianificazione
+==== Attività
 
+===== Pianificazione
 Il gruppo #err418 pone i seguenti principi di qualità:
 
-+ tutto il materiale presente nei branch principali della repository (`src` e di conseguenza `main`) deve essere di buona qualità:
-  - tutti i prodotti del gruppo devono essere gestiti tramite repository su GitHub (@repository-github), nelle quali deve essere implementato il sistema di _featuring branching_;
-  - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di pull request (@controllo_release).
++ il contenuto del branch principale delle repository (`src` e, di conseguenza, `main` per Documenti, e `dev` per WMS3) deve rispettare i criteri di qualità definiti nel #pdq e nella @processo_gestione_configurazione. Inoltre:
+  - tutti gli elementi di configurazione devono essere gestiti tramite repository su GitHub (@repository-github), con il sistema di _feature branching_;
+  - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di Pull Request (@controllo_release).
 + il contenuto della documentazione deve seguire i principi di redazione descritti nella @stile-convenzioni;
 + la documentazione prodotta deve seguire degli standard interni e/o esterni:
   - standard interni:
-    - vengono definiti nel presente documento alla @norme-documentazione.
+    - vengono definiti nel presente documento nella @norme-documentazione.
   - standard esterni:
     - il gruppo adotta i seguenti standard ISO:
     #figure(table(
@@ -452,23 +459,31 @@ Il gruppo #err418 pone i seguenti principi di qualità:
       [9126 1:2001], [#pdq],
     ), caption: [Tracciamento ISO-documenti])
     In particolare, per ogni processo interno al presente documento viene specificato il grado di conformità allo standard ISO/IEC/IEEE 12207:2017 all'interno di una sezione dedicata (@tracciamento_paragrafi).
-+ il codice prodotto deve seguire degli standard interni, definiti nel presente documento (@processo_implementazione);
-+ il codice prodotto dal gruppo deve rispettare le metriche di qualità identificate nel #pdq;
-+ il prodotto software deve soddisfare i bisogni e le richieste del Proponente, identificate nel #adr e catalogate in: obbligatorie, desiderabili e opzionali.
++ il codice prodotto deve seguire degli standard interni, definiti nella @processo_implementazione;
++ il codice prodotto dal gruppo deve rispettare i parametri di qualità attraverso il monitoraggio delle metriche identificate nel #pdq;
++ il prodotto software deve soddisfare i bisogni e le richieste del Proponente, identificate nel documento di #adr e catalogate in: obbligatorie, desiderabili e opzionali.
 
-==== Valutazione
+===== Valutazione
 
 La valutazione della qualità dei prodotti di progetto, dell'andamento del gruppo e dell'attuazione dei principi di qualità elencati in precedenza viene effettuata nei seguenti modi:
 
-- review delle pull request da parte del Verificatore:
+- review delle Pull Request da parte del Verificatore:
   - verifica dell'aderenza agli standard interni ed esterni;
-  - verifica della chiarezza e comprensibilità della documentazione;
-  - verifica della presenza di errori ortografici o di scrittura o esecuzione del codice.
-- testing del codice, come descritto nel presente documento (@processo_verifica);
-- revisioni complessive dei prodotti del progetto:
-  - effettuate in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro.
-- utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana);
+  - verifica della leggibilità, chiarezza e comprensibilità della documentazione;
+  - verifica dell'assenza di errori ortografici o sintattici nei documenti;
+  - verifica dell'assenza di errori nel codice (valutazione statica) e nell'esecuzione degli elementi software.
+- testing del codice, come descritto nel processo di integrazione (@processo_integrazione) e nel processo di verifica (@processo_verifica);
+- revisioni complessive degli elementi di configurazione in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro;
+- utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana) per l'individuazione tempestiva di anomalie o situazioni critiche;
 - comunicazione costante con il Proponente per raccogliere feedback e valutare l'adesione del lavoro alle sue richieste (@comunicazione_Proponente).
+
+===== Attuazione di azioni correttive
+L'attività di attuazione di azioni correttive consiste nei seguenti task:
++ individuazione delle parti degli elementi soggetti a configurazione da correggere;
++ segnalazione immediata delle parti da correggere al Responsabile, tramite canale Discord pubblicamente consultabile;
++ individuazione delle azioni correttive da compiere;
++ apertura dei relativi task di revisione su Jira;
++ assegnazione e svolgimento dei task con successiva verifica in sede di Pull Request.
 
 = Processi di gestione tecnica
 

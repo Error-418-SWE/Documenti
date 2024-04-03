@@ -211,8 +211,7 @@ Premendo il tasto destro del mouse e spostando il mouse in una delle quattro dir
 
 L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle frecce direzionali (o in alternativa i tasti W, A, S, D), che permettono il movimento nella direzione indicata dalla freccia. Con il tasto Shift è possibile aumentare la velocità di spostamento.
 
-== Visualizzazione zone, prodotti e ordini di movimentazione
-
+== Visualizzazione zone
 === Visualizzazione lista zone <visualizzazione_lista_zone>
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
@@ -233,40 +232,6 @@ Ad esso seguono le icone relative all'ispezione della zona (@ispezione_zona), ra
 
 Nel caso in cui venga creata una nuova zona (@creazione_zona), essa verrà aggiunta alla lista delle zone.
 Similmente, se una zona dovesse essere eliminata dall'ambiente, essa verrebbe rimossa dalla lista.
-
-=== Visualizzazione lista prodotti
-
-#figure(
-    grid(
-        columns: 2,
-        rows:    (auto, auto),
-        [ #image("./imgs/bottone_lista_prodotti.png", width: 50%)],
-        [ #image("./imgs/lista_prodotti.png", width: 60%)],
-    ),caption: [Icona "Prodotti" (sinistra), pannello contenente la lista prodotti (destra)],
-) <icona_lista_prodotti>
-
-Premendo il pulsante mostrato in @icona_lista_prodotti (sinistra) si aprirà il menù in @icona_lista_prodotti (destra) che contiene tutti i prodotti presenti nel database mostrati in una lista. Ogni prodotto riporta nome, Id, categoria e un pulsante con un icona a forma di occhio che permette di esaminare le informazioni ad esso associate.
-
-Esistono due liste di prodotti, "Collocati" e "Non Collocati": nella prima vengono riportati i prodotti contenuti in un bin e visualizzati nell'ambiente, nella seconda vengono riportati i prodotti che non sono contenuti all'interno di un bin e non sono visualizzati nell'ambiente.
-
-=== Visualizzazione lista movimentazione ordini
-
-#figure(
-    grid(
-        columns: 2,
-        rows:    (auto, auto),
-        [ #image("./imgs/bottone_lista_ordini.png", width: 45%)],
-        [ #image("./imgs/lista_ordini.png", width: 90%)],
-    ),caption: [Icona "Prodotti" (sinistra), pannello contenente la lista prodotti (destra)],
-) <icona_lista_ordini>
-
-Premendo il pulsante in @icona_lista_ordini (sinistra) si aprirà la lista visualizzata in @icona_lista_ordini (destra) che riporta tutti gli ordini di movimentazione effettuati nella sezione corrente. Per ogni ordine viene riportato il prodotto soggetto allo spostamento, il bin di partenza e quello di arrivo.
-
-=== Ricerca Zone e Prodotti
-
-Per facilitare la gestione del magazzino è possibile cercare una zona tramite il suo ID, basta inserirlo nella barra di ricerca mostrata in @icona_lista_zone (destra) che mostrerà come risultato tutte le le zone che contengono la sotto stringa inserita.
-
-Allo stesso modo nella sezione Prodotti mostrata in @icona_lista_prodotti (destra) è possibile ricercare un prodotto tramite il suo ID nell'apposita area di ricerca che mostra tutti i prodotti il cui ID contiene la sotto stringa inserita. È possibile inoltre filtrare i prodotti per la categoria di appartenenza cliccando sul pulsante "Categoria Prodotto" che mostrerà una lista contenente tutte le categorie merceologiche presenti nel database, cliccando sulla categoria che si interessa ricercare è possibile escludere tutti i prodotti non appartenenti alla categoria selezionata.
 
 === Ispezione zona <ispezione_zona>
 
@@ -330,6 +295,51 @@ Nella parte inferiore del pannello sono presenti i pulsanti contenenti le scritt
     Pulsante localizza zona
   ],
 ) <immagine_pulsante_localizza_zona>
+
+== Ispezione bin <ispezione_bin>
+#TODO // sezione già redatta in DOC-664
+
+== Visualizzazione prodotti
+=== Visualizzazione lista prodotti <visualizzazione_lista_prodotti>
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/bottone_lista_prodotti.png", width: 50%)],
+        [ #image("./imgs/lista_prodotti.png", width: 60%)],
+    ),caption: [Icona "Prodotti" (sinistra), pannello contenente la lista prodotti (destra)],
+) <icona_lista_prodotti>
+
+Premendo il pulsante mostrato in @icona_lista_prodotti (sinistra) si aprirà il menù in @icona_lista_prodotti (destra) che contiene tutti i prodotti presenti nel database mostrati in una lista. Ogni prodotto riporta nome, Id, categoria e un pulsante con un icona a forma di occhio che permette di esaminare le informazioni ad esso associate.
+
+Esistono due liste di prodotti, "Collocati" e "Non Collocati": nella prima vengono riportati i prodotti contenuti in un bin e visualizzati nell'ambiente, nella seconda vengono riportati i prodotti che non sono contenuti all'interno di un bin e non sono visualizzati nell'ambiente.
+
+=== Ispezione podotto <ispezione_prodotto>
+#TODO
+
+== Visualizzazione lista ordini di movimentazione
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/bottone_lista_ordini.png", width: 45%)],
+        [ #image("./imgs/lista_ordini.png", width: 90%)],
+    ),caption: [Icona "Prodotti" (sinistra), pannello contenente la lista prodotti (destra)],
+) <icona_lista_ordini>
+
+Premendo il pulsante in @icona_lista_ordini (sinistra) si aprirà la lista visualizzata in @icona_lista_ordini (destra) che riporta tutti gli ordini di movimentazione effettuati nella sezione corrente. Per ogni ordine viene riportato il prodotto soggetto allo spostamento, il bin di partenza e quello di arrivo.
+
+
+== Ricerca zone
+
+
+== Ricerca prodotti
+
+Per facilitare la gestione del magazzino è possibile cercare una zona tramite il suo ID, basta inserirlo nella barra di ricerca mostrata in @icona_lista_zone (destra) che mostrerà come risultato tutte le le zone che contengono la sotto stringa inserita.
+
+Allo stesso modo nella sezione Prodotti mostrata in @icona_lista_prodotti (destra) è possibile ricercare un prodotto tramite il suo ID nell'apposita area di ricerca che mostra tutti i prodotti il cui ID contiene la sotto stringa inserita. È possibile inoltre filtrare i prodotti per la categoria di appartenenza cliccando sul pulsante "Categoria Prodotto" che mostrerà una lista contenente tutte le categorie merceologiche presenti nel database, cliccando sulla categoria che si interessa ricercare è possibile escludere tutti i prodotti non appartenenti alla categoria selezionata.
 
 
 

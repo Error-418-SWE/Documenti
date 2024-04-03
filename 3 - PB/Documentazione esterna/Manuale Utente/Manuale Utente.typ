@@ -281,7 +281,7 @@ In esso vengono visualizzati:
 - *Lista dei Bin*: tabella che elenca, per tutti i bin della zona:
   - codice alfanumerico identificativo univoco del bin;
   - contenuto del bin ("Libero" se vuoto);
-  - pulsante per l'ispezione del bin (#TODO) se non vuoto.
+  - pulsante per l'ispezione del bin (@ispezione_bin) se non vuoto.
 
 \
 Nella parte inferiore del pannello sono presenti i pulsanti contenenti le scritte:
@@ -297,6 +297,73 @@ Nella parte inferiore del pannello sono presenti i pulsanti contenenti le scritt
   ],
 ) <immagine_pulsante_localizza_zona>
 
+== Ispezione bin <ispezione_bin>
+
+Successivamente alla creazione di una zona è possibile ispezionarne i bin singolarmente al fine di visualizzarne i dettagli specifici.
+
+Per eseguire tale operazione è possibile interagire con:
+
+  - il bin di interesse tramite un doppio click del tasto sinistro del mouse. Così facendo esso viene colorato di rosso (@immagini_opzioni_selezione_bin sinistra);
+
+  - il pulsante per l'ispezione del bin (@immagini_opzioni_selezione_bin destra) presente nella lista dei bin di una zona specifica (@ispezione_zona).
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/zona_bin_selezionato.png", width: 80%)],
+        [ #image("./imgs/pulsante_ispeziona_bin.png", width: 80%)],
+    ),caption: [Selezione di un bin (sinistra) e pulsante ispezione bin (destra)],
+) <immagini_opzioni_selezione_bin>
+
+\
+L'esecuzione di almeno una delle modalità elencate permette la visualizzazione, sulla destra dello schermo, del pannello relativo alle informazioni del bin di interesse (@immagine_pannello_ispezione_zona).
+
+In esso vengono visualizzati:
+
+  - *ID*: codice alfanumerico identificativo univoco della zona, è visualizzato anche come titolo del pannello.
+
+    Esso è composto da tre valori:
+
+      - l'ID della zona che lo contiene;
+
+      - una lettera dell'alfabeto inglese che identifica la colonna che lo contiene;
+
+      - numero del bin rispetto alla zona che lo contiene.
+
+
+  - *Dimensioni*: tre campi rispettivamente relativi a:
+
+    - *Lunghezza*: numero reale che definisce la lunghezza del bin;
+
+    - *Larghezza*: numero reale che definisce la larghezza del bin;
+
+    - *Altezza*: numero reale che definisce l'altezza del bin.
+
+  - *Area prodotto contenuto*: nel caso in cui il bin contenga un prodotto, vengono visualizzate le sue informazioni (#TODO), altrimenti viene data la possibilità di selezionare un prodotto non collocato da inserire nel bin.
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/pannello_bin_pieno.png", width: 80%)],
+        [ #image("./imgs/pannello_bin_vuoto.png", width: 80%)],
+    ),caption: [Pannello ispezione bin pieno (sinistra) e pannello ispezione bin vuoto (destra)],
+) <immagini_pannello_bin>
+
+\
+Per inserire un prodotto all'interno di un bin vuoto mediante la sua ispezione, è sufficiente premere sul pulsante contenente la scritta "Seleziona" e ricercare il prodotto desiderato dal relativo pannello sulla sinistra con le medesime modalità presenti nella ricerca di un prodotto (#TODO).
+
+Per confermare la scelta è necessario premere sul pulsante contenente la scritta "Conferma" (@immagine_pannello_inserimento_prodotto).
+
+Il pannello di ispezione del bin verrà aggiornato per contenere le nuove informazioni.
+
+#figure(
+  image("./imgs/pannello_inserimento_prodotto.png", width: 80%),
+  caption: [
+    Pannello di ricerca e inserimento di un prodotto nel bin
+  ],
+) <immagine_pannello_inserimento_prodotto>
 
 
 == Creazione zona <creazione_zona>

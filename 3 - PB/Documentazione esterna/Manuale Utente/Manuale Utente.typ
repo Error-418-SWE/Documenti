@@ -245,7 +245,7 @@ Similmente, se una zona dovesse essere eliminata dall'ambiente, essa verrebbe ri
     ),caption: [Icona "Prodotti" (sinistra), pannello contenente la lista prodotti (destra)],
 ) <icona_lista_prodotti>
 
-Premendo il pulsante mostrato in @icona_lista_prodotti (sinistra) si aprirà il menù in figura @icona_lista_prodotti (destra) che contiene tutti i prodotti presenti nel database mostrati in una lista. Ogni prodotto riporta nome, Id, categoria e un pulsante con un icona a forma di occhio che permette di esaminare le informazioni ad esso associate.
+Premendo il pulsante mostrato in @icona_lista_prodotti (sinistra) si aprirà il menù in @icona_lista_prodotti (destra) che contiene tutti i prodotti presenti nel database mostrati in una lista. Ogni prodotto riporta nome, Id, categoria e un pulsante con un icona a forma di occhio che permette di esaminare le informazioni ad esso associate.
 
 Esistono due liste di prodotti, "Collocati" e "Non Collocati": nella prima vengono riportati i prodotti contenuti in un bin e visualizzati nell'ambiente, nella seconda vengono riportati i prodotti che non sono contenuti all'interno di un bin e non sono visualizzati nell'ambiente.
 
@@ -260,13 +260,13 @@ Esistono due liste di prodotti, "Collocati" e "Non Collocati": nella prima vengo
     ),caption: [Icona "Prodotti" (sinistra), pannello contenente la lista prodotti (destra)],
 ) <icona_lista_ordini>
 
+Premendo il pulsante in @icona_lista_ordini (sinistra) si aprirà la lista visualizzata in @icona_lista_ordini (destra) che riporta tutti gli ordini di movimentazione effettuati nella sezione corrente. Per ogni ordine viene riportato il prodotto soggetto allo spostamento, il bin di partenza e quello di arrivo.
+
 === Ricerca Zone e Prodotti
 
-Per facilitare la gestione del magazzino è possibile cercare una zona tramite il suo ID, basta inserirlo nella barra di ricerca mostrata in @icona_lista_zone che mostrerà come risultato tutte le le zone che contengono la sotto stringa inserita.
+Per facilitare la gestione del magazzino è possibile cercare una zona tramite il suo ID, basta inserirlo nella barra di ricerca mostrata in @icona_lista_zone (destra) che mostrerà come risultato tutte le le zone che contengono la sotto stringa inserita.
 
-Verrà quindi mostrato il menù in @immagine_pannello_ispezione_zona dove vengono riportati l'ID della zona, i dati dimensionali e la lista di bin che la zona contiene.
-
-Allo stesso modo nella sezione Prodotti mostrata in @icona_lista_prodotti (centro) è possibile ricercare un prodotto tramite il suo ID nell'apposita area di ricerca che mostra tutti i prodotti il cui ID contiene la sotto stringa inserita. È possibile inoltre filtrare i prodotti per la categoria di appartenenza cliccando sul pulsante "Categoria Prodotto" che mostrerà una lista contenente tutte le categorie merceologiche presenti nel database, cliccando sulla categoria che si interessa ricercare è possibile escludere tutti i prodotti non appartenenti alla categoria selezionata.
+Allo stesso modo nella sezione Prodotti mostrata in @icona_lista_prodotti (destra) è possibile ricercare un prodotto tramite il suo ID nell'apposita area di ricerca che mostra tutti i prodotti il cui ID contiene la sotto stringa inserita. È possibile inoltre filtrare i prodotti per la categoria di appartenenza cliccando sul pulsante "Categoria Prodotto" che mostrerà una lista contenente tutte le categorie merceologiche presenti nel database, cliccando sulla categoria che si interessa ricercare è possibile escludere tutti i prodotti non appartenenti alla categoria selezionata.
 
 === Ispezione zona <ispezione_zona>
 

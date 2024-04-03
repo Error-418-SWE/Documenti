@@ -422,26 +422,33 @@ I membri dell'organizzazione sono prestabiliti. Qualora le competenze interne al
 
 Non sono previste variazioni della composizione dell'organizzazione, se non in via straordinaria e comunque discussa preventivamente con il Committente.
 
-=== Processo di gestione della qualità <processo_gestione_qualità>
+=== Processo di Gestione della Qualità <processo_gestione_qualità>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.5_
 
 ==== Scopo
+Il processo di Gestione della Qualità ha lo scopo di garantire che i prodotti e i servizi del progetto soddisfino gli obiettivi di qualità del gruppo e i bisogni del Proponente.
 
-Il processo di gestione della qualità ha lo scopo di garantire che i prodotti del progetto soddisfino gli obiettivi di qualità del gruppo e i bisogni del Proponente.
+==== Risultati
+Come risultato dell'efficace attuazione del processo di Gestione della Qualità:
+- vengono definiti e implementati gli obiettivi, le politiche e le procedure di Gestione della Qualità del gruppo;
+- vengono stabiliti i criteri e i metodi di valutazione della qualità;
+- vengono fornite risorse e informazioni al progetto per supportare l'operazione e il monitoraggio delle attività di garanzia della qualità del progetto;
+- vengono raccolti e analizzati i risultati delle valutazioni della garanzia della qualità;
+- le politiche e le procedure di Gestione della Qualità vengono migliorate basandosi sui risultati del progetto e dell'organizzazione.
 
-=== Attività
-==== Pianificazione
+==== Attività
 
+===== Pianificazione
 Il gruppo #err418 pone i seguenti principi di qualità:
 
-+ tutto il materiale presente nei branch principali della repository (`src` e di conseguenza `main`) deve essere di buona qualità:
-  - tutti i prodotti del gruppo devono essere gestiti tramite repository su GitHub (@repository-github), nelle quali deve essere implementato il sistema di _featuring branching_;
-  - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di pull request (@controllo_release).
++ il contenuto del branch principale delle repository (`src` e, di conseguenza, `main` per Documenti, e `dev` per WMS3) deve rispettare i criteri di qualità definiti nel #pdq e nella @processo_gestione_configurazione. Inoltre:
+  - tutti gli elementi di configurazione devono essere gestiti tramite repository su GitHub (@repository-github), con il sistema di _feature branching_;
+  - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di Pull Request (@controllo_release).
 + il contenuto della documentazione deve seguire i principi di redazione descritti nella @stile-convenzioni;
 + la documentazione prodotta deve seguire degli standard interni e/o esterni:
   - standard interni:
-    - vengono definiti nel presente documento alla @norme-documentazione.
+    - vengono definiti nel presente documento nella @norme-documentazione.
   - standard esterni:
     - il gruppo adotta i seguenti standard ISO:
     #figure(table(
@@ -452,23 +459,31 @@ Il gruppo #err418 pone i seguenti principi di qualità:
       [9126 1:2001], [#pdq],
     ), caption: [Tracciamento ISO-documenti])
     In particolare, per ogni processo interno al presente documento viene specificato il grado di conformità allo standard ISO/IEC/IEEE 12207:2017 all'interno di una sezione dedicata (@tracciamento_paragrafi).
-+ il codice prodotto deve seguire degli standard interni, definiti nel presente documento (@processo_implementazione);
-+ il codice prodotto dal gruppo deve rispettare le metriche di qualità identificate nel #pdq;
-+ il prodotto software deve soddisfare i bisogni e le richieste del Proponente, identificate nel #adr e catalogate in: obbligatorie, desiderabili e opzionali.
++ il codice prodotto deve seguire degli standard interni, definiti nella @processo_implementazione;
++ il codice prodotto dal gruppo deve rispettare i parametri di qualità attraverso il monitoraggio delle metriche identificate nel #pdq;
++ il prodotto software deve soddisfare i bisogni e le richieste del Proponente, identificate nel documento di #adr e catalogate in: obbligatorie, desiderabili e opzionali.
 
-==== Valutazione
+===== Valutazione
 
 La valutazione della qualità dei prodotti di progetto, dell'andamento del gruppo e dell'attuazione dei principi di qualità elencati in precedenza viene effettuata nei seguenti modi:
 
-- review delle pull request da parte del Verificatore:
+- review delle Pull Request da parte del Verificatore:
   - verifica dell'aderenza agli standard interni ed esterni;
-  - verifica della chiarezza e comprensibilità della documentazione;
-  - verifica della presenza di errori ortografici o di scrittura o esecuzione del codice.
-- testing del codice, come descritto nel presente documento (@processo_verifica);
-- revisioni complessive dei prodotti del progetto:
-  - effettuate in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro.
-- utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana);
+  - verifica della leggibilità, chiarezza e comprensibilità della documentazione;
+  - verifica dell'assenza di errori ortografici o sintattici nei documenti;
+  - verifica dell'assenza di errori nel codice (valutazione statica) e nell'esecuzione degli elementi software.
+- testing del codice, come descritto nel processo di integrazione (@processo_integrazione) e nel processo di verifica (@processo_verifica);
+- revisioni complessive degli elementi di configurazione in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro;
+- utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana) per l'individuazione tempestiva di anomalie o situazioni critiche;
 - comunicazione costante con il Proponente per raccogliere feedback e valutare l'adesione del lavoro alle sue richieste (@comunicazione_Proponente).
+
+===== Attuazione di azioni correttive
+L'attività di attuazione di azioni correttive consiste nei seguenti task:
++ individuazione delle parti degli elementi soggetti a configurazione da correggere;
++ segnalazione immediata delle parti da correggere al Responsabile, tramite canale Discord pubblicamente consultabile;
++ individuazione delle azioni correttive da compiere;
++ apertura dei relativi task di revisione su Jira;
++ assegnazione e svolgimento dei task con successiva verifica in sede di Pull Request.
 
 = Processi di gestione tecnica
 
@@ -1560,6 +1575,63 @@ Sono classificati per priorità e per fonte.
 ==== Analisi dei requisiti
 Il documento #adr raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
+
+== Processo di definizione dell'architettura <processo_definizione_architettura>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
+
+=== Scopo
+
+Il processo di definizione dell'architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
+
+Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (@processo_design).
+
+=== Preparazione e requisiti <preparazione_architettura>
+
+Il Progettista è il ruolo principale all'interno di questo processo. Il numero di persone assegnate a questo ruolo e le attività che esso dovrà svolgere vengono definite in maniera precisa durante la riunione di retrospettiva e la pianificazione dello _Sprint_ che la segue.
+
+È importante che il Progettista abbia una buona conoscenza dei pattern architetturali e dei concetti principali che riguardano la progettazione architetturale. In particolare, di ogni pattern deve conoscere:
+
+- definizione;
+- aspetti positivi e negativi.
+
+È essenziale, inoltre, la conoscenza degli obiettivi del prodotto e lo studio del documento #adr_v e delle tecnologie che il gruppo ha selezionato per la sua implementazione.
+
+=== Individuazione dell'architettura
+
+Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto da sviluppare, in modo da individuare le alternative più adatte.
+
+Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_ (@specifica_tecnica).
+
+È importante che nella scelta architetturale si mantenga un certo focus sulle caratteristiche principali di una buona architettura, riportate nell'elenco che segue:
+
+- *sufficienza*: deve soddisfare i requisiti;
+- *comprensibilità*: deve essere capita da tutti gli stakeholder;
+- *modularità*: deve essere composta da parti distinte;
+- *robustezza*: deve essere capace di gestire errori e condizioni limite;
+- *flessibilità*: deve essere facilmente modificabile;
+- *riusabilità*: le sue parti possono essere impiegate in altre applicazioni;
+- *disponibilità*: la sua manutenzione causa poca indisponibilità totale;
+- *sicurezza rispetto a malfunzionamenti*: deve funzionare anche in presenza di guasti;
+- *semplicità*: ogni parte contiene solo il necessario e niente di superfluo;
+- *incapsulazione*: deve nascondere all'esterno le parti interne dei suoi componenti;
+- *coesione*: deve raggruppare le parti che svolgono gli stessi compiti;
+- *basso accoppiamento*: parti distinte dipendono poco o niente le une dalle altre.
+
+==== Specifica Tecnica <specifica_tecnica>
+
+Insieme all'architettura del prodotto costituisce uno degli output principali del processo. In questo documento viene descritto il prodotto dal punto di vista tecnico, ovvero dal lato tecnologico e architetturale.
+
+Gli argomenti principali trattati nel documento sono due:
+
++ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto, ciascuna con relativa descrizione, versione di utilizzo e motivazione della scelta;
++ *architettura*: vengono presentate:
+  + *architettura logica*: descrizione dell'architettura del prodotto per componenti, ruoli, connessioni e interazioni;
+  + *architettura di deployment*: descrizione della procedura di deployment.
+
+Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
+
+
 == Processo di Definizione del Design <processo_design>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.5_
 === Scopo
@@ -1642,60 +1714,6 @@ L'attività consiste nei seguenti task:
     - il processo di Gestione delle Informazioni deve controllare gli elementi informativi, come descrizioni di progettazione e specifiche;
     - gli artefatti di design devono essere resi disponibili nel documento _Specifica Tecnica_.
 
-== Processo di definizione dell'architettura <processo_definizione_architettura>
-
-_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
-
-=== Scopo
-
-Il processo di definizione dell'architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
-
-Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (@processo_design).
-
-=== Preparazione e requisiti <preparazione_architettura>
-
-Il Progettista è il ruolo principale all'interno di questo processo. Il numero di persone assegnate a questo ruolo e le attività che esso dovrà svolgere vengono definite in maniera precisa durante la riunione di retrospettiva e la pianificazione dello _Sprint_ che la segue.
-
-È importante che il Progettista abbia una buona conoscenza dei pattern architetturali e dei concetti principali che riguardano la progettazione architetturale. In particolare, di ogni pattern deve conoscere:
-
-- definizione;
-- aspetti positivi e negativi.
-
-È essenziale, inoltre, la conoscenza degli obiettivi del prodotto e lo studio del documento #adr_v e delle tecnologie che il gruppo ha selezionato per la sua implementazione.
-
-=== Individuazione dell'architettura
-
-Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto da sviluppare, in modo da individuare le alternative più adatte.
-
-Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_ (@specifica_tecnica).
-
-È importante che nella scelta architetturale si mantenga un certo focus sulle caratteristiche principali di una buona architettura, riportate nell'elenco che segue:
-
-- *sufficienza*: deve soddisfare i requisiti;
-- *comprensibilità*: deve essere capita da tutti gli stakeholder;
-- *modularità*: deve essere composta da parti distinte;
-- *robustezza*: deve essere capace di gestire errori e condizioni limite;
-- *flessibilità*: deve essere facilmente modificabile;
-- *riusabilità*: le sue parti possono essere impiegate in altre applicazioni;
-- *disponibilità*: la sua manutenzione causa poca indisponibilità totale;
-- *sicurezza rispetto a malfunzionamenti*: deve funzionare anche in presenza di guasti;
-- *semplicità*: ogni parte contiene solo il necessario e niente di superfluo;
-- *incapsulazione*: deve nascondere all'esterno le parti interne dei suoi componenti;
-- *coesione*: deve raggruppare le parti che svolgono gli stessi compiti;
-- *basso accoppiamento*: parti distinte dipendono poco o niente le une dalle altre.
-
-==== Specifica Tecnica <specifica_tecnica>
-
-Insieme all'architettura del prodotto costituisce uno degli output principali del processo. In questo documento viene descritto il prodotto dal punto di vista tecnico, ovvero dal lato tecnologico e architetturale.
-
-Gli argomenti principali trattati nel documento sono due:
-
-+ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto, ciascuna con relativa descrizione, versione di utilizzo e motivazione della scelta;
-+ *architettura*: vengono presentate:
-  + *architettura logica*: descrizione dell'architettura del prodotto per componenti, ruoli, connessioni e interazioni;
-  + *architettura di deployment*: descrizione della procedura di deployment.
-
-Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
 
 == Processo di implementazione <processo_implementazione>
 

@@ -422,26 +422,33 @@ I membri dell'organizzazione sono prestabiliti. Qualora le competenze interne al
 
 Non sono previste variazioni della composizione dell'organizzazione, se non in via straordinaria e comunque discussa preventivamente con il Committente.
 
-=== Processo di gestione della qualità <processo_gestione_qualità>
+=== Processo di Gestione della Qualità <processo_gestione_qualità>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.5_
 
 ==== Scopo
+Il processo di Gestione della Qualità ha lo scopo di garantire che i prodotti e i servizi del progetto soddisfino gli obiettivi di qualità del gruppo e i bisogni del Proponente.
 
-Il processo di gestione della qualità ha lo scopo di garantire che i prodotti del progetto soddisfino gli obiettivi di qualità del gruppo e i bisogni del Proponente.
+==== Risultati
+Come risultato dell'efficace attuazione del processo di Gestione della Qualità:
+- vengono definiti e implementati gli obiettivi, le politiche e le procedure di Gestione della Qualità del gruppo;
+- vengono stabiliti i criteri e i metodi di valutazione della qualità;
+- vengono fornite risorse e informazioni al progetto per supportare l'operazione e il monitoraggio delle attività di garanzia della qualità del progetto;
+- vengono raccolti e analizzati i risultati delle valutazioni della garanzia della qualità;
+- le politiche e le procedure di Gestione della Qualità vengono migliorate basandosi sui risultati del progetto e dell'organizzazione.
 
-=== Attività
-==== Pianificazione
+==== Attività
 
+===== Pianificazione
 Il gruppo #err418 pone i seguenti principi di qualità:
 
-+ tutto il materiale presente nei branch principali della repository (`src` e di conseguenza `main`) deve essere di buona qualità:
-  - tutti i prodotti del gruppo devono essere gestiti tramite repository su GitHub (@repository-github), nelle quali deve essere implementato il sistema di _featuring branching_;
-  - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di pull request (@controllo_release).
++ il contenuto del branch principale delle repository (`src` e, di conseguenza, `main` per Documenti, e `dev` per WMS3) deve rispettare i criteri di qualità definiti nel #pdq e nella @processo_gestione_configurazione. Inoltre:
+  - tutti gli elementi di configurazione devono essere gestiti tramite repository su GitHub (@repository-github), con il sistema di _feature branching_;
+  - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di Pull Request (@controllo_release).
 + il contenuto della documentazione deve seguire i principi di redazione descritti nella @stile-convenzioni;
 + la documentazione prodotta deve seguire degli standard interni e/o esterni:
   - standard interni:
-    - vengono definiti nel presente documento alla @norme-documentazione.
+    - vengono definiti nel presente documento nella @norme-documentazione.
   - standard esterni:
     - il gruppo adotta i seguenti standard ISO:
     #figure(table(
@@ -452,23 +459,31 @@ Il gruppo #err418 pone i seguenti principi di qualità:
       [9126 1:2001], [#pdq],
     ), caption: [Tracciamento ISO-documenti])
     In particolare, per ogni processo interno al presente documento viene specificato il grado di conformità allo standard ISO/IEC/IEEE 12207:2017 all'interno di una sezione dedicata (@tracciamento_paragrafi).
-+ il codice prodotto deve seguire degli standard interni, definiti nel presente documento (@processo_implementazione);
-+ il codice prodotto dal gruppo deve rispettare le metriche di qualità identificate nel #pdq;
-+ il prodotto software deve soddisfare i bisogni e le richieste del Proponente, identificate nel #adr e catalogate in: obbligatorie, desiderabili e opzionali.
++ il codice prodotto deve seguire degli standard interni, definiti nella @processo_implementazione;
++ il codice prodotto dal gruppo deve rispettare i parametri di qualità attraverso il monitoraggio delle metriche identificate nel #pdq;
++ il prodotto software deve soddisfare i bisogni e le richieste del Proponente, identificate nel documento di #adr e catalogate in: obbligatorie, desiderabili e opzionali.
 
-==== Valutazione
+===== Valutazione
 
 La valutazione della qualità dei prodotti di progetto, dell'andamento del gruppo e dell'attuazione dei principi di qualità elencati in precedenza viene effettuata nei seguenti modi:
 
-- review delle pull request da parte del Verificatore:
+- review delle Pull Request da parte del Verificatore:
   - verifica dell'aderenza agli standard interni ed esterni;
-  - verifica della chiarezza e comprensibilità della documentazione;
-  - verifica della presenza di errori ortografici o di scrittura o esecuzione del codice.
-- testing del codice, come descritto nel presente documento (@processo_verifica);
-- revisioni complessive dei prodotti del progetto:
-  - effettuate in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro.
-- utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana);
+  - verifica della leggibilità, chiarezza e comprensibilità della documentazione;
+  - verifica dell'assenza di errori ortografici o sintattici nei documenti;
+  - verifica dell'assenza di errori nel codice (valutazione statica) e nell'esecuzione degli elementi software.
+- testing del codice, come descritto nel processo di integrazione (@processo_integrazione) e nel processo di verifica (@processo_verifica);
+- revisioni complessive degli elementi di configurazione in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro;
+- utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana) per l'individuazione tempestiva di anomalie o situazioni critiche;
 - comunicazione costante con il Proponente per raccogliere feedback e valutare l'adesione del lavoro alle sue richieste (@comunicazione_Proponente).
+
+===== Attuazione di azioni correttive
+L'attività di attuazione di azioni correttive consiste nei seguenti task:
++ individuazione delle parti degli elementi soggetti a configurazione da correggere;
++ segnalazione immediata delle parti da correggere al Responsabile, tramite canale Discord pubblicamente consultabile;
++ individuazione delle azioni correttive da compiere;
++ apertura dei relativi task di revisione su Jira;
++ assegnazione e svolgimento dei task con successiva verifica in sede di Pull Request.
 
 = Processi di gestione tecnica
 
@@ -1560,6 +1575,63 @@ Sono classificati per priorità e per fonte.
 ==== Analisi dei requisiti
 Il documento #adr raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
+
+== Processo di definizione dell'architettura <processo_definizione_architettura>
+
+_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
+
+=== Scopo
+
+Il processo di definizione dell'architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
+
+Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (@processo_design).
+
+=== Preparazione e requisiti <preparazione_architettura>
+
+Il Progettista è il ruolo principale all'interno di questo processo. Il numero di persone assegnate a questo ruolo e le attività che esso dovrà svolgere vengono definite in maniera precisa durante la riunione di retrospettiva e la pianificazione dello _Sprint_ che la segue.
+
+È importante che il Progettista abbia una buona conoscenza dei pattern architetturali e dei concetti principali che riguardano la progettazione architetturale. In particolare, di ogni pattern deve conoscere:
+
+- definizione;
+- aspetti positivi e negativi.
+
+È essenziale, inoltre, la conoscenza degli obiettivi del prodotto e lo studio del documento #adr_v e delle tecnologie che il gruppo ha selezionato per la sua implementazione.
+
+=== Individuazione dell'architettura
+
+Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto da sviluppare, in modo da individuare le alternative più adatte.
+
+Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_ (@specifica_tecnica).
+
+È importante che nella scelta architetturale si mantenga un certo focus sulle caratteristiche principali di una buona architettura, riportate nell'elenco che segue:
+
+- *sufficienza*: deve soddisfare i requisiti;
+- *comprensibilità*: deve essere capita da tutti gli stakeholder;
+- *modularità*: deve essere composta da parti distinte;
+- *robustezza*: deve essere capace di gestire errori e condizioni limite;
+- *flessibilità*: deve essere facilmente modificabile;
+- *riusabilità*: le sue parti possono essere impiegate in altre applicazioni;
+- *disponibilità*: la sua manutenzione causa poca indisponibilità totale;
+- *sicurezza rispetto a malfunzionamenti*: deve funzionare anche in presenza di guasti;
+- *semplicità*: ogni parte contiene solo il necessario e niente di superfluo;
+- *incapsulazione*: deve nascondere all'esterno le parti interne dei suoi componenti;
+- *coesione*: deve raggruppare le parti che svolgono gli stessi compiti;
+- *basso accoppiamento*: parti distinte dipendono poco o niente le une dalle altre.
+
+==== Specifica Tecnica <specifica_tecnica>
+
+Insieme all'architettura del prodotto costituisce uno degli output principali del processo. In questo documento viene descritto il prodotto dal punto di vista tecnico, ovvero dal lato tecnologico e architetturale.
+
+Gli argomenti principali trattati nel documento sono due:
+
++ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto, ciascuna con relativa descrizione, versione di utilizzo e motivazione della scelta;
++ *architettura*: vengono presentate:
+  + *architettura logica*: descrizione dell'architettura del prodotto per componenti, ruoli, connessioni e interazioni;
+  + *architettura di deployment*: descrizione della procedura di deployment.
+
+Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
+
+
 == Processo di Definizione del Design <processo_design>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.5_
 === Scopo
@@ -1642,60 +1714,6 @@ L'attività consiste nei seguenti task:
     - il processo di Gestione delle Informazioni deve controllare gli elementi informativi, come descrizioni di progettazione e specifiche;
     - gli artefatti di design devono essere resi disponibili nel documento _Specifica Tecnica_.
 
-== Processo di definizione dell'architettura <processo_definizione_architettura>
-
-_Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
-
-=== Scopo
-
-Il processo di definizione dell'architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
-
-Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (@processo_design).
-
-=== Preparazione e requisiti <preparazione_architettura>
-
-Il Progettista è il ruolo principale all'interno di questo processo. Il numero di persone assegnate a questo ruolo e le attività che esso dovrà svolgere vengono definite in maniera precisa durante la riunione di retrospettiva e la pianificazione dello _Sprint_ che la segue.
-
-È importante che il Progettista abbia una buona conoscenza dei pattern architetturali e dei concetti principali che riguardano la progettazione architetturale. In particolare, di ogni pattern deve conoscere:
-
-- definizione;
-- aspetti positivi e negativi.
-
-È essenziale, inoltre, la conoscenza degli obiettivi del prodotto e lo studio del documento #adr_v e delle tecnologie che il gruppo ha selezionato per la sua implementazione.
-
-=== Individuazione dell'architettura
-
-Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto da sviluppare, in modo da individuare le alternative più adatte.
-
-Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_ (@specifica_tecnica).
-
-È importante che nella scelta architetturale si mantenga un certo focus sulle caratteristiche principali di una buona architettura, riportate nell'elenco che segue:
-
-- *sufficienza*: deve soddisfare i requisiti;
-- *comprensibilità*: deve essere capita da tutti gli stakeholder;
-- *modularità*: deve essere composta da parti distinte;
-- *robustezza*: deve essere capace di gestire errori e condizioni limite;
-- *flessibilità*: deve essere facilmente modificabile;
-- *riusabilità*: le sue parti possono essere impiegate in altre applicazioni;
-- *disponibilità*: la sua manutenzione causa poca indisponibilità totale;
-- *sicurezza rispetto a malfunzionamenti*: deve funzionare anche in presenza di guasti;
-- *semplicità*: ogni parte contiene solo il necessario e niente di superfluo;
-- *incapsulazione*: deve nascondere all'esterno le parti interne dei suoi componenti;
-- *coesione*: deve raggruppare le parti che svolgono gli stessi compiti;
-- *basso accoppiamento*: parti distinte dipendono poco o niente le une dalle altre.
-
-==== Specifica Tecnica <specifica_tecnica>
-
-Insieme all'architettura del prodotto costituisce uno degli output principali del processo. In questo documento viene descritto il prodotto dal punto di vista tecnico, ovvero dal lato tecnologico e architetturale.
-
-Gli argomenti principali trattati nel documento sono due:
-
-+ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto, ciascuna con relativa descrizione, versione di utilizzo e motivazione della scelta;
-+ *architettura*: vengono presentate:
-  + *architettura logica*: descrizione dell'architettura del prodotto per componenti, ruoli, connessioni e interazioni;
-  + *architettura di deployment*: descrizione della procedura di deployment.
-
-Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
 
 == Processo di implementazione <processo_implementazione>
 
@@ -1777,43 +1795,101 @@ L'elemento implementato deve essere approvato durante il processo di verifica (@
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.8_
 
 === Scopo
-Il processo di integrazione ha lo scopo di combinare iterativamente elementi software al fine di ottenere un prodotto che soddisfi i requisiti rispettando l'architettura e il design definiti.
-È quindi necessario il coordinamento con il processo di definizione dell'architettura (@processo_definizione_architettura) e il processo di design (@processo_design).
+
+Il processo di integrazione ha lo scopo di combinare iterativamente un insieme di elementi software al fine di ottenere un prodotto che soddisfi i requisiti, rispettando l'architettura e il design definiti.
+
+Di conseguenza, esso viene attuato in coordinamento con:
+- il processo di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni);
+- il processo di definizione dell'architettura (@processo_definizione_architettura).
+- il processo di definizione del design (@processo_design);
 
 L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la Continuous Integration.
 
-
 === Risultati
+
 Come risultato della corretta implementazione del processo di integrazione:
-- viene integrato il nuovo elemento software con il prodotto principale;
-- vengono eseguiti automaticamente i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione;
-- vengono identificati i risultati ed eventuali anomalie;
-- i risultati dei test vengono registrati e possono essere visualizzati su GitHub;
-- gli elementi correttamente integrati vengono tracciati e possono essere visualizzati su GitHub.
+
+- i nuovi elementi software implementati sono integrati con la _codebase_ esistente;
+- il sistema software è composto dall'integrazione degli elementi software implementati;
+- i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione sono eseguiti automaticamente;
+- le interfacce tra gli elementi software sono definite, implementate e aggiornate;
+- le interfacce tra il sistema software e gli elementi esterni sono definite, implementate e aggiornate;
+- gli strumenti di supporto al processo di integrazione sono individuati, configurati e in funzione;
+- i risultati dell'integrazione sono identificati, assieme ad eventuali anomalie;
+- i risultati dei test sono registrati e possono essere visualizzati dai membri del gruppo.
 
 === Attività
-==== Pianificazione della strategia di integrazione
 
-  La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche "Continuous Integration" e "Continuous Deployment", al fine di garantire un frequente allineamento degli ambienti di lavoro tra i membri e avere costantemente la versione più aggiornata del prodotto disponibile e funzionante.
-  Essa prevede la gestione dell'integrazione degli elementi software e dell'esecuzione dei test di unità, integrazione e non regressione mediante automazioni GitHub Actions.
-  Testare automaticamente il prodotto ad ogni iterazione garantisce inoltre il rispetto dei requisiti descritti nel documento #adr_v e i processi di verifica.
-  A supporto dell'integrazione ed il deployment è inoltre presente un Virtual Private Server su Azure che esegue Docker.
+==== Definizione della strategia di integrazione
 
-==== Esecuzione
+La strategia individuata deve garantire il coordinamento tempestivo delle attività dei processi di implementazione e di integrazione.
 
-  Gli elementi software implementati attivano il processo di integrazione dal momento in cui le modifiche presenti nella pull request vengono approvate da un Verificatore, il quale attua la funzione di merge.
-  Le GitHub Action provvedono a:
-  - costruire l'immagine Docker e pubblicarla su Docker Hub e GitHub Container Registry tramite la action "build_docker", le cui caratteristiche e job sono descritti nel file _build_docker.yml_;
-  - copiare il contenuto del repository sul Virtual Private Server e proseguire con l'avvio di Docker Compose tramite il file _deploy.yml_;
-  - creare, tramite la action "tag_semver", le cui caratteristiche e job sono descritti nel file _tag_semver.yml_, un tag di versione semantica per ogni push sul branch di development del Version Control System. Tale tag viene pubblicato su GitHub e viene creata una release;
-  - l'esecuzione dei test avviene tramite la action "test_nodejs", le cui caratteristiche e job sono descritti nel file _test_nodejs.yml_.
+La strategia di integrazione definita dal gruppo si basa sull'adozione delle pratiche di _Continuous Integration_ (CI) e _Continuous Deployment_ (CD), al fine di permettere un frequente allineamento degli ambienti di lavoro tra i membri e garantire che la versione più aggiornata del prodotto sia sempre disponibile, funzionante e verificata.
 
-==== Gestione dei risultati
-  I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a causa dell'approvazione della pull request. Le GitHub Actions prevedono la visualizzazione di messaggi che descrivono gli eventuali errori insorti oppure, in loro assenza, della corretta esecuzione dell'automazione.
+Tale strategia prevede l'esecuzione di test di unità e di integrazione negli ambienti locali di sviluppo e nel repository centrale, tramite GitHub Actions.
 
-  I test automatici forniscono un resoconto di tutti i test svolti con i relativi esiti nei log della GitHub Action corrispondente.
+La strategia di integrazione prevede il coordinamento con:
+- il processo di Verifica (@processo_verifica), per:
+  + fornire evidenza obiettiva che il sistema software integrato soddisfi i requisiti;
+  + identificare e risolvere le anomalie riscontrate, sia nel software che negli elementi ad esso associati quali requisiti, test, architettura e design.
+- il processo di Validazione (@processo_validazione), per confermare che il sistema software integrato soddisfi gli scopi e le funzionalità previste;
+- il processo di Controllo della Qualità (@processo_controllo_qualità) per supportare la verifica e la validazione del sistema software integrato, individuare e risolvere i problemi e le inconformità.
 
-  Su GitHub è possibile visualizzare l'insieme delle pull request approvate e correttamente integrate, in questo modo è possibile tenere traccia degli elementi che costituiscono il prodotto.
+===== Identificazione dei criteri di integrazione
+
+L'integrazione degli elementi software deve avvenire in modo incrementale, e deve risultare nella creazione di un sistema software integrato eseguibile senza errori e consistente con l'architettura e il design definiti. Il soddisfacimento dei requisiti funzionali e non funzionali descritti nel documento #adr_v è conseguito incrementalmente come risultato dei passaggi di integrazione.
+
+===== Identificazione dei servizi abilitanti
+
+Il gruppo si dota dei seguenti strumenti e servizi abilitanti per implementare la strategia di integrazione:
+- GitHub Actions, per l'automazione delle attività di integrazione e di verifica nel repository GitHub;
+- Node.js (npm) e Jest, per l'esecuzione dei test negli ambienti di sviluppo locali;
+- Coveralls, per la valutazione della copertura dei test eseguiti;
+- Jira, per la registrazione dei risultati dei test e delle anomalie riscontrate.
+
+L'uso degli strumenti e dei servizi abilitanti è regolato nell'ambito del processo di verifica (@processo_verifica).
+
+==== Attuazione della strategia di integrazione
+
+L'integrazione degli elementi software implementati avviene attuando quanto prescritto dalla strategia di integrazione, utilizzando le procedure e i servizi abilitanti individuati.
+
+L'attuazione successiva della strategia di integrazione prosegue fino a che il sistema software completo risponde a tutte le caratteristiche individuate e descritte nel documento #adr_v.
+
+L'integrazione degli elementi software, individuati e specificati tramite i processi di definizione dell'architettura (@processo_definizione_architettura) e di definizione del design (@processo_design), avviene elemento per elemento, secondo l'ordine di implementazione stabilito durante la pianificazione delle attività. Qualora un elemento software non fosse ancora disponibile per l'integrazione, la funzionalità può essere temporaneamente simulata tramite l'uso di _mock_ o _stub_. Prima di convalidarne la conformità, il sistema software così integrato viene sottoposto a verifica e validazione per garantire che soddisfi i requisiti e le aspettative degli stakeholder.
+
+A seguito di tali attività, il Programmatore invia i cambiamenti proposti al repository, tramite il meccanisimo descritto nella @controllo_release. Il Verificatore può approvare la Pull Request e, tramite la funzione di _merge_, integrare l'elemento software implementato nel sistema software. A supporto di tale operazione, è prevista l'esecuzione di GitHub Actions che provvedono a:
+- creare e associare al sistema integrato, tramite la action `tag_semver.yml`, un tag di versione semantica per identificare univocamente la release. Il versionamento avviene in accordo con la @versionamento_software. Lo step di versionamento predefinito è di livello "patch" (es. `1.0.0` #sym.arrow.r `1.0.1`), ma può essere esplicitato dal Programmatore nel messaggio di commit tramite i modificatori:
+  - `#patch`, per incrementare il numero di patch (z);
+  - `#minor`, per incrementare il numero di minor (y).
+- costruire un artefatto sotto forma di immagine Docker, e pubblicarlo sui _container registries_ Docker Hub e GitHub Container Registry tramite la action `build_docker` (`build_docker.yml`);
+- calcolare la copertura dei test eseguiti sul sistema integrato con Coveralls, e pubblicarla come report sulla Pull Request tramite la action `test_nodejs.yml`;
+
+==== Gestione dei risultati di integrazione
+
+I risultati delle attività di integrazione includono:
+- il sistema software integrato;
+- il responso dell'esecuzione delle attività di testing automatico;
+- il risultato delle attività di verifica e validazione svolte dal Verificatore;
+- l'identificazione e la risoluzione dei problemi di integrazione tra elementi software;
+- quando applicabile, l'identificazione e la risoluzione delle anomalie imputabili agli strumenti o alle modalità di integrazione adottate (si rimanda al processo di Controllo della Qualità, @processo_controllo_qualità).
+
+Il sistema software integrato rappresenta una *baseline di prodotto*.
+
+I risultati sono registrati nel repository GitHub e nell'ITS adottato dal gruppo. Quando necessario, i risultati delle attività di integrazione possono essere condivisi con:
+- l'Amministratore per la risoluzione di problemi legati agli strumenti abilitanti o per l'adozione di altre misure correttive, in accordo con le parti coinvolte;
+- il Proponente e/o il Committente per la convalida del sistema software integrato.
+
+===== Tracciabilità degli elementi del sistema software
+
+La tracciabilità tra gli elementi del sistema software, la Pull Request associata, e i requisiti avviene per mezzo di Jira. I ticket direttamente associabili ad un requisito ne riportano il codice identificativo nell'apposito campo. In questo modo, è possibile risalire a quali elementi del sistema software soddisfino un determinato requisito e, di conseguenza, quale sia lo stato di avanzamento del progetto in termini di requisiti soddisfatti.
+
+Tramite GitHub, è inoltre reso disponibile un registro delle Pull Request approvate (e dunque integrate) o chiuse/rifiutate, liberamente consultabile da tutti i membri del gruppo.
+
+Dopo l'approvazione, a ciascun sistema software risultato dell'integrazione di elementi software implementati sarà associato un numero di versione (come descritto nella @versionamento_software). Questo numero di versione sarà utilizzato per identificare il sistema software e per tracciare le modifiche apportate nel tempo. In accordo con quanto descritto in questa sezione, ad un numero di versione superiore corrisponderà un numero di requisiti soddisfatti superiore.
+
+Ciascuna versione del sistema software integrato, intesa come artefatto eseguibile, dovrà essere conservata e resa disponibile per il download tramite le apposite funzionalità di GitHub.
+
+I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'apertura o chiusura di una Pull Request. Le GitHub Actions devono prevedere la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'integrazione.
 
 == Processo di verifica <processo_verifica>
 
@@ -1971,61 +2047,78 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.11_
 
 === Scopo
 
-Il processo di Validazione si occupa di fornire prove oggettive che il sistema soddisfi i requisiti esposti dal Proponente descritti nell'#adr.
+Il processo di Validazione si occupa di fornire prove oggettive che il sistema soddisfi i requisiti del Proponente, descritti nel documento #adr_v.
 
-Lo scopo del processo è quindi quello di accertare l'abilità del sistema, o di un suo specifico elemento, di soddisfare in determinate specifiche condizioni operative l'obiettivo per cui è stato creato.
+Lo scopo del processo è quindi accertare la capacità del sistema, o di un suo elemento, di soddisfare, in specifiche condizioni operative, l'obiettivo per cui è stato creato.
 
 === Risultati
 
-Come risultato della corretta implementazione del processo di Validazione otteniamo:
-- individuazione di limiti e vincoli che influenzano i requisiti, il design e l'architettura;
-- feedback da parte del Proponente in merito al lavoro svolto;
-- evidenza che il sistema o l'elemento di sistema soddisfa i bisogni del Proponente.
+Come risultato della corretta implementazione del processo di Validazione si ottiene:
+- individuazione di limiti e vincoli che influenzano i requisiti, il design e l'architettura del sistema;
+- feedback da parte del Proponente in merito allo stato di avanzamento e qualità del lavoro svolto;
+- evidenza che il sistema, o l'elemento di sistema, soddisfi i requisiti dichiarati;
+- tracciamento di eventuali anomalie riscontrate.
+
 
 === Attività
-==== Preparazione alla validazione
-La validazione viene svolta prima internamente al gruppo, il Programmatore deve fornire un elemento software che soddisfi le indicazioni date dal Progettista e che possieda le qualità minime di accettabilità per passare la revisione del Verificatore come descritto nei paragrafi del processo di implementazione (@processo_implementazione), di integrazione (@processo_integrazione), e di verifica (@processo_verifica). Il sistema si ritiene quindi in uno stato accettabile, anche se incompleto, e pronto per essere mostrato al Proponente.
+==== Validazione interna
 
-==== Effettuare la validazione
-Il gruppo pianifica dei meeting settimanali con il Proponente per esaminare lo stato di avanzamento dei lavori. Qui viene quindi mostrato il sistema in funzione (definito come MVC (_Minimum Viable Product_) in quanto il sistema potrebbe ancora non essere del tutto rifinito e presentare problematiche in determinate circostanze o assenze di funzionalità perché ancora non del tutto implementate), con particolare enfasi sulle novità introdotte e le difficoltà incontrate. Il Proponente fornisce quindi feedback riguardo l'adempimento dei bisogni espressi, e aiuta il gruppo chiarendo particolari inerenti la realtà di riferimento a cui il sistema è indirizzato.
+Dopo aver apportato avanzamenti al software e a seguito dell'attuazione del processo di verifica (@processo_verifica), devono avvenire delle analisi e test manuali per constatare lo stato di soddisfacimento dei requisiti. I risultati di tali analisi devono essere discussi durante i meeting di retrospettiva in quanto fondamentali per la pianificazione delle future attività.
+I test manuali precedentemente menzionati devono avvenire mediante l'utilizzo di Docker Compose, permettendo così l'esecuzione su un ambiente con caratteristiche standard, e prevedono l'esecuzione manuale delle funzionalità implementate atte a soddisfare i requisiti definiti.
 
-==== Gestire i risultati della validazione
-In seguito alle direttive del Proponente, l'elemento software viene adattato per affrontare eventuali criticità emerse durante il processo, potenzialmente influenzando l'architettura, il design e i requisiti.
-Una volta che il sistema o un elemento di sistema viene approvato da Verificatore, Progettista e Proponente viene quindi considerato come abile a soddisfare i requisiti descritti nell'#adr nella maniera descritta dal design ed esplicitata dall'architettura individuata con le tecnologie individuate durante RTB. L'adempimento di requisiti da parte di uno specifico elemento di sistema viene quindi tracciato all'interno del documento di #st.
+
+==== Validazione esterna
+
+Al fine di esaminare lo stato di avanzamento dei lavori, il gruppo deve pianificare dei meeting settimanali con il Proponente, al quale deve venire presentato il sistema in funzione.
+
+Il feedback ricevuto dal Proponente durante questi meeting è essenziale per il proseguimento dei lavori e la loro pianificazione.
+Al termine del meeting, il gruppo dovrà effettuare una riunione interna per discutere dei feedback ricevuti e valutare, se necessario, azioni correttive da applicare.
+
+Nel momento in cui il gruppo avrà soddisfatto tutti i requisiti obbligatori definiti nel documento #adr_v e implementato tutte le funzionalità desiderate, dovrà avvenire il meeting esterno di validazione finale del software. Il gruppo presenterà il prodotto sviluppato al Proponente, il quale, a seguito di un'attenta analisi, potrà affermare il totale adempimento dei requisiti obbligatori e delle funzionalità concordate, riconoscendo il prodotto sviluppato come Minimum Viable Product (MVP) atteso dal capitolato.
+
+==== Gestione dei risultati della validazione
+
+Nel caso in cui il software venga riconosciuto come MVP e approvato definitivamente dal Proponente, il lavoro su di esso deve subire una riduzione di priorità o arrestarsi totalmente, dando maggiore importanza all'eventuale documentazione incompleta in vista della revisione PB.
+L'adempimento dei requisiti da parte del prodotto sviluppato deve essere tracciato all'interno del documento #st_v.
+
+Contrariamente, nel caso in cui emergano problematiche o mancanze, esse devono venire discusse e affrontate in un meeting interno al fine di eseguire una mirata pianificazione dei task correttivi.
+Questi ultimi vengono registrati su Jira in modo tale da ottenere maggiore chiarezza riguardo l'organizzazione del gruppo e l'avanzamento dei lavori.
+Tali considerazioni e decisioni prese devono essere presenti nel verbale conseguente al relativo meeting interno.
+
 
 #pagebreak()
 
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
 
 La tabella di seguito riportata consente di associare ogni capitolo del documento al rispettivo capitolo dello standard di riferimento. Viene riportato anche il grado di conformità:
-- *To outcome* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
+- *To outcomes* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
 - *Full* indica che il capitolo riporta fedelmente le indicazioni dello standard con poche o nessuna azione di adeguamento.
 
 #figure(
   table(
     columns: 3,
     [*Capitolo Norme*],[*Capitolo Standard*],[*Conformance Level*],
-    [@processo_fornitura],[6.1.2 - Supply process],[To outcome],
-    [@processo_ciclo_di_vita],[6.2.1 - Life cycle model management process],[To outcome],
-    [@processo_risorse_umane],[6.2.4 - Human Resource Management process],[To outcome],
-    [@processo_gestione_qualità],[6.2.5 - Quality Management process],[To outcome],
-    [@pianificazione],[6.3.1 - Project Planning process],[To outcome],
+    [@processo_fornitura],[6.1.2 - Supply process],[To outcomes],
+    [@processo_ciclo_di_vita],[6.2.1 - Life cycle model management process],[To outcomes],
+    [@processo_risorse_umane],[6.2.4 - Human Resource Management process],[To outcomes],
+    [@processo_gestione_qualità],[6.2.5 - Quality Management process],[To outcomes],
+    [@pianificazione],[6.3.1 - Project Planning process],[To outcomes],
     [@valutazioneControllo],[6.3.2 - Project assessment and control process],[Full],
     [@processo_gestione_decisioni],[6.3.3 - Decision Management process],[Full],
     [@processo_gestione_rischi],[6.3.4 - Risk Management process],[Full],
-    [@processo_gestione_configurazione],[6.3.5 - Configuration Management process],[To outcome],
-    [@processo_gestione_informazioni],[6.3.6 - Information Management process],[To outcome],
-    [@processo_misurazione],[6.3.7 - Measurement process],[To outcome],
+    [@processo_gestione_configurazione],[6.3.5 - Configuration Management process],[To outcomes],
+    [@processo_gestione_informazioni],[6.3.6 - Information Management process],[To outcomes],
+    [@processo_misurazione],[6.3.7 - Measurement process],[To outcomes],
     [@processo_controllo_qualità],[6.3.8 - Quality Assurance process],[Full],
     [@processo_missione],[6.4.1 - Business or Mission Analysis process],[Full],
-    [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcome],
-    [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcome],
-    [@processo_design],[6.4.5 - Design Definition process],[To outcome],
-    [@processo_implementazione],[6.4.7 - Implementation process],[To outcome],
-    [@processo_integrazione],[6.4.8 - Integration process],[To outcome],
-    [@processo_verifica],[6.4.9 - Verification process],[To outcome],
-    [@processo_transizione],[6.4.10 - Transition process],[To outcome],
-    [@processo_validazione],[6.4.11 - Validation process],[To outcome],
+    [@processo_bisogni],[6.4.2 - Stakeholder Needs and Requirements Definition process],[To outcomes],
+    [@processo_definizione_architettura],[6.4.4 - Architecture Definition process],[To outcomes],
+    [@processo_design],[6.4.5 - Design Definition process],[To outcomes],
+    [@processo_implementazione],[6.4.7 - Implementation process],[To outcomes],
+    [@processo_integrazione],[6.4.8 - Integration process],[To outcomes],
+    [@processo_verifica],[6.4.9 - Verification process],[To outcomes],
+    [@processo_transizione],[6.4.10 - Transition process],[To outcomes],
+    [@processo_validazione],[6.4.11 - Validation process],[To outcomes],
   ),
   caption: "Tracciamento paragrafi ISO/IEC/IEEE 12207:2017"
 )

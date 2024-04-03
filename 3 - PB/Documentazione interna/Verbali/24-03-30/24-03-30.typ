@@ -24,7 +24,7 @@
 
 = Valutazione del progresso generale <avanzamento>
 
-Lo Sprint 21 è servito al gruppo per terminare gli ultimi lavori in previsione del colloquio PB.
+Lo Sprint 21 è servito al gruppo per pianificare e continuare gli ultimi lavori in previsione del colloquio PB.
 
 == #ndp
 
@@ -55,8 +55,6 @@ Sono state aggiornate e revisionate le seguenti sezioni:
 
 = Analisi retrospettiva
 
-#TODO
-
 Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq\:
 
 - CPI di progetto a #TODO, rappresenta un valore accettabile ($>=0.95$) e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
@@ -81,5 +79,26 @@ Il gruppo attende la valutazione della nuova versione del documento #adr da part
 Vista la concomitanza con le vacanze pasquali il gruppo spera di poter sostenere almeno il primo colloquio con il #cardin entro lo Sprint 22.
 
 Il gruppo prosegue con la correzione e il miglioramento dei documenti, continua inoltre la ricerca di bug all'interno del MVP.
+
+= Pianificazione <pianificazione>
+
+#show figure: set block(breakable: true)
+
+#let table-json(data) = {
+  let keys = data.at(0).keys()
+  table(
+    align: left,
+    columns: keys.len(),
+    ..keys,
+    ..data.map(
+      row => keys.map(
+        key => row.at(key, default: [n/a])
+      )
+    ).flatten()
+  )
+}
+#figure(caption: [Task pianificate per lo Sprint 22.],
+  table-json(json("tasks.json"))
+)
 
 

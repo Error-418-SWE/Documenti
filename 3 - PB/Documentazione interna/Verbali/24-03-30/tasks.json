@@ -1,0 +1,57 @@
+[
+	{
+		"Descrizione": "Redigere sezione grid",
+		"ID task": "DOC-660",
+		"Ruolo": "Programmatore"
+	},
+	{
+		"Descrizione": "Redigere sezione ispezione bin",
+		"ID task": "DOC-664",
+		"Ruolo": "Programmatore"
+	},
+	{
+		"Descrizione": "Redigere sezione collocazione zona nell'ambiente 3D",
+		"ID task": "DOC-665",
+		"Ruolo": "Programmatore"
+	},
+	{
+		"Descrizione": "Redigere sezione ricerca zona",
+		"ID task": "DOC-667",
+		"Ruolo": "Programmatore"
+	},
+	{
+		"Descrizione": "Redigere sezione spostamento POV su bin",
+		"ID task": "DOC-669",
+		"Ruolo": "Programmatore"
+	},
+	{
+		"Descrizione": "Redigere sezione visualizzazione informazione prodotto",
+		"ID task": "DOC-670",
+		"Ruolo": "Programmatore"
+	},
+	{
+		"Descrizione": "Redigere sezione visualizzazione lista prodotti",
+		"ID task": "DOC-671",
+		"Ruolo": "Programmatore"
+	},
+	{
+		"Descrizione": "Redigere sezione ricerca prodotti",
+		"ID task": "DOC-672",
+		"Ruolo": "Programmatore"
+	},
+	{
+		"Descrizione": "Redigere sezione visualizzazione lista ordini movimentazione",
+		"ID task": "DOC-673",
+		"Ruolo": "Programmatore"
+	},
+	{
+		"Descrizione": "Redigere sezione visualizzazione singolo ordine movimentazione",
+		"ID task": "DOC-674",
+		"Ruolo": "Programmatore"
+	},
+	{
+		"Descrizione": "Aggiornare immagini",
+		"ID task": "DOC-675",
+		"Ruolo": "Programmatore"
+	}
+]

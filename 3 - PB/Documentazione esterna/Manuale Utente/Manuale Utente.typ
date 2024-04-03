@@ -382,7 +382,7 @@ Nel caso in cui la zona fosse in collisione con altri elementi dell'ambiente di 
 
 === Griglia
 
-Per agevolare il posizionamento di una zona durante la fase di spostamento, è possibile usufruire della "Griglia" tramite il relativo pannello (@immagine_grid) presente nella parte inferiore destra dello schermo.
+Per agevolare il posizionamento di una zona durante la fase di spostamento, è possibile usufruire di una griglia tramite il relativo pannello presente nella parte inferiore destra dello schermo (@immagine_grid).
 
 #figure(
   image("./imgs/grid.png", width: 50%),

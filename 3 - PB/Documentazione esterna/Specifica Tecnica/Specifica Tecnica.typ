@@ -494,7 +494,7 @@ Il Repository Pattern permette di separare la logica di business dalla logica di
 
 \
 *Interfaccia implementata*
-- *DataMapperInterface*: interfaccia che definisce i metodi per la creazione di oggetti a partire dai dati letti dal database.
+- *DataRepositoryInterface*: interfaccia che definisce i metodi per il retrive dei dati dal database.
   - *Metodi:*
     - *getAll*:
       - *obiettivo: * ottenere tutte le informazioni relative agli oggetti;
@@ -512,7 +512,7 @@ Il Repository Pattern permette di separare la logica di business dalla logica di
 \
 *Classi implementate*
 
-L'interfaccia `DataMapperInterface` è implementata dalle seguenti classi:
+L'interfaccia `DataRepositoryInterface` è implementata dalle seguenti classi:
 
 - *productRepository*: è responsabile dell'ottenimento dei dati relativi agli oggetti `Product`.
   - *Metodi*:

@@ -211,7 +211,7 @@ Premendo il tasto destro del mouse e spostando il mouse in una delle quattro dir
 
 L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle frecce direzionali (o in alternativa i tasti W, A, S, D), che permettono il movimento nella direzione indicata dalla freccia. Con il tasto Shift è possibile aumentare la velocità di spostamento.
 
-== Visualizzazione zone
+== Visualizzazione zone, prodotti e ordini di movimentazione
 
 === Visualizzazione lista zone <visualizzazione_lista_zone>
 
@@ -223,16 +223,50 @@ Selezionando da esso la prima icona (@icona_lista_zone sinistra), la quale corri
     grid(
         columns: 2,
         rows:    (auto, auto),
-        [ #image("./imgs/pulsante_zone.png", width: 70%)],
-        [ #image("./imgs/lista_zone.png", width: 70%)],
+        [ #image("./imgs/pulsante_zone.png", width: 60%)],
+        [ #image("./imgs/lista_zone.png", width: 55%)],
     ),caption: [Icona "Zone" (sinistra) e pannello contenente la lista delle zone (destra)],
 ) <icona_lista_zone>
 
 Ogni riga di tale lista corrisponde ad una zona, la quale viene identificata dal suo parametro `ID`.
-Ad esso seguono le icone relative all'ispezione della zona (#TODO), rappresentata da un occhio, e alla sua eliminazione (@eliminazione_zona), rappresentata da un cestino.
+Ad esso seguono le icone relative all'ispezione della zona (@ispezione_zona), rappresentata da un occhio, e alla sua eliminazione (@eliminazione_zona), rappresentata da un cestino.
 
 Nel caso in cui venga creata una nuova zona (@creazione_zona), essa verrà aggiunta alla lista delle zone.
 Similmente, se una zona dovesse essere eliminata dall'ambiente, essa verrebbe rimossa dalla lista.
+
+=== Visualizzazione lista prodotti
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/bottone_lista_prodotti.png", width: 50%)],
+        [ #image("./imgs/lista_prodotti.png", width: 60%)],
+    ),caption: [Icona "Prodotti" (sinistra), pannello contenente la lista prodotti (destra)],
+) <icona_lista_prodotti>
+
+Premendo il pulsante mostrato in @icona_lista_prodotti (sinistra) si aprirà il menù in figura @icona_lista_prodotti (destra) che contiene tutti i prodotti presenti nel database mostrati in una lista. Ogni prodotto riporta nome, Id, categoria e un pulsante con un icona a forma di occhio che permette di esaminare le informazioni ad esso associate.
+
+Esistono due liste di prodotti, "Collocati" e "Non Collocati": nella prima vengono riportati i prodotti contenuti in un bin e visualizzati nell'ambiente, nella seconda vengono riportati i prodotti che non sono contenuti all'interno di un bin e non sono visualizzati nell'ambiente.
+
+=== Visualizzazione lista movimentazione ordini
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/bottone_lista_ordini.png", width: 45%)],
+        [ #image("./imgs/lista_ordini.png", width: 90%)],
+    ),caption: [Icona "Prodotti" (sinistra), pannello contenente la lista prodotti (destra)],
+) <icona_lista_ordini>
+
+=== Ricerca Zone e Prodotti
+
+Per facilitare la gestione del magazzino è possibile cercare una zona tramite il suo ID, basta inserirlo nella barra di ricerca mostrata in @icona_lista_zone che mostrerà come risultato tutte le le zone che contengono la sotto stringa inserita.
+
+Verrà quindi mostrato il menù in @immagine_pannello_ispezione_zona dove vengono riportati l'ID della zona, i dati dimensionali e la lista di bin che la zona contiene.
+
+Allo stesso modo nella sezione Prodotti mostrata in @icona_lista_prodotti (centro) è possibile ricercare un prodotto tramite il suo ID nell'apposita area di ricerca che mostra tutti i prodotti il cui ID contiene la sotto stringa inserita. È possibile inoltre filtrare i prodotti per la categoria di appartenenza cliccando sul pulsante "Categoria Prodotto" che mostrerà una lista contenente tutte le categorie merceologiche presenti nel database, cliccando sulla categoria che si interessa ricercare è possibile escludere tutti i prodotti non appartenenti alla categoria selezionata.
 
 === Ispezione zona <ispezione_zona>
 
@@ -415,7 +449,6 @@ Alla pressione di uno dei pulsanti elencati, verrà aperto il pannello di confer
 Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo pannello, la relativa zona (e conseguentemente tutti i bin in essa contenuti) verrà rimossa dall'ambiente di lavoro e dalla lista delle zone.
 
 Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno visualizzabili nella lista dei prodotti non collocati (#TODO) in attesa di una nuova collocazione.
-
 
 == Ispezione Bin, Prodotti e Zone
 

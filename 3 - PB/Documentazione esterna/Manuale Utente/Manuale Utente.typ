@@ -241,7 +241,7 @@ Per eseguire tale operazione è possibile interagire con:
 
   - il pulsante contenente l'icona raffigurante un occhio (@immagini_pulsanti_ispezione_zona sinistra) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da ispezionare;
 
-  - il cubo rosso presente in un angolo ai piedi della zona, visibile nel caso in cui il cursore del mouse sia sovrapposto a tale zona (@immagini_pulsanti_ispezione_zona destra). Per eseguire l'ispezione, tale cubo deve essere premuto con un doppio click del tasto sinistro del mouse.
+  - il cubo rosso presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse sia sovrapposto a tale zona (@immagini_pulsanti_ispezione_zona destra). Per eseguire l'ispezione, tale cubo deve essere premuto con un doppio click del tasto sinistro del mouse.
 
 #figure(
     grid(
@@ -396,7 +396,7 @@ Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà 
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile spostare una zona in esso collocata.
 
-Per eseguire tale operazione è possibile interagire con il cubo rosso, presente nelle coordinate (0,0) rispetto alla zona, visibile nel caso in cui il cursore del mouse venga sovrapposto ad essa (@immagini_pulsanti_ispezione_zona destra).
+Per eseguire tale operazione è possibile interagire con il cubo rosso, presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse venga sovrapposto ad essa (@immagini_pulsanti_ispezione_zona destra).
 
 Per realizzare lo spostamento è sufficiente premere il tasto sinistro del mouse sopra al cubo descritto e, mantenendo la pressione di tale tasto, spostare il mouse per riposizionare la zona interessata nell'ambiente di lavoro.
 
@@ -497,36 +497,6 @@ Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo p
 
 Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno visualizzabili nella lista dei prodotti non collocati (#TODO) in attesa di una nuova collocazione.
 
-== Ispezione Bin, Prodotti e Zone
-
-#figure(
-    grid(
-        columns: 3,
-        rows:    (auto, auto),
-        [ #image("./imgs/ispezione_1.png", width: 80%)],
-        [ #image("./imgs/ispezione_2.png", width: 100%)],
-        [ #image("./imgs/ispezione_3.png", width: 75%)],
-    ),caption: [Menù di ispezione zone (sinistra e centro) e menù di ispezione bin (destra)],
-) <ispezione>
-
-È possibile in ogni momento ispezionare una zona facendo doppio click sul cubetto rosso presente in uno dei suoi angoli, usato anche per lo spostamento. Si aprirà quindi il menù in figura @ispezione (sinistra e centro), dove vengono riportate in ordine:
-- id della zona;
-- orientamento e dimensioni;
-- lista di bin che riporta per ogni voce:
-  - id del bin;
-  - stato ("Libero" o, se occupato, nome del prodotto contenuto);
-  - pulsante per la visualizzazione dei dettagli del bin (menù in @ispezione a destra), presente solo se il bin è occupato.
-
-Per ispezionare il contenuto di un bin è possibile, in alternativa al pulsante citato in precedenza, fare doppio click sul bin desiderato ed aprire il menù in figura @ispezione (destra).
-Verranno mostrati:
-- id del bin;
-- dimensioni del bin;
-- informazioni sul prodotto contenuto, se presente:
-  - nome;
-  - id;
-  - categoria;
-  - dimensioni;
-  - peso.
 
 == Richiesta spostamento prodotto
 

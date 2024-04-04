@@ -41,3 +41,5 @@ Il Proponente riconosce il prodotto software del gruppo #err418 come MVP.
 == Pianificazione incontri futuri
 
 A seguito del meeting odierno, gli incontri periodici sono da considerarsi conclusi e il Proponente ha espresso la sua disponibilità per futuri aggiornamenti sul progetto e ad eventuali attività legate alla Customer Acceptance.
+
+#pagebreak()

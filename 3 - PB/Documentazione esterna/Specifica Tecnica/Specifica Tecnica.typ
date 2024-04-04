@@ -494,7 +494,7 @@ Il Repository Pattern permette di separare la logica di business dalla logica di
 
 \
 *Interfaccia implementata*
-- *DataRepositoryInterface*: interfaccia che definisce i metodi per il retrive dei dati dal database.
+- *DataRepositoryInterface*: interfaccia che definisce i metodi per il retrieve dei dati dal database.
   - *Metodi:*
     - *getAll*:
       - *obiettivo: * ottenere tutte le informazioni relative agli oggetti;

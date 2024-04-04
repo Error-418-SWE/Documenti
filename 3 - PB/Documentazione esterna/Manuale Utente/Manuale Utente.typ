@@ -330,8 +330,14 @@ Sulla destra di tale riga è presente l'icona relativa all'ispezione del prodott
 === Ispezione podotto <ispezione_prodotto>
 #TODO
 
-== ordini di movimentazione prodotti
+== Ordini di movimentazione prodotti
 === Visualizzazione lista ordini di movimentazione
+
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+
+Selezionando da esso la terza icona (@icona_lista_ordini sinistra), la quale corrisponde alla voce "Ordini di movimentazione", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista degli ordini di movimentazione avvenuti nella sessione corrente (@icona_lista_ordini destra).
+
+Per ogni ordine viene riportato il nome del prodotto soggetto allo spostamento e gli `ID` del bin di partenza e di destinazione.
 
 #figure(
     grid(
@@ -339,10 +345,9 @@ Sulla destra di tale riga è presente l'icona relativa all'ispezione del prodott
         rows:    (auto, auto),
         [ #image("./imgs/bottone_lista_ordini.png", width: 45%)],
         [ #image("./imgs/lista_ordini.png", width: 90%)],
-    ),caption: [Icona "Prodotti" (sinistra), pannello contenente la lista prodotti (destra)],
+    ),caption: [Icona "Ordini di movimentazione" (sinistra), pannello contenente la lista degli ordini (destra)],
 ) <icona_lista_ordini>
 
-Premendo il pulsante in @icona_lista_ordini (sinistra) si aprirà la lista visualizzata in @icona_lista_ordini (destra) che riporta tutti gli ordini di movimentazione effettuati nella sezione corrente. Per ogni ordine viene riportato il prodotto soggetto allo spostamento, il bin di partenza e quello di arrivo.
 
 === Richiesta spostamento prodotto <richiesta_spostamento_prodotto>
 

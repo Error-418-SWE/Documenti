@@ -330,7 +330,7 @@ Sulla destra di tale riga è presente l'icona relativa all'ispezione del prodott
 === Ispezione podotto <ispezione_prodotto>
 #TODO
 
-== ordini di movimentazione
+== ordini di movimentazione prodotti
 === Visualizzazione lista ordini di movimentazione
 
 #figure(
@@ -344,31 +344,28 @@ Sulla destra di tale riga è presente l'icona relativa all'ispezione del prodott
 
 Premendo il pulsante in @icona_lista_ordini (sinistra) si aprirà la lista visualizzata in @icona_lista_ordini (destra) che riporta tutti gli ordini di movimentazione effettuati nella sezione corrente. Per ogni ordine viene riportato il prodotto soggetto allo spostamento, il bin di partenza e quello di arrivo.
 
-=== Richiesta spostamento prodotto
+=== Richiesta spostamento prodotto <richiesta_spostamento_prodotto>
+
+Lo spostamento di un prodotto tra due bin avviene tramite _drag and drop_:
+
+  - posizionando il puntatore del mouse sul bin contenente il prodotto che si desidera spostare e premendo il tasto sinistro del mouse, è possibile "prendere" il prodotto;
+
+  - tenendo premuto il medesimo tasto è possibile spostare il prodotto nella posizione del bin di destinazione;
+
+  - rilasciando il tasto, verrà visualizzata nella parte inferiore destra dello schermo una notifica che avviserà dell'avvenuto, o meno, ordine di spostamento.
+
+
+Nel caso in cui l'ordine di movimentazione sia avvenuto correttamente, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde (@immagine_spostamento_prodotti).
 
 #figure(
-    grid(
-        columns: 2,
-        rows:    (auto, auto),
-        [ #image("./imgs/spostamento_drag_and_drop.png", width: 80%)],
-        [ #image("./imgs/spostamento_non_collocato.png", width: 80%)],
-    ),caption: [Spostamento prodotti con drag and drop (sinistra), menù spostamento prodotti non collocati (destra)],
-) <spostamento>
+  image("./imgs/spostamento_drag_and_drop.png", width: 40%),
+  caption: [
+    Visualizzazione spostamento prodotti nella zona
+  ],
+) <immagine_spostamento_prodotti>
 
-==== Spostamento tramite drag and drop
-
-Lo spostamento di un prodotto da un bin a un altro avviene tramite _drag and drop_. Posizionando il puntatore del mouse sul prodotto che si desidera spostare e premendo il tasto sinistro possiamo "prendere" il prodotto. Tenendo premuto il tasto sinistro è possibile spostare il prodotto in prossimità della posizione in cui vogliamo posizionarlo e quindi, rilasciando il tasto sinistro, effettuare lo spostamento. È possibile spostare prodotti solamente all'interno di bin vuoti.
-
-In basso a destra nello schermo, una notifica avviserà della possibilità o meno di effettuare lo spostamento. In caso di esito positivo, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde, come rappresentato in @spostamento
-
-===== Spostamento prodotto non collocato
-
-I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti*, possono essere posizionati nel seguente modo:
-- ricerco la posizione in cui voglio collocare il prodotto nell'ambiente (deve essere vuota);
-- doppio click sulla posizione desiderata;
-- nel menù che apparirà (@spostamento), premere il pulsante *Seleziona*;
-- selezionare il prodotto desiderato e premere *Conferma*;
-- il prodotto risulta collocato.
+\
+I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti* (@visualizzazione_lista_prodotti), possono essere posizionati tramite il pannello di ispezione del bin di destinazione (@ispezione_bin), purché esso sia vuoto, ma tale operazione non comporta la generazione di una richiesta di spostamento.
 
 
 == Ricerca zone

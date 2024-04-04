@@ -262,7 +262,7 @@
 	"JSX": {
 		"description": "Estensione della sintassi JavaScript che permette la creazione di elementi React che vengono poi renderizzati nel Document Object Model (DOM).",
 		"acronyms": [],
-    "synonyms": []
+		"synonyms": []
 	},
   "Magazzino": {
     "description": "Struttura logistica in grado di ricevere le merci, conservarle (stoccaggio) e renderle disponibili per lo smistamento, la spedizione e la consegna.",

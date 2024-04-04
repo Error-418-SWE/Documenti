@@ -235,13 +235,13 @@ Similmente, se una zona dovesse essere eliminata dall'ambiente, essa verrebbe ri
 
 === Ispezione zona <ispezione_zona>
 
-Successivamente alla creazione dell'ambiente di lavoro è possibile ispezionare le zone in esso contenute visualizzandone i specifici dettagli.
+Successivamente alla creazione dell'ambiente di lavoro è possibile ispezionare le zone in esso contenute visualizzandone i dettagli.
 
 Per eseguire tale operazione è possibile interagire con:
 
   - il pulsante contenente l'icona raffigurante un occhio (@immagini_pulsanti_ispezione_zona sinistra) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da ispezionare;
 
-  - il cubo rosso presente nelle coordinate (0,0) rispetto alla zona, visibile nel caso in cui il cursore del mouse sia sovrapposto a tale zona (@immagini_pulsanti_ispezione_zona destra). Per eseguire l'ispezione, tale cubo deve essere premuto con un doppio click del tasto sinistro del mouse.
+  - il cubo rosso presente in un angolo ai piedi della zona, visibile nel caso in cui il cursore del mouse sia sovrapposto a tale zona (@immagini_pulsanti_ispezione_zona destra). Per eseguire l'ispezione, tale cubo deve essere premuto con un doppio click del tasto sinistro del mouse.
 
 #figure(
     grid(
@@ -256,7 +256,7 @@ Per eseguire tale operazione è possibile interagire con:
 L'esecuzione di almeno una delle modalità elencate permette la visualizzazione, sulla destra dello schermo, del pannello relativo alle informazioni della zona di interesse (@immagine_pannello_ispezione_zona).
 
 #figure(
-  image("./imgs/pannello_ispezione_zona.png", width: 40%),
+  image("./imgs/pannello_ispezione_zona.png", width: 30%),
   caption: [
     Pannello di ispezione zona
   ],
@@ -283,7 +283,7 @@ In esso vengono visualizzati:
   - pulsante per l'ispezione del bin (#TODO) se non vuoto.
 
 \
-Nella parte inferiore del pannello sono presenti i pulsanti contenenti le scritte:
+Nella parte inferiore del pannello sono presenti i pulsanti:
   - *Localizza*: se premuto (@immagine_pulsante_localizza_zona) riposiziona automaticamente la visuale sulla zona, in modo da permettere una più immediata visualizzazione e localizzazione della stessa;
   - *Modifica*: se premuto permette la modifica della zona (@modifica_zona);
   - *Elimina*: se premuto permette l'eliminazione della zona (@eliminazione_zona).
@@ -339,7 +339,7 @@ Premendo il pulsante in @icona_lista_ordini (sinistra) si aprirà la lista visua
 
 Per facilitare la gestione del magazzino è possibile cercare una zona tramite il suo ID, basta inserirlo nella barra di ricerca mostrata in @icona_lista_zone (destra) che mostrerà come risultato tutte le le zone che contengono la sotto stringa inserita.
 
-Allo stesso modo nella sezione Prodotti mostrata in @icona_lista_prodotti (destra) è possibile ricercare un prodotto tramite il suo ID nell'apposita area di ricerca che mostra tutti i prodotti il cui ID contiene la sotto stringa inserita. È possibile inoltre filtrare i prodotti per la categoria di appartenenza cliccando sul pulsante "Categoria Prodotto" che mostrerà una lista contenente tutte le categorie merceologiche presenti nel database, cliccando sulla categoria che si interessa ricercare è possibile escludere tutti i prodotti non appartenenti alla categoria selezionata.
+Allo stesso modo nella sezione Prodotti mostrata in @icona_lista_prodotti (destra) è possibile ricercare un prodotto tramite il suo ID nell'apposita area di ricerca che mostra tutti i prodotti il cui ID contiene la sotto stringa inserita. È possibile inoltre filtrare i prodotti per la categoria di appartenenza cliccando sul pulsante "Categoria Prodotto" che mostrerà una lista contenente tutte le categorie merceologiche presenti nel database, cliccando sulla categoria che si vuole ricercare è possibile escludere tutti i prodotti non appartenenti alla categoria selezionata.
 
 
 
@@ -347,24 +347,18 @@ Allo stesso modo nella sezione Prodotti mostrata in @icona_lista_prodotti (destr
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile creare le zone contenenti i bin in modo personalizzato.
 
-Sul lato destro superiore del pannello relativo alla visualizzazione della lista delle zone (@visualizzazione_lista_zone), è presente un pulsante nero contenente la scritta "+ Nuova" (@immagine_pulsante_nuova_zona).
+Sul lato destro superiore del pannello relativo alla visualizzazione della lista delle zone (@visualizzazione_lista_zone), è presente un pulsante nero contenente la scritta "+ Nuova" (@nuova_zona (sinistra)).
 
 #figure(
-  image("./imgs/pulsante_nuova_zona.png", width: 50%),
-  caption: [
-    Pulsante di creazione di una nuova zona
-  ],
-) <immagine_pulsante_nuova_zona>
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/pulsante_nuova_zona.png", width: 60%),],
+        [ #image("./imgs/pannello_nuova_zona.png", width: 50%),],
+    ),caption: [Pulsante di creazione di una nuova zona (sinistra) e pannello di creazione di una nuova zona (destra)],
+) <nuova_zona>
 
-Alla sua pressione verrà reso disponibile, sulla destra della schermata, il pannello "Nuova zona" (@immagine_pannello_nuova_zona) nel quale sarà possibile inserire tutti i dati utili alla creazione della zona personalizzata.
-
-#figure(
-  image("./imgs/pannello_nuova_zona.png", width: 50%),
-  caption: [
-    Pannello di creazione di una nuova zona
-  ],
-) <immagine_pannello_nuova_zona>
-
+Alla sua pressione verrà reso disponibile, sulla destra della schermata, il pannello "Nuova zona" (@nuova_zona (destra)) nel quale sarà possibile inserire tutti i dati utili alla creazione della zona personalizzata.
 I dati necessari alla creazione sono:
 - *ID*: numero intero che rappresenta il codice identificativo univoco della zona;
 - *Direzione*: può assumere valore `Nord-Sud` o `Est-Ovest` e rappresenta l'orientamento della zona rispetto al piano;
@@ -486,8 +480,8 @@ Per eseguire tale operazione è possibile interagire con:
     grid(
         columns: 2,
         rows:    (auto, auto),
-        [ #image("./imgs/pulsante_eliminazione_zona.png", width: 80%)],
-        [ #image("./imgs/pulsante_cestino_zone.png", width: 100%)],
+        [ #image("./imgs/pulsante_eliminazione_zona.png", width: 60%)],
+        [ #image("./imgs/pulsante_cestino_zone.png", width: 90%)],
     ),caption: [Pulsante "Elimina" di eliminazione zona (sinistra) e pulsanti "cestino" di eliminazione zona (destra)],
 )<immagini_pulsanti_eliminazione_zona>
 

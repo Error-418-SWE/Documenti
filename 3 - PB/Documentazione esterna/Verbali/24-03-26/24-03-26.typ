@@ -22,7 +22,14 @@
 - Pianificazione incontri futuri.
 
 == Presentazione MVP
-Sono state presentate al Proponente le diverse funzionalità implementate nel MVP atte a rispettare i requisiti espressi nel documento #adr_v. La lista dei requisiti soddisfatti è presente nel documento #st, disponibile al seguente link: #align(left,link("https://error418swe.netlify.app/pb/documentazione-esterna/specifica-tecnica/")), nella sezione "Requisiti soddisfatti".
+Sono state presentate al Proponente le diverse funzionalità implementate nel MVP volte a soddisfare i requisiti espressi nel documento #adr_v.
+
+La lista dei requisiti soddisfatti è presente nel documento #st\, alla sezione "Requisiti soddisfatti". Il documento è disponibile al seguente link:
+
+#align(
+  center,
+  link("https://error418swe.netlify.app/pb/documentazione-esterna/specifica-tecnica/")
+)
 
 Oltre alle funzionalità già presentate nei precedenti meeting, sono state aggiunte:
 
@@ -34,7 +41,6 @@ Oltre alle funzionalità già presentate nei precedenti meeting, sono state aggi
 Il Proponente è risultato soddisfatto di quanto presentato e ha confermato il corretto soddisfacimento di tutti i requisiti derivati dal capitolato emersi durante lo sviluppo del progetto, sia minimi che desiderabili.
 
 Inoltre è stata apprezzata l'attenzione data all'usabilità del prodotto.
-
 
 Il Proponente riconosce il prodotto software del gruppo #err418 come MVP.
 

@@ -302,6 +302,10 @@ Nella parte inferiore del pannello sono presenti i pulsanti:
 == Visualizzazione prodotti
 === Visualizzazione lista prodotti <visualizzazione_lista_prodotti>
 
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+
+Selezionando da esso la seconda icona (@icona_lista_prodotti sinistra), la quale corrisponde alla voce "Prodotti", si aprirà un ulteriore pannello dove sarà possibile visualizzare le liste dei prodotti letti da database (@icona_lista_prodotti destra).
+
 #figure(
     grid(
         columns: 2,
@@ -311,14 +315,23 @@ Nella parte inferiore del pannello sono presenti i pulsanti:
     ),caption: [Icona "Prodotti" (sinistra), pannello contenente la lista prodotti (destra)],
 ) <icona_lista_prodotti>
 
-Premendo il pulsante mostrato in @icona_lista_prodotti (sinistra) si aprirà il menù in @icona_lista_prodotti (destra) che contiene tutti i prodotti presenti nel database mostrati in una lista. Ogni prodotto riporta nome, Id, categoria e un pulsante con un icona a forma di occhio che permette di esaminare le informazioni ad esso associate.
+\
+Esistono due liste di prodotti:
 
-Esistono due liste di prodotti, "Collocati" e "Non Collocati": nella prima vengono riportati i prodotti contenuti in un bin e visualizzati nell'ambiente, nella seconda vengono riportati i prodotti che non sono contenuti all'interno di un bin e non sono visualizzati nell'ambiente.
+  - *Collocati*: vengono riportati i prodotti contenuti in un bin e visualizzati nell'ambiente;
+
+  - *Non collocati*: vengono riportati i prodotti che non sono contenuti all'interno di un bin e non sono visualizzati nell'ambiente.
+
+
+Ogni riga di tali liste corrisponde ad un prodotto, il quale viene identificato dal suo nome, ed elenca le informazioni relative al suo `ID` e le categorie di cui fa parte.
+
+Sulla destra di tale riga è presente l'icona relativa all'ispezione del prodotto (@ispezione_prodotto), rappresentata da un occhio.
 
 === Ispezione podotto <ispezione_prodotto>
 #TODO
 
-== Visualizzazione lista ordini di movimentazione
+== ordini di movimentazione
+=== Visualizzazione lista ordini di movimentazione
 
 #figure(
     grid(
@@ -330,6 +343,32 @@ Esistono due liste di prodotti, "Collocati" e "Non Collocati": nella prima vengo
 ) <icona_lista_ordini>
 
 Premendo il pulsante in @icona_lista_ordini (sinistra) si aprirà la lista visualizzata in @icona_lista_ordini (destra) che riporta tutti gli ordini di movimentazione effettuati nella sezione corrente. Per ogni ordine viene riportato il prodotto soggetto allo spostamento, il bin di partenza e quello di arrivo.
+
+=== Richiesta spostamento prodotto
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/spostamento_drag_and_drop.png", width: 80%)],
+        [ #image("./imgs/spostamento_non_collocato.png", width: 80%)],
+    ),caption: [Spostamento prodotti con drag and drop (sinistra), menù spostamento prodotti non collocati (destra)],
+) <spostamento>
+
+==== Spostamento tramite drag and drop
+
+Lo spostamento di un prodotto da un bin a un altro avviene tramite _drag and drop_. Posizionando il puntatore del mouse sul prodotto che si desidera spostare e premendo il tasto sinistro possiamo "prendere" il prodotto. Tenendo premuto il tasto sinistro è possibile spostare il prodotto in prossimità della posizione in cui vogliamo posizionarlo e quindi, rilasciando il tasto sinistro, effettuare lo spostamento. È possibile spostare prodotti solamente all'interno di bin vuoti.
+
+In basso a destra nello schermo, una notifica avviserà della possibilità o meno di effettuare lo spostamento. In caso di esito positivo, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde, come rappresentato in @spostamento
+
+===== Spostamento prodotto non collocato
+
+I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti*, possono essere posizionati nel seguente modo:
+- ricerco la posizione in cui voglio collocare il prodotto nell'ambiente (deve essere vuota);
+- doppio click sulla posizione desiderata;
+- nel menù che apparirà (@spostamento), premere il pulsante *Seleziona*;
+- selezionare il prodotto desiderato e premere *Conferma*;
+- il prodotto risulta collocato.
 
 
 == Ricerca zone
@@ -496,33 +535,6 @@ Alla pressione di uno dei pulsanti elencati, verrà aperto il pannello di confer
 Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo pannello, la relativa zona (e conseguentemente tutti i bin in essa contenuti) verrà rimossa dall'ambiente di lavoro e dalla lista delle zone.
 
 Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno visualizzabili nella lista dei prodotti non collocati (#TODO) in attesa di una nuova collocazione.
-
-
-== Richiesta spostamento prodotto
-
-#figure(
-    grid(
-        columns: 2,
-        rows:    (auto, auto),
-        [ #image("./imgs/spostamento_drag_and_drop.png", width: 80%)],
-        [ #image("./imgs/spostamento_non_collocato.png", width: 80%)],
-    ),caption: [Spostamento prodotti con drag and drop (sinistra), menù spostamento prodotti non collocati (destra)],
-) <spostamento>
-
-=== Spostamento tramite drag and drop
-
-Lo spostamento di un prodotto da un bin a un altro avviene tramite _drag and drop_. Posizionando il puntatore del mouse sul prodotto che si desidera spostare e premendo il tasto sinistro possiamo "prendere" il prodotto. Tenendo premuto il tasto sinistro è possibile spostare il prodotto in prossimità della posizione in cui vogliamo posizionarlo e quindi, rilasciando il tasto sinistro, effettuare lo spostamento. È possibile spostare prodotti solamente all'interno di bin vuoti.
-
-In basso a destra nello schermo, una notifica avviserà della possibilità o meno di effettuare lo spostamento. In caso di esito positivo, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde, come rappresentato in @spostamento
-
-=== Spostamento prodotto non collocato
-
-I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti*, possono essere posizionati nel seguente modo:
-- ricerco la posizione in cui voglio collocare il prodotto nell'ambiente (deve essere vuota);
-- doppio click sulla posizione desiderata;
-- nel menù che apparirà (@spostamento), premere il pulsante *Seleziona*;
-- selezionare il prodotto desiderato e premere *Conferma*;
-- il prodotto risulta collocato.
 
 == Impostazioni
 

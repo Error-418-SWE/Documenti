@@ -373,15 +373,26 @@ Nel caso in cui l'ordine di movimentazione sia avvenuto correttamente, i bin di 
 I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti* (@visualizzazione_lista_prodotti), possono essere posizionati tramite il pannello di ispezione del bin di destinazione (@ispezione_bin), purché esso sia vuoto, ma tale operazione non comporta la generazione di una richiesta di spostamento.
 
 
-== Ricerca zone
+== Ricerca zone <ricerca_zone>
 
+Nella parte superiore del pannello relativo alla visualizzazione della lista delle zone (@icona_lista_zone destra), è presente l'area di ricerca delle zone tramite `ID`.
 
-== Ricerca prodotti
+Dopo aver inserito il parametro desiderato nella barra di ricerca, verranno mostrati nell'area sottostante i risultati relativi alle zone aventi un `ID` che contenga al suo interno il parametro immesso.
 
-Per facilitare la gestione del magazzino è possibile cercare una zona tramite il suo ID, basta inserirlo nella barra di ricerca mostrata in @icona_lista_zone (destra) che mostrerà come risultato tutte le le zone che contengono la sotto stringa inserita.
+== Ricerca prodotti <ricerca_prodotti>
 
-Allo stesso modo nella sezione Prodotti mostrata in @icona_lista_prodotti (destra) è possibile ricercare un prodotto tramite il suo ID nell'apposita area di ricerca che mostra tutti i prodotti il cui ID contiene la sotto stringa inserita. È possibile inoltre filtrare i prodotti per la categoria di appartenenza cliccando sul pulsante "Categoria Prodotto" che mostrerà una lista contenente tutte le categorie merceologiche presenti nel database, cliccando sulla categoria che si vuole ricercare è possibile escludere tutti i prodotti non appartenenti alla categoria selezionata.
+Nella parte superiore del pannello relativo alla visualizzazione delle liste dei prodotti (@icona_lista_prodotti destra), è presente l'area di ricerca dei prodotti.
 
+I criteri di ricerca disponibili sono:
+
+  - mediante il nome del prodotto o una sua sottostringa. Deve essere selezionata la voce "Nome" a sinistra della barra di ricerca;
+
+  - mediante l'`ID` del prodotto o una sua sottostringa. Deve essere selezionata la voce "ID" a sinistra della barra di ricerca;
+
+  - in aggiunta ai criteri precedentemente elencati, è possibile filtrare i risultati delle ricerche in base alle categorie merceologiche. Dopo aver premuto su "Categoria prodotto", la categoria scelta deve essere selezionata dalla sottostante lista delle merci presenti nel database.
+  Così facendo verranno esclusi dalle ricerche tutti i prodotti non appartenenti alla categoria selezionata.
+
+Dopo aver inserito il parametro desiderato nella barra di ricerca, verranno mostrati nell'area sottostante i relativi prodotti.
 
 
 == Creazione zona <creazione_zona>

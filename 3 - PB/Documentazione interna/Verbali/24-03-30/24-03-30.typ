@@ -19,13 +19,12 @@
 
 = Ordine del giorno
 - Valutazione del progresso generale;
-- Pianificazione.
 - Invio candidatura PB;
+- Pianificazione.
 
 = Valutazione del progresso generale <avanzamento>
 
-Lo Sprint 21 è servito al gruppo per pianificare e continuare gli ultimi lavori in previsione del colloquio PB.
-
+Durante lo Sprint 21 sono stati pianificati e continuati gli ultimi lavori in previsione del colloquio PB, inoltre si è svolta una riunione di convalida del MVP con il Proponente in cui tutte le funzionalità del sistema sono state mostrate e approvate.
 == #ndp
 
 Sono state aggiornate e revisionate le seguenti sezioni:
@@ -34,25 +33,25 @@ Sono state aggiornate e revisionate le seguenti sezioni:
 - Processo di integrazione;
 - Processo di verifica;
 - Processo di implementazione;
-- Processo di transizione.
 
 == #pdq
 
-- redatto tracciamento test;
-- aggiornate metriche dalla dashboard.
+- Redatto tracciamento test;
+- Aggiornate metriche dalla dashboard.
 
 == #st
 
-- completata e ampliata la specifica tecnica.
+- Completato e ampliato il documento.
 
 == #man
 
-- definite le ultime task;
-- redatta sezione Modifica Zona;
-- redatta sezione Ordine Movimentazione Ordine;
-- in corso la sezione Ispezione Zona;
-- in corso la sezione Visualizzazione Lista Zone.
-
+- Definite le ultime task;
+- Redatta sezione Modifica Zona;
+- Redatta sezione Richiesta spostamento prodotto;
+- In corso la sezione Ispezione Zona;
+- In corso la sezione Visualizzazione Lista Zone;
+- Definito template documento;
+- Redatta sezione Eliminazione zona
 = Analisi retrospettiva
 
 Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq\:
@@ -70,15 +69,15 @@ Maggiori dettagli in merito al valore delle metriche alla loro analisi sono repe
 
 Il gruppo ed il Proponente si ritengono soddisfatti dell'andamento dei lavori e dei progressi ottenuti.
 
-Le review delle pull request sono avvenute con precisione e in tempi brevi.
+Le review delle Pull Request sono avvenute con precisione e in tempi brevi.
 
 = Invio candidatura PB
 
 Il gruppo attende la valutazione della nuova versione del documento #adr da parte del #cardin, bloccante l'invio della candidatura PB.
 
-Vista la concomitanza con le vacanze pasquali il gruppo spera di poter sostenere almeno il primo colloquio con il #cardin entro lo Sprint 22.
+Vista la concomitanza con le vacanze pasquali, il gruppo conta di poter sostenere il primo colloquio con il #cardin entro lo Sprint 22.
 
-Il gruppo prosegue con la correzione e il miglioramento dei documenti, continua inoltre la ricerca di bug all'interno del MVP.
+Il gruppo prosegue con la correzione e il miglioramento dei documenti; continua inoltre la ricerca di bug all'interno del MVP.
 
 = Pianificazione <pianificazione>
 

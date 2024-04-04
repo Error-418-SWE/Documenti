@@ -304,7 +304,7 @@ L'obiettivo principale è assicurare che il software sia sviluppato utilizzando 
     - Deployment del software "WMS3" mediante container Docker;
     - Isolamento dell'ambiente di sviluppo.
 
-  - *Immagini Docker utilizzate*
+  - *Immagini Docker utilizzate: *
     - *PostgreSQL*: container per il database relazionale;
       - Immagine: `postgres:16.2`.
 

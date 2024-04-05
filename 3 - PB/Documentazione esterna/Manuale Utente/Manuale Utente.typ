@@ -212,37 +212,36 @@ Premendo il tasto destro del mouse e spostando il mouse in una delle quattro dir
 L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle frecce direzionali (o in alternativa i tasti W, A, S, D), che permettono il movimento nella direzione indicata dalla freccia. Con il tasto Shift è possibile aumentare la velocità di spostamento.
 
 == Visualizzazione zone
-
 === Visualizzazione lista zone <visualizzazione_lista_zone>
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
 
-Selezionando da esso la prima icona (@icona_lista_zone sinistra), la quale corrisponde alla voce "Zone", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente (@icona_lista_zone destra).
+Selezionando da esso la prima icona (@icona_lista_zone (sinistra)), la quale corrisponde alla voce "Zone", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente (@icona_lista_zone (destra)).
 
 #figure(
     grid(
         columns: 2,
         rows:    (auto, auto),
-        [ #image("./imgs/pulsante_zone.png", width: 70%)],
-        [ #image("./imgs/lista_zone.png", width: 70%)],
+        [ #image("./imgs/pulsante_zone.png", width: 60%)],
+        [ #image("./imgs/lista_zone.png", width: 55%)],
     ),caption: [Icona "Zone" (sinistra) e pannello contenente la lista delle zone (destra)],
 ) <icona_lista_zone>
 
 Ogni riga di tale lista corrisponde ad una zona, la quale viene identificata dal suo parametro `ID`.
-Ad esso seguono le icone relative all'ispezione della zona (#TODO), rappresentata da un occhio, e alla sua eliminazione (@eliminazione_zona), rappresentata da un cestino.
+Ad esso seguono le icone relative all'ispezione della zona (@ispezione_zona), rappresentata da un occhio, e alla sua eliminazione (@eliminazione_zona), rappresentata da un cestino.
 
 Nel caso in cui venga creata una nuova zona (@creazione_zona), essa verrà aggiunta alla lista delle zone.
 Similmente, se una zona dovesse essere eliminata dall'ambiente, essa verrebbe rimossa dalla lista.
 
 === Ispezione zona <ispezione_zona>
 
-Successivamente alla creazione dell'ambiente di lavoro è possibile ispezionare le zone in esso contenute visualizzandone i specifici dettagli.
+Successivamente alla creazione dell'ambiente di lavoro è possibile ispezionare le zone in esso contenute visualizzandone i dettagli.
 
 Per eseguire tale operazione è possibile interagire con:
 
-  - il pulsante contenente l'icona raffigurante un occhio (@immagini_pulsanti_ispezione_zona sinistra) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da ispezionare;
+  - il pulsante contenente l'icona raffigurante un occhio (@immagini_pulsanti_ispezione_zona (sinistra)) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da ispezionare;
 
-  - il cubo rosso presente nelle coordinate (0,0) rispetto alla zona, visibile nel caso in cui il cursore del mouse sia sovrapposto a tale zona (@immagini_pulsanti_ispezione_zona destra). Per eseguire l'ispezione, tale cubo deve essere premuto con un doppio click del tasto sinistro del mouse.
+  - il cubo rosso presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse sia sovrapposto a tale zona (@immagini_pulsanti_ispezione_zona (destra)). Per eseguire l'ispezione, tale cubo deve essere premuto con un doppio click del tasto sinistro del mouse.
 
 #figure(
     grid(
@@ -257,7 +256,7 @@ Per eseguire tale operazione è possibile interagire con:
 L'esecuzione di almeno una delle modalità elencate permette la visualizzazione, sulla destra dello schermo, del pannello relativo alle informazioni della zona di interesse (@immagine_pannello_ispezione_zona).
 
 #figure(
-  image("./imgs/pannello_ispezione_zona.png", width: 40%),
+  image("./imgs/pannello_ispezione_zona.png", width: 30%),
   caption: [
     Pannello di ispezione zona
   ],
@@ -284,7 +283,7 @@ In esso vengono visualizzati:
   - pulsante per l'ispezione del bin (#TODO) se non vuoto.
 
 \
-Nella parte inferiore del pannello sono presenti i pulsanti contenenti le scritte:
+Nella parte inferiore del pannello sono presenti i pulsanti:
   - *Localizza*: se premuto (@immagine_pulsante_localizza_zona) riposiziona automaticamente la visuale sulla zona, in modo da permettere una più immediata visualizzazione e localizzazione della stessa;
   - *Modifica*: se premuto permette la modifica della zona (@modifica_zona);
   - *Elimina*: se premuto permette l'eliminazione della zona (@eliminazione_zona).
@@ -297,30 +296,120 @@ Nella parte inferiore del pannello sono presenti i pulsanti contenenti le scritt
   ],
 ) <immagine_pulsante_localizza_zona>
 
+== Ispezione bin <ispezione_bin>
+#TODO // sezione già redatta in DOC-664
+
+== Visualizzazione prodotti
+=== Visualizzazione lista prodotti <visualizzazione_lista_prodotti>
+
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+
+Selezionando da esso la seconda icona (@icona_lista_prodotti sinistra), la quale corrisponde alla voce "Prodotti", si aprirà un ulteriore pannello dove sarà possibile visualizzare le liste dei prodotti letti da database (@icona_lista_prodotti destra).
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/bottone_lista_prodotti.png", width: 50%)],
+        [ #image("./imgs/lista_prodotti.png", width: 60%)],
+    ),caption: [Icona "Prodotti" (sinistra), pannello contenente la lista prodotti (destra)],
+) <icona_lista_prodotti>
+
+\
+Esistono due liste di prodotti:
+
+  - *Collocati*: vengono riportati i prodotti contenuti in un bin e visualizzati nell'ambiente;
+
+  - *Non collocati*: vengono riportati i prodotti che non sono contenuti all'interno di un bin e non sono visualizzati nell'ambiente.
+
+
+Ogni riga di tali liste corrisponde ad un prodotto, il quale viene identificato dal suo nome, ed elenca le informazioni relative al suo `ID` e le categorie di cui fa parte.
+
+Sulla destra di tale riga è presente l'icona relativa all'ispezione del prodotto (@ispezione_prodotto), rappresentata da un occhio.
+
+=== Ispezione prodotto <ispezione_prodotto>
+#TODO
+
+== Ordini di movimentazione prodotti
+=== Visualizzazione lista ordini di movimentazione
+
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+
+Selezionando da esso la terza icona (@icona_lista_ordini (sinistra)), la quale corrisponde alla voce "Ordini di movimentazione", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista degli ordini di movimentazione avvenuti nella sessione corrente (@icona_lista_ordini (destra)).
+
+Per ogni ordine viene riportato il nome del prodotto soggetto allo spostamento e gli `ID` del bin di partenza e di destinazione.
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/bottone_lista_ordini.png", width: 45%)],
+        [ #image("./imgs/lista_ordini.png", width: 90%)],
+    ),caption: [Icona "Ordini di movimentazione" (sinistra), pannello contenente la lista degli ordini (destra)],
+) <icona_lista_ordini>
+
+
+=== Richiesta spostamento prodotto <richiesta_spostamento_prodotto>
+
+Lo spostamento di un prodotto tra due bin avviene tramite _drag and drop_:
+
+  - posizionando il puntatore del mouse sul bin contenente il prodotto che si desidera spostare e premendo il tasto sinistro del mouse, è possibile "prendere" il prodotto;
+
+  - tenendo premuto il medesimo tasto è possibile spostare il prodotto nella posizione del bin di destinazione;
+
+  - rilasciando il tasto, verrà visualizzata nella parte inferiore destra dello schermo una notifica che avviserà della corretta creazione, o meno, dell'ordine di spostamento.
+
+
+Nel caso in cui l'ordine di movimentazione sia avvenuto correttamente, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde (@immagine_spostamento_prodotti).
+
+#figure(
+  image("./imgs/spostamento_drag_and_drop.png", width: 40%),
+  caption: [
+    Visualizzazione spostamento prodotti nella zona
+  ],
+) <immagine_spostamento_prodotti>
+
+\
+I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti* (@visualizzazione_lista_prodotti), possono essere posizionati tramite il pannello di ispezione del bin di destinazione (@ispezione_bin), purché esso sia vuoto. Tale operazione non comporta la generazione di una richiesta di spostamento.
+
+
+== Ricerca zone <ricerca_zone>
+
+Nella parte superiore del pannello relativo alla visualizzazione della lista delle zone (@icona_lista_zone (destra)), è presente l'area di ricerca delle zone tramite `ID`.
+
+Dopo aver inserito il parametro desiderato nella barra di ricerca, verranno mostrati nell'area sottostante i risultati relativi alle zone aventi un `ID` che contenga al suo interno il parametro immesso.
+
+== Ricerca prodotti <ricerca_prodotti>
+
+Nella parte superiore del pannello relativo alla visualizzazione delle liste dei prodotti (@icona_lista_prodotti (destra)), è presente l'area di ricerca dei prodotti.
+
+I criteri di ricerca disponibili sono:
+
+  - nome del prodotto o una sua sottostringa: deve essere selezionata la voce "Nome" a sinistra della barra di ricerca;
+
+  - `ID` del prodotto o una sua sottostringa: deve essere selezionata la voce "ID" a sinistra della barra di ricerca;
+
+  - categoria merceologica: dopo aver premuto su "Categoria prodotto" comparirà una lista nella quale è possibile selezionare la categoria desiderata.
+
+I risultati della ricerca verranno mostrati nell'area sottostante, all'interno dell'apposita lista (@visualizzazione_lista_prodotti).
 
 
 == Creazione zona <creazione_zona>
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile creare le zone contenenti i bin in modo personalizzato.
 
-Sul lato destro superiore del pannello relativo alla visualizzazione della lista delle zone (@visualizzazione_lista_zone), è presente un pulsante nero contenente la scritta "+ Nuova" (@immagine_pulsante_nuova_zona).
+Sul lato destro superiore del pannello relativo alla visualizzazione della lista delle zone (@visualizzazione_lista_zone), è presente un pulsante nero contenente la scritta "+ Nuova" (@nuova_zona (sinistra)).
 
 #figure(
-  image("./imgs/pulsante_nuova_zona.png", width: 50%),
-  caption: [
-    Pulsante di creazione di una nuova zona
-  ],
-) <immagine_pulsante_nuova_zona>
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/pulsante_nuova_zona.png", width: 60%),],
+        [ #image("./imgs/pannello_nuova_zona.png", width: 50%),],
+    ),caption: [Pulsante di creazione di una nuova zona (sinistra) e pannello di creazione di una nuova zona (destra)],
+) <nuova_zona>
 
-Alla sua pressione verrà reso disponibile, sulla destra della schermata, il pannello "Nuova zona" (@immagine_pannello_nuova_zona) nel quale sarà possibile inserire tutti i dati utili alla creazione della zona personalizzata.
-
-#figure(
-  image("./imgs/pannello_nuova_zona.png", width: 50%),
-  caption: [
-    Pannello di creazione di una nuova zona
-  ],
-) <immagine_pannello_nuova_zona>
-
+Alla sua pressione verrà reso disponibile, sulla destra della schermata, il pannello "Nuova zona" (@nuova_zona (destra)) nel quale sarà possibile inserire tutti i dati utili alla creazione della zona personalizzata.
 I dati necessari alla creazione sono:
 - *ID*: numero intero che rappresenta il codice identificativo univoco della zona;
 - *Direzione*: può assumere valore `Nord-Sud` o `Est-Ovest` e rappresenta l'orientamento della zona rispetto al piano;
@@ -341,7 +430,7 @@ I dati necessari alla creazione sono:
 
 - *aggiunta livelli*: a destra del numero attuale di livelli configurati, è presente un pulsante bianco contenente la scritta "Aggiungi" che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* indicata mediante un numero reale.
 
-Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" (@pulsante_crea_zona sinistra) per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
+Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" (@pulsante_crea_zona (sinistra)) per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
 Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo.
 
 #figure(
@@ -358,7 +447,7 @@ Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà 
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile spostare una zona in esso collocata.
 
-Per eseguire tale operazione è possibile interagire con il cubo rosso, presente nelle coordinate (0,0) rispetto alla zona, visibile nel caso in cui il cursore del mouse venga sovrapposto ad essa (@immagini_pulsanti_ispezione_zona destra).
+Per eseguire tale operazione è possibile interagire con il cubo rosso, presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse venga sovrapposto ad essa (@immagini_pulsanti_ispezione_zona (destra)).
 
 Per realizzare lo spostamento è sufficiente premere il tasto sinistro del mouse sopra al cubo descritto e, mantenendo la pressione di tale tasto, spostare il mouse per riposizionare la zona interessata nell'ambiente di lavoro.
 
@@ -434,16 +523,16 @@ Successivamente alla creazione dell'ambiente di lavoro è possibile eliminare un
 
 Per eseguire tale operazione è possibile interagire con:
 
-- il pulsante rosso contenente la scritta "Elimina" contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@immagini_pulsanti_eliminazione_zona sinistra);
+- il pulsante rosso contenente la scritta "Elimina" contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@immagini_pulsanti_eliminazione_zona (sinistra));
 
-- il pulsante contenente l'icona raffigurante un cestino (@immagini_pulsanti_eliminazione_zona destra) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da eliminare.
+- il pulsante contenente l'icona raffigurante un cestino (@immagini_pulsanti_eliminazione_zona (destra)) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da eliminare.
 
 #figure(
     grid(
         columns: 2,
         rows:    (auto, auto),
-        [ #image("./imgs/pulsante_eliminazione_zona.png", width: 80%)],
-        [ #image("./imgs/pulsante_cestino_zone.png", width: 100%)],
+        [ #image("./imgs/pulsante_eliminazione_zona.png", width: 60%)],
+        [ #image("./imgs/pulsante_cestino_zone.png", width: 90%)],
     ),caption: [Pulsante "Elimina" di eliminazione zona (sinistra) e pulsanti "cestino" di eliminazione zona (destra)],
 )<immagini_pulsanti_eliminazione_zona>
 
@@ -458,64 +547,6 @@ Alla pressione di uno dei pulsanti elencati, verrà aperto il pannello di confer
 Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo pannello, la relativa zona (e conseguentemente tutti i bin in essa contenuti) verrà rimossa dall'ambiente di lavoro e dalla lista delle zone.
 
 Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno visualizzabili nella lista dei prodotti non collocati (#TODO) in attesa di una nuova collocazione.
-
-
-== Ispezione Bin, Prodotti e Zone
-
-#figure(
-    grid(
-        columns: 3,
-        rows:    (auto, auto),
-        [ #image("./imgs/ispezione_1.png", width: 80%)],
-        [ #image("./imgs/ispezione_2.png", width: 100%)],
-        [ #image("./imgs/ispezione_3.png", width: 75%)],
-    ),caption: [Menù di ispezione zone (sinistra e centro) e menù di ispezione bin (destra)],
-) <ispezione>
-
-È possibile in ogni momento ispezionare una zona facendo doppio click sul cubetto rosso presente in uno dei suoi angoli, usato anche per lo spostamento. Si aprirà quindi il menù in figura @ispezione (sinistra e centro), dove vengono riportate in ordine:
-- id della zona;
-- orientamento e dimensioni;
-- lista di bin che riporta per ogni voce:
-  - id del bin;
-  - stato ("Libero" o, se occupato, nome del prodotto contenuto);
-  - pulsante per la visualizzazione dei dettagli del bin (menù in @ispezione a destra), presente solo se il bin è occupato.
-
-Per ispezionare il contenuto di un bin è possibile, in alternativa al pulsante citato in precedenza, fare doppio click sul bin desiderato ed aprire il menù in figura @ispezione (destra).
-Verranno mostrati:
-- id del bin;
-- dimensioni del bin;
-- informazioni sul prodotto contenuto, se presente:
-  - nome;
-  - id;
-  - categoria;
-  - dimensioni;
-  - peso.
-
-== Richiesta spostamento prodotto
-
-#figure(
-    grid(
-        columns: 2,
-        rows:    (auto, auto),
-        [ #image("./imgs/spostamento_drag_and_drop.png", width: 80%)],
-        [ #image("./imgs/spostamento_non_collocato.png", width: 80%)],
-    ),caption: [Spostamento prodotti con drag and drop (sinistra), menù spostamento prodotti non collocati (destra)],
-) <spostamento>
-
-=== Spostamento tramite drag and drop
-
-Lo spostamento di un prodotto da un bin a un altro avviene tramite _drag and drop_. Posizionando il puntatore del mouse sul prodotto che si desidera spostare e premendo il tasto sinistro possiamo "prendere" il prodotto. Tenendo premuto il tasto sinistro è possibile spostare il prodotto in prossimità della posizione in cui vogliamo posizionarlo e quindi, rilasciando il tasto sinistro, effettuare lo spostamento. È possibile spostare prodotti solamente all'interno di bin vuoti.
-
-In basso a destra nello schermo, una notifica avviserà della possibilità o meno di effettuare lo spostamento. In caso di esito positivo, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde, come rappresentato in @spostamento
-
-=== Spostamento prodotto non collocato
-
-I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti*, possono essere posizionati nel seguente modo:
-- ricerco la posizione in cui voglio collocare il prodotto nell'ambiente (deve essere vuota);
-- doppio click sulla posizione desiderata;
-- nel menù che apparirà (@spostamento), premere il pulsante *Seleziona*;
-- selezionare il prodotto desiderato e premere *Conferma*;
-- il prodotto risulta collocato.
 
 == Impostazioni
 

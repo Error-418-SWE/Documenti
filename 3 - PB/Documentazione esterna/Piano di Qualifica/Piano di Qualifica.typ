@@ -13,6 +13,9 @@
   showImagesIndex: false,
 );
 
+
+#set table(align: center + horizon)
+
 = Introduzione
 
 == Scopo del documento
@@ -98,7 +101,7 @@ Si definisce:
     rows: (auto, 30pt),
 
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$"SPV" = sum_(r in R) "OR"_r * "CR"_r$), align(center+horizon,$>"0"$), align(center+horizon,$>"0"$),
+    [$"SPV" = sum_(r in R) "OR"_r * "CR"_r$], [$>"0"$], [$>"0"$],
   ),
   caption: "Specifiche metrica SPV"
 )
@@ -111,7 +114,7 @@ Si definisce:
     rows: (auto, 30pt),
 
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$"PPV" = sum_(s in S)"SPV"_("s")$), align(center+horizon,$cases(>"0", <="BAC")$), align(center+horizon,$cases(>"0", <="BAC")$),
+    [$"PPV" = sum_(s in S)"SPV"_("s")$], [$cases(>"0", <="BAC")$], [$cases(>"0", <="BAC")$],
   ),
   caption: "Specifiche metrica SPV"
 )
@@ -141,7 +144,7 @@ Si definisce:
     rows: (auto, 30pt),
 
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$"PAC" = sum_(s in S)"SAC"_("s")$), align(center+horizon,$<="BAC"$), align(center+horizon,$<="BAC"$),
+    [$"PAC" = sum_(s in S)"SAC"_("s")$], [$<="BAC"$], [$<="BAC"$],
   ),
   caption: "Specifiche metrica PAC"
 )
@@ -161,7 +164,7 @@ L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato p
     rows: (auto, 30pt),
 
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$"SEV" = display("SPC"/"SPP")*"SPV"$), align(center+horizon, $="SPV"$), align(center+horizon, $>="80% del SPV"$),
+    [$"SEV" = display("SPC"/"SPP")*"SPV"$], [ $="SPV"$], [ $>="80% del SPV"$],
   ),
   caption: "Specifiche metrica SEV"
 )
@@ -174,7 +177,7 @@ L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato p
     rows: (auto, 40pt),
 
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon, $"PEV" = sum_(s in S)"SEV"_("s")$), align(center+horizon, $="PPV"$), align(center+horizon, $>="80% del PPV"$),
+    [ $"PEV" = sum_(s in S)"SEV"_("s")$], [ $="PPV"$], [ $>="80% del PPV"$],
   ),
   caption: "Specifiche metrica PEV"
 )
@@ -190,7 +193,7 @@ Il *CPI* rappresenta l'indice di performance del costo, ovvero il rapporto tra i
     rows: (auto, 30pt),
 
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$"CPI" = display("PEV"/"PAC")$), align(center+horizon,$>=1$), align(center+horizon,$>=0.95$),
+    [$"CPI" = display("PEV"/"PAC")$], [$>=1$], [$>=0.95$],
   ),
   caption: "Specifiche metrica CPI"
 )
@@ -205,11 +208,11 @@ L'EAC rappresenta il costo stimato al termine del progetto. Tale metrica viene c
     rows: (auto,50pt),
 
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon,$"EAC" = display("BAC"/"CPI")$), align(center+horizon,$<="BAC"$),
-    align(center+horizon, $cases( <= "BAC + 5%",
+    [$"EAC" = display("BAC"/"CPI")$], [$<="BAC"$],
+    [ $cases( <= "BAC + 5%",
                                  <= "BAC alla consegna",
                                  >= "12000 da regolamento"
-                                  )$),
+                                  )$],
   ),
   caption: "Specifiche metrica EAC"
 )
@@ -243,7 +246,7 @@ Dati:
     columns: 3,
     rows: (auto, 30pt),
     [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    align(center+horizon, [% metriche soddisfatte = $display("MS"/"MT")*100$]), align(center+horizon,$100%$), align(center+horizon,$>=75%$),
+    [% metriche soddisfatte = $display("MS"/"MT")*100$], [$100%$], [$>=75%$],
   ),
   caption: "Specifiche metriche soddisfatte"
 )
@@ -261,7 +264,7 @@ Il Mandatory Requirements Coverage esprime la percentuale di copertura dei requi
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*MRC* = $display("MR"_c/"MR"_t)*100$]), align(center+horizon,$100%$), align(center+horizon,$100%$),
+      [*MRC* = $display("MR"_c/"MR"_t)*100$], [$100%$], [$100%$],
     ),
     caption: "Mandatory Requirements Coverage"
 )
@@ -275,7 +278,7 @@ Il Desiderable Requirements Coverage esprime la percentuale di copertura dei req
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*DRC* = $display("DR"_c/"DR"_t)*100$]), align(center+horizon,$100%$), align(center+horizon,$>=0%$),
+      [*DRC* = $display("DR"_c/"DR"_t)*100$], [$100%$], [$>=0%$],
     ),
     caption: "Desiderable Requirements Coverage"
 )
@@ -289,7 +292,7 @@ L'Optional Requirements Coverage esprime la percentuale di copertura dei requisi
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*ORC* = $display("OR"_c/"OR"_t)*100$]), align(center+horizon,$100%$), align(center+horizon,$>=0%$),
+      [*ORC* = $display("OR"_c/"OR"_t)*100$], [$100%$], [$>=0%$],
     ),
     caption: "Optional Requirements Coverage"
 )
@@ -303,7 +306,7 @@ L'ART si riferisce al tempo di risposta medio, cioè al periodo medio di tempo c
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*Average Response Time*]), align(center+horizon,$<=2s$), align(center+horizon,$<=4s$),
+      [*Average Response Time*], [$<=2s$], [$<=4s$],
     ),
     caption: "Average Response Time"
 )
@@ -317,7 +320,7 @@ Il LT misura il tempo medio che gli utenti impiegano per apprendere ad utilizzar
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*Learning Time*]), align(center+horizon,$<=15m$), align(center+horizon,$<=20m$),
+      [*Learning Time*], [$<=15m$], [$<=20m$],
     ),
     caption: "Average Response Time"
 )
@@ -329,7 +332,7 @@ L'EOU esprime la facilità del raggiungimento di un obiettivo nel prodotto softw
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*Ease of Use*]), align(center+horizon,$<=5$), align(center+horizon,$<=7$),
+      [*Ease of Use*], [$<=5$], [$<=7$],
     ),
     caption: "Ease of Use"
 )
@@ -348,7 +351,7 @@ La CC è una metrica utilizzata per misurare la complessità di un metodo. Essa 
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*CC*$(G) = e - n + p$]), align(center+horizon,$<=7$), align(center+horizon,$<=10$),
+      [*CC*$(G) = e - n + p$], [$<=7$], [$<=10$],
     ),
     caption: "Ciclomatic Complexity"
 
@@ -362,7 +365,7 @@ Il CL misura il grado di dipendenza di una classe da altre classi nel sistema. Q
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*Coupling Level*]), align(center+horizon,$<=4$), align(center+horizon,$<=6$),
+      [*Coupling Level*], [$<=4$], [$<=6$],
     ),
     caption: "Coupling Level"
 )
@@ -374,7 +377,7 @@ L'RC misura il numero di responsabilità che una classe ha all'interno di un sis
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*Responsability Count*]), align(center+horizon,$1$), align(center+horizon,$1$),
+      [*Responsability Count*], [$1$], [$1$],
     ),
     caption: "Responsability Count"
 )
@@ -386,7 +389,7 @@ Il MPN è una metrica che misura il numero di parametri di un metodo.
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*Method Parameters Number*]), align(center+horizon,$<=3$), align(center+horizon,$<=4$),
+      [*Method Parameters Number*], [$<=3$], [$<=4$],
     ),
     caption: "Method Parameters Number"
 )
@@ -401,7 +404,7 @@ La FD è un indicatore della stabilità e della qualità del software. Questa me
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*FD*$="T"_f/"T"_e*100$]), align(center+horizon,$0%$), align(center+horizon,$0%$),
+      [*FD*$="T"_f/"T"_e*100$], [$0%$], [$0%$],
     ),
     caption: "Failure Density"
 )
@@ -416,7 +419,7 @@ La SBV è una metrica che indica la percentuale di browser supportati rispetto a
       columns: 3,
       rows: (auto, 30pt),
       [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      align(center+horizon, [*SBV*$="V"_s/"V"_a*100$]), align(center+horizon,$100%$), align(center+horizon,$100%$),
+      [*SBV*$="V"_s/"V"_a*100$], [$100%$], [$100%$],
     ),
     caption: "Supported Browser Version"
 )

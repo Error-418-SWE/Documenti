@@ -216,7 +216,7 @@ L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle f
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
 
-Selezionando da esso la prima icona (@icona_lista_zone sinistra), la quale corrisponde alla voce "Zone", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente (@icona_lista_zone destra).
+Selezionando da esso la prima icona (@icona_lista_zone (sinistra)), la quale corrisponde alla voce "Zone", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente (@icona_lista_zone (destra)).
 
 #figure(
     grid(
@@ -239,9 +239,9 @@ Successivamente alla creazione dell'ambiente di lavoro è possibile ispezionare 
 
 Per eseguire tale operazione è possibile interagire con:
 
-  - il pulsante contenente l'icona raffigurante un occhio (@immagini_pulsanti_ispezione_zona sinistra) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da ispezionare;
+  - il pulsante contenente l'icona raffigurante un occhio (@immagini_pulsanti_ispezione_zona (sinistra)) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da ispezionare;
 
-  - il cubo rosso presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse sia sovrapposto a tale zona (@immagini_pulsanti_ispezione_zona destra). Per eseguire l'ispezione, tale cubo deve essere premuto con un doppio click del tasto sinistro del mouse.
+  - il cubo rosso presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse sia sovrapposto a tale zona (@immagini_pulsanti_ispezione_zona (destra)). Per eseguire l'ispezione, tale cubo deve essere premuto con un doppio click del tasto sinistro del mouse.
 
 #figure(
     grid(
@@ -327,7 +327,7 @@ Ogni riga di tali liste corrisponde ad un prodotto, il quale viene identificato 
 
 Sulla destra di tale riga è presente l'icona relativa all'ispezione del prodotto (@ispezione_prodotto), rappresentata da un occhio.
 
-=== Ispezione podotto <ispezione_prodotto>
+=== Ispezione prodotto <ispezione_prodotto>
 #TODO
 
 == Ordini di movimentazione prodotti
@@ -335,7 +335,7 @@ Sulla destra di tale riga è presente l'icona relativa all'ispezione del prodott
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
 
-Selezionando da esso la terza icona (@icona_lista_ordini sinistra), la quale corrisponde alla voce "Ordini di movimentazione", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista degli ordini di movimentazione avvenuti nella sessione corrente (@icona_lista_ordini destra).
+Selezionando da esso la terza icona (@icona_lista_ordini (sinistra)), la quale corrisponde alla voce "Ordini di movimentazione", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista degli ordini di movimentazione avvenuti nella sessione corrente (@icona_lista_ordini (destra)).
 
 Per ogni ordine viene riportato il nome del prodotto soggetto allo spostamento e gli `ID` del bin di partenza e di destinazione.
 
@@ -375,13 +375,13 @@ I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodot
 
 == Ricerca zone <ricerca_zone>
 
-Nella parte superiore del pannello relativo alla visualizzazione della lista delle zone (@icona_lista_zone destra), è presente l'area di ricerca delle zone tramite `ID`.
+Nella parte superiore del pannello relativo alla visualizzazione della lista delle zone (@icona_lista_zone (destra)), è presente l'area di ricerca delle zone tramite `ID`.
 
 Dopo aver inserito il parametro desiderato nella barra di ricerca, verranno mostrati nell'area sottostante i risultati relativi alle zone aventi un `ID` che contenga al suo interno il parametro immesso.
 
 == Ricerca prodotti <ricerca_prodotti>
 
-Nella parte superiore del pannello relativo alla visualizzazione delle liste dei prodotti (@icona_lista_prodotti destra), è presente l'area di ricerca dei prodotti.
+Nella parte superiore del pannello relativo alla visualizzazione delle liste dei prodotti (@icona_lista_prodotti (destra)), è presente l'area di ricerca dei prodotti.
 
 I criteri di ricerca disponibili sono:
 
@@ -431,7 +431,7 @@ I dati necessari alla creazione sono:
 
 - *aggiunta livelli*: a destra del numero attuale di livelli configurati, è presente un pulsante bianco contenente la scritta "Aggiungi" che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* indicata mediante un numero reale.
 
-Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" (@pulsante_crea_zona sinistra) per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
+Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" (@pulsante_crea_zona (sinistra)) per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
 Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo.
 
 #figure(
@@ -448,7 +448,7 @@ Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà 
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile spostare una zona in esso collocata.
 
-Per eseguire tale operazione è possibile interagire con il cubo rosso, presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse venga sovrapposto ad essa (@immagini_pulsanti_ispezione_zona destra).
+Per eseguire tale operazione è possibile interagire con il cubo rosso, presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse venga sovrapposto ad essa (@immagini_pulsanti_ispezione_zona (destra)).
 
 Per realizzare lo spostamento è sufficiente premere il tasto sinistro del mouse sopra al cubo descritto e, mantenendo la pressione di tale tasto, spostare il mouse per riposizionare la zona interessata nell'ambiente di lavoro.
 
@@ -524,9 +524,9 @@ Successivamente alla creazione dell'ambiente di lavoro è possibile eliminare un
 
 Per eseguire tale operazione è possibile interagire con:
 
-- il pulsante rosso contenente la scritta "Elimina" contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@immagini_pulsanti_eliminazione_zona sinistra);
+- il pulsante rosso contenente la scritta "Elimina" contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@immagini_pulsanti_eliminazione_zona (sinistra));
 
-- il pulsante contenente l'icona raffigurante un cestino (@immagini_pulsanti_eliminazione_zona destra) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da eliminare.
+- il pulsante contenente l'icona raffigurante un cestino (@immagini_pulsanti_eliminazione_zona (destra)) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da eliminare.
 
 #figure(
     grid(

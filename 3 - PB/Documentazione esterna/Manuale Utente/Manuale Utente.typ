@@ -357,7 +357,7 @@ Lo spostamento di un prodotto tra due bin avviene tramite _drag and drop_:
 
   - tenendo premuto il medesimo tasto è possibile spostare il prodotto nella posizione del bin di destinazione;
 
-  - rilasciando il tasto, verrà visualizzata nella parte inferiore destra dello schermo una notifica che avviserà dell'avvenuto, o meno, ordine di spostamento.
+  - rilasciando il tasto, verrà visualizzata nella parte inferiore destra dello schermo una notifica che avviserà della corretta creazione, o meno, dell'ordine di spostamento.
 
 
 Nel caso in cui l'ordine di movimentazione sia avvenuto correttamente, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde (@immagine_spostamento_prodotti).
@@ -370,7 +370,7 @@ Nel caso in cui l'ordine di movimentazione sia avvenuto correttamente, i bin di 
 ) <immagine_spostamento_prodotti>
 
 \
-I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti* (@visualizzazione_lista_prodotti), possono essere posizionati tramite il pannello di ispezione del bin di destinazione (@ispezione_bin), purché esso sia vuoto, ma tale operazione non comporta la generazione di una richiesta di spostamento.
+I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodotti* (@visualizzazione_lista_prodotti), possono essere posizionati tramite il pannello di ispezione del bin di destinazione (@ispezione_bin), purché esso sia vuoto. Tale operazione non comporta la generazione di una richiesta di spostamento.
 
 
 == Ricerca zone <ricerca_zone>
@@ -385,14 +385,13 @@ Nella parte superiore del pannello relativo alla visualizzazione delle liste dei
 
 I criteri di ricerca disponibili sono:
 
-  - mediante il nome del prodotto o una sua sottostringa. Deve essere selezionata la voce "Nome" a sinistra della barra di ricerca;
+  - nome del prodotto o una sua sottostringa: deve essere selezionata la voce "Nome" a sinistra della barra di ricerca;
 
-  - mediante l'`ID` del prodotto o una sua sottostringa. Deve essere selezionata la voce "ID" a sinistra della barra di ricerca;
+  - `ID` del prodotto o una sua sottostringa: deve essere selezionata la voce "ID" a sinistra della barra di ricerca;
 
-  - in aggiunta ai criteri precedentemente elencati, è possibile filtrare i risultati delle ricerche in base alle categorie merceologiche. Dopo aver premuto su "Categoria prodotto", la categoria scelta deve essere selezionata dalla sottostante lista delle merci presenti nel database.
-  Così facendo verranno esclusi dalle ricerche tutti i prodotti non appartenenti alla categoria selezionata.
+  - categoria merceologica: dopo aver premuto su "Categoria prodotto" comparirà una lista nella quale è possibile selezionare la categoria desiderata.
 
-Dopo aver inserito il parametro desiderato nella barra di ricerca, verranno mostrati nell'area sottostante i relativi prodotti.
+I risultati della ricerca verranno mostrati nell'area sottostante, all'interno dell'apposita lista (@visualizzazione_lista_prodotti).
 
 
 == Creazione zona <creazione_zona>

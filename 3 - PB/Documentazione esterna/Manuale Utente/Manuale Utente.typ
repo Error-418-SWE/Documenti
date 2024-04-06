@@ -316,7 +316,7 @@ Per eseguire tale operazione è possibile interagire con:
 ) <immagini_opzioni_selezione_bin>
 
 \
-L'esecuzione di almeno una delle modalità elencate permette la visualizzazione, sulla destra dello schermo, del pannello relativo alle informazioni del bin di interesse (@immagine_pannello_ispezione_zona).
+L'esecuzione di almeno una delle modalità elencate permette la visualizzazione, sulla destra dello schermo, del pannello relativo alle informazioni del bin di interesse (@immagini_pannello_bin).
 
 In esso vengono visualizzati:
 
@@ -351,7 +351,7 @@ In esso vengono visualizzati:
 ) <immagini_pannello_bin>
 
 \
-Per inserire un prodotto all'interno di un bin vuoto mediante la sua ispezione, è sufficiente premere sul pulsante contenente la scritta "Seleziona" e ricercare il prodotto desiderato dal relativo pannello sulla sinistra con le medesime modalità presenti nella ricerca di un prodotto (#TODO).
+Per inserire un prodotto all'interno di un bin vuoto mediante la sua ispezione, è sufficiente premere sul pulsante contenente la scritta "Seleziona" e ricercare il prodotto desiderato dal relativo pannello sulla sinistra tramite il suo `ID` o nome.
 
 Per confermare la scelta è necessario premere sul pulsante contenente la scritta "Conferma" (@immagine_pannello_inserimento_prodotto).
 

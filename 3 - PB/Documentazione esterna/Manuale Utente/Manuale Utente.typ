@@ -612,7 +612,7 @@ Alla pressione di uno dei pulsanti elencati, verrà aperto il pannello di confer
 
 Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo pannello, la relativa zona (e conseguentemente tutti i bin in essa contenuti) verrà rimossa dall'ambiente di lavoro e dalla lista delle zone.
 
-Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno visualizzabili nella lista dei prodotti non collocati (#TODO) in attesa di una nuova collocazione.
+Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno visualizzabili nella lista dei prodotti non collocati (@visualizzazione_lista_prodotti) in attesa di una nuova collocazione.
 
 == Impostazioni
 

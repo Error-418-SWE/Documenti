@@ -419,7 +419,7 @@ In esso vengono visualizzati:
 
   - *Nome*: nome del prodotto, è visualizzato come titolo del pannello;
 
-  - *ID*: codice identificativo univoco del prodotto.
+  - *ID*: codice identificativo univoco del prodotto;
 
   - *Categorie*: lista delle categorie appartenenti al prodotto;
 

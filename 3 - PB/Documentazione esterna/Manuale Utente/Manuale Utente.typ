@@ -320,7 +320,7 @@ L'esecuzione di almeno una delle modalità elencate permette la visualizzazione,
 
 In esso vengono visualizzati:
 
-  - *ID*: codice alfanumerico identificativo univoco della zona, è visualizzato anche come titolo del pannello.
+  - *ID*: codice alfanumerico identificativo univoco del bin, è visualizzato anche come titolo del pannello.
 
     Esso è composto da tre valori:
 

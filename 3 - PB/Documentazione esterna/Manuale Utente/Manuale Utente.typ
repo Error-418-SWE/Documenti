@@ -328,7 +328,45 @@ Ogni riga di tali liste corrisponde ad un prodotto, il quale viene identificato 
 Sulla destra di tale riga è presente l'icona relativa all'ispezione del prodotto (@ispezione_prodotto), rappresentata da un occhio.
 
 === Ispezione prodotto <ispezione_prodotto>
-#TODO
+
+Successivamente alla creazione dell'ambiente di lavoro è possibile ispezionare i prodotti letti da database visualizzandone i dettagli.
+
+Per eseguire tale operazione è possibile interagire con:
+
+  - il pulsante contenente l'icona raffigurante un occhio (@immagini_ispezione_prodotto (sinistra)) presente nella lista dei prodotti (@visualizzazione_lista_prodotti) nella riga corrispondente al prodotto da ispezionare;
+
+ - il pannello di ispezione del bin contenente il prodotto di interesse (@ispezione_bin).
+
+L'esecuzione di almeno una delle modalità elencate permette la visualizzazione, sulla destra dello schermo, del pannello relativo alle informazioni del prodotto di interesse (@immagini_ispezione_prodotto (destra)).
+
+#figure(
+    grid(
+        columns: 2,
+        rows:    (auto, auto),
+        [ #image("./imgs/pulsante_ispezione_prodotto.png", width: 70%)],
+        [ #image("./imgs/pannello_ispezione_prodotto.png", width: 70%)],
+    ),caption: [Pulsante "occhio" per l'ispezione prodotto (sinistra) e pannello di ispezione prodotto (destra)],
+)<immagini_ispezione_prodotto>
+
+\
+In esso vengono visualizzati:
+
+  - *Nome*: nome del prodotto, è visualizzato come titolo del pannello;
+
+  - *ID*: codice identificativo univoco del prodotto.
+
+  - *Categorie*: lista delle categorie appartenenti al prodotto;
+
+  - *Dimensioni*: tre campi rispettivamente relativi a:
+
+    - *Lunghezza*: numero reale che definisce la lunghezza del prodotto;
+
+    - *Larghezza*: numero reale che definisce la larghezza del prodotto;
+
+    - *Altezza*: numero reale che definisce l'altezza del prodotto.
+
+  - *Peso*: numero reale che definisce il peso del prodotto.
+
 
 == Ordini di movimentazione prodotti
 === Visualizzazione lista ordini di movimentazione

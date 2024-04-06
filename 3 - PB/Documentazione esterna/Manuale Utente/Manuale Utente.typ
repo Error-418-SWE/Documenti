@@ -339,7 +339,7 @@ In esso vengono visualizzati:
 
     - *Altezza*: numero reale che definisce l'altezza del bin.
 
-  - *Area prodotto contenuto*: nel caso in cui il bin contenga un prodotto, vengono visualizzate le sue informazioni (#TODO), altrimenti viene data la possibilità di selezionare un prodotto non collocato da inserire nel bin.
+  - *Area prodotto contenuto*: nel caso in cui il bin contenga un prodotto, vengono visualizzate le sue informazioni (@ispezione_prodotto), altrimenti viene data la possibilità di selezionare un prodotto non collocato da inserire nel bin.
 
 #figure(
     grid(

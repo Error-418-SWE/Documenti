@@ -139,7 +139,7 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
     [*Componente*], [*Versione*], [*Riferimenti*],
 
     [Docker],[$>=$ 24.0.7],[https://docs.docker.com/],
-    [Docker-compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
+    [Docker Compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
 
   ),
   caption: "Requisiti di sistema minimi"
@@ -189,15 +189,6 @@ In questa sezione, viene presentata una panoramica completa degli strumenti e de
 L'obiettivo principale è assicurare che il software sia sviluppato utilizzando le tecnologie adeguate in termini di efficacia ed efficienza e che soddisfi i requisiti individuati nel documento #adr_v.
 
 == Tecnologie implementative
-=== Tailwind CSS
-  - Framework CSS utilizzato per lo sviluppo di interfacce utente web. Offre una serie di classi predefinite per la definizione dello stile degli elementi.
-  - *Versione: * 3.4.1.
-  - *Link: * https://tailwindcss.com/ #lastVisitedOn(04, 04, 2024)
-  - *Linguaggio: * CSS.
-  - *Contesto di utilizzo: *
-    - Definizione stile e layout componenti web.
-
-\
 === Next.js
   - Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web. Offre funzionalità avanzate realizzazione di API, gestione del routing e Server Action.
   - *Versione: * 14.1.0.
@@ -225,6 +216,15 @@ L'obiettivo principale è assicurare che il software sia sviluppato utilizzando 
   - *Linguaggio: * TypeScript, JSON.
   - *Contesto di utilizzo: *
     - Codifica lato server.
+\
+=== Tailwind CSS
+  - Framework CSS utilizzato per lo sviluppo di interfacce utente web. Offre una serie di classi predefinite per la definizione dello stile degli elementi.
+  - *Versione: * 3.4.1.
+  - *Link: * https://tailwindcss.com/ #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * CSS.
+  - *Contesto di utilizzo: *
+    - Definizione stile e layout componenti web.
+
 \
 === Shadcn/ui
   - Raccolta di componenti React personalizzati per la creazione di interfacce utente. Offre una serie di componenti pronti all'uso per la realizzazione di interfacce grafiche.
@@ -312,8 +312,8 @@ L'obiettivo principale è assicurare che il software sia sviluppato utilizzando 
       - Immagine: `node:20-alpine`.
 
 \
-=== Docker-compose
-  - Docker-compose è uno strumento per la definizione e l'esecuzione di applicazioni multi-container. Viene utilizzato per gestire l'orchestrazione dei container Docker e semplificare il processo di deployment.
+=== Docker Compose
+  - Docker Compose è uno strumento per la definizione e l'esecuzione di applicazioni multi-container. Viene utilizzato per gestire l'orchestrazione dei container Docker e semplificare il processo di deployment.
   - *Versione: * 2.23.3.
   - *Link: * https://docs.docker.com/compose/ #lastVisitedOn(04, 04, 2024)
   - *Linguaggio: * YAML.
@@ -1536,19 +1536,19 @@ Nel contesto del progetto didattico, l'architettura monolitica è stata scelta t
 - *Deployment*: l'architettura monolitica semplifica il processo di deployment, dovendo gestire un unico sistema.
 
 == Deployment con Docker
-Il processo di deployment del software è gestito mediante l'utilizzo di Docker e Docker-compose. La scelta di utilizzare Docker è stata determinata dai seguenti fattori:
+Il processo di deployment del software è gestito mediante l'utilizzo di Docker e Docker Compose. La scelta di utilizzare Docker è stata determinata dai seguenti fattori:
 
 - *Isolamento*: Docker permette di eseguire processi informatici in ambienti isolati chiamati container. Questo garantisce che il software funzioni in modo coerente e affidabile, creando una base comune di sviluppo tra i Programmatori e garantendo che il prodotto software sia isolato dall'ambiente di esecuzione;
 
 - *Portabilità*: Docker semplifica il processo di deployment del prodotto in diversi ambienti, garantendo che il software funzioni in modo coerente e affidabile su qualsiasi piattaforma;
 
-- *Semplicità di installazione e avvio*: impostata la configurazione dei `Dockerfile` e di Docker-compose, l'avvio e la gestione dei container è standardizzata.
+- *Semplicità di installazione e avvio*: impostata la configurazione dei `Dockerfile` e di Docker Compose, l'avvio e la gestione dei container è standardizzata.
 
 In conclusione, l'architettura monolitica si allinea perfettamente con le esigenze e le limitazioni del progetto, rendendola una scelta ragionata e valida. Questa scelta permette di concentrarsi sulle priorità chiave: sviluppare un prodotto funzionante e di alta qualità in tempi ragionevoli, pur mantenendo la flessibilità di apportare modifiche in base alle esigenze emerse.
 
 \
 === Ambiente Docker
-I container Docker sono organizzati e gestiti mediante Docker-compose.
+I container Docker sono organizzati e gestiti mediante Docker Compose.
 
 Sono presenti due container:
 

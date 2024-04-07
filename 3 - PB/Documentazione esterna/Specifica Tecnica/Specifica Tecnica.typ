@@ -139,7 +139,7 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
     [*Componente*], [*Versione*], [*Riferimenti*],
 
     [Docker],[$>=$ 24.0.7],[https://docs.docker.com/],
-    [Docker-compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
+    [Docker Compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
 
   ),
   caption: "Requisiti di sistema minimi"
@@ -330,8 +330,8 @@ Docker è un software utilizzato per il processo di deployment di applicazioni s
   - Immagine: `node:20-alpine`.
 
 \
-=== Docker-compose
-Docker-compose è uno strumento per la definizione e l'esecuzione di applicazioni multi-container. Viene utilizzato per gestire l'orchestrazione dei container Docker e semplificare il processo di deployment.
+=== Docker Compose
+Docker Compose è uno strumento per la definizione e l'esecuzione di applicazioni multi-container. Viene utilizzato per gestire l'orchestrazione dei container Docker e semplificare il processo di deployment.
 
 *Versione: * 2.23.3.
 
@@ -1554,19 +1554,19 @@ Nel contesto del progetto didattico, l'architettura monolitica è stata scelta t
 - *Deployment*: l'architettura monolitica semplifica il processo di deployment, dovendo gestire un unico sistema.
 
 == Deployment con Docker
-Il processo di deployment del software è gestito mediante l'utilizzo di Docker e Docker-compose. La scelta di utilizzare Docker è stata determinata dai seguenti fattori:
+Il processo di deployment del software è gestito mediante l'utilizzo di Docker e Docker Compose. La scelta di utilizzare Docker è stata determinata dai seguenti fattori:
 
 - *Isolamento*: Docker permette di eseguire processi informatici in ambienti isolati chiamati container. Questo garantisce che il software funzioni in modo coerente e affidabile, creando una base comune di sviluppo tra i Programmatori e garantendo che il prodotto software sia isolato dall'ambiente di esecuzione;
 
 - *Portabilità*: Docker semplifica il processo di deployment del prodotto in diversi ambienti, garantendo che il software funzioni in modo coerente e affidabile su qualsiasi piattaforma;
 
-- *Semplicità di installazione e avvio*: impostata la configurazione dei `Dockerfile` e di Docker-compose, l'avvio e la gestione dei container è standardizzata.
+- *Semplicità di installazione e avvio*: impostata la configurazione dei `Dockerfile` e di Docker Compose, l'avvio e la gestione dei container è standardizzata.
 
 In conclusione, l'architettura monolitica si allinea perfettamente con le esigenze e le limitazioni del progetto, rendendola una scelta ragionata e valida. Questa scelta permette di concentrarsi sulle priorità chiave: sviluppare un prodotto funzionante e di alta qualità in tempi ragionevoli, pur mantenendo la flessibilità di apportare modifiche in base alle esigenze emerse.
 
 \
 === Ambiente Docker
-I container Docker sono organizzati e gestiti mediante Docker-compose.
+I container Docker sono organizzati e gestiti mediante Docker Compose.
 
 Sono presenti due container:
 

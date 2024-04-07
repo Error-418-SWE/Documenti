@@ -526,7 +526,7 @@ L'interfaccia `DataRepositoryInterface` è implementata dalle seguenti classi:
 
 \
 === Data Mapper Pattern
-Il Data Mapper Pattern, assieme al Repository Pattern, permette di separare la logica di business dalla logica di accesso ai dati. Il Data Mapper Pattern si occupa di mappare i dati letti dal database in oggetti del Business layer, garantendo una maggiore flessibilità e manutenibilità del codice.
+Il Data Mapper Pattern, assieme al Repository Pattern, permette di separare la logica di business dalla logica di accesso ai dati.
 
 Permette la mappatura dei dati letti dal database in oggetti del Business layer, stabilendo un contratto che i dati letti devono rispettare per essere trasformati in oggetti.
 

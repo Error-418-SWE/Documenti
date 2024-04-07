@@ -23,7 +23,7 @@
 
 = Valutazione del progresso generale <avanzamento>
 
-Durante lo Sprint 20 sono state completate buona parte delle task previste, ed è stato quasi concluso lo sviluppo del MVP.
+Durante lo Sprint 20 è stata completata buona parte delle task previste, ed è stato quasi concluso lo sviluppo del MVP.
 
 Il giorno venerdì 22/03/2024 si è svolto il meeting esterno con il Proponente per un aggiornamento riguardo lo stato dei lavori e l'illustrazione degli ultimi avanzamenti del MVP.
 
@@ -35,7 +35,7 @@ Sono stati conclusi l'aggiornamento e l'estensione del documento, il quale è st
 
 Il #man ha visto completati i seguenti lavori:
 
-- rimozione sezione requisiti di sistema e hardware, lasciando solo i requisiti riguardanti i browser;
+- rimozione sezione requisiti di sistema e hardware, poiché ritenuti di scarso interesse per l'utilizzatore finale, lasciando solo i requisiti riguardanti i browser;
 - redazione delle seguenti sezioni delle istruzioni d'uso:
   - Avvio e configurazione dell'ambiente;
   - Movimento nell'ambiente tridimensionale;

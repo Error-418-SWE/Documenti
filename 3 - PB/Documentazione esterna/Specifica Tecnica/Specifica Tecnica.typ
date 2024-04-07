@@ -131,7 +131,7 @@ Per concludere, “WMS3” supporta la personalizzazione dell'ambiente attravers
 
 Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'applicazione, comprese le caratteristiche necessarie per configurare l'ambiente di sviluppo del progetto.
 
-== Requisiti di sistema minimi
+== Requisiti software
 
 #figure(
   table(
@@ -140,27 +140,10 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 
     [Docker],[$>=$ 24.0.7],[https://docs.docker.com/],
     [Docker Compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
-
+    [Browser],[Supporto a WebGL 2.0],[@req_browser]
   ),
-  caption: "Requisiti di sistema minimi"
+  caption: "Requisiti software"
 )
-
-== Requisiti hardware
-
-#figure(
-  table(
-    columns: 2,
-    [*Componente*], [*Requisito minimo*],
-
-    [Processore],[Processore a 64 bit con SLAT (Second Level Address Translation)],
-    [Memoria RAM],[4GB DDR4],
-    [Spazio su disco], [$>=$ 20 GB],
-
-  ),
-  caption: "Requisiti hardware"
-)
-
-== Browser
 
 #figure(
   table(
@@ -169,14 +152,29 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 
     [Google Chrome],[$>=$ 89],
     [Microsoft Edge],[$>=$ 89],
-    [Mozilla Firefox],[$>=$ 16.4],
-    [Apple Safari],[$>=$ 108],
+    [Mozilla Firefox],[$>=$ 67],
+    [Apple Safari],[$>=$ 15],
     [Opera Browser],[$>=$ 76],
     [Google Chrome per Android],[$>=$ 89],
     [Apple Safari per iOS],[$>=$ 17.1],
     [Samsung Internet],[$>=$ 23],
   ),
   caption: "Browser supportati"
+) <req_browser>
+
+== Requisiti hardware
+
+#figure(
+  table(
+    columns: 2,
+    [*Componente*], [*Requisito minimo*],
+
+    [Processore],[CPU a 64 bit con supporto hardware alla virtualizzazione],
+    [Scheda video],[GPU con supporto a OpenGL ES 3.0],
+    [Memoria RAM],[4 GB],
+    [Spazio su disco],[$>=$ 20 GB],
+  ),
+  caption: "Requisiti hardware"
 )
 
 #pagebreak()

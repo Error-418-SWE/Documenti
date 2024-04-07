@@ -365,7 +365,7 @@ Ciascun layer possiede il suo sistema di classi e componenti e prevede metodi pe
 )
 
 === Vantaggi
-- Ogni livello dell'archiettetura crea un livello di astrazione che permette di perseguire la _separation of concerns_ e di rendere il software più manutenibile e scalabile;
+- Ogni livello dell'architettura crea un livello di astrazione che permette di perseguire la _separation of concerns_ e di rendere il software più manutenibile e scalabile;
 - Semplicità di implementazione in termini di costi e tempo;
 - Semplicità di test e debug.
 
@@ -507,7 +507,7 @@ Il Repository Pattern permette di separare la logica di business dalla logica di
       - *parametri: * `id:string` dell'oggetto interessato;
       - *risultati: *
         - *Esito positivo: * Promise contenente le informazioni dell'oggetto corrispondente;
-        - *Esito negativo: * Promise contenente lsita vuota.
+        - *Esito negativo: * Promise contenente lista vuota.
 
 \
 *Classi implementate*
@@ -1276,7 +1276,7 @@ I componenti realizzati sono i seguenti:
           - *Nome*: ricerca per nome.
       - *Combobox*: permette di selezionare la categoria di appartenenza dei prodotti da visualizzare;
         - *opzioni*: lista di categorie di appartenenza dei prodotti presenti nel magazzino.
-      - *Tabs*: permette di visuallizza o i prodotti collocati o i prodotti non collocati.
+      - *Tabs*: permette di visualizzare i prodotti collocati o i prodotti non collocati.
         - *opzioni*:
           - *Collocati*: visualizza solo i prodotti collocati;
           - *Non collocati*: visualizza solo i prodotti non collocati.
@@ -1376,7 +1376,7 @@ I componenti realizzati sono i seguenti:
     - *parametri*:
       - *zone*: oggetto `Zone` che rappresenta la zona da modificare, opzionale.
     - *interazione con l'utente*:
-      - *Input*: permette di insereire l'ID della zona (disabilitato in caso di modifica);
+      - *Input*: permette di inserire l'ID della zona (disabilitato in caso di modifica);
         - *nome*: "ID".
       - *Input*: permette di inserire la lunghezza della zona;
         - *nome*: "lunghezza".
@@ -1419,8 +1419,8 @@ I componenti realizzati sono i seguenti:
 
   \
   - *bin_columns*:
-    - *descrizione*: definisce le colonne del componente `data-table` utilizzato all'interno di `zoneItemDetails` per la visualizzazione dei bin presenti all'interno della zona interssata. Le colonne definite sono:
-      - *Id*: id del bin;
+    - *descrizione*: definisce le colonne del componente `data-table` utilizzato all'interno di `zoneItemDetails` per la visualizzazione dei bin presenti all'interno della zona interessata. Le colonne definite sono:
+      - *ID*: ID del bin;
       - *Prodotto*: nome del prodotto presente all'interno del bin (se presente);
       - *Button*: permette di visualizzare i dettagli del bin.
         - *azione*: mostra i dettagli del bin mediante il componente `binItemDetails`.
@@ -1529,12 +1529,12 @@ Mediante l'utilizzo dei framework \@react-three/fiber e \@react-three/drei, è p
 - *GridModeSelector*:
   - *descrizione*: componente dedicato alla selezione della dimensione della griglia di riferimento;
   - *interazione con l'utente*:
-    - *ToggleGruop*: permette di selezionare la dimensione della griglia di riferimento;
+    - *ToggleGroup*: permette di selezionare la dimensione della griglia di riferimento;
       - *opzioni*:
         - *0*: griglia non visibile;
-        - *0.1*: griglia con celle di 0.1 unità, rappesentanti 10cm;
-        - *0.5*: griglia con celle di 0.5 unità, rappesentanti 50cm;
-        - *1*: griglia con celle di 1 unità, rappesentanti 1m.
+        - *0.1*: griglia con celle di 0.1 unità, rappresentanti 10cm;
+        - *0.5*: griglia con celle di 0.5 unità, rappresentanti 50cm;
+        - *1*: griglia con celle di 1 unità, rappresentanti 1m.
 
 \
 = Architettura di deployment

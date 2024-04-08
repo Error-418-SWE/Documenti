@@ -1470,7 +1470,7 @@ I componenti realizzati sono i seguenti:
 
 \
 === Three.js
-Gli oggetti di modello vengono passati come parametri ai componenti Three.js per la loro creazione, rendendo dunque indipendente l'oggetto di business indipendente dalla sua rappresentazione grafica.
+Gli oggetti di modello vengono passati come parametri ai componenti Three.js per la loro creazione, rendendo dunque indipendente l'oggetto di business dalla sua rappresentazione grafica.
 
 Mediante l'utilizzo dei framework \@react-three/fiber e \@react-three/drei, è possibile creare elementi 3D all'interno di un'applicazione React trattando gli elementi come componenti.
 

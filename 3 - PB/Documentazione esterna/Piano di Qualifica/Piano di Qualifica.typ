@@ -443,12 +443,17 @@ Ad ogni test è associato un esito che può essere:
 - `P`: positivo, il test ha dato esito positivo;
 - `N`: negativo, il test ha dato esito negativo.
 
+== Test di unità
+La suite di testi di unità ha lo scopo di verificare il corretto funzionamento delle singole unità software. Il termine "unità" si riferisce al più piccolo componente dotato di comportamento autonomo e che può dunque essere singolarmente testato. 
+
+I test di unità sono stati implementati mediante l'utilizzo del framework Jest.
+
+
 #show figure: set block(breakable: true)
 #figure(
    table(
       columns: 3,
       rows: (auto, auto),
-      align: left,
       [*Codice*],[*Descrizione*],[*Stato*],
       [U-1.1],[*Bin*: verifica che il metodo `getId()` ritorni correttamente l'ID del bin],[P],
       [U-1.2],[*Bin*: verifica che il metodo `getLevel()` ritorni correttamente il livello del bin],[P],
@@ -501,6 +506,19 @@ Ad ogni test è associato un esito che può essere:
       [U-6.2],[*BinMapper*: verifica che la classe crei correttamente un bin con prodotto da un file JSON],[P],
       [U-7.1],[*ProductMapper*: verifica che la classe crei correttamente un prodotto da un file JSON],[P],
       [U-8.1],[*ZoneMapper*: verifica che la classe crei correttamente una zona da un file JSON],[P],
+    ),
+    caption: "Tabella unit test - risultato"
+)
+
+== Test di integrazione
+La suite di test di integrazione ha lo scopo di verificare che i diversi componenti del sistema si integrino correttamente, mirando ad individuare eventuali errori di durante l'interazione tra le diverse unità software.
+
+I test di integrazione sono stati implementati mediante l'utilizzo del framework Jest.
+#figure(
+  table(
+      columns: 3,
+      rows: (auto, auto),
+      [*Codice*],[*Descrizione*],[*Stato*],
       [I-1.1],[*getAllBins*: verifica che vengano correttamente restituiti tutti i bin da database],[P],
       [I-1.2],[*getAllBins*: verifica che venga correttamente restituito `null` se si verifica  un errore],[P],
       [I-2.1],[*getBinById*: verifica che venga correttamente restituito il bin cercato per ID da database],[P],
@@ -531,8 +549,8 @@ Ad ogni test è associato un esito che può essere:
       [I-11.1],[*getAllZones*: verifica che vengano correttamente ritornate tutte le zone],[P],
       [I-12.1],[*getBinsByZoneId*: verifica che vengano correttamente ritornati tutti i bin dato l'ID di una zona],[P],
       [I-13.1],[*getZoneById*: verifica che venga correttamente ritornata la zona cercata per ID e i suoi bin],[P],
-    ),
-    caption: "Tabella tracciamento test - risultato"
+  ),
+  caption: "Tabella integration test - risultato"
 )
 
 = Valutazione della qualità

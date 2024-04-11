@@ -444,7 +444,7 @@ Ad ogni test è associato un esito che può essere:
 - `N`: negativo, il test ha dato esito negativo.
 
 == Test di unità
-La suite di testi di unità ha lo scopo di verificare il corretto funzionamento delle singole unità software. Il termine "unità" si riferisce al più piccolo componente dotato di comportamento autonomo e che può dunque essere singolarmente testato. 
+La suite di test di unità ha lo scopo di verificare il corretto funzionamento delle singole unità software. Il termine "unità" si riferisce al più piccolo componente dotato di comportamento autonomo, che può dunque essere singolarmente testato. 
 
 I test di unità sono stati implementati mediante l'utilizzo del framework Jest.
 
@@ -511,7 +511,7 @@ I test di unità sono stati implementati mediante l'utilizzo del framework Jest.
 )
 
 == Test di integrazione
-La suite di test di integrazione ha lo scopo di verificare che i diversi componenti del sistema si integrino correttamente, mirando ad individuare eventuali errori di durante l'interazione tra le diverse unità software.
+La suite di test di integrazione ha lo scopo di verificare che i diversi componenti del sistema si integrino correttamente, mirando ad individuare eventuali errori durante l'interazione tra le diverse unità software.
 
 I test di integrazione sono stati implementati mediante l'utilizzo del framework Jest.
 #figure(

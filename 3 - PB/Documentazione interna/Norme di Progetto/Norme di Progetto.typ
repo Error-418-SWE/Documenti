@@ -1958,7 +1958,7 @@ I risultati ottenuti dai test sono visualizzati su GitHub:
 - all'interno della Pull Request, sotto forma di commenti del Verificatore, per i test manuali;
 - all'interno della Pull Request, sotto forma di commento, oppure nella sezione relativa alle automazioni eseguite nella Pull Request, per i test automatici.
 
-Se a seguito di tutti i test non emergono anomalie o errori, la Pull Request potrà essere accettata e chiusa dal Verificatore, il quale approverà il merge all'interno del branch `dev`. Al momento della chiusura dovranno essere eseguite altre automazioni riguardanti il versionamento (@versionamento_software). È possibile visualizzare l'insieme delle Pull Request approvate ed integrate mediante merge all'interno di GitHub.
+Se a seguito di tutti i test non emergono anomalie o errori, la Pull Request potrà essere accettata e chiusa dal Verificatore, il quale approverà il merge all'interno del branch `dev`. Al momento della chiusura dovranno essere eseguite altre automazioni riguardanti il versionamento (@versionamento_software).
 
 Nel caso in cui almeno un'attività di verifica faccia emergere problematiche, le modifiche non possono essere integrate nel branch principale. La segnalazione e gestione degli errori dovrà avvenire nel seguente modo:
 

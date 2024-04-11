@@ -2056,13 +2056,11 @@ Come risultato della corretta implementazione del processo di Validazione si ott
 - evidenza che il sistema, o l'elemento di sistema, soddisfi i requisiti dichiarati;
 - tracciamento di eventuali anomalie riscontrate.
 
-
 === Attività
 ==== Validazione interna
 
-Dopo aver apportato avanzamenti al software e a seguito dell'attuazione del processo di verifica (@processo_verifica), devono avvenire delle analisi e test manuali per constatare lo stato di soddisfacimento dei requisiti. I risultati di tali analisi devono essere discussi durante i meeting di retrospettiva in quanto fondamentali per la pianificazione delle future attività.
-I test manuali precedentemente menzionati devono avvenire mediante l'utilizzo di Docker Compose, permettendo così l'esecuzione su un ambiente con caratteristiche standard, e prevedono l'esecuzione manuale delle funzionalità implementate atte a soddisfare i requisiti definiti.
-
+Dopo aver apportato avanzamenti al software e a seguito dell'attuazione del processo di Verifica (@processo_verifica), devono avvenire delle analisi e test manuali per constatare lo stato di soddisfacimento dei requisiti. I risultati di tali analisi devono essere discussi durante i meeting di retrospettiva in quanto fondamentali per la pianificazione delle future attività.
+I test manuali precedentemente menzionati devono avvenire mediante l'utilizzo di Docker Compose, permettendo così l'esecuzione su un ambiente con caratteristiche standard, e devono prevedere l'esecuzione manuale delle funzionalità implementate atte a soddisfare i requisiti definiti.
 
 ==== Validazione esterna
 
@@ -2078,8 +2076,8 @@ Nel momento in cui il gruppo avrà soddisfatto tutti i requisiti obbligatori def
 Nel caso in cui il software venga riconosciuto come MVP e approvato definitivamente dal Proponente, il lavoro su di esso deve subire una riduzione di priorità o arrestarsi totalmente, dando maggiore importanza all'eventuale documentazione incompleta in vista della revisione PB.
 L'adempimento dei requisiti da parte del prodotto sviluppato deve essere tracciato all'interno del documento #st_v.
 
-Contrariamente, nel caso in cui emergano problematiche o mancanze, esse devono venire discusse e affrontate in un meeting interno al fine di eseguire una mirata pianificazione dei task correttivi.
-Questi ultimi vengono registrati su Jira in modo tale da ottenere maggiore chiarezza riguardo l'organizzazione del gruppo e l'avanzamento dei lavori.
+Contrariamente, nel caso in cui emergano problematiche o mancanze, esse devono essere discusse e affrontate in un meeting interno, al fine di eseguire una mirata pianificazione dei task correttivi.
+Questi ultimi vengono registrati su Jira, in modo tale da ottenere maggiore chiarezza riguardo l'organizzazione del gruppo e l'avanzamento dei lavori.
 Tali considerazioni e decisioni prese devono essere presenti nel verbale conseguente al relativo meeting interno.
 
 

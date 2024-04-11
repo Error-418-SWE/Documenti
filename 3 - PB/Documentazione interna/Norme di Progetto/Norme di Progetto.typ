@@ -1891,18 +1891,20 @@ Ciascuna versione del sistema software integrato, intesa come artefatto eseguibi
 
 I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'apertura o chiusura di una Pull Request. Le GitHub Actions devono prevedere la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'integrazione.
 
-== Processo di verifica <processo_verifica>
+== Processo di Verifica <processo_verifica>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.9_
 
 === Scopo
-Il processo di verifica ha lo scopo di dimostrare, con evidenza obiettiva, che il sistema, o una sua parte, adempie ai requisiti associati definiti nel documento #adr_v, nel rispetto delle metriche di qualità del prodotto definite nel #pdq_v.
+
+Il processo di Verifica ha lo scopo di dimostrare, con evidenza obiettiva, che il sistema, o una sua parte, adempie ai requisiti associati definiti nel documento #adr_v, nel rispetto delle metriche di qualità del prodotto definite nel #pdq_v.
 Nel caso in cui vengano identificati errori o mancanze, vengono fornite le informazioni necessarie a determinare la risoluzione delle anomalie riscontrate.
 
-Tali operazioni sono possibili mediante test automatici eseguiti, in parte, durante il processo di integrazione (@processo_integrazione), e test manuali eseguiti dai componenti del gruppo, con l'obiettivo di individuare tempestivamente eventuali problemi.
+Tali operazioni sono possibili mediante test automatici eseguiti, in parte, durante il processo di Integrazione (@processo_integrazione), e test manuali eseguiti dai componenti del gruppo, con l'obiettivo di individuare tempestivamente eventuali problemi.
 
 === Risultati
-Come risultato della corretta applicazione del processo di verifica, per ogni elemento:
+
+Come risultato della corretta applicazione del processo di Verifica, per ogni elemento:
 - viene effettuata una verifica manuale da parte di uno o più Verificatori;
 - vengono eseguiti i test automatici di unità e di integrazione;
 - vengono rilevati eventuali problemi legati al rispetto della correttezza, dei requisiti o dell'architettura, in funzione di quanto definito;
@@ -1916,9 +1918,9 @@ Come risultato della corretta applicazione del processo di verifica, per ogni el
 
 ===== Verifiche preliminari
 
-La prima attività di verifica avviene durante l'implementazione del software. In questa attività devono essere sviluppati, dove possibile, i test di unità su cui si baserà l'elemento software da implementare, sia esso un pattern o una classe, seguendo così il principio del _Test Driven Development_. I test qui sviluppati rientrano nei test automatici adottati da #err418, e devono essere inseriti all'interno di una cartella dedicata nella repository WMS3 (@repository-github), denominata `__test__`.
+La prima attività di verifica avviene durante l'implementazione del software. In questa attività devono essere sviluppati, dove possibile, i test di unità su cui si baserà l'elemento software da implementare, sia esso un pattern o una classe, seguendo così il principio del _Test Driven Development_. I test qui sviluppati rientrano nei test automatici adottati da #err418, e devono essere inseriti all'interno di una cartella dedicata nel repository WMS3 (@repository-github), denominata `__test__`.
 
-All'interno della cartella `__test__`, dovranno essere implementati anche i test di integrazione, i quali dovranno verificare la corretta interazione tra tutte le parti di sistema. Questo tipo di test dovrà essere implementato, dove necessario, con l'utilizzo di mock.
+All'interno della cartella `__test__`, dovranno essere implementati anche i test di integrazione, i quali dovranno verificare la corretta interazione tra tutte le parti di sistema. Questo tipo di test dovrà essere implementato, dove necessario, con l'utilizzo di _mock_.
 
 Tutti i test automatici dovranno essere implementati utilizzando il framework di testing Jest, e dovranno essere eseguibili tramite il comando
 
@@ -1931,7 +1933,7 @@ Tutti i test automatici dovranno essere implementati utilizzando il framework di
 )
 
 
-Come descritto nel processo di implementazione (@processo_implementazione), talvolta non è possibile implementare test automatici poiché risulterebbe troppo complicato e oneroso. Questo avviene quando il soggetto dell'implementazione è:
+Come descritto nel processo di Implementazione (@processo_implementazione), talvolta non è possibile implementare test automatici poiché risulterebbe troppo complicato e oneroso. Questo avviene quando il soggetto dell'implementazione è:
 - una componente grafica appartenente alla UI o all'ambiente 3D;
 - una determinata interazione tra utente e sistema che risulta difficile da automatizzare.
 
@@ -1941,13 +1943,13 @@ Qualora l'impegno, temporale o economico, per la conduzione dei test manuali si 
 
 ===== Verifiche in Pull Request
 
-Tutti i test di unità e di integrazione implementati dovranno essere eseguiti automaticamente dalle GitHub Actions (@automazioni) ogni volta che una Pull Request (@controllo_release) viene aperta o aggiornata nel suo contenuto. L'automazione designata all'esecuzione dei test dovrà essere codificata nel file `test_nodejs.yml`, situato nella repository WMS3 al percorso `WMS3/.github/workflows/`. Il merging di una Pull Request non potrà avvenire se un test automatico fallisce.
+Tutti i test di unità e di integrazione implementati dovranno essere eseguiti automaticamente dalle GitHub Actions (@automazioni) ogni volta che una Pull Request (@controllo_release) viene aperta o aggiornata nel suo contenuto. L'automazione designata all'esecuzione dei test dovrà essere codificata nel file `test_nodejs.yml`, situato nel repository WMS3 al percorso `WMS3/.github/workflows/`. Il merging di una Pull Request non potrà avvenire se un test automatico fallisce.
 
 Successivamente all'esecuzione dei test automatici, il Verificatore potrà controllare il contenuto della Pull Request. In particolare dovrà condurre delle verifiche manuali atte ad accertare che:
 
 - il codice scritto rispetti quanto definito nel processo di implementazione (@processo_implementazione);
 - il codice esegua senza problemi;
-- l'elemento implementato nella Pull Request sia visualizzato correttamente all'interno del prodotto, e assolva tutte le funzionalità ad esso richieste dalla #st_v e dall'#adr_v\.
+- l'elemento implementato nella Pull Request sia visualizzato correttamente all'interno del prodotto, e assolva tutte le funzionalità ad esso richieste dai documenti #st_v e #adr_v\.
 
 ==== Gestione dei risultati
 
@@ -1960,7 +1962,7 @@ Se a seguito di tutti i test non emergono anomalie o errori, la Pull Request pot
 
 Nel caso in cui almeno un'attività di verifica faccia emergere problematiche, le modifiche non possono essere integrate nel branch principale. La segnalazione e gestione degli errori dovrà avvenire nel seguente modo:
 
-- *errori nei test automatici*: vengono segnalati dalle GitHub Actions. È possibile visualizzare il log dell'esecuzione dell'automazione nella sezione Actions della repository. Il Programmatore dovrà quindi controllare il log ed effettuare le correzioni necessarie a risolvere l'errore che si è presentato;
+- *errori nei test automatici*: vengono segnalati dalle GitHub Actions. È possibile visualizzare il log dell'esecuzione dell'automazione nella sezione Actions del repository. Il Programmatore dovrà quindi controllare il log ed effettuare le correzioni necessarie a risolvere l'errore che si è presentato;
 - *errori nei test manuali*: vengono segnalati dal Verificatore tramite commenti nella Pull Request. Il Verificatore dovrà inserire dei commenti nei quali dovrà descrivere nel modo più dettagliato possibile gli errori riscontrati e i passaggi per riprodurli, evitando così ambiguità e incomprensioni. Il commento dovrà essere inserito nel file relativo all'elemento o alla funzionalità che presenta errori, e, se possibile, nella riga dove si è individuato l'errore.
 
 Il Programmatore dovrà quindi individuare la causa di questi errori e risolverli nel minor tempo possibile, così da evitare situazioni di stallo nello sviluppo del software.

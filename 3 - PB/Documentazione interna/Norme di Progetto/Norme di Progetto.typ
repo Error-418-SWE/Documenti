@@ -1743,7 +1743,7 @@ Questi processi sono fondamentali, poiché al loro completamento si dispone già
 
 Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi in quanto trasforma il processo di Implementazione in una traduzione del design in codice.
 
-==== Preparazione per l'implementazione
+==== Preparazione per l'implementazione <preparazione_implementazione>
 
 Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test specifici per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del Progettista di una serie di test di unità precedentemente allo sviluppo vero e proprio dell'elemento di sistema. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
 
@@ -1918,7 +1918,7 @@ Come risultato della corretta applicazione del processo di Verifica, per ogni el
 
 ===== Verifiche preliminari
 
-La prima attività di verifica avviene durante l'implementazione del software. In questa attività devono essere sviluppati, dove possibile, i test di unità su cui si baserà l'elemento software da implementare, sia esso un pattern o una classe, seguendo così il principio del _Test Driven Development_. I test qui sviluppati rientrano nei test automatici adottati da #err418, e devono essere inseriti all'interno di una cartella dedicata nel repository WMS3 (@repository-github), denominata `__test__`.
+La prima attività di verifica avviene durante la preparazione all'implementazione del software (@preparazione_implementazione). In questa attività devono essere sviluppati, dove possibile, i test di unità su cui si baserà l'elemento software da implementare, sia esso un pattern o una classe, seguendo così il principio del _Test Driven Development_. I test qui sviluppati rientrano nei test automatici adottati da #err418, e devono essere inseriti all'interno di una cartella dedicata nel repository WMS3 (@repository-github), denominata `__test__`.
 
 All'interno della cartella `__test__`, dovranno essere implementati anche i test di integrazione, i quali dovranno verificare la corretta interazione tra tutte le parti di sistema. Questo tipo di test dovrà essere implementato, dove necessario, con l'utilizzo di _mock_.
 

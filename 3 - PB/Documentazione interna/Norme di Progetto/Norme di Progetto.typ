@@ -1715,19 +1715,19 @@ L'attività consiste nei seguenti task:
     - gli artefatti di design devono essere resi disponibili nel documento _Specifica Tecnica_.
 
 
-== Processo di implementazione <processo_implementazione>
+== Processo di Implementazione <processo_implementazione>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.7_
 
 === Scopo
 
-Lo scopo del processo di implementazione è di concretizzare un elemento specifico del sistema. Questo processo traduce i requisiti, le architetture e i design (includendo le interfacce), in azioni che danno vita ad un elemento di sistema in linea con le pratiche della tecnologia implementativa selezionata, facendo uso delle specializzazioni e discipline tecniche appropriate.
+Lo scopo del processo di Implementazione è di concretizzare un elemento specifico del sistema. Questo processo traduce i requisiti, le architetture e i design (includendo le interfacce), in azioni che danno vita ad un elemento di sistema in linea con le pratiche della tecnologia implementativa selezionata, facendo uso delle specializzazioni e discipline tecniche appropriate.
 
 Il risultato di questo processo è un elemento del sistema che soddisfa i requisiti specifici e derivati del sistema, nonché le architetture e i design definiti.
 
 === Risultati
 
-La corretta realizzazione del processo di implementazione produce i seguenti risultati:
+La corretta realizzazione del processo di Implementazione produce i seguenti risultati:
 
 - identificazione dei vincoli implementativi che influenzano i requisiti, l'architettura o il design;
 - realizzazione di un elemento di sistema;
@@ -1737,11 +1737,11 @@ La corretta realizzazione del processo di implementazione produce i seguenti ris
 
 ==== Progettazione dell'elemento da implementare
 
-È necessario che prima dell'inizio effettivo dello sviluppo di un elemento software, questo sia stato definito dai processi di definizione dell'architettura (@processo_definizione_architettura) e del design (@processo_design).
+È necessario che prima dell'inizio effettivo dello sviluppo di un elemento software, questo sia stato definito dai processi di Definizione dell'Architettura (@processo_definizione_architettura) e del Design (@processo_design).
 
 Questi processi sono fondamentali, poiché al loro completamento si dispone già di una struttura ben definita del sistema, che include le sue componenti principali, le loro interazioni e le funzionalità che devono essere implementate.
 
-Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi in quanto trasforma il processo di implementazione in una traduzione del design in codice.
+Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi in quanto trasforma il processo di Implementazione in una traduzione del design in codice.
 
 ==== Preparazione per l'implementazione
 
@@ -1754,7 +1754,7 @@ Questo vale sia per il codice sviluppato in proprio sia per quello riutilizzato 
 
 Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in Pull Request tutte le funzionalità che si ha necessità di controllare manualmente, oltre al riferimento al task interessato su Jira.
 
-Dopo aver sviluppato e testato i singoli moduli attraverso i test di unità, inizia il processo di integrazione (@processo_integrazione).
+Dopo aver sviluppato e testato i singoli moduli attraverso i test di unità, inizia il processo di Integrazione (@processo_integrazione).
 
 ==== Implementazione
 
@@ -1788,7 +1788,7 @@ Prima di sottoporre il software a verifica è necessario assicurarsi che l'eleme
 
 ==== Gestione dei risultati dell'implementazione e delle anomalie incontrate
 
-L'elemento implementato deve essere approvato durante il processo di verifica (@processo_verifica) e integrato nel sistema come descritto nel processo di integrazione (@processo_integrazione).
+L'elemento implementato deve essere approvato durante il processo di Verifica (@processo_verifica) e integrato nel sistema come descritto nel processo di Integrazione (@processo_integrazione).
 
 == Processo di Integrazione <processo_integrazione>
 

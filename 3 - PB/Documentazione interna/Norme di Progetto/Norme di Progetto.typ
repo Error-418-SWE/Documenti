@@ -1790,20 +1790,20 @@ Prima di sottoporre il software a verifica è necessario assicurarsi che l'eleme
 
 L'elemento implementato deve essere approvato durante il processo di verifica (@processo_verifica) e integrato nel sistema come descritto nel processo di integrazione (@processo_integrazione).
 
-== Processo di integrazione <processo_integrazione>
+== Processo di Integrazione <processo_integrazione>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.8_
 
 === Scopo
 
-Il processo di integrazione ha lo scopo di combinare iterativamente un insieme di elementi software al fine di ottenere un prodotto che soddisfi i requisiti, rispettando l'architettura e il design definiti.
+Il processo di Integrazione ha lo scopo di combinare iterativamente un insieme di elementi software al fine di ottenere un prodotto che soddisfi i requisiti, rispettando l'architettura e il design definiti.
 
-Di conseguenza, esso viene attuato in coordinamento con:
-- il processo di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni);
-- il processo di definizione dell'architettura (@processo_definizione_architettura).
-- il processo di definizione del design (@processo_design);
+Di conseguenza, esso viene attuato in coordinamento con i processi di:
+- Definizione di Bisogni e Requisiti degli Stakeholder (@processo_bisogni);
+- Definizione dell'Architettura (@processo_definizione_architettura).
+- Definizione del Design (@processo_design);
 
-L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la Continuous Integration.
+L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la _Continuous Integration_.
 
 === Risultati
 
@@ -1847,7 +1847,7 @@ Il gruppo si dota dei seguenti strumenti e servizi abilitanti per implementare l
 - Coveralls, per la valutazione della copertura dei test eseguiti;
 - Jira, per la registrazione dei risultati dei test e delle anomalie riscontrate.
 
-L'uso degli strumenti e dei servizi abilitanti è regolato nell'ambito del processo di verifica (@processo_verifica).
+L'uso degli strumenti e dei servizi abilitanti è regolato nell'ambito del processo di Verifica (@processo_verifica).
 
 ==== Attuazione della strategia di integrazione
 
@@ -1855,14 +1855,14 @@ L'integrazione degli elementi software implementati avviene attuando quanto pres
 
 L'attuazione successiva della strategia di integrazione prosegue fino a che il sistema software completo risponde a tutte le caratteristiche individuate e descritte nel documento #adr_v.
 
-L'integrazione degli elementi software, individuati e specificati tramite i processi di definizione dell'architettura (@processo_definizione_architettura) e di definizione del design (@processo_design), avviene elemento per elemento, secondo l'ordine di implementazione stabilito durante la pianificazione delle attività. Qualora un elemento software non fosse ancora disponibile per l'integrazione, la funzionalità può essere temporaneamente simulata tramite l'uso di _mock_ o _stub_. Prima di convalidarne la conformità, il sistema software così integrato viene sottoposto a verifica e validazione per garantire che soddisfi i requisiti e le aspettative degli stakeholder.
+L'integrazione degli elementi software, individuati e specificati tramite i processi di Definizione dell'Architettura (@processo_definizione_architettura) e di Definizione del Design (@processo_design), avviene elemento per elemento, secondo l'ordine di implementazione stabilito durante la pianificazione delle attività. Qualora un elemento software non fosse ancora disponibile per l'integrazione, la funzionalità può essere temporaneamente simulata tramite l'uso di _mock_ o _stub_. Prima di convalidarne la conformità, il sistema software così integrato viene sottoposto a verifica e validazione per garantire che soddisfi i requisiti e le aspettative degli stakeholder.
 
 A seguito di tali attività, il Programmatore invia i cambiamenti proposti al repository, tramite il meccanismo descritto nella @controllo_release. Il Verificatore può approvare la Pull Request e, tramite la funzione di _merge_, integrare l'elemento software implementato nel sistema software. A supporto di tale operazione, è prevista l'esecuzione di GitHub Actions che provvedono a:
 - creare e associare al sistema integrato, tramite la action `tag_semver.yml`, un tag di versione semantica per identificare univocamente la release. Il versionamento avviene in accordo con la @versionamento_software. Lo step di versionamento predefinito è di livello "patch" (es. `1.0.0` #sym.arrow.r `1.0.1`), ma può essere esplicitato dal Programmatore nel messaggio di commit tramite i modificatori:
   - `#patch`, per incrementare il numero di patch (z);
   - `#minor`, per incrementare il numero di minor (y).
 - costruire un artefatto sotto forma di immagine Docker, e pubblicarlo sui _container registries_ Docker Hub e GitHub Container Registry tramite la action `build_docker` (`build_docker.yml`);
-- calcolare la copertura dei test eseguiti sul sistema integrato con Coveralls, e pubblicarla come report sulla Pull Request tramite la action `test_nodejs.yml`;
+- calcolare la copertura dei test eseguiti sul sistema integrato con Coveralls, e pubblicarla come report sulla Pull Request tramite la action `test_nodejs.yml`.
 
 ==== Gestione dei risultati di integrazione
 

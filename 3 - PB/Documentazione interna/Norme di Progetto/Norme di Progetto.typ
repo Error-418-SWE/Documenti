@@ -1774,7 +1774,7 @@ Per garantire una standardizzazione e una migliore gestione del codice, devono e
 
 + regole di codifica:
 
-  - type safety con Typescript attraverso l'utilizzo di tipi specifici e limitando al massimo l'uso del tipo `any`;
+  - type safety con TypeScript attraverso l'utilizzo di tipi specifici e limitando al massimo l'uso del tipo `any`;
   - notazione camel per nomi di file e variabili;
   - indentazione del codice di tipo Egyptian braces;
   - limitare il più possibile la lunghezza di metodi e delle singole righe di codice, perseguendo i principi di leggibilità e manutenibilità. #TODO //precisare lunghezza massima metodi e righe
@@ -1788,7 +1788,7 @@ Prima di sottoporre il software a verifica è necessario assicurarsi che l'eleme
 
 ==== Gestione dei risultati dell'implementazione e delle anomalie incontrate
 
-L'elemento implementato deve essere approvato durante il processo di verifica (@processo_verifica) e integrato nel sistema come descritto nella @processo_integrazione.
+L'elemento implementato deve essere approvato durante il processo di verifica (@processo_verifica) e integrato nel sistema come descritto nel processo di integrazione (@processo_integrazione).
 
 == Processo di integrazione <processo_integrazione>
 

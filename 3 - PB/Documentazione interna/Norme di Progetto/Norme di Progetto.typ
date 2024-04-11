@@ -1988,41 +1988,40 @@ Coinvolge l'installazione del sistema verificato al fine di consentire l'operati
 
 === Risultati
 
-I risultati della corretta applicazione del processo di transizione sono:
+I risultati della corretta applicazione del processo di Transizione sono:
 
-- avviene il rilascio di una versione del sistema;
-- viene effettuato il deploy del software su Azure;
-- viene garantito il funzionamento dei servizi e l'operatività del sistema;
-- vengono identificati i risultati e le anomalie della transizione;
-- viene stabilita la tracciabilità degli elementi trasferiti;
-- viene redatto del documento #man\;
-- viene fornito supporto e formazione degli utenti all'utilizzo del sistema.
+- rilascio di una versione del sistema;
+- deployment del software su Azure;
+- garanzia del funzionamento dei servizi e dell'operatività del sistema;
+- identificazione di risultati e anomalie della transizione;
+- tracciabilità degli elementi trasferiti;
+- redazione del documento #man\;
+- supporto e formazione degli utenti all'utilizzo del sistema.
 
 === Attività
 
 ==== Rilascio dell'ultima versione di sistema
 
 Il repository GitHub dedicato a WMS3 è provvisto di un branch principale `dev`, il quale rappresenta la fonte da cui vengono creati i feature branch.
-Questi ultimi sono necessari al conseguimento degli obiettivi di un task e oggetto dei merge a seguito delle successive pull request.
+Questi ultimi sono necessari al conseguimento degli obiettivi di un task e oggetto dei merge a seguito delle successive Pull Request.
 
 I rilasci del prodotto devono avvenire sempre dal branch di partenza `dev`, in quanto il codice contenuto in esso garantisce il soddisfacimento dei requisiti di qualità imposti dal gruppo.
 
-Ogni release avvenuta con successo, in conformità con il superamento dei test e le procedure descritte nei processi di implementazione (@processo_implementazione), integrazione (@processo_integrazione) e verifica (@processo_verifica), deve generare una release specifica tracciata e consultabile (@tracciabilità_risultati_release) con relativo numero di versione aggiornato (@versionamento).
+Ogni release avvenuta con successo, in conformità con il superamento dei test e le procedure descritte nei processi di Implementazione (@processo_implementazione), Integrazione (@processo_integrazione) e Verifica (@processo_verifica), deve generare una release specifica tracciata e consultabile (@tracciabilità_risultati_release) con relativo numero di versione aggiornato (@versionamento).
 
-Ad ogni modifica del sistema devono venire aggiornati anche i documenti #man e #st, al fine di includere la documentazione relativa alle modifiche apportate.
+Ad ogni modifica del sistema devono essere aggiornati anche i documenti #man e #st, al fine di includere la documentazione relativa alle modifiche apportate.
 
 ==== Deploy su Azure
 
-Il gruppo ha definito una GitHub Action chiamata _Deploy to VPS_ (i cui job sono descritti nel file _deploy.yml_) la quale effettua il deploy del sistema, aggiornato all'ultima versione rilasciata sul branch `dev`, all'interno della macchina virtuale di Azure.
+Il gruppo ha definito una GitHub Action chiamata _deploy to VPS_ (i cui job sono descritti nel file _deploy.yml_) la quale effettua il deploy del sistema, aggiornato all'ultima versione rilasciata sul branch `dev`, all'interno della macchina virtuale di Azure.
 
-Questo permette la fruizione del sistema senza la necessità di dover scaricare le ultime modifiche sul proprio dispositivo e senza dover ricreare le relative immagini Docker.
-
+Questo permette la fruizione del sistema senza la necessità di dover scaricare le ultime modifiche sul proprio dispositivo, e senza dover ricreare le relative immagini Docker.
 
 ==== Redazione del documento #man
 
 Al fine di fornire agli utenti di WMS3 una guida documentale atta ad indicare il suo corretto utilizzo, il gruppo deve mettere a disposizione il documento #man.
 
-In esso deve venire riportato:
+In esso devono essere riportati:
 
 - guida all'avvio e configurazione dell'ambiente;
 
@@ -2031,17 +2030,13 @@ In esso deve venire riportato:
 - guida dettagliata all'utilizzo delle funzionalità offerte.
 
 
-Il #man deve venire redatto seguendo i principi di redazione dei documenti descritti nel paragrafo riguardante il processo di gestione delle informazioni (@processo_gestione_informazioni).
-
+Il #man deve venire redatto seguendo i principi di redazione dei documenti descritti nel paragrafo riguardante il processo di Gestione delle Informazioni (@processo_gestione_informazioni).
 
 ==== Tracciabilità risultati <tracciabilità_risultati_release>
 
-I risultati relativi a controlli e test automatici avvenuti in fase di release sono visualizzati su GitHub nella sezione relativa alle automazioni avvenute nella pull request dell'elemento in oggetto.
+I risultati relativi a controlli e test automatici avvenuti in fase di release sono visualizzati su GitHub nella sezione relativa alle automazioni avvenute nella Pull Request dell'elemento in oggetto.
 
 Se da essi non emergono anomalie o errori, la transizione è avvenuta correttamente e viene confermata la conformità degli elementi analizzati.
-
-Per avere traccia degli elementi verificati che costituiscono le singole release del prodotto, su GitHub è possibile visualizzare l'insieme delle release e lo storico delle corrispondenti pull request approvate ed integrate.
-
 
 == Processo di Validazione <processo_validazione>
 

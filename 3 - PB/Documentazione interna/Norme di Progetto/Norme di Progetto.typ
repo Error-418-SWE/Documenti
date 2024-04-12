@@ -1672,9 +1672,9 @@ L'attività consiste nei seguenti task:
     i Progettisti devono seguire concetti base fondamentali come l'astrazione, la modularizzazione, l'incapsulamento, la separazione tra interfaccia e implementazione. Inoltre devono rispettare i principi della SOLID programming, per creare software più modulare, scalabile, manutenibile e adattabile ai cambiamenti futuri;
   + *scegliere le tecnologie a supporto della Definizione del Design*:\
     la scelta delle tecnologie deve seguire questa prassi:
-      - i Progettisti devono individuare le possibili tecnologie in base alle loro conoscenze pregresse e ad un'esplorazione tecnologica, la discussione fra loro deve avvenire nei canali Discord "database" e "mvp";
+      - i Progettisti devono individuare le possibili tecnologie in base alle loro conoscenze pregresse e ad un'esplorazione tecnologica, la discussione fra loro deve avvenire nei canali Discord `#database` e `#mvp`;
       - deve essere eseguito un breve studio di fattibilità per verificare la possibilità di utilizzo delle tecnologie;
-      - nei canali Discord "mvp" e "database", i Progettisti devono chiedere un confronto con gli altri membri del gruppo per valutare alternative tecnologiche o confermare le scelte fatte.
+      - nei canali Discord `#mvp` e `#database`, i Progettisti devono chiedere un confronto con gli altri membri del gruppo per valutare alternative tecnologiche o confermare le scelte fatte.
 
 ==== Progettazione degli elementi del sistema
 L'attività consiste nei seguenti task:

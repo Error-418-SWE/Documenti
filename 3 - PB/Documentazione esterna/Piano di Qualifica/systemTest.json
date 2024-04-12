@@ -1,632 +1,980 @@
 [
-    {
-       "Codice":"TS-1",
-       "Descrizione":"Verificare che l'utente possa configurare un ambiente 3D all'avvio della sessione d'uso",
-       "Requisito":"FM-1",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-2",
-       "Descrizione":"Verificare che l'utente abbia la possibilità di scegliere tra diverse modalità di configurazione del magazzino",
-       "Requisito":"FD-2",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-3",
-       "Descrizione":"Verificare che sia fornita una modalità di configurazione dell'ambiente 3D per la rappresentazione di un magazzino con pianta rettangolare",
-       "Requisito":"FM-3",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-4",
-       "Descrizione":"Verificare che sia fornita una modalità di configurazione dell'ambiente 3D per la rappresentazione di un magazzino con planimetria importata da file SVG",
-       "Requisito":"FD-4",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-5",
-       "Descrizione":"Verificare che l'utente possa indicare la larghezza della planimetria rettangolare",
-       "Requisito":"FM-5",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-6",
-       "Descrizione":"Verificare che l'utente possa indicare la lunghezza della planimetria rettangolare",
-       "Requisito":"FM-6",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-7",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se la larghezza indicata non è positiva (<=0)",
-       "Requisito":"FM-7",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-8",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se la lunghezza indicata non è positiva (<=0)",
-       "Requisito":"FM-8",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-9",
-       "Descrizione":"Verificare che l'utente possa caricare un file SVG da usare come planimetria qualora abbia scelto di definire la planimetria a partire da un file SVG",
-       "Requisito":"FD-9",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-10",
-       "Descrizione":"Verificare che il file SVG sia sanificato prima dell'importazione",
-       "Requisito":"FD-10",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-11",
-       "Descrizione":"Verificare che il file SVG contenga almeno un elemento grafico tra path, rect, circle, ellipse, line, polyline, polygon, text, g per essere considerato valido",
-       "Requisito":"FD-11",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-12",
-       "Descrizione":"Verificare che l'utente riceva un messaggio di errore qualora avesse caricato un file SVG privo di elementi grafici (path, rect, circle, ellipse, line, polyline, polygon, text, g)",
-       "Requisito":"FD-12",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-13",
-       "Descrizione":"Verificare che il file SVG sia validato",
-       "Requisito":"FD-13",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-14",
-       "Descrizione":"Verificare che l'utente riceva un messaggio di errore qualora avesse caricato un file SVG non valido o corrotto",
-       "Requisito":"FD-14",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-15",
-       "Descrizione":"Verificare che l'utente che abbia scelto la modalità di configurazione a partire da un file SVG, possa indicare il solo lato maggiore del magazzino per configurare la planimetria",
-       "Requisito":"FD-15",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-16",
-       "Descrizione":"Verificare che il sistema determini il valore del lato minore a partire dal rapporto di aspetto del file SVG e dai dati forniti dall'utente",
-       "Requisito":"FD-16",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-17",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se il valore indicato come lato maggiore non è positivo (<=0)",
-       "Requisito":"FD-17",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-18",
-       "Descrizione":"Verificare che l'utente possa riconfigurare la planimetria dell'ambiente 3D corrente",
-       "Requisito":"FM-18",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-19",
-       "Descrizione":"Verificare che a seguito della riconfigurazione della planimetria, le modifiche a zone, bin e prodotti non subiscano variazioni",
-       "Requisito":"FM-19",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-20",
-       "Descrizione":"Verificare che l'utente possa visualizzare un'anteprima delle modifiche alla planimetria prima di confermare l'operazione",
-       "Requisito":"FO-20",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-21",
-       "Descrizione":"Verificare che l'utente possa ridefinire la larghezza dell'ambiente 3D corrente",
-       "Requisito":"FM-21",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-22",
-       "Descrizione":"Verificare che l'utente possa ridefinire la lunghezza dell'ambiente 3D corrente",
-       "Requisito":"FM-22",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-23",
-       "Descrizione":"Verificare che l'utente che abbia configurato un ambiente 3D a partire da file SVG non possa definire un valore di lunghezza inferiore a quello corrente",
-       "Requisito":"FD-23",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-24",
-       "Descrizione":"Verificare che l'utente che abbia configurato un ambiente 3D a partire da file SVG non possa definire un valore di larghezza inferiore a quello corrente",
-       "Requisito":"FD-24",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-25",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se il nuovo valore di larghezza indicato non è positivo (<=0)",
-       "Requisito":"FM-25",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-26",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se il nuovo valore di lunghezza indicato non è positivo (<=0)",
-       "Requisito":"FM-26",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-27",
-       "Descrizione":"Verificare che l'utente possa disporre di una griglia di aggancio come aiuto al posizionamento delle zone nell'ambiente 3D",
-       "Requisito":"FD-27",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-28",
-       "Descrizione":"Verificare che il passo della griglia sia configurabile",
-       "Requisito":"FD-28",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-29",
-       "Descrizione":"Verificare che l'utente possa disattivare la griglia di posizionamento",
-       "Requisito":"FD-29",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-30",
-       "Descrizione":"Verificare che la griglia sia configurabile durante le normali operazioni sull'ambiente 3D, non esclusivamente durante la configurazione dell'ambiente",
-       "Requisito":"FD-30",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-31",
-       "Descrizione":"Verificare che se il passo di griglia non è nullo, il collocamento delle zone si agganci ad essa",
-       "Requisito":"FD-31",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-32",
-       "Descrizione":"Verificare che l'utente possa importare le zone da un database",
-       "Requisito":"FD-32",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-33",
-       "Descrizione":"Verificare che l'utente possa importare le zone da un database durante la fase di configurazione dell'ambiente 3D",
-       "Requisito":"FD-33",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-34",
-       "Descrizione":"Verificare che le zone importate siano collocate automaticamente nell'ambiente 3D, nella posizione descritta dal database",
-       "Requisito":"FD-34",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-35",
-       "Descrizione":"Verificare che i bin delle zone siano importati contestualmente all'importazione delle zone",
-       "Requisito":"FD-35",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-36",
-       "Descrizione":"Verificare che l'importazione delle zone possa avvenire solo se l'utente ha configurato un ambiente 3D a partire da file SVG",
-       "Requisito":"FD-36",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-37",
-       "Descrizione":"Verificare che l'utente visualizzi un messaggio di errore nel caso l'importazione non dovesse andare a buon fine",
-       "Requisito":"FD-37",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-38",
-       "Descrizione":"Verificare che l'utente possa importare i prodotti da database",
-       "Requisito":"FD-38",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-39",
-       "Descrizione":"Verificare che quando l'utente importa zone e prodotti da un database, i prodotti siano collocati nei rispettivi bin di appartenenza",
-       "Requisito":"FD-39",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-40",
-       "Descrizione":"Verificare che l'utente possa alterare il proprio POV sull'ambiente 3D",
-       "Requisito":"FM-40",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-41",
-       "Descrizione":"Verificare che l'utente possa ruotare il proprio POV attorno all'asse longitudinale",
-       "Requisito":"FM-41",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-42",
-       "Descrizione":"Verificare che l'utente possa traslare il proprio POV lungo l'asse orizzontale",
-       "Requisito":"FM-42",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-43",
-       "Descrizione":"Verificare che l'utente possa effettuare zoom-in",
-       "Requisito":"FM-43",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-44",
-       "Descrizione":"Verificare che l'utente possa effettuare zoom-out",
-       "Requisito":"FM-44",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-45",
-       "Descrizione":"Verificare che l'utente possa configurare un nuovo ambiente 3D",
-       "Requisito":"FM-45",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-46",
-       "Descrizione":"Verificare che la configurazione di un nuovo ambiente 3D cancelli tutti i dati della sessione corrente",
-       "Requisito":"FM-46",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-47",
-       "Descrizione":"Verificare che il sistema non offra la persistenza dei dati importati",
-       "Requisito":"FM-47",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-48",
-       "Descrizione":"Verificare che il sistema non offra la persistenza dei dati generati durante la sessione corrente",
-       "Requisito":"FM-48",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-49",
-       "Descrizione":"Verificare che la lista delle movimentazioni di prodotti richieste durante la sessione corrente sia scartata contestualmente alla riconfigurazione dell'ambiente 3D",
-       "Requisito":"FM-49",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-50",
-       "Descrizione":"Verificare che le aggiunte alle zone siano scartate contestualmente alla riconfigurazione dell'ambiente 3D",
-       "Requisito":"FM-50",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-51",
-       "Descrizione":"Verificare che le modifiche alle zone siano scartate contestualmente alla riconfigurazione dell'ambiente 3D",
-       "Requisito":"FM-51",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-52",
-       "Descrizione":"Verificare che le cancellazioni delle zone siano scartate contestualmente alla riconfigurazione dell'ambiente 3D",
-       "Requisito":"FM-52",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-53",
-       "Descrizione":"Verificare che la configurazione della planimetria sia scartata contestualmente alla riconfigurazione dell'ambiente 3D",
-       "Requisito":"FM-53",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-54",
-       "Descrizione":"Verificare che le informazioni sui prodotti siano scartate contestualmente alla riconfigurazione dell'ambiente 3D",
-       "Requisito":"FM-54",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-55",
-       "Descrizione":"Verificare che l'utente possa creare nuove zone",
-       "Requisito":"FM-55",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-56",
-       "Descrizione":"Verificare che l'utente possa indicare una sequenza numerica come codice identificativo delle nuove zone create",
-       "Requisito":"FD-56",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-57",
-       "Descrizione":"Verificare che l'utente visualizzi un errore qualora avesse indicato un codice identificativo già in uso",
-       "Requisito":"FD-57",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-58",
-       "Descrizione":"Verificare che l'utente possa indicare la lunghezza della nuova zona da creare",
-       "Requisito":"FM-58",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-59",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se la lunghezza indicata non è positiva (<=0)",
-       "Requisito":"FM-59",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-60",
-       "Descrizione":"Verificare che l'utente possa scegliere tra \"NS\" e \"WE\" come orientamento della zona da creare",
-       "Requisito":"FD-60",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-61",
-       "Descrizione":"Verificare che l'utente possa indicare il numero di colonne della nuova zona",
-       "Requisito":"FM-61",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-62",
-       "Descrizione":"Verificare che una zona debba contenere almeno 1 colonna",
-       "Requisito":"FM-62",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-64",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se il numero di colonne della nuova zona non è almeno pari a 1",
-       "Requisito":"FM-64",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-65",
-       "Descrizione":"Verificare che l'utente possa personalizzare la larghezza delle colonne della nuova zona",
-       "Requisito":"FD-65",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-66",
-       "Descrizione":"Verificare che l'utente possa suddividere la larghezza della nuova zona in colonne di equa larghezza",
-       "Requisito":"FD-66",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-67",
-       "Descrizione":"Verificare che l'utente possa indicare la larghezza complessiva della nuova zona, qualora avesse richiesto la suddivisione della stessa in colonne di equa larghezza",
-       "Requisito":"FD-67",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-68",
-       "Descrizione":"Verificare che l'utente possa suddividere la larghezza della nuova zona in colonne di larghezza specifica",
-       "Requisito":"FD-68",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-69",
-       "Descrizione":"Verificare che l'utente possa indicare la larghezza di ciascuna colonna, qualora avesse richiesto la suddivisione della nuova zona in colonne di larghezza specifica",
-       "Requisito":"FD-69",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-70",
-       "Descrizione":"Verificare che il sistema determini il valore della larghezza della zona dalla somma delle larghezze delle singole colonne",
-       "Requisito":"FD-70",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-71",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se la larghezza indicata per la singola colonna non è positiva (<=0)",
-       "Requisito":"FD-71",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-72",
-       "Descrizione":"Verificare che l'utente possa personalizzare il numero di livelli della nuova zona da creare",
-       "Requisito":"FM-72",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-73",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se il numero di livelli della nuova zona non è almeno pari a 1",
-       "Requisito":"FM-73",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-74",
-       "Descrizione":"Verificare che l'utente possa personalizzare l'altezza dei singoli livelli della zona",
-       "Requisito":"FM-74",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-75",
-       "Descrizione":"Verificare che una zona debba contenere almeno 1 livello",
-       "Requisito":"FM-75",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-76",
-       "Descrizione":"Verificare che la numerazione dei livelli debba partire da 0 (\"piano terra\")",
-       "Requisito":"FM-76",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-77",
-       "Descrizione":"Verificare che il sistema determini il valore dell'altezza della zona dalla somma delle altezze dei singoli livelli",
-       "Requisito":"FM-77",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-78",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se l'altezza indicata per il singolo livello non è positiva (<=0)",
-       "Requisito":"FM-78",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-79",
-       "Descrizione":"Verificare che l'utente possa modificare una zona già creata",
-       "Requisito":"FM-79",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-80",
-       "Descrizione":"Verificare che l'utente possa modificare una zona importata da database",
-       "Requisito":"FM-80",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-81",
-       "Descrizione":"Verificare che l'utente possa rimuovere una singola colonna, purché l'operazione non elimini una colonna con almeno un bin occupato",
-       "Requisito":"FM-81",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-82",
-       "Descrizione":"Verificare che l'utente possa rimuovere una singola colonna, purché l'operazione non elimini una colonna con indice inferiore all'indice di una colonna con almeno un bin occupato",
-       "Requisito":"FM-82",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-83",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se l'operazione di rimozione di una colonna è impossibile per i vincoli individuati",
-       "Requisito":"FM-83",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-84",
-       "Descrizione":"Verificare che l'utente possa rimuovere un singolo livello, purché l'operazione non elimini un livello con almeno un bin occupato",
-       "Requisito":"FM-84",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-85",
-       "Descrizione":"Verificare che l'utente possa rimuovere un singolo livello, purché l'operazione non elimini un livello con indice inferiore all'indice di un livello con almeno un bin occupato",
-       "Requisito":"FM-85",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-86",
-       "Descrizione":"Verificare che l'utente visualizzi un errore se l'operazione di rimozione di un livello è impossibile per i vincoli individuati",
-       "Requisito":"FM-86",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-87",
-       "Descrizione":"Verificare che l'operazione di creazione di una nuova zona sia conclusa solo con il corretto collocamento della stessa nell'ambiente 3D",
-       "Requisito":"FM-87",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-88",
-       "Descrizione":"Verificare che l'operazione di modifica di una zona sia conclusa solo con il corretto collocamento della stessa nell'ambiente 3D",
-       "Requisito":"FM-88",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-89",
-       "Descrizione":"Verificare che l'utente possa eliminare qualsiasi zona",
-       "Requisito":"FM-89",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-90",
-       "Descrizione":"Verificare che i prodotti collocati in una zona rimossa non siano cancellati",
-       "Requisito":"FM-90",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-91",
-       "Descrizione":"Verificare che l'utente visualizzi un messaggio di avviso prima di procedere con l'eliminazione di una zona",
-       "Requisito":"FM-91",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-92",
-       "Descrizione":"Verificare che l'utente possa ispezionare una zona a partire dall'ambiente 3D",
-       "Requisito":"FM-92",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-93",
-       "Descrizione":"Verificare che l'utente possa visualizzare l'ID della zona ispezionata",
-       "Requisito":"FM-93",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-94",
-       "Descrizione":"Verificare che l'utente possa visualizzare la larghezza della zona ispezionata",
-       "Requisito":"FM-94",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-95",
-       "Descrizione":"Verificare che l'utente possa visualizzare la lunghezza della zona ispezionata",
-       "Requisito":"FM-95",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-96",
-       "Descrizione":"Verificare che l'utente possa visualizzare l'altezza della zona ispezionata",
-       "Requisito":"FM-96",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-97",
-       "Descrizione":"Verificare che la zona ispezionata sia evidenziata graficamente nell'ambiente 3D",
-       "Requisito":"FM-97",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-98",
-       "Descrizione":"Verificare che l'utente possa visualizzare la lista dei bin inclusi nella zona ispezionata",
-       "Requisito":"FM-98",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-99",
-       "Descrizione":"Verificare che l'utente possa visualizzare l'ID dei bin inclusi nella zona ispezionata",
-       "Requisito":"FM-99",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-100",
-       "Descrizione":"Verificare che l'utente possa visualizzare lo stato di occupazione dei bin inclusi nella zona ispezionata",
-       "Requisito":"FM-100",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-101",
-       "Descrizione":"Verificare che l'utente possa collocare una zona creata nello spazio 3D",
-       "Requisito":"FM-101",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-102",
-       "Descrizione":"Verificare che l'utente possa collocare una zona modificata nello spazio 3D",
-       "Requisito":"FM-102",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-103",
-       "Descrizione":"Verificare che il sistema evidenzi graficamente una zona in una posizione non occupabile",
-       "Requisito":"FM-103",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-104",
-       "Descrizione":"Verificare che il sistema impedisca il collocamento di una zona su una posizione non occupabile",
-       "Requisito":"FM-104",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-105",
-       "Descrizione":"Verificare che il sistema impedisca il collocamento di una zona su di un'altra, ovvero impedisca la compenetrazione tra zone",
-       "Requisito":"FM-105",
-       "Stato":"P"
-    },
-    {
-       "Codice":"TS-106",
-       "Descrizione":"Verificare che il sistema impedisca il collocamento di una zona al di fuori del perimetro dell'ambiente 3D",
-       "Requisito":"FM-106",
-       "Stato":"P"
-    }
- ]
+   {
+      "Codice":"TSIS-1",
+      "Descrizione":"Verificare che l'utente possa configurare un ambiente 3D all'avvio della sessione d'uso",
+      "Requisito":"FM-1",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-2",
+      "Descrizione":"Verificare che l'utente abbia la possibilità di scegliere tra diverse modalità di configurazione del magazzino",
+      "Requisito":"FD-2",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-3",
+      "Descrizione":"Verificare che sia fornita una modalità di configurazione dell'ambiente 3D per la rappresentazione di un magazzino con pianta rettangolare",
+      "Requisito":"FM-3",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-4",
+      "Descrizione":"Verificare che sia fornita una modalità di configurazione dell'ambiente 3D per la rappresentazione di un magazzino con planimetria importata da file SVG",
+      "Requisito":"FD-4",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-5",
+      "Descrizione":"Verificare che l'utente possa indicare la larghezza della planimetria rettangolare",
+      "Requisito":"FM-5",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-6",
+      "Descrizione":"Verificare che l'utente possa indicare la lunghezza della planimetria rettangolare",
+      "Requisito":"FM-6",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-7",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se la larghezza indicata non è positiva (<=0)",
+      "Requisito":"FM-7",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-8",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se la lunghezza indicata non è positiva (<=0)",
+      "Requisito":"FM-8",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-9",
+      "Descrizione":"Verificare che l'utente possa caricare un file SVG da usare come planimetria qualora abbia scelto di definire la planimetria a partire da un file SVG",
+      "Requisito":"FD-9",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-10",
+      "Descrizione":"Verificare che il file SVG sia sanificato prima dell'importazione",
+      "Requisito":"FD-10",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-11",
+      "Descrizione":"Verificare che il file SVG contenga almeno un elemento grafico tra path, rect, circle, ellipse, line, polyline, polygon, text, g per essere considerato valido",
+      "Requisito":"FD-11",
+      "Stato":"NI"
+   },
+   {
+      "Codice":"TSIS-12",
+      "Descrizione":"Verificare che l'utente riceva un messaggio di errore qualora avesse caricato un file SVG privo di elementi grafici (path, rect, circle, ellipse, line, polyline, polygon, text, g)",
+      "Requisito":"FD-12",
+      "Stato":"NI"
+   },
+   {
+      "Codice":"TSIS-13",
+      "Descrizione":"Verificare che il file SVG sia validato",
+      "Requisito":"FD-13",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-14",
+      "Descrizione":"Verificare che l'utente riceva un messaggio di errore qualora avesse caricato un file SVG non valido o corrotto",
+      "Requisito":"FD-14",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-15",
+      "Descrizione":"Verificare che l'utente che abbia scelto la modalità di configurazione a partire da un file SVG, possa indicare il solo lato maggiore del magazzino per configurare la planimetria",
+      "Requisito":"FD-15",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-16",
+      "Descrizione":"Verificare che il sistema determini il valore del lato minore a partire dal rapporto di aspetto del file SVG e dai dati forniti dall'utente",
+      "Requisito":"FD-16",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-17",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se il valore indicato come lato maggiore non è positivo (<=0)",
+      "Requisito":"FD-17",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-18",
+      "Descrizione":"Verificare che l'utente possa riconfigurare la planimetria dell'ambiente 3D corrente",
+      "Requisito":"FM-18",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-19",
+      "Descrizione":"Verificare che a seguito della riconfigurazione della planimetria, le modifiche a zone, bin e prodotti non subiscano variazioni",
+      "Requisito":"FM-19",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-20",
+      "Descrizione":"Verificare che l'utente possa visualizzare un'anteprima delle modifiche alla planimetria prima di confermare l'operazione",
+      "Requisito":"FO-20",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-21",
+      "Descrizione":"Verificare che l'utente possa ridefinire la larghezza dell'ambiente 3D corrente",
+      "Requisito":"FM-21",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-22",
+      "Descrizione":"Verificare che l'utente possa ridefinire la lunghezza dell'ambiente 3D corrente",
+      "Requisito":"FM-22",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-23",
+      "Descrizione":"Verificare che l'utente che abbia configurato un ambiente 3D a partire da file SVG non possa definire un valore di lunghezza inferiore a quello corrente",
+      "Requisito":"FD-23",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-24",
+      "Descrizione":"Verificare che l'utente che abbia configurato un ambiente 3D a partire da file SVG non possa definire un valore di larghezza inferiore a quello corrente",
+      "Requisito":"FD-24",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-25",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se il nuovo valore di larghezza indicato non è positivo (<=0)",
+      "Requisito":"FM-25",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-26",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se il nuovo valore di lunghezza indicato non è positivo (<=0)",
+      "Requisito":"FM-26",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-27",
+      "Descrizione":"Verificare che l'utente possa disporre di una griglia di aggancio come aiuto al posizionamento delle zone nell'ambiente 3D",
+      "Requisito":"FD-27",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-28",
+      "Descrizione":"Verificare che il passo della griglia sia configurabile",
+      "Requisito":"FD-28",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-29",
+      "Descrizione":"Verificare che l'utente possa disattivare la griglia di posizionamento",
+      "Requisito":"FD-29",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-30",
+      "Descrizione":"Verificare che la griglia sia configurabile durante le normali operazioni sull'ambiente 3D, non esclusivamente durante la configurazione dell'ambiente",
+      "Requisito":"FD-30",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-31",
+      "Descrizione":"Verificare che se il passo di griglia non è nullo, il collocamento delle zone si agganci ad essa",
+      "Requisito":"FD-31",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-32",
+      "Descrizione":"Verificare che l'utente possa importare le zone da un database",
+      "Requisito":"FD-32",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-33",
+      "Descrizione":"Verificare che l'utente possa importare le zone da un database durante la fase di configurazione dell'ambiente 3D",
+      "Requisito":"FD-33",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-34",
+      "Descrizione":"Verificare che le zone importate siano collocate automaticamente nell'ambiente 3D, nella posizione descritta dal database",
+      "Requisito":"FD-34",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-35",
+      "Descrizione":"Verificare che i bin delle zone siano importati contestualmente all'importazione delle zone",
+      "Requisito":"FD-35",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-36",
+      "Descrizione":"Verificare che l'importazione delle zone possa avvenire solo se l'utente ha configurato un ambiente 3D a partire da file SVG",
+      "Requisito":"FD-36",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-37",
+      "Descrizione":"Verificare che l'utente visualizzi un messaggio di errore nel caso l'importazione non dovesse andare a buon fine",
+      "Requisito":"FD-37",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-38",
+      "Descrizione":"Verificare che l'utente possa importare i prodotti da database",
+      "Requisito":"FD-38",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-39",
+      "Descrizione":"Verificare che quando l'utente importa zone e prodotti da un database, i prodotti siano collocati nei rispettivi bin di appartenenza",
+      "Requisito":"FD-39",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-40",
+      "Descrizione":"Verificare che l'utente possa alterare il proprio POV sull'ambiente 3D",
+      "Requisito":"FM-40",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-41",
+      "Descrizione":"Verificare che l'utente possa ruotare il proprio POV attorno all'asse longitudinale",
+      "Requisito":"FM-41",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-42",
+      "Descrizione":"Verificare che l'utente possa traslare il proprio POV lungo l'asse orizzontale",
+      "Requisito":"FM-42",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-43",
+      "Descrizione":"Verificare che l'utente possa effettuare zoom-in",
+      "Requisito":"FM-43",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-44",
+      "Descrizione":"Verificare che l'utente possa effettuare zoom-out",
+      "Requisito":"FM-44",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-45",
+      "Descrizione":"Verificare che l'utente possa configurare un nuovo ambiente 3D",
+      "Requisito":"FM-45",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-46",
+      "Descrizione":"Verificare che la configurazione di un nuovo ambiente 3D cancelli tutti i dati della sessione corrente",
+      "Requisito":"FM-46",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-47",
+      "Descrizione":"Verificare che il sistema non offra la persistenza dei dati importati",
+      "Requisito":"FM-47",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-48",
+      "Descrizione":"Verificare che il sistema non offra la persistenza dei dati generati durante la sessione corrente",
+      "Requisito":"FM-48",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-49",
+      "Descrizione":"Verificare che la lista delle movimentazioni di prodotti richieste durante la sessione corrente sia scartata contestualmente alla riconfigurazione dell'ambiente 3D",
+      "Requisito":"FM-49",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-50",
+      "Descrizione":"Verificare che le aggiunte alle zone siano scartate contestualmente alla riconfigurazione dell'ambiente 3D",
+      "Requisito":"FM-50",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-51",
+      "Descrizione":"Verificare che le modifiche alle zone siano scartate contestualmente alla riconfigurazione dell'ambiente 3D",
+      "Requisito":"FM-51",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-52",
+      "Descrizione":"Verificare che le cancellazioni delle zone siano scartate contestualmente alla riconfigurazione dell'ambiente 3D",
+      "Requisito":"FM-52",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-53",
+      "Descrizione":"Verificare che la configurazione della planimetria sia scartata contestualmente alla riconfigurazione dell'ambiente 3D",
+      "Requisito":"FM-53",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-54",
+      "Descrizione":"Verificare che le informazioni sui prodotti siano scartate contestualmente alla riconfigurazione dell'ambiente 3D",
+      "Requisito":"FM-54",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-55",
+      "Descrizione":"Verificare che l'utente possa creare nuove zone",
+      "Requisito":"FM-55",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-56",
+      "Descrizione":"Verificare che l'utente possa indicare una sequenza numerica come codice identificativo delle nuove zone create",
+      "Requisito":"FD-56",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-57",
+      "Descrizione":"Verificare che l'utente visualizzi un errore qualora avesse indicato un codice identificativo già in uso",
+      "Requisito":"FD-57",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-58",
+      "Descrizione":"Verificare che l'utente possa indicare la lunghezza della nuova zona da creare",
+      "Requisito":"FM-58",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-59",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se la lunghezza indicata non è positiva (<=0)",
+      "Requisito":"FM-59",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-60",
+      "Descrizione":"Verificare che l'utente possa scegliere tra \"NS\" e \"WE\" come orientamento della zona da creare",
+      "Requisito":"FD-60",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-61",
+      "Descrizione":"Verificare che l'utente possa indicare il numero di colonne della nuova zona",
+      "Requisito":"FM-61",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-62",
+      "Descrizione":"Verificare che una zona debba contenere almeno 1 colonna",
+      "Requisito":"FM-62",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-64",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se il numero di colonne della nuova zona non è almeno pari a 1",
+      "Requisito":"FM-64",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-65",
+      "Descrizione":"Verificare che l'utente possa personalizzare la larghezza delle colonne della nuova zona",
+      "Requisito":"FD-65",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-66",
+      "Descrizione":"Verificare che l'utente possa suddividere la larghezza della nuova zona in colonne di equa larghezza",
+      "Requisito":"FD-66",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-67",
+      "Descrizione":"Verificare che l'utente possa indicare la larghezza complessiva della nuova zona, qualora avesse richiesto la suddivisione della stessa in colonne di equa larghezza",
+      "Requisito":"FD-67",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-68",
+      "Descrizione":"Verificare che l'utente possa suddividere la larghezza della nuova zona in colonne di larghezza specifica",
+      "Requisito":"FD-68",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-69",
+      "Descrizione":"Verificare che l'utente possa indicare la larghezza di ciascuna colonna, qualora avesse richiesto la suddivisione della nuova zona in colonne di larghezza specifica",
+      "Requisito":"FD-69",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-70",
+      "Descrizione":"Verificare che il sistema determini il valore della larghezza della zona dalla somma delle larghezze delle singole colonne",
+      "Requisito":"FD-70",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-71",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se la larghezza indicata per la singola colonna non è positiva (<=0)",
+      "Requisito":"FD-71",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-72",
+      "Descrizione":"Verificare che l'utente possa personalizzare il numero di livelli della nuova zona da creare",
+      "Requisito":"FM-72",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-73",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se il numero di livelli della nuova zona non è almeno pari a 1",
+      "Requisito":"FM-73",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-74",
+      "Descrizione":"Verificare che l'utente possa personalizzare l'altezza dei singoli livelli della zona",
+      "Requisito":"FM-74",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-75",
+      "Descrizione":"Verificare che una zona debba contenere almeno 1 livello",
+      "Requisito":"FM-75",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-76",
+      "Descrizione":"Verificare che la numerazione dei livelli debba partire da 0 (\"piano terra\")",
+      "Requisito":"FM-76",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-77",
+      "Descrizione":"Verificare che il sistema determini il valore dell'altezza della zona dalla somma delle altezze dei singoli livelli",
+      "Requisito":"FM-77",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-78",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se l'altezza indicata per il singolo livello non è positiva (<=0)",
+      "Requisito":"FM-78",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-79",
+      "Descrizione":"Verificare che l'utente possa modificare una zona già creata",
+      "Requisito":"FM-79",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-80",
+      "Descrizione":"Verificare che l'utente possa modificare una zona importata da database",
+      "Requisito":"FM-80",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-81",
+      "Descrizione":"Verificare che l'utente possa rimuovere una singola colonna, purché l'operazione non elimini una colonna con almeno un bin occupato",
+      "Requisito":"FM-81",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-82",
+      "Descrizione":"Verificare che l'utente possa rimuovere una singola colonna, purché l'operazione non elimini una colonna con indice inferiore all'indice di una colonna con almeno un bin occupato",
+      "Requisito":"FM-82",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-83",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se l'operazione di rimozione di una colonna è impossibile per i vincoli individuati",
+      "Requisito":"FM-83",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-84",
+      "Descrizione":"Verificare che l'utente possa rimuovere un singolo livello, purché l'operazione non elimini un livello con almeno un bin occupato",
+      "Requisito":"FM-84",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-85",
+      "Descrizione":"Verificare che l'utente possa rimuovere un singolo livello, purché l'operazione non elimini un livello con indice inferiore all'indice di un livello con almeno un bin occupato",
+      "Requisito":"FM-85",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-86",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se l'operazione di rimozione di un livello è impossibile per i vincoli individuati",
+      "Requisito":"FM-86",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-87",
+      "Descrizione":"Verificare che l'operazione di creazione di una nuova zona sia conclusa solo con il corretto collocamento della stessa nell'ambiente 3D",
+      "Requisito":"FM-87",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-88",
+      "Descrizione":"Verificare che l'operazione di modifica di una zona sia conclusa solo con il corretto collocamento della stessa nell'ambiente 3D",
+      "Requisito":"FM-88",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-89",
+      "Descrizione":"Verificare che l'utente possa eliminare qualsiasi zona",
+      "Requisito":"FM-89",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-90",
+      "Descrizione":"Verificare che i prodotti collocati in una zona rimossa non siano cancellati",
+      "Requisito":"FM-90",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-91",
+      "Descrizione":"Verificare che l'utente visualizzi un messaggio di avviso prima di procedere con l'eliminazione di una zona",
+      "Requisito":"FM-91",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-92",
+      "Descrizione":"Verificare che l'utente possa ispezionare una zona a partire dall'ambiente 3D",
+      "Requisito":"FM-92",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-93",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID della zona ispezionata",
+      "Requisito":"FM-93",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-94",
+      "Descrizione":"Verificare che l'utente possa visualizzare la larghezza della zona ispezionata",
+      "Requisito":"FM-94",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-95",
+      "Descrizione":"Verificare che l'utente possa visualizzare la lunghezza della zona ispezionata",
+      "Requisito":"FM-95",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-96",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'altezza della zona ispezionata",
+      "Requisito":"FM-96",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-97",
+      "Descrizione":"Verificare che la zona ispezionata sia evidenziata graficamente nell'ambiente 3D",
+      "Requisito":"FM-97",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-98",
+      "Descrizione":"Verificare che l'utente possa visualizzare la lista dei bin inclusi nella zona ispezionata",
+      "Requisito":"FM-98",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-99",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID dei bin inclusi nella zona ispezionata",
+      "Requisito":"FM-99",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-100",
+      "Descrizione":"Verificare che l'utente possa visualizzare lo stato di occupazione dei bin inclusi nella zona ispezionata",
+      "Requisito":"FM-100",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-101",
+      "Descrizione":"Verificare che l'utente possa collocare una zona creata nello spazio 3D",
+      "Requisito":"FM-101",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-102",
+      "Descrizione":"Verificare che l'utente possa collocare una zona modificata nello spazio 3D",
+      "Requisito":"FM-102",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-103",
+      "Descrizione":"Verificare che il sistema evidenzi graficamente una zona in una posizione non occupabile",
+      "Requisito":"FM-103",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-104",
+      "Descrizione":"Verificare che il sistema impedisca il collocamento di una zona su una posizione non occupabile",
+      "Requisito":"FM-104",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-105",
+      "Descrizione":"Verificare che il sistema impedisca il collocamento di una zona su di un'altra, ovvero impedisca la compenetrazione tra zone",
+      "Requisito":"FM-105",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-106",
+      "Descrizione":"Verificare che il sistema impedisca il collocamento di una zona al di fuori del perimetro dell'ambiente 3D",
+      "Requisito":"FM-106",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-107",
+      "Descrizione":"Verificare che l'utente possa visualizzare la lista delle zone contenute nell'ambiente 3D",
+      "Requisito":"FM-107",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-108",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID delle zone incluse nella lista",
+      "Requisito":"FM-108",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-109",
+      "Descrizione":"Verificare che l'utente possa cercare le zone in base all'ID",
+      "Requisito":"FD-109",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-110",
+      "Descrizione":"Verificare che le zone che rispondono ai criteri di ricerca siano evidenziate graficamente",
+      "Requisito":"FD-110",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-111",
+      "Descrizione":"Verificare che l'utente possa ispezionare un bin a partire dall'ambiente 3D",
+      "Requisito":"FM-111",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-112",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID del bin ispezionato",
+      "Requisito":"FM-112",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-113",
+      "Descrizione":"Verificare che l'utente possa visualizzare la lunghezza del bin ispezionato",
+      "Requisito":"FM-113",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-114",
+      "Descrizione":"Verificare che l'utente possa visualizzare la larghezza del bin ispezionato",
+      "Requisito":"FM-114",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-115",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'altezza del bin ispezionato",
+      "Requisito":"FM-115",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-116",
+      "Descrizione":"Verificare che il bin ispezionato sia evidenziato graficamente",
+      "Requisito":"FM-116",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-117",
+      "Descrizione":"Verificare che l'utente possa visualizzare le informazioni associate al prodotto eventualmente contenuto nel bin",
+      "Requisito":"FM-117",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-118",
+      "Descrizione":"Verificare che ogni bin possa contenere al massimo 1 prodotto",
+      "Requisito":"FM-118",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-119",
+      "Descrizione":"Verificare che l'utente possa richiedere lo spostamento del POV sulla zona ispezionata",
+      "Requisito":"FD-119",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-120",
+      "Descrizione":"Verificare che l'utente possa richiedere lo spostamento del POV sul bin ispezionato",
+      "Requisito":"FD-120",
+      "Stato":"NI"
+   },
+   {
+      "Codice":"TSIS-121",
+      "Descrizione":"Verificare che l'utente possa visualizzare le informazioni associate ad un prodotto importato da database",
+      "Requisito":"FD-121",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-122",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID del prodotto ispezionato",
+      "Requisito":"FD-122",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-123",
+      "Descrizione":"Verificare che l'utente possa visualizzare il nome del prodotto ispezionato",
+      "Requisito":"FD-123",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-124",
+      "Descrizione":"Verificare che l'utente possa visualizzare la categoria del prodotto ispezionato",
+      "Requisito":"FD-124",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-125",
+      "Descrizione":"Verificare che l'utente possa visualizzare la larghezza del prodotto ispezionato",
+      "Requisito":"FD-125",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-126",
+      "Descrizione":"Verificare che l'utente possa visualizzare la lunghezza del prodotto ispezionato",
+      "Requisito":"FD-126",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-127",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'altezza del prodotto ispezionato",
+      "Requisito":"FD-127",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-128",
+      "Descrizione":"Verificare che l'utente possa visualizzare il peso del prodotto ispezionato",
+      "Requisito":"FD-128",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-129",
+      "Descrizione":"Verificare che l'utente possa visualizzare la lista dei prodotti importati da database",
+      "Requisito":"FD-129",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-130",
+      "Descrizione":"Verificare che l'utente possa distinguere tra prodotti collocati in un bin e non collocati",
+      "Requisito":"FD-130",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-131",
+      "Descrizione":"Verificare che l'utente possa visualizzare la lista dei prodotti collocati",
+      "Requisito":"FD-131",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-132",
+      "Descrizione":"Verificare che l'utente possa visualizzare la lista dei prodotti non collocati",
+      "Requisito":"FD-132",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-133",
+      "Descrizione":"Verificare che l'utente possa visualizzare il nome del prodotto nella lista dei prodotti (collocati e non)",
+      "Requisito":"FD-133",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-134",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID del prodotto nella lista dei prodotti (collocati e non)",
+      "Requisito":"FD-134",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-135",
+      "Descrizione":"Verificare che l'utente possa visualizzare la categoria del prodotto nella lista dei prodotti (collocati e non)",
+      "Requisito":"FD-135",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-136",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID della zona di appartenenza di un prodotto nella lista dei prodotti collocati",
+      "Requisito":"FD-136",
+      "Stato":"NI"
+   },
+   {
+      "Codice":"TSIS-137",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID del bin di appartenenza di un prodotto nella lista dei prodotti collocati",
+      "Requisito":"FD-137",
+      "Stato":"NI"
+   },
+   {
+      "Codice":"TSIS-138",
+      "Descrizione":"Verificare che l'utente possa filtrare la lista dei prodotti collocati in base all'ID",
+      "Requisito":"FD-138",
+      "Stato":"NI"
+   },
+   {
+      "Codice":"TSIS-139",
+      "Descrizione":"Verificare che l'utente possa filtrare la lista dei prodotti non collocati in base all'ID",
+      "Requisito":"FD-139",
+      "Stato":"NI"
+   },
+   {
+      "Codice":"TSIS-140",
+      "Descrizione":"Verificare che l'utente possa filtrare la lista dei prodotti collocati in base al nome",
+      "Requisito":"FD-140",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-141",
+      "Descrizione":"Verificare che l'utente possa filtrare la lista dei prodotti non collocati in base al nome",
+      "Requisito":"FD-141",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-142",
+      "Descrizione":"Verificare che l'utente possa filtrare la lista dei prodotti collocati in base alla categoria",
+      "Requisito":"FD-142",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-143",
+      "Descrizione":"Verificare che l'utente possa filtrare la lista dei prodotti non collocati in base alla categoria",
+      "Requisito":"FD-143",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-144",
+      "Descrizione":"Verificare che i filtri di ricerca siano mutuamente esclusivi",
+      "Requisito":"FD-144",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-145",
+      "Descrizione":"Verificare che l'utente possa inserire un ordine di movimentazione di un prodotto da un bin ad un altro tramite drag and drop",
+      "Requisito":"FM-146",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-146",
+      "Descrizione":"Verificare che ciascun ordine di movimentazione invii una richiesta alla API per la convalida dell'operazione",
+      "Requisito":"FM-147",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-147",
+      "Descrizione":"Verificare che la API riceva almeno l'ID del bin di destinazione",
+      "Requisito":"FM-148",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-148",
+      "Descrizione":"Verificare che la API risponda con stato HTTP 200 se l'operazione è stata convalidata",
+      "Requisito":"FM-149",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-149",
+      "Descrizione":"Verificare che la API risponda con stato HTTP 4XX se l'operazione è stata rifiutata",
+      "Requisito":"FM-150",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-150",
+      "Descrizione":"Verificare che la API convalidi o rifiuti le operazioni in maniera casuale",
+      "Requisito":"FM-151",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-151",
+      "Descrizione":"Verificare che il sistema impedisca l'inserimento di un ordine di movimentazione verso un bin occupato",
+      "Requisito":"FM-152",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-152",
+      "Descrizione":"Verificare che l'utente visualizzi l'esito dell'operazione di convalida da parte dell'API",
+      "Requisito":"FM-153",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-153",
+      "Descrizione":"Verificare che l'utente visualizzi un errore di connessione se l'accesso all'API non è possibile",
+      "Requisito":"FM-154",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-154",
+      "Descrizione":"Verificare che quando un ordine di movimentazione è convalidato, esso viene inserito in una cronologia delle operazioni accessibile dall'utente",
+      "Requisito":"FD-155",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-155",
+      "Descrizione":"Verificare che quando un ordine di movimentazione è rifiutato, il prodotto oggetto dell'operazione ritorna nella posizione di partenza",
+      "Requisito":"FM-156",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-156",
+      "Descrizione":"Verificare che l'utente possa visualizzare la cronologia degli ordini di movimentazione convalidati",
+      "Requisito":"FD-157",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-157",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID del bin di partenza degli ordini di movimentazione convalidati se l'operazione è partita da un bin",
+      "Requisito":"FD-158",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-158",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID del bin di destinazione dell'ordine di movimentazione convalidato",
+      "Requisito":"FD-159",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-159",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID del prodotto oggetto dell'ordine di movimentazione convalidato",
+      "Requisito":"FD-160",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-160",
+      "Descrizione":"Verificare che l'utente possa visualizzare il nome del prodotto oggetto dell'ordine di movimentazione convalidato",
+      "Requisito":"FD-161",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-161",
+      "Descrizione":"Verificare che l'utente possa visualizzare l'ID del bin di partenza degli ordini di movimentazione convalidati se l'operazione è partita da un bin",
+      "Requisito":"FD-162",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-162",
+      "Descrizione":"Verificare che l'utente possa ispezionare un singolo ordine di movimentazione convalidato",
+      "Requisito":"FD-163",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-163",
+      "Descrizione":"Verificare che il sistema evidenzi graficamente il bin di destinazione dell'ordine di movimentazione ispezionato",
+      "Requisito":"FM-164",
+      "Stato":"P"
+   },
+   {
+      "Codice":"TSIS-164",
+      "Descrizione":"Verificare che se l'ordine di movimentazione ispezionato si è originato da un bin, il sistema evidenzi graficamente il bin di partenza nell'ambiente 3D",
+      "Requisito":"FM-165",
+      "Stato":"P"
+   }
+]  

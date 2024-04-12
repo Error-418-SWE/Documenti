@@ -182,15 +182,14 @@ Questo processo permette di individuare le attività da svolgere, le risorse nec
 Il risultato di questo processo è visibile all'interno del documento #pdp.\
 \
 ===== Esecuzione
-Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto. \
+Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto.
+
 Il processo di esecuzione è composto da due attività principali:
 + sviluppo del prodotto;
 + sviluppo della documentazione.
 
-Durante questo processo, ogni ruolo svolge le attività assegnate seguendo quanto stabilito nella pianificazione. Sarà compito del Responsabile verificare che le attività siano svolte correttamente e nei tempi previsti. Ogni membro avrà la possibilità di segnalare eventuali criticità, avendo a disposizione una board apposita sulla piattaforma Miro.\ Questo permette di avere un resoconto pronto a fine Sprint in merito al processo di avanzamento, individuando: \
-- "Keep doing": attività che hanno dato buoni risultati e che quindi vanno mantenute;
-- "Things to change": attività che hanno dato risultati non soddisfacenti e che quindi vanno modificate.
-\
+Durante questo processo, ogni ruolo svolge le attività assegnate seguendo quanto stabilito nella pianificazione. Sarà compito del Responsabile verificare che le attività siano svolte correttamente e nei tempi previsti. Ogni membro avrà la possibilità di segnalare eventuali criticità, avendo a disposizione una board apposita sulla piattaforma Miro, che permette di avere un resoconto pronto a fine Sprint in merito al processo di avanzamento.
+
 La progressione del lavoro è visibile mediante:
 - retrospettiva;
 - grafici di burndown (Jira);
@@ -199,15 +198,11 @@ La progressione del lavoro è visibile mediante:
 I prodotti di questo processo, permettono dunque di procedere con la verifica e lo stabilimento delle contromisure e dei miglioramenti necessari.
 \ \
 ===== Verifica
-Al termine di ogni Sprint, il gruppo procederà con il meeting di retrospettiva, durante il quale verranno analizzati i risultati ottenuti e le attività svolte, basandosi sui prodotti della fase di esecuzione: \
+Al termine di ogni Sprint, il gruppo procederà con il meeting di retrospettiva, durante il quale verranno analizzati i risultati ottenuti e le attività svolte, basandosi sui prodotti dell'attività di esecuzione:
 
-+ grafici di burndown:
-  - permettono di avere una visione rapida di quanto del lavoro pianificato è stato portato a termine: si tratta di una metrica puramente quantitativa, che tiene conto del numero di ticket chiusi e del numero di ticket aperti;
++ *grafici di burndown*: permettono di avere una visione rapida di quanto del lavoro pianificato è stato portato a termine: si tratta di una metrica puramente quantitativa, che tiene conto del numero di story point completati e del numero di story point ancora in lavorazione;
 
-+ board di avanzamento:
-  - "Keep doing": attività che hanno dato buoni risultati e che quindi vanno mantenute: questo permette al gruppo di individuare il _modus operandi_ più efficace ed efficiente per svolgere le attività;
-
-  - "Things to change": attività che hanno dato risultati non soddisfacenti e che quindi vanno modificate: si tratta dell'aspetto più delicato da considerare, in quanto permette di individuare le criticità e le inefficienze del processo di sviluppo, e di conseguenza di apportare le modifiche necessarie per migliorare il processo stesso.
++ *board di avanzamento*: permette di avere una panoramica sulla situazione dello Sprint, in modo da valutarne gli aspetti positivi e negativi.
 
 Questa analisi individua i miglioramenti da apportare al processo di sviluppo, stabilendo le contromisure necessarie per migliorare il processo stesso.
   \ \
@@ -582,9 +577,9 @@ Inoltre, è necessario che il gruppo svolga delle revisioni tecniche con il Comm
 ==== Valutazione <valutazione>
 Durante l'attività di valutazione il gruppo deve analizzare la situazione del progetto, e per fare ciò deve adottare degli strumenti che rappresentino tale situazione nel modo più oggettivo possibile. Il momento in cui si effettua questo compito è la retrospettiva settimanale. Questa si svolge tramite meeting interno su Discord con il supporto di una board Miro. Il meeting è suddiviso concettualmente in tre parti, rappresentate all'interno della board da tre riquadri:
 
-- Keep doing: raccoglie tutti gli aspetti positivi (e di conseguenza da mantenere) dello Sprint;
-- Things to change: raccoglie tutte le problematiche incontrate durante lo Sprint;
-- To do e Improvements: raccoglie tutte le attività da svolgere nel prossimo Sprint, alcune delle quali direttamente collegate agli elementi appartenenti a "Things to change".
+- *Keep doing*: raccoglie tutti gli aspetti positivi, e di conseguenza da mantenere, dello Sprint;
+- *Improvements*: raccoglie tutte le problematiche incontrate durante lo Sprint;
+- *To do*: raccoglie tutte le attività da svolgere nel prossimo Sprint, alcune delle quali direttamente collegate agli elementi appartenenti a "Improvements".
 
 Tramite Miro il gruppo riesce ad avere una panoramica della situazione del lavoro, che viene poi completata da Jira, l'Issue Tracking System adottato. Al suo interno il gruppo ha definito le due milestone esterne (RTB e PB), nelle quali ha creato delle Epic che rappresentano ciò che è necessario produrre per quella milestone, e che raccolgono tutti i task necessari alla produzione di tali prodotti (documenti o software).
 

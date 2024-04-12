@@ -227,7 +227,7 @@ Le responsabilità del Responsabile includono:
 
 + #ndp: si occupa della stesura e dell'aggiornamento delle #ndp, che devono essere rispettate da tutti i membri del gruppo;
 
-+ relazioni esterne: gestisce tutte le interazioni con il Proponente e i Committenti assicurando una comunicazione fluida ed efficace;
++ relazioni esterne: gestisce tutte le interazioni con il Proponente e i Committenti assicurando una comunicazione fluida ed efficace.
 \ \
 ===== Amministratore
 L'Amministratore è la figura incaricata di gestire l'ambiente di lavoro e gli strumenti utilizzati dal gruppo per tutta la durata del progetto. Ha il compito di assicurare che gli strumenti proposti ai membri del gruppo siano efficienti e favoriscano la qualità del lavoro. Monitora, assieme al Responsabile, il rispetto delle regole stabilite in questo documento e verifica che i servizi a disposizione del gruppo siano adeguati alle attività pianificate, promuovendo la produttività.  \
@@ -249,7 +249,7 @@ Il suo compito è di rilevanza in quanto un'incompleta o superficiale analisi pu
 
 Le responsabilità dell'Analista includono:
 
-+ documento di #adr: l'Analista è incaricato di redigere questo documento, che dettaglia i requisiti specifici del progetto.
++ documento di #adr: l'Analista è incaricato di redigere questo documento, che dettaglia i requisiti specifici del progetto;
 
 + interazione con i clienti: l'Analista lavora a stretto contatto con il Proponente o i Committenti per capire e studiare i loro bisogni;
 
@@ -455,7 +455,7 @@ Il gruppo #err418 pone i seguenti principi di qualità:
     ), caption: [Tracciamento ISO-documenti])
     In particolare, per ogni processo interno al presente documento viene specificato il grado di conformità allo standard ISO/IEC/IEEE 12207:2017 all'interno di una sezione dedicata (@tracciamento_paragrafi).
 + il codice prodotto deve seguire degli standard interni, definiti nella @processo_implementazione;
-+ il codice prodotto dal gruppo deve rispettare i parametri di qualità attraverso il monitoraggio delle metriche identificate nel #pdq;
++ il codice prodotto dal gruppo deve rispettare i parametri di qualità attraverso il monitoraggio delle metriche identificate nel #pdq\;
 + il prodotto software deve soddisfare i bisogni e le richieste del Proponente, identificate nel documento di #adr e catalogate in: obbligatorie, desiderabili e opzionali.
 
 ===== Valutazione
@@ -950,7 +950,7 @@ Il workflow è composto dai seguenti passaggi:
 + *richiesta di una nuova review per verificare che i cambiamenti apportati siano corretti*;
 + *nel momento in cui la review termina con esito positivo, si procede al recupero della versione corrente del documento*:
   - se non esiste il corrispettivo pdf nel branch main, allora il documento non era mai stato pubblicato, pertanto la sua versione di partenza sarà fissata a 1.0.0;
-  - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script python;
+  - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script python.
 + *aggiornamento del file `log.csv`*: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
 + *compilazione del documento*: aggiornato il file `log.csv` e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
 + *pubblicazione del documento*: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main del repository;
@@ -1273,13 +1273,13 @@ Il gruppo deve implementare le seguenti attività in conformità con le politich
         + BAC (Budget at Completion);
         + PV (Planned Value), che si estende in:
           - SPV (Sprint Planned Value);
-          - PPV (Project Planned Value);
+          - PPV (Project Planned Value).
         + AC (Actual Cost), che si estende in:
           - SAC (Sprint Actual Cost);
-          - PAC (Project Actual Cost);
+          - PAC (Project Actual Cost).
         + EV (Earned Value), che si estende in:
           - SEV (Sprint Earned Value);
-          - PEV (Project Earned Value);
+          - PEV (Project Earned Value).
         + CPI (Cost Performance Index);
         + EAC (Estimated at Completion).
 
@@ -1389,8 +1389,6 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
 + *gestire report e record del Controllo della Qualità*:
 
- - *l'attività consiste in*:
-
   + *stilare report e record relativi alle attività di Controllo della Qualità*:
     - i report e i record vengono generati tramite l'utilizzo coordinato di Jira, Google Sheets e Grafana che porta alla creazione di un cruscotto di qualità. Si rimanda a @tecnologie_controllo per ulteriori dettagli.
 
@@ -1404,7 +1402,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
   + *trattare incidenti e problemi*:
 
     + in caso di segnalazione di incidenti e problemi deve essere svolto un lavoro collettivo per la loro risoluzione;
-    + tutte le criticità devono prevedere risoluzioni e arginamenti già predisposti all'interno del documento #pdp_v.
+    + tutte le criticità devono prevedere risoluzioni e arginamenti già predisposti all'interno del documento #pdp_v\;
     + nel caso tali problemi o incidenti siano di carattere generale, deve essere avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
 
 ==== Tecnologie <tecnologie_controllo>
@@ -1669,7 +1667,7 @@ L'attività consiste nei seguenti task:
       - stabilire le interfacce fra i componenti;
       - stabilire i paradigmi di composizione per collegare i componenti fra loro.
     I risultati di questa progettazione sono illustrati nei rispettivi diagrammi.
-    Viene anche valutato, se necessario e possibile, l'uso dei design pattern, illustrati nel testo _Design Patterns: Elements of Reusable Object-Oriented Software (1994)_, per standardizzare e ottimizzare l'implementazione delle interazioni tra le componenti del sistema;
+    Viene anche valutato, se necessario e possibile, l'uso dei design pattern, illustrati nel testo _Design Patterns: Elements of Reusable Object-Oriented Software (1994)_, per standardizzare e ottimizzare l'implementazione delle interazioni tra le componenti del sistema.
   + *selezionare principi e caratteristiche di design*:\
     i Progettisti devono seguire concetti base fondamentali come l'astrazione, la modularizzazione, l'incapsulamento, la separazione tra interfaccia e implementazione. Inoltre devono rispettare i principi della SOLID programming, per creare software più modulare, scalabile, manutenibile e adattabile ai cambiamenti futuri;
   + *scegliere le tecnologie a supporto della Definizione del Design*:\
@@ -1687,7 +1685,7 @@ L'attività consiste nei seguenti task:
   + *trasformare le caratteristiche architetturali e di design nella progettazione in elementi del sistema*:\
     - le caratteristiche architetturali e di design sono trasformate in unità architetturali, rappresentate nei relativi diagrammi.
     Le unità architetturali sono unità funzionali (o di responsabilità) ben definite, realizzabili da un singolo programmatore.
-    A una singola unità architetturale possono corrispondere uno o più moduli di codice, la cui corrispondenza unità – modulo è determinata dalle caratteristiche del linguaggio di programmazione utilizzato per la realizzazione;
+    A una singola unità architetturale possono corrispondere uno o più moduli di codice, la cui corrispondenza unità – modulo è determinata dalle caratteristiche del linguaggio di programmazione utilizzato per la realizzazione.
 
   + *esaminare le alternative di progettazione e la fattibilità dell'implementazione*:\
     - i Progettisti devono identificare le alternative di design;

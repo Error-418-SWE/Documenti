@@ -2013,7 +2013,7 @@ Ad ogni modifica del sistema devono essere aggiornati anche i documenti #man e #
 
 ==== Deployment su Azure
 
-Il gruppo ha definito una GitHub Action chiamata _deploy to VPS_ (i cui job sono descritti nel file _deploy.yml_) la quale effettua il deploy del sistema, aggiornato all'ultima versione rilasciata sul branch `dev`, all'interno della macchina virtuale di Azure.
+Il gruppo ha definito una GitHub Action chiamata _deploy to VPS_ (i cui job sono descritti nel file `deploy.yml`) la quale effettua il deploy del sistema, aggiornato all'ultima versione rilasciata sul branch `dev`, all'interno della macchina virtuale di Azure.
 
 Questo permette la fruizione del sistema senza la necessità di dover scaricare le ultime modifiche sul proprio dispositivo, e senza dover ricreare le relative immagini Docker.
 

@@ -81,13 +81,13 @@ L'utente avrà la possibilità di cercare specifici prodotti all'interno del mag
   #lastVisitedOn(13,02,2024)
 
 
-= Processi di accordo
+= Processi di Accordo
 
-== Processo di fornitura <processo_fornitura>
+== Processo di Fornitura <processo_fornitura>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.1.2_
 
 === Scopo e descrizione
-Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con Proponente e Committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
+Il processo di Fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con Proponente e Committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
 === Rapporti con il Proponente <comunicazione_Proponente>
 Il dialogo tra il gruppo #err418 e il Proponente dovrà essere attivo e frequente fino al termine del progetto didattico, in modo che si riescano a raccogliere più feedback possibili riguardo la correttezza del lavoro svolto. Questa comunicazione avverrà in due modalità:
 + scritta, asincrona, utilizzata per:
@@ -104,7 +104,7 @@ I meeting avranno cadenza variabile, e saranno fissati al termine di altri incon
 - 3 - PB.
 
 === Documentazione prodotta
-In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di fornitura, la quale sarà resa disponibile al Proponente, #azienda, e ai Committenti, ovvero il #vardanega e il #cardin.
+In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di Fornitura, la quale sarà resa disponibile al Proponente, #azienda, e ai Committenti, ovvero il #vardanega e il #cardin.
 
 ==== Valutazione dei capitolati
 Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese disponibili dai vari proponenti. Per ogni capitolato vengono presentati tre paragrafi:
@@ -144,28 +144,28 @@ Nel #pdq vengono fissati obiettivi di qualità e vengono descritti i processi ne
 Nel Glossario vengono elencati e definiti in modo preciso tutti i termini rilevanti utilizzati all'interno del progetto. È un documento estremamente importante per evitare situazioni di ambiguità, e garantire così una corretta comprensione della documentazione da parte di tutte le parti coinvolte.
 
 === Strumenti utilizzati
-In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo di fornitura.
+In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo di Fornitura.
 
 - *Zoom*: applicazione per videoconferenze;
 - *Google Slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il Committente riguardo l'andamento del lavoro;
 - *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
 
-= Processi di ciclo di vita
+= Processi di Ciclo di Vita
 
-== Processi organizzativi abilitanti
+== Processi Organizzativi Abilitanti
 
-I processi organizzativi abilitanti hanno la funzione di garantire la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. \
+I processi Organizzativi Abilitanti hanno la funzione di garantire la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. \
 Questi processi forniscono l'infrastruttura e le risorse necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
 
-I processi organizzativi abilitanti implementati dal gruppo sono i seguenti:
-+ processo di gestione dei modelli di ciclo di vita;
-+ processo di gestione dell'infrastruttura.
+I processi Organizzativi Abilitanti implementati dal gruppo sono i seguenti:
++ processo di Gestione dei Modelli di Ciclo di Vita;
++ processo di Gestione dell'Infrastruttura.
 
-=== Processo di gestione dei modelli di ciclo di vita<processo_ciclo_di_vita>
+=== Processo di Gestione dei Modelli di Ciclo di Vita<processo_ciclo_di_vita>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
 ==== Scopo
 
-Lo scopo del processo di gestione del modello di ciclo di vita è definire, mantenere e garantire regole, processi, modelli e procedure di ciclo di vita.\
+Lo scopo del processo di Gestione dei Modelli di Ciclo di Vita è definire, mantenere e garantire regole, processi, modelli e procedure di ciclo di vita.\
 Questo processo fornisce politiche, processi, modelli e procedure del ciclo di vita coerenti con gli obiettivi dell'organizzazione, che sono definiti, adattati, migliorati e mantenuti per supportare le esigenze individuali dei progetti all'interno del contesto dell'organizzazione, e che sono in grado di essere applicati mediante metodi e strumenti efficaci e comprovati.\
 
 Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo di vita del software. Questo modello prevede quattro fasi:
@@ -293,11 +293,11 @@ Le responsabilità del Verificatore includono:
 + approvazione della documentazione sottoposta a verifica.
 
 \ \
-=== Processi di gestione dell'infrastruttura
+=== Processi di Gestione dell'Infrastruttura
 
 ==== Scopo
 
-Lo scopo del processo di gestione dell'infrastruttura è fornire l'infrastruttura e i servizi a supporto dell'organizzazione per il conseguimento degli obiettivi di progetto nel corso dell'intero ciclo di vita.
+Lo scopo del processo di Gestione dell'Infrastruttura è fornire l'infrastruttura e i servizi a supporto dell'organizzazione per il conseguimento degli obiettivi di progetto nel corso dell'intero ciclo di vita.
 
 Questo processo definisce, fornisce e regola i servizi, gli strumenti e le tecnologie di comunicazione e condivisione delle informazioni a supporto degli scopi dell'organizzazione.
 
@@ -305,14 +305,14 @@ Questo processo definisce, fornisce e regola i servizi, gli strumenti e le tecno
 
 L'infrastruttura è costituita dai servizi, dagli strumenti e dalle tecnologie di comunicazione e condivisione delle informazioni adottate a supporto degli scopi dell'organizzazione. L'infrastruttura risponde alle necessità di comunicazione interna ed esterna.
 
-I requisiti dei processi di gestione dell'infrastruttura sono:
+I requisiti dei processi di Gestione dell'Infrastruttura sono:
 
 + semplicità di adozione di strumenti e servizi;
 + accesso rapido alle informazioni, anche in mobilità;
 + non ridondanza tra strumenti e servizi adottati.
 
 ==== Infrastruttura di comunicazione
-I principi della comunicazione che ispirano i processi di gestione dell'infrastruttura sono:
+I principi della comunicazione che ispirano i processi di Gestione dell'Infrastruttura sono:
 
 + Comunicazione aperta: le comunicazioni avvengono in modalità pubblica, ovvero tutti i membri possono partecipare (compatibilmente con i loro impegni di progetto e sempre nel rispetto delle rispettive responsabilità). I membri del gruppo hanno accesso e possono liberamente consultare i messaggi, le eventuali registrazioni e i verbali;
 
@@ -366,9 +366,9 @@ Sono compiti dell'amministratore il mantenimento dell'infrastruttura, l'aggiorna
 
 L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi sufficienti a coprire tutti i requisiti di comunicazione.
 
-=== Processo di gestione delle Risorse Umane <processo_risorse_umane>
+=== Processo di Gestione delle Risorse Umane <processo_risorse_umane>
 
-La natura didattica del progetto riduce le prerogative del processo di gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la: \
+La natura didattica del progetto riduce le prerogative del processo di Gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la: \
  _conformance to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.4_.
 
 ==== Scopo
@@ -480,12 +480,12 @@ L'attività di attuazione di azioni correttive consiste nei seguenti task:
 + apertura dei relativi task di revisione su Jira;
 + assegnazione e svolgimento dei task con successiva verifica in sede di Pull Request.
 
-= Processi di gestione tecnica
+= Processi di Gestione Tecnica
 
-== Processo di pianificazione di progetto <pianificazione>
+== Processo di Pianificazione di Progetto <pianificazione>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
 === Scopo
-Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato #pdp (@PdP).
+Il processo di Pianificazione di Progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato #pdp (@PdP).
 
 === Risultati (#pdp) <PdP>
 Il #pdp è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento accompagnata dai grafici di Gantt e di burndown. Sono presenti cinque sezioni, di cui le prime quattro rientrano nel processo di pianificazione:
@@ -545,10 +545,10 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
 Ad ogni ruolo è inoltre associato un costo orario, sulla base del quale il gruppo calcola il preventivo totale del progetto e quello di ogni _Sprint_ seguito dal relativo consuntivo. Il costo orario viene calcolato in base alla sua importanza all'interno del progetto, misurata in termini di competenze e disponibilità della risorsa.
 
 
-== Processo di valutazione e controllo di progetto <valutazioneControllo>
+== Processo di Valutazione e Controllo di Progetto <valutazioneControllo>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.2_
 === Scopo
-Il processo di valutazione e controllo ha lo scopo di determinare lo stato del progetto tramite la verifica dell'allineamento del lavoro con i piani definiti. Tale allineamento viene dimostrato osservando i seguenti parametri:
+Il processo di Valutazione e Controllo ha lo scopo di determinare lo stato del progetto tramite la verifica dell'allineamento del lavoro con i piani definiti. Tale allineamento viene dimostrato osservando i seguenti parametri:
 
 - tempistiche;
 - costi;
@@ -557,7 +557,7 @@ Il processo di valutazione e controllo ha lo scopo di determinare lo stato del p
 Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e viene messo per iscritto all'interno dei verbali di tali riunioni e nei paragrafi di consuntivo del #pdp.
 
 === Risultati
-Come risultato dell'implementazione del processo di valutazione e controllo si elencano i seguenti:
+Come risultato dell'implementazione del processo di Valutazione e Controllo si elencano i seguenti:
 - valutazione dell'adeguatezza di ruoli, responsabilità e risorse;
 - esecuzione delle azioni correttive scaturite dalle revisioni di progresso;
 - viene avviata, se necessaria, la ripianificazione del progetto;
@@ -622,7 +622,7 @@ Le azioni di cambiamento dovute a richieste del Committente e/o Proponente sono 
 ===== Autorizzazione ad avanzare alla successiva milestone
 L'autorizzazione ad avanzare alla successiva milestone di progetto viene concessa dal Committente e/o Proponente in seguito ai colloqui pianificati su Zoom con quest'ultimi. Il gruppo si riserva di procedere verso la milestone successiva solo una volta ricevuta l'approvazione richiesta, in modo da non portare avanti difetti e problematiche che potrebbero risultare insidiosi da correggere una volta entrati in un periodo avanzato del progetto.
 
-== Processo di gestione delle Decisioni <processo_gestione_decisioni>
+== Processo di Gestione delle Decisioni <processo_gestione_decisioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
 
 === Scopo
@@ -779,7 +779,7 @@ Questa attività consiste nei seguenti compiti:
   pratica necessaria per valutare la necessità di futuri interventi di trattamento del rischio o eventuali modifiche della sua priorità;
 
 + *coordinamento dell'azione di gestione dopo la selezione di una strategia di trattamento del rischio*:\
-  dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di valutazione e controllo del progetto può essere applicato.
+  dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del progetto può essere applicato.
 
 ==== Monitoraggio dei rischi
 Questa attività consiste nei seguenti compiti:
@@ -1240,7 +1240,7 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.7_
 
 === Scopo
 
-Lo scopo del processo di misurazione è raccogliere, analizzare e riportare dati e informazioni, al fine di dimostrare la qualità di prodotti, servizi e processi.\
+Lo scopo del processo di Misurazione è raccogliere, analizzare e riportare dati e informazioni, al fine di dimostrare la qualità di prodotti, servizi e processi.\
 Questo processo viene svolto affinché il gruppo sia in grado di prendere le corrette decisioni per gestire al meglio il raggiungimento dei propri obiettivi.\
 Le misure devono soddisfare determinate caratteristiche di qualità, ovvero devono essere:
 + verificabili;
@@ -1253,7 +1253,7 @@ Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di
 
 === Risultati
 
-A seguito dell'implementazione efficace del processo di misurazione:
+A seguito dell'implementazione efficace del processo di Misurazione:
 
 - vengono identificate le esigenze informative;
 - viene identificato e sviluppato un insieme appropriato di misure basato sulle esigenze informative;
@@ -1265,7 +1265,7 @@ I risultati sono contenuti nel documento #pdq_v.
 
 === Attività
 
-Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito nel #pdq_v\:
+Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di Misurazione definito nel #pdq_v\:
 
 + prepararsi per la misurazione:
 
@@ -1308,7 +1308,7 @@ Il gruppo deve implementare le seguenti attività in conformità con le politich
     - definire procedure di raccolta, analisi, accesso e reportistica dei dati:
         - #pdq: definisce i criteri e le modalità di misurazione e reportistica dei dati misurati.
 
-    - definire criteri per valutare gli elementi informativi e il processo di misurazione:
+    - definire criteri per valutare gli elementi informativi e il processo di Misurazione:
         - #pdq: definisce i valori ottimali e accettabili della strategia di misurazione adottata a cui tutti i documenti prodotti devono conformarsi.
 
     - identificare e pianificare le azioni da intraprendere per i casi in cui i parametri di misurazione di qualità non vengano rispettati.
@@ -1384,7 +1384,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
   + il Verificatore deve valutare i prodotti e i servizi al fine di garantirne la conformità rispetto ai criteri stabiliti;
   + il Verificatore deve assicurarsi che la verifica e la convalida degli output dei processi del ciclo di vita siano eseguiti conformemente con quanto concordato in precedenza;
-  + il Verificatore deve applicare il processo di misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
+  + il Verificatore deve applicare il processo di Misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
   + il Verificatore deve esprimere un giudizio e segnalare eventuali problematiche riscontrate.
 
 + *gestire report e record del Controllo della Qualità*:
@@ -1426,13 +1426,13 @@ I dati sono visualizzati sotto forma di grafici, per aiutarne l'analisi e la com
 
 = Processi tecnici
 
-== Processo di analisi della missione <processo_missione>
+== Processo di Analisi della Missione <processo_missione>
 
 _Tailored conformance on ISO/IEC/IEEE 12207:2017 clause 6.4.1 per ISO/IEC/IEEE 12207:2017 Annex A_
 
 === Scopo
 
-Il processo di analisi della missione definisce i problemi e le opportunità dai quali scaturisce il progetto, caratterizza lo spazio delle soluzioni e determina una classe di soluzione preferita.
+Il processo di Analisi della Missione definisce i problemi e le opportunità dai quali scaturisce il progetto, caratterizza lo spazio delle soluzioni e determina una classe di soluzione preferita.
 
 === Strategia di identificazione e analisi della missione
 
@@ -1449,7 +1449,7 @@ Si identifica l'ambito del Capitolato attraverso la definizione di:
 - tipologia di utenza attesa;
 - destinazione d'uso del prodotto finale.
 
-La sintesi di bisogni e requisiti avviene nel contesto del processo di definizione di bisogni e requisiti degli Stakeholder disponibile nella @processo_bisogni.
+La sintesi di bisogni e requisiti avviene nel contesto del processo di Definizione di Bisogni e Requisiti degli Stakeholder disponibile nella @processo_bisogni.
 
 ==== Classi di soluzione
 Si identificano classi di soluzione che possano sfruttare le opportunità e risolvere i problemi individuati.
@@ -1479,13 +1479,13 @@ Sulla base dei risultati della valutazione, il gruppo individua una classe di so
 ==== Analisi dei requisiti
 Il documento #adr raccoglie le informazioni previste da questo processo. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
 
-== Processo di definizione di bisogni e requisiti degli stakeholder <processo_bisogni>
+== Processo di Definizione di Bisogni e Requisiti degli Stakeholder <processo_bisogni>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.2_
 
 === Scopo
 
-Il processo di definizione di bisogni e requisiti degli stakeholder definisce i requisiti di un sistema che possa fornire le funzionalità di cui gli utenti e gli stakeholder necessitano.
+Il processo di Definizione di Bisogni e Requisiti degli Stakeholder definisce i requisiti di un sistema che possa fornire le funzionalità di cui gli utenti e gli stakeholder necessitano.
 
 Il processo identifica gli stakeholder coinvolti con il sistema durante l'intero suo ciclo di vita.
 
@@ -1518,7 +1518,7 @@ Il gruppo adotta una strategia iterativa per l'identificazione, l'analisi e la t
 - osservazione delle criticità delle soluzioni software preesistenti.
 Le comunicazioni con gli stakeholder avvengono nelle modalità descritte in @modalita-comunicazione.
 
-Le attività sono supportate, quando utile, da documenti, immagini, dimostratori tecnologici e in generale qualsiasi elemento informativo utile alla comprensione dei bisogni degli stakeholder. Le informazioni sono organizzate in modo da supportare l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. Il livello di astrazione adottato può differire in base all'interlocutore e al progresso globale conseguito dal _Processo di definizione di bisogni e requisiti degli stakeholder_.
+Le attività sono supportate, quando utile, da documenti, immagini, dimostratori tecnologici e in generale qualsiasi elemento informativo utile alla comprensione dei bisogni degli stakeholder. Le informazioni sono organizzate in modo da supportare l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. Il livello di astrazione adottato può differire in base all'interlocutore e al progresso globale conseguito dal processo di Definizione di Bisogni e Requisiti degli Stakeholder.
 
 Lo strumento adottato a supporto di queste operazioni è Miro.
 
@@ -1545,7 +1545,7 @@ I bisogni degli stakeholder scaturiscono da fonti diverse. Il gruppo si impegna 
 - norme, leggi o altri vincoli esterni.
 
 ==== Definizione delle priorità
-Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (@processo_gestione_decisioni), guidano la selezione e la prioritizzazione dei requisiti.
+Le preferenze espresse dagli stakeholder, coadiuvate dal processo di Gestione delle Decisioni (@processo_gestione_decisioni), guidano la selezione e la prioritizzazione dei requisiti.
 
 ==== Casi d'uso
 Si definisce un insieme di casi d'uso (anche detti use case, abbreviato in UC) che identifichi tutte le funzionalità attese.
@@ -1585,15 +1585,15 @@ Sono classificati per priorità e per fonte.
 Il documento #adr raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
 
-== Processo di definizione dell'architettura <processo_definizione_architettura>
+== Processo di Definizione dell'Architettura <processo_definizione_architettura>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
 
 === Scopo
 
-Il processo di definizione dell'architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
+Il processo di Definizione dell'Architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
 
-Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (@processo_design).
+Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di Analisi della Missione (@processo_missione), di Definizione di Bisogni e Requisiti degli Stakeholder (@processo_bisogni) e di definizione del design (@processo_design).
 
 === Preparazione e requisiti <preparazione_architettura>
 

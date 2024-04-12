@@ -1127,17 +1127,16 @@ L'obiettivo è perseguire:
 - manutenibilità.
 
 ==== Convenzioni stilistiche globali
-Convenzioni stilistiche valide sia per i prodotti documentali che software.
 
 ===== Nomi dei documenti <norma_nomi_documenti>
 Ogni parola dei titoli dei documenti deve iniziare con la lettera maiuscola, ad eccezione delle preposizioni e degli articoli.\
-I verbali avranno come titolo la data del verbale nel formato _yyyy-mm-dd_.
+I verbali avranno come titolo la data del verbale nel formato `yyyy-mm-dd`.
 Se si fa riferimento al contenuto di un documento, dopo il rispettivo titolo riportare anche la versione nel formato `\_vX.Y.Z`. \
 
 Esempio: #ndp_v.
 
 ===== Formato data
-All'interno del documento, le date seguiranno il formato locale _dd/mm/yyyy_, mentre all'interno dei nomi dei file e dei commit di GitHub, il formato utilizzato sarà _yyyy-mm-dd_, dove:
+All'interno del documento, le date seguiranno il formato locale `dd/mm/yyyy`, mentre all'interno dei nomi dei file il formato utilizzato sarà `yyyy-mm-dd`, dove:
 - *dd*: numero del giorno con due cifre;
 - *mm*: numero del mese con due cifre;
 - *yyyy*: numero dell'anno con quattro cifre.

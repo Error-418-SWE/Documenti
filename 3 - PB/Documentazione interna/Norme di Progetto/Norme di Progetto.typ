@@ -667,17 +667,17 @@ Le decisioni possono riguardare diversi aspetti del capitolato, e la loro catego
 
 Le decisioni vengono dunque così classificate:
 + *Decisioni organizzative*: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto. Esempi notevoli sono le decisioni focalizzate alla coordinazione del gruppo o alla scelta degli strumenti da utilizzare per la gestione del progetto (ad esempio: scelta dell'ITS, delle piattaforme per la comunicazione e per la collaborazione):
-  - documento soggetto a modifiche: #ndp;
+  - documento soggetto a modifiche: #ndp\;
   - ruoli responsabili dell'aggiornamento: Responsabile, Amministratori;
   - strategia di decision-making: collaborativa.
 
 + *Decisioni tecnologiche*: sono relative allo stack tecnologico da adottare durante lo sviluppo del progetto:
-  - documento soggetto a modifiche: #ndp;
+  - documento soggetto a modifiche: #ndp\;
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making.
 
 + *Decisioni sui requisiti*: sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
-  - documento soggetto a modifiche: #adr;
+  - documento soggetto a modifiche: #adr\;
   - ruoli responsabili dell'aggiornamento: Analisti;
   - strategia di decision-making: collaborativa.
 
@@ -692,7 +692,7 @@ Le decisioni vengono dunque così classificate:
   - strategia di decision-making: expertise decision-making.
 
 + *Decisioni sulla qualità*: sono decisioni relative ai controlli di qualità:
-  - documento soggetto a modifiche: #pdq;
+  - documento soggetto a modifiche: #pdq\;
   - ruoli responsabili dell'aggiornamento: Responsabile, Verificatori;
   - strategia di decision-making: collaborativa.
 
@@ -1043,11 +1043,11 @@ Le informazioni possono essere tecniche, di progetto, organizzative e di accordo
 === Informazioni gestite
 Le informazioni gestite dal gruppo sono:
 - documentazione:
-  - #pdp;
-  - #ndp;
-  - #pdq;
-  - #adr;
-  - #glo;
+  - #pdp\;
+  - #ndp\;
+  - #pdq\;
+  - #adr\;
+  - #glo\;
   - Verbali.
 - codice sorgente:
   - Proof of Concept (PoC);
@@ -1146,7 +1146,7 @@ Ogni parola dei titoli dei documenti deve iniziare con la lettera maiuscola, ad 
 I verbali avranno come titolo la data del verbale nel formato `yyyy-mm-dd`.
 Se si fa riferimento al contenuto di un documento, dopo il rispettivo titolo riportare anche la versione nel formato `\_vX.Y.Z`. \
 
-Esempio: #ndp_v.
+Esempio: #ndp_v
 
 ===== Formato data
 All'interno del documento, le date seguiranno il formato locale `dd/mm/yyyy`, mentre all'interno dei nomi dei file il formato utilizzato sarà `yyyy-mm-dd`, dove:
@@ -1265,7 +1265,7 @@ I risultati sono contenuti nel documento #pdq_v.
 
 === Attività
 
-Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito nel #pdq_v:
+Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito nel #pdq_v\:
 
 + prepararsi per la misurazione:
 

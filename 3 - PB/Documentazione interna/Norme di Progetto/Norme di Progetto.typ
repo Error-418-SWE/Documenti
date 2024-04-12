@@ -1117,7 +1117,7 @@ Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e att
    - *Titolo risoluzione*;
    - *Criticità affrontate*.
 + eventuali ulteriori argomenti organizzati in paragrafi indipendenti;
-+ "*Pianificazione*", riporta la tabella contenente le task programmate per lo Sprint successivo. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso realizzato in Google Sheets (maggiori dettagli in merito reperibili al paragrafo @google_sheets) e disponibile nel Google Drive del gruppo.
++ "*Pianificazione*", riporta la tabella contenente i task programmati per lo Sprint successivo. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso realizzato in Google Sheets (maggiori dettagli in merito reperibili al paragrafo @google_sheets) e disponibile nel Google Drive del gruppo.
 
 === Stile e convenzioni <stile-convenzioni>
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.

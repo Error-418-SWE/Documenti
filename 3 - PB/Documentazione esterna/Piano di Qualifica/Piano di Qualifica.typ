@@ -461,7 +461,8 @@ I test di unità sono stati implementati mediante l'utilizzo del framework Jest.
     ..keys,
     ..data.map(
       row => keys.map(
-        key => row.at(key, default: [n/a])
+        key => {
+          return eval(row.at(key, default: [n/a]), mode: "markup")}
       )
     ).flatten()
   )

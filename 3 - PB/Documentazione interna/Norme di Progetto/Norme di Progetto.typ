@@ -863,9 +863,9 @@ Il tracciamento delle modifiche avviene per mezzo di automazioni che permettono 
 - autore della modifica;
 - revisore incaricato.
 
-Tali informazioni sono salvate in un file CSV, unico per ogni documento. Questo file, denominato _log.csv_, è salvato nella cartella dedicata al documento a cui si riferisce, e viene generato automaticamente da una GitHub Action invocata all'apertura, riapertura, sincronizzazione e chiusura di una pull request. Maggiori dettagli al paragrafo dedicato (@automazioni).
+Tali informazioni sono salvate in un file CSV, unico per ogni documento. Questo file, denominato `log.csv`, è salvato nella cartella dedicata al documento a cui si riferisce, e viene generato automaticamente da una GitHub Action invocata all'apertura, riapertura, sincronizzazione e chiusura di una pull request. Maggiori dettagli al paragrafo dedicato (@automazioni).
 
-Ogni documento, nella sezione direttamente sottostante all'indice, mostra in formato tabellare le informazioni relative al tracciamento delle modifiche, leggendo le informazioni dal file _log.csv_.
+Ogni documento, nella sezione direttamente sottostante all'indice, mostra in formato tabellare le informazioni relative al tracciamento delle modifiche, leggendo le informazioni dal file `log.csv`.
 
 #figure(table(
     align: left,
@@ -893,13 +893,13 @@ Documenti è organizzata in modo da suddividere la documentazione necessaria all
   - *Documentazione esterna*: contiene i documenti ad uso esterno:
     - *Verbali*: contiene i verbali delle riunioni esterne;
     - *doc_file_name*:
-      - _doc_file_name.typ_: file sorgente del documento;
-      - _log.csv_: registro delle modifiche associato al documento.
+      - `doc_file_name.typ`: file sorgente del documento;
+      - `log.csv`: registro delle modifiche associato al documento.
   - *Documentazione interna*: contiene i documenti ad uso interno:
       - *Verbali*: contiene i verbali delle riunioni interne;
     - *doc_file_name*:
-      - _doc_file_name.typ_: file sorgente del documento;
-      - _log.csv_: registro delle modifiche associato al documento.
+      - `doc_file_name.typ`: file sorgente del documento;
+      - `log.csv`: registro delle modifiche associato al documento.
 - *PB*: contiene i file necessari alla Product Baseline. È organizzata allo stesso modo della cartella dedicata alla RTB.
 
 Al fine di garantire uno svolgimento delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _feature branching_. È presente un branch per le release e un branch per lo sviluppo dal quale vengono creati dei branch per ogni nuova funzionalità o modifica da apportare.
@@ -935,7 +935,7 @@ La repository è organizzata in due sottocartelle principali, da cui si diramano
 Anche in questa repository, come per Documenti, viene applicato il _feature branching_, utilizzando `dev` come branch di appoggio per l'apertura dei branch di feature, identificati dal codice `WMS-XXX`, dove `XXX` è il numero del relativo task su Jira.
 
 ====== GitHub Actions <automazioni>
-L'intero processo di versionamento è accompagnato da una serie di automazioni, realizzate tramite GitHub Actions, che sollevano i componenti del gruppo dall'onere manuale di attività come la compilazione dei documenti, l'aggiornamento del registro delle modifiche (file _log.csv_) e la pubblicazione dei documenti dopo la verifica.
+L'intero processo di versionamento è accompagnato da una serie di automazioni, realizzate tramite GitHub Actions, che sollevano i componenti del gruppo dall'onere manuale di attività come la compilazione dei documenti, l'aggiornamento del registro delle modifiche (file `log.csv`) e la pubblicazione dei documenti dopo la verifica.
 
 *Workflow delle automazioni:*
 #figure(image("./imgs/workflow_actions.svg", format: "svg", width: 100%), caption: [Workflow delle automazioni]);
@@ -949,14 +949,14 @@ Il workflow è composto dai seguenti passaggi:
   - nome del file;
   - path del file.
 + *controllo del numero di file modificati*: se il numero di file modificati è maggiore di 1, il workflow termina con un errore;
-+ *controllo dell'esistenza del file _log.csv_*: se il file non esiste, viene creato (sinonimo di creazione del documento);
++ *controllo dell'esistenza del file `log.csv`*: se il file non esiste, viene creato (sinonimo di creazione del documento);
 + *rilascio della review*: il verificatore si occupa di controllare il documento e rilasciare la review, segnando i cambiamenti richiesti;
 + *richiesta di una nuova review per verificare che i cambiamenti apportati siano corretti*;
 + *nel momento in cui la review termina con esito positivo, si procede al recupero della versione corrente del documento*:
   - se non esiste il corrispettivo pdf nel branch main, allora il documento non era mai stato pubblicato, pertanto la sua versione di partenza sarà fissata a 1.0.0;
   - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script python;
-+ *aggiornamento del file _log.csv_*: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
-+ *compilazione del documento*: aggiornato il file _log.csv_ e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
++ *aggiornamento del file `log.csv`*: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
++ *compilazione del documento*: aggiornato il file `log.csv` e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
 + *pubblicazione del documento*: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main della repository;
 + *merge non confermato*: qualora a termine della compilazione del documento non venisse confermato il merge da parte del verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo main del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
 
@@ -966,7 +966,7 @@ All'approvazione della pull request, e alla conseguente chiusura del branch, un'
 
 ====== Typst
 Il gruppo utilizza Typst come strumento di scrittura e compilazione dei documenti. \
-Al fine di dare una struttura comune ai documenti si è creato un file _template.typ_ parametrizzato, sfruttando la possibilità di produrre un file pdf compilando insieme più file Typst. Questo file contiene le impostazioni di base per la creazione di un documento:
+Al fine di dare una struttura comune ai documenti si è creato un file `template.typ` parametrizzato, sfruttando la possibilità di produrre un file pdf compilando insieme più file Typst. Questo file contiene le impostazioni di base per la creazione di un documento:
 - `title`: titolo del documento;
 - `subTitle`: sottotitolo del documento;
 - `docType`: tipologia del documento (Verbale, Documento);
@@ -982,7 +982,7 @@ Al fine di dare una struttura comune ai documenti si è creato un file _template
 - `showIndex`: flag che indica se mostrare l'indice;
 - `isExternalUse`: flag che indica se il documento è per uso esterno.
 Al momento della creazione di un nuovo documento sarà sufficiente importare il modello e specificare i parametri sopra elencati. \
-Al fine di semplificare la procedura di creazione di un documento, è stato condiviso un documento di testo denominato _quickstart.txt_ che contiene la configurazione base per la stesura dei documenti.
+Al fine di semplificare la procedura di creazione di un documento, è stato condiviso un documento di testo denominato `quickstart.txt` che contiene la configurazione base per la stesura dei documenti.
 
 ==== Tracciamento dei task e amministrazione dello stato di configurazione
 
@@ -1031,7 +1031,7 @@ Il controllo delle release viene gestito tramite il meccanismo di pull request d
 Prima di integrare i nuovi cambiamenti, viene aperta una pull request dall'assegnatario del task. La pull request deve avere un titolo valido (come descritto nel paragrafo dedicato @automazioni) e deve essere designato almeno un reviewer. Di norma il reviewer di base è il Verificatore, che svolge una supervisione sulla correttezza sintattica e semantica dei contenuti.
 Nel caso in cui ci sia bisogno di una figura con delle competenze specifiche per quanto riguarda la semantica e il contenuto del materiale da revisionare, il Verificatore può essere affiancato da altri membri del gruppo.
 Per ogni richiesta di modifiche da apportare vengono aperte delle conversation, in cui è possibile evidenziare le linee del documento che hanno bisogno di cambiamenti, oltre a stabilire un canale di comunicazione tra assegnatario e Verificatore.
-Il processo di verifica del documento è accompagnato dall'esecuzione di GitHub Actions che si occupano di automatizzare l'aggiornamento del file _log.csv_ con i dati relativi alla modifica apportata, e la compilazione e pubblicazione del documento nel ramo main del repository. In questo modo si assicura che ogni documento presente nel ramo principale sia prima stato sottoposto ad un processo di verifica.
+Il processo di verifica del documento è accompagnato dall'esecuzione di GitHub Actions che si occupano di automatizzare l'aggiornamento del file `log.csv` con i dati relativi alla modifica apportata, e la compilazione e pubblicazione del documento nel ramo main del repository. In questo modo si assicura che ogni documento presente nel ramo principale sia prima stato sottoposto ad un processo di verifica.
 Si può procedere alla chiusura della pull request e con l'operazione di merge solo nel caso in cui tutte le conversation siano state risolte e siano stati applicati i cambiamenti richiesti in fase di review.
 Solo a seguito del merge della pull request, il task collegato presente in Jira può essere definito concluso e il relativo branch viene chiuso in modo automatico.
 
@@ -1062,7 +1062,7 @@ Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e d
 === Documentazione <norme-documentazione>
 
 ==== Struttura dei documenti <struttura-documenti>
-Ogni documento segue una struttura standard, stabilita nel template _template.typ_. \
+Ogni documento segue una struttura standard, stabilita nel template `template.typ`. \
 Questo paragrafo non tratta della struttura dei verbali. Per le norme sulla struttura dei verbali si rimanda alla @struttura-verbali.\
 I documenti pertanto sono così strutturati:
 

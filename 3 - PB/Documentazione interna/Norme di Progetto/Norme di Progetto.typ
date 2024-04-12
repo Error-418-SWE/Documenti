@@ -1943,11 +1943,11 @@ Qualora l'impegno, temporale o economico, per la conduzione dei test manuali si 
 
 ===== Verifiche in Pull Request
 
-Tutti i test di unità e di integrazione implementati dovranno essere eseguiti automaticamente dalle GitHub Actions (@automazioni) ogni volta che una Pull Request (@controllo_release) viene aperta o aggiornata nel suo contenuto. L'automazione designata all'esecuzione dei test dovrà essere codificata nel file `test_nodejs.yml`, situato nel repository WMS3 al percorso `WMS3/.github/workflows/`. Il merging di una Pull Request non potrà avvenire se un test automatico fallisce.
+Tutti i test di unità e di integrazione implementati dovranno essere eseguiti automaticamente dalle GitHub Actions (@automazioni) ogni volta che una Pull Request viene aperta o aggiornata nel suo contenuto. L'automazione designata all'esecuzione dei test dovrà essere codificata nel file `test_nodejs.yml`, situato nel repository WMS3 al percorso `WMS3/.github/workflows/`. Il merging di una Pull Request non potrà avvenire se un test automatico fallisce.
 
 Successivamente all'esecuzione dei test automatici, il Verificatore potrà controllare il contenuto della Pull Request. In particolare dovrà condurre delle verifiche manuali atte ad accertare che:
 
-- il codice scritto rispetti quanto definito nel processo di implementazione (@processo_implementazione);
+- il codice scritto rispetti quanto definito nel processo di Implementazione (@processo_implementazione);
 - il codice esegua senza problemi;
 - l'elemento implementato nella Pull Request sia visualizzato correttamente all'interno del prodotto, e assolva tutte le funzionalità ad esso richieste dai documenti #st_v e #adr_v\.
 
@@ -2011,7 +2011,7 @@ Ogni release avvenuta con successo, in conformità con il superamento dei test e
 
 Ad ogni modifica del sistema devono essere aggiornati anche i documenti #man e #st, al fine di includere la documentazione relativa alle modifiche apportate.
 
-==== Deploy su Azure
+==== Deployment su Azure
 
 Il gruppo ha definito una GitHub Action chiamata _deploy to VPS_ (i cui job sono descritti nel file _deploy.yml_) la quale effettua il deploy del sistema, aggiornato all'ultima versione rilasciata sul branch `dev`, all'interno della macchina virtuale di Azure.
 

@@ -14,7 +14,7 @@
 = Introduzione
 
 == Scopo del documento
-Questo documento contiene le regole del _way of working_ che disciplinano le attività di ogni membro del gruppo _Error_418_. Queste regole mirano a garantire coerenza, uniformità ed efficacia nel processo collaborativo, promuovendo un ambiente di lavoro strutturato ed efficiente.
+Questo documento contiene le regole del _way of working_ che disciplinano le attività di ogni membro del gruppo #err418. Queste regole mirano a garantire coerenza, uniformità ed efficacia nel processo collaborativo, promuovendo un ambiente di lavoro strutturato ed efficiente.
 L'approccio adottato per la redazione di questo documento è di natura incrementale. Ciò significa che il testo è soggetto ad aggiornamenti e revisioni continue al fine di integrare progressivamente le nuove norme, le _best practices_ e i cambiamenti che emergono nel corso dello sviluppo del progetto. Questa flessibilità consente al gruppo di adattarsi prontamente alle dinamiche di lavoro e alle esigenze specifiche del contesto, garantendo un documento sempre allineato alle necessità attuali del gruppo.
 
 == Scopo del progetto
@@ -89,7 +89,7 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.1.2_
 === Scopo e descrizione
 Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con Proponente e Committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
 === Rapporti con il Proponente <comunicazione_Proponente>
-Il dialogo tra il gruppo _Error_418_ e il Proponente dovrà essere attivo e frequente fino al termine del progetto didattico, in modo che si riescano a raccogliere più feedback possibili riguardo la correttezza del lavoro svolto. Questa comunicazione avverrà in due modalità:
+Il dialogo tra il gruppo #err418 e il Proponente dovrà essere attivo e frequente fino al termine del progetto didattico, in modo che si riescano a raccogliere più feedback possibili riguardo la correttezza del lavoro svolto. Questa comunicazione avverrà in due modalità:
 + scritta, asincrona, utilizzata per:
   - comunicazioni di breve durata;
   - condivisione di verbali e materiali informativi;
@@ -619,10 +619,10 @@ Nell'attività di controllo si intraprendono azioni correttive nei confronti dei
 Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcuni dei task raccolti rispondono direttamente ai problemi individuati nella parte di Things to change.
 
 ===== Ripianificazione
-La ripianificazione ha atto quando gli obiettivi cambiano nel corso dello sprint o alcune ipotesi fatte in fase di pianificazione si rivelano sbagliate. La ripianificazione viene gestita tramite Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo.
+La ripianificazione avviene quando gli obiettivi cambiano nel corso dello sprint o alcune ipotesi fatte in fase di pianificazione si rivelano sbagliate. La ripianificazione viene gestita tramite Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo.
 
 ===== Azioni di cambiamento dovute a richieste del Committente e/o Proponente
-Le azioni di cambiamento dovute a richieste del Committente e/o Proponente sono recepite attraverso i canali di comunicazione con quest'ultimi (Zoom, mail) e vengono registrate nei rispettivi verbali. A queste azioni viene attribuita un'alta priorità per garantire massima soddisfazione nel cliente finale.
+Le azioni di cambiamento dovute a richieste del Committente e/o Proponente sono recepite attraverso i canali di comunicazione con quest'ultimi (Zoom, mail) e vengono registrate nei rispettivi verbali. A queste azioni viene attribuita un'alta priorità per garantire massima soddisfazione del cliente finale.
 
 ===== Autorizzazione ad avanzare alla successiva milestone
 L'autorizzazione ad avanzare alla successiva milestone di progetto viene concessa dal Committente e/o Proponente in seguito ai colloqui pianificati su Zoom con quest'ultimi. Il gruppo si riserva di procedere verso la milestone successiva solo una volta ricevuta l'approvazione richiesta, in modo da non portare avanti difetti e problematiche che potrebbero risultare insidiosi da correggere una volta entrati in un periodo avanzato del progetto.
@@ -850,7 +850,7 @@ L'aggiornamento del numero di versione per il software deve attenersi alle segue
     - nei nomi di parametri;
     - nei nomi di funzioni o metodi.
   - cambiamento nel valore di parametri:
-    - cambiamento di colore di un elmento grafico;
+    - cambiamento di colore di un elemento grafico;
     - cambiamento di un valore numerico;
     - cambiamento di un valore letterale.
 
@@ -902,7 +902,7 @@ Documenti è organizzata in modo da suddividere la documentazione necessaria all
       - _log.csv_: registro delle modifiche associato al documento.
 - *PB*: contiene i file necessari alla Product Baseline. È organizzata allo stesso modo della cartella dedicata alla RTB.
 
-Al fine di garantire uno svolgimento delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _featuring branching_. È presente un branch per le release e un branch per lo sviluppo dal quale vengono creati dei branch per ogni nuova funzionalità o modifica da apportare.
+Al fine di garantire uno svolgimento delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _feature branching_. È presente un branch per le release e un branch per lo sviluppo dal quale vengono creati dei branch per ogni nuova funzionalità o modifica da apportare.
 Questi ultimi vengono identificati dal codice `DOC-XXX`, dove `XXX` è il numero del relativo task su Jira. I branch di feature vengono integrati tramite pull request.
 
 *WMS3* è la repository che contiene il codice sorgente del prodotto software sviluppato dal gruppo. È presente un branch principale, `dev`, in cui si trova il codice sorgente relativo all'ultima versione del prodotto, reperibile anche nella sezione Releases presente sulla destra dell'interfaccia di GitHub.
@@ -1003,7 +1003,7 @@ Nel processo di versionamento e di tracciamento delle modifiche, Jira ricopre un
 - selezionare l'opzione di creazione di un branch dedicato al task (integrazione con GitHub);
 - selezionare la repository e il branch da cui creare il nuovo branch.
 
-A questo punto, il task si aggiornerà nello stato "In corso" e verrà aperto il relativo branch. Terminato il task ed effettuata la pull request, lo stato del ticket passerà automatica a "In verifica". Superato il processo di verifica, Jira provvederà ad aggiornare lo stato del task in "Completato".
+A questo punto, il task si aggiornerà nello stato "In corso" e verrà aperto il relativo branch. Terminato il task ed effettuata la pull request, lo stato del ticket passerà automaticamente a "In verifica". Superato il processo di verifica, Jira provvederà ad aggiornare lo stato del task in "Completato".
 
 ====== Backlog
 Ogni task da svolgere è segnato all'interno del backlog di Jira. Durante la pianificazione dello sprint, si definisce lo sprint backlog, il sottoinsieme di attività provenienti dal backlog che si intendono portare a termine entro la conclusione dello sprint.
@@ -1030,7 +1030,7 @@ Il gruppo utilizza come metrica principale il burndown chart, che permette di av
 Il controllo delle release viene gestito tramite il meccanismo di pull request di GitHub.
 Prima di integrare i nuovi cambiamenti, viene aperta una pull request dall'assegnatario del task. La pull request deve avere un titolo valido (come descritto nel paragrafo dedicato @automazioni) e deve essere designato almeno un reviewer. Di norma il reviewer di base è il Verificatore, che svolge una supervisione sulla correttezza sintattica e semantica dei contenuti.
 Nel caso in cui ci sia bisogno di una figura con delle competenze specifiche per quanto riguarda la semantica e il contenuto del materiale da revisionare, il Verificatore può essere affiancato da altri membri del gruppo.
-Per ogni richiesta di modifiche da apportare vengono aperte delle conversation, in cui è possibile evidenziare le linee del documento che hanno bisogno di cambiamenti, oltre a stabilire un canale di comunicazione fra assegnatario e Verificatore.
+Per ogni richiesta di modifiche da apportare vengono aperte delle conversation, in cui è possibile evidenziare le linee del documento che hanno bisogno di cambiamenti, oltre a stabilire un canale di comunicazione tra assegnatario e Verificatore.
 Il processo di verifica del documento è accompagnato dall'esecuzione di GitHub Actions che si occupano di automatizzare l'aggiornamento del file _log.csv_ con i dati relativi alla modifica apportata, e la compilazione e pubblicazione del documento nel ramo main del repository. In questo modo si assicura che ogni documento presente nel ramo principale sia prima stato sottoposto ad un processo di verifica.
 Si può procedere alla chiusura della pull request e con l'operazione di merge solo nel caso in cui tutte le conversation siano state risolte e siano stati applicati i cambiamenti richiesti in fase di review.
 Solo a seguito del merge della pull request, il task collegato presente in Jira può essere definito concluso e il relativo branch viene chiuso in modo automatico.
@@ -1104,7 +1104,7 @@ Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e att
 + "*Ordine del giorno*": elenco degli argomenti trattati durante la riunione;
 + "*Valutazione del progresso generale*" descrive l'analisi sul lavoro svolto durante lo sprint precedente. Questo paragrafo è così definito:
   - valutazione sulla qualità del lavoro in merito alla velocità di avanzamento, evidenziando eventuali rallentamenti o meriti riscontrati.
-  - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportato una descrizione sul lavoro svolto, se i lavori svolti sono molti e diversi riportarli in forma di elenco puntato.
+  - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportata una descrizione sul lavoro svolto, se i lavori svolti sono molti e diversi riportarli in forma di elenco puntato.
 + "*Analisi di retrospettiva*", suddiviso in:
   - lista di valori calcolati dalle metriche presenti nel #pdq riguardo allo sprint, nello specifico riportare:
    - CPI: valore precedente e valore attuale;
@@ -1494,7 +1494,7 @@ Sono identificati tutti quegli stakeholder che possiedano una forte influenza su
 ==== Matrice degli stakeholder
 Si classificano gli stakeholder individuati sulla base di:
 - coinvolgimento nel progetto: indica l'interesse dello stakeholder nell'ambito di progetto;
-- autorità sullo sviluppo: indica il potere decisionale esercitabile sull'ambito di progetto.
+- autorità sullo sviluppo: indica il potere decisionale esercitabile nell'ambito di progetto.
 
 Entrambe le classificazioni si strutturano su tre livelli: basso, medio, alto.
 
@@ -2091,7 +2091,7 @@ Tali considerazioni e decisioni prese devono essere presenti nel verbale consegu
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
 
 La tabella di seguito riportata consente di associare ogni capitolo del documento al rispettivo capitolo dello standard di riferimento. Viene riportato anche il grado di conformità:
-- *To outcomes* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
+- *To outcomes* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obiettivo di qualità che lo standard impone;
 - *Full* indica che il capitolo riporta fedelmente le indicazioni dello standard con poche o nessuna azione di adeguamento.
 
 #figure(

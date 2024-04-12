@@ -437,7 +437,7 @@ Come risultato dell'efficace attuazione del processo di Gestione della Qualità:
 ===== Pianificazione
 Il gruppo #err418 pone i seguenti principi di qualità:
 
-+ il contenuto del branch principale delle repository (`src` e, di conseguenza, `main` per Documenti, e `dev` per WMS3) deve rispettare i criteri di qualità definiti nel #pdq e nella @processo_gestione_configurazione. Inoltre:
++ il contenuto del branch principale dei repository (`src` e, di conseguenza, `main` per Documenti, e `dev` per WMS3) deve rispettare i criteri di qualità definiti nel #pdq e nella @processo_gestione_configurazione. Inoltre:
   - tutti gli elementi di configurazione devono essere gestiti tramite repository su GitHub (@repository-github), con il sistema di _feature branching_;
   - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di Pull Request (@controllo_release).
 + il contenuto della documentazione deve seguire i principi di redazione descritti nella @stile-convenzioni;
@@ -872,13 +872,13 @@ Ogni documento, nella sezione direttamente sottostante all'indice, mostra in for
 ===== Tecnologie adoperate
 ====== GitHub <repository-github>
 Lo strumento di versionamento scelto dal gruppo è GitHub.
-Il gruppo #err418 ha creato un'organizzazione omonima su GitHub in modo da gestire e separare il lavoro in più repository pensate per scopi e contenuti diversi:
+Il gruppo #err418 ha creato un'organizzazione omonima su GitHub in modo da gestire e separare il lavoro in più repository pensati per scopi e contenuti diversi:
 
 - Documenti: documentazione;
 - WMS3: codice sorgente;
 - PoC: Proof of Concept.
 
-*Documenti* è la repository dedicata alla documentazione prodotta, la quale possiede tre branch principali:
+*Documenti* è il repository dedicato alla documentazione prodotta, il quale possiede tre branch principali:
 - `main`: contiene i file pdf dei documenti prodotti solamente in seguito ad un processo di review con esito positivo;
 - `src`: contiene i file sorgente dei documenti prodotti, file di configurazione e di supporto;
 - `website`: contiene i file sorgente del sito web che espone la documentazione del gruppo.
@@ -900,9 +900,9 @@ Documenti è organizzata in modo da suddividere la documentazione necessaria all
 Al fine di garantire uno svolgimento delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _feature branching_. È presente un branch per le release e un branch per lo sviluppo dal quale vengono creati dei branch per ogni nuova funzionalità o modifica da apportare.
 Questi ultimi vengono identificati dal codice `DOC-XXX`, dove `XXX` è il numero del relativo task su Jira. I branch di feature vengono integrati tramite pull request.
 
-*WMS3* è la repository che contiene il codice sorgente del prodotto software sviluppato dal gruppo. È presente un branch principale, `dev`, in cui si trova il codice sorgente relativo all'ultima versione del prodotto, reperibile anche nella sezione Releases presente sulla destra dell'interfaccia di GitHub.
+*WMS3* è il repository che contiene il codice sorgente del prodotto software sviluppato dal gruppo. È presente un branch principale, `dev`, in cui si trova il codice sorgente relativo all'ultima versione del prodotto, reperibile anche nella sezione Releases presente sulla destra dell'interfaccia di GitHub.
 
-La repository è organizzata in due sottocartelle principali, da cui si diramano diverse cartelle secondarie:
+Il repository è organizzato in due sottocartelle principali, da cui si diramano diverse cartelle secondarie:
 - *db*: contiene il file SQL utile alla creazione e popolamento del database di supporto;
 - *web*: contiene il codice sorgente di frontend e backend, e si dirama in:
   - *\_\_test\_\_*: contiene i test del software, in particolare:
@@ -928,7 +928,7 @@ La repository è organizzata in due sottocartelle principali, da cui si diramano
   - *public*: file SVG per la creazione del magazzino e una sottocartella di icone;
   - *ServerActions*: file relativi all'implementazione delle Server Actions utilizzate.
 
-Anche in questa repository, come per Documenti, viene applicato il _feature branching_, utilizzando `dev` come branch di appoggio per l'apertura dei branch di feature, identificati dal codice `WMS-XXX`, dove `XXX` è il numero del relativo task su Jira.
+Anche in questo repository, come per Documenti, viene applicato il _feature branching_, utilizzando `dev` come branch di appoggio per l'apertura dei branch di feature, identificati dal codice `WMS-XXX`, dove `XXX` è il numero del relativo task su Jira.
 
 ====== GitHub Actions <automazioni>
 L'intero processo di versionamento è accompagnato da una serie di automazioni, realizzate tramite GitHub Actions, che sollevano i componenti del gruppo dall'onere manuale di attività come la compilazione dei documenti, l'aggiornamento del registro delle modifiche (file `log.csv`) e la pubblicazione dei documenti dopo la verifica.
@@ -953,7 +953,7 @@ Il workflow è composto dai seguenti passaggi:
   - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script python;
 + *aggiornamento del file `log.csv`*: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
 + *compilazione del documento*: aggiornato il file `log.csv` e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
-+ *pubblicazione del documento*: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main della repository;
++ *pubblicazione del documento*: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main del repository;
 + *merge non confermato*: qualora a termine della compilazione del documento non venisse confermato il merge da parte del verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo main del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
 
 
@@ -997,7 +997,7 @@ Ogni task è identificato da un codice univoco incrementale nel formato `DOC-XXX
 Nel processo di versionamento e di tracciamento delle modifiche, Jira ricopre un ruolo fondamentale, grazie anche alla sua integrazione con GitHub: nel momento in cui si intende avviare un task, è necessario seguire i seguenti passaggi:
 - aprire il task su Jira;
 - selezionare l'opzione di creazione di un branch dedicato al task (integrazione con GitHub);
-- selezionare la repository e il branch da cui creare il nuovo branch.
+- selezionare il repository e il branch da cui creare il nuovo branch.
 
 A questo punto, il task si aggiornerà nello stato "In corso" e verrà aperto il relativo branch. Terminato il task ed effettuata la pull request, lo stato del ticket passerà automaticamente a "In verifica". Superato il processo di verifica, Jira provvederà ad aggiornare lo stato del task in "Completato".
 
@@ -1218,7 +1218,7 @@ Di seguito viene riportata la tabella delle variabili e la loro rappresentazione
 === Distribuzione delle informazioni
 Il gruppo condivide il materiale prodotto all'interno di un repository dedicato reperibile al link:\
 #align(link("https://github.com/Error-418-SWE/Documenti"), center)
-Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
+Maggiori dettagli in merito all'organizzazione del repository sono reperibili qui: @repository-github.
 
 == Processo di Misurazione <processo_misurazione>
 
@@ -1912,7 +1912,7 @@ Come risultato della corretta applicazione del processo di verifica, per ogni el
 
 ===== Verifiche preliminari
 
-La prima attività di verifica avviene durante l'implementazione del software. In questa attività devono essere sviluppati, dove possibile, i test di unità su cui si baserà l'elemento software da implementare, sia esso un pattern o una classe, seguendo così il principio del _Test Driven Development_. I test qui sviluppati rientrano nei test automatici adottati da #err418, e devono essere inseriti all'interno di una cartella dedicata nella repository WMS3 (@repository-github), denominata `__test__`.
+La prima attività di verifica avviene durante l'implementazione del software. In questa attività devono essere sviluppati, dove possibile, i test di unità su cui si baserà l'elemento software da implementare, sia esso un pattern o una classe, seguendo così il principio del _Test Driven Development_. I test qui sviluppati rientrano nei test automatici adottati da #err418, e devono essere inseriti all'interno di una cartella dedicata nel repository WMS3 (@repository-github), denominata `__test__`.
 
 All'interno della cartella `__test__`, dovranno essere implementati anche i test di integrazione, i quali dovranno verificare la corretta interazione tra tutte le parti di sistema. Questo tipo di test dovrà essere implementato, dove necessario, con l'utilizzo di mock.
 
@@ -1937,7 +1937,7 @@ Qualora l'impegno, temporale o economico, per la conduzione dei test manuali si 
 
 ===== Verifiche in Pull Request
 
-Tutti i test di unità e di integrazione implementati dovranno essere eseguiti automaticamente dalle GitHub Actions (@automazioni) ogni volta che una Pull Request (@controllo_release) viene aperta o aggiornata nel suo contenuto. L'automazione designata all'esecuzione dei test dovrà essere codificata nel file `test_nodejs.yml`, situato nella repository WMS3 al percorso `WMS3/.github/workflows/`. Il merging di una Pull Request non potrà avvenire se un test automatico fallisce.
+Tutti i test di unità e di integrazione implementati dovranno essere eseguiti automaticamente dalle GitHub Actions (@automazioni) ogni volta che una Pull Request (@controllo_release) viene aperta o aggiornata nel suo contenuto. L'automazione designata all'esecuzione dei test dovrà essere codificata nel file `test_nodejs.yml`, situato nel repository WMS3 al percorso `WMS3/.github/workflows/`. Il merging di una Pull Request non potrà avvenire se un test automatico fallisce.
 
 Successivamente all'esecuzione dei test automatici, il Verificatore potrà controllare il contenuto della Pull Request. In particolare dovrà condurre delle verifiche manuali atte ad accertare che:
 
@@ -1956,7 +1956,7 @@ Se a seguito di tutti i test non emergono anomalie o errori, la Pull Request pot
 
 Nel caso in cui almeno un'attività di verifica faccia emergere problematiche, le modifiche non possono essere integrate nel branch principale. La segnalazione e gestione degli errori dovrà avvenire nel seguente modo:
 
-- *errori nei test automatici*: vengono segnalati dalle GitHub Actions. È possibile visualizzare il log dell'esecuzione dell'automazione nella sezione Actions della repository. Il Programmatore dovrà quindi controllare il log ed effettuare le correzioni necessarie a risolvere l'errore che si è presentato;
+- *errori nei test automatici*: vengono segnalati dalle GitHub Actions. È possibile visualizzare il log dell'esecuzione dell'automazione nella sezione Actions del repository. Il Programmatore dovrà quindi controllare il log ed effettuare le correzioni necessarie a risolvere l'errore che si è presentato;
 - *errori nei test manuali*: vengono segnalati dal Verificatore tramite commenti nella Pull Request. Il Verificatore dovrà inserire dei commenti nei quali dovrà descrivere nel modo più dettagliato possibile gli errori riscontrati e i passaggi per riprodurli, evitando così ambiguità e incomprensioni. Il commento dovrà essere inserito nel file relativo all'elemento o alla funzionalità che presenta errori, e, se possibile, nella riga dove si è individuato l'errore.
 
 Il Programmatore dovrà quindi individuare la causa di questi errori e risolverli nel minor tempo possibile, così da evitare situazioni di stallo nello sviluppo del software.

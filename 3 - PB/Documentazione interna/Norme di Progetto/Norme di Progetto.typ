@@ -1800,8 +1800,8 @@ Il processo di Integrazione ha lo scopo di combinare iterativamente un insieme d
 
 Di conseguenza, esso viene attuato in coordinamento con i processi di:
 - Definizione di Bisogni e Requisiti degli Stakeholder (@processo_bisogni);
-- Definizione dell'Architettura (@processo_definizione_architettura).
-- Definizione del Design (@processo_design);
+- Definizione dell'Architettura (@processo_definizione_architettura);
+- Definizione del Design (@processo_design).
 
 L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la _Continuous Integration_.
 

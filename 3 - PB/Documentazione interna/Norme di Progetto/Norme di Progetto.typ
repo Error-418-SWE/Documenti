@@ -1088,36 +1088,49 @@ I documenti pertanto sono così strutturati:
 + *Contenuto del file*: sezione successiva agli indici. Rappresenta il corpo del documento, suddiviso in paragrafi.
 
 ==== Struttura dei verbali <struttura-verbali>
-Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e attività oggetto di discussione durante i meeting interni ed esterni, il gruppo raccoglie tali informazioni all'interno di verbali redatti al termine dei meeting. La struttura dei verbali è la seguente:
+Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e attività oggetto di discussione durante i meeting interni ed esterni, il gruppo raccoglie tali informazioni all'interno di verbali redatti al termine dei meeting.
+
+===== Verbali interni di retrospettiva <struttura-verbali-retrospettiva>
 
 + *cover page* (@struttura-documenti);
-+ "*Informazioni generali*":
-  - luogo: il luogo reale o digitale dove il gruppo insieme ad eventuali partecipanti esterni svolge il meeting;
-  - data e ora nel formato (gg-mm-aaaa, hh:mm ~ hh:mm);
++ *Informazioni generali*:
+  - luogo: il luogo reale o piattaforma software dove il gruppo svolge il meeting;
+  - data e ora nel formato `dd/mm/aaaa @ hh:mm ~ hh:mm`;
   - partecipanti;
-  - assenti;
-  - partecipanti esterni al gruppo (se presenti).
-+ "*Ordine del giorno*": elenco degli argomenti trattati durante la riunione;
-+ "*Valutazione del progresso generale*" descrive l'analisi sul lavoro svolto durante lo Sprint precedente. Questo paragrafo è così definito:
-  - valutazione sulla qualità del lavoro in merito alla velocità di avanzamento, evidenziando eventuali rallentamenti o meriti riscontrati.
-  - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportata una descrizione sul lavoro svolto, se i lavori svolti sono molti e diversi riportarli in forma di elenco puntato.
-+ "*Analisi di retrospettiva*", suddiviso in:
-  - lista di valori calcolati dalle metriche presenti nel #pdq riguardo allo Sprint, nello specifico riportare:
+  - assenti.
++ *Ordine del giorno*: elenco degli argomenti trattati durante la riunione;
++ *Valutazione del progresso generale*: descrive il lavoro svolto durante lo Sprint a cui si riferisce la retrospettiva. Questo paragrafo è così definito:
+  - valutazione sulla qualità del lavoro in merito alla velocità di avanzamento, evidenziando eventuali rallentamenti o meriti riscontrati. In questa parte deve essere indicato se sono stati effettuati meeting esterni, riportando data e oggetto di ogni meeting svolto;
+  - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportata una descrizione del lavoro svolto. Se in una epic sono stati solvi diversi lavori, questi vanno riportati in forma di elenco non numerato.
++ *Analisi di retrospettiva*, suddiviso in:
+  - discussione delle principali metriche del #pdq riguardanti l'andamento dello Sprint e del progetto:
    - CPI: valore precedente e valore attuale;
    - EAC: valore precedente e valore attuale;
    - rapporto tra SEV e SPV.
-  - sottoparagrafo "*Keep doing*", riporta i meriti riscontrati dal gruppo;
-  - sottoparagrafo "*Improvements*", riporta le criticità riscontrate dal gruppo etichettate con un codice identificativo.
-  I codici sono così composti:
-   - *P*, lettera indicante una Problematica;
-   - *O/T*, a seconda se la problematica sia di origine organizzativa o tecnologica;
-   - *N*, intero naturale positivo che incrementa ad ogni nuova problematica di tipo organizzativo o tecnologico.
-  Quindi inserire la tabella che associa ogni criticità ad una risoluzione presente nel #pdp. La tabella deve riportare:
-   - *ID risoluzione*;
-   - *Titolo risoluzione*;
-   - *Criticità affrontate*.
-+ eventuali ulteriori argomenti organizzati in paragrafi indipendenti;
-+ "*Pianificazione*", riporta la tabella contenente i task programmati per lo Sprint successivo. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso realizzato in Google Sheets (maggiori dettagli in merito reperibili al paragrafo @google_sheets) e disponibile nel Google Drive del gruppo.
+  - *Keep doing*: riporta gli aspetti positivi dello Sprint;
+  - *Improvements*: riporta le criticità riscontrate dal gruppo etichettate con un codice identificativo, e le relative soluzioni. Si articola in due parti:
+    - *Criticità evidenziate*: riporta l'elenco delle criticità, ognuna identificata da un codice composto nel seguente modo:
+      - *P*, lettera indicante una problematica;
+      - *O/T*, a seconda se la problematica sia di origine organizzativa o tecnologica;
+      - *N*, intero naturale positivo che incrementa ad ogni nuova problematica di tipo organizzativo o tecnologico.
+    - *Soluzioni predisposte*: tabella che associa ad ogni criticità una soluzione. È suddivisa in tre colonne:
+      - ID risoluzione;
+      - Titolo: titolo o breve descrizione della soluzione;
+      - Criticità affrontate.
++ eventuali ulteriori argomenti affrontati, organizzati in paragrafi indipendenti;
++ *Pianificazione*: riporta la tabella contenente i task programmati per lo Sprint successivo. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso realizzato in Google Sheets (maggiori dettagli in merito reperibili al paragrafo @google_sheets) e disponibile nel Google Drive del gruppo.
+
+===== Verbali esterni <struttura-verbali-esterni>
+
+La struttura dei verbali esterni deve rispecchiare i primi tre punti della @struttura-verbali-retrospettiva. In "Partecipanti" dovranno essere riportati i nominativi dei partecipanti esterni e il ruolo svolto all'interno del meeting. Ogni argomento della sezione "Ordine del giorno" dovrà essere discusso in una sottosezione dedicata.
+
+Nei verbali esterni riguardanti gli incontri con il Proponente dovrà essere presente la sezione "Pianificazione incontri futuri", nella quale si riporta la data del prossimo meeting.
+
+===== Altri verbali interni <struttura-verbali-interni-generali>
+
+La struttura dei verbali interni che non riguardano la retrospettiva deve rispecchiare i primi tre punti della @struttura-verbali-retrospettiva. Ogni argomento della sezione "Ordine del giorno" dovrà essere discusso in una sottosezione dedicata.
+
+Nel caso in cui da un meeting interno scaturiscano nuovi task da svolgere, questi dovranno essere riportati in una sezione "Pianificazione" all'interno di una tabella.
 
 === Stile e convenzioni <stile-convenzioni>
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.

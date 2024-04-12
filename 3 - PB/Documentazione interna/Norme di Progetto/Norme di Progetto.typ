@@ -1554,15 +1554,16 @@ I casi d'uso sono definiti ed utilizzati nel documento di #adr. Essi sono:
 - un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
 
 Ogni caso d'uso comprende:
-+ Codice identificativo;
-+ Titolo;
-+ Descrizione;
-+ Attore;
-+ Precondizioni (opzionale);
-+ Postcondizioni (opzionale);
++ Codice identificativo e titolo;
++ Attore principale;
++ Precondizioni;
++ Postcondizioni;
 + Scenario principale;
 + Scenari alternativi (opzionale);
-+ Generalizzazioni (opzionale).
++ User story associata;
++ Generalizzazioni (opzionale);
++ Estensioni (opzionale);
++ Requisiti derivati.
 
 Il codice identificativo assume l'aspetto `UC-X.Y`, dove `UC-` è la radice del codice; `X` è una cifra positiva crescente di cifre che identifica un caso d'uso; `Y` è una cifra positiva crescente, attiva solo per le generalizzazioni di uno stesso caso d'uso.
 

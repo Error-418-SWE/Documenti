@@ -917,15 +917,16 @@ La repository è organizzata in due sottocartelle principali, da cui si diramano
     - *providers*: file relativi all'implementazione del pattern Provider;
     - *ThreeComponents*: file relativi agli elementi 3D;
     - *ui*: file relativi agli elementi dell'interfaccia grafica.
-  - *dataMapper*: file relativi all'implementazione del pattern Data Mapper;
-  - *dataRepository*: file relativi all'implementazione del pattern Repository;
   - *lib*: contiene un file riguardante il merge tra più classi del framework Tailwind CSS;
-  - *model*: file relativi alle classi del modello;
-  - *node_modules*: cartella generata automaticamente da `npm` (Node Package Manager) utile alla gestione delle dipendenze di Node.js;
+  - *model*: file relativi alle classi del modello e ai pattern:
+    - *dataMapper*: file relativi all'implementazione del pattern Data Mapper;
+    - *dataRepository*: file relativi all'implementazione del pattern Repository;
+    - *FloorStrategy*: file relativi all'implementazione del pattern Strategy per la creazione del piano;
+    - *SearchEngine*: file relativi all'implementazione delle funzioni di ricerca.
+  - *node_modules*: cartella generata automaticamente da npm (Node Package Manager) utile alla gestione delle dipendenze di Node.js;
   - *pages*: API prodotte dal gruppo;
   - *public*: file SVG per la creazione del magazzino e una sottocartella di icone;
-  - *ServerActions*: file relativi all'implementazione delle Server Actions utilizzate;
-  - *Strategy*: file relativi all'implementazione del pattern Strategy.
+  - *ServerActions*: file relativi all'implementazione delle Server Actions utilizzate.
 
 Anche in questa repository, come per Documenti, viene applicato il _feature branching_, utilizzando `dev` come branch di appoggio per l'apertura dei branch di feature, identificati dal codice `WMS-XXX`, dove `XXX` è il numero del relativo task su Jira.
 

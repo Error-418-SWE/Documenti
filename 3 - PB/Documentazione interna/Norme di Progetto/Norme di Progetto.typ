@@ -1184,7 +1184,7 @@ Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una
 ===== Variabili Typst per termini ricorrenti
 
 Al fine di uniformare termini ricorrenti, vengono predisposte variabili utilizzabili nella redazione dei documenti. I termini in considerazione sono relativi a:
-- nomi di documenti
+- nomi di documenti;
 - stakeholder;
 - documenti e la versione a cui si fa riferimento;
 - ultima data di accesso ad un link ad una risorsa web esterna.
@@ -1214,6 +1214,8 @@ Di seguito viene riportata la tabella delle variabili e la loro rappresentazione
   ),
   caption: "Variabili Typst per riferirsi a termini ricorrenti"
 )
+
+Tutte le variabili sono definite all'interno del file `common.typ`, reperibile nella root del repository Documenti.
 
 === Distribuzione delle informazioni
 Il gruppo condivide il materiale prodotto all'interno di un repository dedicato reperibile al link:\

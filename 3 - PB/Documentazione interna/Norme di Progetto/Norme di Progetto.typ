@@ -1609,7 +1609,7 @@ Il Progettista è il ruolo principale all'interno di questo processo. Il numero 
 
 Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto da sviluppare, in modo da individuare le alternative più adatte.
 
-Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_ (@specifica_tecnica).
+Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento #st (@specifica_tecnica).
 
 È importante che nella scelta architetturale si mantenga un certo focus sulle caratteristiche principali di una buona architettura, riportate nell'elenco che segue:
 
@@ -1655,7 +1655,7 @@ Come risultato dell'efficace attuazione del processo di Definizione del Design:
 - vengono disegnati i diagrammi a supporto del design;
 - viene effettuato il tracciamento fra i requisiti software e gli elementi di sistema.
 
-Le scelte di design relative agli elementi di sistema e i relativi diagrammi sono illustrati nel documento _Specifica Tecnica_.
+Le scelte di design relative agli elementi di sistema e i relativi diagrammi sono illustrati nel documento #st\.
 
 === Attività
 ==== Pianificazione della Definizione del Design
@@ -1712,7 +1712,7 @@ L'attività consiste nei seguenti task:
 ==== Gestione del design
 L'attività consiste nei seguenti task:
   + *giustificare le scelte di design*:\
-    le scelte di design devono essere giustificate e documentate nel documento _Specifica Tecnica_. Le giustificazioni possono includere confronti con alternative possibili e analisi delle implicazioni a lungo termine delle decisioni prese. Questo livello di dettaglio aiuta a garantire che il design sia robusto, efficiente e in grado di soddisfare le esigenze del progetto in modo efficace;
+    le scelte di design devono essere giustificate e documentate nel documento #st\. Le giustificazioni possono includere confronti con alternative possibili e analisi delle implicazioni a lungo termine delle decisioni prese. Questo livello di dettaglio aiuta a garantire che il design sia robusto, efficiente e in grado di soddisfare le esigenze del progetto in modo efficace;
   + *stabilire il tracciamento tra gli elementi di design, i requisiti del sistema e le entità architetturali dell'architettura del sistema software*;
   + *determinare lo stato del sistema software e del design degli elementi*:\
     il processo di Misurazione deve essere utilizzato per stabilire misure per la completezza e la qualità del design mentre progredisce. I processi di Verifica e Validazione vengono attivati per verificare e convalidare il design dettagliato e l'implementazione.
@@ -1720,7 +1720,7 @@ L'attività consiste nei seguenti task:
   + *fornire gli artefatti e le informazioni di design*:\
     - il processo di Gestione della Configurazione deve essere utilizzato per stabilire e mantenere elementi di configurazione e le linee guida per artefatti come modelli di progettazione;
     - il processo di Gestione delle Informazioni deve controllare gli elementi informativi, come descrizioni di progettazione e specifiche;
-    - gli artefatti di design devono essere resi disponibili nel documento _Specifica Tecnica_.
+    - gli artefatti di design devono essere resi disponibili nel documento #st\.
 
 
 == Processo di implementazione <processo_implementazione>

@@ -553,6 +553,26 @@ I test di integrazione sono stati implementati mediante l'utilizzo del framework
   caption: "Tabella integration test - risultato"
 )
 
+== Test di sistema
+La suite di test di sistema ha lo scopo di verificare che il sistema soddisfi i requisiti definiti nel documento #adr_v. L'implementazione di test automatici per la parte interattiva del prodotto e per l'ambiente tridimensionale è stata ritenuta eccessivamente complessa in termini di tempo e risorse valutando l'inesperienza del gruppo. Non risultava però ragionevole rinunciare a questa tipologia di test, pertanto si è deciso di svolgerli manualmente.
+
+#let systemTests = json("systemTest.json");
+#let keys = systemTests.at(0).keys();
+#figure(
+  table(
+    columns: (auto, auto, auto, auto),
+    ..keys,
+    ..systemTests.map(
+      row => keys.map(
+        key => row.at(key)
+      )
+    ).flatten()
+  ),
+  caption: "Tabella test di sistema"
+)
+
+
+
 = Valutazione della qualità
 
 == Premessa

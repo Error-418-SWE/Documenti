@@ -1,0 +1,222 @@
+[
+   {
+      "Codice":"UNI-1.1",
+      "Descrizione":"Bin: verifica che il metodo `getId()` ritorni correttamente l'ID del bin",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-1.2",
+      "Descrizione":"Bin: verifica che il metodo `getLevel()` ritorni correttamente il livello del bin",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-1.3",
+      "Descrizione":"Bin: verifica che il metodo `getColumn()` ritorni correttamente la colonna del bin",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-1.4",
+      "Descrizione":"Bin: verifica che il metodo `getHeight()` ritorni correttamente l'altezza del bin",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-1.5",
+      "Descrizione":"Bin: verifica che il metodo `getLength()` ritorni correttamente la lunghezza del bin",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-1.6",
+      "Descrizione":"Bin: verifica che il metodo `getWidth()` ritorni correttamente la larghezza del bin",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-1.7",
+      "Descrizione":"Bin: verifica che il metodo `getProduct()` ritorni correttamente il prodotto contenuto nel bin",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-1.8",
+      "Descrizione":"Bin: verifica che il metodo `setId()` modifichi correttamente l'ID del bin",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-1.9 - UNI-1.10",
+      "Descrizione":"Bin: verifica che il metodo `setProduct()` modifichi correttamente il prodotto contenuto nel bin",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-1.11 - UNI-1.12",
+      "Descrizione":"Bin: verifica che il metodo `clearProduct()` assegni il valore `null` all'attributo `product`",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-2.1",
+      "Descrizione":"Floor: verifica che il metodo `getLength()` ritorni correttamente la lunghezza del piano",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-2.2",
+      "Descrizione":"Floor: verifica che il metodo `setLength()` modifichi correttamente la lunghezza del piano",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-2.3",
+      "Descrizione":"Floor: verifica che il metodo `getWidth()` ritorni correttamente la larghezza del piano",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-2.4",
+      "Descrizione":"Floor: verifica che il metodo `setWidth()` modifichi correttamente la larghezza del piano",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-2.5",
+      "Descrizione":"Floor: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano SVG: verifica che `getString()` ritorni correttamente la stringa contenente l'SVG",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-2.6",
+      "Descrizione":"Floor: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano SVG: verifica che `getLength()` ritorni correttamente la lunghezza del piano SVG",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-2.7",
+      "Descrizione":"Floor: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano SVG: verifica che `getWidth()` ritorni correttamente la larghezza del piano SVG",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-2.8",
+      "Descrizione":"Floor: verifica che il metodo `setSVG()` modifichi correttamente le dimensioni del piano SVG",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-2.9",
+      "Descrizione":"Floor: verifica che il metodo `clone()` ritorni correttamente un clone del piano",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-3.1",
+      "Descrizione":"Order: verifica che il metodo `getId()` ritorni correttamente l'ID dell'ordine",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-3.2",
+      "Descrizione":"Order: verifica che il metodo `getStartPoint()` ritorni correttamente il bin di partenza dell'ordine",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-3.3",
+      "Descrizione":"Order: verifica che il metodo `getEndPoint()` ritorni correttamente il bin di destinazione dell'ordine",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-3.4",
+      "Descrizione":"Order: verifica che il metodo `getProduct()` ritorni correttamente il prodotto dell'ordine",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-4.1",
+      "Descrizione":"Product: verifica che il metodo `getId()` ritorni correttamente l'ID del prodotto",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-4.2",
+      "Descrizione":"Product: verifica che il metodo `getName()` ritorni correttamente il nome del prodotto",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-4.3",
+      "Descrizione":"Product: verifica che il metodo `getWeight()` ritorni correttamente il peso del prodotto",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-4.4",
+      "Descrizione":"Product: verifica che il metodo `getLength()` ritorni correttamente la lunghezza del prodotto",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-4.5",
+      "Descrizione":"Product: verifica che il metodo `getWidth()` ritorni correttamente la larghezza del prodotto",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-4.6",
+      "Descrizione":"Product: verifica che il metodo `getHeight()` ritorni correttamente l'altezza del prodotto",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-4.7",
+      "Descrizione":"Product: verifica che il metodo `getCategories()` ritorni correttamente la categoria merceologica del prodotto",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.1",
+      "Descrizione":"Zone: verifica che il metodo `getId()` ritorni correttamente l'ID della zona",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.2",
+      "Descrizione":"Zone: verifica che il metodo `getXcoordinate()` ritorni correttamente la coordinata x della zona",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.3",
+      "Descrizione":"Zone: verifica che il metodo `getYcoordinate()` ritorni correttamente la coordinata y della zona",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.4",
+      "Descrizione":"Zone: verifica che il metodo `getHeight()` ritorni correttamente l'altezza della zona",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.5",
+      "Descrizione":"Zone: verifica che il metodo `getLength()` ritorni correttamente la lunghezza della zona",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.6",
+      "Descrizione":"Zone: verifica che il metodo `getWidth()` ritorni correttamente la larghezza della zona",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.7",
+      "Descrizione":"Zone: verifica che il metodo `getBins()` ritorni correttamente i bin della zona",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.8",
+      "Descrizione":"Zone: verifica che il metodo `isNSOriented()` ritorni correttamente `true` se la zona ha orientamento nord-sud",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.9",
+      "Descrizione":"Zone: verifica che il metodo `getBin()` ritorni correttamente il bin cercato tramite ID valido",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.10",
+      "Descrizione":"Zone: verifica che il metodo `getBin()` ritorni correttamente undefined quando il bin cercato ha ID non valido",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.11",
+      "Descrizione":"Zone: verifica che il metodo `getLevel()` ritorni correttamente i livelli della zona",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.12",
+      "Descrizione":"Zone: verifica che il metodo `getColumn()` ritorni correttamente le colonne della zona",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.13",
+      "Descrizione":"Zone: verifica che il metodo `getMaxUsedLevel()` ritorni correttamente il livello utilizzato più alto",
+      "Stato":"P"
+   },
+   {
+      "Codice":"UNI-5.14",
+      "Descrizione":"Zone: verifica che il metodo `getMaxUsedColumn()` ritorni correttamente la colonna utilizzata più a destra",
+      "Stato":"P"
+   }
+]

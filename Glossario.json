@@ -210,7 +210,7 @@
     "synonyms": []
   },
   "Grafana": {
-    "description": "È una piattaforma open-source per la visualizzazione e la monitoraggio di dati. Permette di creare dashboard interattive e personalizzabili per metriche, log e altri dati provenienti da diverse sorgenti.",
+    "description": "È una piattaforma open-source per la visualizzazione e il monitoraggio di dati. Permette di creare dashboard interattive e personalizzabili per metriche, log e altri dati provenienti da diverse sorgenti.",
     "acronyms": [],
     "synonyms": []
   },
@@ -256,6 +256,11 @@
   },
   "Jira": {
     "description": "Suite di software proprietari per l'ITS sviluppata da Atlassian, che consente il bug tracking e la gestione dei progetti sviluppati con metodologie agile.",
+    "acronyms": [],
+    "synonyms": []
+  },
+  "JSX": {
+    "description": "Estensione della sintassi JavaScript che permette la creazione di elementi React che vengono poi renderizzati nel Document Object Model (DOM).",
     "acronyms": [],
     "synonyms": []
   },

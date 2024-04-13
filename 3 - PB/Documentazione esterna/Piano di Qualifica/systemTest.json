@@ -37,13 +37,13 @@
    },
    {
       "Codice":"TSIS-7",
-      "Descrizione":"Verificare che l'utente visualizzi un errore se la larghezza indicata non è positiva (<=0)",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se la larghezza indicata non è positiva ($<=0$)",
       "Requisito":"FM-7",
       "Stato":"P"
    },
    {
       "Codice":"TSIS-8",
-      "Descrizione":"Verificare che l'utente visualizzi un errore se la lunghezza indicata non è positiva (<=0)",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se la lunghezza indicata non è positiva ($<=0$)",
       "Requisito":"FM-8",
       "Stato":"P"
    },
@@ -97,7 +97,7 @@
    },
    {
       "Codice":"TSIS-17",
-      "Descrizione":"Verificare che l'utente visualizzi un errore se il valore indicato come lato maggiore non è positivo (<=0)",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se il valore indicato come lato maggiore non è positivo ($<=0$)",
       "Requisito":"FD-17",
       "Stato":"P"
    },
@@ -145,13 +145,13 @@
    },
    {
       "Codice":"TSIS-25",
-      "Descrizione":"Verificare che l'utente visualizzi un errore se il nuovo valore di larghezza indicato non è positivo (<=0)",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se il nuovo valore di larghezza indicato non è positivo ($<=0$)",
       "Requisito":"FM-25",
       "Stato":"P"
    },
    {
       "Codice":"TSIS-26",
-      "Descrizione":"Verificare che l'utente visualizzi un errore se il nuovo valore di lunghezza indicato non è positivo (<=0)",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se il nuovo valore di lunghezza indicato non è positivo ($<=0$)",
       "Requisito":"FM-26",
       "Stato":"P"
    },
@@ -229,7 +229,7 @@
    },
    {
       "Codice":"TSIS-39",
-      "Descrizione":"Verificare che quando l'utente importa zone e prodotti da un database, i prodotti siano collocati nei rispettivi bin di appartenenza",
+      "Descrizione":"Verificare che, quando l'utente importa zone e prodotti da un database, i prodotti siano collocati nei rispettivi bin di appartenenza",
       "Requisito":"FD-39",
       "Stato":"P"
    },
@@ -349,7 +349,7 @@
    },
    {
       "Codice":"TSIS-59",
-      "Descrizione":"Verificare che l'utente visualizzi un errore se la lunghezza indicata non è positiva (<=0)",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se la lunghezza indicata non è positiva ($<=0$)",
       "Requisito":"FM-59",
       "Stato":"P"
    },
@@ -415,7 +415,7 @@
    },
    {
       "Codice":"TSIS-71",
-      "Descrizione":"Verificare che l'utente visualizzi un errore se la larghezza indicata per la singola colonna non è positiva (<=0)",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se la larghezza indicata per la singola colonna non è positiva ($<=0$)",
       "Requisito":"FD-71",
       "Stato":"P"
    },
@@ -457,7 +457,7 @@
    },
    {
       "Codice":"TSIS-78",
-      "Descrizione":"Verificare che l'utente visualizzi un errore se l'altezza indicata per il singolo livello non è positiva (<=0)",
+      "Descrizione":"Verificare che l'utente visualizzi un errore se l'altezza indicata per il singolo livello non è positiva ($<=0$)",
       "Requisito":"FM-78",
       "Stato":"P"
    },
@@ -977,4 +977,4 @@
       "Requisito":"FM-165",
       "Stato":"P"
    }
-]  
+]

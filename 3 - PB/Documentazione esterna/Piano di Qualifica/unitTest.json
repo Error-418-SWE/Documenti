@@ -46,7 +46,7 @@
    },
    {
       "Codice":"UNI-1.11 - UNI-1.12",
-      "Descrizione":"Bin: verifica che il metodo `clearProduct()` assegni il valore `null` all'attributo product",
+      "Descrizione":"Bin: verifica che il metodo `clearProduct()` assegni il valore `null` all'attributo `product`",
       "Stato":"P"
    },
    {
@@ -71,17 +71,17 @@
    },
    {
       "Codice":"UNI-2.5",
-      "Descrizione":"Floor: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano\nSVG: verifica che `getString()` ritorni correttamente la stringa contenente l'SVG",
+      "Descrizione":"Floor: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano SVG: verifica che `getString()` ritorni correttamente la stringa contenente l'SVG",
       "Stato":"P"
    },
    {
       "Codice":"UNI-2.6",
-      "Descrizione":"Floor: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano\nSVG: verifica che `getLength()` ritorni correttamente la lunghezza del piano SVG",
+      "Descrizione":"Floor: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano SVG: verifica che `getLength()` ritorni correttamente la lunghezza del piano SVG",
       "Stato":"P"
    },
    {
       "Codice":"UNI-2.7",
-      "Descrizione":"Floor: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano\nSVG: verifica che `getWidth()` ritorni correttamente la larghezza del piano SVG",
+      "Descrizione":"Floor: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano SVG: verifica che `getWidth()` ritorni correttamente la larghezza del piano SVG",
       "Stato":"P"
    },
    {

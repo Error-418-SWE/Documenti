@@ -442,7 +442,7 @@ Ad ogni test viene associato un codice definito come segue:
 - *Test di unità* e *Test di integrazione*: l'identificativo numerico è così composto:
   - [`Numero suite`].[`Numero test`];
 - *Test di sistema* e *Test di accettazione*: l'identificativo numerico è così composto:
-  - [`Numero test`] è il codice del requisito associato al test. 
+  - [`Numero test`] è il codice del requisito associato al test.
 
 Ad ogni test è associato uno stato che può essere:
 - `P`: positivo, il test ha dato esito positivo;
@@ -450,7 +450,7 @@ Ad ogni test è associato uno stato che può essere:
 - `NI`: non implementato.
 
 == Test di unità
-La suite di test di unità ha lo scopo di verificare il corretto funzionamento delle singole unità software. Il termine "unità" si riferisce al più piccolo componente dotato di comportamento autonomo, che può dunque essere singolarmente testato. 
+La suite di test di unità ha lo scopo di verificare il corretto funzionamento delle singole unità software. Il termine "unità" si riferisce al più piccolo componente dotato di comportamento autonomo, che può dunque essere singolarmente testato.
 
 I test di unità sono stati implementati mediante l'utilizzo del framework Jest.
 

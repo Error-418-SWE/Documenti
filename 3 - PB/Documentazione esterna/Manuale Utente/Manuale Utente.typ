@@ -290,7 +290,7 @@ Nella parte inferiore del pannello sono presenti i pulsanti:
 
 
 #figure(
-  image("./imgs/pulsante_localizza_zona.png", width: 50%),
+  image("./imgs/pulsante_localizza_zona.png", width: 40%),
   caption: [
     Pulsante localizza zona
   ],

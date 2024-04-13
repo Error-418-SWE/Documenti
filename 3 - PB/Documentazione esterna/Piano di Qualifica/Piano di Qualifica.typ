@@ -440,7 +440,7 @@ Ad ogni test viene associato un codice definito come segue:
 
 *Identificativo numerico* indica la sequenza numerica identificativa del test:
 - *Test di unità* e *Test di integrazione*: l'identificativo numerico è così composto:
-  - [`Numero suite`].[`Numero test`];
+  - [`Numero suite`].[`Numero test`].
 - *Test di sistema* e *Test di accettazione*: l'identificativo numerico è così composto:
   - [`Numero test`] è il codice del requisito associato al test.
 

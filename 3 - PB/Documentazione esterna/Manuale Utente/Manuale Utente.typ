@@ -89,7 +89,6 @@ Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
 Per aprire la pagina web dedicata all'utilizzo di WMS3, è necessario seguire i seguenti passaggi:
 
-  - assicurarsi di avere Docker installato e funzionante sul proprio sistema;
   - assicurarsi che il programma sia in esecuzione. In caso di necessità, la procedura per eseguire il software è descritta nel documento #st_v;
   - aprire un browser web e collegarsi all'indirizzo "localhost:3000".
 

@@ -1644,10 +1644,16 @@ Insieme all'architettura del prodotto costituisce uno degli output principali de
 
 Gli argomenti principali trattati nel documento sono due:
 
-+ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto, ciascuna con relativa descrizione, versione di utilizzo e motivazione della scelta;
++ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto. Di ognuna dovranno essere riportati:
+  - nome;
+  - breve descrizione;
+  - numero di versione;
+  - link al sito web;
+  - linguaggi che utilizza;
+  - contesto di utilizzo.
 + *architettura*: vengono presentate:
-  + *architettura logica*: descrizione dell'architettura del prodotto per componenti, ruoli, connessioni e interazioni;
-  + *architettura di deployment*: descrizione della procedura di deployment.
+  + *architettura di sistema*: descrizione dell'architettura del prodotto per componenti, ruoli, connessioni e interazioni;
+  + *architettura di deployment*: descrizione dell'architettura e della procedura di deployment.
 
 Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
 

@@ -432,82 +432,47 @@ In questa sezione sono elencati i test eseguiti sul prodotto che, come riportato
 - *test di integrazione*: per verificare la corretta integrazione delle parti del sistema.
 
 Ad ogni test viene associato un codice definito come segue:
-#align(`[Tipologia]-[Test Suite].[Sequenza]`, center)
+#align(`[Tipologia]-[Identificativo numerico]`, center)
 *Tipologia* indica il tipo di test:
-- `U`: test di unità;
-- `I`: test di integrazione.
+- `UNI`: test di unità;
+- `INT`: test di integrazione;
+- `SIS`: test di sistema.
 
-*Test Suite* e *Sequenza* sono numeri interi.
+*Identificativo numerico* indica la sequenza numerica identificativa del test:
+- *Test di unità* e *Test di integrazione*: l'identificativo numerico è così composto:
+  - [`Numero suite`].[`Numero test`].
+- *Test di sistema* e *Test di accettazione*: l'identificativo numerico è così composto:
+  - [`Numero test`] è il codice del requisito associato al test.
 
-Ad ogni test è associato un esito che può essere:
+Ad ogni test è associato uno stato che può essere:
 - `P`: positivo, il test ha dato esito positivo;
-- `N`: negativo, il test ha dato esito negativo.
+- `N`: negativo, il test ha dato esito negativo;
+- `NI`: non implementato.
 
 == Test di unità
-La suite di test di unità ha lo scopo di verificare il corretto funzionamento delle singole unità software. Il termine "unità" si riferisce al più piccolo componente dotato di comportamento autonomo, che può dunque essere singolarmente testato. 
+La suite di test di unità ha lo scopo di verificare il corretto funzionamento delle singole unità software. Il termine "unità" si riferisce al più piccolo componente dotato di comportamento autonomo, che può dunque essere singolarmente testato.
 
 I test di unità sono stati implementati mediante l'utilizzo del framework Jest.
+
+#let table-json(data) = {
+  let keys = data.at(0).keys()
+  table(
+    columns: keys.len(),
+    ..keys,
+    ..data.map(
+      row => keys.map(
+        key => {
+          return eval(row.at(key, default: [n/a]), mode: "markup")}
+      )
+    ).flatten()
+  )
+}
 
 
 #show figure: set block(breakable: true)
 #figure(
-   table(
-      columns: 3,
-      rows: (auto, auto),
-      [*Codice*],[*Descrizione*],[*Stato*],
-      [U-1.1],[*Bin*: verifica che il metodo `getId()` ritorni correttamente l'ID del bin],[P],
-      [U-1.2],[*Bin*: verifica che il metodo `getLevel()` ritorni correttamente il livello del bin],[P],
-      [U-1.3],[*Bin*: verifica che il metodo `getColumn()` ritorni correttamente la colonna del bin],[P],
-      [U-1.4],[*Bin*: verifica che il metodo `getHeight()` ritorni correttamente l'altezza del bin],[P],
-      [U-1.5],[*Bin*: verifica che il metodo `getLength()` ritorni correttamente la lunghezza del bin],[P],
-      [U-1.6],[*Bin*: verifica che il metodo `getWidth()` ritorni correttamente la larghezza del bin],[P],
-      [U-1.7],[*Bin*: verifica che il metodo `getProduct()` ritorni correttamente il prodotto contenuto nel bin],[P],
-      [U-1.8],[*Bin*: verifica che il metodo `setId()` modifichi correttamente l'ID del bin],[P],
-      [U-1.9 - U-1.10],[*Bin*: verifica che il metodo `setProduct()` modifichi correttamente il prodotto contenuto nel bin],[P],
-      [U-1.11 - U-1.12],[*Bin*: verifica che il metodo `clearProduct()` assegni il valore `null` all'attributo product],[P],
-      [U-2.1],[*Floor*: verifica che il metodo `getLength()` ritorni correttamente la lunghezza del piano],[P],
-      [U-2.2],[*Floor*: verifica che il metodo `setLength()` modifichi correttamente la lunghezza del piano],[P],
-      [U-2.3],[*Floor*: verifica che il metodo `getWidth()` ritorni correttamente la larghezza del piano],[P],
-      [U-2.4],[*Floor*: verifica che il metodo `setWidth()` modifichi correttamente la larghezza del piano],[P],
-      [U-2.5],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano\
-      *SVG*: verifica che `getString()` ritorni correttamente la stringa contenente l'SVG],[P],
-      [U-2.6],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano\
-      *SVG*: verifica che `getLength()` ritorni correttamente la lunghezza del piano SVG],[P],
-      [U-2.7],[*Floor*: verifica che il metodo `getSVG()` ritorni correttamente l'SVG del piano\
-      *SVG*: verifica che `getWidth()` ritorni correttamente la larghezza del piano SVG],[P],
-      [U-2.8],[*Floor*: verifica che il metodo `setSVG()` modifichi correttamente le dimensioni del piano SVG],[P],
-      [U-2.9],[*Floor*: verifica che il metodo `clone()` ritorni correttamente un clone del piano],[P],
-      [U-3.1],[*Order*: verifica che il metodo `getId()` ritorni correttamente l'ID dell'ordine],[P],
-      [U-3.2],[*Order*: verifica che il metodo `getStartPoint()` ritorni correttamente il bin di partenza dell'ordine],[P],
-      [U-3.3],[*Order*: verifica che il metodo `getEndPoint()` ritorni correttamente il bin di destinazione dell'ordine],[P],
-      [U-3.4],[*Order*: verifica che il metodo `getProduct()` ritorni correttamente il prodotto dell'ordine],[P],
-      [U-4.1],[*Product*: verifica che il metodo `getId()` ritorni correttamente l'ID del prodotto],[P],
-      [U-4.2],[*Product*: verifica che il metodo `getName()` ritorni correttamente il nome del prodotto],[P],
-      [U-4.3],[*Product*: verifica che il metodo `getWeight()` ritorni correttamente il peso del prodotto],[P],
-      [U-4.4],[*Product*: verifica che il metodo `getLength()` ritorni correttamente la lunghezza del prodotto],[P],
-      [U-4.5],[*Product*: verifica che il metodo `getWidth()` ritorni correttamente la larghezza del prodotto],[P],
-      [U-4.6],[*Product*: verifica che il metodo `getHeight()` ritorni correttamente l'altezza del prodotto],[P],
-      [U-4.7],[*Product*: verifica che il metodo `getCategories()` ritorni correttamente la categoria merceologica del prodotto],[P],
-      [U-5.1],[*Zone*: verifica che il metodo `getId()` ritorni correttamente l'ID della zona],[P],
-      [U-5.2],[*Zone*: verifica che il metodo `getXcoordinate()` ritorni correttamente la coordinata x della zona],[P],
-      [U-5.3],[*Zone*: verifica che il metodo `getYcoordinate()` ritorni correttamente la coordinata y della zona],[P],
-      [U-5.4],[*Zone*: verifica che il metodo `getHeight()` ritorni correttamente l'altezza della zona],[P],
-      [U-5.5],[*Zone*: verifica che il metodo `getLength()` ritorni correttamente la lunghezza della zona],[P],
-      [U-5.6],[*Zone*: verifica che il metodo `getWidth()` ritorni correttamente la larghezza della zona],[P],
-      [U-5.7],[*Zone*: verifica che il metodo `getBins()` ritorni correttamente i bin della zona],[P],
-      [U-5.8],[*Zone*: verifica che il metodo `isNSOriented()` ritorni correttamente `true` se la zona ha orientamento nord-sud],[P],
-      [U-5.9],[*Zone*: verifica che il metodo `getBin()` ritorni correttamente il bin cercato tramite ID valido],[P],
-      [U-5.10],[*Zone*: verifica che il metodo `getBin()` ritorni correttamente undefined quando il bin cercato ha ID non valido],[P],
-      [U-5.11],[*Zone*: verifica che il metodo `getLevel()` ritorni correttamente i livelli della zona],[P],
-      [U-5.12],[*Zone*: verifica che il metodo `getColumn()` ritorni correttamente le colonne della zona],[P],
-      [U-5.13],[*Zone*: verifica che il metodo `getMaxUsedLevel()` ritorni correttamente il livello utilizzato più alto],[P],
-      [U-5.14],[*Zone*: verifica che il metodo `getMaxUsedColumn()` ritorni correttamente la colonna utilizzata più a destra],[P],
-      [U-6.1],[*BinMapper*: verifica che la classe crei correttamente un bin vuoto da un file JSON],[P],
-      [U-6.2],[*BinMapper*: verifica che la classe crei correttamente un bin con prodotto da un file JSON],[P],
-      [U-7.1],[*ProductMapper*: verifica che la classe crei correttamente un prodotto da un file JSON],[P],
-      [U-8.1],[*ZoneMapper*: verifica che la classe crei correttamente una zona da un file JSON],[P],
-    ),
-    caption: "Tabella unit test - risultato"
+  table-json(json("unitTest.json")),
+  caption: "Tabella unit test"
 )
 
 == Test di integrazione
@@ -515,43 +480,19 @@ La suite di test di integrazione ha lo scopo di verificare che i diversi compone
 
 I test di integrazione sono stati implementati mediante l'utilizzo del framework Jest.
 #figure(
-  table(
-      columns: 3,
-      rows: (auto, auto),
-      [*Codice*],[*Descrizione*],[*Stato*],
-      [I-1.1],[*getAllBins*: verifica che vengano correttamente restituiti tutti i bin da database],[P],
-      [I-1.2],[*getAllBins*: verifica che venga correttamente restituito `null` se si verifica  un errore],[P],
-      [I-2.1],[*getBinById*: verifica che venga correttamente restituito il bin cercato per ID da database],[P],
-      [I-2.2],[*getBinById*: verifica che venga correttamente restituito null se si verifica  un errore],[P],
-      [I-3.1],[*getAllProduct*: verifica che vengano correttamente restituiti tutti i prodotti da database],[P],
-      [I-3.2],[*getAllProduct*: verifica che venga correttamente restituito null se si verifica  un errore],[P],
-      [I-4.1],[*getProductById*: verifica che venga correttamente restituito il prodotto cercato per ID da database],[P],
-      [I-4.2],[*getProductById*: verifica che venga correttamente restituito -1 se non viene trovato il prodotto],[P],
-      [I-4.3],[*getProductById*: verifica che venga correttamente restituito null se sui verifica un errore],[P],
-      [I-5.1],[*productRepository*: verifica che vengano correttamente restituiti tutti i prodotti],[P],
-      [I-5.2],[*productRepository*: verifica che venga correttamente restituito il prodotto cercato per ID],[P],
-      [I-5.3],[*productRepository*: verifica che venga correttamente gestito un errore quando si vogliono restituire tutti i prodotti],[P],
-      [I-5.4],[*productRepository*: verifica che venga correttamente gestito un errore quando si vuole restituire un prodotto cercato per ID],[P],
-      [I-5.5],[*productRepository*: verifica che venga correttamente restituito un array vuoto quando non viene trovato nessun prodotto],[P],
-      [I-5.6],[*productRepository*: verifica che venga correttamente restituito null quando non vengono trovati prodotti cercando per ID],[P],
-      [I-6.1],[*zoneRepository*: verifica che vengano correttamente restituite tutte le zone],[P],
-      [I-6.2],[*zoneRepository*: verifica che vengano correttamente restituite tutte le zone che non contengono prodotti],[P],
-      [I-6.3],[*zoneRepository*: verifica che venga correttamente restituita la zona cercata per ID], [P],
-      [I-6.4],[*zoneRepository*: verifica che venga correttamente gestito un errore quando si vogliono restituire tutte le zone],[P],
-      [I-6.5],[*zoneRepository*: verifica che venga correttamente gestito un errore quando si vuole restituire una zona cercata per ID],[P],
-      [I-6.6],[*zoneRepository*: verifica che venga correttamente restituito un array vuoto quando non vengono trovate zone],[P],
-      [I-6.7],[*zoneRepository*: verifica che venga correttamente restituito null quando non viene trovata la zona cercata per ID],[P],
-      [I-7.1],[*readSavedSVG*: verifica che venga correttamente letto il contenuto del file SVG],[P],
-      [I-8.1],[*readSavedSVG*: verifica che venga correttamente salvato il contenuto del file SVG],[P],
-      [I-9.1],[*SVGSanitizer*: verifica che venga correttamente sanificato il file SVG di esempio],[P],
-      [I-9.2],[*SVGSanitizer*: verifica che venga correttamente sanificato il file SVG fornito da Sanmarco Informatica],[P],
-      [I-10.1],[*getAllEmptyZones*: verifica che vengano correttamente ritornate tutte le zone vuote],[P],
-      [I-11.1],[*getAllZones*: verifica che vengano correttamente ritornate tutte le zone],[P],
-      [I-12.1],[*getBinsByZoneId*: verifica che vengano correttamente ritornati tutti i bin dato l'ID di una zona],[P],
-      [I-13.1],[*getZoneById*: verifica che venga correttamente ritornata la zona cercata per ID e i suoi bin],[P],
-  ),
-  caption: "Tabella integration test - risultato"
+  table-json(json("integrationTest.json")),
+  caption: "Tabella integration test"
 )
+
+== Test di sistema
+La suite di test di sistema ha lo scopo di verificare che il sistema soddisfi i requisiti definiti nel documento #adr_v. L'implementazione di test automatici per la parte interattiva del prodotto e per l'ambiente tridimensionale è stata ritenuta eccessivamente complessa in termini di tempo e risorse valutando l'inesperienza del gruppo. Non risultava però ragionevole rinunciare a questa tipologia di test, pertanto si è deciso di svolgerli manualmente.
+
+#figure(
+  table-json(json("systemTest.json")),
+  caption: "Tabella test di sistema"
+)
+
+
 
 = Valutazione della qualità
 

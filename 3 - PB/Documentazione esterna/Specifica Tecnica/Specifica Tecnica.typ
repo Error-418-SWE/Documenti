@@ -180,6 +180,19 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 )
 
 #pagebreak()
+
+= Esecuzione del software
+
+Per avviare correttamente WMS3, è necessario seguire i seguenti passaggi:
+
+  - assicurarsi di avere Docker installato e funzionante sul proprio sistema;
+  - navigare fino alla directory contenente il file `compose.yml`;
+  - eseguire il comando `docker compose up -d` da terminale per avviare i container pertinenti.
+    Si raccomanda di assicurarsi che i container siano stati costruiti correttamente prima di procedere con questa operazione.
+    Nel caso in cui essi non siano stati costruiti completamente, eseguire il comando `docker compose build`;
+  - successivamente al corretto completamento del processo di avvio, aprire un browser web e digitare l'URL "localhost:3000".
+
+
 = Tecnologie
 
 == Introduzione

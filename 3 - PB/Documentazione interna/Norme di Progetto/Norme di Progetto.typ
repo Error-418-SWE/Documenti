@@ -1593,9 +1593,20 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
 
 Il processo di Definizione dell'Architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
 
-Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di Analisi della Missione (@processo_missione), di Definizione di Bisogni e Requisiti degli Stakeholder (@processo_bisogni) e di definizione del design (@processo_design).
+Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di Analisi della Missione (@processo_missione), di Definizione di Bisogni e Requisiti degli Stakeholder (@processo_bisogni) e di Definizione del Design (@processo_design).
 
-=== Preparazione e requisiti <preparazione_architettura>
+=== Risultati
+
+Come risultato della corretta implementazione del processo di Definizione dell'Architettura:
+
+- vengono definite più opzioni architetturali;
+- vengono valutate le opzioni e decisa un'architettura definitiva;
+- i bisogni degli stakeholder sono soddisfatti dall'architettura;
+- l'architettura individuata viene descritta nel documento #st\.
+
+=== Attività
+
+==== Preparazione e requisiti <preparazione_architettura>
 
 Il Progettista è il ruolo principale all'interno di questo processo. Il numero di persone assegnate a questo ruolo e le attività che esso dovrà svolgere vengono definite in maniera precisa durante la riunione di retrospettiva e la pianificazione dello _Sprint_ che la segue.
 
@@ -1606,7 +1617,7 @@ Il Progettista è il ruolo principale all'interno di questo processo. Il numero 
 
 È essenziale, inoltre, la conoscenza degli obiettivi del prodotto e lo studio del documento #adr_v e delle tecnologie che il gruppo ha selezionato per la sua implementazione.
 
-=== Individuazione dell'architettura
+==== Individuazione dell'architettura
 
 Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto da sviluppare, in modo da individuare le alternative più adatte.
 
@@ -1627,7 +1638,7 @@ Le proposte architetturali individuate saranno poi illustrate al Proponente dura
 - *coesione*: deve raggruppare le parti che svolgono gli stessi compiti;
 - *basso accoppiamento*: parti distinte dipendono poco o niente le une dalle altre.
 
-==== Specifica Tecnica <specifica_tecnica>
+==== #st <specifica_tecnica>
 
 Insieme all'architettura del prodotto costituisce uno degli output principali del processo. In questo documento viene descritto il prodotto dal punto di vista tecnico, ovvero dal lato tecnologico e architetturale.
 

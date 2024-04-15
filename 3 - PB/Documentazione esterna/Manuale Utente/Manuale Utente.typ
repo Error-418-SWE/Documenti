@@ -508,8 +508,8 @@ Sul lato destro superiore del pannello relativo alla visualizzazione della lista
     grid(
         columns: 2,
         rows:    (auto, auto),
-        [ #image("./imgs/pulsante_nuova_zona.png", width: 60%),],
-        [ #image("./imgs/pannello_nuova_zona.png", width: 50%),],
+        [ #image("./imgs/pulsante_nuova_zona.png", width: 80%)],
+        [ #image("./imgs/pannello_nuova_zona.png", width: 50%)],
     ),caption: [Pulsante di creazione di una nuova zona (sinistra) e pannello di creazione di una nuova zona (destra)],
 ) <nuova_zona>
 

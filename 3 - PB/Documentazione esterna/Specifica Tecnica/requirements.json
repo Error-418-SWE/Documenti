@@ -832,7 +832,7 @@
 			"source": "UC–20",
 			"description": "L'utente può richiedere lo spostamento del POV sulla zona ispezionata",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–120",
@@ -1012,9 +1012,9 @@
 		{
 			"id": "FD–145",
 			"source": "UC–25.1",
-			"description": "L'utente deve poter inserire un ordine di movimentazione di un prodotto dalla lista dei prodotti ad un bin",
+			"description": "L'utente deve poter collocare un prodotto dalla lista dei prodotti in un bin",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FM–146",

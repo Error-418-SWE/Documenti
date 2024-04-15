@@ -85,6 +85,14 @@ Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
 
 = Istruzioni d'uso
+== Apertura del programma
+
+Per aprire la pagina web dedicata all'utilizzo di WMS3, è necessario seguire i seguenti passaggi:
+
+  - assicurarsi che il programma sia in esecuzione. In caso di necessità, la procedura per eseguire il software è descritta nel documento #st_v;
+  - aprire un browser web e collegarsi all'indirizzo "localhost:3000".
+
+
 == Avvio e Configurazione dell'ambiente
 
 Il software all'avvio si presenta come segue:
@@ -678,22 +686,3 @@ Da notare che nel caso di modifica di un piano personalizzato il ridimensionamen
 Nell'ultima sezione in basso, *Demo*, troviamo due pulsanti:
 - *Risincronizza*: permette riportare il piano al suo stato iniziale, annullando tutte le modifiche e gli spostamenti effettuati;
 - *Reimposta*: permette di eliminare tutto il lavoro fatto sul piano e tornare alla schermata di @avvio.
-
-
-#pagebreak()
-
-= Supporto tecnico
-
-Per qualsiasi problema di installazione, difficoltà di utilizzo o malfunzionamento del software, è possibile contattare #err418 tramite l'indirizzo mail #link("mailto:error418swe@gmail.com"), presente anche nel frontespizio del presente documento.
-
-Per facilitare l'individuazione della mail nella casella si consiglia di scrivere l'oggetto nel seguente modo:
-#align(center, `[WMS3] Oggetto`)
-
-Nel corpo del messaggio è importante descrivere:
-
-- browser utilizzato, indicando, se possibile, la versione;
-- elenco dettagliato delle azioni effettuate che hanno portato al problema.
-
-Se utile a una miglior comprensione del problema è possibile allegare degli screenshot della schermata che presenta l'errore.
-
-Per assicurare un miglior supporto tecnico, la mail inviata verrà inoltrata in automatico ad ogni membro del gruppo, in modo da avere maggiore sicurezza della sua lettura.

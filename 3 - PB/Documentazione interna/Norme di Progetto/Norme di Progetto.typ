@@ -1715,19 +1715,19 @@ L'attività consiste nei seguenti task:
     - gli artefatti di design devono essere resi disponibili nel documento _Specifica Tecnica_.
 
 
-== Processo di implementazione <processo_implementazione>
+== Processo di Implementazione <processo_implementazione>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.7_
 
 === Scopo
 
-Lo scopo del processo di implementazione è di concretizzare un elemento specifico del sistema. Questo processo traduce i requisiti, le architetture e i design (includendo le interfacce), in azioni che danno vita ad un elemento di sistema in linea con le pratiche della tecnologia implementativa selezionata, facendo uso delle specializzazioni e discipline tecniche appropriate.
+Lo scopo del processo di Implementazione è di concretizzare un elemento specifico del sistema. Questo processo traduce i requisiti, le architetture e i design (includendo le interfacce), in azioni che danno vita ad un elemento di sistema in linea con le pratiche della tecnologia implementativa selezionata, facendo uso delle specializzazioni e discipline tecniche appropriate.
 
 Il risultato di questo processo è un elemento del sistema che soddisfa i requisiti specifici e derivati del sistema, nonché le architetture e i design definiti.
 
 === Risultati
 
-La corretta realizzazione del processo di implementazione produce i seguenti risultati:
+La corretta realizzazione del processo di Implementazione produce i seguenti risultati:
 
 - identificazione dei vincoli implementativi che influenzano i requisiti, l'architettura o il design;
 - realizzazione di un elemento di sistema;
@@ -1737,13 +1737,13 @@ La corretta realizzazione del processo di implementazione produce i seguenti ris
 
 ==== Progettazione dell'elemento da implementare
 
-È necessario che prima dell'inizio effettivo dello sviluppo di un elemento software, questo sia stato definito dai processi di definizione dell'architettura (@processo_definizione_architettura) e del design (@processo_design).
+È necessario che prima dell'inizio effettivo dello sviluppo di un elemento software, questo sia stato definito dai processi di Definizione dell'Architettura (@processo_definizione_architettura) e del Design (@processo_design).
 
 Questi processi sono fondamentali, poiché al loro completamento si dispone già di una struttura ben definita del sistema, che include le sue componenti principali, le loro interazioni e le funzionalità che devono essere implementate.
 
-Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi in quanto trasforma il processo di implementazione in una traduzione del design in codice.
+Questo approccio fornisce quindi una guida chiara per gli sviluppatori durante l'implementazione, riducendo il rischio di deviazioni o malintesi in quanto trasforma il processo di Implementazione in una traduzione del design in codice.
 
-==== Preparazione per l'implementazione
+==== Preparazione per l'implementazione <preparazione_implementazione>
 
 Fondamentale per garantire il livello di qualità richiesto dal #pdq è definire test specifici per l'elemento di sistema che si vuole realizzare secondo il modello di sviluppo _Test Driven Development_. Questo si concretizza nella realizzazione da parte del Progettista di una serie di test di unità precedentemente allo sviluppo vero e proprio dell'elemento di sistema. Questo vale anche per codice riutilizzato o codice esterno che viene adattato per soddisfare i requisiti richiesti.
 
@@ -1754,7 +1754,7 @@ Questo vale sia per il codice sviluppato in proprio sia per quello riutilizzato 
 
 Per aiutare il lavoro di verifica da parte del Verificatore, vengono riportate in Pull Request tutte le funzionalità che si ha necessità di controllare manualmente, oltre al riferimento al task interessato su Jira.
 
-Dopo aver sviluppato e testato i singoli moduli attraverso i test di unità, inizia il processo di integrazione (@processo_integrazione).
+Dopo aver sviluppato e testato i singoli moduli attraverso i test di unità, inizia il processo di Integrazione (@processo_integrazione).
 
 ==== Implementazione
 
@@ -1774,7 +1774,7 @@ Per garantire una standardizzazione e una migliore gestione del codice, devono e
 
 + regole di codifica:
 
-  - type safety con Typescript attraverso l'utilizzo di tipi specifici e limitando al massimo l'uso del tipo `any`;
+  - type safety con TypeScript attraverso l'utilizzo di tipi specifici e limitando al massimo l'uso del tipo `any`;
   - notazione camel per nomi di file e variabili;
   - indentazione del codice di tipo Egyptian braces;
   - limitare il più possibile la lunghezza di metodi e delle singole righe di codice, perseguendo i principi di leggibilità e manutenibilità. #TODO //precisare lunghezza massima metodi e righe
@@ -1788,22 +1788,22 @@ Prima di sottoporre il software a verifica è necessario assicurarsi che l'eleme
 
 ==== Gestione dei risultati dell'implementazione e delle anomalie incontrate
 
-L'elemento implementato deve essere approvato durante il processo di verifica (@processo_verifica) e integrato nel sistema come descritto nella @processo_integrazione.
+L'elemento implementato deve essere approvato durante il processo di Verifica (@processo_verifica) e integrato nel sistema come descritto nel processo di Integrazione (@processo_integrazione).
 
-== Processo di integrazione <processo_integrazione>
+== Processo di Integrazione <processo_integrazione>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.8_
 
 === Scopo
 
-Il processo di integrazione ha lo scopo di combinare iterativamente un insieme di elementi software al fine di ottenere un prodotto che soddisfi i requisiti, rispettando l'architettura e il design definiti.
+Il processo di Integrazione ha lo scopo di combinare iterativamente un insieme di elementi software al fine di ottenere un prodotto che soddisfi i requisiti, rispettando l'architettura e il design definiti.
 
-Di conseguenza, esso viene attuato in coordinamento con:
-- il processo di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni);
-- il processo di definizione dell'architettura (@processo_definizione_architettura).
-- il processo di definizione del design (@processo_design);
+Di conseguenza, esso viene attuato in coordinamento con i processi di:
+- Definizione di Bisogni e Requisiti degli Stakeholder (@processo_bisogni);
+- Definizione dell'Architettura (@processo_definizione_architettura);
+- Definizione del Design (@processo_design).
 
-L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la Continuous Integration.
+L'integrazione del sistema software avviene automaticamente mediante strumenti che permettano la _Continuous Integration_.
 
 === Risultati
 
@@ -1847,7 +1847,7 @@ Il gruppo si dota dei seguenti strumenti e servizi abilitanti per implementare l
 - Coveralls, per la valutazione della copertura dei test eseguiti;
 - Jira, per la registrazione dei risultati dei test e delle anomalie riscontrate.
 
-L'uso degli strumenti e dei servizi abilitanti è regolato nell'ambito del processo di verifica (@processo_verifica).
+L'uso degli strumenti e dei servizi abilitanti è regolato nell'ambito del processo di Verifica (@processo_verifica).
 
 ==== Attuazione della strategia di integrazione
 
@@ -1855,14 +1855,14 @@ L'integrazione degli elementi software implementati avviene attuando quanto pres
 
 L'attuazione successiva della strategia di integrazione prosegue fino a che il sistema software completo risponde a tutte le caratteristiche individuate e descritte nel documento #adr_v.
 
-L'integrazione degli elementi software, individuati e specificati tramite i processi di definizione dell'architettura (@processo_definizione_architettura) e di definizione del design (@processo_design), avviene elemento per elemento, secondo l'ordine di implementazione stabilito durante la pianificazione delle attività. Qualora un elemento software non fosse ancora disponibile per l'integrazione, la funzionalità può essere temporaneamente simulata tramite l'uso di _mock_ o _stub_. Prima di convalidarne la conformità, il sistema software così integrato viene sottoposto a verifica e validazione per garantire che soddisfi i requisiti e le aspettative degli stakeholder.
+L'integrazione degli elementi software, individuati e specificati tramite i processi di Definizione dell'Architettura (@processo_definizione_architettura) e di Definizione del Design (@processo_design), avviene elemento per elemento, secondo l'ordine di implementazione stabilito durante la pianificazione delle attività. Qualora un elemento software non fosse ancora disponibile per l'integrazione, la funzionalità può essere temporaneamente simulata tramite l'uso di _mock_ o _stub_. Prima di convalidarne la conformità, il sistema software così integrato viene sottoposto a verifica e validazione per garantire che soddisfi i requisiti e le aspettative degli stakeholder.
 
-A seguito di tali attività, il Programmatore invia i cambiamenti proposti al repository, tramite il meccanisimo descritto nella @controllo_release. Il Verificatore può approvare la Pull Request e, tramite la funzione di _merge_, integrare l'elemento software implementato nel sistema software. A supporto di tale operazione, è prevista l'esecuzione di GitHub Actions che provvedono a:
+A seguito di tali attività, il Programmatore invia i cambiamenti proposti al repository, tramite il meccanismo descritto nella @controllo_release. Il Verificatore può approvare la Pull Request e, tramite la funzione di _merge_, integrare l'elemento software implementato nel sistema software. A supporto di tale operazione, è prevista l'esecuzione di GitHub Actions che provvedono a:
 - creare e associare al sistema integrato, tramite la action `tag_semver.yml`, un tag di versione semantica per identificare univocamente la release. Il versionamento avviene in accordo con la @versionamento_software. Lo step di versionamento predefinito è di livello "patch" (es. `1.0.0` #sym.arrow.r `1.0.1`), ma può essere esplicitato dal Programmatore nel messaggio di commit tramite i modificatori:
   - `#patch`, per incrementare il numero di patch (z);
   - `#minor`, per incrementare il numero di minor (y).
 - costruire un artefatto sotto forma di immagine Docker, e pubblicarlo sui _container registries_ Docker Hub e GitHub Container Registry tramite la action `build_docker` (`build_docker.yml`);
-- calcolare la copertura dei test eseguiti sul sistema integrato con Coveralls, e pubblicarla come report sulla Pull Request tramite la action `test_nodejs.yml`;
+- calcolare la copertura dei test eseguiti sul sistema integrato con Coveralls, e pubblicarla come report sulla Pull Request tramite la action `test_nodejs.yml`.
 
 ==== Gestione dei risultati di integrazione
 
@@ -1891,18 +1891,20 @@ Ciascuna versione del sistema software integrato, intesa come artefatto eseguibi
 
 I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'apertura o chiusura di una Pull Request. Le GitHub Actions devono prevedere la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'integrazione.
 
-== Processo di verifica <processo_verifica>
+== Processo di Verifica <processo_verifica>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.9_
 
 === Scopo
-Il processo di verifica ha lo scopo di dimostrare, con evidenza obiettiva, che il sistema, o una sua parte, adempie ai requisiti associati definiti nel documento #adr_v, nel rispetto delle metriche di qualità del prodotto definite nel #pdq_v.
+
+Il processo di Verifica ha lo scopo di dimostrare, con evidenza obiettiva, che il sistema, o una sua parte, adempie ai requisiti associati definiti nel documento #adr_v, nel rispetto delle metriche di qualità del prodotto definite nel #pdq_v.
 Nel caso in cui vengano identificati errori o mancanze, vengono fornite le informazioni necessarie a determinare la risoluzione delle anomalie riscontrate.
 
-Tali operazioni sono possibili mediante test automatici eseguiti, in parte, durante il processo di integrazione (@processo_integrazione), e test manuali eseguiti dai componenti del gruppo, con l'obiettivo di individuare tempestivamente eventuali problemi.
+Tali operazioni sono possibili mediante test automatici eseguiti, in parte, durante il processo di Integrazione (@processo_integrazione), e test manuali eseguiti dai componenti del gruppo, con l'obiettivo di individuare tempestivamente eventuali problemi.
 
 === Risultati
-Come risultato della corretta applicazione del processo di verifica, per ogni elemento:
+
+Come risultato della corretta applicazione del processo di Verifica, per ogni elemento:
 - viene effettuata una verifica manuale da parte di uno o più Verificatori;
 - vengono eseguiti i test automatici di unità e di integrazione;
 - vengono rilevati eventuali problemi legati al rispetto della correttezza, dei requisiti o dell'architettura, in funzione di quanto definito;
@@ -1916,9 +1918,9 @@ Come risultato della corretta applicazione del processo di verifica, per ogni el
 
 ===== Verifiche preliminari
 
-La prima attività di verifica avviene durante l'implementazione del software. In questa attività devono essere sviluppati, dove possibile, i test di unità su cui si baserà l'elemento software da implementare, sia esso un pattern o una classe, seguendo così il principio del _Test Driven Development_. I test qui sviluppati rientrano nei test automatici adottati da #err418, e devono essere inseriti all'interno di una cartella dedicata nella repository WMS3 (@repository-github), denominata `__test__`.
+La prima attività di verifica avviene durante la preparazione all'implementazione del software (@preparazione_implementazione). In questa attività devono essere sviluppati, dove possibile, i test di unità su cui si baserà l'elemento software da implementare, sia esso un pattern o una classe, seguendo così il principio del _Test Driven Development_. I test qui sviluppati rientrano nei test automatici adottati da #err418, e devono essere inseriti all'interno di una cartella dedicata nel repository WMS3 (@repository-github), denominata `__test__`.
 
-All'interno della cartella `__test__`, dovranno essere implementati anche i test di integrazione, i quali dovranno verificare la corretta interazione tra tutte le parti di sistema. Questo tipo di test dovrà essere implementato, dove necessario, con l'utilizzo di mock.
+All'interno della cartella `__test__`, dovranno essere implementati anche i test di integrazione, i quali dovranno verificare la corretta interazione tra tutte le parti di sistema. Questo tipo di test dovrà essere implementato, dove necessario, con l'utilizzo di _mock_.
 
 Tutti i test automatici dovranno essere implementati utilizzando il framework di testing Jest, e dovranno essere eseguibili tramite il comando
 
@@ -1931,7 +1933,7 @@ Tutti i test automatici dovranno essere implementati utilizzando il framework di
 )
 
 
-Come descritto nel processo di implementazione (@processo_implementazione), talvolta non è possibile implementare test automatici poiché risulterebbe troppo complicato e oneroso. Questo avviene quando il soggetto dell'implementazione è:
+Come descritto nel processo di Implementazione (@processo_implementazione), talvolta non è possibile implementare test automatici poiché risulterebbe troppo complicato e oneroso. Questo avviene quando il soggetto dell'implementazione è:
 - una componente grafica appartenente alla UI o all'ambiente 3D;
 - una determinata interazione tra utente e sistema che risulta difficile da automatizzare.
 
@@ -1941,13 +1943,13 @@ Qualora l'impegno, temporale o economico, per la conduzione dei test manuali si 
 
 ===== Verifiche in Pull Request
 
-Tutti i test di unità e di integrazione implementati dovranno essere eseguiti automaticamente dalle GitHub Actions (@automazioni) ogni volta che una Pull Request (@controllo_release) viene aperta o aggiornata nel suo contenuto. L'automazione designata all'esecuzione dei test dovrà essere codificata nel file `test_nodejs.yml`, situato nella repository WMS3 al percorso `WMS3/.github/workflows/`. Il merging di una Pull Request non potrà avvenire se un test automatico fallisce.
+Tutti i test di unità e di integrazione implementati dovranno essere eseguiti automaticamente dalle GitHub Actions (@automazioni) ogni volta che una Pull Request viene aperta o aggiornata nel suo contenuto. L'automazione designata all'esecuzione dei test dovrà essere codificata nel file `test_nodejs.yml`, situato nel repository WMS3 al percorso `WMS3/.github/workflows/`. Il merging di una Pull Request non potrà avvenire se un test automatico fallisce.
 
 Successivamente all'esecuzione dei test automatici, il Verificatore potrà controllare il contenuto della Pull Request. In particolare dovrà condurre delle verifiche manuali atte ad accertare che:
 
-- il codice scritto rispetti quanto definito nel processo di implementazione (@processo_implementazione);
+- il codice scritto rispetti quanto definito nel processo di Implementazione (@processo_implementazione);
 - il codice esegua senza problemi;
-- l'elemento implementato nella Pull Request sia visualizzato correttamente all'interno del prodotto, e assolva tutte le funzionalità ad esso richieste dalla #st_v e dall'#adr_v\.
+- l'elemento implementato nella Pull Request sia visualizzato correttamente all'interno del prodotto, e assolva tutte le funzionalità ad esso richieste dai documenti #st_v e #adr_v\.
 
 ==== Gestione dei risultati
 
@@ -1956,11 +1958,11 @@ I risultati ottenuti dai test sono visualizzati su GitHub:
 - all'interno della Pull Request, sotto forma di commenti del Verificatore, per i test manuali;
 - all'interno della Pull Request, sotto forma di commento, oppure nella sezione relativa alle automazioni eseguite nella Pull Request, per i test automatici.
 
-Se a seguito di tutti i test non emergono anomalie o errori, la Pull Request potrà essere accettata e chiusa dal Verificatore, il quale approverà il merge all'interno del branch `dev`. Al momento della chiusura dovranno essere eseguite altre automazioni riguardanti il versionamento (@versionamento_software). È possibile visualizzare l'insieme delle Pull Request approvate ed integrate mediante merge all'interno di GitHub.
+Se a seguito di tutti i test non emergono anomalie o errori, la Pull Request potrà essere accettata e chiusa dal Verificatore, il quale approverà il merge all'interno del branch `dev`. Al momento della chiusura dovranno essere eseguite altre automazioni riguardanti il versionamento (@versionamento_software).
 
 Nel caso in cui almeno un'attività di verifica faccia emergere problematiche, le modifiche non possono essere integrate nel branch principale. La segnalazione e gestione degli errori dovrà avvenire nel seguente modo:
 
-- *errori nei test automatici*: vengono segnalati dalle GitHub Actions. È possibile visualizzare il log dell'esecuzione dell'automazione nella sezione Actions della repository. Il Programmatore dovrà quindi controllare il log ed effettuare le correzioni necessarie a risolvere l'errore che si è presentato;
+- *errori nei test automatici*: vengono segnalati dalle GitHub Actions. È possibile visualizzare il log dell'esecuzione dell'automazione nella sezione Actions del repository. Il Programmatore dovrà quindi controllare il log ed effettuare le correzioni necessarie a risolvere l'errore che si è presentato;
 - *errori nei test manuali*: vengono segnalati dal Verificatore tramite commenti nella Pull Request. Il Verificatore dovrà inserire dei commenti nei quali dovrà descrivere nel modo più dettagliato possibile gli errori riscontrati e i passaggi per riprodurli, evitando così ambiguità e incomprensioni. Il commento dovrà essere inserito nel file relativo all'elemento o alla funzionalità che presenta errori, e, se possibile, nella riga dove si è individuato l'errore.
 
 Il Programmatore dovrà quindi individuare la causa di questi errori e risolverli nel minor tempo possibile, così da evitare situazioni di stallo nello sviluppo del software.
@@ -1986,41 +1988,40 @@ Coinvolge l'installazione del sistema verificato al fine di consentire l'operati
 
 === Risultati
 
-I risultati della corretta applicazione del processo di transizione sono:
+I risultati della corretta applicazione del processo di Transizione sono:
 
-- avviene il rilascio di una versione del sistema;
-- viene effettuato il deploy del software su Azure;
-- viene garantito il funzionamento dei servizi e l'operatività del sistema;
-- vengono identificati i risultati e le anomalie della transizione;
-- viene stabilita la tracciabilità degli elementi trasferiti;
-- viene redatto del documento #man\;
-- viene fornito supporto e formazione degli utenti all'utilizzo del sistema.
+- rilascio di una versione del sistema;
+- deployment del software su Azure;
+- garanzia del funzionamento dei servizi e dell'operatività del sistema;
+- identificazione di risultati e anomalie della transizione;
+- tracciabilità degli elementi trasferiti;
+- redazione del documento #man\;
+- supporto e formazione degli utenti all'utilizzo del sistema.
 
 === Attività
 
 ==== Rilascio dell'ultima versione di sistema
 
 Il repository GitHub dedicato a WMS3 è provvisto di un branch principale `dev`, il quale rappresenta la fonte da cui vengono creati i feature branch.
-Questi ultimi sono necessari al conseguimento degli obiettivi di un task e oggetto dei merge a seguito delle successive pull request.
+Questi ultimi sono necessari al conseguimento degli obiettivi di un task e oggetto dei merge a seguito delle successive Pull Request.
 
 I rilasci del prodotto devono avvenire sempre dal branch di partenza `dev`, in quanto il codice contenuto in esso garantisce il soddisfacimento dei requisiti di qualità imposti dal gruppo.
 
-Ogni release avvenuta con successo, in conformità con il superamento dei test e le procedure descritte nei processi di implementazione (@processo_implementazione), integrazione (@processo_integrazione) e verifica (@processo_verifica), deve generare una release specifica tracciata e consultabile (@tracciabilità_risultati_release) con relativo numero di versione aggiornato (@versionamento).
+Ogni release avvenuta con successo, in conformità con il superamento dei test e le procedure descritte nei processi di Implementazione (@processo_implementazione), Integrazione (@processo_integrazione) e Verifica (@processo_verifica), deve generare una release specifica tracciata e consultabile (@tracciabilità_risultati_release) con relativo numero di versione aggiornato (@versionamento).
 
-Ad ogni modifica del sistema devono venire aggiornati anche i documenti #man e #st, al fine di includere la documentazione relativa alle modifiche apportate.
+Ad ogni modifica del sistema devono essere aggiornati anche i documenti #man e #st, al fine di includere la documentazione relativa alle modifiche apportate.
 
-==== Deploy su Azure
+==== Deployment su Azure
 
-Il gruppo ha definito una GitHub Action chiamata _Deploy to VPS_ (i cui job sono descritti nel file _deploy.yml_) la quale effettua il deploy del sistema, aggiornato all'ultima versione rilasciata sul branch `dev`, all'interno della macchina virtuale di Azure.
+Il gruppo ha definito una GitHub Action chiamata _deploy to VPS_ (i cui job sono descritti nel file `deploy.yml`) la quale effettua il deploy del sistema, aggiornato all'ultima versione rilasciata sul branch `dev`, all'interno della macchina virtuale di Azure.
 
-Questo permette la fruizione del sistema senza la necessità di dover scaricare le ultime modifiche sul proprio dispositivo e senza dover ricreare le relative immagini Docker.
-
+Questo permette la fruizione del sistema senza la necessità di dover scaricare le ultime modifiche sul proprio dispositivo, e senza dover ricreare le relative immagini Docker.
 
 ==== Redazione del documento #man
 
 Al fine di fornire agli utenti di WMS3 una guida documentale atta ad indicare il suo corretto utilizzo, il gruppo deve mettere a disposizione il documento #man.
 
-In esso deve venire riportato:
+In esso devono essere riportati:
 
 - guida all'avvio e configurazione dell'ambiente;
 
@@ -2029,17 +2030,13 @@ In esso deve venire riportato:
 - guida dettagliata all'utilizzo delle funzionalità offerte.
 
 
-Il #man deve venire redatto seguendo i principi di redazione dei documenti descritti nel paragrafo riguardante il processo di gestione delle informazioni (@processo_gestione_informazioni).
-
+Il #man deve venire redatto seguendo i principi di redazione dei documenti descritti nel paragrafo riguardante il processo di Gestione delle Informazioni (@processo_gestione_informazioni).
 
 ==== Tracciabilità risultati <tracciabilità_risultati_release>
 
-I risultati relativi a controlli e test automatici avvenuti in fase di release sono visualizzati su GitHub nella sezione relativa alle automazioni avvenute nella pull request dell'elemento in oggetto.
+I risultati relativi a controlli e test automatici avvenuti in fase di release sono visualizzati su GitHub nella sezione relativa alle automazioni avvenute nella Pull Request dell'elemento in oggetto.
 
 Se da essi non emergono anomalie o errori, la transizione è avvenuta correttamente e viene confermata la conformità degli elementi analizzati.
-
-Per avere traccia degli elementi verificati che costituiscono le singole release del prodotto, su GitHub è possibile visualizzare l'insieme delle release e lo storico delle corrispondenti pull request approvate ed integrate.
-
 
 == Processo di Validazione <processo_validazione>
 
@@ -2059,13 +2056,11 @@ Come risultato della corretta implementazione del processo di Validazione si ott
 - evidenza che il sistema, o l'elemento di sistema, soddisfi i requisiti dichiarati;
 - tracciamento di eventuali anomalie riscontrate.
 
-
 === Attività
 ==== Validazione interna
 
-Dopo aver apportato avanzamenti al software e a seguito dell'attuazione del processo di verifica (@processo_verifica), devono avvenire delle analisi e test manuali per constatare lo stato di soddisfacimento dei requisiti. I risultati di tali analisi devono essere discussi durante i meeting di retrospettiva in quanto fondamentali per la pianificazione delle future attività.
-I test manuali precedentemente menzionati devono avvenire mediante l'utilizzo di Docker Compose, permettendo così l'esecuzione su un ambiente con caratteristiche standard, e prevedono l'esecuzione manuale delle funzionalità implementate atte a soddisfare i requisiti definiti.
-
+Dopo aver apportato avanzamenti al software e a seguito dell'attuazione del processo di Verifica (@processo_verifica), devono avvenire delle analisi e test manuali per constatare lo stato di soddisfacimento dei requisiti. I risultati di tali analisi devono essere discussi durante i meeting di retrospettiva in quanto fondamentali per la pianificazione delle future attività.
+I test manuali precedentemente menzionati devono avvenire mediante l'utilizzo di Docker Compose, permettendo così l'esecuzione su un ambiente con caratteristiche standard, e devono prevedere l'esecuzione manuale delle funzionalità implementate atte a soddisfare i requisiti definiti.
 
 ==== Validazione esterna
 
@@ -2081,8 +2076,8 @@ Nel momento in cui il gruppo avrà soddisfatto tutti i requisiti obbligatori def
 Nel caso in cui il software venga riconosciuto come MVP e approvato definitivamente dal Proponente, il lavoro su di esso deve subire una riduzione di priorità o arrestarsi totalmente, dando maggiore importanza all'eventuale documentazione incompleta in vista della revisione PB.
 L'adempimento dei requisiti da parte del prodotto sviluppato deve essere tracciato all'interno del documento #st_v.
 
-Contrariamente, nel caso in cui emergano problematiche o mancanze, esse devono venire discusse e affrontate in un meeting interno al fine di eseguire una mirata pianificazione dei task correttivi.
-Questi ultimi vengono registrati su Jira in modo tale da ottenere maggiore chiarezza riguardo l'organizzazione del gruppo e l'avanzamento dei lavori.
+Contrariamente, nel caso in cui emergano problematiche o mancanze, esse devono essere discusse e affrontate in un meeting interno, al fine di eseguire una mirata pianificazione dei task correttivi.
+Questi ultimi vengono registrati su Jira, in modo tale da ottenere maggiore chiarezza riguardo l'organizzazione del gruppo e l'avanzamento dei lavori.
 Tali considerazioni e decisioni prese devono essere presenti nel verbale conseguente al relativo meeting interno.
 
 

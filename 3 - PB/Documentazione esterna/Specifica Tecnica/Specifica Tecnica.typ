@@ -178,136 +178,131 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 )
 
 #pagebreak()
+
+= Esecuzione del software
+
+Per avviare correttamente WMS3, è necessario seguire i seguenti passaggi:
+
+  - assicurarsi di avere Docker installato e funzionante sul proprio sistema;
+  - navigare fino alla directory contenente il file `compose.yml`;
+  - eseguire il comando `docker compose up -d` da terminale per avviare i container pertinenti.
+    Si raccomanda di assicurarsi che i container siano stati costruiti correttamente prima di procedere con questa operazione.
+    Nel caso in cui essi non siano stati costruiti completamente, eseguire il comando `docker compose build`;
+  - successivamente al corretto completamento del processo di avvio, aprire un browser web e digitare l'URL "localhost:3000".
+
+
 = Tecnologie
 
 == Introduzione
 
 In questa sezione, viene presentata una panoramica completa degli strumenti e delle tecnologie utilizzati per lo sviluppo e l'implementazione del software “WMS3”. Questo include una descrizione dettagliata delle tecnologie, del linguaggio di programmazione adottato, delle librerie e dei framework necessari.
 
-L'obiettivo principale è assicurare che il software sia sviluppato utilizzando le tecnologie adeguate in termini di efficacia ed efficienza e che soddisfi i requisiti individuati nel documento #adr.
+L'obiettivo principale è assicurare che il software sia sviluppato utilizzando le tecnologie adeguate in termini di efficacia ed efficienza e che soddisfi i requisiti individuati nel documento #adr_v.
 
 == Tecnologie implementative
-=== JSX
-JSX (JavaScript XML) è un'estensione di sintassi di JavaScript che consente di scrivere codice HTML all'interno di file JavaScript. Viene utilizzato per definire la struttura delle interfacce utente all'interno delle applicazioni React.
-
-*Versione: * 18.0.0.
-
-*Contesto di utilizzo: *
-- Definizione della struttura dei componenti web.
-
-\
-=== CSS
-CSS (Cascading Style Sheets) è un linguaggio utilizzato per definire lo stile e la presentazione delle pagine web. Viene utilizzato per definire la formattazione, il layout e il design delle pagine web.
-
-*Versione: * 3.0.
-
-*Contesto di utilizzo: *
-- Definizione stile e layout componenti web.
-
-*Librerie e framework*
-- *Tailwind CSS*
-  - Framework CSS utilizzato per lo sviluppo di interfacce utente web. Offre una serie di classi predefinite per la definizione dello stile degli elementi.
-  - *Versione: * 3.4.1.
-  - *Link: * https://tailwindcss.com/ #lastVisitedOn(27, 03, 2024)
-
-\
-=== TypeScript
-TypeScript è un superset di JavaScript che aggiunge tipizzazione statica al linguaggio, offrendo maggiore struttura al codice. Questo permette di rilevare errori di programmazione in fase di sviluppo, riducendo il rischio di bug e semplificando la manutenzione del codice.
-
-*Versione: * 5.3.3.
-
-*Contesto di utilizzo: *
-- Definizione tipi e interfacce per i dati;
-- Implementazione dei componenti React;
-- Codifica lato front-end e back-end;
-- Implementazione ambiente 3D.
-
-*Librerie e framework*
-- *Next.js*
+=== Next.js
   - Framework di sviluppo web front-end basato su React e utilizzato per la creazione di applicazioni web. Offre funzionalità avanzate realizzazione di API, gestione del routing e Server Action.
   - *Versione: * 14.1.0.
-  - *Link: * https://nextjs.org/ #lastVisitedOn(27, 03, 2024)
+  - *Link: * https://nextjs.org/ #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * TypeScript, JSX, JSON.
+  - *Contesto di utilizzo: *
+    - Creazione della struttura dell'applicazione;
+    - Implementazione delle API;
+    - Gestione del routing.
+
 \
-- *React*
+=== React
   - Libreria JavaScript utilizzata per la creazione di interfacce utente dinamiche, reattive e stateful. Si basa sul concetto di "components", ovvero blocchi di codice autonomi che gestiscono la propria logica e rendering.
   - *Versione: * 18.0.0.
-  - *Link: * https://reactjs.org/ #lastVisitedOn(27, 03, 2024)
+  - *Link: * https://reactjs.org/ #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * TypeScript, JSX, JSON.
+  - *Contesto di utilizzo: *
+    - Creazione di interfacce utente dinamiche;
+    - Implementazione dei componenti web.
 \
-- *Node.js*
+=== Node.js
   - Runtime system orientato agli eventi per l'esecuzione di codice JavaScript estendibile tramite moduli. Viene utilizzato per eseguire il codice JavaScript lato server.
   - *Versione: * 20.11.0.
-  - *Link: * https://nodejs.org/ #lastVisitedOn(27, 03, 2024)
+  - *Link: * https://nodejs.org/ #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * TypeScript, JSON.
+  - *Contesto di utilizzo: *
+    - Codifica lato server.
 \
-- *Shadcn/ui*
+=== Tailwind CSS
+  - Framework CSS utilizzato per lo sviluppo di interfacce utente web. Offre una serie di classi predefinite per la definizione dello stile degli elementi.
+  - *Versione: * 3.4.1.
+  - *Link: * https://tailwindcss.com/ #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * CSS.
+  - *Contesto di utilizzo: *
+    - Definizione stile e layout componenti web.
+
+\
+=== Shadcn/ui
   - Raccolta di componenti React personalizzati per la creazione di interfacce utente. Offre una serie di componenti pronti all'uso per la realizzazione di interfacce grafiche.
   - *Versione: * 0.8.0.
-  - *Link: * https://ui.shadcn.com/ #lastVisitedOn(27, 03, 2024)
+  - *Link: * https://ui.shadcn.com/ #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * TypeScript, JSX.
+  - *Contesto di utilizzo: *
+    - Creazione di interfacce utente grafiche.
 
+\
 *Librerie e framework ambiente 3D*
-- *Three.js*
+=== Three.js
   - Libreria JavaScript utilizzata per creare e visualizzare grafica computerizzata 3D animata in un browser Web utilizzando WebGL. Offre funzionalità avanzate per la creazione di ambienti 3D interattivi.
   - *Versione: * 0.161.2.
-  - *Link: * https://threejs.org/ #lastVisitedOn(27, 03, 2024)
+  - *Link: * https://threejs.org/ #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * TypeScript.
+  - *Contesto di utilizzo: *
+    - Creazione ambiente 3D.
 
 \
-- *\@react-three/fiber*
+=== \@react-three/fiber
   - Libreria open-source che facilita l'integrazione di Three.js all'interno di applicazioni React. Offre funzionalità avanzate per la creazione di grafica 3D animata.
   - *Versione: * 8.15.16.
-  - *Link: * https://docs.pmnd.rs/react-three-fiber/getting-started/introduction #lastVisitedOn(27, 03, 2024)
+  - *Link: * https://docs.pmnd.rs/react-three-fiber/getting-started/introduction #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * TypeScript, JSX.
+  - *Contesto di utilizzo: *
+    - Creazione ambiente 3D.
 
 \
-- *\@react-three/drei*
+=== \@react-three/drei
   - Libreria che fornisce componenti e utilità per semplificare lo sviluppo di applicazioni in 3D utilizzando React e Three.js. Offre funzionalità avanzate per la creazione di ambienti 3D interattivi.
   - *Versione: * 9.97.6.
-  - *Link: * https://www.npmjs.com/package/@react-three/drei #lastVisitedOn(27, 03, 2024)
+  - *Link: * https://www.npmjs.com/package/@react-three/drei #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * TypeScript, JSX.
+  - *Contesto di utilizzo: *
+    - Creazione ambiente 3D.
 
 \
 == Tecnologie per la validazione dei dati
 === Zod
-Zod è una libreria di validazione dei dati per TypeScript. Viene utilizzata per definire schemi di validazione dei dati e garantire che i dati ricevuti siano conformi a tali schemi.
-
-*Versione: * 3.22.4.
-
-*Contesto di utilizzo: *
-- Validazione dei dati inseriti dall'utente.
+  - Zod è una libreria di validazione dei dati per TypeScript. Viene utilizzata per definire schemi di validazione dei dati e garantire che i dati ricevuti siano conformi a tali schemi.
+  - *Versione: * 3.22.4.
+  - *Link: * https://zod.dev/ #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * TypeScript.
+  - *Contesto di utilizzo: *
+    - Validazione dei dati inseriti dall'utente.
 
 \
 == Tecnologie per la persistenza dei dati
-
-=== SQL
-SQL (Structured Query Language) è un linguaggio di programmazione utilizzato per la gestione dei database relazionali. Viene utilizzato per la creazione, la modifica e la gestione dei dati all'interno del database.
-Nel contesto del capitolato, le operazioni svolte sul database sono esclusivamente di tipo interrogativo.
-
-*Contesto di utilizzo: *
-- Interrogazione del database relazionale.
-
-\
-=== JSON
-JSON (JavaScript Object Notation) è un formato di scambio dati leggero e indipendente dal linguaggio. Viene utilizzato per la trasmissione e lo scambio di dati tra client e server. Utilizzato principalmente nelle comunicazioni nella rete, trova naturale utilizzo nello sviluppo di una web app.
-
-*Contesto di utilizzo: *
-- Risultato delle interrogazioni al database;
-- Risultato delle chiamate API.
-
-\
 === PostgreSQL
-PostgreSQL è un sistema di gestione di database relazionali. Viene utilizzato per la memorizzazione e la gestione dei dati relativi al software “WMS3”.
-
-*Versione: * 16.2.
-
-*Contesto di utilizzo: *
-- Memorizzazione e gestione dei dati relativi ai bin, ai prodotti e alle zone del magazzino.
+  - PostgreSQL è un sistema di gestione di database relazionali. Viene utilizzato per la memorizzazione e la gestione dei dati relativi al software “WMS3”.
+  - *Versione: * 16.2.
+  - *Link: * https://www.postgresql.org/docs/16/index.html #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * SQL.
+  - *Contesto di utilizzo: *
+    - Memorizzazione e gestione dei dati relativi ai bin, ai prodotti e alle zone del magazzino.
 
 \
 == Tecnologie per il testing
 === Jest
-Jest è un framework di testing per JavaScript e TypeScript. Viene utilizzato principalmente per lo unit e l'integration testing, offrendo funzionalità avanzate come la parallelizzazione dei test e il mocking delle dipendenze.
-
-*Versione: * 29.7.0.
-
-*Contesto di utilizzo: *
-- Implementazione della suite di unit testing;
-- Implementazione della suite di integration testing.
+  - Jest è un framework di testing per JavaScript e TypeScript. Viene utilizzato principalmente per lo unit e l'integration testing, offrendo funzionalità avanzate come la parallelizzazione dei test e il mocking delle dipendenze.
+  - *Versione: * 29.7.0.
+  - *Link: * https://jestjs.io/docs/getting-started #lastVisitedOn(04, 04, 2024)
+  - *Linguaggio: * TypeScript, JavaScript.
+  - *Contesto di utilizzo: *
+    - Implementazione della suite di unit testing;
+    - Implementazione della suite di integration testing.
 
 \
 == Tecnologie per il deployment

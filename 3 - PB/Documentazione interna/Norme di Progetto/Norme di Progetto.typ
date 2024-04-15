@@ -38,7 +38,7 @@ L'utente avrà la possibilità di cercare specifici prodotti all'interno del mag
 
 === Riferimenti normativi <riferimenti-normativi>
 
-- Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \
+- Capitolato "Warehouse Management 3D" (C5) di #azienda: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
   #lastVisitedOn(13, 02, 2024)
 
@@ -107,7 +107,7 @@ I meeting avranno cadenza variabile, e saranno fissati al termine di altri incon
 In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di Fornitura, la quale sarà resa disponibile al Proponente, #azienda, e ai Committenti, ovvero il #vardanega e il #cardin.
 
 ==== Valutazione dei capitolati
-Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese disponibili dai vari proponenti. Per ogni capitolato vengono presentati tre paragrafi:
+Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese disponibili dai vari Proponenti. Per ogni capitolato vengono presentati tre paragrafi:
 + *Descrizione*: vengono indicati i nominativi di Proponente e Committente, e viene presentato l'obiettivo del progetto;
 + *Dominio tecnologico*: vengono elencate le tecnologie consigliate dal Proponente del capitolato;
 + *Considerazioni*: il gruppo dà la propria valutazione sul capitolato.
@@ -184,7 +184,7 @@ Il risultato di questo processo è visibile all'interno del documento #pdp.\
 ===== Esecuzione
 Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto.
 
-Il processo di esecuzione è composto da due attività principali:
+Il processo di Esecuzione è composto da due attività principali:
 + sviluppo del prodotto;
 + sviluppo della documentazione.
 
@@ -362,7 +362,7 @@ L'indirizzo è reso noto nel frontespizio di ogni documento prodotto dall'organi
 
 ==== Mantenimento dell'infrastruttura
 
-Sono compiti dell'amministratore il mantenimento dell'infrastruttura, l'aggiornamento delle norme e dei processi e l'identificazione di nuovi servizi a supporto delle attività dell'organizzazione.
+Sono compiti dell'Amministratore il mantenimento dell'infrastruttura, l'aggiornamento delle norme e dei processi e l'identificazione di nuovi servizi a supporto delle attività dell'organizzazione.
 
 L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi sufficienti a coprire tutti i requisiti di comunicazione.
 
@@ -409,7 +409,7 @@ L'organizzazione si adopera per sviluppare le competenze dei membri mediante:
 + attività di _mentoring_ esterno su richiesta, in base alla necessità e alla disponibilità dell'interlocutore esterno;
 + condivisione delle best practice in sessione collettiva.
 
-Le sessioni di tutoring sono "a sportello" ed è responsabilità dei singoli membri richiederne l'attivazione. Il responsabile, identificati i temi di maggior interesse, può espressamente richiedere che un ruolo copra le esigenze di tutoring interno tramite le modalità sopra indicate.
+Le sessioni di tutoring sono "a sportello" ed è responsabilità dei singoli membri richiederne l'attivazione. Il Responsabile, identificati i temi di maggior interesse, può espressamente richiedere che un ruolo copra le esigenze di tutoring interno tramite le modalità sopra indicate.
 
 ===== Acquisire e fornire competenze
 
@@ -467,7 +467,7 @@ La valutazione della qualità dei prodotti di progetto, dell'andamento del grupp
   - verifica della leggibilità, chiarezza e comprensibilità della documentazione;
   - verifica dell'assenza di errori ortografici o sintattici nei documenti;
   - verifica dell'assenza di errori nel codice (valutazione statica) e nell'esecuzione degli elementi software.
-- testing del codice, come descritto nel processo di integrazione (@processo_integrazione) e nel processo di verifica (@processo_verifica);
+- testing del codice, come descritto nel processo di Integrazione (@processo_integrazione) e nel processo di Verifica (@processo_verifica);
 - revisioni complessive degli elementi di configurazione in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro;
 - utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana) per l'individuazione tempestiva di anomalie o situazioni critiche;
 - comunicazione costante con il Proponente per raccogliere feedback e valutare l'adesione del lavoro alle sue richieste (@comunicazione_Proponente).
@@ -488,7 +488,7 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
 Il processo di Pianificazione di Progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato #pdp (@PdP).
 
 === Risultati (#pdp) <PdP>
-Il #pdp è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento accompagnata dai grafici di Gantt e di burndown. Sono presenti cinque sezioni, di cui le prime quattro rientrano nel processo di pianificazione:
+Il #pdp è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento accompagnata dai grafici di Gantt e di burndown. Sono presenti cinque sezioni, di cui le prime quattro rientrano nel processo di Pianificazione:
 
 + Rischi e loro mitigazione;
 + Divisione temporale di sviluppo;
@@ -499,7 +499,7 @@ Il #pdp è il documento principale che viene redatto durante questo processo, e 
 La redazione del documento va di pari passo con l'avanzamento del progetto, in modo tale da essere sempre aggiornato alla situazione corrente del lavoro.
 
 === Attività
-Nel processo di pianificazione sono presenti due attività principali:
+Nel processo di Pianificazione sono presenti due attività principali:
 
 + definizione del progetto;
 + pianificazione del progetto e della gestione tecnica.
@@ -525,7 +525,7 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
 + *Responsabile*: è presente durante l'intero progetto, in particolare si occupa di:
   - coordinare il gruppo;
   - verificare che il lavoro proceda secondo le tempistiche e i costi stabiliti;
-  - rappresentare il gruppo nei rapporti con il committente;
+  - rappresentare il gruppo nei rapporti con il Committente;
   - gestire la pianificazione di ogni _Sprint_.
 + *Amministratore*: ruolo presente durante tutto il progetto. Ha il compito di:
   - predisporre e controllare il corretto utilizzo delle procedure e degli strumenti adottati;
@@ -539,7 +539,7 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
   - definisce le linee guida implementative valutando le scelte più efficienti e sostenibili.
 + *Programmatore*: è attivo negli ultimi due periodi del progetto, nei quali:
   - si occupa della codifica del PoC, senza partire da una progettazione ben definita visto l'obiettivo del Proof of Concept;
-  - traduce in codice eseguibile l'architettura del prodotto finale definita dal progettista durante il periodo di sviluppo del MVP.
+  - traduce in codice eseguibile l'architettura del prodotto finale definita dal Progettista durante il periodo di sviluppo del MVP.
 + *Verificatore*: è presente durante l'intero progetto, e si occupa di controllare che il lavoro prodotto dal gruppo rispetti gli standard qualitativi adottati.
 
 Ad ogni ruolo è inoltre associato un costo orario, sulla base del quale il gruppo calcola il preventivo totale del progetto e quello di ogni _Sprint_ seguito dal relativo consuntivo. Il costo orario viene calcolato in base alla sua importanza all'interno del progetto, misurata in termini di competenze e disponibilità della risorsa.
@@ -853,12 +853,12 @@ L'aggiornamento del numero di versione per il software deve attenersi alle segue
 Il tracciamento delle modifiche avviene per mezzo di automazioni che permettono di identificare:
 - versione del documento modificato;
 - data di modifica (gg-mm-aaaa, ddd);
-- numero della pull request di riferimento;
-- titolo della pull request di riferimento;
+- numero della Pull Request di riferimento;
+- titolo della Pull Request di riferimento;
 - autore della modifica;
 - revisore incaricato.
 
-Tali informazioni sono salvate in un file CSV, unico per ogni documento. Questo file, denominato `log.csv`, è salvato nella cartella dedicata al documento a cui si riferisce, e viene generato automaticamente da una GitHub Action invocata all'apertura, riapertura, sincronizzazione e chiusura di una pull request. Maggiori dettagli al paragrafo dedicato (@automazioni).
+Tali informazioni sono salvate in un file CSV, unico per ogni documento. Questo file, denominato `log.csv`, è salvato nella cartella dedicata al documento a cui si riferisce, e viene generato automaticamente da una GitHub Action invocata all'apertura, riapertura, sincronizzazione e chiusura di una Pull Request. Maggiori dettagli al paragrafo dedicato (@automazioni).
 
 Ogni documento, nella sezione direttamente sottostante all'indice, mostra in formato tabellare le informazioni relative al tracciamento delle modifiche, leggendo le informazioni dal file `log.csv`.
 
@@ -898,7 +898,7 @@ Documenti è organizzata in modo da suddividere la documentazione necessaria all
 - *PB*: contiene i file necessari alla Product Baseline. È organizzata allo stesso modo della cartella dedicata alla RTB.
 
 Al fine di garantire uno svolgimento delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _feature branching_. È presente un branch per le release e un branch per lo sviluppo dal quale vengono creati dei branch per ogni nuova funzionalità o modifica da apportare.
-Questi ultimi vengono identificati dal codice `DOC-XXX`, dove `XXX` è il numero del relativo task su Jira. I branch di feature vengono integrati tramite pull request.
+Questi ultimi vengono identificati dal codice `DOC-XXX`, dove `XXX` è il numero del relativo task su Jira. I branch di feature vengono integrati tramite Pull Request.
 
 *WMS3* è il repository che contiene il codice sorgente del prodotto software sviluppato dal gruppo. È presente un branch principale, `dev`, in cui si trova il codice sorgente relativo all'ultima versione del prodotto, reperibile anche nella sezione Releases presente sulla destra dell'interfaccia di GitHub.
 
@@ -936,29 +936,29 @@ L'intero processo di versionamento è accompagnato da una serie di automazioni, 
 *Workflow delle automazioni:*
 #figure(image("./imgs/workflow_actions.svg", format: "svg", width: 100%), caption: [Workflow delle automazioni]);
 
-Alla creazione della pull request si avvia il workflow per la compilazione e la registrazione delle modifiche avvenute. Prima di procedere è necessario inserire informazioni essenziali ai fini di ottenere maggiore chiarezza e tracciabilità nel messaggio di pull request, quali:
-- titolo conforme, contenente il nome del task di riferimento su Jira legata alla pull request, nel formato `DOC-XXX titolo`;
-- identificativo di almeno un verificatore;
+Alla creazione della Pull Request si avvia il workflow per la compilazione e la registrazione delle modifiche avvenute. Prima di procedere è necessario inserire informazioni essenziali ai fini di ottenere maggiore chiarezza e tracciabilità nel messaggio di Pull Request, quali:
+- titolo conforme, contenente il nome del task di riferimento su Jira legata alla Pull Request, nel formato `DOC-XXX titolo`;
+- identificativo di almeno un Verificatore;
 - eventuali note aggiuntive.
 Il workflow è composto dai seguenti passaggi:
-+ *fetch delle informazioni dei file modificati*: vengono recuperate le informazioni relative ai file modificati nella pull request, quali:
++ *fetch delle informazioni dei file modificati*: vengono recuperate le informazioni relative ai file modificati nella Pull Request, quali:
   - nome del file;
   - path del file.
 + *controllo del numero di file modificati*: se il numero di file modificati è maggiore di 1, il workflow termina con un errore;
 + *controllo dell'esistenza del file `log.csv`*: se il file non esiste, viene creato (sinonimo di creazione del documento);
-+ *rilascio della review*: il verificatore si occupa di controllare il documento e rilasciare la review, segnando i cambiamenti richiesti;
++ *rilascio della review*: il Verificatore si occupa di controllare il documento e rilasciare la review, segnando i cambiamenti richiesti;
 + *richiesta di una nuova review per verificare che i cambiamenti apportati siano corretti*;
 + *nel momento in cui la review termina con esito positivo, si procede al recupero della versione corrente del documento*:
   - se non esiste il corrispettivo pdf nel branch main, allora il documento non era mai stato pubblicato, pertanto la sua versione di partenza sarà fissata a 1.0.0;
   - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script Python.
-+ *aggiornamento del file `log.csv`*: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
++ *aggiornamento del file `log.csv`*: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di Verifica;
 + *compilazione del documento*: aggiornato il file `log.csv` e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
-+ *pubblicazione del documento*: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main del repository;
-+ *merge non confermato*: qualora a termine della compilazione del documento non venisse confermato il merge da parte del verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo main del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
++ *pubblicazione del documento*: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di Verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main del repository;
++ *merge non confermato*: qualora a termine della compilazione del documento non venisse confermato il merge da parte del Verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo main del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
 
 
 L'azione manuale si riduce solamente al rilascio di review e conferma di merge, mentre tutte le altre attività vengono automatizzate.
-All'approvazione della pull request, e alla conseguente chiusura del branch, un'ulteriore automazione integrata su Jira, permette di aggiornare in automatico lo stato del task collegato alla pull request, portandolo allo stato di "Completato".
+All'approvazione della Pull Request, e alla conseguente chiusura del branch, un'ulteriore automazione integrata su Jira, permette di aggiornare in automatico lo stato del task collegato alla Pull Request, portandolo allo stato di "Completato".
 
 ====== Typst
 Il gruppo utilizza Typst come strumento di scrittura e compilazione dei documenti. \
@@ -999,7 +999,7 @@ Nel processo di versionamento e di tracciamento delle modifiche, Jira ricopre un
 - selezionare l'opzione di creazione di un branch dedicato al task (integrazione con GitHub);
 - selezionare il repository e il branch da cui creare il nuovo branch.
 
-A questo punto, il task si aggiornerà nello stato "In corso" e verrà aperto il relativo branch. Terminato il task ed effettuata la pull request, lo stato del ticket passerà automaticamente a "In verifica". Superato il processo di verifica, Jira provvederà ad aggiornare lo stato del task in "Completato".
+A questo punto, il task si aggiornerà nello stato "In corso" e verrà aperto il relativo branch. Terminato il task ed effettuata la Pull Request, lo stato del ticket passerà automaticamente a "In verifica". Superato il processo di Verifica, Jira provvederà ad aggiornare lo stato del task in "Completato".
 
 ====== Backlog
 Ogni task da svolgere è segnato all'interno del backlog di Jira. Durante la pianificazione dello Sprint, si definisce lo Sprint backlog, il sottoinsieme di attività provenienti dal backlog che si intendono portare a termine entro la conclusione dello Sprint.
@@ -1010,7 +1010,7 @@ Le board di Jira permettono, similmente allo Sprint backlog, di avere una vision
 I task sono organizzati in quattro colonne, rappresentanti lo stato:
 - *da completare*: non ancora avviati, ovvero non esiste il branch dedicato;
 - *in corso*: in fase di svolgimento, ovvero branch dedicato al task creato;
-- *in verifica*: in fase di review, dopo l'apertura di una pull request;
+- *in verifica*: in fase di review, dopo l'apertura di una Pull Request;
 - *completato*: task concluso, ovvero branch dedicato chiuso a seguito di merge sul ramo principale.
 
 ====== Timeline
@@ -1023,13 +1023,13 @@ Il gruppo utilizza come metrica principale il burndown chart, che permette di av
 
 
 ==== Controllo delle release <controllo_release>
-Il controllo delle release viene gestito tramite il meccanismo di pull request di GitHub.
-Prima di integrare i nuovi cambiamenti, viene aperta una pull request dall'assegnatario del task. La pull request deve avere un titolo valido (come descritto nel paragrafo dedicato @automazioni) e deve essere designato almeno un reviewer. Di norma il reviewer di base è il Verificatore, che svolge una supervisione sulla correttezza sintattica e semantica dei contenuti.
+Il controllo delle release viene gestito tramite il meccanismo di Pull Request di GitHub.
+Prima di integrare i nuovi cambiamenti, viene aperta una Pull Request dall'assegnatario del task. La Pull Request deve avere un titolo valido (come descritto nel paragrafo dedicato @automazioni) e deve essere designato almeno un reviewer. Di norma il reviewer di base è il Verificatore, che svolge una supervisione sulla correttezza sintattica e semantica dei contenuti.
 Nel caso in cui ci sia bisogno di una figura con delle competenze specifiche per quanto riguarda la semantica e il contenuto del materiale da revisionare, il Verificatore può essere affiancato da altri membri del gruppo.
 Per ogni richiesta di modifiche da apportare vengono aperte delle conversation, in cui è possibile evidenziare le linee del documento che hanno bisogno di cambiamenti, oltre a stabilire un canale di comunicazione tra assegnatario e Verificatore.
 Il processo di verifica del documento è accompagnato dall'esecuzione di GitHub Actions che si occupano di automatizzare l'aggiornamento del file `log.csv` con i dati relativi alla modifica apportata, e la compilazione e pubblicazione del documento nel ramo main del repository. In questo modo si assicura che ogni documento presente nel ramo principale sia prima stato sottoposto ad un processo di verifica.
-Si può procedere alla chiusura della pull request e con l'operazione di merge solo nel caso in cui tutte le conversation siano state risolte e siano stati applicati i cambiamenti richiesti in fase di review.
-Solo a seguito del merge della pull request, il task collegato presente in Jira può essere definito concluso e il relativo branch viene chiuso in modo automatico.
+Si può procedere alla chiusura della Pull Request e con l'operazione di merge solo nel caso in cui tutte le conversation siano state risolte e siano stati applicati i cambiamenti richiesti in fase di review.
+Solo a seguito del merge della Pull Request, il task collegato presente in Jira può essere definito concluso e il relativo branch viene chiuso in modo automatico.
 
 
 == Processo di Gestione delle Informazioni <processo_gestione_informazioni>
@@ -1072,7 +1072,7 @@ I documenti pertanto sono così strutturati:
   - versione;
   - stato;
   - tipo di uso: interno od esterno;
-  - responsabile del gruppo;
+  - Responsabile del gruppo;
   - redattori;
   - verificatori;
   - destinatari;
@@ -1702,7 +1702,7 @@ L'attività consiste nei seguenti task:
 
   + *trasformare le caratteristiche architetturali e di design nella progettazione in elementi del sistema*:\
     - le caratteristiche architetturali e di design sono trasformate in unità architetturali, rappresentate nei relativi diagrammi.
-    Le unità architetturali sono unità funzionali (o di responsabilità) ben definite, realizzabili da un singolo programmatore.
+    Le unità architetturali sono unità funzionali (o di responsabilità) ben definite, realizzabili da un singolo Programmatore.
     A una singola unità architetturale possono corrispondere uno o più moduli di codice, la cui corrispondenza unità – modulo è determinata dalle caratteristiche del linguaggio di programmazione utilizzato per la realizzazione.
 
   + *esaminare le alternative di progettazione e la fattibilità dell'implementazione*:\
@@ -1833,14 +1833,14 @@ L'integrazione del sistema software avviene automaticamente mediante strumenti c
 
 === Risultati
 
-Come risultato della corretta implementazione del processo di integrazione:
+Come risultato della corretta implementazione del processo di Integrazione:
 
 - i nuovi elementi software implementati sono integrati con la _codebase_ esistente;
 - il sistema software è composto dall'integrazione degli elementi software implementati;
 - i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione sono eseguiti automaticamente;
 - le interfacce tra gli elementi software sono definite, implementate e aggiornate;
 - le interfacce tra il sistema software e gli elementi esterni sono definite, implementate e aggiornate;
-- gli strumenti di supporto al processo di integrazione sono individuati, configurati e in funzione;
+- gli strumenti di supporto al processo di Integrazione sono individuati, configurati e in funzione;
 - i risultati dell'integrazione sono identificati, assieme ad eventuali anomalie;
 - i risultati dei test sono registrati e possono essere visualizzati dai membri del gruppo.
 
@@ -1915,7 +1915,7 @@ Dopo l'approvazione, a ciascun sistema software risultato dell'integrazione di e
 
 Ciascuna versione del sistema software integrato, intesa come artefatto eseguibile, dovrà essere conservata e resa disponibile per il download tramite le apposite funzionalità di GitHub.
 
-I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'apertura o chiusura di una Pull Request. Le GitHub Actions devono prevedere la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'integrazione.
+I risultati del processo di Integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'apertura o chiusura di una Pull Request. Le GitHub Actions devono prevedere la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'integrazione.
 
 == Processo di Verifica <processo_verifica>
 

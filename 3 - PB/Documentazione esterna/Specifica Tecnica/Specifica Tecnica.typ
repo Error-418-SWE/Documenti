@@ -131,7 +131,7 @@ Per concludere, “WMS3” supporta la personalizzazione dell'ambiente attravers
 
 Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'applicazione, comprese le caratteristiche necessarie per configurare l'ambiente di sviluppo del progetto.
 
-== Requisiti di sistema minimi
+== Requisiti software
 
 #figure(
   table(
@@ -140,27 +140,10 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 
     [Docker],[$>=$ 24.0.7],[https://docs.docker.com/],
     [Docker Compose],[$>=$ 2.23.3],[https://docs.docker.com/compose/],
-
+    [Browser],[Supporto a WebGL 2.0],[@req_browser]
   ),
-  caption: "Requisiti di sistema minimi"
+  caption: "Requisiti software"
 )
-
-== Requisiti hardware
-
-#figure(
-  table(
-    columns: 2,
-    [*Componente*], [*Requisito minimo*],
-
-    [Processore],[Processore a 64 bit con SLAT (Second Level Address Translation)],
-    [Memoria RAM],[4GB DDR4],
-    [Spazio su disco], [$>=$ 20 GB],
-
-  ),
-  caption: "Requisiti hardware"
-)
-
-== Browser
 
 #figure(
   table(
@@ -169,17 +152,45 @@ Di seguito sono elencati i requisiti minimi necessari per l'esecuzione dell'appl
 
     [Google Chrome],[$>=$ 89],
     [Microsoft Edge],[$>=$ 89],
-    [Mozilla Firefox],[$>=$ 16.4],
-    [Apple Safari],[$>=$ 108],
+    [Mozilla Firefox],[$>=$ 67],
+    [Apple Safari],[$>=$ 15],
     [Opera Browser],[$>=$ 76],
     [Google Chrome per Android],[$>=$ 89],
     [Apple Safari per iOS],[$>=$ 17.1],
     [Samsung Internet],[$>=$ 23],
   ),
   caption: "Browser supportati"
+) <req_browser>
+
+== Requisiti hardware
+
+#figure(
+  table(
+    columns: 2,
+    [*Componente*], [*Requisito minimo*],
+
+    [Processore],[CPU a 64 bit con supporto hardware alla virtualizzazione],
+    [Scheda video],[GPU con supporto a OpenGL ES 3.0],
+    [Memoria RAM],[4 GB],
+    [Spazio su disco],[$>=$ 20 GB],
+  ),
+  caption: "Requisiti hardware"
 )
 
 #pagebreak()
+
+= Esecuzione del software
+
+Per avviare correttamente WMS3, è necessario seguire i seguenti passaggi:
+
+  - assicurarsi di avere Docker installato e funzionante sul proprio sistema;
+  - navigare fino alla directory contenente il file `compose.yml`;
+  - eseguire il comando `docker compose up -d` da terminale per avviare i container pertinenti.
+    Si raccomanda di assicurarsi che i container siano stati costruiti correttamente prima di procedere con questa operazione.
+    Nel caso in cui essi non siano stati costruiti completamente, eseguire il comando `docker compose build`;
+  - successivamente al corretto completamento del processo di avvio, aprire un browser web e digitare l'URL "localhost:3000".
+
+
 = Tecnologie
 
 == Introduzione
@@ -296,29 +307,29 @@ L'obiettivo principale è assicurare che il software sia sviluppato utilizzando 
 \
 == Tecnologie per il deployment
 === Docker
-  - Docker è un software utilizzato per il processo di deployment di applicazioni software. Permette di eseguire processi informatici in ambienti isolati chiamati container, garantendo la portabilità e la scalabilità delle applicazioni.
-  - *Versione: * 24.0.7.
-  - *Link: * https://docs.docker.com/engine/ #lastVisitedOn(04, 04, 2024)
-  - *Linguaggio: * YAML.
-  - *Contesto di utilizzo: *
-    - Deployment del software "WMS3" mediante container Docker;
-    - Isolamento dell'ambiente di sviluppo.
+Docker è un software utilizzato per il processo di deployment di applicazioni software. Permette di eseguire processi informatici in ambienti isolati chiamati container, garantendo la portabilità e la scalabilità delle applicazioni.
 
-  - *Immagini Docker utilizzate: *
-    - *PostgreSQL*: container per il database relazionale;
-      - Immagine: `postgres:16.2`.
+*Versione: * 24.0.7.
 
-    - *Web*: container per l'applicazione web;
-      - Immagine: `node:20-alpine`.
+*Contesto di utilizzo: *
+- Deployment del software "WMS3" mediante container Docker;
+- Isolamento dell'ambiente di sviluppo.
+
+*Immagini Docker utilizzate*
+- *PostgreSQL*: container per il database relazionale;
+  - Immagine: `postgres:16.2`.
+
+- *Web*: container per l'applicazione web;
+  - Immagine: `node:20-alpine`.
 
 \
 === Docker Compose
-  - Docker Compose è uno strumento per la definizione e l'esecuzione di applicazioni multi-container. Viene utilizzato per gestire l'orchestrazione dei container Docker e semplificare il processo di deployment.
-  - *Versione: * 2.23.3.
-  - *Link: * https://docs.docker.com/compose/ #lastVisitedOn(04, 04, 2024)
-  - *Linguaggio: * YAML.
-  - *Contesto di utilizzo: *
-    - Gestione dell'orchestrazione dei container Docker utilizzati.
+Docker Compose è uno strumento per la definizione e l'esecuzione di applicazioni multi-container. Viene utilizzato per gestire l'orchestrazione dei container Docker e semplificare il processo di deployment.
+
+*Versione: * 2.23.3.
+
+*Contesto di utilizzo: *
+- Gestione dell'orchestrazione dei container Docker utilizzati.
 
 #pagebreak()
 
@@ -347,7 +358,7 @@ Ciascun layer possiede il suo sistema di classi e componenti e prevede metodi pe
 )
 
 === Vantaggi
-- Ogni livello dell'archiettetura crea un livello di astrazione che permette di perseguire la _separation of concerns_ e di rendere il software più manutenibile e scalabile;
+- Ogni livello dell'architettura crea un livello di astrazione che permette di perseguire la _separation of concerns_ e di rendere il software più manutenibile e scalabile;
 - Semplicità di implementazione in termini di costi e tempo;
 - Semplicità di test e debug.
 
@@ -489,7 +500,7 @@ Il Repository Pattern permette di separare la logica di business dalla logica di
       - *parametri: * `id:string` dell'oggetto interessato;
       - *risultati: *
         - *Esito positivo: * Promise contenente le informazioni dell'oggetto corrispondente;
-        - *Esito negativo: * Promise contenente lsita vuota.
+        - *Esito negativo: * Promise contenente lista vuota.
 
 \
 *Classi implementate*
@@ -508,7 +519,7 @@ L'interfaccia `DataRepositoryInterface` è implementata dalle seguenti classi:
 
 \
 === Data Mapper Pattern
-Il Data Mapper Pattern, assieme al Repository Pattern, permette di separare la logica di business dalla logica di accesso ai dati. Il Data Mapper Pattern si occupa di mappare i dati letti dal database in oggetti del Business layer, garantendo una maggiore flessibilità e manutenibilità del codice.
+Il Data Mapper Pattern, assieme al Repository Pattern, permette di separare la logica di business dalla logica di accesso ai dati.
 
 Permette la mappatura dei dati letti dal database in oggetti del Business layer, stabilendo un contratto che i dati letti devono rispettare per essere trasformati in oggetti.
 
@@ -1258,7 +1269,7 @@ I componenti realizzati sono i seguenti:
           - *Nome*: ricerca per nome.
       - *Combobox*: permette di selezionare la categoria di appartenenza dei prodotti da visualizzare;
         - *opzioni*: lista di categorie di appartenenza dei prodotti presenti nel magazzino.
-      - *Tabs*: permette di visuallizza o i prodotti collocati o i prodotti non collocati.
+      - *Tabs*: permette di visualizzare i prodotti collocati o i prodotti non collocati.
         - *opzioni*:
           - *Collocati*: visualizza solo i prodotti collocati;
           - *Non collocati*: visualizza solo i prodotti non collocati.
@@ -1358,7 +1369,7 @@ I componenti realizzati sono i seguenti:
     - *parametri*:
       - *zone*: oggetto `Zone` che rappresenta la zona da modificare, opzionale.
     - *interazione con l'utente*:
-      - *Input*: permette di insereire l'ID della zona (disabilitato in caso di modifica);
+      - *Input*: permette di inserire l'ID della zona (disabilitato in caso di modifica);
         - *nome*: "ID".
       - *Input*: permette di inserire la lunghezza della zona;
         - *nome*: "lunghezza".
@@ -1401,8 +1412,8 @@ I componenti realizzati sono i seguenti:
 
   \
   - *bin_columns*:
-    - *descrizione*: definisce le colonne del componente `data-table` utilizzato all'interno di `zoneItemDetails` per la visualizzazione dei bin presenti all'interno della zona interssata. Le colonne definite sono:
-      - *Id*: id del bin;
+    - *descrizione*: definisce le colonne del componente `data-table` utilizzato all'interno di `zoneItemDetails` per la visualizzazione dei bin presenti all'interno della zona interessata. Le colonne definite sono:
+      - *ID*: ID del bin;
       - *Prodotto*: nome del prodotto presente all'interno del bin (se presente);
       - *Button*: permette di visualizzare i dettagli del bin.
         - *azione*: mostra i dettagli del bin mediante il componente `binItemDetails`.
@@ -1454,7 +1465,7 @@ I componenti realizzati sono i seguenti:
 
 \
 === Three.js
-Gli oggetti di modello vengono passati come parametri ai componenti Three.js per la loro creazione, rendendo dunque indipendente l'oggetto di business indipendente dalla sua rappresentazione grafica.
+Gli oggetti di modello vengono passati come parametri ai componenti Three.js per la loro creazione, rendendo dunque indipendente l'oggetto di business dalla sua rappresentazione grafica.
 
 Mediante l'utilizzo dei framework \@react-three/fiber e \@react-three/drei, è possibile creare elementi 3D all'interno di un'applicazione React trattando gli elementi come componenti.
 
@@ -1511,12 +1522,12 @@ Mediante l'utilizzo dei framework \@react-three/fiber e \@react-three/drei, è p
 - *GridModeSelector*:
   - *descrizione*: componente dedicato alla selezione della dimensione della griglia di riferimento;
   - *interazione con l'utente*:
-    - *ToggleGruop*: permette di selezionare la dimensione della griglia di riferimento;
+    - *ToggleGroup*: permette di selezionare la dimensione della griglia di riferimento;
       - *opzioni*:
         - *0*: griglia non visibile;
-        - *0.1*: griglia con celle di 0.1 unità, rappesentanti 10cm;
-        - *0.5*: griglia con celle di 0.5 unità, rappesentanti 50cm;
-        - *1*: griglia con celle di 1 unità, rappesentanti 1m.
+        - *0.1*: griglia con celle di 0.1 unità, rappresentanti 10cm;
+        - *0.5*: griglia con celle di 0.5 unità, rappresentanti 50cm;
+        - *1*: griglia con celle di 1 unità, rappresentanti 1m.
 
 \
 = Architettura di deployment

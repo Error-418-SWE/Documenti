@@ -71,12 +71,12 @@
 	},
 	{
 	   "codice":"AT-15",
-	   "descrizione":"Deve essere possibile effettuare operazioni di zoom in e zoom out all'interno dell'ambiente tridimensionale",
+	   "descrizione":"Deve essere possibile effettuare operazioni di zoom-in e zoom-out all'interno dell'ambiente tridimensionale",
 	   "stato":"P"
 	},
 	{
 	   "codice":"AT-16",
-	   "descrizione":"Deve essere possibile richiedere la creazione di un ordine di movimentazione di un prodotto da un bin ad un altro mediante un'operazione di drag n drop. La possibilità di effettuare tale spostamento deve essere stabilito mediante l'interrogazione di una API Restful",
+	   "descrizione":"Deve essere possibile richiedere la creazione di un ordine di movimentazione di un prodotto da un bin ad un altro mediante un'operazione di _drag n drop_. La possibilità di effettuare tale spostamento deve essere stabilito mediante l'interrogazione di una API Restful",
 	   "stato":"P"
 	},
 	{

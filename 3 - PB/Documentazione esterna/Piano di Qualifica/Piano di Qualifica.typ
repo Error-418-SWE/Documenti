@@ -497,7 +497,7 @@ La suite di test di sistema ha lo scopo di verificare che il sistema soddisfi i 
 
 \
 == Test di accettazione
-La suite di test di accettazione ha lo scopo di verificare che il prodotto soddisfi quanto atteso dal Proponente. Tali test sono stati svolti manualmente in occasione dei regoli meeting esterni tenuti con il Proponente aziendale.
+La suite di test di accettazione ha lo scopo di verificare che il prodotto soddisfi quanto atteso dal Proponente. Tali test sono stati svolti manualmente in occasione dei regolari meeting esterni tenuti con il Proponente aziendale.
 
 
 #figure(

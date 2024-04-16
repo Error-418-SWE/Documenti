@@ -434,9 +434,10 @@ In questa sezione sono elencati i test eseguiti sul prodotto che, come riportato
 Ad ogni test viene associato un codice definito come segue:
 #align(`[Tipologia]-[Identificativo numerico]`, center)
 *Tipologia* indica il tipo di test:
-- `UNI`: test di unità;
-- `INT`: test di integrazione;
-- `SIS`: test di sistema.
+- `UT`: Unit test;
+- `IT`: Integration test;
+- `ST`: System test;
+- `AT`: Acceptance test.
 
 *Identificativo numerico* indica la sequenza numerica identificativa del test:
 - *Test di unità* e *Test di integrazione*: l'identificativo numerico è così composto:
@@ -448,11 +449,6 @@ Ad ogni test è associato uno stato che può essere:
 - `P`: positivo, il test ha dato esito positivo;
 - `N`: negativo, il test ha dato esito negativo;
 - `NI`: non implementato.
-
-== Test di unità
-La suite di test di unità ha lo scopo di verificare il corretto funzionamento delle singole unità software. Il termine "unità" si riferisce al più piccolo componente dotato di comportamento autonomo, che può dunque essere singolarmente testato.
-
-I test di unità sono stati implementati mediante l'utilizzo del framework Jest.
 
 #let table-json(data) = {
   let keys = data.at(0).keys()
@@ -468,6 +464,11 @@ I test di unità sono stati implementati mediante l'utilizzo del framework Jest.
   )
 }
 
+\
+== Test di unità
+La suite di test di unità ha lo scopo di verificare il corretto funzionamento delle singole unità software. Il termine "unità" si riferisce al più piccolo componente dotato di comportamento autonomo, che può dunque essere singolarmente testato.
+
+I test di unità sono stati implementati mediante l'utilizzo del framework Jest.
 
 #show figure: set block(breakable: true)
 #figure(
@@ -475,6 +476,7 @@ I test di unità sono stati implementati mediante l'utilizzo del framework Jest.
   caption: "Tabella unit test"
 )
 
+\
 == Test di integrazione
 La suite di test di integrazione ha lo scopo di verificare che i diversi componenti del sistema si integrino correttamente, mirando ad individuare eventuali errori durante l'interazione tra le diverse unità software.
 
@@ -484,6 +486,7 @@ I test di integrazione sono stati implementati mediante l'utilizzo del framework
   caption: "Tabella integration test"
 )
 
+\
 == Test di sistema
 La suite di test di sistema ha lo scopo di verificare che il sistema soddisfi i requisiti definiti nel documento #adr_v. L'implementazione di test automatici per la parte interattiva del prodotto e per l'ambiente tridimensionale è stata ritenuta eccessivamente complessa in termini di tempo e risorse valutando l'inesperienza del gruppo. Non risultava però ragionevole rinunciare a questa tipologia di test, pertanto si è deciso di svolgerli manualmente.
 
@@ -492,7 +495,17 @@ La suite di test di sistema ha lo scopo di verificare che il sistema soddisfi i 
   caption: "Tabella test di sistema"
 )
 
+\
+== Test di accettazione
+La suite di test di accettazione ha lo scopo di verificare che il prodotto soddisfi quanto atteso dal Proponente. Tali test sono stati svolti manualmente in occasione dei regolari meeting esterni tenuti con il Proponente aziendale.
 
+
+#figure(
+  table-json(json("acceptanceTest.json")),
+  caption: "Tabella test di accettazione"
+)
+
+#pagebreak()
 
 = Valutazione della qualità
 

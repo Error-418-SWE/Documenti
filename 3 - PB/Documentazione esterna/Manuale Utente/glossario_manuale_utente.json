@@ -5,7 +5,7 @@
 	  "synonyms": []
 	},
 	"Browser": {
-	  "description": "Applicazione per l'acquisizione, la presentazione e la navigazione di risorse sul Web.",
+	  "description": "Programma che permette il collegamento alla rete Internet mediante il quale si può navigare tra i siti telematici e visualizzare informazioni.",
 	  "acronyms": [],
 	  "synonyms": []
 	},
@@ -15,12 +15,12 @@
 	  "synonyms": []
 	},
 	"Documentazione": {
-	  "description": "È un testo scritto allo scopo di spiegare quali funzionalità assolve il software, come è strutturato, implementato e come lo si utilizza.",
+	  "description": "È un insieme di testi scritti allo scopo di spiegare e documentare specifici aspetti e funzionalità del prodotto realizzato e dell'organizzazione progettuale.",
 	  "acronyms": [],
 	  "synonyms": []
 	},
 	"Ingegneria del Software": {
-	  "description": "Disciplina che si occupa della progettazione, sviluppo, test e manutenzione del software. Adotta un approccio sistematico, disciplinato e quantificabile, che mira a creare software di alta qualità, affidabile e manutenibile. ",
+	  "description": "Disciplina che si occupa della progettazione, sviluppo, test e manutenzione di un programma. Adotta un approccio sistematico, disciplinato e quantificabile, che mira a ottenere un prodotto di alta qualità, affidabile e manutenibile. ",
 	  "acronyms": [
 		"IS",
 		"SWE"
@@ -28,14 +28,14 @@
 	  "synonyms": []
 	},
 	"Scalable Vector Graphics": {
-	  "description": "Formato di file di grafica vettoriale bidimensionale basato su XML sviluppato dal World Wide Web Consortium.",
+	  "description": "File vettoriale di tipo grafico che si allineano agli standard compatibili con il web",
 	  "acronyms": [
 		"SVG"
 	  ],
 	  "synonyms": []
 	},
 	"Structured Query Language": {
-	  "description": "Linguaggio standard per database basati sul modello relazionale, progettato per: creare e modificare schemi di database; inserire, modificare e gestire dati memorizzati; interrogare i dati memorizzati.",
+	  "description": "Linguaggio di programmazione progettato per creare e modificare basi di dati basate sul modello relazionale e gestirne i dati memorizzati.",
 	  "acronyms": [
 		"SQL"
 	  ],
@@ -47,14 +47,14 @@
 	  "synonyms": []
 	},
 	"Versione": {
-	  "description": "Nello sviluppo software indica un determinato stato dello sviluppo di un software, programma, documento o applicazione.",
+	  "description": "Indica un determinato stato dello sviluppo di un software, programma, documento o applicazione.",
 	  "acronyms": [],
 	  "synonyms": [
 		"Version"
 	  ]
 	},
 	"Zoom": {
-	  "description": "Servizio di videoconferenza basato su cloud che permette di effettuare chiamate audio o video. Consente di registrare le sessioni per essere poi visualizzate in seguito.",
+	  "description": "Servizio di videoconferenza che permette di effettuare chiamate audio o video. Consente di registrare le sessioni per essere poi visualizzate in seguito.",
 	  "acronyms": [],
 	  "synonyms": []
 	}

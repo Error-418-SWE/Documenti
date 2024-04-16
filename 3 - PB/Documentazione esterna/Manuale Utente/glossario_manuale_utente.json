@@ -1,0 +1,61 @@
+{
+	"Bin": {
+	  "description": "Unità minima di spazio del magazzino atta a contenere prodotti. I bin sono posizionati in automatico all'interno degli scaffali al momento della loro creazione, e possono contenere al massimo un tipo di prodotto. È possibile creare bin, eliminarli se vuoti, e modificarne le dimensioni.",
+	  "acronyms": [],
+	  "synonyms": []
+	},
+	"Browser": {
+	  "description": "Applicazione per l'acquisizione, la presentazione e la navigazione di risorse sul Web.",
+	  "acronyms": [],
+	  "synonyms": []
+	},
+	"Capitolato": {
+	  "description": "Documento redatto dal Proponente in cui viene presentato un progetto, del quale sono specificati gli obiettivi, le tecnologie consigliate per l'implementazione e le principali funzionalità.",
+	  "acronyms": [],
+	  "synonyms": []
+	},
+	"Documentazione": {
+	  "description": "È un testo scritto allo scopo di spiegare quali funzionalità assolve il software, come è strutturato, implementato e come lo si utilizza.",
+	  "acronyms": [],
+	  "synonyms": []
+	},
+	"Ingegneria del Software": {
+	  "description": "Disciplina che si occupa della progettazione, sviluppo, test e manutenzione del software. Adotta un approccio sistematico, disciplinato e quantificabile, che mira a creare software di alta qualità, affidabile e manutenibile. ",
+	  "acronyms": [
+		"IS",
+		"SWE"
+	  ],
+	  "synonyms": []
+	},
+	"Scalable Vector Graphics": {
+	  "description": "Formato di file di grafica vettoriale bidimensionale basato su XML sviluppato dal World Wide Web Consortium.",
+	  "acronyms": [
+		"SVG"
+	  ],
+	  "synonyms": []
+	},
+	"Structured Query Language": {
+	  "description": "Linguaggio standard per database basati sul modello relazionale, progettato per: creare e modificare schemi di database; inserire, modificare e gestire dati memorizzati; interrogare i dati memorizzati.",
+	  "acronyms": [
+		"SQL"
+	  ],
+	  "synonyms": []
+	},
+	"Utente": {
+	  "description": "Colui che usufruisce dell'applicazione e delle sue funzionalità.",
+	  "acronyms": [],
+	  "synonyms": []
+	},
+	"Versione": {
+	  "description": "Nello sviluppo software indica un determinato stato dello sviluppo di un software, programma, documento o applicazione.",
+	  "acronyms": [],
+	  "synonyms": [
+		"Version"
+	  ]
+	},
+	"Zoom": {
+	  "description": "Servizio di videoconferenza basato su cloud che permette di effettuare chiamate audio o video. Consente di registrare le sessioni per essere poi visualizzate in seguito.",
+	  "acronyms": [],
+	  "synonyms": []
+	}
+  }

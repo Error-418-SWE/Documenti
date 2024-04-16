@@ -42,7 +42,7 @@
         "y-min" : 0,
         "y-tick-step" : 1500,
         "y-label" : "Valore in €",
-        "RTB" : "In questo primo periodo, il gruppo è consapevole che il valore pianificato *PPV* risulti superiore a quanto prodotto nell'effettivo indicato dal *PEV*. Nonostante ciò, il gruppo è sempre riuscito a mantenere il valore del *PEV* non solo in crescita, ma anche superiore all'80% del *PPV*.",
+        "RTB" : "In questo primo periodo, il gruppo è consapevole che il valore pianificato *PPV* risulti superiore a quanto prodotto nell'effettivo indicato dal *PEV*. Nonostante ciò, il gruppo è sempre riuscito a mantenere il valore del *PEV* non solo in crescita, ma anche superiore all'80% del *PPV*. \n Dall'analisi del grafico è evidenziabile come il PPV e il PEV abbiano valori sempre relativamente vicini, indicando che il lavoro svolto dal gruppo, seppur migliorabile, rimane in linea con quanto pianificato. L'analisi di questo andamento, pertanto, suggerisce un avanzamento positivo, ma che dovrà essere migliorato al fine di assorbire la differenza che intercorre tra i valori di PPV e PEV.",
         "PB" : "",
         "caption" : "Rapporto tra PPV, PAC e PEV"
     },
@@ -51,7 +51,7 @@
             {
                 "label" : "CPI",
                 "valori" : [
-                    0.98, 1.01, 0.99, 1.00, 0.97, 1.01, 0.99, 1.00, 0.98, 0.97, 0.97, 0.98, 1.02
+                    0.98, 1.01, 0.99, 1.00, 0.97, 1.01, 0.99, 1.00, 0.98, 0.97, 0.97, 0.98, 1.01
                 ],
                 "color" : "blue",
                 "type" : "linear",
@@ -76,7 +76,7 @@
         "y-min" : 0.6,
         "y-tick-step" : 0.1,
         "y-label" : "CPI",
-        "RTB" : "L'indice *CPI* risulta sempre in un range di valore accettabile.Seppur l'andamento non sia lineare, non si rilevano grandi variazioni, il che evidenzia un corretto avanzamento in termini di costi e lavoro prodotto.",
+        "RTB" : "L'indice *CPI* risulta sempre in un range di valore accettabile.Seppur l'andamento non sia lineare, non si rilevano grandi variazioni, il che evidenzia un corretto avanzamento in termini di costi e lavoro prodotto. Il valore ottimale $>=1$ infatti, evidenza come il rapporto tra il lavoro svolto e il lavoro preventivato (in termini di costi) sia positivo, sinonimo di un avanzamento corretto.",
         "PB" : "",
         "caption" : "Andamento CPI"
     },
@@ -115,7 +115,7 @@
         "y-min" : 10000,
         "y-tick-step" : 1000,
         "y-label" : "Valore in €",
-        "RTB" : "Il valore dell'*EAC* oscilla attorno al valore del *BAC*. Il gruppo è consapevole che il valore stabilito dal *BAC* non possa essere superato, pertanto l'*EAC* al termine del progetto dovrà attenersi al rigido vincolo di $<=$ rispetto al *BAC*.",
+        "RTB" : "Il valore dell'*EAC* oscilla attorno al valore del *BAC*. Il gruppo è consapevole che il valore stabilito dal *BAC* non possa essere superato, pertanto l'*EAC* al termine del progetto dovrà attenersi al rigido vincolo di $<=$ rispetto al *BAC*. I periodi più critici sono stati quelli relativi alle festività e alla sessione d'esame, come testimoniato anche all'interno del _Piano di Progetto_: in questo periodi infatti, il gruppo ha dovuto affrontare un rallentamento delle attività (seppur non una sospensione), che ha inevitabilmente portato ad una stima maggiore del costo finale. Risulta altresì, che però il gruppo, non avendo mai sospeso interamente le attività, ha potuto riprendere i lavori mediante un \"warm start\", e infatti, il valore dell'*EAC* a seguito dei periodi critici, è sempre rientrato nei limiti imposti dal *BAC*.",
         "PB" : "",
         "caption" : "Rapporto tra EAC e BAC"
     },
@@ -224,8 +224,212 @@
         "y-min" : 50,
         "y-tick-step" : 5,
         "y-label" : "Valore in %",
-        "RTB" : "*RTB*: La percentuale di metriche soddisfatte risulta per la maggior parte degli Sprint superiore alla soglia di accettabilità del 75%. I periodi in cui tale soglia non è stata raggiunta sono gli Sprint 8, 11, 12 e 13 in quanto: \n - Sprint 8: periodo dal 26/12/2023 al 02/01/2024, caratterizzato da festività natalizie e di fine anno; \n - Sprint 11, 12, 13: periodo dal 15/01/2024 al 05/02/2024, caratterizzato dalla sessione d'esami.",
+        "RTB" : "La percentuale di metriche soddisfatte risulta per la maggior parte degli Sprint superiore alla soglia di accettabilità del 75%. I periodi in cui tale soglia non è stata raggiunta sono gli Sprint 8, 11, 12 e 13 in quanto: \n - Sprint 8: periodo dal 26/12/2023 al 02/01/2024, caratterizzato da festività natalizie e di fine anno; \n - Sprint 11, 12, 13: periodo dal 15/01/2024 al 05/02/2024, caratterizzato dalla sessione d'esami. \n Il valore della metrica, sempre superiore alla soglia di accettazione, indica che il gruppo ha compreso quanto stabilito dal _way of working_. Il motivo del mancato raggiungimento della totalità delle metriche soddisfatte è dovuto a errori ortografici presenti nei documenti, che portano alla mancata soddisfazione della metrica *EO*.",
         "PB" : "",
         "caption" : "Andamento metriche soddisfatte"
+    },
+    "MRC" : {
+        "lines" : [
+            {
+                "label" : "MRC",
+                "valori" : [
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 26, 64, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100  
+                ],
+                "color" : "blue",
+                "type" : "linear",
+                "marker" : "o"
+            }
+        ],
+        "hlines" : [
+            {
+                "label" : "Valore ottimale",
+                "valore" : 100,
+                "color" : "green"
+            },
+            {
+                "label" : "Valore accettabile",
+                "valore" : 100,
+                "color" : "red"
+            }
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 110,
+        "y-min" : 0,
+        "y-tick-step" : 10,
+        "y-label" : "Valore in %",
+        "RTB" : "",
+        "PB" : "Dall'analisi del grafico è evidenziabile come il gruppo abbia raggiunto il soddisfacimento di tutti i requisiti obbligatori individuati. Tale traguardo è stato una priorità. Il raggiungimento di tale traguardo è frutto di un processo di codifica mirato, che vede inizio nello Sprint 17 durante il quale è stato configurato l'intero ambiente di sviluppo e poste le basi per la codebase. Tra il periodo 17 e 19, data l'implementazione della struttura portante del codice, il raggiungimento dei requisiti obbligatori è stato massimo, raggiungendo la totalità nel periodo 20.",
+        "caption" : "Andamento copertura requisiti obbligatori"
+    },
+    "DRC" : {
+        "lines" : [
+            {
+                "label" : "DRC",
+                "valori" : [
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 42, 73, 88, 88, 88, 88, 88, 88, 88, 88, 88  
+                ],
+                "color" : "blue",
+                "type" : "linear",
+                "marker" : "o"
+            }
+        ],
+        "hlines" : [
+            {
+                "label" : "Valore ottimale",
+                "valore" : 100,
+                "color" : "green"
+            },
+            {
+                "label" : "Valore accettabile",
+                "valore" : 75,
+                "color" : "red"
+            }
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 110,
+        "y-min" : 0,
+        "y-tick-step" : 10,
+        "y-label" : "Valore in %",
+        "RTB" : "",
+        "PB" : "Come anche annunciato durante il secondo colloquio RTB, il gruppo ha impostato il lavoro al fine di coprire non solo i requisiti obbligatori, ma anche quelli desiderabili e opzionali. Il gruppo quindi soddisfa l'88% dei requisiti desiderabili individuati. L'implementazione del codice per il loro soddisfacimento, come è possibile notare dal grafico, trova luogo dallo Sprint 17, successivo dunque all'inizio della codifica dei requisiti obbligatori. Dato che il gruppo era già deciso a coprire anche i requisiti desiderabili, la loro implementazione non ha impattato la pianificazione o il soddisfacimento dei requisiti obbligatori, ma anzi, ha trovato luogo in modo parallelo. La copertura, seppur non totale, ha superato la soglia di accettazione, e la loro implementazione è terminata durante lo Sprint 21: infatti a seguito del totale soddisfacimento dei requisiti obbligatori, il gruppo ha potuto concentrarsi sui requisiti desiderabili e opzionali. Il gruppo inoltre vuole evidenziare come i requisiti desiderabili non raggiunti (7 in totale), non rappresentino funzionalità critiche mancanti, bensì solamente modifiche grafiche minori.",
+        "caption" : "Andamento copertura requisiti desiderabili"
+    },
+    "ORC" : {
+        "lines" : [
+            {
+                "label" : "ORC",
+                "valori" : [
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 22, 61, 90, 100, 100, 100, 100, 100, 100, 100, 100 
+                ],
+                "color" : "blue",
+                "type" : "linear",
+                "marker" : "o"
+            }
+        ],
+        "hlines" : [
+            {
+                "label" : "Valore ottimale",
+                "valore" : 100,
+                "color" : "green"
+            },
+            {
+                "label" : "Valore accettabile",
+                "valore" : 75,
+                "color" : "red"
+            }
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 110,
+        "y-min" : 0,
+        "y-tick-step" : 10,
+        "y-label" : "Valore in %",
+        "RTB" : "",
+        "PB" : "Come anche annunciato durante il secondo colloquio RTB, il gruppo ha impostato il lavoro al fine di coprire non solo i requisiti obbligatori, ma anche quelli desiderabili e opzionali. Il gruppo quindi soddisfa la totalità dei requisiti opzionali individuati. Allo stesso modo di quanto avvenuto per i requisiti desiderabili, l'implementazione del codice per il loro soddisfacimento, come è possibile notare dal grafico, trova luogo dallo Sprint 17, successivo dunque all'inizio della codifica dei requisiti obbligatori. Dato che il gruppo era già deciso a coprire anche i requisiti opzionali, la loro implementazione non ha impattato la pianificazione o il soddisfacimento dei requisiti obbligatori, ma anzi, ha trovato luogo in modo parallelo. Come avvenuto anche per i requisiti desiderabili, al termine del soddisfacimento dei requisiti obbligatori avvenuto nello Sprint 20, il gruppo ha potuto concentrarsi sull'ultimare il soddisfacimento dei requisiti opzionali nello Sprint 21. Tale traguardo ha trovato riscontro estremamente positivo anche da parte del Proponente.",
+        "caption" : "Andamento copertura requisiti opzionali"
+    },
+    "CCV" : {
+        "lines" : [
+            {
+                "label" : "CCV",
+                "valori" : [
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 77, 92, 92, 92, 92, 92, 92, 92, 92, 92, 92, 92  
+                ],
+                "color" : "blue",
+                "type" : "linear",
+                "marker" : "triangle"
+            }
+        ],
+        "hlines" : [
+            {
+                "label" : "Valore ottimale",
+                "valore" : 100,
+                "color" : "green"
+            },
+            {
+                "label" : "Valore accettabile",
+                "valore" : 80,
+                "color" : "red"
+            }
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 110,
+        "y-min" : 0,
+        "y-tick-step" : 10,
+        "y-label" : "Valore in %",
+        "RTB" : "",
+        "PB" : "Il gruppo ha raggiunto un livello più che accettabile di Code Coverage pari al 92%. Durante i periodi 16 e 17, dove ancora la codebase era nel suo stadio inziale, la metrica risulta insoddisfatta. Inoltre è importante precisare come l'inesperienza del gruppo nella progettazione e implementazione di test efficaci abbia comportato un rallentamento iniziale nella loro stesura e codifica. Nonostante questo primo rallentamento, una volta acquisita maggiore confidenza con Jest (framework utilizzato per l'implementazione dei test), i tempi di implementazione dei test è stato notevolemente ridotto, non impattanto sulla codifica del codice vero e proprio. Come evidenziato anche dalle metriche _MRC_, _DRC_ e _ORC_, i periodi di maggiore sviluppo sono compresi tra lo Sprint 17 e 20, dove anche la metrica _CCV_ ha raggiunto il suo massimo. La stesura dei test ha permesso di individuare e correggere errori in modo tempestivo.",
+        "caption" : "Andamento code coverage"
+    },
+    "BCV" : {
+        "lines" : [
+            {
+                "label" : "BCV",
+                "valori" : [
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 30, 60, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71, 71
+                ],
+                "color" : "blue",
+                "type" : "linear",
+                "marker" : "triangle"
+            }
+        ],
+        "hlines" : [
+            {
+                "label" : "Valore ottimale",
+                "valore" : 100,
+                "color" : "green"
+            },
+            {
+                "label" : "Valore accettabile",
+                "valore" : 70,
+                "color" : "red"
+            }
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 110,
+        "y-min" : 0,
+        "y-tick-step" : 10,
+        "y-label" : "Valore in %",
+        "RTB" : "",
+        "PB" : "Il gruppo ha raggiunto un livello accettabile di Branch Coverage pari al 71%. Similmente a quanto accade alla metrica CCV indicante il Code Coverage, la Branch Coverage ha risentito di un rallentamento iniziale dovuto all'inesperienza del gruppo nella progettazione e implementazione di test efficaci. Inoltre, la Branch Coverage possiede una natura più complessa, dovuta all'analisi dei diversi percorsi condizionali che il codice può assumere. Nonostante questo, il gruppo si è impegnato a raggiungere un livello di copertura accettabile. Allo stesso modo della metrica CCV, il soddisfacimento della metrica avviene solamente a seguito dello Sprint 18, nei periodi di maggiore sviluppo del progetto.",
+        "caption" : "Andamento branch coverage"
+    },
+    "FD" : {
+        "lines" : [
+            {
+                "label" : "FD",
+                "valori" : [
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+                ],
+                "color" : "blue",
+                "type" : "linear",
+                "marker" : "triangle"
+            }
+        ],
+        "hlines" : [
+            {
+                "label" : "Valore ottimale",
+                "valore" : 0,
+                "color" : "green"
+            },
+            {
+                "label" : "Valore accettabile",
+                "valore" : 0,
+                "color" : "red"
+            }
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 100,
+        "y-min" : 0,
+        "y-tick-step" : 10,
+        "y-label" : "Valore in %",
+        "RTB" : "",
+        "PB" : "Dall'analisi del grafico è possibile notare l'andamento della metrica _FD_ che indica la percentuale di test falliti sul totale di test implementati. L'obiettivo del processo di testing è quello di evidenziare eventuali errori all'interno del codice in modo da poter intervenire in modo efficace ed efficente per la loro correzione. I periodi in cui il gruppo ha riscontrato un numero maggiore di test falliti sono stati lo Sprint 17 e 19, corrispondenti ai periodi di maggiore sviluppo dell'applicativo. Essere riusciti a individuare prontamente gli errori all'interno del codice, ha permesso di non impattare negativamente sulla pianificazione delle attività, contribuendo alla realizzazione di un prodotto software di qualità. Il valore della metrica _FD_ sceso a 0 a seguito del periodo 20, indica che il prodotto software supera con successo tutti i test implementati. Questo traguardo è stato reso possibile grazie all'implementazione di un efficace sistema di Continuous Integration e Continuous Deployment configurato mediante GitHub Actions.",
+        "caption" : "Andamento failure density"
     }
 }

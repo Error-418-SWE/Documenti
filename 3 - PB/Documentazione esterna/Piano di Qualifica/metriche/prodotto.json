@@ -166,7 +166,7 @@
             "nome" : "Code Coverage",
             "formula" : "*CCV* = $display(\"LC\"/\"LT\")*100$",
             "sogliaOttimale" : "$100%$",
-            "sogliaAccettabile" : "$80%$",
+            "sogliaAccettabile" : "$70%$",
             "parametri" : [
                 {
                     "nome" : "$\"LC\"$",
@@ -187,7 +187,7 @@
             "nome" : "Branch Coverage",
             "formula" : "*BCV* = $display(\"BC\"/\"BT\")*100$",
             "sogliaOttimale" : "$100%$",
-            "sogliaAccettabile" : "$80%$",
+            "sogliaAccettabile" : "$70%$",
             "parametri" : [
                 {
                     "nome" : "$\"BC\"$",

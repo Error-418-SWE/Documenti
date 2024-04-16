@@ -257,7 +257,7 @@ La suite di test di accettazione ha lo scopo di verificare che il prodotto soddi
   caption: "Tabella test di accettazione"
 )
 
-#pagebreak()
+\
 
 = Cruscotto di valutazione della qualità
 
@@ -265,8 +265,7 @@ La suite di test di accettazione ha lo scopo di verificare che il prodotto soddi
 Come stabilito dal #pdp_v e dalle #ndp_v, il gruppo ha imposto Sprint della durata settimanale. Nel primo Sprint si è confermato l'utilizzo dell'ITS Jira come strumento di tracciamento, ma per comprenderne a fondo le meccaniche e il corretto utilizzo, sono stati necessari i seguenti 4 Sprint. Nel corso di questo periodo, sono state apportate modifiche di configurazione, anche consapevolmente non retrocompatibili, che hanno introdotto eterogeneità nei dati riportati dall'ITS.
 Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponibili dal quinto Sprint, iniziato il 04/12/2023.
 
-== Processi primari
-=== Fornitura
+== Qualità di processo - Fornitura
 
 #let arrayToPointCoordinate(array) = {
   let i = 0;
@@ -313,7 +312,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #let cruscotto = json("./cruscotto/cruscotto.json");
 
-==== Rapporto tra PPV, PAC e PEV
+=== Rapporto tra PPV, PAC e PEV
 
 #graphFromJson(cruscotto.PPV-PAC-PEV)
 
@@ -321,9 +320,9 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 *PB*: #eval(cruscotto.PPV-PAC-PEV.PB, mode: "markup")
 
-#pagebreak()
-
-==== Cost Performance Index CPI
+\
+\
+=== Cost Performance Index CPI
 
 #graphFromJson(cruscotto.CPI)
 
@@ -331,8 +330,9 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 *PB*: #eval(cruscotto.CPI.PB, mode: "markup");
 
-
-==== Rapporto tra BAC e EAC
+\
+\
+=== Rapporto tra BAC e EAC
 
 #graphFromJson(cruscotto.BAC-EAC)
 
@@ -340,9 +340,10 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 *PB*: #eval(cruscotto.BAC-EAC.PB, mode: "markup");
 
-== Processi di supporto
-=== Documentazione
-==== Errori ortografici
+\
+\
+== Qualità di processo - Documentazione
+=== Errori ortografici
 
 *Documentazione esterna*
 
@@ -356,9 +357,65 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 *PB*: #eval(cruscotto.EO-Interna.PB, mode: "markup");
 
-=== Miglioramento
-==== Metriche soddisfatte
+\
+\
+== Qualità di processo - Miglioramento
+=== Metriche soddisfatte
 
 #graphFromJson(cruscotto.MS)
 
 *RTB*: #eval(cruscotto.MS.RTB, mode: "markup");
+
+*PB*: #eval(cruscotto.MS.PB, mode: "markup");
+
+\
+\
+== Qualità di prodotto - Efficacia
+=== Copertura requisiti obbligatori
+
+#graphFromJson(cruscotto.MRC)
+
+*PB*: #eval(cruscotto.MRC.PB, mode: "markup");
+
+\
+\
+=== Copertura requisiti desiderabili
+
+#graphFromJson(cruscotto.DRC)
+
+*PB*: #eval(cruscotto.DRC.PB, mode: "markup");
+
+\
+\
+=== Copertura requisiti opzionali
+
+#graphFromJson(cruscotto.ORC)
+
+*PB*: #eval(cruscotto.ORC.PB, mode: "markup");
+
+\
+\
+== Qualità di prodotto - Affidabilità
+=== Code coverage
+
+#graphFromJson(cruscotto.CCV)
+
+*PB*: #eval(cruscotto.CCV.PB, mode: "markup");
+
+\
+\
+=== Branch coverage
+
+#graphFromJson(cruscotto.BCV)
+
+*PB*: #eval(cruscotto.BCV.PB, mode: "markup");
+
+\
+\
+=== Failure definisce
+
+#graphFromJson(cruscotto.FD)
+
+*PB*: #eval(cruscotto.FD.PB, mode: "markup");
+
+

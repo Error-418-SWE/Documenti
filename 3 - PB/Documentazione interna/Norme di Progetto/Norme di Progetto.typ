@@ -1101,7 +1101,7 @@ Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e att
 + *Ordine del giorno*: elenco degli argomenti trattati durante la riunione;
 + *Valutazione del progresso generale*: descrive il lavoro svolto durante lo Sprint a cui si riferisce la retrospettiva. Questo paragrafo è così definito:
   - valutazione sulla qualità del lavoro in merito alla velocità di avanzamento, evidenziando eventuali rallentamenti o meriti riscontrati. In questa parte deve essere indicato se sono stati effettuati meeting esterni, riportando data e oggetto di ogni meeting svolto;
-  - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportata una descrizione del lavoro svolto. Se in una epic sono stati solvi diversi lavori, questi vanno riportati in forma di elenco non numerato.
+  - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportata una descrizione del lavoro svolto. Se in una epic sono stati svolti diversi lavori, questi vanno riportati in forma di elenco non numerato.
 + *Analisi di retrospettiva*, suddiviso in:
   - discussione delle principali metriche del #pdq riguardanti l'andamento dello Sprint e del progetto:
    - CPI: valore precedente e valore attuale;

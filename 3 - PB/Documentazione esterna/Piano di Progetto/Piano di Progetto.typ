@@ -2057,6 +2057,45 @@ Questo Sprint impiega:
   supplement: "Grafico"
 )
 
+== Sprint 21 dal 24 /03/2024 al 30/03/2024
+=== Obiettivi prefissati
+=== Preventivo costi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
+    [Carraro],     [0],     [0],     [0],     [1],     [4],     [3],     [8],
+    [Gardin],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
+    [Nardo],     [0],     [0],     [0],     [1],     [4],     [0],     [5],
+    [Oseliero],     [0],     [3],     [0],     [0],     [0],     [0],     [3],
+    [Todesco],     [0],     [0],     [0],     [0],     [5],     [0],     [5],
+    [Zaccone],     [0],     [0],     [0],     [0],     [5],     [0],     [5],
+    [Totale ore],     [4],     [3],     [0],     [2],     [18],     [9],     [36],
+    [Costo ruolo],     [120],     [60],     [0],     [50],     [270],     [135],     [635],
+  ),
+  caption: "Prospetto del preventivo, sprint 21"
+)
+#let data = (
+  ("Responsabile", 4),
+  ("Amministratore", 3),
+  ("Analista", 0),
+  ("Progettista", 2),
+  ("Programmatore", 18),
+  ("Verificatore", 9),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo sprint 21",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
 #pagebreak()
 
 = Consuntivi di periodo <consuntivi>

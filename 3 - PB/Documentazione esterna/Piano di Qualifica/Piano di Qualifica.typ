@@ -32,6 +32,7 @@
 #let nameAndDescriptionList(params) = {
   let result = "";
 
+  result += "Dati: \n";
   for param in params {
     let delimeter = ";"
     if(param == params.last()){ delimeter = "."}
@@ -47,9 +48,8 @@
   result += eval("*" + data.codice + " - " + data.sigla + " " + data.nome + "*\\", mode: "markup");
   result += eval(data.descrizione, mode: "markup");
   if data.parametri.len() > 0 {
-    result += "\nDati: \n";
+    result += nameAndDescriptionList(data.parametri);
   }
-  result += nameAndDescriptionList(data.parametri);
   result += singleTable(data);
   result += "\n";
 
@@ -62,12 +62,14 @@
     result += eval("=== " + data.codice + " - " + data.sigla + " " + data.nome, mode: "markup")
     result += eval("*Descrizione*: \\ " + data.descrizione, mode: "markup")
 
-    result += eval("\\ \\ *Note aggiuntive:* \\ " + data.noteAggiuntive, mode: "markup")
+    result += eval("\\ \\ *Note aggiuntive:* \\ " + data.noteAggiuntive + " \\ \\", mode: "markup")
 
     if(data.estensioni.len() == 0){
+      if(data.parametri.len() > 0){
+        result += nameAndDescriptionList(data.parametri);
+      }
       result += singleTable(data);
     }else{
-      result += "\n\n"
       for extension in data.estensioni{
         result += extensionStructure(extension)
       }
@@ -138,224 +140,48 @@ Il gruppo si dota di una dashboard di monitoraggio per tenere traccia delle metr
 
 
 = Qualità di processo
+La qualità di processo rappresenta un aspetto fondamentale per garantire l'efficacia e l'efficienza del lavoro svolto. Per garantire la qualità di processo, il gruppo si impegna a seguire le norme e le procedure definite nel documento #ndp_v.
 
+#let metricheProcessi = json("metriche/processi.json")
 == Processi primari - Fornitura
-
-#let jsondata = json("metriche/fornitura.json")
-#metricsTablesGenerator(jsondata)
-
-== Processi primari - Miglioramento
+#metricsTablesGenerator(metricheProcessi.fornitura)
 
 == Processi di supporto - Documentazione
-
-- *Errori ortografici*
-#figure(
-  table(
-    columns: 3,
-
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [Numero di errori ortografici presenti nel testo], [0], [0],
-  ),
-  caption: "Specifiche errori ortografici"
-)
-
-Il numero di errori ortografici presenti nei documenti deve essere pari a 0. La metrica evidenzia il numero di errori ortografici individuati durante la revisione precedente al rilascio del documento.
+#metricsTablesGenerator(metricheProcessi.documentazione)
 
 == Processi di supporto - Miglioramento
-==== Percentuale metriche soddisfatte
-Dati:
-- MS: Metriche soddisfatte;
-- MT: Metriche totali.
-
-#figure(
-  table(
-    columns: 3,
-    rows: (auto, 30pt),
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [% metriche soddisfatte = $display("MS"/"MT")*100$], [$100%$], [$>=75%$],
-  ),
-  caption: "Specifiche metriche soddisfatte"
-)
-
-Avere un resoconto delle metriche soddisfatte per ogni sprint permette di evidenziare eventuali criticità e di attuare le misure di correzione necessarie, seguendo, come stabilito nelle #ndp_v al paragrafo _Processo di gestione dei modelli di ciclo di vita_, il ciclo PDCA per il miglioramento continuo.
+#metricsTablesGenerator(metricheProcessi.miglioramento)
 
 = Qualità di prodotto
+La qualità di prodotto mira a garantire non solo che il prodotto soddisfi i requisiti definiti nel documento #adr_v, ma anche che sia conforme agli standard di qualità definiti che il gruppo si impone, perseguendo obiettivi di efficienza, efficacia, usabilità, manutenibilità, affidabilità e portabilità.
+
+#let metricheProdotto = json("metriche/prodotto.json")
 == Efficacia
-=== MRC (Mandatory Requirements Coverage)
-Il Mandatory Requirements Coverage esprime la percentuale di copertura dei requisiti obbligatori, cioè quei requisiti la cui implementazione è stata dichiarata obbligatoria nell'#adr.\
-- $"MR"_c$: numero di requisiti obbligatori coperti;
-- $"MR"_t$: numero totale di requisiti obbligatori.
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*MRC* = $display("MR"_c/"MR"_t)*100$], [$100%$], [$100%$],
-    ),
-    caption: "Mandatory Requirements Coverage"
-)
-
-=== DRC (Desiderable Requirements Coverage)
-Il Desiderable Requirements Coverage esprime la percentuale di copertura dei requisiti desiderabili, cioè quei requisiti la cui implementazione è stata dichiarata opzionale ma con alta priorità nell'#adr.\
-- $"DR"_c$: numero di requisiti desiderabili coperti;
-- $"DR"_t$: numero totale di requisiti desiderabili.
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*DRC* = $display("DR"_c/"DR"_t)*100$], [$100%$], [$>=0%$],
-    ),
-    caption: "Desiderable Requirements Coverage"
-)
-
-=== ORC (Optional Requirements Coverage)
-L'Optional Requirements Coverage esprime la percentuale di copertura dei requisiti opzionali, cioè quei requisiti la cui implementazione è stata dichiarata facoltativa e con bassa priorità nell'#adr.
-- $"OR"_c$: numero di requisiti opzionali coperti;
-- $"OR"_t$: numero totale di requisiti opzionali.
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*ORC* = $display("OR"_c/"OR"_t)*100$], [$100%$], [$>=0%$],
-    ),
-    caption: "Optional Requirements Coverage"
-)
+#metricsTablesGenerator(metricheProdotto.efficacia)
 
 == Efficienza
-=== ART (Average Response Time)
-L'ART si riferisce al tempo di risposta medio, cioè al periodo medio di tempo che trascorre tra l'innesco di una richiesta da parte dell'utente o del sistema e la ricezione della risposta o del risultato da parte del software.
-È misurato in secondi (_s_).
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*Average Response Time*], [$<=2s$], [$<=4s$],
-    ),
-    caption: "Average Response Time"
-)
+#metricsTablesGenerator(metricheProdotto.efficienza)
 
 == Usabilità
-=== LT (Learning Time)
-Il LT misura il tempo medio che gli utenti impiegano per apprendere ad utilizzare il software in modo efficace.
-È misurato in minuti (_m_).
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*Learning Time*], [$<=15m$], [$<=20m$],
-    ),
-    caption: "Average Response Time"
-)
-
-=== EOU (Ease of Use)
-L'EOU esprime la facilità del raggiungimento di un obiettivo nel prodotto software. È misurato in quanti click l'utente deve effettuare prima di arrivare a portare a termine la funzionalità desiderata.
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*Ease of Use*], [$<=5$], [$<=7$],
-    ),
-    caption: "Ease of Use"
-)
+#metricsTablesGenerator(metricheProdotto.usabilita)
 
 
 == Manutenibilità
-=== CC (Ciclomatic Complexity)
-La CC è una metrica utilizzata per misurare la complessità di un metodo. Essa fornisce una stima della complessità strutturale del codice sorgente contando il numero di cammini linearmente indipendenti attraverso il grafo di controllo del flusso del metodo.\
-- _G_: grafo del controllo di flusso;
-- _e_: numero di archi di _G_;
-- _n_: numero di nodi di _G_;
-- _p_: numero di componenti connesse ad ogni arco.
-
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*CC*$(G) = e - n + p$], [$<=7$], [$<=10$],
-    ),
-    caption: "Ciclomatic Complexity"
-
-)
-
-
-=== CL (Coupling Level)
-Il CL misura il grado di dipendenza di una classe da altre classi nel sistema. Questa dipendenza può manifestarsi in vari modi, come l'invocazione di metodi di altre classi, il riferimento a istanze di altre classi, o la dipendenza da tipi definiti in altre classi.
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*Coupling Level*], [$<=4$], [$<=6$],
-    ),
-    caption: "Coupling Level"
-)
-
-=== RC (Responsability Count)
-L'RC misura il numero di responsabilità che una classe ha all'interno di un sistema software.
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*Responsability Count*], [$1$], [$1$],
-    ),
-    caption: "Responsability Count"
-)
-
-=== MPN (Method Parameters Number)
-Il MPN è una metrica che misura il numero di parametri di un metodo.
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*Method Parameters Number*], [$<=3$], [$<=4$],
-    ),
-    caption: "Method Parameters Number"
-)
+#metricsTablesGenerator(metricheProdotto.manutenibilita)
 
 == Affidabilità
-=== FD (Failure Density)
-La FD è un indicatore della stabilità e della qualità del software. Questa metrica misura il numero di errori o difetti rilevati nel software rispetto alla dimensione o alla complessità del sistema.\
-- $"T"_f$: numero di test falliti;
-- $"T"_e$: numero di test effettuati.
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*FD*$="T"_f/"T"_e*100$], [$0%$], [$0%$],
-    ),
-    caption: "Failure Density"
-)
+#metricsTablesGenerator(metricheProdotto.affidabilita)
 
 == Portabilità
-=== SBV (Supported Browser Version)
-La SBV è una metrica che indica la percentuale di browser supportati rispetto a quelle stabilite nel documento di #adr. I vari browser che devono essere rispettati e le relative versioni sono esplicitate nella sezione del documento riguardante i requisiti di qualità.\
-- $"V"_s$: numero di versioni di browser supportate dal software;
-- $"V"_a$: numero di versioni di browser stabilite da supportare nell'#adr.
-#figure(
-   table(
-      columns: 3,
-      rows: (auto, 30pt),
-      [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-      [*SBV*$="V"_s/"V"_a*100$], [$100%$], [$100%$],
-    ),
-    caption: "Supported Browser Version"
-)
+#metricsTablesGenerator(metricheProdotto.portabilita)
 
 = Test
 
 In questa sezione sono elencati i test eseguiti sul prodotto che, come riportato in #ndp_v, possono essere:
 - *test di unità*: per testare una singola unità software;
-- *test di regressione*: per verificare il corretto funzionamento del software, dopo l'implementazione di una nuova funzionalità o la risoluzione di eventuali bug;
 - *test di integrazione*: per verificare la corretta integrazione delle parti del sistema.
+- *test di sistema*: per verificare che il sistema soddisfi i requisiti definiti nel documento #adr_v;
+- *test di accettazione*: svolti assieme al Propoente, per verificare che il prodotto soddisfi quanto atteso.
 
 Ad ogni test viene associato un codice definito come segue:
 #align(`[Tipologia]-[Identificativo numerico]`, center)
@@ -436,8 +262,8 @@ La suite di test di accettazione ha lo scopo di verificare che il prodotto soddi
 = Valutazione della qualità
 
 == Premessa
-Come stabilito dal #pdp_v e dalle #ndp_v, il gruppo ha imposto sprint della durata settimanale. Nel primo sprint si è confermato l'utilizzo dell'ITS Jira come strumento di tracciamento, ma per comprenderne a fondo le meccaniche e il corretto utilizzo, sono stati necessari i seguenti 4 sprint. Nel corso di questo periodo, sono state apportate modifiche di configurazione, anche consapevolmente non retrocompatibili, che hanno introdotto eterogeneità nei dati riportati dall'ITS.
-Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponibili dal quinto sprint, iniziato il 04/12/2023.
+Come stabilito dal #pdp_v e dalle #ndp_v, il gruppo ha imposto Sprint della durata settimanale. Nel primo Sprint si è confermato l'utilizzo dell'ITS Jira come strumento di tracciamento, ma per comprenderne a fondo le meccaniche e il corretto utilizzo, sono stati necessari i seguenti 4 Sprint. Nel corso di questo periodo, sono state apportate modifiche di configurazione, anche consapevolmente non retrocompatibili, che hanno introdotto eterogeneità nei dati riportati dall'ITS.
+Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponibili dal quinto Sprint, iniziato il 04/12/2023.
 
 == Processi primari
 === Fornitura
@@ -596,7 +422,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 *RTB*: Gli errori ortografici nella documentazione rispecchiano i periodi in cui i documenti hanno subito la maggior parte delle modifiche. In particolare:
 - *Documentazione esterna*:
   - *PdP*: il documento ha inizialmente subito la maggior parte di aggiunte a livello testuale, come le sezioni di introduzione, amministrazione dei periodi e dei ruoli. Successivamente gli aggiornamenti sono stati minori, atti alla registrazione e al tracciamento dei preventivi e consuntivi dei vari periodi. Inoltre, l'implementazione di un sistema di creazione automatico delle tabelle dei preventivi e dei consuntivi implementato in _Google Apps Script_, ha permesso di ridurre ulteriormente l'insorgenza di errori;
-  - *PdQ*: l'insorgenza di errori nel #pdq è dettata dall'inizio della sua stesura dallo sprint 9;
+  - *PdQ*: l'insorgenza di errori nel #pdq è dettata dall'inizio della sua stesura dallo Sprint 9;
   - *AdR*: data la natura del periodo di RTB, l'#adr è tra i documenti più corposi e maggiormente soggetti a revisioni e modifiche. Inoltre, l'incremento dei numero di errori è dovuto non solo a revisioni interne ma anche a modifiche dettate da revisioni esterne con i professori;
   - *Glossario*: il #glo è stato soggetto a relativamente poche modifiche; la maggior parte degli errori è stata riscontrata inizialmente.
 - *Documentazione interna*:
@@ -631,6 +457,6 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
   caption: "Andamento percentuale metriche soddisfatte"
 )
 
-*RTB*: La percentuale di metriche soddisfatte risulta per la maggior parte degli sprint superiore alla soglia di accettabilità del 75%. I periodi in cui tale soglia non è stata raggiunta sono gli sprint 8, 11, 12 e 13 in quanto:
+*RTB*: La percentuale di metriche soddisfatte risulta per la maggior parte degli Sprint superiore alla soglia di accettabilità del 75%. I periodi in cui tale soglia non è stata raggiunta sono gli Sprint 8, 11, 12 e 13 in quanto:
 - Sprint 8: periodo dal 26/12/2023 al 02/01/2024, caratterizzato da festività natalizie e di fine anno;
 - Sprint 11, 12, 13: periodo dal 15/01/2024 al 05/02/2024, caratterizzato dalla sessione d'esami.

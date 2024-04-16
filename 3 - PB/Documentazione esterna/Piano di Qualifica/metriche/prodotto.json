@@ -1,0 +1,251 @@
+{
+    "efficacia" : [
+        {
+            "codice" : "M1",
+            "sigla" : "MRC",
+            "nome" : "Mandatory Requirements Coverage",
+            "formula" : "*MRC* = $display(\"MRF\"/\"TMR\")*100$",
+            "sogliaOttimale" : "$100%$",
+            "sogliaAccettabile" : "$100%$",
+            "parametri" : [
+                {
+                    "nome" : "$\"MRF\"$",
+                    "descrizione" : "Mandatory Requirements Fullfilled"
+                },
+                {
+                    "nome" : "$\"TMR\"$",
+                    "descrizione" : "Total Mandatory Requirements"
+                }
+            ],
+            "descrizione" : "Indica la percentuale di requisiti obbligatori soddisfatti rispetto al totale.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Nessuna."
+        },
+        {
+            "codice" : "M2",
+            "sigla" : "DRC",
+            "nome" : "Desiderable Requirements Coverage",
+            "formula" : "*DRC* = $display(\"DRF\"/\"TDR\")*100$",
+            "sogliaOttimale" : "$100%$",
+            "sogliaAccettabile" : "$75%$",
+            "parametri" : [
+                {
+                    "nome" : "$\"DRF\"$",
+                    "descrizione" : "Desiderable Requirements Fullfilled"
+                },
+                {
+                    "nome" : "$\"TDR\"$",
+                    "descrizione" : "Total Desiderable Requirements"
+                }
+            ],
+            "descrizione" : "Indica la percentuale di requisiti desiderabili soddisfatti rispetto al totale.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Nessuna."
+        },
+        {
+            "codice" : "M3",
+            "sigla" : "ORC",
+            "nome" : "Optional Requirements Coverage",
+            "formula" : "*ORC* = $display(\"ORF\"/\"TOR\")*100$",
+            "sogliaOttimale" : "$100%$",
+            "sogliaAccettabile" : "$75%$",
+            "parametri" : [
+                {
+                    "nome" : "$\"ORF\"$",
+                    "descrizione" : "Optional Requirements Fullfilled"
+                },
+                {
+                    "nome" : "$\"TOR\"$",
+                    "descrizione" : "Total Optional Requirements"
+                }
+            ],
+            "descrizione" : "Indica la percentuale di requisiti opzionali soddisfatti rispetto al totale.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Nessuna."
+        }
+    ],
+    "efficienza" : [
+        {
+            "codice" : "M1",
+            "sigla" : "ART",
+            "nome" : "Average Response Time",
+            "formula" : "Average Response Time",
+            "sogliaOttimale" : "$<=2\"s\"$",
+            "sogliaAccettabile" : "$<=4\"s\"$",
+            "parametri" : [],
+            "descrizione" : "La metrica ART si riferisce al tempo di risposta medio, cioè al periodo medio di tempo che trascorre tra l'innesco di una richiesta da parte dell'utente o del sistema e la ricezione della risposta o del risultato da parte del software.",
+            "estensioni" : [],
+            "noteAggiuntive" : "È misurato in secondi (_s_)."
+        }
+    ],
+    "usabilita" : [
+        {
+            "codice" : "M1",
+            "sigla" : "LT",
+            "nome" : "Learnability Time",
+            "formula" : "Learnability Time",
+            "sogliaOttimale" : "$<=10\"min\"$",
+            "sogliaAccettabile" : "$<=20\"min\"$",
+            "parametri" : [],
+            "descrizione" : "La metrica LT si riferisce al tempo medio necessario per apprendere l'utilizzo del software in modo efficace.",
+            "estensioni" : [],
+            "noteAggiuntive" : "È misurato in minuti (_min_)."
+        },
+        {
+            "codice" : "M2",
+            "sigla" : "EOU",
+            "nome" : "Ease Of Use",
+            "formula" : "Ease Of Use",
+            "sogliaOttimale" : "$<=5$",
+            "sogliaAccettabile" : "$<=7$",
+            "parametri" : [],
+            "descrizione" : "La metrica EOU esprime la facilità del raggiungimento di un obiettivo nel prodotto software. È misurato in quanti click l'utente deve effettuare prima di arrivare a portare a termine la funzionalità desiderata.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Nessuna."
+        }
+    ],
+    "manutenibilita" : [
+        {
+            "codice" : "M1",
+            "sigla" : "CC",
+            "nome" : "Ciclomatic Complexity",
+            "formula" : "*CC*$(G) = \"e\" - \"n\" + \"p\"$",
+            "sogliaOttimale" : "$<=7$",
+            "sogliaAccettabile" : "$<=10$",
+            "parametri" : [
+                {
+                    "nome" : "_G_",
+                    "descrizione" : "grafo del controllo di flusso del programma" 
+                },
+                {
+                    "nome" : "_e_",
+                    "descrizione" : "numero di archi del grafo _G_"
+                },
+                {
+                    "nome" : "_n_",
+                    "descrizione" : "numero di nodi del grafo _G_"
+                },
+                {
+                    "nome" : "_p_",
+                    "descrizione" : "numero di componenti connesse del grafo"
+                }
+            ],
+            "descrizione" : "La metrica CC esprime la complessità di un metodo. Essa fornisce una stima della complessità strutturale del codice sorgente contando il numero di cammini linearmente indipendenti attraverso il grafo di controllo del flusso del metodo.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Nessuna."
+        },
+        {
+            "codice" : "M2",
+            "sigla" : "CL",
+            "nome" : "Coupling Level",
+            "formula" : "Coupling Level",
+            "sogliaOttimale" : "$<=4$",
+            "sogliaAccettabile" : "$<=6$",
+            "parametri" : [],
+            "descrizione" : "La metrica CL esprime il grado di dipendenza di una classe da altre classi nel sistema. Questa dipendenza può manifestarsi in vari modi, come l'invocazione di metodi di altre classi, il riferimento a istanze di altre classi, o la dipendenza da tipi definiti in altre classi.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Nessuna."            
+        },
+        {
+            "codice" : "M3",
+            "sigla" : "RC",
+            "nome" : "Responsability Count",
+            "formula" : "Responsability Count",
+            "sogliaOttimale" : "1",
+            "sogliaAccettabile" : "1",
+            "parametri" : [],
+            "descrizione" : "La metrica RC esprime il numero di responsabilità che una classe ha all'interno di un sistema software.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Nessuna."   
+        }
+    ],
+    "affidabilita" : [
+        {
+            "codice" : "M1",
+            "sigla" : "CCV",
+            "nome" : "Code Coverage",
+            "formula" : "*CCV* = $display(\"LC\"/\"LT\")*100$",
+            "sogliaOttimale" : "$100%$",
+            "sogliaAccettabile" : "$80%$",
+            "parametri" : [
+                {
+                    "nome" : "$\"LC\"$",
+                    "descrizione" : "Linee di codice Coperte"
+                },
+                {
+                    "nome" : "$\"LT\"$",
+                    "descrizione" : "Linee di codice Totali"
+                }
+            ],
+            "descrizione" : "La metrica CCV esprime la percentuale di linee di codice coperte dai test rispetto al totale delle linee di codice del software.",
+            "estensioni" : [],
+            "noteAggiuntive" : "É necessario precisare che la metrica di code coverage non considera la porzione di codice dedicata all'interfaccia grafica, bensì gli aspetti funzionali come le classi di modello, i design pattern implementati e le Server Actions. Il calcolo della metrica avviene mediante l'utilizzo di Coveralls e la sua integrazione con GitHub."
+        },
+        {
+            "codice" : "M2",
+            "sigla" : "BCV",
+            "nome" : "Branch Coverage",
+            "formula" : "*BCV* = $display(\"BC\"/\"BT\")*100$",
+            "sogliaOttimale" : "$100%$",
+            "sogliaAccettabile" : "$80%$",
+            "parametri" : [
+                {
+                    "nome" : "$\"BC\"$",
+                    "descrizione" : "Branch Coperti"
+                },
+                {
+                    "nome" : "$\"BT\"$",
+                    "descrizione" : "Branch Totali"
+                }
+            ],
+            "descrizione" : "La metrica BCV esprime la percentuale di branch coperti dai test rispetto al totale dei branch del software, dove con branch si intende un'istruzione condizionale.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Il calcolo della metrica avviene mediante l'utilizzo di Coveralls e la sua integrazione con GitHub."
+        },
+        {
+            "codice" : "M3",
+            "sigla" : "FD",
+            "nome" : "Failure Density",
+            "formula" : "*FD* = $display(\"NF\"/\"NT\")*100$",
+            "sogliaOttimale" : "$0%$",
+            "sogliaAccettabile" : "$0%$",
+            "parametri" : [
+                {
+                    "nome" : "$\"TF\"$",
+                    "descrizione" : "Test Falliti"
+                },
+                {
+                    "nome" : "$\"TE\"$",
+                    "descrizione" : "Test Eseguiti"
+                }
+            ],
+            "descrizione" : "La metrica FD è un indicatore della stabilità e della qualità del software. Questa metrica misura il numero di errori o difetti rilevati nel software rispetto alla dimensione o alla complessità del sistema.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Nessuna."
+        }
+    ],
+    "portabilita" : [
+        {
+            "codice" : "M1",
+            "sigla" : "SBV",
+            "nome" : "Supported Browsers Version",
+            "formula" : "*SBV* = $display(\"VS\"/\"VT\")*100$",
+            "sogliaOttimale" : "$100%$",
+            "sogliaAccettabile" : "$100%$",
+            "parametri" : [
+                {
+                    "nome" : "$\"VS\"$",
+                    "descrizione" : "Versioni Supportate"
+                },
+                {
+                    "nome" : "$\"VT\"$",
+                    "descrizione" : "Versioni Totali"
+                }
+            ],
+            "descrizione" : "La metrica SBV esprime la percentuale di versioni di browser supportate dal software rispetto al totale delle versioni di browser individuate dal documento di Analisi dei Requisiti.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Nessuna."
+        }
+    ]
+
+}

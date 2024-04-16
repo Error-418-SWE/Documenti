@@ -946,7 +946,7 @@ Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
 - *Amministratore*: al fine di:
   - gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
   - aggiornare il documento #pdp.
-- *Analista*: al fine di perfezionare la stesura degli Use Case individuati e redarre una prima versione del documento #adr;
+- *Analista*: al fine di perfezionare la stesura degli Use Case individuati e redigere una prima versione del documento #adr;
 - *Progettista*: al fine di condurre uno studio esplorativo sulla libreria Three.js;
 - *Programmatore*: al fine di esplorare in modo pratico le tecnologie relative ai PoC;
 - *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità degli Use Case individuati nel documento #adr.
@@ -1009,7 +1009,7 @@ Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira;
-- *Analista*: al fine di redarre il documento #adr;
+- *Analista*: al fine di redigere il documento #adr;
 - *Progettista*: al fine di continuare lo studio sulla libreria Three.js;
 - *Programmatore*: al fine di sviluppare i PoC relativi allo studio della libreria;
 - *Verificatore*: al fine di:
@@ -1070,7 +1070,7 @@ In quest'ottica vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira, redigere i verbali e aggiornare il documento #pdp;
-- *Analista*: al fine di redarre il documento #adr con relativi diagrammi UML;
+- *Analista*: al fine di redigere il documento #adr con relativi diagrammi UML;
 - *Progettista*: al fine di progettare i PoC;
 - *Programmatore*: al fine di sviluppare i PoC;
 - *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti assicurandosi che siano coerenti con le #ndp.
@@ -1326,7 +1326,7 @@ La durata dello sprint è inferiore di 1 giorno rispetto alla norma.
 L'attività prevalente è la revisione documentale. I ruoli attivi durante questo sprint sono:
 - *Responsabile*: al fine di:
   - coordinare le attività;
-  - redarre la presentazione a supporto della valutazione RTB.
+  - redigere la presentazione a supporto della valutazione RTB.
 - *Amministratore*: al fine di:
   - redigere i verbali;
   - aggiornare il documento #pdp;
@@ -1934,7 +1934,7 @@ Questo Sprint impiega:
 - *Analista*: al fine di:
   - proseguire con la revisione del documento #adr\.
 - *Progettista*: al fine di:
-  - redarre le sezioni della #st\.
+  - redigere le sezioni della #st\.
 - *Programmatore*: al fine di:
   - collaborare con il Progettista nella stesura della #st\;
   - implementare la UI;

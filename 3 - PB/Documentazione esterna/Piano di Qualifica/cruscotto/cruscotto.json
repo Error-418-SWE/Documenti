@@ -1,0 +1,231 @@
+{
+    "PPV-PAC-PEV" : {
+        "lines" : [
+            {
+                "label" : "PV",
+                "valori" : [
+                    2040, 2655, 3190, 3690, 4200, 4825, 5155, 5470, 5625, 5705, 6300, 6840, 7890
+                ],
+                "color" : "blue",
+                "type" : "spline",
+                "marker" : "none"
+            },
+            {
+                "label" : "AC",
+                "valori" : [
+                    2075, 2620, 3140, 3515, 4090, 4520, 4875, 5105, 5285, 5395, 5990, 6560, 7610
+                ],
+                "color" : "red",
+                "type" : "spline",
+                "marker" : "none"
+            },
+            {
+                "label" : "EV",
+                "valori" : [
+                    2040, 2655, 3111.85, 3528.52, 3948.14, 4573.14, 4848.14, 5084.39, 5178.90, 5224.62, 5819.62, 6442.69, 7735
+                ],
+                "color" : "green",
+                "type" : "spline",
+                "marker" : "none"
+            }
+        ],
+        "hlines" : [
+            {
+                "label" : "BAC",
+                "valore" : 13055,
+                "color" : "blue"
+            }
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 14000,
+        "y-min" : 0,
+        "y-tick-step" : 1500,
+        "y-label" : "Valore in €",
+        "RTB" : "In questo primo periodo, il gruppo è consapevole che il valore pianificato *PPV* risulti superiore a quanto prodotto nell'effettivo indicato dal *PEV*. Nonostante ciò, il gruppo è sempre riuscito a mantenere il valore del *PEV* non solo in crescita, ma anche superiore all'80% del *PPV*.",
+        "PB" : "",
+        "caption" : "Rapporto tra PPV, PAC e PEV"
+    },
+    "CPI" : {
+        "lines" : [
+            {
+                "label" : "CPI",
+                "valori" : [
+                    0.98, 1.01, 0.99, 1.00, 0.97, 1.01, 0.99, 1.00, 0.98, 0.97, 0.97, 0.98, 1.02
+                ],
+                "color" : "blue",
+                "type" : "linear",
+                "marker" : "o"
+            }
+        ],
+        "hlines" : [
+            {
+                "label" : "Limite superiore",
+                "valore" : 1.1,
+                "color" : "green"
+            },
+            {
+                "label" : "Limite inferiore",
+                "valore" : 0.8,
+                "color" : "red"
+            }
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 1.2,
+        "y-min" : 0.6,
+        "y-tick-step" : 0.1,
+        "y-label" : "CPI",
+        "RTB" : "L'indice *CPI* risulta sempre in un range di valore accettabile.Seppur l'andamento non sia lineare, non si rilevano grandi variazioni, il che evidenzia un corretto avanzamento in termini di costi e lavoro prodotto.",
+        "PB" : "",
+        "caption" : "Andamento CPI"
+    },
+    "BAC-EAC" : {
+        "lines" : [
+            {
+                "label" : "EAC",
+                "valori" : [
+                    13278.98, 12882.90, 13173.08, 13004.98, 13524.07, 12903.30, 13127.33, 13107.92, 13322.45, 13480.74, 13437.22, 13292.70, 12844.02
+                ],
+                "color" : "red",
+                "type" : "linear",
+                "marker" : "triangle"
+            }
+        ],
+        "hlines" : [
+            {
+                "label" : "BAC",
+                "valore" : 13055,
+                "color" : "green"
+            },
+            {
+                "label" : "Limite superiore (BAC + 5%)",
+                "valore" : 13657.75,
+                "color" : "red"
+            },
+            {
+                "label" : "Limite inferiore",
+                "valore" : 12000,
+                "color" : "blue"
+            }
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 16000,
+        "y-min" : 10000,
+        "y-tick-step" : 1000,
+        "y-label" : "Valore in €",
+        "RTB" : "Il valore dell'*EAC* oscilla attorno al valore del *BAC*. Il gruppo è consapevole che il valore stabilito dal *BAC* non possa essere superato, pertanto l'*EAC* al termine del progetto dovrà attenersi al rigido vincolo di $<=$ rispetto al *BAC*.",
+        "PB" : "",
+        "caption" : "Rapporto tra EAC e BAC"
+    },
+    "EO-Esterna" : {
+        "lines" : [
+            {
+                "label" : "PdP",
+                "valori" : [
+                    1,2,2,1,0,0,1,0,0,0,1,0,2
+                ],
+                "color" : "blue",
+                "type" : "linear",
+                "marker" : "o"
+            },
+            {
+                "label" : "PdQ",
+                "valori" : [
+                    0,0,0,0,0,2,3,1,0,0,0,0,1
+                ],
+                "color" : "red",
+                "type" : "linear",
+                "marker" : "o"
+            },
+            {
+                "label" : "AdR",
+                "valori" : [
+                    4,4,2,2,3,1,0,0,0,0,0,1,0
+                ],
+                "color" : "green",
+                "type" : "linear",
+                "marker" : "o"
+            },
+            {
+                "label" : "GLS",
+                "valori" : [
+                    3,2,0,0,2,0,1,0,0,0,0,0,0
+                ],
+                "color" : "orange",
+                "type" : "linear",
+                "marker" : "o"
+            }
+        ],
+        "hlines" : [
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 8,
+        "y-min" : 0,
+        "y-tick-step" : 1,
+        "y-label" : "Numero di errori",
+        "RTB" : "",
+        "PB" : "",
+        "caption" : "Andamento errori ortografici nella documentazione esterna"
+    },
+    "EO-Interna" : {
+        "lines" : [
+            {
+                "label" : "NdP",
+                "valori" : [
+                    2,3,4,3,3,2,1,1,0,0,0,1,2
+                ],
+                "color" : "blue",
+                "type" : "linear",
+                "marker" : "o"
+            }
+        ],
+        "hlines" : [
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 8,
+        "y-min" : 0,
+        "y-tick-step" : 1,
+        "y-label" : "Numero di errori",
+        "RTB" : "Gli errori ortografici nella documentazione rispecchiano i periodi in cui i documenti hanno subito la maggior parte delle modifiche. In particolare: \n - *Documentazione esterna*: \n\t - *PdP*: il documento ha inizialmente subito la maggior parte di aggiunte a livello testuale, come le sezioni di introduzione, amministrazione dei periodi e dei ruoli. Successivamente gli aggiornamenti sono stati minori, atti alla registrazione e al tracciamento dei preventivi e consuntivi dei vari periodi. Inoltre, l'implementazione di un sistema di creazione automatico delle tabelle dei preventivi e dei consuntivi implementato in _Google Apps Script_, ha permesso di ridurre ulteriormente l'insorgenza di errori; \n\t - *PdQ*: l'insorgenza di errori all'interno del _Piano di Qualifica_ è dettata dall'inizio della sua stesura dallo Sprint 9; \n\t - *AdR*: data la natura del periodo di RTB, il documento _Analisi dei Requisiti_ è tra i documenti più corposi e maggiormente soggetti a revisioni e modifiche. Inoltre, l'incremento dei numero di errori è dovuto non solo a revisioni interne ma anche a modifiche dettate da revisioni esterne con i professori; \n\t - *Glossario*: il _Glossario_ è stato soggetto a relativamente poche modifiche; la maggior parte degli errori è stata riscontrata inizialmente. \n - *Documentazione interna*: \n\t - *NdP*: l'adozione dello standard ISO/IEC 12207:2017 ha portato con sè anche un grado di complessità maggiore nella stesura del documento, il quale è aumentato di dimensione e complessità. La maggior parte degli errori è pertanto riscontrabile nel periodo di maggiore stesura, per poi ridursi quando le sezioni del documento inerenti e utili al periodo sono state redatte.",
+        "PB" : "",
+        "caption" : "Andamento errori ortografici nella documentazione interna"
+    },
+    "MS" : {
+        "lines" : [
+            {
+                "label" : "MS",
+                "valori" : [
+                    78, 89, 78, 89, 67, 89, 78, 67, 67, 67, 89, 78, 89
+                ],
+                "color" : "red",
+                "type" : "linear",
+                "marker" : "triangle"
+            }
+        ],
+        "hlines" : [
+            {
+                "label" : "Valore ottimale",
+                "valore" : 100,
+                "color" : "green"
+            },
+            {
+                "label" : "Valore accettabile",
+                "valore" : 75,
+                "color" : "red"
+            }
+        ],
+        "vlines" : [
+        ],
+        "y-max" : 110,
+        "y-min" : 50,
+        "y-tick-step" : 5,
+        "y-label" : "Valore in %",
+        "RTB" : "*RTB*: La percentuale di metriche soddisfatte risulta per la maggior parte degli Sprint superiore alla soglia di accettabilità del 75%. I periodi in cui tale soglia non è stata raggiunta sono gli Sprint 8, 11, 12 e 13 in quanto: \n - Sprint 8: periodo dal 26/12/2023 al 02/01/2024, caratterizzato da festività natalizie e di fine anno; \n - Sprint 11, 12, 13: periodo dal 15/01/2024 al 05/02/2024, caratterizzato dalla sessione d'esami.",
+        "PB" : "",
+        "caption" : "Andamento metriche soddisfatte"
+    }
+}

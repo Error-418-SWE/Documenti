@@ -16,6 +16,69 @@
 
 #set table(align: center + horizon)
 
+#let singleTable(data) = {
+  return figure(
+     table(
+      align: center + horizon,
+      columns: (0.5fr, 0.5fr, 1.5fr, 0.75fr, 1fr),
+      rows: (auto, 45pt),
+      [Codice], [Metrica], [formula], [Soglia ottimale], [Soglia accettabile],
+      data.codice, data.sigla, eval(data.formula, mode: "markup"), eval(data.sogliaOttimale, mode: "markup"), eval(data.sogliaAccettabile, mode: "markup")
+    ),
+    caption: "Tabella metrica " + data.sigla
+  )
+}
+
+#let nameAndDescriptionList(params) = {
+  let result = "";
+
+  for param in params {
+    let delimeter = ";"
+    if(param == params.last()){ delimeter = "."}
+    result += eval("- " + param.nome + ": " + param.descrizione + delimeter , mode: "markup");
+  }
+
+  return result;
+}
+
+#let extensionStructure(data) = {
+  let result = "";
+
+  result += eval("*" + data.codice + " - " + data.sigla + " " + data.nome + "*\\", mode: "markup");
+  result += eval(data.descrizione, mode: "markup");
+  if data.parametri.len() > 0 {
+    result += "\nDati: \n";
+  }
+  result += nameAndDescriptionList(data.parametri);
+  result += singleTable(data);
+  result += "\n";
+
+  return result;
+}
+
+#let metricsTablesGenerator(allJsonData) = {
+  let result = "";
+  for data in allJsonData {
+    result += eval("=== " + data.codice + " - " + data.sigla + " " + data.nome, mode: "markup")
+    result += eval("*Descrizione*: \\ " + data.descrizione, mode: "markup")
+
+    result += eval("\\ \\ *Note aggiuntive:* \\ " + data.noteAggiuntive, mode: "markup")
+
+    if(data.estensioni.len() == 0){
+      result += singleTable(data);
+    }else{
+      result += "\n\n"
+      for extension in data.estensioni{
+        result += extensionStructure(extension)
+      }
+    }
+    result += "\n"
+  }
+
+  return result;
+}
+
+
 = Introduzione
 
 == Scopo del documento
@@ -76,151 +139,14 @@ Il gruppo si dota di una dashboard di monitoraggio per tenere traccia delle metr
 
 = Qualità di processo
 
-== Processi primari
+== Processi primari - Fornitura
 
-=== Fornitura
+#let jsondata = json("metriche/fornitura.json")
+#metricsTablesGenerator(jsondata)
 
-==== *BAC (Budget at Completion)*
-Definito nel documento #pdp_v con valore di € 13.055,00.
+== Processi primari - Miglioramento
 
-==== *PV (Planned Value)*
-La metrica PV rappresenta il valore pianificato, ovvero il costo preventivato per portare a termine le attività pianificate nello sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento #pdp_v. Il calcolo di tale metrica è esteso anche all'intero progetto, dove il valore pianificato è definito come sommatoria dei PV di ogni singolo sprint.
-\ \
-- *SPV*: Sprint Planned Value, valore pianificato per un determinato sprint;
-- *PPV*: Project Planned Value, valore pianificato per l'intero progetto.
-
-Dati: \
-- $"r in R = {Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}"$
-- $"OR"_r$: Ore ruolo;
-- $"CR"_r$: Costo ruolo.
-
-Si definisce:
-#figure(
-  table(
-    columns: 3,
-    rows: (auto, 30pt),
-
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$"SPV" = sum_(r in R) "OR"_r * "CR"_r$], [$>"0"$], [$>"0"$],
-  ),
-  caption: "Specifiche metrica SPV"
-)
-Dato:
-- $"s in S, con S insieme degli sprint svolti."$
-Si definisce:
-#figure(
-  table(
-    columns: 3,
-    rows: (auto, 30pt),
-
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$"PPV" = sum_(s in S)"SPV"_("s")$], [$cases(>"0", <="BAC")$], [$cases(>"0", <="BAC")$],
-  ),
-  caption: "Specifiche metrica SPV"
-)
-
-La metrica è un indice necessario a determinare il valore atteso del lavoro svolto in un determinato sprint. Il suo valore strettamente maggiore di 0 indica che non sono contemplati periodi di inattività.
-
-==== *AC (Actual Cost)*
-La metrica *AC* rappresenta la somma dei costi sostenuti dal gruppo in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come consuntivo dello sprint:
-- *SAC*: Sprint Actual Cost, costo effettivo sostenuto dal gruppo in un determinato sprint;
-- *PAC*: Project Actual Cost, costo effettivo sostenuto dal gruppo dall'inizio del progetto, definito come sommatoria dei *SAC*.
-#figure(
-  table(
-    columns: 3,
-
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [SAC = Somma dei costi sostenuti nello sprint], [$<="SPV"$], [$<="SPV" + 10%$],
-  ),
-  caption: "Specifiche metrica SAC"
-)
-
-Dato:
-- $"s in S, con S insieme degli sprint svolti."$
-Si definisce:
-#figure(
-  table(
-    columns: 3,
-    rows: (auto, 30pt),
-
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$"PAC" = sum_(s in S)"SAC"_("s")$], [$<="BAC"$], [$<="BAC"$],
-  ),
-  caption: "Specifiche metrica PAC"
-)
-
-
-==== *EV (Earned Value)*
-L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come valore guadagnato nello sprint:
-- *SEV*: Sprint Earned Value, valore guadagnato dal progetto in un determinato sprint, dove lo stato di completamento del lavoro è espresso mediante il rapporto tra gli story points completati e quelli pianificati per lo sprint;
-- *PEV*: Project Earned Value, valore guadagnato dal progetto dal suo inizio, definito come sommatoria dei *SEV*.
-*Calcolo del SEV*
-- *SPC*: Story Points Completati;
-- *SPP*: Story Points Pianificati.
-
-#figure(
-  table(
-    columns: 3,
-    rows: (auto, 30pt),
-
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$"SEV" = display("SPC"/"SPP")*"SPV"$], [ $="SPV"$], [ $>="80% del SPV"$],
-  ),
-  caption: "Specifiche metrica SEV"
-)
-
-*Calcolo del PEV*
-- $"dato s in S, con S insieme degli sprint svolti"$
-#figure(
-  table(
-    columns: 3,
-    rows: (auto, 40pt),
-
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [ $"PEV" = sum_(s in S)"SEV"_("s")$], [ $="PPV"$], [ $>="80% del PPV"$],
-  ),
-  caption: "Specifiche metrica PEV"
-)
-
-\
-
-==== *CPI (Cost Performance Index)*
-Il *CPI* rappresenta l'indice di performance del costo, ovvero il rapporto tra il valore guadagnato e il costo effettivo sostenuto. Tale metrica viene calcolata in riferimento al valore totale raggiunto del progetto (*PEV*) in proporzione al costo effettivo sostenuto (*PAC*).
-
-#figure(
-  table(
-    columns: 3,
-    rows: (auto, 30pt),
-
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$"CPI" = display("PEV"/"PAC")$], [$>=1$], [$>=0.95$],
-  ),
-  caption: "Specifiche metrica CPI"
-)
-
-Un rapporto maggiore di 1 indica che il valore raggiunto è superiore al costo effettivo sostenuto. Data la natura didattica del progetto e l'inesperienza del gruppo, si ritiene accettabile un valore di *CPI* $>= 0.95$, valore indicante un costo effettivo leggermente superiore al valore guadagnato.
-
-==== *EAC (Estimated At Completion)*
-L'EAC rappresenta il costo stimato al termine del progetto. Tale metrica viene calcolata in riferimento al budget totale del progetto (*BAC*) in proporzione all'indice di performance del costo (*CPI*).
-#figure(
-  table(
-    columns: 3,
-    rows: (auto,50pt),
-
-    [*Calcolo della metrica*],[*Valore ottimale*],[*Valore accettabile*],
-    [$"EAC" = display("BAC"/"CPI")$], [$<="BAC"$],
-    [ $cases( <= "BAC + 5%",
-                                 <= "BAC alla consegna",
-                                 >= "12000 da regolamento"
-                                  )$],
-  ),
-  caption: "Specifiche metrica EAC"
-)
-
-Il costo totale del capitolato non può essere maggiore rispetto a quanto espresso in candidatura, pertanto gli unici valori accettabili (e ottimali) sono pari o inferiori rispetto al *BAC*. Dipendendo strettamente dall'indice di performance (*CPI*), il valore della metrica *EAC* può subire variazioni anche al rialzo. Sarà compito del gruppo assorbire eventuali costi aggiuntivi, al fine di mantenere il valore della metrica *EAC* entro i limiti stabiliti in prospettiva della milestone esterna *PB*.
-
-== Processi di supporto
-=== Documentazione
+== Processi di supporto - Documentazione
 
 - *Errori ortografici*
 #figure(
@@ -235,7 +161,7 @@ Il costo totale del capitolato non può essere maggiore rispetto a quanto espres
 
 Il numero di errori ortografici presenti nei documenti deve essere pari a 0. La metrica evidenzia il numero di errori ortografici individuati durante la revisione precedente al rilascio del documento.
 
-=== Miglioramento
+== Processi di supporto - Miglioramento
 ==== Percentuale metriche soddisfatte
 Dati:
 - MS: Metriche soddisfatte;

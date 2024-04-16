@@ -14,7 +14,7 @@
 = Introduzione
 
 == Scopo del documento
-Questo documento contiene le regole del _way of working_ che disciplinano le attività di ogni membro del gruppo _Error_418_. Queste regole mirano a garantire coerenza, uniformità ed efficacia nel processo collaborativo, promuovendo un ambiente di lavoro strutturato ed efficiente.
+Questo documento contiene le regole del _way of working_ che disciplinano le attività di ogni membro del gruppo #err418. Queste regole mirano a garantire coerenza, uniformità ed efficacia nel processo collaborativo, promuovendo un ambiente di lavoro strutturato ed efficiente.
 L'approccio adottato per la redazione di questo documento è di natura incrementale. Ciò significa che il testo è soggetto ad aggiornamenti e revisioni continue al fine di integrare progressivamente le nuove norme, le _best practices_ e i cambiamenti che emergono nel corso dello sviluppo del progetto. Questa flessibilità consente al gruppo di adattarsi prontamente alle dinamiche di lavoro e alle esigenze specifiche del contesto, garantendo un documento sempre allineato alle necessità attuali del gruppo.
 
 == Scopo del progetto
@@ -38,7 +38,7 @@ L'utente avrà la possibilità di cercare specifici prodotti all'interno del mag
 
 === Riferimenti normativi <riferimenti-normativi>
 
-- Capitolato "Warehouse Management 3D" (C5) di _Sanmarco Informatica S.p.A._: \
+- Capitolato "Warehouse Management 3D" (C5) di #azienda: \
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
   #lastVisitedOn(13, 02, 2024)
 
@@ -81,15 +81,15 @@ L'utente avrà la possibilità di cercare specifici prodotti all'interno del mag
   #lastVisitedOn(13,02,2024)
 
 
-= Processi di accordo
+= Processi di Accordo
 
-== Processo di fornitura <processo_fornitura>
+== Processo di Fornitura <processo_fornitura>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.1.2_
 
 === Scopo e descrizione
-Il processo di fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con Proponente e Committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
+Il processo di Fornitura ha come obiettivo l'offerta di un prodotto o servizio che soddisfi i requisiti concordati con Proponente e Committente. Tra quest'ultimi e il fornitore deve essere stabilito un accordo all'interno del quale vengono definiti i requisiti, le tempistiche e i costi da rispettare. Prima di allora, il fornitore avrà effettuato un'attenta analisi del progetto proposto e dei rischi annessi alla sua realizzazione, con relative linee guida per mitigarli.
 === Rapporti con il Proponente <comunicazione_Proponente>
-Il dialogo tra il gruppo _Error_418_ e il Proponente dovrà essere attivo e frequente fino al termine del progetto didattico, in modo che si riescano a raccogliere più feedback possibili riguardo la correttezza del lavoro svolto. Questa comunicazione avverrà in due modalità:
+Il dialogo tra il gruppo #err418 e il Proponente dovrà essere attivo e frequente fino al termine del progetto didattico, in modo che si riescano a raccogliere più feedback possibili riguardo la correttezza del lavoro svolto. Questa comunicazione avverrà in due modalità:
 + scritta, asincrona, utilizzata per:
   - comunicazioni di breve durata;
   - condivisione di verbali e materiali informativi;
@@ -104,10 +104,10 @@ I meeting avranno cadenza variabile, e saranno fissati al termine di altri incon
 - 3 - PB.
 
 === Documentazione prodotta
-In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di fornitura, la quale sarà resa disponibile al Proponente, _Sanmarco Informatica_, e ai Committenti, ovvero il #vardanega e il #cardin.
+In questa sezione viene descritta la documentazione prodotta dal gruppo nel processo di Fornitura, la quale sarà resa disponibile al Proponente, #azienda, e ai Committenti, ovvero il #vardanega e il #cardin.
 
 ==== Valutazione dei capitolati
-Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese disponibili dai vari proponenti. Per ogni capitolato vengono presentati tre paragrafi:
+Documento nel quale il gruppo ha analizzato le diverse proposte di progetto rese disponibili dai vari Proponenti. Per ogni capitolato vengono presentati tre paragrafi:
 + *Descrizione*: vengono indicati i nominativi di Proponente e Committente, e viene presentato l'obiettivo del progetto;
 + *Dominio tecnologico*: vengono elencate le tecnologie consigliate dal Proponente del capitolato;
 + *Considerazioni*: il gruppo dà la propria valutazione sul capitolato.
@@ -144,28 +144,28 @@ Nel #pdq vengono fissati obiettivi di qualità e vengono descritti i processi ne
 Nel Glossario vengono elencati e definiti in modo preciso tutti i termini rilevanti utilizzati all'interno del progetto. È un documento estremamente importante per evitare situazioni di ambiguità, e garantire così una corretta comprensione della documentazione da parte di tutte le parti coinvolte.
 
 === Strumenti utilizzati
-In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo di fornitura.
+In questa sezione sono indicati gli strumenti utilizzati dal gruppo nel processo di Fornitura.
 
 - *Zoom*: applicazione per videoconferenze;
 - *Google Slides*: servizio cloud offerto da Google, utilizzato dal gruppo per le presentazioni del diario di bordo, ovvero l'attività in cui il gruppo aggiorna il Committente riguardo l'andamento del lavoro;
 - *Jira*: Issue Tracking System utilizzato per la pianificazione del lavoro.
 
-= Processi di ciclo di vita
+= Processi di Ciclo di Vita
 
-== Processi organizzativi abilitanti
+== Processi Organizzativi Abilitanti
 
-I processi organizzativi abilitanti hanno la funzione di garantire la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. \
+I processi Organizzativi Abilitanti hanno la funzione di garantire la capacità dell'organizzazione di acquisire e fornire prodotti o servizi attraverso l'avvio, il supporto e il controllo di progetti. \
 Questi processi forniscono l'infrastruttura e le risorse necessarie a supportare i progetti e il conseguimento degli obiettivi dell'organizzazione e degli accordi fra parti. Non sono da intendersi come un insieme esaustivo di processi aziendali atti alla gestione strategica dell'organizzazione.
 
-I processi organizzativi abilitanti implementati dal gruppo sono i seguenti:
-+ processo di gestione dei modelli di ciclo di vita;
-+ processo di gestione dell'infrastruttura.
+I processi Organizzativi Abilitanti implementati dal gruppo sono i seguenti:
++ processo di Gestione dei Modelli di Ciclo di Vita;
++ processo di Gestione dell'Infrastruttura.
 
-=== Processo di gestione dei modelli di ciclo di vita<processo_ciclo_di_vita>
+=== Processo di Gestione dei Modelli di Ciclo di Vita<processo_ciclo_di_vita>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.1_
 ==== Scopo
 
-Lo scopo del processo di gestione del modello di ciclo di vita è definire, mantenere e garantire regole, processi, modelli e procedure di ciclo di vita.\
+Lo scopo del processo di Gestione dei Modelli di Ciclo di Vita è definire, mantenere e garantire regole, processi, modelli e procedure di ciclo di vita.\
 Questo processo fornisce politiche, processi, modelli e procedure del ciclo di vita coerenti con gli obiettivi dell'organizzazione, che sono definiti, adattati, migliorati e mantenuti per supportare le esigenze individuali dei progetti all'interno del contesto dell'organizzazione, e che sono in grado di essere applicati mediante metodi e strumenti efficaci e comprovati.\
 
 Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo di vita del software. Questo modello prevede quattro fasi:
@@ -176,21 +176,20 @@ Il gruppo adotta il modello PDCA (Plan-Do-Check-Act) per la gestione del ciclo d
 
 ==== Organizzazione del processo
 ===== Pianificazione
-La pianificazione del processo è compito del Responsabile, il quale al termine dello sprint precedente, in base alle attività svolte e ai risultati ottenuti, pianifica le attività da svolgere nello sprint successivo. \
-La pianificazione è un'attività iterativa, che viene svolta all'inizio dello sprint. Il Responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \
+La pianificazione del processo è compito del Responsabile, il quale al termine dello Sprint precedente, in base alle attività svolte e ai risultati ottenuti, pianifica le attività da svolgere nello Sprint successivo. \
+La pianificazione è un'attività iterativa, che viene svolta all'inizio dello Sprint. Il Responsabile, in relazione al progresso svolto, può decidere di modificare la pianificazione iniziale, aggiungendo o rimuovendo attività. \
 Questo processo permette di individuare le attività da svolgere, le risorse necessarie e le tempistiche di svolgimento, mediante il sistema di ticketing offerto da Jira.\
 Il risultato di questo processo è visibile all'interno del documento #pdp.\
 \
 ===== Esecuzione
-Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto. \
-Il processo di esecuzione è composto da due attività principali:
+Identifica il processo di sviluppo del prodotto, dove quanto pianificato viene concretamente svolto.
+
+Il processo di Esecuzione è composto da due attività principali:
 + sviluppo del prodotto;
 + sviluppo della documentazione.
 
-Durante questo processo, ogni ruolo svolge le attività assegnate seguendo quanto stabilito nella pianificazione. Sarà compito del Responsabile verificare che le attività siano svolte correttamente e nei tempi previsti. Ogni membro avrà la possibilità di segnalare eventuali criticità, avendo a disposizione una board apposita sulla piattaforma Miro.\ Questo permette di avere un resoconto pronto a fine sprint in merito al processo di avanzamento, individuando: \
-- "Keep doing": attività che hanno dato buoni risultati e che quindi vanno mantenute;
-- "Things to change": attività che hanno dato risultati non soddisfacenti e che quindi vanno modificate.
-\
+Durante questo processo, ogni ruolo svolge le attività assegnate seguendo quanto stabilito nella pianificazione. Sarà compito del Responsabile verificare che le attività siano svolte correttamente e nei tempi previsti. Ogni membro avrà la possibilità di segnalare eventuali criticità, avendo a disposizione una board apposita sulla piattaforma Miro, che permette di avere un resoconto pronto a fine Sprint in merito al processo di avanzamento.
+
 La progressione del lavoro è visibile mediante:
 - retrospettiva;
 - grafici di burndown (Jira);
@@ -199,22 +198,18 @@ La progressione del lavoro è visibile mediante:
 I prodotti di questo processo, permettono dunque di procedere con la verifica e lo stabilimento delle contromisure e dei miglioramenti necessari.
 \ \
 ===== Verifica
-Al termine di ogni sprint, il gruppo procederà con il meeting di retrospettiva, durante il quale verranno analizzati i risultati ottenuti e le attività svolte, basandosi sui prodotti della fase di esecuzione: \
+Al termine di ogni Sprint, il gruppo procederà con il meeting di retrospettiva, durante il quale verranno analizzati i risultati ottenuti e le attività svolte, basandosi sui prodotti dell'attività di esecuzione:
 
-+ grafici di burndown:
-  - permettono di avere una visione rapida di quanto del lavoro pianificato è stato portato a termine: si tratta di una metrica puramente quantitativa, che tiene conto del numero di ticket chiusi e del numero di ticket aperti;
++ *grafici di burndown*: permettono di avere una visione rapida di quanto del lavoro pianificato è stato portato a termine: si tratta di una metrica puramente quantitativa, che tiene conto del numero di story point completati e del numero di story point ancora in lavorazione;
 
-+ board di avanzamento:
-  - "Keep doing": attività che hanno dato buoni risultati e che quindi vanno mantenute: questo permette al gruppo di individuare il _modus operandi_ più efficace ed efficiente per svolgere le attività;
-
-  - "Things to change": attività che hanno dato risultati non soddisfacenti e che quindi vanno modificate: si tratta dell'aspetto più delicato da considerare, in quanto permette di individuare le criticità e le inefficienze del processo di sviluppo, e di conseguenza di apportare le modifiche necessarie per migliorare il processo stesso.
++ *board di avanzamento*: permette di avere una panoramica sulla situazione dello Sprint, in modo da valutarne gli aspetti positivi e negativi.
 
 Questa analisi individua i miglioramenti da apportare al processo di sviluppo, stabilendo le contromisure necessarie per migliorare il processo stesso.
   \ \
 ===== Attuazione
 L'attuazione è l'ultima fase del processo di gestione del ciclo di vita, e consiste nella messa in pratica delle contromisure stabilite durante la fase di verifica. \
 L'obiettivo è sopperire alle mancanze e alle inefficienze del processo di sviluppo, in modo da migliorare la qualità del prodotto e la produttività del gruppo. \
-Diventa compito del Responsabile stabilire le attività necessarie per attuare le contromisure, e di conseguenza di pianificare le attività da svolgere nello sprint successivo. \
+Diventa compito del Responsabile stabilire le attività necessarie per attuare le contromisure, e di conseguenza di pianificare le attività da svolgere nello Sprint successivo. \
 Il risultato di questo processo è visibile all'interno del documento #pdp.
 \
 \
@@ -226,13 +221,13 @@ Le responsabilità del Responsabile includono:
 
 + coordinamento: ha il compito di supervisionare i membri del gruppo, assicurandosi che le attività vengano svolte nel rispetto delle norme identificate in questo documento;
 
-+ pianificazione: stabilisce le attività da svolgere, le relative scadenze e priorità, sancendo l'inizio e la fine di ogni sprint;
++ pianificazione: stabilisce le attività da svolgere, le relative scadenze e priorità, sancendo l'inizio e la fine di ogni Sprint;
 
 + monitoraggio e gestione dei costi: tiene sotto controllo l'andamento del progetto, stima i costi e gestisce l'analisi dei rischi, garantendo che il progetto rimanga entro il budget previsto;
 
 + #ndp: si occupa della stesura e dell'aggiornamento delle #ndp, che devono essere rispettate da tutti i membri del gruppo;
 
-+ relazioni esterne: gestisce tutte le interazioni con il Proponente e i Committenti assicurando una comunicazione fluida ed efficace;
++ relazioni esterne: gestisce tutte le interazioni con il Proponente e i Committenti assicurando una comunicazione fluida ed efficace.
 \ \
 ===== Amministratore
 L'Amministratore è la figura incaricata di gestire l'ambiente di lavoro e gli strumenti utilizzati dal gruppo per tutta la durata del progetto. Ha il compito di assicurare che gli strumenti proposti ai membri del gruppo siano efficienti e favoriscano la qualità del lavoro. Monitora, assieme al Responsabile, il rispetto delle regole stabilite in questo documento e verifica che i servizi a disposizione del gruppo siano adeguati alle attività pianificate, promuovendo la produttività.  \
@@ -254,7 +249,7 @@ Il suo compito è di rilevanza in quanto un'incompleta o superficiale analisi pu
 
 Le responsabilità dell'Analista includono:
 
-+ documento di #adr: l'Analista è incaricato di redigere questo documento, che dettaglia i requisiti specifici del progetto.
++ documento di #adr: l'Analista è incaricato di redigere questo documento, che dettaglia i requisiti specifici del progetto;
 
 + interazione con i clienti: l'Analista lavora a stretto contatto con il Proponente o i Committenti per capire e studiare i loro bisogni;
 
@@ -298,11 +293,11 @@ Le responsabilità del Verificatore includono:
 + approvazione della documentazione sottoposta a verifica.
 
 \ \
-=== Processi di gestione dell'infrastruttura
+=== Processi di Gestione dell'Infrastruttura
 
 ==== Scopo
 
-Lo scopo del processo di gestione dell'infrastruttura è fornire l'infrastruttura e i servizi a supporto dell'organizzazione per il conseguimento degli obiettivi di progetto nel corso dell'intero ciclo di vita.
+Lo scopo del processo di Gestione dell'Infrastruttura è fornire l'infrastruttura e i servizi a supporto dell'organizzazione per il conseguimento degli obiettivi di progetto nel corso dell'intero ciclo di vita.
 
 Questo processo definisce, fornisce e regola i servizi, gli strumenti e le tecnologie di comunicazione e condivisione delle informazioni a supporto degli scopi dell'organizzazione.
 
@@ -310,14 +305,14 @@ Questo processo definisce, fornisce e regola i servizi, gli strumenti e le tecno
 
 L'infrastruttura è costituita dai servizi, dagli strumenti e dalle tecnologie di comunicazione e condivisione delle informazioni adottate a supporto degli scopi dell'organizzazione. L'infrastruttura risponde alle necessità di comunicazione interna ed esterna.
 
-I requisiti dei processi di gestione dell'infrastruttura sono:
+I requisiti dei processi di Gestione dell'Infrastruttura sono:
 
 + semplicità di adozione di strumenti e servizi;
 + accesso rapido alle informazioni, anche in mobilità;
 + non ridondanza tra strumenti e servizi adottati.
 
 ==== Infrastruttura di comunicazione
-I principi della comunicazione che ispirano i processi di gestione dell'infrastruttura sono:
+I principi della comunicazione che ispirano i processi di Gestione dell'Infrastruttura sono:
 
 + Comunicazione aperta: le comunicazioni avvengono in modalità pubblica, ovvero tutti i membri possono partecipare (compatibilmente con i loro impegni di progetto e sempre nel rispetto delle rispettive responsabilità). I membri del gruppo hanno accesso e possono liberamente consultare i messaggi, le eventuali registrazioni e i verbali;
 
@@ -367,13 +362,13 @@ L'indirizzo è reso noto nel frontespizio di ogni documento prodotto dall'organi
 
 ==== Mantenimento dell'infrastruttura
 
-Sono compiti dell'amministratore il mantenimento dell'infrastruttura, l'aggiornamento delle norme e dei processi e l'identificazione di nuovi servizi a supporto delle attività dell'organizzazione.
+Sono compiti dell'Amministratore il mantenimento dell'infrastruttura, l'aggiornamento delle norme e dei processi e l'identificazione di nuovi servizi a supporto delle attività dell'organizzazione.
 
 L'organizzazione adotta nuovi servizi, strumenti e tecnologie di comunicazione avendo cura di non introdurre ridondanza. L'organizzazione si dota di un insieme di strumenti e servizi sufficienti a coprire tutti i requisiti di comunicazione.
 
-=== Processo di gestione delle Risorse Umane <processo_risorse_umane>
+=== Processo di Gestione delle Risorse Umane <processo_risorse_umane>
 
-La natura didattica del progetto riduce le prerogative del processo di gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la: \
+La natura didattica del progetto riduce le prerogative del processo di Gestione delle Risorse umane. Per questa ragione, l'organizzazione dichiara la: \
  _conformance to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.2.4_.
 
 ==== Scopo
@@ -414,7 +409,7 @@ L'organizzazione si adopera per sviluppare le competenze dei membri mediante:
 + attività di _mentoring_ esterno su richiesta, in base alla necessità e alla disponibilità dell'interlocutore esterno;
 + condivisione delle best practice in sessione collettiva.
 
-Le sessioni di tutoring sono "a sportello" ed è responsabilità dei singoli membri richiederne l'attivazione. Il responsabile, identificati i temi di maggior interesse, può espressamente richiedere che un ruolo copra le esigenze di tutoring interno tramite le modalità sopra indicate.
+Le sessioni di tutoring sono "a sportello" ed è responsabilità dei singoli membri richiederne l'attivazione. Il Responsabile, identificati i temi di maggior interesse, può espressamente richiedere che un ruolo copra le esigenze di tutoring interno tramite le modalità sopra indicate.
 
 ===== Acquisire e fornire competenze
 
@@ -442,7 +437,7 @@ Come risultato dell'efficace attuazione del processo di Gestione della Qualità:
 ===== Pianificazione
 Il gruppo #err418 pone i seguenti principi di qualità:
 
-+ il contenuto del branch principale delle repository (`src` e, di conseguenza, `main` per Documenti, e `dev` per WMS3) deve rispettare i criteri di qualità definiti nel #pdq e nella @processo_gestione_configurazione. Inoltre:
++ il contenuto del branch principale dei repository (`src` e, di conseguenza, `main` per Documenti, e `dev` per WMS3) deve rispettare i criteri di qualità definiti nel #pdq e nella @processo_gestione_configurazione. Inoltre:
   - tutti gli elementi di configurazione devono essere gestiti tramite repository su GitHub (@repository-github), con il sistema di _feature branching_;
   - ogni modifica che vuole essere introdotta in un prodotto dovrà essere prima approvata dal Verificatore tramite il meccanismo di Pull Request (@controllo_release).
 + il contenuto della documentazione deve seguire i principi di redazione descritti nella @stile-convenzioni;
@@ -460,7 +455,7 @@ Il gruppo #err418 pone i seguenti principi di qualità:
     ), caption: [Tracciamento ISO-documenti])
     In particolare, per ogni processo interno al presente documento viene specificato il grado di conformità allo standard ISO/IEC/IEEE 12207:2017 all'interno di una sezione dedicata (@tracciamento_paragrafi).
 + il codice prodotto deve seguire degli standard interni, definiti nella @processo_implementazione;
-+ il codice prodotto dal gruppo deve rispettare i parametri di qualità attraverso il monitoraggio delle metriche identificate nel #pdq;
++ il codice prodotto dal gruppo deve rispettare i parametri di qualità attraverso il monitoraggio delle metriche identificate nel #pdq\;
 + il prodotto software deve soddisfare i bisogni e le richieste del Proponente, identificate nel documento di #adr e catalogate in: obbligatorie, desiderabili e opzionali.
 
 ===== Valutazione
@@ -472,7 +467,7 @@ La valutazione della qualità dei prodotti di progetto, dell'andamento del grupp
   - verifica della leggibilità, chiarezza e comprensibilità della documentazione;
   - verifica dell'assenza di errori ortografici o sintattici nei documenti;
   - verifica dell'assenza di errori nel codice (valutazione statica) e nell'esecuzione degli elementi software.
-- testing del codice, come descritto nel processo di integrazione (@processo_integrazione) e nel processo di verifica (@processo_verifica);
+- testing del codice, come descritto nel processo di Integrazione (@processo_integrazione) e nel processo di Verifica (@processo_verifica);
 - revisioni complessive degli elementi di configurazione in prossimità della fine di ogni periodo di lavoro definito nella @periodi_lavoro;
 - utilizzo di metriche di qualità (@processo_misurazione) definite nel #pdq_v e di un cruscotto di qualità (@grafana) per l'individuazione tempestiva di anomalie o situazioni critiche;
 - comunicazione costante con il Proponente per raccogliere feedback e valutare l'adesione del lavoro alle sue richieste (@comunicazione_Proponente).
@@ -485,15 +480,15 @@ L'attività di attuazione di azioni correttive consiste nei seguenti task:
 + apertura dei relativi task di revisione su Jira;
 + assegnazione e svolgimento dei task con successiva verifica in sede di Pull Request.
 
-= Processi di gestione tecnica
+= Processi di Gestione Tecnica
 
-== Processo di pianificazione di progetto <pianificazione>
+== Processo di Pianificazione di Progetto <pianificazione>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.1_
 === Scopo
-Il processo di pianificazione di progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato #pdp (@PdP).
+Il processo di Pianificazione di Progetto ha come scopo la produzione e coordinazione di un piano efficace ed applicabile per garantire una corretta gestione del lavoro. La pianificazione viene inserita in un documento denominato #pdp (@PdP).
 
 === Risultati (#pdp) <PdP>
-Il #pdp è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento accompagnata dai grafici di Gantt e di burndown. Sono presenti cinque sezioni, di cui le prime quattro rientrano nel processo di pianificazione:
+Il #pdp è il documento principale che viene redatto durante questo processo, e ha il compito di governare la pianificazione e l'avanzamento del progetto. In questo documento vengono determinati i task e gli obiettivi da raggiungere, fornendo anche un'analisi critica del lavoro svolto fino a quel momento accompagnata dai grafici di Gantt e di burndown. Sono presenti cinque sezioni, di cui le prime quattro rientrano nel processo di Pianificazione:
 
 + Rischi e loro mitigazione;
 + Divisione temporale di sviluppo;
@@ -504,7 +499,7 @@ Il #pdp è il documento principale che viene redatto durante questo processo, e 
 La redazione del documento va di pari passo con l'avanzamento del progetto, in modo tale da essere sempre aggiornato alla situazione corrente del lavoro.
 
 === Attività
-Nel processo di pianificazione sono presenti due attività principali:
+Nel processo di Pianificazione sono presenti due attività principali:
 
 + definizione del progetto;
 + pianificazione del progetto e della gestione tecnica.
@@ -522,7 +517,7 @@ Il gruppo ha individuato tre periodi di lavoro principali:
 - sviluppo della Requirements and Technology Baseline (RTB): si studiano le tecnologie da utilizzare e si applicano le conoscenze acquisite per realizzare un PoC (Proof of Concept), ovvero un prodotto software che permetta di dimostrare la padronanza delle tecnologie selezionate ai fini dello sviluppo del progetto;
 - periodo di sviluppo del Minimum Viable Product (MVP): viene progettato e implementato un prodotto software che rispetti almeno i requisiti minimi di accettazione, e che offra tutte le funzionalità richieste.
 
-Ognuno di questi viene suddiviso a sua volta in periodi della durata di una settimana denominati _sprint_. Al termine di ogni _sprint_ viene effettuato un incontro interno di retrospettiva, nel quale si analizza criticamente la settimana appena conclusa, mostrandone aspetti positivi, aspetti da migliorare e fissando obiettivi che verranno poi riportati nell'Issue Tracking System sotto forma di task. Questi andranno a comporre il _backlog_ dello _sprint_ successivo, e il loro progressivo completamento andrà a produrre un _burndown-chart_, utilizzato dal gruppo come strumento che rappresenti in modo oggettivo l'andamento del lavoro.
+Ognuno di questi viene suddiviso a sua volta in periodi della durata di una settimana denominati _Sprint_. Al termine di ogni _Sprint_ viene effettuato un incontro interno di retrospettiva, nel quale si analizza criticamente la settimana appena conclusa, mostrandone aspetti positivi, aspetti da migliorare e fissando obiettivi che verranno poi riportati nell'Issue Tracking System sotto forma di task. Questi andranno a comporre il _backlog_ dello _Sprint_ successivo, e il loro progressivo completamento andrà a produrre un _burndown-chart_, utilizzato dal gruppo come strumento che rappresenti in modo oggettivo l'andamento del lavoro.
 
 ===== Definizione di ruoli, responsabilità e costi
 Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognuno dei quali con precise responsabilità da rispettare. Ogni membro del gruppo dovrà assumere ognuno di questi ruoli all'interno del periodo di lavoro al progetto. L'assegnazione dei ruoli avviene con frequenza bisettimanale. Di seguito viene riportata la descrizione di ogni ruolo con i relativi compiti:
@@ -530,8 +525,8 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
 + *Responsabile*: è presente durante l'intero progetto, in particolare si occupa di:
   - coordinare il gruppo;
   - verificare che il lavoro proceda secondo le tempistiche e i costi stabiliti;
-  - rappresentare il gruppo nei rapporti con il committente;
-  - gestire la pianificazione di ogni _sprint_.
+  - rappresentare il gruppo nei rapporti con il Committente;
+  - gestire la pianificazione di ogni _Sprint_.
 + *Amministratore*: ruolo presente durante tutto il progetto. Ha il compito di:
   - predisporre e controllare il corretto utilizzo delle procedure e degli strumenti adottati;
   - implementare e manutenere gli automatismi in modo da migliorare l'efficienza del gruppo.
@@ -544,16 +539,16 @@ Al fine di migliorare l'assegnazione del lavoro vengono definiti sei ruoli, ognu
   - definisce le linee guida implementative valutando le scelte più efficienti e sostenibili.
 + *Programmatore*: è attivo negli ultimi due periodi del progetto, nei quali:
   - si occupa della codifica del PoC, senza partire da una progettazione ben definita visto l'obiettivo del Proof of Concept;
-  - traduce in codice eseguibile l'architettura del prodotto finale definita dal progettista durante il periodo di sviluppo del MVP.
+  - traduce in codice eseguibile l'architettura del prodotto finale definita dal Progettista durante il periodo di sviluppo del MVP.
 + *Verificatore*: è presente durante l'intero progetto, e si occupa di controllare che il lavoro prodotto dal gruppo rispetti gli standard qualitativi adottati.
 
-Ad ogni ruolo è inoltre associato un costo orario, sulla base del quale il gruppo calcola il preventivo totale del progetto e quello di ogni _sprint_ seguito dal relativo consuntivo. Il costo orario viene calcolato in base alla sua importanza all'interno del progetto, misurata in termini di competenze e disponibilità della risorsa.
+Ad ogni ruolo è inoltre associato un costo orario, sulla base del quale il gruppo calcola il preventivo totale del progetto e quello di ogni _Sprint_ seguito dal relativo consuntivo. Il costo orario viene calcolato in base alla sua importanza all'interno del progetto, misurata in termini di competenze e disponibilità della risorsa.
 
 
-== Processo di valutazione e controllo di progetto <valutazioneControllo>
+== Processo di Valutazione e Controllo di Progetto <valutazioneControllo>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.2_
 === Scopo
-Il processo di valutazione e controllo ha lo scopo di determinare lo stato del progetto tramite la verifica dell'allineamento del lavoro con i piani definiti. Tale allineamento viene dimostrato osservando i seguenti parametri:
+Il processo di Valutazione e Controllo ha lo scopo di determinare lo stato del progetto tramite la verifica dell'allineamento del lavoro con i piani definiti. Tale allineamento viene dimostrato osservando i seguenti parametri:
 
 - tempistiche;
 - costi;
@@ -562,7 +557,7 @@ Il processo di valutazione e controllo ha lo scopo di determinare lo stato del p
 Questo viene fatto all'interno di revisioni periodiche chiamate retrospettive, e viene messo per iscritto all'interno dei verbali di tali riunioni e nei paragrafi di consuntivo del #pdp.
 
 === Risultati
-Come risultato dell'implementazione del processo di valutazione e controllo si elencano i seguenti:
+Come risultato dell'implementazione del processo di Valutazione e Controllo si elencano i seguenti:
 - valutazione dell'adeguatezza di ruoli, responsabilità e risorse;
 - esecuzione delle azioni correttive scaturite dalle revisioni di progresso;
 - viene avviata, se necessaria, la ripianificazione del progetto;
@@ -573,7 +568,7 @@ I risultati sono espressi e analizzati nei paragrafi di consuntivo del #pdp.
 
 === Attività
 ==== Piano di valutazione e controllo del progetto
-La valutazione e il controllo del progetto avvengono a cadenza settimanale, in corrispondenza della riunione di retrospettiva. Durante questa riunione si valuta ciò che è stato svolto durante il periodo di lavoro (_sprint_) che si sta concludendo, se ne identificano i problemi e si decidono soluzioni di controllo che vadano a risolvere o arginare i problemi individuati.
+La valutazione e il controllo del progetto avvengono a cadenza settimanale, in corrispondenza della riunione di retrospettiva. Durante questa riunione si valuta ciò che è stato svolto durante il periodo di lavoro (_Sprint_) che si sta concludendo, se ne identificano i problemi e si decidono soluzioni di controllo che vadano a risolvere o arginare i problemi individuati.
 
 Oltre a queste revisioni periodiche interne, sono presenti attività nelle quali il gruppo espone la propria situazione al Proponente, tramite riunione su Zoom, e Committente, tramite le attività denominate "diario di bordo".
 
@@ -582,22 +577,22 @@ Inoltre, è necessario che il gruppo svolga delle revisioni tecniche con il Comm
 ==== Valutazione <valutazione>
 Durante l'attività di valutazione il gruppo deve analizzare la situazione del progetto, e per fare ciò deve adottare degli strumenti che rappresentino tale situazione nel modo più oggettivo possibile. Il momento in cui si effettua questo compito è la retrospettiva settimanale. Questa si svolge tramite meeting interno su Discord con il supporto di una board Miro. Il meeting è suddiviso concettualmente in tre parti, rappresentate all'interno della board da tre riquadri:
 
-- Keep doing: raccoglie tutti gli aspetti positivi (e di conseguenza da mantenere) dello sprint;
-- Things to change: raccoglie tutte le problematiche incontrate durante lo sprint;
-- To do e Improvements: raccoglie tutte le attività da svolgere nel prossimo sprint, alcune delle quali direttamente collegate agli elementi appartenenti a "Things to change".
+- *Keep doing*: raccoglie tutti gli aspetti positivi, e di conseguenza da mantenere, dello Sprint;
+- *Improvements*: raccoglie tutte le problematiche incontrate durante lo Sprint;
+- *To do*: raccoglie tutte le attività da svolgere nel prossimo Sprint, alcune delle quali direttamente collegate agli elementi appartenenti a "Improvements".
 
 Tramite Miro il gruppo riesce ad avere una panoramica della situazione del lavoro, che viene poi completata da Jira, l'Issue Tracking System adottato. Al suo interno il gruppo ha definito le due milestone esterne (RTB e PB), nelle quali ha creato delle Epic che rappresentano ciò che è necessario produrre per quella milestone, e che raccolgono tutti i task necessari alla produzione di tali prodotti (documenti o software).
 
 Milestone e Epic vengono accompagnate all'interno di Jira da una barra di completamento che rappresenta in verde il lavoro svolto, in blu il lavoro in fase di svolgimento e lascia vuota la parte dedicata alle attività definite ma non ancora in svolgimento. Queste barre contribuiscono a fornire una rappresentazione oggettiva della situazione del progetto.
 
-Oltre a queste, Jira offre la funzionalità di visualizzazione di un burndown-chart, ovvero un grafico che rappresenta l'andamento del lavoro all'interno di uno sprint in due possibili modalità:
+Oltre a queste, Jira offre la funzionalità di visualizzazione di un burndown-chart, ovvero un grafico che rappresenta l'andamento del lavoro all'interno di uno Sprint in due possibili modalità:
 
 - quantità di story point completati;
 - quantità di issue completate.
 
 Entrambe le rappresentazioni pongono nell'asse $x$ del grafico il tempo, indicato in giorni. Questi grafici contengono inoltre una retta rappresentante l'andamento ideale del lavoro, grazie alla quale risulta più semplice verificare l'efficienza del gruppo.
 
-Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consuntivo dello sprint nel #pdp, nel quale, oltre a fare un resoconto dello sprint, si analizza il suo l'aspetto economico: in base ai ruoli impegnati e al monte ore produttivo svolto, si calcola il costo effettivo del periodo concluso, aggiornando conseguentemente il costo preventivato e il documento #pdp. Questo indicatore contribuisce ad avere un resoconto completo del progetto, e permette al gruppo di comprendere meglio come sta lavorando e se sta gestendo correttamente le risorse a sua disposizione.
+Al termine dell'incontro di retrospettiva viene redatto il paragrafo di consuntivo dello Sprint nel #pdp, nel quale, oltre a fare un resoconto dello Sprint, si analizza il suo l'aspetto economico: in base ai ruoli impegnati e al monte ore produttivo svolto, si calcola il costo effettivo del periodo concluso, aggiornando conseguentemente il costo preventivato e il documento #pdp. Questo indicatore contribuisce ad avere un resoconto completo del progetto, e permette al gruppo di comprendere meglio come sta lavorando e se sta gestendo correttamente le risorse a sua disposizione.
 
 ==== Controllo
 Nell'attività di controllo figurano i seguenti task:
@@ -613,21 +608,21 @@ Nell'attività di controllo si intraprendono azioni correttive nei confronti dei
 - miglioramenti e accortezze da adottare.
 
 ====== Mancato raggiungimento degli obiettivi prefissati
-È necessario che alla chiusura dello sprint le attività ancora in fase di svolgimento vengano riportate nello sprint successivo, insieme a tutte quelle attività pianificate ma non ancora iniziate che sono considerate importanti. Tutte le attività che non vengono considerate importanti, ad esempio attività di cui si è rivalutato il grado di priorità, vengono riportate nel backlog. Una situazione di mancato raggiungimento degli obiettivi può essere sinonimo anche da una pianificazione errata e troppo ottimista, ed è quindi necessario che essa sia rivista e migliorata.
+È necessario che alla chiusura dello Sprint le attività ancora in fase di svolgimento vengano riportate nello Sprint successivo, insieme a tutte quelle attività pianificate ma non ancora iniziate che sono considerate importanti. Tutte le attività che non vengono considerate importanti, ad esempio attività di cui si è rivalutato il grado di priorità, vengono riportate nel backlog. Una situazione di mancato raggiungimento degli obiettivi può essere sinonimo anche da una pianificazione errata e troppo ottimista, ed è quindi necessario che essa sia rivista e migliorata.
 
 ====== Miglioramenti e accortezze da adottare
 Le soluzioni correttive vengono decise dal gruppo tramite la visualizzazione e l'analisi della board Miro durante la retrospettiva. Nella board infatti, come esposto nella @valutazione, alcuni dei task raccolti rispondono direttamente ai problemi individuati nella parte di Things to change.
 
 ===== Ripianificazione
-La ripianificazione ha atto quando gli obiettivi cambiano nel corso dello sprint o alcune ipotesi fatte in fase di pianificazione si rivelano sbagliate. La ripianificazione viene gestita tramite Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo.
+La ripianificazione avviene quando gli obiettivi cambiano nel corso dello Sprint o alcune ipotesi fatte in fase di pianificazione si rivelano sbagliate. La ripianificazione viene gestita tramite Jira, che consente di aggiornare i task attivi, permettendo anche la comunicazione tempestiva dei cambiamenti al gruppo.
 
 ===== Azioni di cambiamento dovute a richieste del Committente e/o Proponente
-Le azioni di cambiamento dovute a richieste del Committente e/o Proponente sono recepite attraverso i canali di comunicazione con quest'ultimi (Zoom, mail) e vengono registrate nei rispettivi verbali. A queste azioni viene attribuita un'alta priorità per garantire massima soddisfazione nel cliente finale.
+Le azioni di cambiamento dovute a richieste del Committente e/o Proponente sono recepite attraverso i canali di comunicazione con quest'ultimi (Zoom, mail) e vengono registrate nei rispettivi verbali. A queste azioni viene attribuita un'alta priorità per garantire massima soddisfazione del cliente finale.
 
 ===== Autorizzazione ad avanzare alla successiva milestone
 L'autorizzazione ad avanzare alla successiva milestone di progetto viene concessa dal Committente e/o Proponente in seguito ai colloqui pianificati su Zoom con quest'ultimi. Il gruppo si riserva di procedere verso la milestone successiva solo una volta ricevuta l'approvazione richiesta, in modo da non portare avanti difetti e problematiche che potrebbero risultare insidiosi da correggere una volta entrati in un periodo avanzato del progetto.
 
-== Processo di gestione delle Decisioni <processo_gestione_decisioni>
+== Processo di Gestione delle Decisioni <processo_gestione_decisioni>
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.3_
 
 === Scopo
@@ -650,7 +645,7 @@ Ogni decisione viene presentata identificandone:
 - svantaggi;
 - impatto in termini di tempi e costi.
 
-Il processo di decision making viene prevalentemente svolto nel meeting di retrospettiva, in modo da non contrastare la pianificazione dello sprint in corso ed evitare un eccessivo numero di meeting interni che potrebbero comportare difficoltà organizzative e un rallentamento dell'avanzamento. Alcune decisioni potrebbero richiedere il coinvolgimento di soggetti esterni, come Proponente e Committente, soprattutto nei casi in cui sia richiesta una figura con maggiore esperienza nel campo di riferimento.
+Il processo di decision making viene prevalentemente svolto nel meeting di retrospettiva, in modo da non contrastare la pianificazione dello Sprint in corso ed evitare un eccessivo numero di meeting interni che potrebbero comportare difficoltà organizzative e un rallentamento dell'avanzamento. Alcune decisioni potrebbero richiedere il coinvolgimento di soggetti esterni, come Proponente e Committente, soprattutto nei casi in cui sia richiesta una figura con maggiore esperienza nel campo di riferimento.
 Solo decisioni critiche riguardo cambiamenti sostanziali o nuove direzioni di lavoro possono far scaturire meeting interni mirati.
 
 Il resoconto di quanto deciso sarà visibile all'interno del verbale redatto a fine meeting.
@@ -672,17 +667,17 @@ Le decisioni possono riguardare diversi aspetti del capitolato, e la loro catego
 
 Le decisioni vengono dunque così classificate:
 + *Decisioni organizzative*: sono relative al modo di lavorare, cioè a come vengono gestiti i processi di avanzamento del progetto. Esempi notevoli sono le decisioni focalizzate alla coordinazione del gruppo o alla scelta degli strumenti da utilizzare per la gestione del progetto (ad esempio: scelta dell'ITS, delle piattaforme per la comunicazione e per la collaborazione):
-  - documento soggetto a modifiche: #ndp;
+  - documento soggetto a modifiche: #ndp\;
   - ruoli responsabili dell'aggiornamento: Responsabile, Amministratori;
   - strategia di decision-making: collaborativa.
 
 + *Decisioni tecnologiche*: sono relative allo stack tecnologico da adottare durante lo sviluppo del progetto:
-  - documento soggetto a modifiche: #ndp;
+  - documento soggetto a modifiche: #ndp\;
   - ruoli responsabili dell'aggiornamento: Responsabile, Progettisti;
   - strategia di decision-making: expertise decision-making.
 
 + *Decisioni sui requisiti*: sono relative ai requisiti del prodotto software. Possono riguardare aspetti funzionali e non funzionali:
-  - documento soggetto a modifiche: #adr;
+  - documento soggetto a modifiche: #adr\;
   - ruoli responsabili dell'aggiornamento: Analisti;
   - strategia di decision-making: collaborativa.
 
@@ -697,7 +692,7 @@ Le decisioni vengono dunque così classificate:
   - strategia di decision-making: expertise decision-making.
 
 + *Decisioni sulla qualità*: sono decisioni relative ai controlli di qualità:
-  - documento soggetto a modifiche: #pdq;
+  - documento soggetto a modifiche: #pdq\;
   - ruoli responsabili dell'aggiornamento: Responsabile, Verificatori;
   - strategia di decision-making: collaborativa.
 
@@ -784,7 +779,7 @@ Questa attività consiste nei seguenti compiti:
   pratica necessaria per valutare la necessità di futuri interventi di trattamento del rischio o eventuali modifiche della sua priorità;
 
 + *coordinamento dell'azione di gestione dopo la selezione di una strategia di trattamento del rischio*:\
-  dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di valutazione e controllo del progetto può essere applicato.
+  dopo la selezione di un trattamento del rischio, vengono coordinate azioni di gestione per implementare le decisioni prese. Il processo di Valutazione e Controllo del progetto può essere applicato.
 
 ==== Monitoraggio dei rischi
 Questa attività consiste nei seguenti compiti:
@@ -850,7 +845,7 @@ L'aggiornamento del numero di versione per il software deve attenersi alle segue
     - nei nomi di parametri;
     - nei nomi di funzioni o metodi.
   - cambiamento nel valore di parametri:
-    - cambiamento di colore di un elmento grafico;
+    - cambiamento di colore di un elemento grafico;
     - cambiamento di un valore numerico;
     - cambiamento di un valore letterale.
 
@@ -858,14 +853,14 @@ L'aggiornamento del numero di versione per il software deve attenersi alle segue
 Il tracciamento delle modifiche avviene per mezzo di automazioni che permettono di identificare:
 - versione del documento modificato;
 - data di modifica (gg-mm-aaaa, ddd);
-- numero della pull request di riferimento;
-- titolo della pull request di riferimento;
+- numero della Pull Request di riferimento;
+- titolo della Pull Request di riferimento;
 - autore della modifica;
 - revisore incaricato.
 
-Tali informazioni sono salvate in un file CSV, unico per ogni documento. Questo file, denominato _log.csv_, è salvato nella cartella dedicata al documento a cui si riferisce, e viene generato automaticamente da una GitHub Action invocata all'apertura, riapertura, sincronizzazione e chiusura di una pull request. Maggiori dettagli al paragrafo dedicato (@automazioni).
+Tali informazioni sono salvate in un file CSV, unico per ogni documento. Questo file, denominato `log.csv`, è salvato nella cartella dedicata al documento a cui si riferisce, e viene generato automaticamente da una GitHub Action invocata all'apertura, riapertura, sincronizzazione e chiusura di una Pull Request. Maggiori dettagli al paragrafo dedicato (@automazioni).
 
-Ogni documento, nella sezione direttamente sottostante all'indice, mostra in formato tabellare le informazioni relative al tracciamento delle modifiche, leggendo le informazioni dal file _log.csv_.
+Ogni documento, nella sezione direttamente sottostante all'indice, mostra in formato tabellare le informazioni relative al tracciamento delle modifiche, leggendo le informazioni dal file `log.csv`.
 
 #figure(table(
     align: left,
@@ -877,13 +872,13 @@ Ogni documento, nella sezione direttamente sottostante all'indice, mostra in for
 ===== Tecnologie adoperate
 ====== GitHub <repository-github>
 Lo strumento di versionamento scelto dal gruppo è GitHub.
-Il gruppo #err418 ha creato un'organizzazione omonima su GitHub in modo da gestire e separare il lavoro in più repository pensate per scopi e contenuti diversi:
+Il gruppo #err418 ha creato un'organizzazione omonima su GitHub in modo da gestire e separare il lavoro in più repository pensati per scopi e contenuti diversi:
 
 - Documenti: documentazione;
 - WMS3: codice sorgente;
 - PoC: Proof of Concept.
 
-*Documenti* è la repository dedicata alla documentazione prodotta, la quale possiede tre branch principali:
+*Documenti* è il repository dedicato alla documentazione prodotta, il quale possiede tre branch principali:
 - `main`: contiene i file pdf dei documenti prodotti solamente in seguito ad un processo di review con esito positivo;
 - `src`: contiene i file sorgente dei documenti prodotti, file di configurazione e di supporto;
 - `website`: contiene i file sorgente del sito web che espone la documentazione del gruppo.
@@ -893,21 +888,21 @@ Documenti è organizzata in modo da suddividere la documentazione necessaria all
   - *Documentazione esterna*: contiene i documenti ad uso esterno:
     - *Verbali*: contiene i verbali delle riunioni esterne;
     - *doc_file_name*:
-      - _doc_file_name.typ_: file sorgente del documento;
-      - _log.csv_: registro delle modifiche associato al documento.
+      - `doc_file_name.typ`: file sorgente del documento;
+      - `log.csv`: registro delle modifiche associato al documento.
   - *Documentazione interna*: contiene i documenti ad uso interno:
       - *Verbali*: contiene i verbali delle riunioni interne;
     - *doc_file_name*:
-      - _doc_file_name.typ_: file sorgente del documento;
-      - _log.csv_: registro delle modifiche associato al documento.
+      - `doc_file_name.typ`: file sorgente del documento;
+      - `log.csv`: registro delle modifiche associato al documento.
 - *PB*: contiene i file necessari alla Product Baseline. È organizzata allo stesso modo della cartella dedicata alla RTB.
 
-Al fine di garantire uno svolgimento delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _featuring branching_. È presente un branch per le release e un branch per lo sviluppo dal quale vengono creati dei branch per ogni nuova funzionalità o modifica da apportare.
-Questi ultimi vengono identificati dal codice `DOC-XXX`, dove `XXX` è il numero del relativo task su Jira. I branch di feature vengono integrati tramite pull request.
+Al fine di garantire uno svolgimento delle attività in parallelo, la strategia utilizzata dal gruppo durante lo sviluppo è il _feature branching_. È presente un branch per le release e un branch per lo sviluppo dal quale vengono creati dei branch per ogni nuova funzionalità o modifica da apportare.
+Questi ultimi vengono identificati dal codice `DOC-XXX`, dove `XXX` è il numero del relativo task su Jira. I branch di feature vengono integrati tramite Pull Request.
 
-*WMS3* è la repository che contiene il codice sorgente del prodotto software sviluppato dal gruppo. È presente un branch principale, `dev`, in cui si trova il codice sorgente relativo all'ultima versione del prodotto, reperibile anche nella sezione Releases presente sulla destra dell'interfaccia di GitHub.
+*WMS3* è il repository che contiene il codice sorgente del prodotto software sviluppato dal gruppo. È presente un branch principale, `dev`, in cui si trova il codice sorgente relativo all'ultima versione del prodotto, reperibile anche nella sezione Releases presente sulla destra dell'interfaccia di GitHub.
 
-La repository è organizzata in due sottocartelle principali, da cui si diramano diverse cartelle secondarie:
+Il repository è organizzato in due sottocartelle principali, da cui si diramano diverse cartelle secondarie:
 - *db*: contiene il file SQL utile alla creazione e popolamento del database di supporto;
 - *web*: contiene il codice sorgente di frontend e backend, e si dirama in:
   - *\_\_test\_\_*: contiene i test del software, in particolare:
@@ -922,51 +917,52 @@ La repository è organizzata in due sottocartelle principali, da cui si diramano
     - *providers*: file relativi all'implementazione del pattern Provider;
     - *ThreeComponents*: file relativi agli elementi 3D;
     - *ui*: file relativi agli elementi dell'interfaccia grafica.
-  - *dataMapper*: file relativi all'implementazione del pattern Data Mapper;
-  - *dataRepository*: file relativi all'implementazione del pattern Repository;
   - *lib*: contiene un file riguardante il merge tra più classi del framework Tailwind CSS;
-  - *model*: file relativi alle classi del modello;
-  - *node_modules*: cartella generata automaticamente da `npm` (Node Package Manager) utile alla gestione delle dipendenze di Node.js;
+  - *model*: file relativi alle classi del modello e ai pattern:
+    - *dataMapper*: file relativi all'implementazione del pattern Data Mapper;
+    - *dataRepository*: file relativi all'implementazione del pattern Repository;
+    - *FloorStrategy*: file relativi all'implementazione del pattern Strategy per la creazione del piano;
+    - *SearchEngine*: file relativi all'implementazione delle funzioni di ricerca.
+  - *node_modules*: cartella generata automaticamente da npm (Node Package Manager) utile alla gestione delle dipendenze di Node.js;
   - *pages*: API prodotte dal gruppo;
   - *public*: file SVG per la creazione del magazzino e una sottocartella di icone;
-  - *ServerActions*: file relativi all'implementazione delle Server Actions utilizzate;
-  - *Strategy*: file relativi all'implementazione del pattern Strategy.
+  - *ServerActions*: file relativi all'implementazione delle Server Actions utilizzate.
 
-Anche in questa repository, come per Documenti, viene applicato il _feature branching_, utilizzando `dev` come branch di appoggio per l'apertura dei branch di feature, identificati dal codice `WMS-XXX`, dove `XXX` è il numero del relativo task su Jira.
+Anche in questo repository, come per Documenti, viene applicato il _feature branching_, utilizzando `dev` come branch di appoggio per l'apertura dei branch di feature, identificati dal codice `WMS-XXX`, dove `XXX` è il numero del relativo task su Jira.
 
 ====== GitHub Actions <automazioni>
-L'intero processo di versionamento è accompagnato da una serie di automazioni, realizzate tramite GitHub Actions, che sollevano i componenti del gruppo dall'onere manuale di attività come la compilazione dei documenti, l'aggiornamento del registro delle modifiche (file _log.csv_) e la pubblicazione dei documenti dopo la verifica.
+L'intero processo di versionamento è accompagnato da una serie di automazioni, realizzate tramite GitHub Actions, che sollevano i componenti del gruppo dall'onere manuale di attività come la compilazione dei documenti, l'aggiornamento del registro delle modifiche (file `log.csv`) e la pubblicazione dei documenti dopo la verifica.
 
 *Workflow delle automazioni:*
 #figure(image("./imgs/workflow_actions.svg", format: "svg", width: 100%), caption: [Workflow delle automazioni]);
 
-Alla creazione della pull request si avvia il workflow per la compilazione e la registrazione delle modifiche avvenute. Prima di procedere è necessario inserire informazioni essenziali ai fini di ottenere maggiore chiarezza e tracciabilità nel messaggio di pull request, quali:
-- titolo conforme, contenente il nome del task di riferimento su Jira legata alla pull request, nel formato `DOC-XXX titolo`;
-- identificativo di almeno un verificatore;
+Alla creazione della Pull Request si avvia il workflow per la compilazione e la registrazione delle modifiche avvenute. Prima di procedere è necessario inserire informazioni essenziali ai fini di ottenere maggiore chiarezza e tracciabilità nel messaggio di Pull Request, quali:
+- titolo conforme, contenente il nome del task di riferimento su Jira legata alla Pull Request, nel formato `DOC-XXX titolo`;
+- identificativo di almeno un Verificatore;
 - eventuali note aggiuntive.
 Il workflow è composto dai seguenti passaggi:
-+ *fetch delle informazioni dei file modificati*: vengono recuperate le informazioni relative ai file modificati nella pull request, quali:
++ *fetch delle informazioni dei file modificati*: vengono recuperate le informazioni relative ai file modificati nella Pull Request, quali:
   - nome del file;
   - path del file.
 + *controllo del numero di file modificati*: se il numero di file modificati è maggiore di 1, il workflow termina con un errore;
-+ *controllo dell'esistenza del file _log.csv_*: se il file non esiste, viene creato (sinonimo di creazione del documento);
-+ *rilascio della review*: il verificatore si occupa di controllare il documento e rilasciare la review, segnando i cambiamenti richiesti;
++ *controllo dell'esistenza del file `log.csv`*: se il file non esiste, viene creato (sinonimo di creazione del documento);
++ *rilascio della review*: il Verificatore si occupa di controllare il documento e rilasciare la review, segnando i cambiamenti richiesti;
 + *richiesta di una nuova review per verificare che i cambiamenti apportati siano corretti*;
 + *nel momento in cui la review termina con esito positivo, si procede al recupero della versione corrente del documento*:
   - se non esiste il corrispettivo pdf nel branch main, allora il documento non era mai stato pubblicato, pertanto la sua versione di partenza sarà fissata a 1.0.0;
-  - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script python;
-+ *aggiornamento del file _log.csv_*: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di verifica;
-+ *compilazione del documento*: aggiornato il file _log.csv_ e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
-+ *pubblicazione del documento*: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main della repository;
-+ *merge non confermato*: qualora a termine della compilazione del documento non venisse confermato il merge da parte del verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo main del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
+  - se esiste il corrispettivo pdf nel branch main, essendo la versione contenuta nel nome del file, si procede al recupero della versione corrente del documento, modificando la versione X.Y.Z in base all'analisi del documento mediante uno script Python.
++ *aggiornamento del file `log.csv`*: il file di log viene aggiornato con le informazioni relative alla modifica effettuata: questo passaggio, avvenendo solamente a seguito di review positiva, permette di garantire che vengano segnate solamente le modifiche che hanno superato il processo di Verifica;
++ *compilazione del documento*: aggiornato il file `log.csv` e recuperato il numero di versione, il documento è pronto per essere compilato, mostrando numero di versione e registro delle modifiche aggiornati;
++ *pubblicazione del documento*: terminati i workflow precedenti, se si avvia la procedura di merge a seguito del processo di Verifica, il documento pdf generato dalla compilazione viene pubblicato nel ramo main del repository;
++ *merge non confermato*: qualora a termine della compilazione del documento non venisse confermato il merge da parte del Verificatore, significa che è stato individuato un ulteriore errore o correzione da dover apportare al documento prima della sua pubblicazione sul ramo main del repository. In questa circostanza sarà dunque necessario rilasciare un'ulteriore review. L'esecuzione riprende dal punto 4.
 
 
 L'azione manuale si riduce solamente al rilascio di review e conferma di merge, mentre tutte le altre attività vengono automatizzate.
-All'approvazione della pull request, e alla conseguente chiusura del branch, un'ulteriore automazione integrata su Jira, permette di aggiornare in automatico lo stato del task collegato alla pull request, portandolo allo stato di "Completato".
+All'approvazione della Pull Request, e alla conseguente chiusura del branch, un'ulteriore automazione integrata su Jira, permette di aggiornare in automatico lo stato del task collegato alla Pull Request, portandolo allo stato di "Completato".
 
 ====== Typst
 Il gruppo utilizza Typst come strumento di scrittura e compilazione dei documenti. \
-Al fine di dare una struttura comune ai documenti si è creato un file _template.typ_ parametrizzato, sfruttando la possibilità di produrre un file pdf compilando insieme più file Typst. Questo file contiene le impostazioni di base per la creazione di un documento:
+Al fine di dare una struttura comune ai documenti si è creato un file `template.typ` parametrizzato, sfruttando la possibilità di produrre un file pdf compilando insieme più file Typst. Questo file contiene le impostazioni di base per la creazione di un documento:
 - `title`: titolo del documento;
 - `subTitle`: sottotitolo del documento;
 - `docType`: tipologia del documento (Verbale, Documento);
@@ -982,7 +978,7 @@ Al fine di dare una struttura comune ai documenti si è creato un file _template
 - `showIndex`: flag che indica se mostrare l'indice;
 - `isExternalUse`: flag che indica se il documento è per uso esterno.
 Al momento della creazione di un nuovo documento sarà sufficiente importare il modello e specificare i parametri sopra elencati. \
-Al fine di semplificare la procedura di creazione di un documento, è stato condiviso un documento di testo denominato _quickstart.txt_ che contiene la configurazione base per la stesura dei documenti.
+Al fine di semplificare la procedura di creazione di un documento, è stato condiviso un documento di testo denominato `quickstart.txt` che contiene la configurazione base per la stesura dei documenti.
 
 ==== Tracciamento dei task e amministrazione dello stato di configurazione
 
@@ -1001,20 +997,20 @@ Ogni task è identificato da un codice univoco incrementale nel formato `DOC-XXX
 Nel processo di versionamento e di tracciamento delle modifiche, Jira ricopre un ruolo fondamentale, grazie anche alla sua integrazione con GitHub: nel momento in cui si intende avviare un task, è necessario seguire i seguenti passaggi:
 - aprire il task su Jira;
 - selezionare l'opzione di creazione di un branch dedicato al task (integrazione con GitHub);
-- selezionare la repository e il branch da cui creare il nuovo branch.
+- selezionare il repository e il branch da cui creare il nuovo branch.
 
-A questo punto, il task si aggiornerà nello stato "In corso" e verrà aperto il relativo branch. Terminato il task ed effettuata la pull request, lo stato del ticket passerà automatica a "In verifica". Superato il processo di verifica, Jira provvederà ad aggiornare lo stato del task in "Completato".
+A questo punto, il task si aggiornerà nello stato "In corso" e verrà aperto il relativo branch. Terminato il task ed effettuata la Pull Request, lo stato del ticket passerà automaticamente a "In verifica". Superato il processo di Verifica, Jira provvederà ad aggiornare lo stato del task in "Completato".
 
 ====== Backlog
-Ogni task da svolgere è segnato all'interno del backlog di Jira. Durante la pianificazione dello sprint, si definisce lo sprint backlog, il sottoinsieme di attività provenienti dal backlog che si intendono portare a termine entro la conclusione dello sprint.
-A differenza dello sprint backlog definito durante la pianificazione, il backlog viene espanso man mano che si riscontrano nuovi task necessari o a seguito di decisioni prese durante le riunioni interne o esterne.
+Ogni task da svolgere è segnato all'interno del backlog di Jira. Durante la pianificazione dello Sprint, si definisce lo Sprint backlog, il sottoinsieme di attività provenienti dal backlog che si intendono portare a termine entro la conclusione dello Sprint.
+A differenza dello Sprint backlog definito durante la pianificazione, il backlog viene espanso man mano che si riscontrano nuovi task necessari o a seguito di decisioni prese durante le riunioni interne o esterne.
 
 ====== Board
-Le board di Jira permettono, similmente allo sprint backlog, di avere una visione d'insieme delle attività da svolgere, ma con un approccio più visuale e intuitivo.
+Le board di Jira permettono, similmente allo Sprint backlog, di avere una visione d'insieme delle attività da svolgere, ma con un approccio più visuale e intuitivo.
 I task sono organizzati in quattro colonne, rappresentanti lo stato:
 - *da completare*: non ancora avviati, ovvero non esiste il branch dedicato;
 - *in corso*: in fase di svolgimento, ovvero branch dedicato al task creato;
-- *in verifica*: in fase di review, dopo l'apertura di una pull request;
+- *in verifica*: in fase di review, dopo l'apertura di una Pull Request;
 - *completato*: task concluso, ovvero branch dedicato chiuso a seguito di merge sul ramo principale.
 
 ====== Timeline
@@ -1027,13 +1023,13 @@ Il gruppo utilizza come metrica principale il burndown chart, che permette di av
 
 
 ==== Controllo delle release <controllo_release>
-Il controllo delle release viene gestito tramite il meccanismo di pull request di GitHub.
-Prima di integrare i nuovi cambiamenti, viene aperta una pull request dall'assegnatario del task. La pull request deve avere un titolo valido (come descritto nel paragrafo dedicato @automazioni) e deve essere designato almeno un reviewer. Di norma il reviewer di base è il Verificatore, che svolge una supervisione sulla correttezza sintattica e semantica dei contenuti.
+Il controllo delle release viene gestito tramite il meccanismo di Pull Request di GitHub.
+Prima di integrare i nuovi cambiamenti, viene aperta una Pull Request dall'assegnatario del task. La Pull Request deve avere un titolo valido (come descritto nel paragrafo dedicato @automazioni) e deve essere designato almeno un reviewer. Di norma il reviewer di base è il Verificatore, che svolge una supervisione sulla correttezza sintattica e semantica dei contenuti.
 Nel caso in cui ci sia bisogno di una figura con delle competenze specifiche per quanto riguarda la semantica e il contenuto del materiale da revisionare, il Verificatore può essere affiancato da altri membri del gruppo.
-Per ogni richiesta di modifiche da apportare vengono aperte delle conversation, in cui è possibile evidenziare le linee del documento che hanno bisogno di cambiamenti, oltre a stabilire un canale di comunicazione fra assegnatario e Verificatore.
-Il processo di verifica del documento è accompagnato dall'esecuzione di GitHub Actions che si occupano di automatizzare l'aggiornamento del file _log.csv_ con i dati relativi alla modifica apportata, e la compilazione e pubblicazione del documento nel ramo main del repository. In questo modo si assicura che ogni documento presente nel ramo principale sia prima stato sottoposto ad un processo di verifica.
-Si può procedere alla chiusura della pull request e con l'operazione di merge solo nel caso in cui tutte le conversation siano state risolte e siano stati applicati i cambiamenti richiesti in fase di review.
-Solo a seguito del merge della pull request, il task collegato presente in Jira può essere definito concluso e il relativo branch viene chiuso in modo automatico.
+Per ogni richiesta di modifiche da apportare vengono aperte delle conversation, in cui è possibile evidenziare le linee del documento che hanno bisogno di cambiamenti, oltre a stabilire un canale di comunicazione tra assegnatario e Verificatore.
+Il processo di verifica del documento è accompagnato dall'esecuzione di GitHub Actions che si occupano di automatizzare l'aggiornamento del file `log.csv` con i dati relativi alla modifica apportata, e la compilazione e pubblicazione del documento nel ramo main del repository. In questo modo si assicura che ogni documento presente nel ramo principale sia prima stato sottoposto ad un processo di verifica.
+Si può procedere alla chiusura della Pull Request e con l'operazione di merge solo nel caso in cui tutte le conversation siano state risolte e siano stati applicati i cambiamenti richiesti in fase di review.
+Solo a seguito del merge della Pull Request, il task collegato presente in Jira può essere definito concluso e il relativo branch viene chiuso in modo automatico.
 
 
 == Processo di Gestione delle Informazioni <processo_gestione_informazioni>
@@ -1047,11 +1043,11 @@ Le informazioni possono essere tecniche, di progetto, organizzative e di accordo
 === Informazioni gestite
 Le informazioni gestite dal gruppo sono:
 - documentazione:
-  - #pdp;
-  - #ndp;
-  - #pdq;
-  - #adr;
-  - #glo;
+  - #pdp\;
+  - #ndp\;
+  - #pdq\;
+  - #adr\;
+  - #glo\;
   - Verbali.
 - codice sorgente:
   - Proof of Concept (PoC);
@@ -1062,7 +1058,7 @@ Codice sorgente e documenti sono creati, organizzati, aggiornati, versionati e d
 === Documentazione <norme-documentazione>
 
 ==== Struttura dei documenti <struttura-documenti>
-Ogni documento segue una struttura standard, stabilita nel template _template.typ_. \
+Ogni documento segue una struttura standard, stabilita nel template `template.typ`. \
 Questo paragrafo non tratta della struttura dei verbali. Per le norme sulla struttura dei verbali si rimanda alla @struttura-verbali.\
 I documenti pertanto sono così strutturati:
 
@@ -1076,7 +1072,7 @@ I documenti pertanto sono così strutturati:
   - versione;
   - stato;
   - tipo di uso: interno od esterno;
-  - responsabile del gruppo;
+  - Responsabile del gruppo;
   - redattori;
   - verificatori;
   - destinatari;
@@ -1092,36 +1088,49 @@ I documenti pertanto sono così strutturati:
 + *Contenuto del file*: sezione successiva agli indici. Rappresenta il corpo del documento, suddiviso in paragrafi.
 
 ==== Struttura dei verbali <struttura-verbali>
-Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e attività oggetto di discussione durante i meeting interni ed esterni, il gruppo raccoglie tali informazioni all'interno di verbali redatti al termine dei meeting. La struttura dei verbali è la seguente:
+Al fine di rendicontare argomenti, decisioni, aggiornamenti, problematiche e attività oggetto di discussione durante i meeting interni ed esterni, il gruppo raccoglie tali informazioni all'interno di verbali redatti al termine dei meeting.
+
+===== Verbali interni di retrospettiva <struttura-verbali-retrospettiva>
 
 + *cover page* (@struttura-documenti);
-+ "*Informazioni generali*":
-  - luogo: il luogo reale o digitale dove il gruppo insieme ad eventuali partecipanti esterni svolge il meeting;
-  - data e ora nel formato (gg-mm-aaaa, hh:mm ~ hh:mm);
++ *Informazioni generali*:
+  - luogo: il luogo reale o piattaforma software dove il gruppo svolge il meeting;
+  - data e ora nel formato `dd/mm/aaaa @ hh:mm ~ hh:mm`;
   - partecipanti;
-  - assenti;
-  - partecipanti esterni al gruppo (se presenti).
-+ "*Ordine del giorno*": elenco degli argomenti trattati durante la riunione;
-+ "*Valutazione del progresso generale*" descrive l'analisi sul lavoro svolto durante lo sprint precedente. Questo paragrafo è così definito:
-  - valutazione sulla qualità del lavoro in merito alla velocità di avanzamento, evidenziando eventuali rallentamenti o meriti riscontrati.
-  - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportato una descrizione sul lavoro svolto, se i lavori svolti sono molti e diversi riportarli in forma di elenco puntato.
-+ "*Analisi di retrospettiva*", suddiviso in:
-  - lista di valori calcolati dalle metriche presenti nel #pdq riguardo allo sprint, nello specifico riportare:
+  - assenti.
++ *Ordine del giorno*: elenco degli argomenti trattati durante la riunione;
++ *Valutazione del progresso generale*: descrive il lavoro svolto durante lo Sprint a cui si riferisce la retrospettiva. Questo paragrafo è così definito:
+  - valutazione sulla qualità del lavoro in merito alla velocità di avanzamento, evidenziando eventuali rallentamenti o meriti riscontrati. In questa parte deve essere indicato se sono stati effettuati meeting esterni, riportando data e oggetto di ogni meeting svolto;
+  - sottoparagrafi per ogni epic su cui si è lavorato in cui viene riportata una descrizione del lavoro svolto. Se in una epic sono stati svolti diversi lavori, questi vanno riportati in forma di elenco non numerato.
++ *Analisi di retrospettiva*, suddiviso in:
+  - discussione delle principali metriche del #pdq riguardanti l'andamento dello Sprint e del progetto:
    - CPI: valore precedente e valore attuale;
    - EAC: valore precedente e valore attuale;
    - rapporto tra SEV e SPV.
-  - sottoparagrafo "*Keep doing*", riporta i meriti riscontrati dal gruppo;
-  - sottoparagrafo "*Improvements*", riporta le criticità riscontrate dal gruppo etichettate con un codice identificativo.
-  I codici sono così composti:
-   - *P*, lettera indicante una Problematica;
-   - *O/T*, a seconda se la problematica sia di origine organizzativa o tecnologica;
-   - *N*, intero naturale positivo che incrementa ad ogni nuova problematica di tipo organizzativo o tecnologico.
-  Quindi inserire la tabella che associa ogni criticità ad una risoluzione presente nel #pdp. La tabella deve riportare:
-   - *ID risoluzione*;
-   - *Titolo risoluzione*;
-   - *Criticità affrontate*.
-+ eventuali ulteriori argomenti organizzati in paragrafi indipendenti;
-+ "*Pianificazione*", riporta la tabella contenente le task programmate per lo Sprint successivo. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso realizzato in Google Sheets (maggiori dettagli in merito reperibili al paragrafo @google_sheets) e disponibile nel Google Drive del gruppo.
+  - *Keep doing*: riporta gli aspetti positivi dello Sprint;
+  - *Improvements*: riporta le criticità riscontrate dal gruppo etichettate con un codice identificativo, e le relative soluzioni. Si articola in due parti:
+    - *Criticità evidenziate*: riporta l'elenco delle criticità, ognuna identificata da un codice composto nel seguente modo:
+      - *P*, lettera indicante una problematica;
+      - *O/T*, a seconda se la problematica sia di origine organizzativa o tecnologica;
+      - *N*, intero naturale positivo che incrementa ad ogni nuova problematica di tipo organizzativo o tecnologico.
+    - *Soluzioni predisposte*: tabella che associa ad ogni criticità una soluzione. È suddivisa in tre colonne:
+      - ID risoluzione;
+      - Titolo: titolo o breve descrizione della soluzione;
+      - Criticità affrontate.
++ eventuali ulteriori argomenti affrontati, organizzati in paragrafi indipendenti;
++ *Pianificazione*: riporta la tabella contenente i task programmati per lo Sprint successivo. Questa tabella è automaticamente generata da un foglio di calcolo elettronico condiviso realizzato in Google Sheets (maggiori dettagli in merito reperibili al paragrafo @google_sheets) e disponibile nel Google Drive del gruppo.
+
+===== Verbali esterni <struttura-verbali-esterni>
+
+La struttura dei verbali esterni deve rispecchiare i primi tre punti della @struttura-verbali-retrospettiva. In "Partecipanti" dovranno essere riportati i nominativi dei partecipanti esterni e il ruolo svolto all'interno del meeting. Ogni argomento della sezione "Ordine del giorno" dovrà essere discusso in una sottosezione dedicata.
+
+Nei verbali esterni riguardanti gli incontri con il Proponente dovrà essere presente la sezione "Pianificazione incontri futuri", nella quale si riporta la data del prossimo meeting.
+
+===== Altri verbali interni <struttura-verbali-interni-generali>
+
+La struttura dei verbali interni che non riguardano la retrospettiva deve rispecchiare i primi tre punti della @struttura-verbali-retrospettiva. Ogni argomento della sezione "Ordine del giorno" dovrà essere discusso in una sottosezione dedicata.
+
+Nel caso in cui da un meeting interno scaturiscano nuovi task da svolgere, questi dovranno essere riportati in una sezione "Pianificazione" all'interno di una tabella.
 
 === Stile e convenzioni <stile-convenzioni>
 Al fine di uniformare e conformare i prodotti del progetto, il gruppo ha stabilito delle convenzioni stilistiche e di scrittura da rispettare durante la stesura dei documenti e del codice.
@@ -1131,17 +1140,16 @@ L'obiettivo è perseguire:
 - manutenibilità.
 
 ==== Convenzioni stilistiche globali
-Convenzioni stilistiche valide sia per i prodotti documentali che software.
 
 ===== Nomi dei documenti <norma_nomi_documenti>
 Ogni parola dei titoli dei documenti deve iniziare con la lettera maiuscola, ad eccezione delle preposizioni e degli articoli.\
-I verbali avranno come titolo la data del verbale nel formato _yyyy-mm-dd_.
+I verbali avranno come titolo la data del verbale nel formato `yyyy-mm-dd`.
 Se si fa riferimento al contenuto di un documento, dopo il rispettivo titolo riportare anche la versione nel formato `\_vX.Y.Z`. \
 
-Esempio: #ndp_v.
+Esempio: #ndp_v
 
 ===== Formato data
-All'interno del documento, le date seguiranno il formato locale _dd/mm/yyyy_, mentre all'interno dei nomi dei file e dei commit di GitHub, il formato utilizzato sarà _yyyy-mm-dd_, dove:
+All'interno del documento, le date seguiranno il formato locale `dd/mm/yyyy`, mentre all'interno dei nomi dei file il formato utilizzato sarà `yyyy-mm-dd`, dove:
 - *dd*: numero del giorno con due cifre;
 - *mm*: numero del mese con due cifre;
 - *yyyy*: numero dell'anno con quattro cifre.
@@ -1188,7 +1196,7 @@ Tutte le occorrenze dei termini contenuti nel glossario sono evidenziati con una
 ===== Variabili Typst per termini ricorrenti
 
 Al fine di uniformare termini ricorrenti, vengono predisposte variabili utilizzabili nella redazione dei documenti. I termini in considerazione sono relativi a:
-- nomi di documenti
+- nomi di documenti;
 - stakeholder;
 - documenti e la versione a cui si fa riferimento;
 - ultima data di accesso ad un link ad una risorsa web esterna.
@@ -1219,10 +1227,12 @@ Di seguito viene riportata la tabella delle variabili e la loro rappresentazione
   caption: "Variabili Typst per riferirsi a termini ricorrenti"
 )
 
+Tutte le variabili sono definite all'interno del file `common.typ`, reperibile nella root del repository Documenti.
+
 === Distribuzione delle informazioni
 Il gruppo condivide il materiale prodotto all'interno di un repository dedicato reperibile al link:\
 #align(link("https://github.com/Error-418-SWE/Documenti"), center)
-Maggiori dettagli in merito all'organizzazione della repository sono reperibili qui: @repository-github.
+Maggiori dettagli in merito all'organizzazione del repository sono reperibili qui: @repository-github.
 
 == Processo di Misurazione <processo_misurazione>
 
@@ -1230,7 +1240,7 @@ _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.3.7_
 
 === Scopo
 
-Lo scopo del processo di misurazione è raccogliere, analizzare e riportare dati e informazioni, al fine di dimostrare la qualità di prodotti, servizi e processi.\
+Lo scopo del processo di Misurazione è raccogliere, analizzare e riportare dati e informazioni, al fine di dimostrare la qualità di prodotti, servizi e processi.\
 Questo processo viene svolto affinché il gruppo sia in grado di prendere le corrette decisioni per gestire al meglio il raggiungimento dei propri obiettivi.\
 Le misure devono soddisfare determinate caratteristiche di qualità, ovvero devono essere:
 + verificabili;
@@ -1243,7 +1253,7 @@ Definiamo il concetto di "qualità" come segue: insieme delle caratteristiche di
 
 === Risultati
 
-A seguito dell'implementazione efficace del processo di misurazione:
+A seguito dell'implementazione efficace del processo di Misurazione:
 
 - vengono identificate le esigenze informative;
 - viene identificato e sviluppato un insieme appropriato di misure basato sulle esigenze informative;
@@ -1255,7 +1265,7 @@ I risultati sono contenuti nel documento #pdq_v.
 
 === Attività
 
-Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di misurazione definito nel #pdq_v:
+Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di Misurazione definito nel #pdq_v\:
 
 + prepararsi per la misurazione:
 
@@ -1263,13 +1273,13 @@ Il gruppo deve implementare le seguenti attività in conformità con le politich
         + BAC (Budget at Completion);
         + PV (Planned Value), che si estende in:
           - SPV (Sprint Planned Value);
-          - PPV (Project Planned Value);
+          - PPV (Project Planned Value).
         + AC (Actual Cost), che si estende in:
           - SAC (Sprint Actual Cost);
-          - PAC (Project Actual Cost);
+          - PAC (Project Actual Cost).
         + EV (Earned Value), che si estende in:
           - SEV (Sprint Earned Value);
-          - PEV (Project Earned Value);
+          - PEV (Project Earned Value).
         + CPI (Cost Performance Index);
         + EAC (Estimated at Completion).
 
@@ -1298,7 +1308,7 @@ Il gruppo deve implementare le seguenti attività in conformità con le politich
     - definire procedure di raccolta, analisi, accesso e reportistica dei dati:
         - #pdq: definisce i criteri e le modalità di misurazione e reportistica dei dati misurati.
 
-    - definire criteri per valutare gli elementi informativi e il processo di misurazione:
+    - definire criteri per valutare gli elementi informativi e il processo di Misurazione:
         - #pdq: definisce i valori ottimali e accettabili della strategia di misurazione adottata a cui tutti i documenti prodotti devono conformarsi.
 
     - identificare e pianificare le azioni da intraprendere per i casi in cui i parametri di misurazione di qualità non vengano rispettati.
@@ -1374,12 +1384,10 @@ Le seguenti attività devono essere implementate in conformità con le politiche
 
   + il Verificatore deve valutare i prodotti e i servizi al fine di garantirne la conformità rispetto ai criteri stabiliti;
   + il Verificatore deve assicurarsi che la verifica e la convalida degli output dei processi del ciclo di vita siano eseguiti conformemente con quanto concordato in precedenza;
-  + il Verificatore deve applicare il processo di misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
+  + il Verificatore deve applicare il processo di Misurazione della qualità per verificare che il prodotto o servizio rispetti le metriche precedentemente stabilite;
   + il Verificatore deve esprimere un giudizio e segnalare eventuali problematiche riscontrate.
 
 + *gestire report e record del Controllo della Qualità*:
-
- - *l'attività consiste in*:
 
   + *stilare report e record relativi alle attività di Controllo della Qualità*:
     - i report e i record vengono generati tramite l'utilizzo coordinato di Jira, Google Sheets e Grafana che porta alla creazione di un cruscotto di qualità. Si rimanda a @tecnologie_controllo per ulteriori dettagli.
@@ -1394,7 +1402,7 @@ Le seguenti attività devono essere implementate in conformità con le politiche
   + *trattare incidenti e problemi*:
 
     + in caso di segnalazione di incidenti e problemi deve essere svolto un lavoro collettivo per la loro risoluzione;
-    + tutte le criticità devono prevedere risoluzioni e arginamenti già predisposti all'interno del documento #pdp_v.
+    + tutte le criticità devono prevedere risoluzioni e arginamenti già predisposti all'interno del documento #pdp_v\;
     + nel caso tali problemi o incidenti siano di carattere generale, deve essere avvisato collettivamente il gruppo dell'insorgenza di tali problemi o incidenti, al fine di evitare future ricorrenze degli stessi.
 
 ==== Tecnologie <tecnologie_controllo>
@@ -1404,7 +1412,7 @@ Jira, essendo l'ITS del gruppo, è la fonte principale di informazioni per il cr
 Google Sheets viene utilizzato per rendere meglio manipolabili i dati provenienti da Jira, in modo da poterli analizzare con più facilità e calcolare comodamente metriche come CPI, EAC, EV.
 ===== Grafana  <grafana>
 Grafana è l'applicazione utilizzata per visualizzare i dati raccolti tramite l'implementazione di un cruscotto di qualità. Le informazioni mostrate sono le seguenti:
-  - sprint rimanenti;
+  - Sprint rimanenti;
   - budget rimanente;
   - rapporto EAC e BAC;
   - andamento CPI;
@@ -1418,13 +1426,13 @@ I dati sono visualizzati sotto forma di grafici, per aiutarne l'analisi e la com
 
 = Processi tecnici
 
-== Processo di analisi della missione <processo_missione>
+== Processo di Analisi della Missione <processo_missione>
 
 _Tailored conformance on ISO/IEC/IEEE 12207:2017 clause 6.4.1 per ISO/IEC/IEEE 12207:2017 Annex A_
 
 === Scopo
 
-Il processo di analisi della missione definisce i problemi e le opportunità dai quali scaturisce il progetto, caratterizza lo spazio delle soluzioni e determina una classe di soluzione preferita.
+Il processo di Analisi della Missione definisce i problemi e le opportunità dai quali scaturisce il progetto, caratterizza lo spazio delle soluzioni e determina una classe di soluzione preferita.
 
 === Strategia di identificazione e analisi della missione
 
@@ -1441,7 +1449,7 @@ Si identifica l'ambito del Capitolato attraverso la definizione di:
 - tipologia di utenza attesa;
 - destinazione d'uso del prodotto finale.
 
-La sintesi di bisogni e requisiti avviene nel contesto del processo di definizione di bisogni e requisiti degli Stakeholder disponibile nella @processo_bisogni.
+La sintesi di bisogni e requisiti avviene nel contesto del processo di Definizione di Bisogni e Requisiti degli Stakeholder disponibile nella @processo_bisogni.
 
 ==== Classi di soluzione
 Si identificano classi di soluzione che possano sfruttare le opportunità e risolvere i problemi individuati.
@@ -1471,13 +1479,13 @@ Sulla base dei risultati della valutazione, il gruppo individua una classe di so
 ==== Analisi dei requisiti
 Il documento #adr raccoglie le informazioni previste da questo processo. Il documento deve ricevere approvazione esplicita da parte degli Stakeholder coinvolti.
 
-== Processo di definizione di bisogni e requisiti degli stakeholder <processo_bisogni>
+== Processo di Definizione di Bisogni e Requisiti degli Stakeholder <processo_bisogni>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.2_
 
 === Scopo
 
-Il processo di definizione di bisogni e requisiti degli stakeholder definisce i requisiti di un sistema che possa fornire le funzionalità di cui gli utenti e gli stakeholder necessitano.
+Il processo di Definizione di Bisogni e Requisiti degli Stakeholder definisce i requisiti di un sistema che possa fornire le funzionalità di cui gli utenti e gli stakeholder necessitano.
 
 Il processo identifica gli stakeholder coinvolti con il sistema durante l'intero suo ciclo di vita.
 
@@ -1494,7 +1502,7 @@ Sono identificati tutti quegli stakeholder che possiedano una forte influenza su
 ==== Matrice degli stakeholder
 Si classificano gli stakeholder individuati sulla base di:
 - coinvolgimento nel progetto: indica l'interesse dello stakeholder nell'ambito di progetto;
-- autorità sullo sviluppo: indica il potere decisionale esercitabile sull'ambito di progetto.
+- autorità sullo sviluppo: indica il potere decisionale esercitabile nell'ambito di progetto.
 
 Entrambe le classificazioni si strutturano su tre livelli: basso, medio, alto.
 
@@ -1510,7 +1518,7 @@ Il gruppo adotta una strategia iterativa per l'identificazione, l'analisi e la t
 - osservazione delle criticità delle soluzioni software preesistenti.
 Le comunicazioni con gli stakeholder avvengono nelle modalità descritte in @modalita-comunicazione.
 
-Le attività sono supportate, quando utile, da documenti, immagini, dimostratori tecnologici e in generale qualsiasi elemento informativo utile alla comprensione dei bisogni degli stakeholder. Le informazioni sono organizzate in modo da supportare l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. Il livello di astrazione adottato può differire in base all'interlocutore e al progresso globale conseguito dal _Processo di definizione di bisogni e requisiti degli stakeholder_.
+Le attività sono supportate, quando utile, da documenti, immagini, dimostratori tecnologici e in generale qualsiasi elemento informativo utile alla comprensione dei bisogni degli stakeholder. Le informazioni sono organizzate in modo da supportare l'identificazione, l'analisi e la trasformazione dei bisogni in requisiti. Il livello di astrazione adottato può differire in base all'interlocutore e al progresso globale conseguito dal processo di Definizione di Bisogni e Requisiti degli Stakeholder.
 
 Lo strumento adottato a supporto di queste operazioni è Miro.
 
@@ -1537,7 +1545,7 @@ I bisogni degli stakeholder scaturiscono da fonti diverse. Il gruppo si impegna 
 - norme, leggi o altri vincoli esterni.
 
 ==== Definizione delle priorità
-Le preferenze espresse dagli stakeholder, coadiuvate dal processo di gestione delle decisioni (@processo_gestione_decisioni), guidano la selezione e la prioritizzazione dei requisiti.
+Le preferenze espresse dagli stakeholder, coadiuvate dal processo di Gestione delle Decisioni (@processo_gestione_decisioni), guidano la selezione e la prioritizzazione dei requisiti.
 
 ==== Casi d'uso
 Si definisce un insieme di casi d'uso (anche detti use case, abbreviato in UC) che identifichi tutte le funzionalità attese.
@@ -1546,15 +1554,16 @@ I casi d'uso sono definiti ed utilizzati nel documento di #adr. Essi sono:
 - un ausilio per l'esplorazione degli aspetti descritti nella @identificazione-bisogni.
 
 Ogni caso d'uso comprende:
-+ Codice identificativo;
-+ Titolo;
-+ Descrizione;
-+ Attore;
-+ Precondizioni (opzionale);
-+ Postcondizioni (opzionale);
++ Codice identificativo e titolo;
++ Attore principale;
++ Precondizioni;
++ Postcondizioni;
 + Scenario principale;
 + Scenari alternativi (opzionale);
-+ Generalizzazioni (opzionale).
++ User story associata;
++ Generalizzazioni (opzionale);
++ Estensioni (opzionale);
++ Requisiti derivati.
 
 Il codice identificativo assume l'aspetto `UC-X.Y`, dove `UC-` è la radice del codice; `X` è una cifra positiva crescente di cifre che identifica un caso d'uso; `Y` è una cifra positiva crescente, attiva solo per le generalizzazioni di uno stesso caso d'uso.
 
@@ -1576,17 +1585,28 @@ Sono classificati per priorità e per fonte.
 Il documento #adr raccoglie le informazioni previste. Il documento deve ricevere approvazione esplicita da parte degli stakeholder coinvolti.
 
 
-== Processo di definizione dell'architettura <processo_definizione_architettura>
+== Processo di Definizione dell'Architettura <processo_definizione_architettura>
 
 _Conformant to outcomes to ISO/IEC/IEEE 12207:2017 clause 6.4.4_
 
 === Scopo
 
-Il processo di definizione dell'architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
+Il processo di Definizione dell'Architettura ha come scopo la creazione di uno o più modelli architetturali, nei quali si descrivono più proposte di organizzazione del prodotto dal punto di vista della comunicazione tra le sue componenti. Il modello architetturale definitivo viene deciso in collaborazione con il Proponente, in quanto deve soddisfare i suoi bisogni oltre che i requisiti individuati.
 
-Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di analisi della missione (@processo_missione), di definizione di bisogni e requisiti degli stakeholder (@processo_bisogni) e di definizione del design (@processo_design).
+Per avere una migliore comprensione del problema da affrontare e trovare così una soluzione soddisfacente, è possibile iterare questo processo insieme ai processi di Analisi della Missione (@processo_missione), di Definizione di Bisogni e Requisiti degli Stakeholder (@processo_bisogni) e di Definizione del Design (@processo_design).
 
-=== Preparazione e requisiti <preparazione_architettura>
+=== Risultati
+
+Come risultato della corretta implementazione del processo di Definizione dell'Architettura:
+
+- vengono definite più opzioni architetturali;
+- vengono valutate le opzioni e decisa un'architettura definitiva;
+- i bisogni degli stakeholder sono soddisfatti dall'architettura;
+- l'architettura individuata viene descritta nel documento #st\.
+
+=== Attività
+
+==== Preparazione e requisiti <preparazione_architettura>
 
 Il Progettista è il ruolo principale all'interno di questo processo. Il numero di persone assegnate a questo ruolo e le attività che esso dovrà svolgere vengono definite in maniera precisa durante la riunione di retrospettiva e la pianificazione dello _Sprint_ che la segue.
 
@@ -1597,11 +1617,11 @@ Il Progettista è il ruolo principale all'interno di questo processo. Il numero 
 
 È essenziale, inoltre, la conoscenza degli obiettivi del prodotto e lo studio del documento #adr_v e delle tecnologie che il gruppo ha selezionato per la sua implementazione.
 
-=== Individuazione dell'architettura
+==== Individuazione dell'architettura
 
 Successivamente all'acquisizione delle conoscenze necessarie, il Progettista può procedere all'individuazione di una o più proposte architetturali per il prodotto. In questa attività, oltre alla conoscenza dei pattern descritta nella @preparazione_architettura, sarà necessario analizzare anche gli aspetti positivi e negativi del pattern nel contesto del prodotto da sviluppare, in modo da individuare le alternative più adatte.
 
-Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento _Specifica Tecnica_ (@specifica_tecnica).
+Le proposte architetturali individuate saranno poi illustrate al Proponente durante un meeting, il quale potrà contribuire alla decisione dell'architettura definitiva del prodotto. Il gruppo, una volta individuata l'architettura finale, dovrà descriverne i dettagli all'interno del documento #st (@specifica_tecnica).
 
 È importante che nella scelta architetturale si mantenga un certo focus sulle caratteristiche principali di una buona architettura, riportate nell'elenco che segue:
 
@@ -1618,16 +1638,22 @@ Le proposte architetturali individuate saranno poi illustrate al Proponente dura
 - *coesione*: deve raggruppare le parti che svolgono gli stessi compiti;
 - *basso accoppiamento*: parti distinte dipendono poco o niente le une dalle altre.
 
-==== Specifica Tecnica <specifica_tecnica>
+==== #st <specifica_tecnica>
 
 Insieme all'architettura del prodotto costituisce uno degli output principali del processo. In questo documento viene descritto il prodotto dal punto di vista tecnico, ovvero dal lato tecnologico e architetturale.
 
 Gli argomenti principali trattati nel documento sono due:
 
-+ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto, ciascuna con relativa descrizione, versione di utilizzo e motivazione della scelta;
++ *tecnologie*: vengono presentate le tecnologie utilizzate dal gruppo all'interno del prodotto. Di ognuna dovranno essere riportati:
+  - nome;
+  - breve descrizione;
+  - numero di versione;
+  - link al sito web;
+  - linguaggi che utilizza;
+  - contesto di utilizzo.
 + *architettura*: vengono presentate:
-  + *architettura logica*: descrizione dell'architettura del prodotto per componenti, ruoli, connessioni e interazioni;
-  + *architettura di deployment*: descrizione della procedura di deployment.
+  + *architettura di sistema*: descrizione dell'architettura del prodotto per componenti, ruoli, connessioni e interazioni;
+  + *architettura di deployment*: descrizione dell'architettura e della procedura di deployment.
 
 Nel documento dovranno essere descritti nel dettaglio i design pattern utilizzati nel prodotto e derivati dalle tecnologie, inserendo anche i relativi diagrammi UML, e ogni altro aspetto progettuale che sia rilevante ai fini dell'architettura e del design del prodotto.
 
@@ -1647,7 +1673,7 @@ Come risultato dell'efficace attuazione del processo di Definizione del Design:
 - vengono disegnati i diagrammi a supporto del design;
 - viene effettuato il tracciamento fra i requisiti software e gli elementi di sistema.
 
-Le scelte di design relative agli elementi di sistema e i relativi diagrammi sono illustrati nel documento _Specifica Tecnica_.
+Le scelte di design relative agli elementi di sistema e i relativi diagrammi sono illustrati nel documento #st\.
 
 === Attività
 ==== Pianificazione della Definizione del Design
@@ -1659,14 +1685,14 @@ L'attività consiste nei seguenti task:
       - stabilire le interfacce fra i componenti;
       - stabilire i paradigmi di composizione per collegare i componenti fra loro.
     I risultati di questa progettazione sono illustrati nei rispettivi diagrammi.
-    Viene anche valutato, se necessario e possibile, l'uso dei design pattern, illustrati nel testo _Design Patterns: Elements of Reusable Object-Oriented Software (1994)_, per standardizzare e ottimizzare l'implementazione delle interazioni tra le componenti del sistema;
+    Viene anche valutato, se necessario e possibile, l'uso dei design pattern, illustrati nel testo _Design Patterns: Elements of Reusable Object-Oriented Software (1994)_, per standardizzare e ottimizzare l'implementazione delle interazioni tra le componenti del sistema.
   + *selezionare principi e caratteristiche di design*:\
     i Progettisti devono seguire concetti base fondamentali come l'astrazione, la modularizzazione, l'incapsulamento, la separazione tra interfaccia e implementazione. Inoltre devono rispettare i principi della SOLID programming, per creare software più modulare, scalabile, manutenibile e adattabile ai cambiamenti futuri;
   + *scegliere le tecnologie a supporto della Definizione del Design*:\
     la scelta delle tecnologie deve seguire questa prassi:
-      - i Progettisti devono individuare le possibili tecnologie in base alle loro conoscenze pregresse e ad un'esplorazione tecnologica, la discussione fra loro deve avvenire nei canali Discord "database" e "mvp";
+      - i Progettisti devono individuare le possibili tecnologie in base alle loro conoscenze pregresse e ad un'esplorazione tecnologica, la discussione fra loro deve avvenire nei canali Discord `#database` e `#mvp`;
       - deve essere eseguito un breve studio di fattibilità per verificare la possibilità di utilizzo delle tecnologie;
-      - nei canali Discord "mvp" e "database", i Progettisti devono chiedere un confronto con gli altri membri del gruppo per valutare alternative tecnologiche o confermare le scelte fatte.
+      - nei canali Discord `#mvp` e `#database`, i Progettisti devono chiedere un confronto con gli altri membri del gruppo per valutare alternative tecnologiche o confermare le scelte fatte.
 
 ==== Progettazione degli elementi del sistema
 L'attività consiste nei seguenti task:
@@ -1676,8 +1702,8 @@ L'attività consiste nei seguenti task:
 
   + *trasformare le caratteristiche architetturali e di design nella progettazione in elementi del sistema*:\
     - le caratteristiche architetturali e di design sono trasformate in unità architetturali, rappresentate nei relativi diagrammi.
-    Le unità architetturali sono unità funzionali (o di responsabilità) ben definite, realizzabili da un singolo programmatore.
-    A una singola unità architetturale possono corrispondere uno o più moduli di codice, la cui corrispondenza unità – modulo è determinata dalle caratteristiche del linguaggio di programmazione utilizzato per la realizzazione;
+    Le unità architetturali sono unità funzionali (o di responsabilità) ben definite, realizzabili da un singolo Programmatore.
+    A una singola unità architetturale possono corrispondere uno o più moduli di codice, la cui corrispondenza unità – modulo è determinata dalle caratteristiche del linguaggio di programmazione utilizzato per la realizzazione.
 
   + *esaminare le alternative di progettazione e la fattibilità dell'implementazione*:\
     - i Progettisti devono identificare le alternative di design;
@@ -1704,7 +1730,7 @@ L'attività consiste nei seguenti task:
 ==== Gestione del design
 L'attività consiste nei seguenti task:
   + *giustificare le scelte di design*:\
-    le scelte di design devono essere giustificate e documentate nel documento _Specifica Tecnica_. Le giustificazioni possono includere confronti con alternative possibili e analisi delle implicazioni a lungo termine delle decisioni prese. Questo livello di dettaglio aiuta a garantire che il design sia robusto, efficiente e in grado di soddisfare le esigenze del progetto in modo efficace;
+    le scelte di design devono essere giustificate e documentate nel documento #st\. Le giustificazioni possono includere confronti con alternative possibili e analisi delle implicazioni a lungo termine delle decisioni prese. Questo livello di dettaglio aiuta a garantire che il design sia robusto, efficiente e in grado di soddisfare le esigenze del progetto in modo efficace;
   + *stabilire il tracciamento tra gli elementi di design, i requisiti del sistema e le entità architetturali dell'architettura del sistema software*;
   + *determinare lo stato del sistema software e del design degli elementi*:\
     il processo di Misurazione deve essere utilizzato per stabilire misure per la completezza e la qualità del design mentre progredisce. I processi di Verifica e Validazione vengono attivati per verificare e convalidare il design dettagliato e l'implementazione.
@@ -1712,7 +1738,7 @@ L'attività consiste nei seguenti task:
   + *fornire gli artefatti e le informazioni di design*:\
     - il processo di Gestione della Configurazione deve essere utilizzato per stabilire e mantenere elementi di configurazione e le linee guida per artefatti come modelli di progettazione;
     - il processo di Gestione delle Informazioni deve controllare gli elementi informativi, come descrizioni di progettazione e specifiche;
-    - gli artefatti di design devono essere resi disponibili nel documento _Specifica Tecnica_.
+    - gli artefatti di design devono essere resi disponibili nel documento #st\.
 
 
 == Processo di Implementazione <processo_implementazione>
@@ -1807,14 +1833,14 @@ L'integrazione del sistema software avviene automaticamente mediante strumenti c
 
 === Risultati
 
-Come risultato della corretta implementazione del processo di integrazione:
+Come risultato della corretta implementazione del processo di Integrazione:
 
 - i nuovi elementi software implementati sono integrati con la _codebase_ esistente;
 - il sistema software è composto dall'integrazione degli elementi software implementati;
 - i test atti a garantire il corretto funzionamento del prodotto a seguito dell'integrazione sono eseguiti automaticamente;
 - le interfacce tra gli elementi software sono definite, implementate e aggiornate;
 - le interfacce tra il sistema software e gli elementi esterni sono definite, implementate e aggiornate;
-- gli strumenti di supporto al processo di integrazione sono individuati, configurati e in funzione;
+- gli strumenti di supporto al processo di Integrazione sono individuati, configurati e in funzione;
 - i risultati dell'integrazione sono identificati, assieme ad eventuali anomalie;
 - i risultati dei test sono registrati e possono essere visualizzati dai membri del gruppo.
 
@@ -1889,7 +1915,7 @@ Dopo l'approvazione, a ciascun sistema software risultato dell'integrazione di e
 
 Ciascuna versione del sistema software integrato, intesa come artefatto eseguibile, dovrà essere conservata e resa disponibile per il download tramite le apposite funzionalità di GitHub.
 
-I risultati del processo di integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'apertura o chiusura di una Pull Request. Le GitHub Actions devono prevedere la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'integrazione.
+I risultati del processo di Integrazione vengono visualizzati su GitHub come resoconto delle automazioni eseguite a seguito dell'apertura o chiusura di una Pull Request. Le GitHub Actions devono prevedere la visualizzazione di messaggi che descrivano gli eventuali errori insorti oppure, in loro assenza, la corretta esecuzione dell'integrazione.
 
 == Processo di Verifica <processo_verifica>
 
@@ -1944,6 +1970,7 @@ Qualora l'impegno, temporale o economico, per la conduzione dei test manuali si 
 ===== Verifiche in Pull Request
 
 Tutti i test di unità e di integrazione implementati dovranno essere eseguiti automaticamente dalle GitHub Actions (@automazioni) ogni volta che una Pull Request viene aperta o aggiornata nel suo contenuto. L'automazione designata all'esecuzione dei test dovrà essere codificata nel file `test_nodejs.yml`, situato nel repository WMS3 al percorso `WMS3/.github/workflows/`. Il merging di una Pull Request non potrà avvenire se un test automatico fallisce.
+
 
 Successivamente all'esecuzione dei test automatici, il Verificatore potrà controllare il contenuto della Pull Request. In particolare dovrà condurre delle verifiche manuali atte ad accertare che:
 
@@ -2086,7 +2113,7 @@ Tali considerazioni e decisioni prese devono essere presenti nel verbale consegu
 = Tracciamento paragrafi ISO/IEC/IEEE 12207:2017 <tracciamento_paragrafi>
 
 La tabella di seguito riportata consente di associare ogni capitolo del documento al rispettivo capitolo dello standard di riferimento. Viene riportato anche il grado di conformità:
-- *To outcomes* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obbiettivo di qualità che lo standard impone;
+- *To outcomes* indica che il gruppo ha dovuto adattare lo standard al progetto, omettendo o reinterpretando sezioni incompatibili con la natura del progetto pur cercando il più possibile di perseguire l'obiettivo di qualità che lo standard impone;
 - *Full* indica che il capitolo riporta fedelmente le indicazioni dello standard con poche o nessuna azione di adeguamento.
 
 #figure(

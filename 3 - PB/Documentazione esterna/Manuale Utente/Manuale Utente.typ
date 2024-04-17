@@ -73,8 +73,8 @@ Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
     [Google Chrome],[$>=$ 89],
     [Microsoft Edge],[$>=$ 89],
-    [Mozilla Firefox],[$>=$ 16.4],
-    [Apple Safari],[$>=$ 108],
+    [Mozilla Firefox],[$>=$ 67],
+    [Apple Safari],[$>=$ 15],
     [Opera Browser],[$>=$ 76],
     [Google Chrome per Android],[$>=$ 89],
     [Apple Safari per iOS],[$>=$ 17.1],

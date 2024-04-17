@@ -23,7 +23,7 @@ A seguito dell'incontro con il #cardin, il gruppo ha svolto un meeting interno r
 == Considerazioni scaturite dal colloquio con il #cardin
 Il gruppo ha discusso i diversi argomenti trattati con il #cardin durante il meeting.
 === Database
-Il gruppo ha deciso di scegliere la linea di progettazione che vede il database come parte del capitolato, e in particolare come data layer del software. Come suggerito dal #cardin l'accesso avviene tramite backend anzichè tramite browser visti i potenziali problemi di sicurezza che questo comporterebbe.\
+Il gruppo ha deciso di scegliere la linea di progettazione che vede il database come parte del capitolato, e in particolare come data layer del software. Come suggerito dal #cardin l'accesso avviene tramite backend anziché tramite browser visti i potenziali problemi di sicurezza che questo comporterebbe.\
 La scelta è stata conseguita in seguito ai consigli del #cardin, che ha anche portato l'esempio del pattern CQRS come caso di design dove un database viene usato per sola lettura, come nel caso di WMS3. Il gruppo sceglie però di non implementare questo pattern, dato che nel suo schema è presente una parte dedicata alla scrittura dei dati che non è oggetto del capitolato.
 === Classi anemiche
 Il gruppo ha deciso di proseguire con l'implementazione di classi che rappresentano le istanze del database.

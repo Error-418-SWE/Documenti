@@ -206,7 +206,7 @@
             "codice" : "M3",
             "sigla" : "FD",
             "nome" : "Failure Density",
-            "formula" : "*FD* = $display(\"NF\"/\"NT\")*100$",
+            "formula" : "*FD* = $display(\"TF\"/\"TE\")*100$",
             "sogliaOttimale" : "$0%$",
             "sogliaAccettabile" : "$0%$",
             "parametri" : [

@@ -1730,11 +1730,11 @@ Questo sprint impiega:
     [Carraro],     [0],     [0],     [2],     [3],     [0],     [2],     [7],
     [Gardin],     [2],     [0],     [0],     [0],     [4],     [0],     [6],
     [Nardo],     [0],     [0],     [2],     [3],     [3],     [0],     [8],
-    [Oseliero],     [2],     [0],     [0],     [0],     [1],     [2],     [5],
+    [Oseliero],     [2],     [0],     [0],     [0],     [0],     [2],     [4],
     [Todesco],     [0],     [3],     [2],     [0],     [0],     [2],     [7],
     [Zaccone],     [2],     [0],     [0],     [2],     [0],     [2],     [6],
-    [Totale ore],     [8],     [3],     [6],     [8],     [12],     [9],     [46],
-    [Costo ruolo],     [240],     [60],     [150],     [200],     [180],     [135],     [965],
+    [Totale ore],     [8],     [3],     [6],     [8],     [11],     [9],     [45],
+    [Costo ruolo],     [240],     [60],     [150],     [200],     [165],     [135],     [950],
   ),
   caption: "Prospetto del preventivo, sprint 16"
 )
@@ -1743,7 +1743,7 @@ Questo sprint impiega:
   ("Amministratore", 3),
   ("Analista", 6),
   ("Progettista", 8),
-  ("Programmatore", 12),
+  ("Programmatore", 11),
   ("Verificatore", 9),
 )
 #figure({
@@ -1882,15 +1882,15 @@ Questo sprint impiega:
     [Nardo],     [0],     [2],     [0],     [2],     [2],     [0],     [6],
     [Oseliero],     [2],     [0],     [2],     [0],     [2],     [1],     [7],
     [Todesco],     [0],     [0],     [2],     [2],     [5],     [0],     [9],
-    [Zaccone],     [0],     [1],     [2],     [0],     [5],     [0],     [8],
-    [Totale ore],     [6],     [3],     [8],     [4],     [20],     [9],     [50],
-    [Costo ruolo],     [180],     [60],     [200],     [100],     [300],     [135],     [975],
+    [Zaccone],     [0],     [0],     [2],     [0],     [5],     [0],     [7],
+    [Totale ore],     [6],     [2],     [8],     [4],     [20],     [9],     [49],
+    [Costo ruolo],     [180],     [40],     [200],     [100],     [300],     [135],     [955],
   ),
   caption: "Prospetto del preventivo, sprint 18"
 )
 #let data = (
   ("Responsabile", 6),
-  ("Amministratore", 3),
+  ("Amministratore", 2),
   ("Analista", 8),
   ("Progettista", 4),
   ("Programmatore", 20),
@@ -2066,24 +2066,24 @@ Questo Sprint impiega:
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
     [Banzato],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
-    [Carraro],     [0],     [0],     [0],     [1],     [4],     [3],     [8],
+    [Carraro],     [0],     [0],     [0],     [1],     [4],     [2],     [7],
     [Gardin],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
     [Nardo],     [0],     [0],     [0],     [1],     [4],     [0],     [5],
-    [Oseliero],     [0],     [3],     [0],     [0],     [0],     [0],     [3],
+    [Oseliero],     [0],     [2],     [0],     [0],     [0],     [0],     [2],
     [Todesco],     [0],     [0],     [0],     [0],     [5],     [0],     [5],
     [Zaccone],     [0],     [0],     [0],     [0],     [5],     [0],     [5],
-    [Totale ore],     [4],     [3],     [0],     [2],     [18],     [9],     [36],
-    [Costo ruolo],     [120],     [60],     [0],     [50],     [270],     [135],     [635],
+    [Totale ore],     [4],     [2],     [0],     [2],     [18],     [8],     [34],
+    [Costo ruolo],     [120],     [40],     [0],     [50],     [270],     [120],     [600],
   ),
   caption: "Prospetto del preventivo, sprint 21"
 )
 #let data = (
   ("Responsabile", 4),
-  ("Amministratore", 3),
+  ("Amministratore", 2),
   ("Analista", 0),
   ("Progettista", 2),
   ("Programmatore", 18),
-  ("Verificatore", 9),
+  ("Verificatore", 8),
 )
 #figure({
   roles-legend
@@ -2096,7 +2096,6 @@ Questo Sprint impiega:
   supplement: "Grafico"
 )
 
-
 == Sprint 22 dal 30/03/2024 al 07/04/2024
 === Obiettivi prefissati
 === Preventivo costi
@@ -2106,14 +2105,14 @@ Questo Sprint impiega:
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
     [Banzato],     [0],     [0],     [0],     [2],     [0],     [0],     [2],
-    [Carraro],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
+    [Carraro],     [2],     [0],     [0],     [0],     [0],     [2],     [4],
     [Gardin],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
     [Nardo],     [0],     [3],     [0],     [0],     [0],     [3],     [6],
     [Oseliero],     [0],     [0],     [0],     [2],     [0],     [0],     [2],
     [Todesco],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
     [Zaccone],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
-    [Totale ore],     [4],     [3],     [0],     [4],     [0],     [15],     [26],
-    [Costo ruolo],     [120],     [60],     [0],     [100],     [0],     [225],     [505],
+    [Totale ore],     [4],     [3],     [0],     [4],     [0],     [14],     [25],
+    [Costo ruolo],     [120],     [60],     [0],     [100],     [0],     [210],     [490],
   ),
   caption: "Prospetto del preventivo, sprint 22"
 )
@@ -2123,7 +2122,7 @@ Questo Sprint impiega:
   ("Analista", 0),
   ("Progettista", 4),
   ("Programmatore", 0),
-  ("Verificatore", 15),
+  ("Verificatore", 14),
 )
 #figure({
   roles-legend
@@ -2135,7 +2134,6 @@ Questo Sprint impiega:
   kind: "chart",
   supplement: "Grafico"
 )
-
 
 == Sprint 23 dal 07/04/2024 al 14/04/2024
 === Obiettivi prefissati

@@ -411,7 +411,6 @@ show regex(
   ""
 }
 
-
 set heading(
   level: 1,
   numbering: none,

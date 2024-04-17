@@ -54,7 +54,7 @@ Rimossa la GitHub Action di supporto alla revisione di spellchecking mediante Ch
 I nomi dei documenti, dei professori e del gruppo, sono stati resi variabili riutilizzabili all'interno dei documenti. La modifica sarà estesa all'intero contenuto di tutti i documenti nello Sprint 16.
 
 === Sezione dei riferimenti uniformata
-La sezione dei riferimenti presente all'interno dei documenti soggetti a ciclo di vita è stata uniformata conseguentemente all'utilizzo delle varibili introdotte.
+La sezione dei riferimenti presente all'interno dei documenti soggetti a ciclo di vita è stata uniformata conseguentemente all'utilizzo delle variabili introdotte.
 
 Aggiunta la data di ultima consultazione ai riferimenti.
 

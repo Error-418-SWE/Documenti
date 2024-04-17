@@ -22,7 +22,7 @@
       align: center + horizon,
       columns: (0.5fr, 0.5fr, 1.5fr, 0.75fr, 1fr),
       rows: (auto, 45pt),
-      [Codice], [Metrica], [formula], [Soglia ottimale], [Soglia accettabile],
+      [Codice], [Metrica], [Formula], [Soglia ottimale], [Soglia accettabile],
       data.codice, data.sigla, eval(data.formula, mode: "markup"), eval(data.sogliaOttimale, mode: "markup"), eval(data.sogliaAccettabile, mode: "markup")
     ),
     caption: "Tabella metrica " + data.sigla + " (" + data.nome + ")"
@@ -32,7 +32,7 @@
 #let nameAndDescriptionList(params) = {
   let result = "";
 
-  result += "Dati: \n";
+  result += "\nDati: \n";
   for param in params {
     let delimeter = ";"
     if(param == params.last()){ delimeter = "."}
@@ -417,5 +417,3 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 #graphFromJson(cruscotto.FD)
 
 *PB*: #eval(cruscotto.FD.PB, mode: "markup");
-
-

@@ -20,7 +20,7 @@
 	  "synonyms": []
 	},
 	"Ingegneria del Software": {
-	  "description": "Disciplina che si occupa della progettazione, sviluppo, test e manutenzione di un programma. Adotta un approccio sistematico, disciplinato e quantificabile, che mira a ottenere un prodotto di alta qualità, affidabile e manutenibile. ",
+	  "description": "Disciplina che si occupa della progettazione, sviluppo, test e manutenzione di un programma. Adotta un approccio sistematico, disciplinato e quantificabile, che mira a ottenere un prodotto di alta qualità, affidabile e manutenibile.",
 	  "acronyms": [
 		"IS",
 		"SWE"
@@ -28,7 +28,7 @@
 	  "synonyms": []
 	},
 	"Scalable Vector Graphics": {
-	  "description": "File vettoriale di tipo grafico che si allineano agli standard compatibili con il web",
+	  "description": "File vettoriale di tipo grafico che si allineano agli standard compatibili con il web.",
 	  "acronyms": [
 		"SVG"
 	  ],
@@ -53,8 +53,8 @@
 		"Version"
 	  ]
 	},
-	"Zoom": {
-	  "description": "Servizio di videoconferenza che permette di effettuare chiamate audio o video. Consente di registrare le sessioni per essere poi visualizzate in seguito.",
+	"Zona": {
+	  "description": "Rappresenta una zona di contenimento dei bin, interpretabile come scaffale (se a più ripiani) o area di stoccaggio sul piano (se a un ripiano).",
 	  "acronyms": [],
 	  "synonyms": []
 	}

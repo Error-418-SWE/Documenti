@@ -414,6 +414,7 @@ show regex(
 set heading(
   level: 1,
   numbering: none,
+  outlined: false
 )
 
 let previousTerm = glossary.keys().at(0)

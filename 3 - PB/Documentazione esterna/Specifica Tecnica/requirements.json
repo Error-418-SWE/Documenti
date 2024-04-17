@@ -832,7 +832,7 @@
 			"source": "UC–20",
 			"description": "L'utente può richiedere lo spostamento del POV sulla zona ispezionata",
 			"cat": "Desiderabile",
-			"achieved": false
+			"achieved": true
 		},
 		{
 			"id": "FD–120",
@@ -1010,147 +1010,140 @@
 			"achieved": true
 		},
 		{
-			"id": "FD–145",
-			"source": "UC–25.1",
-			"description": "L'utente deve poter inserire un ordine di movimentazione di un prodotto dalla lista dei prodotti ad un bin",
-			"cat": "Desiderabile",
-			"achieved": false
-		},
-		{
-			"id": "FM–146",
+			"id": "FM–145",
 			"source": "UC–25.2",
 			"description": "L'utente deve poter inserire un ordine di movimentazione di un prodotto da un bin ad un altro tramite drag and drop",
 			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
-			"id": "FM–147",
+			"id": "FM–146",
 			"source": "UC–25.3",
 			"description": "Ciascun ordine di movimentazione deve inviare una richiesta alla API per la convalida dell'operazione",
 			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
-			"id": "FM–148",
+			"id": "FM–147",
 			"source": "UC–25.3",
 			"description": "La API deve ricevere almeno l'ID del bin di destinazione",
 			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
-			"id": "FM–149",
+			"id": "FM–148",
 			"source": "UC–25.3",
 			"description": "La API deve rispondere con stato HTTP 200 se l'operazione è stata convalidata",
 			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
-			"id": "FM–150",
+			"id": "FM–149",
 			"source": "UC–25.3",
 			"description": "La API deve rispondere con stato HTTP 4XX se l'operazione è stata rifiutata",
 			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
-			"id": "FM–151",
+			"id": "FM–150",
 			"source": "VE 23-11-23",
 			"description": "La API convalida o rifiuta le operazioni in maniera casuale",
 			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
-			"id": "FM–152",
+			"id": "FM–151",
 			"source": "UC–25.2.1",
 			"description": "Il sistema deve impedire l'inserimento di un ordine di movimentazione verso un bin occupato",
 			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
-			"id": "FM–153",
+			"id": "FM–152",
 			"source": "UC–25.3",
 			"description": "L'utente deve visualizzare l'esito dell'operazione di convalida da parte dell'API",
 			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
-			"id": "FM–154",
+			"id": "FM–153",
 			"source": "UC–25.3.2",
 			"description": "L'utente deve visualizzare un errore di connessione se l'accesso all'API non è possibile",
 			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
-			"id": "FD–155",
+			"id": "FD–154",
 			"source": "UC–25.3",
 			"description": "Quando un ordine di movimentazione è convalidato, esso viene inserito in una cronologia delle operazioni accessibile dall'utente",
 			"cat": "Desiderabile",
 			"achieved": true
 		},
 		{
-			"id": "FM–156",
+			"id": "FM–155",
 			"source": "UC–25.3",
 			"description": "Quando un ordine di movimentazione è rifiutato, il prodotto oggetto dell'operazione ritorna nella posizione di partenza",
 			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
-			"id": "FD–157",
+			"id": "FD–156",
 			"source": "UC–26",
 			"description": "L'utente deve poter visualizzare la cronologia degli ordini di movimentazione convalidati",
 			"cat": "Desiderabile",
 			"achieved": true
 		},
 		{
-			"id": "FD–158",
+			"id": "FD–157",
 			"source": "UC–26",
 			"description": "L'utente deve poter visualizzare l'ID del bin di partenza degli ordini di movimentazione convalidati se l'operazione è partita da un bin",
 			"cat": "Desiderabile",
 			"achieved": true
 		},
 		{
-			"id": "FD–159",
+			"id": "FD–158",
 			"source": "UC–26.1.2",
 			"description": "L'utente deve poter visualizzare l'ID del bin di destinazione dell'ordine di movimentazione convalidato",
 			"cat": "Desiderabile",
 			"achieved": true
 		},
 		{
-			"id": "FD–160",
+			"id": "FD–159",
 			"source": "UC–26.1.3",
 			"description": "L'utente deve poter visualizzare l'ID del prodotto oggetto dell'ordine di movimentazione convalidato",
 			"cat": "Desiderabile",
 			"achieved": true
 		},
 		{
-			"id": "FD–161",
+			"id": "FD–160",
 			"source": "UC–26.1.4",
 			"description": "L'utente deve poter visualizzare il nome del prodotto oggetto dell'ordine di movimentazione convalidato",
 			"cat": "Desiderabile",
 			"achieved": true
 		},
 		{
-			"id": "FD–162",
+			"id": "FD–161",
 			"source": "UC–26.1.1",
 			"description": "L'utente deve poter visualizzare l'ID del bin di partenza degli ordini di movimentazione convalidati se l'operazione è partita da un bin",
 			"cat": "Desiderabile",
 			"achieved": true
 		},
 		{
-			"id": "FD–163",
+			"id": "FD–162",
 			"source": "UC–27",
 			"description": "L'utente può poter ispezionare un singolo ordine di movimentazione convalidato",
 			"cat": "Desiderabile",
 			"achieved": true
 		},
 		{
-			"id": "FM–164",
+			"id": "FM–163",
 			"source": "UC–27.1",
 			"description": "Il sistema deve evidenziare graficamente il bin di destinazione dell'ordine di movimentazione ispezionato",
 			"cat": "Obbligatorio",
 			"achieved": true
 		},
 		{
-			"id": "FM–165",
+			"id": "FM–164",
 			"source": "UC–27.2",
 			"description": "Se l'ordine di movimentazione ispezionato si è originato da un bin, il sistema deve evidenziare graficamente il bin di partenza nell'ambiente 3D",
 			"cat": "Obbligatorio",

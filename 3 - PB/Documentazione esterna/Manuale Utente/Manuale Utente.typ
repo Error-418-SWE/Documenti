@@ -85,6 +85,14 @@ Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
 
 = Istruzioni d'uso
+== Apertura del programma
+
+Per aprire la pagina web dedicata all'utilizzo di WMS3, è necessario seguire i seguenti passaggi:
+
+  - assicurarsi che il programma sia in esecuzione. In caso di necessità, la procedura per eseguire il software è descritta nel documento #st_v;
+  - aprire un browser web e collegarsi all'indirizzo "localhost:3000".
+
+
 == Avvio e Configurazione dell'ambiente
 
 Il software all'avvio si presenta come segue:
@@ -290,7 +298,7 @@ Nella parte inferiore del pannello sono presenti i pulsanti:
 
 
 #figure(
-  image("./imgs/pulsante_localizza_zona.png", width: 50%),
+  image("./imgs/pulsante_localizza_zona.png", width: 40%),
   caption: [
     Pulsante localizza zona
   ],
@@ -508,8 +516,8 @@ Sul lato destro superiore del pannello relativo alla visualizzazione della lista
     grid(
         columns: 2,
         rows:    (auto, auto),
-        [ #image("./imgs/pulsante_nuova_zona.png", width: 60%),],
-        [ #image("./imgs/pannello_nuova_zona.png", width: 50%),],
+        [ #image("./imgs/pulsante_nuova_zona.png", width: 80%)],
+        [ #image("./imgs/pannello_nuova_zona.png", width: 50%)],
     ),caption: [Pulsante di creazione di una nuova zona (sinistra) e pannello di creazione di una nuova zona (destra)],
 ) <nuova_zona>
 

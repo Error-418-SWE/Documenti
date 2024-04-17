@@ -1267,39 +1267,48 @@ I risultati sono contenuti nel documento #pdq_v.
 
 Il gruppo deve implementare le seguenti attività in conformità con le politiche e le procedure applicabili al processo di Misurazione definito nel #pdq_v\:
 
++ tracciamento delle metriche di qualità:
+Ogni metrica di qualità deve essere tracciata e monitorata per garantire che i processi e i prodotti soddisfino gli obiettivi di qualità stabiliti. Il codice identificativo delle metriche è così composto:
+#align(center, `MXY.Z`)
+dove:
+  - `X` può assumere i valori `P` o `S`, a seconda che la metrica sia relativa a Processi o al prodotto Software;
+  - `Y` è un numero naturale che identifica la metrica;
+  - `Z` è un numero opzionale che identifica l'eventuale estensione della metrica, come avviene ad esempio per per PV che si estende in SPV e PPV.
+
 + prepararsi per la misurazione:
 
     - definire la strategia di misurazione per i processi primari. La strategia scelta si compone di metriche mirate alla valutazione dei processi primari, quali:
-        + BAC (Budget at Completion);
-        + PV (Planned Value), che si estende in:
-          - SPV (Sprint Planned Value);
-          - PPV (Project Planned Value).
-        + AC (Actual Cost), che si estende in:
-          - SAC (Sprint Actual Cost);
-          - PAC (Project Actual Cost).
-        + EV (Earned Value), che si estende in:
-          - SEV (Sprint Earned Value);
-          - PEV (Project Earned Value).
-        + CPI (Cost Performance Index);
-        + EAC (Estimated at Completion).
+        - MP1 - BAC (Budget at Completion);
+        - MP2 - PV (Planned Value), che si estende in:
+          - MP2.1 - SPV (Sprint Planned Value);
+          - MP2.2 - PPV (Project Planned Value).
+        - MP3 - AC (Actual Cost), che si estende in:
+          - MP3.1 - SAC (Sprint Actual Cost);
+          - MP3.2 - PAC (Project Actual Cost).
+        - MP4 - EV (Earned Value), che si estende in:
+          - MP4.1 - SEV (Sprint Earned Value);
+          - MP4.2 - PEV (Project Earned Value).
+        - MP5 - CPI (Cost Performance Index);
+        - MP6 - EAC (Estimated at Completion).
 
     - definire la strategia di misurazione per i processi di supporto. La strategia scelta si compone di una serie di parametri e metriche che permettono di valutare la qualità dei processi di supporto:
-        - errori ortografici;
-        - percentuale metriche soddisfatte.
+        - MP7 - EO (Errori Ortografici);
+        - MP8 - MS (Metriche Soddisfatte).
 
     - definire la strategia di misurazione per la qualità del prodotto. La strategia scelta si compone di metriche mirate alla valutazione della qualità del prodotto, quali:
-        + MRC (Mandatory Requirements Coverage);
-        + DRC (Desiderable Requirements Coverage);
-        + ORC (Optional Requirements Coverage);
-        + ART (Average Response Time);
-        + LT (Learning Time);
-        + EOU (Ease of Use);
-        + CC (Ciclomatic Complexity);
-        + CL (Coupling Level);
-        + RC (Responsability Count);
-        + MPN (Method Parameters Number);
-        + FD (Failure Density);
-        + SBV (Supported Browser Version).
+        - MS1 - MRC (Mandatory Requirements Coverage);
+        - MS2 - DRC (Desiderable Requirements Coverage);
+        - MS3 - ORC (Optional Requirements Coverage);
+        - MS4 - ART (Average Response Time);
+        - MS5 - LT (Learnability Time);
+        - MS6 - EOU (Ease of Use);
+        - MS7 - CC (Ciclomatic Complexity);
+        - MS8 - CL (Coupling Level);
+        - MS9 - RC (Responsability Count);
+        - MS10 - CCV (Code CoVerage);
+        - MS11 - BCV (Branch CoVerage).
+        - MS12 - FD (Failure Density);
+        - MS13 - SBV (Supported Browser Version).
 
     - descrivere le caratteristiche del gruppo rilevanti per la misurazione, come obiettivi aziendali e obiettivi tecnici:
         - richieste del Proponente;

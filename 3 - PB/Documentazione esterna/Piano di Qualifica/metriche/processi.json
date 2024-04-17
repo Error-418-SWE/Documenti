@@ -1,7 +1,7 @@
 {
     "fornitura" : [
         {
-          "codice" : "M1",
+          "codice" : "MP1",
           "sigla" : "BAC",
           "nome" : "Budget at Completion",
           "formula" : "Definito all'interno del Piano di Progetto",
@@ -13,14 +13,14 @@
           "noteAggiuntive" : "Come stabilito dal regolamento del progetto didattico, tale valore deve essere superiore alla soglia minima di € 12.000 e non superiore a quanto presentato alla candidatura."
         },
         {
-        "codice": "M2",
+        "codice": "MP2",
         "sigla": "PV",
         "nome" : "Planned Value",
         "parametri" : [],
         "descrizione": "La metrica PV rappresenta il valore pianificato ovvero il costo preventivato per portare a termine le attività pianificate nello Sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento. Il calcolo di tale metrica è esteso anche all'intero progetto, dove il valore pianificato è definito come sommatoria dei PV di ogni singolo Sprint.",
         "estensioni" : [
           {
-            "codice": "M2.1",
+            "codice": "MP2.1",
             "sigla" : "SPV",
             "nome" : "Sprint Planned Value",
             "descrizione" : "Valore pianificato per un determinato Sprint.",
@@ -43,7 +43,7 @@
             ]
           },
           {
-            "codice": "M2.2",
+            "codice": "MP2.2",
             "sigla" : "PPV",
             "nome" : "Project Planned Value",
             "descrizione" : "Valore pianificato per l'intero progetto.",
@@ -61,14 +61,14 @@
         "noteAggiuntive" : "La metrica è un indice necessario a determinare il valore atteso del lavoro svolto in un determinato Sprint. Il suo valore strettamente maggiore di 0 indica che non sono contemplati periodi di inattività."
       },
       {
-        "codice" : "M3",
+        "codice" : "MP3",
         "sigla" : "AC",
         "nome" : "Actual Cost",
         "parametri" : [],
         "descrizione" : "La metrica *AC* rappresenta la somma dei costi sostenuti dal gruppo in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come consuntivo dello Sprint.",
         "estensioni" : [
           {
-            "codice" : "M3.1",
+            "codice" : "MP3.1",
             "sigla" : "SAC",
             "nome" : "Sprint Actual Cost",
             "descrizione" : "Costo effettivo sostenuto dal gruppo in un determinato Sprint.",
@@ -78,7 +78,7 @@
             "parametri" : []
           },
           {
-            "codice" : "M3.2",
+            "codice" : "MP3.2",
             "sigla" : "PAC",
             "nome" : "Project Actual Cost",
             "descrizione" : "Costo effettivo sostenuto dal gruppo dall'inizio del progetto, definito come sommatoria dei *SAC*.",
@@ -96,14 +96,14 @@
         "noteAggiuntive" : "Nessuna."
       },
       {
-        "codice" : "M4",
+        "codice" : "MP4",
         "sigla" : "EV",
         "nome" : "Earned Value",
         "parametri" : [],
         "descrizione" : "L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come consuntivo dello Sprint.",
         "estensioni" : [
           {
-            "codice" : "M4.1",
+            "codice" : "MP4.1",
             "sigla" : "SEV",
             "nome" : "Sprint Earned Value",
             "descrizione" : "Valore guadagnato dal progetto in un determinato Sprint, dove lo stato di completamento del lavoro è espresso mediante il rapporto tra gli story points completati e quelli pianificati per lo Sprint.",
@@ -113,7 +113,7 @@
             "parametri" : []
           },
           {
-            "codice" : "M4.2",
+            "codice" : "MP4.2",
             "sigla" : "PEV",
             "nome" : "Project Earned Value",
             "descrizione" : "Valore guadagnato dal progetto dal suo inizio, definito come sommatoria dei *SEV*.",
@@ -131,7 +131,7 @@
         "noteAggiuntive" : "Nessuna."
       },
       {
-        "codice" : "M5",
+        "codice" : "MP5",
         "sigla" : "CPI",
         "nome" : "Cost Performance Index",
         "formula" : "*CPI* $= display(\"PEV\"/\"PAC\")$",
@@ -143,7 +143,7 @@
         "noteAggiuntive" : "Un rapporto maggiore di 1 indica che il valore raggiunto è superiore al costo effettivo sostenuto. Data la natura didattica del progetto e l'inesperienza del gruppo, si ritiene accettabile un valore di *CPI* $>= 0.95$, valore indicante un costo effettivo leggermente superiore al valore guadagnato."
       },
       {
-        "codice" : "M6",
+        "codice" : "MP6",
         "sigla" : "EAC",
         "nome" : "Eastimated at Completion",
         "formula" : "*EAC* $= display(\"BAC\"/\"CPI\")$",
@@ -157,7 +157,7 @@
     ],
     "documentazione" : [
         {
-            "codice" : "M1",
+            "codice" : "MP7",
             "sigla" : "EO",
             "nome" : "Errori Ortografici",
             "formula" : "Errori ortografici presenti nei documenti",
@@ -171,7 +171,7 @@
     ],
     "miglioramento" : [
         {
-            "codice" : "M1",
+            "codice" : "MP8",
             "sigla" : "MS",
             "nome" : "Metriche Soddisfatte",
             "formula" : "*MS* = $display(\"MS\"/\"MT\")*100$",

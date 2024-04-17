@@ -10,7 +10,7 @@
   ),
   showLog: true,
   isExternalUse: true,
-  showImagesIndex: false,
+  showImagesIndex: true,
 );
 
 
@@ -25,7 +25,7 @@
       [Codice], [Metrica], [formula], [Soglia ottimale], [Soglia accettabile],
       data.codice, data.sigla, eval(data.formula, mode: "markup"), eval(data.sogliaOttimale, mode: "markup"), eval(data.sogliaAccettabile, mode: "markup")
     ),
-    caption: "Tabella metrica " + data.sigla
+    caption: "Tabella metrica " + data.sigla + " (" + data.nome + ")"
   )
 }
 
@@ -282,9 +282,9 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
     cetz.canvas({
       import cetz.plot
 
-      plot.plot(size: (12, 6), {
+      plot.plot(size: (12, 7), {
         for line in jsonGraphParams.lines{
-          plot.add(arrayToPointCoordinate(line.valori), line: line.type, label: line.label, mark: line.marker);
+          plot.add(arrayToPointCoordinate(line.valori), line: line.type, label: line.label, mark: line.marker, style: (stroke: (paint: eval(line.color))));
         }
         for hline in jsonGraphParams.hlines{
           plot.add-hline(hline.valore, label: hline.label, style: (stroke: (paint: eval(hline.color, mode: "code"), dash: "dotted")));
@@ -293,7 +293,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
           plot.add-vline(vline.valore, label: vline.label, style: (stroke: (paint: eval(vline.color, mode: "code"), dash: "dotted")));
         }
         plot.add-vline(13, label: "RTB", style: (stroke: (paint: black, dash: "dotted")))
-        plot.add-vline(23, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
+        plot.add-vline(24, label: "PB" , style: (stroke: (paint: red, dash: "dotted")))
       },
       y-max: jsonGraphParams.y-max,
       y-min: jsonGraphParams.y-min,
@@ -306,7 +306,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
       )
     }),
     caption: jsonGraphParams.caption
-  
+
   )
 }
 

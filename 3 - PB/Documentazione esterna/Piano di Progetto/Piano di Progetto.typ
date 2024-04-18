@@ -234,7 +234,7 @@ Rallentamenti non preventivati che possono avere conseguenze a cascata sulle att
 
 \ *RIS-1.2 Insufficiente preparazione teorica* <RIS-1.2>
 
-Il progetto richiede conoscenze teoriche legate al perscorso di studi sulle quali sono basate molteplici attività fondamentali. Per esempio, lo studio dei requisiti e la produzione degli Use Case con i relativi diagrammi, oppure il processo di design architetturale ed i relativi pattern da considerare.
+Il progetto richiede conoscenze teoriche legate al percorso di studi sulle quali sono basate molteplici attività fondamentali. Per esempio, lo studio dei requisiti e la produzione degli Use Case con i relativi diagrammi, oppure il processo di design architetturale ed i relativi pattern da considerare.
 Qualora uno o più membri del gruppo dovessero essere insufficientemente preparati sulla teoria necessaria, non potrebbero dare un valido contributo nell'avanzamento dei lavori.
 
 - *Impatto*: grave;
@@ -435,7 +435,7 @@ I membri coinvolti devono mantenere familiarità con le norme, gli automatismi e
 
 *Conseguenze*
 
-Viene minimizzato il tempo necessario al recupero completo degli automatismi necessari a produrre progressi soddisfacienti nei lavori.
+Viene minimizzato il tempo necessario al recupero completo degli automatismi necessari a produrre progressi soddisfacenti nei lavori.
 
 \ *OT-4.4.2 Riduzione della sua probabilità o gravità*
 
@@ -446,7 +446,7 @@ Inoltre, prima di produrre avanzamenti nei lavori, è necessario che le norme re
 
 *Conseguenze*
 
-L'inevitabile rallentamento nella ripresa dei lavori viene mitigato e minimizzato così da poter produrre risultati soddisfacienti ed in linea con la qualità attesa dal gruppo.
+L'inevitabile rallentamento nella ripresa dei lavori viene mitigato e minimizzato così da poter produrre risultati soddisfacenti ed in linea con la qualità attesa dal gruppo.
 
 
 #pagebreak()
@@ -2698,7 +2698,7 @@ Il ruolo di Programmatore presenta un monte ore effettivo minore rispetto a quel
 
 === Obiettivi mancati
 - Implementazione del tracciamento requisito-fonte nel documento #adr;
-- revisione generale del documento per verifcare la presenza e la correttezza di tutti gli Use Case e requisiti necessari;
+- revisione generale del documento per verificare la presenza e la correttezza di tutti gli Use Case e requisiti necessari;
 - Correzione di bug presenti nelle GitHub Actions.
 
 === Problematiche
@@ -2712,13 +2712,13 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 
 === Risoluzioni attuate
 - Richiedere l'upgrade gratuito a Jira Standard per progetti open source;
-- Notiﬁcare, tramite i canali dedicati, chi debba apportare correzioni così da velocizzare i tempi di approvazione;
+- Notificare, tramite i canali dedicati, chi debba apportare correzioni così da velocizzare i tempi di approvazione;
 - Impegnarsi a fornire commenti di review più precisi:
   - indicando con precisione la natura dell'errore e, se utile, la sua localizzazione all'interno della riga;
   - fornendo una possibile correzione, quando appropriato;
   - nel caso di più occorrenze dello stesso errore, segnalarle tutte. Per evitare ripetizioni, fornire una valutazione della prima occorrenza ed inserire un riferimento a tale conversazione nelle occorrenze successive.
-- Per accelerare il lavoro sulle #ndp, chi ha redatto le #ndp nel corso degli sprint precedenti continuerà l'aﬃancamento nel corso dello sprint successivo;
-- La natura esplorativa del PoC richiede ﬂessibilità nella pianiﬁcazione, ma si sottolinea la necessità di continuare a tracciare le attività per riferimento futuro.
+- Per accelerare il lavoro sulle #ndp, chi ha redatto le #ndp nel corso degli sprint precedenti continuerà l'affiancamento nel corso dello sprint successivo;
+- La natura esplorativa del PoC richiede flessibilità nella pianificazione, ma si sottolinea la necessità di continuare a tracciare le attività per riferimento futuro.
 
 === Panoramica dei costi effettivi
 
@@ -3004,7 +3004,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 
 === Risoluzioni attuate
 I membri del gruppo si impegneranno a comunicare in maniera più tempestiva e precisa modifiche apportate e/o aggiornamenti alla configurazione degli strumenti di supporto.
-L'impegno individuale dei membri risulta sbilanciato a causa dell'imminenete sessione d'esame invernale. Pertanto, la pianificazione dei prossimi sprint terrà conto della ridotta disponibilità di tempo. È previsto che la situazione migliorerà entro il termine dello sprint 13.
+L'impegno individuale dei membri risulta sbilanciato a causa dell'imminente sessione d'esame invernale. Pertanto, la pianificazione dei prossimi sprint terrà conto della ridotta disponibilità di tempo. È previsto che la situazione migliorerà entro il termine dello sprint 13.
 
 === Panoramica dei costi effettivi
 
@@ -3460,7 +3460,7 @@ In data 16/02/2024 il gruppo ha sostenuto il colloquio con il #vardanega per il 
 
 In particolare durante lo sprint sono stati raggiunti i seguenti obiettivi:
 - #adr\:
-  - rimosso il termine "_richiesta_" nella nomeclatura dell'UC-7;
+  - rimosso il termine "_richiesta_" nella nomenclatura dell'UC-7;
   - specificate le API utilizzate dall'UC7;
   - inserito tracciamento casi d'uso - requisiti;
   - espressa la distinzione tra obiettivi obbligatori, desiderabili e opzionali;
@@ -3563,8 +3563,8 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 )
 
 Durante lo Sprint 15 le ore preventivate (27) e le ore effettive (27) sono state rispettate, seppur la distribuzione di queste sia stata differente e maggiormente distribuita tra i membri del gruppo. In particolare:
-- le ore preventivate di Responsabile e Amministratore, seppur quantitivamente rispettate, sono state ridistribuite tra i membri del gruppo;
-- le ore di Analista sono state maggiori di quanto preventivato: il tracciamento UC - requsiti, per renderlo uniforme, automatico e facilmente estendibile è stato implementato mediante un automazione direttamente nei documenti in Typst e l'estensione dell'UC 7 ha richiesto più tempo del previsto;
+- le ore preventivate di Responsabile e Amministratore, seppur quantitativamente rispettate, sono state ridistribuite tra i membri del gruppo;
+- le ore di Analista sono state maggiori di quanto preventivato: il tracciamento UC - requisti, per renderlo uniforme, automatico e facilmente estendibile è stato implementato mediante un automazione direttamente nei documenti in Typst e l'estensione dell'UC 7 ha richiesto più tempo del previsto;
 - le ore di Progettista sono state maggiori di quanto preventivato: la progettazione dello schema ER del database è stata più complessa del previsto seppur permettendo di generare confronto tra i membri del gruppo.
 
 === Monitoraggio costi e ore

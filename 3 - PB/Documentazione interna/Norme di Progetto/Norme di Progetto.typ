@@ -1273,7 +1273,7 @@ Ogni metrica di qualità deve essere tracciata e monitorata per garantire che i 
 dove:
   - `X` può assumere i valori `P` o `S`, a seconda che la metrica sia relativa a Processi o al prodotto Software;
   - `Y` è un numero naturale che identifica la metrica;
-  - `Z` è un numero opzionale che identifica l'eventuale estensione della metrica, come avviene ad esempio per per PV che si estende in SPV e PPV.
+  - `Z` è un numero opzionale che identifica l'eventuale estensione della metrica, come avviene ad esempio per PV che si estende in SPV e PPV.
 
 + prepararsi per la misurazione:
 
@@ -1306,7 +1306,7 @@ dove:
         - MS8 - CL (Coupling Level);
         - MS9 - RC (Responsability Count);
         - MS10 - CCV (Code CoVerage);
-        - MS11 - BCV (Branch CoVerage).
+        - MS11 - BCV (Branch CoVerage);
         - MS12 - FD (Failure Density);
         - MS13 - SBV (Supported Browser Version).
 

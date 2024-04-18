@@ -700,4 +700,4 @@ Nell'ultima sezione in basso, *Demo*, troviamo due pulsanti:
 <glossario>
 \
 
-// generato dal tempalte
+// generato dal template

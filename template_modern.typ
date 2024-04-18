@@ -369,7 +369,7 @@ if showTablesIndex {
 }
 
 // Prepare regex for glossary terms matching
-let glossary = json("./3 - PB/Documentazione esterna/Manuale Utente/glossario_manuale_utente.json");
+let glossary = json("glossario_manuale_utente.json");
 let glossaryRegex = ()
 let regexSeparator = "(\b|$)|(\b|$)"
 for term in glossary.keys() {

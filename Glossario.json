@@ -450,7 +450,7 @@
     "synonyms": []
   },
 	"Test di accettazione": {
-    "description": "test formale eseguito per verificare se l'applicazione soddisfa i requisiti richiesti.",
+    "description": "Test formale eseguito per verificare se l'applicazione soddisfa i requisiti richiesti.",
     "acronyms": [],
     "synonyms": ["acceptance test"]
   },

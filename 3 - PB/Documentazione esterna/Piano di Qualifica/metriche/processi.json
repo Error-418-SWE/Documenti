@@ -4,11 +4,11 @@
           "codice" : "MP1",
           "sigla" : "BAC",
           "nome" : "Budget at Completion",
-          "formula" : "Definito all'interno del Piano di Progetto",
+          "formula" : "Definito all'interno del #json_pdp_v",
           "sogliaOttimale" : "minimizzato",
           "sogliaAccettabile" : "minimizzato",
           "parametri" : [],
-          "descrizione" : "Valore indicante il budget massimo a disposizione del gruppo per lo svolgimento del progetto. Il valore ammonta a € 13.055,00 come stabilito nel documento PDP.",
+          "descrizione" : "Valore indicante il budget massimo a disposizione del gruppo per lo svolgimento del progetto. Il valore ammonta a € 13.055,00 come stabilito nel documento #json_pdp_v.",
           "estensioni" : [],
           "noteAggiuntive" : "Come stabilito dal regolamento del progetto didattico, tale valore deve essere superiore alla soglia minima di € 12.000,00 e non superiore a quanto presentato alla candidatura."
         },
@@ -17,7 +17,7 @@
         "sigla": "PV",
         "nome" : "Planned Value",
         "parametri" : [],
-        "descrizione": "La metrica *PV* rappresenta il valore pianificato, ovvero il costo preventivato per portare a termine le attività pianificate nello Sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento _Piano di Progetto_. Il calcolo di tale metrica è esteso anche all'intero progetto, dove il valore pianificato è definito come sommatoria dei PV di ogni singolo Sprint.",
+        "descrizione": "La metrica *PV* rappresenta il valore pianificato, ovvero il costo preventivato per portare a termine le attività pianificate nello Sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento #json_pdp_v. Il calcolo di tale metrica è esteso anche all'intero progetto, dove il valore pianificato è definito come sommatoria dei PV di ogni singolo Sprint.",
         "estensioni" : [
           {
             "codice": "MP2.1",
@@ -49,7 +49,7 @@
             "descrizione" : "Valore pianificato per l'intero progetto.",
             "sogliaOttimale" : "$cases(>0, <=\"BAC\")$",
             "sogliaAccettabile" : "$cases(>0, <=\"BAC\")$",
-            "formula": "*PPV* $= sum_(r in R) \"OR\"_r * \"CR\"_r$",
+            "formula": "*PPV* $= sum_(r in R) \"OR\"_r dot \"CR\"_r$",
             "parametri" : [
               {
                 "nome" : "$s in S$",
@@ -145,7 +145,7 @@
       {
         "codice" : "MP6",
         "sigla" : "EAC",
-        "nome" : "Eastimated at Completion",
+        "nome" : "Estimated at Completion",
         "formula" : "*EAC* $= display(\"BAC\"/\"CPI\")$",
         "sogliaOttimale" : "$<=\"BAC\"$",
         "sogliaAccettabile" : "$cases( <= \"BAC\" + 5%, <= \"BAC alla consegna\", >= \"12000 da regolamento\")$",

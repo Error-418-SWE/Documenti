@@ -10,9 +10,42 @@
   ),
   showLog: true,
   isExternalUse: true,
-  showImagesIndex: true,
+  showTablesIndex: false,
+  showIndex: false,
+  showImagesIndex: false,
 );
 
+#outline(
+  title: "Indice dei contenuti",
+  depth: 4,
+  indent: true
+)
+
+#pagebreak()
+
+#outline(
+  title: "Indice delle tabelle",
+  target: figure.where(kind: table)
+)
+
+#pagebreak()
+
+#outline(
+  title: "Indice dei grafici",
+  target: figure.where(kind: "chart")
+)
+
+#pagebreak()
+
+#let evalScope = (
+  json_ndp_v : ndp_v,
+  json_pdp_v : pdp_v,
+  json_pdq_v : pdq_v,
+  json_adr_v : adr_v,
+  json_glo_v : glo_v,
+  json_st_v  : st_v,
+  json_man_v : man_v
+)
 
 #set table(align: center + horizon)
 
@@ -23,7 +56,7 @@
       columns: (0.5fr, 0.5fr, 1.5fr, 0.75fr, 1fr),
       rows: (auto, 45pt),
       [Codice], [Metrica], [Formula], [Soglia ottimale], [Soglia accettabile],
-      data.codice, data.sigla, eval(data.formula, mode: "markup"), eval(data.sogliaOttimale, mode: "markup"), eval(data.sogliaAccettabile, mode: "markup")
+      data.codice, data.sigla, eval(data.formula, mode: "markup", scope: evalScope), eval(data.sogliaOttimale, mode: "markup"), eval(data.sogliaAccettabile, mode: "markup")
     ),
     caption: "Tabella metrica " + data.sigla + " (" + data.nome + ")"
   )
@@ -34,9 +67,9 @@
 
   result += "\nDati: \n";
   for param in params {
-    let delimeter = ";"
-    if(param == params.last()){ delimeter = "."}
-    result += eval("- " + param.nome + ": " + param.descrizione + delimeter , mode: "markup");
+    let delimiter = ";"
+    if(param == params.last()){ delimiter = "."}
+    result += eval("- " + param.nome + ": " + param.descrizione + delimiter , mode: "markup", scope: evalScope);
   }
 
   return result;
@@ -46,7 +79,7 @@
   let result = "";
 
   result += eval("*" + data.codice + " - " + data.sigla + " " + data.nome + "*\\", mode: "markup");
-  result += eval(data.descrizione, mode: "markup");
+  result += eval(data.descrizione, mode: "markup", scope: evalScope);
   if data.parametri.len() > 0 {
     result += nameAndDescriptionList(data.parametri);
   }
@@ -56,11 +89,16 @@
   return result;
 }
 
-#let metricsTablesGenerator(allJsonData) = {
+#let metricsTablesGenerator(allJsonData, titleDepth : 3) = {
   let result = "";
   for data in allJsonData {
-    result += eval("=== " + data.codice + " - " + data.sigla + " " + data.nome, mode: "markup")
-    result += eval("*Descrizione*: \\ " + data.descrizione, mode: "markup")
+    let titleHeader = "";
+    for i in range(titleDepth){
+      titleHeader += "="
+    }
+    titleHeader += " " + data.codice + " - " + data.sigla + " " + data.nome;
+    result += eval(titleHeader, mode: "markup")
+    result += eval("*Descrizione*: \\ " + data.descrizione, mode: "markup", scope: evalScope)
 
     result += eval("\\ \\ *Note aggiuntive:* \\ " + data.noteAggiuntive + " \\ \\", mode: "markup")
 
@@ -143,14 +181,16 @@ Il gruppo si dota di una dashboard di monitoraggio per tenere traccia delle metr
 La qualità di processo rappresenta un aspetto fondamentale per garantire l'efficacia e l'efficienza del lavoro svolto. Per garantire la qualità di processo, il gruppo si impegna a seguire le norme e le procedure definite nel documento #ndp_v.
 
 #let metricheProcessi = json("./metriche/processi.json")
-== Processi primari - Fornitura
-#metricsTablesGenerator(metricheProcessi.fornitura)
+== Processi primari
+=== Fornitura
+#metricsTablesGenerator(metricheProcessi.fornitura, titleDepth : 4)
 
-== Processi di supporto - Documentazione
-#metricsTablesGenerator(metricheProcessi.documentazione)
+== Processi di supporto
+=== Documentazione
+#metricsTablesGenerator(metricheProcessi.documentazione, titleDepth : 4)
 
-== Processi di supporto - Miglioramento
-#metricsTablesGenerator(metricheProcessi.miglioramento)
+=== Miglioramento
+#metricsTablesGenerator(metricheProcessi.miglioramento, titleDepth : 4)
 
 = Qualità di prodotto
 La qualità di prodotto mira a garantire non solo che il prodotto soddisfi i requisiti definiti nel documento #adr_v, ma anche che sia conforme agli standard di qualità definiti che il gruppo si impone, perseguendo obiettivi di efficienza, efficacia, usabilità, manutenibilità, affidabilità e portabilità.
@@ -181,7 +221,7 @@ In questa sezione sono elencati i test eseguiti sul prodotto che, come riportato
 - *test di unità*: per testare una singola unità software;
 - *test di integrazione*: per verificare la corretta integrazione delle parti del sistema.
 - *test di sistema*: per verificare che il sistema soddisfi i requisiti definiti nel documento #adr_v;
-- *test di accettazione*: svolti assieme al Propoente, per verificare che il prodotto soddisfi quanto atteso.
+- *test di accettazione*: svolti assieme al Proponente, per verificare che il prodotto soddisfi quanto atteso.
 
 Ad ogni test viene associato un codice definito come segue:
 #align(`[Tipologia]-[Identificativo numerico]`, center)
@@ -305,8 +345,9 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
       y-label: jsonGraphParams.y-label,
       )
     }),
-    caption: jsonGraphParams.caption
-
+    caption: jsonGraphParams.caption,
+    supplement: "Grafico",
+    kind : "chart"
   )
 }
 
@@ -316,9 +357,9 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #graphFromJson(cruscotto.PPV-PAC-PEV)
 
-*RTB*: #eval(cruscotto.PPV-PAC-PEV.RTB, mode: "markup")
+*RTB*: #eval(cruscotto.PPV-PAC-PEV.RTB, mode: "markup", scope: evalScope)
 
-*PB*: #eval(cruscotto.PPV-PAC-PEV.PB, mode: "markup")
+*PB*: #eval(cruscotto.PPV-PAC-PEV.PB, mode: "markup", scope: evalScope)
 
 \
 \
@@ -326,9 +367,9 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #graphFromJson(cruscotto.CPI)
 
-*RTB*: #eval(cruscotto.CPI.RTB, mode: "markup");
+*RTB*: #eval(cruscotto.CPI.RTB, mode: "markup", scope: evalScope);
 
-*PB*: #eval(cruscotto.CPI.PB, mode: "markup");
+*PB*: #eval(cruscotto.CPI.PB, mode: "markup", scope: evalScope);
 
 \
 \
@@ -336,9 +377,9 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #graphFromJson(cruscotto.BAC-EAC)
 
-*RTB*: #eval(cruscotto.BAC-EAC.RTB, mode: "markup");
+*RTB*: #eval(cruscotto.BAC-EAC.RTB, mode: "markup", scope: evalScope);
 
-*PB*: #eval(cruscotto.BAC-EAC.PB, mode: "markup");
+*PB*: #eval(cruscotto.BAC-EAC.PB, mode: "markup", scope: evalScope);
 
 \
 \
@@ -353,9 +394,9 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #graphFromJson(cruscotto.EO-Interna)
 
-*RTB*: #eval(cruscotto.EO-Interna.RTB, mode: "markup");
+*RTB*: #eval(cruscotto.EO-Interna.RTB, mode: "markup", scope: evalScope);
 
-*PB*: #eval(cruscotto.EO-Interna.PB, mode: "markup");
+*PB*: #eval(cruscotto.EO-Interna.PB, mode: "markup", scope: evalScope);
 
 \
 \
@@ -364,9 +405,9 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #graphFromJson(cruscotto.MS)
 
-*RTB*: #eval(cruscotto.MS.RTB, mode: "markup");
+*RTB*: #eval(cruscotto.MS.RTB, mode: "markup", scope: evalScope);
 
-*PB*: #eval(cruscotto.MS.PB, mode: "markup");
+*PB*: #eval(cruscotto.MS.PB, mode: "markup", scope: evalScope);
 
 \
 \
@@ -375,7 +416,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #graphFromJson(cruscotto.MRC)
 
-*PB*: #eval(cruscotto.MRC.PB, mode: "markup");
+*PB*: #eval(cruscotto.MRC.PB, mode: "markup", scope: evalScope);
 
 \
 \
@@ -383,7 +424,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #graphFromJson(cruscotto.DRC)
 
-*PB*: #eval(cruscotto.DRC.PB, mode: "markup");
+*PB*: #eval(cruscotto.DRC.PB, mode: "markup", scope: evalScope);
 
 \
 \
@@ -391,7 +432,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #graphFromJson(cruscotto.ORC)
 
-*PB*: #eval(cruscotto.ORC.PB, mode: "markup");
+*PB*: #eval(cruscotto.ORC.PB, mode: "markup", scope: evalScope);
 
 \
 \
@@ -400,7 +441,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #graphFromJson(cruscotto.CCV)
 
-*PB*: #eval(cruscotto.CCV.PB, mode: "markup");
+*PB*: #eval(cruscotto.CCV.PB, mode: "markup", scope: evalScope);
 
 \
 \
@@ -408,7 +449,7 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #graphFromJson(cruscotto.BCV)
 
-*PB*: #eval(cruscotto.BCV.PB, mode: "markup");
+*PB*: #eval(cruscotto.BCV.PB, mode: "markup", scope: evalScope);
 
 \
 \
@@ -416,4 +457,4 @@ Per questo motivo, i dati utili al corretto calcolo delle metriche sono disponib
 
 #graphFromJson(cruscotto.FD)
 
-*PB*: #eval(cruscotto.FD.PB, mode: "markup");
+*PB*: #eval(cruscotto.FD.PB, mode: "markup", scope: evalScope);

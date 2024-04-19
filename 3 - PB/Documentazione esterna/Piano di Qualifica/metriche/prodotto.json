@@ -4,13 +4,13 @@
             "codice" : "MS1",
             "sigla" : "MRC",
             "nome" : "Mandatory Requirements Coverage",
-            "formula" : "*MRC* = $display(\"MRF\"/\"TMR\")*100$",
+            "formula" : "*MRC* = $display(\"MRF\"/\"TMR\") dot 100$",
             "sogliaOttimale" : "$100%$",
             "sogliaAccettabile" : "$100%$",
             "parametri" : [
                 {
                     "nome" : "$\"MRF\"$",
-                    "descrizione" : "Mandatory Requirements Fullfilled"
+                    "descrizione" : "Mandatory Requirements Fulfilled"
                 },
                 {
                     "nome" : "$\"TMR\"$",
@@ -24,18 +24,18 @@
         {
             "codice" : "MS2",
             "sigla" : "DRC",
-            "nome" : "Desiderable Requirements Coverage",
-            "formula" : "*DRC* = $display(\"DRF\"/\"TDR\")*100$",
+            "nome" : "Desirable Requirements Coverage",
+            "formula" : "*DRC* = $display(\"DRF\"/\"TDR\") dot 100$",
             "sogliaOttimale" : "$100%$",
             "sogliaAccettabile" : "$75%$",
             "parametri" : [
                 {
                     "nome" : "$\"DRF\"$",
-                    "descrizione" : "Desiderable Requirements Fullfilled"
+                    "descrizione" : "Desirable Requirements Fulfilled"
                 },
                 {
                     "nome" : "$\"TDR\"$",
-                    "descrizione" : "Total Desiderable Requirements"
+                    "descrizione" : "Total Desirable Requirements"
                 }
             ],
             "descrizione" : "Indica la percentuale di requisiti desiderabili soddisfatti rispetto al totale.",
@@ -46,13 +46,13 @@
             "codice" : "MS3",
             "sigla" : "ORC",
             "nome" : "Optional Requirements Coverage",
-            "formula" : "*ORC* = $display(\"ORF\"/\"TOR\")*100$",
+            "formula" : "*ORC* = $display(\"ORF\"/\"TOR\") dot 100$",
             "sogliaOttimale" : "$100%$",
             "sogliaAccettabile" : "$75%$",
             "parametri" : [
                 {
                     "nome" : "$\"ORF\"$",
-                    "descrizione" : "Optional Requirements Fullfilled"
+                    "descrizione" : "Optional Requirements Fulfilled"
                 },
                 {
                     "nome" : "$\"TOR\"$",
@@ -149,8 +149,8 @@
         {
             "codice" : "MS9",
             "sigla" : "RC",
-            "nome" : "Responsability Count",
-            "formula" : "Responsability Count",
+            "nome" : "Responsibility Count",
+            "formula" : "Responsibility Count",
             "sogliaOttimale" : "1",
             "sogliaAccettabile" : "1",
             "parametri" : [],
@@ -164,7 +164,7 @@
             "codice" : "MS10",
             "sigla" : "CCV",
             "nome" : "Code Coverage",
-            "formula" : "*CCV* = $display(\"LC\"/\"LT\")*100$",
+            "formula" : "*CCV* = $display(\"LC\"/\"LT\") dot 100$",
             "sogliaOttimale" : "$100%$",
             "sogliaAccettabile" : "$70%$",
             "parametri" : [
@@ -177,15 +177,15 @@
                     "descrizione" : "Linee di codice Totali"
                 }
             ],
-            "descrizione" : "La metrica CCV esprime la percentuale di linee di codice coperte dai test rispetto al totale delle linee di codice del software.",
+            "descrizione" : "La metrica *CCV* esprime la percentuale di linee di codice coperte dai test rispetto al totale delle linee di codice del software.",
             "estensioni" : [],
-            "noteAggiuntive" : "É necessario precisare che la metrica di code coverage non considera la porzione di codice dedicata all'interfaccia grafica, bensì gli aspetti funzionali come le classi di modello, i design pattern implementati e le Server Actions. Il calcolo della metrica avviene mediante l'utilizzo di Coveralls e la sua integrazione con GitHub."
+            "noteAggiuntive" : "È necessario precisare che la metrica di code coverage non considera la porzione di codice dedicata all'interfaccia grafica, bensì gli aspetti funzionali come le classi di modello, i design pattern implementati e le Server Actions. Il calcolo della metrica avviene mediante l'utilizzo di Coveralls e la sua integrazione con GitHub."
         },
         {
             "codice" : "MS11",
             "sigla" : "BCV",
             "nome" : "Branch Coverage",
-            "formula" : "*BCV* = $display(\"BC\"/\"BT\")*100$",
+            "formula" : "*BCV* = $display(\"BC\"/\"BT\") dot 100$",
             "sogliaOttimale" : "$100%$",
             "sogliaAccettabile" : "$70%$",
             "parametri" : [
@@ -198,7 +198,7 @@
                     "descrizione" : "Branch Totali"
                 }
             ],
-            "descrizione" : "La metrica BCV esprime la percentuale di branch coperti dai test rispetto al totale dei branch del software, dove con branch si intende un'istruzione condizionale.",
+            "descrizione" : "La metrica *BCV* esprime la percentuale di branch coperti dai test rispetto al totale dei branch del software, dove con branch si intende un'istruzione condizionale.",
             "estensioni" : [],
             "noteAggiuntive" : "Il calcolo della metrica avviene mediante l'utilizzo di Coveralls e la sua integrazione con GitHub."
         },
@@ -206,7 +206,7 @@
             "codice" : "MS12",
             "sigla" : "FD",
             "nome" : "Failure Density",
-            "formula" : "*FD* = $display(\"TF\"/\"TE\")*100$",
+            "formula" : "*FD* = $display(\"TF\"/\"TE\") dot 100$",
             "sogliaOttimale" : "$0%$",
             "sogliaAccettabile" : "$0%$",
             "parametri" : [
@@ -219,7 +219,7 @@
                     "descrizione" : "Test Eseguiti"
                 }
             ],
-            "descrizione" : "La metrica FD è un indicatore della stabilità e della qualità del software. Questa metrica misura il numero di errori o difetti rilevati nel software rispetto alla dimensione o alla complessità del sistema.",
+            "descrizione" : "La metrica *FD* è un indicatore della stabilità e della qualità del software. Questa metrica misura il numero di errori o difetti rilevati nel software rispetto alla dimensione o alla complessità del sistema.",
             "estensioni" : [],
             "noteAggiuntive" : "Nessuna."
         }
@@ -229,7 +229,7 @@
             "codice" : "MS13",
             "sigla" : "SBV",
             "nome" : "Supported Browsers Version",
-            "formula" : "*SBV* = $display(\"VS\"/\"VT\")*100$",
+            "formula" : "*SBV* = $display(\"VS\"/\"VT\") dot 100$",
             "sogliaOttimale" : "$100%$",
             "sogliaAccettabile" : "$100%$",
             "parametri" : [
@@ -242,7 +242,7 @@
                     "descrizione" : "Versioni Totali"
                 }
             ],
-            "descrizione" : "La metrica SBV esprime la percentuale di versioni di browser supportate dal software rispetto al totale delle versioni di browser individuate dal documento di Analisi dei Requisiti.",
+            "descrizione" : "La metrica *SBV* esprime la percentuale di versioni di browser supportate dal software rispetto al totale delle versioni di browser individuate dal documento di #json_adr_v.",
             "estensioni" : [],
             "noteAggiuntive" : "Nessuna."
         }

@@ -1,1 +1,72 @@
-[]
+[
+	{
+	  "ID task": "DOC-560",
+	  "Descrizione": "Aggiornare metriche allo Sprint 18",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-585",
+	  "Descrizione": "Aggiornamento metriche",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-616",
+	  "Descrizione": "Revisionare sezione Quality management process",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-619",
+	  "Descrizione": "Revisionare sezione Verification process",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-620",
+	  "Descrizione": "Revisionare sezione Validation process",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-625",
+	  "Descrizione": "Aggiornare dashboard di monitoraggio",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-617",
+	  "Descrizione": "Revisionare sezione Implementation process",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-618",
+	  "Descrizione": "Revisionare sezione Integration process",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-563",
+	  "Descrizione": "Redigere Specifica Tecnica",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-621",
+	  "Descrizione": "Revisionare sezione Transition process",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-633",
+	  "Descrizione": "Correggere errore descrizione ID zona",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-628",
+	  "Descrizione": "Scrivere guida per Modifica zona",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-614",
+	  "Descrizione": "Caricare verbali firmati nel repository",
+	  "Ruolo": "Da definire"
+	},
+	{
+	  "ID task": "DOC-641",
+	  "Descrizione": "Redigere verbale interno 24/03/2024",
+	  "Ruolo": "Da definire"
+	}
+]

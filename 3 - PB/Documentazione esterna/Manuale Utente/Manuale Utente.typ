@@ -89,7 +89,7 @@ Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
 Per aprire la pagina web dedicata all'utilizzo di WMS3, è necessario seguire i seguenti passaggi:
 
-  - assicurarsi che il programma sia in esecuzione. In caso di necessità, la procedura per eseguire il software è descritta nel documento #st_v;
+  - assicurarsi che il programma sia in esecuzione. In caso di necessità, la procedura per eseguire il software è descritta nel documento #st_v\;
   - aprire un browser web e collegarsi all'indirizzo "localhost:3000".
 
 
@@ -142,7 +142,7 @@ Il sistema ritornerà un errore e impedirà la visualizzazione del piano nel cas
 "Nella schermata sono inoltre presenti due checkbox per l'importazione dei dati da database:
 
 - "Importa gli scaffali dal database": permette di importare gli scaffali presenti nel database, i quali verranno successivamente visualizzati all'interno dell'ambiente 3D;
-- "Importa i prodotti dal database": permette di importare i prodotti presenti nel database, e, se selezionata l'opzione precedente, di popolare gli scaffali presenti con i rispettivi prodotti.
+- "Importa i prodotti dal database": permette di importare i prodotti presenti nel database e, se selezionata l'opzione precedente, di popolare gli scaffali presenti con i rispettivi prodotti.
 
 Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
 
@@ -161,7 +161,7 @@ Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambi
 Una volta che l'ambiente è stato correttamente configurato è possibile cominciare a lavorare con il piano 3D che si presenta come mostrato in in @fine_configurazione_iniziale (in questo caso i piani rappresentati sono entrambi vuoti).
 
 == Movimento nell'ambiente tridimensionale
-Il sistema permette quattro diversi tipi di movimento di camera all'interno dell'ambiente: rotazione del piano, zoom-in e zoom-out, lo spostamento della camera sui due assi (panning) e con le frecce direzionali.
+Il sistema permette quattro diversi tipi di movimento di camera all'interno dell'ambiente: rotazione del piano, zoom-in e zoom-out, spostamento della camera sui due assi (panning) e con le frecce direzionali.
 
 === Rotazione della piano
 
@@ -286,9 +286,9 @@ In esso vengono visualizzati:
   - *Altezza*: numero reale che definisce l'altezza della zona.
 
 - *Lista dei Bin*: tabella che elenca, per tutti i bin della zona:
-  - codice alfanumerico identificativo univoco del bin;
-  - contenuto del bin ("Libero" se vuoto);
-  - pulsante per l'ispezione del bin (@ispezione_bin) se non vuoto.
+  - codice alfanumerico identificativo univoco del bin (colonna Bin);
+  - contenuto del bin ("Libero" se vuoto) (colonna Stato);
+  - pulsante per l'ispezione del bin (@ispezione_bin) se non vuoto (colonna Info).
 
 \
 Nella parte inferiore del pannello sono presenti i pulsanti:

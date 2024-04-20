@@ -64,8 +64,6 @@ Al fine di agevolare la comprensione del presente documento viene fornito, al te
   _#link("https://www.math.unipd.it/~tullio/IS-1/2023/Progetto/C5.pdf")_
   #lastVisitedOn(13, 02, 2024)
 
-=== Riferimenti informativi <riferimenti-informativi>
-
 #pagebreak()
 
 = Requisiti

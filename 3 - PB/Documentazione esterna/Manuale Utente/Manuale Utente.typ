@@ -134,7 +134,7 @@ Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambi
 === Inizializzazione Planimetria Personalizzata
 
 #figure(
-  image("./imgs/planimetria_personalizzata.png", width: 50%),
+  image("./imgs/planimetria_personalizzata.png", width: 44%),
   caption: [
     Definizione parametri del piano personalizzato
   ],

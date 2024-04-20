@@ -180,13 +180,15 @@ Il sistema permette quattro diversi tipi di movimento di camera all'interno dell
     grid(
         columns: 3,
         rows:    (auto, auto),
-        [ #image("./imgs/rotazione_1.png", width: 80%)],
-        [ #image("./imgs/rotazione_2.png", width: 75%)],
-        [ #image("./imgs/mouse_tasto_sinistro.png", width: 50%)],
+        [ #image("./imgs/rotazione_1.png", width: 100%)],
+        [ #image("./imgs/rotazione_2.png", width: 93%)],
+        [ #image("./imgs/mouse_tasto_sinistro.png", width: 65%)],
     ),caption: [Rotazione del piano rispetto la camera],
 ) <camera_rotazione>
 
-Premendo il tasto sinistro e spostando il mouse verso destra ruoteremo il piano rispetto alla camera in senso antiorario, muovendolo invece verso sinistra verrà ruotato in senso orario, come mostrato in @camera_rotazione. Nello stesso modo, spostando il mouse verso il basso possiamo cambiare l'angolazione del piano.
+Premendo il tasto sinistro e spostando il mouse verso destra è possibile ruotare il piano rispetto alla camera in senso antiorario, muovendolo invece verso sinistra verrà ruotato in senso orario, come mostrato in @camera_rotazione.
+
+Allo stesso modo, spostando il mouse verso il basso è possibile cambiare l'angolazione del piano.
 
 === Zoom-in, Zoom-out
 
@@ -194,9 +196,9 @@ Premendo il tasto sinistro e spostando il mouse verso destra ruoteremo il piano 
     grid(
         columns: 3,
         rows:    (auto, auto),
-        [ #image("./imgs/zoom-in.png", width: 80%)],
-        [ #image("./imgs/zoom-out.png", width: 75%)],
-        [ #image("./imgs/mouse_rotella.png", width: 30%)],
+        [ #image("./imgs/zoom-in.png", width: 100%)],
+        [ #image("./imgs/zoom-out.png", width: 92%)],
+        [ #image("./imgs/mouse_rotella.png", width: 35%)],
     ),caption: [Zoom-in e zoom-out],
 ) <camera_zoom>
 
@@ -208,9 +210,9 @@ Ruotando la rotella del mouse in avanti è possibile avvicinarsi all'oggetto des
     grid(
         columns: 3,
         rows:    (auto, auto),
-        [ #image("./imgs/panning_1.png", width: 70%)],
-        [ #image("./imgs/panning_2.png", width: 70%)],
-        [ #image("./imgs/mouse_tasto_destro.png", width: 50%)],
+        [ #image("./imgs/panning_1.png", width: 90%)],
+        [ #image("./imgs/panning_2.png", width: 95%)],
+        [ #image("./imgs/mouse_tasto_destro.png", width: 70%)],
     ),caption: [Panning della camera],
 ) <camera_panning>
 
@@ -222,9 +224,9 @@ Premendo il tasto destro del mouse e spostando il mouse in una delle quattro dir
     grid(
         columns: 3,
         rows:    (auto, auto),
-        [ #image("./imgs/keyboard_wasd.jpg", width: 45%)],
-        [ #image("./imgs/keyboard_arrow.png", width: 40%)],
-        [ #image("./imgs/keyboard_shift.jpg", width: 40%)],
+        [ #image("./imgs/keyboard_wasd.jpg", width: 65%)],
+        [ #image("./imgs/keyboard_arrow.png", width: 60%)],
+        [ #image("./imgs/keyboard_shift.jpg", width: 60%)],
     ),caption: [Movimento con le frecce direzionali],
 ) <camera_direzionali>
 

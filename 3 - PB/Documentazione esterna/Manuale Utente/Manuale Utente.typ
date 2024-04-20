@@ -156,16 +156,20 @@ Il sistema mostretà un errore e impedirà la visualizzazione del piano nel caso
 === Completamento configurazione dell'ambiente
 
 #figure(
-    grid(
-        columns: (auto, auto),
-        rows:    (auto, auto),
-        [ #image("./imgs/piano_rettangolare.png", width: 90%)],
-        [ #image("./imgs/piano_personalizzato.png", width: 90%)],
-    ),caption: [ Corretta configurazione del piano rettangolare (sinistra) e del piano personalizzato (destra)],
-) <fine_configurazione_iniziale>
+  image("./imgs/piano_rettangolare.png", width: 70%),
+  caption: [
+    Configurazione iniziale del piano rettangolare
+  ]
+) <fine_configurazione_rettangolare>
 
+#figure(
+  image("./imgs/piano_personalizzato.png", width: 70%),
+  caption: [
+    Configurazione iniziale del piano personalizzato\
+  ]
+) <fine_configurazione_personalizzata>
 
-Una volta che l'ambiente è stato correttamente configurato è possibile cominciare a lavorare con il piano 3D che si presenta come mostrato in in @fine_configurazione_iniziale (in questo caso i piani rappresentati sono entrambi vuoti).
+Una volta che l'ambiente è stato correttamente configurato è possibile cominciare a lavorare con il piano 3D che si presenta come mostrato in @fine_configurazione_rettangolare e @fine_configurazione_personalizzata.
 
 == Movimento nell'ambiente tridimensionale
 Il sistema permette quattro diversi tipi di movimento di camera all'interno dell'ambiente: rotazione del piano, zoom-in e zoom-out, spostamento della camera sui due assi (panning) e con le frecce direzionali.

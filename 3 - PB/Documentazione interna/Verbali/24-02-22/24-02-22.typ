@@ -36,7 +36,7 @@ La scelta di implementare le altre forme di testing proposte (end-to-end e integ
 
 === Riflessioni sul feedback ricevuto riguardo al deploy dell'applicazione
 
-Il Proponente ha valutato positivamente la scelta delle modalità di deploy dell'applicazione, con particolare apprezzamento per i meccanismi di Continous Integration e Continous Delivery proposti.
+Il Proponente ha valutato positivamente la scelta delle modalità di deploy dell'applicazione, con particolare apprezzamento per i meccanismi di Continuous Integration e Continuous Delivery proposti.
 Il gruppo ha quindi deciso di approvare il percorso scelto e proseguire con l'implementazione.
 
 === Predisposizione modifiche necessarie al diagramma ER
@@ -51,7 +51,7 @@ In particolare le task scaturite dall'esito di questo meeting riguardano:
 
 + aggiornamento dello schema ER del database a seguito del feedback del Proponente in particolare:
 
-  - rimuovere attributo altezza da scaffale perchè derivabile;
+  - rimuovere attributo altezza da scaffale perché derivabile;
   - rimuovere generalizzazione posizione;
   - aggiungere attributi coordinate X e Y allo scaffale;
   - aggiungere possibilità di avere bin di larghezza diversa sullo stesso ripiano;

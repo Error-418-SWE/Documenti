@@ -369,7 +369,7 @@ if showTablesIndex {
 }
 
 // Prepare regex for glossary terms matching
-let glossary = json("Glossario.json");
+let glossary = json("glossario_manuale_utente.json");
 let glossaryRegex = ()
 let regexSeparator = "(\b|$)|(\b|$)"
 for term in glossary.keys() {
@@ -386,9 +386,7 @@ for term in glossary.keys() {
 }
 glossaryRegex = glossaryRegex.dedup().sorted().rev().join(regexSeparator)
 // Highlight glossary terms
-if title == "Glossario"{
-   glossaryRegex = lorem(1)
-}
+
 show regex(
   glossaryRegex
 ): it => {
@@ -406,5 +404,47 @@ set par(justify: true)
 counter(page).update(1)
 
 body
+
+show regex(
+  "\bG\b"
+): it => {
+  ""
+}
+
+set heading(
+  level: 1,
+  numbering: none,
+  outlined: false
+)
+
+let previousTerm = glossary.keys().at(0)
+heading(
+  level: 1,
+  previousTerm.at(0)
+)
+line(length: 100%)
+for term in glossary.keys() {
+  if (term.at(0) != previousTerm.at(0)) {
+    heading(
+      level: 1,
+      term.at(0)
+    )
+    line(length: 100%)
+  }
+  heading(
+    level: 2,
+    if glossary.at(term).acronyms.len() > 0 {
+      term + " (" + glossary.at(term).acronyms.join(", ") + ")"
+    }
+    else {
+      term
+    }
+  )
+  text(
+    glossary.at(term).description
+  )
+  previousTerm = term
+}
+
 
 }

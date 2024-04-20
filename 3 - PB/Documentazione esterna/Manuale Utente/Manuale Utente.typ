@@ -122,11 +122,12 @@ Si può scegliere una modalità di lavoro selezionandola nel pannello di @avvio 
   ],
 ) <piano_rettangolare>
 
-Selezionata l'opzione "Planimetria rettangolare" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_rettangolare, dove sarà possibile definire la larghezza e la lunghezza del magazzino che vogliamo creare.
+Selezionata l'opzione "Planimetria rettangolare" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_rettangolare, dove sarà possibile effettuare le seguenti azioni:
+- definire la larghezza del magazzino (numero maggiore di 0);
+- definire la lunghezza del magazzino (numero maggiore di 0);
+- caricare la lista dei prodotti presente nel database, tramite l'opzione "Importa i prodotti da database".
 
-Per terminare la configurazione del piano è richiesto che i due parametri siano entrambi maggiori di 0, in caso contrario verrà impedito di procedere alla visualizzazione del piano e verrà mostrato un messaggio di errore.
-
-Inoltre, selezionando l'opzione "Importa i prodotti da database", una volta terminata la configurazione dell'ambiente verrà caricata nell'apposita finestra la lista dei prodotti presenti nel database.
+Nel caso in cui vengano inseriti valori di larghezza o lunghezza minori o uguali a 0, verrà impedito di procedere alla visualizzazione del piano e verrà mostrato un messaggio di errore.
 
 Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
 

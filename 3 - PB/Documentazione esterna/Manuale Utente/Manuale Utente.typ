@@ -104,7 +104,7 @@ Per aprire la pagina web dedicata all'utilizzo di WMS3, è necessario seguire i 
 
 Il software all'avvio si presenta come segue:
 #figure(
-  image("./imgs/avvio.png", width: 60%),
+  image("./imgs/avvio.png", width: 44%),
   caption: [
     Schermata iniziale
   ],

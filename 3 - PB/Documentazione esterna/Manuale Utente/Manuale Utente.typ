@@ -116,13 +116,13 @@ Si può scegliere una modalità di lavoro selezionandola nel pannello di @avvio 
 === Inizializzazione Planimetria Rettangolare
 
 #figure(
-  image("./imgs/planimetria_rettangolare.png", width: 60%),
+  image("./imgs/planimetria_rettangolare.png", width: 44%),
   caption: [
     Definizione parametri del piano rettangolare
   ],
 ) <piano_rettangolare>
 
-Selezionata l'opzione "Planimetria rettangolare" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_rettangolare, dove sarà possibile definire la lunghezza e la profondità del magazzino che vogliamo creare.
+Selezionata l'opzione "Planimetria rettangolare" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_rettangolare, dove sarà possibile definire la larghezza e la lunghezza del magazzino che vogliamo creare.
 
 Per terminare la configurazione del piano è richiesto che i due parametri siano entrambi maggiori di 0, in caso contrario verrà impedito di procedere alla visualizzazione del piano e verrà mostrato un messaggio di errore.
 

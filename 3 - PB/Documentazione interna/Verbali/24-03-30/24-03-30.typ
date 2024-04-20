@@ -56,9 +56,9 @@ Sono state aggiornate e revisionate le seguenti sezioni:
 
 Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq\:
 
-- CPI di progetto a #TODO, rappresenta un valore accettabile ($>=0.95$) e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
+- CPI di progetto a 1.00, rappresenta un valore accettabile ($>=0.95$) e ottimo ($>=1$);
 
-- EAC aumenta passando da #TODO a #TODO. Nonostante l'aumento, rientra nelle condizioni di accettabilità;
+- EAC si riconferma con un valore di 13.055€, come nello sprint precedente;
 
 - $"SEV" <= "SPV"$, rientra nelle condizioni di accettabilità poiché $"SEV" >= 80%$ del $"SVP"$.
 

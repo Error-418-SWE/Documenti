@@ -125,9 +125,11 @@ Selezionata l'opzione "Planimetria rettangolare" nella schermata di @avvio, verr
 - definire la lunghezza del magazzino (numero maggiore di 0);
 - caricare la lista dei prodotti presente nel database, tramite l'opzione "Importa i prodotti da database".
 
-Nel caso in cui vengano inseriti valori di larghezza o lunghezza minori o uguali a 0, verrà impedito di procedere alla visualizzazione del piano e verrà mostrato un messaggio di errore.
-
 Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
+
+Il sistema mostretà un errore e impedirà la visualizzazione del piano nel caso in cui uno o entrambi i valori di larghezza e lunghezza siano minori o uguali a 0.
+
+#pagebreak()
 
 === Inizializzazione Planimetria Personalizzata
 
@@ -138,19 +140,18 @@ Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambi
   ],
 ) <piano_personalizzato>
 
-Selezionata l'opzione "Planimetria personalizzata" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_personalizzato, dove sarà possibile caricare il file SVG che verrà disegnato sul piano, e inserire la misura del lato maggiore del magazzino, in modo da scalarne correttamente la pianta.
+Selezionata l'opzione "Planimetria personalizzata" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_personalizzato, dove sarà possibile effettuare le seguenti azioni:
+- caricare il file SVG che verrà disegnato sul piano;
+- inserire la misura del lato maggiore del magazzino, in modo da scalarne correttamente la pianta;
+- importare gli scaffali presenti nel database tramite l'opzione "Importa gli scaffali dal database";
+- importare i prodotti presenti nel database, selezionando l'opzione "Importa i prodotti dal database".
 
-Il sistema ritornerà un errore e impedirà la visualizzazione del piano nel caso in cui:
+Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
+
+Il sistema mostretà un errore e impedirà la visualizzazione del piano nel caso in cui:
 - il file SVG non venga inserito correttamente;
 - il file SVG non sia valido;
 - il valore associato al lato maggiore sia minore o uguale a 0.
-
-"Nella schermata sono inoltre presenti due checkbox per l'importazione dei dati da database:
-
-- "Importa gli scaffali dal database": permette di importare gli scaffali presenti nel database, i quali verranno successivamente visualizzati all'interno dell'ambiente 3D;
-- "Importa i prodotti dal database": permette di importare i prodotti presenti nel database e, se selezionata l'opzione precedente, di popolare gli scaffali presenti con i rispettivi prodotti.
-
-Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
 
 === Completamento configurazione dell'ambiente
 

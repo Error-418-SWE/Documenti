@@ -379,7 +379,7 @@ Il pannello di ispezione del bin verrà aggiornato per contenere le nuove inform
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e delle impostazioni.
 
-Selezionando da esso la seconda icona (@icona_lista_prodotti sinistra), la quale corrisponde alla voce "Prodotti", si aprirà un ulteriore pannello dove sarà possibile visualizzare le liste dei prodotti letti da database (@icona_lista_prodotti destra).
+Selezionando da esso la seconda icona (@icona_lista_prodotti, sinistra), la quale corrisponde alla voce "Prodotti", si aprirà un ulteriore pannello dove sarà possibile visualizzare le liste dei prodotti letti da database (@icona_lista_prodotti, destra).
 
 #figure(
     grid(
@@ -393,10 +393,8 @@ Selezionando da esso la seconda icona (@icona_lista_prodotti sinistra), la quale
 \
 Esistono due liste di prodotti:
 
-  - *Collocati*: vengono riportati i prodotti contenuti in un bin e visualizzati nell'ambiente;
-
-  - *Non collocati*: vengono riportati i prodotti che non sono contenuti all'interno di un bin e non sono visualizzati nell'ambiente.
-
+- *Collocati*: riporta i prodotti contenuti in un bin e visualizzati nell'ambiente;
+- *Non collocati*: riporta i prodotti che non sono contenuti all'interno di un bin e non sono visualizzati nell'ambiente.
 
 Ogni riga di tali liste corrisponde ad un prodotto, il quale viene identificato dal suo nome, ed elenca le informazioni relative al suo `ID` e le categorie di cui fa parte.
 
@@ -406,13 +404,12 @@ Sulla destra di tale riga è presente l'icona relativa all'ispezione del prodott
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile ispezionare i prodotti letti da database visualizzandone i dettagli.
 
-Per eseguire tale operazione è possibile interagire con:
+Per eseguire tale operazione è possibile:
 
-  - il pulsante contenente l'icona raffigurante un occhio (@immagini_ispezione_prodotto (sinistra)) presente nella lista dei prodotti (@visualizzazione_lista_prodotti) nella riga corrispondente al prodotto da ispezionare;
+- cliccare il pulsante contenente l'icona raffigurante un occhio (@immagini_ispezione_prodotto, sinistra) presente nella lista dei prodotti (@visualizzazione_lista_prodotti) nella riga corrispondente al prodotto da ispezionare;
+- interagire con il pannello di ispezione del bin contenente il prodotto di interesse (@ispezione_bin).
 
- - il pannello di ispezione del bin contenente il prodotto di interesse (@ispezione_bin).
-
-L'esecuzione di almeno una delle modalità elencate permette la visualizzazione, sulla destra dello schermo, del pannello relativo alle informazioni del prodotto di interesse (@immagini_ispezione_prodotto (destra)).
+L'esecuzione di almeno una delle modalità elencate permette la visualizzazione, sulla destra dello schermo, del pannello relativo alle informazioni del prodotto di interesse (@immagini_ispezione_prodotto, destra).
 
 #figure(
     grid(
@@ -426,21 +423,14 @@ L'esecuzione di almeno una delle modalità elencate permette la visualizzazione,
 \
 In esso vengono visualizzati:
 
-  - *Nome*: nome del prodotto, è visualizzato come titolo del pannello;
-
-  - *ID*: codice identificativo univoco del prodotto;
-
-  - *Categorie*: lista delle categorie appartenenti al prodotto;
-
-  - *Dimensioni*: tre campi rispettivamente relativi a:
-
-    - *Lunghezza*: numero reale che definisce la lunghezza del prodotto;
-
-    - *Larghezza*: numero reale che definisce la larghezza del prodotto;
-
-    - *Altezza*: numero reale che definisce l'altezza del prodotto.
-
-  - *Peso*: numero reale che definisce il peso del prodotto.
+- *Nome*: nome del prodotto, è visualizzato come titolo del pannello;
+- *ID*: codice identificativo univoco del prodotto;
+- *Categorie*: lista delle categorie appartenenti al prodotto;
+- *Dimensioni*: tre campi rispettivamente relativi a:
+  - *Lunghezza*: numero reale che definisce la lunghezza del prodotto;
+  - *Larghezza*: numero reale che definisce la larghezza del prodotto;
+  - *Altezza*: numero reale che definisce l'altezza del prodotto.
+- *Peso*: numero reale che definisce il peso del prodotto.
 
 
 == Ordini di movimentazione prodotti

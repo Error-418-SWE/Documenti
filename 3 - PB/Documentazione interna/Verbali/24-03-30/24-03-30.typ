@@ -32,7 +32,7 @@ Sono state aggiornate e revisionate le seguenti sezioni:
 - Processo di validazione;
 - Processo di integrazione;
 - Processo di verifica;
-- Processo di implementazione;
+- Processo di implementazione.
 
 == #pdq
 
@@ -51,16 +51,16 @@ Sono state aggiornate e revisionate le seguenti sezioni:
 - In corso la sezione Ispezione Zona;
 - In corso la sezione Visualizzazione Lista Zone;
 - Definito template documento;
-- Redatta sezione Eliminazione zona
+- Redatta sezione Eliminazione zona.
 = Analisi retrospettiva
 
 Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq\:
 
 - CPI di progetto a 1.00, rappresenta un valore accettabile ($>=0.95$) e ottimo ($>=1$);
 
-- EAC si riconferma con un valore di 13.055€, come nello sprint precedente;
+- EAC aumenta con un valore di 13.010,59€, nonostante l'aumento, rientra nelle condizioni di ottimalità;
 
-- $"SEV" <= "SPV"$, rientra nelle condizioni di accettabilità poiché $"SEV" >= 80%$ del $"SVP"$.
+- $"SEV" = "SPV"$, rientra nelle condizioni di accettabilità poiché $"SEV" >= 80%$ del $"SVP"$.
 
 \
 Maggiori dettagli in merito al valore delle metriche alla loro analisi sono reperibili all'interno dei documenti #pdq_v e #pdp_v.

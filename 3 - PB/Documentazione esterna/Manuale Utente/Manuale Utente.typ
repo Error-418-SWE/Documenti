@@ -438,7 +438,7 @@ In esso vengono visualizzati:
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e delle impostazioni.
 
-Selezionando da esso la terza icona (@icona_lista_ordini (sinistra)), la quale corrisponde alla voce "Ordini di movimentazione", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista degli ordini di movimentazione avvenuti nella sessione corrente (@icona_lista_ordini (destra)).
+Selezionando da esso la terza icona (@icona_lista_ordini, sinistra), la quale corrisponde alla voce "Ordini di movimentazione", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista degli ordini di movimentazione avvenuti nella sessione corrente (@icona_lista_ordini, destra).
 
 Per ogni ordine viene riportato il nome del prodotto soggetto allo spostamento e gli `ID` del bin di partenza e di destinazione.
 
@@ -456,14 +456,14 @@ Per ogni ordine viene riportato il nome del prodotto soggetto allo spostamento e
 
 Lo spostamento di un prodotto tra due bin avviene tramite _drag and drop_:
 
-  - posizionando il puntatore del mouse sul bin contenente il prodotto che si desidera spostare e premendo il tasto sinistro del mouse, è possibile "prendere" il prodotto;
++ posizionare il puntatore del mouse sul bin contenente il prodotto che si desidera spostare;
++ premere e tenere premuto il tasto sinistro del mouse per "prendere" il prodotto;
++ spostare il puntatore del mouse per trascinare il prodotto nella posizione desiderata;
++ rilasciare il tasto per depositare il prodotto.
 
-  - tenendo premuto il medesimo tasto è possibile spostare il prodotto nella posizione del bin di destinazione;
+Contemporaneamente al rilascio del tasto verrà visualizzata una notifica nella parte inferiore destra dello schermo, che avviserà della corretta creazione, o meno, dell'ordine di spostamento.
 
-  - rilasciando il tasto, verrà visualizzata nella parte inferiore destra dello schermo una notifica che avviserà della corretta creazione, o meno, dell'ordine di spostamento.
-
-
-Nel caso in cui l'ordine di movimentazione sia avvenuto correttamente, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde (@immagine_spostamento_prodotti).
+Nel caso in cui l'ordine di movimentazione sia avvenuto correttamente, i bin di partenza e di arrivo verranno evidenziati rispettivamente in giallo e verde, come mostrato nella @immagine_spostamento_prodotti.
 
 #figure(
   image("./imgs/spostamento_drag_and_drop.png", width: 40%),

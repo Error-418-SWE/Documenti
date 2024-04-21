@@ -59,9 +59,9 @@ Il documento, per quanto ritenuto concluso con la redazione dei paragrafi deriva
 
 = Analisi retrospettiva
 Lo Sprint 22 è terminato con il raggiungimento della totalità degli obiettivi prefissati. Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq_v:
-- CPI di progetto a 1.02, che rapppresenta un avanzamento positivo del progetto, con valore superiore alla soglia di accettabilità;
+- CPI di progetto a 1.02, che rappresenta un avanzamento positivo del progetto, con valore superiore alla soglia di accettabilità;
 - EAC diminuisce passando da € 12.762,13 a € 12.754,67 rientrando ampiamente nel budget previsto;
-- $"SEV" >= "SPV"$, come testimoniato anche dalla metrica CPI, che indica un avanzamento positivo del progetto.;
+- $"SEV" >= "SPV"$, come testimoniato anche dalla metrica CPI, che indica un avanzamento positivo del progetto.
 
 == Keep doing
 Il gruppo, ormai prossimo alla conclusione del progetto, ha raggiunto, come anche espresso dalle retrospettive precedenti, una soddisfacente capacità di lavoro in modalità asincrona.
@@ -104,6 +104,6 @@ Nelle date 08/04/2024 e 09/04/2024 verranno eseguite le prove generali della pre
     ).flatten()
   )
 }
-#figure(caption: [Task pianificate per lo Sprint #TODO .],
+#figure(caption: [Task pianificate per lo Sprint 23.],
   table-json(json("tasks.json"))
 )

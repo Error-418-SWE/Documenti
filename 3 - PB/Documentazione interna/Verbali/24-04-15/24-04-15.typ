@@ -81,4 +81,20 @@ Persiste una buona collaborazione tra i membri del gruppo e il ritmo di lavoro r
 
 = Pianificazione <pianificazione>
 
-#TODO
+#let table-json(data) = {
+  let keys = data.at(0).keys()
+  table(
+    align: left,
+    columns: keys.len(),
+    ..keys,
+    ..data.map(
+      row => keys.map(
+        key => row.at(key, default: [n/a])
+      )
+    ).flatten()
+  )
+}
+#show figure: set block(breakable: true)
+#figure(caption: [Task pianificate per lo Sprint 23.],
+  table-json(json("tasks.json"))
+)

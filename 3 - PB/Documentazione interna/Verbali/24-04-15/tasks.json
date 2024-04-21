@@ -1,0 +1,42 @@
+[
+	{
+	  "ID task": "DOC-699",
+	  "Descrizione": "Aggiornare requisiti di sistema manuale utente.",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-707",
+	  "Descrizione": "Aggiungere glossario manuale utente.",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-709",
+	  "Descrizione": "Revisione generale del documento Norme di Progetto.",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-711",
+	  "Descrizione": "Rimuovere requisito FD-145.",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-715",
+	  "Descrizione": "Redigere sezione test di accettazione.",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "718",
+	  "Descrizione": "Aggiornare glossario.",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-720",
+	  "Descrizione": "Aggiornare sistema tracciamento delle metriche del Piano di Qualifica.",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-721",
+	  "Descrizione": "Risolvere typo in vari documenti.",
+	  "Ruolo": "Verificatore"
+	}
+]

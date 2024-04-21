@@ -56,7 +56,16 @@ Le modifiche al documento sono state:
 
 = Analisi retrospettiva
 
-#TODO
+Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq\:
+
+- CPI di progetto a 1.01, rappresenta un valore ottimale (dove l'ottimabilità è rappresentata da valori $>=1$);
+
+- EAC diminuisce passando da € 12.992,10 a € 12.968,71 rientrando nel budget previsto;
+
+- $"SEV" >= "SPV"$, come testimoniato anche dalla metrica CPI, che indica un avanzamento positivo del progetto.
+
+\
+Maggiori dettagli in merito al valore delle metriche alla loro analisi sono reperibili all'interno dei documenti #pdq_v e #pdp_v.
 
 == Keep doing <keep-doing>
 

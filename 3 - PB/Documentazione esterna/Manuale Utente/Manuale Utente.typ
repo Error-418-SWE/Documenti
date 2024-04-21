@@ -235,9 +235,9 @@ L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle f
 == Visualizzazione zone
 === Visualizzazione lista zone <visualizzazione_lista_zone>
 
-Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e delle impostazioni.
 
-Selezionando da esso la prima icona (@icona_lista_zone (sinistra)), la quale corrisponde alla voce "Zone", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone già presenti nell'ambiente (@icona_lista_zone (destra)).
+Selezionando da esso la prima icona (@icona_lista_zone, sinistra), la quale corrisponde alla voce "Zone", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone presenti nell'ambiente (@icona_lista_zone, destra).
 
 #figure(
     grid(
@@ -258,11 +258,10 @@ Similmente, se una zona dovesse essere eliminata dall'ambiente, essa verrebbe ri
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile ispezionare le zone in esso contenute visualizzandone i dettagli.
 
-Per eseguire tale operazione è possibile interagire con:
+Per eseguire tale operazione è possibile:
 
-  - il pulsante contenente l'icona raffigurante un occhio (@immagini_pulsanti_ispezione_zona (sinistra)) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da ispezionare;
-
-  - il cubo rosso presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse sia sovrapposto a tale zona (@immagini_pulsanti_ispezione_zona (destra)). Per eseguire l'ispezione, tale cubo deve essere premuto con un doppio click del tasto sinistro del mouse.
+- cliccare il pulsante contenente l'icona raffigurante un occhio (@immagini_pulsanti_ispezione_zona, sinistra) presente nella lista delle zone (@visualizzazione_lista_zone), nella riga corrispondente alla zona da ispezionare;
+- fare doppio click sul cubo rosso presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse sia sovrapposto a tale zona (@immagini_pulsanti_ispezione_zona, destra).
 
 #figure(
     grid(
@@ -305,7 +304,7 @@ In esso vengono visualizzati:
 
 \
 Nella parte inferiore del pannello sono presenti i pulsanti:
-  - *Localizza*: se premuto (@immagine_pulsante_localizza_zona) riposiziona automaticamente la visuale sulla zona, in modo da permettere una più immediata visualizzazione e localizzazione della stessa;
+  - *Localizza* (@immagine_pulsante_localizza_zona): se premuto riposiziona automaticamente la visuale sulla zona, in modo da permettere una più immediata visualizzazione e localizzazione della stessa;
   - *Modifica*: se premuto permette la modifica della zona (@modifica_zona);
   - *Elimina*: se premuto permette l'eliminazione della zona (@eliminazione_zona).
 
@@ -321,11 +320,10 @@ Nella parte inferiore del pannello sono presenti i pulsanti:
 
 Successivamente alla creazione di una zona è possibile ispezionarne i bin singolarmente al fine di visualizzarne i dettagli specifici.
 
-Per eseguire tale operazione è possibile interagire con:
+Per eseguire tale operazione è possibile:
 
-  - il bin di interesse tramite un doppio click del tasto sinistro del mouse. Così facendo esso viene colorato di rosso (@immagini_opzioni_selezione_bin sinistra);
-
-  - il pulsante per l'ispezione del bin (@immagini_opzioni_selezione_bin destra) presente nella lista dei bin di una zona specifica (@ispezione_zona).
+- fare doppio click sul bin di interesse: così facendo esso verrà colorato di rosso (@immagini_opzioni_selezione_bin sinistra);
+- cliccare il pulsante per l'ispezione del bin (@immagini_opzioni_selezione_bin, destra) presente nella lista dei bin di una zona specifica (@ispezione_zona).
 
 #figure(
     grid(
@@ -341,26 +339,15 @@ L'esecuzione di almeno una delle modalità elencate permette la visualizzazione,
 
 In esso vengono visualizzati:
 
-  - *ID*: codice alfanumerico identificativo univoco del bin, è visualizzato anche come titolo del pannello.
-
-    Esso è composto da tre valori:
-
-      - l'ID della zona che lo contiene;
-
-      - una lettera dell'alfabeto inglese che identifica la colonna che lo contiene;
-
-      - numero del bin rispetto alla zona che lo contiene.
-
-
-  - *Dimensioni*: tre campi rispettivamente relativi a:
-
-    - *Lunghezza*: numero reale che definisce la lunghezza del bin;
-
-    - *Larghezza*: numero reale che definisce la larghezza del bin;
-
-    - *Altezza*: numero reale che definisce l'altezza del bin.
-
-  - *Area prodotto contenuto*: nel caso in cui il bin contenga un prodotto, vengono visualizzate le sue informazioni (@ispezione_prodotto), altrimenti viene data la possibilità di selezionare un prodotto non collocato da inserire nel bin.
+- *ID*: codice alfanumerico identificativo univoco del bin, è visualizzato anche come titolo del pannello. È composto da tre valori:
+  - l'ID della zona che lo contiene;
+  - una lettera dell'alfabeto inglese che identifica la colonna che lo contiene;
+  - numero del bin rispetto alla zona che lo contiene.
+- *Dimensioni*: tre campi rispettivamente relativi a:
+  - *Lunghezza*: numero reale che definisce la lunghezza del bin;
+  - *Larghezza*: numero reale che definisce la larghezza del bin;
+  - *Altezza*: numero reale che definisce l'altezza del bin.
+- *Area prodotto contenuto*: nel caso in cui il bin contenga un prodotto, vengono visualizzate le sue informazioni (@ispezione_prodotto), altrimenti viene data la possibilità di selezionare un prodotto non collocato da inserire nel bin.
 
 #figure(
     grid(
@@ -372,9 +359,10 @@ In esso vengono visualizzati:
 ) <immagini_pannello_bin>
 
 \
-Per inserire un prodotto all'interno di un bin vuoto mediante la sua ispezione, è sufficiente premere sul pulsante contenente la scritta "Seleziona" e ricercare il prodotto desiderato dal relativo pannello sulla sinistra tramite il suo `ID` o nome.
-
-Per confermare la scelta è necessario premere sul pulsante contenente la scritta "Conferma" (@immagine_pannello_inserimento_prodotto).
+Per inserire un prodotto all'interno di un bin vuoto mediante la sua ispezione, è sufficiente:
+- premere sul pulsante contenente la scritta "Seleziona";
+- ricercare il prodotto desiderato dal relativo pannello sulla sinistra tramite il suo `ID` o nome;
+- premere sul pulsante contenente la scritta "Conferma" (@immagine_pannello_inserimento_prodotto).
 
 Il pannello di ispezione del bin verrà aggiornato per contenere le nuove informazioni.
 
@@ -389,7 +377,7 @@ Il pannello di ispezione del bin verrà aggiornato per contenere le nuove inform
 == Visualizzazione prodotti
 === Visualizzazione lista prodotti <visualizzazione_lista_prodotti>
 
-Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e delle impostazioni.
 
 Selezionando da esso la seconda icona (@icona_lista_prodotti sinistra), la quale corrisponde alla voce "Prodotti", si aprirà un ulteriore pannello dove sarà possibile visualizzare le liste dei prodotti letti da database (@icona_lista_prodotti destra).
 
@@ -458,7 +446,7 @@ In esso vengono visualizzati:
 == Ordini di movimentazione prodotti
 === Visualizzazione lista ordini di movimentazione
 
-Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e impostazioni.
+Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e delle impostazioni.
 
 Selezionando da esso la terza icona (@icona_lista_ordini (sinistra)), la quale corrisponde alla voce "Ordini di movimentazione", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista degli ordini di movimentazione avvenuti nella sessione corrente (@icona_lista_ordini (destra)).
 

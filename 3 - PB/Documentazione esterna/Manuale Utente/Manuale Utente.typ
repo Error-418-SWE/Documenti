@@ -123,7 +123,7 @@ Si può scegliere una modalità di lavoro selezionandola nel pannello di @avvio 
 Selezionata l'opzione "Planimetria rettangolare" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_rettangolare, dove sarà possibile effettuare le seguenti azioni:
 - definire la larghezza del magazzino (numero maggiore di 0);
 - definire la lunghezza del magazzino (numero maggiore di 0);
-- caricare la lista dei prodotti presente nel database, tramite l'opzione "Importa i prodotti da database".
+- caricare la lista dei prodotti presente nel database selezionando l'opzione "Importa i prodotti da database".
 
 Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
 
@@ -143,8 +143,8 @@ Il sistema mostretà un errore e impedirà la visualizzazione del piano nel caso
 Selezionata l'opzione "Planimetria personalizzata" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_personalizzato, dove sarà possibile effettuare le seguenti azioni:
 - caricare il file SVG che verrà disegnato sul piano;
 - inserire la misura del lato maggiore del magazzino, in modo da scalarne correttamente la pianta;
-- importare gli scaffali presenti nel database tramite l'opzione "Importa gli scaffali dal database";
-- importare i prodotti presenti nel database, selezionando l'opzione "Importa i prodotti dal database".
+- importare gli scaffali presenti nel database selezionando l'opzione "Importa gli scaffali dal database";
+- importare i prodotti presenti nel database selezionando l'opzione "Importa i prodotti dal database".
 
 Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
 

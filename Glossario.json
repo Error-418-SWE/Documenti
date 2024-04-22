@@ -449,15 +449,20 @@
     "acronyms": ["SQL"],
     "synonyms": []
   },
+	"Test di accettazione": {
+    "description": "Test formale eseguito per verificare se l'applicazione soddisfa i requisiti richiesti.",
+    "acronyms": [],
+    "synonyms": ["acceptance test"]
+  },
 	"Test di integrazione": {
     "description": "Attività di testing che verifica il corretto funzionamento dell'interazione o dell'interfaccia tra due o più moduli integrati.",
     "acronyms": [],
-    "synonyms": []
+    "synonyms": ["integration test"]
   },
 	"Test di sistema": {
     "description": "Attività di testing che verifica il corretto funzionamento del sistema integrato nel suo complesso. Questa tipologia di test è anche detta \"end-to-end\".",
     "acronyms": ["E2E"],
-    "synonyms": []
+    "synonyms": ["system test"]
   },
   "Test di unità": {
     "description": "Attività di testing che verifica il corretto funzionamento di una singola unità di un software. A seconda del paradigma di programmazione adottato, l'unità può essere un singolo metodo, una classe, un modulo o un componente.",

@@ -83,7 +83,11 @@ L'attività di codifica ha visto completati i lavori:
 
 = Analisi retrospettiva
 
-#TODO
+Il rendimento dello Sprint 20 è sostenuto dalle principali metriche esposte dal #pdq\:
+
+- CPI di progetto rimane costante a 1.00, rappresentando un valore ottimale;
+- EAC passa da € 12.990,31 a € 12.990,86, rimanendo quindi pressoché costante. Continua a rappresentare un valore ottimale;
+- $"SEV" >= "SPV"$, indica un andamento positivo del progetto.
 
 Maggiori dettagli in merito al valore delle metriche alla loro analisi sono reperibili all'interno dei documenti #pdq_v e #pdp_v.
 
@@ -101,4 +105,21 @@ Il prossimo meeting di retrospettiva, previsto per domenica 31/03/2024 alle ore 
 
 = Pianificazione <pianificazione>
 
-#TODO
+#show figure: set block(breakable: true)
+
+#let table-json(data) = {
+  let keys = data.at(0).keys()
+  table(
+    align: left,
+    columns: keys.len(),
+    ..keys,
+    ..data.map(
+      row => keys.map(
+        key => row.at(key, default: [n/a])
+      )
+    ).flatten()
+  )
+}
+#figure(caption: [Task pianificate per lo Sprint 21.],
+  table-json(json("tasks.json"))
+)

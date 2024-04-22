@@ -1,0 +1,167 @@
+[
+	{
+	  "ID task": "DOC-560",
+	  "Descrizione": "Aggiornare metriche allo Sprint 18",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-585",
+	  "Descrizione": "Aggiornamento metriche",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-616",
+	  "Descrizione": "Revisionare sezione Quality management process",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-619",
+	  "Descrizione": "Revisionare sezione Verification process",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-620",
+	  "Descrizione": "Revisionare sezione Validation process",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-625",
+	  "Descrizione": "Aggiornare dashboard di monitoraggio",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-617",
+	  "Descrizione": "Revisionare sezione Implementation process",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-618",
+	  "Descrizione": "Revisionare sezione Integration process",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-563",
+	  "Descrizione": "Redigere Specifica Tecnica",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-621",
+	  "Descrizione": "Revisionare sezione Transition process",
+	  "Ruolo": "Verificatore"
+	},
+	{
+	  "ID task": "DOC-628",
+	  "Descrizione": "Scrivere guida per Modifica zona",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-614",
+	  "Descrizione": "Caricare verbali firmati nel repository",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-641",
+	  "Descrizione": "Redigere verbale interno 24/03/2024",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-644",
+	  "Descrizione": "Aggiornare descrizione rimozione colonne",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-642",
+	  "Descrizione": "Redigere sezione spostamento prodotto",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-646",
+	  "Descrizione": "Redigere verbale esterno 24-03-26",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-645",
+	  "Descrizione": "Redigere sezione ispezione bin/scaffale",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-654",
+	  "Descrizione": "Estendere sezione Tecnologie",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-655",
+	  "Descrizione": "Estendere sezione Design Pattern",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-658",
+	  "Descrizione": "Definire template per il manuale utente",
+	  "Ruolo": "Amministratore"
+	},
+	{
+	  "ID task": "DOC-657",
+	  "Descrizione": "Redigere sezione Architettura di Deployment",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-662",
+	  "Descrizione": "Redigere sezione \"Eliminazione zona\"",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-661",
+	  "Descrizione": "Aggiungere immagini a capitolo Modifica zona",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "DOC-648",
+	  "Descrizione": "Creare tabella tracciamento test-risultato",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "DOC-666",
+	  "Descrizione": "Aggiunta sezione \"Visualizzazione lista zone\"",
+	  "Ruolo": "Progettista"
+	},
+	{
+	  "ID task": "WMS-154",
+	  "Descrizione": "Bloccare caricamento di file SVG di dimensione maggiore di 10 MB",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-151",
+	  "Descrizione": "Implementare server action per importazione delle zone vuote",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-140",
+	  "Descrizione": "Risolvere l'utente può inserire un ID alfanumerico nel campo ID della zona",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-149",
+	  "Descrizione": "Implementare grid snapping",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-142",
+	  "Descrizione": "Corretto comportamento comandi camera durante drag",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-150",
+	  "Descrizione": "Implementare collocamento prodotti non collocati",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-157",
+	  "Descrizione": "Impostare valori decimali con massimo 2 numeri decimali",
+	  "Ruolo": "Programmatore"
+	},
+	{
+	  "ID task": "WMS-118",
+	  "Descrizione": "Migliorare strategia di spostamento della camera",
+	  "Ruolo": "Programmatore"
+	}
+]

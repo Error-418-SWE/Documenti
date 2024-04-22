@@ -1838,8 +1838,8 @@ Questo sprint impiega:
 In questo sprint proseguono le attività di design e di implementazione. Gli obiettivi prefissati sono:
 - colloquio con il Proponente in data 07/03/2024;
 - aggiornamento ed estensione del documento #pdp\;
-- aggiornamento grafici delle metriche nel #pdq allo Sprint 17;
-- aggiornamento della dashboard Grafana allo Sprint 17;
+- aggiornamento grafici delle metriche nel #pdq allo sprint 17;
+- aggiornamento della dashboard Grafana allo sprint 17;
 - estensione delle #ndp basata su _Transition process_ (6.4.10 dello standard di riferimento) e _Validation process_ (6.4.11 dello standard di riferimento);
 - continuazione della revisione dell'#adr\;
 - richiedere colloquio in modalità sincrona con il #cardin per discutere dei dubbi riguardanti la progettazione;
@@ -1977,9 +1977,10 @@ Questo Sprint impiega:
 
 
 == Sprint 20 dal 17/03/2024 al 24/03/2024
+
 === Obiettivi prefissati
 
-Questo Sprint ha come obiettivi principali l'implementazione del MVP e la stesura del #man\. Sarà inoltre iniziata l'attività di revisione degli ultimi capitoli redatti delle #ndp\. Gli obiettivi prefissati sono:
+Questo sprint ha come obiettivi principali l'implementazione del MVP e la stesura del #man\. Sarà inoltre iniziata l'attività di revisione degli ultimi capitoli redatti delle #ndp\. Gli obiettivi prefissati sono:
 - fissare un colloquio con il Proponente;
 - aggiornamento ed estensione del documento #pdp\;
 - aggiornamento grafici delle metriche nel #pdq allo Sprint 19;
@@ -2003,7 +2004,8 @@ Questo Sprint ha come obiettivi principali l'implementazione del MVP e la stesur
 
 
 === Preventivo costi
-Questo Sprint impiega:
+
+Questo sprint impiega:
 - *Responsabile*: al fine di:
   - coordinare le attività;
   - organizzare il lavoro in reazione al feedback;
@@ -2060,12 +2062,12 @@ Questo Sprint impiega:
 
 === Obiettivi prefissati
 
-Lo Sprint 21 ha come obiettivo primario la convalida come MVP del prodotto software da parte del Proponente. Gli obiettivi prefissati sono:
+Lo sprint 21 ha come obiettivo primario la convalida come MVP del prodotto software da parte del Proponente. Gli obiettivi prefissati sono:
 - sostenere il colloquio di convalida del MVP con il Proponente, il giorno 26/04/2024;
 - aggiornamento ed estensione del documento #pdp\;
-- aggiornamento grafici delle metriche nel #pdq allo Sprint 20;
-- aggiornamento della dashboard Grafana allo Sprint 20;
-- armonizzazione dei seguenti capitoli delle #ndp a seguito della loro revisione, conclusasi durante lo Sprint 20:
+- aggiornamento grafici delle metriche nel #pdq allo sprint 20;
+- aggiornamento della dashboard Grafana allo sprint 20;
+- armonizzazione dei seguenti capitoli delle #ndp a seguito della loro revisione, conclusasi durante lo sprint 20:
   - Processo di gestione della qualità;
   - Processo di implementazione;
   - Processo di integrazione;
@@ -2078,8 +2080,11 @@ Lo Sprint 21 ha come obiettivo primario la convalida come MVP del prodotto softw
   - Ispezione bin/zona.
 - terminare le attività di codifica del MVP.
 
+La pianificazione tiene conto delle festività pasquali, che potrebbero impattare negativamente l'intesità del lavoro durante questo sprint e il successivo.
+
 === Preventivo costi
-Questo Sprint impiega:
+
+Questo sprint impiega:
 - *Responsabile*: al fine di:
   - coordinare le attività;
   - revisionare i capitoli delle #ndp\.
@@ -3877,6 +3882,10 @@ Nessuno.
 
 Nessuna.
 
+=== Risoluzioni attuate
+
+Nessuna.
+
 === Panoramica dei costi effettivi
 
 #figure(
@@ -3930,7 +3939,7 @@ Nessuna.
   supplement: "Grafico"
 )
 
-Durante lo Sprint 16 le ore effettive (43) sono risultate minori di due unità rispetto alle ore preventivate (45), in particolare:
+Durante lo sprint 16 le ore effettive (43) sono risultate minori di due unità rispetto alle ore preventivate (45), in particolare:
 
 - le ore di Progettista sono state minori di quanto preventivato: la progettazione dello schema ER del database è stata più semplice del previsto e ha permesso di generare confronto tra i membri del gruppo. Inoltre, la precedente esperienza di alcuni membri del gruppo con Figma ha permesso di realizzare il mock-up della UI in tempi brevi;
 - le ore di Programmatore sono state maggiori di quanto preventivato a causa dell'elevato numero di strumenti di testing esplorati;
@@ -3953,18 +3962,18 @@ Durante lo Sprint 16 le ore effettive (43) sono risultate minori di due unità r
   caption: "Monitoraggio, sprint 16"
 )
 
-Lo Sprint 16 ha permesso di raggiungere tutti gli obiettivi prefissati con una spesa inferiore alle attese. Nonostante la necessità di maggiori risorse orarie in alcuni ruoli, non sono stati rilevati rallentamenti nel completamento dei compiti previsti.
+Lo sprint 16 ha permesso di raggiungere tutti gli obiettivi prefissati con una spesa inferiore alle attese. Nonostante la necessità di maggiori risorse orarie in alcuni ruoli, non sono stati rilevati rallentamenti nel completamento dei compiti previsti.
 
-Il rendimento positivo dello Sprint 16 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index passa dal valore 0,98 (allo Sprint 15) a 1,02 e raggiunge un valore ottimale, denotando un miglioramento significativo del rendimento del gruppo;
-- EAC: l'Estimate At Completion passa dal valore € 13.292,70 (allo Sprint 15) a € 12.777,29, considerabile come valore ottimale in quanto minore del BAC.
+Il rendimento positivo dello sprint 16 è supportato dalle principali metriche esposte dal #pdq, quali:
+- CPI: il Cost Performance Index passa dal valore 0,98 (allo sprint 15) a 1,02 e raggiunge un valore ottimale, denotando un miglioramento significativo del rendimento del gruppo;
+- EAC: l'Estimate At Completion passa dal valore € 13.292,70 (allo sprint 15) a € 12.777,29, considerabile come valore ottimale in quanto minore del BAC.
 
 
 == Sprint 17 dal 25-02-2024 al 03-03-2024
 
 === Obiettivi raggiunti
 
-Lo Sprint 17 si è concluso raggiungendo la quasi totalità degli obiettivi pianificati, in particolare:
+Lo sprint 17 si è concluso raggiungendo la quasi totalità degli obiettivi pianificati, in particolare:
 
 - colloquio con il Proponente in data 29/02/2024;
 
@@ -3990,12 +3999,12 @@ Lo Sprint 17 si è concluso raggiungendo la quasi totalità degli obiettivi pian
   - normato il sistema di tracciamento rischi-risoluzioni.
 
 - #pdp\:
-  - redatto preventivo dello Sprint 17, iniziato in data 25/02/2024;
-  - redatto consuntivo dello Sprint 16, terminato in data 25/02/2024.
+  - redatto preventivo dello sprint 17, iniziato in data 25/02/2024;
+  - redatto consuntivo dello sprint 16, terminato in data 25/02/2024.
 
 - #pdq\:
-  - aggiornati i grafici di monitoraggio delle metriche allo Sprint 16;
-  - aggiornata la dashboard con i dati sullo Sprint 16.
+  - aggiornati i grafici di monitoraggio delle metriche allo sprint 16;
+  - aggiornata la dashboard con i dati sullo sprint 16.
 
 - #st\:
   - creato documento;
@@ -4027,7 +4036,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 
 === Risoluzioni attuate
 
-#figure(caption: [Soluzioni individuate alle criticità riscontrate.],
+#figure(caption: [Soluzioni individuate alle criticità riscontrate, sprint 17.],
     table(
       align: left,
       columns: (auto, 1fr, auto),
@@ -4089,7 +4098,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   supplement: "Grafico"
 )
 
-Durante lo Sprint 17 le ore effettive (45) hanno superato di una unità le ore preventivate (44), in particolare:
+Durante lo sprint 17 le ore effettive (45) hanno superato di una unità le ore preventivate (44), in particolare:
 
 - l'Analista ha subito un incremento orario, dovuto alla quantità di lavoro richiesta dalla redazione del documento #adr.
 
@@ -4110,18 +4119,18 @@ Durante lo Sprint 17 le ore effettive (45) hanno superato di una unità le ore p
   caption: "Monitoraggio, sprint 17"
 )
 
-Lo Sprint 17, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere la quasi totalità degli obiettivi prefissati.
+Lo sprint 17, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere la quasi totalità degli obiettivi prefissati.
 
-Il rendimento complessivamente positivo dello Sprint 17 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index passa dal valore 1,02 (allo Sprint 16) a 1,01. Nonostante il lieve calo continua a rappresentare un valore accettabile (>=0,95), e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
-- EAC: l'Estimate At Completion passa dal valore € 12.777,29 (allo Sprint 16) a € 12.987,48. Anche se aumentato, il valore è minore del BAC e rientra nel range di accettabilità.
+Il rendimento complessivamente positivo dello sprint 17 è supportato dalle principali metriche esposte dal #pdq, quali:
+- CPI: il Cost Performance Index passa dal valore 1,02 (allo sprint 16) a 1,01. Nonostante il lieve calo continua a rappresentare un valore accettabile (>=0,95), e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
+- EAC: l'Estimate At Completion passa dal valore € 12.777,29 (allo sprint 16) a € 12.987,48. Anche se aumentato, il valore è minore del BAC e rientra nel range di accettabilità.
 
 
 == Sprint 18 dal 03-03-2024 al 10-03-2024
 
 === Obiettivi raggiunti
 
-Lo Sprint 18 si è concluso raggiungendo buona parte degli obiettivi pianificati, in particolare:
+Lo sprint 18 si è concluso raggiungendo buona parte degli obiettivi pianificati, in particolare:
 
 - colloquio con Proponente in data 07/03/2024;
 
@@ -4132,8 +4141,8 @@ Lo Sprint 18 si è concluso raggiungendo buona parte degli obiettivi pianificati
   - redatto il capitolo Processo di validazione.
 
 - #pdp\:
-  - redatto preventivo dello Sprint 18, iniziato in data 03/03/2024;
-  - redatto consuntivo dello Sprint 17, terminato in data 03/03/2024.
+  - redatto preventivo dello sprint 18, iniziato in data 03/03/2024;
+  - redatto consuntivo dello sprint 17, terminato in data 03/03/2024.
 
 - #st\:
   - individuata struttura del documento;
@@ -4160,10 +4169,10 @@ Lo Sprint 18 si è concluso raggiungendo buona parte degli obiettivi pianificati
 === Obiettivi mancati
 
 - #adr\:
-  - non è ancora terminata la revisione completa del documento, comprensiva anche di aggiornamento dei casi d'uso e requisiti. Verrà completata obbligatoriamente entro la fine del prossimo Sprint.
+  - non è ancora terminata la revisione completa del documento, comprensiva anche di aggiornamento dei casi d'uso e requisiti. Verrà completata obbligatoriamente entro la fine del prossimo sprint.
 - #pdq\:
   - non sono state aggiornate le metriche all'interno del documento;
-  - mancato aggiornamento della dashboard Grafana allo Sprint 18.
+  - mancato aggiornamento della dashboard Grafana allo sprint 18.
 
 === Problematiche
 Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
@@ -4174,7 +4183,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 
 === Risoluzioni attuate
 
-#figure(caption: [Soluzioni individuate alle criticità riscontrate.],
+#figure(caption: [Soluzioni individuate alle criticità riscontrate, sprint 18.],
     table(
       align: left,
       columns: (auto, 1fr, auto),
@@ -4237,7 +4246,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   supplement: "Grafico"
 )
 
-Durante lo Sprint 18 le ore effettive (48) sono risultate inferiori di un'unità rispetto al preventivato (49), in particolare:
+Durante lo sprint 18 le ore effettive (48) sono risultate inferiori di un'unità rispetto al preventivato (49), in particolare:
 
 - la redazione delle #ndp ha richiesto un impegno inferiore del previsto da parte del Responsabile;
 - l'Amministratore ha dovuto espletare alcune attività non previste a supporto della codifica;
@@ -4260,18 +4269,18 @@ Durante lo Sprint 18 le ore effettive (48) sono risultate inferiori di un'unità
   caption: "Monitoraggio, sprint 18"
 )
 
-Nonostante la diminuzione dei costi rispetto al preventivo, lo Sprint 18 ha permesso di completare buona parte degli obiettivi previsti.
+Nonostante la diminuzione dei costi rispetto al preventivo, lo sprint 18 ha permesso di completare buona parte degli obiettivi previsti.
 
-Il rendimento positivo dello Sprint 18 è supportato dalle principali metriche esposte dal #pdq, quali:
+Il rendimento positivo dello sprint 18 è supportato dalle principali metriche esposte dal #pdq, quali:
 - CPI: il Cost Performance Index rimane costante a 1.01, rappresentando ancora un valore ottimale ($>=1$);
-- EAC: l'Estimate At Completion diminuisce e passa dal valore di € 12.987,48 (allo Sprint 17) a € 12.933,25.
+- EAC: l'Estimate At Completion diminuisce e passa dal valore di € 12.987,48 (allo sprint 17) a € 12.933,25.
 
 
 == Sprint 19 dal 10-03-2024 al 17-03-2024
 
 === Obiettivi raggiunti
 
-Lo Sprint 19 si è concluso raggiungendo buona parte degli obiettivi pianificati, in particolare:
+Lo sprint 19 si è concluso raggiungendo buona parte degli obiettivi pianificati, in particolare:
 
 - colloquio con Proponente in data 15/03/2024;
 
@@ -4289,8 +4298,8 @@ Lo Sprint 19 si è concluso raggiungendo buona parte degli obiettivi pianificati
     - Supporto Tecnico.
 
 - #pdp\:
-  - redatto preventivo dello Sprint 19, iniziato in data 10/03/2024;
-  - redatto consuntivo dello Sprint 18, terminato in data 10/03/2024.
+  - redatto preventivo dello sprint 19, iniziato in data 10/03/2024;
+  - redatto consuntivo dello sprint 18, terminato in data 10/03/2024.
 
 - #st\:
   - redatte le sezioni:
@@ -4318,7 +4327,7 @@ Lo Sprint 19 si è concluso raggiungendo buona parte degli obiettivi pianificati
 - #adr\:
   - non è stata effettuata la verifica completa del lavoro svolto e, di conseguenza, non è stato inviato il documento al #cardin\.
 - #pdp\:
-  - non è stato redatto il preventivo dello Sprint 19, iniziato in data 10/03/2024.
+  - non è stato redatto il preventivo dello sprint 19, iniziato in data 10/03/2024.
 - #pdq\:
   - non sono state aggiornate le metriche all'interno del documento;
   - mancato aggiornamento della dashboard Grafana.
@@ -4332,7 +4341,7 @@ Durante il meeting di retrospettiva è sorta la seguente problematica:
 
 === Risoluzioni attuate
 
-#figure(caption: [Soluzioni individuate alle criticità riscontrate.],
+#figure(caption: [Soluzioni individuate alle criticità riscontrate, sprint 19.],
     table(
       align: left,
       columns: (auto, 1fr, auto),
@@ -4394,7 +4403,7 @@ Durante il meeting di retrospettiva è sorta la seguente problematica:
   supplement: "Grafico"
 )
 
-Durante lo Sprint 19 le ore effettive sono state pari a quelle preventivate (53), tuttavia si segnalano diverse variazioni nella composizione del prospetto orario. In particolare:
+Durante lo sprint 19 le ore effettive sono state pari a quelle preventivate (53), tuttavia si segnalano diverse variazioni nella composizione del prospetto orario. In particolare:
 
 - le ore di Analista risultano inferiori grazie all'individuazione di un processo di definizione dei diagrammi degli Use case più efficiente;
 - le ore di Progettista risultano inferiori grazie ad una stesura delle sezioni della #st più rapida del previsto;
@@ -4421,18 +4430,18 @@ Sebbene le ore effettive siano state pari a quelle preventivate, la composizione
   caption: "Monitoraggio, sprint 19"
 )
 
-Durante lo Sprint 19 sono stati raggiunti buona parte degli obiettivi. Nonostante la fluttuazione delle ore lavorate per ruolo, il consuntivo finale è risultato inferiore al preventivo, poiché l'aumento delle ore di Programmatore richieste è stato assorbito dal minor impegno richiesto ad altre figure.
+Durante lo sprint 19 sono stati raggiunti buona parte degli obiettivi. Nonostante la fluttuazione delle ore lavorate per ruolo, il consuntivo finale è risultato inferiore al preventivo, poiché l'aumento delle ore di Programmatore richieste è stato assorbito dal minor impegno richiesto ad altre figure.
 
-Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
-- CPI: il Cost Performance Index diminuisce ma rimane entro l'intervallo di ottimalità, passando dal valore 1,01 (allo Sprint 18) a 1,00;
-- EAC: l'Estimate At Completion passa dal valore € 12.933,25 (allo Sprint 18) a € 12.990,31. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello sprint:
+- CPI: il Cost Performance Index diminuisce ma rimane entro l'intervallo di ottimalità, passando dal valore 1,01 (allo sprint 18) a 1,00;
+- EAC: l'Estimate At Completion passa dal valore € 12.933,25 (allo sprint 18) a € 12.990,31. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
 
 
 == Sprint 20 dal 17-03-2024 al 24-03-2024
 
 === Obiettivi raggiunti
 
-Lo Sprint 20 si è concluso con il completamento della maggior parte degli obiettivi di periodo. In particolare:
+Lo sprint 20 si è concluso con il completamento della maggior parte degli obiettivi di periodo. In particolare:
 
 - fissati due colloqui con il Proponente in data 22/03/2024 (per offrire un aggiornamento sul progresso) e 26/03/2024 (al fine di qualificare il lavoro svolto come MVP);
 - inviato il documento #adr al #cardin, requisito obbligatorio per proseguire alla candidatura per la Product Baseline;
@@ -4448,8 +4457,8 @@ Lo Sprint 20 si è concluso con il completamento della maggior parte degli obiet
   - aggiornate le metriche all'interno del documento;
   - aggiornata la dashboard Grafana.
 - #pdp\:
-  - redatto preventivo dello Sprint 20, iniziato in data 17/03/2024;
-  - redatto consuntivo dello Sprint 19, terminato in data 17/03/2024.
+  - redatto preventivo dello sprint 20, iniziato in data 17/03/2024;
+  - redatto consuntivo dello sprint 19, terminato in data 17/03/2024.
 - #st\:
   - redatta la sezione riguardante i requisiti soddisfatti.
   - aggiunte le sezioni Requisiti di sistema e Requisiti hardware.
@@ -4529,7 +4538,7 @@ Nessuna.
   supplement: "Grafico"
 )
 
-Durante lo Sprint 20 le ore effettive (62) hanno superato di due unità le ore preventivate (60), in particolare:
+Durante lo sprint 20 le ore effettive (62) hanno superato di due unità le ore preventivate (60), in particolare:
 
 - gli impegni del Responsabile sono stati assolti in minor tempo rispetto a quanto preventivato;
 - la stesura dei verbali ha impegnato maggiormente l'Amministratore;
@@ -4553,15 +4562,17 @@ Durante lo Sprint 20 le ore effettive (62) hanno superato di due unità le ore p
   caption: "Monitoraggio, sprint 20"
 )
 
-Nonostante l'aumento di costo, lo Sprint 20 ha permesso di completare la maggior parte degli obiettivi prefissati.
+Nonostante l'aumento di costo, lo sprint 20 ha permesso di completare la maggior parte degli obiettivi prefissati.
 
-Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello sprint:
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
+- EAC: l'Estimate At Completion rimane sostanzialmente invariato, passando dal valore di € 12.990,31 (allo sprint 19) a € 12.990,86.
+
 == Sprint 21 dal 24-03-2024 al 31-03-2024
 
 === Obiettivi raggiunti
 
-Lo Sprint 21 si è concluso con il completamento di tutti gli obiettivi di periodo. In particolare:
+Lo sprint 21 si è concluso con il completamento di tutti gli obiettivi di periodo. In particolare:
 - il Proponente ha convalidato, in data 26/04/2024, il prodotto software WMS3 come MVP del capitolato C5;
 - #ndp\: armonizzazione del contenuto dei capitoli relativi a:
   - Processo di gestione della qualità;
@@ -4574,8 +4585,8 @@ Lo Sprint 21 si è concluso con il completamento di tutti gli obiettivi di perio
   - aggiornate le metriche all'interno del documento;
   - aggiornata la dashboard Grafana.
 - #pdp\:
-  - redatto preventivo dello Sprint 21, iniziato in data 24/03/2024;
-  - redatto consuntivo dello Sprint 20, terminato in data 24/03/2024.
+  - redatto preventivo dello sprint 21, iniziato in data 24/03/2024;
+  - redatto consuntivo dello sprint 20, terminato in data 24/03/2024.
 - #man\: redatte le sezioni:
   - Impostazioni;
   - Spostamento prodotto;
@@ -4657,7 +4668,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   supplement: "Grafico"
 )
 
-Durante lo Sprint 21 le ore effettive (36) hanno superato di due unità le ore preventivate (34), in particolare:
+Durante lo sprint 21 le ore effettive (36) hanno superato di due unità le ore preventivate (34), in particolare:
 - le ore richieste al Responsabile per il lavoro sul documento #ndp ha richiesto 1 ora in meno rispetto al previsto;
 - le ore di Programmatore, sebbene complessivamente invariate, sono state riassegnate durante lo sprint in risposta alla problematica insorta `P01`;
 - le ore di Verificatore richieste sono risultate maggiori rispetto alle aspettative a causa di una sottostima della mole di lavoro.
@@ -4681,11 +4692,13 @@ Nel complesso, la riduzione delle ore di Responsabile ha assorbito parzialmente 
   caption: "Monitoraggio, sprint 21"
 )
 
-Lo Sprint 21 si è concluso con il completamento totale delle attività previste. Inoltre, la convalida del prodotto come MVP permetterà di proseguire con la candidatura per la Product Baseline, una volta ricevuto anche il feedback sul documento #adr.
+Lo sprint 21 si è concluso con il completamento totale delle attività previste. Inoltre, la convalida del prodotto come MVP permetterà di proseguire con la candidatura per la Product Baseline, una volta ricevuto anche il feedback sul documento #adr.
 
-Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello sprint:
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
-- EAC: l'Estimate At Completion aumenta, passando dal valore di € 12.990,86 (allo Sprint 20) a € 13.010,59.
+- EAC: l'Estimate At Completion aumenta, passando dal valore di € 12.990,86 (allo sprint 20) a € 13.010,59.
+
+L'aumento dell'EAC, sebbene non significativo, ne avvicina il valore a quello del BAC, ovvero il massimale consentito.
 
 == Sprint 22 dal 30-03-2024 al 07-04-2024
 

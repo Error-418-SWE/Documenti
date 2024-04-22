@@ -3921,7 +3921,7 @@ Lo Sprint 17 si è concluso raggiungendo la quasi totalità degli obiettivi pian
   - normato il sistema di tracciamento rischi-risoluzioni.
 
 - #pdp\:
-  - redatto preventivo dello Sprint 16, iniziato in data 18/02/2024;
+  - redatto preventivo dello Sprint 17, iniziato in data 25/02/2024;
   - redatto consuntivo dello Sprint 16, terminato in data 25/02/2024.
 
 - #pdq\:
@@ -3973,25 +3973,25 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [1],     [2],     [0],     [0],     [2],     [2],     [7],
-    [Carraro],     [2],     [1],     [0],     [2 (-1)],     [0],     [0],     [5 (-1)],
-    [Gardin],     [0],     [1],     [2],     [0],     [4],     [0],     [7],
-    [Nardo],     [1],     [0],     [3],     [2],     [0],     [0],     [6],
-    [Oseliero],     [2 (+1)],     [2],     [0],     [0],     [0],     [3],     [7 (+1)],
-    [Todesco],     [0],     [3],     [2],     [0],     [4],     [1 (+1)],     [10 (+1)],
-    [Zaccone],     [2],     [0],     [3 (+1)],     [0],     [2],     [3],     [10 (+1)],
-    [Totale ore],     [8 (+1)],     [9],     [10 (+1)],     [4 (-1)],     [12],     [9 (+1)],     [52 (+2)],
-    [Costo ruolo],     [240 (+30)],     [180],     [250 (+25)],     [100 (-25)],     [180],     [135 (+15)],     [1085 (+45)],
+    [Banzato],     [0],     [0],     [0],     [0],     [5 (+1)],     [3],     [8 (+1)],
+    [Carraro],     [1],     [0],     [3],     [2],     [0],     [0],     [6],
+    [Gardin],     [0],     [0],     [3],     [0],     [3 (-1)],     [0],     [6 (-1)],
+    [Nardo],     [0],     [2],     [2 (-1)],     [0],     [0],     [2],     [6 (-1)],
+    [Oseliero],     [0],     [2],     [0],     [1],     [4],     [0],     [7],
+    [Todesco],     [3],     [0],     [0],     [0],     [0],     [3],     [6],
+    [Zaccone],     [2],     [0],     [2 (+2)],     [2],     [0],     [0],     [6 (+2)],
+    [Totale ore],     [6],     [4],     [10 (+1)],     [5],     [12],     [8],     [45 (+1)],
+    [Costo ruolo],     [180],     [80],     [250 (+25)],     [125],     [180],     [120],     [935 (+25)],
   ),
   caption: "Prospetto del consuntivo, sprint 17"
 )
 #let data = (
-  ("Responsabile", 7, 8),
-  ("Amministratore", 9, 9),
+  ("Responsabile", 6, 6),
+  ("Amministratore", 4, 4),
   ("Analista", 9, 10),
-  ("Progettista", 5, 4),
+  ("Progettista", 5, 5),
   ("Programmatore", 12, 12),
-  ("Verificatore", 8, 9),
+  ("Verificatore", 8, 8),
 )
 #let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
 #let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
@@ -4020,12 +4020,9 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   supplement: "Grafico"
 )
 
-Durante lo Sprint 17 le ore effettive (52) hanno superato di due unità le ore preventivate (50), in particolare:
+Durante lo Sprint 17 le ore effettive (45) hanno superato di una unità le ore preventivate (44), in particolare:
 
-- Analista e Responsabile hanno avuto un leggero incremento orario, dovuto alla quantità di lavoro effettuata nei documenti #ndp e #adr;
-- il Verificatore ha avuto un lieve aumento di ore in risposta al punto precedente.
-
-Il costo dello Sprint è stato influenzato dall'aumento di ore di Responsabile e Verificatore, in quanto il costo dell'ora di Analista in più è stato bilanciato indirettamente da un calo unitario delle ore di Progettista, avvenuta a causa dei dubbi sorti riguardo il design del prodotto.
+- l'Analista ha subito un incremento orario, dovuto alla quantità di lavoro richiesta dalla redazione del documento #adr.
 
 === Monitoraggio costi e ore
 
@@ -4033,22 +4030,22 @@ Il costo dello Sprint è stato influenzato dall'aumento di ore di Responsabile e
   table(
     columns: 3,
     [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
-    [Responsabile],     [14],     [420],
-    [Amministratore],     [13],     [260],
+    [Responsabile],     [17],     [510],
+    [Amministratore],     [23],     [460],
     [Analista],     [19],     [475],
-    [Progettista],     [6],     [150],
-    [Programmatore],     [140],     [2100],
-    [Verificatore],     [61],     [915],
-    [Rimanente],     [253],     [4320],
+    [Progettista],     [9],     [225],
+    [Programmatore],     [136],     [2040],
+    [Verificatore],     [64],     [960],
+    [Rimanente],     [268],     [4670],
   ),
   caption: "Monitoraggio, sprint 17"
 )
 
-Lo Sprint 17, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere quasi la totalità degli obiettivi prefissati.
+Lo Sprint 17, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere la quasi totalità degli obiettivi prefissati.
 
-Il rendimento positivo dello Sprint 17 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index passa dal valore 1.01 (allo Sprint 16) a 0.99. Nonostante il lieve calo continua a rappresentare un valore accettabile (>=0.95), e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
-- EAC: l'Estimate At Completion passa dal valore 12.911,54 € (allo Sprint 16) a 13.155,40 €. Anche se aumentato, il gruppo non lo considera problematico, in quanto l'incremento risulta contenuto.
+Il rendimento complessivamente positivo dello Sprint 17 è supportato dalle principali metriche esposte dal #pdq, quali:
+- CPI: il Cost Performance Index passa dal valore 1,02 (allo Sprint 16) a 1,01. Nonostante il lieve calo continua a rappresentare un valore accettabile (>=0,95), e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
+- EAC: l'Estimate At Completion passa dal valore € 12.777,29 (allo Sprint 16) a € 12.987,48. Anche se aumentato, il valore è minore del BAC e rientra nel range di accettabilità.
 
 
 == Sprint 18 dal 03-03-2024 al 10-03-2024

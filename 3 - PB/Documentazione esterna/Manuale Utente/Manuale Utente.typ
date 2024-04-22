@@ -587,11 +587,22 @@ Quando essa è attiva, lo spostamento di una zona avverrà esclusivamente nelle 
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile modificare le zone posizionate cambiandone i parametri dimensionali e di orientamento, potendo modificare o aggiungere le colonne e i livelli desiderati.
 
-Durante un'azione di modifica di una zona è possibile rimuovere una o più colonne già presenti esclusivamente se contengono solo bin senza prodotti al loro interno e se non sono presenti colonne con indice superiore a quello dell'insieme di colonne da rimuovere.
+Durante un'azione di modifica di una zona è possibile rimuovere una o più colonne già presenti esclusivamente se:
+- contengono solo bin senza prodotti al loro interno;
+- non sono presenti colonne con indice superiore a quello dell'insieme di colonne da rimuovere.
 
 Tale logica concerne anche la rimozione dei livelli.
 
-Per esempio, durante la modifica di una zona formata da tre livelli (contenenti prodotti solo nel secondo) e cinque colonne (contenenti prodotti solo nelle prime tre), sarà possibile rimuovere la quarta colonna (se priva di prodotti) oppure sia la quarta che la quinta (purché entrambe siano prive di prodotti), ma non le precedenti. Similmente sarà possibile rimuovere il terzo livello (se privo di prodotti) ma non i precedenti.
+Un esempio di rimozione di colonne è presente nell'immagine che segue: nello scaffale di partenza è possibile eliminare al massimo le due colonne vuote a destra e il livello superiore.
+
+#figure(
+    grid(
+        columns: 2,
+        rows: (auto, auto),
+        [ #image("./imgs/rimozione_livelli_colonne1.png", width: 70%)],
+        [ #image("./imgs/rimozione_livelli_colonne2.png", width: 70%)],
+    ),caption: [Esempio di rimozione colonne],
+)<rimozione_colonne>
 
 Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@ispezione_zona), è presente un pulsante contenente la scritta "Modifica" (@pulsante_modifica_zona).
 
@@ -602,11 +613,9 @@ Nella parte inferiore del pannello relativo alla visualizzazione delle informazi
   ],
 ) <pulsante_modifica_zona>
 
-Alla sua pressione sarà permesso all'utente di poter modificare alcuni parametri della zona in oggetto.
+Alla sua pressione sarà permesso all'utente di poter modificare alcuni parametri della zona in oggetto: essi sono i medesimi richiesti durante la creazione della zona (@creazione_zona) e seguono gli stessi vincoli, fuorché il parametro `ID`, il quale non è modificabile.
 
-Essi sono i medesimi richiesti durante la creazione della zona (@creazione_zona) e seguono gli stessi vincoli, fuorché il parametro `ID`, il quale non è modificabile.
-
-Successivamente all'inserimento dei dati rappresentativi della zona modificata, è possibile premere sul pulsante "Salva le modifiche alla zona" (@pulsante_salvataggio_modifica_zona) per aggiornare, come richiesto, l'elemento 3D corrispondente nell'ambiente di lavoro.
+Per aggiornare l'elemento 3D rappresentante la zona modificata è necessario premere il pulsante "Salva le modifiche alla zona" (@pulsante_salvataggio_modifica_zona).
 
 #figure(
   image("./imgs/pulsante_salvataggio_modifiche_zona.png", width: 40%),

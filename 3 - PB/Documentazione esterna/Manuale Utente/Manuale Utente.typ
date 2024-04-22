@@ -655,35 +655,52 @@ Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo p
 
 Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno visualizzabili nella lista dei prodotti non collocati (@visualizzazione_lista_prodotti) in attesa di una nuova collocazione.
 
+#pagebreak()
+
 == Impostazioni
 
+// #figure(
+//     grid(
+//         columns: 2,
+//         rows:    (auto, auto),
+//         [ #image("./imgs/impostazioni.png", width: 50%)],
+//         [ #image("./imgs/ridimensionamento.png", width: 90%)],
+//     ),caption: [Impostazioni ambiente 3D],
+// ) <impostazioni>
+
 #figure(
-    grid(
-        columns: 2,
-        rows:    (auto, auto),
-        [ #image("./imgs/impostazioni.png", width: 50%)],
-        [ #image("./imgs/ridimensionamento.png", width: 90%)],
-    ),caption: [Impostazioni ambiente 3D],
+  image("./imgs/impostazioni.png", width: 30%),
+  caption: [Pannello impostazioni]
 ) <impostazioni>
 
-Premendo il pulsante *Settings* in basso a sinistra dello schermo si aprirà il pannello mostrato in @impostazioni (sinistra).
+Premendo il pulsante *Settings* in basso a sinistra dello schermo si aprirà il pannello mostrato in @impostazioni, all'interno del quale troviamo, in ordine:
 
-In alto troviamo *Informazioni*, contenente varie informazioni riguardo il prodotto.
+- *Informazioni*: contiene varie informazioni riguardo il prodotto;
+- *Planimetria*: riporta i valori dimensionali del piano;
+- *Demo*: contiene due pulsanti:
+  - *Risincronizza*: permette riportare il piano al suo stato iniziale, annullando tutte le modifiche e gli spostamenti effettuati;
+  - *Reimposta*: permette di eliminare tutto il lavoro fatto sul piano e tornare alla schermata di @avvio.
 
-Nella sezione sottostante troviamo Planimetria, dove sono riportati i valori dimensionali del piano, che possono essere modificati cliccandoci sopra e inserendo i nuovi valori da tastiera.
 
-L'inserimento di valori che andrebbero a rimpicciolire il piano vengono considerati errati e la modifica delle dimensioni resa impossibile.
+=== Ridimensionamento planimetria
 
-Una volta modificati i valori e premuto il pulsante *Salva* viene mostrato il pannello in @impostazioni (destra) che mostra in bianco il piano attuale e tratteggiata l'estensione che si vuole apportare. Premere quindi *Conferma* per applicare le modifiche.
+Nella sezione "Planimetria" del pannello delle impostazioni è possibile modificare le dimensioni del piano:
 
-Da notare che nel caso di modifica di un piano personalizzato il ridimensionamento non andrà ad influire sul SVG, che manterrà le dimensioni definite in fase di inizializzazione, ma aumenterà la superficie bianca su cui è disegnato.
++ selezionare la casella contenente la dimensione che si desidera modificare;
++ inserire da tastiera il nuovo valore o modificare quello attuale tramite le freccie di incremento/decremento;
+  - l'inserimento di valori che andrebbero a rimpicciolire il piano vengono considerati errati e la modifica delle dimensioni resa impossibile.
++ salvare le modifiche premendo il pulsante *Salva* presente sotto la casella relativa a "Lunghezza". Alla sua pressione verrà mostrato il pannello di anteprima presente in @ridimensionamento_planimetria, che mostra in bianco il piano attuale e tratteggiata l'estensione che si vuole apportare;
++ premere *Conferma* per applicare le modifiche.
 
-Nell'ultima sezione in basso, *Demo*, troviamo due pulsanti:
-- *Risincronizza*: permette riportare il piano al suo stato iniziale, annullando tutte le modifiche e gli spostamenti effettuati;
-- *Reimposta*: permette di eliminare tutto il lavoro fatto sul piano e tornare alla schermata di @avvio.
+Nel caso di modifica di un piano personalizzato, il ridimensionamento non andrà ad influire sul SVG, che manterrà le dimensioni definite in fase di inizializzazione, ma aumenterà la superficie bianca su cui è disegnato.
 
+#figure(
+  image("./imgs/ridimensionamento.png", width: 50%),
+  caption: [Anteprima ridimensionamento]
+) <ridimensionamento_planimetria>
 
 #pagebreak()
+
 = Glossario dei termini
 <glossario>
 \

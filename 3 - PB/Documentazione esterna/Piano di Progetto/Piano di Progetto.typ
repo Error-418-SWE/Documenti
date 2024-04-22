@@ -4636,6 +4636,7 @@ Nessuno.
 Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 
 *P01*: Le incombenti festività pasquali e gli impegni personali associati hanno rallentato il lavoro di redazione dei documenti.
+
 *P02*: La ricezione del feedback sul documento #adr, adeguato al feedback ricevuto al colloquio RTB col #cardin, non è ancora avvenuta.
 
 === Risoluzioni attuate

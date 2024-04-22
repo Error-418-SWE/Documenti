@@ -4222,7 +4222,14 @@ Lo Sprint 19 si è concluso raggiungendo buona parte degli obiettivi pianificati
     - Supporto Tecnico.
 
 - #pdp\:
+  - redatto preventivo dello Sprint 19, iniziato in data 10/03/2024;
   - redatto consuntivo dello Sprint 18, terminato in data 10/03/2024.
+
+- #st\:
+  - redatte le sezioni:
+    - Design pattern;
+    - Diagramma delle classi;
+    - Requisiti soddisfatti.
 
 - Codifica:
   - implementata creazione del piano rettangolare in Three.js;
@@ -4274,25 +4281,25 @@ Durante il meeting di retrospettiva è sorta la seguente problematica:
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [0],     [0],     [2 (+1)],     [0],     [4],     [3],     [9 (+1)],
-    [Carraro],     [0],     [1],     [0],     [0],     [4 (+1)],     [2],     [7 (+1)],
-    [Gardin],     [1],     [0],     [1],     [0],     [3],     [3],     [8],
-    [Nardo],     [0],     [1],     [2],     [0],     [4],     [0],     [7],
-    [Oseliero],     [1 (-1)],     [0],     [0],     [1],     [4 (+1)],     [1],     [7],
-    [Todesco],     [1],     [0],     [0],     [0],     [4],     [2],     [7],
-    [Zaccone],     [0],     [1 (+1)],     [1],     [0],     [4],     [2],     [8 (+1)],
-    [Totale ore],     [3 (-1)],     [3 (+1)],     [6 (+1)],     [1],     [27 (+2)],     [13],     [53 (+3)],
-    [Costo ruolo],     [90 (-30)],     [60 (+20)],     [150 (+25)],     [25],     [405 (+30)],     [195],     [925 (+45)],
+    [Banzato],     [0],     [1],     [0],     [2],     [4],     [3],     [10],
+    [Carraro],     [0],     [1],     [0],     [1 (-1)],     [5],     [0],     [7 (-1)],
+    [Gardin],     [0],     [0],     [0],     [0],     [7 (+2)],     [0],     [7 (+2)],
+    [Nardo],     [0],     [0],     [2 (-1)],     [0],     [3],     [4 (-1)],     [9 (-2)],
+    [Oseliero],     [0],     [0],     [0],     [0],     [0],     [5],     [5],
+    [Todesco],     [2],     [0],     [2],     [0],     [3],     [0],     [7],
+    [Zaccone],     [0],     [0],     [0],     [0],     [6 (+1)],     [2],     [8 (+1)],
+    [Totale ore],     [2],     [2],     [4 (-1)],     [3 (-1)],     [28 (+3)],     [14 (-1)],     [53],
+    [Costo ruolo],     [60],     [40],     [100 (-25)],     [75 (-25)],     [420 (+45)],     [210 (-15)],     [905 (-20)],
   ),
   caption: "Prospetto del consuntivo, sprint 19"
 )
 #let data = (
-  ("Responsabile", 4, 3),
-  ("Amministratore", 2, 3),
-  ("Analista", 5, 6),
-  ("Progettista", 1, 1),
-  ("Programmatore", 25, 27),
-  ("Verificatore", 13, 13),
+  ("Responsabile", 2, 2),
+  ("Amministratore", 2, 2),
+  ("Analista", 5, 4),
+  ("Progettista", 4, 3),
+  ("Programmatore", 25, 28),
+  ("Verificatore", 15, 14),
 )
 #let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
 #let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
@@ -4321,11 +4328,15 @@ Durante il meeting di retrospettiva è sorta la seguente problematica:
   supplement: "Grafico"
 )
 
-Durante lo Sprint 19 le ore effettive (53) hanno superato di tre unità le ore preventivate (50), in particolare:
+Durante lo Sprint 19 le ore effettive sono state pari a quelle preventivate (53), tuttavia si segnalano diverse variazioni nella composizione del prospetto orario. In particolare:
 
-- le ore di Programmatore sono aumentate in maniera maggiore rispetto agli altri ruoli a causa di problematiche insorte nell'implementazione della creazione del piano a partire da un file SVG. Questo aumento di ore, però, non è stato sufficiente a permettere il completamento della task, sebbene ci siano comunque stati degli avanzamenti.
+- le ore di Analista risultano inferiori grazie all'individuazione di un processo di definizione dei diagrammi degli Use case più efficiente;
+- le ore di Progettista risultano inferiori grazie ad una stesura delle sezioni della #st più rapida del previsto;
+- le ore di Programmatore sono aumentate a causa di problematiche insorte nell'implementazione della creazione del piano a partire da un file SVG. Questo aumento di ore, però, non è stato sufficiente a permettere il completamento della task, sebbene ci siano comunque stati degli avanzamenti;
+- le ore di Verificatore sono diminuite a causa di un minor afflusso di modifiche al codice rispetto alle attese.
 
-L'aumento del costo dello Sprint, però, è stato influenzato principalmente dalle ore di Amministratore e Analista, in quanto il costo causato dall'aumento orario del Programmatore è stato bilanciato indirettamente da un calo di ore nel Responsabile.
+Sebbene le ore effettive siano state pari a quelle preventivate, la composizione del prospetto orario appare diversa rispetto al pianificato.
+
 
 === Monitoraggio costi e ore
 
@@ -4333,22 +4344,22 @@ L'aumento del costo dello Sprint, però, è stato influenzato principalmente dal
   table(
     columns: 3,
     [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
-    [Responsabile],     [6],     [180],
-    [Amministratore],     [3],     [60],
-    [Analista],     [4],     [100],
+    [Responsabile],     [10],     [300],
+    [Amministratore],     [18],     [360],
+    [Analista],     [7],     [175],
     [Progettista],     [2],     [50],
-    [Programmatore],     [90],     [1350],
-    [Verificatore],     [37],     [555],
-    [Rimanente],     [142],     [2295],
+    [Programmatore],     [89],     [1335],
+    [Verificatore],     [41],     [615],
+    [Rimanente],     [167],     [2835],
   ),
   caption: "Monitoraggio, sprint 19"
 )
 
-Nonostante l'aumento di costo, durante lo Sprint 19 sono stati raggiunti buona parte degli obiettivi.
+Durante lo Sprint 19 sono stati raggiunti buona parte degli obiettivi. Nonostante la fluttuazione delle ore lavorate per ruolo, il consuntivo finale è risultato inferiore al preventivo, poiché l'aumento delle ore di Programmatore richieste è stato assorbito dal minor impegno richiesto ad altre figure.
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
-- CPI: il Cost Performance Index diminuisce, passando dal valore 0.99 (allo Sprint 19) a 0.98, ma nonostante ciò rimane nell'intervallo di accettabilità ($>=$0.95);
-- EAC: l'Estimate At Completion passa dal valore 13.155,40 € (allo Sprint 19) a 13.321,30 €. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
+- CPI: il Cost Performance Index diminuisce ma rimane entro l'intervallo di ottimalità, passando dal valore 1,01 (allo Sprint 18) a 1,00;
+- EAC: l'Estimate At Completion passa dal valore € 12.933,25 (allo Sprint 18) a € 12.990,31. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
 
 
 == Sprint 20 dal 17-03-2024 al 24-03-2024

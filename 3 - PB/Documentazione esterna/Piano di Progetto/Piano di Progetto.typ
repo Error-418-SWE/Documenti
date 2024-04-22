@@ -1933,8 +1933,7 @@ Questo Sprint impiega:
   - proseguire con la revisione del documento #adr\.
 - *Progettista*: al fine di redigere le sezioni della #st\:
   - Design pattern;
-  - Diagramma delle classi;
-  - Requisiti soddisfatti.
+  - Diagramma delle classi.
 - *Programmatore*: al fine di:
   - collaborare con il Progettista nella stesura della #st\;
   - implementare la UI;
@@ -4228,8 +4227,7 @@ Lo Sprint 19 si è concluso raggiungendo buona parte degli obiettivi pianificati
 - #st\:
   - redatte le sezioni:
     - Design pattern;
-    - Diagramma delle classi;
-    - Requisiti soddisfatti.
+    - Diagramma delle classi.
 
 - Codifica:
   - implementata creazione del piano rettangolare in Three.js;

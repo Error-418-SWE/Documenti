@@ -2056,9 +2056,41 @@ Questo Sprint impiega:
   supplement: "Grafico"
 )
 
-== Sprint 21 dal 24 /03/2024 al 30/03/2024
+== Sprint 21 dal 24/03/2024 al 30/03/2024
+
 === Obiettivi prefissati
+
+Lo Sprint 21 ha come obiettivo primario la convalida come MVP del prodotto software da parte del Proponente. Gli obiettivi prefissati sono:
+- sostenere il colloquio di convalida del MVP con il Proponente, il giorno 26/04/2024;
+- aggiornamento ed estensione del documento #pdp\;
+- aggiornamento grafici delle metriche nel #pdq allo Sprint 20;
+- aggiornamento della dashboard Grafana allo Sprint 20;
+- armonizzazione dei seguenti capitoli delle #ndp a seguito della loro revisione, conclusasi durante lo Sprint 20:
+  - Processo di gestione della qualità;
+  - Processo di implementazione;
+  - Processo di integrazione;
+  - Processo di verifica;
+  - Processo di transizione;
+  - Processo di validazione.
+- redazione delle seguenti sezioni del #man\:
+  - Impostazioni;
+  - Spostamento prodotto;
+  - Ispezione bin/zona.
+- terminare le attività di codifica del MVP.
+
 === Preventivo costi
+Questo Sprint impiega:
+- *Responsabile*: al fine di:
+  - coordinare le attività;
+  - revisionare i capitoli delle #ndp\.
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
+- *Progettista*: al fine di:
+  - redigere le sezioni della #st\;
+  - redigere le sezioni del #man\.
+- *Programmatore*: al fine di concludere le attività di codifica del MVP;
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp\.
 
 #figure(
   table(

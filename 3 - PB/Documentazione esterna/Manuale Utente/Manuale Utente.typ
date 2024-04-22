@@ -34,7 +34,6 @@ Il prodotto offre le seguenti funzionalità principali:
 - visualizzazione delle informazioni della merce presente in magazzino;
 - caricamento dei dati relativi alle merci da un database SQL;
 - emissione di richieste di spostamento della merce all'interno del magazzino;
-- filtraggio e ricerca delle merci con rappresentazione grafica dei risultati;
 - importazione di planimetrie in formato SVG.
 
 == Glossario
@@ -52,12 +51,6 @@ Al fine di agevolare la comprensione del presente documento viene fornito, al te
   })
 
 == Riferimenti <riferimenti>
-
-=== Riferimenti a documentazione interna <riferimenti-interni>
-
-- Documento #st_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20esterna/Specifica%20Tecnica_v" + st_vo + ".pdf")_
-  #lastVisitedOn(18, 03, 2024)
 
 === Riferimenti normativi <riferimenti-normativi>
 

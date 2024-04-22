@@ -4687,7 +4687,96 @@ Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
 - EAC: l'Estimate At Completion aumenta, passando dal valore di € 12.990,86 (allo Sprint 20) a € 13.010,59.
 
-L'aumento dell'EAC, sebbene non significativo, ne avvicina il valore a quello del BAC.
+== Sprint 22 dal 30-03-2024 al 07-04-2024
+
+=== Obiettivi raggiunti
+
+Lo sprint 22 si è concluso con il completamento di tutti gli obiettivi di periodo. In particolare:
+- il gruppo ha prenotato il colloquio per la Product Baseline col #cardin in data 10/04/2024;
+- #pdq\:
+  - aggiornate le metriche all'interno del documento;
+  - aggiornata la dashboard Grafana.
+- #pdp\:
+  - redatto preventivo dello sprint 22, iniziato in data 30/03/2024;
+  - redatto consuntivo dello sprint 21, terminato in data 30/03/2024.
+- #man\:
+  - redatte le sezioni:
+    - Griglia di collocamento;
+    - Ispezione bin;
+    - Collocazione zona nell'ambiente 3D;
+    - Ricerca zona;
+    - Spostamento POV su bin;
+    - Visualizzazione informazione prodotto;
+    - Visualizzazione lista prodotti;
+    - Ricerca prodotti;
+    - Visualizzazione lista ordini movimentazione;
+    - Visualizzazione singolo ordine movimentazione.
+  - aggiornate le immagini del prodotto software WMS3.
+
+=== Obiettivi mancati
+
+Nessuno.
+
+=== Problematiche
+
+Nessuna.
+
+=== Risoluzioni attuate
+
+Nessuna.
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [1 (+1)],     [0],     [2],     [0],     [0],     [3 (+1)],
+    [Carraro],     [2],     [0],     [0],     [0],     [0],     [2],     [4],
+    [Gardin],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
+    [Nardo],     [0],     [2 (-1)],     [0],     [0],     [0],     [4 (+1)],     [6],
+    [Oseliero],     [0],     [1 (+1)],     [0],     [2],     [0],     [0],     [3 (+1)],
+    [Todesco],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
+    [Zaccone],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
+    [Totale ore],     [4],     [4 (+1)],     [0],     [4],     [0],     [15 (+1)],     [27 (+2)],
+    [Costo ruolo],     [120],     [80 (+20)],     [0],     [100],     [0],     [225 (+15)],     [525 (+35)],
+  ),
+  caption: "Prospetto del consuntivo, sprint 22"
+)
+#let data = (
+  ("Responsabile", 4, 4),
+  ("Amministratore", 3, 4),
+  ("Analista", 0, 0),
+  ("Progettista", 4, 4),
+  ("Programmatore", 0, 0),
+  ("Verificatore", 14, 15),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo sprint 22",
+  kind: "chart",
+  supplement: "Grafico"
+)
 
 // == Sprint n dal D1-M1-2024 al D2-M2-2024
 

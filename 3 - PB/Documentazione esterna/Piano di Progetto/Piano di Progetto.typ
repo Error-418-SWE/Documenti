@@ -2128,8 +2128,44 @@ Questo Sprint impiega:
 )
 
 == Sprint 22 dal 30/03/2024 al 07/04/2024
+
 === Obiettivi prefissati
+
+Lo sprint 22 ha come obiettivo il proseguimento del lavoro sui documenti oggetti di valutazione in sede di PB. Gli obiettivi prefissati sono:
+- candidatura allo sportello PB col #cardin (data da definire, vincolata alla ricezione del feedback positivo sul documento #adr\);
+- aggiornamento ed estensione del documento #pdp\;
+- aggiornamento grafici delle metriche nel #pdq allo sprint 21;
+- aggiornamento della dashboard Grafana allo sprint 21;
+- revisione generale del documento di #st\;
+- redazione delle seguenti sezioni del #man\:
+  - Griglia di collocamento;
+  - Ispezione bin;
+  - Collocazione zona nell'ambiente 3D;
+  - Ricerca zona;
+  - Spostamento POV su bin;
+  - Visualizzazione informazione prodotto;
+  - Visualizzazione lista prodotti;
+  - Ricerca prodotti;
+  - Visualizzazione lista ordini movimentazione;
+  - Visualizzazione singolo ordine movimentazione.
+- aggiornamento di alcune immagini del #man al fine di renderle coerenti con le nuove funzionalità implementate.
+
+Non sono previsti meeting con il Proponente in questo sprint.
+
+La pianificazione tiene conto del rientro dalle festività pasquali, che potrebbero impattare negativamente l'intesità del lavoro durante questo sprint.
+
 === Preventivo costi
+
+Questo sprint impiega:
+- *Responsabile*: al fine di coordinare le attività;
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
+- *Progettista*: al fine di revisionare il documento #st\;
+- *Programmatore*: al fine di:
+  - redigere le sezioni del #man\;
+  - aggiornare le immagini del #man\.
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp\.
 
 #figure(
   table(

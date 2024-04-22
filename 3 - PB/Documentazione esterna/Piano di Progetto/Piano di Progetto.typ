@@ -4946,14 +4946,90 @@ Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti
 - CPI: il Cost Performance Index migliora leggermente e passa a 1,01;
 - EAC: l'Estimate At Completion diminuisce e si allontana ulteriormente dal valore di soglia (BAC), passando dal valore di € 12992,10 (allo sprint 22) a € 12968,71.
 
-// === Risoluzioni attuate
+== Sprint 24 dal 14-04-2024 al 21-04-2024
 
-// === Panoramica dei costi effettivi
+=== Obiettivi raggiunti
 
-// TABLE
+Lo sprint 24 si è concluso con il completamento di tutti gli obiettivi di periodo, meno che uno. In particolare:
+- #pdq\:
+  - aggiornate le metriche all'interno del documento;
+  - aggiornata la dashboard Grafana.
+- #pdp\:
+  - redatto preventivo dello sprint 22, iniziato in data 30/03/2024;
+  - redatto consuntivo dello sprint 21, terminato in data 30/03/2024.
 
-// TODO
+=== Obiettivi mancati
 
-// === Monitoraggio costi e ore
+Nonostante la ricezione del feedback del colloquio PB col #cardin sia avvenuta il giorno 17/04/2024, non è stata inviata la candidatura per il secondo colloquio di Product Baseline col #vardanega.
 
-// TABLE
+=== Problematiche
+
+Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+
+*P01*: Alcuni membri del gruppo sono stati impegnati nelle attività di definizione dei propri _stage_ formativi.
+
+=== Risoluzioni attuate
+
+Nessuna. La candidatura è rimandata allo sprint successivo.
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Carraro],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Gardin],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Nardo],     [1],     [0],     [0],     [0],     [0],     [0],     [1],
+    [Oseliero],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Todesco],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Zaccone],     [0],     [2],     [0],     [0],     [0],     [0],     [2],
+    [Totale ore],     [1],     [2],     [0],     [0],     [0],     [0],     [3],
+    [Costo ruolo],     [30],     [40],     [0],     [0],     [0],     [0],     [70],
+  ),
+  caption: "Prospetto del preventivo, sprint 24"
+)
+#let data = (
+  ("Responsabile", 1),
+  ("Amministratore", 2),
+  ("Analista", 0),
+  ("Progettista", 0),
+  ("Programmatore", 0),
+  ("Verificatore", 0),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo sprint 24",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Le ore preventivate per lo sprint 24 sono state rispettate, con un totale di 3 ore effettive.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [-1],     [-30],
+    [Amministratore],     [6],     [120],
+    [Analista],     [4],     [100],
+    [Progettista],     [-6],     [-150],
+    [Programmatore],     [33],     [495],
+    [Verificatore],     [-10],     [-150],
+    [Rimanente],     [26],     [385],
+  ),
+  caption: "Monitoraggio, sprint 24"
+)
+
+Lo sprint 24 si è concluso con il completamento di tutti gli obiettivi di periodo, tranne uno.
+
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello sprint:
+- CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,01;
+- EAC: l'Estimate At Completion aumenta lievemente, attestandosi su € 12969,18 rispetto al valore di € 12992,10 dello sprint precedente.

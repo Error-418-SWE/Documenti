@@ -688,7 +688,7 @@ Premendo il pulsante *Settings* in basso a sinistra dello schermo si aprirà il 
 Nella sezione "Planimetria" del pannello delle impostazioni è possibile modificare le dimensioni del piano:
 
 + selezionare la casella contenente la dimensione che si desidera modificare;
-+ inserire da tastiera il nuovo valore o modificare quello attuale tramite le freccie di incremento/decremento;
++ inserire da tastiera il nuovo valore o modificare quello attuale tramite le frecce di incremento/decremento;
   - l'inserimento di valori che andrebbero a rimpicciolire il piano vengono considerati errati e la modifica delle dimensioni resa impossibile.
 + salvare le modifiche premendo il pulsante *Salva* presente sotto la casella relativa a "Lunghezza". Alla sua pressione verrà mostrato il pannello di anteprima presente in @ridimensionamento_planimetria, che mostra in bianco il piano attuale e tratteggiata l'estensione che si vuole apportare;
 + premere *Conferma* per applicare le modifiche.

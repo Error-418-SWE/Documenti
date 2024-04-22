@@ -4350,6 +4350,137 @@ Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti
 - EAC: l'Estimate At Completion passa dal valore 13.155,40 € (allo Sprint 19) a 13.321,30 €. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
 
 
+== Sprint 20 dal 17-03-2024 al 24-03-2024
+
+=== Obiettivi raggiunti
+
+Lo Sprint 20 si è concluso con il completamento della maggior parte degli obiettivi di periodo. In particolare:
+
+- fissati due colloqui con il Proponente in data 22/03/2024 (per offrire un aggiornamento sul progresso) e 26/03/2024 (al fine di qualificare il lavoro svolto come MVP);
+- inviato il documento #adr al #cardin, requisito obbligatorio per proseguire alla candidatura per la Product Baseline;
+- #ndp\:
+  - revisionati i capitoli:
+    - Processo di gestione della qualità;
+    - Processo di implementazione;
+    - Processo di integrazione;
+    - Processo di verifica;
+    - Processo di transizione;
+    - Processo di validazione.
+- #pdq\:
+  - aggiornate le metriche all'interno del documento;
+  - aggiornata la dashboard Grafana.
+- #pdp\:
+  - redatto consuntivo dello Sprint 19;
+  - redatto preventivo dello Sprint 20.
+- #st\:
+  - redatta la sezione riguardante i requisiti soddisfatti.
+  - aggiunte le sezioni Requisiti di sistema e Requisiti hardware.
+- #man\:
+  - redatte le sezioni:
+    - Modifica zona;
+    - Eliminazione zona;
+    - Richiesta spostamento prodotto.
+  - rimosse le sezioni Requisiti di sistema e Requisiti hardware;
+  - aggiornato template del documento.
+
+=== Obiettivi mancati
+
+- #man\:
+  - non è stata redatta la sezione Impostazioni.
+
+=== Problematiche
+
+Durante il meeting di retrospettiva è sorta la seguente problematica:
+
+*P01*: Gli avanzamenti del documento #man sono stati minori delle aspettative.
+
+=== Risoluzioni attuate
+
+Nessuna.
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [0],     [7],     [2],     [9],
+    [Carraro],     [0],     [0],     [0],     [0],     [7],     [0],     [7],
+    [Gardin],     [1],     [0],     [0],     [0],     [4 (+1)],     [3 (-1)],     [8],
+    [Nardo],     [0],     [0],     [2],     [0],     [6 (+1)],     [2],     [10 (+1)],
+    [Oseliero],     [0],     [0],     [0],     [0],     [5],     [4],     [9],
+    [Todesco],     [0],     [0],     [1],     [0],     [6 (+1)],     [2],     [9 (+1)],
+    [Zaccone],     [1 (-1)],     [2 (+1)],     [0],     [0],     [3],     [4],     [10],
+    [Totale ore],     [2 (-1)],     [2 (+1)],     [3],     [0],     [38 (+3)],     [17 (-1)],     [62 (+2)],
+    [Costo ruolo],     [60 (-30)],     [40 (+20)],     [75],     [0],     [570 (+45)],     [255 (-15)],     [1000 (+20)],
+  ),
+  caption: "Prospetto del consuntivo, sprint 20"
+)
+#let data = (
+  ("Responsabile", 3, 2),
+  ("Amministratore", 1, 2),
+  ("Analista", 3, 3),
+  ("Progettista", 0, 0),
+  ("Programmatore", 35, 38),
+  ("Verificatore", 18, 17),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo sprint 20",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Durante lo Sprint 20 le ore effettive (62) hanno superato di due unità le ore preventivate (60), in particolare:
+
+- gli impegni del Responsabile sono stati assolti in minor tempo rispetto a quanto preventivato;
+- la stesura dei verbali ha impegnato maggiormente l'Amministratore;
+- dopo aver concluso tutte le attività di codifica pianificate, la figura del Programmatore è stata impegnata nell'implementazione di alcune funzionalità desiderabili o opzionali. Pertanto, le ore di Programmatore sono aumentate rispetto a quanto preventivato;
+- l'impiego della figura del Verificatore è stato leggermente inferiore alle aspettative.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [8],     [240],
+    [Amministratore],     [16],     [320],
+    [Analista],     [4],     [100],
+    [Progettista],     [2],     [50],
+    [Programmatore],     [51],     [765],
+    [Verificatore],     [24],     [360],
+    [Rimanente],     [105],     [1835],
+  ),
+  caption: "Monitoraggio, sprint 20"
+)
+
+Nonostante l'aumento di costo, lo Sprint 20 ha permesso di completare la maggior parte degli obiettivi prefissati.
+
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
+- CPI: il Cost Performance Index rimane stabile sul valore 1.00;
+- EAC: l'Estimate At Completion fluttua leggermente, passando dal valore di € 12.990,31 € (allo Sprint 19) a € 12.990,86.
+
 // == Sprint n dal D1-M1-2024 al D2-M2-2024
 
 // === Obiettivi raggiunti

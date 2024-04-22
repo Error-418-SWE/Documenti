@@ -92,7 +92,7 @@ Per aprire la pagina web dedicata all'utilizzo di WMS3, è necessario seguire i 
 - aprire un browser tra quelli supportati e collegarsi all'indirizzo "localhost:3000".
 
 
-== Avvio e Configurazione dell'ambiente
+== Avvio e configurazione dell'ambiente
 
 Il software all'avvio si presenta come segue:
 #figure(
@@ -101,11 +101,12 @@ Il software all'avvio si presenta come segue:
     Schermata iniziale
   ],
 ) <avvio>
-qui vengono proposte due diverse configurazioni iniziali possibili, *Planimetria rettangolare* e *Planimetria personalizzata*. Le differenze tra le due modalità di lavoro verranno descritte nei capitoli dedicati.
+
+Qui vengono proposte due diverse configurazioni iniziali possibili, *Planimetria rettangolare* e *Planimetria personalizzata*. Le differenze tra le due modalità di lavoro verranno descritte nei capitoli dedicati.
 
 Si può scegliere una modalità di lavoro selezionandola nel pannello di @avvio e premendo il pulsante *Prossimo* in basso a destra.
 
-=== Inizializzazione Planimetria Rettangolare
+=== Inizializzazione planimetria rettangolare
 
 #figure(
   image("./imgs/planimetria_rettangolare.png", width: 44%),
@@ -125,7 +126,7 @@ Il sistema mostrerà un errore e impedirà la visualizzazione del piano nel caso
 
 #pagebreak()
 
-=== Inizializzazione Planimetria Personalizzata
+=== Inizializzazione planimetria personalizzata
 
 #figure(
   image("./imgs/planimetria_personalizzata.png", width: 44%),

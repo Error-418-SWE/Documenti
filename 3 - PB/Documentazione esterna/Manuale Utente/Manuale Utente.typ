@@ -104,7 +104,7 @@ Il software all'avvio si presenta come segue:
 
 Qui vengono proposte due diverse configurazioni iniziali possibili, *Planimetria rettangolare* e *Planimetria personalizzata*. Le differenze tra le due modalità di lavoro verranno descritte nei capitoli dedicati.
 
-Si può scegliere una modalità di lavoro selezionandola nel pannello di @avvio e premendo il pulsante *Prossimo* in basso a destra.
+Si può scegliere una modalità di lavoro selezionandola nel pannello di @avvio e premendo il pulsante *Avanti* in basso a destra.
 
 === Inizializzazione planimetria rettangolare
 
@@ -116,11 +116,11 @@ Si può scegliere una modalità di lavoro selezionandola nel pannello di @avvio 
 ) <piano_rettangolare>
 
 Selezionata l'opzione "Planimetria rettangolare" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_rettangolare, dove sarà possibile effettuare le seguenti azioni:
-- definire la larghezza del magazzino (numero maggiore di 0);
-- definire la lunghezza del magazzino (numero maggiore di 0);
+- definire la larghezza del magazzino espressa in metri (numero maggiore di 0);
+- definire la lunghezza del magazzino espressa in metri (numero maggiore di 0);
 - caricare la lista dei prodotti presente nel database selezionando l'opzione "Importa i prodotti da database".
 
-Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
+Premere quindi il pulsante *Conferma* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
 
 Il sistema mostrerà un errore e impedirà la visualizzazione del piano nel caso in cui uno o entrambi i valori di larghezza e lunghezza siano minori o uguali a 0.
 
@@ -137,11 +137,11 @@ Il sistema mostrerà un errore e impedirà la visualizzazione del piano nel caso
 
 Selezionata l'opzione "Planimetria personalizzata" nella schermata di @avvio, verrà mostrata la schermata presente in @piano_personalizzato, dove sarà possibile effettuare le seguenti azioni:
 - caricare il file SVG che verrà disegnato sul piano;
-- inserire la misura del lato maggiore del magazzino, in modo da scalarne correttamente la pianta;
+- inserire la misura del lato maggiore del magazzino espressa in metri, in modo da scalarne correttamente la pianta;
 - importare gli scaffali presenti nel database selezionando l'opzione "Importa gli scaffali dal database";
 - importare i prodotti presenti nel database selezionando l'opzione "Importa i prodotti dal database".
 
-Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
+Premere quindi il pulsante *Conferma* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
 
 Il sistema mostrerà un errore e impedirà la visualizzazione del piano nel caso in cui:
 - il file SVG non venga inserito correttamente;
@@ -167,7 +167,8 @@ Il sistema mostrerà un errore e impedirà la visualizzazione del piano nel caso
 Una volta che l'ambiente è stato correttamente configurato è possibile cominciare a lavorare con il piano 3D che si presenta come mostrato in @fine_configurazione_rettangolare e @fine_configurazione_personalizzata.
 
 == Movimento nell'ambiente tridimensionale
-Il sistema permette quattro diversi tipi di movimento di camera all'interno dell'ambiente: rotazione del piano, zoom-in e zoom-out, spostamento della camera sui due assi (panning) e con le frecce direzionali.
+
+Il sistema permette quattro diversi tipi di movimento della camera all'interno dell'ambiente: rotazione del piano, zoom-in e zoom-out, spostamento della camera sui due assi (panning) e con le frecce direzionali.
 
 === Rotazione della piano
 
@@ -232,7 +233,7 @@ L' ultimo metodo per muoversi all'interno dell'ambiente è tramite l'uso delle f
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e delle impostazioni.
 
-Selezionando da esso la prima icona (@icona_lista_zone, sinistra), la quale corrisponde alla voce "Zone", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone presenti nell'ambiente (@icona_lista_zone, destra).
+Selezionando da esso la prima icona (@icona_lista_zone, sinistra), corrispondente alla voce "Zone", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista delle zone presenti nell'ambiente (@icona_lista_zone, destra).
 
 #figure(
     grid(
@@ -280,22 +281,16 @@ L'esecuzione di almeno una delle modalità elencate permette la visualizzazione,
 \
 In esso vengono visualizzati:
 
-- *ID*: numero intero che rappresenta il codice identificativo univoco della zona, è visualizzato come titolo del pannello;
-
+- *ID*: numero intero che rappresenta il codice identificativo univoco della zona, visualizzato come titolo del pannello;
 - *Direzione*: può assumere valore `NS` (North-South) o `EW` (East-West) e rappresenta l'orientamento della zona rispetto al piano;
-
 - *Dimensioni*: tre campi rispettivamente relativi a:
-
-  - *Lunghezza*: numero reale che definisce la lunghezza della zona;
-
-  - *Larghezza*: numero reale che definisce la larghezza della zona;
-
-  - *Altezza*: numero reale che definisce l'altezza della zona.
-
+  - *Lunghezza*: numero reale che definisce la lunghezza della zona espressa in metri;
+  - *Larghezza*: numero reale che definisce la larghezza della zona espressa in metri;
+  - *Altezza*: numero reale che definisce l'altezza della zona espressa in metri.
 - *Lista dei Bin*: tabella che elenca, per tutti i bin della zona:
-  - codice alfanumerico identificativo univoco del bin (colonna Bin);
-  - contenuto del bin ("Libero" se vuoto) (colonna Stato);
-  - pulsante per l'ispezione del bin (@ispezione_bin) se non vuoto (colonna Info).
+  - codice alfanumerico identificativo univoco del bin (colonna "Bin");
+  - contenuto del bin ("Libero" se vuoto) (colonna "Stato");
+  - pulsante per l'ispezione del bin (@ispezione_bin) se non vuoto (colonna "Info").
 
 \
 Nella parte inferiore del pannello sono presenti i pulsanti:
@@ -334,14 +329,14 @@ L'esecuzione di almeno una delle modalità elencate permette la visualizzazione,
 
 In esso vengono visualizzati:
 
-- *ID*: codice alfanumerico identificativo univoco del bin, è visualizzato anche come titolo del pannello. È composto da tre valori:
+- *ID*: codice alfanumerico identificativo univoco del bin, visualizzato anche come titolo del pannello. È composto da tre valori:
   - l'ID della zona che lo contiene;
-  - una lettera dell'alfabeto inglese che identifica la colonna che lo contiene;
-  - numero del bin rispetto alla zona che lo contiene.
+  - una stringa di lettere dell'alfabeto inglese che identifica la colonna che lo contiene;
+  - numero del livello che lo contiene.
 - *Dimensioni*: tre campi rispettivamente relativi a:
-  - *Lunghezza*: numero reale che definisce la lunghezza del bin;
-  - *Larghezza*: numero reale che definisce la larghezza del bin;
-  - *Altezza*: numero reale che definisce l'altezza del bin.
+  - *Lunghezza*: numero reale che definisce la lunghezza del bin espressa in metri;
+  - *Larghezza*: numero reale che definisce la larghezza del bin espressa in metri;
+  - *Altezza*: numero reale che definisce l'altezza del bin espressa in metri.
 - *Area prodotto contenuto*: nel caso in cui il bin contenga un prodotto, vengono visualizzate le sue informazioni (@ispezione_prodotto), altrimenti viene data la possibilità di selezionare un prodotto non collocato da inserire nel bin.
 
 #figure(
@@ -356,7 +351,7 @@ In esso vengono visualizzati:
 \
 Per inserire un prodotto all'interno di un bin vuoto mediante la sua ispezione, è sufficiente:
 - premere sul pulsante contenente la scritta "Seleziona";
-- ricercare il prodotto desiderato dal relativo pannello sulla sinistra tramite il suo `ID` o nome;
+- ricercare il prodotto desiderato dal relativo pannello tramite il suo `ID` o nome;
 - premere sul pulsante contenente la scritta "Conferma" (@immagine_pannello_inserimento_prodotto).
 
 Il pannello di ispezione del bin verrà aggiornato per contenere le nuove informazioni.
@@ -374,7 +369,7 @@ Il pannello di ispezione del bin verrà aggiornato per contenere le nuove inform
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e delle impostazioni.
 
-Selezionando da esso la seconda icona (@icona_lista_prodotti, sinistra), la quale corrisponde alla voce "Prodotti", si aprirà un ulteriore pannello dove sarà possibile visualizzare le liste dei prodotti letti da database (@icona_lista_prodotti, destra).
+Selezionando da esso la seconda icona (@icona_lista_prodotti, sinistra), corrispondente alla voce "Prodotti", si aprirà un ulteriore pannello dove sarà possibile visualizzare le liste dei prodotti letti da database (@icona_lista_prodotti, destra).
 
 #figure(
     grid(
@@ -422,10 +417,10 @@ In esso vengono visualizzati:
 - *ID*: codice identificativo univoco del prodotto;
 - *Categorie*: lista delle categorie appartenenti al prodotto;
 - *Dimensioni*: tre campi rispettivamente relativi a:
-  - *Lunghezza*: numero reale che definisce la lunghezza del prodotto;
-  - *Larghezza*: numero reale che definisce la larghezza del prodotto;
-  - *Altezza*: numero reale che definisce l'altezza del prodotto.
-- *Peso*: numero reale che definisce il peso del prodotto.
+  - *Lunghezza*: numero reale che definisce la lunghezza del prodotto espressa in metri;
+  - *Larghezza*: numero reale che definisce la larghezza del prodotto espressa in metri;
+  - *Altezza*: numero reale che definisce l'altezza del prodotto espressa in metri.
+- *Peso*: numero reale che definisce il peso del prodotto espresso in kg.
 
 
 == Ordini di movimentazione prodotti
@@ -433,7 +428,7 @@ In esso vengono visualizzati:
 
 Sulla sinistra della schermata è presente il pannello dedicato alla visualizzazione delle liste di zone, prodotti, ordini e delle impostazioni.
 
-Selezionando da esso la terza icona (@icona_lista_ordini, sinistra), la quale corrisponde alla voce "Ordini di movimentazione", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista degli ordini di movimentazione avvenuti nella sessione corrente (@icona_lista_ordini, destra).
+Selezionando da esso la terza icona (@icona_lista_ordini, sinistra), corrispondente alla voce "Ordini di movimentazione", si aprirà un ulteriore pannello dove sarà possibile visualizzare la lista degli ordini di movimentazione avvenuti nella sessione corrente (@icona_lista_ordini, destra).
 
 Per ogni ordine viene riportato il nome del prodotto soggetto allo spostamento e gli `ID` del bin di partenza e di destinazione.
 
@@ -452,8 +447,8 @@ Per ogni ordine viene riportato il nome del prodotto soggetto allo spostamento e
 Lo spostamento di un prodotto tra due bin avviene tramite _drag and drop_:
 
 + posizionare il puntatore del mouse sul bin contenente il prodotto che si desidera spostare;
-+ premere e tenere premuto il tasto sinistro del mouse per "prendere" il prodotto;
-+ spostare il puntatore del mouse per trascinare il prodotto nella posizione desiderata;
++ premere e tenere premuto il tasto sinistro del mouse per agganciare il prodotto al puntatore;
++ spostare il puntatore continuando a tenere premuto il pulsante sinistro del mouse per trascinare il prodotto nella posizione desiderata;
 + rilasciare il tasto per depositare il prodotto.
 
 Contemporaneamente al rilascio del tasto verrà visualizzata una notifica nella parte inferiore destra dello schermo, che avviserà della corretta creazione, o meno, dell'ordine di spostamento.
@@ -512,18 +507,18 @@ I dati necessari alla creazione sono:
 - *ID*: numero intero che rappresenta il codice identificativo univoco della zona;
 - *Direzione*: può assumere valore `Nord<->Sud` o `Est<->Ovest` e rappresenta l'orientamento della zona rispetto al piano;
 - *Dimensioni*:
-  - *Lunghezza*: numero reale che definisce la lunghezza della zona;
-  - *Larghezza*: numero reale che definisce la larghezza della zona. Essa è definibile dall'utente solo se è selezionata l'opzione "Dividi in parti uguali", altrimenti nello stesso campo viene mostrata automaticamente la larghezza calcolata come somma delle larghezze delle singole colonne;
-  - *Altezza*: numero reale che definisce l'altezza della zona. Essa viene mostrata automaticamente come somma delle altezze dei singoli livelli.
+  - *Lunghezza*: numero reale che definisce la lunghezza della zona espressa in metri;
+  - *Larghezza*: numero reale che definisce la larghezza della zona espressa in metri. Essa è definibile dall'utente solo se è selezionata l'opzione "Dividi in parti uguali", altrimenti nello stesso campo viene mostrata automaticamente la larghezza calcolata come somma delle larghezze delle singole colonne;
+  - *Altezza*: numero reale che definisce l'altezza della zona espressa in metri. Essa viene mostrata automaticamente come somma delle altezze dei singoli livelli.
 - *Colonne*:
   tramite un pulsante di opzione, è possibile selezionare la modalità di configurazione delle colonne.
   Esse sono:
     - *colonne uguali*: tramite l'opzione "Dividi in parti uguali" è possibile dichiarare che tutte le colonne della zona avranno larghezza uguale e definire il *numero di colonne* con un numero intero. In questo modo la larghezza di ogni singola colonna sarà uguale alla divisione tra la larghezza della zona dichiarata e il numero di colonne;
-    - *colonne personalizzate*: tramite l'opzione "Colonne personalizzate" è possibile specificare la *larghezza delle colonne* singolarmente dentro ad un apposito form separando ciascun valore (rappresentato da un numero reale) con degli spazi.\
+    - *colonne personalizzate*: tramite l'opzione "Colonne personalizzate" è possibile specificare singolarmente la *larghezza delle colonne* in metri dentro ad un apposito form, separando ciascun valore (rappresentato da un numero reale) con degli spazi.\
       Per esempio, se viene inserito:
       #align(center, `2 1 3 1.5`)
-      si sta dichiarando che la zona possiede quattro colonne rispettivamente di larghezza 2, 1, 3 e 1.5.
-- *aggiunta livelli*: a destra del numero attuale di livelli configurati è presente un pulsante bianco contenente la scritta "Aggiungi", che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* indicata mediante un numero reale.
+      si sta dichiarando che la zona possiede quattro colonne rispettivamente di larghezza 2m, 1m, 3m e 1.5m.
+- *aggiunta livelli*: a destra del numero attuale di livelli configurati è presente un pulsante bianco contenente la scritta "Aggiungi", che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* espressa in metri mediante un numero reale.
 
 Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" (@pulsante_crea_zona, sinistra) per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
 Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo dove desiderato (@collocamento_zona).
@@ -544,12 +539,12 @@ Successivamente alla creazione dell'ambiente di lavoro è possibile spostare una
 
 Per eseguire tale operazione è possibile interagire con il cubo rosso presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse venga sovrapposto ad essa (@immagini_pulsanti_ispezione_zona, destra):
 
-+ premere il tasto sinistro del mouse sopra al cubo descritto;
++ premere e tenere premuto il tasto sinistro del mouse sopra al cubo descritto;
 + mantenendo la pressione del tasto, spostare il mouse per riposizionare la zona interessata nell'ambiente di lavoro;
   - è possibile muovere la visuale come descritto nella sezione "Movimento con frecce direzionali" (@movimento_frecce_direzionali) per rendere più agevole la fase di spostamento.
 + rilasciare il tasto sinistro del mouse per confermare la posizione desiderata.
 
-Durante lo spostamento, la base della zona sarà di colore verde nel caso in cui essa non collida con altri elementi dell'ambiente di lavoro, rossa altrimenti.
+Durante lo spostamento, la base della zona verrà evidenziata in merito alla fattibilità dello spostamento. Lo spostamento risulterà valido se la zona non collide con altre.
 
 Nel caso in cui la zona fosse in collisione con altri elementi dell'ambiente di lavoro, essa verrà posizionata nell'ultima locazione valida da essa raggiunta durante la fase di spostamento.
 
@@ -559,12 +554,12 @@ Nel caso in cui la zona fosse in collisione con altri elementi dell'ambiente di 
         rows:    (auto, auto),
         [ #image("./imgs/spostamento_zona_verde.png", width: 80%)],
         [ #image("./imgs/spostamento_zona_rosso.png", width: 80%)],
-    ),caption: [Spostamento zona non in collisione (sinistra) e spostamento zona in collisione (destra)],
+    ),caption: [Spostamento zona valido (sinistra, evidenziato in verde), spostamento non valido per collisione (destra, evidenziato in rosso)],
 ) <immagini_spostamento_zona>
 
 === Griglia
 
-Per agevolare il posizionamento di una zona durante la fase di spostamento, è possibile usufruire di una griglia tramite il relativo pannello presente nella parte inferiore destra dello schermo (@immagine_grid).
+Per agevolare il posizionamento di una zona durante l'operazione di spostamento, è possibile usufruire di una griglia tramite il relativo pannello presente nella parte inferiore destra dello schermo (@immagine_grid).
 
 #figure(
   image("./imgs/grid.png", width: 50%),
@@ -574,16 +569,16 @@ Per agevolare il posizionamento di una zona durante la fase di spostamento, è p
 ) <immagine_grid>
 
 \
-Nel caso in cui da esso venga selezionato un valore diverso da zero, nel piano dell'ambiente di lavoro sarà possibile visualizzare una griglia con passo uguale al valore selezionato.
+Se viene selezionato un valore diverso da zero, nel piano dell'ambiente di lavoro sarà possibile visualizzare una griglia con passo uguale al valore selezionato.
 
-Quando essa è attiva, lo spostamento di una zona avverrà esclusivamente nelle posizioni coincidenti con le intersezioni della griglia, potendo quindi modificare la propria posizione in funzione di valori multipli del passo selezionato.
+Se attiva, lo spostamento di una zona avverrà esclusivamente nelle posizioni coincidenti con le intersezioni della griglia, potendo quindi modificare la propria posizione in funzione di valori multipli del passo selezionato (_drag and snap_).
 
 == Modifica zona <modifica_zona>
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile modificare le zone posizionate cambiandone i parametri dimensionali e di orientamento, potendo modificare o aggiungere le colonne e i livelli desiderati.
 
-Durante un'azione di modifica di una zona è possibile rimuovere una o più colonne già presenti esclusivamente se:
-- contengono solo bin senza prodotti al loro interno;
+Durante l'azione di modifica di una zona è possibile rimuovere una o più colonne già presenti esclusivamente se:
+- contengono solo bin vuoti;
 - non sono presenti colonne con indice superiore a quello dell'insieme di colonne da rimuovere.
 
 Tale logica concerne anche la rimozione dei livelli.
@@ -596,10 +591,10 @@ Un esempio di rimozione di colonne è presente nell'immagine che segue: nello sc
         rows: (auto, auto),
         [ #image("./imgs/rimozione_livelli_colonne1.png", width: 70%)],
         [ #image("./imgs/rimozione_livelli_colonne2.png", width: 70%)],
-    ),caption: [Esempio di rimozione colonne],
+    ),caption: [Esempio di rimozione colonne e di un livello],
 )<rimozione_colonne>
 
-Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@ispezione_zona), è presente un pulsante contenente la scritta "Modifica" (@pulsante_modifica_zona).
+Nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@ispezione_zona), è presente il pulsante "Modifica" (@pulsante_modifica_zona).
 
 #figure(
   image("./imgs/pulsante_modifica_zona.png", width: 40%),
@@ -608,9 +603,9 @@ Nella parte inferiore del pannello relativo alla visualizzazione delle informazi
   ],
 ) <pulsante_modifica_zona>
 
-Alla sua pressione sarà permesso all'utente di poter modificare alcuni parametri della zona in oggetto: essi sono i medesimi richiesti durante la creazione della zona (@creazione_zona) e seguono gli stessi vincoli, fuorché il parametro `ID`, il quale non è modificabile.
+Alla sua pressione sarà permesso all'utente di poter modificare i parametri della zona, ad eccezione dell'ID. I parametri modificabili sono i medesimi richiesti durante la creazione della zona (@creazione_zona) e seguono gli stessi vincoli.
 
-Per aggiornare l'elemento 3D rappresentante la zona modificata è necessario premere il pulsante "Salva le modifiche alla zona" (@pulsante_salvataggio_modifica_zona).
+Per salvare le modifiche effettuate è necessario premere il pulsante "Salva le modifiche alla zona" (@pulsante_salvataggio_modifica_zona): la sua rappresentazione 3D verrà aggiornata di conseguenza.
 
 #figure(
   image("./imgs/pulsante_salvataggio_modifiche_zona.png", width: 40%),
@@ -625,7 +620,7 @@ Successivamente alla creazione dell'ambiente di lavoro è possibile eliminare un
 
 Per eseguire tale operazione è possibile interagire con:
 
-- il pulsante rosso contenente la scritta "Elimina" contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@immagini_pulsanti_eliminazione_zona, sinistra);
+- il pulsante "Elimina" (evidenziato in rosso) contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@immagini_pulsanti_eliminazione_zona, sinistra);
 
 - il pulsante contenente l'icona raffigurante un cestino (@immagini_pulsanti_eliminazione_zona, destra) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da eliminare.
 
@@ -638,7 +633,7 @@ Per eseguire tale operazione è possibile interagire con:
     ),caption: [Pulsante "Elimina" di eliminazione zona (sinistra) e pulsanti "cestino" di eliminazione zona (destra)],
 )<immagini_pulsanti_eliminazione_zona>
 
-Alla pressione di uno dei pulsanti elencati, verrà aperto il pannello di conferma dell'operazione, in quanto irreversibile.
+L'eliminazione è un'operazione irreversibile, pertanto, viene mostrato un avviso di conferma prima di procedere alla sua eliminazione.
 
 #figure(
   image("./imgs/conferma_eliminazione_zona.png", width: 50%),
@@ -654,40 +649,30 @@ Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno 
 
 == Impostazioni
 
-// #figure(
-//     grid(
-//         columns: 2,
-//         rows:    (auto, auto),
-//         [ #image("./imgs/impostazioni.png", width: 50%)],
-//         [ #image("./imgs/ridimensionamento.png", width: 90%)],
-//     ),caption: [Impostazioni ambiente 3D],
-// ) <impostazioni>
-
 #figure(
   image("./imgs/impostazioni.png", width: 30%),
   caption: [Pannello impostazioni]
 ) <impostazioni>
 
-Premendo il pulsante *Settings* in basso a sinistra dello schermo si aprirà il pannello mostrato in @impostazioni, all'interno del quale troviamo, in ordine:
+Premendo il pulsante *Impostazioni* in basso a sinistra dello schermo si aprirà il pannello mostrato in @impostazioni, contenente le sezioni:
 
-- *Informazioni*: contiene varie informazioni riguardo il prodotto;
-- *Planimetria*: riporta i valori dimensionali del piano;
+- *Informazioni*: contiene le informazioni sull'ambito di realizzazione del prodotto;
+- *Planimetria*: riporta larghezza e lunghezza del piano espresse in metri;
 - *Demo*: contiene due pulsanti:
   - *Risincronizza*: permette riportare il piano al suo stato iniziale, annullando tutte le modifiche e gli spostamenti effettuati;
-  - *Reimposta*: permette di eliminare tutto il lavoro fatto sul piano e tornare alla schermata di @avvio.
-
+  - *Reimposta*: permette di tornare alla schermata di configurazione iniziale @avvio.
 
 === Ridimensionamento planimetria
 
-Nella sezione "Planimetria" del pannello delle impostazioni è possibile modificare le dimensioni del piano:
+Nella sezione "Planimetria" del pannello delle impostazioni è possibile modificare le larghezza e lunghezza del piano:
 
-+ selezionare la casella contenente la dimensione che si desidera modificare;
++ selezionare il campo contenente la dimensione che si desidera modificare;
 + inserire da tastiera il nuovo valore o modificare quello attuale tramite le frecce di incremento/decremento;
   - l'inserimento di valori che andrebbero a rimpicciolire il piano vengono considerati errati e la modifica delle dimensioni resa impossibile.
 + salvare le modifiche premendo il pulsante *Salva* presente sotto la casella relativa a "Lunghezza". Alla sua pressione verrà mostrato il pannello di anteprima presente in @ridimensionamento_planimetria, che mostra in bianco il piano attuale e tratteggiata l'estensione che si vuole apportare;
 + premere *Conferma* per applicare le modifiche.
 
-Nel caso di modifica di un piano personalizzato, il ridimensionamento non andrà ad influire sul SVG, che manterrà le dimensioni definite in fase di inizializzazione, ma aumenterà la superficie bianca su cui è disegnato.
+Nel caso di modifica di un piano personalizzato, il ridimensionamento non andrà ad influire sulla piantina rappresentante il file SVG caricato, che manterrà le dimensioni definite in fase di inizializzazione, ma aumenterà l'area di lavoro interagibile.
 
 #figure(
   image("./imgs/ridimensionamento.png", width: 50%),

@@ -4,7 +4,8 @@
  title: "Manuale Utente",
  authors: (
    "Nardo Silvio",
-   "Todesco Mattia",
+   "Oseliero Antonio",
+   "Todesco Mattia"
  ),
  showLog: true,
  showImagesIndex: true,

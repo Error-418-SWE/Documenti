@@ -4380,8 +4380,8 @@ Lo Sprint 20 si è concluso con il completamento della maggior parte degli obiet
   - aggiornate le metriche all'interno del documento;
   - aggiornata la dashboard Grafana.
 - #pdp\:
-  - redatto consuntivo dello Sprint 19;
-  - redatto preventivo dello Sprint 20.
+  - redatto preventivo dello Sprint 20, iniziato in data 17/03/2024;
+  - redatto consuntivo dello Sprint 19, terminato in data 17/03/2024.
 - #st\:
   - redatta la sezione riguardante i requisiti soddisfatti.
   - aggiunte le sezioni Requisiti di sistema e Requisiti hardware.
@@ -4488,8 +4488,8 @@ Durante lo Sprint 20 le ore effettive (62) hanno superato di due unità le ore p
 Nonostante l'aumento di costo, lo Sprint 20 ha permesso di completare la maggior parte degli obiettivi prefissati.
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
-- CPI: il Cost Performance Index rimane stabile sul valore 1.00;
-- EAC: l'Estimate At Completion fluttua leggermente, passando dal valore di € 12.990,31 € (allo Sprint 19) a € 12.990,86.
+- CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
+- EAC: l'Estimate At Completion rimane sostanzialmente invariato, passando dal valore di € 12.990,31 € (allo Sprint 19) a € 12.990,86.
 
 // == Sprint n dal D1-M1-2024 al D2-M2-2024
 

@@ -24,28 +24,24 @@
 
 = Valutazione del progresso generale <avanzamento>
 
-Lo Sprint 23 si è soffermato sulla preparazione alla valutazione PB con il professor Cardin e alla revisione dei documenti.
+Lo Sprint 23 si è soffermato sulla preparazione alla valutazione PB con il #cardin e alla revisione dei documenti.
 
-Il giorno mercoledì 10/04/2024 si è svolto lo sportello di valutazione PB con il professor Cardin, il quale esito non ci è stato ad oggi comunicato.
+Il giorno mercoledì 10/04/2024 si è svolto lo sportello di valutazione PB con il #cardin, il cui esito non è stato ad oggi comunicato.
 
-Come previsto, le ore di lavoro svolte in questo sprint sono state minori rispetto agli sprint precedenti in quanto è ridotto il lavoro rimanente per completare il progetto.
+Come previsto, le ore di lavoro svolte in questo Sprint sono state minori rispetto agli Sprint precedenti in quanto è ridotto il lavoro rimanente per completare il progetto.
 
 == #ndp
 
-Il documento è stato nuovamente revisionato dai capitolo 5.5 a 5.9.
+Il documento è stato nuovamente revisionato dal capitolo 5.5 al 5.9.
 
 == #pdq
 
 Le tabelle relative agli unit test e agli integration test sono state separate.
 Inoltre è stata redatta la sezione relativa ai test di sistema.
 
-== #st
-
-È stata aggiunta la sezione riguardante l'esecuzione del software e sono stati aggiornati i requisiti di sistema.
-
 == #man
 
-Le modifiche al documento sono state:
+Sono state apportate le seguenti modifiche al documento:
 
   - aggiunta della sezione riguardante la guida all'apertura della pagina atta all'utilizzo di WMS3;
 
@@ -58,7 +54,7 @@ Le modifiche al documento sono state:
 
 Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq\:
 
-- CPI di progetto a 1.01, rappresenta un valore ottimale (dove l'ottimabilità è rappresentata da valori $>=1$);
+- CPI di progetto a 1.01, rappresenta un valore ottimale in quanto $>=1$;
 
 - EAC diminuisce passando da € 12.992,10 a € 12.968,71 rientrando nel budget previsto;
 
@@ -69,13 +65,13 @@ Maggiori dettagli in merito al valore delle metriche alla loro analisi sono repe
 
 == Keep doing <keep-doing>
 
-Persiste una buona collaborazione tra i membri del gruppo e il ritmo di lavoro rimane soddisfaciente nonostante la sua preventivata riduzione.
+Persiste una buona collaborazione tra i membri del gruppo e il ritmo di lavoro rimane soddisfacente nonostante la sua preventivata riduzione.
 
 == Improvements <improvements>
 
 === Criticità evidenziate
 
-*P01*: Durante la valutazione PB il professor Cardin ha evidenziato delle criticità relativamente all'architettura del MVP.
+*P01*: Durante la valutazione PB il #cardin ha evidenziato delle criticità relativamente all'architettura del MVP.
 
 === Soluzioni predisposte
 

@@ -4001,7 +4001,7 @@ Lo Sprint 16 ha permesso di raggiungere tutti gli obiettivi prefissati con una s
 
 Il rendimento positivo dello Sprint 16 è supportato dalle principali metriche esposte dal #pdq, quali:
 - CPI: il Cost Performance Index passa dal valore 0,98 (allo Sprint 15) a 1,02 e raggiunge un valore ottimale, denotando un miglioramento significativo del rendimento del gruppo;
-- EAC: l'Estimate At Completion passa dal valore € 13292,70 (allo Sprint 15) a € 12777,29, considerabile come valore ottimale in quanto minore del BAC.
+- EAC: l'Estimate At Completion passa dal valore 13292,70 € (allo Sprint 15) a 12777,29 €, considerabile come valore ottimale in quanto minore del BAC.
 
 
 == Sprint 17 dal 25-02-2024 al 03-03-2024
@@ -4158,7 +4158,7 @@ Lo Sprint 17, pur comportando un costo superiore a quanto preventivato, ha perme
 
 Il rendimento complessivamente positivo dello Sprint 17 è supportato dalle principali metriche esposte dal #pdq, quali:
 - CPI: il Cost Performance Index passa dal valore 1,02 (allo Sprint 16) a 1,01. Nonostante il lieve calo continua a rappresentare un valore accettabile ($>=0,95$), e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
-- EAC: l'Estimate At Completion passa dal valore € 12777,29 (allo Sprint 16) a € 12987,48. Anche se aumentato, il valore è minore del BAC e rientra nel range di accettabilità.
+- EAC: l'Estimate At Completion passa dal valore 12777,29 € (allo Sprint 16) a 12987,48 €. Anche se aumentato, il valore è minore del BAC e rientra nel range di accettabilità.
 
 
 == Sprint 18 dal 03-03-2024 al 10-03-2024
@@ -4308,7 +4308,7 @@ Nonostante la diminuzione dei costi rispetto al preventivo, lo Sprint 18 ha perm
 
 Il rendimento positivo dello Sprint 18 è supportato dalle principali metriche esposte dal #pdq, quali:
 - CPI: il Cost Performance Index rimane costante a 1,01 rappresentando ancora un valore ottimale ($>=1$);
-- EAC: l'Estimate At Completion diminuisce e passa dal valore di € 12987,48 (allo Sprint 17) a € 12933,25.
+- EAC: l'Estimate At Completion diminuisce e passa dal valore di 12987,48 € (allo Sprint 17) a 12933,25 €.
 
 
 == Sprint 19 dal 10-03-2024 al 17-03-2024
@@ -4469,7 +4469,7 @@ Durante lo Sprint 19 sono stati raggiunti buona parte degli obiettivi. Nonostant
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
 - CPI: il Cost Performance Index diminuisce ma rimane entro l'intervallo di ottimalità, passando dal valore 1,01 (allo Sprint 18) a 1,00;
-- EAC: l'Estimate At Completion passa dal valore € 12933,25 (allo Sprint 18) a € 12990,31. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
+- EAC: l'Estimate At Completion passa dal valore 12933,25 € (allo Sprint 18) a 12990,31 €. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
 
 
 == Sprint 20 dal 17-03-2024 al 24-03-2024
@@ -4601,7 +4601,7 @@ Nonostante l'aumento di costo, lo Sprint 20 ha permesso di completare la maggior
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
-- EAC: l'Estimate At Completion rimane sostanzialmente invariato, passando dal valore di € 12990,31 (allo Sprint 19) a € 12990,86.
+- EAC: l'Estimate At Completion rimane sostanzialmente invariato, passando dal valore di 12990,31 € (allo Sprint 19) a 12990,86 €.
 
 == Sprint 21 dal 24-03-2024 al 31-03-2024
 
@@ -4732,7 +4732,7 @@ Lo Sprint 21 si è concluso con il completamento totale delle attività previste
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
-- EAC: l'Estimate At Completion aumenta, passando dal valore di € 12990,86 (allo Sprint 20) a € 13010,59.
+- EAC: l'Estimate At Completion aumenta, passando dal valore di 12990,86 € (allo Sprint 20) a 13010,59 €.
 
 L'aumento dell'EAC, sebbene non significativo, ne avvicina il valore a quello del BAC, ovvero il massimale consentito.
 
@@ -4852,7 +4852,7 @@ Lo Sprint 22 si è concluso con il completamento di tutti gli obiettivi di perio
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
-- EAC: l'Estimate At Completion diminuisce e si allontana dal valore di soglia (BAC), passando dal valore di € 13010,59 (allo Sprint 21) a € 12992,10.
+- EAC: l'Estimate At Completion diminuisce e si allontana dal valore di soglia (BAC), passando dal valore di 13010,59 € (allo Sprint 21) a 12992,10 €.
 
 == Sprint 23 dal 07-04-2024 al 14-04-2024
 
@@ -4960,7 +4960,7 @@ Lo Sprint 23 si è concluso con il completamento di tutti gli obiettivi di perio
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
 - CPI: il Cost Performance Index migliora leggermente e passa a 1,01;
-- EAC: l'Estimate At Completion diminuisce e si allontana ulteriormente dal valore di soglia (BAC), passando dal valore di € 12992,10 (allo Sprint 22) a € 12968,71.
+- EAC: l'Estimate At Completion diminuisce e si allontana ulteriormente dal valore di soglia (BAC), passando dal valore di 12992,10 € (allo Sprint 22) a 12968,71 €.
 
 == Sprint 24 dal 14-04-2024 al 21-04-2024
 
@@ -5048,4 +5048,4 @@ Lo Sprint 24 si è concluso con il completamento di tutti gli obiettivi di perio
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,01;
-- EAC: l'Estimate At Completion aumenta lievemente, attestandosi su € 12969,18 rispetto al valore di € 12992,10 dello Sprint precedente.
+- EAC: l'Estimate At Completion aumenta lievemente, attestandosi su 12969,18 € rispetto al valore di 12992,10 € dello Sprint precedente.

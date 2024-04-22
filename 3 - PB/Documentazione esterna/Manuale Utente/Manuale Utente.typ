@@ -127,7 +127,7 @@ Selezionata l'opzione "Planimetria rettangolare" nella schermata di @avvio, verr
 
 Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
 
-Il sistema mostretà un errore e impedirà la visualizzazione del piano nel caso in cui uno o entrambi i valori di larghezza e lunghezza siano minori o uguali a 0.
+Il sistema mostrerà un errore e impedirà la visualizzazione del piano nel caso in cui uno o entrambi i valori di larghezza e lunghezza siano minori o uguali a 0.
 
 #pagebreak()
 
@@ -148,7 +148,7 @@ Selezionata l'opzione "Planimetria personalizzata" nella schermata di @avvio, ve
 
 Premere quindi il pulsante *Submit* per procedere alla visualizzazione dell'ambiente 3D, oppure il pulsante *Indietro* per annullare la configurazione e tornare al menù mostrato in @avvio.
 
-Il sistema mostretà un errore e impedirà la visualizzazione del piano nel caso in cui:
+Il sistema mostrerà un errore e impedirà la visualizzazione del piano nel caso in cui:
 - il file SVG non venga inserito correttamente;
 - il file SVG non sia valido;
 - il valore associato al lato maggiore sia minore o uguale a 0.

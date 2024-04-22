@@ -94,8 +94,8 @@ L'attività di codifica ha visto completati i lavori:
 = Analisi retrospettiva
 
 Lo Sprint 17 è terminato con il raggiungimento della quasi totalità degli obiettivi prefissati. Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq\:
-- CPI di progetto cala leggermente passando da 1.01 a 0.99, rappresentando ancora un valore accettabile ($>=0.95$) e rimanendo molto vicino all'ottimalità, rappresentata da valori $>=1$;
-- EAC aumenta passando da € 12.911,54 a € 13.155,40. Il gruppo non lo considera un aumento problematico in quanto risulta abbastanza contenuto;
+- CPI di progetto cala leggermente passando da 1.02 a 1.01, continuando a rappresentare l'ottimabilità, data da valori $>=1$;
+- EAC aumenta passando da € 12.777,29 a € 12.987,48. Il gruppo non lo considera un aumento problematico in quanto risulta abbastanza contenuto;
 - $"SEV" <= "SPV"$ ma comunque accettabile in quanto $>=80% "del" "SPV"$.
 
 Maggiori dettagli in merito al valore delle metriche alla loro analisi sono reperibili all'interno dei documenti #pdq_v e #pdp_v.

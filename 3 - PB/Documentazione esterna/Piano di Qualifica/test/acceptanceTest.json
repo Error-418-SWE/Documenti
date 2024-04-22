@@ -1,0 +1,102 @@
+[
+	{
+	   "codice":"AT-1",
+	   "descrizione":"Deve essere possibile configurare l'ambiente in modo manuale, specificandone le dimensioni",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-2",
+	   "descrizione":"Deve essere possibile configurare l'ambiente in modo personalizzato, importando un file SVG rappresentante la piantina dell'ambiente",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-3",
+	   "descrizione":"Deve essere possibile creare una nuova zona, specificandone le proprietà come id, orientamento, dimensioni, organizzazione delle colonne e dei ripiani",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-4",
+	   "descrizione":"Deve essere possibile ricollocare una zona nell'ambiente tridimensionale",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-5",
+	   "descrizione":"Deve essere possibile eliminare una zona dall'ambiente tridimensionale",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-6",
+	   "descrizione":"Deve essere possibile modificare una zona dall'ambiente tridimensionale",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-7",
+	   "descrizione":"Deve essere possibile ispezionare una zona, mostrandone i dettagli come id, dimensioni, orientamento e bin in essa contenuti",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-8",
+	   "descrizione":"Deve essere possibile ispezionare i bin, mostrandone i dettagli come id, dimensioni ed eventuale prodotto in esso contenuto",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-9",
+	   "descrizione":"Deve essere possibile ispezionare i prodotti presenti, mostrandone i dettagli come id, nome, dimensioni",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-10",
+	   "descrizione":"Deve essere possibile ispezionare i bin interagendo direttamente nell'ambiente tridimensionale",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-11",
+	   "descrizione":"Deve essere possibile evidenziare il bin selezionato all'interno dell'ambiente",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-12",
+	   "descrizione":"Deve essere possibile ispezionare una zona interagendo direttamente nell'ambiente tridimensionale",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-13",
+	   "descrizione":"Deve essere possibile muovere la camera all'interno dell'ambiente tridimensionale",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-14",
+	   "descrizione":"Deve essere possibile ruotare la camera all'interno dell'ambiente tridimensionale",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-15",
+	   "descrizione":"Deve essere possibile effettuare operazioni di zoom-in e zoom-out all'interno dell'ambiente tridimensionale",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-16",
+	   "descrizione":"Deve essere possibile richiedere la creazione di un ordine di movimentazione di un prodotto da un bin ad un altro mediante un'operazione di _drag n drop_. La possibilità di effettuare tale spostamento deve essere stabilito mediante l'interrogazione di una API Restful",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-17",
+	   "descrizione":"Deve essere possibile evidenziare i bin soggetti ad operazioni di movimentazione",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-18",
+	   "descrizione":"Deve essere possibile ridimensionare l'ambiente di lavoro",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-19",
+	   "descrizione":"Deve essere possibile ripristinare l'ambiente nel suo stato iniziale a seguito della creazione",
+	   "stato":"P"
+	},
+	{
+	   "codice":"AT-20",
+	   "descrizione":"Deve essere possibile ritornare alla procedura di configurazione dell'ambiente",
+	   "stato":"P"
+	}
+ ]

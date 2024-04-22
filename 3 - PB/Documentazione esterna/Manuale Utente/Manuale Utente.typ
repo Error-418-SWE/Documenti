@@ -37,15 +37,22 @@ Il prodotto offre le seguenti funzionalità principali:
 - importazione di planimetrie in formato SVG.
 
 == Glossario
-#glo_paragrafo
+
+Al fine di agevolare la comprensione del presente documento viene fornito, al termine dello stesso (@glossario), un glossario che espliciti il significato dei termini di dominio. Essi sono evidenziati nel testo mediante l'aggiunta di una "_G_" a pedice:
+
+  #align(center, {
+    text("Termine di glossario")
+    h(0.03em)
+    text(
+      fill: luma(100),
+      sub(emph("G"))
+    )
+    h(0.02em)
+  })
 
 == Riferimenti <riferimenti>
 
 === Riferimenti a documentazione interna <riferimenti-interni>
-
-- Documento #glo_v: \
-  _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Glossario_v" + glo_vo + ".pdf")_
-  #lastVisitedOn(25, 02, 2024)
 
 - Documento #st_v: \
   _#link("https://github.com/Error-418-SWE/Documenti/blob/main/3%20-%20PB/Documentazione%20esterna/Specifica%20Tecnica_v" + st_vo + ".pdf")_
@@ -73,8 +80,8 @@ Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
     [Google Chrome],[$>=$ 89],
     [Microsoft Edge],[$>=$ 89],
-    [Mozilla Firefox],[$>=$ 16.4],
-    [Apple Safari],[$>=$ 108],
+    [Mozilla Firefox],[$>=$ 67],
+    [Apple Safari],[$>=$ 15],
     [Opera Browser],[$>=$ 76],
     [Google Chrome per Android],[$>=$ 89],
     [Apple Safari per iOS],[$>=$ 17.1],
@@ -686,3 +693,11 @@ Da notare che nel caso di modifica di un piano personalizzato il ridimensionamen
 Nell'ultima sezione in basso, *Demo*, troviamo due pulsanti:
 - *Risincronizza*: permette riportare il piano al suo stato iniziale, annullando tutte le modifiche e gli spostamenti effettuati;
 - *Reimposta*: permette di eliminare tutto il lavoro fatto sul piano e tornare alla schermata di @avvio.
+
+
+#pagebreak()
+= Glossario dei termini
+<glossario>
+\
+
+// generato dal template

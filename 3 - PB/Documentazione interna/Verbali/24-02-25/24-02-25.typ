@@ -58,8 +58,8 @@ Il #pdq ha visto completati i lavori:
 
 = Analisi retrospettiva
 Lo Sprint 16 è terminato con il raggiungimento di tutti gli obiettivi prefissati, il cui rendimento positivo è sostenuto dalle principali metriche esposte dal #pdq\:
-- CPI di progetto cresce passando da 0.98 a 1.01;
-- EAC diminuisce passando da € 13.292,70 a € 12.911,54;
+- CPI di progetto cresce passando da 0.98 a 1.02;
+- EAC diminuisce passando da € 13.292,70 a € 12.777,29;
 - $"SEV" >= "SPV"$.
 
 Maggiori dettagli in merito al valore delle metriche alla loro analisi sono reperibili all'interno dei documenti #pdq_v e #pdp_v.

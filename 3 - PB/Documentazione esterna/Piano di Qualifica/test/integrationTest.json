@@ -1,0 +1,152 @@
+[
+   {
+      "Codice":"IT-1.1",
+      "Descrizione":"getAllBins: verifica che vengano correttamente restituiti tutti i bin da database",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-1.2",
+      "Descrizione":"getAllBins: verifica che venga correttamente restituito `null` se si verifica  un errore",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-2.1",
+      "Descrizione":"getBinById: verifica che venga correttamente restituito il bin cercato per ID da database",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-2.2",
+      "Descrizione":"getBinById: verifica che venga correttamente restituito `null` se si verifica  un errore",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-3.1",
+      "Descrizione":"getAllProduct: verifica che vengano correttamente restituiti tutti i prodotti da database",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-3.2",
+      "Descrizione":"getAllProduct: verifica che venga correttamente restituito `null` se si verifica  un errore",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-4.1",
+      "Descrizione":"getProductById: verifica che venga correttamente restituito il prodotto cercato per ID da database",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-4.2",
+      "Descrizione":"getProductById: verifica che venga correttamente restituito -1 se non viene trovato il prodotto",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-4.3",
+      "Descrizione":"getProductById: verifica che venga correttamente restituito `null` se sui si verifica un errore",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-5.1",
+      "Descrizione":"productRepository: verifica che vengano correttamente restituiti tutti i prodotti",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-5.2",
+      "Descrizione":"productRepository: verifica che venga correttamente restituito il prodotto cercato per ID",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-5.3",
+      "Descrizione":"productRepository: verifica che venga correttamente gestito un errore quando si vogliono restituire tutti i prodotti",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-5.4",
+      "Descrizione":"productRepository: verifica che venga correttamente gestito un errore quando si vuole restituire un prodotto cercato per ID",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-5.5",
+      "Descrizione":"productRepository: verifica che venga correttamente restituito un array vuoto quando non viene trovato nessun prodotto",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-5.6",
+      "Descrizione":"productRepository: verifica che venga correttamente restituito `null` quando non vengono trovati prodotti cercando per ID",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-6.1",
+      "Descrizione":"zoneRepository: verifica che vengano correttamente restituite tutte le zone",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-6.2",
+      "Descrizione":"zoneRepository: verifica che vengano correttamente restituite tutte le zone che non contengono prodotti",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-6.3",
+      "Descrizione":"zoneRepository: verifica che venga correttamente restituita la zona cercata per ID",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-6.4",
+      "Descrizione":"zoneRepository: verifica che venga correttamente gestito un errore quando si vogliono restituire tutte le zone",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-6.5",
+      "Descrizione":"zoneRepository: verifica che venga correttamente gestito un errore quando si vuole restituire una zona cercata per ID",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-6.6",
+      "Descrizione":"zoneRepository: verifica che venga correttamente restituito un array vuoto quando non vengono trovate zone",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-6.7",
+      "Descrizione":"zoneRepository: verifica che venga correttamente restituito `null` quando non viene trovata la zona cercata per ID",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-7.1",
+      "Descrizione":"readSavedSVG: verifica che venga correttamente letto il contenuto del file SVG",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-8.1",
+      "Descrizione":"readSavedSVG: verifica che venga correttamente salvato il contenuto del file SVG",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-9.1",
+      "Descrizione":"SVGSanitizer: verifica che venga correttamente sanificato il file SVG di esempio",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-9.2",
+      "Descrizione":"SVGSanitizer: verifica che venga correttamente sanificato il file SVG fornito da Sanmarco Informatica",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-10.1",
+      "Descrizione":"getAllEmptyZones: verifica che vengano correttamente ritornate tutte le zone vuote",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-11.1",
+      "Descrizione":"getAllZones: verifica che vengano correttamente ritornate tutte le zone",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-12.1",
+      "Descrizione":"getBinsByZoneId: verifica che, dato l'ID di una zona, vengano correttamente ritornati tutti i bin contenuti in essa",
+      "Stato":"P"
+   },
+   {
+      "Codice":"IT-13.1",
+      "Descrizione":"getZoneById: verifica che venga correttamente ritornata la zona cercata per ID e i suoi bin",
+      "Stato":"P"
+   }
+]

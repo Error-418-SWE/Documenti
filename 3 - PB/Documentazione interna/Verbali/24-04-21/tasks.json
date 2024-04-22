@@ -1,0 +1,17 @@
+[
+	{
+        "ID task": "DOC-726",
+        "Descrizione": "Redigere lettera di presentazione PB",
+        "Ruolo": "Responsabile"
+    },
+    {
+        "ID task":"DOC-730",
+        "Descrizione":"Impostare presentazione per il secondo colloquio PB",
+        "Ruolo":"Amministratore"
+    },
+    {
+        "ID task":"DOC-731",
+        "Descrizione":"Redigere email candidatura per il secondo colloquio PB",
+        "Ruolo":"Responsabile"
+    }
+]

@@ -860,121 +860,121 @@
    {
       "Codice":"ST-145",
       "Descrizione":"Verificare che l'utente possa inserire un ordine di movimentazione di un prodotto da un bin ad un altro tramite drag and drop",
-      "Requisito":"FM-146",
+      "Requisito":"FM-145",
       "Stato":"P"
    },
    {
       "Codice":"ST-146",
       "Descrizione":"Verificare che ciascun ordine di movimentazione invii una richiesta alla API per la convalida dell'operazione",
-      "Requisito":"FM-147",
+      "Requisito":"FM-146",
       "Stato":"P"
    },
    {
       "Codice":"ST-147",
       "Descrizione":"Verificare che la API riceva almeno l'ID del bin di destinazione",
-      "Requisito":"FM-148",
+      "Requisito":"FM-147",
       "Stato":"P"
    },
    {
       "Codice":"ST-148",
       "Descrizione":"Verificare che la API risponda con stato HTTP 200 se l'operazione è stata convalidata",
-      "Requisito":"FM-149",
+      "Requisito":"FM-148",
       "Stato":"P"
    },
    {
       "Codice":"ST-149",
       "Descrizione":"Verificare che la API risponda con stato HTTP 4XX se l'operazione è stata rifiutata",
-      "Requisito":"FM-150",
+      "Requisito":"FM-149",
       "Stato":"P"
    },
    {
       "Codice":"ST-150",
       "Descrizione":"Verificare che la API convalidi o rifiuti le operazioni in maniera casuale",
-      "Requisito":"FM-151",
+      "Requisito":"FM-150",
       "Stato":"P"
    },
    {
       "Codice":"ST-151",
       "Descrizione":"Verificare che il sistema impedisca l'inserimento di un ordine di movimentazione verso un bin occupato",
-      "Requisito":"FM-152",
+      "Requisito":"FM-151",
       "Stato":"P"
    },
    {
       "Codice":"ST-152",
       "Descrizione":"Verificare che l'utente visualizzi l'esito dell'operazione di convalida da parte dell'API",
-      "Requisito":"FM-153",
+      "Requisito":"FM-152",
       "Stato":"P"
    },
    {
       "Codice":"ST-153",
       "Descrizione":"Verificare che l'utente visualizzi un errore di connessione se l'accesso all'API non è possibile",
-      "Requisito":"FM-154",
+      "Requisito":"FM-153",
       "Stato":"P"
    },
    {
       "Codice":"ST-154",
       "Descrizione":"Verificare che quando un ordine di movimentazione è convalidato, esso viene inserito in una cronologia delle operazioni accessibile dall'utente",
-      "Requisito":"FD-155",
+      "Requisito":"FD-154",
       "Stato":"P"
    },
    {
       "Codice":"ST-155",
       "Descrizione":"Verificare che quando un ordine di movimentazione è rifiutato, il prodotto oggetto dell'operazione ritorna nella posizione di partenza",
-      "Requisito":"FM-156",
+      "Requisito":"FM-155",
       "Stato":"P"
    },
    {
       "Codice":"ST-156",
       "Descrizione":"Verificare che l'utente possa visualizzare la cronologia degli ordini di movimentazione convalidati",
-      "Requisito":"FD-157",
+      "Requisito":"FD-156",
       "Stato":"P"
    },
    {
       "Codice":"ST-157",
       "Descrizione":"Verificare che l'utente possa visualizzare l'ID del bin di partenza degli ordini di movimentazione convalidati se l'operazione è partita da un bin",
-      "Requisito":"FD-158",
+      "Requisito":"FD-157",
       "Stato":"P"
    },
    {
       "Codice":"ST-158",
       "Descrizione":"Verificare che l'utente possa visualizzare l'ID del bin di destinazione dell'ordine di movimentazione convalidato",
-      "Requisito":"FD-159",
+      "Requisito":"FD-158",
       "Stato":"P"
    },
    {
       "Codice":"ST-159",
       "Descrizione":"Verificare che l'utente possa visualizzare l'ID del prodotto oggetto dell'ordine di movimentazione convalidato",
-      "Requisito":"FD-160",
+      "Requisito":"FD-159",
       "Stato":"P"
    },
    {
       "Codice":"ST-160",
       "Descrizione":"Verificare che l'utente possa visualizzare il nome del prodotto oggetto dell'ordine di movimentazione convalidato",
-      "Requisito":"FD-161",
+      "Requisito":"FD-160",
       "Stato":"P"
    },
    {
       "Codice":"ST-161",
       "Descrizione":"Verificare che l'utente possa visualizzare l'ID del bin di partenza degli ordini di movimentazione convalidati se l'operazione è partita da un bin",
-      "Requisito":"FD-162",
+      "Requisito":"FD-161",
       "Stato":"P"
    },
    {
       "Codice":"ST-162",
       "Descrizione":"Verificare che l'utente possa ispezionare un singolo ordine di movimentazione convalidato",
-      "Requisito":"FD-163",
+      "Requisito":"FD-162",
       "Stato":"P"
    },
    {
       "Codice":"ST-163",
       "Descrizione":"Verificare che il sistema evidenzi graficamente il bin di destinazione dell'ordine di movimentazione ispezionato",
-      "Requisito":"FM-164",
+      "Requisito":"FM-163",
       "Stato":"P"
    },
    {
       "Codice":"ST-164",
       "Descrizione":"Verificare che se l'ordine di movimentazione ispezionato si è originato da un bin, il sistema evidenzi graficamente il bin di partenza nell'ambiente 3D",
-      "Requisito":"FM-165",
+      "Requisito":"FM-164",
       "Stato":"P"
    }
 ]

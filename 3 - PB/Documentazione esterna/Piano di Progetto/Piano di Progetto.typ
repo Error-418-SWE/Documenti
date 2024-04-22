@@ -1931,8 +1931,10 @@ Questo Sprint impiega:
   - aggiornare il documento #pdp\.
 - *Analista*: al fine di:
   - proseguire con la revisione del documento #adr\.
-- *Progettista*: al fine di:
-  - redigere le sezioni della #st\.
+- *Progettista*: al fine di redigere le sezioni della #st\:
+  - Design pattern;
+  - Diagramma delle classi;
+  - Requisiti soddisfatti.
 - *Programmatore*: al fine di:
   - collaborare con il Progettista nella stesura della #st\;
   - implementare la UI;

@@ -1,6 +1,6 @@
 {
 	"Bin": {
-	  "description": "Unità minima di spazio del magazzino atta a contenere prodotti. I bin sono posizionati in automatico all'interno degli scaffali al momento della loro creazione, e possono contenere al massimo un tipo di prodotto. È possibile creare bin, eliminarli se vuoti, e modificarne le dimensioni.",
+	  "description": "Unità minima di spazio del magazzino atta a contenere prodotti. I bin sono posizionati in automatico all'interno degli scaffali al momento della loro creazione, e possono contenere al massimo un prodotto.",
 	  "acronyms": [],
 	  "synonyms": []
 	},
@@ -15,7 +15,7 @@
 	  "synonyms": []
 	},
 	"Documentazione": {
-	  "description": "È un insieme di testi scritti allo scopo di spiegare e documentare specifici aspetti e funzionalità del prodotto realizzato e dell'organizzazione progettuale.",
+	  "description": "Insieme dei documenti e artefatti prodotti durante la realizzazione del capitolato.",
 	  "acronyms": [],
 	  "synonyms": []
 	},

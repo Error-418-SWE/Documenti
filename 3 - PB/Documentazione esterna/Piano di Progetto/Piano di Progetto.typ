@@ -4521,7 +4521,137 @@ Nonostante l'aumento di costo, lo Sprint 20 ha permesso di completare la maggior
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
-- EAC: l'Estimate At Completion rimane sostanzialmente invariato, passando dal valore di € 12.990,31 € (allo Sprint 19) a € 12.990,86.
+== Sprint 21 dal 24-03-2024 al 31-03-2024
+
+=== Obiettivi raggiunti
+
+Lo Sprint 21 si è concluso con il completamento di tutti gli obiettivi di periodo. In particolare:
+- il Proponente ha convalidato, in data 26/04/2024, il prodotto software WMS3 come MVP del capitolato C5;
+- #ndp\: armonizzazione del contenuto dei capitoli relativi a:
+  - Processo di gestione della qualità;
+  - Processo di implementazione;
+  - Processo di integrazione;
+  - Processo di verifica;
+  - Processo di transizione;
+  - Processo di validazione.
+- #pdq\:
+  - aggiornate le metriche all'interno del documento;
+  - aggiornata la dashboard Grafana.
+- #pdp\:
+  - redatto preventivo dello Sprint 21, iniziato in data 24/03/2024;
+  - redatto consuntivo dello Sprint 20, terminato in data 24/03/2024.
+- #man\: redatte le sezioni:
+  - Impostazioni;
+  - Spostamento prodotto;
+  - Ispezione bin/zona.
+- terminata l'attività di codifica in concomitanza con la convalida del prodotto come MVP.
+
+=== Obiettivi mancati
+
+Nessuno.
+
+=== Problematiche
+
+Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+
+*P01*: Le incombenti festività pasquali e gli impegni personali associati hanno rallentato il lavoro di redazione dei documenti.
+*P02*: La ricezione del feedback sul documento #adr, adeguato al feedback ricevuto al colloquio RTB col #cardin, non è ancora avvenuta.
+
+=== Risoluzioni attuate
+
+#figure(caption: [Soluzioni individuate alle criticità riscontrate, sprint 21.],
+    table(
+      align: left,
+      columns: (auto, 1fr, auto),
+      [ID risoluzione], [Titolo], [Criticità affrontate],
+      [R1], [Ridistribuzione dei task tra i membri], [P01]
+    )
+)
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [2],     [0],     [0],     [0],     [0],     [5 (+2)],     [7 (+2)],
+    [Carraro],     [0],     [0],     [0],     [1],     [2 (-2)],     [3 (+1)],     [6 (-1)],
+    [Gardin],     [1 (-1)],     [0],     [0],     [0],     [1 (+1)],     [3],     [5],
+    [Nardo],     [0],     [0],     [0],     [1],     [3 (-1)],     [0],     [4 (-1)],
+    [Oseliero],     [0],     [2],     [0],     [0],     [0],     [0],     [2],
+    [Todesco],     [0],     [0],     [0],     [0],     [6 (+1)],     [0],     [6 (+1)],
+    [Zaccone],     [0],     [0],     [0],     [0],     [6 (+1)],     [0],     [6 (+1)],
+    [Totale ore],     [3 (-1)],     [2],     [0],     [2],     [18],     [11 (+3)],     [36 (+2)],
+    [Costo ruolo],     [90 (-30)],     [40],     [0],     [50],     [270],     [165 (+45)],     [615 (+15)],
+  ),
+  caption: "Prospetto del consuntivo, sprint 21"
+)
+#let data = (
+  ("Responsabile", 4, 3),
+  ("Amministratore", 2, 2),
+  ("Analista", 0, 0),
+  ("Progettista", 2, 2),
+  ("Programmatore", 18, 18),
+  ("Verificatore", 8, 11),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo sprint 21",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Durante lo Sprint 21 le ore effettive (36) hanno superato di due unità le ore preventivate (34), in particolare:
+- le ore richieste al Responsabile per il lavoro sul documento #ndp ha richiesto 1 ora in meno rispetto al previsto;
+- le ore di Programmatore, sebbene complessivamente invariate, sono state riassegnate durante lo sprint in risposta alla problematica insorta `P01`;
+- le ore di Verificatore richieste sono risultate maggiori rispetto alle aspettative a causa di una sottostima della mole di lavoro.
+
+Nel complesso, la riduzione delle ore di Responsabile ha assorbito parzialmente l'incremento di costi dovuto all'impiego maggiore del Verificatore. Tuttavia, il consuntivo finale è risultato superiore al preventivo.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [5],     [150],
+    [Amministratore],     [14],     [280],
+    [Analista],     [4],     [100],
+    [Progettista],     [0],     [0],
+    [Programmatore],     [33],     [495],
+    [Verificatore],     [13],     [195],
+    [Rimanente],     [69],     [1220],
+  ),
+  caption: "Monitoraggio, sprint 21"
+)
+
+Lo Sprint 21 si è concluso con il completamento totale delle attività previste. Inoltre, la convalida del prodotto come MVP permetterà di proseguire con la candidatura per la Product Baseline, una volta ricevuto anche il feedback sul documento #adr.
+
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
+- CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
+- EAC: l'Estimate At Completion aumenta, passando dal valore di € 12.990,86 (allo Sprint 20) a € 13.010,59.
+
+L'aumento dell'EAC, sebbene non significativo, ne avvicina il valore a quello del BAC.
 
 // == Sprint n dal D1-M1-2024 al D2-M2-2024
 

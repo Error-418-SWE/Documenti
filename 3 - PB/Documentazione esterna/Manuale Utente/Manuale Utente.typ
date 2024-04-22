@@ -531,7 +531,7 @@ I dati necessari alla creazione sono:
 - *aggiunta livelli*: a destra del numero attuale di livelli configurati è presente un pulsante bianco contenente la scritta "Aggiungi", che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* indicata mediante un numero reale.
 
 Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" (@pulsante_crea_zona, sinistra) per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
-Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo dove desiderato.
+Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo dove desiderato (@collocamento_zona).
 
 #figure(
     grid(
@@ -547,13 +547,16 @@ Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà 
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile spostare una zona in esso collocata.
 
-Per eseguire tale operazione è possibile interagire con il cubo rosso, presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse venga sovrapposto ad essa (@immagini_pulsanti_ispezione_zona (destra)).
+Per eseguire tale operazione è possibile interagire con il cubo rosso presente nell'angolo in basso a sinistra rispetto alla zona, visibile nel caso in cui il cursore del mouse venga sovrapposto ad essa (@immagini_pulsanti_ispezione_zona, destra):
 
-Per realizzare lo spostamento è sufficiente premere il tasto sinistro del mouse sopra al cubo descritto e, mantenendo la pressione di tale tasto, spostare il mouse per riposizionare la zona interessata nell'ambiente di lavoro.
++ premere il tasto sinistro del mouse sopra al cubo descritto;
++ mantenendo la pressione del tasto, spostare il mouse per riposizionare la zona interessata nell'ambiente di lavoro;
+  - è possibile muovere la visuale come descritto nella sezione "Movimento con frecce direzionali" (@movimento_frecce_direzionali) per rendere più agevole la fase di spostamento.
++ rilasciare il tasto sinistro del mouse per confermare la posizione desiderata.
 
-Per rendere più agevole la fase di spostamento, è possibile muovere la visuale come descritto nella sezione "Movimento con frecce direzionali" (@movimento_frecce_direzionali).
+Durante lo spostamento, la base della zona sarà di colore verde nel caso in cui essa non collida con altri elementi dell'ambiente di lavoro, rossa altrimenti.
 
-Durante questa fase la base della zona sarà di colore verde nel caso in cui essa non collida con altri elementi dell'ambiente di lavoro, rossa altrimenti.
+Nel caso in cui la zona fosse in collisione con altri elementi dell'ambiente di lavoro, essa verrà posizionata nell'ultima locazione valida da essa raggiunta durante la fase di spostamento.
 
 #figure(
     grid(
@@ -563,11 +566,6 @@ Durante questa fase la base della zona sarà di colore verde nel caso in cui ess
         [ #image("./imgs/spostamento_zona_rosso.png", width: 80%)],
     ),caption: [Spostamento zona non in collisione (sinistra) e spostamento zona in collisione (destra)],
 ) <immagini_spostamento_zona>
-
-\
-Per confermare la posizione desiderata per la zona soggetta allo spostamento, è sufficiente rilasciare il tasto sinistro del mouse.
-
-Nel caso in cui la zona fosse in collisione con altri elementi dell'ambiente di lavoro, essa verrà posizionata nell'ultima locazione valida da essa raggiunta durante la fase di spostamento.
 
 === Griglia
 

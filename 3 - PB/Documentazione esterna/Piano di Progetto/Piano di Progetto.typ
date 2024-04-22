@@ -3779,6 +3779,7 @@ Lo Sprint 16 si è concluso raggiungendo tutti gli obiettivi pianificati, in par
   - accorpato documento #ris nel #pdp;
   - estesa sezione di Analisi dei Rischi;
   - codificati i rischi e relativi metodi di risoluzione;
+  - redatto preventivo dello Sprint 16, iniziato in data 18/02/2024;
   - redatto consuntivo dello Sprint 15, terminato in data 18/02/2024.
 
 - #pdq\:
@@ -3813,25 +3814,25 @@ Nessuna.
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [3],     [1 (-1)],     [0],     [3],     [2],     [1 (+1)],     [10],
-    [Carraro],     [0],     [0],     [2],     [2 (+1)],     [0],     [2],     [6 (+1)],
-    [Gardin],     [0],     [0],     [0],     [0],     [4 (-1)],     [1 (+1)],     [5],
-    [Nardo],     [0],     [3 (+1)],     [2],     [0],     [0],     [4],     [9 (+1)],
-    [Oseliero],     [0],     [2],     [0],     [0],     [2],     [0],     [4],
-    [Todesco],     [3],     [0],     [2],     [1],     [0],     [3],     [9],
-    [Zaccone],     [3],     [2],     [0],     [3],     [0],     [0],     [8],
-    [Totale ore],     [9],     [8],     [6],     [9 (+1)],     [8 (-1)],     [11 (+2)],     [51 (+2)],
-    [Costo ruolo],     [270],     [160],     [150],     [225 (+25)],     [120 (-15)],     [165 (+30)],     [1090 (+40)],
+    [Banzato],     [1 (-1)],     [0],     [0],     [0],     [4],     [1],     [6 (-1)],
+    [Carraro],     [0],     [0],     [2],     [1 (-2)],     [0],     [2],     [5 (-2)],
+    [Gardin],     [2],     [1 (+1)],     [0],     [0],     [4],     [1 (+1)],     [8 (+2)],
+    [Nardo],     [1 (+1)],     [0],     [1 (-1)],     [ (-3)],     [3],     [1 (+1)],     [6 (-2)],
+    [Oseliero],     [2],     [0],     [0],     [2 (+2)],     [1 (+1)],     [1 (-1)],     [6 (+2)],
+    [Todesco],     [0],     [2 (-1)],     [3 (+1)],     [0],     [0],     [1 (-1)],     [6 (-1)],
+    [Zaccone],     [2],     [0],     [0],     [2],     [0],     [2],     [6],
+    [Totale ore],     [8],     [3],     [6],     [5 (-3)],     [12 (+1)],     [9],     [43 (-2)],
+    [Costo ruolo],     [240],     [60],     [150],     [125 (-75)],     [180 (+15)],     [135],     [890 (-60)],
   ),
   caption: "Prospetto del consuntivo, sprint 16"
 )
 #let data = (
-  ("Responsabile", 9, 9),
-  ("Amministratore", 8, 8),
+  ("Responsabile", 8, 8),
+  ("Amministratore", 3, 3),
   ("Analista", 6, 6),
-  ("Progettista", 8, 9),
-  ("Programmatore", 9, 8),
-  ("Verificatore", 9, 11),
+  ("Progettista", 8, 5),
+  ("Programmatore", 11, 12),
+  ("Verificatore", 9, 9),
 )
 #let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
 #let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
@@ -3860,11 +3861,11 @@ Nessuna.
   supplement: "Grafico"
 )
 
-Durante lo Sprint 16 le ore effettive (51) hanno superato di due unità le ore preventivate (49), in particolare:
+Durante lo Sprint 16 le ore effettive (43) sono risultate minori di due unità rispetto alle ore preventivate (45), in particolare:
 
-- l'aumento delle attività di progettazione ha portato a un incremento, seppur leggero, delle ore di Progettista;
-- le ore di Verificatore sono state maggiori di quanto preventivato: l'aumento delle attività di progettazione e le diverse attività svolte sulle #ndp e sull'#ris hanno necessitato di più risorse per essere verificate.
-
+- le ore di Progettista sono state minori di quanto preventivato: la progettazione dello schema ER del database è stata più semplice del previsto e ha permesso di generare confronto tra i membri del gruppo. Inoltre, la precedente esperienza di alcuni membri del gruppo con Figma ha permesso di realizzare il mock-up della UI in tempi brevi;
+- le ore di Programmatore sono state maggiori di quanto preventivato a causa dell'elevato numero di strumenti di testing esplorati;
+- a causa di impegni personali di alcuni membri del gruppo tutti i ruoli hanno subito ridistribuzioni delle ore lavorate, senza tuttavia risultare in situazioni eccedenti rispetto a quanto preventivato.
 
 === Monitoraggio costi e ore
 
@@ -3872,22 +3873,22 @@ Durante lo Sprint 16 le ore effettive (51) hanno superato di due unità le ore p
   table(
     columns: 3,
     [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
-    [Responsabile],     [22],     [660],
-    [Amministratore],     [22],     [440],
+    [Responsabile],     [23],     [690],
+    [Amministratore],     [27],     [540],
     [Analista],     [29],     [725],
-    [Progettista],     [10],     [250],
-    [Programmatore],     [152],     [2280],
-    [Verificatore],     [70],     [1050],
-    [Rimanente],     [305],     [5405],
+    [Progettista],     [14],     [350],
+    [Programmatore],     [148],     [2220],
+    [Verificatore],     [72],     [1080],
+    [Rimanente],     [313],     [5605],
   ),
   caption: "Monitoraggio, sprint 16"
 )
 
-Lo Sprint 16, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere tutti gli obiettivi prefissati. Nonostante la necessità di maggiori risorse orarie in alcuni ruoli, non sono stati rilevati rallentamenti nel completamento dei compiti previsti.
+Lo Sprint 16 ha permesso di raggiungere tutti gli obiettivi prefissati con una spesa inferiore alle attese. Nonostante la necessità di maggiori risorse orarie in alcuni ruoli, non sono stati rilevati rallentamenti nel completamento dei compiti previsti.
 
 Il rendimento positivo dello Sprint 16 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index passa dal valore 0.98 (allo Sprint 15) a 1.01, indicando un miglioramento del rendimento del gruppo e raggiungendo un valore ottimale;
-- EAC: l'Estimate At Completion passa dal valore 13.292,70 € (allo Sprint 15) a 12.911,54 €, considerabile come valore ottimale in quanto minore del BAC. Il costo finale del progetto va dunque a ridursi ulteriormente rispetto allo Sprint 15.
+- CPI: il Cost Performance Index passa dal valore 0,98 (allo Sprint 15) a 1,02 e raggiunge un valore ottimale, denotando un miglioramento significativo del rendimento del gruppo;
+- EAC: l'Estimate At Completion passa dal valore € 13.292,70 (allo Sprint 15) a € 12.777,29, considerabile come valore ottimale in quanto minore del BAC.
 
 
 == Sprint 17 dal 25-02-2024 al 03-03-2024

@@ -4838,8 +4838,113 @@ Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
 - EAC: l'Estimate At Completion diminuisce e si allontana dal valore di soglia (BAC), passando dal valore di € 13010,59 (allo sprint 21) a € 12992,10.
 
-// === Problematiche
-// Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+== Sprint 23 dal 07-04-2024 al 14-04-2024
+
+=== Obiettivi raggiunti
+
+Lo sprint 23 si è concluso con il completamento di tutti gli obiettivi di periodo. In particolare:
+- è stata sostenuto il colloquio per la Product Baseline col #cardin in data 10/04/2024;
+- #pdq\:
+  - separata la lista dei test di unità da quelli di integrazione;
+  - redatta la lista dei test di sistema;
+  - aggiornate le metriche all'interno del documento;
+  - aggiornata la dashboard Grafana.
+- #pdp\:
+  - redatto preventivo dello sprint 23, iniziato in data 07/04/2024;
+  - redatto consuntivo dello sprint 22, terminato in data 07/04/2024.
+- #man:\
+  - aggiunta la sezione sull'avvio del software;
+  - rimossa la sezione sul supporto tecnico.
+
+=== Obiettivi mancati
+
+Nessuno.
+
+=== Problematiche
+
+Nessuna.
+
+=== Risoluzioni attuate
+
+Nessuna.
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [0],     [0],     [2],     [2],
+    [Carraro],     [0],     [2],     [0],     [0],     [0],     [0],     [2],
+    [Gardin],     [0],     [0],     [0],     [0],     [0],     [2],     [2],
+    [Nardo],     [0],     [0],     [0],     [1],     [0],     [0],     [1],
+    [Oseliero],     [1],     [0],     [0],     [0],     [0],     [2],     [3],
+    [Todesco],     [0],     [0],     [0],     [0],     [0],     [2],     [2],
+    [Zaccone],     [0],     [0],     [0],     [1],     [0],     [0],     [1],
+    [Totale ore],     [1],     [2],     [0],     [2],     [0],     [8],     [13],
+    [Costo ruolo],     [30],     [40],     [0],     [50],     [0],     [120],     [240],
+  ),
+  caption: "Prospetto del consuntivo, sprint 23"
+)
+#let data = (
+  ("Responsabile", 1, 1),
+  ("Amministratore", 2, 2),
+  ("Analista", 0, 0),
+  ("Progettista", 2, 2),
+  ("Programmatore", 0, 0),
+  ("Verificatore", 8, 8),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo sprint 23",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Le ore preventivate per lo sprint 23 sono state rispettate, con un totale di 13 ore effettive.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [5],     [150],
+    [Amministratore],     [14],     [280],
+    [Analista],     [4],     [100],
+    [Progettista],     [0],     [0],
+    [Programmatore],     [33],     [495],
+    [Verificatore],     [13],     [195],
+    [Rimanente],     [69],     [1220],
+  ),
+  caption: "Monitoraggio, sprint 23"
+)
+
+Lo sprint 23 si è concluso con il completamento di tutti gli obiettivi di periodo.
+
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello sprint:
+- CPI: il Cost Performance Index migliora leggermente e passa a 1,01;
+- EAC: l'Estimate At Completion diminuisce e si allontana ulteriormente dal valore di soglia (BAC), passando dal valore di € 12992,10 (allo sprint 22) a € 12968,71.
 
 // === Risoluzioni attuate
 

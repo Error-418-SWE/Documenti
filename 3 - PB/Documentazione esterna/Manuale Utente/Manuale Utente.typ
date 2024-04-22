@@ -501,7 +501,7 @@ I risultati della ricerca verranno mostrati nell'area sottostante, all'interno d
 
 Successivamente alla creazione dell'ambiente di lavoro è possibile creare le zone contenenti i bin in modo personalizzato.
 
-Sul lato destro superiore del pannello relativo alla visualizzazione della lista delle zone (@visualizzazione_lista_zone), è presente un pulsante nero contenente la scritta "+ Nuova" (@nuova_zona (sinistra)).
+Sul lato destro superiore del pannello relativo alla visualizzazione della lista delle zone (@visualizzazione_lista_zone), è presente un pulsante nero contenente la scritta "+ Nuova" (@nuova_zona, sinistra).
 
 #figure(
     grid(
@@ -512,29 +512,26 @@ Sul lato destro superiore del pannello relativo alla visualizzazione della lista
     ),caption: [Pulsante di creazione di una nuova zona (sinistra) e pannello di creazione di una nuova zona (destra)],
 ) <nuova_zona>
 
-Alla sua pressione verrà reso disponibile, sulla destra della schermata, il pannello "Nuova zona" (@nuova_zona (destra)) nel quale sarà possibile inserire tutti i dati utili alla creazione della zona personalizzata.
+Alla sua pressione verrà reso disponibile sulla destra della schermata il pannello "Nuova zona" (@nuova_zona, destra), nel quale sarà possibile inserire tutti i dati utili alla creazione della zona personalizzata.
 I dati necessari alla creazione sono:
 - *ID*: numero intero che rappresenta il codice identificativo univoco della zona;
-- *Direzione*: può assumere valore `Nord-Sud` o `Est-Ovest` e rappresenta l'orientamento della zona rispetto al piano;
+- *Direzione*: può assumere valore `Nord<->Sud` o `Est<->Ovest` e rappresenta l'orientamento della zona rispetto al piano;
 - *Dimensioni*:
   - *Lunghezza*: numero reale che definisce la lunghezza della zona;
   - *Larghezza*: numero reale che definisce la larghezza della zona. Essa è definibile dall'utente solo se è selezionata l'opzione "Dividi in parti uguali", altrimenti nello stesso campo viene mostrata automaticamente la larghezza calcolata come somma delle larghezze delle singole colonne;
   - *Altezza*: numero reale che definisce l'altezza della zona. Essa viene mostrata automaticamente come somma delle altezze dei singoli livelli.
-
 - *Colonne*:
   tramite un pulsante di opzione, è possibile selezionare la modalità di configurazione delle colonne.
   Esse sono:
     - *colonne uguali*: tramite l'opzione "Dividi in parti uguali" è possibile dichiarare che tutte le colonne della zona avranno larghezza uguale e definire il *numero di colonne* con un numero intero. In questo modo la larghezza di ogni singola colonna sarà uguale alla divisione tra la larghezza della zona dichiarata e il numero di colonne;
-    - *colonne personalizzate*: tramite l'opzione "Colonne personalizzate" è possibile specificare la *larghezza delle colonne* singolarmente dentro ad un apposito form separando ciascun valore (rappresentato da un numero reale) con degli spazi.
-
+    - *colonne personalizzate*: tramite l'opzione "Colonne personalizzate" è possibile specificare la *larghezza delle colonne* singolarmente dentro ad un apposito form separando ciascun valore (rappresentato da un numero reale) con degli spazi.\
       Per esempio, se viene inserito:
       #align(center, `2 1 3 1.5`)
       si sta dichiarando che la zona possiede quattro colonne rispettivamente di larghezza 2, 1, 3 e 1.5.
+- *aggiunta livelli*: a destra del numero attuale di livelli configurati è presente un pulsante bianco contenente la scritta "Aggiungi", che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* indicata mediante un numero reale.
 
-- *aggiunta livelli*: a destra del numero attuale di livelli configurati, è presente un pulsante bianco contenente la scritta "Aggiungi" che, se premuto, permette l'aggiunta nell'area sottostante di una sezione rappresentante un nuovo livello della zona. È quindi possibile definire l'*altezza del livello* indicata mediante un numero reale.
-
-Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" (@pulsante_crea_zona (sinistra)) per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
-Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo.
+Successivamente all'inserimento dei dati rappresentativi della nuova zona personalizzata, è possibile premere sul pulsante "Crea zona" (@pulsante_crea_zona, sinistra) per generare l'elemento 3D corrispondente nell'ambiente di lavoro.
+Esso verrà posizionato automaticamente alle coordinate (0,0) del piano e sarà quindi possibile riposizionarlo dove desiderato.
 
 #figure(
     grid(

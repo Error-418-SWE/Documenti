@@ -52,7 +52,7 @@ Sono state apportate le seguenti modifiche al documento:
 
 = Analisi retrospettiva
 
-Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq\:
+Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq_v\:
 
 - CPI di progetto a 1.01, rappresenta un valore ottimale in quanto $>=1$;
 
@@ -100,6 +100,6 @@ Persiste una buona collaborazione tra i membri del gruppo e il ritmo di lavoro r
   )
 }
 #show figure: set block(breakable: true)
-#figure(caption: [Task pianificate per lo Sprint 23.],
+#figure(caption: [Task pianificate per lo Sprint 24.],
   table-json(json("tasks.json"))
 )

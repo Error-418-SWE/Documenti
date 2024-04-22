@@ -22,13 +22,13 @@ Lo Sprint 24 si conclude con il completamento dei task pianificati, rispecchiand
 
 == Verbali
 Durante il processo di revisione documentale, sono stati corretti errori ortografici nei seguenti verbali:
-- Verable 24/02/18;
-- Verbale 24/02/22
+- Verbale 24/02/18;
+- Verbale 24/02/22;
 - Verbale 24/03/06;
 - Verbale 24/03/17.
 
 == #st
-Il #cardin ha epresso giudizio positivo nei confronti del documento #st_v, ritenendolo "in linea con quanto atteso". Tale risultato permette al gruppo di procedere con la candidatura per il secondo colloquio della Product Baseline.
+Il #cardin ha espresso giudizio positivo nei confronti del documento #st_v, ritenendolo "in linea con quanto atteso". Tale risultato permette al gruppo di procedere con la candidatura per il secondo colloquio della Product Baseline.
 
 == #ndp
 Il documento #ndp_v ha subito un aggiornamento in merito alla sezione _Processo di Misurazione_, relativo al sistema di tracciamento delle metriche. 
@@ -42,7 +42,7 @@ Il documento #pdq ha visto una ristrutturazione del suo contenuto, organizzando 
 
 Tale approccio, permette di rendere uniforme la rappresentazione delle metriche all'interno del documento, garantendo una maggiore coerenza stilistica e semplcità di manutenzione.
 
-Terminata inoltre, la redazione della sezione dedicata ai test di accettazione.
+Terminata, inoltre, la redazione della sezione dedicata ai test di accettazione.
 
 == #glo
 Il documento #glo_v ha visto l'aggiornamento dei termini:
@@ -50,13 +50,13 @@ Il documento #glo_v ha visto l'aggiornamento dei termini:
 - "Test di sistema", ora in grado di essere rilevato anche fosse scritto "system test".
 
 == #man
-Data la natura diversa e i destinatari a cui è destinato il documento #man, il gruppo ha redatto un glossario dedicato. 
+Data la natura diversa e i destinatari a cui è rivolto il documento #man, il gruppo ha redatto un glossario dedicato. 
 
 = Analisi retrospettiva
 Lo Sprint 24 è terminato con il raggiungimento della totalità degli obiettivi prefissati. Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq_v:
 - CPI di progetto a 1.01, che rappresenta un avanzamento positivo del progetto, con valore superiore alla soglia di accettabilità;
 - EAC aumenta passando da € 12.968,71 a € 12.969,18. L'aumento è irrisorio e non incide sul budget previsto. Il valore di tale metrica è oramai consolidato, e dato il limitato lavoro rimanente, non si prevedono variazioni significative;
-- $"SEV" >= "SPV"$, come testimoniato anche dalla metrica CPI, che indica un avanzamento positivo del progetto, che si avvicina alla sua conclusione.
+- $"SEV" = "SPV"$, come testimoniato anche dalla metrica CPI, che indica un avanzamento positivo del progetto, che si avvicina alla sua conclusione.
 
 == Keep doing 
 Il gruppo, ormai prossimo alla conclusione del progetto, ha raggiunto, come anche espresso dalle retrospettive precedenti, una soddisfacente capacità di lavoro in modalità asincrona. Il _way of working_ è consolidato e non necessita di ulteriori modifiche.

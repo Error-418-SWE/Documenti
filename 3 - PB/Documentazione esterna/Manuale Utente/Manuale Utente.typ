@@ -630,9 +630,9 @@ Successivamente alla creazione dell'ambiente di lavoro è possibile eliminare un
 
 Per eseguire tale operazione è possibile interagire con:
 
-- il pulsante rosso contenente la scritta "Elimina" contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@immagini_pulsanti_eliminazione_zona (sinistra));
+- il pulsante rosso contenente la scritta "Elimina" contenuto nella parte inferiore del pannello relativo alla visualizzazione delle informazioni di una zona (@immagini_pulsanti_eliminazione_zona, sinistra);
 
-- il pulsante contenente l'icona raffigurante un cestino (@immagini_pulsanti_eliminazione_zona (destra)) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da eliminare.
+- il pulsante contenente l'icona raffigurante un cestino (@immagini_pulsanti_eliminazione_zona, destra) presente nella lista delle zone (@visualizzazione_lista_zone) nella riga corrispondente alla zona da eliminare.
 
 #figure(
     grid(
@@ -651,7 +651,7 @@ Alla pressione di uno dei pulsanti elencati, verrà aperto il pannello di confer
   ],
 ) <immagine_pannello_conferma_eliminazione_zona>
 
-Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo pannello, la relativa zona (e conseguentemente tutti i bin in essa contenuti) verrà rimossa dall'ambiente di lavoro e dalla lista delle zone.
+Nel caso in cui venisse premuto il pulsante "Elimina" presente in quest'ultimo pannello, verranno rimossi dall'ambiente di lavoro e dalle liste la zona selezionata e tutti i bin in essa contenuti.
 
 Dal momento dell'eliminazione di una zona contenente dei prodotti, essi saranno visualizzabili nella lista dei prodotti non collocati (@visualizzazione_lista_prodotti) in attesa di una nuova collocazione.
 

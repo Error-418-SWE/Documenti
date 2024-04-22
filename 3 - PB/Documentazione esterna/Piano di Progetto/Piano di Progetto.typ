@@ -2211,14 +2211,14 @@ Questo sprint impiega:
 
 === Obiettivi prefissati
 
-Lo sprint 23 ha come obiettivo la preparazione per il colloquio PB col #cardin e la conclusione del lavoro di revisione dei documenti. Gli obiettivi prefissati sono:
+Lo sprint 23 ha come obiettivo la preparazione per il colloquio PB col #cardin (10/04/2024) e la conclusione del lavoro di revisione dei documenti. Gli obiettivi prefissati sono:
 - preparazione della presentazione per il colloquio PB col #cardin;
 - aggiornamento ed estensione del documento #pdp\;
 - aggiornamento grafici delle metriche nel #pdq allo sprint 22;
 - aggiornamento della dashboard Grafana allo sprint 22;
 - separazione della lista dei test di unità e quella dei test di integrazione nel documento #pdq;
 - redazione della sezione relativa ai test di sistema nel documento #pdq;
-- aggiunta della sezione riguardante la guida all'apertura della pagina atta all'utilizzo di WMS3 nel #man;
+- aggiunta della sezione riguardante la guida sull'avvio del software nel #man;
 - rimozione della sezione "Supporto tecnico" dal #man.
 
 === Preventivo costi
@@ -2268,8 +2268,22 @@ Questo sprint impiega:
 
 
 == Sprint 24 dal 14/04/2024 al 21/04/2024
+
 === Obiettivi prefissati
+
+Lo sprint 24 prevede esclusivamente compiti di ordinaria amministrazione, in attesa della ricezione del feedback sul colloquio PB col #cardin. Gli obiettivi prefissati sono:
+- candidatura allo sportello PB col #vardanega (data da definire, vincolata alla ricezione del feedback positivo sul documento #st\);
+- aggiornamento ed estensione del documento #pdp\;
+- aggiornamento grafici delle metriche nel #pdq allo sprint 22;
+- aggiornamento della dashboard Grafana allo sprint 22.
+
 === Preventivo costi
+
+Questo sprint impiega:
+- *Responsabile*: al fine di coordinare le attività;
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
 
 #figure(
   table(
@@ -3743,11 +3757,11 @@ Nessuno.
 === Problematiche
 Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 
-*P1*: Seppur durante lo Sprint siano state portate a termine tutte la task previste raggiungendo gli obiettivi prefissati, per alcune task non è stata rispettata la data di scadenza fissata. Ciò, pur non comportando rallentamenti o sovraccarico di lavoro, ha permesso di evidenziare nuovamente l'importanza di una comunicazione attiva.
+*P01*: Seppur durante lo Sprint siano state portate a termine tutte la task previste raggiungendo gli obiettivi prefissati, per alcune task non è stata rispettata la data di scadenza fissata. Ciò, pur non comportando rallentamenti o sovraccarico di lavoro, ha permesso di evidenziare nuovamente l'importanza di una comunicazione attiva.
 
-*P2*: Alcuni membri del gruppo evidenziano gli impegni universitari non ancora conclusi, che comportano una riduzione in termini di disponibilità.
+*P02*: Alcuni membri del gruppo evidenziano gli impegni universitari non ancora conclusi, che comportano una riduzione in termini di disponibilità.
 
-*P3*: Mancato sfruttamento del tempo alla conclusione delle task assegnate al singolo membro: si rinnova l'importanza di essere maggiormente proattivi.
+*P03*: Mancato sfruttamento del tempo alla conclusione delle task assegnate al singolo membro: si rinnova l'importanza di essere maggiormente proattivi.
 
 === Risoluzioni attuate
 #figure(caption: [Risoluzioni attuate Sprint 15.],
@@ -3755,8 +3769,8 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
       align: left,
       columns: (auto, 1fr, auto),
       [ID risoluzione], [Titolo], [Problematiche affrontate],
-      [RO1],[Riassegnazione task], [P1, P2],
-      [RO2],[Proattività],[P3]
+      [RO1],[Riassegnazione task], [P01, P02],
+      [RO2],[Proattività],[P03]
     )
 )
 
@@ -3836,8 +3850,8 @@ Durante lo Sprint 15 le ore preventivate (27) e le ore effettive (27) sono state
 Lo Sprint 15, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere tutti gli obiettivi prefissati. La distribuzione delle ore tra i membri del gruppo è stata differente da quanto preventivato, ma non ha comportato rallentamenti o sovraccarico di lavoro.
 
 Il rendimento positivo dello Sprint 15 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index passa dal valore 0.97 (allo Sprint 14) a 0.98, indicando un miglioramento del rendimento del gruppo;
-- EAC: l'Estimate At Completion passa dal valore 13.437,22 € (allo Sprint 14) a 13.292,70 € (seppur ancora maggiore al BAC), indicando una riduzione del costo finale del progetto se il rendimento del gruppo rimarrà costante.
+- CPI: il Cost Performance Index passa dal valore 0,97 (allo Sprint 14) a 0,98 indicando un miglioramento del rendimento del gruppo;
+- EAC: l'Estimate At Completion passa dal valore 13437,22 € (allo Sprint 14) a 13292,70 € (seppur ancora maggiore al BAC), indicando una riduzione del costo finale del progetto se il rendimento del gruppo rimarrà costante.
 
 
 == Sprint 16 dal 18-02-2024 al 25-02-2024
@@ -3986,7 +4000,7 @@ Lo sprint 16 ha permesso di raggiungere tutti gli obiettivi prefissati con una s
 
 Il rendimento positivo dello sprint 16 è supportato dalle principali metriche esposte dal #pdq, quali:
 - CPI: il Cost Performance Index passa dal valore 0,98 (allo sprint 15) a 1,02 e raggiunge un valore ottimale, denotando un miglioramento significativo del rendimento del gruppo;
-- EAC: l'Estimate At Completion passa dal valore € 13.292,70 (allo sprint 15) a € 12.777,29, considerabile come valore ottimale in quanto minore del BAC.
+- EAC: l'Estimate At Completion passa dal valore € 13292,70 (allo sprint 15) a € 12777,29, considerabile come valore ottimale in quanto minore del BAC.
 
 
 == Sprint 17 dal 25-02-2024 al 03-03-2024
@@ -4061,7 +4075,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
       align: left,
       columns: (auto, 1fr, auto),
       [ID risoluzione], [Titolo], [Criticità affrontate],
-      [R1],[Richiesta di colloquio via Zoom al #cardin], [P01]
+      [R01],[Richiesta di colloquio via Zoom al #cardin], [P01]
     )
 )
 
@@ -4142,8 +4156,8 @@ Durante lo sprint 17 le ore effettive (45) hanno superato di una unità le ore p
 Lo sprint 17, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere la quasi totalità degli obiettivi prefissati.
 
 Il rendimento complessivamente positivo dello sprint 17 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index passa dal valore 1,02 (allo sprint 16) a 1,01. Nonostante il lieve calo continua a rappresentare un valore accettabile (>=0,95), e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
-- EAC: l'Estimate At Completion passa dal valore € 12.777,29 (allo sprint 16) a € 12.987,48. Anche se aumentato, il valore è minore del BAC e rientra nel range di accettabilità.
+- CPI: il Cost Performance Index passa dal valore 1,02 (allo sprint 16) a 1,01. Nonostante il lieve calo continua a rappresentare un valore accettabile ($>=0,95$), e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
+- EAC: l'Estimate At Completion passa dal valore € 12777,29 (allo sprint 16) a € 12987,48. Anche se aumentato, il valore è minore del BAC e rientra nel range di accettabilità.
 
 
 == Sprint 18 dal 03-03-2024 al 10-03-2024
@@ -4208,7 +4222,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
       align: left,
       columns: (auto, 1fr, auto),
       [ID risoluzione], [Titolo], [Criticità affrontate],
-      [R1], [Aggiornamento continuo sugli sviluppi], [P01],
+      [R01], [Aggiornamento continuo sugli sviluppi], [P01],
       [OT-1.1.2\ (#pdp_v)], [Accettazione del rischio], [P02]
     )
 )
@@ -4292,8 +4306,8 @@ Durante lo sprint 18 le ore effettive (48) sono risultate inferiori di un'unità
 Nonostante la diminuzione dei costi rispetto al preventivo, lo sprint 18 ha permesso di completare buona parte degli obiettivi previsti.
 
 Il rendimento positivo dello sprint 18 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index rimane costante a 1.01, rappresentando ancora un valore ottimale ($>=1$);
-- EAC: l'Estimate At Completion diminuisce e passa dal valore di € 12.987,48 (allo sprint 17) a € 12.933,25.
+- CPI: il Cost Performance Index rimane costante a 1,01 rappresentando ancora un valore ottimale ($>=1$);
+- EAC: l'Estimate At Completion diminuisce e passa dal valore di € 12987,48 (allo sprint 17) a € 12933,25.
 
 
 == Sprint 19 dal 10-03-2024 al 17-03-2024
@@ -4366,7 +4380,7 @@ Durante il meeting di retrospettiva è sorta la seguente problematica:
       align: left,
       columns: (auto, 1fr, auto),
       [ID risoluzione], [Titolo], [Criticità affrontate],
-      [R1], [Migliore ridistribuzione dei task], [P01]
+      [R01], [Migliore ridistribuzione dei task], [P01]
     )
 )
 
@@ -4454,7 +4468,7 @@ Durante lo sprint 19 sono stati raggiunti buona parte degli obiettivi. Nonostant
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello sprint:
 - CPI: il Cost Performance Index diminuisce ma rimane entro l'intervallo di ottimalità, passando dal valore 1,01 (allo sprint 18) a 1,00;
-- EAC: l'Estimate At Completion passa dal valore € 12.933,25 (allo sprint 18) a € 12.990,31. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
+- EAC: l'Estimate At Completion passa dal valore € 12933,25 (allo sprint 18) a € 12990,31. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
 
 
 == Sprint 20 dal 17-03-2024 al 24-03-2024
@@ -4586,7 +4600,7 @@ Nonostante l'aumento di costo, lo sprint 20 ha permesso di completare la maggior
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello sprint:
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
-- EAC: l'Estimate At Completion rimane sostanzialmente invariato, passando dal valore di € 12.990,31 (allo sprint 19) a € 12.990,86.
+- EAC: l'Estimate At Completion rimane sostanzialmente invariato, passando dal valore di € 12990,31 (allo sprint 19) a € 12990,86.
 
 == Sprint 21 dal 24-03-2024 al 31-03-2024
 
@@ -4631,7 +4645,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
       align: left,
       columns: (auto, 1fr, auto),
       [ID risoluzione], [Titolo], [Criticità affrontate],
-      [R1], [Ridistribuzione dei task tra i membri], [P01]
+      [R01], [Ridistribuzione dei task tra i membri], [P01]
     )
 )
 
@@ -4716,7 +4730,7 @@ Lo sprint 21 si è concluso con il completamento totale delle attività previste
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello sprint:
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
-- EAC: l'Estimate At Completion aumenta, passando dal valore di € 12.990,86 (allo sprint 20) a € 13.010,59.
+- EAC: l'Estimate At Completion aumenta, passando dal valore di € 12990,86 (allo sprint 20) a € 13010,59.
 
 L'aumento dell'EAC, sebbene non significativo, ne avvicina il valore a quello del BAC, ovvero il massimale consentito.
 

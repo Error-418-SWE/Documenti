@@ -2208,8 +2208,28 @@ Questo sprint impiega:
 )
 
 == Sprint 23 dal 07/04/2024 al 14/04/2024
+
 === Obiettivi prefissati
+
+Lo sprint 23 ha come obiettivo la preparazione per il colloquio PB col #cardin e la conclusione del lavoro di revisione dei documenti. Gli obiettivi prefissati sono:
+- preparazione della presentazione per il colloquio PB col #cardin;
+- aggiornamento ed estensione del documento #pdp\;
+- aggiornamento grafici delle metriche nel #pdq allo sprint 22;
+- aggiornamento della dashboard Grafana allo sprint 22;
+- separazione della lista dei test di unità e quella dei test di integrazione nel documento #pdq;
+- redazione della sezione relativa ai test di sistema nel documento #pdq;
+- aggiunta della sezione riguardante la guida all'apertura della pagina atta all'utilizzo di WMS3 nel #man;
+- rimozione della sezione "Supporto tecnico" dal #man.
+
 === Preventivo costi
+
+Questo sprint impiega:
+- *Responsabile*: al fine di coordinare le attività;
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
+- *Progettista*: al fine di redigere le sezioni del #man\;
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp\.
 
 #figure(
   table(

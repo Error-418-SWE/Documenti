@@ -4063,9 +4063,8 @@ Lo Sprint 18 si è concluso raggiungendo buona parte degli obiettivi pianificati
   - redatto il capitolo Processo di validazione.
 
 - #pdp\:
-  - redatto preventivo dello Sprint 17, iniziato in data 25/02/2024;
-  - redatto consuntivo dello Sprint 17, terminato in data 03/03/2024;
-  - redatto preventivo dello Sprint 18, iniziato in data 03/03/2024.
+  - redatto preventivo dello Sprint 18, iniziato in data 03/03/2024;
+  - redatto consuntivo dello Sprint 17, terminato in data 03/03/2024.
 
 - #st\:
   - individuata struttura del documento;
@@ -4077,12 +4076,15 @@ Lo Sprint 18 si è concluso raggiungendo buona parte degli obiettivi pianificati
 - Codifica:
   - migliorato e popolato il database di supporto;
   - implementata l'importazione dei dati da database;
-  - aggiornato Docker compose;
+  - aggiornato Docker Compose;
   - implementate le classi:
     - `Product`;
     - `Bin`;
     - `Zone`.
-  - implementati i pannelli;
+  - implementati i pannelli di navigazione:
+    - `ProductPanel`;
+    - `BinPanel`;
+    - `ZonePanel`.
   - rimossi elementi superflui.
 
 
@@ -4119,25 +4121,25 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [1],     [1],     [1],     [0],     [4],     [2],     [9],
-    [Carraro],     [0],     [1],     [2],     [1],     [4 (+2)],     [1],     [9 (+2)],
-    [Gardin],     [2],     [0],     [2],     [0],     [1],     [3],     [8],
-    [Nardo],     [0],     [3],     [0],     [1 (+1)],     [4],     [2 (+2)],     [10 (+3)],
-    [Oseliero],     [ (-1)],     [0],     [0],     [1],     [4 (+1)],     [3],     [8],
-    [Todesco],     [2],     [0],     [2],     [0],     [3],     [0],     [7],
-    [Zaccone],     [0],     [2],     [2],     [0],     [3],     [0],     [7],
-    [Totale ore],     [5 (-1)],     [7],     [9],     [3 (+1)],     [23 (+3)],     [11 (+2)],     [58 (+5)],
-    [Costo ruolo],     [150 (-30)],     [140],     [225],     [75 (+25)],     [345 (+45)],     [165 (+30)],     [1100 (+70)],
+    [Banzato],     [2],     [0],     [1],     [1 (+1)],     [2],     [0],     [6 (+1)],
+    [Carraro],     [1 (-1)],     [0],     [0],     [0],     [ (-2)],     [5],     [6 (-3)],
+    [Gardin],     [0],     [0],     [1],     [0],     [3 (+1)],     [3],     [7 (+1)],
+    [Nardo],     [0],     [2],     [0],     [2],     [1 (-1)],     [0],     [5 (-1)],
+    [Oseliero],     [2],     [0],     [2],     [0],     [3 (+1)],     [1],     [8 (+1)],
+    [Todesco],     [0],     [0],     [2],     [1 (-1)],     [5],     [0],     [8 (-1)],
+    [Zaccone],     [0],     [1 (+1)],     [2],     [0],     [5],     [0],     [8 (+1)],
+    [Totale ore],     [5 (-1)],     [3 (+1)],     [8],     [4],     [19 (-1)],     [9],     [48 (-1)],
+    [Costo ruolo],     [150 (-30)],     [60 (+20)],     [200],     [100],     [285 (-15)],     [135],     [930 (-25)],
   ),
   caption: "Prospetto del consuntivo, sprint 18"
 )
 #let data = (
   ("Responsabile", 6, 5),
-  ("Amministratore", 7, 7),
-  ("Analista", 9, 9),
-  ("Progettista", 2, 3),
-  ("Programmatore", 20, 23),
-  ("Verificatore", 9, 11),
+  ("Amministratore", 2, 3),
+  ("Analista", 8, 8),
+  ("Progettista", 4, 4),
+  ("Programmatore", 20, 19),
+  ("Verificatore", 9, 9),
 )
 #let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
 #let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
@@ -4166,12 +4168,11 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   supplement: "Grafico"
 )
 
-Durante lo Sprint 18 le ore effettive (58) hanno superato di cinque unità le ore preventivate (53), in particolare:
+Durante lo Sprint 18 le ore effettive (48) sono risultate inferiori di un'unità rispetto al preventivato (49), in particolare:
 
-- Progettista e Programmatore hanno avuto un aumento di ore causato dalla quantità di lavoro svolto sullo sviluppo del MVP e sulla stesura della #st\;
-- il Verificatore ha avuto un lieve aumento di ore in risposta al punto precedente e al lavoro che si sta svolgendo sull'#adr\.
-
-L'aumento del costo dello Sprint è stato influenzato principalmente dalle ore di Progettista e Programmatore, in quanto il costo causato dall'aumento orario del Verificatore è stato bilanciato indirettamente da un calo di ore nel Responsabile.
+- la redazione delle #ndp ha richiesto un impegno inferiore del previsto da parte del Responsabile;
+- l'Amministratore ha dovuto espletare alcune attività non previste a supporto della codifica;
+- il Programmatore ha richiesto un impegno inferiore del previsto grazie alle _utilities_ offerte dal framework Next.js per l'implementazione delle funzionalità richieste per l'accesso al database.
 
 === Monitoraggio costi e ore
 
@@ -4179,22 +4180,22 @@ L'aumento del costo dello Sprint è stato influenzato principalmente dalle ore d
   table(
     columns: 3,
     [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
-    [Responsabile],     [9],     [270],
-    [Amministratore],     [6],     [120],
-    [Analista],     [10],     [250],
-    [Progettista],     [3],     [75],
+    [Responsabile],     [12],     [360],
+    [Amministratore],     [20],     [400],
+    [Analista],     [11],     [275],
+    [Progettista],     [5],     [125],
     [Programmatore],     [117],     [1755],
-    [Verificatore],     [50],     [750],
-    [Rimanente],     [195],     [3220],
+    [Verificatore],     [55],     [825],
+    [Rimanente],     [220],     [3740],
   ),
   caption: "Monitoraggio, sprint 18"
 )
 
-Nonostante l'aumento del costo preventivato, lo Sprint 18 ha permesso di completare buona parte degli obiettivi previsti.
+Nonostante la diminuzione dei costi rispetto al preventivo, lo Sprint 18 ha permesso di completare buona parte degli obiettivi previsti.
 
 Il rendimento positivo dello Sprint 18 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index rimane costante a 0.99, rappresentando ancora un valore accettabile ($>=0.95$) e rimanendo molto vicino all'ottimalità, rappresentata da valori $>=1$;
-- EAC: l'Estimate At Completion passa dal valore di 13.155,40 € (allo Sprint 17) a 13.210,90 €. Nonostante sia aumentato rientra comunque nelle condizioni di accettabilità.
+- CPI: il Cost Performance Index rimane costante a 1.01, rappresentando ancora un valore ottimale ($>=1$);
+- EAC: l'Estimate At Completion diminuisce e passa dal valore di € 12.987,48 (allo Sprint 17) a € 12.933,25.
 
 
 == Sprint 19 dal 10-03-2024 al 17-03-2024

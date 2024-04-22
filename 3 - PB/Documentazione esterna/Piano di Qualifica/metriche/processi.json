@@ -1,0 +1,195 @@
+{
+    "fornitura" : [
+        {
+          "codice" : "MP1",
+          "sigla" : "BAC",
+          "nome" : "Budget at Completion",
+          "formula" : "Definito all'interno del #json_pdp_v",
+          "sogliaOttimale" : "minimizzato",
+          "sogliaAccettabile" : "minimizzato",
+          "parametri" : [],
+          "descrizione" : "Valore indicante il budget massimo a disposizione del gruppo per lo svolgimento del progetto. Il valore ammonta a € 13.055,00 come stabilito nel documento #json_pdp_v.",
+          "estensioni" : [],
+          "noteAggiuntive" : "Come stabilito dal regolamento del progetto didattico, tale valore deve essere superiore alla soglia minima di € 12.000,00 e non superiore a quanto presentato alla candidatura."
+        },
+        {
+        "codice": "MP2",
+        "sigla": "PV",
+        "nome" : "Planned Value",
+        "parametri" : [],
+        "descrizione": "La metrica *PV* rappresenta il valore pianificato, ovvero il costo preventivato per portare a termine le attività pianificate nello Sprint. Per il calcolo del valore pianificato si considera la sommatoria delle ore preventivate per il costo del ruolo necessario al loro svolgimento, secondo quanto definito nel documento #json_pdp_v. Il calcolo di tale metrica è esteso anche all'intero progetto, dove il valore pianificato è definito come sommatoria dei PV di ogni singolo Sprint.",
+        "estensioni" : [
+          {
+            "codice": "MP2.1",
+            "sigla" : "SPV",
+            "nome" : "Sprint Planned Value",
+            "descrizione" : "Valore pianificato per un determinato Sprint.",
+            "sogliaOttimale" : "$>0$",
+            "sogliaAccettabile" : "$>0$",
+            "formula": "*SPV* $= sum_(r in R) \"OR\"_r dot \"CR\"_r$",
+            "parametri" : [
+              {
+                "nome" : "$r in R$",
+                "descrizione" : "$\"R = {Responsabile, Amministratore, Analista, Progettista, Programmatore, Verificatore}\"$"
+              },
+              {
+                "nome" : "$\"OR\"_r$",
+                "descrizione" : "ore ruolo"
+              },
+              {
+                "nome" : "$\"CR\"_r$",
+                "descrizione" : "costo ruolo"
+              }
+            ]
+          },
+          {
+            "codice": "MP2.2",
+            "sigla" : "PPV",
+            "nome" : "Project Planned Value",
+            "descrizione" : "Valore pianificato per l'intero progetto.",
+            "sogliaOttimale" : "$cases(>0, <=\"BAC\")$",
+            "sogliaAccettabile" : "$cases(>0, <=\"BAC\")$",
+            "formula": "*PPV* $= sum_(r in R) \"OR\"_r dot \"CR\"_r$",
+            "parametri" : [
+              {
+                "nome" : "$s in S$",
+                "descrizione" : "con S insieme degli Sprint svolti"
+              }
+            ]
+          }
+        ],
+        "noteAggiuntive" : "La metrica è un indice necessario a determinare il valore atteso del lavoro svolto in un determinato Sprint. Il suo valore strettamente maggiore di 0 indica che non sono contemplati periodi di inattività."
+      },
+      {
+        "codice" : "MP3",
+        "sigla" : "AC",
+        "nome" : "Actual Cost",
+        "parametri" : [],
+        "descrizione" : "La metrica *AC* rappresenta la somma dei costi sostenuti dal gruppo in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come consuntivo dei singoli Sprint.",
+        "estensioni" : [
+          {
+            "codice" : "MP3.1",
+            "sigla" : "SAC",
+            "nome" : "Sprint Actual Cost",
+            "descrizione" : "Costo effettivo sostenuto dal gruppo in un determinato Sprint.",
+            "sogliaOttimale" : "$<=\"SPV\"$",
+            "sogliaAccettabile" : "$<=\"SPV\" + 10%$",
+            "formula" : "*SAC* = Somma dei costi sostenuti nello Sprint",
+            "parametri" : []
+          },
+          {
+            "codice" : "MP3.2",
+            "sigla" : "PAC",
+            "nome" : "Project Actual Cost",
+            "descrizione" : "Costo effettivo sostenuto dal gruppo dall'inizio del progetto, definito come sommatoria dei *SAC*.",
+            "sogliaOttimale" : "$<=\"BAC\"$",
+            "sogliaAccettabile" : "$<=\"BAC\"$",
+            "formula" : "*PAC* $= sum_(s in S)\"SAC\"_(\"s\")$",
+            "parametri" : [
+              {
+                "nome" : "$s in S$",
+                "descrizione" : "con S insieme degli Sprint svolti"
+              }
+            ]
+          }
+        ],
+        "noteAggiuntive" : "Nessuna."
+      },
+      {
+        "codice" : "MP4",
+        "sigla" : "EV",
+        "nome" : "Earned Value",
+        "parametri" : [],
+        "descrizione" : "L'Earned Value rappresenta il valore guadagnato dal progetto in un determinato periodo di tempo. Tale metrica viene calcolata sia in riferimento all'intero progetto, sia come consuntivo dei singoli Sprint.",
+        "estensioni" : [
+          {
+            "codice" : "MP4.1",
+            "sigla" : "SEV",
+            "nome" : "Sprint Earned Value",
+            "descrizione" : "Valore guadagnato dal progetto in un determinato Sprint, dove lo stato di completamento del lavoro è espresso mediante il rapporto tra gli story points completati e quelli pianificati per lo Sprint.",
+            "sogliaOttimale" : "$=\"SPV\"$",
+            "sogliaAccettabile" : "$>=80% \" SPV\"$",
+            "formula" : "*SEV* $= display(\"SPC\"/\"SPP\") dot \"SPV\"$",
+            "parametri" : []
+          },
+          {
+            "codice" : "MP4.2",
+            "sigla" : "PEV",
+            "nome" : "Project Earned Value",
+            "descrizione" : "Valore guadagnato dal progetto dal suo inizio, definito come sommatoria dei *SEV*.",
+            "sogliaOttimale" : "$=\"PPV\"$",
+            "sogliaAccettabile" : "$>= 80%\" PPV\"$",
+            "formula" : "*PEV* $= sum_(s in S)\"SEV\"_(\"s\")$",
+            "parametri" : [
+              {
+                "nome" : "$s in S$",
+                "descrizione" : "con S insieme degli Sprint svolti"
+              }
+            ]
+          }
+        ],
+        "noteAggiuntive" : "Nessuna."
+      },
+      {
+        "codice" : "MP5",
+        "sigla" : "CPI",
+        "nome" : "Cost Performance Index",
+        "formula" : "*CPI* $= display(\"PEV\"/\"PAC\")$",
+        "sogliaOttimale" : "$>=1$",
+        "sogliaAccettabile" : "$>=0.95$",
+        "parametri" : [],
+        "descrizione": "Il *CPI* rappresenta l'indice di performance del costo, ovvero il rapporto tra il valore guadagnato e il costo effettivo sostenuto. Tale metrica viene calcolata in riferimento al valore totale raggiunto del progetto (*PEV*) in proporzione al costo effettivo sostenuto (*PAC*).",
+        "estensioni" : [],
+        "noteAggiuntive" : "Un rapporto maggiore di 1 indica che il valore raggiunto è superiore al costo effettivo sostenuto. Data la natura didattica del progetto e l'inesperienza del gruppo, si ritiene accettabile un valore di *CPI* $>= 0.95$, valore indicante un costo effettivo leggermente superiore al valore guadagnato."
+      },
+      {
+        "codice" : "MP6",
+        "sigla" : "EAC",
+        "nome" : "Estimated at Completion",
+        "formula" : "*EAC* $= display(\"BAC\"/\"CPI\")$",
+        "sogliaOttimale" : "$<=\"BAC\"$",
+        "sogliaAccettabile" : "$cases( <= \"BAC\" + 5%, <= \"BAC alla consegna\", >= \"12000 da regolamento\")$",
+        "parametri" : [],
+        "descrizione": "La metrica *EAC* rappresenta il costo stimato per portare a termine il progetto, calcolato in base all'indice di performance del costo (*CPI*).",
+        "estensioni" : [],
+        "noteAggiuntive" : "Il costo totale del capitolato non può essere maggiore rispetto a quanto espresso in candidatura, pertanto gli unici valori accettabili (e ottimali) sono pari o inferiori rispetto al *BAC*. Dipendendo strettamente dall'indice di performance (*CPI*), il valore della metrica *EAC* può subire variazioni anche al rialzo. Sarà compito del gruppo assorbire eventuali costi aggiuntivi, al fine di mantenere il valore della metrica *EAC* entro i limiti stabiliti in prospettiva della milestone esterna *PB*."
+      }
+    ],
+    "documentazione" : [
+        {
+            "codice" : "MP7",
+            "sigla" : "EO",
+            "nome" : "Errori Ortografici",
+            "formula" : "Errori ortografici presenti nei documenti",
+            "sogliaOttimale" : "0",
+            "sogliaAccettabile" : "0",
+            "parametri" : [],
+            "descrizione": "Indica il numero di errori ortografici presenti nei documenti individuati durante i processi di verifica e/o di revisione.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Nessuna."
+        }
+    ],
+    "miglioramento" : [
+        {
+            "codice" : "MP8",
+            "sigla" : "MS",
+            "nome" : "Metriche Soddisfatte",
+            "formula" : "*MS* = $display(\"MS\"/\"MT\") dot 100$",
+            "sogliaOttimale" : "$=100%$",
+            "sogliaAccettabile" : "$>=75%$",
+            "parametri" : [
+                {
+                    "nome" : "MS",
+                    "descrizione" : "numero di metriche soddisfatte"
+                },
+                {
+                    "nome" : "MT",
+                    "descrizione" : "numero di metriche totali"
+                }
+            ],
+            "descrizione": "Indica la percentuale di metriche soddisfatte rispetto a quelle totali.",
+            "estensioni" : [],
+            "noteAggiuntive" : "Avere un resoconto delle metriche soddisfatte per ogni Sprint permette di evidenziare eventuali criticità e di attuare le misure di correzione necessarie."
+        }
+    ]
+}

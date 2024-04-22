@@ -88,8 +88,8 @@ Per i requisiti di sistema e hardware si rimanda al documento #st_v.
 
 Per aprire la pagina web dedicata all'utilizzo di WMS3, è necessario seguire i seguenti passaggi:
 
-  - assicurarsi che il programma sia in esecuzione. In caso di necessità, la procedura per eseguire il software è descritta nel documento #st_v\;
-  - aprire un browser web e collegarsi all'indirizzo "localhost:3000".
+- assicurarsi che il programma sia in esecuzione. In caso di necessità, la procedura per eseguire il software è descritta nel documento #st_v\;
+- aprire un browser tra quelli supportati e collegarsi all'indirizzo "localhost:3000".
 
 
 == Avvio e Configurazione dell'ambiente

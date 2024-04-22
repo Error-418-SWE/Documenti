@@ -185,7 +185,6 @@ A ciascun rischio individuato si associano:
 I rischi sono suddivisi nelle categorie:
 + rischi tecnici;
 + rischi esterni;
-+ rischi organizzativi;
 + rischi di project management.
 
 
@@ -301,7 +300,6 @@ Miglioramento dell'efficienza nel completamento dei compiti nonostante i rallent
 Le attività non svolte o completate parzialmente possono determinare uno slittamento della data di consegna e delle scadenze intermedie prefissate.
 
 
-=== Rischi organizzativi
 === Rischi di project management
 
 *RIS-4.1 Comunicazione con il Proponente* <RIS-4.1>

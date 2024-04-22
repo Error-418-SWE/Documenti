@@ -4811,11 +4811,32 @@ Nessuna.
   supplement: "Grafico"
 )
 
-// == Sprint n dal D1-M1-2024 al D2-M2-2024
+Durante lo sprint 22 le ore effettive (27) hanno superato di due unità le ore preventivate (25), in particolare:
+- l'Amministratore è stato impegnato nella risoluzione di un problema di connessione alle API dell'ITS adottato dal gruppo, oltre che nello svolgimento delle attività pianificate;
+- il Verificatore ha richiesto un impegno maggiore del previsto per la verifica della lista dei test di sistema.
 
-// === Obiettivi raggiunti
+=== Monitoraggio costi e ore
 
-// === Obiettivi mancati
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [1],     [30],
+    [Amministratore],     [10],     [200],
+    [Analista],     [4],     [100],
+    [Progettista],     [-4],     [-100],
+    [Programmatore],     [33],     [495],
+    [Verificatore],     [-2],     [-30],
+    [Rimanente],     [42],     [695],
+  ),
+  caption: "Monitoraggio, sprint 22"
+)
+
+Lo sprint 22 si è concluso con il completamento di tutti gli obiettivi di periodo.
+
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello sprint:
+- CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
+- EAC: l'Estimate At Completion diminuisce e si allontana dal valore di soglia (BAC), passando dal valore di € 13010,59 (allo sprint 21) a € 12992,10.
 
 // === Problematiche
 // Durante il meeting di retrospettiva sono sorte le seguenti problematiche:

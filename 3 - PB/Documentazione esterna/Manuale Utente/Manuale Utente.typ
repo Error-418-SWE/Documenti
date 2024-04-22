@@ -478,7 +478,7 @@ I prodotti non collocati, visualizzabili nell'apposita sezione del menù *Prodot
 
 == Ricerca zone <ricerca_zone>
 
-Nella parte superiore del pannello relativo alla visualizzazione della lista delle zone (@icona_lista_zone (destra)), è presente l'area di ricerca delle zone tramite `ID`.
+Nella parte superiore del pannello relativo alla visualizzazione della lista delle zone (@icona_lista_zone, destra), è presente l'area di ricerca delle zone tramite `ID`.
 
 Dopo aver inserito il parametro desiderato nella barra di ricerca, verranno mostrati nell'area sottostante i risultati relativi alle zone aventi un `ID` che contenga al suo interno il parametro immesso.
 

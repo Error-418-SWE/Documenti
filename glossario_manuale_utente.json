@@ -1,0 +1,61 @@
+{
+	"Bin": {
+	  "description": "Unità minima di spazio del magazzino atta a contenere prodotti. I bin sono posizionati in automatico all'interno degli scaffali al momento della loro creazione, e possono contenere al massimo un tipo di prodotto. È possibile creare bin, eliminarli se vuoti, e modificarne le dimensioni.",
+	  "acronyms": [],
+	  "synonyms": []
+	},
+	"Browser": {
+	  "description": "Programma che permette il collegamento alla rete Internet mediante il quale si può navigare tra i siti telematici e visualizzare informazioni.",
+	  "acronyms": [],
+	  "synonyms": []
+	},
+	"Capitolato": {
+	  "description": "Documento redatto dal Proponente in cui viene presentato un progetto, del quale sono specificati gli obiettivi, le tecnologie consigliate per l'implementazione e le principali funzionalità.",
+	  "acronyms": [],
+	  "synonyms": []
+	},
+	"Documentazione": {
+	  "description": "È un insieme di testi scritti allo scopo di spiegare e documentare specifici aspetti e funzionalità del prodotto realizzato e dell'organizzazione progettuale.",
+	  "acronyms": [],
+	  "synonyms": []
+	},
+	"Ingegneria del Software": {
+	  "description": "Disciplina che si occupa della progettazione, sviluppo, test e manutenzione di un programma. Adotta un approccio sistematico, disciplinato e quantificabile, che mira a ottenere un prodotto di alta qualità, affidabile e manutenibile.",
+	  "acronyms": [
+		"IS",
+		"SWE"
+	  ],
+	  "synonyms": []
+	},
+	"Scalable Vector Graphics": {
+	  "description": "File vettoriale di tipo grafico che si allineano agli standard compatibili con il web.",
+	  "acronyms": [
+		"SVG"
+	  ],
+	  "synonyms": []
+	},
+	"Structured Query Language": {
+	  "description": "Linguaggio di programmazione progettato per creare e modificare basi di dati basate sul modello relazionale e gestirne i dati memorizzati.",
+	  "acronyms": [
+		"SQL"
+	  ],
+	  "synonyms": []
+	},
+	"Utente": {
+	  "description": "Colui che usufruisce dell'applicazione e delle sue funzionalità.",
+	  "acronyms": [],
+	  "synonyms": []
+	},
+	"Versione": {
+	  "description": "Indica un determinato stato dello sviluppo di un software, programma, documento o applicazione.",
+	  "acronyms": [],
+	  "synonyms": [
+		"Version"
+	  ]
+	},
+	"Zona": {
+	  "description": "Rappresenta una zona di contenimento dei bin, interpretabile come scaffale (se a più ripiani) o area di stoccaggio sul piano (se a un ripiano).",
+	  "acronyms": [],
+	  "synonyms": []
+	}
+  }

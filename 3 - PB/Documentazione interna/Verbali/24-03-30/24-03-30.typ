@@ -58,9 +58,9 @@ Il rendimento positivo dello Sprint è sostenuto dalle principali metriche espos
 
 - CPI di progetto a 1.00, rappresenta un valore accettabile ($>=0.95$) e ottimo ($>=1$);
 
-- EAC aumenta da 12.933,25 a 12.990,31€, nonostante l'aumento, rientra nelle condizioni di ottimalità;
+- EAC aumenta da 12.990,86 a 13.010,59€, nonostante l'aumento, rientra nelle condizioni di ottimalità;
 
-- $"SEV" <= "SPV"$, rientra nelle condizioni di accettabilità poiché $"SEV" >= 80%$ del $"SVP"$.
+- $"SEV" = "SPV"$, rientra nelle condizioni di accettabilità poiché $"SEV" >= 80%$ del $"SVP"$.
 
 \
 Maggiori dettagli in merito al valore delle metriche alla loro analisi sono reperibili all'interno dei documenti #pdq_v e #pdp_v.

@@ -5048,4 +5048,4 @@ Lo Sprint 24 si è concluso con il completamento di tutti gli obiettivi di perio
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
 - CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,01;
-- EAC: l'Estimate At Completion aumenta lievemente, attestandosi su 12969,18 € rispetto al valore di 12992,10 € dello Sprint precedente.
+- EAC: l'Estimate At Completion aumenta lievemente, attestandosi su 12969,18 € rispetto al valore di 12968,71 € dello Sprint precedente.

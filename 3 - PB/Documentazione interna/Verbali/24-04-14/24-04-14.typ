@@ -1,7 +1,7 @@
 #import "/template.typ": *
 
 #show: project.with(
-  date: "15/04/24",
+  date: "14/04/24",
   subTitle: "Meeting di retrospettiva e pianificazione",
   docType: "verbale",
   authors: (

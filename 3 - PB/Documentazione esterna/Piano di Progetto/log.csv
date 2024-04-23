@@ -1,39 +1,55 @@
-1.15.1,18-04-2024,457,DOC-721 Risolto typo Piano di Progetto,Oseliero Antonio,Banzato Alessio
-1.15.0,20-03-2024,384,DOC-623 Redigere consuntivo di periodo Sprint 19,Banzato Alessio,Todesco Mattia
-1.14.0,17-03-2024,371,DOC-584 Redigere consuntivo di periodo Sprint 18,Banzato Alessio,Todesco Mattia
-1.13.0,04-03-2024,345,DOC-538 Redigere preventivo sprint 17,Oseliero Antonio,Todesco Mattia
-1.12.0,27-02-2024,333,DOC-518 Redigere preventivo di periodo Sprint 16,Gardin Giovanni,Carraro Riccardo
-1.11.0,25-02-2024,323,DOC-515 Aggiunta struttura codificata ai rischi e loro opzioni di trattamento,Nardo Silvio,Carraro Riccardo
-1.10.0,24-02-2024,309,DOC-517 Redigere consuntivo di periodo Sprint 15,Carraro Riccardo,Gardin Giovanni
+1.30.0,23-04-2024,445,DOC-764 Redigere consuntivo di periodo Sprint 24,Gardin Giovanni,Carraro Riccardo
+1.29.0,22-04-2024,445,DOC-687 Redigere preventivo di periodo Sprint 25,Gardin Giovanni,Carraro Riccardo
+1.28.2,18-04-2024,433,DOC-765 Risolto typo Piano di Progetto,Oseliero Antonio,Banzato Alessio
+1.28.1,16-04-2024,432,DOC-755 Correggere typo nel consuntivo di periodo Sprint 23,Zaccone Rosario,Nardo Silvio
+1.28.0,16-04-2024,430,DOC-716 Redigere consuntivo di periodo Sprint 23,Zaccone Rosario,Nardo Silvio
+1.27.0,14-04-2024,426,DOC-732 Redigere preventivo di periodo Sprint 24,Carraro Riccardo,Gardin Giovanni
+1.26.0,10-04-2024,412,DOC-715 Redigere preventivo di periodo Sprint 23,Nardo Silvio,Todesco Mattia
+1.25.0,09-04-2024,409,DOC-721 Redigere consuntivo di periodo Sprint 22,Nardo Silvio,Todesco Mattia
+1.24.0,04-04-2024,408,DOC-689 Redigere consuntivo di periodo Sprint 21,Oseliero Antonio,Carraro Riccardo
+1.23.0,02-04-2024,400,DOC-690 Redigere preventivo di periodo Sprint 22,Nardo Silvio,Gardin Giovanni
+1.22.0,24-03-2024,392,DOC-656 Redigere consuntivo di periodo Sprint 20,Oseliero Antonio,Banzato Alessio
+1.21.0,24-03-2024,390,DOC-657 Redigere preventivo di periodo Sprint 21,Oseliero Antonio,Banzato Alessio
+1.20.0,20-03-2024,384,DOC-623 Redigere consuntivo di periodo Sprint 19,Banzato Alessio,Todesco Mattia
+1.19.0,19-03-2024,380,DOC-622 Redigere preventivo di periodo Sprint 20,Zaccone Rosario,Gardin Giovanni
+1.18.0,17-03-2024,371,DOC-584 Redigere consuntivo di periodo Sprint 18,Banzato Alessio,Todesco Mattia
+1.17.0,12-03-2024,372,DOC-583 Redigere preventivo di periodo Sprint 19,Carraro Riccardo,Nardo Silvio
+1.16.0,06-03-2024,352,DOC-561 Redigere consuntivo di periodo Sprint 17,Zaccone Rosario,Carraro Riccardo
+1.15.0,06-03-2024,353,DOC-560 Redigere preventivo di periodo Sprint 18,Zaccone Rosario,Carraro Riccardo
+1.14.0,04-03-2024,345,DOC-538 Redigere preventivo Sprint 17,Oseliero Antonio,Todesco Mattia
+1.13.0,26-02-2024,330,DOC-540 Redigere consuntivo di periodo Sprint 16,Nardo Silvio,Todesco Mattia
+1.12.0,25-02-2024,323,DOC-515 Aggiungere struttura codificata ai rischi e loro opzioni di trattamento,Nardo Silvio,Carraro Riccardo
+1.11.0,24-02-2024,309,DOC-517 Redigere consuntivo di periodo Sprint 15,Carraro Riccardo,Gardin Giovanni
+1.10.0,20-02-2024,333,DOC-518 Redigere preventivo di periodo Sprint 16,Gardin Giovanni,Carraro Riccardo
 1.9.0,18-02-2024,296,DOC-489 Includere il contenuto della Analisi dei Rischi,Gardin Giovanni,Carraro Riccardo
-1.8.1,18-02-2024,301,DOC-503 Uso delle variabili per riferirsi ai documenti,Gardin Giovanni,Carraro Riccardo
+1.8.1,18-02-2024,301,DOC-503 Applicare uso delle variabili per riferirsi ai documenti,Gardin Giovanni,Carraro Riccardo
 1.8.0,16-02-2024,278,DOC-477 Redigere preventivo di periodo Sprint 15,Gardin Giovanni,Carraro Riccardo
-1.7.0,14-02-2024,270,DOC-476 Redigere consuntivo di periodo sprint 14,Gardin Giovanni,Carraro Riccardo
-1.6.0,14-02-2024,270,DOC-476 Redigere consuntivo di periodo sprint 14,Gardin Giovanni,Carraro Riccardo
+1.7.0,14-02-2024,270,DOC-476 Redigere consuntivo di periodo Sprint 14,Gardin Giovanni,Carraro Riccardo
+1.6.0,14-02-2024,270,DOC-476 Redigere consuntivo di periodo Sprint 14,Gardin Giovanni,Carraro Riccardo
 1.5.1,13-02-2024,264,DOC-465 Aggiunte date di ultimo accesso,Gardin Giovanni,Carraro Riccardo
 1.5.0,11-02-2024,228,DOC-378 Refactor Piano di Progetto,Gardin Giovanni,Nardo Silvio
-1.4.0,17-01-2024,198,DOC-336 Aggiornato preventivo Sprint 9,Gardin Giovanni,Zaccone Rosario
-1.3.0,17-01-2024,199,DOC-338 Aggiornato consuntivo Sprint 8,Gardin Giovanni,Zaccone Rosario
-1.2.0,16-01-2024,196,DOC-361 Redigere preventivo sprint 11,Todesco Mattia,Zaccone Rosario
+1.4.0,17-01-2024,198,DOC-336 Correggere preventivo Sprint 9,Gardin Giovanni,Zaccone Rosario
+1.3.0,17-01-2024,199,DOC-338 Correggere consuntivo Sprint 8,Gardin Giovanni,Zaccone Rosario
+1.2.0,16-01-2024,196,DOC-361 Redigere preventivo Sprint 11,Todesco Mattia,Zaccone Rosario
 1.1.0,14-01-2024,180,DOC-328 Revisionare Piano di Progetto,Banzato Alessio,Carraro Riccardo
-1.0.0,02-01-2024,135,DOC-291 Redigere preventivo e pianificazione sprint 8,Banzato Alessio,Oseliero Antonio
-1.0.0,31-12-2023,133,DOC-290 Redigere consuntivo sprint 7,Banzato Alessio,Oseliero Antonio
-1.13.0,21-12-2023,118,DOC-273 Redigere preventivo e pianificazione dello sprint 7,Banzato Alessio,Oseliero Antonio
-1.12.1,21-12-2023,120,DOC-198 Includere ruolo programmatore per sprint precedenti,Banzato Alessio,Oseliero Antonio
-1.12.0,21-12-2023,115,DOC-274 Redigere consuntivo sprint 6,Banzato Alessio,Oseliero Antonio
+1.0.0,02-01-2024,135,DOC-291 Redigere preventivo e pianificazione Sprint 8,Banzato Alessio,Oseliero Antonio
+1.0.0,31-12-2023,133,DOC-290 Redigere consuntivo Sprint 7,Banzato Alessio,Oseliero Antonio
+1.13.0,21-12-2023,118,DOC-273 Redigere preventivo e pianificazione dello Sprint 7,Banzato Alessio,Oseliero Antonio
+1.12.1,21-12-2023,120,DOC-198 Includere ruolo programmatore per Sprint precedenti,Banzato Alessio,Oseliero Antonio
+1.12.0,21-12-2023,115,DOC-274 Redigere consuntivo Sprint 6,Banzato Alessio,Oseliero Antonio
 1.11.3,19-12-2023,114,DOC-257 Correggere dichiarazione tabelle Piano di Progetto,Banzato Alessio,Oseliero Antonio
-1.11.2,17-12-2023,104,DOC-199 Aggiunta della figura del programmatore nel preventivo del quarto sprint,Nardo Silvio,Carraro Riccardo
-1.11.1,14-12-2023,104,DOC-199 Aggiunta della figura del programmatore nel preventivo del quarto sprint,Nardo Silvio,Todesco Mattia
-1.11.0,14-12-2023,103,DOC-224 Aggiunto preventivo sprint sei,Nardo Silvio,Todesco Mattia
-1.10.0,14-12-2023,93,DOC-222 Aggiunto consuntivo quinto sprint,Nardo Silvio,Carraro Riccardo
-1.10.0,14-12-2023,93,DOC-222 Aggiunto consuntivo quinto sprint,Nardo Silvio,Todesco Mattia
-1.9.0,10-12-2023,79,DOC-189 Redatto consuntivo sprint 4,Zaccone Rosario,Todesco Mattia
-1.8.0,10-12-2023,80,DOC-54 Redatto consuntivo sprint 2,Zaccone Rosario,Todesco Mattia
+1.11.2,17-12-2023,104,DOC-199 Aggiunta della figura del programmatore nel preventivo del quarto Sprint,Nardo Silvio,Carraro Riccardo
+1.11.1,14-12-2023,104,DOC-199 Aggiunta della figura del programmatore nel preventivo del quarto Sprint,Nardo Silvio,Todesco Mattia
+1.11.0,14-12-2023,103,DOC-224 Aggiunto preventivo Sprint sei,Nardo Silvio,Todesco Mattia
+1.10.0,14-12-2023,93,DOC-222 Aggiunto consuntivo quinto Sprint,Nardo Silvio,Carraro Riccardo
+1.10.0,14-12-2023,93,DOC-222 Aggiunto consuntivo quinto Sprint,Nardo Silvio,Todesco Mattia
+1.9.0,10-12-2023,79,DOC-189 Redatto consuntivo Sprint 4,Zaccone Rosario,Todesco Mattia
+1.8.0,10-12-2023,80,DOC-54 Redatto consuntivo Sprint 2,Zaccone Rosario,Todesco Mattia
 1.7.0,10-12-2023,82,DOC-47 Redazione paragrafo analisi dei costi,Carraro Riccardo,Todesco Mattia
-1.6.0,10-12-2023,59,DOC-85 Redatto consuntivo dello sprint 3,Zaccone Rosario,Gardin Giovanni
-1.5.0,08-12-2023,73,DOC-191 Redatto preventivo quinto sprint,Rosario Zaccone,Mattia Todesco
+1.6.0,10-12-2023,59,DOC-85 Redatto consuntivo dello Sprint 3,Zaccone Rosario,Gardin Giovanni
+1.5.0,08-12-2023,73,DOC-191 Redatto preventivo quinto Sprint,Rosario Zaccone,Mattia Todesco
 1.4.0,06-12-2023,61,DOC-46 Analisi dei rischi,Gardin Giovanni,Carraro Riccardo
-1.3.0,27-11-2023,45,DOC-55 Redatto paragrafo del preventivo dello sprint 3,Zaccone Rosario,Gardin Giovanni
-1.2.0,01-12-2023,58,DOC-120 Redatto preventivo dello sprint 4,Zaccone Rosario,Gardin Giovanni
-1.1.0,26-11-2023,43,DOC-53 Aggiunto paragrafo preventivo sprint 2,Zaccone Rosario,Gardin Giovanni
+1.3.0,27-11-2023,45,DOC-55 Redatto paragrafo del preventivo dello Sprint 3,Zaccone Rosario,Gardin Giovanni
+1.2.0,01-12-2023,58,DOC-120 Redatto preventivo dello Sprint 4,Zaccone Rosario,Gardin Giovanni
+1.1.0,26-11-2023,43,DOC-53 Aggiunto paragrafo preventivo Sprint 2,Zaccone Rosario,Gardin Giovanni
 1.0.0,14-11-2023,1,Creazione documento Piano di Progetto,Carraro Riccardo,Gardin Giovanni

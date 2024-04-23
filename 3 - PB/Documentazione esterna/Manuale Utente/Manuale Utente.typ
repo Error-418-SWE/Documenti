@@ -245,7 +245,12 @@ Selezionando da esso la prima icona (@icona_lista_zone, sinistra), corrispondent
 ) <icona_lista_zone>
 
 Ogni riga di tale lista corrisponde ad una zona, la quale viene identificata dal suo parametro `ID`.
-Ad esso seguono le icone relative all'ispezione della zona (@ispezione_zona), rappresentata da un occhio, e alla sua eliminazione (@eliminazione_zona), rappresentata da un cestino.
+
+Ad esso seguono le icone:
+
+#grid( columns: (auto,10%,90%), align: horizon, gutter: 2%,[•],[#image("./imgs/icona_occhio.png")], [*ispeziona zona*: porta all'apertura del pannello rappresentato in @immagine_pannello_ispezione_zona descritto nella sezione @ispezione_zona;])
+
+#grid( columns: (auto,10%,90%), align: horizon, gutter: 2%,[•],[#image("./imgs/icona_cestino.png")], [*elimina zona*: operazione descritta nella sezione @eliminazione_zona.])
 
 Nel caso in cui venga creata una nuova zona (@creazione_zona), essa verrà aggiunta alla lista delle zone.
 Similmente, se una zona dovesse essere eliminata dall'ambiente, essa verrebbe rimossa dalla lista.

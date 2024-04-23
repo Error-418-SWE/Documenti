@@ -77,9 +77,9 @@ L'attività di codifica ha visto completati i lavori:
 
 Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq\:
 
-- CPI di progetto a 0.98, rappresenta un valore accettabile ($>=0.95$) e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
+- CPI di progetto a 1.00, rappresenta un valore ottimo ($>=1.00$);
 
-- EAC aumenta passando da € 13.210,90 a € 13.321,30. Nonostante l'aumento, rientra nelle condizioni di accettabilità;
+- EAC aumenta passando da € 12.933,25 a € 12.990,31. Nonostante l'aumento, rientra nelle condizioni di accettabilità;
 
 - $"SEV" <= "SPV"$, rientra nelle condizioni di accettabilità poiché $"SEV" >= 80%$ del $"SVP"$.
 

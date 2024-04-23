@@ -1812,7 +1812,7 @@ Per garantire una standardizzazione e una migliore gestione del codice, devono e
   - type safety con TypeScript attraverso l'utilizzo di tipi specifici e limitando al massimo l'uso del tipo `any`;
   - notazione camel per nomi di file e variabili;
   - indentazione del codice di tipo Egyptian braces;
-  - limitare il più possibile la lunghezza di metodi e delle singole righe di codice, perseguendo i principi di leggibilità e manutenibilità. #TODO //precisare lunghezza massima metodi e righe
+  - perseguire principi di leggibilità e manutenibilità.
 
 + buone pratiche per la codifica:
 

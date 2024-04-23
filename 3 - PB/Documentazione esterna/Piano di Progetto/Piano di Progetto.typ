@@ -124,8 +124,8 @@ Il documento si articola in 6 sezioni principali:
 - *Panoramica generale* (@panoramica-generale): dedicata all'analisi preventiva dei costi complessivi di realizzazione;
 - *Periodi di sviluppo* (@periodi-di-sviluppo): dedicata all'analisi della suddivisione temporale dello sviluppo del progetto;
 - *Pianificazione del lavoro* (@pianificazione-lavoro): dedicata alla descrizione della metodologia di lavoro adottata;
-- *Preventivi di periodo* (@preventivi): dedicata alla pianificazione delle attività da svolgere per ciascuno sprint;
-- *Consuntivi di periodo* (@consuntivi): dedicata all'analisi retrospettiva del lavoro svolto in ciascuno sprint. Riporta eventuali criticità ed azioni intraprese a fini migliorativi.
+- *Preventivi di periodo* (@preventivi): dedicata alla pianificazione delle attività da svolgere per ciascuno Sprint;
+- *Consuntivi di periodo* (@consuntivi): dedicata all'analisi retrospettiva del lavoro svolto in ciascuno Sprint. Riporta eventuali criticità ed azioni intraprese a fini migliorativi.
 
 == Glossario
 #glo_paragrafo
@@ -185,7 +185,6 @@ A ciascun rischio individuato si associano:
 I rischi sono suddivisi nelle categorie:
 + rischi tecnici;
 + rischi esterni;
-+ rischi organizzativi;
 + rischi di project management.
 
 
@@ -301,7 +300,6 @@ Miglioramento dell'efficienza nel completamento dei compiti nonostante i rallent
 Le attività non svolte o completate parzialmente possono determinare uno slittamento della data di consegna e delle scadenze intermedie prefissate.
 
 
-=== Rischi organizzativi
 === Rischi di project management
 
 *RIS-4.1 Comunicazione con il Proponente* <RIS-4.1>
@@ -414,9 +412,9 @@ Se il rischio dovesse verificarsi più volte consecutivamente è necessario rive
 
 \ *RIS-4.4 Lenta ripresa dei lavori* <RIS-4.4>
 
-Durante la durata del progetto è eccezionalmente possibile che si verifichino dei periodi in cui uno o più membri non dispongono di sufficiente disponibilità per partecipare alle attività di progetto.
+Durante la durata del progetto è eccezionalmente possibile che si verifichino dei periodi in cui uno o più membri non godano di sufficiente disponibilità per partecipare alle attività di progetto.
 Questo può avvenire, ad esempio, a seguito di particolari impegni personali o universitari.
-La ripresa dei lavori a pieno regime seguendo correttamente le norme prefissate ed utilizzando correttamente tutte le tecnologie, potrebbe non essere immediata.
+La ripresa dei lavori a pieno regime, seguendo correttamente le norme prefissate ed utilizzando correttamente tutte le tecnologie, potrebbe non essere immediata.
 Si ritiene fondamentale minimizzare l'impatto in termini di tempo e qualità sul lavoro svolto.
 
 - *Impatto*: medio;
@@ -691,35 +689,35 @@ Il gruppo si è imposto una metodologia di lavoro *Agile* mediante l'applicazion
 
 Tale approccio è definibile *adattivo*, in grado dunque di adattarsi ad eventuali modifiche in corso d'opera, in merito soprattutto a cambiamenti di specifiche e requisiti.
 
-L'intero sviluppo è dunque organizzato in iterazioni di lunghezza fissa, denominati in Scrum come *sprint*.
+L'intero sviluppo è dunque organizzato in iterazioni di lunghezza fissa, denominati in Scrum come *Sprint*.
 
 L'analisi retrospettiva e il frequente contatto con il Proponente permettono di indirizzare lo sviluppo verso la realizzazione di un prodotto finale che si attenga quanto più possibile ai requisiti desiderati dall'azienda e alle sue aspettative, e una documentazione dettagliata e precisa che evolve e migliora insieme al prodotto.
 
 === Eventi dettati dal framework
 La corretta applicazione del framework comporta il rispetto di determinati impegni, individuabili nello svolgimento di precisi eventi organizzativi quali:
-- *Sprint planning*: evento decisionale da tenersi prima dell'avvio dello sprint successivo. In questo incontro vengono stabiliti gli obiettivi da raggiungere e le task necessarie da compiere entro la fine dello stesso;
+- *Sprint planning*: evento decisionale da tenersi prima dell'avvio dello Sprint successivo. In questo incontro vengono stabiliti gli obiettivi da raggiungere e le task necessarie da compiere entro la fine dello stesso;
 
-- *Sprint review*: al termine dello sprint si compie un'azione di revisione del progresso, valutando gli obiettivi che sono stati (o meno) raggiunti;
+- *Sprint review*: al termine dello Sprint si compie un'azione di revisione del progresso, valutando gli obiettivi che sono stati (o meno) raggiunti;
 
-- *Sprint retrospective*: al termine dello sprint si compie un'azione di retrospettiva, analizzando eventuali criticità incontrate e stabilendo i possibili miglioramenti o meccanismi di mitigazione.
+- *Sprint retrospective*: al termine dello Sprint si compie un'azione di retrospettiva, analizzando eventuali criticità incontrate e stabilendo i possibili miglioramenti o meccanismi di mitigazione.
 
-=== Organizzazione per sprint
-Gli sprint sono periodi di sviluppo di durata fissa entro i quali si cerca di raggiungere obiettivi prefissati. Ciascuno sprint viene stabilito, in termini di scope e obiettivi, in un momento precedente all'avvio dello sprint stesso.
+=== Organizzazione per Sprint
+Gli Sprint sono periodi di sviluppo di durata fissa entro i quali si cerca di raggiungere obiettivi prefissati. Ciascuno Sprint viene stabilito, in termini di scope e obiettivi, in un momento precedente all'avvio dello Sprint stesso.
 
-Il gruppo _Error\_418_ adotta periodi di sprint di una settimana, ove l'intento è fissare obiettivi concretamente raggiungibili nell'arco di tempo stabilito. Festività o esigenze organizzative peculiari potrebbero indurre variazioni nella durata di singoli sprint.
+Il gruppo _Error\_418_ adotta periodi di Sprint di una settimana, ove l'intento è fissare obiettivi concretamente raggiungibili nell'arco di tempo stabilito. Festività o esigenze organizzative peculiari potrebbero indurre variazioni nella durata di singoli Sprint.
 
-La pianificazione di uno sprint sarà così composta:
-- *Obiettivi prefissati*: gli obiettivi che si intende raggiungere entro il termine dello sprint;
-- *Preventivo costi*: preventivo dei costi dello sprint, calcolato in base alle figure che vi operano e alla loro quantità di ore di lavoro previste.
+La pianificazione di uno Sprint sarà così composta:
+- *Obiettivi prefissati*: gli obiettivi che si intende raggiungere entro il termine dello Sprint;
+- *Preventivo costi*: preventivo dei costi dello Sprint, calcolato in base alle figure che vi operano e alla loro quantità di ore di lavoro previste.
 
-Essenziale in questa organizzazione è l'analisi retrospettiva al termine di ogni sprint. Essa permette di valutare in modo critico eventuali mancanze, criticità o errori che possono in questo modo venir affrontati per trovare soluzioni che ne mitighino gli effetti. È inoltre utile per identificare buone prassi e strategie che hanno portato a risultati positivi, in modo da poterle replicare in futuro.
+Essenziale in questa organizzazione è l'analisi retrospettiva al termine di ogni Sprint. Essa permette di valutare in modo critico eventuali mancanze, criticità o errori che possono in questo modo venir affrontati per trovare soluzioni che ne mitighino gli effetti. È inoltre utile per identificare buone prassi e strategie che hanno portato a risultati positivi, in modo da poterle replicare in futuro.
 
-La retrospettiva di uno sprint si articolerà in:
-- *Obiettivi raggiunti*: obiettivi fissati e concretamente raggiunti al termine dello sprint;
-- *Obiettivi mancati*: obiettivi non raggiunti al termine dello sprint;
-- *Problematiche insorte*: analisi delle criticità riscontrate durante lo sprint, in modo da aver chiare le motivazioni che le hanno causate;
-- *Risoluzioni attuate*: azioni compiute in risposta alle problematiche riscontrate durante lo sprint, in modo che in futuro si possano prevenire o mitigare;
-- *Panoramica dei costi effettivi* (consuntivo): al termine dello sprint sarà possibile verificare se i costi preventivati rispecchino i costi effettivi, in base alle ore svolte per ogni ruolo;
+La retrospettiva di uno Sprint si articolerà in:
+- *Obiettivi raggiunti*: obiettivi fissati e concretamente raggiunti al termine dello Sprint;
+- *Obiettivi mancati*: obiettivi non raggiunti al termine dello Sprint;
+- *Problematiche insorte*: analisi delle criticità riscontrate durante lo Sprint, in modo da aver chiare le motivazioni che le hanno causate;
+- *Risoluzioni attuate*: azioni compiute in risposta alle problematiche riscontrate durante lo Sprint, in modo che in futuro si possano prevenire o mitigare;
+- *Panoramica dei costi effettivi* (consuntivo): al termine dello Sprint sarà possibile verificare se i costi preventivati rispecchino i costi effettivi, in base alle ore svolte per ogni ruolo;
 - *Monitoraggio costi e ore*: tabelle che riportano le ore e il budget rimanenti per ogni ruolo e complessivamente.
 
 === Rotazione dei ruoli
@@ -734,14 +732,14 @@ I ruoli assegnati a ciascun membro del gruppo sono riportati in @preventivi e @c
 #pagebreak()
 
 = Preventivi di periodo <preventivi>
-Il preventivo di ogni sprint esprime gli obiettivi e il relativo costo preventivato, secondo un'attività di pianificazione mirata al conseguimento efficace ed efficiente degli obiettivi di periodo.
+Il preventivo di ogni Sprint esprime gli obiettivi e il relativo costo preventivato, secondo un'attività di pianificazione mirata al conseguimento efficace ed efficiente degli obiettivi di periodo.
 
 == Sprint 1 dal 06-11-2023 al 13-11-2023
 
 === Obiettivi prefissati
-Gli obiettivi del primo sprint si concentrano sulla correzione e sul miglioramento dei documenti e della repository in seguito alla valutazione esposta dal Committente.
+Gli obiettivi del primo Sprint si concentrano sulla correzione e sul miglioramento dei documenti e della repository in seguito alla valutazione esposta dal Committente.
 
-Gli obiettivi dello sprint 1 sono:
+Gli obiettivi dello Sprint 1 sono:
 - riconfigurazione della repository;
 - revisione preventivo costi con aggiornamento della suddivisione delle ore;
 - implementazione di automazioni per la compilazione dei documenti;
@@ -751,7 +749,7 @@ Gli obiettivi dello sprint 1 sono:
 - contatto con l'azienda Proponente per fissare un primo meeting di analisi.
 
 === Preventivo costi
-Nel primo sprint il gruppo svolge compiti correttivi e incentrati sul miglioramento dei documenti e dei processi. In quest'ottica, vede l'impiego principale delle figure:
+Nel primo Sprint il gruppo svolge compiti correttivi e incentrati sul miglioramento dei documenti e dei processi. In quest'ottica, vede l'impiego principale delle figure:
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
@@ -776,7 +774,7 @@ In questo primo periodo, l'assegnazione dei ruoli di Progettista e di Programmat
     [Totale ore],     [3],     [8],     [6],     [0],     [0],     [6],     [23],
     [Costo\ ruolo],     [€ 90],     [€ 160],     [€ 150],     [€ 0],     [€ 0],     [€ 90],     [€ 490],
   ),
-  caption: "Prospetto del preventivo, sprint 1"
+  caption: "Prospetto del preventivo, Sprint 1"
 )
 #let data = (
   ("Responsabile", 3),
@@ -792,7 +790,7 @@ In questo primo periodo, l'assegnazione dei ruoli di Progettista e di Programmat
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 1",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 1",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -801,9 +799,9 @@ In questo primo periodo, l'assegnazione dei ruoli di Progettista e di Programmat
 == Sprint 2 dal 13-11-2023 al 20-11-2023
 
 === Obiettivi prefissati
-Gli obiettivi del secondo sprint si concentrano sull'individuazione degli Use Case del progetto, sul perfezionamento delle automazioni e sulla stesura iniziale delle #ndp.
+Gli obiettivi del secondo Sprint si concentrano sull'individuazione degli Use Case del progetto, sul perfezionamento delle automazioni e sulla stesura iniziale delle #ndp.
 
-Gli obiettivi dello sprint 2 sono:
+Gli obiettivi dello Sprint 2 sono:
 - riconfigurazione della repository;
 - stesura della sezione _Introduzione_ del documento #ndp;
 - stesura della sezione _Processi di supporto_ del documento #ndp;
@@ -814,7 +812,7 @@ Gli obiettivi dello sprint 2 sono:
 - inizio dell'individuazione e della stesura degli Use Case.
 
 === Preventivo costi
-Nel secondo sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti e compiti orientati all'individuazione e alla stesura degli Use Case. In quest'ottica, vede l'impiego principale delle figure:
+Nel secondo Sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti e compiti orientati all'individuazione e alla stesura degli Use Case. In quest'ottica, vede l'impiego principale delle figure:
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira per la definizione e il miglioramento delle automazioni per la compilazione e il versionamento dei documenti;
@@ -839,7 +837,7 @@ In questo  periodo, l'assegnazione dei ruoli di Programmatore e Progettista è r
     [Totale ore],     [3],     [8],     [9],     [0],     [0],     [3],     [23],
     [Costo\ ruolo],     [€ 90],     [€ 160],     [€ 225],     [€ 0],     [€ 0],     [€ 45],     [€ 520],
   ),
-  caption: "Prospetto del preventivo, sprint 2"
+  caption: "Prospetto del preventivo, Sprint 2"
 )
 #let data = (
         ("Responsabile", 3),
@@ -855,16 +853,16 @@ In questo  periodo, l'assegnazione dei ruoli di Programmatore e Progettista è r
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 2",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 2",
   kind: "chart",
   supplement: "Grafico"
 )
 
 == Sprint 3 dal 20-11-2023 al 27-11-2023
 === Obiettivi prefissati
-Gli obiettivi del terzo sprint si concentrano sull'aggiornamento del documento #ndp, sul periodo di #adr (principalmente concentrata sui requisiti funzionali) e su un primo momento di esplorazione delle nuove tecnologie.
+Gli obiettivi del terzo Sprint si concentrano sull'aggiornamento del documento #ndp, sul periodo di #adr (principalmente concentrata sui requisiti funzionali) e su un primo momento di esplorazione delle nuove tecnologie.
 
-Gli obiettivi dello sprint 3 sono:
+Gli obiettivi dello Sprint 3 sono:
 - proseguimento del processo di individuazione e stesura degli Use Case;
 - perfezionamento delle automazioni di versionamento documenti;
 - perfezionamento del template usato per i documenti;
@@ -874,7 +872,7 @@ Gli obiettivi dello sprint 3 sono:
 - contatto con l'azienda Proponente per fissare il prossimo meeting.
 
 === Preventivo costi
-Nel terzo sprint, il gruppo svolge delle attività principalmente focalizzate sull'#adr e sull'aggiornamento e perfezionamento dei documenti e delle automazioni. In quest'ottica, vede l'impiego principale delle figure:
+Nel terzo Sprint, il gruppo svolge delle attività principalmente focalizzate sull'#adr e sull'aggiornamento e perfezionamento dei documenti e delle automazioni. In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di:
@@ -902,7 +900,7 @@ In questo periodo, l'assegnazione del ruolo di Programmatore è ritenuta precoce
     [Totale ore],     [3],     [6],     [8],     [3],     [0],     [3],     [23],
     [Costo\ ruolo],     [€ 90],     [€ 120],     [€ 200],     [€ 75],     [€ 0],     [€ 45],     [€ 530],
   ),
-  caption: "Prospetto del preventivo, sprint 3"
+  caption: "Prospetto del preventivo, Sprint 3"
 )
 #let data = (
         ("Responsabile", 3),
@@ -918,7 +916,7 @@ In questo periodo, l'assegnazione del ruolo di Programmatore è ritenuta precoce
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 3",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 3",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -926,10 +924,10 @@ In questo periodo, l'assegnazione del ruolo di Programmatore è ritenuta precoce
 == Sprint 4 dal 27-11-2023 al 04-12-2023
 
 === Obiettivi prefissati
-Gli obiettivi del quarto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
+Gli obiettivi del quarto Sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi Sprint, sulla finalizzazione di una prima versione
 del documento #adr e sull'esplorazione delle nuove tecnologie.
 
-Gli obiettivi dello sprint 4 sono:
+Gli obiettivi dello Sprint 4 sono:
 - perfezionamento della stesura degli Use Case individuati finora;
 - redazione di una prima versione dell'#adr;
 - scelta di una data per un eventuale primo meeting con il #cardin per ottenere un feedback sull'#adr;
@@ -940,13 +938,13 @@ Gli obiettivi dello sprint 4 sono:
  - parametrizzazione degli elementi presenti nell'applicazione.
 
 === Preventivo costi
-Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, #adr e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
+Nel quarto Sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, #adr e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di:
   - gestire gli strumenti GitHub e Jira per la definizione delle automazioni per la compilazione e il versionamento dei documenti;
   - aggiornare il documento #pdp.
-- *Analista*: al fine di perfezionare la stesura degli Use Case individuati e redarre una prima versione del documento #adr;
+- *Analista*: al fine di perfezionare la stesura degli Use Case individuati e redigere una prima versione del documento #adr;
 - *Progettista*: al fine di condurre uno studio esplorativo sulla libreria Three.js;
 - *Programmatore*: al fine di esplorare in modo pratico le tecnologie relative ai PoC;
 - *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti e di effettuare un controllo sulla validità degli Use Case individuati nel documento #adr.
@@ -965,7 +963,7 @@ Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
     [Totale ore],     [3],     [6],     [7],     [1],     [3],     [3],     [23],
     [Costo\ ruolo],     [€ 90],     [€ 120],     [€ 175],     [€ 25],     [€ 45],     [€ 45],     [€ 500],
   ),
-  caption: "Prospetto del preventivo, sprint 4"
+  caption: "Prospetto del preventivo, Sprint 4"
 )
 #let data = (
         ("Responsabile", 3),
@@ -981,7 +979,7 @@ Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 4",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 4",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -989,10 +987,10 @@ Nel quarto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
 == Sprint 5 dal 04-12-2023 al 11-12-2023
 
 === Obiettivi prefissati
-Gli obiettivi del quinto sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi sprint, sulla finalizzazione di una prima versione
+Gli obiettivi del quinto Sprint si concentrano sull'aggiornamento e perfezionamento dei documenti redatti negli scorsi Sprint, sulla finalizzazione di una prima versione
 del documento #adr e sullo sviluppo dei primi PoC.
 
-Gli obiettivi dello sprint 5 sono:
+Gli obiettivi dello Sprint 5 sono:
 - perfezionamento del sistema di _drag and drop_ nel PoC;
 - creazione degli scaffali nel PoC;
 - creazione ambiente Docker;
@@ -1005,11 +1003,11 @@ Gli obiettivi dello sprint 5 sono:
 - redigere il Glossario.
 
 === Preventivo costi
-Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, #adr e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
+Nel quinto Sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti, #adr e studio delle nuove tecnologie. In quest'ottica, vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira;
-- *Analista*: al fine di redarre il documento #adr;
+- *Analista*: al fine di redigere il documento #adr;
 - *Progettista*: al fine di continuare lo studio sulla libreria Three.js;
 - *Programmatore*: al fine di sviluppare i PoC relativi allo studio della libreria;
 - *Verificatore*: al fine di:
@@ -1030,7 +1028,7 @@ Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
     [Totale ore],     [3],     [3],     [8],     [4],     [8],     [3],     [29],
     [Costo\ ruolo],     [€ 90],     [€ 60],     [€ 200],     [€ 100],     [€ 120],     [€ 45],     [€ 615],
   ),
-  caption: "Prospetto del preventivo, sprint 5"
+  caption: "Prospetto del preventivo, Sprint 5"
 )
 #let data = (
   ("Responsabile", 3),
@@ -1046,7 +1044,7 @@ Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 5",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 5",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1054,7 +1052,7 @@ Nel quinto sprint il gruppo svolge compiti correttivi incentrati sul miglioramen
 == Sprint 6 dal 11-12-2023 al 18-12-2023
 
 === Obiettivi prefissati
-Gli obiettivi del sesto sprint si focalizzano sul miglioramento dei PoC e dei diversi documenti. Nel dettaglio:
+Gli obiettivi del sesto Sprint si focalizzano sul miglioramento dei PoC e dei diversi documenti. Nel dettaglio:
 - avanzare con la redazione del PoC "A" integrando il funzionamento dei bin;
 - approfondire e migliorare l'utilizzo di Docker nel PoC corrispondente;
 - migliorare le GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
@@ -1064,13 +1062,13 @@ Gli obiettivi del sesto sprint si focalizzano sul miglioramento dei PoC e dei di
 - aggiungere al documento #adr la tabella che correli gli Use Case ai requisiti.
 
 === Preventivo costi
-Nel sesto sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti #adr e #ndp.
+Nel sesto Sprint il gruppo svolge compiti correttivi incentrati sul miglioramento dei documenti #adr e #ndp.
 Il gruppo continua a produrre e migliorare PoC e inizia a scrivere il documento #pdq.
 In quest'ottica vede l'impiego principale delle figure:
 
 - *Responsabile*: al fine di coordinare le attività e contattare l'azienda Proponente;
 - *Amministratore*: al fine di gestire gli strumenti GitHub e Jira, redigere i verbali e aggiornare il documento #pdp;
-- *Analista*: al fine di redarre il documento #adr con relativi diagrammi UML;
+- *Analista*: al fine di redigere il documento #adr con relativi diagrammi UML;
 - *Progettista*: al fine di progettare i PoC;
 - *Programmatore*: al fine di sviluppare i PoC;
 - *Verificatore*: al fine di verificare la correttezza delle modifiche ai documenti assicurandosi che siano coerenti con le #ndp.
@@ -1089,7 +1087,7 @@ In quest'ottica vede l'impiego principale delle figure:
     [Totale ore],     [3],     [3],     [8],     [2],     [6],     [3],     [25],
     [Costo\ ruolo],     [€ 90],     [€ 60],     [€ 200],     [€ 50],     [€ 90],     [€ 45],     [€ 535],
   ),
-  caption: "Prospetto del preventivo, sprint 6"
+  caption: "Prospetto del preventivo, Sprint 6"
 )
 #let data = (
   ("Responsabile", 3),
@@ -1105,7 +1103,7 @@ In quest'ottica vede l'impiego principale delle figure:
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 6",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 6",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1113,7 +1111,7 @@ In quest'ottica vede l'impiego principale delle figure:
 == Sprint 7 dal 18-12-2023 al 25-12-2023
 
 === Obiettivi prefissati
-Gli obiettivi del settimo sprint si focalizzano sul completamento del PoC A, terminare l'#adr e in generale sull'avanzamento dei documenti e miglioramento delle automazioni. Nel dettaglio gli obiettivi posti sono:
+Gli obiettivi del settimo Sprint si focalizzano sul completamento del PoC A, terminare l'#adr e in generale sull'avanzamento dei documenti e miglioramento delle automazioni. Nel dettaglio gli obiettivi posti sono:
 - creazione di un PoC per il front-end e realizzazione di un PoC definitivo comprendente tutto il lavoro svolto finora;
 - espansione del #pdq con l'individuazione delle metriche da utilizzare;
 - aggiornamento delle #ndp;
@@ -1124,7 +1122,7 @@ Gli obiettivi del settimo sprint si focalizzano sul completamento del PoC A, ter
 - implementazione dell'automazione che evidenzia i termini presenti nel glossario all'interno dei documenti.
 
 === Preventivo costi
-Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del PoC finale e sul proseguimento e miglioramento di tutti i documenti necessari alla Requirements and Technology Baseline. Di conseguenza saranno essenziali le figure di:
+Nel settimo Sprint i compiti del gruppo sono incentrati sulla realizzazione del PoC finale e sul proseguimento e miglioramento di tutti i documenti necessari alla Requirements and Technology Baseline. Di conseguenza saranno essenziali le figure di:
 - *Responsabile*: al fine di coordinare le attività e proseguire la redazione delle #ndp;
 - *Amministratore*: al fine di:
   - redigere i verbali;
@@ -1152,7 +1150,7 @@ Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del 
     [Totale ore],     [3],     [4],     [3],     [6],     [5],     [2],     [23],
     [Costo\ ruolo],     [€ 90],     [€ 80],     [€ 75],     [€ 150],     [€ 75],     [€ 30],     [€ 500],
   ),
-  caption: "Prospetto del preventivo, sprint 7"
+  caption: "Prospetto del preventivo, Sprint 7"
 )
 #let data = (
   ("Responsabile", 3),
@@ -1168,7 +1166,7 @@ Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del 
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 7",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 7",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1176,7 +1174,7 @@ Nel settimo sprint i compiti del gruppo sono incentrati sulla realizzazione del 
 == Sprint 8 dal 25-12-2023 al 01-01-2024
 
 === Obiettivi prefissati <obiettivi8>
-Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nel settimo sprint e sull'avanzamento del documento #ndp, oltre che sul miglioramento di alcuni aspetti di attività già concluse. Gli obiettivi prefissati per questo sprint sono:
+Gli obiettivi dell'ottavo Sprint si incentrano sul completamento delle attività rimaste sospese nel settimo Sprint e sull'avanzamento del documento #ndp, oltre che sul miglioramento di alcuni aspetti di attività già concluse. Gli obiettivi prefissati per questo Sprint sono:
 
 - miglioramento del Glossario:
   - rendere _case insensitive_ l'individuazione dei termini;
@@ -1184,7 +1182,7 @@ Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività
 - proseguimento del documento #adr con:
   - implementazione tracciamento requisito-fonte;
   - miglioramento della resa grafica dei diagrammi UML tramite la loro conversione in SVG.
-- proseguimento del documento #ndp, recuperando i capitoli non scritti nello sprint precedente e espandendone altri;
+- proseguimento del documento #ndp, recuperando i capitoli non scritti nello Sprint precedente e espandendone altri;
 - perfezionamento del PoC finale;
 - miglioramento delle GitHub Actions risolvendo eventuali problemi o aggiungendo funzionalità;
 - studio e confronto delle tecnologie riguardanti le API (Next.js e Express.js);
@@ -1192,14 +1190,14 @@ Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività
 - realizzazione di una dashboard per monitorare le metriche definite nel #pdq.
 
 === Preventivo costi
-Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di conseguenza saranno necessari tutti i ruoli presenti nel gruppo:
+Gli obiettivi dell'ottavo Sprint riguardano tutti gli aspetti del progetto, di conseguenza saranno necessari tutti i ruoli presenti nel gruppo:
 - *Responsabile*: al fine di coordinare le attività e proseguire la redazione delle #ndp;
 - *Amministratore*: al fine di:
   - redigere i verbali;
   - aggiornare il documento #pdp;
   - gestire GitHub e Jira;
   - migliorare le GitHub Actions individuando e rimuovendo bug;
-  - migliorare il Glossario secondo quanto descritto nel paragrafo di pianificazione di questo sprint.
+  - migliorare il Glossario secondo quanto descritto nel paragrafo di pianificazione di questo Sprint.
 - *Analista*: al fine di:
   - aggiungere il tracciamento requisito-fonte nel documento #adr;
   - convertire i diagrammi UML in SVG.
@@ -1223,7 +1221,7 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
     [Totale ore],     [4],     [3],     [3],     [6],     [3],     [4],     [23],
     [Costo\ ruolo],     [€ 120],     [€ 60],     [€ 75],     [€ 150],     [€ 45],     [€ 60],     [€ 510],
   ),
-  caption: "Prospetto del preventivo, sprint 8"
+  caption: "Prospetto del preventivo, Sprint 8"
 )
 #let data = (
   ("Responsabile", 4),
@@ -1239,7 +1237,7 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 8",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 8",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1247,7 +1245,7 @@ Gli obiettivi dell'ottavo sprint riguardano tutti gli aspetti del progetto, di c
 == Sprint 9 dal 01-01-2024 al 08-01-2024
 
 === Obiettivi prefissati <obiettivi9>
-Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività rimaste sospese nell'ottavo sprint, sulla revisione dei documenti e del PoC in vista della valutazione RTB. Gli obiettivi prefissati per questo sprint sono:
+Gli obiettivi dell'ottavo Sprint si incentrano sul completamento delle attività rimaste sospese nell'ottavo Sprint, sulla revisione dei documenti e del PoC in vista della valutazione RTB. Gli obiettivi prefissati per questo Sprint sono:
 
 - estensione e revisione del documento #ndp;
 - correzione degli errori riscontrati in alcuni UC nel documento #adr, compreso l'aggiornamento dei diagrammi UML associati;
@@ -1257,7 +1255,7 @@ Gli obiettivi dell'ottavo sprint si incentrano sul completamento delle attività
 - ripresa dei contatti con il Proponente tramite l'invio di una comunicazione di aggiornamento corredata da un video demo del PoC.
 
 === Preventivo costi
-Gli obiettivi del nono sprint riguardano i seguenti ruoli:
+Gli obiettivi del nono Sprint riguardano i seguenti ruoli:
 - *Responsabile*: al fine di:
   - coordinare le attività e proseguire la redazione delle #ndp;
   - contattare il Proponente fornendo aggiornamenti sull'avanzamento dei lavori.
@@ -1269,7 +1267,7 @@ Gli obiettivi del nono sprint riguardano i seguenti ruoli:
   - realizzare una dashboard per il monitoraggio delle metriche.
 - *Analista*: al fine di correggere gli errori riscontrati in alcuni UC nel documento #adr;
 - *Verificatore*: al fine di:
-  - revisionare i documenti prodotti nel corso degli sprint precedenti;
+  - revisionare i documenti prodotti nel corso degli Sprint precedenti;
   - verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp.
 
 #figure(
@@ -1286,7 +1284,7 @@ Gli obiettivi del nono sprint riguardano i seguenti ruoli:
     [Totale ore],     [4],     [10],     [5],     [0],     [0],     [12],     [31],
     [Costo\ ruolo],     [€ 120],     [€ 200],     [€ 125],     [€ 0],     [€ 0],     [€ 180],     [€ 625],
   ),
-  caption: "Prospetto del preventivo, sprint 9"
+  caption: "Prospetto del preventivo, Sprint 9"
 )
 #let data = (
   ("Responsabile", 4),
@@ -1302,7 +1300,7 @@ Gli obiettivi del nono sprint riguardano i seguenti ruoli:
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 9",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 9",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1311,7 +1309,7 @@ Gli obiettivi del nono sprint riguardano i seguenti ruoli:
 
 === Obiettivi prefissati
 
-Gli obiettivi del decimo sprint vertono sulla revisione dei documenti in preparazione per il colloquio RTB. Gli obiettivi prefissati per questo sprint sono:
+Gli obiettivi del decimo Sprint vertono sulla revisione dei documenti in preparazione per il colloquio RTB. Gli obiettivi prefissati per questo Sprint sono:
 
 - verificare la correttezza dei documenti redatti finora;
 - identificare e correggere le cause del problema prestazionale del PoC;
@@ -1319,14 +1317,14 @@ Gli obiettivi del decimo sprint vertono sulla revisione dei documenti in prepara
 - ampliare la dashboard di monitoraggio con nuove visualizzazioni;
 - preparare la presentazione a supporto della valutazione RTB in Google Slides.
 
-La durata dello sprint è inferiore di 1 giorno rispetto alla norma.
+La durata dello Sprint è inferiore di 1 giorno rispetto alla norma.
 
 === Preventivo costi
 
-L'attività prevalente è la revisione documentale. I ruoli attivi durante questo sprint sono:
+L'attività prevalente è la revisione documentale. I ruoli attivi durante questo Sprint sono:
 - *Responsabile*: al fine di:
   - coordinare le attività;
-  - redarre la presentazione a supporto della valutazione RTB.
+  - redigere la presentazione a supporto della valutazione RTB.
 - *Amministratore*: al fine di:
   - redigere i verbali;
   - aggiornare il documento #pdp;
@@ -1354,7 +1352,7 @@ L'attività prevalente è la revisione documentale. I ruoli attivi durante quest
     [Totale ore],     [2],     [2],     [2],     [0],     [4],     [8],     [18],
     [Costo\ ruolo],     [€ 60],     [€ 40],     [€ 50],     [€ 0],     [€ 60],     [€ 120],     [€ 330],
   ),
-  caption: "Prospetto del preventivo, sprint 10"
+  caption: "Prospetto del preventivo, Sprint 10"
 )
 #let data = (
   ("Responsabile", 2),
@@ -1370,7 +1368,7 @@ L'attività prevalente è la revisione documentale. I ruoli attivi durante quest
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 10",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 10",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1379,7 +1377,7 @@ L'attività prevalente è la revisione documentale. I ruoli attivi durante quest
 
 === Obiettivi prefissati
 
-Gli obiettivi dell'undicesimo sprint si incentrano sulla preparazione per il colloquio RTB oltre che sulla revisione di alcuni aspetti di attività già concluse. Gli obiettivi prefissati per questo sprint sono:
+Gli obiettivi dell'undicesimo Sprint si incentrano sulla preparazione per il colloquio RTB oltre che sulla revisione di alcuni aspetti di attività già concluse. Gli obiettivi prefissati per questo Sprint sono:
 
 - aggiornare il #pdq con nuove metriche individuate riguardanti:
   - budget utilizzato;
@@ -1425,7 +1423,7 @@ Sono state assegnate ore al ruolo di Verificatore e Analista a scapito di quello
     [Totale ore],     [3],     [3],     [3],     [0],     [0],     [6],     [15],
     [Costo ruolo],     [€ 90],     [€ 60],     [€ 75],     [€ 0],     [€ 0],     [€ 90],     [€ 315],
   ),
-  caption: "Prospetto del preventivo, sprint 11"
+  caption: "Prospetto del preventivo, Sprint 11"
 )
 #let data = (
   ("Responsabile", 3),
@@ -1441,7 +1439,7 @@ Sono state assegnate ore al ruolo di Verificatore e Analista a scapito di quello
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 11",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 11",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1450,9 +1448,9 @@ Sono state assegnate ore al ruolo di Verificatore e Analista a scapito di quello
 
 === Obiettivi prefissati
 
-Gli obiettivi del dodicesimo sprint riguardano la partecipazione al colloquio RTB con il #cardin, in data 25/01/2024 alle ore 8:40.
+Gli obiettivi del dodicesimo Sprint riguardano la partecipazione al colloquio RTB con il #cardin, in data 25/01/2024 alle ore 8:40.
 
-In questo sprint inizia la sessione d'esame invernale. Gli obiettivi prefissati per questo sprint sono:
+In questo Sprint inizia la sessione d'esame invernale. Gli obiettivi prefissati per questo Sprint sono:
 - estensione dei termini di Glossario;
 - aggiunta di grafici significativi al #pdp, come ad esempio la suddivisione oraria per ruolo, mediante il pacchetto `plotst` di Typst;
 - correzione minore della tabella che riporta il computo dei requisiti totali nel documento di #adr;
@@ -1460,7 +1458,7 @@ In questo sprint inizia la sessione d'esame invernale. Gli obiettivi prefissati 
 
 === Preventivo costi
 
-Dato lo scope ridotto del lavoro, questo sprint impiega un numero di ore inferiore rispetto agli sprint precedenti. I ruoli attivi durante questo sprint sono:
+Dato lo scope ridotto del lavoro, questo Sprint impiega un numero di ore inferiore rispetto agli Sprint precedenti. I ruoli attivi durante questo Sprint sono:
 - *Responsabile*: al fine di coordinare le attività.
 - *Amministratore*: al fine di:
   - redigere i verbali;
@@ -1484,7 +1482,7 @@ Dato lo scope ridotto del lavoro, questo sprint impiega un numero di ore inferio
     [Totale ore],     [1],     [1],     [0],     [3],     [0],     [2],     [7],
     [Costo\ ruolo],     [€ 30],     [€ 20],     [€ 0],     [€ 75],     [€ 0],     [€ 30],     [€ 155],
   ),
-  caption: "Prospetto del preventivo, sprint 12"
+  caption: "Prospetto del preventivo, Sprint 12"
 )
 #let data = (
   ("Responsabile", 1),
@@ -1500,7 +1498,7 @@ Dato lo scope ridotto del lavoro, questo sprint impiega un numero di ore inferio
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 12",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 12",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1511,7 +1509,7 @@ Dato lo scope ridotto del lavoro, questo sprint impiega un numero di ore inferio
 Nessuno che esuli dalla normale amministrazione di progetto. Il gruppo attende la valutazione del colloquio RTB e si prepara per la sessione d'esame.
 
 === Preventivo costi
-Questo sprint impiega:
+Questo Sprint impiega:
 - *Responsabile*: al fine di:
   - coordinare le attività;
   - organizzare il lavoro in reazione al feedback, se ricevuto.
@@ -1533,7 +1531,7 @@ Questo sprint impiega:
     [Totale ore],     [2],     [1],     [0],     [0],     [0],     [0],     [3],
     [Costo\ ruolo],     [€ 60],     [€ 20],     [€ 0],     [€ 0],     [€ 0],     [€ 0],     [€ 80],
   ),
-  caption: "Prospetto del preventivo, sprint 13"
+  caption: "Prospetto del preventivo, Sprint 13"
 )
 #let data = (
   ("Responsabile", 2),
@@ -1549,7 +1547,7 @@ Questo sprint impiega:
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 13",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 13",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1557,16 +1555,16 @@ Questo sprint impiega:
 == Sprint 14 dal 04-02-2024 al 11-02-2024
 
 === Obiettivi prefissati
-Il feedback ricevuto dopo il colloquio RTB con il #cardin ha evidenziato la necessità di una profonda revisione del documento di #adr, che pertanto è il focus principale di questo sprint. Gli obiettivi prefissati per questo sprint sono:
+Il feedback ricevuto dopo il colloquio RTB con il #cardin ha evidenziato la necessità di una profonda revisione del documento di #adr, che pertanto è il focus principale di questo Sprint. Gli obiettivi prefissati per questo Sprint sono:
 - revisione, correzione ed estensione del documento #adr secondo il feedback ricevuto;
 - preparazione in vista del colloquio RTB con il #vardanega (data da definire);
-- inclusione nella dashboard di monitoraggio delle metriche individuate nel corso dello sprint precedente;
+- inclusione nella dashboard di monitoraggio delle metriche individuate nel corso dello Sprint precedente;
 - estensione dei termini di Glossario;
 - invio aggiornamento sullo stato del progetto al Proponente.
 
 === Preventivo costi
 
-Questo sprint impiega:
+Questo Sprint impiega:
 - *Responsabile*: al fine di:
   - coordinare le attività;
   - contattare il Proponente fornendo aggiornamenti sull'avanzamento dei lavori.
@@ -1594,7 +1592,7 @@ Questo sprint impiega:
     [Totale ore],     [3],     [3],     [8],     [2],     [0],     [13],     [29],
     [Costo\ ruolo],     [€ 90],     [€ 60],     [€ 200],     [€ 50],     [€ 0],     [€ 195],     [€ 595],
   ),
-  caption: "Prospetto del preventivo, sprint 14"
+  caption: "Prospetto del preventivo, Sprint 14"
 )
 #let data = (
   ("Responsabile", 3),
@@ -1610,7 +1608,7 @@ Questo sprint impiega:
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 14",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 14",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1618,7 +1616,7 @@ Questo sprint impiega:
 == Sprint 15 dal 11-02-2024 al 18-02-2024
 
 === Obiettivi prefissati
-Questo sprint si occupa della preparazione per il colloquio RTB con il #vardanega e avvia le attività di progettazione del prodotto software. Gli obiettivi prefissati per questo sprint sono:
+Questo Sprint si occupa della preparazione per il colloquio RTB con il #vardanega e avvia le attività di progettazione del prodotto software. Gli obiettivi prefissati per questo Sprint sono:
 - definizione del diagramma ER del database da implementare;
 - studio preliminare degli elementi architetturali del prodotto;
 - identificazione degli strumenti di appoggio per l'implementazione di una pipeline di CI/CD;
@@ -1628,7 +1626,7 @@ Questo sprint si occupa della preparazione per il colloquio RTB con il #vardaneg
 - prenotazione del colloquio RTB con il #vardanega, nella seconda metà della settimana.
 
 === Preventivo costi
-Questo sprint impiega:
+Questo Sprint impiega:
 - *Responsabile*: al fine di:
   - coordinare le attività;
   - candidare il gruppo al colloquio RTB;
@@ -1663,7 +1661,7 @@ Questo sprint impiega:
     [Totale ore],     [3],     [4],     [3],     [4],     [6],     [7],     [27],
     [Costo ruolo],     [90],     [80],     [75],     [100],     [90],     [105],     [540],
   ),
-  caption: "Prospetto del preventivo, sprint 15"
+  caption: "Prospetto del preventivo, Sprint 15"
 )
 #let data = (
   ("Responsabile", 3),
@@ -1679,7 +1677,7 @@ Questo sprint impiega:
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 15",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 15",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1687,7 +1685,7 @@ Questo sprint impiega:
 == Sprint 16 dal 18-02-2024 al 25-02-2024
 
 === Obiettivi prefissati
-In questo sprint prosegue il lavoro di kick-off del design del MVP. Gli obiettivi prefissati sono:
+In questo Sprint prosegue il lavoro di kick-off del design del MVP. Gli obiettivi prefissati sono:
 - ripresa dei colloqui con il Proponente, in modalità sincrona, il giorno 22/02/2024 alle ore 15:00;
 - accorpamento del documento #ris nel #pdp;
 - aggiornamento ed estensione del documento #pdp;
@@ -1699,7 +1697,7 @@ In questo sprint prosegue il lavoro di kick-off del design del MVP. Gli obiettiv
 - generale adeguamento della documentazione al feedback ricevuto dal #vardanega a seguito del colloquio RTB.
 
 === Preventivo costi
-Questo sprint impiega:
+Questo Sprint impiega:
 - *Responsabile*: al fine di:
   - coordinare le attività;
   - organizzare il lavoro in reazione al feedback;
@@ -1726,24 +1724,24 @@ Questo sprint impiega:
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [3],     [2],     [0],     [3],     [2],     [0],     [10],
-    [Carraro],     [0],     [0],     [2],     [1],     [0],     [2],     [5],
-    [Gardin],     [0],     [0],     [0],     [0],     [5],     [0],     [5],
-    [Nardo],     [0],     [2],     [2],     [0],     [0],     [4],     [8],
-    [Oseliero],     [0],     [2],     [0],     [0],     [2],     [0],     [4],
-    [Todesco],     [3],     [0],     [2],     [1],     [0],     [3],     [9],
-    [Zaccone],     [3],     [2],     [0],     [3],     [0],     [0],     [8],
-    [Totale ore],     [9],     [8],     [6],     [8],     [9],     [9],     [49],
-    [Costo ruolo],     [270],     [160],     [150],     [200],     [135],     [135],     [1050],
+    [Banzato],     [2],     [0],     [0],     [0],     [4],     [1],     [7],
+    [Carraro],     [0],     [0],     [2],     [3],     [0],     [2],     [7],
+    [Gardin],     [2],     [0],     [0],     [0],     [4],     [0],     [6],
+    [Nardo],     [0],     [0],     [2],     [3],     [3],     [0],     [8],
+    [Oseliero],     [2],     [0],     [0],     [0],     [0],     [2],     [4],
+    [Todesco],     [0],     [3],     [2],     [0],     [0],     [2],     [7],
+    [Zaccone],     [2],     [0],     [0],     [2],     [0],     [2],     [6],
+    [Totale ore],     [8],     [3],     [6],     [8],     [11],     [9],     [45],
+    [Costo ruolo],     [240],     [60],     [150],     [200],     [165],     [135],     [950],
   ),
-  caption: "Prospetto del preventivo, sprint 16"
+  caption: "Prospetto del preventivo, Sprint 16"
 )
 #let data = (
-  ("Responsabile", 9),
-  ("Amministratore", 8),
+  ("Responsabile", 8),
+  ("Amministratore", 3),
   ("Analista", 6),
   ("Progettista", 8),
-  ("Programmatore", 9),
+  ("Programmatore", 11),
   ("Verificatore", 9),
 )
 #figure({
@@ -1752,7 +1750,7 @@ Questo sprint impiega:
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 16",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 16",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1760,7 +1758,7 @@ Questo sprint impiega:
 == Sprint 17 dal 26-02-2024 al 03-03-2024
 
 === Obiettivi prefissati
-Questo sprint si occupa di cominciare il lavoro di definizione del design e di proseguire il lavoro sulla documentazione. Gli obiettivi prefissati sono:
+Questo Sprint si occupa di cominciare il lavoro di definizione del design e di proseguire il lavoro sulla documentazione. Gli obiettivi prefissati sono:
 - meeting interno di design thinking, in modalità sincrona, il giorno 26/02/2024 ore 15:00;
 - colloquio con il Proponente, in modalità sincrona, il giorno 29/02/2024 alle ore 16:00;
 - estendere le #ndp con il paragrafo di Technical processes/Implementation process;
@@ -1771,15 +1769,15 @@ Questo sprint si occupa di cominciare il lavoro di definizione del design e di p
 - #adr: revisione del documento;
 - redigere introduzione del documento Manuale Utente;
 - redigere introduzione del documento Specifica Tecnica;
-- #pdp: redigere preventivo e consuntivo dello sprint 16;
-- #pdp: redigere preventivo sprint 17;
+- #pdp: redigere preventivo e consuntivo dello Sprint 16;
+- #pdp: redigere preventivo Sprint 17;
 - aggiornare le metriche del #pdq con i dati aggiornati da Grafana;
 - preparare il mock-up dell'UI da presentare al Proponente;
 - aggiornare lo schema ER in seguito al feedback ricevuto dal Proponente.
 
 
 === Preventivo costi
-Questo sprint impiega:
+Questo Sprint impiega:
 - *Responsabile*: al fine di:
   - coordinare le attività;
   - organizzare il lavoro in reazione al feedback;
@@ -1803,21 +1801,21 @@ Questo sprint impiega:
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [1],     [2],     [0],     [0],     [2],     [2],     [7],
-    [Carraro],     [2],     [1],     [0],     [3],     [0],     [0],     [6],
-    [Gardin],     [0],     [1],     [2],     [0],     [4],     [0],     [7],
-    [Nardo],     [1],     [0],     [3],     [2],     [0],     [0],     [6],
-    [Oseliero],     [1],     [2],     [0],     [0],     [0],     [3],     [6],
-    [Todesco],     [0],     [3],     [2],     [0],     [4],     [0],     [9],
-    [Zaccone],     [2],     [0],     [2],     [0],     [2],     [3],     [9],
-    [Totale ore],     [7],     [9],     [9],     [5],     [12],     [8],     [50],
-    [Costo ruolo],     [210],     [180],     [225],     [125],     [180],     [120],     [1040],
+    [Banzato],     [0],     [0],     [0],     [0],     [4],     [3],     [7],
+    [Carraro],     [1],     [0],     [3],     [2],     [0],     [0],     [6],
+    [Gardin],     [0],     [0],     [3],     [0],     [4],     [0],     [7],
+    [Nardo],     [0],     [2],     [3],     [0],     [0],     [2],     [7],
+    [Oseliero],     [0],     [2],     [0],     [1],     [4],     [0],     [7],
+    [Todesco],     [3],     [0],     [0],     [0],     [0],     [3],     [6],
+    [Zaccone],     [2],     [0],     [0],     [2],     [0],     [0],     [4],
+    [Totale ore],     [6],     [4],     [9],     [5],     [12],     [8],     [44],
+    [Costo ruolo],     [180],     [80],     [225],     [125],     [180],     [120],     [910],
   ),
-  caption: "Prospetto del preventivo, sprint 17"
+  caption: "Prospetto del preventivo, Sprint 17"
 )
 #let data = (
-  ("Responsabile", 7),
-  ("Amministratore", 9),
+  ("Responsabile", 6),
+  ("Amministratore", 4),
   ("Analista", 9),
   ("Progettista", 5),
   ("Programmatore", 12),
@@ -1829,7 +1827,7 @@ Questo sprint impiega:
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 17",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 17",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1837,7 +1835,7 @@ Questo sprint impiega:
 == Sprint 18 dal 03/03/2024 al 10/03/2024
 === Obiettivi prefissati
 
-In questo sprint proseguono le attività di design e di implementazione. Gli obiettivi prefissati sono:
+In questo Sprint proseguono le attività di design e di implementazione. Gli obiettivi prefissati sono:
 - colloquio con il Proponente in data 07/03/2024;
 - aggiornamento ed estensione del documento #pdp\;
 - aggiornamento grafici delle metriche nel #pdq allo Sprint 17;
@@ -1853,7 +1851,7 @@ In questo sprint proseguono le attività di design e di implementazione. Gli obi
 - aggiornamento e aggiunta di funzionalità riguardanti le Zone dell'ambiente nel mock-up.
 
 === Preventivo costi
-Questo sprint impiega:
+Questo Sprint impiega:
 - *Responsabile*: al fine di:
   - coordinare le attività;
   - organizzare il lavoro in reazione al feedback;
@@ -1876,23 +1874,23 @@ Questo sprint impiega:
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [1],     [1],     [1],     [0],     [4],     [2],     [9],
-    [Carraro],     [0],     [1],     [2],     [1],     [2],     [1],     [7],
-    [Gardin],     [2],     [0],     [2],     [0],     [1],     [3],     [8],
-    [Nardo],     [0],     [3],     [0],     [0],     [4],     [0],     [7],
-    [Oseliero],     [1],     [0],     [0],     [1],     [3],     [3],     [8],
-    [Todesco],     [2],     [0],     [2],     [0],     [3],     [0],     [7],
-    [Zaccone],     [0],     [2],     [2],     [0],     [3],     [0],     [7],
-    [Totale ore],     [6],     [7],     [9],     [2],     [20],     [9],     [53],
-    [Costo ruolo],     [180],     [140],     [225],     [50],     [300],     [135],     [1030],
+    [Banzato],     [2],     [0],     [1],     [0],     [2],     [0],     [5],
+    [Carraro],     [2],     [0],     [0],     [0],     [2],     [5],     [9],
+    [Gardin],     [0],     [0],     [1],     [0],     [2],     [3],     [6],
+    [Nardo],     [0],     [2],     [0],     [2],     [2],     [0],     [6],
+    [Oseliero],     [2],     [0],     [2],     [0],     [2],     [1],     [7],
+    [Todesco],     [0],     [0],     [2],     [2],     [5],     [0],     [9],
+    [Zaccone],     [0],     [0],     [2],     [0],     [5],     [0],     [7],
+    [Totale ore],     [6],     [2],     [8],     [4],     [20],     [9],     [49],
+    [Costo ruolo],     [180],     [40],     [200],     [100],     [300],     [135],     [955],
   ),
-  caption: "Prospetto del preventivo, sprint 18"
+  caption: "Prospetto del preventivo, Sprint 18"
 )
 #let data = (
   ("Responsabile", 6),
-  ("Amministratore", 7),
-  ("Analista", 9),
-  ("Progettista", 2),
+  ("Amministratore", 2),
+  ("Analista", 8),
+  ("Progettista", 4),
   ("Programmatore", 20),
   ("Verificatore", 9),
 )
@@ -1902,7 +1900,7 @@ Questo sprint impiega:
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 18",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 18",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -1933,8 +1931,9 @@ Questo Sprint impiega:
   - aggiornare il documento #pdp\.
 - *Analista*: al fine di:
   - proseguire con la revisione del documento #adr\.
-- *Progettista*: al fine di:
-  - redarre le sezioni della #st\.
+- *Progettista*: al fine di redigere le sezioni della #st\:
+  - Design pattern;
+  - Diagramma delle classi.
 - *Programmatore*: al fine di:
   - collaborare con il Progettista nella stesura della #st\;
   - implementare la UI;
@@ -1945,25 +1944,25 @@ Questo Sprint impiega:
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [0],     [0],     [1],     [0],     [4],     [3],     [8],
-    [Carraro],     [0],     [1],     [0],     [0],     [3],     [2],     [6],
-    [Gardin],     [1],     [0],     [1],     [0],     [3],     [3],     [8],
-    [Nardo],     [0],     [1],     [2],     [0],     [4],     [0],     [7],
-    [Oseliero],     [2],     [0],     [0],     [1],     [3],     [1],     [7],
-    [Todesco],     [1],     [0],     [0],     [0],     [4],     [2],     [7],
-    [Zaccone],     [0],     [0],     [1],     [0],     [4],     [2],     [7],
-    [Totale ore],     [4],     [2],     [5],     [1],     [25],     [13],     [50],
-    [Costo ruolo],     [120],     [40],     [125],     [25],     [375],     [195],     [880],
+    [Banzato],     [0],     [1],     [0],     [2],     [4],     [3],     [10],
+    [Carraro],     [0],     [1],     [0],     [2],     [5],     [0],     [8],
+    [Gardin],     [0],     [0],     [0],     [0],     [5],     [0],     [5],
+    [Nardo],     [0],     [0],     [3],     [0],     [3],     [5],     [11],
+    [Oseliero],     [0],     [0],     [0],     [0],     [0],     [5],     [5],
+    [Todesco],     [2],     [0],     [2],     [0],     [3],     [0],     [7],
+    [Zaccone],     [0],     [0],     [0],     [0],     [5],     [2],     [7],
+    [Totale ore],     [2],     [2],     [5],     [4],     [25],     [15],     [53],
+    [Costo ruolo],     [60],     [40],     [125],     [100],     [375],     [225],     [925],
   ),
-  caption: "Prospetto del preventivo, sprint 19"
+  caption: "Prospetto del preventivo, Sprint 19"
 )
 #let data = (
-  ("Responsabile", 4),
+  ("Responsabile", 2),
   ("Amministratore", 2),
   ("Analista", 5),
-  ("Progettista", 1),
+  ("Progettista", 4),
   ("Programmatore", 25),
-  ("Verificatore", 13),
+  ("Verificatore", 15),
 )
 #figure({
   roles-legend
@@ -1971,13 +1970,14 @@ Questo Sprint impiega:
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 19",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 19",
   kind: "chart",
   supplement: "Grafico"
 )
 
 
 == Sprint 20 dal 17/03/2024 al 24/03/2024
+
 === Obiettivi prefissati
 
 Questo Sprint ha come obiettivi principali l'implementazione del MVP e la stesura del #man\. Sarà inoltre iniziata l'attività di revisione degli ultimi capitoli redatti delle #ndp\. Gli obiettivi prefissati sono:
@@ -2004,6 +2004,7 @@ Questo Sprint ha come obiettivi principali l'implementazione del MVP e la stesur
 
 
 === Preventivo costi
+
 Questo Sprint impiega:
 - *Responsabile*: al fine di:
   - coordinare le attività;
@@ -2026,25 +2027,25 @@ Questo Sprint impiega:
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [0],     [0],     [0],     [0],     [4],     [3],     [7],
-    [Carraro],     [1],     [0],     [1],     [0],     [5],     [0],     [7],
-    [Gardin],     [0],     [0],     [0],     [0],     [6],     [3],     [9],
-    [Nardo],     [0],     [0],     [0],     [0],     [5],     [4],     [9],
-    [Oseliero],     [2],     [1],     [0],     [0],     [5],     [2],     [10],
-    [Todesco],     [0],     [0],     [1],     [0],     [7],     [1],     [9],
-    [Zaccone],     [0],     [0],     [0],     [0],     [6],     [3],     [9],
-    [Totale ore],     [3],     [1],     [2],     [0],     [38],     [16],     [60],
-    [Costo ruolo],     [90],     [20],     [50],     [0],     [570],     [240],     [970],
+    [Banzato],     [0],     [0],     [0],     [0],     [7],     [2],     [9],
+    [Carraro],     [0],     [0],     [0],     [0],     [7],     [0],     [7],
+    [Gardin],     [1],     [0],     [0],     [0],     [3],     [4],     [8],
+    [Nardo],     [0],     [0],     [2],     [0],     [5],     [2],     [9],
+    [Oseliero],     [0],     [0],     [0],     [0],     [5],     [4],     [9],
+    [Todesco],     [0],     [0],     [1],     [0],     [5],     [2],     [8],
+    [Zaccone],     [2],     [1],     [0],     [0],     [3],     [4],     [10],
+    [Totale ore],     [3],     [1],     [3],     [0],     [35],     [18],     [60],
+    [Costo ruolo],     [90],     [20],     [75],     [0],     [525],     [270],     [980],
   ),
-  caption: "Prospetto del preventivo, sprint 20"
+  caption: "Prospetto del preventivo, Sprint 20"
 )
 #let data = (
   ("Responsabile", 3),
   ("Amministratore", 1),
-  ("Analista", 2),
+  ("Analista", 3),
   ("Progettista", 0),
-  ("Programmatore", 38),
-  ("Verificatore", 16),
+  ("Programmatore", 35),
+  ("Verificatore", 18),
 )
 #figure({
   roles-legend
@@ -2052,18 +2053,281 @@ Questo Sprint impiega:
     import draw: *
     chart.piechart(..piechart-config, data)}
   )},
-  caption: "Suddivisione oraria per ruolo, preventivo sprint 20",
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 20",
   kind: "chart",
   supplement: "Grafico"
 )
+
+== Sprint 21 dal 24/03/2024 al 30/03/2024
+
+=== Obiettivi prefissati
+
+Lo Sprint 21 ha come obiettivo primario la convalida come MVP del prodotto software da parte del Proponente. Gli obiettivi prefissati sono:
+- sostenere il colloquio di convalida del MVP con il Proponente, il giorno 26/04/2024;
+- aggiornamento ed estensione del documento #pdp\;
+- aggiornamento grafici delle metriche nel #pdq allo Sprint 20;
+- aggiornamento della dashboard Grafana allo Sprint 20;
+- armonizzazione dei seguenti capitoli delle #ndp a seguito della loro revisione, conclusasi durante lo Sprint 20:
+  - Processo di gestione della qualità;
+  - Processo di implementazione;
+  - Processo di integrazione;
+  - Processo di verifica;
+  - Processo di transizione;
+  - Processo di validazione.
+- redazione delle seguenti sezioni del #man\:
+  - Impostazioni;
+  - Spostamento prodotto;
+  - Ispezione bin/zona.
+- terminare le attività di codifica del MVP.
+
+La pianificazione tiene conto delle festività pasquali, che potrebbero impattare negativamente l'intesità del lavoro durante questo Sprint e il successivo.
+
+=== Preventivo costi
+
+Questo Sprint impiega:
+- *Responsabile*: al fine di:
+  - coordinare le attività;
+  - revisionare i capitoli delle #ndp\.
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
+- *Progettista*: al fine di:
+  - redigere le sezioni della #st\;
+  - redigere le sezioni del #man\.
+- *Programmatore*: al fine di concludere le attività di codifica del MVP;
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp\.
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
+    [Carraro],     [0],     [0],     [0],     [1],     [4],     [2],     [7],
+    [Gardin],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
+    [Nardo],     [0],     [0],     [0],     [1],     [4],     [0],     [5],
+    [Oseliero],     [0],     [2],     [0],     [0],     [0],     [0],     [2],
+    [Todesco],     [0],     [0],     [0],     [0],     [5],     [0],     [5],
+    [Zaccone],     [0],     [0],     [0],     [0],     [5],     [0],     [5],
+    [Totale ore],     [4],     [2],     [0],     [2],     [18],     [8],     [34],
+    [Costo ruolo],     [120],     [40],     [0],     [50],     [270],     [120],     [600],
+  ),
+  caption: "Prospetto del preventivo, Sprint 21"
+)
+#let data = (
+  ("Responsabile", 4),
+  ("Amministratore", 2),
+  ("Analista", 0),
+  ("Progettista", 2),
+  ("Programmatore", 18),
+  ("Verificatore", 8),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 21",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+== Sprint 22 dal 30/03/2024 al 07/04/2024
+
+=== Obiettivi prefissati
+
+Lo Sprint 22 ha come obiettivo il proseguimento del lavoro sui documenti oggetti di valutazione in sede di PB. Gli obiettivi prefissati sono:
+- candidatura allo sportello PB col #cardin (data da definire, vincolata alla ricezione del feedback positivo sul documento #adr\);
+- aggiornamento ed estensione del documento #pdp\;
+- aggiornamento grafici delle metriche nel #pdq allo Sprint 21;
+- aggiornamento della dashboard Grafana allo Sprint 21;
+- revisione generale del documento di #st\;
+- redazione delle seguenti sezioni del #man\:
+  - Griglia di collocamento;
+  - Ispezione bin;
+  - Collocazione zona nell'ambiente 3D;
+  - Ricerca zona;
+  - Spostamento POV su bin;
+  - Visualizzazione informazione prodotto;
+  - Visualizzazione lista prodotti;
+  - Ricerca prodotti;
+  - Visualizzazione lista ordini movimentazione;
+  - Visualizzazione singolo ordine movimentazione.
+- aggiornamento di alcune immagini del #man al fine di renderle coerenti con le nuove funzionalità implementate.
+
+Non sono previsti meeting con il Proponente in questo Sprint.
+
+La pianificazione tiene conto del rientro dalle festività pasquali, che potrebbero impattare negativamente l'intesità del lavoro durante questo Sprint.
+
+=== Preventivo costi
+
+Questo Sprint impiega:
+- *Responsabile*: al fine di coordinare le attività;
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
+- *Progettista*: al fine di revisionare il documento #st\;
+- *Programmatore*: al fine di:
+  - redigere le sezioni del #man\;
+  - aggiornare le immagini del #man\.
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp\.
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [2],     [0],     [0],     [2],
+    [Carraro],     [2],     [0],     [0],     [0],     [0],     [2],     [4],
+    [Gardin],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
+    [Nardo],     [0],     [3],     [0],     [0],     [0],     [3],     [6],
+    [Oseliero],     [0],     [0],     [0],     [2],     [0],     [0],     [2],
+    [Todesco],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
+    [Zaccone],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
+    [Totale ore],     [4],     [3],     [0],     [4],     [0],     [14],     [25],
+    [Costo ruolo],     [120],     [60],     [0],     [100],     [0],     [210],     [490],
+  ),
+  caption: "Prospetto del preventivo, Sprint 22"
+)
+#let data = (
+  ("Responsabile", 4),
+  ("Amministratore", 3),
+  ("Analista", 0),
+  ("Progettista", 4),
+  ("Programmatore", 0),
+  ("Verificatore", 14),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 22",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+== Sprint 23 dal 07/04/2024 al 14/04/2024
+
+=== Obiettivi prefissati
+
+Lo Sprint 23 ha come obiettivo la preparazione per il colloquio PB col #cardin (10/04/2024) e la conclusione del lavoro di revisione dei documenti. Gli obiettivi prefissati sono:
+- preparazione della presentazione per il colloquio PB col #cardin;
+- aggiornamento ed estensione del documento #pdp\;
+- aggiornamento grafici delle metriche nel #pdq allo Sprint 22;
+- aggiornamento della dashboard Grafana allo Sprint 22;
+- separazione della lista dei test di unità e quella dei test di integrazione nel documento #pdq;
+- redazione della sezione relativa ai test di sistema nel documento #pdq;
+- aggiunta della sezione riguardante la guida sull'avvio del software nel #man;
+- rimozione della sezione "Supporto tecnico" dal #man.
+
+=== Preventivo costi
+
+Questo Sprint impiega:
+- *Responsabile*: al fine di coordinare le attività;
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
+- *Progettista*: al fine di redigere le sezioni del #man\;
+- *Verificatore*: al fine di verificare la correttezza del lavoro prodotto e la sua coerenza con le #ndp\.
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [0],     [0],     [2],     [2],
+    [Carraro],     [0],     [2],     [0],     [0],     [0],     [0],     [2],
+    [Gardin],     [0],     [0],     [0],     [0],     [0],     [2],     [2],
+    [Nardo],     [0],     [0],     [0],     [1],     [0],     [0],     [1],
+    [Oseliero],     [1],     [0],     [0],     [0],     [0],     [2],     [3],
+    [Todesco],     [0],     [0],     [0],     [0],     [0],     [2],     [2],
+    [Zaccone],     [0],     [0],     [0],     [1],     [0],     [0],     [1],
+    [Totale ore],     [1],     [2],     [0],     [2],     [0],     [8],     [13],
+    [Costo ruolo],     [30],     [40],     [0],     [50],     [0],     [120],     [240],
+  ),
+  caption: "Prospetto del preventivo, Sprint 23"
+)
+#let data = (
+  ("Responsabile", 1),
+  ("Amministratore", 2),
+  ("Analista", 0),
+  ("Progettista", 2),
+  ("Programmatore", 0),
+  ("Verificatore", 8),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 23",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+
+== Sprint 24 dal 14/04/2024 al 21/04/2024
+
+=== Obiettivi prefissati
+
+Lo Sprint 24 prevede esclusivamente compiti di ordinaria amministrazione, in attesa della ricezione del feedback sul colloquio PB col #cardin. Gli obiettivi prefissati sono:
+- candidatura allo sportello PB col #vardanega (data da definire, vincolata alla ricezione del feedback positivo sul documento #st\);
+- aggiornamento ed estensione del documento #pdp\;
+- aggiornamento grafici delle metriche nel #pdq allo Sprint 22;
+- aggiornamento della dashboard Grafana allo Sprint 22.
+
+=== Preventivo costi
+
+Questo Sprint impiega:
+- *Responsabile*: al fine di coordinare le attività;
+- *Amministratore*: al fine di:
+  - redigere i verbali;
+  - aggiornare il documento #pdp\.
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Carraro],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Gardin],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Nardo],     [1],     [0],     [0],     [0],     [0],     [0],     [1],
+    [Oseliero],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Todesco],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Zaccone],     [0],     [2],     [0],     [0],     [0],     [0],     [2],
+    [Totale ore],     [1],     [2],     [0],     [0],     [0],     [0],     [3],
+    [Costo ruolo],     [30],     [40],     [0],     [0],     [0],     [0],     [70],
+  ),
+  caption: "Prospetto del preventivo, Sprint 24"
+)
+#let data = (
+  ("Responsabile", 1),
+  ("Amministratore", 2),
+  ("Analista", 0),
+  ("Progettista", 0),
+  ("Programmatore", 0),
+  ("Verificatore", 0),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 24",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
 
 #pagebreak()
 
 = Consuntivi di periodo <consuntivi>
 
-Il consuntivo di ogni sprint permette di avere una valutazione critica dell'avanzamento dello sviluppo, valutando in modo oggettivo i punti positivi e negativi dello sprint terminato.
+Il consuntivo di ogni Sprint permette di avere una valutazione critica dell'avanzamento dello sviluppo, valutando in modo oggettivo i punti positivi e negativi dello Sprint terminato.
 
-Questa fase di retrospettiva è essenziale al fine di individuare possibili miglioramenti e di analizzare se la pianificazione ideata all'inizio dello sprint sia stata concreta ed efficace.
+Questa fase di retrospettiva è essenziale al fine di individuare possibili miglioramenti e di analizzare se la pianificazione ideata all'inizio dello Sprint sia stata concreta ed efficace.
 
 
 == Sprint 1 dal 06-11-2023 al 13-11-2023
@@ -2085,7 +2349,7 @@ A causa di una sottostima del carico di lavoro per l'implementazione delle autom
 Un altro problema riguarda la comunicazione con l'azienda Proponente: sfortunatamente, la mail inviata non ha ricevuto riscontro in tempo, impedendo di procedere ulteriormente con l'#adr e la programmazione di un meeting con l'azienda.
 
 === Risoluzioni attuate
-Le automazioni riguardanti il versionamento verranno concluse nello sprint successivo.
+Le automazioni riguardanti il versionamento verranno concluse nello Sprint successivo.
 
 La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di un'azione di sollecito con una seconda mail, e successivamente la richiesta di stabilire un nuovo canale di comunicazione.
 
@@ -2105,7 +2369,7 @@ La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di u
     [Totale ore],     [2 (-1)],     [12 (+4)],     [4 (-2)],     [0],     [0],     [4 (-2)],     [22 (-1)],
     [Costo\ ruolo],     [€ 60 (-30)],     [€ 240 (+80)],     [€ 100 (-50)],     [€ 0],     [€ 0],     [€ 60 (-30)],     [€ 460 (-30)],
   ),
-  caption: "Prospetto del consuntivo, sprint 1"
+  caption: "Prospetto del consuntivo, Sprint 1"
 )
 #let data = (
   ("Responsabile", 3, 2),
@@ -2137,7 +2401,7 @@ La problematica in merito al contatto con l'azienda vedrà l'intraprendersi di u
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 1",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 1",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -2165,7 +2429,7 @@ Il ruolo dell'Amministratore, invece, ha visto un aumento delle ore rispetto a q
     [Verificatore], [143], [€ 2145],
     [Rimanente], [643], [€ 12595],
   ),
-  caption: "Monitoraggio sprint 1"
+  caption: "Monitoraggio Sprint 1"
 )
 
 
@@ -2182,7 +2446,7 @@ Il ruolo dell'Amministratore, invece, ha visto un aumento delle ore rispetto a q
 - Inizio dell'individuazione e della stesura degli Use Case.
 
 === Obiettivi mancati
-Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obiettivi mancati dello sprint precedente.
+Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obiettivi mancati dello Sprint precedente.
 
 === Problematiche
 - Il gruppo ha notato la mancanza di una struttura comune nei verbali, che porta a documenti senza una precisa convenzione e rallentamenti in fase di redazione;
@@ -2210,7 +2474,7 @@ Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obi
     [Totale ore],     [3],     [12 (+4)],     [9],     [0],     [0],     [2 (-1)],     [26 (+3)],
     [Costo\ ruolo],     [€ 90],     [€ 240 (+80)],     [€ 225],     [€ 0],     [€ 0],     [€ 30 (-15)],     [€ 585 (+65)],
   ),
-  caption: "Prospetto del consuntivo, sprint 2"
+  caption: "Prospetto del consuntivo, Sprint 2"
 )
 #let data = (
   ("Responsabile", 3, 3),
@@ -2242,7 +2506,7 @@ Gli obiettivi sono stati tutti raggiunti, considerando anche che molti erano obi
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 2",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 2",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -2266,7 +2530,7 @@ A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore ef
     [Verificatore], [141], [€ 2115],
     [Rimanente], [617], [€ 12010],
   ),
-  caption: "Monitoraggio sprint 2"
+  caption: "Monitoraggio Sprint 2"
 )
 
 
@@ -2288,15 +2552,15 @@ A causa delle problematiche incontrate, alcuni ruoli hanno visto un monte ore ef
 
 Nonostante la realizzazione soddisfacente della maggior parte degli obiettivi concordati, sono emerse alcune criticità durante l'implementazione del progetto:
 
-- si è riscontrata una pianificazione non ottimale e superficiale, attribuibile alla mancanza di un dettagliato processo di pianificazione durante la riunione precedente l'avvio dello sprint;
+- si è riscontrata una pianificazione non ottimale e superficiale, attribuibile alla mancanza di un dettagliato processo di pianificazione durante la riunione precedente l'avvio dello Sprint;
 - sono sorti problemi a causa della mancata definizione di standard per la creazione dei grafici di Gantt e burndown, comportando una stesura parziale dei paragrafi nel documento #pdp;
 - la durata dei meeting ha superato le aspettative a causa di alcune inefficienze temporali;
-- il gruppo ha rilevato la mancanza di standard per designare le persone responsabili della redazione dei verbali durante lo sprint.
+- il gruppo ha rilevato la mancanza di standard per designare le persone responsabili della redazione dei verbali durante lo Sprint.
 
 === Risoluzioni attuate
 Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentrano su un'organizzazione e un'attenzione maggiore nel processo di pianificazione, oltre alla definizione di standard relativi ai grafici da inserire nei documenti e relativi allo svolgimento dei meeting e redazione dei rispettivi verbali. In particolare:
 
-- è stata prestata una maggiore attenzione nella pianificazione del nuovo sprint, introducendo nella board retrospettiva di Miro una bacheca relativa alle task da svolgere, che sono state tradotte fin da subito in ticket di Jira e assegnati ai rispettivi ruoli;
+- è stata prestata una maggiore attenzione nella pianificazione del nuovo Sprint, introducendo nella board retrospettiva di Miro una bacheca relativa alle task da svolgere, che sono state tradotte fin da subito in ticket di Jira e assegnati ai rispettivi ruoli;
 - la durata massima dei meeting di retrospettiva è stata fissata a 90 minuti (_soft limit_);
 - sono stati definiti degli standard per la realizzazione dei grafici, adottando quelli proposti da Jira;
 - è stato assegnato all'Amministratore il compito della redazione dei verbali.
@@ -2317,7 +2581,7 @@ Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentr
     [Totale ore],     [2 (-1)],     [8 (+2)],     [8],     [3],     [0],     [3],     [24 (+1)],
     [Costo\ ruolo],     [€ 60 (-30)],     [€ 160 (+40)],     [€ 200],     [€ 75],     [€ 0],     [€ 45],     [€ 540 (+10)],
   ),
-  caption: "Prospetto del consuntivo, sprint 3"
+  caption: "Prospetto del consuntivo, Sprint 3"
 )
 #let data = (
   ("Responsabile", 3, 2),
@@ -2349,7 +2613,7 @@ Le risoluzioni attuate per risolvere i problemi citati in precedenza si concentr
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 3",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 3",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -2372,7 +2636,7 @@ A causa dei problemi incontrati, alcuni ruoli hanno visto un monte ore effettivo
     [Verificatore], [138], [€ 2070],
     [Rimanente], [593], [€ 11470],
   ),
-  caption: "Monitoraggio sprint 3"
+  caption: "Monitoraggio Sprint 3"
 )
 
 
@@ -2417,7 +2681,7 @@ Inoltre, il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'u
     [Totale ore],     [3],     [4 (-2)],     [7],     [1],     [4 (+1)],     [4 (+1)],     [23],
     [Costo\ ruolo],     [€ 90],     [€ 80 (-40)],     [€ 175],     [€ 25],     [€ 60 (+15)],     [€ 60 (+15)],     [€ 490 (-10)],
   ),
-  caption: "Prospetto del consuntivo, sprint 4"
+  caption: "Prospetto del consuntivo, Sprint 4"
 )
 #let data = (
   ("Responsabile", 3, 3),
@@ -2449,7 +2713,7 @@ Inoltre, il gruppo ha preso l'impegno di formarsi in maniera approfondita sull'u
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 4",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 4",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -2473,7 +2737,7 @@ A causa dei rallentamenti incontrati, alcuni ruoli hanno visto un monte ore effe
     [Verificatore], [134], [€ 2010],
     [Rimanente], [570], [€ 10980],
   ),
-  caption: "Monitoraggio sprint 4"
+  caption: "Monitoraggio Sprint 4"
 )
 
 
@@ -2524,7 +2788,7 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
     [Totale ore],     [3],     [2 (-1)],     [8],     [2 (-2)],     [8],     [3],     [26 (-3)],
     [Costo\ ruolo],     [€ 90],     [€ 40 (-20)],     [€ 200],     [€ 50 (-50)],     [€ 120],     [€ 45],     [€ 545 (-70)],
   ),
-  caption: "Prospetto del consuntivo, sprint 5"
+  caption: "Prospetto del consuntivo, Sprint 5"
 )
 #let data = (
   ("Responsabile", 3, 3),
@@ -2556,7 +2820,7 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 5",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 5",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -2577,7 +2841,7 @@ Per produrre una prima versione dei PoC, i Progettisti (e in parte il Responsabi
     [Verificatore], [131], [€ 1965],
     [Rimanente], [544], [€ 10435],
   ),
-  caption: "Monitoraggio sprint 5"
+  caption: "Monitoraggio Sprint 5"
 )
 
 
@@ -2613,7 +2877,7 @@ Durante il meeting di retrospettiva sono emerse le seguenti problematiche da mig
 === Risoluzioni attuate
 Conseguentemente ai problemi rilevati, sono state individuate le relative soluzioni da adottare:
 - si richiede ai componenti del gruppo una comunicazione rapida delle difficoltà e problemi, non appena questi si presentano;
-- il numero di persone assegnate alla redazione delle #ndp verrà incrementato da due a tre, in modo da garantire la produzione di un maggior numero di sezioni durante lo sprint.
+- il numero di persone assegnate alla redazione delle #ndp verrà incrementato da due a tre, in modo da garantire la produzione di un maggior numero di sezioni durante lo Sprint.
 
 === Panoramica dei costi effettivi
 
@@ -2631,7 +2895,7 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
     [Totale ore],     [3],     [3],     [8],     [2],     [5 (-1)],     [3],     [24 (-1)],
     [Costo\ ruolo],     [€ 90],     [€ 60],     [€ 200],     [€ 50],     [€ 75 (-15)],     [€ 45],     [€ 520 (-15)],
   ),
-  caption: "Prospetto del consuntivo, sprint 6"
+  caption: "Prospetto del consuntivo, Sprint 6"
 )
 #let data = (
   ("Responsabile", 3, 3),
@@ -2663,7 +2927,7 @@ Conseguentemente ai problemi rilevati, sono state individuate le relative soluzi
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 6",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 6",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -2684,7 +2948,7 @@ Il ruolo di Programmatore presenta un monte ore effettivo minore rispetto a quel
     [Verificatore], [128], [€ 1920],
     [Rimanente], [520], [€ 9915],
   ),
-  caption: "Monitoraggio sprint 6"
+  caption: "Monitoraggio Sprint 6"
 )
 
 
@@ -2707,7 +2971,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 - il pool mensile di automatismi inclusi nel piano gratuito relativi ai ticket di Jira è stato esaurito;
 - lentezza nell'approvazione delle correzioni richieste nelle review;
 - nelle review delle pull request alcuni commenti risultano essere poco chiari e/o sbrigativi;
-- il progresso relativo al documento #ndp è risultato scarso in confronto con gli sprint precedenti, e in ritardo rispetto a quanto pianificato;
+- il progresso relativo al documento #ndp è risultato scarso in confronto con gli Sprint precedenti, e in ritardo rispetto a quanto pianificato;
 - il tracciamento delle attività relative al PoC non ha lo stesso livello di precisione di quello delle attività documentali.
 
 === Risoluzioni attuate
@@ -2717,8 +2981,8 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   - indicando con precisione la natura dell'errore e, se utile, la sua localizzazione all'interno della riga;
   - fornendo una possibile correzione, quando appropriato;
   - nel caso di più occorrenze dello stesso errore, segnalarle tutte. Per evitare ripetizioni, fornire una valutazione della prima occorrenza ed inserire un riferimento a tale conversazione nelle occorrenze successive.
-- Per accelerare il lavoro sulle #ndp, chi ha redatto le #ndp nel corso degli sprint precedenti continuerà l'affiancamento nel corso dello sprint successivo;
-- La natura esplorativa del PoC richiede flessibilità nella pianificazione, ma si sottolinea la necessità di continuare a tracciare le attività per riferimento futuro.
+- Per accelerare il lavoro sulle #ndp, chi ha redatto le #ndp nel corso degli Sprint precedenti continuerà l'aﬃancamento nel corso dello Sprint successivo;
+- La natura esplorativa del PoC richiede ﬂessibilità nella pianiﬁcazione, ma si sottolinea la necessità di continuare a tracciare le attività per riferimento futuro.
 
 === Panoramica dei costi effettivi
 
@@ -2736,7 +3000,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
     [Totale ore],     [2 (-1)],     [3 (-1)],     [1 (-2)],     [5 (-1)],     [5],     [2],     [18 (-5)],
     [Costo\ ruolo],     [€ 60 (-30)],     [€ 60 (-20)],     [€ 25 (-50)],     [€ 125 (-25)],     [€ 75],     [€ 30],     [€ 375 (-125)],
   ),
-  caption: "Prospetto del consuntivo, sprint 7"
+  caption: "Prospetto del consuntivo, Sprint 7"
 )
 #let data = (
   ("Responsabile", 3, 2),
@@ -2768,7 +3032,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 7",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 7",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -2789,7 +3053,7 @@ Diversi ruoli risultano avere un monte ore minore rispetto a quello preventivato
     [Verificatore], [126], [€ 1890],
     [Rimanente], [502], [€ 9540],
   ),
-  caption: "Monitoraggio sprint 7"
+  caption: "Monitoraggio Sprint 7"
 )
 
 
@@ -2833,7 +3097,7 @@ Nessuna.
     [Totale ore],     [4],     [6 (+3)],     [3],     [5 (-1)],     [5 (+2)],     [4],     [27 (+4)],
     [Costo\ ruolo],     [€ 120],     [€ 120 (+60)],     [€ 75],     [€ 125 (-25)],     [€ 75 (+30)],     [€ 60],     [€ 575 (+65)],
   ),
-  caption: "Prospetto del consuntivo, sprint 8"
+  caption: "Prospetto del consuntivo, Sprint 8"
 )
 #let data = (
   ("Responsabile", 4, 4),
@@ -2865,7 +3129,7 @@ Nessuna.
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 8",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 8",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -2886,14 +3150,14 @@ La ricerca di una valida soluzione per implementare la dashboard di monitoraggio
     [Verificatore], [122], [€ 1830],
     [Rimanente], [475], [€ 8965],
   ),
-  caption: "Monitoraggio sprint 8"
+  caption: "Monitoraggio Sprint 8"
 )
 
 
 == Sprint 9 dal 01-01-2024 al 08-01-2024
 
 === Obiettivi raggiunti
-Tutti gli obiettivi dello sprint sono stati raggiunti.
+Tutti gli obiettivi dello Sprint sono stati raggiunti.
 
 === Obiettivi mancati
 Nessuno.
@@ -2902,7 +3166,7 @@ Nessuno.
 Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 - le norme di formattazione del testo non sono state rispettate in alcune sezioni dei documenti, specialmente nelle sezioni redatte meno di recente;
 - le norme per l'inclusione di riferimenti a documenti esterni sono imprecise;
-- alcuni ticket non urgenti vengono erroneamente creati ed inseriti nel backlog dello sprint in corso, falsando la reportistica di Jira.
+- alcuni ticket non urgenti vengono erroneamente creati ed inseriti nel backlog dello Sprint in corso, falsando la reportistica di Jira.
 
 === Risoluzioni attuate
 - Durante la verifica dei documenti in ottica RTB, il Verificatore controllerà anche l'uso conforme della formattazione del testo;
@@ -2911,7 +3175,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   + i link ai documenti siano riportati nella sezione Riferimenti;
   + i link ai documenti siano riportati per esteso;
   + i link puntino al documento PDF contenuto nel branch `main`.
-- I ticket non urgenti saranno aggiunti al backlog generale e non a quello dello sprint in corso.
+- I ticket non urgenti saranno aggiunti al backlog generale e non a quello dello Sprint in corso.
 
 === Panoramica dei costi effettivi
 
@@ -2929,7 +3193,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
     [Totale ore],     [3 (-1)],     [4 (-6)],     [4 (-1)],     [1 (+1)],     [0],     [9 (-3)],     [21 (-10)],
     [Costo\ ruolo],     [€ 90 (-30)],     [€ 80 (-120)],     [€ 100 (-25)],     [€ 25 (+25)],     [€ 0],     [€ 135 (-45)],     [€ 430 (-195)],
   ),
-  caption: "Prospetto del consuntivo, sprint 9"
+  caption: "Prospetto del consuntivo, Sprint 9"
 )
 #let data = (
   ("Responsabile", 4, 3),
@@ -2961,12 +3225,12 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 9",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 9",
   kind: "chart",
   supplement: "Grafico"
 )
 
-La pianificazione delle attività per lo sprint 9 è stata conservativa. L'entità di alcune attività, specialmente quelle relative alle automazioni e alla dashboard, si sono rivelate sensibilmente minori del previsto. Il Progettista, inizialmente non previsto, è stato interpellato per la realizzazione della presentazione per il colloquio RTB con il #cardin.
+La pianificazione delle attività per lo Sprint 9 è stata conservativa. L'entità di alcune attività, specialmente quelle relative alle automazioni e alla dashboard, si sono rivelate sensibilmente minori del previsto. Il Progettista, inizialmente non previsto, è stato interpellato per la realizzazione della presentazione per il colloquio RTB con il #cardin.
 
 === Monitoraggio costi e ore
 
@@ -2982,7 +3246,7 @@ La pianificazione delle attività per lo sprint 9 è stata conservativa. L'entit
     [Verificatore], [113], [€ 1695],
     [Rimanente], [454], [€ 8535],
   ),
-  caption: "Monitoraggio sprint 9"
+  caption: "Monitoraggio Sprint 9"
 )
 
 
@@ -3004,6 +3268,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 
 === Risoluzioni attuate
 I membri del gruppo si impegneranno a comunicare in maniera più tempestiva e precisa modifiche apportate e/o aggiornamenti alla configurazione degli strumenti di supporto.
+
 L'impegno individuale dei membri risulta sbilanciato a causa dell'imminente sessione d'esame invernale. Pertanto, la pianificazione dei prossimi sprint terrà conto della ridotta disponibilità di tempo. È previsto che la situazione migliorerà entro il termine dello sprint 13.
 
 === Panoramica dei costi effettivi
@@ -3022,7 +3287,7 @@ L'impegno individuale dei membri risulta sbilanciato a causa dell'imminente sess
     [Totale ore],     [2],     [2],     [2],     [1 (+1)],     [4],     [8],     [19 (+1)],
     [Costo\ ruolo],     [€ 60],     [€ 40],     [€ 50],     [€ 25 (+25)],     [€ 60],     [€ 120],     [€ 355 (+25)],
   ),
-  caption: "Prospetto del consuntivo, sprint 10"
+  caption: "Prospetto del consuntivo, Sprint 10"
 )
 #let data = (
   ("Responsabile", 2, 2),
@@ -3054,7 +3319,7 @@ L'impegno individuale dei membri risulta sbilanciato a causa dell'imminente sess
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 10",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 10",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -3075,7 +3340,7 @@ La presenza del Progettista, non pianificata, deriva dalla necessità di decider
     [Verificatore],     [105],     [€ 1575],
     [Rimanente],     [435],     [€ 8180],
   ),
-  caption: "Monitoraggio sprint 10"
+  caption: "Monitoraggio Sprint 10"
 )
 
 == Sprint 11 dal 14-01-2024 al 21-01-2024
@@ -3112,7 +3377,7 @@ Nessuna. La situazione di carico di lavoro asimmetrico è destinata a migliorare
     [Totale ore],     [2 (-1)],     [3],     [2 (-1)],     [0],     [0],     [4 (-2)],     [11 (-4)],
     [Costo\ ruolo],     [€ 60 (-30)],     [€ 60],     [€ 50 (-25)],     [€ 0],     [€ 0],     [€ 60 (-30)],     [€ 230 (-85)],
   ),
-  caption: "Prospetto del consuntivo, sprint 11"
+  caption: "Prospetto del consuntivo, Sprint 11"
 )
 #let data = (
   ("Responsabile", 3, 2),
@@ -3144,7 +3409,7 @@ Nessuna. La situazione di carico di lavoro asimmetrico è destinata a migliorare
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 11",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 11",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -3165,7 +3430,7 @@ La necessità dei ruoli di Responsabile e di Analista è stata minore rispetto a
     [Verificatore],     [101],     [€ 1515],
     [Rimanente],     [424],     [€ 7950],
   ),
-  caption: "Monitoraggio sprint 11"
+  caption: "Monitoraggio Sprint 11"
 )
 
 
@@ -3201,7 +3466,7 @@ Nessuna.
     [Totale ore],     [1],     [1],     [1 (+1)],     [3],     [0],     [2],     [8 (+1)],
     [Costo\ ruolo],     [€ 30],     [€ 20],     [€ 25 (+25)],     [€ 75],     [€ 0],     [€ 30],     [€ 180 (+25)],
   ),
-  caption: "Prospetto del consuntivo, sprint 12"
+  caption: "Prospetto del consuntivo, Sprint 12"
 )
 #let data = (
   ("Responsabile", 1, 1),
@@ -3233,7 +3498,7 @@ Nessuna.
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 12",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 12",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -3254,13 +3519,13 @@ Il totale delle ore di lavoro preventivate è stato in gran parte rispettato. Tu
     [Verificatore],     [99],     [€ 1485],
     [Rimanente],     [416],     [€ 7770],
   ),
-  caption: "Monitoraggio sprint 12"
+  caption: "Monitoraggio Sprint 12"
 )
 
 == Sprint 13 dal 28-01-2024 al 04-02-2024
 
 === Obiettivi raggiunti
-- Preparazione della pianificazione dello sprint 14 a seguito del risultato del colloquio RTB sostenuto con il #cardin, ricevuto il 31/01/2024.
+- Preparazione della pianificazione dello Sprint 14 a seguito del risultato del colloquio RTB sostenuto con il #cardin, ricevuto il 31/01/2024.
 
 === Obiettivi mancati
 Nessuno.
@@ -3287,7 +3552,7 @@ Nessuna.
     [Totale ore],     [3 (+1)],     [1],     [0],     [0],     [0],     [0],     [4 (+1)],
     [Costo\ ruolo],     [€ 90 (+30)],     [€ 20],     [€ 0],     [€ 0],     [€ 0],     [€ 0],     [€ 110 (+30)],
   ),
-  caption: "Prospetto del consuntivo, sprint 13"
+  caption: "Prospetto del consuntivo, Sprint 13"
 )
 #let data = (
   ("Responsabile", 2, 3),
@@ -3319,12 +3584,12 @@ Nessuna.
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 13",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 13",
   kind: "chart",
   supplement: "Grafico"
 )
 
-Lo sprint 13 è stato caratterizzato da un momento di pausa, dovuto alla concomitanza degli esami, conclusosi mercoledì 31/01/2024 con la ricezione del feedback da parte del #cardin. Nel corso dei giorni rimanenti, il Responsabile ha aggiornato la pianificazione per adeguarla al diverso contesto di lavoro.
+Lo Sprint 13 è stato caratterizzato da un momento di pausa, dovuto alla concomitanza degli esami, conclusosi mercoledì 31/01/2024 con la ricezione del feedback da parte del #cardin. Nel corso dei giorni rimanenti, il Responsabile ha aggiornato la pianificazione per adeguarla al diverso contesto di lavoro.
 
 === Monitoraggio costi e ore
 
@@ -3340,7 +3605,7 @@ Lo sprint 13 è stato caratterizzato da un momento di pausa, dovuto alla concomi
     [Verificatore],     [99],     [€ 1485],
     [Rimanente],     [412],     [€ 7660],
   ),
-  caption: "Monitoraggio sprint 13"
+  caption: "Monitoraggio Sprint 13"
 )
 
 == Sprint 14 dal 04-02-2024 al 11-02-2024
@@ -3361,7 +3626,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 - la board Miro ha mostrato scarsità di riscontro su _Keep doings_ e _Improvements_ prima dell'incontro di retrospettiva.
 
 === Risoluzioni attuate
-- I conflitti di _merge_ sono inevitabili quando più branch insistono sullo stesso documento. Durante questo sprint la maggior parte del lavoro è avvenuta sul documento #adr. Si cercherà di evitare la sovrapposizione di lavoro sui documenti coordinando il lavoro di redattori e Verificatori;
+- I conflitti di _merge_ sono inevitabili quando più branch insistono sullo stesso documento. Durante questo Sprint la maggior parte del lavoro è avvenuta sul documento #adr. Si cercherà di evitare la sovrapposizione di lavoro sui documenti coordinando il lavoro di redattori e Verificatori;
 - Il Responsabile ha sottolineato l'importanza di individuare _Keep doings_ e _Improvements_ prima dell'incontro di retrospettiva. Non si tratta di un'attività facoltativa, ma di un processo chiave nel miglioramento continuo del gruppo.
 
 === Panoramica dei costi effettivi
@@ -3380,7 +3645,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
     [Totale ore],     [3],     [3],     [8],     [2],     [0],     [13],     [29],
     [Costo ruolo],     [90],     [60],     [200],     [50],     [0],     [195],     [595],
   ),
-  caption: "Prospetto del consuntivo, sprint 14"
+  caption: "Prospetto del consuntivo, Sprint 14"
 )
 #let data = (
   ("Responsabile", 3, 3),
@@ -3412,12 +3677,12 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 14",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 14",
   kind: "chart",
   supplement: "Grafico"
 )
 
-La pianificazione di questo sprint è stata precisa e rispettata. Il lavoro del Verificatore è stato particolarmente intenso a causa delle numerose modifiche apportate al documento #adr.
+La pianificazione di questo Sprint è stata precisa e rispettata. Il lavoro del Verificatore è stato particolarmente intenso a causa delle numerose modifiche apportate al documento #adr.
 
 === Monitoraggio costi e ore
 
@@ -3433,7 +3698,7 @@ La pianificazione di questo sprint è stata precisa e rispettata. Il lavoro del 
     [Verificatore],     [86],     [1290],
     [Rimanente],     [383],     [7065],
   ),
-  caption: "Monitoraggio, sprint 14"
+  caption: "Monitoraggio, Sprint 14"
 )
 
 #box(
@@ -3458,7 +3723,7 @@ Lo Sprint 15 si è concluso raggiungendo tutti gli obiettivi pianificati.
 
 In data 16/02/2024 il gruppo ha sostenuto il colloquio con il #vardanega per il secondo sportello di valutazione RTB, di cui ha ottenuto l'esito, risultato positivo, in data 17/02/2024.
 
-In particolare durante lo sprint sono stati raggiunti i seguenti obiettivi:
+In particolare durante lo Sprint sono stati raggiunti i seguenti obiettivi:
 - #adr\:
   - rimosso il termine "_richiesta_" nella nomenclatura dell'UC-7;
   - specificate le API utilizzate dall'UC7;
@@ -3493,11 +3758,11 @@ Nessuno.
 === Problematiche
 Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 
-*P1*: Seppur durante lo Sprint siano state portate a termine tutte la task previste raggiungendo gli obiettivi prefissati, per alcune task non è stata rispettata la data di scadenza fissata. Ciò, pur non comportando rallentamenti o sovraccarico di lavoro, ha permesso di evidenziare nuovamente l'importanza di una comunicazione attiva.
+*P01*: Seppur durante lo Sprint siano state portate a termine tutte la task previste raggiungendo gli obiettivi prefissati, per alcune task non è stata rispettata la data di scadenza fissata. Ciò, pur non comportando rallentamenti o sovraccarico di lavoro, ha permesso di evidenziare nuovamente l'importanza di una comunicazione attiva.
 
-*P2*: Alcuni membri del gruppo evidenziano gli impegni universitari non ancora conclusi, che comportano una riduzione in termini di disponibilità.
+*P02*: Alcuni membri del gruppo evidenziano gli impegni universitari non ancora conclusi, che comportano una riduzione in termini di disponibilità.
 
-*P3*: Mancato sfruttamento del tempo alla conclusione delle task assegnate al singolo membro: si rinnova l'importanza di essere maggiormente proattivi.
+*P03*: Mancato sfruttamento del tempo alla conclusione delle task assegnate al singolo membro: si rinnova l'importanza di essere maggiormente proattivi.
 
 === Risoluzioni attuate
 #figure(caption: [Risoluzioni attuate Sprint 15.],
@@ -3505,8 +3770,8 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
       align: left,
       columns: (auto, 1fr, auto),
       [ID risoluzione], [Titolo], [Problematiche affrontate],
-      [RO1],[Riassegnazione task], [P1, P2],
-      [RO2],[Proattività],[P3]
+      [RO1],[Riassegnazione task], [P01, P02],
+      [RO2],[Proattività],[P03]
     )
 )
 
@@ -3525,7 +3790,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
     [Totale ore],     [3],     [4],     [5 (+2)],     [5 (+1)],     [5 (-1)],     [5 (-2)],     [27],
     [Costo ruolo],     [90],     [80],     [125 (+50)],     [125 (+25)],     [75 (-15)],     [75 (-30)],     [570 (+30)],
   ),
-  caption: "Prospetto del consuntivo, sprint 15"
+  caption: "Prospetto del consuntivo, Sprint 15"
 )
 #let data = (
   ("Responsabile", 3, 3),
@@ -3557,7 +3822,7 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 15",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 15",
   kind: "chart",
   supplement: "Grafico"
 )
@@ -3580,14 +3845,14 @@ Durante lo Sprint 15 le ore preventivate (27) e le ore effettive (27) sono state
     [Verificatore],     [81],     [1215],
     [Rimanente],     [356],     [6495],
   ),
-  caption: "Monitoraggio, sprint 15"
+  caption: "Monitoraggio, Sprint 15"
 )
 
 Lo Sprint 15, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere tutti gli obiettivi prefissati. La distribuzione delle ore tra i membri del gruppo è stata differente da quanto preventivato, ma non ha comportato rallentamenti o sovraccarico di lavoro.
 
 Il rendimento positivo dello Sprint 15 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index passa dal valore 0.97 (allo Sprint 14) a 0.98, indicando un miglioramento del rendimento del gruppo;
-- EAC: l'Estimate At Completion passa dal valore 13.437,22 € (allo Sprint 14) a 13.292,70 € (seppur ancora maggiore al BAC), indicando una riduzione del costo finale del progetto se il rendimento del gruppo rimarrà costante.
+- CPI: il Cost Performance Index passa dal valore 0,97 (allo Sprint 14) a 0,98 indicando un miglioramento del rendimento del gruppo;
+- EAC: l'Estimate At Completion passa dal valore 13437,22 € (allo Sprint 14) a 13292,70 € (seppur ancora maggiore al BAC), indicando una riduzione del costo finale del progetto se il rendimento del gruppo rimarrà costante.
 
 
 == Sprint 16 dal 18-02-2024 al 25-02-2024
@@ -3623,6 +3888,7 @@ Lo Sprint 16 si è concluso raggiungendo tutti gli obiettivi pianificati, in par
   - accorpato documento #ris nel #pdp;
   - estesa sezione di Analisi dei Rischi;
   - codificati i rischi e relativi metodi di risoluzione;
+  - redatto preventivo dello Sprint 16, iniziato in data 18/02/2024;
   - redatto consuntivo dello Sprint 15, terminato in data 18/02/2024.
 
 - #pdq\:
@@ -3651,31 +3917,35 @@ Nessuno.
 
 Nessuna.
 
+=== Risoluzioni attuate
+
+Nessuna.
+
 === Panoramica dei costi effettivi
 
 #figure(
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [3],     [1 (-1)],     [0],     [3],     [2],     [1 (+1)],     [10],
-    [Carraro],     [0],     [0],     [2],     [2 (+1)],     [0],     [2],     [6 (+1)],
-    [Gardin],     [0],     [0],     [0],     [0],     [4 (-1)],     [1 (+1)],     [5],
-    [Nardo],     [0],     [3 (+1)],     [2],     [0],     [0],     [4],     [9 (+1)],
-    [Oseliero],     [0],     [2],     [0],     [0],     [2],     [0],     [4],
-    [Todesco],     [3],     [0],     [2],     [1],     [0],     [3],     [9],
-    [Zaccone],     [3],     [2],     [0],     [3],     [0],     [0],     [8],
-    [Totale ore],     [9],     [8],     [6],     [9 (+1)],     [8 (-1)],     [11 (+2)],     [51 (+2)],
-    [Costo ruolo],     [270],     [160],     [150],     [225 (+25)],     [120 (-15)],     [165 (+30)],     [1090 (+40)],
+    [Banzato],     [1 (-1)],     [0],     [0],     [0],     [4],     [1],     [6 (-1)],
+    [Carraro],     [0],     [0],     [2],     [1 (-2)],     [0],     [2],     [5 (-2)],
+    [Gardin],     [2],     [1 (+1)],     [0],     [0],     [4],     [1 (+1)],     [8 (+2)],
+    [Nardo],     [1 (+1)],     [0],     [1 (-1)],     [ (-3)],     [3],     [1 (+1)],     [6 (-2)],
+    [Oseliero],     [2],     [0],     [0],     [2 (+2)],     [1 (+1)],     [1 (-1)],     [6 (+2)],
+    [Todesco],     [0],     [2 (-1)],     [3 (+1)],     [0],     [0],     [1 (-1)],     [6 (-1)],
+    [Zaccone],     [2],     [0],     [0],     [2],     [0],     [2],     [6],
+    [Totale ore],     [8],     [3],     [6],     [5 (-3)],     [12 (+1)],     [9],     [43 (-2)],
+    [Costo ruolo],     [240],     [60],     [150],     [125 (-75)],     [180 (+15)],     [135],     [890 (-60)],
   ),
-  caption: "Prospetto del consuntivo, sprint 16"
+  caption: "Prospetto del consuntivo, Sprint 16"
 )
 #let data = (
-  ("Responsabile", 9, 9),
-  ("Amministratore", 8, 8),
+  ("Responsabile", 8, 8),
+  ("Amministratore", 3, 3),
   ("Analista", 6, 6),
-  ("Progettista", 8, 9),
-  ("Programmatore", 9, 8),
-  ("Verificatore", 9, 11),
+  ("Progettista", 8, 5),
+  ("Programmatore", 11, 12),
+  ("Verificatore", 9, 9),
 )
 #let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
 #let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
@@ -3699,16 +3969,16 @@ Nessuna.
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 16",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 16",
   kind: "chart",
   supplement: "Grafico"
 )
 
-Durante lo Sprint 16 le ore effettive (51) hanno superato di due unità le ore preventivate (49), in particolare:
+Durante lo Sprint 16 le ore effettive (43) sono risultate minori di due unità rispetto alle ore preventivate (45), in particolare:
 
-- l'aumento delle attività di progettazione ha portato a un incremento, seppur leggero, delle ore di Progettista;
-- le ore di Verificatore sono state maggiori di quanto preventivato: l'aumento delle attività di progettazione e le diverse attività svolte sulle #ndp e sull'#ris hanno necessitato di più risorse per essere verificate.
-
+- le ore di Progettista sono state minori di quanto preventivato: la progettazione dello schema ER del database è stata più semplice del previsto e ha permesso di generare confronto tra i membri del gruppo. Inoltre, la precedente esperienza di alcuni membri del gruppo con Figma ha permesso di realizzare il mock-up della UI in tempi brevi;
+- le ore di Programmatore sono state maggiori di quanto preventivato a causa dell'elevato numero di strumenti di testing esplorati;
+- a causa di impegni personali di alcuni membri del gruppo tutti i ruoli hanno subito ridistribuzioni delle ore lavorate, senza tuttavia risultare in situazioni eccedenti rispetto a quanto preventivato.
 
 === Monitoraggio costi e ore
 
@@ -3716,22 +3986,22 @@ Durante lo Sprint 16 le ore effettive (51) hanno superato di due unità le ore p
   table(
     columns: 3,
     [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
-    [Responsabile],     [22],     [660],
-    [Amministratore],     [22],     [440],
+    [Responsabile],     [23],     [690],
+    [Amministratore],     [27],     [540],
     [Analista],     [29],     [725],
-    [Progettista],     [10],     [250],
-    [Programmatore],     [152],     [2280],
-    [Verificatore],     [70],     [1050],
-    [Rimanente],     [305],     [5405],
+    [Progettista],     [14],     [350],
+    [Programmatore],     [148],     [2220],
+    [Verificatore],     [72],     [1080],
+    [Rimanente],     [313],     [5605],
   ),
-  caption: "Monitoraggio, sprint 16"
+  caption: "Monitoraggio, Sprint 16"
 )
 
-Lo Sprint 16, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere tutti gli obiettivi prefissati. Nonostante la necessità di maggiori risorse orarie in alcuni ruoli, non sono stati rilevati rallentamenti nel completamento dei compiti previsti.
+Lo Sprint 16 ha permesso di raggiungere tutti gli obiettivi prefissati con una spesa inferiore alle attese. Nonostante la necessità di maggiori risorse orarie in alcuni ruoli, non sono stati rilevati rallentamenti nel completamento dei compiti previsti.
 
 Il rendimento positivo dello Sprint 16 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index passa dal valore 0.98 (allo Sprint 15) a 1.01, indicando un miglioramento del rendimento del gruppo e raggiungendo un valore ottimale;
-- EAC: l'Estimate At Completion passa dal valore 13.292,70 € (allo Sprint 15) a 12.911,54 €, considerabile come valore ottimale in quanto minore del BAC. Il costo finale del progetto va dunque a ridursi ulteriormente rispetto allo Sprint 15.
+- CPI: il Cost Performance Index passa dal valore 0,98 (allo Sprint 15) a 1,02 e raggiunge un valore ottimale, denotando un miglioramento significativo del rendimento del gruppo;
+- EAC: l'Estimate At Completion passa dal valore 13292,70 € (allo Sprint 15) a 12777,29 €, considerabile come valore ottimale in quanto minore del BAC.
 
 
 == Sprint 17 dal 25-02-2024 al 03-03-2024
@@ -3764,7 +4034,7 @@ Lo Sprint 17 si è concluso raggiungendo la quasi totalità degli obiettivi pian
   - normato il sistema di tracciamento rischi-risoluzioni.
 
 - #pdp\:
-  - redatto preventivo dello Sprint 16, iniziato in data 18/02/2024;
+  - redatto preventivo dello Sprint 17, iniziato in data 25/02/2024;
   - redatto consuntivo dello Sprint 16, terminato in data 25/02/2024.
 
 - #pdq\:
@@ -3801,12 +4071,12 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 
 === Risoluzioni attuate
 
-#figure(caption: [Soluzioni individuate alle criticità riscontrate.],
+#figure(caption: [Soluzioni individuate alle criticità riscontrate, Sprint 17.],
     table(
       align: left,
       columns: (auto, 1fr, auto),
       [ID risoluzione], [Titolo], [Criticità affrontate],
-      [R1],[Richiesta di colloquio via Zoom al #cardin], [P01]
+      [R01],[Richiesta di colloquio via Zoom al #cardin], [P01]
     )
 )
 
@@ -3816,25 +4086,25 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [1],     [2],     [0],     [0],     [2],     [2],     [7],
-    [Carraro],     [2],     [1],     [0],     [2 (-1)],     [0],     [0],     [5 (-1)],
-    [Gardin],     [0],     [1],     [2],     [0],     [4],     [0],     [7],
-    [Nardo],     [1],     [0],     [3],     [2],     [0],     [0],     [6],
-    [Oseliero],     [2 (+1)],     [2],     [0],     [0],     [0],     [3],     [7 (+1)],
-    [Todesco],     [0],     [3],     [2],     [0],     [4],     [1 (+1)],     [10 (+1)],
-    [Zaccone],     [2],     [0],     [3 (+1)],     [0],     [2],     [3],     [10 (+1)],
-    [Totale ore],     [8 (+1)],     [9],     [10 (+1)],     [4 (-1)],     [12],     [9 (+1)],     [52 (+2)],
-    [Costo ruolo],     [240 (+30)],     [180],     [250 (+25)],     [100 (-25)],     [180],     [135 (+15)],     [1085 (+45)],
+    [Banzato],     [0],     [0],     [0],     [0],     [5 (+1)],     [3],     [8 (+1)],
+    [Carraro],     [1],     [0],     [3],     [2],     [0],     [0],     [6],
+    [Gardin],     [0],     [0],     [3],     [0],     [3 (-1)],     [0],     [6 (-1)],
+    [Nardo],     [0],     [2],     [2 (-1)],     [0],     [0],     [2],     [6 (-1)],
+    [Oseliero],     [0],     [2],     [0],     [1],     [4],     [0],     [7],
+    [Todesco],     [3],     [0],     [0],     [0],     [0],     [3],     [6],
+    [Zaccone],     [2],     [0],     [2 (+2)],     [2],     [0],     [0],     [6 (+2)],
+    [Totale ore],     [6],     [4],     [10 (+1)],     [5],     [12],     [8],     [45 (+1)],
+    [Costo ruolo],     [180],     [80],     [250 (+25)],     [125],     [180],     [120],     [935 (+25)],
   ),
-  caption: "Prospetto del consuntivo, sprint 17"
+  caption: "Prospetto del consuntivo, Sprint 17"
 )
 #let data = (
-  ("Responsabile", 7, 8),
-  ("Amministratore", 9, 9),
+  ("Responsabile", 6, 6),
+  ("Amministratore", 4, 4),
   ("Analista", 9, 10),
-  ("Progettista", 5, 4),
+  ("Progettista", 5, 5),
   ("Programmatore", 12, 12),
-  ("Verificatore", 8, 9),
+  ("Verificatore", 8, 8),
 )
 #let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
 #let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
@@ -3858,17 +4128,14 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 17",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 17",
   kind: "chart",
   supplement: "Grafico"
 )
 
-Durante lo Sprint 17 le ore effettive (52) hanno superato di due unità le ore preventivate (50), in particolare:
+Durante lo Sprint 17 le ore effettive (45) hanno superato di una unità le ore preventivate (44), in particolare:
 
-- Analista e Responsabile hanno avuto un leggero incremento orario, dovuto alla quantità di lavoro effettuata nei documenti #ndp e #adr;
-- il Verificatore ha avuto un lieve aumento di ore in risposta al punto precedente.
-
-Il costo dello Sprint è stato influenzato dall'aumento di ore di Responsabile e Verificatore, in quanto il costo dell'ora di Analista in più è stato bilanciato indirettamente da un calo unitario delle ore di Progettista, avvenuta a causa dei dubbi sorti riguardo il design del prodotto.
+- l'Analista ha subito un incremento orario, dovuto alla quantità di lavoro richiesta dalla redazione del documento #adr.
 
 === Monitoraggio costi e ore
 
@@ -3876,22 +4143,22 @@ Il costo dello Sprint è stato influenzato dall'aumento di ore di Responsabile e
   table(
     columns: 3,
     [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
-    [Responsabile],     [14],     [420],
-    [Amministratore],     [13],     [260],
+    [Responsabile],     [17],     [510],
+    [Amministratore],     [23],     [460],
     [Analista],     [19],     [475],
-    [Progettista],     [6],     [150],
-    [Programmatore],     [140],     [2100],
-    [Verificatore],     [61],     [915],
-    [Rimanente],     [253],     [4320],
+    [Progettista],     [9],     [225],
+    [Programmatore],     [136],     [2040],
+    [Verificatore],     [64],     [960],
+    [Rimanente],     [268],     [4670],
   ),
-  caption: "Monitoraggio, sprint 17"
+  caption: "Monitoraggio, Sprint 17"
 )
 
-Lo Sprint 17, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere quasi la totalità degli obiettivi prefissati.
+Lo Sprint 17, pur comportando un costo superiore a quanto preventivato, ha permesso di raggiungere la quasi totalità degli obiettivi prefissati.
 
-Il rendimento positivo dello Sprint 17 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index passa dal valore 1.01 (allo Sprint 16) a 0.99. Nonostante il lieve calo continua a rappresentare un valore accettabile (>=0.95), e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
-- EAC: l'Estimate At Completion passa dal valore 12.911,54 € (allo Sprint 16) a 13.155,40 €. Anche se aumentato, il gruppo non lo considera problematico, in quanto l'incremento risulta contenuto.
+Il rendimento complessivamente positivo dello Sprint 17 è supportato dalle principali metriche esposte dal #pdq, quali:
+- CPI: il Cost Performance Index passa dal valore 1,02 (allo Sprint 16) a 1,01. Nonostante il lieve calo continua a rappresentare un valore accettabile ($>=0,95$), e rimane molto vicino all'ottimalità, rappresentata da valori $>=1$;
+- EAC: l'Estimate At Completion passa dal valore 12777,29 € (allo Sprint 16) a 12987,48 €. Anche se aumentato, il valore è minore del BAC e rientra nel range di accettabilità.
 
 
 == Sprint 18 dal 03-03-2024 al 10-03-2024
@@ -3909,9 +4176,8 @@ Lo Sprint 18 si è concluso raggiungendo buona parte degli obiettivi pianificati
   - redatto il capitolo Processo di validazione.
 
 - #pdp\:
-  - redatto preventivo dello Sprint 17, iniziato in data 25/02/2024;
-  - redatto consuntivo dello Sprint 17, terminato in data 03/03/2024;
-  - redatto preventivo dello Sprint 18, iniziato in data 03/03/2024.
+  - redatto preventivo dello Sprint 18, iniziato in data 03/03/2024;
+  - redatto consuntivo dello Sprint 17, terminato in data 03/03/2024.
 
 - #st\:
   - individuata struttura del documento;
@@ -3923,12 +4189,15 @@ Lo Sprint 18 si è concluso raggiungendo buona parte degli obiettivi pianificati
 - Codifica:
   - migliorato e popolato il database di supporto;
   - implementata l'importazione dei dati da database;
-  - aggiornato Docker compose;
+  - aggiornato Docker Compose;
   - implementate le classi:
     - `Product`;
     - `Bin`;
     - `Zone`.
-  - implementati i pannelli;
+  - implementati i pannelli di navigazione:
+    - `ProductPanel`;
+    - `BinPanel`;
+    - `ZonePanel`.
   - rimossi elementi superflui.
 
 
@@ -3949,12 +4218,12 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
 
 === Risoluzioni attuate
 
-#figure(caption: [Soluzioni individuate alle criticità riscontrate.],
+#figure(caption: [Soluzioni individuate alle criticità riscontrate, Sprint 18.],
     table(
       align: left,
       columns: (auto, 1fr, auto),
       [ID risoluzione], [Titolo], [Criticità affrontate],
-      [R1], [Aggiornamento continuo sugli sviluppi], [P01],
+      [R01], [Aggiornamento continuo sugli sviluppi], [P01],
       [OT-1.1.2\ (#pdp_v)], [Accettazione del rischio], [P02]
     )
 )
@@ -3965,25 +4234,25 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [1],     [1],     [1],     [0],     [4],     [2],     [9],
-    [Carraro],     [0],     [1],     [2],     [1],     [4 (+2)],     [1],     [9 (+2)],
-    [Gardin],     [2],     [0],     [2],     [0],     [1],     [3],     [8],
-    [Nardo],     [0],     [3],     [0],     [1 (+1)],     [4],     [2 (+2)],     [10 (+3)],
-    [Oseliero],     [ (-1)],     [0],     [0],     [1],     [4 (+1)],     [3],     [8],
-    [Todesco],     [2],     [0],     [2],     [0],     [3],     [0],     [7],
-    [Zaccone],     [0],     [2],     [2],     [0],     [3],     [0],     [7],
-    [Totale ore],     [5 (-1)],     [7],     [9],     [3 (+1)],     [23 (+3)],     [11 (+2)],     [58 (+5)],
-    [Costo ruolo],     [150 (-30)],     [140],     [225],     [75 (+25)],     [345 (+45)],     [165 (+30)],     [1100 (+70)],
+    [Banzato],     [2],     [0],     [1],     [1 (+1)],     [2],     [0],     [6 (+1)],
+    [Carraro],     [1 (-1)],     [0],     [0],     [0],     [ (-2)],     [5],     [6 (-3)],
+    [Gardin],     [0],     [0],     [1],     [0],     [3 (+1)],     [3],     [7 (+1)],
+    [Nardo],     [0],     [2],     [0],     [2],     [1 (-1)],     [0],     [5 (-1)],
+    [Oseliero],     [2],     [0],     [2],     [0],     [3 (+1)],     [1],     [8 (+1)],
+    [Todesco],     [0],     [0],     [2],     [1 (-1)],     [5],     [0],     [8 (-1)],
+    [Zaccone],     [0],     [1 (+1)],     [2],     [0],     [5],     [0],     [8 (+1)],
+    [Totale ore],     [5 (-1)],     [3 (+1)],     [8],     [4],     [19 (-1)],     [9],     [48 (-1)],
+    [Costo ruolo],     [150 (-30)],     [60 (+20)],     [200],     [100],     [285 (-15)],     [135],     [930 (-25)],
   ),
-  caption: "Prospetto del consuntivo, sprint 18"
+  caption: "Prospetto del consuntivo, Sprint 18"
 )
 #let data = (
   ("Responsabile", 6, 5),
-  ("Amministratore", 7, 7),
-  ("Analista", 9, 9),
-  ("Progettista", 2, 3),
-  ("Programmatore", 20, 23),
-  ("Verificatore", 9, 11),
+  ("Amministratore", 2, 3),
+  ("Analista", 8, 8),
+  ("Progettista", 4, 4),
+  ("Programmatore", 20, 19),
+  ("Verificatore", 9, 9),
 )
 #let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
 #let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
@@ -4007,17 +4276,16 @@ Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 18",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 18",
   kind: "chart",
   supplement: "Grafico"
 )
 
-Durante lo Sprint 18 le ore effettive (58) hanno superato di cinque unità le ore preventivate (53), in particolare:
+Durante lo Sprint 18 le ore effettive (48) sono risultate inferiori di un'unità rispetto al preventivato (49), in particolare:
 
-- Progettista e Programmatore hanno avuto un aumento di ore causato dalla quantità di lavoro svolto sullo sviluppo del MVP e sulla stesura della #st\;
-- il Verificatore ha avuto un lieve aumento di ore in risposta al punto precedente e al lavoro che si sta svolgendo sull'#adr\.
-
-L'aumento del costo dello Sprint è stato influenzato principalmente dalle ore di Progettista e Programmatore, in quanto il costo causato dall'aumento orario del Verificatore è stato bilanciato indirettamente da un calo di ore nel Responsabile.
+- la redazione delle #ndp ha richiesto un impegno inferiore del previsto da parte del Responsabile;
+- l'Amministratore ha dovuto espletare alcune attività non previste a supporto della codifica;
+- il Programmatore ha richiesto un impegno inferiore del previsto grazie alle _utilities_ offerte dal framework Next.js per l'implementazione delle funzionalità richieste per l'accesso al database.
 
 === Monitoraggio costi e ore
 
@@ -4025,22 +4293,22 @@ L'aumento del costo dello Sprint è stato influenzato principalmente dalle ore d
   table(
     columns: 3,
     [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
-    [Responsabile],     [9],     [270],
-    [Amministratore],     [6],     [120],
-    [Analista],     [10],     [250],
-    [Progettista],     [3],     [75],
+    [Responsabile],     [12],     [360],
+    [Amministratore],     [20],     [400],
+    [Analista],     [11],     [275],
+    [Progettista],     [5],     [125],
     [Programmatore],     [117],     [1755],
-    [Verificatore],     [50],     [750],
-    [Rimanente],     [195],     [3220],
+    [Verificatore],     [55],     [825],
+    [Rimanente],     [220],     [3740],
   ),
-  caption: "Monitoraggio, sprint 18"
+  caption: "Monitoraggio, Sprint 18"
 )
 
-Nonostante l'aumento del costo preventivato, lo Sprint 18 ha permesso di completare buona parte degli obiettivi previsti.
+Nonostante la diminuzione dei costi rispetto al preventivo, lo Sprint 18 ha permesso di completare buona parte degli obiettivi previsti.
 
 Il rendimento positivo dello Sprint 18 è supportato dalle principali metriche esposte dal #pdq, quali:
-- CPI: il Cost Performance Index rimane costante a 0.99, rappresentando ancora un valore accettabile ($>=0.95$) e rimanendo molto vicino all'ottimalità, rappresentata da valori $>=1$;
-- EAC: l'Estimate At Completion passa dal valore di 13.155,40 € (allo Sprint 17) a 13.210,90 €. Nonostante sia aumentato rientra comunque nelle condizioni di accettabilità.
+- CPI: il Cost Performance Index rimane costante a 1,01 rappresentando ancora un valore ottimale ($>=1$);
+- EAC: l'Estimate At Completion diminuisce e passa dal valore di 12987,48 € (allo Sprint 17) a 12933,25 €.
 
 
 == Sprint 19 dal 10-03-2024 al 17-03-2024
@@ -4065,7 +4333,13 @@ Lo Sprint 19 si è concluso raggiungendo buona parte degli obiettivi pianificati
     - Supporto Tecnico.
 
 - #pdp\:
+  - redatto preventivo dello Sprint 19, iniziato in data 10/03/2024;
   - redatto consuntivo dello Sprint 18, terminato in data 10/03/2024.
+
+- #st\:
+  - redatte le sezioni:
+    - Design pattern;
+    - Diagramma delle classi.
 
 - Codifica:
   - implementata creazione del piano rettangolare in Three.js;
@@ -4102,12 +4376,12 @@ Durante il meeting di retrospettiva è sorta la seguente problematica:
 
 === Risoluzioni attuate
 
-#figure(caption: [Soluzioni individuate alle criticità riscontrate.],
+#figure(caption: [Soluzioni individuate alle criticità riscontrate, Sprint 19.],
     table(
       align: left,
       columns: (auto, 1fr, auto),
       [ID risoluzione], [Titolo], [Criticità affrontate],
-      [R1], [Migliore ridistribuzione dei task], [P01]
+      [R01], [Migliore ridistribuzione dei task], [P01]
     )
 )
 
@@ -4117,25 +4391,25 @@ Durante il meeting di retrospettiva è sorta la seguente problematica:
   table(
     columns: 8,
     [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
-    [Banzato],     [0],     [0],     [2 (+1)],     [0],     [4],     [3],     [9 (+1)],
-    [Carraro],     [0],     [1],     [0],     [0],     [4 (+1)],     [2],     [7 (+1)],
-    [Gardin],     [1],     [0],     [1],     [0],     [3],     [3],     [8],
-    [Nardo],     [0],     [1],     [2],     [0],     [4],     [0],     [7],
-    [Oseliero],     [1 (-1)],     [0],     [0],     [1],     [4 (+1)],     [1],     [7],
-    [Todesco],     [1],     [0],     [0],     [0],     [4],     [2],     [7],
-    [Zaccone],     [0],     [1 (+1)],     [1],     [0],     [4],     [2],     [8 (+1)],
-    [Totale ore],     [3 (-1)],     [3 (+1)],     [6 (+1)],     [1],     [27 (+2)],     [13],     [53 (+3)],
-    [Costo ruolo],     [90 (-30)],     [60 (+20)],     [150 (+25)],     [25],     [405 (+30)],     [195],     [925 (+45)],
+    [Banzato],     [0],     [1],     [0],     [2],     [4],     [3],     [10],
+    [Carraro],     [0],     [1],     [0],     [1 (-1)],     [5],     [0],     [7 (-1)],
+    [Gardin],     [0],     [0],     [0],     [0],     [7 (+2)],     [0],     [7 (+2)],
+    [Nardo],     [0],     [0],     [2 (-1)],     [0],     [3],     [4 (-1)],     [9 (-2)],
+    [Oseliero],     [0],     [0],     [0],     [0],     [0],     [5],     [5],
+    [Todesco],     [2],     [0],     [2],     [0],     [3],     [0],     [7],
+    [Zaccone],     [0],     [0],     [0],     [0],     [6 (+1)],     [2],     [8 (+1)],
+    [Totale ore],     [2],     [2],     [4 (-1)],     [3 (-1)],     [28 (+3)],     [14 (-1)],     [53],
+    [Costo ruolo],     [60],     [40],     [100 (-25)],     [75 (-25)],     [420 (+45)],     [210 (-15)],     [905 (-20)],
   ),
-  caption: "Prospetto del consuntivo, sprint 19"
+  caption: "Prospetto del consuntivo, Sprint 19"
 )
 #let data = (
-  ("Responsabile", 4, 3),
-  ("Amministratore", 2, 3),
-  ("Analista", 5, 6),
-  ("Progettista", 1, 1),
-  ("Programmatore", 25, 27),
-  ("Verificatore", 13, 13),
+  ("Responsabile", 2, 2),
+  ("Amministratore", 2, 2),
+  ("Analista", 5, 4),
+  ("Progettista", 4, 3),
+  ("Programmatore", 25, 28),
+  ("Verificatore", 15, 14),
 )
 #let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
 #let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
@@ -4159,16 +4433,20 @@ Durante il meeting di retrospettiva è sorta la seguente problematica:
       i += 1
     }
   })},
-  caption: "Suddivisione oraria per ruolo, consuntivo sprint 19",
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 19",
   kind: "chart",
   supplement: "Grafico"
 )
 
-Durante lo Sprint 19 le ore effettive (53) hanno superato di tre unità le ore preventivate (50), in particolare:
+Durante lo Sprint 19 le ore effettive sono state pari a quelle preventivate (53), tuttavia si segnalano diverse variazioni nella composizione del prospetto orario. In particolare:
 
-- le ore di Programmatore sono aumentate in maniera maggiore rispetto agli altri ruoli a causa di problematiche insorte nell'implementazione della creazione del piano a partire da un file SVG. Questo aumento di ore, però, non è stato sufficiente a permettere il completamento della task, sebbene ci siano comunque stati degli avanzamenti.
+- le ore di Analista risultano inferiori grazie all'individuazione di un processo di definizione dei diagrammi degli Use case più efficiente;
+- le ore di Progettista risultano inferiori grazie ad una stesura delle sezioni della #st più rapida del previsto;
+- le ore di Programmatore sono aumentate a causa di problematiche insorte nell'implementazione della creazione del piano a partire da un file SVG. Questo aumento di ore, però, non è stato sufficiente a permettere il completamento della task, sebbene ci siano comunque stati degli avanzamenti;
+- le ore di Verificatore sono diminuite a causa di un minor afflusso di modifiche al codice rispetto alle attese.
 
-L'aumento del costo dello Sprint, però, è stato influenzato principalmente dalle ore di Amministratore e Analista, in quanto il costo causato dall'aumento orario del Programmatore è stato bilanciato indirettamente da un calo di ore nel Responsabile.
+Sebbene le ore effettive siano state pari a quelle preventivate, la composizione del prospetto orario appare diversa rispetto al pianificato.
+
 
 === Monitoraggio costi e ore
 
@@ -4176,41 +4454,598 @@ L'aumento del costo dello Sprint, però, è stato influenzato principalmente dal
   table(
     columns: 3,
     [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
-    [Responsabile],     [6],     [180],
-    [Amministratore],     [3],     [60],
-    [Analista],     [4],     [100],
+    [Responsabile],     [10],     [300],
+    [Amministratore],     [18],     [360],
+    [Analista],     [7],     [175],
     [Progettista],     [2],     [50],
-    [Programmatore],     [90],     [1350],
-    [Verificatore],     [37],     [555],
-    [Rimanente],     [142],     [2295],
+    [Programmatore],     [89],     [1335],
+    [Verificatore],     [41],     [615],
+    [Rimanente],     [167],     [2835],
   ),
-  caption: "Monitoraggio, sprint 19"
+  caption: "Monitoraggio, Sprint 19"
 )
 
-Nonostante l'aumento di costo, durante lo Sprint 19 sono stati raggiunti buona parte degli obiettivi.
+Durante lo Sprint 19 sono stati raggiunti buona parte degli obiettivi. Nonostante la fluttuazione delle ore lavorate per ruolo, il consuntivo finale è risultato inferiore al preventivo, poiché l'aumento delle ore di Programmatore richieste è stato assorbito dal minor impegno richiesto ad altre figure.
 
 Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
-- CPI: il Cost Performance Index diminuisce, passando dal valore 0.99 (allo Sprint 19) a 0.98, ma nonostante ciò rimane nell'intervallo di accettabilità ($>=$0.95);
-- EAC: l'Estimate At Completion passa dal valore 13.155,40 € (allo Sprint 19) a 13.321,30 €. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
+- CPI: il Cost Performance Index diminuisce ma rimane entro l'intervallo di ottimalità, passando dal valore 1,01 (allo Sprint 18) a 1,00;
+- EAC: l'Estimate At Completion passa dal valore 12933,25 € (allo Sprint 18) a 12990,31 €. Anche se aumentato, è considerato accettabile in quanto rispetta la condizione di $<=$ BAC+5\% espressa dal #pdq\.
 
 
-// == Sprint n dal D1-M1-2024 al D2-M2-2024
+== Sprint 20 dal 17-03-2024 al 24-03-2024
 
-// === Obiettivi raggiunti
+=== Obiettivi raggiunti
 
-// === Obiettivi mancati
+Lo Sprint 20 si è concluso con il completamento della maggior parte degli obiettivi di periodo. In particolare:
 
-// === Problematiche
-// Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+- fissati due colloqui con il Proponente in data 22/03/2024 (per offrire un aggiornamento sul progresso) e 26/03/2024 (al fine di qualificare il lavoro svolto come MVP);
+- inviato il documento #adr al #cardin, requisito obbligatorio per proseguire alla candidatura per la Product Baseline;
+- #ndp\:
+  - revisionati i capitoli:
+    - Processo di gestione della qualità;
+    - Processo di implementazione;
+    - Processo di integrazione;
+    - Processo di verifica;
+    - Processo di transizione;
+    - Processo di validazione.
+- #pdq\:
+  - aggiornate le metriche all'interno del documento;
+  - aggiornata la dashboard Grafana.
+- #pdp\:
+  - redatto preventivo dello Sprint 20, iniziato in data 17/03/2024;
+  - redatto consuntivo dello Sprint 19, terminato in data 17/03/2024.
+- #st\:
+  - redatta la sezione riguardante i requisiti soddisfatti.
+  - aggiunte le sezioni Requisiti di sistema e Requisiti hardware.
+- #man\:
+  - redatte le sezioni:
+    - Modifica zona;
+    - Eliminazione zona;
+    - Richiesta spostamento prodotto.
+  - rimosse le sezioni Requisiti di sistema e Requisiti hardware;
+  - aggiornato template del documento.
 
-// === Risoluzioni attuate
+=== Obiettivi mancati
 
-// === Panoramica dei costi effettivi
+- #man\:
+  - non è stata redatta la sezione Impostazioni.
 
-// TABLE
+=== Problematiche
 
-// TODO
+Durante il meeting di retrospettiva è sorta la seguente problematica:
 
-// === Monitoraggio costi e ore
+*P01*: Gli avanzamenti del documento #man sono stati minori delle aspettative.
 
-// TABLE
+=== Risoluzioni attuate
+
+Nessuna.
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [0],     [7],     [2],     [9],
+    [Carraro],     [0],     [0],     [0],     [0],     [7],     [0],     [7],
+    [Gardin],     [1],     [0],     [0],     [0],     [4 (+1)],     [3 (-1)],     [8],
+    [Nardo],     [0],     [0],     [2],     [0],     [6 (+1)],     [2],     [10 (+1)],
+    [Oseliero],     [0],     [0],     [0],     [0],     [5],     [4],     [9],
+    [Todesco],     [0],     [0],     [1],     [0],     [6 (+1)],     [2],     [9 (+1)],
+    [Zaccone],     [1 (-1)],     [2 (+1)],     [0],     [0],     [3],     [4],     [10],
+    [Totale ore],     [2 (-1)],     [2 (+1)],     [3],     [0],     [38 (+3)],     [17 (-1)],     [62 (+2)],
+    [Costo ruolo],     [60 (-30)],     [40 (+20)],     [75],     [0],     [570 (+45)],     [255 (-15)],     [1000 (+20)],
+  ),
+  caption: "Prospetto del consuntivo, Sprint 20"
+)
+#let data = (
+  ("Responsabile", 3, 2),
+  ("Amministratore", 1, 2),
+  ("Analista", 3, 3),
+  ("Progettista", 0, 0),
+  ("Programmatore", 35, 38),
+  ("Verificatore", 18, 17),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 20",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Durante lo Sprint 20 le ore effettive (62) hanno superato di due unità le ore preventivate (60), in particolare:
+
+- gli impegni del Responsabile sono stati assolti in minor tempo rispetto a quanto preventivato;
+- la stesura dei verbali ha impegnato maggiormente l'Amministratore;
+- dopo aver concluso tutte le attività di codifica pianificate, la figura del Programmatore è stata impegnata nell'implementazione di alcune funzionalità desiderabili o opzionali. Pertanto, le ore di Programmatore sono aumentate rispetto a quanto preventivato;
+- l'impiego della figura del Verificatore è stato leggermente inferiore alle aspettative.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [8],     [240],
+    [Amministratore],     [16],     [320],
+    [Analista],     [4],     [100],
+    [Progettista],     [2],     [50],
+    [Programmatore],     [51],     [765],
+    [Verificatore],     [24],     [360],
+    [Rimanente],     [105],     [1835],
+  ),
+  caption: "Monitoraggio, Sprint 20"
+)
+
+Nonostante l'aumento di costo, lo Sprint 20 ha permesso di completare la maggior parte degli obiettivi prefissati.
+
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
+- CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
+- EAC: l'Estimate At Completion rimane sostanzialmente invariato, passando dal valore di 12990,31 € (allo Sprint 19) a 12990,86 €.
+
+== Sprint 21 dal 24-03-2024 al 31-03-2024
+
+=== Obiettivi raggiunti
+
+Lo Sprint 21 si è concluso con il completamento di tutti gli obiettivi di periodo. In particolare:
+- il Proponente ha convalidato, in data 26/04/2024, il prodotto software WMS3 come MVP del capitolato C5;
+- #ndp\: armonizzazione del contenuto dei capitoli relativi a:
+  - Processo di gestione della qualità;
+  - Processo di implementazione;
+  - Processo di integrazione;
+  - Processo di verifica;
+  - Processo di transizione;
+  - Processo di validazione.
+- #pdq\:
+  - aggiornate le metriche all'interno del documento;
+  - aggiornata la dashboard Grafana.
+- #pdp\:
+  - redatto preventivo dello Sprint 21, iniziato in data 24/03/2024;
+  - redatto consuntivo dello Sprint 20, terminato in data 24/03/2024.
+- #man\: redatte le sezioni:
+  - Impostazioni;
+  - Spostamento prodotto;
+  - Ispezione bin/zona.
+- terminata l'attività di codifica in concomitanza con la convalida del prodotto come MVP.
+
+=== Obiettivi mancati
+
+Nessuno.
+
+=== Problematiche
+
+Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+
+*P01*: Le incombenti festività pasquali e gli impegni personali associati hanno rallentato il lavoro di redazione dei documenti.
+
+*P02*: La ricezione del feedback sul documento #adr, adeguato al feedback ricevuto al colloquio RTB col #cardin, non è ancora avvenuta.
+
+=== Risoluzioni attuate
+
+#figure(caption: [Soluzioni individuate alle criticità riscontrate, Sprint 21.],
+    table(
+      align: left,
+      columns: (auto, 1fr, auto),
+      [ID risoluzione], [Titolo], [Criticità affrontate],
+      [R01], [Ridistribuzione dei task tra i membri], [P01]
+    )
+)
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [2],     [0],     [0],     [0],     [0],     [5 (+2)],     [7 (+2)],
+    [Carraro],     [0],     [0],     [0],     [1],     [2 (-2)],     [3 (+1)],     [6 (-1)],
+    [Gardin],     [1 (-1)],     [0],     [0],     [0],     [1 (+1)],     [3],     [5],
+    [Nardo],     [0],     [0],     [0],     [1],     [3 (-1)],     [0],     [4 (-1)],
+    [Oseliero],     [0],     [2],     [0],     [0],     [0],     [0],     [2],
+    [Todesco],     [0],     [0],     [0],     [0],     [6 (+1)],     [0],     [6 (+1)],
+    [Zaccone],     [0],     [0],     [0],     [0],     [6 (+1)],     [0],     [6 (+1)],
+    [Totale ore],     [3 (-1)],     [2],     [0],     [2],     [18],     [11 (+3)],     [36 (+2)],
+    [Costo ruolo],     [90 (-30)],     [40],     [0],     [50],     [270],     [165 (+45)],     [615 (+15)],
+  ),
+  caption: "Prospetto del consuntivo, Sprint 21"
+)
+#let data = (
+  ("Responsabile", 4, 3),
+  ("Amministratore", 2, 2),
+  ("Analista", 0, 0),
+  ("Progettista", 2, 2),
+  ("Programmatore", 18, 18),
+  ("Verificatore", 8, 11),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 21",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Durante lo Sprint 21 le ore effettive (36) hanno superato di due unità le ore preventivate (34), in particolare:
+- le ore richieste al Responsabile per il lavoro sul documento #ndp ha richiesto 1 ora in meno rispetto al previsto;
+- le ore di Programmatore, sebbene complessivamente invariate, sono state riassegnate durante lo Sprint in risposta alla problematica insorta `P01`;
+- le ore di Verificatore richieste sono risultate maggiori rispetto alle aspettative a causa di una sottostima della mole di lavoro.
+
+Nel complesso, la riduzione delle ore di Responsabile ha assorbito parzialmente l'incremento di costi dovuto all'impiego maggiore del Verificatore. Tuttavia, il consuntivo finale è risultato superiore al preventivo.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [5],     [150],
+    [Amministratore],     [14],     [280],
+    [Analista],     [4],     [100],
+    [Progettista],     [0],     [0],
+    [Programmatore],     [33],     [495],
+    [Verificatore],     [13],     [195],
+    [Rimanente],     [69],     [1220],
+  ),
+  caption: "Monitoraggio, Sprint 21"
+)
+
+Lo Sprint 21 si è concluso con il completamento totale delle attività previste. Inoltre, la convalida del prodotto come MVP permetterà di proseguire con la candidatura per la Product Baseline, una volta ricevuto anche il feedback sul documento #adr.
+
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
+- CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
+- EAC: l'Estimate At Completion aumenta, passando dal valore di 12990,86 € (allo Sprint 20) a 13010,59 €.
+
+L'aumento dell'EAC, sebbene non significativo, ne avvicina il valore a quello del BAC, ovvero il massimale consentito.
+
+== Sprint 22 dal 30-03-2024 al 07-04-2024
+
+=== Obiettivi raggiunti
+
+Lo Sprint 22 si è concluso con il completamento di tutti gli obiettivi di periodo. In particolare:
+- il gruppo ha prenotato il colloquio per la Product Baseline col #cardin in data 10/04/2024;
+- #pdq\:
+  - aggiornate le metriche all'interno del documento;
+  - aggiornata la dashboard Grafana.
+- #pdp\:
+  - redatto preventivo dello Sprint 22, iniziato in data 30/03/2024;
+  - redatto consuntivo dello Sprint 21, terminato in data 30/03/2024.
+- #man\:
+  - redatte le sezioni:
+    - Griglia di collocamento;
+    - Ispezione bin;
+    - Collocazione zona nell'ambiente 3D;
+    - Ricerca zona;
+    - Spostamento POV su bin;
+    - Visualizzazione informazione prodotto;
+    - Visualizzazione lista prodotti;
+    - Ricerca prodotti;
+    - Visualizzazione lista ordini movimentazione;
+    - Visualizzazione singolo ordine movimentazione.
+  - aggiornate le immagini del prodotto software WMS3.
+
+=== Obiettivi mancati
+
+Nessuno.
+
+=== Problematiche
+
+Nessuna.
+
+=== Risoluzioni attuate
+
+Nessuna.
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [1 (+1)],     [0],     [2],     [0],     [0],     [3 (+1)],
+    [Carraro],     [2],     [0],     [0],     [0],     [0],     [2],     [4],
+    [Gardin],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
+    [Nardo],     [0],     [2 (-1)],     [0],     [0],     [0],     [4 (+1)],     [6],
+    [Oseliero],     [0],     [1 (+1)],     [0],     [2],     [0],     [0],     [3 (+1)],
+    [Todesco],     [2],     [0],     [0],     [0],     [0],     [3],     [5],
+    [Zaccone],     [0],     [0],     [0],     [0],     [0],     [3],     [3],
+    [Totale ore],     [4],     [4 (+1)],     [0],     [4],     [0],     [15 (+1)],     [27 (+2)],
+    [Costo ruolo],     [120],     [80 (+20)],     [0],     [100],     [0],     [225 (+15)],     [525 (+35)],
+  ),
+  caption: "Prospetto del consuntivo, Sprint 22"
+)
+#let data = (
+  ("Responsabile", 4, 4),
+  ("Amministratore", 3, 4),
+  ("Analista", 0, 0),
+  ("Progettista", 4, 4),
+  ("Programmatore", 0, 0),
+  ("Verificatore", 14, 15),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 22",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Durante lo Sprint 22 le ore effettive (27) hanno superato di due unità le ore preventivate (25), in particolare:
+- l'Amministratore è stato impegnato nella risoluzione di un problema di connessione alle API dell'ITS adottato dal gruppo, oltre che nello svolgimento delle attività pianificate;
+- il Verificatore ha richiesto un impegno maggiore del previsto per la verifica della lista dei test di sistema.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [1],     [30],
+    [Amministratore],     [10],     [200],
+    [Analista],     [4],     [100],
+    [Progettista],     [-4],     [-100],
+    [Programmatore],     [33],     [495],
+    [Verificatore],     [-2],     [-30],
+    [Rimanente],     [42],     [695],
+  ),
+  caption: "Monitoraggio, Sprint 22"
+)
+
+Lo Sprint 22 si è concluso con il completamento di tutti gli obiettivi di periodo.
+
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
+- CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,00;
+- EAC: l'Estimate At Completion diminuisce e si allontana dal valore di soglia (BAC), passando dal valore di 13010,59 € (allo Sprint 21) a 12992,10 €.
+
+== Sprint 23 dal 07-04-2024 al 14-04-2024
+
+=== Obiettivi raggiunti
+
+Lo Sprint 23 si è concluso con il completamento di tutti gli obiettivi di periodo. In particolare:
+- è stata sostenuto il colloquio per la Product Baseline col #cardin in data 10/04/2024;
+- #pdq\:
+  - separata la lista dei test di unità da quelli di integrazione;
+  - redatta la lista dei test di sistema;
+  - aggiornate le metriche all'interno del documento;
+  - aggiornata la dashboard Grafana.
+- #pdp\:
+  - redatto preventivo dello Sprint 23, iniziato in data 07/04/2024;
+  - redatto consuntivo dello Sprint 22, terminato in data 07/04/2024.
+- #man:\
+  - aggiunta la sezione sull'avvio del software;
+  - rimossa la sezione sul supporto tecnico.
+
+=== Obiettivi mancati
+
+Nessuno.
+
+=== Problematiche
+
+Nessuna.
+
+=== Risoluzioni attuate
+
+Nessuna.
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [0],     [0],     [2],     [2],
+    [Carraro],     [0],     [2],     [0],     [0],     [0],     [0],     [2],
+    [Gardin],     [0],     [0],     [0],     [0],     [0],     [2],     [2],
+    [Nardo],     [0],     [0],     [0],     [1],     [0],     [0],     [1],
+    [Oseliero],     [1],     [0],     [0],     [0],     [0],     [2],     [3],
+    [Todesco],     [0],     [0],     [0],     [0],     [0],     [2],     [2],
+    [Zaccone],     [0],     [0],     [0],     [1],     [0],     [0],     [1],
+    [Totale ore],     [1],     [2],     [0],     [2],     [0],     [8],     [13],
+    [Costo ruolo],     [30],     [40],     [0],     [50],     [0],     [120],     [240],
+  ),
+  caption: "Prospetto del consuntivo, Sprint 23"
+)
+#let data = (
+  ("Responsabile", 1, 1),
+  ("Amministratore", 2, 2),
+  ("Analista", 0, 0),
+  ("Progettista", 2, 2),
+  ("Programmatore", 0, 0),
+  ("Verificatore", 8, 8),
+)
+#let x-coordinates = compute-labels-x-coordinate(data, role-chart-size)
+#let y-coordinates = compute-labels-y-coordinate(data, role-chart-size)
+
+#figure({
+  import draw: *
+  canvas({
+    chart.barchart(..barchart-config, data)
+    let i = 0
+    while(i < data.len()) {
+      content(
+        (x-coordinates.at(i).at(0), y-coordinates.at(i).at(0)),
+        [#data.at(i).at(1)],
+        ..barchart-label-config
+      )
+      content(
+        (x-coordinates.at(i).at(1), y-coordinates.at(i).at(1)),
+        [#data.at(i).at(2)],
+        ..barchart-label-config
+      )
+      i += 1
+    }
+  })},
+  caption: "Suddivisione oraria per ruolo, consuntivo Sprint 23",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Le ore preventivate per lo Sprint 23 sono state rispettate, con un totale di 13 ore effettive.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [5],     [150],
+    [Amministratore],     [14],     [280],
+    [Analista],     [4],     [100],
+    [Progettista],     [0],     [0],
+    [Programmatore],     [33],     [495],
+    [Verificatore],     [13],     [195],
+    [Rimanente],     [69],     [1220],
+  ),
+  caption: "Monitoraggio, Sprint 23"
+)
+
+Lo Sprint 23 si è concluso con il completamento di tutti gli obiettivi di periodo.
+
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
+- CPI: il Cost Performance Index migliora leggermente e passa a 1,01;
+- EAC: l'Estimate At Completion diminuisce e si allontana ulteriormente dal valore di soglia (BAC), passando dal valore di 12992,10 € (allo Sprint 22) a 12968,71 €.
+
+== Sprint 24 dal 14-04-2024 al 21-04-2024
+
+=== Obiettivi raggiunti
+
+Lo Sprint 24 si è concluso con il completamento di tutti gli obiettivi di periodo, meno che uno. In particolare:
+- #pdq\:
+  - aggiornate le metriche all'interno del documento;
+  - aggiornata la dashboard Grafana.
+- #pdp\:
+  - redatto preventivo dello Sprint 22, iniziato in data 30/03/2024;
+  - redatto consuntivo dello Sprint 21, terminato in data 30/03/2024.
+
+=== Obiettivi mancati
+
+Nonostante la ricezione del feedback del colloquio PB col #cardin sia avvenuta il giorno 17/04/2024, non è stata inviata la candidatura per il secondo colloquio di Product Baseline col #vardanega.
+
+=== Problematiche
+
+Durante il meeting di retrospettiva sono sorte le seguenti problematiche:
+
+*P01*: Alcuni membri del gruppo sono stati impegnati nelle attività di definizione dei propri _stage_ formativi.
+
+=== Risoluzioni attuate
+
+Nessuna. La candidatura è rimandata allo Sprint successivo.
+
+=== Panoramica dei costi effettivi
+
+#figure(
+  table(
+    columns: 8,
+    [*Membro*], [*Responsabile*], [*Amministratore*], [*Analista*], [*Progettista*], [*Programmatore*], [*Verificatore*], [*Totale*],
+    [Banzato],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Carraro],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Gardin],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Nardo],     [1],     [0],     [0],     [0],     [0],     [0],     [1],
+    [Oseliero],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Todesco],     [0],     [0],     [0],     [0],     [0],     [0],     [0],
+    [Zaccone],     [0],     [2],     [0],     [0],     [0],     [0],     [2],
+    [Totale ore],     [1],     [2],     [0],     [0],     [0],     [0],     [3],
+    [Costo ruolo],     [30],     [40],     [0],     [0],     [0],     [0],     [70],
+  ),
+  caption: "Prospetto del preventivo, Sprint 24"
+)
+#let data = (
+  ("Responsabile", 1),
+  ("Amministratore", 2),
+  ("Analista", 0),
+  ("Progettista", 0),
+  ("Programmatore", 0),
+  ("Verificatore", 0),
+)
+#figure({
+  roles-legend
+  canvas({
+    import draw: *
+    chart.piechart(..piechart-config, data)}
+  )},
+  caption: "Suddivisione oraria per ruolo, preventivo Sprint 24",
+  kind: "chart",
+  supplement: "Grafico"
+)
+
+Le ore preventivate per lo Sprint 24 sono state rispettate, con un totale di 3 ore effettive.
+
+=== Monitoraggio costi e ore
+
+#figure(
+  table(
+    columns: 3,
+    [*Ruolo*], [*Ore rimanenti*], [*Budget rimanente*],
+    [Responsabile],     [-1],     [-30],
+    [Amministratore],     [6],     [120],
+    [Analista],     [4],     [100],
+    [Progettista],     [-6],     [-150],
+    [Programmatore],     [33],     [495],
+    [Verificatore],     [-10],     [-150],
+    [Rimanente],     [26],     [385],
+  ),
+  caption: "Monitoraggio, Sprint 24"
+)
+
+Lo Sprint 24 si è concluso con il completamento di tutti gli obiettivi di periodo, tranne uno.
+
+Vengono di seguito riportate le principali metriche esposte dal #pdq riguardanti l'andamento dello Sprint:
+- CPI: il Cost Performance Index rimane stabile sul valore ottimale di 1,01;
+- EAC: l'Estimate At Completion aumenta lievemente, attestandosi su 12969,18 € rispetto al valore di 12968,71 € dello Sprint precedente.

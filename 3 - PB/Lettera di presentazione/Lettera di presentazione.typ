@@ -86,7 +86,7 @@ Per agevolare la consultazione dei documenti, il gruppo si è munito di un sito 
 
 #align(center)[#link("https://error418swe.netlify.app/")]
 
-È fornito inoltre il prodotto software _WMS3_, disponibile all'indirizzo:
+È fornito inoltre il prodotto software _WMS3_, accettato come MVP del Capitolato 5 da Sanmarco Informatica S.p.A. il 26/04/2024. Esso è disponibile all'indirizzo:
 
 #align(center)[#link("https://github.com/Error-418-SWE/WMS3/tree/main/")]
 
@@ -106,7 +106,7 @@ I membri del gruppo sono riportati nella tabella seguente:
   ),
 )
 
-Il gruppo aggiorna la stima dei costi, riducendola a *€ #TODO*. La data di consegna prevista rimane invariata ed è fissata al *#TODO*.
+Il gruppo aggiorna la stima dei costi, riducendola a *€ 12.960,00*.
 
 #v(1em)
 

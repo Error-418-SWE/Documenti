@@ -60,7 +60,7 @@ Il documento, per quanto ritenuto concluso con la redazione dei paragrafi deriva
 = Analisi retrospettiva
 Lo Sprint 22 è terminato con il raggiungimento della totalità degli obiettivi prefissati. Il rendimento positivo dello Sprint è sostenuto dalle principali metriche esposte dal #pdq_v:
 - CPI di progetto a 1.00, che rappresenta un avanzamento positivo del progetto, con valore superiore alla soglia di accettabilità;
-- EAC diminuisce passando da € € 13.010,59 a € € 12.992,10 rientrando ampiamente nel budget previsto;
+- EAC passa da € € 12.990,31 a € € 12.990,86 rientrando nel budget previsto;
 - $"SEV" >= "SPV"$, come testimoniato anche dalla metrica CPI, che indica un avanzamento positivo del progetto.
 
 == Keep doing

@@ -86,7 +86,7 @@ Per agevolare la consultazione dei documenti, il gruppo si è munito di un sito 
 
 #align(center)[#link("https://error418swe.netlify.app/")]
 
-È fornito inoltre il prodotto software _WMS3_, accettato come MVP del Capitolato 5 da Sanmarco Informatica S.p.A. il 26/04/2024. Esso è disponibile all'indirizzo:
+È fornito inoltre il prodotto software _WMS3_, accettato come MVP del Capitolato 5 da Sanmarco Informatica S.p.A. il 26/03/2024. Esso è disponibile all'indirizzo:
 
 #align(center)[#link("https://github.com/Error-418-SWE/WMS3/tree/main/")]
 
